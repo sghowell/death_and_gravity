@@ -32,13 +32,17 @@ class ClassSpec:
     z_first: float = 0.005
     ratio: float = 1.1
     h_max: float = 0.02
+    refine: int = 0              # midpoint refinements of the geometric grid (each halves every segment)
 
     @property
     def x(self) -> np.ndarray:
         if self.grid_kind == "uniform":
             return grid(self.N, self.z_max)
         from .geometry import geometric_grid
-        return geometric_grid(self.z_max, self.z_first, self.ratio, self.h_max)
+        xg = geometric_grid(self.z_max, self.z_first, self.ratio, self.h_max)
+        for _ in range(self.refine):
+            xg = np.sort(np.concatenate([xg, 0.5 * (xg[:-1] + xg[1:])]))
+        return xg
 
     @property
     def n_seg(self) -> int:

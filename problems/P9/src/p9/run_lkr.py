@@ -36,10 +36,11 @@ def main():
     ap.add_argument("--workers", type=int, default=6)
     ap.add_argument("--passes", type=int, default=12)
     ap.add_argument("--tol", type=float, default=2e-5)
+    ap.add_argument("--refine", type=int, default=0)
     args = ap.parse_args()
     bao = load_desi(); sn = load_pantheon()
-    spec = ClassSpec(L=args.L, grid_kind="geometric"); fr = Frozen(bao, sn, spec)
-    out = RESULTS / f"lkr_L{args.L:g}_D{args.Delta:g}.json"
+    spec = ClassSpec(L=args.L, grid_kind="geometric", refine=args.refine); fr = Frozen(bao, sn, spec)
+    out = RESULTS / f"lkr_L{args.L:g}_D{args.Delta:g}_r{args.refine}.json"
     if out.exists():
         r = json.loads(out.read_text())
         T = r["T"]; chi2_min = r.get("chi2_class_min")
