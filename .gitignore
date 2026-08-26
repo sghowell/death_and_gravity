@@ -1,0 +1,27 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+
+# LaTeX build products (PDFs are committed deliberately)
+*.aux
+*.log
+*.out
+*.toc
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# Large raw data files: kept out of git, pinned by sha256 in data/MANIFEST.json
+problems/*/data/raw/*.cov
+problems/*/data/raw/*.fits
+problems/*/data/raw/*.npy
+
+# OS
+.DS_Store
+problems/*/data/cache/
+problems/*/results/*.npy

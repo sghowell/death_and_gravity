@@ -1,0 +1,64 @@
+{
+  "frozen_on": "2026-08-25",
+  "purpose": "Frozen inputs for P9(a): certified upper bound on H0 over a stated class of late-time expansion histories.",
+  "files": [
+    {
+      "path": "raw/desi_gaussian_bao_ALL_GCcomb_mean.txt",
+      "sha256": "9ac154ab583ce759c0f7eef3c978c7c70a6ead2d18774caceadf1a350a640585",
+      "bytes": 472,
+      "source_url": "https://raw.githubusercontent.com/CobayaSampler/bao_data/master/desi_bao_dr2/desi_gaussian_bao_ALL_GCcomb_mean.txt",
+      "upstream_repo": "CobayaSampler/bao_data",
+      "upstream_path": "desi_bao_dr2",
+      "upstream_commit": "b7b8a36e9bccb063081f811f323cada21ab5fbdd",
+      "upstream_commit_date": "2025-03-20T22:10:01Z",
+      "content": "13 DESI DR2 BAO measurements: z, value, quantity (DV_over_rs at z=0.295; DM_over_rs and DH_over_rs at z=0.510, 0.706, 0.934, 1.321, 1.484, 2.33)",
+      "reference": "DESI Collaboration, DESI DR2 results II, Phys. Rev. D 112, 083515 (2025), arXiv:2503.14738"
+    },
+    {
+      "path": "raw/desi_gaussian_bao_ALL_GCcomb_cov.txt",
+      "sha256": "252a143274c8a07c78694c119617d36594f6d7965d00319ca611c6ffb886e509",
+      "bytes": 2547,
+      "source_url": "https://raw.githubusercontent.com/CobayaSampler/bao_data/master/desi_bao_dr2/desi_gaussian_bao_ALL_GCcomb_cov.txt",
+      "upstream_repo": "CobayaSampler/bao_data",
+      "upstream_path": "desi_bao_dr2",
+      "upstream_commit": "b7b8a36e9bccb063081f811f323cada21ab5fbdd",
+      "content": "13x13 covariance matrix in the row order of the mean file"
+    },
+    {
+      "path": "raw/Pantheon+SH0ES.dat",
+      "sha256": "1cb0fc379ef066afdc2ffd1857681cc478024570d8a3eba284fb645775198cf8",
+      "bytes": 579283,
+      "source_url": "https://raw.githubusercontent.com/PantheonPlusSH0ES/DataRelease/main/Pantheon+_Data/4_DISTANCES_AND_COVAR/Pantheon+SH0ES.dat",
+      "upstream_repo": "PantheonPlusSH0ES/DataRelease",
+      "upstream_commit": "c447f0fea703fcd0fff57de5000947b5ca81286b",
+      "upstream_commit_date": "2022-12-21T19:29:49Z",
+      "content": "1701 SN Ia light curves; columns include zHD, zHEL, m_b_corr, IS_CALIBRATOR, CEPH_DIST",
+      "reference": "Brout et al., Astrophys. J. 938, 110 (2022), arXiv:2202.04077; Scolnic et al., Astrophys. J. 938, 113 (2022)"
+    },
+    {
+      "path": "raw/Pantheon+SH0ES_STAT+SYS.cov",
+      "sha256": "abf806d966485e64afdb359c87bffc0ecc00d05eff0a31ced66f247385df0fdc",
+      "bytes": 33284960,
+      "git_tracked": false,
+      "source_url": "https://raw.githubusercontent.com/PantheonPlusSH0ES/DataRelease/main/Pantheon+_Data/4_DISTANCES_AND_COVAR/Pantheon+SH0ES_STAT+SYS.cov",
+      "upstream_repo": "PantheonPlusSH0ES/DataRelease",
+      "upstream_commit": "c447f0fea703fcd0fff57de5000947b5ca81286b",
+      "content": "first line N=1701, then N*N entries row-major: statistical+systematic covariance of m_b_corr in the row order of the .dat file",
+      "note": "not committed (33 MB); re-download and verify sha256 before use"
+    }
+  ],
+  "scalar_inputs": [
+    {
+      "name": "r_drag_Planck2018",
+      "value_Mpc": 147.09,
+      "sigma_Mpc": 0.26,
+      "reference": "Planck Collaboration, Planck 2018 results VI, Astron. Astrophys. 641, A6 (2020), Table 2, TT,TE,EE+lowE+lensing",
+      "role": "primary sound-horizon prior; box [value - 2 sigma, value + 2 sigma] in the v1 statement"
+    },
+    {
+      "name": "c_km_s",
+      "value": 299792.458,
+      "reference": "exact (SI definition)"
+    }
+  ]
+}
