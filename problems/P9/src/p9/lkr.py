@@ -43,18 +43,26 @@ class Brackets3:
 
 
 def initial_brackets3(fr: Frozen) -> Brackets3:
-    spc = fr.spec; x = spc.x; N = spc.n_seg; L = spc.L
-    ulo, uhi = spc.u_box
+    """Class-box brackets, computed in ball arithmetic and rounded OUTWARD (the induction base of the
+    certificate chain): rho from the class theta-range, yb from D_M(z_b) in [ulo z_b, uhi z_b],
+    lambda from [log10 ulo, log10 uhi]."""
+    from .lkr_rows import ArbArith, theta_bounds as theta_bounds_ar
+    from .verify import _endpoint
+    ar = ArbArith()
+    spc = fr.spec; x = spc.x; N = spc.n_seg; L = ar.c(spc.L)
+    ulo, uhi = ar.c(spc.u_box[0]), ar.c(spc.u_box[1])
     rho_lo = np.zeros(N + 1); rho_hi = np.zeros(N + 1)
     for i in range(1, N + 1):
-        tl, th = theta_bounds(x[i], L)
-        em1 = np.expm1(x[i])
-        rho_lo[i] = np.log10(tl / em1); rho_hi[i] = np.log10(th / em1)
+        xi = ar.c(x[i])
+        tl, th = theta_bounds_ar(xi, L, ar)
+        em1 = ar.expm1(xi)
+        rho_lo[i] = _endpoint(ar.log10(tl / em1), -1); rho_hi[i] = _endpoint(ar.log10(th / em1), +1)
     kinds = fr.bao.kind
     idx_dm = [r for r, k in enumerate(kinds) if k == "DM_over_rs"]
-    yb_lo = np.array([np.log10(fr.P[r] @ np.full(N + 1, ulo)) for r in idx_dm])
-    yb_hi = np.array([np.log10(fr.P[r] @ np.full(N + 1, uhi)) for r in idx_dm])
-    return Brackets3(rho_lo, rho_hi, yb_lo, yb_hi, np.full(N + 1, np.log10(ulo)), np.full(N + 1, np.log10(uhi)))
+    yb_lo = np.array([_endpoint(ar.log10(ulo * ar.c(fr.bao.z[r])), -1) for r in idx_dm])
+    yb_hi = np.array([_endpoint(ar.log10(uhi * ar.c(fr.bao.z[r])), +1) for r in idx_dm])
+    llo = _endpoint(ar.log10(ulo), -1); lhi = _endpoint(ar.log10(uhi), +1)
+    return Brackets3(rho_lo, rho_hi, yb_lo, yb_hi, np.full(N + 1, llo), np.full(N + 1, lhi))
 
 
 def _sandwich_rows(E_, nvar, iE, lin_coeffs, lo, hi, K=N_TANGENTS):

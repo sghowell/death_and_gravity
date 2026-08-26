@@ -61,7 +61,16 @@ class ClassSpec:
 
     @property
     def u_box(self) -> tuple[float, float]:
-        return C_KM_S / (self.H_max * self.r_hi), C_KM_S / (self.H_min * self.r_lo)
+        """Class box on u = c/(r_d H), rounded OUTWARD to floats (the floats define the class)."""
+        from fractions import Fraction
+        lo = Fraction(C_KM_S) / (Fraction(self.H_max) * Fraction(self.r_hi))
+        hi = Fraction(C_KM_S) / (Fraction(self.H_min) * Fraction(self.r_lo))
+        flo, fhi = float(lo), float(hi)
+        if Fraction(flo) > lo:
+            flo = np.nextafter(flo, -np.inf)
+        if Fraction(fhi) < hi:
+            fhi = np.nextafter(fhi, np.inf)
+        return float(flo), float(fhi)
 
 
 def whitener(C: np.ndarray) -> np.ndarray:

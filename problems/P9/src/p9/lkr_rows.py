@@ -179,7 +179,7 @@ def build(fr: Frozen, br, T, ar) -> Build:
     one = ar.c(1)
     B = Build(lay); B.c_node = c_node
     ulo = ar.c(spc.u_box[0]); uhi = ar.c(spc.u_box[1])
-    llo_box, lhi_box = ar.log10(ulo), ar.log10(uhi)
+    llo_box, lhi_box = ar.dn(ar.log10(ulo)), ar.up(ar.log10(uhi))   # outward: the box must contain the class
     # ---------------- equalities ----------------
     # BAO: w_b + Wb P = Wb d
     Wb = [[ar.c(v) for v in row] for row in fr.Wb]

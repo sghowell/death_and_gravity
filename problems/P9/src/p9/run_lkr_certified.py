@@ -78,7 +78,11 @@ def certified_pass(fr, br, T, cert_dir, pass_id, workers, lam_nodes=None):
     ctx = mp.get_context("spawn")
     with ctx.Pool(workers, initializer=_init, initargs=(fr, br, T, str(cert_dir))) as pool:
         res = pool.map(_job, jobs, chunksize=2)
-    c_node = m.c_node
+    # rigorous c_node (log10(e^{x_i} - 1)) in ball arithmetic; the subtraction below is rounded outward
+    from flint import arb
+    from .lkr_rows import ArbArith
+    ar = ArbArith()
+    c_ball = [arb(0)] + [ar.log10(ar.expm1(ar.c(v))) for v in fr.spec.x[1:]]
     rho_lo = br.rho_lo.copy(); rho_hi = br.rho_hi.copy(); lam_lo = br.lam_lo.copy(); lam_hi = br.lam_hi.copy()
     yb_lo = br.yb_lo.copy(); yb_hi = br.yb_hi.copy()
     worst_gap = 0.0
@@ -91,8 +95,8 @@ def certified_pass(fr, br, T, cert_dir, pass_id, workers, lam_nodes=None):
         i = int(kind[3:]) if kind.startswith("rho") else int(kind[3:]) if kind.startswith("lam") else int(kind[2:])
         side = tag.split("_")[2]
         if kind.startswith("rho"):
-            if side == "lo": rho_lo[i] = max(rho_lo[i], lb - c_node[i])
-            else: rho_hi[i] = min(rho_hi[i], -lb - c_node[i])
+            if side == "lo": rho_lo[i] = max(rho_lo[i], _endpoint(arb(lb) - c_ball[i], -1))
+            else: rho_hi[i] = min(rho_hi[i], _endpoint(arb(-lb) - c_ball[i], +1))
         elif kind.startswith("lam"):
             if side == "lo": lam_lo[i] = max(lam_lo[i], lb)
             else: lam_hi[i] = min(lam_hi[i], -lb)
@@ -126,9 +130,11 @@ def main():
         u = lcdm_u_nodes(spec.x, om, hrd)
         cands = [minimize_chi2_over_class(fr, u), minimize_chi2_over_class(fr, np.full(spec.n_seg + 1, u[0]))]
         u_star, Mp_star, chi2_star = min(cands, key=lambda c: c[2])
-        assert in_class_exact(spec, u_star)
+        from flint import arb
+        from .socp2 import MP_BOX
+        assert in_class_exact(spec, u_star) and MP_BOX[0] <= Mp_star <= MP_BOX[1]
         ball = rigorous_chi2(fr, u_star, Mp_star)
-        T = _endpoint(ball, +1) + args.Delta
+        T = _endpoint(ball + arb(args.Delta), +1)
         ref = dict(u=u_star.tolist(), Mp=Mp_star, chi2_float=chi2_star, chi2_enclosure=ball.str(20), T=T)
         br = initial_brackets3(fr); hist = []
         print(f"{tag}: class-min chi2 {ball.str(12)} -> T={T:.6f}; nodes={spec.n_seg+1}", flush=True)

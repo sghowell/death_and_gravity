@@ -160,6 +160,16 @@ block-diagonal covariance diag(C_BAO, C_SN) (the certificate is stated for
 C̃ := L_C L_Cᵀ, with ‖C − C̃‖_max recorded). This is a second-order cone
 program.
 
+### 3.3a What "the covariance" means in the certified statement
+Every certified statement uses C̃ := (WᵀW)⁻¹ with W the float64 inverse
+Cholesky factor of the selected covariance block (SN: 1580×1580; BAO:
+12×12); W is the recorded object, treated as exact. Recorded deviations
+(`data/MANIFEST.json`, "whitening"): max |W C Wᵀ − I| = 6.2×10⁻¹⁵ (SN),
+2.2×10⁻¹⁶ (BAO), i.e. C̃ agrees with the released covariance to double
+precision. All file values are parsed as correctly rounded doubles and
+treated as exact rationals thereafter; the derived covariance cache is
+sha256-pinned in the manifest and checked at load time.
+
 ### 3.4 Dropped BGS point
 D_V = (z D_M² D_H)^{1/3} is concave in (D_M, D_H), so an upper constraint
 on it is not convex. Removing the BGS row and column from the BAO Gaussian

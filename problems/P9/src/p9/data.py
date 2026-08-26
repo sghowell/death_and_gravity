@@ -76,7 +76,13 @@ def load_pantheon_cov() -> np.ndarray:
     CACHE.mkdir(exist_ok=True)
     npy = CACHE / "pantheon_plus_statsys.npy"
     if npy.exists():
-        return np.load(npy)
+        cov = np.load(npy)
+        # the cache is derived data: re-check it against the manifest-pinned raw file's parse hash
+        man = json.loads((DATA / "MANIFEST.json").read_text())
+        expected = man.get("derived", {}).get("pantheon_plus_statsys_npy_sha256")
+        if expected is not None and _sha256(npy) != expected:
+            raise ValueError("Pantheon+ covariance cache does not match the manifest; delete data/cache and re-run")
+        return cov
     with open(RAW / "Pantheon+SH0ES_STAT+SYS.cov") as f:
         n = int(f.readline())
         arr = np.loadtxt(f)
