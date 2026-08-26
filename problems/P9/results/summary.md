@@ -7,6 +7,7 @@ lower bounds: certified feasible class members. Values in km s⁻¹ Mpc⁻¹.
 | L | Δ | r | T | certified H₀ max (upper) | certified feasible H₀ (lower) | passes | status |
 |---|---|---|---|---|---|---|---|
 | 1 | 4 | 2 | 1600.6025 | **≤ 69.8430** | ≥ 69.6497 | 6 | done (lkr_L1_D4_r2) |
+| 1.5 | 1 | 2 | 1380.7252 | **≤ 68.9288** | ≥ 68.3373 | 5 | done (lkr_L1.5_D1_r2) |
 | 1.5 | 4 | 2 | 1383.7252 | **≤ 69.8418** | ≥ 69.5228 | 5 | done (lkr_L1.5_D4_r2_v0) |
 | 2 | 4 | 2 | 1381.1495 | **≤ 70.0717** | ≥ 69.5877 | 5 | done (lkr_L2_D4_r2) |
 | 3 | 4 | 2 | 1376.8755 | **≤ 70.6184** | ≥ 69.7561 | 6 | done (lkr_L3_D4_r2) |
