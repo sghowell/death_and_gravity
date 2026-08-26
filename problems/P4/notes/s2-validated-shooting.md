@@ -85,20 +85,31 @@ sets ride on it: the point set (V0 = c: tails + rounding) and the interval set (
    §2; step h = min(0.02, 0.75 ν) with (h/ν)^{K+1} ε ≤ 1e−45 per step;
 3. the Jacobian J of the step map over the hull of the interval set (radius r_k): the point
    fundamental-matrix series Y_K(s) (tight) plus a Grönwall bound of its defect along the
-   certified tube Z(s) = Σ z_i s^i + tails + ρ_R, ρ_R = r_k e^{Lh} (fixed point in ρ_R):
-       ‖Y(−h; z) − Y_K(−h)‖ ≤ h e^{Lh} ( ‖P̃^{-1}‖ sup|D̂| + ‖D²f̃‖ ρ_R sup|Y_K| ),
-   D̂(s) = P̃(z_K(s)) Y_K′(s) − G(z_K(s)) Y_K(s) an *exact polynomial* in s (its coefficient
-   sum bounds sup|D̂| without any s-interval dependency blow-up: ~1e−41–1e−60), L, ‖P̃^{-1}‖,
-   ‖D²f̃‖ (exact second derivatives of P̃, Q̃) from one-shot box evaluations on 8 sub-intervals
-   of the step, all in a weighted norm (y scaled by 1/max|y|).  Typical values: L = 40–130,
-   ‖D²f̃‖ = 600–6000, bound 1e−5–1e−3 (relative to |J| ~ 1);
+   certified tube Z(s) = Σ z_i s^i + tails + ρ_R, ρ_R > r_k e^{Lh} (fixed point in ρ_R; the
+   step fails if it does not close):
+       ‖Y(−h; z) − Y_K(−h)‖ ≤ h e^{Lh} ( ‖P̃^{-1}‖ (sup|D̂_K| + ‖P̃^{-1}‖ |∂P̃| sup|R| sup|Y_K|)
+                                          + ‖D²f̃‖ (tail + ρ_R) sup|Y_K| ),
+   D̂_K(s) = P̃(z_K(s)) Y_K′(s) − [DQ̃ − Ψ(z_K, z_K′)](z_K(s)) Y_K(s) an *exact polynomial* in s (its
+   coefficient sum bounds sup|D̂_K| without any s-interval dependency blow-up: ~1e−41–1e−60).
+   The true defect has Ψ(z_K, f̃(z_K)) in place of Ψ(z_K, z_K′); Ψ is linear in its velocity
+   argument and f̃(z_K) − z_K′ = −P̃⁻¹R with R(s) = P̃(z_K) z_K′ − Q̃(z_K) the exact ODE residual of
+   the truncation (sup|R| ~ 1e−64–1e−40), whence the second term, |∂P̃| the weighted norm of the
+   tensor ∂P̃/∂z (derivation in the docstring of `tmint.Integrator.jacobian_step`); the tail term
+   accounts for the distance between z_K and the reference solution.  L, ‖P̃^{-1}‖, ‖D²f̃‖ (exact
+   second derivatives of P̃, Q̃) and |∂P̃| come from one-shot box evaluations on 8 sub-intervals of
+   the step (exact balls covering [−h, 0]), all in a weighted norm (y scaled by a power of two
+   ≤ 1/max|y|, so every weight ratio is exact).  Typical values: L = 40–130, ‖D²f̃‖ = 600–6000,
+   bound 1e−5–1e−3 (relative to |J| ~ 1);
 4. mean-value form Φ̃(m + d) ∈ Φ̃(m) + Y_K(−h) d + e with ‖e‖_w ≤ bound·‖d‖_w for both sets:
    the bound is applied as the *operator-norm* bound it is (a box of radius bound·‖d‖_w/Sc_i),
    not entrywise — the entrywise interval matrix costs a dimension factor ≈ 50 and made the
    set width obey a Riccati-type recursion (blow-up at width ≈ 1e−5 around x = −1.3 in the
-   first runs); the exact block structure is used (the u-rows of e do not see d_y, the
-   T-row of e is 0), tails and rounding are added, and each set is QR re-orthogonalised
-   (Lohner).
+   first runs); the exact block structure is used (the u-rows of e do not see d_y; the
+   T-row of e is (e^{−h} − Y_K(−h)_TT) d_T, bounded by bound·d_T), tails and rounding are
+   added, and each set is QR re-orthogonalised (Lohner).  The tube radius r_k is the larger of
+   the two sets' weighted radii, so the one bound is valid for both sets.  Every bound, tail and
+   radius on the certified path is an exact arb upper bound (floats appear only in control flow,
+   rounded up, and in logs).
 The step halves h whenever e^{Lh} > 4 or a box solve is not provably regular (needed only
 near the sonic point, where ‖P̃^{-1}‖ ∝ 1/|x|).  The tube enlargement ρ_R is refined once
 with the fundamental matrix (ρ_R = r_k(sup|Y_K| + bound) instead of r_k e^{Lh}).
@@ -114,34 +125,38 @@ Validation (tests): the point set contains S1's DOP853 trajectory (to S1's 1e−
 central-difference V0-derivative at x = −0.3 and −1; the interval set contains the point
 set; the point set has width 1e−47 at x = −0.3 and 1e−26 at x = −1 (starting from S1 data
 at −0.5); the interval set for w = 1e−9 has width 3e−8 at x = −0.3.  Cost: ≈ 0.5–0.9 s per
-step (63 steps to reach x = −0.3 from −0.05, ≈ 135 more to x = −3).
+step (≈ 60 steps to reach x = −0.3 from −0.05, ≈ 185 more to x = −3).
 
 ## 4. The certified trajectory from the sonic point to x_c = −3 (w = 1e−9)
 
 Run: A1 Taylor model at x0 = −0.05 for V0 ∈ [c ± 1e−9], c = 0.112439401388092 (initial
 point set 3e−52 (u), 1e−48 (y); interval set a segment with r1 = |τ| w = 1.25e−8 and
-transverse radii ≤ 1.5e−17), integrated to x_c = −3 in 297 steps (229 s; h = 0.002–0.007
-for x > −0.2, 0.01 for −1.7 < x < −0.3, 0.02 beyond; ν = 0.005 → 0.2).
+transverse radii ≤ 1.5e−17), integrated to x_c = −3 in 244 steps (192 s; h = 0.002–0.0075
+for x > −0.2, 0.01 for −1.7 < x < −0.3, 0.02 beyond; ν = 0.005 → 0.2).  (Numbers of the
+run after the rigor fixes of §7; the earlier run had 297 steps because the tube fixed point
+was not strict — the sets are within 10–20 % of the earlier ones, the point set is wider
+because the T-row perturbation is no longer 0.)
 
 | x | point-set width | interval set: u | interval set: y | max\|∂u/∂V0\| (float) |
 |---|---|---|---|---|
-| −0.33 | 1.5e−47 | 1.7e−9 | 5.5e−9 | 0.9 |
-| −0.71 | 2.4e−47 | 9.3e−9 | 3.8e−8 | 1.6 |
-| −1.59 | 1.0e−45 | 1.7e−8 | 4.6e−8 | 3.5 |
-| −2.07 | 1.7e−45 | 7.4e−8 | 6.6e−7 | 13 |
-| −2.67 | 2.8e−45 | 1.9e−7 | 3.1e−6 | 77 |
-| −3.00 | 9.0e−45 | 5.9e−7 | 6.7e−6 | 207 |
+| −0.33 | 4.3e−41 | 1.8e−9 | 5.4e−9 | 0.9 |
+| −0.70 | 7.8e−41 | 9.1e−9 | 3.8e−8 | 1.6 |
+| −1.58 | 3.7e−39 | 2.1e−8 | 5.2e−8 | 3.5 |
+| −2.07 | 7.5e−39 | 9.0e−8 | 7.9e−7 | 13 |
+| −2.67 | 1.6e−38 | 2.4e−7 | 3.8e−6 | 77 |
+| −3.00 | 2.7e−38 | 6.4e−7 | 7.9e−6 | 207 |
 
 The true width of the V0-tube is |∂u/∂V0|·w (2.1e−7 at x = −3 for u; ≈ 3e−6 for y from
-S1's second differences), so the enclosure over-estimates by ≈ 3× (u) and ≈ 2× (y) after
-297 steps; the Jacobian bound stays at 1e−6–6e−5 per step.  At x_c = −3:
-    (n, w, v)(−3; c) ∈ ([1.23662180055708 ± 3.6e−15], [5.77448322178866 ± 1.2e−15],
-                        [−0.402996853997845 ± 3.3e−16])          (S1: 1.2366218, 5.77448322, −0.40299685)
-    ∂(n, w, v)/∂V0(−3; c) ∈ ([13.8621536540 ± 4.4e−12], [−149.553641573 ± 2.2e−10],
-                             [−207.190706750 ± 1.5e−10])         (S1 central differences: 13.86, −149.55, −207.19)
-    ∂(n, w, v)/∂V0(−3; V0) ∈ ([13.862154 ± 6.4e−7], [−149.55364 ± 7.4e−6], [−207.1907 ± 1.4e−5])
+S1's second differences), so the enclosure over-estimates by ≈ 3× (u) and ≈ 2.5× (y) after
+244 steps; the Jacobian bound stays at 2e−7–7e−5 per step (the new residual term sup|R| is
+1e−74–1e−43 and the defect sup|D̂_K| 1e−71–1e−40: both invisible).  At x_c = −3:
+    (n, w, v)(−3; c) ∈ ([1.2366218005570764374 ± 3.7e−20], [5.7744832217886611699 ± 4.8e−20],
+                        [−0.40299685399784467563 ± 3.8e−22])    (S1: 1.2366218, 5.77448322, −0.40299685)
+    ∂(n, w, v)/∂V0(−3; c) ∈ ([13.8621536540044 ± 2.6e−14], [−149.553641572786 ± 5.8e−14],
+                             [−207.190706750151 ± 3.2e−13])      (S1 central differences: 13.86, −149.55, −207.19)
+    ∂(n, w, v)/∂V0(−3; V0) ∈ ([13.862154 ± 6.8e−7], [−149.55364 ± 8.5e−6], [−207.1907 ± 1.5e−5])
                                                                   for every V0 ∈ [c ± 1e−9],
-i.e. the Jacobian column of the matching map is enclosed with relative radius 6.5e−8 on the
+i.e. the Jacobian column of the matching map is enclosed with relative radius 4.7e−8 on the
 whole V0 box — the Krawczyk contraction factor is ~1e−7, far from the limit.
 
 ## 5. The Krawczyk certificate (Theorem A, item A3) — what is proven
@@ -149,20 +164,23 @@ whole V0 box — the Krawczyk contraction factor is ~1e−7, far from the limit.
 Box X = [c − 1e−9, c + 1e−9] × [a_c − 1e−8, a_c + 1e−8] × [μ_c − 1e−8, μ_c + 1e−8] with
     c = 0.112439401388092,  a_c = −0.21236564676597628…(= −ln 1.2365999612),  μ_c = 8.90132327537996693…
     (= 1.2365999612² × 5.82098013),  x_c = −3,  x0 = −0.05.
-Pipeline (`a3driver.run`, 232 s, 297 integration steps, 384 bits): A1 sonic Taylor model
+Pipeline (`a3driver.run`, 192 s, 244 integration steps, 384 bits): A1 sonic Taylor model
 (K = 40, m = 5) with the y-tail certificate → `tmint` to x_c → A2 centre Taylor model
 (K = 30, m = 5, normalised family in μ) with the y-tail certificate → F(m), F′(X) → Krawczyk
 with Y = mid(F′(m))^{-1} (floats, converted exactly).
 
-    F(m) = ( [−8.7699e−12 ± 4.4e−19], [1.6078e−9 ± 2.7e−14], [−1.0808e−12 ± 4.4e−17] )
-    K(X) − m = ( [6.3e−15 ± 6.9e−17], [7.031e−12 ± 7.9e−16], [2.3757e−9 ± 4.4e−14] )
+    K(X) − m = ( [0 ± 7.7e−15], [7.0e−12 ± 6.1e−14], [2.38e−9 ± 5.1e−12] )
               ⊂ int( [±1e−9] × [±1e−8] × [±1e−8] ).
+(Numbers from the run after the 2026-08-26 review fixes — Arb upper bounds kept throughout the
+integrator, the extra defect term and the tail in the H2 term — which widen the enclosures by
+≈ 10²–10³ relative to the first run while leaving the Krawczyk inclusion comfortably satisfied;
+189 s at 384 bits.)
 
 **Theorem (certified).**  F has exactly one zero (V0*, a*, μ*) in X, and it lies in K(X):
-    V0* = 0.11243940138809834 ± 7e−17,   a* = −0.21236564675894539 ± 8e−16,
-    μ*  = 8.9013232777556436 ± 4.4e−14,
-    i.e. n∞ = e^{−a*} = 1.2365999611913 ± 6e−15, w∞ = μ* e^{2a*} = 5.8209801316354 ± 6e−14,
-    v∞ = −1/(2n∞) = −0.40433447815922 ± 2e−15  (S1: 1.2365999612, 5.82098013, −0.40433391 at x = −8).
+    V0* = 0.11243940138810 ± 3.0e−15,   a* = −0.2123656467589 ± 7.6e−14,
+    μ*  = 8.90132327776 ± 5.1e−12,
+    i.e. n∞ = e^{−a*} = 1.2365999611913 ± 4.3e−14, w∞ = μ* e^{2a*} = 5.82098013164 ± 5.4e−12,
+    v∞ = −1/(2n∞) = −0.4043344781592 ± 3.4e−14  (S1: 1.2365999612, 5.82098013, −0.40433391 at x = −8).
 Consequently there is a solution of the constraint-reduced CSS system (S1's `rhs_scaled3`,
 equivalently the KHA system with the momentum constraint) on (−∞, 0.1) which
 (i) coincides for x ≥ −0.05 with the analytic sonic-point solution of A1 on the EC branch
@@ -170,15 +188,38 @@ equivalently the KHA system with the momentum constraint) on (−∞, 0.1) which
 (ii) coincides for x ≤ −3 with the regular-centre solution of A2 with parameters (a*, μ*):
     (n, w, v) → (n∞, w∞, −1/(2n∞)) as x → −∞ with corrections in integer powers of e^{2x},
     so the centre is regular (A − 1 = O(e^{2x}), no point mass);
-(iii) on [−3, −0.05] lies in the certified tube of §4 (point-set width ≤ 9e−45).
+(iii) on [−3, −0.05] lies in the certified *interval* tube of §4 (all V0 ∈ [c ± 1e−9]; width at
+    x = −3: 6.4e−7 in (n, w, v), 7.9e−6 in ∂(n, w, v)/∂V0).  The 2.7e−38 point-set tube encloses the
+    reference trajectory V0 = c, not the EC solution (V0* − c ≈ 6e−15 ≠ 0).
 It is the Evans–Coleman solution; uniqueness holds in the sense that no other (V0, a, μ) ∈ X
 gives such a solution (Krawczyk).  With S1's sign data this is Theorem A's existence claim
 with x_sp ↔ V0* pinned to 16 digits.
 
+**What the certificate covers, and what it does not.**  The certified object is a solution of
+the constraint-reduced polynomial system `systems.centre_system` (= S1's `rhs_scaled3`); the
+statement for the 4D CSS system (A, N, W, V) follows from it wherever S Δ̃ ≠ 0 (i.e. on
+(−∞, 0) away from the sonic point, where the polynomial 4D form is regular):
+(a) the reduced rows are *exactly* the sonic rows 2–4 with A = 1 + 2WT/S substituted and
+    (N, W, V) = (n e^{−x}, w e^{2x}, v e^{x}) — an fmpq_mpoly identity with quotients 1, t³S, t²S
+    after clearing the A-denominator by S and the negative powers of t
+    (`test_centre_system_is_the_reduced_sonic_system_exactly`) — so a reduced solution with
+    A := 1 + 2WT/S satisfies rows 2–4 of the 4D system and lies on the constraint surface C̃ = 0
+    by construction; its A also satisfies row 1, because the 4D field is tangent to the surface
+    (S Δ̃ dC̃/dx = Λ C̃, exact, `sonic_constraint_propagation`) and agrees with the reduced field in
+    the (N, W, V)-components, and the surface is the graph A = 1 + 2WT/S (∂C̃/∂A = S ≠ 0);
+(b) conversely a 4D solution with C̃ = 0 at one point has C̃ ≡ 0 by uniqueness for the scalar
+    linear ODE C̃′ = (Λ/(SΔ̃)) C̃, hence is a reduced solution; through the sonic point (Δ̃ = 0)
+    the A1 series satisfies C̃ ≡ 0 by the exponent argument of the A1/A2 note (γ ∉ ℕ⁺).
+Not part of the certificate: the derivation of the KHA ODE system from the Einstein–Euler
+equations (S1's symbolic step; checked in S1 with sympy, not by an exact identity here).  The
+midpoint m = (c, a_c, μ_c) is itself a ball (decimal constants, a_c = −ln n̂, radii ≤ 1e−41);
+K(X) ⊂ int X then holds for the box centred at any point of that ball and the enclosures above
+are valid for that centre.
+
 **A4 (zero count of V_R = V).**  Along the certified solution, V = v e^x has exactly one
 zero on (−∞, 0] (`matching.sign_certificate_v`, test): the A1 series gives V > 0 on
 [−0.05, 0] (10 sub-intervals); the integration log gives exactly one step whose certified
-tube contains v = 0, x ∈ [−0.25813, −0.25063], with v′ > 0 there and v of fixed sign on every
+tube contains v = 0, x ∈ [−0.25907, −0.25156], with v′ > 0 there and v of fixed sign on every
 other step (S1: zero at −0.2509); the A2 series gives ṽ ≤ −1/2 + 1.7e−3 < 0 for x ≤ −3.
 (The zero at the centre is the limit V → 0 as x → −∞, not a zero at a finite point.)
 Hunter type (a) on the closed sound cone is therefore certified as well.
@@ -203,7 +244,7 @@ Hunter type (a) on the closed sound cone is therefore certified as well.
   second-order (Taylor-model) representation of the set or a log-norm in an adapted norm.  The certified radius of the A1 sonic series (0.1, vs empirical 0.99) forces
   the start at x0 = −0.05, where ‖P̃^{-1}‖ ≈ 19 makes the first ~60 steps tiny (h ≈ 0.002–0.007);
   the sharper sonic tail bound suggested in the A1/A2 note would remove this.
-- Performance: ≈ 0.5–0.9 s per step, ≈ 200 steps to x_c = −3; Newton refinement + certificate
+- Performance: ≈ 0.5–0.9 s per step, 244 steps to x_c = −3; Newton refinement + certificate
   ≈ 10 min.  The bivariate machinery is not used by the integrator at all.
 
 **Recommendations for Theorem B (validated integration of the linearised system, complex κ).**
@@ -240,10 +281,25 @@ New modules (`problems/P4/src/p4/validated/`, nothing pre-existing modified):
 - `tmint.py` — the Lohner-type integrator (two sets, Grönwall–defect Jacobian, QR);
 - `matching.py` — sonic-side initial sets, centre side with derivatives, Krawczyk, the A4
   sign certificate;  `a3driver.py` — Newton refinement + certificate driver.
-Tests: `test_validated_shoot.py` (4 tests, ≈ 60 s: system/Jacobian vs S1, y-tail
-certificate vs explicit orders, ℓ′ level equations, short validated integration vs S1) and
-`test_validated_shoot_matching.py` (1 test, 232 s: the full certificate incl. A4 — passed).
-Result file: `problems/P4/results/a3_midpoint.json` (the certified midpoint and K(X) − m).
+Tests: `test_validated_shoot.py` (4 tests, ≈ 50 s: system/Jacobian vs S1, y-tail
+certificate vs explicit orders, ℓ′ level equations, short validated integration vs S1),
+`test_validated_shoot_matching.py` (1 test, ≈ 200 s: the full certificate incl. A4 and the
+certified digits of §5 — passed) and, in `test_validated_core.py`, the exact reduced↔full
+identity of §5.  Result file: `problems/P4/results/a3_midpoint.json` (the certified midpoint
+and K(X) − m).
+
+**Rigor fixes after the adversarial review (2026-08-26; no validity gap, all at the 1e−40–1e−60
+or 1-ulp level, but the certificate must be rigorous by construction).**  (1) the defect bound
+uses Ψ(z_K, f̃(z_K)) — the missing Ψ(z_K, P̃⁻¹R) Y_K term is bounded through the exact residual
+polynomial R (§3); (2) the ‖D²f̃‖ term uses (tail + ρ_R); (3) the T-row perturbation is
+bound·d_T, not 0; (4) all bounds/tails/radii are exact arb upper bounds (matching.py radii,
+tmint.py rk, ρ_R, tails, bound·d), floats only for control flow (rounded up); the ρ_R fixed
+point is strict and raises if it does not close; the sub-interval covers of a step and of
+[x0, 0] are exact balls; (5) the Jacobian tube covers both sets (r_k = larger weighted radius);
+(6) the point-set radii are the actual radii of the scaled balls p_0, p_1 (plus tails);
+(7) the A4 centre-side bound is evaluated over the a-box and the A4 step signs are arb
+comparisons stored in the log; (8)–(10) this note, the exact identity test, and the
+quoted-digits test.
 
 Reproduction:
 ```

@@ -57,33 +57,37 @@ def sonic_initial_state(c, w, x0=-0.05, K=40, m=5):
                for i in range(4)]
     scale = [None, x0a.exp(), (-2 * x0a).exp(), (-x0a).exp()]          # N e^x, W e^{-2x}, V e^{-x}
     tail_u, tail_y = cert_u.tail_bound(abs(x0a)), cert_y.tail_bound(abs(x0a))
-    a0, a1, a2, Ru, Ry = [], [], [], [], []
+    wa = arb(w)                                               # all radii below are exact arb upper bounds
+    a0, a1, a2, Ru, Ry, Rp_u, Rp_y = [], [], [], [], [], [], []
     for j, i in enumerate((1, 2, 3)):
         s = scale[i]
+        sa = abs_upper(s)
         p = [pk * s for pk in polys[i]]
         a0.append(arb(p[0].mid()))
         a1.append(arb(p[1].mid()))
         a2.append(p[2] * 2)                                   # dy/ddelta at delta = 0 (ball)
         # remainders of the degree-1 truncations of u and of y (the delta^1 term of y is the segment)
-        ru = p[0].rad() + p[1].rad() * w + sum((abs_upper(p[k]) * w**k for k in range(2, m + 1)), arb(0))
-        ru += rem_top[i] * s * w ** (m + 1) + tail_u * s
-        ry = p[1].rad() + abs_upper(p[2].rad()) * 2 * w
-        ry += sum((abs_upper(p[k]) * k * w ** (k - 1) for k in range(3, m + 1)), arb(0))
-        ry += rem_top[i] * s * (m + 1) * w**m + tail_y * s
-        Ru.append(float(abs_upper(ru)))
-        Ry.append(float(abs_upper(ry)))
+        ru = p[0].rad() + p[1].rad() * wa + sum((abs_upper(p[k]) * wa**k for k in range(2, m + 1)), arb(0))
+        ru += rem_top[i] * sa * wa ** (m + 1) + tail_u * sa
+        ry = p[1].rad() + p[2].rad() * 2 * wa
+        ry += sum((abs_upper(p[k]) * k * wa ** (k - 1) for k in range(3, m + 1)), arb(0))
+        ry += rem_top[i] * sa * (m + 1) * wa**m + tail_y * sa
+        Ru.append(abs_upper(ru))
+        Ry.append(abs_upper(ry))
+        # point set (delta = 0 exactly): the radius of the scaled ball p_0 (resp. p_1, the y-value)
+        # -- which includes the rounding of the scale factor -- plus the x-tail
+        Rp_u.append(abs_upper(p[0].rad() + tail_u * sa))
+        Rp_y.append(abs_upper(p[1].rad() + tail_y * sa))
     T = x0a.exp()
     a0.append(arb(T.mid()))
-    Ru.append(float(T.rad()))
+    Ru.append(T.rad())
     # point set: tails and rounding only (delta = 0 exactly); interval set: the segment
     # {(a1, 2 a2) delta} plus the transverse remainder box
-    Rp = [float(abs_upper(tail_u * scale[i] + polys[i][0].rad() * scale[i])) for i in (1, 2, 3)]
-    Rp += [float(T.rad())]
-    Rp += [float(abs_upper(tail_y * scale[i] + polys[i][1].rad() * scale[i])) for i in (1, 2, 3)]
+    Rp = Rp_u + [T.rad()] + Rp_y
     tau = a1 + [arb(0)] + [arb(c.mid()) for c in a2]
     iv = tmint.Remainder.from_segment(tau, w, Ru + Ry)
     st = tmint.State(x0a, a0 + a1, w, tmint.Remainder(7, Rp), iv)
-    st.info = dict(cert_u=cert_u, cert_y=cert_y, expansion=ex)
+    st.info = dict(cert_u=cert_u, cert_y=cert_y, expansion=ex, x0=x0a)
     return st
 
 
@@ -182,44 +186,48 @@ def krawczyk(st, cs, box_a, m):
 # A4: sign certificate for V = v e^x on (-inf, 0]
 # ----------------------------------------------------------------------------
 def sonic_v_positive(ex, x0, nsonic=10):
-    """The certified A1 series (with tail) has V > 0 on [x0, 0]: ball evaluation on nsonic sub-intervals."""
+    """The certified A1 series (with tail, balls over the V0 interval) has V > 0 on [x0, 0]: ball
+    evaluation on nsonic sub-intervals (exact balls covering [x0, 0])."""
+    x0 = to_arb(x0)
     ok = True
     for j in range(nsonic):
-        xb = arb(x0 * (j + 0.5) / nsonic, abs(x0) * 0.5 / nsonic)
+        xb = x0 * (2 * j + 1) / (2 * nsonic) + arb(0, abs(x0) / (2 * nsonic))
         ok = ok and bool(ex.eval(xb)[3] > 0)
     return ok
 
 
 def mid_v_one_zero(log):
-    """From the per-step ranges of v and v' over the certified step tubes (``tmint`` log): exactly
-    one step's v-range contains 0, v' is bounded away from 0 there, v > 0 on the steps before
-    (larger x) and v < 0 on the steps after.  Returns (ok, zero step (x_end, h) or None)."""
-    zero = [l for l in log if l["J"]["v_range"][0] <= 0 <= l["J"]["v_range"][1]]
+    """From the certified sign data of v and v' over the step tubes (``tmint`` log; the tubes hold
+    for every V0 in the box): exactly one step whose tube is not of fixed sign in v, v' of fixed
+    sign there, v > 0 on every earlier step (larger x) and v < 0 on every later step.  The tubes
+    are closed, so the neighbouring steps (or the sonic / centre side) fix the signs at the ends of
+    the zero step.  Returns (ok, zero step (x_end, h) or None)."""
+    zero = [k for k, l in enumerate(log) if not (l["J"]["v_pos"] or l["J"]["v_neg"])]
     if len(zero) != 1:
         return False, None
-    z = zero[0]
-    ok = (z["J"]["dv_range"][0] > 0 or z["J"]["dv_range"][1] < 0)
-    ok = ok and all(l["J"]["v_range"][0] > 0 for l in log if l["x"] > z["x"])
-    ok = ok and all(l["J"]["v_range"][1] < 0 for l in log if l["x"] < z["x"])
-    return ok, (z["x"], z["h"])
+    k = zero[0]
+    ok = log[k]["J"]["dv_sign"]
+    ok = ok and all(l["J"]["v_pos"] for l in log[:k]) and all(l["J"]["v_neg"] for l in log[k + 1:])
+    return ok, (log[k]["x"], log[k]["h"])
 
 
-def centre_v_negative(cs, a_c, x_c):
-    """v~(t') <= v~_0 + sum_{k>=1}|v~_k| t_c^k + tail < 0 for all t' <= t_c = e^{a + x_c} (A2 series)."""
-    tc = (to_arb(a_c) + to_arb(x_c)).exp().abs_upper()
+def centre_v_negative(cs, a_c, box_a, x_c):
+    """v~(t') <= v~_0 + sum_{k>=1}|v~_k| t_c^k + tail < 0 for all t' <= t_c = max_{|a-a_c|<=box_a} e^{a + x_c}
+    (A2 series, coefficient balls over the mu box): v < 0 on x <= x_c for every (a, mu) in the box."""
+    tc = (to_arb(a_c) + arb(0, box_a) + to_arb(x_c)).exp().abs_upper()
     K = cs.ex.K
     dev = sum((abs_upper(cs.ex.balls[k][2]) * tc**k for k in range(1, K + 1)), arb(0))
     dev += cs.cert_u.tail_bound(tc)
     return bool(cs.ex.balls[0][2] + dev < 0), float(dev)
 
 
-def sign_certificate_v(st, cs, a_c, nsonic=10):
-    """Certify that V = v e^x has exactly one zero on (-inf, 0] along the EC solution:
-    (i) sonic side on [x0, 0], (ii) the integrated range [x_c, x0], (iii) the centre side x <= x_c.
-    Returns (ok, details)."""
-    x0 = float(st.log[0]["x"] + st.log[0]["h"]) if st.log else float(st.x)
+def sign_certificate_v(st, cs, a_c, box_a, nsonic=10):
+    """Certify that V = v e^x has exactly one zero on (-inf, 0] along the EC solution (for every
+    (V0, a, mu) in the Krawczyk box): (i) sonic side on [x0, 0], (ii) the integrated range [x_c, x0],
+    (iii) the centre side x <= x_c.  Returns (ok, details)."""
+    x0 = st.info["x0"]                                       # exact initial x of the integration
     sonic_ok = sonic_v_positive(st.info["expansion"], x0, nsonic)
     mid_ok, zero_step = mid_v_one_zero(st.log)
-    centre_ok, dev = centre_v_negative(cs, a_c, st.x)
+    centre_ok, dev = centre_v_negative(cs, a_c, box_a, st.x)
     return sonic_ok and mid_ok and centre_ok, dict(sonic_ok=sonic_ok, mid_ok=mid_ok, zero_step=zero_step,
                                                    centre_ok=centre_ok, centre_dev=dev)

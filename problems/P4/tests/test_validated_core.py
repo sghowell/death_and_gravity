@@ -8,6 +8,7 @@ from p4 import css
 from p4.validated import recursion, sonic
 from p4.validated.arbseries import Series, precision
 from p4.validated.biseries import BiSeries
+from p4.validated.shootsys import remap
 from p4.validated.systems import (
     centre_system,
     sonic_constraint_poly,
@@ -60,6 +61,57 @@ def test_polynomial_systems_match_S1_rhs(seed):
             lhs = sum(float(C.P[r][i](*args)) * rhs[i] for i in range(3))
             q = float(C.Q[r](*args))
             assert abs(lhs - q) < 1e-12 * (1 + abs(q))
+
+
+def _row(sys, r, ctx, dgens):
+    """Residual row  sum_i P[r][i] dU_i - Q[r]  of a PolySystem as a polynomial in ``ctx``
+    (whose first generators are those of the system, followed by the derivative generators ``dgens``)."""
+    g = {k: k for k in range(sys.d + 1)}
+    row = -remap(sys.Q[r], ctx, g)
+    for i in range(sys.d):
+        if not sys.P[r][i].is_zero():
+            row += remap(sys.P[r][i], ctx, g) * dgens[i]
+    return row
+
+
+def test_centre_system_is_the_reduced_sonic_system_exactly():
+    """Exact fmpq_mpoly identity: the centre rows (N, 3, 4) are the sonic rows 2-4 with the momentum
+    constraint A = 1 + 2WT/S (T = 1 + V^2/3 + (4/3)NV, S = 1 - V^2) substituted and the change of
+    variables (N, W, V) = (n/t, w t^2, v t), d/dx = theta, i.e. (N', W', V') = ((n' - n)/t,
+    t^2(w' + 2w), t(v' + v)); after clearing the A-denominator by S and the negative powers of t by t
+    the quotients are the units 1, t^3 S, t^2 S (remainders exactly zero)."""
+    Ssys, Csys = sonic_system(), centre_system()
+    cs = fmpq_mpoly_ctx.get(("t", "A", "N", "W", "V", "dA", "dN", "dW", "dV"))
+    cc = fmpq_mpoly_ctx.get(("t", "n", "w", "v", "dn", "dw", "dv"))
+    t, n, w, v, dn, dw, dv = cc.gens()
+    S = 1 - v**2 * t**2
+    Tc = 1 + v**2 * t**2 * fmpq(1, 3) + fmpq(4, 3) * n * v                # T after the substitution
+    # image of each sonic generator as (numerator, t-weight, S-weight): X = num / (t^a S^b)
+    img = {0: (t, 0, 0), 1: (S + 2 * w * t**2 * Tc, 0, 1), 2: (n, 1, 0), 3: (w * t**2, 0, 0),
+           4: (v * t, 0, 0), 5: None, 6: (dn - n, 1, 0), 7: (t**2 * (dw + 2 * w), 0, 0), 8: (t * (dv + v), 0, 0)}
+
+    def substitute(poly):
+        """t^Amax S^Bmax * poly(images), a polynomial in cc (Amax, Bmax the maximal weights)."""
+        terms = [(list(map(int, e)), fmpq(c)) for e, c in poly.terms()]
+        assert all(e[0] == 0 and e[5] == 0 for e, _ in terms)              # autonomous; no A' in rows 2-4
+        wts = [(sum(e[k] * img[k][1] for k in range(9) if e[k]), sum(e[k] * img[k][2] for k in range(9) if e[k]))
+               for e, _ in terms]
+        Amax, Bmax = max(a for a, _ in wts), max(b for _, b in wts)
+        tot = cc.constant(0)
+        for (e, c), (a, b) in zip(terms, wts):
+            term = cc.constant(0) + c
+            for k in range(9):
+                if e[k]:
+                    term *= img[k][0] ** e[k]
+            tot += term * t ** (Amax - a) * S ** (Bmax - b)
+        return tot
+
+    units = [cc.constant(1), t**3 * S, t**2 * S]
+    for r in (1, 2, 3):
+        sub = substitute(_row(Ssys, r, cs, cs.gens()[5:]))
+        crow = _row(Csys, r - 1, cc, (dn, dw, dv))
+        q, rem = divmod(sub, crow)
+        assert rem.is_zero() and q == units[r - 1], (r, q, rem)
 
 
 def test_constraint_is_invariant_of_4d_flow():

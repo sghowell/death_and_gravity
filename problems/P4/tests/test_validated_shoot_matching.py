@@ -22,6 +22,9 @@ M_V0 = "0.112439401388092"
 M_A = None            # filled from the driver output below
 M_MU = None
 HALF = (1e-9, 1e-8, 1e-8)
+# certified digits as quoted in the note (V0*, a*, mu*, n_inf, w_inf, v_inf): (midpoint, radius)
+QUOTED = [("0.11243940138810", 8e-15), ("-0.2123656467589", 2e-13), ("8.90132327776", 1.2e-11),
+          ("1.2365999611913", 1e-13), ("5.82098013164", 1.2e-11), ("-0.4043344781592", 8e-14)]
 
 
 def _midpoint():
@@ -51,7 +54,14 @@ def test_krawczyk_certificate():           # slow (~3-5 min): the full certified
         assert res["ok"], (res["Kbox"], det["Fm"])
         for i, hw in enumerate(HALF):
             assert float(abs(res["Kbox"][i]).abs_upper()) < hw
-        # (iv) A4: V = v e^x has exactly one zero on (-inf, 0] along the certified solution
-        ok, info = matching.sign_certificate_v(st, res["centre"], a_c)
+        # (iv) the certified digits quoted in notes/s2-validated-shooting.md section 5: the enclosures
+        # m + (K(X) - m) of (V0*, a*, mu*) and the derived (n_inf, w_inf, v_inf) lie inside the quoted balls
+        V0s, a_s, mu_s = (c + res["Kbox"][0], a_c + res["Kbox"][1], mu_c + res["Kbox"][2])
+        n_inf = (-a_s).exp()
+        derived = [V0s, a_s, mu_s, n_inf, mu_s * (2 * a_s).exp(), -1 / (2 * n_inf)]
+        for val, (mid, rad) in zip(derived, QUOTED):
+            assert (arb(mid) + arb(0, rad)).contains(val), (mid, rad, val.str(20, radius=True))
+        # (v) A4: V = v e^x has exactly one zero on (-inf, 0] along the certified solution
+        ok, info = matching.sign_certificate_v(st, res["centre"], a_c, HALF[1])
         assert ok, info
         assert -0.3 < info["zero_step"][0] < -0.2                     # S1: the zero is at x = -0.2509

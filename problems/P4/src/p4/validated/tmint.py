@@ -14,16 +14,19 @@ keeps every ball tight (interval Taylor coefficients of this system blow up by
     (``tailbound``) and of y from the affine-contraction argument (``lintail``);
     h <= hfrac * nu;
  2. J, an interval enclosure of the Jacobian of the step map over the hull of the
-    interval set: the point fundamental-matrix series Y_K(s) plus a Groenwall bound
-    of its defect along the certified tube  sum z_i s^i + tail + rho_R  that
-    contains every solution started in the hull (``jacobian_step``);
+    larger of the two sets: the point fundamental-matrix series Y_K(s) plus a
+    Groenwall bound of its defect along the certified tube  sum z_i s^i + tail + rho_R
+    that contains every solution started in either hull (``jacobian_step``);
  3. mean-value form: Phi~(m + d) in Phi~(m) + J d for both sets; the tails and the
     rounding radii of the new midpoint go into the sets.
-Everything is ball arithmetic; the reference trajectory itself is only the
-midpoint of the point set (its true value is enclosed by the point set).
+Everything is ball arithmetic: every bound, tail and radius on the certified path
+is an exact arb upper bound (floats appear only in control flow, rounded up, and
+in logs); the reference trajectory itself is only the midpoint of the point set
+(its true value is enclosed by the point set).
 """
 from __future__ import annotations
 
+import math
 from dataclasses import dataclass, field
 
 import numpy as np
@@ -45,6 +48,23 @@ def _colvec(v):
 
 def _rad_ball(x):
     return arb(0, abs_upper(x))
+
+
+def _float_up(x):
+    """A double f >= x (x an arb), i.e. float(x) rounded toward +inf: for control flow only; the
+    certificate itself keeps the arb value."""
+    f = float(x.upper())
+    while not (arb(f) >= x):
+        f = math.nextafter(f, math.inf)
+    return f
+
+
+def _amax(vals):
+    """Rigorous maximum (as an exact arb upper bound) of nonnegative arb values."""
+    out = arb(0)
+    for v in vals:
+        out = out.max(v)
+    return out
 
 
 class Remainder:
@@ -77,6 +97,10 @@ class Remainder:
     def hull(self):
         v = self.A * _colvec(self.r)
         return [_rad_ball(v[i, 0]) for i in range(self.m)]
+
+    def radii(self):
+        """Exact arb radii of the hull (the certified widths; ``widths`` is their float version, logs only)."""
+        return [b.rad() for b in self.hull()]
 
     def widths(self):
         return [float(b.rad()) for b in self.hull()]
@@ -133,33 +157,61 @@ class Integrator:
         self.K, self.hmax, self.hfrac, self.nsub, self.verbose = K, hmax, hfrac, nsub, verbose
         self.hess = ss.Hessian(self.sys7)
 
-    def jacobian_step(self, co, tails, h, widths):
-        """Interval enclosure J of d Phi~_{-h}/dz over the hull (radius rk) of the set (7x7).
+    def jacobian_step(self, co, tails, h, hull_radii):
+        """Interval enclosure J of d Phi~_{-h}/dz over the hull (weighted radius rk) of the sets (7x7).
 
-        Y_K(s) = sum_{i<=K} Y_i s^i is the (tight) fundamental-matrix series through m.
-        Every solution started within the (weighted) radius rk of m stays, for |s| <= h, in
-        the tube Z(s) = sum_i z_i s^i + tail + rho_R,  rho_R = rk e^{L h}  (Groenwall,
-        L >= sup ||Df~|| on the tube; fixed point in rho_R).  Its fundamental matrix solves
-        P~(z) Y' = G(z) Y with z in Z(s); with the defect D^(s) = P~(z_K(s)) Y_K'(s) - G(z_K(s)) Y_K(s)
-        (an exact polynomial in s with tiny ball coefficients: truncation only) and the
-        variation of A = Df~ across the tube's cross-section, ||A(s; z) - A_0(s)|| <= ||D^2 f~|| rho_R,
-            ||Y(-h; z) - Y_K(-h)|| <= h e^{L h} ( ||P~^{-1}|| sup|D^| + ||D^2 f~|| rho_R sup|Y_K| ).
-        All norms are weighted (y scaled by lam = 1/max|y|)."""
+        Y_K(s) = sum_{i<=K} Y_i s^i is the (tight) fundamental-matrix series through m and
+        z_K(s) = sum_{i<=K} z_i s^i the truncated reference solution (x-tail <= ``tails``).  Every
+        solution z(s) started within the weighted radius rk of m stays, for |s| <= h, in the tube
+            Z(s) = z_K(s) + [tail + rho_R],   rho_R > rk e^{L h}   (Groenwall, L >= sup ||Df~|| on the tube;
+        fixed point in rho_R), and its fundamental matrix solves Y' = A(s) Y, A(s) = Df~(z(s)).  With
+        A_0(s) = Df~(z_K(s)),
+            (Y - Y_K)' = A (Y - Y_K) - E,    E := Y_K' - A Y_K = (Y_K' - A_0 Y_K) + (A_0 - A) Y_K,
+        so  ||Y(-h; z) - Y_K(-h)|| <= h e^{L h} sup_{|s|<=h} ||E(s)||.  The two parts of E:
+         (a) Y_K' - A_0 Y_K = P~(z_K)^{-1} D^(s) with the exact defect polynomial
+                 D^(s) = P~(z_K) Y_K' - [DQ~(z_K) - Psi(z_K, f~(z_K))] Y_K,  Psi(z, v)_{rl} = sum_i v_i dP~_{ri}/dz_l
+             (P~ Df~ = DQ~ - Psi(z, f~(z)) by differentiating P~ f~ = Q~).  The polynomial formed below,
+             D^_K, uses Psi(z_K, z_K') (the series derivative) instead of Psi(z_K, f~(z_K)).  Psi is
+             linear in v and f~(z_K) - z_K' = -P~(z_K)^{-1} R(s), R(s) := P~(z_K) z_K' - Q~(z_K) the ODE
+             residual of the truncation (an exact polynomial, O(s^K)); hence
+                 D^ = D^_K - Psi(z_K, P~(z_K)^{-1} R) Y_K,   sup||D^|| <= Dsup + |dP~| Pinv Rsup Ysup,
+             with |dP~| := max_r sum_{i,l} |dP~_{ri}/dz_l| Sc_r/(Sc_i Sc_l) on the tube (so that
+             ||Psi(z, v)|| <= |dP~| ||v||) and Dsup, Rsup, Ysup the coefficient sums of D^_K, R, Y_K on
+             |s| <= h (no s-interval dependency blow-up; truncation only).
+         (b) ||(A_0 - A) Y_K|| <= ||D^2 f~|| ||z_K(s) - z(s)|| ||Y_K|| <= H2 (tail + rho_R) Ysup
+             (mean value on the convex tube box, which contains z_K(s) and z(s)).
+        Altogether
+            ||Y(-h; z) - Y_K(-h)|| <= h e^{L h} [ Pinv (Dsup + Pinv |dP~| Rsup Ysup) + H2 (tail + rho_R) Ysup ].
+        All norms are weighted (y scaled by lam, a power of two <= 1/max|y|, so every weight ratio is
+        exact); every bound is an exact arb upper bound, floats only for control flow (rounded up).
+        ``hull_radii``: per-component arb radii of every set to be propagated (point and interval set);
+        the tube is built for the larger weighted radius, so the bound is valid for both sets.
+        Returns (Jmid, bound, Sc) with ``bound`` an arb."""
         K = self.K
-        lam = 1 / max(1.0, max(abs(float(c)) for c in co[0][DU:]))
+        ymax = max(abs(float(c)) for c in co[0][DU:])
+        lam = 1.0 if ymax <= 1.0 else 2.0 ** -math.frexp(ymax)[1]      # power of two in (1/(2 ymax), 1/ymax]
         Sc = [1.0] * DU + [lam] * DY
+        hh = arb(h)
 
         def wnorm(M):
             return norm_inf(arb_mat([[M[r, c] * (Sc[r] / Sc[c]) for c in range(DZ)] for r in range(DZ)]))
+
+        def sup_poly(s):
+            """sum_k |s_k| h^k  >=  sup_{|s| <= h} |s(s)|  for a polynomial Series."""
+            tot, hp = arb(0), arb(1)
+            for k in range(len(s)):
+                tot += abs_upper(s[k]) * hp
+                hp *= hh
+            return tot
 
         Yt = ss.variational_coefficients(self.sys7, co, K, BLOCKS)
         zs = recursion.series_from_coefs(co, DZ, cap=None, extra_zero=False)
         Pser = self.sys7.P_series(zs)
         dQs, Psis = self.sys7.dQ_series(zs), self.sys7.psi_series(zs)
+        Rres = self.sys7.residual(zs)                    # R(s) = P~(z_K) z_K' - Q~(z_K), exact polynomial
         YK = [[Series([Yt[i][r, c] for i in range(K + 1)]) for c in range(DZ)] for r in range(DZ)]
         dYK = [[Series([Yt[i][r, c] * i for i in range(1, K + 1)]) for c in range(DZ)] for r in range(DZ)]
-        hh = arb(h)
-        Dsup, Ysup = arb(0), arb(0)
+        Dsup, Ysup, Rsup = arb(0), arb(0), arb(0)
         for r in range(DZ):
             rowD, rowY = arb(0), arb(0)
             for c in range(DZ):
@@ -168,28 +220,33 @@ class Integrator:
                     if len(Pser[r][l]) > 1 or Pser[r][l][0] != 0:
                         acc = acc + Pser[r][l] * dYK[l][c]
                     acc = acc - (dQs[r][l] - Psis[r][l]) * YK[l][c]
-                tot, hp = arb(0), arb(1)
-                for k in range(len(acc)):
-                    tot += abs_upper(acc[k]) * hp
-                    hp *= hh
-                rowD += tot * (Sc[r] / Sc[c])
-                ty, hp = arb(0), arb(1)
-                for i in range(K + 1):
-                    ty += abs_upper(Yt[i][r, c]) * hp
-                    hp *= hh
-                rowY += ty * (Sc[r] / Sc[c])
+                rowD += sup_poly(acc) * (Sc[r] / Sc[c])
+                rowY += sup_poly(YK[r][c]) * (Sc[r] / Sc[c])
             Dsup, Ysup = Dsup.max(rowD), Ysup.max(rowY)
-        tail_u, tail_y = tails
+            Rsup = Rsup.max(sup_poly(Rres[r]) * Sc[r])
+        tail_w = tails[0].max(tails[1] * lam)             # weighted norm of the x-tail (z_K vs reference)
         Id = [[arb(1) if i == j else arb(0) for j in range(DZ)] for i in range(DZ)]
-        rk = max(Sc[j] * widths[j] for j in range(DZ))          # weighted radius of the set
+        rk = _amax(Sc[j] * hr[j] for hr in hull_radii for j in range(DZ))   # weighted radius covering every set
+        dP = self.sys7.dP()
+
+        def dP_norm(args):
+            best = arb(0)
+            for r in range(DZ):
+                row = arb(0)
+                for i in range(DZ):
+                    for l in range(DZ):
+                        if not dP[r][i][l].is_zero():
+                            row += abs_upper(ss.eval_box(dP[r][i][l], args)) * (Sc[r] / (Sc[i] * Sc[l]))
+                best = best.max(row)
+            return best
 
         def tube_pass(rho_R):
-            Lmax, Pinv, H2 = arb(0), arb(0), arb(0)
+            Lmax, Pinv, H2, dPn = arb(0), arb(0), arb(0), arb(0)
             vr, dvr = None, None                         # ranges of v and v' over the step tube (A4)
-            for j in range(self.nsub):
-                sj = arb(-h * (j + 0.5) / self.nsub, h * 0.5 / self.nsub)
+            for j in range(self.nsub):                   # exact balls covering [-h, 0]
+                sj = (arb(-h) * (2 * j + 1)) / (2 * self.nsub) + arb(0, hh / (2 * self.nsub))
                 Z = ss.horner_vec(co, sj)
-                Z = [Z[i] + arb(0, (tail_u if i < DU else tail_y) + rho_R / Sc[i]) for i in range(DZ)]
+                Z = [Z[i] + arb(0, tails[0 if i < DU else 1] + rho_R / Sc[i]) for i in range(DZ)]
                 f, P = ss.rhs_enclosure(self.sys7, Z, BLOCKS)
                 vr = Z[2] if vr is None else vr.union(Z[2])
                 dvr = f[2] if dvr is None else dvr.union(f[2])
@@ -197,29 +254,41 @@ class Integrator:
                 Lmax = Lmax.max(wnorm(A))
                 Pinv = Pinv.max(wnorm(ss.block_solve(P, Id, BLOCKS)))
                 H2 = H2.max(self.hess.norm(Z, BLOCKS, Sc))
-            g = float(abs_upper((Lmax * h).exp()))
-            bound = abs_upper((Lmax * h).exp() * h * (Pinv * Dsup + H2 * rho_R * Ysup))
-            return g, bound, dict(L=float(Lmax), Pinv=float(Pinv), H2=float(H2), v_range=(float(vr.lower()),
-                                  float(vr.upper())), dv_range=(float(dvr.lower()), float(dvr.upper())))
+                dPn = dPn.max(dP_norm([arb(0)] + Z))
+            eLh = (Lmax * hh).exp()
+            g = _float_up(eLh)
+            E = Pinv * (Dsup + Pinv * dPn * Rsup * Ysup) + H2 * (rho_R + tail_w) * Ysup
+            bound = abs_upper(eLh * hh * E)
+            info = dict(L=float(Lmax), Pinv=float(Pinv), H2=float(H2), dPn=float(dPn),
+                        v_range=(float(vr.lower()), float(vr.upper())),
+                        dv_range=(float(dvr.lower()), float(dvr.upper())),
+                        v_pos=bool(vr > 0), v_neg=bool(vr < 0), dv_sign=bool(dvr > 0) or bool(dvr < 0))
+            return g, bound, info
 
-        growth = 1.0
+        growth, validated = 1.0, False
         for _ in range(6):                           # fixed point on the tube enlargement rho_R (Groenwall)
-            rho_R = rk * growth
+            rho_R = abs_upper(rk * growth)
             g, bound, info = tube_pass(rho_R)
             if g > 4.0:
                 raise RuntimeError("L h too large for the tube enlargement; reduce the step")
-            if g <= growth or rk == 0.0:
+            if g < growth or rk == 0:                # rk e^{L h} <= rk g < rk growth <= rho_R: invariant tube
+                validated = True
                 break
             growth = 1.5 * g
-        # refinement: the deviation of solutions started within rk is <= (sup|Y_K| + bound) rk
-        rho_R2 = rk * float(abs_upper(Ysup + bound)) * 1.01
+        if not validated:
+            raise RuntimeError("tube enlargement did not converge; reduce the step")
+        # refinement (valid because the tube above is): a solution started within rk deviates from the
+        # reference by at most (sup|Y_K| + bound) rk for |s| <= h (mean value with the fundamental
+        # matrix), so the smaller tube rho_R2 > that also contains every such solution
+        rho_R2 = abs_upper(rk * (Ysup + bound) * 1.01)
         if rho_R2 < rho_R:
             g2, bound2, info2 = tube_pass(rho_R2)
             if bound2 < bound:
                 bound, info, rho_R = bound2, info2, rho_R2
         Jmid = ss.horner_mat(Yt, arb(-h))
-        self.last = dict(Dsup=float(Dsup), bound=float(bound), rho_R=rho_R, Ysup=float(Ysup), **info)
-        return Jmid, float(bound), Sc
+        self.last = dict(Dsup=float(Dsup), Rsup=float(Rsup), bound=float(bound), rho_R=float(rho_R),
+                         Ysup=float(Ysup), rk=float(rk), **info)
+        return Jmid, bound, Sc
 
     def step(self, st, x_end):
         K = self.K
@@ -232,10 +301,11 @@ class Integrator:
         cert_y = lintail.linear_tail_certificate(self.sys7, self.eqs7, co, DU, cert_u)
         nu = float(cert_u.nu)
         h = min(self.hmax, self.hfrac * nu, float(st.x - x_end))
+        hull_radii = [S.radii() for S in (st.pt, st.iv)]          # exact arb radii before the step
         for _ in range(12):
-            tails = (float(abs_upper(cert_u.tail_bound(arb(h)))), float(abs_upper(cert_y.tail_bound(arb(h)))))
+            tails = (cert_u.tail_bound(arb(h)), cert_y.tail_bound(arb(h)))      # exact arb upper bounds
             try:
-                J = self.jacobian_step(co, tails, h, st.iv.widths())
+                J = self.jacobian_step(co, tails, h, hull_radii)
                 break
             except (RuntimeError, ZeroDivisionError):
                 h *= 0.5
@@ -243,18 +313,19 @@ class Integrator:
             raise RuntimeError(f"Jacobian enclosure failed at x={st.x}")
         Jmid, bound, Sc = J
         mn = ss.horner_vec(co, arb(-h))
-        extra = [arb(0, abs_upper(mn[i].rad() + (tails[0] if i < DU else tails[1]))) for i in range(DZ)]
-        for S in (st.pt, st.iv):
-            d = S.widths()
-            du = max(d[:DU])                              # u-rows of the perturbation see (d_u, d_T) only
-            dw = max(Sc[j] * d[j] for j in range(DZ))     # weighted norm of the whole deviation
-            pert = [arb(0, bound * du) if i < DY else arb(0) for i in range(DU)]        # T exact: 0
+        extra = [arb(0, mn[i].rad() + tails[0 if i < DU else 1]) for i in range(DZ)]
+        for S, d in zip((st.pt, st.iv), hull_radii):
+            du = _amax(d[:DU])                            # u-rows of the perturbation see (d_u, d_T) only
+            dw = _amax(Sc[j] * d[j] for j in range(DZ))   # weighted norm of the whole deviation
+            pert = [arb(0, bound * du) for i in range(DY)]
+            pert += [arb(0, bound * d[DU - 1])]           # T-row: (e^{-h} - Y_K(-h)_TT) d_T, |.| <= bound d_T
             pert += [arb(0, bound * dw / Sc[DU + i]) for i in range(DY)]
             S.propagate(Jmid, extra, pert)
         st.m = [arb(c.mid()) for c in mn]
         st.x = st.x - arb(h)
         st.log.append(dict(x=float(st.x), h=h, nu=nu, eps_u=float(cert_u.eps), eps_y=float(cert_y.eps),
-                           tails=tails, J=dict(self.last), pt=st.pt.widths(), iv=st.iv.widths()))
+                           tails=(float(tails[0]), float(tails[1])), J=dict(self.last), pt=st.pt.widths(),
+                           iv=st.iv.widths()))
         if self.verbose:
             p, v = st.pt.widths(), st.iv.widths()
             print(f"x={float(st.x):+.5f} h={h:.4f} nu={nu:.3g} L={self.last['L']:.3g} Jbound={self.last['bound']:.1e} "
