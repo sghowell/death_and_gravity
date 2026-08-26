@@ -11,7 +11,11 @@ a verified-feasible class member reaches H₀ = 69.53 (at r_lo), so the true max
 | v2 + class-only κ-difference bounds | 1340 | 75.5 | low-z overfitting removed; mid-z links (D unconstrained by BAO, factor-2 brackets) still leak ~0.07 mag → hockey stick at z<0.05 |
 | v2 + bracket-aware differences, 3 tangents, OBBT on κ | 1341 | 75.4 | same mechanism |
 | κ-only (no ũ): exact SN, class-only first/second differences, BAO via 6 exponential sandwiches | 1344 | 76.1 (subset tightening) | class-only linear conditions lose the slope–history coupling; also: subset tightening is invalid as a *useful* outer set (subset χ² floor ≈ 250 vs T ≈ 1384 → BAO ±30σ) |
-| λ–κ–ρ (LKR): exact class in λ = log₁₀ ũ, exact SN in κ, segment identities in scale-free exponential form | (running) | (running) | expected floor ≈ class minimum; brackets on differences only |
+| λ–κ–ρ (LKR): exact class in λ = log₁₀ ũ, exact SN in κ, segment identities in scale-free exponential form | 1362.7 | 72.22 | converges in 3 full-sample passes; node-level slack 0; the whole floor gap is the per-SN interpolation slack (∝ h²), used coherently (first-order estimate 17.0; midpoint ×2 → 4.1, ×4 → 1.0) |
+| LKR on the ×4 refined grid (373 nodes), certified chain | (running) | (running) | expected floor within ~1 of the class minimum |
+
+Certified anchors (all rigorous): max_F H₀ ≥ 69.5313 (L=1.5, Δ=4), ≥ 68.3481 (Δ=1), ≥ 70.5647 (Δ=9);
+≥ 69.7527 (L=1), 69.5835 (L=2), 69.7414 (L=3), 70.1621 (L=5), 71.5592 (L=10) at Δ=4.
 
 ## Lessons
 1. Any relaxation with per-object slack that scales with an *absolute* bracket width cannot bootstrap
