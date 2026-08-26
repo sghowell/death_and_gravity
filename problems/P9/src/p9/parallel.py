@@ -41,7 +41,8 @@ def tighten_parallel(fr: Frozen, br: Brackets3, T: float, n_workers: int = 6, la
         q = np.zeros(m.nvar); q[m.idx["yb"][p]] = 1.0
         jobs.append(("yb", p, +1, q)); jobs.append(("yb", p, -1, -q))
     t0 = time.time()
-    ctx = mp.get_context("fork")
+    # "spawn": fork after BLAS/Rust threads have started deadlocks on macOS
+    ctx = mp.get_context("spawn")
     with ctx.Pool(n_workers, initializer=_init, initargs=(fr, br, T)) as pool:
         vals = pool.map(_solve_obj, [j[3] for j in jobs], chunksize=4)
     rho_lo = br.rho_lo.copy(); rho_hi = br.rho_hi.copy()
