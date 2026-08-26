@@ -49,7 +49,10 @@ def _job(args):
     q = np.zeros(_M.nvar)
     for v, cf in qd.items():
         q[v] = cf
-    val, x, z = _M.solve_dual(q)
+    try:
+        val, x, z = _M.solve_dual(q)
+    except RuntimeError as e:      # solver failure: no tightening for this quantity (still valid)
+        return tag, None, None
     n_eq, n_in = _M._n_eq, _M._n_in
     lb = _V.certify(z[:n_eq], z[n_eq:n_eq + n_in], z[n_eq + n_in:], qd, verbose=False)
     np.savez_compressed(_DIR / f"{tag}.npz", z=z, q=list(qd.items()), primal=val, rigorous=lb)
@@ -79,7 +82,10 @@ def certified_pass(fr, br, T, cert_dir, pass_id, workers, lam_nodes=None):
     rho_lo = br.rho_lo.copy(); rho_hi = br.rho_hi.copy(); lam_lo = br.lam_lo.copy(); lam_hi = br.lam_hi.copy()
     yb_lo = br.yb_lo.copy(); yb_hi = br.yb_hi.copy()
     worst_gap = 0.0
+    n_fail = sum(1 for _, val, _ in res if val is None)
     for tag, val, lb in res:
+        if val is None:
+            continue
         worst_gap = max(worst_gap, abs(val - lb))
         kind = tag.split("_")[1]
         i = int(kind[3:]) if kind.startswith("rho") else int(kind[3:]) if kind.startswith("lam") else int(kind[2:])
@@ -94,7 +100,7 @@ def certified_pass(fr, br, T, cert_dir, pass_id, workers, lam_nodes=None):
             if side == "lo": yb_lo[i] = max(yb_lo[i], lb)
             else: yb_hi[i] = min(yb_hi[i], -lb)
     print(f"    certified pass {pass_id}: {len(jobs)} solves+certificates on {workers} workers in {time.time()-t0:.0f}s; "
-          f"max |solver - rigorous| = {worst_gap:.2e}", flush=True)
+          f"max |solver - rigorous| = {worst_gap:.2e}; solver failures (left untightened): {n_fail}", flush=True)
     return Brackets3(rho_lo, rho_hi, yb_lo, yb_hi, lam_lo, lam_hi)
 
 

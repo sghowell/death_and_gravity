@@ -69,11 +69,18 @@ class LKRModel2:
         self.Pw = sp.diags(dvec).tocsc()
 
     def _solve(self, P, q):
-        solver = clarabel.DefaultSolver(P, q, self.A, self.b, self.cones, self.settings)
-        sol = solver.solve()
-        if "Solved" not in str(sol.status):
-            raise RuntimeError(f"clarabel status {sol.status}")
-        return sol
+        """Solve; on numerical trouble retry at looser tolerances (the verifier certifies any returned
+        dual, so a looser solve only weakens the bound slightly)."""
+        last = None
+        for tol in (self.settings.tol_gap_abs, 1e-8, 1e-7, 1e-6):
+            st = clarabel.DefaultSettings(); st.verbose = False
+            st.tol_gap_abs = tol; st.tol_gap_rel = tol; st.tol_feas = tol; st.max_iter = 500
+            solver = clarabel.DefaultSolver(P, q, self.A, self.b, self.cones, st)
+            sol = solver.solve()
+            last = str(sol.status)
+            if "Solved" in last:
+                return sol
+        raise RuntimeError(f"clarabel status {last}")
 
     def solve_dual(self, q):
         """Returns (primal value, x, z) for min q.y."""
