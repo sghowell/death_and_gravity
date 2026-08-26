@@ -18,18 +18,24 @@ Fix the frozen inputs D of `data/MANIFEST.json`:
 - Sound horizon: r_d ∈ [r_lo, r_hi] = [146.57, 147.61] Mpc (Planck 2018
   r_drag = 147.09 ± 0.26 Mpc, ±2σ box).
 
-Fix the class parameters: z_max = 2.5, X = ln(1+z_max), a uniform grid
-x_i = iX/N (i = 0..N) in x = ln(1+z) with N = 50, and a slope bound L > 0.
+Fix the class parameters: z_max = 2.5, X = ln(1+z_max), the grid G in
+x = ln(1+z) defined by x_0 = 0, x_1 = ln(1.005), x_{k+1} = 1.1 x_k while the
+spacing is below 0.02, then uniform spacing 0.02 up to X (94 nodes; v2 —
+geometric at low z so that the interpolation bound of §3.2 is small there),
+and a slope bound L > 0. The a priori box 20 ≤ H(z) ≤ 2000 km s⁻¹ Mpc⁻¹ is
+part of the class.
 
-**Class.** C(N, L) is the set of continuous functions ũ: [0, X] → (0, ∞)
-that are linear on each segment [x_{i−1}, x_i] and satisfy, for every
+**Class.** C(G, L) is the set of continuous functions ũ: [0, X] → (0, ∞)
+that are linear on each segment [x_k, x_{k+1}] of G and satisfy, for every
 segment,
 
-    |ũ_i − ũ_{i−1}| ≤ L · h · min(ũ_{i−1}, ũ_i),   h = X/N.
+    |ũ_{k+1} − ũ_k| ≤ L · h_k · min(ũ_k, ũ_{k+1}),   h_k = x_{k+1} − x_k,
 
-Here ũ(x) = c / (r_d H(z)) is the dimensionless Hubble distance in units of
-r_d. Every member satisfies |d ln H / d ln(1+z)| ≤ L on each segment, so
-C(N, L) ⊂ Lip_L(ln H). (Flat ΛCDM has d ln H/d ln(1+z) = (3/2)Ω_m(z) ≤ 1.5.)
+together with the box. Here ũ(x) = c / (r_d H(z)) is the dimensionless
+Hubble distance in units of r_d. Every member satisfies
+|d ln H / d ln(1+z)| ≤ L on each segment, so C(G, L) ⊂ Lip_L(ln H). (Flat
+ΛCDM has d ln H/d ln(1+z) = (3/2)Ω_m(z) ≤ 1.5, so it lies in the class for
+L ≥ 1.5 approximately; for smaller L the class excludes it.)
 
 **Observables** (flat FLRW):
 
@@ -44,24 +50,28 @@ absolute magnitude, the constant 25, and 5 log₁₀(r_d/Mpc)),
               + rᵀ C_SN⁻¹ r,   r_j = m_j − 5 log₁₀ D̃_L(zHD_j, zHEL_j) − M'.
 
 **Feasible set.** For Δ > 0 and an explicit reference point (ũ*, M'*) ∈
-C(N, L) × ℝ recorded in the certificate,
+C(G, L) × ℝ recorded in the certificate,
 
-    F(N, L, Δ) = { (ũ, M') : ũ ∈ C(N, L),  χ²(ũ, M') ≤ T },  T := χ²(ũ*, M'*) + Δ.
+    F(G, L, Δ) = { (ũ, M') : ũ ∈ C(G, L),  χ²(ũ, M') ≤ T },  T := χ²(ũ*, M'*) + Δ.
 
 Because T ≥ min χ² + Δ for any reference point, F contains the Δ-sublevel
-set of the minimum; a bound over F is therefore a bound over the latter.
+set of the class minimum; a bound over F is therefore a bound over the
+latter. Two reference points are reported: the (locally optimized, exactly
+feasible) class minimizer, giving the profile-likelihood statement, and the
+flat-ΛCDM best fit when it lies in the class, giving the statement "every
+class member fitting at least as well as ΛCDM up to Δ has H₀ ≤ …".
 
-**Claim to be certified.** For all (ũ, M') ∈ F(N, L, Δ) and all
+**Claim to be certified.** For all (ũ, M') ∈ F(G, L, Δ) and all
 r_d ∈ [r_lo, r_hi]:
 
-    H₀ := c / (r_d · ũ(0)) ≤ H_max(N, L, Δ) := c / (r_lo · ũ₀^min),
+    H₀ := c / (r_d · ũ(0)) ≤ H_max(G, L, Δ) := c / (r_lo · ũ₀^min),
 
 where ũ₀^min is a certified lower bound on min{ ũ(0) : (ũ, M') ∈ F }.
 
-The deliverable is the curve L ↦ H_max(50, L, Δ) for
-L ∈ {0.5, 1, 1.5, 2, 3, 5, 10, ∞} and Δ ∈ {1, 4, 9}, with an exact
-certificate for each (L, Δ = 4) row, plus N ∈ {25, 100} as a sensitivity
-check (not certified).
+The deliverable is the curve L ↦ H_max(G, L, Δ) for
+L ∈ {0.5, 1, 1.5, 2, 3, 5, 10} and Δ ∈ {1, 4, 9}, with an exact certificate
+for each (L, Δ = 4) row. (L = ∞ is not covered by the v2 relaxation, whose
+interpolation bound needs finite L.)
 
 ## 2. What is and is not claimed
 
@@ -86,18 +96,45 @@ All D̃_M(z), D̃_H(z) are linear functionals of the node vector
 ũ = (ũ_0, …, ũ_N); the class constraints are linear inequalities; the
 objective (minimize ũ_0) is linear. The BAO term is a convex quadratic in ũ.
 
-### 3.2 The SN logarithm (only non-convexity)
+### 3.2 The SN logarithm (only non-convexity) — v2 relaxation
 r_j depends on ũ through log₁₀ of the linear functional D̃_j := D̃_M(zHD_j).
-Relaxation: introduce ℓ_j and replace ℓ_j = log₁₀ D̃_j by the sandwich
 
-    secant_j(D̃_j) ≤ ℓ_j ≤ tangent_j(D̃_j)   on a bracket D̃_j ∈ [D_lo,j, D_hi,j],
+v1 (superseded) sandwiched each ℓ_j = log₁₀ D̃_j between a secant and a
+tangent on a per-SN bracket. That relaxation is valid but useless in
+practice: 1580 independent slacks let the relaxed χ² fall ~10³ below the
+true value until brackets are already at the few-percent level, which
+bound-tightening from BAO-only brackets never reaches (documented in
+`results/`).
 
-where the bracket is itself certified: [D_lo,j, D_hi,j] are rigorous lower
-and upper bounds of the linear functional D̃_j over a convex outer set
-containing F (first the BAO-plus-class set, then, iteratively, the current
-relaxed set). Since log₁₀ is concave, the sandwich contains the graph, so the
-relaxed set F_rel ⊇ F and any bound over F_rel is valid for F. The gap is
-O((ln(D_hi/D_lo))²) in log₁₀ D and shrinks under iteration.
+v2 moves the SN term to log-distance space, where it is exactly convex, and
+confines the nonconvex link to the grid nodes:
+
+- Node variables κ_i := log₁₀[ D̃_M(x_i) / (e^{x_i} − 1) ] for i ≥ 1 and
+  κ_0 := log₁₀ ũ_0 (κ is the log of the running average of ũ; it is smooth
+  and tends to log₁₀ ũ_0 as x → 0).
+- Per-SN values: ℓ_j = κ(x_j) + log₁₀(e^{x_j} − 1), with κ(x_j) replaced by
+  the linear interpolation of the two adjacent node values up to a
+  class-only error bound e_k: on segment k, |κ − interp| ≤ (h_k²/8)·B_k/ln 10
+  where B_k bounds |F''|, F = ln[D̃_M/(e^x − 1)], over the class. With
+  q = e^x/(e^x−1), θ = ũ(x)(e^x−1)/D̃_M(x) ∈ [θ_lo, θ_hi] (from
+  |d ln ũ/dx| ≤ L), and a = ũ'/ũ ∈ [−L, L]:
+  F'' = q[θa − (θ−1)(q(1+θ) − 1)], bounded factor by factor on each segment;
+  the first segment uses the exact form F = ln(ũ_0 + b φ(x)). This gives
+  5e_k ≤ 0.002 mag everywhere for L = 1.5 (implemented in
+  `geometry.kappa_interp_slack`; Monte Carlo test in `tests/test_kappa.py`).
+  The interpolation-error bound holds for C^{1,1} functions, so kinks of ũ
+  at nodes are covered.
+- Node links: κ_i + c_i = log₁₀ D̃_i with D̃_i = (A_nodes ũ)_i linear in ũ,
+  sandwiched between the secant and a tangent on a certified bracket
+  [D_lo,i, D_hi,i] (94 sandwiches instead of 1580).
+- BAO stays exact in ũ. Objective min ũ_0.
+
+Brackets are certified by optimality-based bound tightening: rigorous
+min/max of each ũ_i and D̃_i over the current relaxed set (which contains F),
+iterated; the SN term no longer degrades with bracket width, so the
+iteration converges. Bound-tightening passes are run on a redshift-stratified
+subset of the SNe (its marginal χ² is ≤ the full χ², so the subset set
+contains F); the reference point and the final bound use the full sample.
 
 ### 3.3 The certified problem
 After relaxation the problem is
@@ -177,4 +214,9 @@ Ledger levels for this problem:
   ũ_{i} ≤ ũ_{i−1}.
 
 ## Revision log
-- v1 (2026-08-25): initial statement.
+- v1 (2026-08-25): initial statement (uniform grid N = 50; per-SN sandwich).
+- v2 (2026-08-25): geometric-at-low-z grid G (94 nodes); κ (log-distance
+  node) relaxation replacing the per-SN sandwich; reference point defined as
+  the polished class minimizer (ΛCDM reference reported alongside); L = ∞
+  dropped from the deliverable. Reason: the v1 relaxation does not converge
+  (see §3.2).
