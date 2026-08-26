@@ -239,7 +239,7 @@ numerically), so counts there are Z − P with P known.
 | β = 1/κ₁ | 0.355801922 | 0.35580192 | ✓ |
 | gauge eigenvalue (sonic-point gauge) | 0.3556992036 = −dN̄_ss/dx(0) | KHA95/99 | ✓ |
 | zeros in [0,15]×[−14,14] | 2 (gauge + κ₁) | KHA95: none other | ✓ |
-| next real eigenvalue | κ₂ = −1.5456213652 | KHA99: Re κ ≲ −1.4 | ✓ |
+| next eigenvalues | κ₂ = −1.5456213652, κ₃ = −3.8446698689 (both real; no complex pair for Re κ ≥ −4.45, \|Im κ\| ≤ 8) | KHA99: Re κ ≲ −1.4, then (at γ = 1.3, 1.4) a complex pair | ✓ / not found |
 | monotonicity on the cone | v_rel ↑, ρ̂ ↓, (1/3 − v_rel²) ↓; V not monotone | needed for Theorem C | new |
 
 ## What S1 settles for the formulation's [open] items
@@ -290,3 +290,33 @@ prob = perturb.Problem(0.112439401388092, 1, K=36, x_end=-9.0)
 spectrum.refine_zero(prob, 2.81, 2.812, real=True)        # kappa_1
 spectrum.winding_number(prob, (0.0, 15.0, -14.0, 14.0))   # -> 2
 ```
+
+**Negative half-plane counts (poles P at κ = −0.099−1.099n known; Z = winding + P).**
+
+| rectangle | winding | P inside | Z | content |
+|---|---|---|---|---|
+| [−1.1, 0] × [−2, 2] | −1 | 1 (−0.099) | 0 | — |
+| [−2.25, −1.25] × [−2, 2] | 1 | 0 | 1 | κ₂ = −1.5456 |
+| [−2.25, −1.25] × [−6, 6] | 1 | 0 | 1 | κ₂ only |
+| [−3.35, −2.35] × [−3, 3] | 0 | 0 | 0 | — |
+| [−4.45, −2.35] × [−6, 6] | 0 | 1 (−3.396, simple: (κ+3.396)E → 0.115) | 1 | κ₃ |
+| [−4.45, −0.05] × [−8, 8] | −2 | 4 | 2 | κ₂, κ₃ |
+
+The real-axis scan below the n = 3 pole gives the third eigenvalue
+**κ₃ = −3.8446698689** (real, |E| < 1e−11). So the spectrum found in
+−4.45 ≤ Re κ ≤ 15, |Im κ| ≤ 8 (14 for Re κ ≥ 0) is entirely real:
+κ₁ = 2.81055255, κ̄ = 0.35570 (gauge), κ₂ = −1.54562137, κ₃ = −3.84466987 —
+with a spectral gap of ≈ 1.9 between the gauge mode and the first stable mode.
+KHA99's "complex pair" (reported for γ = 1.3, 1.4) was **not** found in this
+region; if present at γ = 4/3 it has Re κ < −4.45 or |Im κ| > 8 (a coarse |E| map
+on [−4.4, −2.4] × [0, 6] has no interior minimum; |E| simply decreases toward large
+|Im κ|). Not pursued further (only the Re κ ≥ 0 count matters for Theorem B).
+`results/ec_matching_function.png` shows E on the real axis.
+
+**Bisection cross-check of the KHA box (`spectrum.locate_zeros`, 40 pts/side,
+boxes ≥ 0.5).** Recursive subdivision of [0, 15] × [−14, 14] (26 sub-boxes, split
+lines shifted off Im κ = 0) leaves exactly two boxes with winding 1:
+[0, 0.469] × [−0.175, 0.298] → secant 0.3556992036 (gauge) and
+[2.344, 2.813] × [−0.175, 0.298] → secant 2.8105525488 (κ₁); every other box has
+winding 0, in particular [0, 15] × [6.44, 14], [7.5, 15] × [−1.12, 6.44] and
+[3.75, 7.5] × [−1.12, 2.66]. Both refined zeros have |Im κ| < 1e−18 and |E| < 6e−16.
