@@ -132,5 +132,29 @@ C.  Analytic large-|λ| exclusion (research; see §2).
 - S4: Theorem C (analytic exclusion) — research track; may become its own
   problem entry.
 
+## S1 outcomes (2026-08-25, `notes/numerics-report.md`) — closing the [open] items
+- Branch: the EC solution crosses the sonic point along the first-order root
+  with V₁ > 0 (desingularized eigenvalue +31.3; the other root carries no
+  regular-centre solution on V₀ ∈ (0, 1/√3)). Sonic data at k = 1/3:
+  V₀ = 0.112439401388092, (A₀, N₀, ω₀) = (1.8614267226, 2.0113168913,
+  0.3256888894). The sonic point is a saddle on this range, as Harada states.
+- Gauge: KHA sonic-point gauge N_p(0) = 0 with the momentum constraint used to
+  eliminate A and A_p; the pure-gauge eigenvalue is κ̄ = 2 − A₀ + 2ω₀/3 =
+  0.3556992037 (the digest's "0.35699" is a dropped digit of 0.355699).
+- Rectangle: E(κ) is analytic on Re κ > −1.19 (poles only at the sonic-point
+  resonances κ = −0.0990 − 1.0990 n); R = [0, 15] × [−14, 14] contains exactly
+  κ̄ and κ₁ = 2.8105525488 (KHA99: 2.81055255). Next eigenvalue κ₂ = −1.5456.
+- Theorem C hypotheses: on the closed sound cone, v_rel (= HM01's |V_z|) is
+  strictly increasing to 1/√3, ρ̂ = 4πρt² strictly decreasing, and
+  w = 1/3 − v_rel² strictly decreasing — the properties the GHJS energy method
+  uses — while the areal-frame velocity V_R is not monotone (one zero inside the
+  cone). The energy method must be set up with V_z, not V_R.
+- Analytic variable at the centre: corrections in integer powers of e^{x}.
+- Ledger: the numbers above are CONJECTURED (double precision, one-sided
+  shooting; V₀ to ~1e−13). S2 (Theorem A) starts from the validated sonic
+  expansion (order-40 series verified against integration to 1e−15) and a
+  two-sided matching.
+
 ## Revision log
 - v1 (2026-08-25): initial, with [open] items to be closed by S1.
+- v1.1 (2026-08-25): S1 outcomes recorded; [open] items closed as above.
