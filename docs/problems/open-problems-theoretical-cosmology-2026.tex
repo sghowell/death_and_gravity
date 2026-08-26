@@ -1,0 +1,470 @@
+\documentclass[11pt,letterpaper]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,linkcolor=blue!40!black,citecolor=blue!40!black,urlcolor=blue!40!black]{hyperref}
+
+\setlength{\parskip}{2pt}
+\newcommand{\HH}{H}
+\newcommand{\MM}{M}
+\newcommand{\LL}{L}
+
+\title{\bfseries Ten Open Problems in Theoretical Cosmology\\ Selected for AI-Assisted Proof and Discovery}
+\author{Sean Howell\\[2pt] \normalsize Zetetic Works Research Corporation}
+\date{August 21, 2026 (revision 1.1)}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\noindent
+We identify 10 open problems in theoretical cosmology, each unresolved as of August 21, 2026, selected not for importance alone but for suitability to AI-assisted attack. The selection rubric scores 5 properties: formalizability of the statement, the availability of machine-checkable certificates for candidate solutions, the structure of the generation space, decomposability into independently publishable subproblems, and the existence of adjacent computer-assisted precedent. The problems span generic oscillatory (BKL) singularities, strong cosmic censorship with a positive cosmological constant, cosmic no-hair beyond perturbation theory, rigorous critical collapse and primordial black hole thresholds, a monotone gravitational entropy functional, completeness and positivity in the cosmological bootstrap, de Sitter vacua in controlled string compactifications, semiclassical singularity theorems and the classification of stable bounces, concordance anomalies recast as certified model search, and the well-posedness of Lorentzian quantum cosmology. For each problem we give the sharpest statement we can defend, its current status, the verification interface that makes machine assistance credible, and an entry-point subproblem sized for a 1--2 quarter effort. The organizing thesis is that the binding constraint in AI-assisted theoretical physics is not generation but verification, and that problem selection should optimize the asymmetry between the two.
+\end{abstract}
+
+\section{Introduction}
+\label{sec:intro}
+
+Three developments between 2022 and 2026 changed what it is reasonable to attempt in mathematical physics with machine assistance. First, formal proof search reached competition level with fully machine-checked output: AlphaProof, trained by reinforcement learning against the Lean verifier, performed at silver-medal standard on the 2024 International Mathematical Olympiad, with the methodology published in late 2025 \cite{hubert2025}, building on the earlier geometry system \cite{trinh2024}; by 2026, agentic loops built around such provers were producing verified Lean proofs for research-level statements, including several Erd\H{o}s problems \cite{nexus2026}. Second, generate-and-evaluate search over programs and constructions, in which a language model proposes and an automatic evaluator scores, produced new results on open problems: FunSearch on extremal combinatorics \cite{romera2024}, and its evolutionary successor applied at scale to a suite of 67 problems across analysis, combinatorics, geometry, and number theory, matching or improving best known constructions in a nontrivial fraction of cases \cite{georgiev2025}. Third, computer-assisted proof for hard nonlinear PDE matured into a repeatable pipeline: neural networks discover approximate self-similar profiles \cite{wang2023}, and interval-arithmetic functional analysis converts them into theorems, as in the Chen--Hou proof of blowup for the 2D Boussinesq and axisymmetric 3D Euler equations \cite{chenhou2022}; see \cite{gomezserrano2019,tucker2002} for the broader tradition. A complementary datum: the Gowers--Green--Manners--Tao proof of Marton's conjecture \cite{gowers2023} was formalized in Lean within weeks of announcement, demonstrating that the formalization overhead for frontier mathematics, given a motivated team and mathlib \cite{mathlib2020}, has dropped by an order of magnitude.
+
+These successes share one structural feature. In each case generation was unreliable, but verification was sound, mechanical, and cheap relative to the value of a hit. The language model or search process was permitted to be wrong almost always, because a certificate, a Lean kernel check, an executable evaluation, an interval enclosure, a semidefinite programming dual, filtered the output stream. We take this as the design principle for problem selection: \emph{the expected value of AI assistance on a problem is governed less by the difficulty of the problem than by the quality of the verification interface one can build for it}.
+
+Theoretical cosmology is unusually well positioned for this program, for 3 reasons. The mathematical side of the subject has spent 3 decades sharpening its conjectures into precise statements about low-dimensional dynamical systems, spectral problems, and quasilinear PDE, exactly the forms that admit certificates. The phenomenological side acquired, with DESI DR2 and the persistent Hubble discrepancy, anomalies crisp enough to support theorem-shaped questions about model classes rather than open-ended model building. And the field already runs on symbolic computation (tensor algebra systems, perturbation-theory pipelines, Boltzmann codes), so the substrate for machine-verified derivation chains exists.
+
+This document fixes 10 problem statements, verified to be open against the literature as of August 21, 2026. It is written to function as a pre-registration: the statements are frozen here precisely so that any later claim of progress can be checked against a target that did not move. For each problem we give 4 things in fixed order: the sharpest defensible \textbf{statement}; the \textbf{status}, meaning what is proven, what is numerical lore, and what is contested; the \textbf{verification interface}, meaning the concrete certificate format that a machine-generated candidate must produce; and an \textbf{entry point}, a first subproblem sized for a 1--2 quarter effort by a small team, chosen by working backwards from the full problem. Section \ref{sec:criteria} states the selection rubric and records what we excluded and why. Section \ref{sec:problems} presents the problems. Section \ref{sec:toolchain} maps problems to verification stacks. Section \ref{sec:outlook} discusses sequencing and risk.
+
+Two caveats on scope. We use ``theoretical cosmology'' broadly: mathematical general relativity of cosmological spacetimes, early-universe theory including its quantum-gravity-adjacent questions, and data-anchored theory in which certificates are defined relative to frozen likelihoods. And we make no claim that machine assistance replaces judgment. Choosing definitions, recognizing which lemma is the load-bearing one, and judging significance remain human work; the machinery below is a lever, not a substitute.
+
+\section{Selection criteria}
+\label{sec:criteria}
+
+\subsection{The rubric}
+
+Each candidate problem was scored on 5 axes.
+
+\begin{itemize}[leftmargin=1.6em,itemsep=1pt,topsep=2pt]
+\item[\textbf{C1.}] \textbf{Formalizability.} The problem admits a sharp mathematical statement today, without first inventing a framework. A problem whose main difficulty is deciding what the question means scores low.
+\item[\textbf{C2.}] \textbf{Certificates.} Candidate solutions or proofs are machine-checkable: a proof-assistant kernel, an interval-arithmetic enclosure, an exact semidefinite or sum-of-squares dual, a finite exhaustive enumeration, or a deterministic frozen-data likelihood evaluation. This is the load-bearing axis.
+\item[\textbf{C3.}] \textbf{Structured search.} The generation space is parametric or combinatorial (ansatz families, multiplier vector fields, candidate functionals, operator bases, flux lattices, integration contours), so learned or evolutionary search applies.
+\item[\textbf{C4.}] \textbf{Decomposability.} Recognized subproblems exist whose resolution is independently publishable, allowing the program to pay for itself before the endgame.
+\item[\textbf{C5.}] \textbf{Precedent.} An adjacent problem has already yielded to computer-assisted or ML-guided methods, lowering methodological risk.
+\end{itemize}
+
+Table \ref{tab:scores} records the scores. The scale is coarse by design (\HH{} = high, \MM{} = medium, \LL{} = low); its purpose is to expose the portfolio logic, not to rank the problems by importance.
+
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{@{}llccccc@{}}
+\toprule
+ & Problem & C1 & C2 & C3 & C4 & C5 \\
+\midrule
+P1  & Generic oscillatory (BKL) singularities            & \HH & \HH & \MM & \HH & \HH \\
+P2  & Strong cosmic censorship with $\Lambda>0$          & \HH & \HH & \HH & \HH & \MM \\
+P3  & Cosmic no-hair beyond perturbation theory          & \MM & \MM & \HH & \HH & \MM \\
+P4  & Rigorous critical collapse and PBH thresholds      & \HH & \HH & \HH & \HH & \HH \\
+P5  & A monotone gravitational entropy functional        & \MM & \HH & \HH & \MM & \HH \\
+P6  & Cosmological bootstrap: completeness and positivity& \MM & \HH & \HH & \HH & \HH \\
+P7  & de Sitter vacua in controlled compactifications    & \MM & \HH & \HH & \HH & \HH \\
+P8  & Semiclassical singularity theorems and bounces     & \HH & \HH & \HH & \HH & \MM \\
+P9  & Concordance anomalies as certified model search    & \MM & \HH & \HH & \HH & \MM \\
+P10 & Well-posed Lorentzian quantum cosmology            & \MM & \HH & \MM & \MM & \MM \\
+\bottomrule
+\end{tabular}
+\caption{Rubric scores for the 10 selected problems. C1: formalizability; C2: certificates; C3: structured search; C4: decomposability; C5: precedent. \HH{} = high, \MM{} = medium, \LL{} = low.}
+\label{tab:scores}
+\end{table}
+
+\subsection{Exclusions}
+
+Several famous problems were excluded because they fail C1 or C2, and it is worth being explicit, since their absence is a choice rather than an oversight. The \emph{cosmological constant problem} in its standard form (why is the vacuum energy small) has no agreed success criterion; competing formulations disagree about what would count as a solution, so there is nothing for a certificate to certify. The \emph{measure problem} of eternal inflation fails for the same reason at one remove: the object in dispute is the probability space itself. The \emph{microscopic origin of de Sitter entropy} \cite{gibbonshawking1977} lacks agreed axioms for what a static-patch holographic description must satisfy. The \emph{problem of time} in quantum gravity is a framework question. Each of these may eventually be sharpened into rubric-compatible fragments, and P7 and P10 below capture the fragments we currently consider defensible, but the headline versions are not machine-tractable, and pretending otherwise would corrupt the portfolio.
+
+\subsection{Near misses}
+\label{sec:nearmiss}
+
+Four problems narrowly missed the list and deserve tracking. (i) The \emph{averaging and backreaction problem}: whether small-scale inhomogeneity produces effective stress-energy at cosmological scales \cite{buchert2000,greenwald2011}. The mathematical core, Burnett's conjecture that high-frequency vacuum limits solve Einstein--massless Vlasov \cite{burnett1989}, has now been proven under $\mathbb{U}(1)$ symmetry and in generalized wave gauges by Huneau and Luk \cite{huneauluk2024wave,huneauluk2024review}; the gauge-free case and the converse conjecture remain open and are excellent targets, but the field is moving fast enough by human hands that the marginal value of machine assistance is currently lower. (ii) \emph{Quasi-local energy and positivity with $\Lambda>0$} \cite{szabados2009}: sharp and certificate-friendly, but entangled with unsettled definitional choices. (iii) \emph{Genericity of inflation from inhomogeneous initial data}: strong numerical evidence \cite{east2016} awaiting a theorem; this is effectively a special case of the P3 toolchain. (iv) \emph{Gravitational Landau damping}: relaxation of Vlasov--Poisson perturbations around expanding backgrounds, with the Mouhot--Villani theory \cite{mouhotvillani2011} as the flat-space precedent; we fold its collapse-side aspects into P4.
+
+\section{The problems}
+\label{sec:problems}
+
+\subsection{P1: Generic oscillatory (BKL) singularities}
+\label{sec:p1}
+
+\paragraph{Statement.} Prove, for an open or full-measure class of vacuum initial data, that the approach to a spacelike singularity is asymptotically local (spatial derivatives become subdominant), oscillatory (an infinite sequence of Kasner epochs governed by the BKL map), and statistically chaotic (Kasner parameters distributed by the Gauss-map invariant measure), as conjectured by Belinskii, Khalatnikov, and Lifshitz \cite{bkl1970,bkl1982} and Misner \cite{misner1969}. The minimal nontrivial version: prove that a full-measure set of Bianchi IX vacuum solutions exhibits infinitely many Kasner transitions with the predicted statistics.
+
+\paragraph{Status.} The quiescent (non-oscillatory) regime is settled: stable Big Bang formation holds for Einstein--scalar and stiff-fluid matter in $3{+}1$ dimensions and for vacuum gravity in sufficiently high dimension, through the complete sub-critical range \cite{rodnianskispeck2018,frs2023}. In the oscillatory regime, the Bianchi IX attractor theorem \cite{ringstrom2001} confines generic $\alpha$-limit sets to the union of vacuum type I and II orbits, and almost every solution converges to that attractor \cite{brehm2016}; heteroclinic-chain constructions realize particular periodic and aperiodic Kasner itineraries on codimension-one stable sets \cite{liebscher2011,beguin2010}; Reiterer and Trubowitz \cite{reiterertrubowitz2010} control a full-measure set of itineraries on the Kasner circle (not a full-measure set of initial data); and B\'eguin and Dutilleul \cite{beguindutilleul2023} prove that the set of Bianchi VIII and IX data shadowing such chains has positive Lebesgue measure. No full-measure statement about the realized Kasner statistics exists. Strong cosmic censorship is proven for $T^3$ Gowdy spacetimes \cite{ringstrom2009}, a non-oscillatory symmetry class; nothing rigorous exists for inhomogeneous oscillatory singularities, where numerics \cite{garfinkle2004} support BKL locality punctuated by spike structures. The cosmological billiards reformulation \cite{dhn2003} organizes the expected asymptotics as hyperbolic billiard dynamics.
+
+\paragraph{Verification interface.} In Hubble-normalized variables \cite{wainwrighthsu1989} the homogeneous problem is a polynomial flow on a compact state space, and every needed ingredient is certificate-shaped: interval-arithmetic covering relations and cone conditions certify shadowing of heteroclinic chains (the technology of the Lorenz-attractor proof \cite{tucker2002}); sum-of-squares programming \cite{parrilo2003} certifies local Lyapunov functions and return-map contraction; and the Kasner map itself is conjugate to the Gauss map, whose ergodic theory (continued fractions, Gauss--Kuzmin statistics) is squarely within Lean/mathlib's comfort zone \cite{mathlib2020}. A candidate proof therefore decomposes into finitely many validated-numerics lemmas plus a formalizable ergodic argument.
+
+\paragraph{Entry point.} A computer-assisted, interval-certified version of the known approach theorem for the period-3 (golden-ratio) heteroclinic cycle in Bianchi IX \cite{liebscher2011}: an explicit cone-condition or graph-transform certificate, with numerical constants for the neighborhood size and for the transverse contraction and expansion rates of the return map, packaged so that the local passage lemmas are independently checkable. The cycle is a saddle for the return map (the set of solutions approaching it toward the singularity is codimension one), and smooth linearization fails at it by an eigenvalue resonance \cite{buchner2025}, so the certificate must control the nonlinear passage near the Kasner circle directly. This upgrades the qualitative result to quantitative, certificate-backed form and is the template for the measure-theoretic assembly.
+
+\subsection{P2: Strong cosmic censorship with a positive cosmological constant}
+\label{sec:p2}
+
+\paragraph{Statement.} Determine whether Christodoulou's formulation of strong cosmic censorship holds for the Einstein--Maxwell system with $\Lambda>0$: for generic initial data close to Reissner--Nordstr\"om--de Sitter (RNdS), is the maximal globally hyperbolic development inextendible across the Cauchy horizon as a weak ($H^1_{\mathrm{loc}}$) solution? Resolve the analogous question for Kerr--de Sitter and Kerr--Newman--de Sitter.
+
+\paragraph{Status.} The linear diagnostic is the ratio $\beta=\alpha/\kappa_-$ of the quasinormal-mode spectral gap $\alpha$ to the Cauchy-horizon surface gravity $\kappa_-$. High-precision (non-rigorous) numerics find $\beta>1/2$ for near-extremal RNdS, indicating that scalar perturbations remain too regular at the Cauchy horizon and that the Christodoulou formulation is endangered for smooth data \cite{cardoso2018}, while Kerr--de Sitter appears safe \cite{dias2018}; the charged and nonlinear cases are contested. On the rigorous side, the nonlinear stability of slowly rotating Kerr--de Sitter exteriors is a theorem \cite{hintzvasy2018}; the interior problem is settled \emph{conditionally} on the exterior decay rate, in that scalar waves decaying at rate $\beta\kappa_-$ are $H^{1/2+\beta-0}$ at the Cauchy horizon \cite{hintzvasy2017}, with nonlinear spherically symmetric and charged-scalar analogues \cite{cgns2018,rossetti2025}; for rough ($H^1$ but not smoother) data the Christodoulou formulation holds for all subextremal parameters \cite{dsr2018}; and Hintz \cite{hintz2025} has rigorously located the near-extremal family of quasinormal modes (correcting the near-extremal formula of \cite{cardoso2018} for $\ell\ge1$), so that the $\beta>1/2$ verdict for smooth data reduces to the conjecture that no other modes are shallower (Conjecture 1.5 of \cite{hintz2025}). In the $\Lambda=0$ setting the $C^0$-extendibility of the Kerr Cauchy horizon is established \cite{dafermosluk2017}. What has no rigorous proof is precisely the exterior spectral-gap lower bound for smooth data: a resonance-free strip $\{-\kappa_-/2<\operatorname{Im}\omega\le0\}\setminus\{0\}$, uniform in angular momentum.
+
+\paragraph{Verification interface.} Two independent certificate channels exist. The quasinormal spectrum of RNdS reduces to resonances of an ODE spectral problem; interval-arithmetic Evans-function or argument-principle computations \cite{arb2017} can produce rigorous enclosures of all resonances in a compact region of the complex plane for each angular momentum (the radial equation is Fuchsian, so rigorous connection-coefficient methods for D-finite functions \cite{mezzarobba2016} apply directly); combined with explicit large-$\ell$ and large-frequency exclusion lemmas, this converts the numerical inequality $\beta>1/2$ into a theorem on an explicit set of $(Q/M,\Lambda M^2)$. Separately, the vector-field-multiplier method that drives interior energy estimates is a convex search: a multiplier current with pointwise-positive divergence is exactly a positivity certificate, so candidate multipliers proposed by search can be certified by sum-of-squares decomposition \cite{parrilo2003}. This makes both the ``violation'' and ``restoration'' directions machine-checkable.
+
+\paragraph{Entry point.} A rigorous, certificate-backed proof that $\beta>1/2$ for an explicit set of subextremal RNdS parameters in the regime where numerics put $\beta$ comfortably above $1/2$, i.e., the first theorem-grade statement of linear strong-cosmic-censorship violation for smooth data. Enclosing the dominant modes is not sufficient: the statement is a resonance-free strip, uniform in $\ell$, and decomposes into (i) an explicit large-$\ell$ exclusion (barrier-top WKB bounds with explicit error constants), (ii) an explicit large-$|\operatorname{Re}\omega|$ exclusion for each $\ell$, and (iii) a validated argument-principle count of the resonances of the radial ODE in the remaining compact region. Parts (i)--(ii) are analytic lemmas with explicit constants that do not yet exist in the literature; part (iii) is standard validated numerics. Resolving Conjecture 1.5 of \cite{hintz2025} in the near-extremal limit is the natural continuation.
+
+\subsection{P3: Cosmic no-hair beyond perturbation theory}
+\label{sec:p3}
+
+\paragraph{Statement.} Characterize the basin of attraction of de Sitter space. Concretely: (a) prove future stability of de Sitter, or local approach to de Sitter in expanding regions, for large classes of inhomogeneous initial data and realistic matter, with quantitative basin estimates; and (b) prove the static rigidity statement (``cosmic baldness'' \cite{boucher1983}): the only static vacuum solution with $\Lambda>0$ and a single regular cosmological horizon is de Sitter.
+
+\paragraph{Status.} Wald's theorem \cite{wald1983} settles the homogeneous case (all Bianchi types except recollapsing IX). Perturbatively, de Sitter is future stable for vacuum \cite{friedrich1986}, for nonlinear scalar fields \cite{ringstrom2008}, and for a broad range of fluid and kinetic matter \cite{rodnianskispeck2013}. What is missing is everything nonperturbative: large-data statements, data containing black holes, sharp basin boundaries, and the static uniqueness conjecture (b), which has resisted the Robinson-identity techniques that settled the $\Lambda=0$ black-hole uniqueness theorems.
+
+\paragraph{Verification interface.} The historical bottleneck in static uniqueness proofs was the discovery of a divergence identity: a combination of curvature quantities whose divergence is a sum of squares vanishing exactly on the target geometry. Discovery of such identities is a finite-dimensional search over a graded polynomial ansatz in curvature and its derivatives, and certification is a symbolic computation plus a sum-of-squares check: a task profile matching FunSearch-class systems \cite{romera2024} with computer-algebra verification. On the dynamical side (a), the object to discover is a weighted energy hierarchy whose differential inequalities close; each closure step is again a positivity certificate.
+
+\paragraph{Entry point.} Automate the rediscovery of the known divergence identities behind the Schwarzschild static uniqueness theorem, with machine-verified symbolic certificates, then run the identical pipeline on the $\Lambda>0$ static ansatz. Even a certified impossibility result within a stated ansatz class (no identity of degree $\le d$ exists) would be informative and publishable.
+
+\subsection{P4: Rigorous critical collapse and primordial black hole thresholds}
+\label{sec:p4}
+
+\paragraph{Statement.} Establish the mathematical content of critical gravitational collapse \cite{choptuik1993,gundlach2007}: (a) prove existence, uniqueness in its symmetry class, and codimension-1 linear stability of the discretely self-similar Choptuik solution for the Einstein--scalar system, thereby deriving the universality of the mass-scaling exponent; (b) do the same for the continuously self-similar Evans--Coleman solution of the radiation fluid \cite{evanscoleman1994}, which controls primordial black hole (PBH) formation thresholds in the early universe \cite{musco2019}; and (c) for cold collisionless matter, prove generic finite-time shell-crossing from smooth cold Vlasov--Poisson data and the attractor property of the self-similar secondary-infall solutions \cite{fillmoregoldreich1984,bertschinger1985,rampfhahn2021}.
+
+\paragraph{Status.} Existence of the Choptuik spacetime is a computer-assisted theorem \cite{reiterer2019}; uniqueness, the stability spectrum, and hence universality remain open. For fluids, Guo, Had\v{z}i\'c, and Jang \cite{ghj2023} proved existence of the relativistic Larson--Penston (Ori--Piran) self-similar solution for sufficiently small sound speed $p/\rho$, and Guo, Had\v{z}i\'c, Jang, and Schrecker \cite{ghjs2025} proved mode stability and nonlinear radial stability of its Newtonian limit, with validated ODE integration certifying the compact part of the spectrum. Neither covers the radiation case $p=\rho/3$, the Evans--Coleman solution (a different member of the self-similar family, with exactly one unstable mode in the numerics \cite{kha1995,maison1996,harada2003}), or any one-unstable-mode solution; nothing rigorous exists for the Vlasov--Poisson attractors. The critical exponents and echoing period are known numerically to many digits, which is precisely the situation that computer-assisted proof converts into theorems.
+
+\paragraph{Verification interface.} This problem inherits a complete, proven pipeline from mathematical fluid dynamics: a neural network or spectral solver finds the self-similar profile to high accuracy \cite{wang2023}, and interval-arithmetic functional analysis certifies an exact solution nearby together with rigorous bounds on the linearized spectrum, exactly the architecture of the Euler and Boussinesq blowup proofs \cite{chenhou2022,gomezserrano2019}. Discrete self-similarity makes (a) a time-periodic boundary-value problem in similarity variables; continuous self-similarity makes (b) an ODE boundary-value problem with a single unstable mode to certify, which would yield the PBH critical exponent as a rigorous number; the spectral half has a direct template in \cite{ghjs2025}.
+
+\paragraph{Entry point.} A computer-assisted proof of existence of the Evans--Coleman continuously self-similar radiation-fluid solution together with a validated count of exactly 1 unstable mode. This is the shortest path in the entire program from current tooling to a theorem cosmologists would quote. Two points are to be fixed in the formulation before computation: the existence half is non-perturbative at $p=\rho/3$ (the sonic point is a saddle, and the small-sound-speed shooting of \cite{ghj2023} does not apply), and the spectral half needs an a priori confinement of unstable eigenvalues to a compact region that cannot reuse the monotonicity structure of the Larson--Penston profile, together with an explicit treatment of gauge modes.
+
+\subsection{P5: A monotone gravitational entropy functional}
+\label{sec:p5}
+
+\paragraph{Statement.} Construct a functional $S[\Sigma;g,K,\text{matter}]$ of Cauchy data, built covariantly from curvature, such that (i) $S$ is non-decreasing along Einstein evolution, with respect to a stated class of time functions, for matter satisfying stated energy conditions, (ii) $S$ vanishes exactly on conformally flat (FLRW) data, and (iii) $S$ reproduces horizon-area scaling when black holes form; or prove that no such functional exists within a stated ansatz class. This is the sharp version of Penrose's Weyl curvature hypothesis \cite{penrose1979}.
+
+\paragraph{Status.} The Clifton--Ellis--Tavakol proposal \cite{cet2013}, based on a square root of the Bel--Robinson tensor, is defined unambiguously only for Petrov types D and N; its extension to algebraically general (Petrov type I) spacetimes, which include generic Bianchi models, is not unique \cite{sns2026}. Where it is defined it increases in structure-forming regimes but is known to decrease in others (decaying-mode and collapsing regions of Lema\^itre--Tolman--Bondi models, and some locally rotationally symmetric Bianchi I sources \cite{sussmanlarena2014,chakraborty2021}), so it is not a counterexample-free candidate for the full problem; no alternative candidate does better; and no non-existence theorem excludes the natural observer-dependent ansatz classes (the Pelavas--Lake obstruction \cite{pelavaslake1998} applies only to observer-independent dimensionless curvature scalars). The problem is open in both directions, which is exactly what makes it a discovery problem rather than a verification problem.
+
+\paragraph{Verification interface.} Fix a graded ansatz: scalar densities polynomial in the Weyl tensor, Ricci tensor, and their derivatives up to a stated order, with free coefficients. Then (i) is checkable: differentiate along the flow using the Einstein equations, reduce modulo the constraint ideal, and ask whether the result admits a sum-of-squares representation \cite{parrilo2003}; (ii) and (iii) are algebraic side-conditions. Counterexample search runs on Bianchi and Gowdy testbeds with validated integration \cite{arb2017}. The loop ``propose functional, symbolically verify monotonicity or emit certified counterexample'' is structurally identical to the program-search loops that produced new extremal constructions \cite{romera2024,georgiev2025}.
+
+\paragraph{Entry point.} First, a fixed specification of the Clifton--Ellis--Tavakol functional on Petrov type I data (choice of Bel--Robinson factorization, trace and frame conventions, fluid versus normal congruence under tilt, time parameter), recorded as part of the pre-registration; then a certified verdict on the resulting functional across Bianchi class A types with tilted perfect fluids: either machine-verified monotonicity certificates type by type (plausible for the compact type II state space), or a validated counterexample trajectory (expected in the unbounded types). Either outcome is a paper; both calibrate the ansatz space for the search proper.
+
+\subsection{P6: Cosmological bootstrap: completeness and positivity}
+\label{sec:p6}
+
+\paragraph{Statement.} Determine the space of primordial correlators consistent with unitarity, locality, and the symmetries of (approximate) de Sitter space. Concretely: (a) establish whether the bootstrap axioms (singularity structure plus the cosmological optical theorem) fix tree-level exchange correlators uniquely and constrain loop level; and (b) derive rigorous positivity bounds on wavefunction coefficients and inflationary observables, the de Sitter analogue of flat-space S-matrix positivity \cite{adams2006}, with dual certificates rather than numerical exclusion only.
+
+\paragraph{Status.} The bootstrap program \cite{ablp2020}, the cosmological optical theorem and cutting rules \cite{goodhew2021}, and the surrounding effort surveyed in \cite{snowmass2022} have produced striking reconstructions at tree level, but there is no axiomatization sharp enough to support completeness theorems, no nonperturbative positivity statement, and no analogue of the rigorous convex-geometry backbone that the conformal bootstrap possesses \cite{polandrychkov2019}.
+
+\paragraph{Verification interface.} The conformal bootstrap is the strongest existing precedent for machine-generated, certificate-backed physics theorems: exclusion statements are semidefinite programs whose dual solutions, rationalized, are exact proofs \cite{sdpb2015,polandrychkov2019}. The cosmological problem has the same shape once a family of correlators and a positivity structure are fixed: candidate bounds proposed by search are certified by SDP duals, and symbolic identities (weight-shifting relations, cutting rules) are verified by computer algebra. The open work item, and the reason C1 scores \MM{}, is pinning the axioms; but that is a finite, paper-sized task, not a framework invention.
+
+\paragraph{Entry point.} For the 4-point function of a conformally coupled scalar exchanging a single massive field in de Sitter, convert the known numerical constraints into the first dual-certified exclusion bound on the exchange coefficients: a small, self-contained theorem establishing the certificate format for the field.
+
+\subsection{P7: de Sitter vacua in controlled string compactifications}
+\label{sec:p7}
+
+\paragraph{Statement.} Prove or refute, in a parametrically controlled regime, the existence of a metastable de Sitter vacuum of string theory. Sharp finite versions: (a) complete the classification of classical no-go theorems for type II orientifold compactifications, closing the gaps in the ingredient lists of \cite{maldacenanunez2001,hkyt2007}; (b) settle the tadpole conjecture \cite{tadpole2020}, that full flux stabilization of many moduli requires flux charge growing linearly with the number of moduli, in tension with the tadpole bound; and (c) for explicitly specified compactifications, decide by certified exhaustive search whether stabilized de Sitter critical points exist within the tadpole-allowed flux lattice.
+
+\paragraph{Status.} The KKLT construction \cite{kklt2003} and its descendants remain contested at the level of parametric control; the de Sitter swampland conjecture \cite{oosv2018} remains neither proven nor refuted; the tadpole conjecture is supported in asymptotic regimes and open in general; and Denef--Douglas established that the general flux-vacua search is NP-hard \cite{denefdouglas2007}, which is an argument \emph{for} certified search rather than against it: hardness is about worst cases, while physics needs verdicts on specific compactifications.
+
+\paragraph{Verification interface.} Three channels. Flux enumeration under tadpole constraints is lattice-point search, and branch-and-bound with interval relaxations yields certified exhaustion: a ``no vacuum in this class'' verdict becomes a theorem, not a scan. No-go theorems are inequalities of the form $|\nabla V|^2/V^2\ge c$ over stated ingredient lists, and such inequalities are sum-of-squares feasibility problems \cite{parrilo2003}, so both mechanized rederivation and machine-extended no-gos carry exact certificates. And the asymptotic Hodge-theoretic structures underlying (b) are algebraic enough to formalize incrementally.
+
+\paragraph{Entry point.} Mechanize the classical type IIA no-go theorems as machine-verified sum-of-squares certificates over their exact ingredient lists, then run automated search for the minimal ingredient extensions that break each certificate. This converts a folklore map of loopholes into an exact boundary.
+
+\subsection{P8: Semiclassical singularity theorems and the classification of stable bounces}
+\label{sec:p8}
+
+\paragraph{Statement.} (a) Prove Penrose--Hawking-type incompleteness theorems \cite{penrose1965,hawkingpenrose1970} assuming only quantum energy inequalities satisfied by realistic quantum fields, with constants sharp enough to apply at cosmological scales. (b) Classify stable, geodesically complete bouncing FLRW cosmologies within scalar-tensor effective field theories: determine exactly where the no-go theorems of Horndeski gravity \cite{kobayashi2016,lmr2016} end and the beyond-Horndeski constructions \cite{creminelli2016} begin, and whether the surviving constructions are consistent with matter coupling and UV positivity constraints \cite{adams2006,rubakov2014}.
+
+\paragraph{Status.} Fewster and Kontou have derived singularity theorems under weakened, quantum-compatible energy hypotheses \cite{fewsterkontou2020,fewsterkontou2022}, with a worldvolume-averaged cosmological (past-directed) version in \cite{gkos2024}, but the constants are not yet at realistic-field strength and the null and non-minimally coupled cases are open. On (b), the Horndeski no-go is a theorem under explicit hypotheses (spatially flat FLRW, a non-degenerate tensor sector with $\int aF_T\,dt$ divergent at both ends, finite $\Theta$, regular unitary gauge); relaxing them admits stable bounces inside Horndeski at the price of strong gravity in the asymptotic past \cite{ageeva2021}. At the effective-field-theory level the boundary is known: a stable bounce requires the beyond-Horndeski operator ${}^{(3)}\!R\,\delta N$ with a sign-changing coefficient \cite{creminelli2016}, and covariant constructions realize it one rung up the operator ladder, including with general-relativistic asymptotics and a single extra DHOST operator \cite{yepiao2019}; see \cite{mironovvolkova2024} for a review. The theorem-level classification over covariant DHOST operator subsets, including matter coupling (where subluminality singles out an exceptional subclass \cite{mrv2020,an2025}) and UV positivity, is open.
+
+\paragraph{Verification interface.} Both halves are identity-chain-plus-positivity arguments, the native format of computer algebra with independent verification: the no-go proofs are sequences of integration-by-parts identities in tensor calculus terminating in a single sign condition, so a machine can both re-derive them with verified algebra and search the DHOST operator space for either an extended no-go certificate or an explicit bounce whose ghost-freedom and gradient stability are certified by validated eigenvalue bounds along the entire trajectory \cite{arb2017}. The quantum energy inequality bounds in (a) are variational problems with certifiable optima.
+
+\paragraph{Entry point.} A machine-verified rederivation of the Horndeski bounce no-go as a formal identity chain with its hypotheses stated explicitly, followed by automated search over a parametrized beyond-Horndeski and DHOST operator set for the minimal certified stable bounce, using the strong-gravity loophole inside Horndeski and the effective-field-theory criterion of \cite{creminelli2016} as known-answer tests. The deliverable is an exact classification boundary in a stated operator basis, with matter coupling and subluminality as the first extension beyond what is known.
+
+\subsection{P9: Concordance anomalies as certified model search}
+\label{sec:p9}
+
+\paragraph{Statement.} Recast the 2 leading anomalies of the concordance model as theorems about model classes. (a) Hubble constant: for an explicitly stated class of late-time modifications of the expansion history $H(z)$, and frozen baryon-acoustic-oscillation, supernova, and sound-horizon data, prove a certified upper bound on the attainable $H_0$, making rigorous the inverse-distance-ladder folklore \cite{knoxmillea2020}. (b) Dark energy dynamics: given the DESI DR2 posterior preference for $w_0>-1$, $w_a<0$ with a phantom crossing \cite{desi2025}, determine the minimal effective-field-theory-of-dark-energy operator content that realizes a stable crossing, as a classification theorem extending the single-field no-go \cite{vikman2005,quintom2010}, and intersect it with positivity constraints \cite{adams2006}.
+
+\paragraph{Status.} As of this writing the Hubble discrepancy stands: Planck infers $H_0=67.4\pm0.5$ \cite{planck2018}, the Cepheid ladder gives $73.0\pm1.0$ \cite{riess2022} with JWST cross-checks rejecting the leading systematics hypotheses, while the Chicago--Carnegie Hubble Program reports $70.4\pm1.2(\mathrm{stat})\pm1.3(\mathrm{sys})$ as its baseline, with its JWST-only tip-of-the-red-giant-branch subsample at $68.8\pm1.8(\mathrm{stat})\pm1.3(\mathrm{sys})$ \cite{freedman2025}; see \cite{cai2026,kamionkowskiriess2023} for the 2026 state of play. Proposed resolutions, early dark energy foremost \cite{poulin2023}, buy $H_0$ at cost elsewhere. Model-independent reconstructions of the late-time expansion history anchored to the CMB sound horizon consistently return $H_0\approx68$--$69$ \cite{lemos2019,keeleyshafieloo2023,zhou2025,sabogal2026}, subject to the caveat that the data constrain $H(z)$ only above $z\approx0.01$ \cite{efstathiou2021}; none is a worst-case bound over a stated function class. The DESI DR2 preference for evolving dark energy sits at $3.1\sigma$ against CMB alone and $2.8$--$4.2\sigma$ with supernova compilations \cite{desi2025}, with active disputes about dataset consistency; the theory-side questions in (b) are well posed regardless of how the data dispute resolves.
+
+\paragraph{Verification interface.} Part (a) is the cleanest certificate in this document: with $H(z)$ entering the observables through integrals of $1/H$, the feasibility problem is convex in natural variables, and convex duality supplies exact bound certificates against frozen, hash-pinned likelihoods; the deterministic pipeline is the verifier. Part (b) is perturbation-theory algebra (stability conditions as eigenvalue positivity along trajectories) plus positivity-cone membership, both certifiable, with candidate operator sets proposed by search.
+
+\paragraph{Entry point.} The dual-certified bound of (a) for the class of smooth late-time $H(z)$ deformations with stated priors, the class being stated to include its behavior at very low redshift, where the data are weak and the bound would otherwise be vacuous \cite{efstathiou2021}: a short, decision-relevant theorem, achievable in weeks with existing tooling (the supernova magnitude--distance relation is the one non-convex ingredient and is handled by a rigorous outer relaxation), whose value survives any future data release because the statement is explicitly conditional on the frozen inputs.
+
+\subsection{P10: Well-posed Lorentzian quantum cosmology}
+\label{sec:p10}
+
+\paragraph{Statement.} Make the no-boundary \cite{hartlehawking1983} and tunneling proposals well defined as Lorentzian path integrals, beginning with minisuperspace: classify the saddle points and Picard--Lefschetz thimble decompositions of the gravitational path integral for closed cosmologies with $\Lambda>0$, determine which integration contours yield normalizable, stable perturbations, and characterize the allowable complex saddles under the Kontsevich--Segal--Witten criterion \cite{kontsevichsegal2021,witten2021}.
+
+\paragraph{Status.} The Feldbrugge--Lehners--Turok analysis \cite{flt2017,fltprl2017} argued that the Lorentzian minisuperspace integral selects a saddle with inverse-Gaussian (unsuppressed) perturbations, prompting the rebuttal of \cite{ddhhj2017} based on alternative contours and boundary conditions; a decade on, there is no agreed specification of the theory even in minisuperspace, and nothing rigorous beyond it. This is a genuine open problem whose difficulty is partly definitional, hence the \MM{} on C1, but the minisuperspace fragment is fully formalizable.
+
+\paragraph{Verification interface.} In the FLRW minisuperspace, where the scale-factor integral is Gaussian and the remaining lapse integral has a rational phase, the saddle set is an algebraic variety, computable by certified homotopy continuation and Gr\"obner methods; in anisotropic minisuperspaces the saddles are complex solutions of an ODE boundary-value problem, explicit in the biaxial Bianchi IX case \cite{jhh2019} and otherwise to be located and validated by interval methods; descent-flow (thimble) decompositions can be validated by interval integration of the flow equations \cite{arb2017}; and the Kontsevich--Segal allowability condition is semialgebraic, hence decidable family by family. A complete, certified saddle-and-contour atlas is therefore an achievable artifact, and disagreements between proposals become checkable statements about which atlas entry each proposal selects.
+
+\paragraph{Entry point.} The certified atlas for biaxial ($U(2)$-symmetric) Bianchi IX minisuperspace with $\Lambda>0$ (saddles, thimbles, allowability map), where the saddles are known in closed form \cite{jhh2019} and the integration domain can be fixed as in the FLRW debate, extending that debate to the first anisotropic case with machine-verified global structure; the triaxial case follows once its integration domain is specified, which is itself part of the problem.
+
+\section{Verification toolchain}
+\label{sec:toolchain}
+
+The problems above were chosen so that every claimed advance must pass through 1 of 6 verification stacks, each already load-tested elsewhere. \emph{Proof assistants} (Lean 4 with mathlib \cite{mathlib2020}) carry the ergodic-theoretic and geometric-analysis lemmas of P1 and P3 and provide the substrate that systems like AlphaProof search against \cite{hubert2025,nexus2026}. \emph{Validated numerics} (interval arithmetic, e.g., Arb \cite{arb2017}, with the covering-relation and self-similar-profile technology of \cite{tucker2002,chenhou2022,gomezserrano2019}) carries P1, P2, P4, and P10. \emph{Exact convex certificates} (sum-of-squares and semidefinite duals with rational rounding \cite{parrilo2003,sdpb2015}) carry P2, P3, P5, P6, P7, and P8. \emph{Certified enumeration} (branch-and-bound with interval relaxations over flux lattices) carries P7. \emph{Verified computer algebra} (tensor-calculus derivation chains re-derived independently and checked term by term) carries P5 and P8. \emph{Frozen-data pipelines} (deterministic likelihoods, pinned inputs, convex duality) carry P9.
+
+Around every stack we assume the same harness: a certificate-gated generate-verify-refine loop in which language-model or evolutionary proposers are allowed to be almost always wrong, verifiers are trusted and cheap, and nothing enters the record without a certificate. The 2024--2026 record \cite{romera2024,georgiev2025,wang2023,nexus2026} indicates that this architecture, rather than raw model capability, is what converts machine fluency into theorems. Two failure modes deserve standing attention: the numerics-to-theorem gap (a validated enclosure is a theorem only if the functional-analytic reduction to finitely many checks is itself correct, which argues for formalizing the reduction), and statement drift (the temptation to prove the nearby easier statement, which the pre-registration function of this document is designed to resist).
+
+\section{Outlook}
+\label{sec:outlook}
+
+The portfolio has a deliberate maturity gradient. The near-term tier converts existing numerical lore into theorems: the P4 radiation-fluid entry and the P9 convex bound are each plausibly a 1--2 quarter effort with current tooling, and the P2 spectral-gap entry has the same shape but needs explicit-constant high-frequency lemmas that do not yet exist and should be expected to take longer; each produces a result quotable outside the AI-for-mathematics community. The middle tier is discovery under certificates: P5, P7, and P8 are search problems whose verifiers exist today and whose outputs (a monotone functional, an exact no-go boundary, a classification of bounces) would be significant regardless of how they were found. The long tier, P1, P3, P6, and P10, requires assembling many certified pieces into architectures that do not yet exist, and should be expected to pay out in fragments for years before any endgame.
+
+Two closing remarks. First, nothing here predicts that machine assistance will resolve these problems; the claim is conditional and comparative: if AI-assisted methods are to contribute to theoretical cosmology in the next 5 years, these 10 problems are where the verification asymmetry is most favorable, and effort allocated here dominates effort allocated to equally important but certificate-poor questions. Second, the list is falsifiable as a selection: if by 2031 the entries with \HH{} certificate scores have produced nothing while human-only methods advanced, the thesis of Section \ref{sec:intro}, not merely the execution, was wrong. We consider that a feature. Fixing the statements now is what makes the experiment legible later.
+
+\vspace{4pt}
+\noindent\textit{Openness of each problem was checked against the literature through August 21, 2026. Corrections to any status claim are welcome and will be recorded in the revision log below.}
+
+\section*{Revision log}
+\begin{itemize}[leftmargin=2.6em,itemsep=1pt,topsep=2pt]
+\item[v1.0] August 21, 2026. Initial version.
+\item[v1.1] August 21, 2026. Literature re-audit of P1, P2, P4, P5, P8, and P9, and of the 20 most recent references (none found to be spurious). Status updated: P1 (almost-everywhere convergence to the attractor \cite{brehm2016}; positive-measure shadowing sets \cite{beguindutilleul2023}); P2 (conditional interior results and the rough-data theorem recorded; near-extremal mode family located rigorously \cite{hintz2025}; the open item restated as the uniform spectral-gap lower bound); P4 (small-sound-speed fluid existence \cite{ghj2023} and Newtonian Larson--Penston stability \cite{ghjs2025} recorded); P5 (non-uniqueness of the Clifton--Ellis--Tavakol functional off Petrov types D and N, and known non-monotone regimes, recorded); P8 (hypotheses of the Horndeski no-go and the strong-gravity loophole recorded); P9 (Chicago--Carnegie values corrected; prior model-independent bounds cited). Entry points rewritten for P1, P2, P5, and P10 to target statements the proposed certificates actually establish; P4, P8, and P9 entry points annotated. Bibliographic corrections to \cite{hubert2025,nexus2026,chenhou2022,desi2025,freedman2025,cai2026,poulin2023,tadpole2020}. P3, P6, and P7 were not re-audited in this revision.
+\end{itemize}
+
+\begin{thebibliography}{99}\setlength{\itemsep}{1pt}\small
+
+\bibitem{hubert2025} T.~Hubert, R.~Mehta, L.~Sartran, et al., ``Olympiad-level formal mathematical reasoning with reinforcement learning,'' Nature \textbf{651}, 607 (2026); published online November 2025.
+
+\bibitem{trinh2024} T.~H.~Trinh, Y.~Wu, Q.~V.~Le, H.~He, and T.~Luong, ``Solving olympiad geometry without human demonstrations,'' Nature \textbf{625}, 476 (2024).
+
+\bibitem{nexus2026} G.~Tsoukalas, A.~Kovsharov, et al., ``Advancing mathematics research with AI-driven formal proof search,'' arXiv:2605.22763 (2026).
+
+\bibitem{romera2024} B.~Romera-Paredes et al., ``Mathematical discoveries from program search with large language models,'' Nature \textbf{625}, 468 (2024).
+
+\bibitem{georgiev2025} B.~Georgiev, J.~G\'omez-Serrano, T.~Tao, and A.~Z.~Wagner, ``Mathematical exploration and discovery at scale,'' arXiv:2511.02864 (2025).
+
+\bibitem{wang2023} Y.~Wang, C.-Y.~Lai, J.~G\'omez-Serrano, and T.~Buckmaster, ``Asymptotic self-similar blow-up profile for three-dimensional axisymmetric Euler equations using neural networks,'' Phys. Rev. Lett. \textbf{130}, 244002 (2023).
+
+\bibitem{chenhou2022} J.~Chen and T.~Y.~Hou, ``Stable nearly self-similar blowup of the 2D Boussinesq and 3D Euler equations with smooth data I: Analysis,'' arXiv:2210.07191 (2022); ``II: Rigorous numerics,'' Multiscale Model. Simul. \textbf{23}, 25 (2025), arXiv:2305.05660.
+
+\bibitem{gomezserrano2019} J.~G\'omez-Serrano, ``Computer-assisted proofs in PDE: a survey,'' SeMA J. \textbf{76}, 459 (2019).
+
+\bibitem{tucker2002} W.~Tucker, ``A rigorous ODE solver and Smale's 14th problem,'' Found. Comput. Math. \textbf{2}, 53 (2002).
+
+\bibitem{gowers2023} W.~T.~Gowers, B.~Green, F.~Manners, and T.~Tao, ``On a conjecture of Marton,'' arXiv:2311.05762 (2023).
+
+\bibitem{mathlib2020} The mathlib Community, ``The Lean mathematical library,'' in \emph{Proc. 9th ACM SIGPLAN Int. Conf. on Certified Programs and Proofs} (2020), pp. 367--381.
+
+\bibitem{parrilo2003} P.~A.~Parrilo, ``Semidefinite programming relaxations for semialgebraic problems,'' Math. Program. \textbf{96}, 293 (2003).
+
+\bibitem{sdpb2015} D.~Simmons-Duffin, ``A semidefinite program solver for the conformal bootstrap,'' J. High Energy Phys. \textbf{06} (2015) 174.
+
+\bibitem{arb2017} F.~Johansson, ``Arb: efficient arbitrary-precision midpoint-radius interval arithmetic,'' IEEE Trans. Comput. \textbf{66}, 1281 (2017).
+
+\bibitem{polandrychkov2019} D.~Poland, S.~Rychkov, and A.~Vichi, ``The conformal bootstrap: theory, numerical techniques, and applications,'' Rev. Mod. Phys. \textbf{91}, 015002 (2019).
+
+\bibitem{gibbonshawking1977} G.~W.~Gibbons and S.~W.~Hawking, ``Cosmological event horizons, thermodynamics, and particle creation,'' Phys. Rev. D \textbf{15}, 2738 (1977).
+
+\bibitem{buchert2000} T.~Buchert, ``On average properties of inhomogeneous fluids in general relativity: dust cosmologies,'' Gen. Relativ. Gravit. \textbf{32}, 105 (2000).
+
+\bibitem{greenwald2011} S.~R.~Green and R.~M.~Wald, ``New framework for analyzing the effects of small scale inhomogeneities in cosmology,'' Phys. Rev. D \textbf{83}, 084020 (2011).
+
+\bibitem{burnett1989} G.~A.~Burnett, ``The high-frequency limit in general relativity,'' J. Math. Phys. \textbf{30}, 90 (1989).
+
+\bibitem{huneauluk2024wave} C.~Huneau and J.~Luk, ``Burnett's conjecture in generalized wave coordinates,'' arXiv:2403.03470 (2024).
+
+\bibitem{huneauluk2024review} C.~Huneau and J.~Luk, ``High-frequency solutions to the Einstein equations,'' Class. Quantum Grav. \textbf{41}, 143002 (2024).
+
+\bibitem{szabados2009} L.~B.~Szabados, ``Quasi-local energy-momentum and angular momentum in general relativity,'' Living Rev. Relativ. \textbf{12}, 4 (2009).
+
+\bibitem{east2016} W.~E.~East, M.~Kleban, A.~Linde, and L.~Senatore, ``Beginning inflation in an inhomogeneous universe,'' J. Cosmol. Astropart. Phys. \textbf{09} (2016) 010.
+
+\bibitem{mouhotvillani2011} C.~Mouhot and C.~Villani, ``On Landau damping,'' Acta Math. \textbf{207}, 29 (2011).
+
+\bibitem{bkl1970} V.~A.~Belinskii, I.~M.~Khalatnikov, and E.~M.~Lifshitz, ``Oscillatory approach to a singular point in the relativistic cosmology,'' Adv. Phys. \textbf{19}, 525 (1970).
+
+\bibitem{bkl1982} V.~A.~Belinskii, I.~M.~Khalatnikov, and E.~M.~Lifshitz, ``A general solution of the Einstein equations with a time singularity,'' Adv. Phys. \textbf{31}, 639 (1982).
+
+\bibitem{misner1969} C.~W.~Misner, ``Mixmaster universe,'' Phys. Rev. Lett. \textbf{22}, 1071 (1969).
+
+\bibitem{rodnianskispeck2018} I.~Rodnianski and J.~Speck, ``Stable Big Bang formation in near-FLRW solutions to the Einstein--scalar field and Einstein--stiff fluid systems,'' Selecta Math. \textbf{24}, 4293 (2018).
+
+\bibitem{frs2023} G.~Fournodavlos, I.~Rodnianski, and J.~Speck, ``Stable Big Bang formation for Einstein's equations: the complete sub-critical regime,'' J. Amer. Math. Soc. \textbf{36}, 827 (2023).
+
+\bibitem{ringstrom2001} H.~Ringstr\"om, ``The Bianchi IX attractor,'' Ann. Henri Poincar\'e \textbf{2}, 405 (2001).
+
+\bibitem{liebscher2011} S.~Liebscher, J.~H\"arterich, K.~Webster, and M.~Georgi, ``Ancient dynamics in Bianchi models: approach to periodic cycles,'' Commun. Math. Phys. \textbf{305}, 59 (2011).
+
+\bibitem{ringstrom2009} H.~Ringstr\"om, ``Strong cosmic censorship in $T^3$-Gowdy spacetimes,'' Ann. of Math. \textbf{170}, 1181 (2009).
+
+\bibitem{garfinkle2004} D.~Garfinkle, ``Numerical simulations of generic singularities,'' Phys. Rev. Lett. \textbf{93}, 161101 (2004).
+
+\bibitem{dhn2003} T.~Damour, M.~Henneaux, and H.~Nicolai, ``Cosmological billiards,'' Class. Quantum Grav. \textbf{20}, R145 (2003).
+
+\bibitem{wainwrighthsu1989} J.~Wainwright and L.~Hsu, ``A dynamical systems approach to Bianchi cosmologies: orthogonal models of class A,'' Class. Quantum Grav. \textbf{6}, 1409 (1989).
+
+\bibitem{cardoso2018} V.~Cardoso, J.~L.~Costa, K.~Destounis, P.~Hintz, and A.~Jansen, ``Quasinormal modes and strong cosmic censorship,'' Phys. Rev. Lett. \textbf{120}, 031103 (2018).
+
+\bibitem{dias2018} O.~J.~C.~Dias, F.~C.~Eperon, H.~S.~Reall, and J.~E.~Santos, ``Strong cosmic censorship in de Sitter space,'' Phys. Rev. D \textbf{97}, 104060 (2018).
+
+\bibitem{hintzvasy2018} P.~Hintz and A.~Vasy, ``The global non-linear stability of the Kerr--de Sitter family of black holes,'' Acta Math. \textbf{220}, 1 (2018).
+
+\bibitem{dafermosluk2017} M.~Dafermos and J.~Luk, ``The interior of dynamical vacuum black holes I: the $C^0$-stability of the Kerr Cauchy horizon,'' arXiv:1710.01722 (2017).
+
+\bibitem{wald1983} R.~M.~Wald, ``Asymptotic behavior of homogeneous cosmological models in the presence of a positive cosmological constant,'' Phys. Rev. D \textbf{28}, 2118 (1983).
+
+\bibitem{friedrich1986} H.~Friedrich, ``On the existence of $n$-geodesically complete or future complete solutions of Einstein's field equations with smooth asymptotic structure,'' Commun. Math. Phys. \textbf{107}, 587 (1986).
+
+\bibitem{ringstrom2008} H.~Ringstr\"om, ``Future stability of the Einstein--non-linear scalar field system,'' Invent. Math. \textbf{173}, 123 (2008).
+
+\bibitem{rodnianskispeck2013} I.~Rodnianski and J.~Speck, ``The nonlinear future stability of the FLRW family of solutions to the irrotational Euler--Einstein system with a positive cosmological constant,'' J. Eur. Math. Soc. \textbf{15}, 2369 (2013).
+
+\bibitem{boucher1983} W.~Boucher and G.~W.~Gibbons, ``Cosmic baldness,'' in \emph{The Very Early Universe}, edited by G.~W.~Gibbons, S.~W.~Hawking, and S.~T.~C.~Siklos (Cambridge University Press, Cambridge, 1983).
+
+\bibitem{choptuik1993} M.~W.~Choptuik, ``Universality and scaling in gravitational collapse of a massless scalar field,'' Phys. Rev. Lett. \textbf{70}, 9 (1993).
+
+\bibitem{gundlach2007} C.~Gundlach and J.~M.~Mart\'in-Garc\'ia, ``Critical phenomena in gravitational collapse,'' Living Rev. Relativ. \textbf{10}, 5 (2007).
+
+\bibitem{evanscoleman1994} C.~R.~Evans and J.~S.~Coleman, ``Critical phenomena and self-similarity in the gravitational collapse of radiation fluid,'' Phys. Rev. Lett. \textbf{72}, 1782 (1994).
+
+\bibitem{musco2019} I.~Musco, ``Threshold for primordial black holes: dependence on the shape of the cosmological perturbations,'' Phys. Rev. D \textbf{100}, 123524 (2019).
+
+\bibitem{fillmoregoldreich1984} J.~A.~Fillmore and P.~Goldreich, ``Self-similar gravitational collapse in an expanding universe,'' Astrophys. J. \textbf{281}, 1 (1984).
+
+\bibitem{bertschinger1985} E.~Bertschinger, ``Self-similar secondary infall and accretion in an Einstein--de Sitter universe,'' Astrophys. J. Suppl. \textbf{58}, 39 (1985).
+
+\bibitem{rampfhahn2021} C.~Rampf and O.~Hahn, ``Shell-crossing in a $\Lambda$CDM universe,'' Mon. Not. R. Astron. Soc. \textbf{501}, L71 (2021).
+
+\bibitem{reiterer2019} M.~Reiterer and E.~Trubowitz, ``Choptuik's critical spacetime exists,'' Commun. Math. Phys. \textbf{368}, 143 (2019).
+
+\bibitem{penrose1979} R.~Penrose, ``Singularities and time-asymmetry,'' in \emph{General Relativity: An Einstein Centenary Survey}, edited by S.~W.~Hawking and W.~Israel (Cambridge University Press, Cambridge, 1979), pp. 581--638.
+
+\bibitem{cet2013} T.~Clifton, G.~F.~R.~Ellis, and R.~Tavakol, ``A gravitational entropy proposal,'' Class. Quantum Grav. \textbf{30}, 125009 (2013).
+
+\bibitem{adams2006} A.~Adams, N.~Arkani-Hamed, S.~Dubovsky, A.~Nicolis, and R.~Rattazzi, ``Causality, analyticity and an IR obstruction to UV completion,'' J. High Energy Phys. \textbf{10} (2006) 014.
+
+\bibitem{ablp2020} N.~Arkani-Hamed, D.~Baumann, H.~Lee, and G.~L.~Pimentel, ``The cosmological bootstrap: inflationary correlators from symmetries and singularities,'' J. High Energy Phys. \textbf{04} (2020) 105.
+
+\bibitem{goodhew2021} H.~Goodhew, S.~Jazayeri, and E.~Pajer, ``The cosmological optical theorem,'' J. Cosmol. Astropart. Phys. \textbf{04} (2021) 021.
+
+\bibitem{snowmass2022} D.~Baumann et al., ``Snowmass white paper: the cosmological bootstrap,'' arXiv:2203.08121 (2022).
+
+\bibitem{maldacenanunez2001} J.~M.~Maldacena and C.~N\'u\~nez, ``Supergravity description of field theories on curved manifolds and a no-go theorem,'' Int. J. Mod. Phys. A \textbf{16}, 822 (2001).
+
+\bibitem{hkyt2007} M.~P.~Hertzberg, S.~Kachru, W.~Taylor, and M.~Tegmark, ``Inflationary constraints on type IIA string theory,'' J. High Energy Phys. \textbf{12} (2007) 095.
+
+\bibitem{tadpole2020} I.~Bena, J.~Bl\aa b\"ack, M.~Gra\~na, and S.~L\"ust, ``The tadpole problem,'' J. High Energy Phys. \textbf{11} (2021) 223, arXiv:2010.10519.
+
+\bibitem{kklt2003} S.~Kachru, R.~Kallosh, A.~Linde, and S.~P.~Trivedi, ``de Sitter vacua in string theory,'' Phys. Rev. D \textbf{68}, 046005 (2003).
+
+\bibitem{oosv2018} G.~Obied, H.~Ooguri, L.~Spodyneiko, and C.~Vafa, ``De Sitter space and the swampland,'' arXiv:1806.08362 (2018).
+
+\bibitem{denefdouglas2007} F.~Denef and M.~R.~Douglas, ``Computational complexity of the landscape I,'' Ann. Phys. \textbf{322}, 1096 (2007).
+
+\bibitem{penrose1965} R.~Penrose, ``Gravitational collapse and space-time singularities,'' Phys. Rev. Lett. \textbf{14}, 57 (1965).
+
+\bibitem{hawkingpenrose1970} S.~W.~Hawking and R.~Penrose, ``The singularities of gravitational collapse and cosmology,'' Proc. R. Soc. Lond. A \textbf{314}, 529 (1970).
+
+\bibitem{fewsterkontou2020} C.~J.~Fewster and E.-A.~Kontou, ``A new derivation of singularity theorems with weakened energy hypotheses,'' Class. Quantum Grav. \textbf{37}, 065010 (2020).
+
+\bibitem{fewsterkontou2022} C.~J.~Fewster and E.-A.~Kontou, ``A semiclassical singularity theorem,'' Class. Quantum Grav. \textbf{39}, 075028 (2022).
+
+\bibitem{kobayashi2016} T.~Kobayashi, ``Generic instabilities of nonsingular cosmologies in Horndeski theory: a no-go theorem,'' Phys. Rev. D \textbf{94}, 043511 (2016).
+
+\bibitem{lmr2016} M.~Libanov, S.~Mironov, and V.~Rubakov, ``Generalized Galileons: instabilities of bouncing and Genesis cosmologies and modified Genesis,'' J. Cosmol. Astropart. Phys. \textbf{08} (2016) 037.
+
+\bibitem{creminelli2016} P.~Creminelli, D.~Pirtskhalava, L.~Santoni, and E.~Trincherini, ``Stability of geodesically complete cosmologies,'' J. Cosmol. Astropart. Phys. \textbf{11} (2016) 047.
+
+\bibitem{rubakov2014} V.~A.~Rubakov, ``The null energy condition and its violation,'' Phys. Usp. \textbf{57}, 128 (2014).
+
+\bibitem{knoxmillea2020} L.~Knox and M.~Millea, ``Hubble constant hunter's guide,'' Phys. Rev. D \textbf{101}, 043533 (2020).
+
+\bibitem{desi2025} DESI Collaboration, ``DESI DR2 results II: measurements of baryon acoustic oscillations and cosmological constraints,'' Phys. Rev. D \textbf{112}, 083515 (2025), arXiv:2503.14738.
+
+\bibitem{vikman2005} A.~Vikman, ``Can dark energy evolve to the phantom?,'' Phys. Rev. D \textbf{71}, 023515 (2005).
+
+\bibitem{quintom2010} Y.-F.~Cai, E.~N.~Saridakis, M.~R.~Setare, and J.-Q.~Xia, ``Quintom cosmology: theoretical implications and observations,'' Phys. Rep. \textbf{493}, 1 (2010).
+
+\bibitem{planck2018} Planck Collaboration, ``Planck 2018 results. VI. Cosmological parameters,'' Astron. Astrophys. \textbf{641}, A6 (2020).
+
+\bibitem{riess2022} A.~G.~Riess et al., ``A comprehensive measurement of the local value of the Hubble constant with 1 km s$^{-1}$ Mpc$^{-1}$ uncertainty from the Hubble Space Telescope and the SH0ES team,'' Astrophys. J. Lett. \textbf{934}, L7 (2022).
+
+\bibitem{freedman2025} W.~L.~Freedman et al., ``Status report on the Chicago--Carnegie Hubble Program (CCHP): measurement of the Hubble constant using the Hubble and James Webb Space Telescopes,'' Astrophys. J. \textbf{985}, 203 (2025), arXiv:2408.06153.
+
+\bibitem{cai2026} R.-G.~Cai and S.-J.~Wang, ``The Hubble tension: a decade review,'' Res. Astron. Astrophys. \textbf{26}, 084011 (2026), arXiv:2606.20434.
+
+\bibitem{kamionkowskiriess2023} M.~Kamionkowski and A.~G.~Riess, ``The Hubble tension and early dark energy,'' Annu. Rev. Nucl. Part. Sci. \textbf{73}, 153 (2023).
+
+\bibitem{poulin2023} V.~Poulin, T.~L.~Smith, and T.~Karwal, ``The ups and downs of early dark energy solutions to the Hubble tension: a review of models, hints and constraints circa 2023,'' Phys. Dark Universe \textbf{42}, 101348 (2023).
+
+\bibitem{hartlehawking1983} J.~B.~Hartle and S.~W.~Hawking, ``Wave function of the universe,'' Phys. Rev. D \textbf{28}, 2960 (1983).
+
+\bibitem{flt2017} J.~Feldbrugge, J.-L.~Lehners, and N.~Turok, ``Lorentzian quantum cosmology,'' Phys. Rev. D \textbf{95}, 103508 (2017).
+
+\bibitem{fltprl2017} J.~Feldbrugge, J.-L.~Lehners, and N.~Turok, ``No smooth beginning for spacetime,'' Phys. Rev. Lett. \textbf{119}, 171301 (2017).
+
+\bibitem{ddhhj2017} J.~Diaz Dorronsoro, J.~J.~Halliwell, J.~B.~Hartle, T.~Hertog, and O.~Janssen, ``Real no-boundary wave function in Lorentzian quantum cosmology,'' Phys. Rev. D \textbf{96}, 043505 (2017).
+
+\bibitem{kontsevichsegal2021} M.~Kontsevich and G.~Segal, ``Wick rotation and the positivity of energy in quantum field theory,'' Q. J. Math. \textbf{72}, 673 (2021).
+
+\bibitem{witten2021} E.~Witten, ``A note on complex spacetime metrics,'' arXiv:2111.06514 (2021).
+
+\bibitem{brehm2016} B.~Brehm, ``Bianchi VIII and IX vacuum cosmologies: almost every solution forms particle horizons and converges to the Mixmaster attractor,'' arXiv:1606.08058 (2016).
+
+\bibitem{beguin2010} F.~B\'eguin, ``Aperiodic oscillatory asymptotic behavior for some Bianchi spacetimes,'' Class. Quantum Grav. \textbf{27}, 185005 (2010).
+
+\bibitem{reiterertrubowitz2010} M.~Reiterer and E.~Trubowitz, ``The BKL conjectures for spatially homogeneous spacetimes,'' arXiv:1005.4908 (2010).
+
+\bibitem{beguindutilleul2023} F.~B\'eguin and T.~Dutilleul, ``Chaotic dynamics of spatially homogeneous spacetimes,'' Commun. Math. Phys. \textbf{399}, 737 (2023).
+
+\bibitem{buchner2025} J.~Buchner, ``$C^1$-stable-manifolds for periodic heteroclinic chains in Bianchi IX: symbolic computations and statistical properties,'' arXiv:2503.02664 (2025).
+
+\bibitem{hintzvasy2017} P.~Hintz and A.~Vasy, ``Analysis of linear waves near the Cauchy horizon of cosmological black holes,'' J. Math. Phys. \textbf{58}, 081509 (2017).
+
+\bibitem{cgns2018} J.~L.~Costa, P.~M.~Gir\~ao, J.~Nat\'ario, and J.~D.~Silva, ``On the occurrence of mass inflation for the Einstein--Maxwell-scalar field system with a cosmological constant and an exponential Price law,'' Commun. Math. Phys. \textbf{361}, 289 (2018).
+
+\bibitem{rossetti2025} F.~Rossetti, ``Strong cosmic censorship for the spherically symmetric Einstein--Maxwell-charged-Klein-Gordon system with positive $\Lambda$: stability of the Cauchy horizon and $H^1$ extensions,'' Ann. Henri Poincar\'e \textbf{26}, 675 (2025).
+
+\bibitem{dsr2018} M.~Dafermos and Y.~Shlapentokh-Rothman, ``Rough initial data and the strength of the blue-shift instability on cosmological black holes with $\Lambda>0$,'' Class. Quantum Grav. \textbf{35}, 195010 (2018).
+
+\bibitem{hintz2025} P.~Hintz, ``Quasinormal modes of near-extremal Reissner--Nordstr\"om--de Sitter spacetimes,'' arXiv:2504.01734 (2025).
+
+\bibitem{mezzarobba2016} M.~Mezzarobba, ``Rigorous multiple-precision evaluation of D-finite functions in SageMath,'' in \emph{Mathematical Software -- ICMS 2016} (Springer, 2016), arXiv:1607.01967.
+
+\bibitem{ghj2023} Y.~Guo, M.~Had\v{z}i\'c, and J.~Jang, ``Naked singularities in the Einstein--Euler system,'' Ann. PDE \textbf{9}, 4 (2023).
+
+\bibitem{ghjs2025} Y.~Guo, M.~Had\v{z}i\'c, J.~Jang, and M.~Schrecker, ``Nonlinear stability of the Larson--Penston collapse,'' arXiv:2509.12435 (2025).
+
+\bibitem{kha1995} T.~Koike, T.~Hara, and S.~Adachi, ``Critical behavior in gravitational collapse of radiation fluid: a renormalization group (linear perturbation) analysis,'' Phys. Rev. Lett. \textbf{74}, 5170 (1995).
+
+\bibitem{maison1996} D.~Maison, ``Non-universality of critical behaviour in spherically symmetric gravitational collapse,'' Phys. Lett. B \textbf{366}, 82 (1996).
+
+\bibitem{harada2003} T.~Harada, ``Self-similar solutions, critical behavior and convergence to attractor in gravitational collapse,'' arXiv:gr-qc/0302004 (2003).
+
+\bibitem{sns2026} M.~Sarma, S.~N\'ajera, and R.~A.~Sussman, ``Gravitational entropy in Petrov type I spacetimes,'' arXiv:2605.20611 (2026).
+
+\bibitem{sussmanlarena2014} R.~A.~Sussman and J.~Larena, ``Gravitational entropies in LTB dust models,'' Class. Quantum Grav. \textbf{31}, 075021 (2014).
+
+\bibitem{chakraborty2021} S.~Chakraborty, S.~Guha, and R.~Goswami, ``An investigation on gravitational entropy of cosmological models,'' Int. J. Mod. Phys. D \textbf{30}, 2150051 (2021).
+
+\bibitem{pelavaslake1998} N.~Pelavas and K.~Lake, ``Measures of gravitational entropy: self-similar spacetimes,'' Phys. Rev. D \textbf{62}, 044009 (2000).
+
+\bibitem{gkos2024} M.~Graf, E.-A.~Kontou, A.~Ohanyan, and B.~Schinnerl, ``Hawking-type singularity theorems for worldvolume energy inequalities,'' Ann. Henri Poincar\'e \textbf{26}, 3871 (2025).
+
+\bibitem{ageeva2021} Y.~Ageeva, P.~Petrov, and V.~Rubakov, ``Nonsingular cosmological models with strong gravity in the past,'' Phys. Rev. D \textbf{104}, 063530 (2021).
+
+\bibitem{yepiao2019} G.~Ye and Y.-S.~Piao, ``Bounce in general relativity and higher-order derivative operators,'' Phys. Rev. D \textbf{99}, 084019 (2019).
+
+\bibitem{mironovvolkova2024} S.~Mironov and V.~Volkova, ``Non-singular cosmological scenarios in scalar-tensor theories and their stability: a review,'' Phys. Usp. \textbf{68}, 163 (2025), arXiv:2409.16108.
+
+\bibitem{mrv2020} S.~Mironov, V.~Rubakov, and V.~Volkova, ``Superluminality in beyond Horndeski theory with extra scalar field,'' Phys. Scripta \textbf{95}, 084002 (2020).
+
+\bibitem{an2025} O.~S.~An, J.~U.~Kang, Y.~J.~Kim, U.~R.~Mun, and U.~G.~Ri, ``Fully viable DHOST bounce with extra scalar,'' J. High Energy Phys. \textbf{05} (2025) 005.
+
+\bibitem{lemos2019} P.~Lemos, E.~Lee, G.~Efstathiou, and S.~Gratton, ``Model independent $H(z)$ reconstruction using the cosmic inverse distance ladder,'' Mon. Not. R. Astron. Soc. \textbf{483}, 4803 (2019).
+
+\bibitem{keeleyshafieloo2023} R.~E.~Keeley and A.~Shafieloo, ``Ruling out new physics at low redshift as a solution to the $H_0$ tension,'' Phys. Rev. Lett. \textbf{131}, 111002 (2023).
+
+\bibitem{zhou2025} Z.~Zhou, Z.~Miao, S.~Bi, C.~Ai, and H.~Zhang, ``What prevents resolving the Hubble tension through late-time expansion modifications?,'' Phys. Rev. D \textbf{112}, 103502 (2025).
+
+\bibitem{sabogal2026} M.~A.~Sabogal, L.~A.~Escamilla, D.~Pedrotti, E.~Selimaj, and S.~Vagnozzi, ``Hubble tension: the shape wall,'' arXiv:2607.21244 (2026).
+
+\bibitem{efstathiou2021} G.~Efstathiou, ``To $H_0$ or not to $H_0$?,'' Mon. Not. R. Astron. Soc. \textbf{505}, 3866 (2021).
+
+\bibitem{jhh2019} O.~Janssen, J.~J.~Halliwell, and T.~Hertog, ``No-boundary proposal in biaxial Bianchi IX minisuperspace,'' Phys. Rev. D \textbf{99}, 123531 (2019).
+
+\end{thebibliography}
+
+\end{document}
