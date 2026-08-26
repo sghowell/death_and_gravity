@@ -5,8 +5,14 @@
 > frozen DESI DR2 BAO + Pantheon+ + Planck r_d (lower 2σ edge), every class
 > member within Δχ² = 4 of the class best fit has H₀ ≤ 69.8417, and an explicit
 > certified member reaches 69.5313 (so the true maximum is in [69.53, 69.84]).
-> Certified feasible points exist for L ∈ {1, 2, 3, 5, 10} and Δ ∈ {1, 9}; the
-> corresponding certified upper bounds are queued (`scripts/run_p9_curve.sh`).
+> The full certified curve (each row: upper bound from a certificate chain,
+> lower bound from a certified feasible member, same class and T) is in
+> `problems/P9/results/summary.md`: at Δ = 4, max_F H₀ ∈ [69.65, 69.84] (L=1),
+> [69.52, 69.84] (L=1.5), [69.59, 70.07] (L=2), [69.76, 70.62] (L=3),
+> [70.20, 71.97] (L=5), [71.64, 76.28] (L=10, relaxation loose); for L=1.5,
+> Δ=1 gives [68.34, 68.93] and Δ=9 gives [70.56, 70.80]. Both chains were
+> adversarially reviewed; the P9 fixes (ulp-level outward rounding, class/T
+> consistency) are applied and the L=1.5 chain is being re-run.
 > Getting there required three relaxation redesigns (`problems/P9/notes/
 > relaxation-log.md`). P4 has the Evans–Coleman profile and spectrum
 > reproduced (κ₁ = 2.8105525488, exactly one non-gauge unstable mode in the
