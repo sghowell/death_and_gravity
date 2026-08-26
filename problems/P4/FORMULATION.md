@@ -155,6 +155,24 @@ C.  Analytic large-|λ| exclusion (research; see §2).
   expansion (order-40 series verified against integration to 1e−15) and a
   two-sided matching.
 
+## S2 outcomes (2026-08-26)
+- A1, A2 certified (`notes/s2-validated-expansions.md`): sonic-point Taylor
+  models in V₀ (K = 40–60, Banach tail bound, convergent on |x| < 0.1) and the
+  regular-centre family certified for x ≤ −3.
+- A3, A4 certified (`notes/s2-validated-shooting.md` §5): Arb Taylor-method
+  integrator with rigorous set enclosure from x = −0.05 to x = −3; Krawczyk
+  contraction of the matching map on the box [c ± 10⁻⁹] × [a_c ± 10⁻⁸] ×
+  [μ_c ± 10⁻⁸] ⇒ Theorem A's existence statement with V₀* = 0.11243940138809834
+  ± 7×10⁻¹⁷ and one certified zero of V on the sound cone. Remaining for
+  Theorem A as stated: global uniqueness in V₀ (needs an injectivity statement
+  for the regular-centre manifold at x_c) and the extension past the sonic
+  point / to t = 0 (same integrator, not run). Independent review of the rigor
+  chain is required before this is quoted as a theorem.
+- Theorem B next: reuse the integrator for the linearized system with complex
+  κ (report §6 gives the recommended route: interval-enclosed E on ∂R plus a
+  Krawczyk enclosure of κ₁).
+
 ## Revision log
 - v1 (2026-08-25): initial, with [open] items to be closed by S1.
 - v1.1 (2026-08-25): S1 outcomes recorded; [open] items closed as above.
+- v1.2 (2026-08-26): S2 outcomes recorded (A1–A4 certified; review pending).
