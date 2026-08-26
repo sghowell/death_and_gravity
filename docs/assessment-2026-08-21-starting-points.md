@@ -1,5 +1,19 @@
 # Starting-point assessment for the ten-problem portfolio
 
+> **Status after the first working session (2026-08-25/26).** P9(a) has its
+> first certified theorem: for the class C(G, L=1.5) (373-node grid), Δ = 4,
+> frozen DESI DR2 BAO + Pantheon+ + Planck r_d (lower 2σ edge), every class
+> member within Δχ² = 4 of the class best fit has H₀ ≤ 69.8417, and an explicit
+> certified member reaches 69.5313 (so the true maximum is in [69.53, 69.84]).
+> Certified feasible points exist for L ∈ {1, 2, 3, 5, 10} and Δ ∈ {1, 9}; the
+> corresponding certified upper bounds are queued (`scripts/run_p9_curve.sh`).
+> Getting there required three relaxation redesigns (`problems/P9/notes/
+> relaxation-log.md`). P4 has the Evans–Coleman profile and spectrum
+> reproduced (κ₁ = 2.8105525488, exactly one non-gauge unstable mode in the
+> KHA box, GHJS-type monotonicity holds in V_z variables) and the sonic-point
+> and centre expansions certified in Arb (Theorem A ingredients A1–A2); the
+> validated shooting step (A3) is in progress. Ledger: `CLAIMS.md`.
+
 Date: 2026-08-21. Scope: which entry points in
 `docs/problems/open-problems-theoretical-cosmology-2026.tex` to attack first,
 and what has to exist before any attack is credible. Literature claims below
