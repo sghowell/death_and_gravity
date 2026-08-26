@@ -50,9 +50,9 @@ absolute magnitude, the constant 25, and 5 log₁₀(r_d/Mpc)),
               + rᵀ C_SN⁻¹ r,   r_j = m_j − 5 log₁₀ D̃_L(zHD_j, zHEL_j) − M'.
 
 **Feasible set.** For Δ > 0 and an explicit reference point (ũ*, M'*) ∈
-C(G, L) × ℝ recorded in the certificate,
+C(G, L) × [0, 40] recorded in the certificate,
 
-    F(G, L, Δ) = { (ũ, M') : ũ ∈ C(G, L),  χ²(ũ, M') ≤ T },  T := χ²(ũ*, M'*) + Δ.
+    F(G, L, Δ) = { (ũ, M') : ũ ∈ C(G, L),  M' ∈ [0, 40],  χ²(ũ, M') ≤ T },  T := χ²(ũ*, M'*) + Δ.
 
 Because T ≥ min χ² + Δ for any reference point, F contains the Δ-sublevel
 set of the class minimum; a bound over F is therefore a bound over the
@@ -125,9 +125,22 @@ confines the nonconvex link to the grid nodes:
   The interpolation-error bound holds for C^{1,1} functions, so kinks of ũ
   at nodes are covered.
 - Node links: κ_i + c_i = log₁₀ D̃_i with D̃_i = (A_nodes ũ)_i linear in ũ,
-  sandwiched between the secant and a tangent on a certified bracket
+  sandwiched between the secant and three tangents on a certified bracket
   [D_lo,i, D_hi,i] (94 sandwiches instead of 1580).
-- BAO stays exact in ũ. Objective min ũ_0.
+- Smoothness of κ, two families of linear constraints on κ_{i+1} − κ_i:
+  (a) class-only: D̃_{i+1}/D̃_i = 1 + inc_i/D̃_i with inc_i ∈ ũ_i[J_−, J_+] and
+  D̃_i ∈ ũ_i[I_−, I_+] from the Lipschitz bound (the ũ_i scale cancels), so
+  κ_{i+1} − κ_i lies in an explicit interval independent of any bracket
+  (a few mmag wide at z ≲ 0.05 for L = 1.5); (b) bracket-aware: the same
+  ratio bounded with the current node bounds on ũ_i, ũ_{i+1}, D̃_i. Without
+  (a)–(b) the 94 independent link slacks let κ overfit the Hubble diagram and
+  bound tightening stalls; with them the relaxed χ² minimum approaches the
+  class minimum as brackets shrink.
+- BAO stays exact in ũ. Objective min ũ_0. The SN nuisance is boxed,
+  M' ∈ [0, 40] (part of the definition of F).
+- Bound tightening computes rigorous min/max of ũ_i, of D̃_i through ũ, and
+  of κ_i directly (the last converted to D̃-brackets through 10^{κ_i + c_i});
+  brackets are the intersection of all valid bounds obtained so far.
 
 Brackets are certified by optimality-based bound tightening: rigorous
 min/max of each ũ_i and D̃_i over the current relaxed set (which contains F),

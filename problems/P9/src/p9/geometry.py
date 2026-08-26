@@ -125,11 +125,44 @@ def kappa_second_derivative_bound(xa: float, xb: float, L: float) -> float:
     if xa <= 0.0:
         if xb > 0.1:
             raise ValueError("first segment too long for the closed-form bound")
-        return L * (1.0 / 6.0) * 1.02 + L * L * 0.25 * 1.02
+        # phi(x) = ((x-1)e^x + 1)/(e^x - 1) = x/2 + x^2/12 - x^4/720 + ...:
+        # phi'' <= 1/6 and phi' <= 1/2 + x/6 on [0, 0.1]; |b|/(u_0 + b phi) <= L.
+        return L * (1.0 / 6.0) + L * L * (0.5 + xb / 6.0) ** 2
     q = np.exp(xa) / np.expm1(xa)
     th_lo, th_hi = theta_bounds(xb, L)
     dth = max(abs(th_lo - 1.0), abs(th_hi - 1.0))
     return q * (L * th_hi + dth * (q * (1.0 + th_hi) - 1.0))
+
+
+def _J_pm(xa: float, xb: float, L: float, sign: int) -> float:
+    """int_{xa}^{xb} e^{sign*L*(x-xa)} e^{x} dx  (forward Lipschitz envelope from xa)."""
+    a = 1.0 + sign * L
+    if abs(a) < 1e-12:
+        return np.exp(xa) * (xb - xa)
+    return np.exp(xa) * (np.exp(a * (xb - xa)) - 1.0) / a
+
+
+def kappa_difference_bounds(x_nodes: np.ndarray, L: float) -> tuple[np.ndarray, np.ndarray]:
+    """Class-only bounds on kappa_{i+1} - kappa_i (log10 units), i = 0..N-1.
+
+    D_{i+1}/D_i = 1 + inc_i/D_i with inc_i in u_i [J_-, J_+] and D_i in u_i [I_-, I_+] (the u_i scale
+    cancels); for i = 0, D_1 in u_0 [J_-, J_+]. Then kappa_{i+1} - kappa_i = log10(D_{i+1}/D_i) - (c_{i+1} - c_i),
+    with c_i = log10(e^{x_i} - 1) (c_0 := 0 and kappa_0 = log10 u_0, so D_0 is replaced by u_0).
+    """
+    N = len(x_nodes) - 1
+    lo = np.empty(N); hi = np.empty(N)
+    c = np.concatenate([[0.0], np.log10(np.expm1(x_nodes[1:]))])
+    for i in range(N):
+        xa, xb = x_nodes[i], x_nodes[i + 1]
+        Jm, Jp = _J_pm(xa, xb, L, -1), _J_pm(xa, xb, L, +1)
+        if i == 0:
+            r_lo, r_hi = Jm, Jp                       # D_1 / u_0
+        else:
+            Im, Ip = _I_pm(xa, L, -1), _I_pm(xa, L, +1)
+            r_lo, r_hi = 1.0 + Jm / Ip, 1.0 + Jp / Im  # D_{i+1} / D_i
+        lo[i] = np.log10(r_lo) - (c[i + 1] - c[i])
+        hi[i] = np.log10(r_hi) - (c[i + 1] - c[i])
+    return lo, hi
 
 
 def kappa_interp_slack(x_nodes: np.ndarray, L: float) -> np.ndarray:

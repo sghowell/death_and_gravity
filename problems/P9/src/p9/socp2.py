@@ -21,10 +21,11 @@ import clarabel
 import numpy as np
 import scipy.sparse as sp
 
-from .geometry import kappa_interp_slack, segment_index
+from .geometry import kappa_difference_bounds, kappa_interp_slack, segment_index
 from .model import Frozen
 
 LN10 = np.log(10.0)
+MP_BOX = (0.0, 40.0)   # box on the SN nuisance M' (part of the definition of F)
 
 
 @dataclass
@@ -48,7 +49,55 @@ class NodeBounds:
         return NodeBounds(u_lo, u_hi, fr.A_nodes @ u_lo, fr.A_nodes @ u_hi)
 
 
+N_TANGENTS = 3
+
+
+def tangent_points(lo: np.ndarray, hi: np.ndarray, tangent_u, fr: Frozen) -> list[np.ndarray]:
+    """K tangent points per node inside [lo, hi]: geometric quantiles, plus the reference point if given."""
+    K = N_TANGENTS
+    pts = [lo ** (1 - s) * hi ** s for s in np.linspace(0.15, 0.85, K)]
+    if tangent_u is not None:
+        tp = np.concatenate([[tangent_u[0]], (fr.A_nodes @ tangent_u)[1:]])
+        pts[K // 2] = np.clip(tp, lo, hi)
+    return pts
+
+
+def full_segment_coeffs(x: np.ndarray) -> tuple[np.ndarray, np.ndarray]:
+    """inc_k = alpha_k u_k + beta_k u_{k+1} for the full segment k (both coefficients >= 0)."""
+    hs = np.diff(x); ex = np.exp(x)
+    alpha = (ex[1:] - (hs + 1.0) * ex[:-1]) / hs
+    beta = ((hs - 1.0) * ex[1:] + ex[:-1]) / hs
+    return alpha, beta
+
+
+def bracket_kappa_difference_bounds(fr: Frozen, nb: NodeBounds) -> tuple[np.ndarray, np.ndarray]:
+    """Bounds on kappa_{i+1} - kappa_i from the current node bounds (valid on F given nb valid).
+
+    i >= 1: D_{i+1}/D_i = 1 + inc_i/D_i, inc_i in [a u_lo,i + b u_lo,i+1, a u_hi,i + b u_hi,i+1], D_i in [dm_lo, dm_hi].
+    i = 0:  D_1/u_0 = a_0 + b_0 u_1/u_0 in [a_0 + b_0 u_lo,1/u_hi,0, a_0 + b_0 u_hi,1/u_lo,0].
+    """
+    x = fr.spec.x
+    N = len(x) - 1
+    a, b = full_segment_coeffs(x)
+    c = np.concatenate([[0.0], np.log10(np.expm1(x[1:]))])
+    lo = np.empty(N); hi = np.empty(N)
+    for i in range(N):
+        inc_lo = a[i] * nb.u_lo[i] + b[i] * nb.u_lo[i + 1]
+        inc_hi = a[i] * nb.u_hi[i] + b[i] * nb.u_hi[i + 1]
+        if i == 0:
+            r_lo = a[0] + b[0] * nb.u_lo[1] / nb.u_hi[0]
+            r_hi = a[0] + b[0] * nb.u_hi[1] / nb.u_lo[0]
+        else:
+            r_lo = 1.0 + inc_lo / nb.dm_hi[i]
+            r_hi = 1.0 + inc_hi / nb.dm_lo[i]
+        lo[i] = np.log10(r_lo) - (c[i + 1] - c[i])
+        hi[i] = np.log10(r_hi) - (c[i + 1] - c[i])
+    return lo, hi
+
+
 class KappaModel:
+    MP_BOX = MP_BOX
+
     def __init__(self, fr: Frozen, nb: NodeBounds, T: float | None, tangent_u: np.ndarray | None = None,
                  tol: float = 1e-8):
         self.fr, self.nb, self.T = fr, nb, T
@@ -109,11 +158,8 @@ class KappaModel:
         lo = np.concatenate([[nb.u_lo[0]], nb.dm_lo[1:]])
         hi = np.concatenate([[nb.u_hi[0]], nb.dm_hi[1:]])
         cnode = np.concatenate([[0.0], np.log10(np.expm1(x[1:]))])
-        if tangent_u is None:
-            tp = np.sqrt(lo * hi)
-        else:
-            tp = np.concatenate([[tangent_u[0]], (fr.A_nodes @ tangent_u)[1:]])
-            tp = np.clip(tp, lo, hi)
+        tps = tangent_points(lo, hi, tangent_u, fr)
+        self.tps = tps
         Dlin = sp.lil_matrix((N + 1, nvar))
         Dlin[0, iu[0]] = 1.0
         Dlin[1:, iu] = fr.A_nodes[1:]
@@ -122,10 +168,25 @@ class KappaModel:
         slope = (np.log10(hi) - np.log10(lo)) / (hi - lo)
         G += [-Dlin, Dlin]; h += [-lo, hi]
         G.append(-Ikn + sp.diags(slope) @ Dlin); h.append(-np.log10(lo) + slope * lo + cnode)     # secant
-        G.append(Ikn - sp.diags(1.0 / (tp * LN10)) @ Dlin); h.append(np.log10(tp) - 1.0 / LN10 - cnode)  # tangent
+        for tp in tps:                                                                            # tangents
+            G.append(Ikn - sp.diags(1.0 / (tp * LN10)) @ Dlin); h.append(np.log10(tp) - 1.0 / LN10 - cnode)
+        Dk = E(N, [(i, ik[i + 1], 1.0) for i in range(N)] + [(i, ik[i], -1.0) for i in range(N)])
+        if np.isfinite(spc.L):
+            # class-implied smoothness of kappa: dlo_i <= kappa_{i+1} - kappa_i <= dhi_i (bracket-free)
+            dlo, dhi = kappa_difference_bounds(x, spc.L)
+            G += [Dk, -Dk]; h += [dhi, -dlo]
+            self.kappa_diff_bounds = (dlo, dhi)
+        # bracket-aware smoothness of kappa (valid given the current node bounds)
+        blo, bhi = bracket_kappa_difference_bounds(fr, nb)
+        G += [Dk, -Dk]; h += [bhi, -blo]
+        self.bracket_diff_bounds = (blo, bhi)
+        # Mp box (part of the definition of F)
+        IM = E(1, [(0, iM, 1.0)])
+        G += [-IM, IM]; h += [np.array([-self.MP_BOX[0]]), np.array([self.MP_BOX[1]])]
         Gm = sp.vstack(G).tocsr(); hv = np.concatenate(h)
         A_blocks.append(Gm); b_blocks.append(hv)
         cones = [clarabel.ZeroConeT(n_eq), clarabel.NonnegativeConeT(Gm.shape[0])]
+        self._n_eq, self._n_in = n_eq, Gm.shape[0]
         if T is not None:
             nsoc = 1 + nbao + n
             S = sp.lil_matrix((nsoc, nvar)); S[1:1 + nbao, iwb] = -np.eye(nbao); S[1 + nbao:, iws] = -np.eye(n)
@@ -153,21 +214,32 @@ class KappaModel:
         y = np.asarray(sol.x)
         return 2.0 * sol.obj_val, y[self.idx["u"]].copy(), float(y[self.idx["Mp"]])
 
-    def extremize(self, c_u: np.ndarray) -> float:
+    def extremize(self, c_u: np.ndarray, c_k: np.ndarray | None = None) -> float:
         q = np.zeros(self.nvar); q[self.idx["u"]] = c_u
+        if c_k is not None:
+            q[self.idx["kappa"]] = c_k
         return float(self._solve(self.P0, q).obj_val)
 
     def node_bounds(self, verbose: bool = False) -> NodeBounds:
+        """Min/max of u_i, D_i (via u) and kappa_i over the relaxed set; D brackets are the
+        intersection of the u-side bounds with 10^(kappa bounds + c_i)."""
         N = self.N
         A = self.fr.A_nodes
+        x = self.fr.spec.x
+        c = np.concatenate([[0.0], np.log10(np.expm1(x[1:]))])
+        z = np.zeros(N + 1)
         u_lo = np.empty(N + 1); u_hi = np.empty(N + 1); dm_lo = np.zeros(N + 1); dm_hi = np.zeros(N + 1)
         for i in range(N + 1):
             e = np.zeros(N + 1); e[i] = 1.0
             u_lo[i] = self.extremize(e); u_hi[i] = -self.extremize(-e)
+            k_lo = self.extremize(z, e); k_hi = -self.extremize(z, -e)
             if i > 0:
-                dm_lo[i] = self.extremize(A[i]); dm_hi[i] = -self.extremize(-A[i])
+                dm_lo[i] = max(self.extremize(A[i]), 10 ** (k_lo + c[i]))
+                dm_hi[i] = min(-self.extremize(-A[i]), 10 ** (k_hi + c[i]))
+            else:
+                u_lo[0] = max(u_lo[0], 10 ** k_lo); u_hi[0] = min(u_hi[0], 10 ** k_hi)
             if verbose and i % 15 == 0:
-                print(f"    node {i:3d} x={self.fr.spec.x[i]:.4f}: u in [{u_lo[i]:.4f},{u_hi[i]:.4f}]"
+                print(f"    node {i:3d} x={x[i]:.4f}: u in [{u_lo[i]:.4f},{u_hi[i]:.4f}]"
                       f"  D in [{dm_lo[i]:.5f},{dm_hi[i]:.5f}]", flush=True)
         # intersect with previous bounds (both valid)
         return NodeBounds(np.maximum(u_lo, self.nb.u_lo), np.minimum(u_hi, self.nb.u_hi),
