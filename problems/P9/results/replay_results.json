@@ -2,9 +2,19 @@
  "date": "2026-08-29",
  "tool": "src/p9/replay.py (re-verifies every stored dual from the class-box base; outward rounding throughout)",
  "replayed_H0_max": {
-  "lkr_L1.5_D4_r2": 69.841751, "lkr_L1_D4_r2": 69.843019, "lkr_L2_D4_r2": 70.071649, "lkr_L3_D4_r2": 70.618397,
-  "lkr_L5_D4_r2": 71.973055, "lkr_L10_D4_r2": 76.275738, "lkr_L1.5_D1_r2": 68.928723, "lkr_L1.5_D9_r2": 70.797010
+  "lkr_L1.5_D4_r2": 69.841751,
+  "lkr_L1_D4_r2": 69.843019,
+  "lkr_L2_D4_r2": 70.071649,
+  "lkr_L3_D4_r2": 70.618397,
+  "lkr_L5_D4_r2": 71.973055,
+  "lkr_L10_D4_r2": 76.275738,
+  "lkr_L1.5_D1_r2": 68.928723,
+  "lkr_L1.5_D9_r2": 70.79701,
+  "lkr_L1.5_D4_r2_union3": 72.58692,
+  "lkr_L1.5_D4_r2_union3_dv": 72.705187
  },
- "stored_H0_max_differences": {"lkr_L1_D4_r2": "stored 69.842957 (pre-fix chain; replayed value is the rigorous one)"},
- "note": "all other rows replay to the stored value exactly"
+ "stored_H0_max_differences": {
+  "lkr_L1_D4_r2": "stored 69.842957 (pre-fix chain; replayed value is the rigorous one)"
+ },
+ "note": "all other rows replay to the stored value exactly Variant chains union3 / union3_dv replayed 2026-08-30 (results/replay_variant_*.log); dv, dessn5yr, dessn5yr_dv replays pending."
 }
