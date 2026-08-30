@@ -190,3 +190,8 @@ the float literals 8/3, 4/3 in `css.py` (asserted).
 - v1.2 (2026-08-26): S2 outcomes recorded (A1–A4 certified; review pending).
 - v1.3 (2026-08-29): adversarial-review fixes applied and re-run; modelling
   scope closed; Theorem B in progress (staged).
+- v1.4 (2026-08-30): Theorem B certified on R = [0,15]×[−14,14]
+  (`notes/s2-theorem-b.md` §3): winding number 2, two simple real zeros
+  (gauge and κ₁ ∈ [2.81055254439, 2.81055255326]), γ ∈ [0.3558019218,
+  0.3558019231]; review pending. Theorem C (exclusion outside R) remains the
+  open research item.
