@@ -172,7 +172,21 @@ C.  Analytic large-|λ| exclusion (research; see §2).
   κ (report §6 gives the recommended route: interval-enclosed E on ∂R plus a
   Krawczyk enclosure of κ₁).
 
+## Modelling scope (2026-08-29, `notes/modelling-scope.md`)
+The KHA CSS system certified in S2 is now derived exactly from spherically
+symmetric Einstein–Euler with p = ρ/3 (sympy from the metric, no tensor
+package; residuals cancel identically, time-dependent terms included) and
+checked independently by exact-rational second-order jets sharing no code;
+the angular Einstein equation follows from the contracted Bianchi identity;
+Lemmas 1–4 give the PDE reduction, constraint-surface invariance,
+reduced ⇒ full via the adjugate (isolated zeros of Δ̃ only), and the
+sonic-point gluing through the certified analytic series. What remains by
+reading rather than identity: the KHA95 sign/normalization conventions and
+the float literals 8/3, 4/3 in `css.py` (asserted).
+
 ## Revision log
 - v1 (2026-08-25): initial, with [open] items to be closed by S1.
 - v1.1 (2026-08-25): S1 outcomes recorded; [open] items closed as above.
 - v1.2 (2026-08-26): S2 outcomes recorded (A1–A4 certified; review pending).
+- v1.3 (2026-08-29): adversarial-review fixes applied and re-run; modelling
+  scope closed; Theorem B in progress (staged).
