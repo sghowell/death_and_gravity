@@ -148,6 +148,8 @@ def main():
         if last is not None and abs(lb - last) < args.tol:
             break
         last = lb
+    if state.exists():   # mark the chain finished (converged or passes exhausted) for the report tooling
+        s = json.loads(state.read_text()); s["done"] = True; state.write_text(json.dumps(s, indent=1))
     print("TOTAL done", flush=True)
 
 

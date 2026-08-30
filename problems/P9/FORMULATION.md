@@ -290,6 +290,32 @@ and state.json records the variant so that `replay` rebuilds the same inputs.
   N_eff = 3.044 and ω_bc = Ω_m h² from the DESI DR2 BAO(+BBN) ΛCDM fit;
   box = ±2σ = [145.56, 150.52] Mpc.
 
+### 6.2 Variant results (2026-08-30; L = 1.5, Δ = 4, r = 2, r_d box Planck ±2σ)
+Each row is a two-sided certified statement of the §1 form for its own inputs
+and its own T = upper(χ²(reference) + 4) (`results/summary.md`; chains
+`results/certificates/lkr_L1.5_D4_r2_<suffix>/state.json`, feasible points
+`feasible_L1.5_D4_r2_<suffix>.json`). Values at r_lo = 146.57 Mpc; lower
+bounds rounded down, upper bounds rounded up.
+
+| SN sample | BGS D_V | max_F H₀ | class-min χ² (n_SN + n_BAO) |
+|---|---|---|---|
+| Pantheon+ (baseline) | no | [69.5227, 69.8418] | 1379.73 (1580 + 12) |
+| Pantheon+ | yes | [69.7713, 70.0769] | 1380.94 (1580 + 13) |
+| DES-SN5YR | no | [71.0206, 71.2683] | 1625.65 (1820 + 12) |
+| DES-SN5YR | yes | (chain running) | 1625.66 (1820 + 13) |
+| Union3 (22 bins) | no | [72.5207, 72.5870] | 13.51 (22 + 12) |
+| Union3 (22 bins) | yes | [72.6384, 72.7052] | 14.05 (22 + 13) |
+
+Reading: the shape wall is sample-dependent at the 1–3 km s⁻¹ Mpc⁻¹ level
+(the SN sample fixes the *shape* of D_M(z) that the class must reproduce;
+the BAO rows then fix its scale in units of r_d), and adding the BGS D_V row
+moves the wall up by 0.2–0.4. With Union3 the wall reaches ≈ 72.6 — still
+below the local-distance-ladder values quoted in the problem statement — and
+the width of the two-sided enclosure is ≤ 0.31 for every row, so the
+relaxation, not the class, is the limiting factor only for the Pantheon+
+rows. All numbers are for the Planck ±2σ r_d box; the BBN box rescales the
+upper bounds by 146.57/145.56 (§1: H₀ ≤ H₀max · r_lo/r_d).
+
 ### 3.6 v3: the λ–κ–ρ relaxation (the one used for certificates)
 The v2 relaxation (§3.2) is valid but stalls at H₀ ≲ 75 for L = 1.5 because
 the link between the SN side (κ) and the class side (ũ) is loose wherever

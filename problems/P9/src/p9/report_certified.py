@@ -20,6 +20,17 @@ CERT = RESULTS / "certificates"
 R_D_REF = 147.09     # Mpc: Planck 2018 central value, the reference point of the rescaled column
 
 
+def chain_log_done(tag: str) -> bool:
+    """A chain is finished when a run log that opens with its tag ends with the 'TOTAL done' marker
+    (log names vary between the curve and variant queues, so match on the header line, not the file name)."""
+    for p in RESULTS.glob("lkr_cert_*.log"):
+        txt = p.read_text()
+        head = txt.split("\n", 1)[0]
+        if (head.startswith(tag + " ") or head.startswith(tag + ":") or head.startswith(f"resuming {tag}:")) and "TOTAL done" in txt:
+            return True
+    return False
+
+
 def chains():
     out = []
     for d in sorted(CERT.glob("lkr_L*_D*_r*")):
@@ -27,7 +38,7 @@ def chains():
         if not st.exists():
             continue
         s = json.loads(st.read_text())
-        done = any("TOTAL done" in p.read_text() for p in RESULTS.glob(f"lkr_cert_{s['tag']}*.log"))
+        done = bool(s.get("done")) or chain_log_done(s["tag"])
         var = Variant.from_state(s)
         out.append(dict(dir=d.name, tag=s["tag"], L=s["L"], Delta=s["Delta"], refine=s["refine"], T=s["T"],
                         H0_max=s["H0_max"], passes=len(s["history"]), done=done, var=var,
