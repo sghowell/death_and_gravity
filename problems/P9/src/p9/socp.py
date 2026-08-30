@@ -24,6 +24,7 @@ class DirectModel:
     def __init__(self, fr: Frozen, br: Brackets, T: float | None, tol: float = 1e-9):
         self.fr, self.br, self.T = fr, br, T
         spc = fr.spec
+        assert not spc.use_dv, "this model has no D_V row (use the LKR relaxation)"
         N, n, nb = spc.n_seg, len(fr.sn.m), len(fr.bao.value)
         self.N, self.n, self.nb = N, n, nb
         iu = np.arange(N + 1)

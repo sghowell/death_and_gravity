@@ -15,7 +15,7 @@ import numpy as np
 import scipy.sparse as sp
 
 from .lkr import Brackets3
-from .lkr_rows import FloatArith, build
+from .lkr_rows import FloatArith, build, obbt_objectives
 from .model import Frozen
 
 
@@ -99,22 +99,13 @@ class LKRModel2:
         return self.extremize(q)
 
     def tighten(self, verbose=False, lam_nodes=None, rho_nodes=None) -> Brackets3:
-        br = self.br; N = self.N
-        rho_lo = br.rho_lo.copy(); rho_hi = br.rho_hi.copy()
-        lam_lo = br.lam_lo.copy(); lam_hi = br.lam_hi.copy()
-        yb_lo = br.yb_lo.copy(); yb_hi = br.yb_hi.copy()
-        if rho_nodes is None:
-            rho_nodes = range(1, N + 1)
-        if lam_nodes is None:
-            lam_nodes = sorted(set(self.enodes) | {0})
-        for i in rho_nodes:
-            q = np.zeros(self.nvar); q[self.idx["lam"][i]] = 1.0; q[self.idx["kappa"][i]] = -1.0
-            rho_lo[i] = max(rho_lo[i], self.extremize(q) - self.c_node[i])
-            rho_hi[i] = min(rho_hi[i], -self.extremize(-q) - self.c_node[i])
-        for i in lam_nodes:
-            q = np.zeros(self.nvar); q[self.idx["lam"][i]] = 1.0
-            lam_lo[i] = max(lam_lo[i], self.extremize(q)); lam_hi[i] = min(lam_hi[i], -self.extremize(-q))
-        for p in range(len(self.idx_dm)):
-            q = np.zeros(self.nvar); q[self.idx["yb"][p]] = 1.0
-            yb_lo[p] = max(yb_lo[p], self.extremize(q)); yb_hi[p] = min(yb_hi[p], -self.extremize(-q))
-        return Brackets3(rho_lo, rho_hi, yb_lo, yb_hi, lam_lo, lam_hi)
+        """OBBT over lkr_rows.obbt_objectives (rho at rho_nodes, lambda at lam_nodes, all y_b, all y_V)."""
+        br = self.br.copy()
+        for kind, i, side, qd in obbt_objectives(self.lay, lam_nodes):
+            if kind == "rho" and rho_nodes is not None and i not in rho_nodes:
+                continue
+            q = np.zeros(self.nvar)
+            for v, cf in qd.items():
+                q[v] = cf
+            br.apply_bound(kind, i, side, self.extremize(q), float(self.c_node[i]) if kind == "rho" else 0.0)
+        return br

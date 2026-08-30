@@ -102,6 +102,7 @@ class KappaModel:
                  tol: float = 1e-8):
         self.fr, self.nb, self.T = fr, nb, T
         spc = fr.spec
+        assert not spc.use_dv, "this model has no D_V row (use the LKR relaxation)"
         x = spc.x
         N, n, nbao = spc.n_seg, len(fr.sn.m), len(fr.bao.value)
         self.N, self.n = N, n

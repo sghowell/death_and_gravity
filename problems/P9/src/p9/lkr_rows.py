@@ -104,6 +104,13 @@ class Layout:
     Ed: np.ndarray; Er: np.ndarray; Es: np.ndarray; yb: np.ndarray; P: np.ndarray; U: np.ndarray
     wb: np.ndarray; ws: np.ndarray; nvar: int
     enodes: list; epos: dict; idx_dm: list; idx_dh: list
+    # D_V option (ClassSpec.use_dv; FORMULATION §6.1). All empty when use_dv is False: the layout is then
+    # identical to the baseline by construction (empty blocks shift no index).
+    idx_dv: list = field(default_factory=list)      # BAO rows of kind DV_over_rs
+    idx_ym: list = field(default_factory=list)      # rows owning a y_b = log10 D_M(z_b) variable: idx_dm + idx_dv
+    yH: np.ndarray = None                           # y_H = log10 D_H(z_b), one per D_V row
+    yV: np.ndarray = None                           # y_V = log10 D_V(z_b) = (log10 z_b + 2 y_b + y_H)/3
+    dvnodes: list = field(default_factory=list)     # grid nodes bracketing the D_V redshifts (tightened like enodes)
 
 
 @dataclass
@@ -124,18 +131,50 @@ def layout_for(fr: Frozen) -> Layout:
     kinds = fr.bao.kind; nbao = len(kinds)
     idx_dm = [r for r, k in enumerate(kinds) if k == "DM_over_rs"]
     idx_dh = [r for r, k in enumerate(kinds) if k == "DH_over_rs"]
+    idx_dv = [r for r, k in enumerate(kinds) if k == "DV_over_rs"] if spc.use_dv else []
+    idx_ym = idx_dm + idx_dv
     from .geometry import segment_index
     xb = np.log1p(fr.bao.z); kb = segment_index(x, xb)
     enodes = sorted({int(kb[r]) for r in idx_dh} | {int(kb[r]) + 1 for r in idx_dh})
     epos = {node: p for p, node in enumerate(enodes)}
+    dvnodes = sorted({int(kb[r]) for r in idx_dv} | {int(kb[r]) + 1 for r in idx_dv})
     pos = 0
     def block(m):
         nonlocal pos
         r = np.arange(pos, pos + m); pos += m; return r
     lam = block(N + 1); kappa = block(N + 1); Mp = int(block(1)[0]); ell = block(n)
-    Ed = block(N); Er = block(N); Es = block(N); yb = block(len(idx_dm)); P = block(nbao)
+    Ed = block(N); Er = block(N); Es = block(N); yb = block(len(idx_ym))
+    yH = block(len(idx_dv)); yV = block(len(idx_dv)); P = block(nbao)
     U = block(len(enodes)); wb = block(nbao); ws = block(n)
-    return Layout(N, n, nbao, lam, kappa, Mp, ell, Ed, Er, Es, yb, P, U, wb, ws, pos, enodes, epos, idx_dm, idx_dh)
+    return Layout(N, n, nbao, lam, kappa, Mp, ell, Ed, Er, Es, yb, P, U, wb, ws, pos, enodes, epos, idx_dm, idx_dh,
+                  idx_dv=idx_dv, idx_ym=idx_ym, yH=yH, yV=yV, dvnodes=dvnodes)
+
+
+def obbt_objectives(lay: Layout, lam_nodes=None):
+    """The bound-tightening objectives, as (kind, i, side, {var: coeff}): minimize the linear form for side
+    'lo', its negative for side 'hi'. kind 'rho' (lam_i - kappa_i; c_i subtracted afterwards), 'lam' (nodes
+    lam_nodes; default: D_H nodes, D_V nodes and node 0), 'yb' (all y_b), 'yv' (D_V rows)."""
+    if lam_nodes is None:
+        lam_nodes = sorted(set(lay.enodes) | set(lay.dvnodes) | {0})
+    jobs = []
+    for i in range(1, lay.N + 1):
+        jobs.append(("rho", i, "lo", {int(lay.lam[i]): 1.0, int(lay.kappa[i]): -1.0}))
+        jobs.append(("rho", i, "hi", {int(lay.lam[i]): -1.0, int(lay.kappa[i]): 1.0}))
+    for i in lam_nodes:
+        jobs.append(("lam", i, "lo", {int(lay.lam[i]): 1.0})); jobs.append(("lam", i, "hi", {int(lay.lam[i]): -1.0}))
+    for p in range(len(lay.yb)):
+        jobs.append(("yb", p, "lo", {int(lay.yb[p]): 1.0})); jobs.append(("yb", p, "hi", {int(lay.yb[p]): -1.0}))
+    for q in range(len(lay.yV)):
+        jobs.append(("yv", q, "lo", {int(lay.yV[q]): 1.0})); jobs.append(("yv", q, "hi", {int(lay.yV[q]): -1.0}))
+    return jobs
+
+
+def dv_gap(t, lh, ar):
+    """Upper bound on log10((1-t)10^a + t 10^b) - [(1-t)a + tb] over |b - a| <= lh (the Jensen defect of
+    log10 D_H at the interpolation weight t): g(d) = log10((1-t) + t 10^d) - t d is convex with g(0) = 0, so
+    the maximum over [-lh, lh] is at an endpoint. Rounded up."""
+    g = lambda d: ar.log10((1 - t) + t * ar.pow10(d)) - t * d
+    return ar.up(ar.absmax(g(lh), g(-lh)))
 
 
 def sandwich_range(lo, hi, ar, K=N_TANGENTS):
@@ -204,6 +243,10 @@ def build(fr: Frozen, br, T, ar) -> Build:
     for r in lay.idx_dh:
         k = int(kb[r]); t = tb[r]
         B.eq_rows.append(([(lay.P[r], one), (lay.U[lay.epos[k]], -(1 - t)), (lay.U[lay.epos[k + 1]], -t)], ar.c(0)))
+    # D_V rows: 3 y_V - 2 y_b - y_H = log10 z_b   (log10 D_V = [log10 z + 2 log10 D_M + log10 D_H]/3)
+    for q, r in enumerate(lay.idx_dv):
+        p = len(lay.idx_dm) + q
+        B.eq_rows.append(([(lay.yV[q], ar.c(3)), (lay.yb[p], ar.c(-2)), (lay.yH[q], -one)], ar.log10(ar.c(fr.bao.z[r]))))
     # ---------------- inequalities ----------------
     le = B.le_rows
     lam_lo = [ar.absmax(llo_box, llo_box) for _ in range(N + 1)]  # placeholders replaced below
@@ -268,15 +311,32 @@ def build(fr: Frozen, br, T, ar) -> Build:
             coeffs = [(v, cf * sc) if v == lay.Es[i] else (v, cf) for v, cf in coeffs]
             le.append((coeffs, rhs))
         _el, _eh = sandwich_range(lo_s + shift, hi_s + shift, ar); B._ranges["Es"][i] = (_el / sc, _eh / sc)
-    # BAO D_M rows
+    # BAO D_M rows (y_b for the D_M rows and for the D_V rows; P sandwich only for the D_M rows)
+    assert len(br.yb_lo) == len(lay.idx_ym) and len(br.yv_lo) == len(lay.idx_dv), "brackets do not match the layout"
     yb_lo = [ar.c(v) for v in br.yb_lo]; yb_hi = [ar.c(v) for v in br.yb_hi]
-    for p, r in enumerate(lay.idx_dm):
+    for p, r in enumerate(lay.idx_ym):
         k = int(kb[r]); t = tb[r]; cbr = ar.log10(ar.c(fr.bao.z[r])); e = e_seg[k]
         le.append(([(lay.yb[p], one), (lay.kappa[k], -(1 - t)), (lay.kappa[k + 1], -t)], cbr + e))
         le.append(([(lay.yb[p], -one), (lay.kappa[k], (1 - t)), (lay.kappa[k + 1], t)], -cbr + e))
         le.append(([(lay.yb[p], -one)], -yb_lo[p]))
         le.append(([(lay.yb[p], one)], yb_hi[p]))
-        for coeffs, rhs in sandwich_rows(lay.P[r], [(lay.yb[p], one)], yb_lo[p], yb_hi[p], ar):
+        if r in lay.idx_dm:
+            for coeffs, rhs in sandwich_rows(lay.P[r], [(lay.yb[p], one)], yb_lo[p], yb_hi[p], ar):
+                le.append((coeffs, rhs))
+    # D_V rows: D_H(z_b) = (1-t) u_k + t u_{k+1} is a convex combination, so by concavity of log10
+    #   (1-t) lam_k + t lam_{k+1} <= y_H <= (1-t) lam_k + t lam_{k+1} + gap_k(t)      (dv_gap, class-only);
+    # then P_r = 10^{y_V} sandwiched on the certified bracket [yv_lo, yv_hi].
+    yv_lo = [ar.c(v) for v in br.yv_lo]; yv_hi = [ar.c(v) for v in br.yv_hi]
+    B._dv_gap = []
+    for q, r in enumerate(lay.idx_dv):
+        k = int(kb[r]); t = tb[r]
+        gap = dv_gap(t, lh[k], ar); B._dv_gap.append(gap)
+        lin = [(lay.lam[k], (1 - t)), (lay.lam[k + 1], t)]
+        le.append(([(lay.yH[q], -one)] + lin, ar.c(0)))
+        le.append(([(lay.yH[q], one)] + [(v, -cf) for v, cf in lin], gap))
+        le.append(([(lay.yV[q], -one)], -yv_lo[q]))
+        le.append(([(lay.yV[q], one)], yv_hi[q]))
+        for coeffs, rhs in sandwich_rows(lay.P[r], [(lay.yV[q], one)], yv_lo[q], yv_hi[q], ar):
             le.append((coeffs, rhs))
     # U nodes
     for node in lay.enodes:
@@ -308,8 +368,14 @@ def build(fr: Frozen, br, T, ar) -> Build:
             blo, bhi = B._ranges["Er"][i]; lo[lay.Er[i]] = blo; hi[lay.Er[i]] = bhi
         else:
             lo[lay.Er[0]] = big_neg; hi[lay.Er[0]] = big   # unused variable (no rows): rho stays exactly 0
-    for p in range(len(lay.idx_dm)):
+    for p in range(len(lay.idx_ym)):
         lo[lay.yb[p]] = yb_lo[p]; hi[lay.yb[p]] = yb_hi[p]
+    for q, r in enumerate(lay.idx_dv):
+        k = int(kb[r]); t = tb[r]
+        lo[lay.yH[q]] = (1 - t) * lam_lo[k] + t * lam_lo[k + 1]
+        hi[lay.yH[q]] = (1 - t) * lam_hi[k] + t * lam_hi[k + 1] + B._dv_gap[q]
+        lo[lay.yV[q]] = yv_lo[q]; hi[lay.yV[q]] = yv_hi[q]
+        lo[lay.P[r]], hi[lay.P[r]] = sandwich_range(yv_lo[q], yv_hi[q], ar)
     U_rng = {}
     for node in lay.enodes:
         U_rng[node] = sandwich_range(lam_lo[node], lam_hi[node], ar)

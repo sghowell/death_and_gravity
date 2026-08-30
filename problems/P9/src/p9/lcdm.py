@@ -8,7 +8,7 @@ from scipy.optimize import minimize
 
 from . import C_KM_S
 from .data import BAO, SN
-from .model import whitener
+from .model import sn_whitener, whitener
 
 
 def _E(z, om):
@@ -26,10 +26,19 @@ def dh_over_rd(z, om, h_rd):
     return C_KM_S / (100.0 * h_rd) / _E(np.asarray(z), om)
 
 
+def _pred(z, kind, om, h_rd):
+    if kind == "DM_over_rs":
+        return dm_over_rd(z, om, h_rd)[0]
+    if kind == "DH_over_rs":
+        return dh_over_rd(z, om, h_rd)
+    if kind == "DV_over_rs":
+        return np.cbrt(z * dm_over_rd(z, om, h_rd)[0] ** 2 * dh_over_rd(z, om, h_rd))
+    raise ValueError(kind)
+
+
 def chi2_bao(theta, bao: BAO, Wb):
     om, h_rd = theta
-    pred = np.array([dm_over_rd(z, om, h_rd)[0] if k == "DM_over_rs" else dh_over_rd(z, om, h_rd)
-                     for z, k in zip(bao.z, bao.kind)])
+    pred = np.array([_pred(z, k, om, h_rd) for z, k in zip(bao.z, bao.kind)])
     r = bao.value - pred
     return float(np.sum((Wb @ r) ** 2))
 
@@ -45,7 +54,7 @@ def fit_bao(bao: BAO):
 def fit_bao_sn(bao: BAO, sn: SN):
     """Joint fit (om, h_rd) with the SN nuisance Mp profiled analytically."""
     Wb = whitener(bao.cov)
-    Wsn = whitener(sn.cov)
+    Wsn = sn_whitener(sn)
     ones = np.ones(len(sn.m))
     Cinv1 = Wsn.T @ (Wsn @ ones)
     denom = Cinv1 @ ones

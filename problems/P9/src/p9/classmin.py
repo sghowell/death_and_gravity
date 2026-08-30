@@ -23,11 +23,12 @@ def chi2_and_grad(fr: Frozen, u: np.ndarray):
     Mp = (Cinv_1 @ y) / (Cinv_1 @ ones)
     r = y - Mp
     Cinv_r = fr.Wsn.T @ (fr.Wsn @ r)          # profiling makes d chi2/d Mp = 0, so the envelope theorem applies
-    rb = fr.bao.value - fr.P @ u
+    pred, J = fr.bao_pred(u, jac=True)          # J = P except on D_V rows (nonlinear)
+    rb = fr.bao.value - pred
     Cb_rb = fr.Wb.T @ (fr.Wb @ rb)
     chi2 = float(r @ Cinv_r + rb @ Cb_rb)
     # d r_j / d u = -(5/ln10) A_j / D_j
-    grad = -2.0 * (5.0 / LN10) * (fr.A_sn.T @ (Cinv_r / D)) - 2.0 * (fr.P.T @ Cb_rb)
+    grad = -2.0 * (5.0 / LN10) * (fr.A_sn.T @ (Cinv_r / D)) - 2.0 * (J.T @ Cb_rb)
     return chi2, grad, Mp
 
 

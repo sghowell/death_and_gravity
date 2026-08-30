@@ -5,6 +5,7 @@ slope/box conditions), (ii) an enclosure of chi2(u_f, Mp_f) in ball arithmetic w
 <= T := upper(chi2(u*, Mp*)) + Delta for the recorded reference point u*. Everything is exact/rigorous.
 
 usage: PYTHONPATH=problems/P9/src uv run python -m p9.certify_feasible --L 1.5 --Delta 4
+       [--sn {pantheon,dessn5yr,union3}] [--dv] [--rd_box LO HI | planck | bbn]      (FORMULATION §6.1)
 """
 
 from __future__ import annotations
@@ -18,12 +19,12 @@ import numpy as np
 
 from . import C_KM_S
 from .classmin import minimize_chi2_over_class
-from .data import load_desi, load_pantheon, verify_manifest
 from .feasible import max_H0_point
 from .geometry import lcdm_u_nodes
 from .lcdm import fit_bao_sn
-from .model import ClassSpec, Frozen
+from .model import ClassSpec
 from .socp2 import MP_BOX
+from .variants import Variant, add_variant_args
 from .verify import _endpoint, rigorous_chi2
 
 RESULTS = Path(__file__).resolve().parents[2] / "results"
@@ -50,10 +51,10 @@ def main():
     ap.add_argument("--Delta", type=float, default=4.0)
     ap.add_argument("--refine", type=int, default=0)
     ap.add_argument("--T", type=float, default=None, help="use this T (e.g. the certified chain's) instead of recomputing")
+    add_variant_args(ap)
     args = ap.parse_args()
-    verify_manifest()
-    bao = load_desi(); sn = load_pantheon()
-    spec = ClassSpec(L=args.L, grid_kind="geometric", refine=args.refine); fr = Frozen(bao, sn, spec)
+    var = Variant.from_args(args)
+    bao, sn, spec, fr = var.frozen(args.L, args.refine)
     (om, hrd), _ = fit_bao_sn(bao, sn)
     u = lcdm_u_nodes(spec.x, om, hrd)
     cands = [minimize_chi2_over_class(fr, u), minimize_chi2_over_class(fr, np.full(spec.n_seg + 1, u[0]))]
@@ -68,12 +69,13 @@ def main():
     chi2_f_up = _endpoint(ball_f, +1)
     ok = bool(ok_class) and bool(chi2_f_up <= T)
     H0 = C_KM_S / (spec.r_lo * u_f[0])
-    print(f"L={args.L} Delta={args.Delta}: reference chi2 in {ball_star.str(12)} -> T={T:.6f}")
+    print(f"L={args.L} Delta={args.Delta} [{var.describe()}]: reference chi2 in {ball_star.str(12)} -> T={T:.6f}")
     print(f"  feasible point: in class (exact) = {ok_class}; chi2 in {ball_f.str(12)}; upper {chi2_f_up:.6f} <= T: {chi2_f_up <= T}")
     print(f"  => CERTIFIED lower bound on max H0 over F: {H0:.4f} (at r_lo={spec.r_lo})" if ok else "  => NOT certified")
-    out = RESULTS / "certificates" / f"feasible_L{args.L:g}_D{args.Delta:g}_r{args.refine}.json"
+    out = RESULTS / "certificates" / f"feasible_L{args.L:g}_D{args.Delta:g}_r{args.refine}{var.tag}.json"
     out.parent.mkdir(parents=True, exist_ok=True)
-    out.write_text(json.dumps(dict(L=args.L, Delta=args.Delta, refine=args.refine, grid_x=[float(v) for v in spec.x], r_lo=spec.r_lo,
+    out.write_text(json.dumps(dict(L=args.L, Delta=args.Delta, refine=args.refine, grid_x=[float(v) for v in spec.x],
+                                   **var.as_dict(), n_sn=len(sn.m), n_bao=len(bao.value),
                                    u_ref=u_star.tolist(), Mp_ref=Mp_star, chi2_ref_enclosure=ball_star.str(20),
                                    T=T, u_feasible=u_f.tolist(), Mp_feasible=Mp_f, chi2_feasible_enclosure=ball_f.str(20),
                                    in_class_exact=bool(ok_class), certified=bool(ok), H0_lower_bound=(float(H0) if ok else None)), indent=1))

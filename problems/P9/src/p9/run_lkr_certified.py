@@ -4,7 +4,9 @@ T is a rigorous enclosure of chi2 at the (exactly class-feasible) reference poin
 Dual vectors are stored under results/certificates/lkr_<tag>/.
 
 usage: PYTHONPATH=problems/P9/src uv run python -m p9.run_lkr_certified --L 1.5 --Delta 4 --refine 2 --workers 8 --passes 8
-Resumes from results/certificates/lkr_<tag>/state.json if present.
+       [--sn {pantheon,dessn5yr,union3}] [--dv] [--rd_box LO HI | planck | bbn]      (FORMULATION §6.1 variants)
+Resumes from results/certificates/lkr_<tag>/state.json if present. The tag is L<L>_D<Delta>_r<refine> plus the
+variant suffix (empty for the baseline), so baseline certificate directories are unchanged.
 """
 
 from __future__ import annotations
@@ -24,12 +26,12 @@ import numpy as np
 from . import C_KM_S
 from .certify_feasible import in_class_exact
 from .classmin import minimize_chi2_over_class
-from .data import load_desi, load_pantheon, verify_manifest
 from .geometry import lcdm_u_nodes
 from .lcdm import fit_bao_sn
 from .lkr import Brackets3, initial_brackets3
 from .lkr2 import LKRModel2
-from .model import ClassSpec, Frozen
+from .lkr_rows import obbt_objectives
+from .variants import Variant, add_variant_args
 from .verify import _endpoint, rigorous_chi2
 from .verify3 import Verifier3
 
@@ -59,53 +61,50 @@ def _job(args):
     return tag, val, lb
 
 
+def c_node_balls(fr):
+    """Rigorous c_i = log10(e^{x_i} - 1) (c_0 = 0) as Arb balls, for the outward-rounded rho update."""
+    from flint import arb
+    from .lkr_rows import ArbArith
+    ar = ArbArith()
+    return [arb(0)] + [ar.log10(ar.expm1(ar.c(v))) for v in fr.spec.x[1:]]
+
+
 def certified_pass(fr, br, T, cert_dir, pass_id, workers, lam_nodes=None):
-    m = LKRModel2(fr, br, T)          # for layout only
-    lay = m.lay; N = lay.N
-    if lam_nodes is None:
-        lam_nodes = sorted(set(lay.enodes) | {0})
-    jobs = []
-    for i in range(1, N + 1):
-        jobs.append((f"p{pass_id}_rho{i}_lo", {int(lay.lam[i]): 1.0, int(lay.kappa[i]): -1.0}))
-        jobs.append((f"p{pass_id}_rho{i}_hi", {int(lay.lam[i]): -1.0, int(lay.kappa[i]): 1.0}))
-    for i in lam_nodes:
-        jobs.append((f"p{pass_id}_lam{i}_lo", {int(lay.lam[i]): 1.0}))
-        jobs.append((f"p{pass_id}_lam{i}_hi", {int(lay.lam[i]): -1.0}))
-    for p in range(len(lay.idx_dm)):
-        jobs.append((f"p{pass_id}_yb{p}_lo", {int(lay.yb[p]): 1.0}))
-        jobs.append((f"p{pass_id}_yb{p}_hi", {int(lay.yb[p]): -1.0}))
+    lay = LKRModel2(fr, br, T).lay          # for layout only
+    objs = obbt_objectives(lay, lam_nodes)
+    jobs = [(f"p{pass_id}_{kind}{i}_{side}", qd) for kind, i, side, qd in objs]
     t0 = time.time()
     ctx = mp.get_context("spawn")
     with ctx.Pool(workers, initializer=_init, initargs=(fr, br, T, str(cert_dir))) as pool:
         res = pool.map(_job, jobs, chunksize=2)
-    # rigorous c_node (log10(e^{x_i} - 1)) in ball arithmetic; the subtraction below is rounded outward
-    from flint import arb
-    from .lkr_rows import ArbArith
-    ar = ArbArith()
-    c_ball = [arb(0)] + [ar.log10(ar.expm1(ar.c(v))) for v in fr.spec.x[1:]]
-    rho_lo = br.rho_lo.copy(); rho_hi = br.rho_hi.copy(); lam_lo = br.lam_lo.copy(); lam_hi = br.lam_hi.copy()
-    yb_lo = br.yb_lo.copy(); yb_hi = br.yb_hi.copy()
+    c_ball = c_node_balls(fr)
+    out = br.copy()
     worst_gap = 0.0
     n_fail = sum(1 for _, val, _ in res if val is None)
-    for tag, val, lb in res:
+    for (kind, i, side, _), (tag, val, lb) in zip(objs, res):
         if val is None:
             continue
         worst_gap = max(worst_gap, abs(val - lb))
-        kind = tag.split("_")[1]
-        i = int(kind[3:]) if kind.startswith("rho") else int(kind[3:]) if kind.startswith("lam") else int(kind[2:])
-        side = tag.split("_")[2]
-        if kind.startswith("rho"):
-            if side == "lo": rho_lo[i] = max(rho_lo[i], _endpoint(arb(lb) - c_ball[i], -1))
-            else: rho_hi[i] = min(rho_hi[i], _endpoint(arb(-lb) - c_ball[i], +1))
-        elif kind.startswith("lam"):
-            if side == "lo": lam_lo[i] = max(lam_lo[i], lb)
-            else: lam_hi[i] = min(lam_hi[i], -lb)
-        else:
-            if side == "lo": yb_lo[i] = max(yb_lo[i], lb)
-            else: yb_hi[i] = min(yb_hi[i], -lb)
+        out.apply_bound(kind, i, side, lb, c_ball[i] if kind == "rho" else 0.0)
     print(f"    certified pass {pass_id}: {len(jobs)} solves+certificates on {workers} workers in {time.time()-t0:.0f}s; "
           f"max |solver - rigorous| = {worst_gap:.2e}; solver failures (left untightened): {n_fail}", flush=True)
-    return Brackets3(rho_lo, rho_hi, yb_lo, yb_hi, lam_lo, lam_hi)
+    return out
+
+
+def reference_point(fr, bao, sn, spec, Delta):
+    """Class minimizer (from the LCDM fit and from a flat start), exactly in class, with rigorous T."""
+    (om, hrd), _ = fit_bao_sn(bao, sn)
+    u = lcdm_u_nodes(spec.x, om, hrd)
+    cands = [minimize_chi2_over_class(fr, u), minimize_chi2_over_class(fr, np.full(spec.n_seg + 1, u[0]))]
+    u_star, Mp_star, chi2_star = min(cands, key=lambda c: c[2])
+    from flint import arb
+    from .socp2 import MP_BOX
+    assert in_class_exact(spec, u_star) and MP_BOX[0] <= Mp_star <= MP_BOX[1]
+    ball = rigorous_chi2(fr, u_star, Mp_star)
+    T = _endpoint(ball + arb(Delta), +1)
+    ref = dict(u=u_star.tolist(), Mp=Mp_star, chi2_float=chi2_star, chi2_enclosure=ball.str(20), T=T,
+               lcdm_fit=dict(omega_m=float(om), h_rd=float(hrd)))
+    return ref, T, ball
 
 
 def main():
@@ -113,31 +112,23 @@ def main():
     ap.add_argument("--L", type=float, default=1.5); ap.add_argument("--Delta", type=float, default=4.0)
     ap.add_argument("--refine", type=int, default=2); ap.add_argument("--workers", type=int, default=8)
     ap.add_argument("--passes", type=int, default=8); ap.add_argument("--tol", type=float, default=2e-5)
+    add_variant_args(ap)
     args = ap.parse_args()
-    verify_manifest()
-    bao = load_desi(); sn = load_pantheon()
-    spec = ClassSpec(L=args.L, grid_kind="geometric", refine=args.refine); fr = Frozen(bao, sn, spec)
-    tag = f"L{args.L:g}_D{args.Delta:g}_r{args.refine}"
+    var = Variant.from_args(args)
+    bao, sn, spec, fr = var.frozen(args.L, args.refine)
+    tag = f"L{args.L:g}_D{args.Delta:g}_r{args.refine}" + var.tag
     cert_dir = RESULTS / "certificates" / f"lkr_{tag}"; cert_dir.mkdir(parents=True, exist_ok=True)
     state = cert_dir / "state.json"
     if state.exists():
         s = json.loads(state.read_text())
-        T = s["T"]; br = Brackets3(*(np.array(s[k]) for k in ["rho_lo", "rho_hi", "yb_lo", "yb_hi", "lam_lo", "lam_hi"]))
-        hist = s["history"]; ref = s["reference"]
+        assert Variant.from_state(s) == var, f"state.json variant {Variant.from_state(s)} != {var}"
+        T = s["T"]; br = Brackets3.from_dict(s); hist = s["history"]; ref = s["reference"]
         print(f"resuming {tag}: T={T:.6f} passes done={len(hist)}", flush=True)
     else:
-        (om, hrd), _ = fit_bao_sn(bao, sn)
-        u = lcdm_u_nodes(spec.x, om, hrd)
-        cands = [minimize_chi2_over_class(fr, u), minimize_chi2_over_class(fr, np.full(spec.n_seg + 1, u[0]))]
-        u_star, Mp_star, chi2_star = min(cands, key=lambda c: c[2])
-        from flint import arb
-        from .socp2 import MP_BOX
-        assert in_class_exact(spec, u_star) and MP_BOX[0] <= Mp_star <= MP_BOX[1]
-        ball = rigorous_chi2(fr, u_star, Mp_star)
-        T = _endpoint(ball + arb(args.Delta), +1)
-        ref = dict(u=u_star.tolist(), Mp=Mp_star, chi2_float=chi2_star, chi2_enclosure=ball.str(20), T=T)
+        ref, T, ball = reference_point(fr, bao, sn, spec, args.Delta)
         br = initial_brackets3(fr); hist = []
-        print(f"{tag}: class-min chi2 {ball.str(12)} -> T={T:.6f}; nodes={spec.n_seg+1}", flush=True)
+        print(f"{tag} [{var.describe()}; n_SN={len(sn.m)}, n_BAO={len(bao.value)}]: class-min chi2 {ball.str(12)} -> "
+              f"T={T:.6f}; nodes={spec.n_seg+1}", flush=True)
     last = hist[-1]["lambda0_min"] if hist else None
     for it in range(len(hist), len(hist) + args.passes):
         t = time.time()
@@ -152,8 +143,8 @@ def main():
         hist.append(dict(pass_=it, lambda0_min=lb, solver=val, H0_max=H0, widths=br.width(), seconds=time.time() - t))
         print(f"pass {it}: rigorous lambda0_min={lb:.6f} (solver {val:.6f}) -> H0_max={H0:.4f}  widths {br.width()} [{time.time()-t:.0f}s]", flush=True)
         state.write_text(json.dumps(dict(tag=tag, L=args.L, Delta=args.Delta, refine=args.refine, T=T, reference=ref,
-                                         history=hist, H0_max=H0, lambda0_min=lb, r_lo=spec.r_lo,
-                                         **{k: getattr(br, k).tolist() for k in ["rho_lo", "rho_hi", "yb_lo", "yb_hi", "lam_lo", "lam_hi"]}), indent=1))
+                                         history=hist, H0_max=H0, lambda0_min=lb, **var.as_dict(),
+                                         n_sn=len(sn.m), n_bao=len(bao.value), **br.to_dict()), indent=1))
         if last is not None and abs(lb - last) < args.tol:
             break
         last = lb

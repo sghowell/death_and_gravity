@@ -45,6 +45,55 @@
    "upstream_commit": "c447f0fea703fcd0fff57de5000947b5ca81286b",
    "content": "first line N=1701, then N*N entries row-major: statistical+systematic covariance of m_b_corr in the row order of the .dat file",
    "note": "not committed (33 MB); re-download and verify sha256 before use"
+  },
+  {
+   "path": "raw/DES-Dovekie_HD.csv",
+   "sample": "dessn5yr",
+   "optional": true,
+   "source_url": "https://raw.githubusercontent.com/des-science/DES-SN5YR/main/4_DISTANCES_COVMAT/DES-Dovekie_HD.csv",
+   "upstream_repo": "des-science/DES-SN5YR",
+   "upstream_path": "4_DISTANCES_COVMAT",
+   "upstream_commit": "442c24841b55c3d629ed7177c09763dc237ba8e1",
+   "upstream_commit_date": "2025-11-14T11:56:40Z",
+   "upstream_blob_sha": "f80ec4e2795edcbf3442f460c539bea56226027a",
+   "content": "DES-SN5YR Hubble diagram, Dovekie release (SNANA key format: VARNAMES CID IDSURVEY zHD zHEL MU MUERR MUERR_VPEC MUERR_SYS PROBIA_BEAMS; 1820 SNe, zHD in [0.025, 1.14]). m := MU (bias- and contamination-corrected distance modulus quoted for the release's fixed M_0avg = -29.96210, i.e. 'assuming H0 = 70'); the constant is absorbed by the free M' (M' ~ 25 + 5 log10 r_d)",
+   "reference": "Popovic et al. 2025, arXiv:2506.05471 (Dovekie recalibration); DES Collaboration 2025, arXiv:2511.07517 (DES-SN reanalysis); original DES-SN5YR: DES Collaboration 2024, ApJL 973, L14, arXiv:2401.02929; Vincenzi et al. 2024, ApJ 975, 86, arXiv:2401.02945",
+   "release_choice": "Dovekie release (repository main since 2025-11-13, commits bd96ed2/442c248) rather than the 2024 files (commit 403c761: DES-SN5YR_HD.csv + STAT+SYS.txt.gz, 1829 SNe): it is the release the maintainers currently distribute and supersedes the 2024 distances (improved cross-calibration, fixed host-color law), and its covariance is released as a single STAT+SYS precision matrix, so no assembly convention (diag(MUERR^2) + COVSYS) is needed. The 2024 files remain available at that commit if a pre-Dovekie variant is wanted",
+   "sha256": "2f57019d783eaa976df80a41b0054171a2d994ee9808d715ce850c2df5720aaf",
+   "bytes": 148002
+  },
+  {
+   "path": "raw/DES-Dovekie_STAT+SYS.npz",
+   "sample": "dessn5yr",
+   "optional": true,
+   "git_tracked": false,
+   "source_url": "https://raw.githubusercontent.com/des-science/DES-SN5YR/main/4_DISTANCES_COVMAT/STAT%2BSYS.npz",
+   "upstream_repo": "des-science/DES-SN5YR",
+   "upstream_path": "4_DISTANCES_COVMAT/STAT+SYS.npz",
+   "upstream_commit": "442c24841b55c3d629ed7177c09763dc237ba8e1",
+   "upstream_commit_date": "2025-11-14T11:56:40Z",
+   "upstream_blob_sha": "4289666487f427782ec81c327ae7f7741f0f5fe5",
+   "content": "npz with keys nsn (=[1820]) and cov: the upper triangle (np.triu_indices order) of the 1820x1820 STAT+SYS *inverse* covariance of MU, in the row order of DES-Dovekie_HD.csv; unpacked exactly as in the release's DES-Dovekie-SN_Likelihood.py (data.load_dessn5yr_precision)",
+   "note": "not committed by default (6.2 MB); re-download and verify sha256 before use",
+   "sha256": "ffd3124b32148b1372bd95fda9299269f0352a9f8eee02d416c610e38495463b",
+   "bytes": 6244951
+  },
+  {
+   "path": "raw/mu_mat_union3_cosmo=2_mu.fits",
+   "sample": "union3",
+   "optional": true,
+   "git_tracked": false,
+   "source_url": "https://raw.githubusercontent.com/rubind/union3_release/main/mu_mat_union3_cosmo=2_mu.fits",
+   "upstream_repo": "rubind/union3_release",
+   "upstream_path": ".",
+   "upstream_commit": "a3e75550b4434068ba99e8b7b651d542d9b793d1",
+   "upstream_commit_date": "2024-08-22T05:43:50Z",
+   "upstream_blob_sha": "844074869f512b7edbb4038c7296927698f6cd69",
+   "content": "FITS primary HDU, 23x23 float64 (BITPIX -64): row 0 = the 22 bin redshifts (0.05 ... 2.26226), column 0 = the 22 binned distance moduli mu (Union3 + UNITY1.5, 'cosmo=2' spline model), the remaining 22x22 block = their inverse covariance (symmetric to 4e-11; symmetrized). The mu's carry an arbitrary additive constant (degenerate with UNITY's script-M; absorbed by M'). zHEL := zHD := z_bin. Parsed without astropy (data._read_fits_primary_image)",
+   "reference": "Rubin et al. 2023, arXiv:2311.12098 (Union3/UNITY1.5). The repository also holds Union3.1+UNITY1.7/1.8 files (2026-04); this manifest freezes the original Union3 file",
+   "note": "gitignored by the repository rule problems/*/data/raw/*.fits (8.6 kB); re-download and verify sha256 before use",
+   "sha256": "ef98b7dde1025ee7134f3242aaea3f1f0ed3f2b29a718458c550a8e4e24d0349",
+   "bytes": 8640
   }
  ],
  "scalar_inputs": [
@@ -53,12 +102,27 @@
    "value_Mpc": 147.09,
    "sigma_Mpc": 0.26,
    "reference": "Planck Collaboration, Planck 2018 results VI, Astron. Astrophys. 641, A6 (2020), Table 2, TT,TE,EE+lowE+lensing",
-   "role": "primary sound-horizon prior; box [value - 2 sigma, value + 2 sigma] in the v1 statement"
+   "role": "primary sound-horizon prior; box [value - 2 sigma, value + 2 sigma] in the v1 statement",
+   "box_Mpc": [
+    146.57,
+    147.61
+   ]
   },
   {
    "name": "c_km_s",
    "value": 299792.458,
    "reference": "exact (SI definition)"
+  },
+  {
+   "name": "r_drag_BBN",
+   "value_Mpc": 148.04,
+   "sigma_Mpc": 1.24,
+   "box_Mpc": [
+    145.56,
+    150.52
+   ],
+   "derivation": "r_d = 147.05 Mpc (omega_b/0.02236)^-0.13 (omega_bc/0.1432)^-0.23 (N_eff/3.04)^-0.1 [DESI DR2 results II, arXiv:2503.14738, Eq. (2)] with omega_b = 0.02218 +- 0.00055 (Schoeneberg 2024, arXiv:2401.15054, PRyMordial, LCDM, PDG light-element abundances), N_eff = 3.044, omega_bc = Omega_m h^2 with Omega_m = 0.2975 +- 0.0086 (DESI DR2 BAO, LCDM) and h = 0.6851 +- 0.0058 (DESI DR2 BAO + BBN, arXiv:2503.14738 Sec. VI); sigma by linear propagation with the three inputs taken as independent (the neutrino contribution to Omega_m, ~0.5%, is neglected: 0.1% in r_d). box = value -+ 2 sigma, rounded outward to 0.01 Mpc",
+   "role": "alternative sound-horizon box independent of the CMB (BBN + BAO only); select with --rd_box bbn. Since the certified bound is on u_0 = c/(r_d H0), H0_max scales exactly as 1/r_d (see report_certified)"
   }
  ],
  "derived": {
@@ -68,6 +132,17 @@
  "whitening": {
   "statement": "the certified statistic uses C~ := (W^T W)^{-1} with W the float64 inverse Cholesky factor of the selected covariance block; W is the recorded object",
   "max_abs_WCWt_minus_I_SN": 6.217248937900877e-15,
-  "max_abs_WCWt_minus_I_BAO": 2.220446049250313e-16
- }
+  "max_abs_WCWt_minus_I_BAO": 2.220446049250313e-16,
+  "statement_precision_samples": "for DES-SN5YR and Union3 the released object is the precision matrix P; W := L^T with P_sym = L L^T (Cholesky, P_sym = (P + P^T)/2), so W^T W = P_sym to rounding and C~ = (W^T W)^{-1}; no inverse is formed on the certified path (model.whitener_from_precision). SN.cov = inv(P_sym) is kept only for subsets, the LCDM fit and the diagnostic below",
+  "max_abs_WtW_minus_P_over_max_abs_P_dessn5yr": 2.6893553312400693e-15,
+  "max_abs_WCWt_minus_I_dessn5yr_C_is_inv_P": 2.353672812205332e-14,
+  "max_abs_WtW_minus_P_over_max_abs_P_union3": 1.610400579960691e-16,
+  "max_abs_WCWt_minus_I_union3_C_is_inv_P": 3.1530333899354446e-14
+ },
+ "revision": [
+  {
+   "date": "2026-08-29",
+   "change": "added the DES-SN5YR (Dovekie) and Union3 SN files (optional, per-sample), their whitening convention, and the BBN-based r_d box (FORMULATION §6.1)"
+  }
+ ]
 }

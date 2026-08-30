@@ -236,6 +236,60 @@ Ledger levels for this problem:
   variant; discretization lemma to Lip_L(ln H); monotone (NEC) subclass
   ũ_{i} ≤ ũ_{i−1}.
 
+### 6.1 v2 options implemented (2026-08-29): D_V row, SN samples, r_d box
+All options are off by default: the baseline statement (§1) and its
+certificate directories (`results/certificates/lkr_L*_D*_r*`, empty variant
+suffix) are unchanged. The drivers `run_lkr_certified`, `certify_feasible`
+and `replay` take `--sn {pantheon,dessn5yr,union3}`, `--dv` and
+`--rd_box LO HI | planck | bbn`; the certificate tag gets the suffix
+`_<sn>`, `_dv`, `_rd<lo>-<hi>` for each non-default part (`src/p9/variants.py`),
+and state.json records the variant so that `replay` rebuilds the same inputs.
+
+- **BGS D_V row** (`ClassSpec.use_dv`, `--dv`; BAO covariance = the full
+  13×13, `data.load_desi(drop_dv=False)`). In log variables
+  log10 D_V = (log10 z_b + 2 y_b + y_H)/3 with y_b = log10 D_M(z_b)
+  interpolated from κ (± e_k, exactly as for the D_M rows) and
+  y_H = log10 D_H(z_b). Since D_H(z_b) = (1−t) ũ_k + t ũ_{k+1} is a convex
+  combination of the node values, concavity of log10 gives the class-only rows
+  (1−t) λ_k + t λ_{k+1} ≤ y_H ≤ (1−t) λ_k + t λ_{k+1} + gap_k(t), with
+  gap_k(t) = max_{|d| ≤ lh_k} [log10((1−t) + t·10^d) − t d] attained at
+  d = ±lh_k (the bracket is convex in d; ≈ 7×10⁻⁵ for L = 1.5, h = 0.02),
+  a subset of the coarser bracket [min(λ_k, λ_{k+1}), max(λ_k, λ_{k+1})] ⊂
+  [λ_k − lh_k, λ_k + lh_k]. y_V is a variable with the equality
+  3 y_V − 2 y_b − y_H = log10 z_b, bracketed by OBBT like y_b (base bracket
+  [log10(ũ_lo z_b), log10(ũ_hi z_b)], since D_M ∈ ũ[·] z_b and D_H ∈ [ũ_lo, ũ_hi]),
+  and the prediction P_V is sandwiched (four tangents below, chord above) on
+  10^{y_V}. All rows are generated once in `lkr_rows.build` for both
+  arithmetics (§3.7); the exact statistic, the class minimizer's gradient, the
+  rigorous χ² enclosure and the ΛCDM fit use D_V = (z D_M² D_H)^{1/3} exactly.
+  Tests (`tests/test_variants.py`): Verifier3 reproduces the solver duals with
+  the row on; every row and every absorption bound holds at random class
+  members; the 13-row BAO-only ΛCDM fit reproduces DESI DR2
+  (Ω_m = 0.2975, h r_d = 101.54 Mpc, known-answer test §5.1).
+- **SN samples** (`--sn`). The likelihood form is unchanged for every sample:
+  r_j = m_j − 5 log10[(1+zHEL_j) D̃_M(zHD_j)] − M', M' ∈ [0, 40] absorbing the
+  sample's magnitude/offset convention. DES-SN5YR: the Dovekie release
+  (repository main, commit 442c248, 2025-11-14; 1820 SNe with
+  zHD ∈ [0.025, 1.14]; m := MU, released for a fixed M_0; the STAT+SYS
+  matrix is released as a precision matrix P). Union3: the 22 binned distance
+  moduli of Rubin et al. 2023 with their inverse covariance (z_bin ∈ [0.05,
+  2.26]; the μ's carry an arbitrary constant; zHEL := zHD := z_bin). For
+  precision-released samples the recorded whitening is W = Lᵀ with
+  P_sym = L Lᵀ, so WᵀW = P to rounding and C̃ = (WᵀW)⁻¹; no inverse is formed
+  on the certified path (deviations recorded in `MANIFEST.json`, "whitening").
+  Joint flat-ΛCDM fits to the frozen 12-row BAO + SN (h r_d in Mpc):
+  Pantheon+ Ω_m = 0.304, h r_d = 101.07; DES-SN5YR 0.306, 100.91;
+  Union3 0.303, 101.15 (β = c/(r_d H₀) = 29.66, 29.71, 29.64).
+- **r_d box** (`--rd_box`). The certificate bounds ũ₀; r_d enters only through
+  H₀ = c/(r_d ũ₀) and the (inactive) a priori H box, so for every r_d in the
+  box H₀ ≤ H_max · r_lo/r_d exactly; `report_certified` adds the column at
+  r_d = 147.09 Mpc and rounds upper bounds up, lower bounds down. The
+  BBN-based box (`--rd_box bbn`, `MANIFEST.json` "r_drag_BBN"):
+  r_d = 148.04 ± 1.24 Mpc from the DESI DR2 fitting formula (arXiv:2503.14738
+  Eq. 2) with ω_b = 0.02218 ± 0.00055 (Schöneberg 2024, arXiv:2401.15054),
+  N_eff = 3.044 and ω_bc = Ω_m h² from the DESI DR2 BAO(+BBN) ΛCDM fit;
+  box = ±2σ = [145.56, 150.52] Mpc.
+
 ### 3.6 v3: the λ–κ–ρ relaxation (the one used for certificates)
 The v2 relaxation (§3.2) is valid but stalls at H₀ ≲ 75 for L = 1.5 because
 the link between the SN side (κ) and the class side (ũ) is loose wherever

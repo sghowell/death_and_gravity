@@ -34,12 +34,45 @@ N_TANGENTS = 4
 @dataclass
 class Brackets3:
     rho_lo: np.ndarray; rho_hi: np.ndarray          # log10 u_i/D_i, i = 1..N (index 0 unused)
-    yb_lo: np.ndarray; yb_hi: np.ndarray            # log10 D_M/r_d at BAO D_M redshifts
+    yb_lo: np.ndarray; yb_hi: np.ndarray            # log10 D_M/r_d at BAO D_M redshifts (+ D_V redshifts if use_dv)
     lam_lo: np.ndarray; lam_hi: np.ndarray          # log10 u_i at all nodes (used for U sandwiches at E nodes)
+    yv_lo: np.ndarray = field(default_factory=lambda: np.zeros(0))   # log10 D_V/r_d at the D_V rows (use_dv only)
+    yv_hi: np.ndarray = field(default_factory=lambda: np.zeros(0))
+    KEYS = ("rho_lo", "rho_hi", "yb_lo", "yb_hi", "lam_lo", "lam_hi", "yv_lo", "yv_hi")
 
     def width(self):
-        return dict(rho=float(np.max(self.rho_hi[1:] - self.rho_lo[1:])), yb=float(np.max(self.yb_hi - self.yb_lo)),
-                    lam=float(np.max(self.lam_hi - self.lam_lo)))
+        d = dict(rho=float(np.max(self.rho_hi[1:] - self.rho_lo[1:])), yb=float(np.max(self.yb_hi - self.yb_lo)),
+                 lam=float(np.max(self.lam_hi - self.lam_lo)))
+        if len(self.yv_lo):
+            d["yv"] = float(np.max(self.yv_hi - self.yv_lo))
+        return d
+
+    def copy(self) -> Brackets3:
+        return Brackets3(*(np.array(getattr(self, k), dtype=float).copy() for k in self.KEYS))
+
+    def to_dict(self) -> dict:
+        return {k: np.asarray(getattr(self, k)).tolist() for k in self.KEYS}
+
+    @staticmethod
+    def from_dict(s: dict) -> Brackets3:
+        return Brackets3(*(np.array(s.get(k, []), dtype=float) for k in Brackets3.KEYS))
+
+    def apply_bound(self, kind: str, i: int, side: str, lb: float, shift=0.0) -> None:
+        """Intersect (in place) with a lower bound lb on the OBBT objective (kind, i, side) of
+        lkr_rows.obbt_objectives: side 'lo' minimizes v, side 'hi' minimizes -v, so v >= lb resp. v <= -lb.
+        For kind 'rho', v = lam_i - kappa_i and shift = c_i (float, or an Arb ball: then the subtraction is
+        rounded outward rigorously)."""
+        lo, hi = getattr(self, kind + "_lo"), getattr(self, kind + "_hi")
+        if isinstance(shift, float):
+            val = lb - shift if side == "lo" else -lb - shift
+        else:
+            from flint import arb
+            from .verify import _endpoint
+            val = _endpoint(arb(lb) - shift, -1) if side == "lo" else _endpoint(arb(-lb) - shift, +1)
+        if side == "lo":
+            lo[i] = max(lo[i], val)
+        else:
+            hi[i] = min(hi[i], val)
 
 
 def initial_brackets3(fr: Frozen) -> Brackets3:
@@ -59,10 +92,14 @@ def initial_brackets3(fr: Frozen) -> Brackets3:
         rho_lo[i] = _endpoint(ar.log10(tl / em1), -1); rho_hi[i] = _endpoint(ar.log10(th / em1), +1)
     kinds = fr.bao.kind
     idx_dm = [r for r, k in enumerate(kinds) if k == "DM_over_rs"]
-    yb_lo = np.array([_endpoint(ar.log10(ulo * ar.c(fr.bao.z[r])), -1) for r in idx_dm])
-    yb_hi = np.array([_endpoint(ar.log10(uhi * ar.c(fr.bao.z[r])), +1) for r in idx_dm])
+    idx_dv = [r for r, k in enumerate(kinds) if k == "DV_over_rs"] if spc.use_dv else []
+    # D_M(z) in [ulo z, uhi z] and D_H in [ulo, uhi], hence D_V = (z D_M^2 D_H)^{1/3} in [ulo z, uhi z] too
+    yb_lo = np.array([_endpoint(ar.log10(ulo * ar.c(fr.bao.z[r])), -1) for r in idx_dm + idx_dv])
+    yb_hi = np.array([_endpoint(ar.log10(uhi * ar.c(fr.bao.z[r])), +1) for r in idx_dm + idx_dv])
+    yv_lo = np.array([_endpoint(ar.log10(ulo * ar.c(fr.bao.z[r])), -1) for r in idx_dv])
+    yv_hi = np.array([_endpoint(ar.log10(uhi * ar.c(fr.bao.z[r])), +1) for r in idx_dv])
     llo = _endpoint(ar.log10(ulo), -1); lhi = _endpoint(ar.log10(uhi), +1)
-    return Brackets3(rho_lo, rho_hi, yb_lo, yb_hi, np.full(N + 1, llo), np.full(N + 1, lhi))
+    return Brackets3(rho_lo, rho_hi, yb_lo, yb_hi, np.full(N + 1, llo), np.full(N + 1, lhi), yv_lo, yv_hi)
 
 
 def _sandwich_rows(E_, nvar, iE, lin_coeffs, lo, hi, K=N_TANGENTS):
@@ -84,6 +121,7 @@ class LKRModel:
     def __init__(self, fr: Frozen, br: Brackets3, T: float | None, tol: float = 1e-8):
         self.fr, self.br, self.T = fr, br, T
         spc = fr.spec; x = spc.x; hs = spc.hs; L = spc.L
+        assert not spc.use_dv, "LKRModel (independent implementation) has no D_V row; use lkr2.LKRModel2"
         N, n = spc.n_seg, len(fr.sn.m)
         self.N, self.n = N, n
         kinds = fr.bao.kind; nbao = len(kinds)

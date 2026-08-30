@@ -424,7 +424,12 @@ def rigorous_chi2(fr: Frozen, u: np.ndarray, Mp: float) -> arb:
     rb = []
     for z, val, kind in zip(fr.bao.z, fr.bao.value, fr.bao.kind):
         xv = (_a(1.0) + _a(z)).log()
-        pred = dm(xv) if kind == "DM_over_rs" else dh(xv)
+        if kind == "DM_over_rs":
+            pred = dm(xv)
+        elif kind == "DH_over_rs":
+            pred = dh(xv)
+        else:                                   # DV_over_rs = (z D_M^2 D_H)^{1/3}, exact in ball arithmetic
+            pred = (_a(z) * dm(xv) ** 2 * dh(xv)).root(3)
         rb.append(_a(val) - pred)
     Wb = arb_mat([[_a(t) for t in row] for row in fr.Wb])
     wb = Wb * arb_mat([[r] for r in rb])

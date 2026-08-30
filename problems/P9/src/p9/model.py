@@ -33,6 +33,7 @@ class ClassSpec:
     ratio: float = 1.1
     h_max: float = 0.02
     refine: int = 0              # midpoint refinements of the geometric grid (each halves every segment)
+    use_dv: bool = False         # include the BGS D_V/r_d row (needs load_desi(drop_dv=False)); FORMULATION §6.1
 
     @property
     def x(self) -> np.ndarray:
@@ -79,6 +80,19 @@ def whitener(C: np.ndarray) -> np.ndarray:
     return solve_triangular(Lc, np.eye(C.shape[0]), lower=True)
 
 
+def whitener_from_precision(P: np.ndarray) -> np.ndarray:
+    """W = L^T with P = L L^T (Cholesky of the released precision matrix), so W^T W = P to rounding and
+    C~ := (W^T W)^{-1} is the inverse of a matrix within a few ulps of the released P; no inverse is formed."""
+    Lc = cholesky(0.5 * (P + P.T), lower=True)
+    return Lc.T.copy()
+
+
+def sn_whitener(sn: SN) -> np.ndarray:
+    """The recorded whitening W of an SN sample: from the released precision when that is the released
+    object (DES-SN5YR, Union3), else the inverse Cholesky factor of the released covariance (Pantheon+)."""
+    return whitener_from_precision(sn.precision) if sn.precision is not None else whitener(sn.cov)
+
+
 @dataclass
 class Frozen:
     bao: BAO
@@ -90,29 +104,48 @@ class Frozen:
     Wb: np.ndarray = field(init=False)
     Wsn: np.ndarray = field(init=False)
     sn_offset: np.ndarray = field(init=False)  # 5 log10(1+zHEL)
+    dv_rows: list = field(init=False)          # BAO rows of kind DV_over_rs (nonlinear: (z D_M^2 D_H)^{1/3})
+    AM_bao: np.ndarray = field(init=False)     # D_M/r_d and D_H/r_d matrices at all BAO redshifts
+    AH_bao: np.ndarray = field(init=False)
 
     def __post_init__(self):
         x = self.spec.x
         AM = dm_matrix(x, self.bao.z)
         AH = dh_matrix(x, self.bao.z)
-        rows = []
+        rows, dv_rows = [], []
         for r, kind in enumerate(self.bao.kind):
             if kind == "DM_over_rs":
                 rows.append(AM[r])
             elif kind == "DH_over_rs":
                 rows.append(AH[r])
+            elif kind == "DV_over_rs" and self.spec.use_dv:
+                rows.append(np.zeros(AM.shape[1])); dv_rows.append(r)   # P row unused; see bao_pred
             else:
-                raise ValueError(f"unsupported BAO kind {kind} (drop D_V rows)")
-        self.P = np.array(rows)
+                raise ValueError(f"unsupported BAO kind {kind} (drop D_V rows or set ClassSpec.use_dv=True)")
+        if self.spec.use_dv and not dv_rows:
+            raise ValueError("use_dv=True but the BAO data has no D_V row (use load_desi(drop_dv=False))")
+        self.P = np.array(rows); self.dv_rows = dv_rows; self.AM_bao = AM; self.AH_bao = AH
         self.A_sn = dm_matrix(x, self.sn.zHD)
         self.A_nodes = dm_matrix(x, np.expm1(x))
         self.Wb = whitener(self.bao.cov)
-        self.Wsn = whitener(self.sn.cov)
+        self.Wsn = sn_whitener(self.sn)
         self.sn_offset = 5.0 * np.log10(1.0 + self.sn.zHEL)
+
+    def bao_pred(self, u: np.ndarray, jac: bool = False):
+        """BAO predictions in data order: P u for D_M/D_H rows, (z D_M^2 D_H)^{1/3} for D_V rows;
+        with jac=True also the Jacobian d pred / d u (rows in data order)."""
+        pred = self.P @ u
+        J = self.P.copy() if jac else None
+        for r in self.dv_rows:
+            dm = self.AM_bao[r] @ u; dh = self.AH_bao[r] @ u
+            pred[r] = np.cbrt(self.bao.z[r] * dm * dm * dh)
+            if jac:
+                J[r] = pred[r] / 3.0 * (2.0 * self.AM_bao[r] / dm + self.AH_bao[r] / dh)
+        return (pred, J) if jac else pred
 
     # ---- exact statistic at a point (true logarithm, no relaxation) ----
     def chi2(self, u: np.ndarray, Mp: float) -> float:
-        rb = self.bao.value - self.P @ u
+        rb = self.bao.value - self.bao_pred(u)
         D = self.A_sn @ u
         rs = self.sn.m - 5.0 * np.log10(D) - self.sn_offset - Mp
         return float(np.sum((self.Wb @ rb) ** 2) + np.sum((self.Wsn @ rs) ** 2))
@@ -148,6 +181,7 @@ class Model:
     def __init__(self, fr: Frozen, br: Brackets, T: float | None):
         self.fr, self.br, self.T = fr, br, T
         sp = fr.spec
+        assert not sp.use_dv, "the v1 model has no D_V row (use the LKR relaxation, lkr_rows.build)"
         N = sp.n_seg
         self.u = cp.Variable(N + 1, name="u")
         self.Mp = cp.Variable(name="Mp")
@@ -218,6 +252,7 @@ def initial_brackets(fr: Frozen, T: float) -> Brackets:
 def bao_only_bounds(fr: Frozen, T: float):
     """Node bounds over the outer set {class box, slope, BAO chi2 <= T} (SN dropped: valid, loose)."""
     sp = fr.spec
+    assert not sp.use_dv, "bao_only_bounds has no D_V row"
     N = sp.n_seg
     u = cp.Variable(N + 1)
     c = cp.Parameter(N + 1)

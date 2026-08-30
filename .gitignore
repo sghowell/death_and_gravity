@@ -30,3 +30,6 @@ problems/*/tests/__pycache__/
 
 # certificate dual vectors (hundreds of MB); state.json and result.json are committed
 problems/*/results/certificates/lkr_*/*.npz
+
+# small released files needed for replay (override the generic patterns)
+!problems/P9/data/raw/mu_mat_union3_cosmo=2_mu.fits
