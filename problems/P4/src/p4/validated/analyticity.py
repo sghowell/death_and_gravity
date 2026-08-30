@@ -24,7 +24,7 @@ import json
 import multiprocessing as mp
 import time
 
-from flint import acb, acb_mat, arb
+from flint import acb, acb_mat, arb, fmpq
 
 from . import lincentre, linsonic4, linscaled
 from .arbseries import precision
@@ -78,6 +78,56 @@ def centre_box(S, ce, cx, cy, w, K=50, nu=0.06, prec=256):
         return True, dict(Z=det["Z1"] + det["Z2"], g=det["g"], eps=max(det["eps"]))
 
 
+def _laurent(poly, k, z0):
+    """t-order-k coefficient of t^{d_N} poly(N = n/t, W = w t^2, V = v t) at (n, w, v) = z0 (arb balls);
+    the t-order of a monomial N^a W^b V^e is d_N - a + 2b + e >= 0 (exact bookkeeping)."""
+    dN, tot = poly.degrees()[2], arb(0)
+    for exps, c in poly.terms():
+        et, eA, a, b, e = map(int, exps)
+        assert et == 0 and eA == 0
+        if dN - a + 2 * b + e == k:
+            tot += arb(fmpq(c)) * z0[0] ** a * z0[1] ** b * z0[2] ** e
+    return tot
+
+
+def constraint_exponents(bg, ce, x_d=-3.0, prec=256):
+    """Ball certificate of the conditions under which the exact identity  16 S D c' = Lambda_lin c
+    (``linsys.linear_constraint_propagation``) forces the linearised constraint c to vanish identically:
+    (a) sonic point: D(u_0) = 0 exactly (A1 closed forms), D_1 != 0 and gamma := Lambda_lin(u_0)/(16 S_0 D_1)
+        not a positive integer  =>  every solution analytic at x = 0 with c(0) = 0 (the order-0 constraint of
+        the 4D recursion) has c == 0 on its disc of convergence  (p~ in Sigma);
+    (b) centre: with N = n/t, W = w t^2, V = v t, c = t^2 c~ and  theta c~ = (lambda(t) - 2) c~ with lambda =
+        Lambda_lin/(16 S D) analytic at t = 0 (Lambda_lin has no N^3 monomial: exact), lambda(0) = [N^2]/(16 (-1))
+        = -1, so rho := lambda(0) - 2 = -3 is no nonnegative integer  =>  every solution analytic in t at the
+        centre (the exponent-0 family r_1, r_2) has c~ == 0  (r_i in Sigma);
+    (c) e_W not in Sigma(x_d):  l_Sigma . e_W = 2 A T~ != 0 at u(x_d).
+    Lambda_lin and D are kappa-free, so (a)-(c) hold for every kappa at once."""
+    from flint import fmpq
+    from .arbseries import Series
+    from .linsys import LinSystem, linear_constraint_propagation, plain_from_scaled
+    from .polysys import _PolyEvaluator
+    with precision(prec):
+        L = LinSystem()
+        lam, D = linear_constraint_propagation(L)
+        u = [s.with_cap(2) for s in bg.series()]
+        ev = _PolyEvaluator([Series.var(2)] + u)
+        D0, D1, S0, W0 = ev(D)[0], ev(D)[1], ev(L.S)[0], u[2][0]
+        gamma = ev(lam)[0] / (16 * S0 * D1)
+        ok_a = bool(D0.contains(arb(0)) and S0 != 0 and W0 != 0 and D1 != 0) and bool(gamma < 1 or not gamma.contains_integer())
+        dN = lam.degrees()[2]
+        ok_reg = not any(dN - int(e[2]) + 2 * int(e[3]) + int(e[4]) < dN - 2 for e, _ in lam.terms())
+        z0 = ce.balls[0]
+        Dc = _laurent(D, 0, z0)
+        lam0 = _laurent(lam, dN - 2, z0) / (16 * Dc)
+        rho = lam0 - 2
+        ok_b = ok_reg and bool(Dc != 0) and bool(rho < 0 or not rho.contains_integer())
+        A, N, W, V = plain_from_scaled(x_d, *ce.eval(x_d))
+        lw = 2 * A * (1 + V * V / 3 + N * V * arb(fmpq(4, 3)))
+        ok_c = bool(lw != 0)
+        return dict(ok=ok_a and ok_b and ok_c, sonic_ok=ok_a, centre_ok=ok_b, eW_ok=ok_c, gamma_sonic=gamma, D1=D1,
+                    D0=D0, rho_centre=rho, lambda_centre=lam0, D_centre=Dc, lSigma_eW=lw, n_terms=len(lam.coeffs()))
+
+
 def _init():
     from . import linmatch
     from .modecount import V0_EC, W_V0, certified_centre
@@ -127,10 +177,18 @@ def certify_analyticity(tube_path, rect=(0.0, 15.0, -14.0, 14.0), w0=0.5, worker
     """(P), (S), (C) on R; summary dict (saved to ``out`` as JSON if given)."""
     from . import lintube
     t0 = time.time()
+    from . import linmatch
+    from .modecount import V0_EC, W_V0, certified_centre
     tube = lintube.Tube.load(tube_path)
     ok_t, nsteps, pinv = tube_regular(tube)
+    last = tube.steps[-1]
+    x_d = float(last.x - arb(last.h))
+    with precision(256):
+        cx = constraint_exponents(linmatch.box_background(V0_EC, W_V0, K=41), certified_centre(), x_d)
+    cx = {k: (str(v) if isinstance(v, arb) else v) for k, v in cx.items()}
     boxes = cover(rect, w0, workers)
-    summ = dict(rect=rect, tube_regular=ok_t, n_steps=nsteps, max_Pinv=pinv, n_boxes=len(boxes),
+    summ = dict(rect=rect, w0=w0, enlarge=ENLARGE, x_d=x_d, tube_info=tube.info, constants=dict(V0=V0_EC, w_V0=W_V0, K_sonic=40, K_centre=50, nu_centre=0.06, x0=-0.05),
+                constraint=cx, tube_regular=ok_t, n_steps=nsteps, max_Pinv=pinv, n_boxes=len(boxes),
                 min_w=min(b["w"] for b in boxes), min_nu=min(b["sonic"]["nu"] for b in boxes),
                 max_re_sigma=max(b["sonic"]["re_sigma_max"] for b in boxes), max_Z_sonic=max(b["sonic"]["Z"] for b in boxes),
                 max_Z_centre=max(b["centre"]["Z"] for b in boxes), max_g_centre=max(b["centre"]["g"] for b in boxes),
@@ -138,3 +196,19 @@ def certify_analyticity(tube_path, rect=(0.0, 15.0, -14.0, 14.0), w0=0.5, worker
     if out:
         json.dump(summ, open(out, "w"))
     return summ
+
+
+if __name__ == "__main__":                       # PYTHONPATH=problems/P4/src uv run python -m p4.validated.analyticity TUBE.json
+    import argparse
+    import os
+    from .modecount import RESULTS_DIR
+    ap = argparse.ArgumentParser(description="analyticity cover of R + constraint-exponent certificate (results JSON)")
+    ap.add_argument("tube")
+    ap.add_argument("--rect", nargs=4, type=float, default=(0.0, 15.0, -14.0, 14.0), metavar=("A", "B", "C", "D"))
+    ap.add_argument("--w0", type=float, default=0.5)
+    ap.add_argument("--workers", type=int, default=2)
+    ap.add_argument("--out", default=os.path.join(RESULTS_DIR, "analyticity_R.json"))
+    a = ap.parse_args()
+    os.makedirs(os.path.dirname(a.out), exist_ok=True)
+    s = certify_analyticity(a.tube, rect=tuple(a.rect), w0=a.w0, workers=a.workers, out=a.out)
+    print({k: v for k, v in s.items() if k not in ("boxes", "tube_info")}, "->", a.out)

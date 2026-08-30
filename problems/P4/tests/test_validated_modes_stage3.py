@@ -194,3 +194,77 @@ def test_full_rectangle_result_if_available():
     with precision(256):
         total = sum((modecount.dec(s["inc"]) for s in res["segments"]), arb(0))
         assert (total / (2 * arb.pi()) - 2).abs_upper() < 0.5
+
+
+# ---------------------------------------------------------------------------------------------
+# constraint-surface invariance (exact) and its exponent conditions; stored full-R results
+# ---------------------------------------------------------------------------------------------
+RESULTS = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "results", "theorem_b")
+
+
+def test_linearised_constraint_propagated_exactly_and_exponents(bg):
+    """Exact fmpq_mpoly identity 16 S D c' = Lambda_lin c for the linearised momentum constraint along
+    the 4D linearised flow (remainder 0, Lambda_lin kappa-free, 19 terms, D = Delta~/(4SW)); the sonic
+    exponent gamma contains 0 (no positive integer), D_1 != 0, the centre exponent is -3, and e_W is not
+    in Sigma(x_d): p~, r_1, r_2 lie on the constraint surface for every kappa (notes section 3.8)."""
+    from p4.validated import linsys
+    lam, D = linsys.linear_constraint_propagation()
+    assert lam.degrees()[1] == 0 and lam.degrees()[2] == 3 and D.degrees()[2] == 2
+    ce = modecount.certified_centre()
+    r = analyticity.constraint_exponents(bg, ce, -3.0)
+    assert r["ok"] and r["sonic_ok"] and r["centre_ok"] and r["eW_ok"]
+    assert r["gamma_sonic"].contains(arb(0)) and r["gamma_sonic"].rad() < 1e-12 and r["D1"] > 7
+    assert r["rho_centre"].contains(arb(-3)) and r["rho_centre"].rad() < 1e-12
+    assert r["D0"].contains(arb(0)) and abs(r["lSigma_eW"]) > 0.5
+
+
+def test_context_refuses_mismatched_tube():
+    tube = lintube.Tube.build(V0_EC, W_V0, x_c=-0.06)
+    tube.info["V0"] = "0.1124394013880984"
+    with pytest.raises(ValueError):
+        modecount.Context(tube)
+
+
+def _sides_tiled(res):
+    for corner, direction, length in modecount.sides_of(res["rect"]):
+        segs = sorted((s["s0"], s["s1"]) for s in res["segments"]
+                      if abs(complex(*s["kc"]) - (complex(*corner) + complex(*direction) * (s["s0"] + s["w"]))) < 1e-12)
+        assert segs[0][0] == 0.0 and abs(segs[-1][1] - length) < 1e-12
+        assert all(abs(segs[i][1] - segs[i + 1][0]) < 1e-12 for i in range(len(segs) - 1))
+
+
+def test_full_rectangle_result_if_available():
+    """Re-checks the stored JSON of the full-R run (results/theorem_b/winding_R.json, or P4_STAGE3_WINDING):
+    winding 2 from the exactly encoded tile increments, contour tiled without gaps, constants as certified."""
+    path = os.environ.get("P4_STAGE3_WINDING") or os.path.join(RESULTS, "winding_R.json")
+    if not os.path.exists(path):
+        pytest.skip("no full-rectangle result file")
+    res = json.load(open(path))
+    assert res["winding"] == 2 and res["certified"] and res["min_abs_E"] > 0 and res["n_tiles"] == len(res["segments"])
+    assert res["constants"]["V0"] == V0_EC and res["tube_info"]["V0"] == V0_EC and float(res["tube_info"]["w"]) == W_V0
+    assert all(s["minE"] > 0 and s["w"] <= res["wmax"] for s in res["segments"])
+    _sides_tiled(res)
+    with precision(256):
+        total = sum((modecount.dec(s["inc"]) for s in res["segments"]), arb(0))
+        assert (total / (2 * arb.pi()) - 2).abs_upper() < 0.5
+
+
+def test_stored_analyticity_cover():
+    """Re-checks the stored cover (results/theorem_b/analyticity_R.json, or P4_STAGE3_ANALYTICITY): the closed
+    tiles partition R, each certified on a strictly larger box, nu > |x0|, Re sigma < 1, Z < 1, g < K+1, and the
+    constraint-exponent certificate holds."""
+    path = os.environ.get("P4_STAGE3_ANALYTICITY") or os.path.join(RESULTS, "analyticity_R.json")
+    if not os.path.exists(path):
+        pytest.skip("no analyticity result file")
+    res = json.load(open(path))
+    a, b, c, d = res["rect"]
+    bx = res["boxes"]
+    assert all(b_["w_cert"] > b_["w"] and a <= b_["cx"] - b_["w"] and b_["cx"] + b_["w"] <= b
+               and c <= b_["cy"] - b_["w"] and b_["cy"] + b_["w"] <= d for b_ in bx)
+    assert sum((2 * b_["w"]) ** 2 for b_ in bx) == (b - a) * (d - c)
+    for i, p in enumerate(bx):
+        for q in bx[i + 1:]:
+            assert abs(p["cx"] - q["cx"]) >= p["w"] + q["w"] or abs(p["cy"] - q["cy"]) >= p["w"] + q["w"]
+    assert all(b_["sonic"]["nu"] > 0.05 and b_["sonic"]["re_sigma_max"] < 1 and b_["sonic"]["Z"] < 1
+               and b_["centre"]["Z"] < 1 and b_["centre"]["g"] < 51 for b_ in bx)
+    assert res["tube_regular"] and res["constraint"]["ok"] and res["tube_info"]["V0"] == V0_EC

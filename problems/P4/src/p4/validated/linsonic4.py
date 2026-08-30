@@ -294,7 +294,7 @@ def certify4(ex, nu=None):
     P0, G0 = st.P, st.G[0]
     kabs = abs_up(ex.kappa)
     q1 = [[_col(b)] for b in ex.balls]
-    jmax = st.lp + K + 1
+    jmax = max(st.lp, st.lg) + K + 1                 # F_j != 0 up to j = K + max(lp - 2, lg - 1)
     F = [st.residual(q1, j, K, 1)[0] for j in range(jmax + 1)]
 
     def En(n):
@@ -311,7 +311,7 @@ def certify4(ex, nu=None):
         if not nu_ < cert_u.nu:
             continue
         Z1 = arb(0)
-        for k in range(1, max(st.lp, st.lg)):
+        for k in range(1, max(st.lp, st.lg) + 1):         # B_k != 0 up to k = max(lp - 1, lg)
             Bk = [[arb(0)] * 4 for _ in range(4)]
             for i, row in enumerate(rows):
                 for cc, r, s in row:

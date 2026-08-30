@@ -148,3 +148,65 @@ def background_from_state(st, point=False):
     """(A, N, W, V) balls at st.x from a ``tmint.State`` (the A3 tube: point set or interval set)."""
     u = st.u_point() if point else st.u_interval()
     return plain_from_scaled(st.x, u[0], u[1], u[2])
+
+
+def linear_constraint_propagation(L=None):
+    """Exact propagation identity of the linearised momentum constraint (Theorem B, Stage 3).
+
+    For a background u(x) solving the 4D CSS system with C~(u) = 0 and any solution p of the 4D
+    linearised system  P(u) p' = (DQ - Psi - kappa P_s) p,  the functional
+        c(x) := (kappa - A) S A_p - A (C~_N N_p + C~_W W_p + C~_V V_p)   (= A S x linearised E_tr)
+    satisfies the scalar ODE   16 S D c' = Lambda_lin c,   D := Delta~/(4 S W) = 3N^2V^2 - N^2 + 4NV - V^2 + 3,
+    with Lambda_lin a kappa-free polynomial in (N, W, V) (no A, no p).  Exact derivation (fmpq_mpoly):
+    u' and p' by Cramer's rule (denominators S Delta~), A eliminated by A = (S + 2WT)/S (the constraint,
+    homogenised), exact division of S^2 Delta~^2 dc/dx by c (remainder 0), gcd cancellation; the
+    denominator is checked to be a constant multiple of S D.  Hence the constraint hyperplane
+    Sigma(x) = ker c is invariant wherever S D != 0, i.e. wherever Delta~ != 0.
+    Returns (Lambda_lin, D) in the sonic context (t, A, N, W, V)."""
+    from flint import fmpq_mpoly_ctx
+    L = L or LinSystem()
+    sys = L.sys
+    ctx = fmpq_mpoly_ctx.get(("t", "A", "N", "W", "V", "Ap", "Np", "Wp", "Vp", "k"))
+    _, A, N, W, V, Ap, Np, Wp, Vp, k = ctx.gens()
+    pr = lambda q: q.project_to_context(ctx)                                       # noqa: E731
+    P = [[pr(sys.P[r][c]) for c in range(4)] for r in range(4)]
+    Q = [pr(q) for q in sys.Q]
+    dP, dQ = sys.dP(), sys.dQ()
+    dP = [[[pr(dP[r][i][l]) for l in range(4)] for i in range(4)] for r in range(4)]
+    dQ = [[pr(dQ[r][l]) for l in range(4)] for r in range(4)]
+    Ps, dC, S = [[pr(x) for x in row] for row in L.Ps], [pr(c) for c in L.dC], pr(L.S)
+    p = [Ap, Np, Wp, Vp]
+    Delta = P[2][2] * P[3][3] - P[2][3] * P[3][2]
+    SD = S * Delta
+    du = [Q[0] * Delta, Q[1] * SD, (Q[2] * P[3][3] - Q[3] * P[2][3]) * S, (P[2][2] * Q[3] - P[3][2] * Q[2]) * S]
+    Psi = [[sum((du[i] * dP[r][i][l] for i in range(4)), ctx.constant(0)) for l in range(4)] for r in range(4)]
+    Gp = [sum(((SD * dQ[r][l] - Psi[r][l] - k * SD * Ps[r][l]) * p[l] for l in range(4)), ctx.constant(0))
+          for r in range(4)]                                                         # S Delta~ (G p)
+    dp = [Gp[0] * Delta, Gp[1] * SD, (P[3][3] * Gp[2] - P[2][3] * Gp[3]) * S, (P[2][2] * Gp[3] - P[3][2] * Gp[2]) * S]
+    c = (k - A) * S * Ap - A * (dC[1] * Np + dC[2] * Wp + dC[3] * Vp)
+    num = sum((c.derivative(i + 1) * du[i] * SD for i in range(4)), ctx.constant(0))
+    num += sum((c.derivative(j + 5) * dp[j] for j in range(4)), ctx.constant(0))     # = S^2 Delta~^2 dc/dx
+    Anum = S + 2 * W * (1 + V**2 * fmpq(1, 3) + N * V * fmpq(4, 3))                 # A = Anum / S on C~ = 0
+
+    def elim(f):
+        dA, out = f.degrees()[1], ctx.constant(0)
+        for exps, coef in f.terms():
+            e = list(map(int, exps))
+            eA, e[1] = e[1], 0
+            out += ctx.from_dict({tuple(e): coef}) * Anum**eA * S ** (dA - eA)
+        return out, dA
+    num_s, a = elim(num)
+    c_s, b = elim(c)
+    q, r = divmod(num_s, c_s)
+    if not r.is_zero():
+        raise ArithmeticError("linearised constraint is not propagated by the 4D linearised flow")
+    mu_s, _ = elim(S ** (a - b) * S**2 * Delta**2)                                  # dc/dx = q c / mu
+    g = q.gcd(mu_s)
+    lam, den = q // g, mu_s // g
+    Dpoly = 3 * N**2 * V**2 - N**2 + 4 * N * V - V**2 + 3
+    const, rem = divmod(den, S * Dpoly)
+    if not (rem.is_zero() and const.is_constant()):
+        raise ArithmeticError("unexpected denominator of the linearised constraint propagation")
+    lam = lam * (16 / fmpq(const.coeffs()[0]))
+    back = lambda f: f.project_to_context(sys.ctx)                                    # noqa: E731
+    return back(lam), back(Dpoly)

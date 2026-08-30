@@ -5,7 +5,7 @@ Krawczyk (E: C -> C as a map of R^2, Jacobian = the real form of E'):  on the bo
     K(B) = kappa_c - Y E(kappa_c) + (1 - Y E'(B)) (B - kappa_c),   Y = 1/E'(kappa_c) (midpoint),
 K(B) contained in the interior of B  =>  E has exactly one zero in B, and it lies in K(B).
 E and E'(B) come from the Taylor model of ``modecount.Context.E_model`` on |delta| <= w = 2 w_B:
-E(kappa_c) = c_0, E'(delta) = sum_k k c_k delta^{k-1} + R'(delta) with |R'| <= rem/(w - w_B) on B
+E(kappa_c) = c_0 + R(0), E'(delta) = sum_k k c_k delta^{k-1} + R'(delta) with |R'| <= rem/(w - sqrt2 w_B) on B (|delta| <= sqrt2 w_B there)
 (Cauchy's estimate for the derivative of the remainder).  The complex box arithmetic of acb
 over-approximates the real 2x2 interval products, so the containment test is sound.
 Gauge mode: kappa-bar = 2 - A_0 + 2 W_0/3 (certified sonic data); the pure-gauge perturbation
@@ -43,12 +43,14 @@ def krawczyk(ctx, kappa_c, w, m=3, newton=True, verbose=False):
             E, info = ctx.E_model(acb(kc.real, kc.imag), w, m)
         wB = w / 2
         B = _cbox(wB)
-        dE_B = sum((E.c[k] * k * B ** (k - 1) for k in range(1, E.m + 1)), acb(0)) + _cbox(E.rem / arb(w - wB))
+        E0 = E.c[0] + _cbox(E.rem)                                       # E(kappa_c) = c_0 + R(0)
+        dE_B = sum((E.c[k] * k * B ** (k - 1) for k in range(1, E.m + 1)), acb(0))
+        dE_B += _cbox(abs_upper(E.rem / (arb(w) - arb(2).sqrt() * wB)))    # |delta| <= sqrt2 w_B on the square box
         Y = 1 / acb(E.c[1].real.mid(), E.c[1].imag.mid())
-        Kop = -Y * E.c[0] + (1 - Y * dE_B) * B
+        Kop = -Y * E0 + (1 - Y * dE_B) * B
         ok = bool(B.real.contains_interior(Kop.real)) and bool(B.imag.contains_interior(Kop.imag))
         zero = acb(kc.real, kc.imag) + Kop
-        return dict(ok=ok, kappa_c=kc, w_B=wB, K=Kop, zero=zero, E=E.c[0], dE=E.c[1], dE_box=dE_B, rem=float(E.rem),
+        return dict(ok=ok, kappa_c=kc, w_B=wB, K=Kop, zero=zero, E=E0, dE=E.c[1], dE_box=dE_B, rem=float(E.rem),
                     model=E, info=info)
 
 

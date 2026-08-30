@@ -179,6 +179,13 @@ class Context:
     def __init__(self, tube, x0=-0.05, K_sonic=40, prec=256):
         from . import linmatch, linscaled
         self.tube, self.x0, self.K_sonic, self.prec = tube, x0, K_sonic, prec
+        info = dict(getattr(tube, "info", None) or {})
+        try:
+            ok = info["V0"] == V0_EC and float(info["w"]) == W_V0 and float(info["x0"]) == x0
+        except (KeyError, TypeError, ValueError):
+            ok = False
+        if not ok:
+            raise ValueError(f"tube.info {info} does not match V0={V0_EC}, w={W_V0}, x0={x0}")
         with precision(prec):
             self.S4 = linscaled.full_system()
             self.bg = linmatch.box_background(V0_EC, W_V0, K=K_sonic + 1)
@@ -369,9 +376,29 @@ def winding_number(tube_path, rect=(0.0, 15.0, -14.0, 14.0), m=8, wmax=0.25, chu
         wn = total / (2 * arb.pi())
         N = int(round(float(wn.mid())))
         ok = bool((wn - N).abs_upper() < 0.5)
-    result = dict(rect=rect, m=m, wmax=wmax, winding=N, certified=ok, winding_ball=[float(wn.mid()), float(wn.rad())],
+    tinfo = json.load(open(tube_path)).get("info")
+    consts = dict(V0=V0_EC, w_V0=W_V0, x0=-0.05, K_sonic=40, prec=prec, nsub=nsub, chunk=chunk, pole=POLE, workers=workers)
+    result = dict(rect=rect, m=m, wmax=wmax, winding=N, certified=ok, constants=consts, tube_info=tinfo, winding_ball=[float(wn.mid()), float(wn.rad())],
                   total_arg=enc(total), n_tiles=len(recs), min_abs_E=min(r["minE"] for r in recs),
                   time=time.time() - t0, segments=sorted(recs, key=lambda r: (r["kc"][1] if r["kc"][0] in (rect[0], rect[1]) else r["kc"][0])))
     if out:
         json.dump(result, open(out, "w"))
     return result
+
+
+RESULTS_DIR = __import__("os").path.normpath(__import__("os").path.join(__import__("os").path.dirname(__file__), "..", "..", "..", "results", "theorem_b"))
+
+if __name__ == "__main__":                       # PYTHONPATH=problems/P4/src uv run python -m p4.validated.modecount TUBE.json
+    import argparse
+    import os
+    ap = argparse.ArgumentParser(description="rigorous winding number of E around a rectangle (results JSON)")
+    ap.add_argument("tube", help="tube saved by lintube.Tube.save (A3 tube [-3, -0.05] for the V0 box)")
+    ap.add_argument("--rect", nargs=4, type=float, default=(0.0, 15.0, -14.0, 14.0), metavar=("A", "B", "C", "D"))
+    ap.add_argument("--workers", type=int, default=8)
+    ap.add_argument("--m", type=int, default=8)
+    ap.add_argument("--out", default=os.path.join(RESULTS_DIR, "winding_R.json"))
+    a = ap.parse_args()
+    os.makedirs(os.path.dirname(a.out), exist_ok=True)
+    r = winding_number(a.tube, rect=tuple(a.rect), m=a.m, workers=a.workers, out=a.out)
+    print(f"winding {r['winding']} certified={r['certified']} ball={r['winding_ball']} tiles={r['n_tiles']} "
+          f"min|E|={r['min_abs_E']:.3g} time={r['time']:.0f}s -> {a.out}")

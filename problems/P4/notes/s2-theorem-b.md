@@ -319,8 +319,9 @@ with precision(256):
 
 Status: Stage 3 of 3 done (2026-08-29). Code (new, nothing pre-existing modified):
 `problems/P4/src/p4/validated/{linsonic4,lintaylor,modecount,analyticity,krawczyk_kappa}.py`; tests
-`uv run pytest problems/P4/tests/test_validated_modes_stage3.py -q` (6 fast tests ≈ 30 s; 2 slow ones with
-`P4_TUBE_CACHE=<tube.json>`; the full-rectangle JSON is re-verified when `P4_STAGE3_WINDING` points to it).
+`uv run pytest problems/P4/tests/test_validated_modes_stage3.py -q` (8 fast tests ≈ 45 s; 2 slow ones with
+`P4_TUBE_CACHE=<tube.json>`; the stored full-R results `results/theorem_b/{winding_R,analyticity_R}.json` are
+re-verified by 2 further tests). Revised 2026-08-30 after an adversarial review (§3.8: what changed).
 Every number below is a rigorous 256-bit ball unless marked float. The tube is the Stage-2 A3 tube
 [−3, −0.05] (244 steps, V0 ∈ c* ± 1e−16), *without* the centre extension: E is evaluated at x_d = −3 (§3.3).
 
@@ -338,8 +339,8 @@ hence M_n is singular iff n = σ(κ) := −tr(D₄⁻¹E₄(κ)), a single *affi
 σ(κ₁) = −2.64741095423 ± 7e−14, σ(κ̄) = −0.41375455226, σ(0) = −0.09010597051, σ(15+14i) = −13.7385 − 12.7385i
 (S1's resonances κ = −0.0990 − 1.0990n: σ(κ) = −(κ + 0.0990)/1.0990). Order 0: A_p(0) = 1, N_p(0) = 0,
 ℓ·G₀p₀ = 0 and the linearised constraint (a 2×2 solve for (W_p, V_p)(0), singular iff σ(κ) = 0, the pole of
-E at −0.099); the constraint surface is invariant, so the series stays on it (`constraint_residual`: a ball
-identity, all orders contain 0). Tail certificate as in §1.3 with the rank-one sharpening
+E at −0.099); the constraint surface is invariant (exact identity, §3.8) and the series stays on it (`constraint_residual`:
+a ball identity, all orders contain 0; proof in §3.8). Tail certificate as in §1.3 with the rank-one sharpening
 ‖M_n⁻¹‖ ≤ (c/n), c = ‖D₄⁻¹‖(1 + ‖D₄⁻¹E₄‖/(K+1 − max Re σ)) (no g < K+1 needed).
 Checks (test): at κ₁, κ̄, 0, 15+14i every coefficient ball (n ≤ 40) overlaps the Stage-1 3D ball and the
 values at x₀ = −0.05 overlap (4D radii ≤ 1e−11); the 4D certificate is at least as good as the 3D one:
@@ -399,9 +400,8 @@ x_d = −3 (the tube end; the regular family is certified there with ν = 0.06 >
 sonic data from §3.1. **x_d-independence.** For x_d′ < x_d: r_i(x_d′) = Φr_i(x_d), p̃(x_d′) = Φp̃(x_d), Φ = Φ(x_d′, x_d)
 entire in κ, det Φ ≠ 0, and Φ⁻¹e_W = α(κ)e_W + σ with σ ∈ Σ(x_d) (the linearised constraint surface, a
 κ-analytic hyperplane not containing e_W since ∂C̃/∂W = −2T̃ ≠ 0) and α = ℓ_Σ(Φ⁻¹e_W)/ℓ_Σ(e_W) ≠ 0 because Σ is
-invariant (e_W ∉ Σ(x_d′) = ΦΣ(x_d)). Since r₁, r₂, p̃ ∈ Σ (p̃: constraint imposed at order 0 + invariance;
-r_i: Σ carries the exponents {−3, 0, 0} of the reduced form, §2.4, so it contains the whole 2-dimensional
-regular family), det[r₁, r₂, p̃, σ] = 0 (four vectors in a 3-space) and
+invariant (e_W ∉ Σ(x_d′) = ΦΣ(x_d)). Since r₁, r₂, p̃ ∈ Σ (proven for every κ in §3.8: exact invariance identity + exponent
+conditions at the sonic point and at the centre), det[r₁, r₂, p̃, σ] = 0 (four vectors in a 3-space) and
     E_{x_d′}(κ) = e^{3(x_d′−x_d)} det Φ(x_d′, x_d; κ) α(κ) · E_{x_d}(κ),
 an analytic nonvanishing factor: zeros, multiplicities and the winding number are the same for every
 x_d ≤ −3. (Float check: E₃/E_fin^{S1}(x_end = −3) = 0.1109 + 0.0677i, 0.1119 + 0.0689i, 0.1129 + 0.0700i at
@@ -438,6 +438,10 @@ Run (8 workers, spawn; 172 chunks of length 0.5; the κ-free step data of the 24
 | left (Re κ = 0) | 150 | 0.125 ×102, 2⁻⁴ ×10, 2⁻⁵ ×10, 2⁻⁶ ×12, 2⁻⁷ ×16 | 4.81e−3 (at Im κ ≈ ±13.6) | 9.1e−5 | 4.3e−6 | 29 |
 
 **Total: Σ Δarg / 2π = 2.00000 ± 8.4e−4 ⟹ winding number 2**, certified; 290 tiles, min |E| on ∂R = 4.81e−3
+(re-run 2026-08-30 with the fixes of §3.8 from `python -m p4.validated.modecount`, stored as
+`results/theorem_b/winding_R.json` with every tile increment as an exact dyadic ball: 1.99999996 ± 8.39e−4, the same
+290 tiles, the same per-side table to the digits shown, 1231 s wall on 8 workers; re-summed by
+`test_full_rectangle_result_if_available`)
 (S1's float minimum 4.5e−2 was for E_fin; E₃ = E_fin × the factor of §3.3), 1255 s wall (8665 CPU-s), the
 conjugate symmetry E(κ̄) = E(κ)̄ visible tile by tile (the bottom and top rows are conjugates to all digits).
 Corner/side values (floats of the endpoint balls): E₃(0) = 0.113077, E₃(15) = 1125.08, E₃(±14i) = 7.31e−4 ∓
@@ -467,29 +471,34 @@ at −0.099: 432 boxes in the end, min half-width 0.125); every tile is certifie
 so the open certified boxes cover the closed rectangle and E is analytic on a neighbourhood of R.
 Results: min ν = 0.065, max Re σ = 0.105 (< 1: no resonance in R; the resonances are at σ ∈ {1, 2, …}, i.e.
 Re κ ≤ −1.198, and the pole σ = 0 at −0.099 ∉ R), max Z_sonic = 0.99974, max Z_centre = 0.572, max g_centre
-= 6.12; 76 s with 2 workers. Consequences used below: (i) for every κ ∈ R the admissible sonic solution with
+= 6.12; 76 s with 2 workers (re-run 2026-08-30 with the certify4 fix of §3.8, `results/theorem_b/analyticity_R.json`:
+the same 432 boxes and the same numbers to the digits shown, max ‖P⁻¹‖ = 11.74, 79 s; the JSON also records the
+constraint-exponent certificate of §3.8 and is re-checked by `test_stored_analyticity_cover`). Consequences used below: (i) for every κ ∈ R the admissible sonic solution with
 N_p(0) = 0 is unique up to scale and has A_p(0) ≠ 0 (σ(κ) ≠ 0), so the normalisation A_p(0) = 1 loses
-nothing; (ii) E(κ) = 0 ⟺ p̃(x_d; κ) ∈ span(r₁, r₂) ⟺ κ is an eigenvalue in the class of §3.8 (as in §2.4,
-using e_W ∉ Σ and r₁, r₂, p̃ ∈ Σ); (iii) E is analytic on a neighbourhood of R, so the winding number of
+nothing; (ii) E(κ) = 0 ⟺ p̃(x_d; κ) ∈ span(r₁, r₂) ⟺ κ is an eigenvalue in the class of §3.8 (using e_W ∉ Σ(x_d)
+and r₁, r₂, p̃ ∈ Σ, both proven for every κ ∈ R in §3.8, and r₁(x_d), r₂(x_d) independent: a dependence
+would give a solution vanishing at x_d, hence ≡ 0 near x_d (P(t_d) invertible, `tube_regular`) and on the
+whole disc |t| < 0.06 by analyticity, against (w̃, ṽ)(0) = (1, 0), (0, 1)); (iii) E is analytic on a neighbourhood of R, so the winding number of
 E|∂R equals the number of zeros in R counted with multiplicity.
 
 ### 3.6 Krawczyk enclosures of the two zeros (`krawczyk_kappa.py`)
 
 With the Taylor model of §3.3 on |δ| ≤ w around κ_c (m = 3): E(κ_c) = c₀, E′(B) = Σ_k k c_k B^{k−1} + R′ on the
-box B = κ_c ± w/2 with |R′| ≤ rem/(w − w/2) (Cauchy for the remainder's derivative), Y = 1/mid(c₁),
-K(B) = −Y c₀ + (1 − Y E′(B))·(B − κ_c). K(B) ⊂ int B (acb boxes over-approximate the real 2×2 interval
+box B = κ_c ± w/2 with |R′| ≤ rem/(w − √2·w/2) (Cauchy for the remainder's derivative; |δ| ≤ √2·w/2 on the square box), Y = 1/mid(c₁),
+K(B) = −Y E(κ_c) + (1 − Y E′(B))·(B − κ_c), E(κ_c) = c₀ + R(0) ∈ c₀ ± rem. K(B) ⊂ int B (acb boxes over-approximate the real 2×2 interval
 products, so the test is sound) ⟹ exactly one zero of E in B, contained in κ_c + K(B). κ_c is first
 Newton-refined from the float S1 values (one extra model, 20–40 s).
 
 | zero | κ_c (after Newton) | w/2 | E(κ_c) | E′(κ_c) | E′(B) | K(B) radius | enclosure |
 |---|---|---|---|---|---|---|---|
-| κ₁ | 2.8105525488271472 | 1e−7 | ± 1.0e−10 | 0.022490638 ± 4e−10 | 0.0224906 ± 4.1e−8 | 4.4e−9 | 2.81055254883 ± 5.61e−9 (Im ± 4.4e−9) |
-| κ̄ | 0.3556992037109642 | 1e−5 | ± 2.2e−10 | −0.061293328 ± 9e−10 | −0.06129 ± 6.4e−6 | 4.6e−9 | 0.35569920371 ± 8.35e−9 (Im ± 4.6e−9) |
+| κ₁ | 2.8105525488271472 | 1e−7 | ± 1.0e−10 (incl. R(0) ≤ 1.6e−23) | 0.022490638 ± 4.3e−10 | 0.02249064 ± 4.9e−9 | 4.4e−9 | 2.81055254883 ± 5.61e−9 (Im ± 4.4e−9) |
+| κ̄ | 0.3556992037109642 | 1e−5 | ± 2.2e−10 (incl. R(0) ≤ 7.4e−18) | −0.061293328 ± 8.8e−10 | −0.06129 ± 6.4e−6 | 4.6e−9 | 0.35569920371 ± 8.35e−9 (Im ± 4.6e−9) |
 
 Outward-rounded: **κ₁ ∈ [2.81055254439, 2.81055255326]**, **κ̄ ∈ [0.35569919907, 0.35569920835]**, both with
 |Im| ≤ 4.7e−9, both simple (E′(B) ∌ 0), and **γ = 1/κ₁ ∈ [0.3558019218, 0.3558019231]** (ball 0.35580192 ±
 3.0e−9). The enclosure radii are set by |E(κ_c)|/|E′| with rad E(κ_c) = 1e−10 (the Lohner width of the
-propagation, 5e−10 relative), not by the Taylor model (remainders 1.6e−23, 1.0e−17). S1's κ₁ =
+propagation, 5e−10 relative), not by the Taylor model (remainders 1.6e−23, 7.4e−18). Re-run 2026-08-30 with the corrected operator
+(§3.8 (iii)); the outward-rounded enclosures are unchanged; `results/theorem_b/krawczyk.json`. S1's κ₁ =
 2.8105525487765 (float, ± 1e−9) and KHA99's 2.81055255 lie inside; γ agrees with KHA's 0.35580192 to all
 digits given. The two boxes are disjoint, so with the winding number 2 of §3.4 they are *all* the zeros.
 
@@ -538,35 +547,69 @@ admissible sonic solution is unique up to scale and has A_p(0) ≠ 0 for σ(κ) 
 (non-analytic at the sonic point), non-spherical modes and Re κ < 0 are outside this class, and Theorem C
 (no zeros with Re κ ≥ 0 outside R) remains the open analytic item; the count refers to the KHA sonic-point
 gauge (the HM01 gauge would move κ̄ but not κ₁).
-**Rigor caveats.** (1) The gauge identity "g = (A′, N′ + κN, W′, V′)/A′(0) solves the linearised system for
+**Rigor caveats (as revised 2026-08-30).** (1) The gauge identity "g = (A′, N′ + κN, W′, V′)/A′(0) solves the linearised system for
 every κ" is used as the symmetry argument and verified as a ball identity to order 38 (§3.7), not as an exact
 polynomial identity; the Krawczyk statement (exactly one simple zero in the box containing κ̄) is
-independent of it. (2) r₁, r₂ ∈ Σ is used through the exponent count {−3, 0, 0} of the reduced form (§2.4)
-and checked as a ball identity (Stage-2 test), not proven for every κ ∈ R separately — it only enters the
-equivalence "E = 0 ⟺ eigenvalue" and the x_d-independence, not the zero count of E itself. (3) The A1/A2/A3
+independent of it. (2) *Closed.* r₁, r₂, p̃ ∈ Σ is now proven for every κ ∈ R by the exact identity and the two exponent
+conditions below (previously: exponent count {−3, 0, 0} of the reduced form, ball-checked). (3) The A1/A2/A3
 certificates of Theorem A are inherited (V0 box, centre balls, tube); an independent review of the whole rigor
 chain (Stage 1–3) is still required before quoting a theorem. (4) All winding-number arithmetic is exact
 dyadic/arb; the per-tile models are Taylor models with rigorous remainders; the sub-segment criterion
 Re(E e^{−iθ}) > 0 is a ball comparison.
 
+**Invariance of the constraint hyperplane and the equivalence E = 0 ⟺ eigenvalue (exact, all κ).** Let
+c(x) := (κ − A)S A_p − A(C̃_N N_p + C̃_W W_p + C̃_V V_p) along the background (Σ(x) = ker c(x, ·); c = AS × the
+linearised E_tr, given row 1). `linsys.linear_constraint_propagation` establishes, in `fmpq_mpoly` exactly as
+Lemma 2 of `modelling-scope.md` (u′ and p′ by Cramer, A eliminated by the background constraint A = (S + 2WT̃)/S,
+exact division with remainder 0, gcd cancellation, denominator checked to be a constant multiple of S·D):
+    16 S D · dc/dx = Λ_lin · c,   D := Δ̃/(4SW) = 3N²V² − N² + 4NV − V² + 3,   Λ_lin ∈ ℚ[N, W, V] (19 terms, κ-free),
+for every solution p of the 4D linearised system P p′ = (DQ − Ψ − κP_s)p over a background solving the 4D system
+with C̃ = 0 (both facts hold for the A1 series, the A3 tube and the A2 series, `modelling-scope.md` Lemma 4).
+Hence Σ is invariant wherever Δ̃ ≠ 0, in particular along the whole tube (`tube_regular`: P invertible on every
+sub-box ⟺ SΔ̃ ≠ 0), and the ODE has the two singular ends handled by exponents (`analyticity.constraint_exponents`,
+ball certificate, recorded in `analyticity_R.json`): (a) *sonic point.* D(u₀) = 0 exactly (A1's closed forms,
+`test_sonic_closed_forms_exact_in_Q_V0_sqrt3`, with S₀W₀ ≠ 0), D₁ = 7.5606 ± 7e−15 ≠ 0, so c′ = λc has a simple
+pole with residue γ_lin = Λ_lin(u₀)/(16 S₀ D₁) = 0 ± 1.3e−15 ∉ ℕ⁺; an analytic c with c(0) = 0 (the order-0
+constraint of the 4D recursion) then has (nD₁·16S₀ − Λ_lin(u₀))c_n = (lower orders) and c ≡ 0 on |x| < ν: p̃ ∈ Σ,
+transported to x_d by invariance. (b) *centre.* With N = n/t, W = wt², V = vt (t = e^x) one has c = t²c̃ with c̃
+analytic for a solution analytic in t, and θc̃ = (λ(t) − 2)c̃, λ = Λ_lin/(16SD): t²D = −n² + O(t²) and Λ_lin has
+no N³ monomial (exact), so λ is analytic at t = 0 with λ(0) = 16n₀²/(16·(−n₀²)) = −1 — the constraint exponent
+is ρ = −3 (ball −3 ± 4e−15; the off-Σ point-mass direction) ∉ ℕ₀, hence (k − ρ)c̃_k = (lower orders) forces c̃ ≡ 0
+for every solution analytic in t: r₁, r₂ ∈ Σ on |t| < 0.06 ∋ e^{−3}. (c) ℓ_Σ·e_W = 2AT̃ = 0.6778 ± 1e−14 ≠ 0 at
+x_d: e_W ∉ Σ(x_d). All three are κ-independent. With §3.5 (i) (uniqueness of the admissible sonic solution: the
+order-0 2×2 solve M₀ is a ball solve on every box of the cover) and (C) (the exponent-0 family is exactly
+span(r₁, r₂)), E(κ) = 0 ⟺ κ is an eigenvalue in the class above, for every κ ∈ R — in particular at κ₁ and κ̄.
+
+**What changed in the review revision (2026-08-30).** (i) The exact identity and exponent certificate above
+(new: `linsys.linear_constraint_propagation`, `analyticity.constraint_exponents`, test). (ii) `linsonic4.certify4`:
+residual orders up to j = K + max(l_P, l_G) + 1 and Z₁ summed to k = max(l_P, l_G) (previously l_P + K + 1 and
+k < max; with l_P = l_G = 42 one term of size ~1e−9 was omitted; all certificates re-run, numbers unchanged).
+(iii) Krawczyk: E(κ_c) = c₀ + R(0) includes the model remainder and the Cauchy denominator is w − √2·w_B for
+the square box (§3.6 re-run: enclosures unchanged to the digits shown). (iv) `modecount.Context` refuses a cached
+tube whose `info` (V0, box width, x₀) differs from the certified constants. (v) The full-rectangle winding and
+the analyticity cover are re-runnable from `python -m p4.validated.{modecount,analyticity} TUBE` and their
+results (all tile increments as exact dyadics, box parameters, tube info) are stored in `results/theorem_b/` and
+re-checked by tests.
+
 **Timings** (M-series laptop, 256 bits). 4D sonic series + certificate 0.05–0.1 s; δ-model (m = 8, box run)
 0.15 s; centre model 0.4 s; fundamental-matrix Taylor model over the 244 tube steps 38 s at m = 8 (0.16
 s/step, of which the block recursion ≈ 40 %, the 10 Lohner sets ≈ 30 %), 9–20 s at m = 3; one contour tile
-≈ 40 s (+ 15 s per worker for the κ-free step data); the whole contour (§3.4) in ≈ 20 min on 8 workers; the
-interior cover 76 s (2 workers); Krawczyk 38 s (κ₁), 20 s (κ̄) including the Newton re-centring; fast
-tests 30 s, slow tests ≈ 5 min with the cached tube.
+≈ 40 s (+ 15 s per worker for the κ-free step data); the whole contour (§3.4) in ≈ 20 min on 8 workers (1231 s); the
+interior cover 79 s (2 workers); Krawczyk 39 s (κ₁), 19 s (κ̄) including the Newton re-centring; fast
+tests 45 s, slow tests ≈ 5 min with the cached tube; the exact identity of §3.8 0.01 s, its exponent certificate 1 s.
 
-Reproduction (tube from §2.5's `Tube.build` saved with `tube.save(path)`; the P9-style scratch runs):
+Reproduction (tube from §2.5's `Tube.build` saved with `tube.save(path)`, ≈ 190 s; results under
+`problems/P4/results/theorem_b/`, re-checked by the tests):
 ```
 PYTHONPATH=problems/P4/src uv run python -c "
-from p4.validated import modecount, analyticity, krawczyk_kappa, lintube
-from flint import arb
-tube = 'tube_full.json'                                                     # A3 tube [-3, -0.05], 244 steps
-r = modecount.winding_number(tube, rect=(0, 15, -14, 14), workers=8, out='winding_R.json'); print(r['winding'], r['certified'])
-a = analyticity.certify_analyticity(tube, out='analyticity_R.json'); print({k: v for k, v in a.items() if k != 'boxes'})
-ctx = modecount.Context(lintube.Tube.load(tube))
+from p4.validated import lintube, modecount; lintube.Tube.build(modecount.V0_EC, modecount.W_V0, x_c=-3.0).save('tube_full.json')"
+PYTHONPATH=problems/P4/src uv run python -m p4.validated.modecount tube_full.json --workers 8      # winding_R.json, ~20 min
+PYTHONPATH=problems/P4/src uv run python -m p4.validated.analyticity tube_full.json --workers 2    # analyticity_R.json, ~80 s
+PYTHONPATH=problems/P4/src uv run python -c "
+from p4.validated import modecount, krawczyk_kappa, lintube; from flint import arb
+ctx = modecount.Context(lintube.Tube.load('tube_full.json'))                                        # krawczyk.json numbers
 for kc, w in ((modecount.KAPPA1, 2e-7), (modecount.KGAUGE, 2e-5)):
-    k = krawczyk_kappa.krawczyk(ctx, arb(kc), w); print(k['ok'], k['zero'], k['dE'])
+    k = krawczyk_kappa.krawczyk(ctx, arb(kc), w); print(k['ok'], k['zero'], k['dE'], k['dE_box'])
 print(krawczyk_kappa.gauge_checks(ctx.bg))"
-P4_TUBE_CACHE=tube_full.json P4_STAGE3_WINDING=winding_R.json uv run pytest problems/P4/tests/test_validated_modes_stage3.py -q
+P4_TUBE_CACHE=tube_full.json uv run pytest problems/P4/tests -q -k stage                            # Stage 1-3, slow tests included
 ```
