@@ -10,7 +10,7 @@ Baseline rows: Pantheon+, BGS D_V row dropped, r_d box = Planck 2018 ±2σ (FORM
 | L | Δ | r | SN | D_V | r_d box [Mpc] | T | certified H₀ max (upper, at r_lo) | at r_d = 147.09 | certified feasible H₀ (lower) | passes | status |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | 1.5 | 4 | 2 | dessn5yr | no | [146.57, 147.61] | 1629.6473 | **≤ 71.2683** | ≤ 71.0164 | ≥ 71.0206 | 5 | done (lkr_L1.5_D4_r2_dessn5yr) |
-| 1.5 | 4 | 2 | dessn5yr | yes | [146.57, 147.61] | 1629.6604 | **≤ 71.6855** | ≤ 71.4320 | - | 2 | running (lkr_L1.5_D4_r2_dessn5yr_dv) |
+| 1.5 | 4 | 2 | dessn5yr | yes | [146.57, 147.61] | 1629.6604 | **≤ 71.2130** | ≤ 70.9612 | ≥ 70.9831 | 5 | done (lkr_L1.5_D4_r2_dessn5yr_dv) |
 | 1 | 4 | 2 | pantheon | no | [146.57, 147.61] | 1600.6025 | **≤ 69.8430** | ≤ 69.5961 | ≥ 69.6497 | 6 | done (lkr_L1_D4_r2) |
 | 1.5 | 1 | 2 | pantheon | no | [146.57, 147.61] | 1380.7252 | **≤ 68.9288** | ≤ 68.6851 | ≥ 68.3373 | 5 | done (lkr_L1.5_D1_r2) |
 | 1.5 | 4 | 2 | pantheon | no | [146.57, 147.61] | 1383.7252 | **≤ 69.8418** | ≤ 69.5949 | ≥ 69.5227 | 5 | done (lkr_L1.5_D4_r2) |

@@ -302,19 +302,20 @@ bounds rounded down, upper bounds rounded up.
 | Pantheon+ (baseline) | no | [69.5227, 69.8418] | 1379.73 (1580 + 12) |
 | Pantheon+ | yes | [69.7713, 70.0769] | 1380.94 (1580 + 13) |
 | DES-SN5YR | no | [71.0206, 71.2683] | 1625.65 (1820 + 12) |
-| DES-SN5YR | yes | (chain running) | 1625.66 (1820 + 13) |
+| DES-SN5YR | yes | [70.9831, 71.2130] | 1625.66 (1820 + 13) |
 | Union3 (22 bins) | no | [72.5207, 72.5870] | 13.51 (22 + 12) |
 | Union3 (22 bins) | yes | [72.6384, 72.7052] | 14.05 (22 + 13) |
 
 Reading: the shape wall is sample-dependent at the 1–3 km s⁻¹ Mpc⁻¹ level
 (the SN sample fixes the *shape* of D_M(z) that the class must reproduce;
 the BAO rows then fix its scale in units of r_d), and adding the BGS D_V row
-moves the wall up by 0.2–0.4. With Union3 the wall reaches ≈ 72.6 — still
-below the local-distance-ladder values quoted in the problem statement — and
-the width of the two-sided enclosure is ≤ 0.31 for every row, so the
-relaxation, not the class, is the limiting factor only for the Pantheon+
-rows. All numbers are for the Planck ±2σ r_d box; the BBN box rescales the
-upper bounds by 146.57/145.56 (§1: H₀ ≤ H₀max · r_lo/r_d).
+moves the wall by ≤ 0.3 (up for Pantheon+ and Union3, slightly down for
+DES-SN5YR). With Union3 the wall reaches ≈ 72.6 — still below the
+local-distance-ladder values quoted in the problem statement. The width of
+each two-sided enclosure (0.07 Union3, 0.23–0.25 DES-SN5YR, 0.31–0.32
+Pantheon+) is the relaxation gap at r = 2; the class maximum lies inside it.
+All numbers are for the Planck ±2σ r_d box; the BBN box rescales the upper
+bounds by 146.57/145.56 (§1: H₀ ≤ H₀max · r_lo/r_d).
 
 ### 3.6 v3: the λ–κ–ρ relaxation (the one used for certificates)
 The v2 relaxation (§3.2) is valid but stalls at H₀ ≲ 75 for L = 1.5 because
