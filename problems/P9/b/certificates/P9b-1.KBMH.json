@@ -1,0 +1,151 @@
+{
+ "claim": "P9b-1.KBMH",
+ "row": "KBMH",
+ "verdict": "CERTIFIED (E)",
+ "date": "2026-08-31",
+ "prec_bits": 128,
+ "conventions": "FORMULATION.md v1.1; alpha_B in BS14 convention; c_s^2 = exact dust DE eigen-speed (rev-v1.1 pin)",
+ "background": {
+  "w_DE": "-4/5 - (4/5)(1-a)  [CPL(-4/5,-4/5); 1+w = (4a-3)/5]",
+  "g_de": "exp((9/5) ln a + (12/5)(1-a))",
+  "E2": "(3/10) a^-3 + (7/10) g_de(a)   [H0 = 1]",
+  "hd": "-(3/2) (Om + (1+w) Ode)",
+  "fhat": "3 Ode (1+w)  [= f/(M_Pl^2 H^2), M_Pl^2 = 1]",
+  "m2": "exp(alpha_M ln a)  [M^2(a=1) = M_Pl^2]",
+  "rm": "3 Om / m2",
+  "target": "MASTER_TARGET_B (witnesses.py) = D c_s^2; c_s^2 = target/D"
+ },
+ "witness": {
+  "alpha_K": "1",
+  "alpha_B_BS": "a/2",
+  "alpha_T": "0",
+  "alpha_M": "1/2",
+  "alpha_H": "1",
+  "M2_over_MPl2": "a^(1/2)",
+  "J": [
+   "7/10",
+   "1"
+  ]
+ },
+ "crossing": {
+  "a_c": "3/4",
+  "interior_to_J": true,
+  "ivt_gap": "1/50",
+  "note": "fhat = 3 Ode (1+w), 1+w = (4a-3)/5: certified f < 0 on the left and f > 0 on the right subinterval; sign change on (a_c-1/50, a_c+1/50) by IVT; f(a_c) = 0 exactly on F*"
+ },
+ "d3_bounds": {
+  "alpha_K": "1 in (0, 10^3]",
+  "max_abs_alpha_i": "max(|a/2|, 1/10, 1/2, 1) <= 1 <= 10",
+  "aB_degeneracy": "|alpha_B^BS| <= 1/2 < 2 (certified)"
+ },
+ "checks": {
+  "cs2_ge_cmin": {
+   "quantity": "cs2",
+   "bound": "4/5",
+   "relation": ">",
+   "interval": [
+    "7/10",
+    "1"
+   ],
+   "n_subintervals": 16,
+   "max_depth": 7,
+   "min_lower_endpoint": 0.8143174769356845,
+   "pass": true
+  },
+  "D_ge_Dmin": {
+   "quantity": "D",
+   "bound": "11/10",
+   "relation": ">",
+   "interval": [
+    "7/10",
+    "1"
+   ],
+   "n_subintervals": 1,
+   "max_depth": 0,
+   "min_lower_endpoint": 1.1668749984260645,
+   "pass": true
+  },
+  "aB_ne_2": {
+   "quantity": "aB",
+   "bound": "2",
+   "relation": "<",
+   "interval": [
+    "7/10",
+    "1"
+   ],
+   "n_subintervals": 1,
+   "max_depth": 0,
+   "max_upper_endpoint": 0.5000000004190954,
+   "pass": true
+  },
+  "cT2_nonneg": {
+   "exact": "c_T^2 = 1 + alpha_T = 1",
+   "pass": true
+  },
+  "M2_pos": {
+   "quantity": "m2",
+   "bound": "0",
+   "relation": ">",
+   "interval": [
+    "7/10",
+    "1"
+   ],
+   "n_subintervals": 1,
+   "max_depth": 0,
+   "min_lower_endpoint": 0.8366600237786768,
+   "pass": true
+  },
+  "Ode_pos": {
+   "quantity": "Ode",
+   "bound": "0",
+   "relation": ">",
+   "interval": [
+    "7/10",
+    "1"
+   ],
+   "n_subintervals": 1,
+   "max_depth": 0,
+   "min_lower_endpoint": 0.1592751014977693,
+   "pass": true
+  },
+  "E2_pos": {
+   "quantity": "E2",
+   "bound": "0",
+   "relation": ">",
+   "interval": [
+    "7/10",
+    "1"
+   ],
+   "n_subintervals": 1,
+   "max_depth": 0,
+   "min_lower_endpoint": 0.5679972837714384,
+   "pass": true
+  },
+  "fhat_neg_left": {
+   "quantity": "fhat",
+   "bound": "0",
+   "relation": "<",
+   "interval": [
+    "7/10",
+    "73/100"
+   ],
+   "n_subintervals": 1,
+   "max_depth": 0,
+   "max_upper_endpoint": -0.015041550760390234,
+   "pass": true
+  },
+  "fhat_pos_right": {
+   "quantity": "fhat",
+   "bound": "0",
+   "relation": ">",
+   "interval": [
+    "77/100",
+    "1"
+   ],
+   "n_subintervals": 3,
+   "max_depth": 2,
+   "min_lower_endpoint": 0.0005834142207168041,
+   "pass": true
+  }
+ }
+}
