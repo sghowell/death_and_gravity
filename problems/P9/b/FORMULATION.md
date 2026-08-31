@@ -201,6 +201,10 @@ frozen-data stack; part (b) is theory-side algebra + certificates.
   standard UV completion (that is exactly what POS conditionalizes).
 - No screening (Vainshtein or otherwise), no nonlinear/quasi-static
   phenomenology, no G_eff/ISW/growth claims, no observational fitting.
+- No observational constraint enters any claim; in particular the GW170817
+  bound |c_T² − 1| ≲ 10⁻¹⁵ is an observational statement outside the frozen
+  ladder — witnesses with α_T ≠ 0 are statements about the EFT operator
+  content, not about which model nature realizes (review fix (i), v1.2).
 - No multi-field: quintom two-field crossings (ghost pair) are out of scope;
   the classification is over the single-scalar unitary-gauge EFT only.
 - No DHOST beyond the α_H toggle; no explicit breaking of spatial diffs; no
@@ -233,3 +237,14 @@ frozen-data stack; part (b) is theory-side algebra + certificates.
   The §3.2(1) known-answer gate passes in that form: (3.13) exact at
   α_H = 0, and the exact product rule c₁²c₂² = c_m²·c_s²(85) for all five
   α's. (d) §3.2 gate status: all four known-answer tests pass; S2 is GO.
+- v1.2 (2026-08-31, S5 close-out): adversarial review of the full chain —
+  verdict "the chain survives; no FLAW, no claim-level GAP; all CERTIFIED
+  labels justified". Wording fixes applied: (i) GW170817 named as
+  out-of-scope in §4; (ii) recorded that D'Amico et al. 1609.01272 eq.
+  (2.18) lacks the (1+α_H) factor on its α̇_B term relative to GLV14 (85)/
+  GLPV 1408.1952 and the machine derivation — the v1.1 eigen-speed pin is
+  confirmed by the GLPV 1408.1952 dispersion relation, which is now the
+  citation of record (1609.01272 demoted to "cf."); (iii) P9b-2 ledger
+  wording "constrains" → "applies to", with MN (10) flagged as the quartic
+  example-model prior (frozen assumption, not derived from (16)–(17) for
+  cubic braiding) and the {K,M} saturation noted as vacuous-satisfaction.
