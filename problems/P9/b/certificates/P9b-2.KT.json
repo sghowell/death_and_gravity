@@ -1,0 +1,61 @@
+{
+ "claim": "P9b-2.KT",
+ "row": "KT",
+ "conditional_on": "POS",
+ "date": "2026-08-31",
+ "prec_bits": 128,
+ "pos_pin": {
+  "assumption_set": "POS (FORMULATION 2(b2); frozen)",
+  "source": "Melville-Noller arXiv:1904.05874 (PRD 101, 021502(R)), eqs. (16)-(17); example-model alpha-form eq. (10); ar5iv fetch re-verified 2026-08-31",
+  "inequality": "alpha_B^BS <= 2 alpha_T / (1 + alpha_T)  at every a in J",
+  "side_condition": "1 + alpha_T > 0 (M^2, G4 > 0 in the MN derivation)",
+  "convention": "alpha_B in BS14 convention (= MN's); S1 pin alpha_B^BS = -2 alpha_B^GLV",
+  "conditionality": "flat-space bounds transferred to FLRW per MN's stated assumption; alpha-form applied pointwise to the trajectory (MN's own (12)-usage); not claimed to follow from UV physics on this background"
+ },
+ "frozen_witness": {
+  "alpha_K": "1",
+  "alpha_B_BS": "0",
+  "alpha_T": "-1/10",
+  "alpha_M": "0",
+  "alpha_H": "0",
+  "M2_over_MPl2": "1",
+  "J": [
+   "3/5",
+   "1"
+  ]
+ },
+ "pos_rhs": "2 aT/(1+aT) = -2/9",
+ "side_condition": "1 + alpha_T = 9/10 > 0: holds",
+ "verdict": "violates_everywhere",
+ "pos_check": {
+  "quantity": "qpos",
+  "bound": "0",
+  "relation": "<",
+  "interval": [
+   "3/5",
+   "1"
+  ],
+  "n_subintervals": 1,
+  "max_depth": 0,
+  "max_upper_endpoint": -0.22222222222222215,
+  "pass": true
+ },
+ "violating_subinterval": [
+  "3/5",
+  "1"
+ ],
+ "alternative": {
+  "found": false,
+  "impossible": {
+   "statement": "Row {K,T}: {stable crossing} intersect POS is EMPTY \u2014 exact, whole row, family B (not just this witness).",
+   "argument": [
+    "POS with alpha_B == 0: 0 <= 2 aT/(1+aT); side condition 1+aT > 0 forces alpha_T >= 0 on J.",
+    "Exact S2 row identity (derivation/rows.py; re-verified in tests/test_s4_positivity.py): alpha_K c_s^2 = fhat - 2 alpha_T, fhat = f/(MPl^2 H^2).",
+    "D1 crossing with rho_DE > 0, H^2 > 0 gives fhat < 0 on the phantom side, so alpha_K c_s^2 = fhat - 2 alpha_T < 0 there.",
+    "alpha_K > 0 (D3) forces c_s^2 < 0: D2(ii) fails. No bounded alpha_T >= 0 rescues this."
+   ],
+   "level": "exact identity + stated sign analysis (level of P9b-0)"
+  }
+ },
+ "status": "(ii+) frozen witness violates POS on all of J, and the whole row is excluded: no {K,T} witness satisfies POS and stable crossing (exact identity)"
+}

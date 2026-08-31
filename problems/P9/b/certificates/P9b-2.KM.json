@@ -1,0 +1,35 @@
+{
+ "claim": "P9b-2.KM",
+ "row": "KM",
+ "conditional_on": "POS",
+ "date": "2026-08-31",
+ "prec_bits": 128,
+ "pos_pin": {
+  "assumption_set": "POS (FORMULATION 2(b2); frozen)",
+  "source": "Melville-Noller arXiv:1904.05874 (PRD 101, 021502(R)), eqs. (16)-(17); example-model alpha-form eq. (10); ar5iv fetch re-verified 2026-08-31",
+  "inequality": "alpha_B^BS <= 2 alpha_T / (1 + alpha_T)  at every a in J",
+  "side_condition": "1 + alpha_T > 0 (M^2, G4 > 0 in the MN derivation)",
+  "convention": "alpha_B in BS14 convention (= MN's); S1 pin alpha_B^BS = -2 alpha_B^GLV",
+  "conditionality": "flat-space bounds transferred to FLRW per MN's stated assumption; alpha-form applied pointwise to the trajectory (MN's own (12)-usage); not claimed to follow from UV physics on this background"
+ },
+ "frozen_witness": {
+  "alpha_K": "1",
+  "alpha_B_BS": "0",
+  "alpha_T": "0",
+  "alpha_M": "1/2",
+  "alpha_H": "0",
+  "M2_over_MPl2": "a^(1/2)",
+  "J": [
+   "3/5",
+   "1"
+  ]
+ },
+ "pos_rhs": "2 aT/(1+aT) = 0",
+ "side_condition": "1 + alpha_T = 1 > 0: holds",
+ "verdict": "satisfies_exact",
+ "pos_check": {
+  "exact": "alpha_B = alpha_T = 0 identically: (10) reads 0 <= 0 (weak inequality saturated at every a in J)",
+  "pass": true
+ },
+ "status": "(i) certified stable-crossing witness satisfying POS exists (the frozen witness; exact saturation; strict satisfaction unattainable in-row since alpha_B = alpha_T = 0 identically)"
+}

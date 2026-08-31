@@ -1,0 +1,189 @@
+{
+ "claim": "P9b-2.KBM",
+ "row": "KBM",
+ "conditional_on": "POS",
+ "date": "2026-08-31",
+ "prec_bits": 128,
+ "pos_pin": {
+  "assumption_set": "POS (FORMULATION 2(b2); frozen)",
+  "source": "Melville-Noller arXiv:1904.05874 (PRD 101, 021502(R)), eqs. (16)-(17); example-model alpha-form eq. (10); ar5iv fetch re-verified 2026-08-31",
+  "inequality": "alpha_B^BS <= 2 alpha_T / (1 + alpha_T)  at every a in J",
+  "side_condition": "1 + alpha_T > 0 (M^2, G4 > 0 in the MN derivation)",
+  "convention": "alpha_B in BS14 convention (= MN's); S1 pin alpha_B^BS = -2 alpha_B^GLV",
+  "conditionality": "flat-space bounds transferred to FLRW per MN's stated assumption; alpha-form applied pointwise to the trajectory (MN's own (12)-usage); not claimed to follow from UV physics on this background"
+ },
+ "frozen_witness": {
+  "alpha_K": "1",
+  "alpha_B_BS": "a/2",
+  "alpha_T": "0",
+  "alpha_M": "1/2",
+  "alpha_H": "0",
+  "M2_over_MPl2": "a^(1/2)",
+  "J": [
+   "3/5",
+   "1"
+  ]
+ },
+ "pos_rhs": "2 aT/(1+aT) = 0",
+ "side_condition": "1 + alpha_T = 1 > 0: holds",
+ "verdict": "violates_everywhere",
+ "pos_check": {
+  "quantity": "qpos",
+  "bound": "0",
+  "relation": "<",
+  "interval": [
+   "3/5",
+   "1"
+  ],
+  "n_subintervals": 1,
+  "max_depth": 0,
+  "max_upper_endpoint": -0.29999999944120637,
+  "pass": true
+ },
+ "violating_subinterval": [
+  "3/5",
+  "1"
+ ],
+ "alternative": {
+  "found": true,
+  "witness": {
+   "alpha_K": "1",
+   "alpha_B_BS": "1/2*a + -21/40",
+   "alpha_T": "0",
+   "alpha_M": "1/2",
+   "alpha_H": "0",
+   "M2_over_MPl2": "a^(1/2)",
+   "J": [
+    "3/5",
+    "1"
+   ]
+  },
+  "c_min": "3/5",
+  "D_min": "1",
+  "checks": {
+   "cs2_ge_cmin": {
+    "quantity": "cs2",
+    "bound": "3/5",
+    "relation": ">",
+    "interval": [
+     "3/5",
+     "1"
+    ],
+    "n_subintervals": 34,
+    "max_depth": 9,
+    "min_lower_endpoint": 0.6014097137376664,
+    "pass": true
+   },
+   "D_ge_Dmin": {
+    "quantity": "D",
+    "bound": "1",
+    "relation": ">",
+    "interval": [
+     "3/5",
+     "1"
+    ],
+    "n_subintervals": 4,
+    "max_depth": 3,
+    "min_lower_endpoint": 1.0004687499730058,
+    "pass": true
+   },
+   "aB_ne_2": {
+    "quantity": "aB",
+    "bound": "2",
+    "relation": "<",
+    "interval": [
+     "3/5",
+     "1"
+    ],
+    "n_subintervals": 1,
+    "max_depth": 0,
+    "max_upper_endpoint": -0.024999999324791126,
+    "pass": true
+   },
+   "cT2_nonneg": {
+    "exact": "c_T^2 = 1 + alpha_T = 1",
+    "pass": true
+   },
+   "M2_pos": {
+    "quantity": "m2",
+    "bound": "0",
+    "relation": ">",
+    "interval": [
+     "3/5",
+     "1"
+    ],
+    "n_subintervals": 1,
+    "max_depth": 0,
+    "min_lower_endpoint": 0.7745966641232369,
+    "pass": true
+   },
+   "Ode_pos": {
+    "quantity": "Ode",
+    "bound": "0",
+    "relation": ">",
+    "interval": [
+     "3/5",
+     "1"
+    ],
+    "n_subintervals": 1,
+    "max_depth": 0,
+    "min_lower_endpoint": 0.08675786480307576,
+    "pass": true
+   },
+   "E2_pos": {
+    "quantity": "E2",
+    "bound": "0",
+    "relation": ">",
+    "interval": [
+     "3/5",
+     "1"
+    ],
+    "n_subintervals": 1,
+    "max_depth": 0,
+    "min_lower_endpoint": 0.31244002057032444,
+    "pass": true
+   },
+   "fhat_neg_left": {
+    "quantity": "fhat",
+    "bound": "0",
+    "relation": "<",
+    "interval": [
+     "3/5",
+     "73/100"
+    ],
+    "n_subintervals": 3,
+    "max_depth": 2,
+    "max_upper_endpoint": -0.01389058260270394,
+    "pass": true
+   },
+   "fhat_pos_right": {
+    "quantity": "fhat",
+    "bound": "0",
+    "relation": ">",
+    "interval": [
+     "77/100",
+     "1"
+    ],
+    "n_subintervals": 3,
+    "max_depth": 2,
+    "min_lower_endpoint": 0.0005834142207168041,
+    "pass": true
+   },
+   "pos_strict": {
+    "quantity": "qpos",
+    "bound": "0",
+    "relation": ">",
+    "interval": [
+     "3/5",
+     "1"
+    ],
+    "n_subintervals": 1,
+    "max_depth": 0,
+    "min_lower_endpoint": 0.024999999324791126,
+    "pass": true
+   }
+  },
+  "note": "same background F*, same J, all D3 bounds hold; witness is joint (every row alpha nonzero on J)"
+ },
+ "status": "(i) frozen witness violates POS on all of J; POS-compatible alternative witness certified (stability + strict POS)"
+}
