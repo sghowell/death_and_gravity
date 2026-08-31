@@ -216,3 +216,20 @@ frozen-data stack; part (b) is theory-side algebra + certificates.
   CPL(−4/5, −4/5), Ω_m0 = 3/10; ladder = 16 subsets ⊇ {α_K}; bounds
   α_K ≤ 10³, |α_i| ≤ 10; POS = Melville–Noller (16)–(17)/(10). Equation
   pins recorded from web fetches on 2026-08-31 and re-verified in S1.
+- v1.1 (2026-08-31, S1 close-out; `notes/s1-derivation.md`, `derivation/`,
+  `tests/`). (a) All §1.2 equation pins re-verified verbatim against ar5iv
+  fetches (GLV14 (68), (73)–(89); BS14 (3.4), (3.12)–(3.13); DPSV (40)–(41),
+  (59)); the map α_B^BS = −2 α_B^GLV verified as a derivation identity.
+  (b) Naming clarification: the frozen operator names (M₂⁴, m₃³, m̄₄², m̃₄²)
+  are those of GLV14 eq. (87)/GLPV 1304.4840; arXiv:1210.0201's own names are
+  m̄₁³ = m₃³, M̄₂² = −M̄₃² = 2m̄₄², μ₁² = m̃₄²/2 (dictionary content
+  unchanged, sympy-verified). (c) Pin sharpening for D2(ii), by exact
+  derivation, no silent adaptation: with dust and α_H ≠ 0 the GLV14 (85)
+  formula is not the UV eigen-speed of the coupled (ζ, δσ_m) system; the
+  frozen meaning of "c_s² derived from the frozen action" is henceforth the
+  exact DE eigen-speed, which equals (85) + α_H² ρ_m/(M² H² α) for dust
+  (kinetic matter mixing, cf. arXiv:1609.01272) and coincides with
+  BS14 (3.13) = GLV14 (85) whenever α_H = 0 (all ladder rows without α_H).
+  The §3.2(1) known-answer gate passes in that form: (3.13) exact at
+  α_H = 0, and the exact product rule c₁²c₂² = c_m²·c_s²(85) for all five
+  α's. (d) §3.2 gate status: all four known-answer tests pass; S2 is GO.

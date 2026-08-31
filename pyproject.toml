@@ -23,5 +23,5 @@ dev = ["pytest>=8", "ruff>=0.6"]
 package = false
 
 [tool.pytest.ini_options]
-pythonpath = ["problems/P9/src"]
+pythonpath = ["problems/P9/src", "problems/P9/b", "problems/P9/b/src"]
 testpaths = ["problems/P9/tests"]
