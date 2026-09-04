@@ -8,6 +8,10 @@ around a pre-registered problems document and a certificate-gated ledger.
 - Starting-point assessment and pre-work: `docs/assessment-2026-08-21-starting-points.md`.
 - Claims ledger: `CLAIMS.md` — nothing is stated as a result unless it is
   recorded there with the evidence path and a level.
+- P8(b): [completed scoped classification and verification commands](problems/P8/README.md).
+  All 32 M0/M1 sector-row verdicts are decided: minimal optional groups are
+  C or D without extra matter, and CD with rolling canonical matter.
+  This is an all-time linear-principal result, not UV or nonlinear completion.
 
 ## Layout
 
