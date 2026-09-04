@@ -1,0 +1,1221 @@
+{
+  "all_time_sign_proofs": {
+    "J_positive": {
+      "denominator": {
+        "coefficients_ascending": [
+          "1",
+          "5",
+          "10",
+          "10",
+          "5",
+          "1"
+        ],
+        "lower": "0",
+        "roots": 0,
+        "signs_lower": [
+          1,
+          1
+        ],
+        "signs_upper": [
+          1,
+          1
+        ],
+        "sturm_degrees": [
+          5,
+          4
+        ],
+        "upper": "+infinity",
+        "variations_lower": 0,
+        "variations_upper": 0
+      },
+      "denominator_zero_order_in_t_squared": 0,
+      "domain": "all t",
+      "expression": "2*(u**8 + 2*u**6 + 4*u**2 + 1)/(u**2 + 1)**5",
+      "numerator": {
+        "coefficients_ascending": [
+          "2",
+          "8",
+          "0",
+          "4",
+          "2"
+        ],
+        "lower": "0",
+        "roots": 0,
+        "signs_lower": [
+          1,
+          1,
+          -1,
+          -1,
+          -1
+        ],
+        "signs_upper": [
+          1,
+          1,
+          1,
+          -1,
+          -1
+        ],
+        "sturm_degrees": [
+          4,
+          3,
+          2,
+          1,
+          0
+        ],
+        "upper": "+infinity",
+        "variations_lower": 1,
+        "variations_upper": 1
+      },
+      "numerator_zero_order_in_t_squared": 0,
+      "upper_t_squared": null
+    },
+    "gamma_minus_Lambda_exceeds_half": {
+      "denominator": {
+        "coefficients_ascending": [
+          "2",
+          "6",
+          "6",
+          "2"
+        ],
+        "lower": "0",
+        "roots": 0,
+        "signs_lower": [
+          1,
+          1
+        ],
+        "signs_upper": [
+          1,
+          1
+        ],
+        "sturm_degrees": [
+          3,
+          2
+        ],
+        "upper": "1/16",
+        "variations_lower": 0,
+        "variations_upper": 0
+      },
+      "denominator_zero_order_in_t_squared": 0,
+      "domain": "all t",
+      "expression": "-(3*u**6 + 9*u**4 + 9*u**2 - 1)/(2*(u**2 + 1)**3)",
+      "numerator": {
+        "coefficients_ascending": [
+          "1",
+          "-9",
+          "-9",
+          "-3"
+        ],
+        "lower": "0",
+        "roots": 0,
+        "signs_lower": [
+          1,
+          -1,
+          -1
+        ],
+        "signs_upper": [
+          1,
+          -1,
+          -1
+        ],
+        "sturm_degrees": [
+          3,
+          2,
+          0
+        ],
+        "upper": "1/16",
+        "variations_lower": 1,
+        "variations_upper": 1
+      },
+      "numerator_zero_order_in_t_squared": 0,
+      "upper_t_squared": "1/16"
+    },
+    "weighted_J_lower_half": {
+      "denominator": {
+        "coefficients_ascending": [
+          "2",
+          "8",
+          "12",
+          "8",
+          "2"
+        ],
+        "lower": "0",
+        "roots": 0,
+        "signs_lower": [
+          1,
+          1
+        ],
+        "signs_upper": [
+          1,
+          1
+        ],
+        "sturm_degrees": [
+          4,
+          3
+        ],
+        "upper": "+infinity",
+        "variations_lower": 0,
+        "variations_upper": 0
+      },
+      "denominator_zero_order_in_t_squared": 0,
+      "domain": "all t",
+      "expression": "(3*u**8 + 4*u**6 - 6*u**4 + 12*u**2 + 3)/(2*(u**2 + 1)**4)",
+      "numerator": {
+        "coefficients_ascending": [
+          "3",
+          "12",
+          "-6",
+          "4",
+          "3"
+        ],
+        "lower": "0",
+        "roots": 0,
+        "signs_lower": [
+          1,
+          1,
+          -1,
+          -1,
+          -1
+        ],
+        "signs_upper": [
+          1,
+          1,
+          1,
+          -1,
+          -1
+        ],
+        "sturm_degrees": [
+          4,
+          3,
+          2,
+          1,
+          0
+        ],
+        "upper": "+infinity",
+        "variations_lower": 1,
+        "variations_upper": 1
+      },
+      "numerator_zero_order_in_t_squared": 0,
+      "upper_t_squared": null
+    }
+  },
+  "claim": "P8-S5.1.D",
+  "date": "2026-09-04",
+  "denominator_factor_proofs": {
+    "u**2 + 1": {
+      "coefficients_ascending": [
+        "1",
+        "1"
+      ],
+      "lower": "0",
+      "roots": 0,
+      "signs_lower": [
+        1,
+        1
+      ],
+      "signs_upper": [
+        1,
+        1
+      ],
+      "sturm_degrees": [
+        1,
+        0
+      ],
+      "upper": "+infinity",
+      "variations_lower": 0,
+      "variations_upper": 0
+    },
+    "u**8 + 2*u**6 + 4*u**2 + 1": {
+      "coefficients_ascending": [
+        "1",
+        "4",
+        "0",
+        "2",
+        "1"
+      ],
+      "lower": "0",
+      "roots": 0,
+      "signs_lower": [
+        1,
+        1,
+        -1,
+        -1,
+        -1
+      ],
+      "signs_upper": [
+        1,
+        1,
+        1,
+        -1,
+        -1
+      ],
+      "sturm_degrees": [
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "upper": "+infinity",
+      "variations_lower": 1,
+      "variations_upper": 1
+    }
+  },
+  "exact_residuals": {
+    "compact_nonlinear_normalization": {
+      "F0": "0",
+      "FX": "0",
+      "FXX": "0",
+      "H": "0",
+      "gamma_principal_kinetic_local_b": "0",
+      "lapse_equation": "0",
+      "lapse_hessian": "0",
+      "omega": "0",
+      "omega_time": "0",
+      "unitary_principal_kinetic": "0",
+      "weighted_J": "0"
+    },
+    "dimensionful_covariant_background": {
+      "A2": "0",
+      "A4_homogeneity": "0",
+      "A5_homogeneity": "0",
+      "EN": "0",
+      "Ea": "0",
+      "FT": "0",
+      "GT": "0",
+      "J": "0",
+      "Lambda": "0",
+      "Theta": "0"
+    },
+    "generic_stationary_series": {
+      "Hamiltonian_order_0": "0",
+      "Hamiltonian_order_1": "0",
+      "Hamiltonian_order_2": "0",
+      "Hamiltonian_order_3": "0",
+      "Hamiltonian_order_4": "0",
+      "constraint_order_0": "0",
+      "constraint_order_1": "0",
+      "constraint_order_2": "0",
+      "constraint_order_3": "0"
+    },
+    "nonlinear_audit": {
+      "Ia_A4": "0",
+      "Ia_A5": "0",
+      "background_identity": "0",
+      "background_lapse": "0",
+      "kinetic_square": "0",
+      "lapse_velocity_cancellation": "0",
+      "linear_chart_dictionary": "0",
+      "nonlinear_to_J": "0",
+      "nonlinear_to_Lambda": "0",
+      "nonlinear_to_Theta": "0",
+      "six_component_Legendre": "0",
+      "spatial_gradient_IBP": "0"
+    },
+    "scale_and_chart_identities": {
+      "physical_H_definition": "0",
+      "relative_error": "0"
+    }
+  },
+  "finite_q_kinetic_check": {
+    "domain": "abs(u)<=1/4, q=tau^2*k_physical^2>=64",
+    "exact_kinetic": "2*q*(u**2 + 1)*(u**8 + 2*u**6 + 4*u**2 + 1)/(q*u**12 + 6*q*u**10 + 15*q*u**8 + 16*q*u**6 + 3*q*u**4 - 6*q*u**2 + q - 2*u**10 - 6*u**8 - 4*u**6 - 8*u**4 - 10*u**2 - 2)",
+    "not_a_cutoff_or_complete_WKB_bound": true,
+    "relative_error_upper": "8/(q-8) <= 1/7"
+  },
+  "invariant_ordering": {
+    "Hamiltonian_orders": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "lapse_orders": [
+      1,
+      2,
+      3
+    ],
+    "monomial_exponents": [
+      "sigma",
+      "rho",
+      "shear2"
+    ],
+    "weights": [
+      1,
+      1,
+      2
+    ]
+  },
+  "lapse_hessian": {
+    "asymptotic_u_squared_times_J": "2",
+    "at_bounce": "-4",
+    "expression": "-4*(u**8 + 2*u**6 + 4*u**2 + 1)/(u**2 + 1)**5"
+  },
+  "lapse_jets": {
+    "A": [
+      "-4*(u - 1)*(u + 1)/(u**2 + 1)**2",
+      "0",
+      "-4*(u**8 + 2*u**6 + 4*u**2 + 1)/(u**2 + 1)**5",
+      "12*(u**20 + 8*u**18 + 27*u**16 + 108*u**14 + 394*u**12 + 852*u**10 + 534*u**8 - 700*u**6 - 939*u**4 - 500*u**2 + 39)/(u**2 + 1)**11",
+      "-24*(2*u**26 + 22*u**24 + 108*u**22 + 683*u**20 + 3854*u**18 + 13455*u**16 + 24816*u**14 + 15606*u**12 - 22554*u**10 - 60004*u**8 - 64268*u**6 - 35361*u**4 - 5758*u**2 + 503)/(u**2 + 1)**14"
+    ],
+    "B": [
+      "4*u/(u**2 + 1)",
+      "4*u/(u**2 + 1)",
+      "48*u*(u**6 + 3*u**4 + 3*u**2 + 4)/(u**2 + 1)**7",
+      "-72*u*(5*u**12 + 30*u**10 + 75*u**8 + 124*u**6 + 147*u**4 + 102*u**2 + 17)/(u**2 + 1)**10",
+      "144*u*(20*u**18 + 180*u**16 + 720*u**14 + 1815*u**12 + 3330*u**10 + 4545*u**8 + 4224*u**6 + 2277*u**4 + 522*u**2 + 35)/(u**2 + 1)**13"
+    ],
+    "C": [
+      "-1/2",
+      "-(u**6 + 3*u**4 + 3*u**2 - 1)/(2*(u**2 + 1)**3)",
+      "-(3*u**6 + 9*u**4 + 9*u**2 + 5)/(u**2 + 1)**6",
+      "(15*u**12 + 90*u**10 + 225*u**8 + 324*u**6 + 297*u**4 + 162*u**2 + 43)/(u**2 + 1)**9",
+      "-2*(3*u**6 + 9*u**4 + 9*u**2 + 4)*(15*u**12 + 90*u**10 + 225*u**8 + 340*u**6 + 345*u**4 + 210*u**2 + 59)/(u**2 + 1)**12"
+    ],
+    "D": [
+      "-1/3",
+      "-(u**6 + 3*u**4 + 3*u**2 + 7)/(3*(u**2 + 1)**3)",
+      "6*(u**6 + 3*u**4 + 3*u**2 - 1)/(u**2 + 1)**6",
+      "-6*(5*u**12 + 30*u**10 + 75*u**8 + 76*u**6 + 3*u**4 - 42*u**2 - 7)/(u**2 + 1)**9",
+      "36*u**2*(u**4 + 3*u**2 + 3)*(5*u**12 + 30*u**10 + 75*u**8 + 60*u**6 - 45*u**4 - 90*u**2 - 23)/(u**2 + 1)**12"
+    ],
+    "E": [
+      "2",
+      "2*(u**6 + 3*u**4 + 3*u**2 + 7)/(u**2 + 1)**3",
+      "-36*(u**6 + 3*u**4 + 3*u**2 - 1)/(u**2 + 1)**6",
+      "36*(5*u**12 + 30*u**10 + 75*u**8 + 76*u**6 + 3*u**4 - 42*u**2 - 7)/(u**2 + 1)**9",
+      "-216*u**2*(u**4 + 3*u**2 + 3)*(5*u**12 + 30*u**10 + 75*u**8 + 60*u**6 - 45*u**4 - 90*u**2 - 23)/(u**2 + 1)**12"
+    ]
+  },
+  "local_background_unit_compactification": {
+    "P": "-4*x**8 + 10*x**6 - 6*x**4 + 1",
+    "P_bounds": [
+      "1/4 strict",
+      "1 inclusive"
+    ],
+    "coordinate_warning": "Pointwise constant choice of local units, not a global time-dependent canonical transformation",
+    "ell": "tau*sqrt(1+u^2)",
+    "normalized_lapse_hessian": "-4*P, hence -4 <= h_NN < -1",
+    "physical_mode_reduction_still_required": true,
+    "principal_kinetic_normalizations": {
+      "finite_q_gamma": "ell^2*k_physical^2>=68 implies the recorded kinetic relative error <=1/7",
+      "gamma": "abs(u)<=1/4, beta=b/ell: K_beta/M^2=2*P/Lambda^2, 1/2<K_beta/M^2<=8",
+      "gradient": "Same principal coefficients since the pinned D witness has K=G",
+      "unitary": "abs(u)>=1/8: K_v/M^2=P/(2*x^2), 1/8<K_v/M^2<=65/2"
+    },
+    "stationary_coefficient_bounds": {
+      "hamiltonian": [
+        {
+          "0,0,0": {
+            "absolute_bound": "12",
+            "denominator_P_power": 0,
+            "denominator_constant_abs": "1",
+            "expression": "-4*(2*x**2 - 1)",
+            "future_endpoint": "-4",
+            "numerator_L1_norm": "12",
+            "past_endpoint": "-4"
+          }
+        },
+        {
+          "0,1,0": {
+            "absolute_bound": "1/2",
+            "denominator_P_power": 0,
+            "denominator_constant_abs": "2",
+            "expression": "-1/2",
+            "future_endpoint": "-1/2",
+            "numerator_L1_norm": "1",
+            "past_endpoint": "-1/2"
+          },
+          "1,0,0": {
+            "absolute_bound": "4",
+            "denominator_P_power": 0,
+            "denominator_constant_abs": "1",
+            "expression": "4*x",
+            "future_endpoint": "4",
+            "numerator_L1_norm": "4",
+            "past_endpoint": "-4"
+          }
+        },
+        {
+          "0,0,1": {
+            "absolute_bound": "2",
+            "denominator_P_power": 0,
+            "denominator_constant_abs": "1",
+            "expression": "2",
+            "future_endpoint": "2",
+            "numerator_L1_norm": "2",
+            "past_endpoint": "2"
+          },
+          "0,2,0": {
+            "absolute_bound": "225/8",
+            "denominator_P_power": 1,
+            "denominator_constant_abs": "32",
+            "expression": "-(2*x**6 - 6*x**4 + 6*x**2 - 1)**2/(32*(4*x**8 - 10*x**6 + 6*x**4 - 1))",
+            "future_endpoint": "1/32",
+            "numerator_L1_norm": "225",
+            "past_endpoint": "1/32"
+          },
+          "1,1,0": {
+            "absolute_bound": "30",
+            "denominator_P_power": 1,
+            "denominator_constant_abs": "2",
+            "expression": "x*(2*x**6 - 6*x**4 + 6*x**2 - 1)/(2*(4*x**8 - 10*x**6 + 6*x**4 - 1))",
+            "future_endpoint": "-1/2",
+            "numerator_L1_norm": "15",
+            "past_endpoint": "1/2"
+          },
+          "2,0,0": {
+            "absolute_bound": "36",
+            "denominator_P_power": 1,
+            "denominator_constant_abs": "3",
+            "expression": "-(4*x**8 - 10*x**6 + 6*x**4 + 6*x**2 - 1)/(3*(4*x**8 - 10*x**6 + 6*x**4 - 1))",
+            "future_endpoint": "5/3",
+            "numerator_L1_norm": "27",
+            "past_endpoint": "5/3"
+          }
+        },
+        {
+          "0,1,1": {
+            "absolute_bound": "735",
+            "denominator_P_power": 1,
+            "denominator_constant_abs": "4",
+            "expression": "-(2*x**6 - 6*x**4 + 6*x**2 - 1)*(6*x**6 - 18*x**4 + 18*x**2 - 7)/(4*(4*x**8 - 10*x**6 + 6*x**4 - 1))",
+            "future_endpoint": "-1/4",
+            "numerator_L1_norm": "735",
+            "past_endpoint": "-1/4"
+          },
+          "0,3,0": {
+            "absolute_bound": "533189475/4",
+            "denominator_P_power": 3,
+            "denominator_constant_abs": "256",
+            "expression": "(2*x**6 - 6*x**4 + 6*x**2 - 1)**2*(576*x**26 - 6768*x**24 + 36288*x**22 - 118192*x**20 + 262528*x**18 - 422784*x**16 + 510376*x**14 - 467136*x**12 + 320568*x**10 - 159084*x**8 + 53448*x**6 - 10872*x**4 + 1082*x**2 - 29)/(256*(4*x**8 - 10*x**6 + 6*x**4 - 1)**3)",
+            "future_endpoint": "-1/256",
+            "numerator_L1_norm": "533189475",
+            "past_endpoint": "-1/256"
+          },
+          "1,0,1": {
+            "absolute_bound": "392",
+            "denominator_P_power": 1,
+            "denominator_constant_abs": "1",
+            "expression": "2*x*(6*x**6 - 18*x**4 + 18*x**2 - 7)/(4*x**8 - 10*x**6 + 6*x**4 - 1)",
+            "future_endpoint": "2",
+            "numerator_L1_norm": "98",
+            "past_endpoint": "-2"
+          },
+          "1,2,0": {
+            "absolute_bound": "192582510",
+            "denominator_P_power": 3,
+            "denominator_constant_abs": "32",
+            "expression": "-x*(2*x**6 - 6*x**4 + 6*x**2 - 1)*(1440*x**26 - 16992*x**24 + 91584*x**22 - 300608*x**20 + 675608*x**18 - 1106712*x**16 + 1366528*x**14 - 1285100*x**12 + 908568*x**10 - 465428*x**8 + 162154*x**6 - 34722*x**4 + 3828*x**2 - 145)/(32*(4*x**8 - 10*x**6 + 6*x**4 - 1)**3)",
+            "future_endpoint": "3/32",
+            "numerator_L1_norm": "96291255",
+            "past_endpoint": "-3/32"
+          },
+          "2,1,0": {
+            "absolute_bound": "92381816",
+            "denominator_P_power": 3,
+            "denominator_constant_abs": "24",
+            "expression": "(7104*x**28 - 84192*x**26 + 456240*x**24 - 1510112*x**22 + 3438976*x**20 - 5743136*x**18 + 7273120*x**16 - 7044496*x**14 + 5138664*x**12 - 2718024*x**10 + 980944*x**8 - 220344*x**6 + 26544*x**4 - 1278*x**2 + 7)/(24*(4*x**8 - 10*x**6 + 6*x**4 - 1)**3)",
+            "future_endpoint": "-17/24",
+            "numerator_L1_norm": "34643181",
+            "past_endpoint": "-17/24"
+          },
+          "3,0,0": {
+            "absolute_bound": "44138944/3",
+            "denominator_P_power": 3,
+            "denominator_constant_abs": "3",
+            "expression": "-x*(960*x**22 - 8544*x**20 + 33720*x**18 - 80536*x**16 + 133208*x**14 - 161692*x**12 + 143136*x**10 - 87268*x**8 + 33274*x**6 - 6786*x**4 + 540*x**2 - 7)/(3*(4*x**8 - 10*x**6 + 6*x**4 - 1)**3)",
+            "future_endpoint": "5/3",
+            "numerator_L1_norm": "689671",
+            "past_endpoint": "-5/3"
+          }
+        },
+        {
+          "0,0,2": {
+            "absolute_bound": "4802",
+            "denominator_P_power": 1,
+            "denominator_constant_abs": "2",
+            "expression": "-(6*x**6 - 18*x**4 + 18*x**2 - 7)**2/(2*(4*x**8 - 10*x**6 + 6*x**4 - 1))",
+            "future_endpoint": "1/2",
+            "numerator_L1_norm": "2401",
+            "past_endpoint": "1/2"
+          },
+          "0,2,1": {
+            "absolute_bound": "5211777495",
+            "denominator_P_power": 3,
+            "denominator_constant_abs": "64",
+            "expression": "(2*x**6 - 6*x**4 + 6*x**2 - 1)*(10368*x**32 - 152928*x**30 + 1049760*x**28 - 4464192*x**26 + 13205136*x**24 - 28908000*x**22 + 48603776*x**20 - 64163600*x**18 + 67221504*x**16 - 55903504*x**14 + 36524792*x**12 - 18338112*x**10 + 6819056*x**8 - 1770550*x**6 + 290826*x**4 - 25032*x**2 + 697)/(64*(4*x**8 - 10*x**6 + 6*x**4 - 1)**3)",
+            "future_endpoint": "3/64",
+            "numerator_L1_norm": "5211777495",
+            "past_endpoint": "3/64"
+          },
+          "0,4,0": {
+            "absolute_bound": "11347279022598525/8",
+            "denominator_P_power": 5,
+            "denominator_constant_abs": "24576",
+            "expression": "-(2*x**6 - 6*x**4 + 6*x**2 - 1)**2*(8957952*x**52 - 210511872*x**50 + 2365459200*x**48 - 16938201600*x**46 + 86909677056*x**44 - 340641936000*x**42 + 1061640643456*x**40 - 2703510232064*x**38 + 5734920874624*x**36 - 10275516900608*x**34 + 15704736477056*x**32 - 20609495125344*x**30 + 23310529693920*x**28 - 22751150449952*x**26 + 19135788785088*x**24 - 13815694307776*x**22 + 8504177884160*x**20 - 4418311469304*x**18 + 1910720510792*x**16 - 675066137456*x**14 + 190080639000*x**12 - 41262307272*x**10 + 6597200480*x**8 - 727430586*x**6 + 49988994*x**4 - 1807482*x**2 + 25553)/(24576*(4*x**8 - 10*x**6 + 6*x**4 - 1)**5)",
+            "future_endpoint": "5/8192",
+            "numerator_L1_norm": "34041837067795575",
+            "past_endpoint": "5/8192"
+          },
+          "1,1,1": {
+            "absolute_bound": "5018444944",
+            "denominator_P_power": 3,
+            "denominator_constant_abs": "4",
+            "expression": "-x*(8640*x**32 - 127872*x**30 + 881280*x**28 - 3767712*x**26 + 11227632*x**24 - 24830208*x**22 + 42313312*x**20 - 56809600*x**18 + 60714864*x**16 - 51630368*x**14 + 34552216*x**12 - 17798544*x**10 + 6810268*x**8 - 1831952*x**6 + 317088*x**4 - 30150*x**2 + 1103)/(4*(4*x**8 - 10*x**6 + 6*x**4 - 1)**3)",
+            "future_endpoint": "-3/4",
+            "numerator_L1_norm": "313652809",
+            "past_endpoint": "3/4"
+          },
+          "1,3,0": {
+            "absolute_bound": "2732087849419020",
+            "denominator_P_power": 5,
+            "denominator_constant_abs": "256",
+            "expression": "x*(2*x**6 - 6*x**4 + 6*x**2 - 1)*(2488320*x**52 - 58599936*x**50 + 660026880*x**48 - 4739291136*x**46 + 24398466048*x**44 - 96020172288*x**42 + 300747108096*x**40 - 770473544832*x**38 + 1646072858304*x**36 - 2973875929600*x**34 + 4588301140544*x**32 - 6085229927104*x**30 + 6963170216576*x**28 - 6882188758496*x**26 + 5867186402832*x**24 - 4297223145152*x**22 + 2685672842016*x**20 - 1418090126624*x**18 + 624051275808*x**16 - 224780736632*x**14 + 64721671540*x**12 - 14439805152*x**10 + 2393568612*x**8 - 277860404*x**6 + 20665572*x**4 - 847800*x**2 + 14013)/(256*(4*x**8 - 10*x**6 + 6*x**4 - 1)**5)",
+            "future_endpoint": "-5/256",
+            "numerator_L1_norm": "683021962354755",
+            "past_endpoint": "5/256"
+          },
+          "2,0,1": {
+            "absolute_bound": "3609864800/3",
+            "denominator_P_power": 3,
+            "denominator_constant_abs": "6",
+            "expression": "(21312*x**28 - 252576*x**26 + 1368720*x**24 - 4543392*x**22 + 10432896*x**20 - 17685696*x**18 + 22900672*x**16 - 22894928*x**14 + 17507368*x**12 - 9959448*x**10 + 4015840*x**8 - 1058800*x**6 + 157272*x**4 - 9306*x**2 + 49)/(6*(4*x**8 - 10*x**6 + 6*x**4 - 1)**3)",
+            "future_endpoint": "17/6",
+            "numerator_L1_norm": "112808275",
+            "past_endpoint": "17/6"
+          },
+          "2,2,0": {
+            "absolute_bound": "1970830215150232",
+            "denominator_P_power": 5,
+            "denominator_constant_abs": "384",
+            "expression": "-(37158912*x**54 - 876966912*x**52 + 9901066752*x**50 - 71293634304*x**48 + 368280907776*x**46 - 1455454388736*x**44 + 4582132499200*x**42 - 11811944258304*x**40 + 25422305023872*x**38 - 46324468653440*x**36 + 72172842183552*x**34 - 96765740242560*x**32 + 112054200033216*x**30 - 112186174254528*x**28 + 96964510413984*x**26 - 72059640841984*x**24 + 45732351886464*x**22 - 24542692334112*x**20 + 10989620775088*x**18 - 4034660788272*x**16 + 1187362882728*x**14 - 272014396520*x**12 + 46665762984*x**10 - 5683657368*x**8 + 454325452*x**6 - 20922888*x**4 + 420732*x**2 - 697)/(384*(4*x**8 - 10*x**6 + 6*x**4 - 1)**5)",
+            "future_endpoint": "29/128",
+            "numerator_L1_norm": "739061330681337",
+            "past_endpoint": "29/128"
+          },
+          "3,1,0": {
+            "absolute_bound": "631028796899456",
+            "denominator_P_power": 5,
+            "denominator_constant_abs": "24",
+            "expression": "x*(5114880*x**48 - 105629184*x**46 + 1036862208*x**44 - 6456330240*x**42 + 28715445504*x**40 - 97372275840*x**38 + 262281735872*x**36 - 576901309952*x**34 + 1056001930048*x**32 - 1629226022016*x**30 + 2135332284736*x**28 - 2386567401856*x**26 + 2275022598288*x**24 - 1843472590368*x**22 + 1260738883984*x**20 - 719493390848*x**18 + 337153054016*x**16 - 126920000584*x**14 + 37283368580*x**12 - 8220405568*x**10 + 1289432332*x**8 - 133136656*x**6 + 8002128*x**4 - 220540*x**2 + 1103)/(24*(4*x**8 - 10*x**6 + 6*x**4 - 1)**5)",
+            "future_endpoint": "-9/8",
+            "numerator_L1_norm": "14789737427331",
+            "past_endpoint": "9/8"
+          },
+          "4,0,0": {
+            "absolute_bound": "681008983219328/9",
+            "denominator_P_power": 5,
+            "denominator_constant_abs": "72",
+            "expression": "-(12616704*x**44 - 223349760*x**42 + 1863288576*x**40 - 9799525632*x**38 + 36670124352*x**36 - 104400499968*x**34 + 235784322496*x**32 - 433963374784*x**30 + 662003809536*x**28 - 845036055424*x**26 + 905937519792*x**24 - 814454057280*x**22 + 609805330656*x**20 - 375383943776*x**18 + 186258428736*x**16 - 72431952048*x**14 + 21238827276*x**12 - 4448917008*x**10 + 615176252*x**8 - 49646588*x**6 + 1896348*x**4 - 18360*x**2 + 49)/(72*(4*x**8 - 10*x**6 + 6*x**4 - 1)**5)",
+            "future_endpoint": "145/72",
+            "numerator_L1_norm": "5320382681401",
+            "past_endpoint": "145/72"
+          }
+        }
+      ],
+      "lapse": [
+        {
+          "0,1,0": {
+            "absolute_bound": "15/2",
+            "denominator_P_power": 1,
+            "denominator_constant_abs": "8",
+            "expression": "(2*x**6 - 6*x**4 + 6*x**2 - 1)/(8*(4*x**8 - 10*x**6 + 6*x**4 - 1))",
+            "future_endpoint": "-1/8",
+            "numerator_L1_norm": "15",
+            "past_endpoint": "-1/8"
+          },
+          "1,0,0": {
+            "absolute_bound": "4",
+            "denominator_P_power": 1,
+            "denominator_constant_abs": "1",
+            "expression": "-x/(4*x**8 - 10*x**6 + 6*x**4 - 1)",
+            "future_endpoint": "1",
+            "numerator_L1_norm": "1",
+            "past_endpoint": "-1"
+          }
+        },
+        {
+          "0,0,1": {
+            "absolute_bound": "98",
+            "denominator_P_power": 1,
+            "denominator_constant_abs": "2",
+            "expression": "(6*x**6 - 18*x**4 + 18*x**2 - 7)/(2*(4*x**8 - 10*x**6 + 6*x**4 - 1))",
+            "future_endpoint": "1/2",
+            "numerator_L1_norm": "49",
+            "past_endpoint": "1/2"
+          },
+          "0,2,0": {
+            "absolute_bound": "106551255/2",
+            "denominator_P_power": 3,
+            "denominator_constant_abs": "128",
+            "expression": "-(2*x**6 - 6*x**4 + 6*x**2 - 1)*(1728*x**26 - 20304*x**24 + 108864*x**22 - 354560*x**20 + 787448*x**18 - 1267848*x**16 + 1530040*x**14 - 1399880*x**12 + 960264*x**10 - 476384*x**8 + 160078*x**6 - 32634*x**4 + 3288*x**2 - 97)/(128*(4*x**8 - 10*x**6 + 6*x**4 - 1)**3)",
+            "future_endpoint": "3/128",
+            "numerator_L1_norm": "106551255",
+            "past_endpoint": "3/128"
+          },
+          "1,1,0": {
+            "absolute_bound": "51309128",
+            "denominator_P_power": 3,
+            "denominator_constant_abs": "8",
+            "expression": "x*(1440*x**26 - 16992*x**24 + 91584*x**22 - 300592*x**20 + 675472*x**18 - 1106208*x**16 + 1365440*x**14 - 1283572*x**12 + 907128*x**10 - 464560*x**8 + 161888*x**6 - 34740*x**4 + 3870*x**2 - 155)/(8*(4*x**8 - 10*x**6 + 6*x**4 - 1)**3)",
+            "future_endpoint": "-3/8",
+            "numerator_L1_norm": "6413641",
+            "past_endpoint": "3/8"
+          },
+          "2,0,0": {
+            "absolute_bound": "36915760/3",
+            "denominator_P_power": 3,
+            "denominator_constant_abs": "12",
+            "expression": "-(3552*x**22 - 31440*x**20 + 123144*x**18 - 289480*x**16 + 465488*x**14 - 543580*x**12 + 461352*x**10 - 270124*x**8 + 98794*x**6 - 18978*x**4 + 1296*x**2 - 7)/(12*(4*x**8 - 10*x**6 + 6*x**4 - 1)**3)",
+            "future_endpoint": "17/12",
+            "numerator_L1_norm": "2307235",
+            "past_endpoint": "17/12"
+          }
+        },
+        {
+          "0,1,1": {
+            "absolute_bound": "1388675236",
+            "denominator_P_power": 3,
+            "denominator_constant_abs": "16",
+            "expression": "-(10368*x**32 - 152928*x**30 + 1049760*x**28 - 4464096*x**26 + 13204032*x**24 - 28902240*x**22 + 48585616*x**20 - 64124824*x**18 + 67162248*x**16 - 55837256*x**14 + 36470956*x**12 - 18307728*x**10 + 6808768*x**8 - 1769828*x**6 + 291888*x**4 - 25506*x**2 + 767)/(16*(4*x**8 - 10*x**6 + 6*x**4 - 1)**3)",
+            "future_endpoint": "-3/16",
+            "numerator_L1_norm": "347168809",
+            "past_endpoint": "-3/16"
+          },
+          "0,3,0": {
+            "absolute_bound": "755869627552755",
+            "denominator_P_power": 5,
+            "denominator_constant_abs": "1024",
+            "expression": "(2*x**6 - 6*x**4 + 6*x**2 - 1)*(2985984*x**52 - 70170624*x**50 + 788486400*x**48 - 5646039552*x**46 + 28969332480*x**44 - 113541937920*x**42 + 353847622656*x**40 - 901029657984*x**38 + 1911182246400*x**36 - 3423995617792*x**34 + 5232469118720*x**32 - 6865661212384*x**30 + 7764259525472*x**28 - 7576701959648*x**26 + 6371645515008*x**24 - 4599506971712*x**22 + 2830859272080*x**20 - 1470684060320*x**18 + 636055421808*x**16 - 224795529176*x**14 + 63347388160*x**12 - 13774973136*x**10 + 2210199048*x**8 - 245482382*x**6 + 17128086*x**4 - 639126*x**2 + 9459)/(1024*(4*x**8 - 10*x**6 + 6*x**4 - 1)**5)",
+            "future_endpoint": "-5/1024",
+            "numerator_L1_norm": "755869627552755",
+            "past_endpoint": "-5/1024"
+          },
+          "1,0,1": {
+            "absolute_bound": "668522208",
+            "denominator_P_power": 3,
+            "denominator_constant_abs": "2",
+            "expression": "3*x*(1440*x**26 - 16992*x**24 + 91584*x**22 - 301488*x**20 + 683376*x**18 - 1137024*x**16 + 1437248*x**14 - 1397300*x**12 + 1037112*x**10 - 572160*x**8 + 223264*x**6 - 56532*x**4 + 7862*x**2 - 391)/(2*(4*x**8 - 10*x**6 + 6*x**4 - 1)**3)",
+            "future_endpoint": "3/2",
+            "numerator_L1_norm": "20891319",
+            "past_endpoint": "-3/2"
+          },
+          "1,2,0": {
+            "absolute_bound": "1091913861113656",
+            "denominator_P_power": 5,
+            "denominator_constant_abs": "128",
+            "expression": "-x*(7464960*x**52 - 175799808*x**50 + 1980080640*x**48 - 14217799680*x**46 + 73193902848*x**44 - 288046138752*x**42 + 902153941120*x**40 - 2311043144192*x**38 + 4936983021376*x**36 - 8918440127232*x**34 + 13758249982144*x**32 - 18244258650880*x**30 + 20873168972352*x**28 - 20627022246048*x**26 + 17582000154160*x**24 - 12875379534592*x**22 + 8045874575888*x**20 - 4248166805272*x**18 + 1869614156952*x**16 - 673642863328*x**14 + 194112852508*x**12 - 43377739032*x**10 + 7213683564*x**8 - 842800972*x**6 + 63485076*x**4 - 2669808*x**2 + 46023)/(128*(4*x**8 - 10*x**6 + 6*x**4 - 1)**5)",
+            "future_endpoint": "15/128",
+            "numerator_L1_norm": "136489232639207",
+            "past_endpoint": "-15/128"
+          },
+          "2,1,0": {
+            "absolute_bound": "1575288850922720/3",
+            "denominator_P_power": 5,
+            "denominator_constant_abs": "96",
+            "expression": "(18579456*x**48 - 382745088*x**46 + 3746559744*x**44 - 23249417856*x**42 + 102957185664*x**40 - 347195926656*x**38 + 928749644032*x**36 - 2025649220352*x**34 + 3671047523712*x**32 - 5599187568384*x**30 + 7244872492608*x**28 - 7983986305056*x**26 + 7495980041136*x**24 - 5976474769824*x**22 + 4017990590784*x**20 - 2252155131736*x**18 + 1035418011384*x**16 - 381788445120*x**14 + 109543322312*x**12 - 23471747616*x**10 + 3545252148*x**8 - 346570048*x**6 + 19091964*x**4 - 447888*x**2 + 767)/(96*(4*x**8 - 10*x**6 + 6*x**4 - 1)**5)",
+            "future_endpoint": "-29/32",
+            "numerator_L1_norm": "49227776591335",
+            "past_endpoint": "-29/32"
+          },
+          "3,0,0": {
+            "absolute_bound": "84061329006336",
+            "denominator_P_power": 5,
+            "denominator_constant_abs": "4",
+            "expression": "-x*(852480*x**42 - 15047424*x**40 + 125110656*x**38 - 655145088*x**36 + 2437452288*x**34 - 6887025792*x**32 + 15405767552*x**30 - 28028358912*x**28 + 42186919296*x**26 - 53044371632*x**24 + 55931390496*x**22 - 49389469680*x**20 + 36279510864*x**18 - 21887359312*x**16 + 10631067080*x**14 - 4039640224*x**12 + 1153367976*x**10 - 233571748*x**8 + 30769004*x**6 - 2293008*x**4 + 75528*x**2 - 391)/(4*(4*x**8 - 10*x**6 + 6*x**4 - 1)**5)",
+            "future_endpoint": "9/4",
+            "numerator_L1_norm": "328364566431",
+            "past_endpoint": "-9/4"
+          }
+        }
+      ]
+    },
+    "x": "u/sqrt(1+u^2)"
+  },
+  "not_established": [
+    "fully momentum-reduced cubic or quartic vertices",
+    "physical 2-to-2 amplitudes",
+    "uniform all-time weak-coupling hierarchy",
+    "all-orders or loop control",
+    "nonlinear PDE stability",
+    "M1 extension",
+    "UV positivity or completion"
+  ],
+  "prior_classification_sha256": "4e82b45d3d1daed0a5e4698f1dd39fa51e2eb09b6efcf3cf5caac3a12d45dec8",
+  "scale_restoration": {
+    "Ai": "M^2 ai(phi/tau,X)",
+    "E_curvature_over_E_ref": [
+      "sqrt(2) inclusive",
+      "sqrt(6) strict"
+    ],
+    "E_ref": "1/(tau*sqrt(1+u^2))",
+    "F": "M^2/tau^2 f(phi/tau,X)",
+    "F2": "-M^2/2",
+    "action_prefactor": "M**2*tau**2",
+    "canonical_tail_clock": "2 M asinh(phi/tau)",
+    "canonical_vertex_fixed_frequency_prefactor": "(M*tau)^(2-n)",
+    "clock": "phi=t; X=1"
+  },
+  "schema": 1,
+  "scope": "D-only M0: exact nonlinear lapse-derivative removal, canonical Hamiltonian and stationary invariant expansion through fourth order",
+  "source_sha256": {
+    "FORMULATION.md": "b86dcf8826215149983ed72c96f5b3cbde1b6b1bcd7380114ddc62bd9e1960cf",
+    "README.md": "464e4fde7e57eef9bfa314e033f433e5f60832af10e0fc2a2ff4e858c9ee66db",
+    "notes/audit.md": "543c642438ec52453fc14463d23e0bb5e569b43d6773660241a701657a82a287",
+    "notes/literature.md": "1cd0c04183af4f42fa0c4b3df926ab68336136ad3c9f276e56271096b2db1742",
+    "notes/nonlinear-d.md": "27660c0dd9c21ded767e85a619eb39513a1877ce9c463332991f6ed415330fbf",
+    "src/p8_s5/__init__.py": "7ac43b451ce80e16df0430daa90558f9bc5035dfa496729c1debffa52197d1ec",
+    "src/p8_s5/compact.py": "21d523ca31e93da6110a98ec52a8c3e3c0b3fea941cad645c9afd1276018fc0a",
+    "src/p8_s5/lapse_series.py": "45926be3cbb116dacd36ce6097647ce8bc51340f97951cd9a44e30d4275d267f",
+    "src/p8_s5/nonlinear_d.py": "7cd29992c751e8dcc3fc1dbb11ad5fb9d4bc226700eff4d5e957aa78af701140",
+    "src/p8_s5/scales.py": "5ef9507d555d99967018bf79a841e200a0888c5aeb422dedea0f4e0a5cdc052c",
+    "src/p8_s5/verify.py": "e2593eff3f4d1bebd3494fec321a0b1073a3655c62db3155465b9d6afc191f1a",
+    "tests/conftest.py": "0a66f702e6745f595c577c900a8af00ac88164875c88f636a2519c36883c65ad",
+    "tests/test_compact.py": "93f613f9b9f90563e138a4ffc6f18863331abf52e2a6e61db8e75b2987070b97",
+    "tests/test_lapse_series.py": "c0abd3e2a6678c42ac4c3fe1f9cf8891f76983a9728f31c7e314407c98640ed8",
+    "tests/test_nonlinear_d.py": "9c5f36cc814cccb09fdef2ce8345d90f7e22f8313f791e64dd198c960ce8ac86",
+    "tests/test_report.py": "2d2838d23cedef28af06b5eb57f2a3305c649ed82000aeea198a6460f448e491",
+    "tests/test_scales.py": "f78b76044c6e3975805f5b1e9948af7fe5790b87c69eb1ef80816a2e8459a644"
+  },
+  "stationary_coefficients": {
+    "hamiltonian": [
+      {
+        "0,0,0": {
+          "at_bounce": "4",
+          "coefficient": "-4*(u - 1)*(u + 1)/(u**2 + 1)**2",
+          "nonzero_denominator_factors": [
+            {
+              "factor": "u**2 + 1",
+              "multiplicity": 2
+            }
+          ]
+        }
+      },
+      {
+        "0,1,0": {
+          "at_bounce": "-1/2",
+          "coefficient": "-1/2",
+          "nonzero_denominator_factors": []
+        },
+        "1,0,0": {
+          "at_bounce": "0",
+          "coefficient": "4*u/(u**2 + 1)",
+          "nonzero_denominator_factors": [
+            {
+              "factor": "u**2 + 1",
+              "multiplicity": 1
+            }
+          ]
+        }
+      },
+      {
+        "0,0,1": {
+          "at_bounce": "2",
+          "coefficient": "2",
+          "nonzero_denominator_factors": []
+        },
+        "0,2,0": {
+          "at_bounce": "1/32",
+          "coefficient": "(u**6 + 3*u**4 + 3*u**2 - 1)**2/(32*(u**2 + 1)*(u**8 + 2*u**6 + 4*u**2 + 1))",
+          "nonzero_denominator_factors": [
+            {
+              "factor": "u**2 + 1",
+              "multiplicity": 1
+            },
+            {
+              "factor": "u**8 + 2*u**6 + 4*u**2 + 1",
+              "multiplicity": 1
+            }
+          ]
+        },
+        "1,1,0": {
+          "at_bounce": "0",
+          "coefficient": "-u*(u**2 + 1)*(u**6 + 3*u**4 + 3*u**2 - 1)/(2*(u**8 + 2*u**6 + 4*u**2 + 1))",
+          "nonzero_denominator_factors": [
+            {
+              "factor": "u**8 + 2*u**6 + 4*u**2 + 1",
+              "multiplicity": 1
+            }
+          ]
+        },
+        "2,0,0": {
+          "at_bounce": "-1/3",
+          "coefficient": "(5*u**8 + 16*u**6 + 18*u**4 + 2*u**2 - 1)/(3*(u**8 + 2*u**6 + 4*u**2 + 1))",
+          "nonzero_denominator_factors": [
+            {
+              "factor": "u**8 + 2*u**6 + 4*u**2 + 1",
+              "multiplicity": 1
+            }
+          ]
+        }
+      },
+      {
+        "0,1,1": {
+          "at_bounce": "7/4",
+          "coefficient": "-(u**6 + 3*u**4 + 3*u**2 - 1)*(u**6 + 3*u**4 + 3*u**2 + 7)/(4*(u**2 + 1)*(u**8 + 2*u**6 + 4*u**2 + 1))",
+          "nonzero_denominator_factors": [
+            {
+              "factor": "u**2 + 1",
+              "multiplicity": 1
+            },
+            {
+              "factor": "u**8 + 2*u**6 + 4*u**2 + 1",
+              "multiplicity": 1
+            }
+          ]
+        },
+        "0,3,0": {
+          "at_bounce": "29/256",
+          "coefficient": "-(u**6 + 3*u**4 + 3*u**2 - 1)**2*(u**26 + 11*u**24 + 54*u**22 + 218*u**20 + 839*u**18 + 2493*u**16 + 4492*u**14 + 3564*u**12 - 1641*u**10 - 5259*u**8 - 3026*u**6 - 150*u**4 + 705*u**2 - 29)/(256*(u**2 + 1)**5*(u**8 + 2*u**6 + 4*u**2 + 1)**3)",
+          "nonzero_denominator_factors": [
+            {
+              "factor": "u**2 + 1",
+              "multiplicity": 5
+            },
+            {
+              "factor": "u**8 + 2*u**6 + 4*u**2 + 1",
+              "multiplicity": 3
+            }
+          ]
+        },
+        "1,0,1": {
+          "at_bounce": "0",
+          "coefficient": "2*u*(u**2 + 1)*(u**6 + 3*u**4 + 3*u**2 + 7)/(u**8 + 2*u**6 + 4*u**2 + 1)",
+          "nonzero_denominator_factors": [
+            {
+              "factor": "u**8 + 2*u**6 + 4*u**2 + 1",
+              "multiplicity": 1
+            }
+          ]
+        },
+        "1,2,0": {
+          "at_bounce": "0",
+          "coefficient": "u*(u**6 + 3*u**4 + 3*u**2 - 1)*(3*u**26 + 33*u**24 + 162*u**22 + 660*u**20 + 2565*u**18 + 7641*u**16 + 13808*u**14 + 11212*u**12 - 4239*u**10 - 15113*u**8 - 8610*u**6 - 96*u**4 + 1943*u**2 - 145)/(32*(u**2 + 1)**3*(u**8 + 2*u**6 + 4*u**2 + 1)**3)",
+          "nonzero_denominator_factors": [
+            {
+              "factor": "u**2 + 1",
+              "multiplicity": 3
+            },
+            {
+              "factor": "u**8 + 2*u**6 + 4*u**2 + 1",
+              "multiplicity": 3
+            }
+          ]
+        },
+        "2,1,0": {
+          "at_bounce": "-7/24",
+          "coefficient": "-(17*u**28 + 188*u**26 + 929*u**24 + 3880*u**22 + 15429*u**20 + 46364*u**18 + 84165*u**16 + 69536*u**14 - 22317*u**12 - 87580*u**10 - 49437*u**8 + 1048*u**6 + 10567*u**4 - 1180*u**2 + 7)/(24*(u**2 + 1)*(u**8 + 2*u**6 + 4*u**2 + 1)**3)",
+          "nonzero_denominator_factors": [
+            {
+              "factor": "u**2 + 1",
+              "multiplicity": 1
+            },
+            {
+              "factor": "u**8 + 2*u**6 + 4*u**2 + 1",
+              "multiplicity": 3
+            }
+          ]
+        },
+        "3,0,0": {
+          "at_bounce": "0",
+          "coefficient": "u*(u**2 + 1)*(5*u**22 + 41*u**20 + 143*u**18 + 681*u**16 + 2642*u**14 + 5650*u**12 + 4074*u**10 - 2882*u**8 - 4655*u**6 - 1771*u**4 + 463*u**2 - 7)/(3*(u**8 + 2*u**6 + 4*u**2 + 1)**3)",
+          "nonzero_denominator_factors": [
+            {
+              "factor": "u**8 + 2*u**6 + 4*u**2 + 1",
+              "multiplicity": 3
+            }
+          ]
+        }
+      },
+      {
+        "0,0,2": {
+          "at_bounce": "49/2",
+          "coefficient": "(u**6 + 3*u**4 + 3*u**2 + 7)**2/(2*(u**2 + 1)*(u**8 + 2*u**6 + 4*u**2 + 1))",
+          "nonzero_denominator_factors": [
+            {
+              "factor": "u**2 + 1",
+              "multiplicity": 1
+            },
+            {
+              "factor": "u**8 + 2*u**6 + 4*u**2 + 1",
+              "multiplicity": 1
+            }
+          ]
+        },
+        "0,2,1": {
+          "at_bounce": "697/64",
+          "coefficient": "(u**6 + 3*u**4 + 3*u**2 - 1)*(3*u**32 + 42*u**30 + 270*u**28 + 1236*u**26 + 4932*u**24 + 16830*u**22 + 44234*u**20 + 83488*u**18 + 108054*u**16 + 80502*u**14 - 13262*u**12 - 124140*u**10 - 146052*u**8 - 62974*u**6 + 1014*u**4 + 13880*u**2 - 697)/(64*(u**2 + 1)**5*(u**8 + 2*u**6 + 4*u**2 + 1)**3)",
+          "nonzero_denominator_factors": [
+            {
+              "factor": "u**2 + 1",
+              "multiplicity": 5
+            },
+            {
+              "factor": "u**8 + 2*u**6 + 4*u**2 + 1",
+              "multiplicity": 3
+            }
+          ]
+        },
+        "0,4,0": {
+          "at_bounce": "25553/24576",
+          "coefficient": "(u**6 + 3*u**4 + 3*u**2 - 1)**2*(15*u**52 + 330*u**50 + 3435*u**48 + 23394*u**46 + 121824*u**44 + 528126*u**42 + 2051448*u**40 + 7780926*u**38 + 29505111*u**36 + 101924356*u**34 + 283926787*u**32 + 577490740*u**30 + 749303256*u**28 + 339206524*u**26 - 759848056*u**24 - 1665079300*u**22 - 1195986707*u**20 + 414793810*u**18 + 1509212353*u**16 + 1188917770*u**14 + 280528136*u**12 - 169882074*u**10 - 111931904*u**8 - 3501530*u**6 + 13106669*u**4 - 1143104*u**2 + 25553)/(24576*(u**2 + 1)**9*(u**8 + 2*u**6 + 4*u**2 + 1)**5)",
+          "nonzero_denominator_factors": [
+            {
+              "factor": "u**2 + 1",
+              "multiplicity": 9
+            },
+            {
+              "factor": "u**8 + 2*u**6 + 4*u**2 + 1",
+              "multiplicity": 5
+            }
+          ]
+        },
+        "1,1,1": {
+          "at_bounce": "0",
+          "coefficient": "-u*(3*u**32 + 42*u**30 + 270*u**28 + 1242*u**26 + 4998*u**24 + 17154*u**22 + 45238*u**20 + 85826*u**18 + 112428*u**16 + 87102*u**14 - 5110*u**12 - 115602*u**10 - 139110*u**8 - 59210*u**6 + 2802*u**4 + 12502*u**2 - 1103)/(4*(u**2 + 1)**3*(u**8 + 2*u**6 + 4*u**2 + 1)**3)",
+          "nonzero_denominator_factors": [
+            {
+              "factor": "u**2 + 1",
+              "multiplicity": 3
+            },
+            {
+              "factor": "u**8 + 2*u**6 + 4*u**2 + 1",
+              "multiplicity": 3
+            }
+          ]
+        },
+        "1,3,0": {
+          "at_bounce": "0",
+          "coefficient": "-u*(u**6 + 3*u**4 + 3*u**2 - 1)*(5*u**52 + 110*u**50 + 1145*u**48 + 7796*u**46 + 40570*u**44 + 175704*u**42 + 682934*u**40 + 2603012*u**38 + 9944179*u**36 + 34552526*u**34 + 96603163*u**32 + 197189608*u**30 + 258025596*u**28 + 123868416*u**26 - 243382412*u**24 - 550989592*u**22 - 404509429*u**20 + 122386186*u**18 + 481711311*u**16 + 377240996*u**14 + 84304298*u**12 - 55755032*u**10 - 33968458*u**8 + 207124*u**6 + 4024797*u**4 - 483462*u**2 + 14013)/(256*(u**2 + 1)**7*(u**8 + 2*u**6 + 4*u**2 + 1)**5)",
+          "nonzero_denominator_factors": [
+            {
+              "factor": "u**2 + 1",
+              "multiplicity": 7
+            },
+            {
+              "factor": "u**8 + 2*u**6 + 4*u**2 + 1",
+              "multiplicity": 5
+            }
+          ]
+        },
+        "2,0,1": {
+          "at_bounce": "-49/6",
+          "coefficient": "(17*u**28 + 188*u**26 + 929*u**24 + 3872*u**22 + 15373*u**20 + 46212*u**18 + 92973*u**16 + 120816*u**14 + 96899*u**12 - 9100*u**10 - 136525*u**8 - 120432*u**6 - 40753*u**4 + 8620*u**2 - 49)/(6*(u**2 + 1)*(u**8 + 2*u**6 + 4*u**2 + 1)**3)",
+          "nonzero_denominator_factors": [
+            {
+              "factor": "u**2 + 1",
+              "multiplicity": 1
+            },
+            {
+              "factor": "u**8 + 2*u**6 + 4*u**2 + 1",
+              "multiplicity": 3
+            }
+          ]
+        },
+        "2,2,0": {
+          "at_bounce": "-697/384",
+          "coefficient": "(87*u**54 + 1917*u**52 + 19989*u**50 + 136275*u**48 + 709410*u**46 + 3071046*u**44 + 11966302*u**42 + 46077882*u**40 + 178590813*u**38 + 627450735*u**36 + 1765763727*u**34 + 3622002849*u**32 + 4779719308*u**30 + 2413461828*u**28 - 4204746540*u**26 - 9833693252*u**24 - 7359977151*u**22 + 1953784203*u**20 + 8324240835*u**18 + 6478263141*u**16 + 1369991346*u**14 - 983311338*u**12 - 553499538*u**10 + 24957930*u**8 + 65952427*u**6 - 10228503*u**4 + 401913*u**2 - 697)/(384*(u**2 + 1)**5*(u**8 + 2*u**6 + 4*u**2 + 1)**5)",
+          "nonzero_denominator_factors": [
+            {
+              "factor": "u**2 + 1",
+              "multiplicity": 5
+            },
+            {
+              "factor": "u**8 + 2*u**6 + 4*u**2 + 1",
+              "multiplicity": 5
+            }
+          ]
+        },
+        "3,1,0": {
+          "at_bounce": "0",
+          "coefficient": "-u*(27*u**48 + 516*u**46 + 4620*u**44 + 27348*u**42 + 127302*u**40 + 504396*u**38 + 1903928*u**36 + 7669980*u**34 + 30334857*u**32 + 97108840*u**30 + 219808664*u**28 + 306604232*u**26 + 150812868*u**24 - 291583976*u**22 - 616501872*u**20 - 373207176*u**18 + 204353229*u**16 + 468194132*u**14 + 279128636*u**12 + 26820644*u**10 - 36801738*u**8 - 10653988*u**6 + 3234136*u**4 - 194068*u**2 + 1103)/(24*(u**2 + 1)**3*(u**8 + 2*u**6 + 4*u**2 + 1)**5)",
+          "nonzero_denominator_factors": [
+            {
+              "factor": "u**2 + 1",
+              "multiplicity": 3
+            },
+            {
+              "factor": "u**8 + 2*u**6 + 4*u**2 + 1",
+              "multiplicity": 5
+            }
+          ]
+        },
+        "4,0,0": {
+          "at_bounce": "49/72",
+          "coefficient": "(145*u**44 + 2354*u**42 + 17655*u**40 + 89624*u**38 + 375831*u**36 + 1368582*u**34 + 5373045*u**32 + 24118064*u**30 + 92498826*u**28 + 240133604*u**26 + 360232022*u**24 + 166400928*u**22 - 382154082*u**20 - 688015332*u**18 - 293122038*u**16 + 303266832*u**14 + 439515381*u**12 + 187931466*u**10 + 8136835*u**8 - 15499768*u**6 + 1522107*u**4 - 17282*u**2 + 49)/(72*(u**2 + 1)*(u**8 + 2*u**6 + 4*u**2 + 1)**5)",
+          "nonzero_denominator_factors": [
+            {
+              "factor": "u**2 + 1",
+              "multiplicity": 1
+            },
+            {
+              "factor": "u**8 + 2*u**6 + 4*u**2 + 1",
+              "multiplicity": 5
+            }
+          ]
+        }
+      }
+    ],
+    "lapse": [
+      {
+        "0,1,0": {
+          "at_bounce": "1/8",
+          "coefficient": "-(u**2 + 1)**2*(u**6 + 3*u**4 + 3*u**2 - 1)/(8*(u**8 + 2*u**6 + 4*u**2 + 1))",
+          "nonzero_denominator_factors": [
+            {
+              "factor": "u**8 + 2*u**6 + 4*u**2 + 1",
+              "multiplicity": 1
+            }
+          ]
+        },
+        "1,0,0": {
+          "at_bounce": "0",
+          "coefficient": "u*(u**2 + 1)**4/(u**8 + 2*u**6 + 4*u**2 + 1)",
+          "nonzero_denominator_factors": [
+            {
+              "factor": "u**8 + 2*u**6 + 4*u**2 + 1",
+              "multiplicity": 1
+            }
+          ]
+        }
+      },
+      {
+        "0,0,1": {
+          "at_bounce": "7/2",
+          "coefficient": "(u**2 + 1)**2*(u**6 + 3*u**4 + 3*u**2 + 7)/(2*(u**8 + 2*u**6 + 4*u**2 + 1))",
+          "nonzero_denominator_factors": [
+            {
+              "factor": "u**8 + 2*u**6 + 4*u**2 + 1",
+              "multiplicity": 1
+            }
+          ]
+        },
+        "0,2,0": {
+          "at_bounce": "97/128",
+          "coefficient": "(u**6 + 3*u**4 + 3*u**2 - 1)*(3*u**26 + 33*u**24 + 162*u**22 + 648*u**20 + 2469*u**18 + 7317*u**16 + 13148*u**14 + 10192*u**12 - 5571*u**10 - 16469*u**8 - 9630*u**6 - 744*u**4 + 2027*u**2 - 97)/(128*(u**2 + 1)**2*(u**8 + 2*u**6 + 4*u**2 + 1)**3)",
+          "nonzero_denominator_factors": [
+            {
+              "factor": "u**2 + 1",
+              "multiplicity": 2
+            },
+            {
+              "factor": "u**8 + 2*u**6 + 4*u**2 + 1",
+              "multiplicity": 3
+            }
+          ]
+        },
+        "1,1,0": {
+          "at_bounce": "0",
+          "coefficient": "-u*(3*u**26 + 33*u**24 + 162*u**22 + 654*u**20 + 2517*u**18 + 7479*u**16 + 13480*u**14 + 10712*u**12 - 4887*u**10 - 15805*u**8 - 9162*u**6 - 390*u**4 + 1855*u**2 - 155)/(8*(u**8 + 2*u**6 + 4*u**2 + 1)**3)",
+          "nonzero_denominator_factors": [
+            {
+              "factor": "u**8 + 2*u**6 + 4*u**2 + 1",
+              "multiplicity": 3
+            }
+          ]
+        },
+        "2,0,0": {
+          "at_bounce": "-7/12",
+          "coefficient": "(u**2 + 1)**2*(17*u**22 + 137*u**20 + 467*u**18 + 2049*u**16 + 7730*u**14 + 16522*u**12 + 11490*u**10 - 9770*u**8 - 14843*u**6 - 6403*u**4 + 1219*u**2 - 7)/(12*(u**8 + 2*u**6 + 4*u**2 + 1)**3)",
+          "nonzero_denominator_factors": [
+            {
+              "factor": "u**8 + 2*u**6 + 4*u**2 + 1",
+              "multiplicity": 3
+            }
+          ]
+        }
+      },
+      {
+        "0,1,1": {
+          "at_bounce": "767/16",
+          "coefficient": "-(3*u**32 + 42*u**30 + 270*u**28 + 1230*u**26 + 4866*u**24 + 16506*u**22 + 43234*u**20 + 81182*u**18 + 103788*u**16 + 74070*u**14 - 21334*u**12 - 132702*u**10 - 153522*u**8 - 67994*u**6 - 1338*u**4 + 13234*u**2 - 767)/(16*(u**2 + 1)**2*(u**8 + 2*u**6 + 4*u**2 + 1)**3)",
+          "nonzero_denominator_factors": [
+            {
+              "factor": "u**2 + 1",
+              "multiplicity": 2
+            },
+            {
+              "factor": "u**8 + 2*u**6 + 4*u**2 + 1",
+              "multiplicity": 3
+            }
+          ]
+        },
+        "0,3,0": {
+          "at_bounce": "9459/1024",
+          "coefficient": "-(u**6 + 3*u**4 + 3*u**2 - 1)*(5*u**52 + 110*u**50 + 1145*u**48 + 7790*u**46 + 40456*u**44 + 174690*u**42 + 675248*u**40 + 2546522*u**38 + 9609565*u**36 + 33106340*u**34 + 92076409*u**32 + 186749836*u**30 + 239961528*u**28 + 100239108*u**26 - 265906904*u**24 - 562936876*u**22 - 397653073*u**20 + 149532790*u**18 + 520765467*u**16 + 412999718*u**14 + 103656896*u**12 - 53121542*u**10 - 37121752*u**8 - 1552718*u**6 + 4224111*u**4 - 393192*u**2 + 9459)/(1024*(u**2 + 1)**6*(u**8 + 2*u**6 + 4*u**2 + 1)**5)",
+          "nonzero_denominator_factors": [
+            {
+              "factor": "u**2 + 1",
+              "multiplicity": 6
+            },
+            {
+              "factor": "u**8 + 2*u**6 + 4*u**2 + 1",
+              "multiplicity": 5
+            }
+          ]
+        },
+        "1,0,1": {
+          "at_bounce": "0",
+          "coefficient": "3*u*(u**26 + 11*u**24 + 54*u**22 + 218*u**20 + 839*u**18 + 2493*u**16 + 4968*u**14 + 6296*u**12 + 4755*u**10 - 1295*u**8 - 8478*u**6 - 7314*u**4 - 2779*u**2 + 391)/(2*(u**8 + 2*u**6 + 4*u**2 + 1)**3)",
+          "nonzero_denominator_factors": [
+            {
+              "factor": "u**8 + 2*u**6 + 4*u**2 + 1",
+              "multiplicity": 3
+            }
+          ]
+        },
+        "1,2,0": {
+          "at_bounce": "0",
+          "coefficient": "u*(15*u**52 + 330*u**50 + 3435*u**48 + 23364*u**46 + 121254*u**44 + 523056*u**42 + 2023026*u**40 + 7666524*u**38 + 29147625*u**36 + 101013218*u**34 + 281983841*u**32 + 573999848*u**30 + 743965700*u**28 + 331868944*u**26 - 769963908*u**24 - 1679344776*u**22 - 1213645791*u**20 + 397718222*u**18 + 1495347533*u**16 + 1179674516*u**14 + 282108534*u**12 - 157230976*u**10 - 101372366*u**8 - 441748*u**6 + 11697351*u**4 - 1473210*u**2 + 46023)/(128*(u**2 + 1)**4*(u**8 + 2*u**6 + 4*u**2 + 1)**5)",
+          "nonzero_denominator_factors": [
+            {
+              "factor": "u**2 + 1",
+              "multiplicity": 4
+            },
+            {
+              "factor": "u**8 + 2*u**6 + 4*u**2 + 1",
+              "multiplicity": 5
+            }
+          ]
+        },
+        "2,1,0": {
+          "at_bounce": "-767/96",
+          "coefficient": "-(87*u**48 + 1656*u**46 + 14760*u**44 + 86976*u**42 + 403230*u**40 + 1591752*u**38 + 5917952*u**36 + 23107824*u**34 + 88998009*u**32 + 281083784*u**30 + 631189848*u**28 + 867340152*u**26 + 381300220*u**24 - 945801624*u**22 - 1892612952*u**20 - 1109013864*u**18 + 682006257*u**16 + 1508517408*u**14 + 929830368*u**12 + 121762152*u**10 - 107534682*u**8 - 38310096*u**6 + 9002232*u**4 - 429480*u**2 + 767)/(96*(u**2 + 1)**2*(u**8 + 2*u**6 + 4*u**2 + 1)**5)",
+          "nonzero_denominator_factors": [
+            {
+              "factor": "u**2 + 1",
+              "multiplicity": 2
+            },
+            {
+              "factor": "u**8 + 2*u**6 + 4*u**2 + 1",
+              "multiplicity": 5
+            }
+          ]
+        },
+        "3,0,0": {
+          "at_bounce": "0",
+          "coefficient": "u*(9*u**42 + 145*u**40 + 1078*u**38 + 5442*u**36 + 22793*u**34 + 82821*u**32 + 313248*u**30 + 1335448*u**28 + 4993850*u**26 + 12845234*u**24 + 19052140*u**22 + 7935196*u**20 - 22579454*u**18 - 39038206*u**16 - 16112784*u**14 + 18066808*u**12 + 26357821*u**10 + 11927741*u**8 + 1032142*u**6 - 864558*u**4 + 67317*u**2 - 391)/(4*(u**8 + 2*u**6 + 4*u**2 + 1)**5)",
+          "nonzero_denominator_factors": [
+            {
+              "factor": "u**8 + 2*u**6 + 4*u**2 + 1",
+              "multiplicity": 5
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "status": "NONLINEAR_IDENTITIES_VERIFIED; PERTURBATIVE_CONTROL_OPEN",
+  "weighted_J_bounds": {
+    "lower_strict": "1/2",
+    "upper_gap": "(4*u^6+12*u^4)/(1+u^2)^4",
+    "upper_weak": "2",
+    "weight": "1+u^2"
+  },
+  "written_lemmas": [
+    "notes/nonlinear-d.md",
+    "notes/audit.md"
+  ]
+}

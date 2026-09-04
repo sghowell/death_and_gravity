@@ -12,6 +12,7 @@ around a pre-registered problems document and a certificate-gated ledger.
   All 32 M0/M1 sector-row verdicts are decided: minimal optional groups are
   C or D without extra matter, and CD with rolling canonical matter.
   This is an all-time linear-principal result, not UV or nonlinear completion.
+- P8 S5: [nonlinear D-witness extension and perturbative-control work](problems/P8/s5/README.md) (underway; no strong-coupling or UV verdict).
 
 ## Layout
 
