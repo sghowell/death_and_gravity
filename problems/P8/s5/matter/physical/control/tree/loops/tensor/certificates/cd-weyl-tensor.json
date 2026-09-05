@@ -1,0 +1,327 @@
+{
+  "algebraic_residuals": {
+    "compact_coefficients_and_derivative_jets": {
+      "compact_B": "0",
+      "compact_F": "0",
+      "compact_G": "0",
+      "compact_Hdot": "0",
+      "compact_speed_shift": "0",
+      "hubble_Chebyshev_derivative_0": "0",
+      "hubble_Chebyshev_derivative_1": "0",
+      "hubble_Chebyshev_derivative_2": "0",
+      "hubble_Chebyshev_derivative_3": "0"
+    },
+    "finite_residual_coefficient_majorants": {
+      "coefficient_0_gamma": "0",
+      "coefficient_0_velocity": "0",
+      "coefficient_1_gamma": "0",
+      "coefficient_1_velocity": "0",
+      "coefficient_2_gamma": "0",
+      "coefficient_2_velocity": "0",
+      "residual_phase_majorant_arithmetic": "0"
+    },
+    "off_shell_and_branch_field_maps": {
+      "branch_map_order_one": "0",
+      "branch_map_order_zero": "0",
+      "off_shell_action_redefinition": "0"
+    },
+    "off_shell_operator_factorization": {
+      "fourth_operator_on_baseline_equation": "0",
+      "full_off_shell_operator_factorization": "0"
+    },
+    "old_canonical_tensor_normalization": {
+      "old_canonical_tensor_equation": "0"
+    },
+    "original_fourth_order_residual": {
+      "exact_fourth_order_residual_on_reduced_solution": "0",
+      "residual_order_one": "0",
+      "residual_order_zero": "0"
+    }
+  },
+  "all_time_coefficient_bounds": {
+    "Hubble_derivative_jets": "abs(ell^(n+1)*H^(n))<=4*n!, verified recurrence through n=4 and Chebyshev identity",
+    "canonical_mass_shift": "abs(beta)*(64*q/ell^2+1920/ell^4)",
+    "friction_shift": "320*abs(beta)/ell^3",
+    "speed_shift": "64*abs(beta)/ell^2"
+  },
+  "branch_field_map": "gamma=y-8beta*H*y_dot+O(beta^2), only when E0[y]=O(beta)",
+  "claim": "P8-S5.10.CD",
+  "compact_coefficients": {
+    "B": "96*x**3 - 56*x",
+    "Hdot": "4 - 8*x**2",
+    "canonical_G_non_q_part": "-4608*x**4 + 2688*x**2",
+    "canonical_mass_G": "q*(128*x**2 - 64) - 4608*x**4 + 2688*x**2",
+    "friction_F": "768*x**3 - 448*x",
+    "speed_shift_over_beta": "128*x**2 - 64"
+  },
+  "date": "2026-09-05",
+  "exact_original_operator_residual": "Efull[gamma_red]=4beta^2*(L0+2(H^2-Hdot))*L1*gamma_red, L1=8(Hddot-2H*Hdot)*dt-16Hdot*q",
+  "finite_window_energy_Duhamel_and_residual": {
+    "conditional_example": {
+      "assumption": "independently supplied abs(cC)<=1 and M*tau=10^324",
+      "epsilon_upper": "1/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "higher_derivative_spatial_parameter": "1/15625000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "relative_energy_norm_evolution_error": "1/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "relative_first_Born_remainder": "1/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "relative_original_equation_residual": "1/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "domain": {
+      "centre_data": "same physical gamma(t0), gamma_dot(t0), hence same old Y(t0), P(t0)",
+      "centre_momenta": "10^11<=k_com*ell0<=4*10^12, both TT polarizations",
+      "coarse_window_geometry": "1/2<=a<=2 and 1/2<=ell/ell0<=2",
+      "matching_input": "constant cC; epsilon=abs(cC)/(M*tau)^2<=10^-30",
+      "not_initial_data": "not equal redefined y data or a newly chosen corrected quantum vacuum",
+      "window": "abs(t-t0)<=ell0/100; ell0=tau*sqrt(1+u0^2); a(t0)=1"
+    },
+    "exact_compact_coefficient_extrema": {
+      "B": {
+        "absolute_sup": "40",
+        "candidate_points": [
+          "-1",
+          "1",
+          "-sqrt(7)/6",
+          "sqrt(7)/6"
+        ],
+        "candidate_values": [
+          "-40",
+          "40",
+          "56*sqrt(7)/9",
+          "-56*sqrt(7)/9"
+        ],
+        "derivative": "288*x**2 - 56",
+        "interval": [
+          "-1",
+          "1"
+        ],
+        "nonnegative_margins": [
+          "0",
+          "0",
+          "40 - 56*sqrt(7)/9",
+          "40 - 56*sqrt(7)/9"
+        ],
+        "polynomial": "96*x**3 - 56*x",
+        "stationary_roots": [
+          "-sqrt(7)/6",
+          "sqrt(7)/6"
+        ],
+        "variable": "x"
+      },
+      "Hdot": {
+        "absolute_sup": "4",
+        "candidate_points": [
+          "0",
+          "1"
+        ],
+        "candidate_values": [
+          "4",
+          "-4"
+        ],
+        "derivative": "-8",
+        "interval": [
+          "0",
+          "1"
+        ],
+        "nonnegative_margins": [
+          "0",
+          "0"
+        ],
+        "polynomial": "4 - 8*v",
+        "stationary_roots": [],
+        "variable": "v"
+      },
+      "canonical_G_non_q": {
+        "absolute_sup": "1920",
+        "candidate_points": [
+          "0",
+          "1",
+          "7/24"
+        ],
+        "candidate_values": [
+          "0",
+          "-1920",
+          "392"
+        ],
+        "derivative": "2688 - 9216*v",
+        "interval": [
+          "0",
+          "1"
+        ],
+        "nonnegative_margins": [
+          "1920",
+          "0",
+          "1528"
+        ],
+        "polynomial": "-4608*v**2 + 2688*v",
+        "stationary_roots": [
+          "7/24"
+        ],
+        "variable": "v"
+      },
+      "friction_F": {
+        "absolute_sup": "320",
+        "candidate_points": [
+          "-1",
+          "1",
+          "-sqrt(7)/6",
+          "sqrt(7)/6"
+        ],
+        "candidate_values": [
+          "-320",
+          "320",
+          "448*sqrt(7)/9",
+          "-448*sqrt(7)/9"
+        ],
+        "derivative": "2304*x**2 - 448",
+        "interval": [
+          "-1",
+          "1"
+        ],
+        "nonnegative_margins": [
+          "0",
+          "0",
+          "320 - 448*sqrt(7)/9",
+          "320 - 448*sqrt(7)/9"
+        ],
+        "polynomial": "768*x**3 - 448*x",
+        "stationary_roots": [
+          "-sqrt(7)/6",
+          "sqrt(7)/6"
+        ],
+        "variable": "x"
+      },
+      "physical_speed_shift": {
+        "absolute_sup": "64",
+        "candidate_points": [
+          "0",
+          "1"
+        ],
+        "candidate_values": [
+          "-64",
+          "64"
+        ],
+        "derivative": "128",
+        "interval": [
+          "0",
+          "1"
+        ],
+        "nonnegative_margins": [
+          "0",
+          "0"
+        ],
+        "polynomial": "128*v - 64",
+        "stationary_roots": [],
+        "variable": "v"
+      }
+    },
+    "exact_sufficient_margins": {
+      "Duhamel_evolution_error": "5800000000000000/9",
+      "baseline_derivative_energy_rate": "624999999999999999868",
+      "baseline_energy_norm": "13/63",
+      "baseline_energy_ratio": "190197802877062563848/1431376375572649130625",
+      "baseline_positive_W": "624999999999999999940",
+      "ell_ratio_coarse_lower": "49/100",
+      "extra_energy_exponent": "24999999999999/2500000000000000",
+      "first_Born_remainder": "25720000000000000000000000000000/27",
+      "low_energy_higher_derivative_parameter": "621/62500",
+      "metric_to_old_canonical_phase_norm": "39062499962499999991/39062500000000000000",
+      "original_equation_residual": "89760000000000000000000000000000000000",
+      "perturbation_norm_including_k_enhancement": "57656249999974999999988/9765625",
+      "perturbed_energy_norm": "1/9",
+      "positive_physical_two_derivative_speed": "1953124999999999999999999999/3906250000000000000000000000",
+      "positive_y_action_kinetic_coefficient": "488281249999999999999999999/976562500000000000000000000",
+      "scale_factor_coarse_upper": "91/95",
+      "total_energy_ratio": "145/2067"
+    },
+    "limits": [
+      "no actual four-data fourth-order approximation/branch existence theorem",
+      "no unknown matching coefficient or omitted operator error is bounded",
+      "no scalar sector, corrected quantum state, complete loop or front-velocity verdict"
+    ],
+    "original_fourth_order_residual_bound": "ell0^2*abs((M/2)*a^(3/2)*Efull[gamma_red])<=10^38*epsilon^2*N_t(Y,P)",
+    "perturbation_energy_norm_generator_bound": "ell0*(abs(f)+abs(DeltaW)/sqrt(W0))<=10^16*abs(cC)/(M*ell0)^2",
+    "relative_energy_ratio_about_centre": [
+      "3/5",
+      "5/3"
+    ],
+    "relative_first_Born_remainder": "10^30*epsilon^2; Taylor remainder of the chosen second-order representative only",
+    "relative_same_data_evolution_error": "10^15*epsilon",
+    "residual_coefficient_majorants": {
+      "0": {
+        "gamma": "102400*q",
+        "velocity": "10240*q + 1024000"
+      },
+      "1": {
+        "gamma": "65536*q**2 + 27525120*q",
+        "velocity": "1310720*q + 275251200"
+      },
+      "2": {
+        "gamma": "1677721600*q",
+        "velocity": "16777216000"
+      }
+    },
+    "retained_frequency_enhancement": "40000000000025000000012/9765625"
+  },
+  "formulation": "FORMULATION.md",
+  "not_established": [
+    "scalar/matter constraints or complete candidate linear stability, nonlinear/tree or loop control",
+    "a unique physical exact-fourth-order branch, control of arbitrary extra initial data, or a UV front velocity",
+    "full quantum superluminality, a physical EFT ghost, a UV exclusion/completion or the full chi-loop correction",
+    "bounds on finite matching, other operators, nonlocal/anomaly/state terms or unknown higher-order remainders",
+    "global fixed-comoving evolution, a global vacuum, a corrected Gaussian-state comparison or backreaction solution control",
+    "P8 completion or replacement of any old certificate"
+  ],
+  "off_shell_field_map": "gamma=y+2beta*E0[y]-8beta*H*y_dot+O(beta^2)",
+  "operational_contract": {
+    "background": "exact old flat FLRW background retained because full first variation of C^2 vanishes there",
+    "candidate": "NEW S_CD/M1+cC*integral sqrt(-g)*C^2 with constant cC; old action/certificates not overwritten",
+    "comparison": "exact solutions of the chosen reduced second-order representative versus the old tensor equation on one finite window",
+    "initial_data": "same physical gamma,gamma_dot at centre t0, equivalently same old Y,P; not equal y data or a changed Gaussian state",
+    "matching": "an independent constant coefficient bound; no finite matching value inferred from isolated running",
+    "residual_scope": "explicit O(beta^2) residual and first-order formal matching, not existence or closeness of an exact fourth-order branch",
+    "sector": "linear tensor sector only, both unit-norm TT polarizations; physical matter metric unchanged",
+    "sign_statement": "for nonzero cC the leading physical two-derivative speed shift changes sign as Hdot changes sign; not an ultraviolet front-velocity verdict",
+    "variable_and_time_units": "Y=(M/2)*a^(3/2)*gamma; sigma=(t-t0)/ell0; P=dY/dsigma; w0=ell0^2*W0; N_t=sqrt(abs(P)^2+w0*abs(Y)^2)"
+  },
+  "physical_tensor_equation": "gamma_ddot+[3H+8beta*(Hddot-2H*Hdot)]gamma_dot+[1-16beta*Hdot]*q*gamma=0; chosen representative, beta=cC/M^2",
+  "positive_and_omission_controls": {
+    "constant_frequency_speed_error_accumulates": "-sin(kappa) + sin(kappa*(beta + 1))",
+    "drop_off_shell_field_map_E0_term_error": "E0**2/2",
+    "flat_background_reduced_correction": "0",
+    "naive_y_speed_used_as_physical_at_bounce_error": "64",
+    "omit_canonical_volume_mass_error_at_x_half": "-384",
+    "physical_speed_shift_at_bounce_per_beta_over_tau2": "-64",
+    "physical_speed_shift_at_u_sqrt3_per_beta_over_ell2": "32",
+    "speed_shift_zero_at_u_one": "0",
+    "wrong_real_TT_normalization_speed_error_at_bounce": "-64"
+  },
+  "primary_sources": {
+    "field_redefinitions_and_finite_order_equivalence": "https://arxiv.org/pdf/1709.09695",
+    "perturbative_branch_and_order_reduction": "https://arxiv.org/pdf/gr-qc/9211002",
+    "reduced_equation_resummation_and_action_cautions": "https://arxiv.org/pdf/1710.01562"
+  },
+  "prior_S5_9_CD_sha256": "da7e0b445245dd87369380c087dc8a6a45361b68e2b4711f2c6ffa989db42fb1",
+  "reduced_y_action": "M^2/8 integral a^3*((1+16beta*H^2)*y_dot^2-q*y^2), accurate through first order",
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "2b2e196285a056e1680d3aeca6685d49e59a72f5042e6ebaa04c3ead36793514",
+    "README.md": "afd41dc0410887c4d3565fecc69d8cfc7ff1869caece4f90c4946326808c57dd",
+    "notes/tensor-response.md": "78824a9a381f9b67dc8bae1d556c22e03ed0c07a946389181aa001977a68d03f",
+    "src/p8_m1_weyl/__init__.py": "87f6fdd707a5365050e5cabb3f7dc4d4d3de4d5d508e87983721dc7ca64e940b",
+    "src/p8_m1_weyl/bounds.py": "20138082132f1b22afd8364109a3246766dab0cf531eac4cb107cd8b61edf1ce",
+    "src/p8_m1_weyl/reduction.py": "cd9632d2e0634b144319750b51cf262436e186d4de2d67d53b76cc7d1238a3c4",
+    "src/p8_m1_weyl/verify.py": "39229a0cf6fafb343bf5c9689af57bee02e5da6103925cf34d17ed36b84cf3f0",
+    "tests/conftest.py": "ae6013d745608b6fb02ebacfbf8b3f3f9cf1379da9fce520975f08ac393b749f",
+    "tests/test_m1_weyl_action_audit.py": "a488cc0052b3d2a5fbe44aeed99c9c313bff6bf62a5818ea9b5d5ec383fe587e",
+    "tests/test_m1_weyl_bounds.py": "c1394818fedf78a1ac7a1f74fb0ccf117b0a8dd8dba16f92b44cdbc1837ea74d",
+    "tests/test_m1_weyl_reduction.py": "6584312eb94fa049db69e9f1c0e10ee1de41762f5c139226b07db1d1c4c1459d",
+    "tests/test_m1_weyl_report.py": "2497d5b9c2b280c38aa8fdda9caaadb3c351d2083c1bca3db279f75ffb3bd9df"
+  },
+  "status": "CONSTANT_WEYL_CANDIDATE_REDUCED_TENSOR_FINITE_WINDOW_CONTROL; FULL_CANDIDATE_AND_QUANTUM_CAUSALITY_OPEN",
+  "verification_boundary": [
+    "S5.9 and its prior linear/free/tree lineage are pinned and replayed",
+    "independent tests contract dynamic linearized curvature and vary the literal tensor action",
+    "exact arithmetic checks operator identities, field maps, polynomial majorants and finite-window constants",
+    "energy/Duhamel and perturbative interpretation are written proofs, not formalized PDE or UV theorems"
+  ],
+  "written_proof": "notes/tensor-response.md"
+}

@@ -29,8 +29,13 @@ around a pre-registered problems document and a certificate-gated ledger.
   A prescribed transported Hadamard state gives a qualitative second-order
   semiclassical residual on compact slabs; this does not solve the full
   semiclassical equation or numerically bound its quantum response.
-  Quantitative backreacted QSEI control and a self-consistent cosmological
-  focusing application remain open.
+  The subsequent [prepared-state response calculation](problems/P8/a/applicability/reference/asymptotics/backreaction/response/README.md)
+  computes the actual first parameter derivative of the renormalized stress,
+  with explicit history and renormalization dependence and rational bounds
+  for a specified smooth preparation. A second-order metric correction
+  improves the actual compact-slab residual to qualitative O(epsilon^3).
+  Finite-amplitude error bounds, backreacted QSEI control and a self-consistent
+  cosmological focusing application remain open.
 - P8(b): [completed scoped classification and verification commands](problems/P8/README.md).
   All 32 M0/M1 sector-row verdicts are decided: minimal optional groups are
   C or D without extra matter, and CD with rolling canonical matter.
@@ -69,6 +74,12 @@ around a pre-registered problems document and a certificate-gated ledger.
   permitted by S6. Finite matching coefficients, nonlocal effects and the
   remaining coupled loops are not bounded; no loop-corrected stability or UV
   verdict follows.
+  A separately named [constant-Weyl tensor candidate](problems/P8/s5/matter/physical/control/tree/loops/tensor/README.md)
+  preserves the CD background and now has explicit finite-window tensor
+  evolution and original-equation residual bounds under a stated coefficient
+  bound. The physical metric variable and its derivative field map are kept
+  distinct. This controls one local operator's order-reduced tensor response,
+  not the full quantum correction, scalar sector or high-frequency causal cone.
 - P8 S6: [conditional UV framework and vacuum-extension test](problems/P8/s6/README.md).
   A smooth clock tube does not fix the vacuum positivity coefficient. The
   adopted vacuum/Regge framework requires controlled matching to the bounce;
