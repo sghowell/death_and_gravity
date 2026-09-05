@@ -1,0 +1,253 @@
+{
+  "bound_bookkeeping_synthetic_controls_not_P8_bounds": {
+    "gravity_allows_negative": {
+      "necessary_margin": [
+        "1",
+        "1"
+      ],
+      "status": "NOT_EXCLUDED_BY_THIS_NECESSARY_BOUND"
+    },
+    "missing_gravity": {
+      "necessary_margin": null,
+      "status": "UNTESTED_MISSING_BOUND"
+    },
+    "strict_negative_margin": {
+      "necessary_margin": [
+        "-1",
+        "-1"
+      ],
+      "status": "EXCLUDED_BY_SUPPLIED_CONDITIONAL_BOUND"
+    }
+  },
+  "claim": "P8-S6.1.D",
+  "conditional_policy": "FORMULATION.md; assumptions are not machine-proved physics",
+  "date": "2026-09-04",
+  "extension": {
+    "Ia_denominator_F2_minus_XA1": "-1/2",
+    "analytic_branch": "NO_FINITE_CONSTANT_CLOCK_VACUUM_IF_EXACT_TUBE_EQUALITY_AND_CONNECTED_GLOBAL_REAL_ANALYTICITY",
+    "clock_tube": [
+      "9/10",
+      "11/10"
+    ],
+    "exact_residuals": {
+      "Ia_A4": "0",
+      "Ia_A5": "0",
+      "canonical_vacuum": "0",
+      "flat_derivative_1": "0",
+      "flat_derivative_2": "0",
+      "flat_derivative_3": "0",
+      "flat_derivative_4": "0",
+      "flat_derivative_5": "0",
+      "flat_derivative_6": "0",
+      "flat_derivative_7": "0",
+      "flat_derivative_8": "0",
+      "physical_A2": "0",
+      "physical_A4": "0",
+      "physical_A5": "0",
+      "tube_A3": "0",
+      "tube_A4": "0",
+      "tube_A5": "0",
+      "tube_F": "0",
+      "vacuum_A1": "0",
+      "vacuum_A2": "0",
+      "vacuum_A3": "0",
+      "vacuum_A4": "0",
+      "vacuum_A5": "0",
+      "vacuum_F": "0",
+      "vacuum_K": "0",
+      "vacuum_kinetic": "0",
+      "vacuum_mass": "0",
+      "vacuum_metric_equation": "0",
+      "vacuum_scalar_equation": "0"
+    },
+    "flat_derivative_polynomials": [
+      "1",
+      "z**2",
+      "z**4 - 2*z**3",
+      "z**6 - 6*z**5 + 6*z**4",
+      "z**8 - 12*z**7 + 36*z**6 - 24*z**5",
+      "z**10 - 20*z**9 + 120*z**8 - 240*z**7 + 120*z**6",
+      "z**12 - 30*z**11 + 300*z**10 - 1200*z**9 + 1800*z**8 - 720*z**7",
+      "z**14 - 42*z**13 + 630*z**12 - 4200*z**11 + 12600*z**10 - 15120*z**9 + 5040*z**8",
+      "z**16 - 56*z**15 + 1176*z**14 - 11760*z**13 + 58800*z**12 - 141120*z**11 + 141120*z**10 - 40320*z**9"
+    ],
+    "flat_polynomial_variable": "z",
+    "functions": {
+      "A1": "0",
+      "A2": "0",
+      "A3": "4*B(X)/(u**2 + 1)**3",
+      "A4": "(4*X**2*B(X)**2 - 4*u**6*B(X) - 12*u**4*B(X) - 12*u**2*B(X) - 4*B(X))/(u**12 + 6*u**10 + 15*u**8 + 20*u**6 + 15*u**4 + 6*u**2 + 1)",
+      "A5": "-16*X*B(X)**2/(u**12 + 6*u**10 + 15*u**8 + 20*u**6 + 15*u**4 + 6*u**2 + 1)",
+      "F": "(1 - B(X))*(X**2*Z**2*lambda + X*Z/2 - Z*m**2*(u - u0)**2/2) + (-45*X**2*u**8 - 122*X**2*u**6 - 96*X**2*u**4 + 12*X**2*u**2 - 5*X**2 + 2*X*u**14 + 10*X*u**12 + 18*X*u**10 + 88*X*u**8 + 210*X*u**6 + 174*X*u**4 - 10*X*u**2 + 20*X - 10*u**14 - 62*u**12 - 162*u**10 - 263*u**8 - 288*u**6 - 186*u**4 - 34*u**2 - 19)*B(X)/(u**2 + 1)**8",
+      "F2": "-1/2",
+      "K": "0"
+    },
+    "scope": "Smooth off-tube algebraic family, not a controlled vacuum-to-bounce or UV matching construction",
+    "switch_formula": "r(X-1/4)/(r(X-1/4)+r(3/4-X)); r(y)=0 if y<=0 else exp(-1/y)",
+    "switch_thresholds": [
+      "1/4",
+      "3/4"
+    ],
+    "tube_margin": "3/20",
+    "units": "M=tau=1 for algebra; physical restoration in notes/vacuum-extension.md",
+    "vacuum_function": "X**2*Z**2*lambda + X*Z/2 - Z*m**2*(u - u0)**2/2"
+  },
+  "not_established": [
+    "controlled matching between vacuum and clock tube",
+    "healthy transition-domain spectrum or heavy gap",
+    "finite-gravity or bounce positivity verdict",
+    "loop/all-orders or radiative control",
+    "M1 interactions",
+    "nonlinear/global stability",
+    "UV completion",
+    "P8(a)"
+  ],
+  "original_polynomial_vacuum_audit": {
+    "conformal_time_length_over_tau": "pi",
+    "constant_clock_F": "-(10*u**14 + 62*u**12 + 162*u**10 + 263*u**8 + 288*u**6 + 186*u**4 + 34*u**2 + 19)/(u**2 + 1)**8",
+    "finite_constant_clock_Minkowski_vacuum": "absent for this explicit polynomial continuation to X=0",
+    "fixed_comoving_k_over_Eref": "k/sqrt(u**2 + 1)",
+    "flat_constant_clock_metric_equation_requires": "F(phi0,0)=0",
+    "future_ratio_limit": "0",
+    "minus_F_strictly_positive": {
+      "denominator": {
+        "coefficients_ascending": [
+          "1",
+          "8",
+          "28",
+          "56",
+          "70",
+          "56",
+          "28",
+          "8",
+          "1"
+        ],
+        "lower": "0",
+        "roots": 0,
+        "signs_lower": [
+          1,
+          1
+        ],
+        "signs_upper": [
+          1,
+          1
+        ],
+        "sturm_degrees": [
+          8,
+          7
+        ],
+        "upper": "+infinity",
+        "variations_lower": 0,
+        "variations_upper": 0
+      },
+      "denominator_zero_order_in_t_squared": 0,
+      "domain": "all t",
+      "expression": "(10*u**14 + 62*u**12 + 162*u**10 + 263*u**8 + 288*u**6 + 186*u**4 + 34*u**2 + 19)/(u**2 + 1)**8",
+      "numerator": {
+        "coefficients_ascending": [
+          "19",
+          "34",
+          "186",
+          "288",
+          "263",
+          "162",
+          "62",
+          "10"
+        ],
+        "lower": "0",
+        "roots": 0,
+        "signs_lower": [
+          1,
+          1,
+          -1,
+          -1,
+          1,
+          1,
+          -1,
+          -1
+        ],
+        "signs_upper": [
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          1,
+          -1
+        ],
+        "sturm_degrees": [
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1,
+          0
+        ],
+        "upper": "+infinity",
+        "variations_lower": 3,
+        "variations_upper": 3
+      },
+      "numerator_zero_order_in_t_squared": 0,
+      "upper_t_squared": null
+    },
+    "past_ratio_limit": "0",
+    "positivity_verdict": "NOT_APPLIED: stationary scattering/vacuum matching and gravitational dispersion assumptions not frozen",
+    "tensor_Planck_mass": "M^2, nonzero; graviton is not removed",
+    "warning": "Neither absence of this vacuum nor finite conformal time excludes all possible UV completions"
+  },
+  "prior_scattering_sha256": "086e5047f1751d4f28ddb6c813651b4b6d0aaf3471cf2ef9a7828ffcf038772f",
+  "schema": 1,
+  "selected_followup": "S6.2: test a common matching construction for the positive-lambda member",
+  "source_sha256": {
+    "FORMULATION.md": "d00df35d5821b05baa61e897725a22ed1ac21d0536b74bdaece3ab0093215901",
+    "README.md": "9e6ce09ac548031fd1fb239225970843e7a21ab1aea644c9273ef0311575759d",
+    "notes/literature.md": "856195f2dd741cb2205a3047e497e6dd04b06ede55cb836252f60ef6f672eb9a",
+    "notes/vacuum-extension.md": "866e93e3d56376cdade764a38e96ef1111b7d6ecea501454b56e3678cc6d29e3",
+    "src/p8_uv/__init__.py": "44a715261398997879252c2fa551955d0d1c29262862950d4a8063547cd5dca5",
+    "src/p8_uv/dispersion.py": "1156430ffa16cf89d40a0345edb667a66d949e6d23dd00d72fbf9af28589ec89",
+    "src/p8_uv/extension.py": "f057d1ee043f1d4349c44d6ab3ba0a6623bf2bfcd923c392ce3ca57cb2a6603a",
+    "src/p8_uv/vacuum.py": "c02a3ace80206c568538f14b5dcd30a475f2ebba723087ab161dc912987dbe7f",
+    "src/p8_uv/verify.py": "bda83c51542db1aa6774e46c318fb1d679d59f6487c343ce2ed1018209246af1",
+    "tests/conftest.py": "47de002e3eb5552e7648313400209d52a5536f7914171476770b82647cc3fd64",
+    "tests/test_uv_dispersion.py": "6a34a1358320b234df0ab48a83bf3f07d7a7c17efd76b0fc9a6108d2c568bdcb",
+    "tests/test_uv_extension.py": "6365006be890de5cdaffeebc9b45ba53b31ad28cba3a178c47dff7ea020ec99c",
+    "tests/test_uv_report.py": "4ca9e29071aaf4bd05555afd548671d90e397ab69b3ea34f4048a4fa389da7c6",
+    "tests/test_uv_vacuum.py": "e967bcf68ddae61863913076e70a60948713407a6eed9465f5f7191056dd96c0"
+  },
+  "status": "VACUUM_UNDERDETERMINATION_VERIFIED; CONDITIONAL_UV_POLICY_ADOPTED; MATCHING_OPEN",
+  "vacuum_amplitude": {
+    "amplitude": "2*lambda*(12*m**4 - 4*m**2*s - 4*m**2*t_transfer - 4*m**2*w + s**2 + t_transfer**2 + w**2)",
+    "b2": "4*lambda",
+    "b2_definition": "(1/2) partial_v^2 A(v,0) at v=0; v=s+t_transfer/2-2*m^2",
+    "diagnostic_members": {
+      "lambda<0": "NEGATIVE_LEADING_SCALAR_COEFFICIENT",
+      "lambda=0": "TREE_SATURATION_NOT_A_STANDALONE_EXCLUSION",
+      "lambda>0": "POSITIVE_LEADING_SCALAR_COEFFICIENT"
+    },
+    "exact_residuals": {
+      "forward_b2": "0",
+      "heavy_exact_b2": "0",
+      "heavy_leading_matching": "0",
+      "heavy_stationary_matching": "0",
+      "labelled_vs_pairing": "0",
+      "s_t_crossing": "0",
+      "s_w_crossing": "0"
+    },
+    "heavy_field_tree_regression": {
+      "amplitude": "g**2*((-2*m**2 + w)**2/(M_h**2 - w) + (-2*m**2 + t_transfer)**2/(M_h**2 - t_transfer) + (-2*m**2 + s)**2/(M_h**2 - s))/4",
+      "b2_exact": "-g**2/(2*(-M_h**2 + 2*m**2))",
+      "domain": "M_h>2m>0",
+      "lambda_leading": "g**2/(8*M_h**2)",
+      "warning": "derivative-coupled massive mediator, not a UV completion"
+    },
+    "lagrangian": "Y/2-m^2*psi^2/2+lambda*Y^2; Y=(partial psi)^2",
+    "on_shell_sum": "s+t_transfer+w=4*m^2",
+    "scope": "Vacuum scalar decoupling patch only; no finite-gravity or bounce positivity verdict"
+  },
+  "written_lemmas": [
+    "notes/vacuum-extension.md"
+  ]
+}

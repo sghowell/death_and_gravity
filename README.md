@@ -19,6 +19,10 @@ around a pre-registered problems document and a certificate-gated ledger.
   The D-only finite-time, nonexceptional cubic/quartic tree criterion now has
   a uniform sufficient scale choice. Inclusive scattering, all-orders control,
   M1 interactions and UV admissibility remain open; no UV completion verdict.
+- P8 S6: [conditional UV framework and vacuum-extension test](problems/P8/s6/README.md).
+  A smooth clock tube does not fix the vacuum positivity coefficient. The
+  adopted vacuum/Regge framework requires controlled matching to the bounce;
+  a healthy spliced vacuum is not a UV-completion result.
 
 ## Layout
 
