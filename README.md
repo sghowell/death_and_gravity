@@ -23,6 +23,11 @@ around a pre-registered problems document and a certificate-gated ledger.
   A smooth clock tube does not fix the vacuum positivity coefficient. The
   adopted vacuum/Regge framework requires controlled matching to the bounce;
   a healthy spliced vacuum is not a UV-completion result.
+  [First parent-matching tests](problems/P8/s6/matching/README.md) obstruct
+  conventional scalar parents, including regular frame changes with the
+  required tensor tails. An exact D-to-quartic-Horndeski map loses
+  invertibility at two finite times; this is not a singularity of D itself.
+  General derivative/curvature or quantum matching mechanisms remain open.
 
 ## Layout
 

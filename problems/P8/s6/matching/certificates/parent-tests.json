@@ -1,0 +1,358 @@
+{
+  "Einstein_parent_global_tensor_matching": {
+    "all_time_threshold_limit": "1",
+    "exact_residuals": {
+      "H_E": "0",
+      "H_E_dot": "0",
+      "concavity_secants": "0",
+      "inverse_F": "0",
+      "inverse_G": "0",
+      "tensor_error_threshold": "0",
+      "tensor_gradient_pullback": "0",
+      "tensor_kinetic_pullback": "0",
+      "tensor_product": "0"
+    },
+    "global_result": "No regular disformal pullback of a classical flat Einstein/NEC-scalar solution can have physical a growing in both tails and F_T,G_T tending to positive constants",
+    "inverse_C": "sqrt(f_T)*sqrt(g_T)",
+    "inverse_W": "f_T**(3/2)/sqrt(g_T)",
+    "normalized_F_T": "sqrt(C)*sqrt(W)",
+    "normalized_G_T": "C**(3/2)/sqrt(W)",
+    "scope": "Exact Einstein seed with positive scalar field metric (or separately proved NEC); excludes no general Horndeski/DHOST/quantum parent",
+    "three_slice_error_threshold": "L**2*(L**2 + 2)/(L**4 + 2*L**2 + 2)",
+    "three_slice_examples": {
+      "L1_threshold_not_sufficient": {
+        "L": "1",
+        "epsilon": "3/5",
+        "necessary_error_lower_bound": "3/5",
+        "squared_scale_margin": "0",
+        "status": "BOUND_INCONCLUSIVE",
+        "warning": "Necessary only; equality does not construct a parent"
+      },
+      "L2_threshold_not_sufficient": {
+        "L": "2",
+        "epsilon": "12/13",
+        "necessary_error_lower_bound": "12/13",
+        "squared_scale_margin": "0",
+        "status": "BOUND_INCONCLUSIVE",
+        "warning": "Necessary only; equality does not construct a parent"
+      },
+      "ten_percent_L1": {
+        "L": "1",
+        "epsilon": "1/10",
+        "necessary_error_lower_bound": "3/5",
+        "squared_scale_margin": "5/2",
+        "status": "EXCLUDED_BY_EINSTEIN_CONCAVITY",
+        "warning": "Necessary only; equality does not construct a parent"
+      }
+    }
+  },
+  "claim": "P8-S6.2.parents",
+  "date": "2026-09-04",
+  "exact_quartic_Horndeski_map": {
+    "Einstein_seed_subcase": "Exact open-tube G_T=F_T=M^2 forces C=W=1 for an EH seed; C_X=0 contradicts the nonzero D lapse mixing",
+    "clock_J_over_C": "(u**6 + 3*u**4 + 3*u**2 - 1)/(u**2 + 1)**3",
+    "exact_residuals": {
+      "B_primitive": "0",
+      "C_primitive": "0",
+      "Horndeski_lapse_mixing_zero": "0",
+      "Horndeski_tensor_identity": "0",
+      "KV_pullback": "0",
+      "map_jacobian": "0",
+      "necessary_B_X": "0",
+      "necessary_J": "0",
+      "necessary_W_condition": "0",
+      "negative_root": "0",
+      "normalized_C": "0",
+      "normalized_W": "0",
+      "positive_root": "0",
+      "positive_root_polynomial": "0",
+      "prior_Lambda": "0",
+      "prior_spatial_map": "0",
+      "root_polynomial_monotonicity": "0",
+      "target_ADM_KV": "0"
+    },
+    "metric_vs_map_control": "C=W=1 at X=1, even at both zero-J times: regular metric determinants do not imply invertible field transformation",
+    "negative_crossing_time_over_tau": "-sqrt(-1 + 2**(1/3))",
+    "normalized_B_example": "4*Integral(exp((1 - y**2)/(u**2 + 1)**3), (y, 1, X))/(u**2 + 1)**3",
+    "normalized_C_example": "exp((1 - X**2)/(u**2 + 1)**3)",
+    "positive_crossing_time_over_tau": "sqrt(-1 + 2**(1/3))",
+    "required_B_X": "-2*C_X/X",
+    "required_C_X_over_C": "-A3*X/(2*M**2)",
+    "required_J": "-C*(A3*X**2 - 2*M**2)/(2*M**2)",
+    "result": "No smooth everywhere-invertible one-clock C(phi,X),B(phi,X) disformal map of the exact D tube to a quartic Horndeski action",
+    "root_bracket_signs": "[-1, 6]",
+    "scope": "Exact tube map only; failed coordinates are not a singularity of the original witness, a general parent exclusion, or a bound for arbitrary tube-deforming corrections"
+  },
+  "minimal_parent": {
+    "Raychaudhuri_equation": "2*Q(t)*Derivative(a(t), (t, 2))/a(t) - 2*Q(t)*Derivative(a(t), t)**2/a(t)**2 + Tkin(t) + Derivative(Q(t), (t, 2)) - Derivative(Q(t), t)*Derivative(a(t), t)/a(t)",
+    "bounce_stress_remainder_minimum": "4*M**2/tau**2",
+    "exact_residuals": {
+      "Einstein_boundary": "0",
+      "Raychaudhuri_combination": "0",
+      "bounce_null_stress": "0",
+      "lapse_equation": "0",
+      "mixed_field_metric_squares": "0",
+      "scale_equation": "0"
+    },
+    "gravity_boundary": "3*Q(t)*a(t)**2*Derivative(a(t), t)/N(t)",
+    "lapse_equation": "3*Q(t)*Derivative(a(t), t)**2/a(t)**2 - Tkin(t)/2 - V(t) + 3*Derivative(Q(t), t)*Derivative(a(t), t)/a(t)",
+    "minimal_parent_verdict": "NO_EXACT_CLASSICAL_FLAT_BOUNCE_WITH_POSITIVE_FIELD_METRIC_AND_CONSTANT_M",
+    "mixed_field_metric_null_squares": "d1*(l21*v2 + l31*v3 + v1)**2 + d2*(l32*v3 + v2)**2 + d3*v3**2",
+    "reduced_lagrangian": "-N(t)*V(t)*a(t)**3 - 3*Q(t)*a(t)*Derivative(a(t), t)**2/N(t) + Tkin(t)*a(t)**3/(2*N(t)) - 3*a(t)**2*Derivative(Q(t), t)*Derivative(a(t), t)/N(t)",
+    "ricci_scalar": "6*(-N(t)*a(t)*Derivative(a(t), (t, 2)) - N(t)*Derivative(a(t), t)**2 + a(t)*Derivative(N(t), t)*Derivative(a(t), t))/(N(t)**3*a(t)**2)",
+    "scale_equation": "2*Q(t)*Derivative(a(t), (t, 2))/a(t) + Q(t)*Derivative(a(t), t)**2/a(t)**2 + Tkin(t)/2 - V(t) + Derivative(Q(t), (t, 2)) + 2*Derivative(Q(t), t)*Derivative(a(t), t)/a(t)",
+    "scope": "Physical metric, homogeneous classical parent; no quantum NEC assumption",
+    "target_H_dot": "-2*(t - tau)*(t + tau)/(t**2 + tau**2)**2",
+    "target_null_stress": "4*M**2*(t - tau)*(t + tau)/(t**2 + tau**2)**2"
+  },
+  "nonminimal_escape_control_not_P8_witness": {
+    "Einstein_H": "-u*(3*u**2 + 1)*exp(3*u**2/2)/(tau*(u**2 + 1))",
+    "Einstein_H_dot": "-(9*u**6 + 15*u**4 + 11*u**2 + 1)*exp(3*u**2)/(tau**2*(u**2 + 1)**2)",
+    "Einstein_field_metric": "2*M**2*(9*u**6 + 15*u**4 + 11*u**2 + 1)/(tau**2*(u**2 + 1)**2)",
+    "Einstein_kinetic_positive_polynomial_coefficients_in_u_squared": [
+      1,
+      11,
+      15,
+      9
+    ],
+    "Jordan_Q": "M**2*exp(-3*u**2)",
+    "Jordan_field_metric": "-2*M**2*(18*u**6 + 39*u**4 + 16*u**2 - 1)*exp(-3*u**2)/(tau**2*(u**2 + 1)**2)",
+    "Jordan_potential": "M**2*(18*u**6 + 3*u**4 - 8*u**2 - 1)*exp(-3*u**2)/(tau**2*(u**2 + 1)**2)",
+    "bounce_Planck_jets": [
+      "1",
+      "0",
+      "-6"
+    ],
+    "exact_residuals": {
+      "Einstein_Friedmann": "0",
+      "Einstein_kinetic": "0",
+      "Einstein_scalar_equation": "0",
+      "Jordan_lapse_equation": "0",
+      "Jordan_scale_equation": "0",
+      "conformal_field_metric": "0",
+      "positive_H_E_decay": "0"
+    },
+    "future_q_limit": "0",
+    "past_q_limit": "0",
+    "physical_a": "u**2 + 1",
+    "q": "exp(-3*u**2)",
+    "warning": "Background-only nonminimal escape control. Q tends to zero, violates P8 tensor tails; not the D extension, no vacuum/UV/perturbation verdict"
+  },
+  "nonminimal_parent_error_bounds": {
+    "Einstein_time_kinetic": "3*M**2*Derivative(q(t), t)**2/(2*q(t)**3) + Tkin(t)/q(t)**2",
+    "H_E": "(a(t)*Derivative(q(t), t)/2 + q(t)*Derivative(a(t), t))/(a(t)*q(t)**(3/2))",
+    "H_E_dot": "Derivative(q(t), (t, 2))/(2*q(t)**2) - 3*Derivative(q(t), t)**2/(4*q(t)**3) + Derivative(a(t), (t, 2))/(a(t)*q(t)) - Derivative(a(t), t)*Derivative(q(t), t)/(2*a(t)*q(t)**2) - Derivative(a(t), t)**2/(a(t)**2*q(t))",
+    "bounce_H_E_dot_times_tau_squared": "(8*q0**2 + 2*q0*q2 - 3*q1**2)/(4*q0**3)",
+    "common_C2_error_necessary_lower_bound": "4/7",
+    "common_error_lower_margin": "-(epsilon - 2)*(7*epsilon - 4)/(2*(epsilon - 1))",
+    "exact_residuals": {
+      "Einstein_kinetic_bridge": "0",
+      "H_E": "0",
+      "H_E_dot": "0",
+      "bounce_numerator": "0",
+      "common_error_factorization": "0",
+      "margin_monotonicity": "0",
+      "threshold_zero": "0"
+    },
+    "examples_not_parent_constructions": {
+      "small_amplitude_fast_variation": {
+        "lower_margin": "-1393/660",
+        "scope": "H(0)=0; supplied physical-time Planck jets and H_dot error only",
+        "status": "NEC_LOWER_BOUND_INCONCLUSIVE"
+      },
+      "ten_percent_C2": {
+        "lower_margin": "209/60",
+        "scope": "H(0)=0; supplied physical-time Planck jets and H_dot error only",
+        "status": "EXCLUDED_BY_CONFORMAL_NEC"
+      },
+      "ten_percent_geometry_error": {
+        "lower_margin": "991/300",
+        "scope": "H(0)=0; supplied physical-time Planck jets and H_dot error only",
+        "status": "EXCLUDED_BY_CONFORMAL_NEC"
+      },
+      "threshold_not_sufficient": {
+        "lower_margin": "0",
+        "scope": "H(0)=0; supplied physical-time Planck jets and H_dot error only",
+        "status": "NEC_LOWER_BOUND_INCONCLUSIVE"
+      }
+    },
+    "general_jet_lower_bound": "(4-2*eta)*(1-epsilon0)-epsilon2-3*epsilon1^2/(2*(1-epsilon0))",
+    "necessary_bounce_numerator": "4*q0 + q2 - 3*q1**2/(2*q0)",
+    "scope": "Classical nonminimal two-derivative scalar parent with healthy Einstein field metric; not all DHOST or UV theories"
+  },
+  "not_established": [
+    "exclusion of all parents for the smooth splice or D witness",
+    "a general D-row or DHOST UV no-go",
+    "finite-gravity positivity verdict",
+    "quantum-stress or higher-derivative parent classification",
+    "a controlled alternative matching construction",
+    "M1 interaction control",
+    "all-orders or nonlinear stability",
+    "P8(a) or full P8 completion"
+  ],
+  "prior_vacuum_extension_sha256": "6a7ab2a7bf6719d3829795779a876dab0694a5b99383726c14f0880515d2d7d4",
+  "related_claims": [
+    "P8-S6.2.frames"
+  ],
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "27edd3eb2fb4630d78c1478c1248b2948e238d2080313bbd1942127211d6cfb6",
+    "README.md": "9b8534cbc228e05089c990f70d05cc83c66ee6a918b107473c3dc12598b37195",
+    "notes/frame-tests.md": "8c5105c09c3b58b1a7fead23c768867d5124ef38d88c29911ab1bc25500d4efd",
+    "notes/literature.md": "8fae1bf30929efb66f7c7e7da5add533d4631f990888ea18065a120bc9b6a23a",
+    "notes/parent-tests.md": "730f11505e32759d7ff03ea9f2b5ffef4b18a6eda63245343851d1d9c557c2ac",
+    "src/p8_matching/__init__.py": "2ad8d6373a40f39c61fedeadba401b4172d59985f551c49bc710dabe0a03dfdf",
+    "src/p8_matching/background.py": "5fbff122df0345e5b4dd60c1c48db44bb750c6ccd42301c91c62d8d0e868301a",
+    "src/p8_matching/conformal.py": "5a001b20346fd94164f50e0ec8409b8e194db1c0003695b146879b7c76d21283",
+    "src/p8_matching/convexity.py": "68695e2ef7f076c4502e588514de08868fdcce91e5689c5bb95cf78da447c231",
+    "src/p8_matching/escape.py": "c9af50800256baf2bd196fdafc6685f897b9302c6d37de33da6c04f9cd74f1a7",
+    "src/p8_matching/frames.py": "ed765d63bcc0754d36e46d32aec64637a0e9d8df4654a86741f0a55b29586fea",
+    "src/p8_matching/horndeski.py": "ea484804db01c0ca312a24a3d306c628c856ef33dee9d3ed0e0a7131fd010793",
+    "src/p8_matching/verify.py": "bcd1d4781163ca83f76f38e6d984d0e61a571652453dc41140ba907963ea20a7",
+    "tests/conftest.py": "30d1c44f7f9da4a2f9c973ca12d943b377592d0f05b18a05d1494c3c77991bd8",
+    "tests/test_matching_background.py": "977d334caa3b7dd97bea0e395f92ae5666f8e6fd649a81f710ec6387d0a9c2fd",
+    "tests/test_matching_conformal.py": "1a033ea58f6955c9043cd5eaad70754469e075bdd5733c13837af174db5ebae4",
+    "tests/test_matching_convexity.py": "5c263b949ec0b39f4763e0a709b78daf8eddeea0851da0dfd863b6cd35e01423",
+    "tests/test_matching_escape.py": "c5fb1c2f487361d55e27f633acfd3e72162e8207ad4b0cc66feaf328bcac9f80",
+    "tests/test_matching_frames.py": "e7711ff803867f6ddd2dc6553a2d342f9ee996245c2b16ef491de6e1102e5f9c",
+    "tests/test_matching_horndeski.py": "fc74e864b3a9b906eea4c88e8afbd748aaa396dc04931f902c78633b7645219f",
+    "tests/test_matching_report.py": "326f99fa54d404b4c750c21ca87bc0e05b5e35f49432c38c533e232623ccd2c8"
+  },
+  "stable_algebraic_parent": {
+    "exact_residuals": {
+      "Fxx_formula": "0",
+      "bare_velocity_00": "0",
+      "bare_velocity_01": "0",
+      "bare_velocity_10": "0",
+      "bare_velocity_11": "0",
+      "direct_equation_determinant": "0",
+      "low_k_slope": "0",
+      "nonlinear_envelope": "0",
+      "nonlinear_expected": "0",
+      "nonlinear_stationarity": "0",
+      "physical_bounce_jet": "0",
+      "positive_square": "0",
+      "prior_vacuum_bridge": "0",
+      "two_heavy_envelope": "0",
+      "two_heavy_positive_form": "0",
+      "vacuum_mediator_lambda": "0",
+      "zero_k_factor": "0"
+    },
+    "mixed_gap_control": {
+      "determinant": "-c**2*omega**2 + k2**2 + k2*kappa - 2*k2*omega**2 - kappa*omega**2 + omega**4",
+      "low_k_speed_squared": "kappa/(c**2 + kappa)",
+      "negative_control": {
+        "gap_squared": 1,
+        "k_squared": "1/10",
+        "kappa": -1,
+        "lower_root_negative": true,
+        "mixing_squared": 2,
+        "roots_omega_squared": [
+          "3/5 - 3*sqrt(5)/10",
+          "3/5 + 3*sqrt(5)/10"
+        ],
+        "warning": "IR-unstable control, not a healthy bounce or complete UV model"
+      },
+      "physical_gap_squared": "c**2 + kappa",
+      "stationary_Hessian": "kappa"
+    },
+    "physical_second_jet_remainder_minimum": "10*M**2/tau**2",
+    "relative_second_jet_remainder_minimum": "1",
+    "scope": "Stable affine-X stationary matching in a fixed coefficient convention only; not DHOST positivity",
+    "stationary_examples": {
+      "nonlinear_Hessian": "-X*b + mu**2",
+      "nonlinear_Pxx": "-j**2*mu**4/(X*b - mu**2)**3",
+      "nonlinear_root": "-X*j/(X*b - mu**2)",
+      "two_heavy_P": "(-2*V0*k11*k22 + 2*V0*k12**2 + X**2*j1**2*k22 - 2*X**2*j1*j2*k12 + X**2*j2**2*k11 + X*k11*k22*z0 - X*k12**2*z0)/(2*(k11*k22 - k12**2))",
+      "two_heavy_Pxx": "(j1**2*k22 - 2*j1*j2*k12 + j2**2*k11)/(k11*k22 - k12**2)",
+      "two_heavy_positive_form": "j1**2/k11 + (-j1*k12 + j2*k11)**2/(k11*(k11*k22 - k12**2))",
+      "vacuum_mediator_lambda": "g**2/(8*mu**2)"
+    },
+    "stationary_positive_domain": "K positive definite; in 2D k11>0 and det K>0; nonlinear mu^2-bX>0",
+    "target_Fxx": "-2*(45*u**8 + 122*u**6 + 96*u**4 - 12*u**2 + 5)/(u**2 + 1)**8",
+    "target_bounce_F_Fx_Fxx": [
+      "-4",
+      "10",
+      "-10"
+    ],
+    "target_minus_Fxx_sign": {
+      "denominator": {
+        "coefficients_ascending": [
+          "1",
+          "8",
+          "28",
+          "56",
+          "70",
+          "56",
+          "28",
+          "8",
+          "1"
+        ],
+        "lower": "0",
+        "roots": 0,
+        "signs_lower": [
+          1,
+          1
+        ],
+        "signs_upper": [
+          1,
+          1
+        ],
+        "sturm_degrees": [
+          8,
+          7
+        ],
+        "upper": "+infinity",
+        "variations_lower": 0,
+        "variations_upper": 0
+      },
+      "denominator_zero_order_in_t_squared": 0,
+      "domain": "all t",
+      "expression": "2*(45*u**8 + 122*u**6 + 96*u**4 - 12*u**2 + 5)/(u**2 + 1)**8",
+      "numerator": {
+        "coefficients_ascending": [
+          "10",
+          "-24",
+          "192",
+          "244",
+          "90"
+        ],
+        "lower": "0",
+        "roots": 0,
+        "signs_lower": [
+          1,
+          -1,
+          -1,
+          1,
+          1
+        ],
+        "signs_upper": [
+          1,
+          1,
+          1,
+          -1,
+          1
+        ],
+        "sturm_degrees": [
+          4,
+          3,
+          2,
+          1,
+          0
+        ],
+        "upper": "+infinity",
+        "variations_lower": 2,
+        "variations_upper": 2
+      },
+      "numerator_zero_order_in_t_squared": 0,
+      "upper_t_squared": null
+    },
+    "target_positive_numerator_decomposition": "45*u**8 + 122*u**6 + 96*(u**2 - 1/16)**2 + 37/8"
+  },
+  "status": "FIRST_MATCHING_ANSATZES_OBSTRUCTED; GENERAL_UV_MATCHING_OPEN",
+  "tested_parent_hypotheses": "FORMULATION.md; selected ansatzes, not universal UV assumptions",
+  "written_lemmas": [
+    "notes/parent-tests.md",
+    "notes/frame-tests.md"
+  ]
+}
