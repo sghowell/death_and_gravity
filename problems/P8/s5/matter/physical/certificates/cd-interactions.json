@@ -1,0 +1,2771 @@
+{
+  "claim": "P8-S5.6.CD",
+  "construction": {
+    "Legendre_contact": "L4=-H4(P0)+H3_P^T*A^-1*H3_P/2; three unordered 2+2 partitions",
+    "York_recursion_orders": [
+      1,
+      2,
+      3
+    ],
+    "canonical_generators_retained": [
+      "metric expansion boundary",
+      "-l*pi_chi",
+      "-H*b*P_b in gamma chart"
+    ],
+    "constraint": "partial_j Pi_bar^ij+Gamma^i_jk Pi_bar^jk-(pi_chi/2)*g^ij*partial_j s=0",
+    "labelled_convention": "coefficient of product epsilon_i, no 1/n!; repeated fields have distinct leg labels",
+    "metric": "g_ij=(1+2*zeta)*delta_ij+gammaTT_ij",
+    "mixed_boundary_inverse": "p_metric=p+3*l*s; pi_chi=l+P+3*l*zeta at local a=1",
+    "mixed_generator": "F=3*a^3*l*zeta*s, partial_t F=0 because (a^3*l)'=0",
+    "not_a_scattering_amplitude": true,
+    "physical_hamiltonian_orders": [
+      3,
+      4
+    ],
+    "scalar_contact": "full two-by-two inverse Hessian, including off-diagonal terms",
+    "stationary_lapse": "same pinned invariant quartic formula; only first two perturbative lapse-solution orders n1,n2 are needed for H4; coefficient derivatives through A4,L3,Q2 are retained",
+    "tensor_contact": "sum over both TT basis tensors of (E:E)*left_pi*right_pi/4"
+  },
+  "date": "2026-09-05",
+  "domain": {
+    "background": "fixed CD/M1; same physical matter metric and covariant tube as P8-2.CD",
+    "gamma_velocity": "q*Lambda^2>J0=J+w^2/2 at every external and quartic internal momentum",
+    "local_units": "ell=tau*sqrt(1+u^2), local a=1; q=ell^2*k_physical^2",
+    "momentum": "arbitrary rational spatial momenta, total zero, every nonempty proper-subset sum nonzero",
+    "phase_time": "r=u/(1+sqrt(1+u^2)) in [-1,1]; endpoints denote compact tail limits",
+    "symbolic_velocity_calls": "rational expression only; positivity hypotheses not certified over its entire time domain",
+    "tensors": "arbitrary nonzero real rational TT polarizations, both internal polarizations contracted",
+    "unitary_velocity": "Theta!=0; actual full scalar K positive definite",
+    "zero_modes": "homogeneous tadpoles checked separately; homogeneous/backreaction dynamics not solved"
+  },
+  "exact_residuals": {
+    "York_inverse": {
+      "10": "0",
+      "11": "0",
+      "12": "0",
+      "20": "0",
+      "21": "0",
+      "22": "0",
+      "00": "0",
+      "01": "0",
+      "02": "0"
+    },
+    "York_symplectic_projection": {
+      "York_TT_pairing_identity": "0",
+      "York_trace": "0"
+    },
+    "canonical_boundaries_and_local_q_drift": {
+      "compact_q_drift": "0",
+      "mixed_boundary_symplectic": "0",
+      "mixed_boundary_time_generator": "0"
+    },
+    "compact_background": {
+      "Lambda_bridge": "0",
+      "Theta_bridge": "0",
+      "inverse_time": "0",
+      "lapse_J_bridge": "0",
+      "matter_bridge": "0",
+      "unit_semicircle": "0"
+    },
+    "full_two_scalar_velocity_response": {
+      "gamma_momentum_Hessian_determinant": "0",
+      "gamma_principal_K_00": "0",
+      "gamma_principal_K_01": "0",
+      "gamma_principal_K_10": "0",
+      "gamma_principal_K_11": "0",
+      "gamma_response_alpha_00": "0",
+      "gamma_response_alpha_01": "0",
+      "gamma_response_alpha_10": "0",
+      "gamma_response_alpha_11": "0",
+      "gamma_response_beta_00": "0",
+      "gamma_response_beta_01": "0",
+      "gamma_response_beta_10": "0",
+      "gamma_response_beta_11": "0",
+      "gamma_velocity_K_00": "0",
+      "gamma_velocity_K_01": "0",
+      "gamma_velocity_K_10": "0",
+      "gamma_velocity_K_11": "0",
+      "unitary_momentum_Hessian_determinant": "0",
+      "unitary_response_alpha_00": "0",
+      "unitary_response_alpha_01": "0",
+      "unitary_response_alpha_10": "0",
+      "unitary_response_alpha_11": "0",
+      "unitary_response_beta_00": "0",
+      "unitary_response_beta_01": "0",
+      "unitary_response_beta_10": "0",
+      "unitary_response_beta_11": "0"
+    },
+    "matrix_quartic_Legendre_completion": {
+      "off_diagonal_contact": "0",
+      "two_scalar_quartic_Legendre": "0"
+    },
+    "stationary_lapse_bridge": {
+      "Hamiltonian_0": "0",
+      "Hamiltonian_1": "0",
+      "Hamiltonian_2": "0",
+      "Hamiltonian_3": "0",
+      "Hamiltonian_4": "0",
+      "lapse_1": "0",
+      "lapse_2": "0"
+    },
+    "symbolic_time_full_quadratic_bridge": {
+      "gamma_P_P": "0",
+      "gamma_m_P": "0",
+      "gamma_m_m": "0",
+      "gamma_m_p": "0",
+      "gamma_p_P": "0",
+      "gamma_p_p": "0",
+      "gamma_s_P": "0",
+      "gamma_s_m": "0",
+      "gamma_s_p": "0",
+      "gamma_s_s": "0",
+      "tadpole_P": "0",
+      "tadpole_m": "0",
+      "tadpole_p": "0",
+      "tadpole_s": "0",
+      "tensor_P_pi": "0",
+      "tensor_P_t": "0",
+      "tensor_m_pi": "0",
+      "tensor_m_t": "0",
+      "tensor_p_pi": "0",
+      "tensor_p_t": "0",
+      "tensor_pi_pi": "0",
+      "tensor_s_pi": "0",
+      "tensor_s_t": "0",
+      "tensor_t_pi": "0",
+      "tensor_t_t": "0",
+      "unitary_P_P": "0",
+      "unitary_m_P": "0",
+      "unitary_m_m": "0",
+      "unitary_m_p": "0",
+      "unitary_p_P": "0",
+      "unitary_p_p": "0",
+      "unitary_s_P": "0",
+      "unitary_s_m": "0",
+      "unitary_s_p": "0",
+      "unitary_s_s": "0"
+    }
+  },
+  "finite_momentum_quadratic_distinction": {
+    "bounce_q8_K": [
+      [
+        "24",
+        "1/5"
+      ],
+      [
+        "1/5",
+        "401/800"
+      ]
+    ],
+    "bounce_velocity_pole": "q=6; phase Hamiltonian is regular there",
+    "finite_q_matter_diagonal_is_not_generally_one_half": true,
+    "gamma_H2": "(-4*H*J*p*q*v + 2*J*P**2*q - 3*J*l**2*q*s**2 + 4*J*l*q**2*s*v - J*p**2 + 2*J*q**2*s**2 + P**2*q*w**2 - 6*P*l*q*s*theta*w + 2*P*lam*p*q*w + 4*P*q**2*theta*v*w + 9*l**2*q*s**2*theta**2 - 6*l*lam*p*q*s*theta - 12*l*q**2*s*theta**2*v + lam**2*p**2*q + 4*lam*p*q**2*theta*v + 4*q**3*theta**2*v**2)/(4*J*q)",
+    "gamma_K": [
+      [
+        "q*(2*J + w**2)/(-2*J + 2*lam**2*q - w**2)",
+        "-lam*q*w/(-2*J + 2*lam**2*q - w**2)"
+      ],
+      [
+        "-lam*q*w/(-2*J + 2*lam**2*q - w**2)",
+        "(-J + lam**2*q)/(-2*J + 2*lam**2*q - w**2)"
+      ]
+    ],
+    "no_application_of_principal_cone_lemma_to_finite_q_K": true,
+    "principal_limit": "q->infinity recovers [[J0/Lambda^2,-w/(2*Lambda)],[-w/(2*Lambda),1/2]]",
+    "unitary_H2": "(2*J*P**2 - 3*J*l**2*s**2 - 2*J*l*p*s + 2*J*q*s**2 - 4*J*q*v**2 + P**2*w**2 - 6*P*l*s*theta*w + 4*P*lam*q*v*w - 2*P*p*theta*w + 9*l**2*s**2*theta**2 - 12*l*lam*q*s*theta*v + 6*l*p*s*theta**2 + 4*lam**2*q**2*v**2 - 4*lam*p*q*theta*v + p**2*theta**2)/(4*J)"
+  },
+  "negative_controls": {
+    "linear_only_York_quartic_error": "-3/100",
+    "matter_free_constraint_nonzero_residual": [
+      "-2097152*I/244140625",
+      "-2097152*I/244140625",
+      "0"
+    ],
+    "missing_matter_clock_tadpole": "2097152/244140625",
+    "missing_mixed_boundary_quadratic_error": "-235770201169920000000000/1572843518077215066895057"
+  },
+  "not_established": [
+    "time-dependent coupled configuration/mode normalization",
+    "finite-k positive oscillator chart or free-mode propagation bound",
+    "nonexceptional interacting M1 tree-control window or cutoff hierarchy",
+    "cubic-exchange scattering amplitudes or inclusive/forward/soft limits",
+    "all-orders/loop control or radiative protection of the exceptional relation",
+    "global nonlinear Dirac/PDE, BKL, or backreaction stability",
+    "UV admissibility or completion",
+    "full P8 completion"
+  ],
+  "phase_kernel_examples": [
+    {
+      "chart": "unitary",
+      "constraints": {
+        "constraint_0_0": true,
+        "constraint_0_1": true,
+        "constraint_0_2": true,
+        "constraint_1_0": true,
+        "constraint_1_1": true,
+        "constraint_1_2": true,
+        "constraint_2_0": true,
+        "constraint_2_1": true,
+        "constraint_2_2": true
+      },
+      "kernel": "-236866556611512344262609355406882940857732024480003812853866511309459026511897652422265882341/463838347109535828180498886816153864846850159782373367010122245228379987835884094238281250",
+      "legs": [
+        {
+          "kind": "s",
+          "polarization": null,
+          "wave": [
+            "2",
+            "3",
+            "0"
+          ]
+        },
+        {
+          "kind": "m",
+          "polarization": null,
+          "wave": [
+            "0",
+            "2",
+            "4"
+          ]
+        },
+        {
+          "kind": "m",
+          "polarization": null,
+          "wave": [
+            "-2",
+            "-5",
+            "-4"
+          ]
+        }
+      ],
+      "r": "1/3"
+    },
+    {
+      "chart": "unitary",
+      "constraints": {
+        "constraint_0_0": true,
+        "constraint_0_1": true,
+        "constraint_0_2": true,
+        "constraint_1_0": true,
+        "constraint_1_1": true,
+        "constraint_1_2": true,
+        "constraint_2_0": true,
+        "constraint_2_1": true,
+        "constraint_2_2": true
+      },
+      "kernel": "11746225764501090331621581724312469505033697358055398400164474315307346515/50582454900507778619300259277182076918507678326972041311344618114909752509",
+      "legs": [
+        {
+          "kind": "p",
+          "polarization": null,
+          "wave": [
+            "2",
+            "3",
+            "0"
+          ]
+        },
+        {
+          "kind": "m",
+          "polarization": null,
+          "wave": [
+            "0",
+            "2",
+            "4"
+          ]
+        },
+        {
+          "kind": "P",
+          "polarization": null,
+          "wave": [
+            "-2",
+            "-5",
+            "-4"
+          ]
+        }
+      ],
+      "r": "1/3"
+    },
+    {
+      "chart": "unitary",
+      "constraints": {
+        "constraint_0_0": true,
+        "constraint_0_1": true,
+        "constraint_0_2": true,
+        "constraint_1_0": true,
+        "constraint_1_1": true,
+        "constraint_1_2": true,
+        "constraint_2_0": true,
+        "constraint_2_1": true,
+        "constraint_2_2": true
+      },
+      "kernel": "5056/1305",
+      "legs": [
+        {
+          "kind": "m",
+          "polarization": null,
+          "wave": [
+            "2",
+            "3",
+            "0"
+          ]
+        },
+        {
+          "kind": "m",
+          "polarization": null,
+          "wave": [
+            "0",
+            "2",
+            "4"
+          ]
+        },
+        {
+          "kind": "t",
+          "polarization": [
+            [
+              "1061/1305",
+              "-122/261",
+              "8/45"
+            ],
+            [
+              "-122/261",
+              "-44/261",
+              "4/9"
+            ],
+            [
+              "8/45",
+              "4/9",
+              "-29/45"
+            ]
+          ],
+          "wave": [
+            "-2",
+            "-5",
+            "-4"
+          ]
+        }
+      ],
+      "r": "1/3"
+    },
+    {
+      "chart": "unitary",
+      "constraints": {
+        "constraint_0_0": true,
+        "constraint_0_1": true,
+        "constraint_0_2": true,
+        "constraint_1_0": true,
+        "constraint_1_1": true,
+        "constraint_1_2": true,
+        "constraint_2_0": true,
+        "constraint_2_1": true,
+        "constraint_2_2": true
+      },
+      "kernel": "-219015148505984117054900769194756732182109689156878479812548160552978515625/15563832277079316498246233623748331359540824100606781941952190189203000772",
+      "legs": [
+        {
+          "kind": "s",
+          "polarization": null,
+          "wave": [
+            "2",
+            "3",
+            "0"
+          ]
+        },
+        {
+          "kind": "P",
+          "polarization": null,
+          "wave": [
+            "0",
+            "2",
+            "4"
+          ]
+        },
+        {
+          "kind": "P",
+          "polarization": null,
+          "wave": [
+            "-2",
+            "-5",
+            "-4"
+          ]
+        }
+      ],
+      "r": "1/3"
+    },
+    {
+      "chart": "unitary",
+      "constraints": {
+        "constraint_0_0": true,
+        "constraint_0_1": true,
+        "constraint_0_2": true,
+        "constraint_1_0": true,
+        "constraint_1_1": true,
+        "constraint_1_2": true,
+        "constraint_2_0": true,
+        "constraint_2_1": true,
+        "constraint_2_2": true
+      },
+      "kernel": "0",
+      "legs": [
+        {
+          "kind": "m",
+          "polarization": null,
+          "wave": [
+            "2",
+            "3",
+            "0"
+          ]
+        },
+        {
+          "kind": "P",
+          "polarization": null,
+          "wave": [
+            "0",
+            "2",
+            "4"
+          ]
+        },
+        {
+          "kind": "pi",
+          "polarization": [
+            [
+              "1061/1305",
+              "-122/261",
+              "8/45"
+            ],
+            [
+              "-122/261",
+              "-44/261",
+              "4/9"
+            ],
+            [
+              "8/45",
+              "4/9",
+              "-29/45"
+            ]
+          ],
+          "wave": [
+            "-2",
+            "-5",
+            "-4"
+          ]
+        }
+      ],
+      "r": "1/3"
+    },
+    {
+      "chart": "unitary",
+      "constraints": {
+        "constraint_0_0": true,
+        "constraint_0_1": true,
+        "constraint_0_2": true,
+        "constraint_1_0": true,
+        "constraint_1_1": true,
+        "constraint_1_2": true,
+        "constraint_2_0": true,
+        "constraint_2_1": true,
+        "constraint_2_2": true
+      },
+      "kernel": "-213621180178514046580562518596781400064266300198225365952691506975342592/19454790346349145622807792029685414199426030125758477427440237736503750965",
+      "legs": [
+        {
+          "kind": "s",
+          "polarization": null,
+          "wave": [
+            "2",
+            "3",
+            "0"
+          ]
+        },
+        {
+          "kind": "m",
+          "polarization": null,
+          "wave": [
+            "0",
+            "2",
+            "4"
+          ]
+        },
+        {
+          "kind": "P",
+          "polarization": null,
+          "wave": [
+            "-2",
+            "-5",
+            "-4"
+          ]
+        }
+      ],
+      "r": "1/3"
+    },
+    {
+      "chart": "unitary",
+      "constraints": {
+        "constraint_0_0": true,
+        "constraint_0_1": true,
+        "constraint_0_2": true,
+        "constraint_1_0": true,
+        "constraint_1_1": true,
+        "constraint_1_2": true,
+        "constraint_2_0": true,
+        "constraint_2_1": true,
+        "constraint_2_2": true,
+        "constraint_3_0": true,
+        "constraint_3_1": true,
+        "constraint_3_2": true
+      },
+      "kernel": "6245356491239188612167697892670032200445641989970423967232123628629805368406342493964199262969903970793517296072954354420822406839600319224318/573730170477781479357518429294792764831609761608183525480937142781047334747364714686907024180838422452198492763774762574255466461181640625",
+      "legs": [
+        {
+          "kind": "s",
+          "polarization": null,
+          "wave": [
+            "2",
+            "3",
+            "0"
+          ]
+        },
+        {
+          "kind": "s",
+          "polarization": null,
+          "wave": [
+            "0",
+            "2",
+            "4"
+          ]
+        },
+        {
+          "kind": "m",
+          "polarization": null,
+          "wave": [
+            "3",
+            "-2",
+            "1"
+          ]
+        },
+        {
+          "kind": "m",
+          "polarization": null,
+          "wave": [
+            "-5",
+            "-3",
+            "-5"
+          ]
+        }
+      ],
+      "r": "1/3"
+    },
+    {
+      "chart": "unitary",
+      "constraints": {
+        "constraint_0_0": true,
+        "constraint_0_1": true,
+        "constraint_0_2": true,
+        "constraint_1_0": true,
+        "constraint_1_1": true,
+        "constraint_1_2": true,
+        "constraint_2_0": true,
+        "constraint_2_1": true,
+        "constraint_2_2": true,
+        "constraint_3_0": true,
+        "constraint_3_1": true,
+        "constraint_3_2": true
+      },
+      "kernel": "-142300298402333013772681129972149271731230129074231103062049434797230792178373155762664843486452608818742043742412180706350792635227497204517/1147460340955562958715036858589585529663219523216367050961874285562094669494729429373814048361676844904396985527549525148510932922363281250",
+      "legs": [
+        {
+          "kind": "m",
+          "polarization": null,
+          "wave": [
+            "2",
+            "3",
+            "0"
+          ]
+        },
+        {
+          "kind": "m",
+          "polarization": null,
+          "wave": [
+            "0",
+            "2",
+            "4"
+          ]
+        },
+        {
+          "kind": "m",
+          "polarization": null,
+          "wave": [
+            "3",
+            "-2",
+            "1"
+          ]
+        },
+        {
+          "kind": "m",
+          "polarization": null,
+          "wave": [
+            "-5",
+            "-3",
+            "-5"
+          ]
+        }
+      ],
+      "r": "1/3"
+    },
+    {
+      "chart": "unitary",
+      "constraints": {
+        "constraint_0_0": true,
+        "constraint_0_1": true,
+        "constraint_0_2": true,
+        "constraint_1_0": true,
+        "constraint_1_1": true,
+        "constraint_1_2": true,
+        "constraint_2_0": true,
+        "constraint_2_1": true,
+        "constraint_2_2": true,
+        "constraint_3_0": true,
+        "constraint_3_1": true,
+        "constraint_3_2": true
+      },
+      "kernel": "-93399101628974780708139934147288523227652147647000754238819631646621617916872656629399552/53694523149336504876858062460567396570326166480484880488753163155937055287571910400390625",
+      "legs": [
+        {
+          "kind": "s",
+          "polarization": null,
+          "wave": [
+            "2",
+            "3",
+            "0"
+          ]
+        },
+        {
+          "kind": "m",
+          "polarization": null,
+          "wave": [
+            "0",
+            "2",
+            "4"
+          ]
+        },
+        {
+          "kind": "t",
+          "polarization": [
+            [
+              "47/182",
+              "45/91",
+              "3/14"
+            ],
+            [
+              "45/91",
+              "61/91",
+              "-1/7"
+            ],
+            [
+              "3/14",
+              "-1/7",
+              "-13/14"
+            ]
+          ],
+          "wave": [
+            "3",
+            "-2",
+            "1"
+          ]
+        },
+        {
+          "kind": "pi",
+          "polarization": [
+            [
+              "-47/1003",
+              "-630/1003",
+              "25/59"
+            ],
+            [
+              "-630/1003",
+              "625/1003",
+              "15/59"
+            ],
+            [
+              "25/59",
+              "15/59",
+              "-34/59"
+            ]
+          ],
+          "wave": [
+            "-5",
+            "-3",
+            "-5"
+          ]
+        }
+      ],
+      "r": "1/3"
+    },
+    {
+      "chart": "unitary",
+      "constraints": {
+        "constraint_0_0": true,
+        "constraint_0_1": true,
+        "constraint_0_2": true,
+        "constraint_1_0": true,
+        "constraint_1_1": true,
+        "constraint_1_2": true,
+        "constraint_2_0": true,
+        "constraint_2_1": true,
+        "constraint_2_2": true,
+        "constraint_3_0": true,
+        "constraint_3_1": true,
+        "constraint_3_2": true
+      },
+      "kernel": "-1542858594100207786072423005040884451508305700622757062306422481673328028287817/405873618121674415641265280440108985194105610895623659482229215754035854132216",
+      "legs": [
+        {
+          "kind": "m",
+          "polarization": null,
+          "wave": [
+            "2",
+            "3",
+            "0"
+          ]
+        },
+        {
+          "kind": "m",
+          "polarization": null,
+          "wave": [
+            "0",
+            "2",
+            "4"
+          ]
+        },
+        {
+          "kind": "pi",
+          "polarization": [
+            [
+              "47/182",
+              "45/91",
+              "3/14"
+            ],
+            [
+              "45/91",
+              "61/91",
+              "-1/7"
+            ],
+            [
+              "3/14",
+              "-1/7",
+              "-13/14"
+            ]
+          ],
+          "wave": [
+            "3",
+            "-2",
+            "1"
+          ]
+        },
+        {
+          "kind": "pi",
+          "polarization": [
+            [
+              "-47/1003",
+              "-630/1003",
+              "25/59"
+            ],
+            [
+              "-630/1003",
+              "625/1003",
+              "15/59"
+            ],
+            [
+              "25/59",
+              "15/59",
+              "-34/59"
+            ]
+          ],
+          "wave": [
+            "-5",
+            "-3",
+            "-5"
+          ]
+        }
+      ],
+      "r": "1/3"
+    },
+    {
+      "chart": "unitary",
+      "constraints": {
+        "constraint_0_0": true,
+        "constraint_0_1": true,
+        "constraint_0_2": true,
+        "constraint_1_0": true,
+        "constraint_1_1": true,
+        "constraint_1_2": true,
+        "constraint_2_0": true,
+        "constraint_2_1": true,
+        "constraint_2_2": true,
+        "constraint_3_0": true,
+        "constraint_3_1": true,
+        "constraint_3_2": true
+      },
+      "kernel": "1995103523465295881958374637609711671015884265274989002197697632916171490906970669313633610357190355913505971431732177734375/308019039866322018559380093192302908506147859142688075988325962459535098920986983970579568531172776786553081215113157345824",
+      "legs": [
+        {
+          "kind": "p",
+          "polarization": null,
+          "wave": [
+            "2",
+            "3",
+            "0"
+          ]
+        },
+        {
+          "kind": "P",
+          "polarization": null,
+          "wave": [
+            "0",
+            "2",
+            "4"
+          ]
+        },
+        {
+          "kind": "p",
+          "polarization": null,
+          "wave": [
+            "3",
+            "-2",
+            "1"
+          ]
+        },
+        {
+          "kind": "P",
+          "polarization": null,
+          "wave": [
+            "-5",
+            "-3",
+            "-5"
+          ]
+        }
+      ],
+      "r": "1/3"
+    },
+    {
+      "chart": "unitary",
+      "constraints": {
+        "constraint_0_0": true,
+        "constraint_0_1": true,
+        "constraint_0_2": true,
+        "constraint_1_0": true,
+        "constraint_1_1": true,
+        "constraint_1_2": true,
+        "constraint_2_0": true,
+        "constraint_2_1": true,
+        "constraint_2_2": true,
+        "constraint_3_0": true,
+        "constraint_3_1": true,
+        "constraint_3_2": true
+      },
+      "kernel": "-1571666830576837624817883220423951784403089611097610685628991129113696051685078254/2157471951328025565643100756339454324422417637917049514935224674992546837121560675",
+      "legs": [
+        {
+          "kind": "m",
+          "polarization": null,
+          "wave": [
+            "2",
+            "3",
+            "0"
+          ]
+        },
+        {
+          "kind": "P",
+          "polarization": null,
+          "wave": [
+            "0",
+            "2",
+            "4"
+          ]
+        },
+        {
+          "kind": "t",
+          "polarization": [
+            [
+              "47/182",
+              "45/91",
+              "3/14"
+            ],
+            [
+              "45/91",
+              "61/91",
+              "-1/7"
+            ],
+            [
+              "3/14",
+              "-1/7",
+              "-13/14"
+            ]
+          ],
+          "wave": [
+            "3",
+            "-2",
+            "1"
+          ]
+        },
+        {
+          "kind": "pi",
+          "polarization": [
+            [
+              "-47/1003",
+              "-630/1003",
+              "25/59"
+            ],
+            [
+              "-630/1003",
+              "625/1003",
+              "15/59"
+            ],
+            [
+              "25/59",
+              "15/59",
+              "-34/59"
+            ]
+          ],
+          "wave": [
+            "-5",
+            "-3",
+            "-5"
+          ]
+        }
+      ],
+      "r": "1/3"
+    },
+    {
+      "chart": "gamma",
+      "constraints": {
+        "constraint_0_0": true,
+        "constraint_0_1": true,
+        "constraint_0_2": true,
+        "constraint_1_0": true,
+        "constraint_1_1": true,
+        "constraint_1_2": true,
+        "constraint_2_0": true,
+        "constraint_2_1": true,
+        "constraint_2_2": true
+      },
+      "kernel": "0",
+      "legs": [
+        {
+          "kind": "s",
+          "polarization": null,
+          "wave": [
+            "2",
+            "3",
+            "0"
+          ]
+        },
+        {
+          "kind": "m",
+          "polarization": null,
+          "wave": [
+            "0",
+            "2",
+            "4"
+          ]
+        },
+        {
+          "kind": "m",
+          "polarization": null,
+          "wave": [
+            "-2",
+            "-5",
+            "-4"
+          ]
+        }
+      ],
+      "r": "0"
+    },
+    {
+      "chart": "gamma",
+      "constraints": {
+        "constraint_0_0": true,
+        "constraint_0_1": true,
+        "constraint_0_2": true,
+        "constraint_1_0": true,
+        "constraint_1_1": true,
+        "constraint_1_2": true,
+        "constraint_2_0": true,
+        "constraint_2_1": true,
+        "constraint_2_2": true
+      },
+      "kernel": "0",
+      "legs": [
+        {
+          "kind": "p",
+          "polarization": null,
+          "wave": [
+            "2",
+            "3",
+            "0"
+          ]
+        },
+        {
+          "kind": "m",
+          "polarization": null,
+          "wave": [
+            "0",
+            "2",
+            "4"
+          ]
+        },
+        {
+          "kind": "P",
+          "polarization": null,
+          "wave": [
+            "-2",
+            "-5",
+            "-4"
+          ]
+        }
+      ],
+      "r": "0"
+    },
+    {
+      "chart": "gamma",
+      "constraints": {
+        "constraint_0_0": true,
+        "constraint_0_1": true,
+        "constraint_0_2": true,
+        "constraint_1_0": true,
+        "constraint_1_1": true,
+        "constraint_1_2": true,
+        "constraint_2_0": true,
+        "constraint_2_1": true,
+        "constraint_2_2": true
+      },
+      "kernel": "5056/1305",
+      "legs": [
+        {
+          "kind": "m",
+          "polarization": null,
+          "wave": [
+            "2",
+            "3",
+            "0"
+          ]
+        },
+        {
+          "kind": "m",
+          "polarization": null,
+          "wave": [
+            "0",
+            "2",
+            "4"
+          ]
+        },
+        {
+          "kind": "t",
+          "polarization": [
+            [
+              "1061/1305",
+              "-122/261",
+              "8/45"
+            ],
+            [
+              "-122/261",
+              "-44/261",
+              "4/9"
+            ],
+            [
+              "8/45",
+              "4/9",
+              "-29/45"
+            ]
+          ],
+          "wave": [
+            "-2",
+            "-5",
+            "-4"
+          ]
+        }
+      ],
+      "r": "0"
+    },
+    {
+      "chart": "gamma",
+      "constraints": {
+        "constraint_0_0": true,
+        "constraint_0_1": true,
+        "constraint_0_2": true,
+        "constraint_1_0": true,
+        "constraint_1_1": true,
+        "constraint_1_2": true,
+        "constraint_2_0": true,
+        "constraint_2_1": true,
+        "constraint_2_2": true
+      },
+      "kernel": "0",
+      "legs": [
+        {
+          "kind": "s",
+          "polarization": null,
+          "wave": [
+            "2",
+            "3",
+            "0"
+          ]
+        },
+        {
+          "kind": "P",
+          "polarization": null,
+          "wave": [
+            "0",
+            "2",
+            "4"
+          ]
+        },
+        {
+          "kind": "P",
+          "polarization": null,
+          "wave": [
+            "-2",
+            "-5",
+            "-4"
+          ]
+        }
+      ],
+      "r": "0"
+    },
+    {
+      "chart": "gamma",
+      "constraints": {
+        "constraint_0_0": true,
+        "constraint_0_1": true,
+        "constraint_0_2": true,
+        "constraint_1_0": true,
+        "constraint_1_1": true,
+        "constraint_1_2": true,
+        "constraint_2_0": true,
+        "constraint_2_1": true,
+        "constraint_2_2": true
+      },
+      "kernel": "0",
+      "legs": [
+        {
+          "kind": "m",
+          "polarization": null,
+          "wave": [
+            "2",
+            "3",
+            "0"
+          ]
+        },
+        {
+          "kind": "P",
+          "polarization": null,
+          "wave": [
+            "0",
+            "2",
+            "4"
+          ]
+        },
+        {
+          "kind": "pi",
+          "polarization": [
+            [
+              "1061/1305",
+              "-122/261",
+              "8/45"
+            ],
+            [
+              "-122/261",
+              "-44/261",
+              "4/9"
+            ],
+            [
+              "8/45",
+              "4/9",
+              "-29/45"
+            ]
+          ],
+          "wave": [
+            "-2",
+            "-5",
+            "-4"
+          ]
+        }
+      ],
+      "r": "0"
+    },
+    {
+      "chart": "gamma",
+      "constraints": {
+        "constraint_0_0": true,
+        "constraint_0_1": true,
+        "constraint_0_2": true,
+        "constraint_1_0": true,
+        "constraint_1_1": true,
+        "constraint_1_2": true,
+        "constraint_2_0": true,
+        "constraint_2_1": true,
+        "constraint_2_2": true
+      },
+      "kernel": "-7233/1199",
+      "legs": [
+        {
+          "kind": "s",
+          "polarization": null,
+          "wave": [
+            "2",
+            "3",
+            "0"
+          ]
+        },
+        {
+          "kind": "m",
+          "polarization": null,
+          "wave": [
+            "0",
+            "2",
+            "4"
+          ]
+        },
+        {
+          "kind": "P",
+          "polarization": null,
+          "wave": [
+            "-2",
+            "-5",
+            "-4"
+          ]
+        }
+      ],
+      "r": "0"
+    },
+    {
+      "chart": "gamma",
+      "constraints": {
+        "constraint_0_0": true,
+        "constraint_0_1": true,
+        "constraint_0_2": true,
+        "constraint_1_0": true,
+        "constraint_1_1": true,
+        "constraint_1_2": true,
+        "constraint_2_0": true,
+        "constraint_2_1": true,
+        "constraint_2_2": true,
+        "constraint_3_0": true,
+        "constraint_3_1": true,
+        "constraint_3_2": true
+      },
+      "kernel": "-2814696/1199",
+      "legs": [
+        {
+          "kind": "s",
+          "polarization": null,
+          "wave": [
+            "2",
+            "3",
+            "0"
+          ]
+        },
+        {
+          "kind": "s",
+          "polarization": null,
+          "wave": [
+            "0",
+            "2",
+            "4"
+          ]
+        },
+        {
+          "kind": "m",
+          "polarization": null,
+          "wave": [
+            "3",
+            "-2",
+            "1"
+          ]
+        },
+        {
+          "kind": "m",
+          "polarization": null,
+          "wave": [
+            "-5",
+            "-3",
+            "-5"
+          ]
+        }
+      ],
+      "r": "0"
+    },
+    {
+      "chart": "gamma",
+      "constraints": {
+        "constraint_0_0": true,
+        "constraint_0_1": true,
+        "constraint_0_2": true,
+        "constraint_1_0": true,
+        "constraint_1_1": true,
+        "constraint_1_2": true,
+        "constraint_2_0": true,
+        "constraint_2_1": true,
+        "constraint_2_2": true,
+        "constraint_3_0": true,
+        "constraint_3_1": true,
+        "constraint_3_2": true
+      },
+      "kernel": "-2775087/43600",
+      "legs": [
+        {
+          "kind": "m",
+          "polarization": null,
+          "wave": [
+            "2",
+            "3",
+            "0"
+          ]
+        },
+        {
+          "kind": "m",
+          "polarization": null,
+          "wave": [
+            "0",
+            "2",
+            "4"
+          ]
+        },
+        {
+          "kind": "m",
+          "polarization": null,
+          "wave": [
+            "3",
+            "-2",
+            "1"
+          ]
+        },
+        {
+          "kind": "m",
+          "polarization": null,
+          "wave": [
+            "-5",
+            "-3",
+            "-5"
+          ]
+        }
+      ],
+      "r": "0"
+    },
+    {
+      "chart": "gamma",
+      "constraints": {
+        "constraint_0_0": true,
+        "constraint_0_1": true,
+        "constraint_0_2": true,
+        "constraint_1_0": true,
+        "constraint_1_1": true,
+        "constraint_1_2": true,
+        "constraint_2_0": true,
+        "constraint_2_1": true,
+        "constraint_2_2": true,
+        "constraint_3_0": true,
+        "constraint_3_1": true,
+        "constraint_3_2": true
+      },
+      "kernel": "0",
+      "legs": [
+        {
+          "kind": "s",
+          "polarization": null,
+          "wave": [
+            "2",
+            "3",
+            "0"
+          ]
+        },
+        {
+          "kind": "m",
+          "polarization": null,
+          "wave": [
+            "0",
+            "2",
+            "4"
+          ]
+        },
+        {
+          "kind": "t",
+          "polarization": [
+            [
+              "47/182",
+              "45/91",
+              "3/14"
+            ],
+            [
+              "45/91",
+              "61/91",
+              "-1/7"
+            ],
+            [
+              "3/14",
+              "-1/7",
+              "-13/14"
+            ]
+          ],
+          "wave": [
+            "3",
+            "-2",
+            "1"
+          ]
+        },
+        {
+          "kind": "pi",
+          "polarization": [
+            [
+              "-47/1003",
+              "-630/1003",
+              "25/59"
+            ],
+            [
+              "-630/1003",
+              "625/1003",
+              "15/59"
+            ],
+            [
+              "25/59",
+              "15/59",
+              "-34/59"
+            ]
+          ],
+          "wave": [
+            "-5",
+            "-3",
+            "-5"
+          ]
+        }
+      ],
+      "r": "0"
+    },
+    {
+      "chart": "gamma",
+      "constraints": {
+        "constraint_0_0": true,
+        "constraint_0_1": true,
+        "constraint_0_2": true,
+        "constraint_1_0": true,
+        "constraint_1_1": true,
+        "constraint_1_2": true,
+        "constraint_2_0": true,
+        "constraint_2_1": true,
+        "constraint_2_2": true,
+        "constraint_3_0": true,
+        "constraint_3_1": true,
+        "constraint_3_2": true
+      },
+      "kernel": "-846812151/437745308",
+      "legs": [
+        {
+          "kind": "m",
+          "polarization": null,
+          "wave": [
+            "2",
+            "3",
+            "0"
+          ]
+        },
+        {
+          "kind": "m",
+          "polarization": null,
+          "wave": [
+            "0",
+            "2",
+            "4"
+          ]
+        },
+        {
+          "kind": "pi",
+          "polarization": [
+            [
+              "47/182",
+              "45/91",
+              "3/14"
+            ],
+            [
+              "45/91",
+              "61/91",
+              "-1/7"
+            ],
+            [
+              "3/14",
+              "-1/7",
+              "-13/14"
+            ]
+          ],
+          "wave": [
+            "3",
+            "-2",
+            "1"
+          ]
+        },
+        {
+          "kind": "pi",
+          "polarization": [
+            [
+              "-47/1003",
+              "-630/1003",
+              "25/59"
+            ],
+            [
+              "-630/1003",
+              "625/1003",
+              "15/59"
+            ],
+            [
+              "25/59",
+              "15/59",
+              "-34/59"
+            ]
+          ],
+          "wave": [
+            "-5",
+            "-3",
+            "-5"
+          ]
+        }
+      ],
+      "r": "0"
+    },
+    {
+      "chart": "gamma",
+      "constraints": {
+        "constraint_0_0": true,
+        "constraint_0_1": true,
+        "constraint_0_2": true,
+        "constraint_1_0": true,
+        "constraint_1_1": true,
+        "constraint_1_2": true,
+        "constraint_2_0": true,
+        "constraint_2_1": true,
+        "constraint_2_2": true,
+        "constraint_3_0": true,
+        "constraint_3_1": true,
+        "constraint_3_2": true
+      },
+      "kernel": "-6743508595138200/225495203170145909",
+      "legs": [
+        {
+          "kind": "p",
+          "polarization": null,
+          "wave": [
+            "2",
+            "3",
+            "0"
+          ]
+        },
+        {
+          "kind": "P",
+          "polarization": null,
+          "wave": [
+            "0",
+            "2",
+            "4"
+          ]
+        },
+        {
+          "kind": "p",
+          "polarization": null,
+          "wave": [
+            "3",
+            "-2",
+            "1"
+          ]
+        },
+        {
+          "kind": "P",
+          "polarization": null,
+          "wave": [
+            "-5",
+            "-3",
+            "-5"
+          ]
+        }
+      ],
+      "r": "0"
+    },
+    {
+      "chart": "gamma",
+      "constraints": {
+        "constraint_0_0": true,
+        "constraint_0_1": true,
+        "constraint_0_2": true,
+        "constraint_1_0": true,
+        "constraint_1_1": true,
+        "constraint_1_2": true,
+        "constraint_2_0": true,
+        "constraint_2_1": true,
+        "constraint_2_2": true,
+        "constraint_3_0": true,
+        "constraint_3_1": true,
+        "constraint_3_2": true
+      },
+      "kernel": "-1944088843813/2659302746100",
+      "legs": [
+        {
+          "kind": "m",
+          "polarization": null,
+          "wave": [
+            "2",
+            "3",
+            "0"
+          ]
+        },
+        {
+          "kind": "P",
+          "polarization": null,
+          "wave": [
+            "0",
+            "2",
+            "4"
+          ]
+        },
+        {
+          "kind": "t",
+          "polarization": [
+            [
+              "47/182",
+              "45/91",
+              "3/14"
+            ],
+            [
+              "45/91",
+              "61/91",
+              "-1/7"
+            ],
+            [
+              "3/14",
+              "-1/7",
+              "-13/14"
+            ]
+          ],
+          "wave": [
+            "3",
+            "-2",
+            "1"
+          ]
+        },
+        {
+          "kind": "pi",
+          "polarization": [
+            [
+              "-47/1003",
+              "-630/1003",
+              "25/59"
+            ],
+            [
+              "-630/1003",
+              "625/1003",
+              "15/59"
+            ],
+            [
+              "25/59",
+              "15/59",
+              "-34/59"
+            ]
+          ],
+          "wave": [
+            "-5",
+            "-3",
+            "-5"
+          ]
+        }
+      ],
+      "r": "0"
+    },
+    {
+      "chart": "unitary",
+      "compact_tail_limit": true,
+      "constraints": {
+        "constraint_0_0": true,
+        "constraint_0_1": true,
+        "constraint_0_2": true,
+        "constraint_1_0": true,
+        "constraint_1_1": true,
+        "constraint_1_2": true,
+        "constraint_2_0": true,
+        "constraint_2_1": true,
+        "constraint_2_2": true
+      },
+      "kernel": "-117/2",
+      "legs": [
+        {
+          "kind": "s",
+          "polarization": null,
+          "wave": [
+            "2",
+            "3",
+            "0"
+          ]
+        },
+        {
+          "kind": "m",
+          "polarization": null,
+          "wave": [
+            "0",
+            "2",
+            "4"
+          ]
+        },
+        {
+          "kind": "m",
+          "polarization": null,
+          "wave": [
+            "-2",
+            "-5",
+            "-4"
+          ]
+        }
+      ],
+      "r": "-1"
+    },
+    {
+      "chart": "unitary",
+      "compact_tail_limit": true,
+      "constraints": {
+        "constraint_0_0": true,
+        "constraint_0_1": true,
+        "constraint_0_2": true,
+        "constraint_1_0": true,
+        "constraint_1_1": true,
+        "constraint_1_2": true,
+        "constraint_2_0": true,
+        "constraint_2_1": true,
+        "constraint_2_2": true
+      },
+      "kernel": "-117/2",
+      "legs": [
+        {
+          "kind": "s",
+          "polarization": null,
+          "wave": [
+            "2",
+            "3",
+            "0"
+          ]
+        },
+        {
+          "kind": "m",
+          "polarization": null,
+          "wave": [
+            "0",
+            "2",
+            "4"
+          ]
+        },
+        {
+          "kind": "m",
+          "polarization": null,
+          "wave": [
+            "-2",
+            "-5",
+            "-4"
+          ]
+        }
+      ],
+      "r": "1"
+    }
+  ],
+  "prior_sha256": {
+    "s5/matter/certificates/cd-matter.json": "6b0dcb44c0849050912f22546fc7c2ef4c55f148ebca32184b09b4abecf7ca7c",
+    "s5/physical/certificates/interactions.json": "fec2b468d9144817026e923eeed1d7b573fdae068213b42a93cb2e4e77eb8c20"
+  },
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "971358368cf1b4766360b41831cd84825ca0bca3948b187774e4a8ff9919fb5a",
+    "README.md": "058f148b33a4f3c4bea22a799654bb02e770f051f8658f0b9694ac500b6687e8",
+    "notes/audit.md": "98328d86c676c64d66cea2cd7a994a8ef0bf8cae2142325f95b9f123d5484686",
+    "notes/reduction.md": "12812ff9c30ffcae6c05496298fa0deb9e420b82b13db0b86b2298d2db3832f6",
+    "src/p8_m1_physical/__init__.py": "32375fd872b944bf74b290328fe38be96de20785f71e3bb9a9a5147c100d95ad",
+    "src/p8_m1_physical/background.py": "128776702d58893036e32b2e302e024deb22346c8a7a7228c7decc6e8969e964",
+    "src/p8_m1_physical/lagrangian.py": "072b380ece8c7ad1784a824249ebdedea659183c12f04fef95c639b835faffe6",
+    "src/p8_m1_physical/momentum.py": "83ce51d0a786d3af9642a2e6056e10a01a9d08787c20e1ab00d04a66d0d3ab5f",
+    "src/p8_m1_physical/quadratic.py": "31c2dfa504e1b6153fa409078bac7d28ee1f38dfe0c3c7230571fbb6a883eef4",
+    "src/p8_m1_physical/regressions.py": "ad1c9fa18677f26ca6424c812d17e6afe8a26cc19f37caac94810a89f79ea149",
+    "src/p8_m1_physical/verify.py": "e7c6122fe2f9648eb07fe00f3784f18622b9ba4a90bddf09a96abcf5eb20750b",
+    "src/p8_m1_physical/vertices.py": "803a63df6aebf6ba6bda567a3e4beb897d902a0d0889c33738ff261b540ccad8",
+    "tests/conftest.py": "7234b35e05b8a86b9678315604f58ad67b44b75768b0840deaf5c1aa4128e1bf",
+    "tests/test_m1_physical_quadratic.py": "a6fbdef391fb6ddc760d98db476fe2f5d8aa015b54b863287f2cd389ff17fc3d",
+    "tests/test_m1_physical_report.py": "a0982ef2599a38e4346c8a06e30ff90e287053d16b0bd7dac721313b622d850f",
+    "tests/test_m1_physical_vertices.py": "826a9a873e9e5a6125d1bbf4f59c16d4d8cbe9a5e5f13b3b45407593e31e84a7"
+  },
+  "status": "M1_PHYSICAL_PHASE_AND_UNNORMALIZED_VELOCITY_REDUCTION; INTERACTION_CONTROL_OPEN",
+  "structural_all_time_phase_regularity": {
+    "J_bounds_from_pinned_S5_5": [
+      "1/10",
+      "8"
+    ],
+    "basis": "finite recursion in compact-polynomial jets, fixed nonzero transfer inverses and 1/J",
+    "compact_lapse_jet_absolute_bounds": {
+      "A": [
+        "1112/25",
+        "0",
+        "141923/40",
+        "27446319/200",
+        "106192407/10"
+      ],
+      "B": [
+        "8",
+        "20",
+        "368",
+        "27936",
+        "1985874"
+      ],
+      "C": [
+        "1/2",
+        "11/2",
+        "75/4",
+        "354",
+        "183159/16"
+      ],
+      "D": [
+        "1/3",
+        "5/3",
+        "76/3",
+        "3217/4",
+        "37504"
+      ],
+      "E": [
+        "2",
+        "10",
+        "152",
+        "9651/2",
+        "225024"
+      ],
+      "L": [
+        "16/5",
+        "176/5",
+        "465/4",
+        "11328/5",
+        "2926059/40"
+      ],
+      "M": [
+        "1/2",
+        "11/2",
+        "75/4",
+        "354",
+        "183159/16"
+      ],
+      "Z": [
+        "1/2",
+        "5/2",
+        "38",
+        "9651/8",
+        "56256"
+      ]
+    },
+    "compact_variables": "x=2r/(1+r^2), y=(1-r^2)/(1+r^2); x^2+y^2=1",
+    "consequence": "each fixed nonexceptional-momentum phase coefficient extends continuously and is bounded on compact time",
+    "no_expanded_symbolic_quartic_majorant_is_claimed": true,
+    "no_inverse_Theta_or_Lambda_in_phase_construction": true,
+    "not_a_uniform_momentum_or_velocity_bound": true
+  },
+  "unnormalized_velocity_examples": [
+    {
+      "Legendre_corrections": [],
+      "chart": "gamma",
+      "kernel": "22597/5096",
+      "legs": [
+        {
+          "kind": "s_dot",
+          "polarization": null,
+          "wave": [
+            "2",
+            "3",
+            "0"
+          ]
+        },
+        {
+          "kind": "m_dot",
+          "polarization": null,
+          "wave": [
+            "0",
+            "2",
+            "4"
+          ]
+        },
+        {
+          "kind": "m_dot",
+          "polarization": null,
+          "wave": [
+            "-2",
+            "-5",
+            "-4"
+          ]
+        }
+      ],
+      "minus_H": "22597/5096",
+      "normalized": false,
+      "r": "0"
+    },
+    {
+      "Legendre_corrections": [],
+      "chart": "gamma",
+      "kernel": "0",
+      "legs": [
+        {
+          "kind": "m",
+          "polarization": null,
+          "wave": [
+            "2",
+            "3",
+            "0"
+          ]
+        },
+        {
+          "kind": "t_dot",
+          "polarization": [
+            [
+              "1",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "-4/5",
+              "2/5"
+            ],
+            [
+              "0",
+              "2/5",
+              "-1/5"
+            ]
+          ],
+          "wave": [
+            "0",
+            "2",
+            "4"
+          ]
+        },
+        {
+          "kind": "t_dot",
+          "polarization": [
+            [
+              "1061/1305",
+              "-122/261",
+              "8/45"
+            ],
+            [
+              "-122/261",
+              "-44/261",
+              "4/9"
+            ],
+            [
+              "8/45",
+              "4/9",
+              "-29/45"
+            ]
+          ],
+          "wave": [
+            "-2",
+            "-5",
+            "-4"
+          ]
+        }
+      ],
+      "minus_H": "0",
+      "normalized": false,
+      "r": "0"
+    },
+    {
+      "Legendre_corrections": [
+        {
+          "partition": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "scalar": "3363968619671/17663755200000",
+          "scalar_off_diagonal": "120719692267/162914172960000",
+          "tensor": "0",
+          "tensor_polarizations": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "partition": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              3
+            ]
+          ],
+          "scalar": "940022654041/3138713424000",
+          "scalar_off_diagonal": "12332060418791/12544391317920000",
+          "tensor": "0",
+          "tensor_polarizations": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "partition": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "scalar": "113276656431349/474294472960000",
+          "scalar_off_diagonal": "28494187791631/33451710181120000",
+          "tensor": "0",
+          "tensor_polarizations": [
+            "0",
+            "0"
+          ]
+        }
+      ],
+      "chart": "gamma",
+      "kernel": "15739581640021/33058771200000",
+      "legs": [
+        {
+          "kind": "m_dot",
+          "polarization": null,
+          "wave": [
+            "2",
+            "3",
+            "0"
+          ]
+        },
+        {
+          "kind": "m_dot",
+          "polarization": null,
+          "wave": [
+            "0",
+            "2",
+            "4"
+          ]
+        },
+        {
+          "kind": "m_dot",
+          "polarization": null,
+          "wave": [
+            "3",
+            "-2",
+            "1"
+          ]
+        },
+        {
+          "kind": "m_dot",
+          "polarization": null,
+          "wave": [
+            "-5",
+            "-3",
+            "-5"
+          ]
+        }
+      ],
+      "minus_H": "-3269548239/12940480000",
+      "normalized": false,
+      "r": "0"
+    },
+    {
+      "Legendre_corrections": [
+        {
+          "partition": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "scalar": "0",
+          "scalar_off_diagonal": "0",
+          "tensor": "-28/59625",
+          "tensor_polarizations": [
+            "-99856/351012375",
+            "-1444/7800275"
+          ]
+        },
+        {
+          "partition": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              3
+            ]
+          ],
+          "scalar": "50362182481/480415320",
+          "scalar_off_diagonal": "-1620632507/80002495650",
+          "tensor": "0",
+          "tensor_polarizations": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "partition": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "scalar": "0",
+          "scalar_off_diagonal": "0",
+          "tensor": "-889/1531700",
+          "tensor_polarizations": [
+            "-103/10721900",
+            "-18/31535"
+          ]
+        }
+      ],
+      "chart": "gamma",
+      "kernel": "171654240563/2894913000",
+      "legs": [
+        {
+          "kind": "s",
+          "polarization": null,
+          "wave": [
+            "2",
+            "3",
+            "0"
+          ]
+        },
+        {
+          "kind": "m_dot",
+          "polarization": null,
+          "wave": [
+            "0",
+            "2",
+            "4"
+          ]
+        },
+        {
+          "kind": "s",
+          "polarization": null,
+          "wave": [
+            "3",
+            "-2",
+            "1"
+          ]
+        },
+        {
+          "kind": "m_dot",
+          "polarization": null,
+          "wave": [
+            "-5",
+            "-3",
+            "-5"
+          ]
+        }
+      ],
+      "minus_H": "-1254362614529/27547624500",
+      "normalized": false,
+      "r": "0"
+    },
+    {
+      "Legendre_corrections": [
+        {
+          "partition": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "scalar": "0",
+          "scalar_off_diagonal": "0",
+          "tensor": "0",
+          "tensor_polarizations": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "partition": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              3
+            ]
+          ],
+          "scalar": "0",
+          "scalar_off_diagonal": "0",
+          "tensor": "0",
+          "tensor_polarizations": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "partition": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "scalar": "0",
+          "scalar_off_diagonal": "0",
+          "tensor": "0",
+          "tensor_polarizations": [
+            "0",
+            "0"
+          ]
+        }
+      ],
+      "chart": "gamma",
+      "kernel": "0",
+      "legs": [
+        {
+          "kind": "s_dot",
+          "polarization": null,
+          "wave": [
+            "2",
+            "3",
+            "0"
+          ]
+        },
+        {
+          "kind": "m_dot",
+          "polarization": null,
+          "wave": [
+            "0",
+            "2",
+            "4"
+          ]
+        },
+        {
+          "kind": "t",
+          "polarization": [
+            [
+              "47/182",
+              "45/91",
+              "3/14"
+            ],
+            [
+              "45/91",
+              "61/91",
+              "-1/7"
+            ],
+            [
+              "3/14",
+              "-1/7",
+              "-13/14"
+            ]
+          ],
+          "wave": [
+            "3",
+            "-2",
+            "1"
+          ]
+        },
+        {
+          "kind": "t_dot",
+          "polarization": [
+            [
+              "-47/1003",
+              "-630/1003",
+              "25/59"
+            ],
+            [
+              "-630/1003",
+              "625/1003",
+              "15/59"
+            ],
+            [
+              "25/59",
+              "15/59",
+              "-34/59"
+            ]
+          ],
+          "wave": [
+            "-5",
+            "-3",
+            "-5"
+          ]
+        }
+      ],
+      "minus_H": "0",
+      "normalized": false,
+      "r": "0"
+    },
+    {
+      "Legendre_corrections": [],
+      "chart": "unitary",
+      "kernel": "-3252841818779144262916188184259/12022724982637453079223632812500",
+      "legs": [
+        {
+          "kind": "s_dot",
+          "polarization": null,
+          "wave": [
+            "2",
+            "3",
+            "0"
+          ]
+        },
+        {
+          "kind": "m_dot",
+          "polarization": null,
+          "wave": [
+            "0",
+            "2",
+            "4"
+          ]
+        },
+        {
+          "kind": "m_dot",
+          "polarization": null,
+          "wave": [
+            "-2",
+            "-5",
+            "-4"
+          ]
+        }
+      ],
+      "minus_H": "-3252841818779144262916188184259/12022724982637453079223632812500",
+      "normalized": false,
+      "r": "1/3"
+    },
+    {
+      "Legendre_corrections": [],
+      "chart": "unitary",
+      "kernel": "-3608234295296/4651929931640625",
+      "legs": [
+        {
+          "kind": "m",
+          "polarization": null,
+          "wave": [
+            "2",
+            "3",
+            "0"
+          ]
+        },
+        {
+          "kind": "t_dot",
+          "polarization": [
+            [
+              "1",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "-4/5",
+              "2/5"
+            ],
+            [
+              "0",
+              "2/5",
+              "-1/5"
+            ]
+          ],
+          "wave": [
+            "0",
+            "2",
+            "4"
+          ]
+        },
+        {
+          "kind": "t_dot",
+          "polarization": [
+            [
+              "1061/1305",
+              "-122/261",
+              "8/45"
+            ],
+            [
+              "-122/261",
+              "-44/261",
+              "4/9"
+            ],
+            [
+              "8/45",
+              "4/9",
+              "-29/45"
+            ]
+          ],
+          "wave": [
+            "-2",
+            "-5",
+            "-4"
+          ]
+        }
+      ],
+      "minus_H": "-3608234295296/4651929931640625",
+      "normalized": false,
+      "r": "1/3"
+    },
+    {
+      "Legendre_corrections": [
+        {
+          "partition": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "scalar": "17811991375838381507674354129489999664465604839499343705151/41831299706733282309219589750203541569471984100341796875000",
+          "scalar_off_diagonal": "-220054679784073193005245639646211236972939296301048813633770124059537615880192/8224261074560093830010336504592434254135700649198763867915266798895168304443359375",
+          "tensor": "0",
+          "tensor_polarizations": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "partition": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              3
+            ]
+          ],
+          "scalar": "6850769313107650990133666398719972980056458129926410633319/16088961425666647042007534519309054449796916961669921875000",
+          "scalar_off_diagonal": "-84636457297829876154147573758247263340510405910040466960442531014884403970048/3163177336369266857696283270997090097744500249691832256890487230344295501708984375",
+          "tensor": "0",
+          "tensor_polarizations": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "partition": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "scalar": "160307960681574678615328177314005516454596375047040713053751/376481697360599540782976307751831874125247856903076171875000",
+          "scalar_off_diagonal": "-1980492591214344406700324291028133702145118875991322410972833399431647715131392/74018349671040844470093028541331908287221305842788874811237401190056514739990234375",
+          "tensor": "0",
+          "tensor_polarizations": [
+            "0",
+            "0"
+          ]
+        }
+      ],
+      "chart": "unitary",
+      "kernel": "0",
+      "legs": [
+        {
+          "kind": "m_dot",
+          "polarization": null,
+          "wave": [
+            "2",
+            "3",
+            "0"
+          ]
+        },
+        {
+          "kind": "m_dot",
+          "polarization": null,
+          "wave": [
+            "0",
+            "2",
+            "4"
+          ]
+        },
+        {
+          "kind": "m_dot",
+          "polarization": null,
+          "wave": [
+            "3",
+            "-2",
+            "1"
+          ]
+        },
+        {
+          "kind": "m_dot",
+          "polarization": null,
+          "wave": [
+            "-5",
+            "-3",
+            "-5"
+          ]
+        }
+      ],
+      "minus_H": "-2404619424954195726767625791047314405840539694214064076098873/1882408486802997703914881538759159370626239284515380859375000",
+      "normalized": false,
+      "r": "1/3"
+    },
+    {
+      "Legendre_corrections": [
+        {
+          "partition": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "scalar": "549792889022554504531634298630731166920851581058993633364520601/61087775413078050487622357628001566114072669088840484619140625",
+          "scalar_off_diagonal": "-2555081870184376952403388579037266810685475763097265053214864801641097686633414656/10675723510246275644724956039615179079887688342709933867005394402411997318267822265625",
+          "tensor": "-2421442742004935032832/60727071260154247283935546875",
+          "tensor_polarizations": [
+            "-1233650951253289758359552/51071466929789721965789794921875",
+            "-17839608772730235650048/1134921487328660488128662109375"
+          ]
+        },
+        {
+          "partition": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              3
+            ]
+          ],
+          "scalar": "9444760798617859169609612611238539454520002298818255520776941747/260641175095799682080522059212806682086710054779052734375000000",
+          "scalar_off_diagonal": "-13882364490545346591824261235260762701973473338878385088603912193885825809843748864/6405434106147765386834973623769107447932613005625960320203236641447198390960693359375",
+          "tensor": "0",
+          "tensor_polarizations": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "partition": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "scalar": "706178497100352383085531392949739769206015980787683327774219481/78463853752798029292990494908855344919853339407444000244140625",
+          "scalar_off_diagonal": "-356727560553981802695973737305968369686085054684998055713687642400891410004836352/1451898397393493487682594021387664354864725614608551005912733638728031635284423828125",
+          "tensor": "-19220201764664171823104/390002746537435054779052734375",
+          "tensor_polarizations": [
+            "-318123217380750393344/390002746537435054779052734375",
+            "-24708599408213622784/509807511813640594482421875"
+          ]
+        }
+      ],
+      "chart": "unitary",
+      "kernel": "313695722679859113658074666724192758948809/89795923835890999591156482696533203125000",
+      "legs": [
+        {
+          "kind": "s",
+          "polarization": null,
+          "wave": [
+            "2",
+            "3",
+            "0"
+          ]
+        },
+        {
+          "kind": "m_dot",
+          "polarization": null,
+          "wave": [
+            "0",
+            "2",
+            "4"
+          ]
+        },
+        {
+          "kind": "s",
+          "polarization": null,
+          "wave": [
+            "3",
+            "-2",
+            "1"
+          ]
+        },
+        {
+          "kind": "m_dot",
+          "polarization": null,
+          "wave": [
+            "-5",
+            "-3",
+            "-5"
+          ]
+        }
+      ],
+      "minus_H": "-424694987572993697406047386740493533638032888103121939842537213123/8369477733631789791252319456944570124784356203460693359375000000",
+      "normalized": false,
+      "r": "1/3"
+    },
+    {
+      "Legendre_corrections": [
+        {
+          "partition": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "scalar": "-57083530741551834493089448735113737882051026273719943168/75481267281863434651027859512734074641619893127926025390625",
+          "scalar_off_diagonal": "-2192594370332061380332343995283254293032676213128636076999184151174801333272576/2638227155122948294546189405135268247252434537597822730231957342129041548095703125",
+          "tensor": "308355549507223552/13975707594364013671875",
+          "tensor_polarizations": [
+            "130322026752469782757376/4854224445873235960693359375",
+            "-171999767966498553856/35957218117579525634765625"
+          ]
+        },
+        {
+          "partition": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              3
+            ]
+          ],
+          "scalar": "24190653815441510000632688507131084154083270209536/850732795512690162310824001270601010331021618798828125",
+          "scalar_off_diagonal": "-2014684347410738620350959037076813824801418253143957597409346687336448/1338069563037843598248278650110871469443331126423240607049175321451753955078125",
+          "tensor": "0",
+          "tensor_polarizations": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "partition": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "scalar": "-7209166192365198717848617420854160102667101345037312/307782521967668890499429296637462399596869828768544921875",
+          "scalar_off_diagonal": "182469128952387874115351177893981002833108912695129080230211410651512832/142380513133619431769159428213649397470766308378295194964899285130773670849609375",
+          "tensor": "950498331215962112/16152007081486376953125",
+          "tensor_polarizations": [
+            "-1299356613851373568/16152007081486376953125",
+            "318450806095872/2286200577705078125"
+          ]
+        }
+      ],
+      "chart": "unitary",
+      "kernel": "-283265707647406278129876224502784/1981314732906353985219014974365234375",
+      "legs": [
+        {
+          "kind": "s_dot",
+          "polarization": null,
+          "wave": [
+            "2",
+            "3",
+            "0"
+          ]
+        },
+        {
+          "kind": "m_dot",
+          "polarization": null,
+          "wave": [
+            "0",
+            "2",
+            "4"
+          ]
+        },
+        {
+          "kind": "t",
+          "polarization": [
+            [
+              "47/182",
+              "45/91",
+              "3/14"
+            ],
+            [
+              "45/91",
+              "61/91",
+              "-1/7"
+            ],
+            [
+              "3/14",
+              "-1/7",
+              "-13/14"
+            ]
+          ],
+          "wave": [
+            "3",
+            "-2",
+            "1"
+          ]
+        },
+        {
+          "kind": "t_dot",
+          "polarization": [
+            [
+              "-47/1003",
+              "-630/1003",
+              "25/59"
+            ],
+            [
+              "-630/1003",
+              "625/1003",
+              "15/59"
+            ],
+            [
+              "25/59",
+              "15/59",
+              "-34/59"
+            ]
+          ],
+          "wave": [
+            "-5",
+            "-3",
+            "-5"
+          ]
+        }
+      ],
+      "minus_H": "17987281027737251596328844227977995193313121087488/34107553512929473093006325086138153829264783935546875",
+      "normalized": false,
+      "r": "1/3"
+    }
+  ],
+  "written_proofs": [
+    "notes/reduction.md",
+    "notes/audit.md"
+  ]
+}

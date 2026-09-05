@@ -13,6 +13,10 @@ around a pre-registered problems document and a certificate-gated ledger.
   cubic contraction threshold by 8.825--8.826%. Local QEI validity duration,
   initial Ricci assumptions and physical field/state calibration remain explicit;
   this is not full P8(a) or a cosmological application.
+  The new [exact radiation-background difference QSEI](problems/P8/a/applicability/README.md)
+  proves a Minkowski-coefficient bound on every compact positive-time sampling
+  interval in that fixed testbed, without assuming a short averaging duration.
+  Absolute reference-state stress and semiclassical self-consistency remain open.
 - P8(b): [completed scoped classification and verification commands](problems/P8/README.md).
   All 32 M0/M1 sector-row verdicts are decided: minimal optional groups are
   C or D without extra matter, and CD with rolling canonical matter.
@@ -23,11 +27,16 @@ around a pre-registered problems document and a certificate-gated ledger.
   and [hard finite-time tree control / UV applicability](problems/P8/s5/scattering/README.md).
   The D-only finite-time, nonexceptional cubic/quartic tree criterion now has
   a uniform sufficient scale choice. Inclusive scattering, all-orders control,
-  M1 interactions and UV admissibility remain open; no UV completion verdict.
+  M1 interaction control and UV admissibility remain open; no UV completion verdict.
 - P8 CD/M1: [nonlinear preparation and principal-cone robustness](problems/P8/s5/matter/README.md).
   The matter branch now has a regular nonlinear spatial chart, its required
   canonical boundary, seven-velocity Legendre reduction and quartic invariant
-  coefficients with all-time bounds. Physical M1 vertices/control remain open.
+  coefficients with all-time bounds. Its new
+  [physical cubic/quartic reduction](problems/P8/s5/matter/physical/README.md)
+  solves all three matter-sourced spatial constraints and retains the paired
+  scalar-matter canonical shifts. The unnormalized velocity kernels include the
+  full coupled scalar Legendre contact and both tensor polarizations. Coupled
+  mode normalization, free-evolution bounds and M1 interaction control remain open.
   Exact mixing mismatch forces a superluminal principal mode with frozen
   canonical matter; a specified one-sided covariant deformation stays causal
   within the exceptional relation. Neither result computes loop corrections.
