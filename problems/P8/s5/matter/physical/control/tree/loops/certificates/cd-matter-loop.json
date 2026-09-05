@@ -1,0 +1,327 @@
+{
+  "C2_E4_R2_BoxR_coefficients": {
+    "BoxR": "1/30",
+    "C2": "1/120",
+    "E4": "-1/360",
+    "R2": "1/72"
+  },
+  "algebraic_residuals": {
+    "CD_curvature_and_covariant_variation": {
+      "compact_A2_chosen_representative": "0",
+      "compact_BoxR": "0",
+      "compact_C2": "0",
+      "compact_E4": "0",
+      "compact_I_A2_00": "0",
+      "compact_I_A2_pressure": "0",
+      "compact_I_R2_00": "0",
+      "compact_I_R2_pressure": "0",
+      "compact_R": "0",
+      "compact_Rddot": "0",
+      "compact_Rdot": "0",
+      "compact_Ric2": "0",
+      "compact_Riem2": "0",
+      "compact_first_curvature_derivative": "0",
+      "compact_second_curvature_derivative": "0",
+      "free_M1_background_equation": "0",
+      "minisuperspace_scale_variation": "0",
+      "variation_conservation": "0",
+      "variation_trace": "0"
+    },
+    "heat_kernel_decompositions": {
+      "minimal_ricci_basis": "0",
+      "nonminimal_completed_square": "0",
+      "weyl_euler_basis": "0"
+    },
+    "illustrative_Einstein_field_redefinition_trade": {
+      "gravity_term_traded": "0",
+      "illustrative_einstein_on_shell_Y_squared": "0",
+      "induced_matter_terms": "0"
+    },
+    "real_scalar_pole_and_convention_signs": {
+      "constant_scale_rescaling": "0",
+      "n_minus_four_vs_epsilon_pole": "0",
+      "real_scalar_proper_time_residue": "0",
+      "wick_local_coefficient_sign": "0"
+    },
+    "tensor_principal_coefficient_only": {
+      "R_squared_two_derivative_tensor_coefficient": "0",
+      "TT_Weyl_canonical_coefficient": "0",
+      "TT_Weyl_quadratic": "0",
+      "TT_norm": "0"
+    }
+  },
+  "claim": "P8-S5.9.CD",
+  "convention_table": {
+    "Euclidean_compensating_beta_per_bulk_coefficient": "hbar/(16*pi**2)",
+    "Euclidean_counterterm_coefficient_per_A2_over_epsilon": "hbar/(32*pi**2)",
+    "Euclidean_effective_action": "GammaE=(hbar/2)*Tr log(DE/mu^2)",
+    "Euclidean_pole_coefficient_per_A2_over_epsilon": "-hbar/(32*pi**2)",
+    "Euclidean_pole_coefficient_per_A2_over_n_minus_4": "hbar/(16*pi**2)",
+    "P8_Lorentzian_compensating_beta_per_bulk_coefficient": "-hbar/(16*pi**2)",
+    "P8_Lorentzian_counterterm_coefficient_per_A2_over_epsilon": "-hbar/(32*pi**2)",
+    "P8_Lorentzian_pole_coefficient_per_A2_over_epsilon": "hbar/(32*pi**2)",
+    "constant_scale_GammaE_derivative_per_A2": "-hbar/(16*pi**2)",
+    "constant_scale_GammaL_derivative_per_A2": "hbar/(16*pi**2)",
+    "continuation": "GammaE=-i*GammaL|continued; dt=-i*dtE; gL|continued=-gE; cE=-cL",
+    "dimension": "n=4-2*epsilon",
+    "locality_only": "no global Euclidean CD determinant or global state is assumed"
+  },
+  "date": "2026-09-05",
+  "exact_background_bounds_and_conditional_scaling": {
+    "S5_8_Mtau": "1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "conditional_unit_log_hbar_one_source_ratio_upper": "7/6000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "exact_all_time_invariants_and_variations": {
+      "A2_chosen_representative": {
+        "absolute_sup": "480",
+        "candidate_v": [
+          "0",
+          "1"
+        ],
+        "compact_polynomial": "1184*x**4/3 + 256*x**2/3",
+        "cosmic_expression": "32*u**2*(45*u**2 + 8)/(3*tau**4*(u**2 + 1)**4)",
+        "dimension": "4",
+        "max": "480",
+        "min": "0"
+      },
+      "BoxR": {
+        "absolute_sup": "3024",
+        "candidate_v": [
+          "0",
+          "1/36",
+          "1"
+        ],
+        "compact_polynomial": "3456*x**4 - 192*x**2 - 240",
+        "cosmic_expression": "48*(63*u**4 - 14*u**2 - 5)/(tau**4*(u**2 + 1)**4)",
+        "dimension": "4",
+        "max": "3024",
+        "min": "-728/3"
+      },
+      "C2": {
+        "absolute_sup": "0",
+        "candidate_v": [
+          "0",
+          "1"
+        ],
+        "compact_polynomial": "0",
+        "cosmic_expression": "0",
+        "dimension": "4",
+        "max": "0",
+        "min": "0"
+      },
+      "E4": {
+        "absolute_sup": "4608",
+        "candidate_v": [
+          "0",
+          "1"
+        ],
+        "compact_polynomial": "3072*x**4 + 1536*x**2",
+        "cosmic_expression": "1536*u**2*(3*u**2 + 1)/(tau**4*(u**2 + 1)**4)",
+        "dimension": "4",
+        "max": "4608",
+        "min": "0"
+      },
+      "I_A2_00": {
+        "absolute_sup": "84",
+        "candidate_v": [
+          "0",
+          "2/9",
+          "1"
+        ],
+        "compact_polynomial": "144*x**4 - 64*x**2 + 4",
+        "cosmic_expression": "4*(21*u**4 - 14*u**2 + 1)/(tau**4*(u**2 + 1)**4)",
+        "dimension": "4",
+        "max": "84",
+        "min": "-28/9"
+      },
+      "I_A2_pressure": {
+        "absolute_sup": "56",
+        "candidate_v": [
+          "0",
+          "1"
+        ],
+        "compact_polynomial": "-48*x**4 - 16*x**2 + 8",
+        "cosmic_expression": "-8*(7*u**4 - 1)/(tau**4*(u**2 + 1)**4)",
+        "dimension": "4",
+        "max": "8",
+        "min": "-56"
+      },
+      "I_R2_00": {
+        "absolute_sup": "6048",
+        "candidate_v": [
+          "0",
+          "2/9",
+          "1"
+        ],
+        "compact_polynomial": "10368*x**4 - 4608*x**2 + 288",
+        "cosmic_expression": "288*(21*u**4 - 14*u**2 + 1)/(tau**4*(u**2 + 1)**4)",
+        "dimension": "4",
+        "max": "6048",
+        "min": "-224"
+      },
+      "I_R2_pressure": {
+        "absolute_sup": "4032",
+        "candidate_v": [
+          "0",
+          "1"
+        ],
+        "compact_polynomial": "-3456*x**4 - 1152*x**2 + 576",
+        "cosmic_expression": "-576*(7*u**4 - 1)/(tau**4*(u**2 + 1)**4)",
+        "dimension": "4",
+        "max": "576",
+        "min": "-4032"
+      },
+      "R": {
+        "absolute_sup": "168",
+        "candidate_v": [
+          "0",
+          "1"
+        ],
+        "compact_polynomial": "-144*x**2 - 24",
+        "cosmic_expression": "-24*(7*u**2 + 1)/(tau**2*(u**2 + 1)**2)",
+        "dimension": "2",
+        "max": "-24",
+        "min": "-168"
+      },
+      "Ric2": {
+        "absolute_sup": "7104",
+        "candidate_v": [
+          "0",
+          "1"
+        ],
+        "compact_polynomial": "5376*x**4 + 1536*x**2 + 192",
+        "cosmic_expression": "192*(37*u**4 + 10*u**2 + 1)/(tau**4*(u**2 + 1)**4)",
+        "dimension": "4",
+        "max": "7104",
+        "min": "192"
+      },
+      "Riem2": {
+        "absolute_sup": "4800",
+        "candidate_v": [
+          "0",
+          "1"
+        ],
+        "compact_polynomial": "3840*x**4 + 768*x**2 + 192",
+        "cosmic_expression": "192*(5*u**2 - 2*u + 1)*(5*u**2 + 2*u + 1)/(tau**4*(u**2 + 1)**4)",
+        "dimension": "4",
+        "max": "4800",
+        "min": "192"
+      }
+    },
+    "isolated_constant_log_source_ratio": "168*hbar*abs(log(mu/mu0))/((4*pi)^2*(M*ell)^2)",
+    "local_finite_R2_source_ratio": "12096*abs(cR(mu0))/(M*ell)^2; finite cR is matching input, not bounded here",
+    "rational_log_source_enclosure": "(7/6)*hbar*L/(M*tau)^2 if abs(log(mu/mu0))<=L; uses pi>3 and ell>=tau",
+    "tensor_R2_two_derivative_coefficient_ratio": "abs(delta M_T^2)/M^2<=672*abs(cR)/(M*ell)^2 for this added local term",
+    "tensor_flat_Weyl_highest_derivative_coefficient": "L2_cC=2*cC*(Box Y)^2/M^2, TT norm one; not a curved finite-band operator bound"
+  },
+  "formulation": "FORMULATION.md",
+  "not_established": [
+    "net beta functions or absence of cancellations in the fully quantized CD/M1 theory",
+    "bounds on finite matching coefficients, complete renormalized stress tensor, anomaly or massless nonlocal/state-dependent terms",
+    "a global Euclidean CD determinant, global vacuum, in/out S matrix, or infrared/boundary prescription",
+    "a mass-gap or massive Schwinger-DeWitt expansion for the massless M1 field",
+    "corrected coupled constraint reduction, kinetic positivity, propagation cone, physical ghost or quantum superluminality",
+    "backreaction solution control, higher-derivative order-reduced evolution, higher-loop/all-order remainders or technical naturalness",
+    "S6 UV matching/admissibility/completion, optimal physical cutoff, or full P8 completion"
+  ],
+  "off_shell_fixed_variable_nonclosure": {
+    "acceleration_hessian": "a",
+    "bulk_density_mod_Euler_and_total_derivatives": "a*addot**2/2 + addot*adot**2 + adot**4/(2*a)",
+    "equivalence_scope": "modulo total derivatives in frozen variables, not modulo derivative field redefinitions or CD equations of motion",
+    "fourth_order_Euler_Lagrange_coefficient": "a",
+    "restriction": "phi=t, N=1, X_clock=1, arbitrary smooth a(t)>0",
+    "strict_quadratic_DHOST_restriction_acceleration_hessian": "0"
+  },
+  "operational_contract": {
+    "S6_relationship": "higher EFT operators are permitted as separately named matching candidates; old finite DHOST truncation is not overwritten",
+    "bulk_UV_scope": "local curvature-squared pole; no physical boundary/initial-surface counterterms or global determinant computed",
+    "comparison_denominator": "positive reference M^2/ell^2, not the actual vanishing Einstein density at the bounce",
+    "conditional_smallness": "only specified constant logarithmic increment, or independently supplied finite cR bound; not a full quantum remainder",
+    "loop_order": "order hbar isolated chi determinant; no mixed, clock, graviton or other matter loops",
+    "matter_frame": "unchanged original P8 physical metric, signature +---, R=-6*(Hdot+2H^2), Einstein action -M^2 R/2",
+    "quantized_fields": "one real, massless, free, minimally coupled chi only; g and clock are external",
+    "scale_comparison": "mu and mu0 are constants; no substitution of a spacetime-dependent scale into the action",
+    "topological_quotient": "strictly four-dimensional bulk variation, compactly supported variations; dimensional Euler pole is retained before continuation"
+  },
+  "positive_and_omission_controls": {
+    "geometry": {
+      "R_flat_radiation_I_R2_00": "0",
+      "R_flat_radiation_I_R2_pressure": "0",
+      "R_flat_radiation_R": "0",
+      "bulk_A2_variation_bounce_not_zero": "4",
+      "drop_curvature_derivatives_I00_error_at_x_half": "576",
+      "drop_ell_derivative_Rdot_error": "-288*x**3 - 48*x",
+      "finite_local_coefficient_remains_free": "576*cR_finite",
+      "full_A2_density_bounce": "0",
+      "wrong_R_sign_curvature_error_at_bounce": "48"
+    },
+    "heat": {
+      "R_flat_bulk_Weyl_term": "C2/120",
+      "Ricci_flat_local_is_Euler": "0",
+      "conformal_C2_coefficient": "1/120",
+      "conformal_R2_coefficient": "0",
+      "flip_E_sign_at_conformal_coupling_error": "1/18",
+      "omit_R2_acceleration_hessian_error": "-a",
+      "omit_real_scalar_half_residue_error": "-hbar/(32*pi**2)",
+      "using_Euclidean_as_Lorentzian_beta_error_per_R2": "hbar/(576*pi**2)"
+    }
+  },
+  "primary_sources": {
+    "equations_of_motion_and_field_redefinitions": {
+      "numerical_coefficients_imported": false,
+      "sections": [
+        "6",
+        "8"
+      ],
+      "url": "https://www.numdam.org/article/AIHPA_1974__20_1_69_0.pdf"
+    },
+    "heat_kernel": {
+      "equations": [
+        "1.16",
+        "1.18",
+        "2.32",
+        "3.6",
+        "4.28"
+      ],
+      "sections": [
+        "2.3 (local Lorentzian counterterms)",
+        "7.1 (anomaly distinction)",
+        "8.2 (nonlocal expansion)"
+      ],
+      "url": "https://arxiv.org/pdf/hep-th/0306138"
+    },
+    "perturbative_higher_derivative_interpretation": {
+      "sections": [
+        "I",
+        "II"
+      ],
+      "url": "https://arxiv.org/pdf/gr-qc/9211002"
+    }
+  },
+  "prior_S5_8_CD_sha256": "839151b1ae103d4945b54ed703d9bb35e0aa4aa5ff3d173c20e7859767dd9787",
+  "real_minimal_scalar_local_A2": "BoxR/30 + R**2/72 - Ric2/180 + Riem2/180",
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "f5dce742bf479bfc2abd7e5b4ee60b705c3d8fa918067ec1c80a744b90fba182",
+    "README.md": "73e39537f11977adc5070299b54ddfef7855cbc352637cba96e16968d4d5879c",
+    "notes/one-loop.md": "4b5d1917b885f90d1afbd67e1c690a8e80cda55d6efd7819ef60f65c6c7778de",
+    "src/p8_m1_loops/__init__.py": "a8fef2511140e62558faeeac6237eef045a06def10f4c0417dc6caf65713eed9",
+    "src/p8_m1_loops/background.py": "97b2bfc0851482e7181ff0a206df7d854e6597d9390451f97d0ca20ad60100d4",
+    "src/p8_m1_loops/heat_kernel.py": "df465d2b923c93add1f49b69882188c41a554feb04ab0de64ae16dc36a065859",
+    "src/p8_m1_loops/verify.py": "1b904776247029e00a58627f8abd820d8e8313e13e798ee3cc73be7d0612c7e5",
+    "tests/conftest.py": "45103d64089d5908a6281b64d6d224e6d0edee9daf5e0717e4b616d9c63b2afd",
+    "tests/test_m1_loops_background.py": "dedf07e8d1e7c633c8bbf62e25ca06c63140c8e32010d7ad19f13006d37312ef",
+    "tests/test_m1_loops_heat_kernel.py": "9d2b33fc93ca11fe83030c9231ae15cc1ef2bf3ea7801909b09bb14d088773b8",
+    "tests/test_m1_loops_lapse_variation.py": "444eb639efd1143102b7a81b49905ec53d3fcc795970d9fd149cd302e3837700",
+    "tests/test_m1_loops_report.py": "8df1caf9e2f731deda08624dea4cf20e93c760f9e7a910a70a6cf11e4a0358d6",
+    "tests/test_m1_loops_weyl_variation.py": "2c52dc6804a140459a54dc5ec215c8f0931355e0fec0e22be5c7a29f81718f28"
+  },
+  "status": "ISOLATED_M1_LOCAL_ONE_LOOP_COUNTERTERM_AND_FROZEN_VARIABLE_NONCLOSURE; FULL_QUANTUM_CONTROL_OPEN",
+  "verification_boundary": [
+    "prior S5.8 is hash-pinned and replayed, not retroactively quantum-corrected",
+    "the universal heat coefficient/local Lorentzian renormalization theorem is an external primary-source input",
+    "exact algebra checks decomposition, pole normalization, off-shell symbol, all-time polynomial extrema and dimensions",
+    "independent tests vary the lapse before gauge fixing and contract the linearized Weyl tensor before specializing",
+    "field-redefinition and perturbative-EFT limitations are written arguments, not a complete quantum-equivalence or stability proof"
+  ],
+  "written_proof": "notes/one-loop.md"
+}

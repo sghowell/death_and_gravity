@@ -22,8 +22,15 @@ around a pre-registered problems document and a certificate-gated ledger.
   [whole-patch source obstruction](problems/P8/a/applicability/reference/asymptotics/README.md)
   proves that changing the Hadamard state cannot make the exact radiation
   metric self-consistent on its entire patch with the specified field and
-  ordinary radiation sources. Finite slabs, backreacted metrics and a
-  self-consistent cosmological focusing application remain open.
+  ordinary radiation sources. The new
+  [first-order backreaction and finite-slab residual analysis](problems/P8/a/applicability/reference/asymptotics/backreaction/README.md)
+  constructs the leading Einstein-plus-radiation correction and an exactly
+  solvable conserved order-reduced surrogate, with explicit Taylor bounds.
+  A prescribed transported Hadamard state gives a qualitative second-order
+  semiclassical residual on compact slabs; this does not solve the full
+  semiclassical equation or numerically bound its quantum response.
+  Quantitative backreacted QSEI control and a self-consistent cosmological
+  focusing application remain open.
 - P8(b): [completed scoped classification and verification commands](problems/P8/README.md).
   All 32 M0/M1 sector-row verdicts are decided: minimal optional groups are
   C or D without extra matter, and CD with rolling canonical matter.
@@ -55,6 +62,13 @@ around a pre-registered problems document and a certificate-gated ledger.
   Exact mixing mismatch forces a superluminal principal mode with frozen
   canonical matter; a specified one-sided covariant deformation stays causal
   within the exceptional relation. Neither result computes loop corrections.
+  The new [isolated matter-loop counterterm audit](problems/P8/s5/matter/physical/control/tree/loops/README.md)
+  derives the required curvature-squared operators, establishes nonclosure of
+  the strict truncation in the frozen physical variables, and bounds their
+  local logarithmic scale variation on CD. These additional EFT operators are
+  permitted by S6. Finite matching coefficients, nonlocal effects and the
+  remaining coupled loops are not bounded; no loop-corrected stability or UV
+  verdict follows.
 - P8 S6: [conditional UV framework and vacuum-extension test](problems/P8/s6/README.md).
   A smooth clock tube does not fix the vacuum positivity coefficient. The
   adopted vacuum/Regge framework requires controlled matching to the bounce;
