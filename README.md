@@ -8,6 +8,11 @@ around a pre-registered problems document and a certificate-gated ledger.
 - Starting-point assessment and pre-work: `docs/assessment-2026-08-21-starting-points.md`.
 - Claims ledger: `CLAIMS.md` — nothing is stated as a result unless it is
   recorded there with the evidence path and a level.
+- P8(a): [conditional local-QEI focusing optimization](problems/P8/a/README.md).
+  Exact localization and a certified two-parameter trial lower the same-partition
+  cubic contraction threshold by 8.825--8.826%. Local QEI validity duration,
+  initial Ricci assumptions and physical field/state calibration remain explicit;
+  this is not full P8(a) or a cosmological application.
 - P8(b): [completed scoped classification and verification commands](problems/P8/README.md).
   All 32 M0/M1 sector-row verdicts are decided: minimal optional groups are
   C or D without extra matter, and CD with rolling canonical matter.
@@ -19,6 +24,13 @@ around a pre-registered problems document and a certificate-gated ledger.
   The D-only finite-time, nonexceptional cubic/quartic tree criterion now has
   a uniform sufficient scale choice. Inclusive scattering, all-orders control,
   M1 interactions and UV admissibility remain open; no UV completion verdict.
+- P8 CD/M1: [nonlinear preparation and principal-cone robustness](problems/P8/s5/matter/README.md).
+  The matter branch now has a regular nonlinear spatial chart, its required
+  canonical boundary, seven-velocity Legendre reduction and quartic invariant
+  coefficients with all-time bounds. Physical M1 vertices/control remain open.
+  Exact mixing mismatch forces a superluminal principal mode with frozen
+  canonical matter; a specified one-sided covariant deformation stays causal
+  within the exceptional relation. Neither result computes loop corrections.
 - P8 S6: [conditional UV framework and vacuum-extension test](problems/P8/s6/README.md).
   A smooth clock tube does not fix the vacuum positivity coefficient. The
   adopted vacuum/Regge framework requires controlled matching to the bounce;
