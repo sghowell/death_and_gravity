@@ -13,10 +13,14 @@ around a pre-registered problems document and a certificate-gated ledger.
   cubic contraction threshold by 8.825--8.826%. Local QEI validity duration,
   initial Ricci assumptions and physical field/state calibration remain explicit;
   this is not full P8(a) or a cosmological application.
-  The new [exact radiation-background difference QSEI](problems/P8/a/applicability/README.md)
+  The [exact radiation-background difference QSEI](problems/P8/a/applicability/README.md)
   proves a Minkowski-coefficient bound on every compact positive-time sampling
   interval in that fixed testbed, without assuming a short averaging duration.
-  Absolute reference-state stress and semiclassical self-consistency remain open.
+  The new [reference-stress and absolute-QSEI calculation](problems/P8/a/applicability/reference/README.md)
+  computes the positive reference effective energy and removes the conditional
+  reference-stress parameter for this testbed. Its reference state is not an
+  exact semiclassical source for the radiation metric; self-consistent
+  cosmological application remains open.
 - P8(b): [completed scoped classification and verification commands](problems/P8/README.md).
   All 32 M0/M1 sector-row verdicts are decided: minimal optional groups are
   C or D without extra matter, and CD with rolling canonical matter.
@@ -35,8 +39,12 @@ around a pre-registered problems document and a certificate-gated ledger.
   [physical cubic/quartic reduction](problems/P8/s5/matter/physical/README.md)
   solves all three matter-sourced spatial constraints and retains the paired
   scalar-matter canonical shifts. The unnormalized velocity kernels include the
-  full coupled scalar Legendre contact and both tensor polarizations. Coupled
-  mode normalization, free-evolution bounds and M1 interaction control remain open.
+  full coupled scalar Legendre contact and both tensor polarizations. The new
+  [coupled canonical normalization and free-energy bound](problems/P8/s5/matter/physical/control/README.md)
+  retains finite-momentum mixing and all time-dependent generators, and gives
+  a uniform sufficient local band with energy variation below a factor of two.
+  Its conservative q>=10^20 threshold is not an interacting cutoff;
+  M1 interaction control remains open.
   Exact mixing mismatch forces a superluminal principal mode with frozen
   canonical matter; a specified one-sided covariant deformation stays causal
   within the exceptional relation. Neither result computes loop corrections.

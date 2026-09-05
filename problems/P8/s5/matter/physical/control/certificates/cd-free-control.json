@@ -1,0 +1,1358 @@
+{
+  "canonical_dictionary": {
+    "Hamiltonian_measure": "a^3; H2=p^T*A*p/2+p^T*B*Q+Q^T*C*Q/2",
+    "Lagrangian": "(Ydot+Omega*Y)^T*(Ydot+Omega*Y)/2-Y^T*W*Y/2",
+    "boundary_and_connection": "S=sym(Bhat); Omega=-skew(Bhat); P=pi+S*Y",
+    "finite_q_mixing_retained": true,
+    "free_energy": "E=(P^dagger*P+Y^dagger*W*Y)/2; Edot=Y^dagger*(Wdot+[Omega,W])*Y/2",
+    "frequency_dependent_canonical_boundary_is_not_an_interaction_bound": true,
+    "instantaneous_eigenvectors_used": false,
+    "mass_dimension_derivative": "D_n=(1-x^2)*partial_x+6*x*z*partial_z-11*x*l*partial_l-n*x",
+    "normalization": "T^T*T=A^-1; Y=a^(3/2)*T*Q; pi=a^(3/2)*T^-T*p",
+    "original_phase_inverse": "Q=a^-3/2*T^-1*Y; p=a^-3/2*T^T*(P-S*Y)",
+    "potential": "W=T^-T*C*T^-1-S^2+[S,Omega]-Sdot=(q*I+M)/ell^2",
+    "time_generator": "F=3*H*I/2+Tdot*T^-1; Bhat=T*B*T^-1+F"
+  },
+  "claim": "P8-S5.7.CD",
+  "compact_coefficient_records": {
+    "gamma": {
+      "exact_residuals": {
+        "full_Cholesky_00": "0",
+        "full_Cholesky_01": "0",
+        "full_Cholesky_10": "0",
+        "full_Cholesky_11": "0",
+        "full_velocity_cross_00": "0",
+        "full_velocity_cross_01": "0",
+        "full_velocity_cross_10": "0",
+        "full_velocity_cross_11": "0"
+      },
+      "original_phase_momentum_boundary_coefficients": {
+        "momentum_boundary11": {
+          "even": {
+            "denominator_terms": 59,
+            "numerator_terms": 72,
+            "rational_expression_sha256": "a55abcde4431fc5a4e7b9350e929adcf99063aedddc6acc417c582ef11f43d63",
+            "z_zero_denominator_not_identically_zero": false
+          },
+          "exact_arithmetic": "QQ(x,z)[l]/(l^2-(1-x^2)^11/100)",
+          "odd_times_l": {
+            "denominator_terms": 1,
+            "numerator_terms": 0,
+            "rational_expression_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+            "z_zero_denominator_not_identically_zero": true
+          }
+        },
+        "momentum_boundary12_factor": {
+          "even": {
+            "denominator_terms": 1,
+            "numerator_terms": 0,
+            "rational_expression_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+            "z_zero_denominator_not_identically_zero": true
+          },
+          "exact_arithmetic": "QQ(x,z)[l]/(l^2-(1-x^2)^11/100)",
+          "odd_times_l": {
+            "denominator_terms": 72,
+            "numerator_terms": 37,
+            "rational_expression_sha256": "359e611674063b451799c11600a972910994108cd3eed9cd58975a744f7da60f",
+            "z_zero_denominator_not_identically_zero": true
+          }
+        },
+        "momentum_boundary22": {
+          "even": {
+            "denominator_terms": 62,
+            "numerator_terms": 62,
+            "rational_expression_sha256": "010fbce51761f5d65510356c3eefe6e25b2bcf3c0367caa8443db2dd87d937f8",
+            "z_zero_denominator_not_identically_zero": true
+          },
+          "exact_arithmetic": "QQ(x,z)[l]/(l^2-(1-x^2)^11/100)",
+          "odd_times_l": {
+            "denominator_terms": 1,
+            "numerator_terms": 0,
+            "rational_expression_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+            "z_zero_denominator_not_identically_zero": true
+          }
+        }
+      },
+      "principal_subtracted_unwhitened_mass": [
+        {
+          "even": {
+            "denominator_terms": 41,
+            "numerator_terms": 31,
+            "rational_expression_sha256": "20bc7cc90992bd4d322770c77cfe7cf988d311d7d05be421bd5a3a3282d45ffd",
+            "z_zero_denominator_not_identically_zero": true
+          },
+          "exact_arithmetic": "QQ(x,z)[l]/(l^2-(1-x^2)^11/100)",
+          "odd_times_l": {
+            "denominator_terms": 1,
+            "numerator_terms": 0,
+            "rational_expression_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+            "z_zero_denominator_not_identically_zero": true
+          }
+        },
+        {
+          "even": {
+            "denominator_terms": 1,
+            "numerator_terms": 0,
+            "rational_expression_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+            "z_zero_denominator_not_identically_zero": true
+          },
+          "exact_arithmetic": "QQ(x,z)[l]/(l^2-(1-x^2)^11/100)",
+          "odd_times_l": {
+            "denominator_terms": 41,
+            "numerator_terms": 29,
+            "rational_expression_sha256": "0ed9f29071d5349b8d0716abbd4c8446f86fc0f0857eac12ed3351405023f55e",
+            "z_zero_denominator_not_identically_zero": true
+          }
+        },
+        {
+          "even": {
+            "denominator_terms": 1,
+            "numerator_terms": 0,
+            "rational_expression_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+            "z_zero_denominator_not_identically_zero": true
+          },
+          "exact_arithmetic": "QQ(x,z)[l]/(l^2-(1-x^2)^11/100)",
+          "odd_times_l": {
+            "denominator_terms": 41,
+            "numerator_terms": 29,
+            "rational_expression_sha256": "0ed9f29071d5349b8d0716abbd4c8446f86fc0f0857eac12ed3351405023f55e",
+            "z_zero_denominator_not_identically_zero": true
+          }
+        },
+        {
+          "even": {
+            "denominator_terms": 41,
+            "numerator_terms": 74,
+            "rational_expression_sha256": "752529e199374c97d995bd76541cf225b076149bfc251671212577c1acb9f631",
+            "z_zero_denominator_not_identically_zero": true
+          },
+          "exact_arithmetic": "QQ(x,z)[l]/(l^2-(1-x^2)^11/100)",
+          "odd_times_l": {
+            "denominator_terms": 1,
+            "numerator_terms": 0,
+            "rational_expression_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+            "z_zero_denominator_not_identically_zero": true
+          }
+        }
+      ],
+      "regular_mass_and_connection_coefficients": {
+        "connection_factor": {
+          "even": {
+            "denominator_terms": 1,
+            "numerator_terms": 0,
+            "rational_expression_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+            "z_zero_denominator_not_identically_zero": true
+          },
+          "exact_arithmetic": "QQ(x,z)[l]/(l^2-(1-x^2)^11/100)",
+          "odd_times_l": {
+            "denominator_terms": 72,
+            "numerator_terms": 37,
+            "rational_expression_sha256": "1badbfb4e699bd2332dd2e02994345ca42954d6fc9422f5eb08ec6ed6646ced0",
+            "z_zero_denominator_not_identically_zero": true
+          }
+        },
+        "covariant_mass11": {
+          "even": {
+            "denominator_terms": 316,
+            "numerator_terms": 330,
+            "rational_expression_sha256": "90c1224cb3abdb28fe895d67f53a5df52c57f5b46ebb3d6705bce08399038699",
+            "z_zero_denominator_not_identically_zero": true
+          },
+          "exact_arithmetic": "QQ(x,z)[l]/(l^2-(1-x^2)^11/100)",
+          "odd_times_l": {
+            "denominator_terms": 1,
+            "numerator_terms": 0,
+            "rational_expression_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+            "z_zero_denominator_not_identically_zero": true
+          }
+        },
+        "covariant_mass12_factor": {
+          "even": {
+            "denominator_terms": 1,
+            "numerator_terms": 0,
+            "rational_expression_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+            "z_zero_denominator_not_identically_zero": true
+          },
+          "exact_arithmetic": "QQ(x,z)[l]/(l^2-(1-x^2)^11/100)",
+          "odd_times_l": {
+            "denominator_terms": 375,
+            "numerator_terms": 286,
+            "rational_expression_sha256": "ce0cdcc12da6f380415a1beece697c48794f72a794d57cb5ec9dd5e114e2d1d7",
+            "z_zero_denominator_not_identically_zero": true
+          }
+        },
+        "covariant_mass22": {
+          "even": {
+            "denominator_terms": 345,
+            "numerator_terms": 360,
+            "rational_expression_sha256": "60ff67355e183e8a61f557c648b638ada9efad8a35bd0f4363f1d3ebe12cfd38",
+            "z_zero_denominator_not_identically_zero": true
+          },
+          "exact_arithmetic": "QQ(x,z)[l]/(l^2-(1-x^2)^11/100)",
+          "odd_times_l": {
+            "denominator_terms": 1,
+            "numerator_terms": 0,
+            "rational_expression_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+            "z_zero_denominator_not_identically_zero": true
+          }
+        },
+        "mass11": {
+          "even": {
+            "denominator_terms": 164,
+            "numerator_terms": 177,
+            "rational_expression_sha256": "d02e9622b959e8a2aecda592bfb2f5cd241eb1361a9e084a4e8784b5ea31f0e3",
+            "z_zero_denominator_not_identically_zero": true
+          },
+          "exact_arithmetic": "QQ(x,z)[l]/(l^2-(1-x^2)^11/100)",
+          "odd_times_l": {
+            "denominator_terms": 1,
+            "numerator_terms": 0,
+            "rational_expression_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+            "z_zero_denominator_not_identically_zero": true
+          }
+        },
+        "mass12_factor": {
+          "even": {
+            "denominator_terms": 1,
+            "numerator_terms": 0,
+            "rational_expression_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+            "z_zero_denominator_not_identically_zero": true
+          },
+          "exact_arithmetic": "QQ(x,z)[l]/(l^2-(1-x^2)^11/100)",
+          "odd_times_l": {
+            "denominator_terms": 200,
+            "numerator_terms": 144,
+            "rational_expression_sha256": "7fc609fd05030161b71aa52bcc9b0d407c92b080633cf4716b39d636a8a7f7f0",
+            "z_zero_denominator_not_identically_zero": true
+          }
+        },
+        "mass22": {
+          "even": {
+            "denominator_terms": 180,
+            "numerator_terms": 194,
+            "rational_expression_sha256": "2cb315783372a1a35bf4622f3162a7f618c942cfcd02cd8fefa5277c0a403713",
+            "z_zero_denominator_not_identically_zero": true
+          },
+          "exact_arithmetic": "QQ(x,z)[l]/(l^2-(1-x^2)^11/100)",
+          "odd_times_l": {
+            "denominator_terms": 1,
+            "numerator_terms": 0,
+            "rational_expression_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+            "z_zero_denominator_not_identically_zero": true
+          }
+        }
+      }
+    },
+    "unitary": {
+      "exact_residuals": {
+        "full_Cholesky_00": "0",
+        "full_Cholesky_01": "0",
+        "full_Cholesky_10": "0",
+        "full_Cholesky_11": "0",
+        "full_velocity_cross_00": "0",
+        "full_velocity_cross_01": "0",
+        "full_velocity_cross_10": "0",
+        "full_velocity_cross_11": "0"
+      },
+      "original_phase_momentum_boundary_coefficients": {
+        "momentum_boundary11": {
+          "even": {
+            "denominator_terms": 21,
+            "numerator_terms": 42,
+            "rational_expression_sha256": "2af41518d662fef48fc61118bd9d06d25383514cceb48ce5c9a2fed2deb903c1",
+            "z_zero_denominator_not_identically_zero": false
+          },
+          "exact_arithmetic": "QQ(x,z)[l]/(l^2-(1-x^2)^11/100)",
+          "odd_times_l": {
+            "denominator_terms": 1,
+            "numerator_terms": 0,
+            "rational_expression_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+            "z_zero_denominator_not_identically_zero": true
+          }
+        },
+        "momentum_boundary12_factor": {
+          "even": {
+            "denominator_terms": 1,
+            "numerator_terms": 0,
+            "rational_expression_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+            "z_zero_denominator_not_identically_zero": true
+          },
+          "exact_arithmetic": "QQ(x,z)[l]/(l^2-(1-x^2)^11/100)",
+          "odd_times_l": {
+            "denominator_terms": 7,
+            "numerator_terms": 18,
+            "rational_expression_sha256": "c96ceb2b0770f7cfe7064cf42b2e3249eb7c39b74ca6d076c8f6b7c91ce868fe",
+            "z_zero_denominator_not_identically_zero": true
+          }
+        },
+        "momentum_boundary22": {
+          "even": {
+            "denominator_terms": 4,
+            "numerator_terms": 15,
+            "rational_expression_sha256": "9584715b697fcf2e737194d904da16f8c84f416e8e94cf131d5b161c2b2329ce",
+            "z_zero_denominator_not_identically_zero": true
+          },
+          "exact_arithmetic": "QQ(x,z)[l]/(l^2-(1-x^2)^11/100)",
+          "odd_times_l": {
+            "denominator_terms": 1,
+            "numerator_terms": 0,
+            "rational_expression_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+            "z_zero_denominator_not_identically_zero": true
+          }
+        }
+      },
+      "principal_subtracted_unwhitened_mass": [
+        {
+          "even": {
+            "denominator_terms": 1,
+            "numerator_terms": 0,
+            "rational_expression_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+            "z_zero_denominator_not_identically_zero": true
+          },
+          "exact_arithmetic": "QQ(x,z)[l]/(l^2-(1-x^2)^11/100)",
+          "odd_times_l": {
+            "denominator_terms": 1,
+            "numerator_terms": 0,
+            "rational_expression_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+            "z_zero_denominator_not_identically_zero": true
+          }
+        },
+        {
+          "even": {
+            "denominator_terms": 1,
+            "numerator_terms": 0,
+            "rational_expression_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+            "z_zero_denominator_not_identically_zero": true
+          },
+          "exact_arithmetic": "QQ(x,z)[l]/(l^2-(1-x^2)^11/100)",
+          "odd_times_l": {
+            "denominator_terms": 9,
+            "numerator_terms": 11,
+            "rational_expression_sha256": "64f95f886d20ddd12a7ab1dc8cdad40232967f638e02769add62b69c53c9ae0e",
+            "z_zero_denominator_not_identically_zero": true
+          }
+        },
+        {
+          "even": {
+            "denominator_terms": 1,
+            "numerator_terms": 0,
+            "rational_expression_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+            "z_zero_denominator_not_identically_zero": true
+          },
+          "exact_arithmetic": "QQ(x,z)[l]/(l^2-(1-x^2)^11/100)",
+          "odd_times_l": {
+            "denominator_terms": 9,
+            "numerator_terms": 11,
+            "rational_expression_sha256": "64f95f886d20ddd12a7ab1dc8cdad40232967f638e02769add62b69c53c9ae0e",
+            "z_zero_denominator_not_identically_zero": true
+          }
+        },
+        {
+          "even": {
+            "denominator_terms": 7,
+            "numerator_terms": 19,
+            "rational_expression_sha256": "5496e6df5562669ce54ffeb41042d7357a5ca35300f4942080620a4286c6ae42",
+            "z_zero_denominator_not_identically_zero": true
+          },
+          "exact_arithmetic": "QQ(x,z)[l]/(l^2-(1-x^2)^11/100)",
+          "odd_times_l": {
+            "denominator_terms": 1,
+            "numerator_terms": 0,
+            "rational_expression_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+            "z_zero_denominator_not_identically_zero": true
+          }
+        }
+      ],
+      "regular_mass_and_connection_coefficients": {
+        "connection_factor": {
+          "even": {
+            "denominator_terms": 1,
+            "numerator_terms": 0,
+            "rational_expression_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+            "z_zero_denominator_not_identically_zero": true
+          },
+          "exact_arithmetic": "QQ(x,z)[l]/(l^2-(1-x^2)^11/100)",
+          "odd_times_l": {
+            "denominator_terms": 4,
+            "numerator_terms": 4,
+            "rational_expression_sha256": "29ca999a42aec7355058cdc0079c29507bf8162b2b55a534f2e1014c18770287",
+            "z_zero_denominator_not_identically_zero": true
+          }
+        },
+        "covariant_mass11": {
+          "even": {
+            "denominator_terms": 61,
+            "numerator_terms": 74,
+            "rational_expression_sha256": "845d0e90abc8079233ea23a12a217529b0b9e378f7cd5abc50b47bab480bff24",
+            "z_zero_denominator_not_identically_zero": true
+          },
+          "exact_arithmetic": "QQ(x,z)[l]/(l^2-(1-x^2)^11/100)",
+          "odd_times_l": {
+            "denominator_terms": 1,
+            "numerator_terms": 0,
+            "rational_expression_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+            "z_zero_denominator_not_identically_zero": true
+          }
+        },
+        "covariant_mass12_factor": {
+          "even": {
+            "denominator_terms": 1,
+            "numerator_terms": 0,
+            "rational_expression_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+            "z_zero_denominator_not_identically_zero": true
+          },
+          "exact_arithmetic": "QQ(x,z)[l]/(l^2-(1-x^2)^11/100)",
+          "odd_times_l": {
+            "denominator_terms": 47,
+            "numerator_terms": 60,
+            "rational_expression_sha256": "43b02432b335622533dbbf4c8f581f8a5530d520ddc8ba1e614d2da202aed430",
+            "z_zero_denominator_not_identically_zero": true
+          }
+        },
+        "covariant_mass22": {
+          "even": {
+            "denominator_terms": 44,
+            "numerator_terms": 57,
+            "rational_expression_sha256": "e5270e2889379960d73405a22616bf714b69699ee85767fbd033ac05e71344fb",
+            "z_zero_denominator_not_identically_zero": true
+          },
+          "exact_arithmetic": "QQ(x,z)[l]/(l^2-(1-x^2)^11/100)",
+          "odd_times_l": {
+            "denominator_terms": 1,
+            "numerator_terms": 0,
+            "rational_expression_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+            "z_zero_denominator_not_identically_zero": true
+          }
+        },
+        "mass11": {
+          "even": {
+            "denominator_terms": 41,
+            "numerator_terms": 53,
+            "rational_expression_sha256": "df343b6f7df1652f96fd40f4053a5d6bdce5de4cd1f9a8a8c7fdce0e585845ea",
+            "z_zero_denominator_not_identically_zero": true
+          },
+          "exact_arithmetic": "QQ(x,z)[l]/(l^2-(1-x^2)^11/100)",
+          "odd_times_l": {
+            "denominator_terms": 1,
+            "numerator_terms": 0,
+            "rational_expression_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+            "z_zero_denominator_not_identically_zero": true
+          }
+        },
+        "mass12_factor": {
+          "even": {
+            "denominator_terms": 1,
+            "numerator_terms": 0,
+            "rational_expression_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+            "z_zero_denominator_not_identically_zero": true
+          },
+          "exact_arithmetic": "QQ(x,z)[l]/(l^2-(1-x^2)^11/100)",
+          "odd_times_l": {
+            "denominator_terms": 27,
+            "numerator_terms": 39,
+            "rational_expression_sha256": "64cb1e48fb47cea8c5905b83c53897f5eaefac8a567c62ab93a53804a237d524",
+            "z_zero_denominator_not_identically_zero": true
+          }
+        },
+        "mass22": {
+          "even": {
+            "denominator_terms": 24,
+            "numerator_terms": 36,
+            "rational_expression_sha256": "22b7030024b2f46a71762316d81533e04e3f966ba5a5a052546c2f1f3e9a4fc0",
+            "z_zero_denominator_not_identically_zero": true
+          },
+          "exact_arithmetic": "QQ(x,z)[l]/(l^2-(1-x^2)^11/100)",
+          "odd_times_l": {
+            "denominator_terms": 1,
+            "numerator_terms": 0,
+            "rational_expression_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+            "z_zero_denominator_not_identically_zero": true
+          }
+        }
+      }
+    }
+  },
+  "compact_tail_checks": [
+    {
+      "connection": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0"
+        ]
+      ],
+      "mass_plus_30I": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0"
+        ]
+      ],
+      "tensor_mass_plus_30": "0",
+      "x": -1
+    },
+    {
+      "connection": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0"
+        ]
+      ],
+      "mass_plus_30I": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0"
+        ]
+      ],
+      "tensor_mass_plus_30": "0",
+      "x": 1
+    }
+  ],
+  "covering_arithmetic_margins": {
+    "D_lower": "0",
+    "D_relative_lower": "1/1000",
+    "R_lower": "0",
+    "R_relative_lower": "0",
+    "chart_overlap": "5/36",
+    "energy_exponent_below_one": "7/11",
+    "energy_growth_below_two": "3/7",
+    "gamma_alpha_lower": "18563/63700",
+    "gamma_alpha_upper": "487/48",
+    "gamma_lambda_lower": "1473/40960",
+    "root_ratio_gamma": "295/3",
+    "root_ratio_unitary": "20",
+    "unitary_alpha_lower": "59/44100",
+    "unitary_alpha_upper": "36691/100",
+    "window_gamma_margin": "593/9900",
+    "window_q_lower": "161/200",
+    "window_q_upper": "80519999/90250000",
+    "window_unitary_margin": "97/1650"
+  },
+  "date": "2026-09-05",
+  "domain": {
+    "background": "the fixed CD/M1 witness, same covariant tube and physical matter metric",
+    "compact_time": "x=u/sqrt(1+u^2), u=t/tau; x=+-1 denotes compact tail limits only",
+    "local_length": "ell=tau*sqrt(1+u^2)",
+    "local_window": "abs(t-t0)<=ell0/100; q0>=2*10^20; gamma if abs(x0)<=9/50, unitary otherwise",
+    "momentum": "fixed nonzero comoving momentum; q=ell^2*kcom^2/a^2 and z=1/q",
+    "not_a_global_fixed_comoving_high_frequency_band": true,
+    "positive_kinetic_cover": {
+      "both": "q>=1000",
+      "gamma": "abs(x)<=1/4",
+      "unitary": "abs(x)>=1/9"
+    },
+    "solutions": "any exact coupled scalar or individual tensor free solution; nonzero solutions for energy ratios"
+  },
+  "formulation": "FORMULATION.md",
+  "generic_coupled_canonical_and_energy_residuals": {
+    "Hamiltonian_whitening": "0",
+    "canonical_momentum_0": "0",
+    "canonical_momentum_1": "0",
+    "canonical_velocity_0": "0",
+    "canonical_velocity_1": "0",
+    "covariant_derivative_symmetric_00": "0",
+    "covariant_derivative_symmetric_01": "0",
+    "covariant_derivative_symmetric_10": "0",
+    "covariant_derivative_symmetric_11": "0",
+    "covariant_energy_identity": "0",
+    "kinetic_whitening_00": "0",
+    "kinetic_whitening_01": "0",
+    "kinetic_whitening_10": "0",
+    "kinetic_whitening_11": "0",
+    "symmetric_Lagrangian_boundary": "0",
+    "symmetric_canonical_boundary": "0"
+  },
+  "generic_omission_controls": {
+    "discarded_connection_in_velocity": [
+      "-omega*y1",
+      "omega*y0"
+    ],
+    "missing_symmetric_boundary_derivative": [
+      "sdot*y0*y1"
+    ],
+    "missing_volume_generator": [
+      "nu*(p0*y0 + p1*y1)"
+    ],
+    "reversed_covariant_commutator": [
+      "2*omega*y0*y1*(-w0 + w1)"
+    ]
+  },
+  "independent_original_cosmic_time_fixtures": [
+    {
+      "chart": "unitary",
+      "ell_at_tau_one": "5/4",
+      "exact_residuals": {
+        "antisymmetric_connection": [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        "canonical_momentum_boundary": [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        "full_finite_q_potential": [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        "physical_kinetic_whitening": [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ]
+      },
+      "kcom_squared": "10000",
+      "local_connection": [
+        [
+          "0",
+          "-12884901888*sqrt(3145687036154430133790114)/1572843518077215066895057"
+        ],
+        [
+          "12884901888*sqrt(3145687036154430133790114)/1572843518077215066895057",
+          "0"
+        ]
+      ],
+      "local_potential": [
+        [
+          "48896645710325394760279207793148289706566520162761175155742071117698781408222/18861124862757273854377372816045659798913048779350951101148128509521484375",
+          "418614662526860276487079752175615381410352808987104209010688*sqrt(3145687036154430133790114)/18861124862757273854377372816045659798913048779350951101148128509521484375"
+        ],
+        [
+          "418614662526860276487079752175615381410352808987104209010688*sqrt(3145687036154430133790114)/18861124862757273854377372816045659798913048779350951101148128509521484375",
+          "31260062929558345778409561020528857041130944491516654/11991736397155900111789181924323689937591552734375"
+        ]
+      ],
+      "q_local": "65536/25",
+      "u": "-3/4",
+      "x": "-3/5"
+    },
+    {
+      "chart": "unitary",
+      "ell_at_tau_one": "5/4",
+      "exact_residuals": {
+        "antisymmetric_connection": [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        "canonical_momentum_boundary": [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        "full_finite_q_potential": [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        "physical_kinetic_whitening": [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ]
+      },
+      "kcom_squared": "10000",
+      "local_connection": [
+        [
+          "0",
+          "-12884901888*sqrt(3145687036154430133790114)/1572843518077215066895057"
+        ],
+        [
+          "12884901888*sqrt(3145687036154430133790114)/1572843518077215066895057",
+          "0"
+        ]
+      ],
+      "local_potential": [
+        [
+          "48896645710325394760279207793148289706566520162761175155742071117698781408222/18861124862757273854377372816045659798913048779350951101148128509521484375",
+          "-418614662526860276487079752175615381410352808987104209010688*sqrt(3145687036154430133790114)/18861124862757273854377372816045659798913048779350951101148128509521484375"
+        ],
+        [
+          "-418614662526860276487079752175615381410352808987104209010688*sqrt(3145687036154430133790114)/18861124862757273854377372816045659798913048779350951101148128509521484375",
+          "31260062929558345778409561020528857041130944491516654/11991736397155900111789181924323689937591552734375"
+        ]
+      ],
+      "q_local": "65536/25",
+      "u": "3/4",
+      "x": "3/5"
+    },
+    {
+      "chart": "gamma",
+      "ell_at_tau_one": "41/40",
+      "exact_residuals": {
+        "antisymmetric_connection": [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        "canonical_momentum_boundary": [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        "full_finite_q_potential": [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        "physical_kinetic_whitening": [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ]
+      },
+      "kcom_squared": "10000",
+      "local_connection": [
+        [
+          "0",
+          "2421148848249720140549296675110956055403121303035505616808331978892879300353132068864000000000000000*sqrt(96780976410345948610988376369077196892251514997078566378395437013493520991528666485438)/279105578441068572272894424161003891363226765356180482993989018581527460730359672960139959905888825812693332814354862577552127516158491092326609"
+        ],
+        [
+          "-2421148848249720140549296675110956055403121303035505616808331978892879300353132068864000000000000000*sqrt(96780976410345948610988376369077196892251514997078566378395437013493520991528666485438)/279105578441068572272894424161003891363226765356180482993989018581527460730359672960139959905888825812693332814354862577552127516158491092326609",
+          "0"
+        ]
+      ],
+      "local_potential": [
+        [
+          "6079966117268432881123642705886521416444775112513674130198172453944911693135261043335912315806036843512713350455670463386674547621523940605385417742784705002331264198934226842738906312742880859498249534814955354/709193916802813819523271839349859292729773526691098609968153304509071788973393568195251746250667194035428219537644571235087670965179179444709337066167373437848432142243392559197481885471958625495610620464241",
+          "-843051932660984024825003373539647903354859126690061813180093401015652899918643585368539444699399699516653461295466077257269976708395941353691800292654411924770630298172807230521344000000000000000*sqrt(96780976410345948610988376369077196892251514997078566378395437013493520991528666485438)/14082842215331381674420878556003228731955041441854028696332286149816462252280467404265836838714481154357364960120357505521352933440676891996654757975841231793563922400707271197181629137322868533604850374444987393287097108675982680881840639"
+        ],
+        [
+          "-843051932660984024825003373539647903354859126690061813180093401015652899918643585368539444699399699516653461295466077257269976708395941353691800292654411924770630298172807230521344000000000000000*sqrt(96780976410345948610988376369077196892251514997078566378395437013493520991528666485438)/14082842215331381674420878556003228731955041441854028696332286149816462252280467404265836838714481154357364960120357505521352933440676891996654757975841231793563922400707271197181629137322868533604850374444987393287097108675982680881840639",
+          "49791089016926534455213623447973581579712551388328563793186678069995558888987270156068390117451739843435386168576790560863188008551570478741144852676333059803005650965550066119917195501630/5779038949404140699202399236072936010976403606602588029314311542736110675063051067132869305049221341308122304822984531286710452707184430090996388617210396866809202260954230992172432399"
+        ]
+      ],
+      "q_local": "40960000000000/4750104241",
+      "u": "-9/40",
+      "x": "-9/41"
+    },
+    {
+      "chart": "gamma",
+      "ell_at_tau_one": "1",
+      "exact_residuals": {
+        "antisymmetric_connection": [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        "canonical_momentum_boundary": [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        "full_finite_q_potential": [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        "physical_kinetic_whitening": [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ]
+      },
+      "kcom_squared": "10000",
+      "local_connection": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0"
+        ]
+      ],
+      "local_potential": [
+        [
+          "23920049074798/2396562399",
+          "-36274600*sqrt(11982806)/1088692937073"
+        ],
+        [
+          "-36274600*sqrt(11982806)/1088692937073",
+          "99819958078331/9988008597"
+        ]
+      ],
+      "q_local": "10000",
+      "u": "0",
+      "x": "0"
+    },
+    {
+      "chart": "gamma",
+      "ell_at_tau_one": "41/40",
+      "exact_residuals": {
+        "antisymmetric_connection": [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        "canonical_momentum_boundary": [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        "full_finite_q_potential": [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        "physical_kinetic_whitening": [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ]
+      },
+      "kcom_squared": "10000",
+      "local_connection": [
+        [
+          "0",
+          "-2421148848249720140549296675110956055403121303035505616808331978892879300353132068864000000000000000*sqrt(96780976410345948610988376369077196892251514997078566378395437013493520991528666485438)/279105578441068572272894424161003891363226765356180482993989018581527460730359672960139959905888825812693332814354862577552127516158491092326609"
+        ],
+        [
+          "2421148848249720140549296675110956055403121303035505616808331978892879300353132068864000000000000000*sqrt(96780976410345948610988376369077196892251514997078566378395437013493520991528666485438)/279105578441068572272894424161003891363226765356180482993989018581527460730359672960139959905888825812693332814354862577552127516158491092326609",
+          "0"
+        ]
+      ],
+      "local_potential": [
+        [
+          "6079966117268432881123642705886521416444775112513674130198172453944911693135261043335912315806036843512713350455670463386674547621523940605385417742784705002331264198934226842738906312742880859498249534814955354/709193916802813819523271839349859292729773526691098609968153304509071788973393568195251746250667194035428219537644571235087670965179179444709337066167373437848432142243392559197481885471958625495610620464241",
+          "-843051932660984024825003373539647903354859126690061813180093401015652899918643585368539444699399699516653461295466077257269976708395941353691800292654411924770630298172807230521344000000000000000*sqrt(96780976410345948610988376369077196892251514997078566378395437013493520991528666485438)/14082842215331381674420878556003228731955041441854028696332286149816462252280467404265836838714481154357364960120357505521352933440676891996654757975841231793563922400707271197181629137322868533604850374444987393287097108675982680881840639"
+        ],
+        [
+          "-843051932660984024825003373539647903354859126690061813180093401015652899918643585368539444699399699516653461295466077257269976708395941353691800292654411924770630298172807230521344000000000000000*sqrt(96780976410345948610988376369077196892251514997078566378395437013493520991528666485438)/14082842215331381674420878556003228731955041441854028696332286149816462252280467404265836838714481154357364960120357505521352933440676891996654757975841231793563922400707271197181629137322868533604850374444987393287097108675982680881840639",
+          "49791089016926534455213623447973581579712551388328563793186678069995558888987270156068390117451739843435386168576790560863188008551570478741144852676333059803005650965550066119917195501630/5779038949404140699202399236072936010976403606602588029314311542736110675063051067132869305049221341308122304822984531286710452707184430090996388617210396866809202260954230992172432399"
+        ]
+      ],
+      "q_local": "40960000000000/4750104241",
+      "u": "9/40",
+      "x": "9/41"
+    }
+  ],
+  "not_established": [
+    "normalized cubic/quartic M1 kernel majorants or finite-time interacting tree control",
+    "an interacting cutoff, an optimized high-frequency threshold or a usable hierarchy at a specified M*tau",
+    "a preferred vacuum, a WKB expansion or fixed-comoving high-frequency control over the entire bounce history",
+    "all-wavelength stability, infrared/zero-mode or global chart-stitching energy estimates",
+    "on-shell scattering amplitudes, soft/forward/inclusive limits, loops or radiative protection",
+    "nonlinear PDE/BKL/backreaction stability, UV matching/completion or full P8 completion"
+  ],
+  "prior_S5_6_CD_sha256": "b961a0e07825ba356bec71123d27f47b3c7362d60fc206ee8554f770dc73934f",
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "a84d0bf2f2a1955b1f113e971f9475eab948d36411b69d2c8afb5c5a8a708ff1",
+    "README.md": "9bc2e17511477797bd25928dc914d798ca72eccbea0445e92c1c46d9ab4b9a81",
+    "notes/normalization.md": "897ef624ec08bfac5bef4abd78774c3ca5083f344fa82a26ecd3a6b623b609f6",
+    "src/p8_m1_control/__init__.py": "265796139a9a82b576964e438a9c60a3b7757b40b766b29ac98c9664e0b05d15",
+    "src/p8_m1_control/audit.py": "617dccf713f6c4d2c6444ecaa1b0ec8dd7b59f08715637e9313b98278f71b67e",
+    "src/p8_m1_control/bounds.py": "e1ba7697c1b23fb1d7830dbef24c4b430a37c8b2b8b90329388daf59bb4c80ba",
+    "src/p8_m1_control/independent.py": "4aabc1f0b8ee58b650f1df546fdcb328256ca3daf66b8c33295c2aab11527775",
+    "src/p8_m1_control/model.py": "9485798ede94ba016cc0205778a95ab1fe8ac829880158fbf972105b463f4a29",
+    "src/p8_m1_control/oscillator.py": "5cdac4cd48317516ef16a26f3c562724ebc378a0736a6b25ae36543f130f3b89",
+    "src/p8_m1_control/verify.py": "99375241afff7c70546c1687e878da99fe2270af9850394d28f3b514b1c479dd",
+    "tests/conftest.py": "8b5663a0666794a2cdce3e44655be93b1bd28effb5b69b04fd946ff56b035b50",
+    "tests/test_control_bounds.py": "da29cf9ccef250e82fe4ad8441d39d4cd5fda58a393b489f023b746a792c1530",
+    "tests/test_control_model.py": "2b4eb734c1ca5dab259e6280c4150c638a984232642ef745fe79e76f8b16549b",
+    "tests/test_control_replay.py": "ceeff229c0d7c912dee589eb964fb3782b74721d7a92d826be86321de013f17d",
+    "tests/test_independent_control.py": "c02eab8b7987c270204d318e73db6a998ad3b5876e6898a7dbb16663fcd220d8"
+  },
+  "status": "COUPLED_CANONICAL_NORMALIZATION_AND_LOCAL_FREE_ENERGY_CONTROL; M1_INTERACTION_CONTROL_OPEN",
+  "symbolic_finite_q_bounce": {
+    "exact_residuals": {
+      "compact_vs_cosmic_chi": "0",
+      "compact_vs_cosmic_connection_dot_factor": "0",
+      "compact_vs_cosmic_connection_factor": "0",
+      "compact_vs_cosmic_d1": "0",
+      "compact_vs_cosmic_d2": "0",
+      "compact_vs_cosmic_potential11": "0",
+      "compact_vs_cosmic_potential12_factor": "0",
+      "compact_vs_cosmic_potential22": "0",
+      "compact_vs_cosmic_ratio": "0",
+      "cosmic_vs_known_answer_chi": "0",
+      "cosmic_vs_known_answer_connection_dot_factor": "0",
+      "cosmic_vs_known_answer_connection_factor": "0",
+      "cosmic_vs_known_answer_d1": "0",
+      "cosmic_vs_known_answer_d2": "0",
+      "cosmic_vs_known_answer_potential11": "0",
+      "cosmic_vs_known_answer_potential12_factor": "0",
+      "cosmic_vs_known_answer_potential22": "0",
+      "cosmic_vs_known_answer_ratio": "0",
+      "determinant_known_answer": "0"
+    },
+    "known_answer": {
+      "chi": "20*q_bounce/(200*q_bounce - 1199)",
+      "connection_dot_factor": "-80*q_bounce*(1000*q_bounce - 12297)/(200*q_bounce - 1199)**2",
+      "connection_factor": "0",
+      "d1": "2398*q_bounce/(200*q_bounce - 1199)",
+      "d2": "(200*q_bounce - 1199)/(200*q_bounce - 1200)",
+      "determinant": "(1199*q_bounce**3 - 37198*q_bounce**2 + 166106*q_bounce + 86676)/(1199*q_bounce - 7194)",
+      "potential11": "(239800*q_bounce**2 - 5994805*q_bounce - 2875202)/(239800*q_bounce - 1437601)",
+      "potential12_factor": "-80*q_bounce*(199*q_bounce + 5103)/(200*q_bounce - 1199)**2",
+      "potential22": "(200*q_bounce**3 - 3603*q_bounce**2 + 21620*q_bounce - 43338)/((q_bounce - 6)*(200*q_bounce - 1199))",
+      "ratio": "(40000*q_bounce**2 - 479600*q_bounce + 1437601)/(479600*q_bounce**2 - 2877600*q_bounce)"
+    },
+    "negative_control_meaning": "positive kinetic does not imply positive W; NOT a dynamical-instability theorem",
+    "negative_control_q8": {
+      "d1": "19184/401",
+      "d2": "401/400",
+      "determinant": "-175630/1199",
+      "potential11": "-35486442/480799"
+    },
+    "positive_velocity_domain": "q>6"
+  },
+  "uniform_exact_majorants_and_free_energy_contract": {
+    "centre_q_sufficient": "q0 >= 200000000000000000000",
+    "charts": {
+      "gamma": {
+        "coefficient_bounds": {
+          "connection_factor": {
+            "absolute_bound": "24380753850236968845084330778838507/162259276829213363391578010288128",
+            "denominator_absolute_lower": "16384/2025",
+            "denominator_factors": [
+              {
+                "absolute_lower": "4/125",
+                "factor": "R=Lambda^2-J*z",
+                "power": 2
+              }
+            ],
+            "weighted_numerator_L1": "24380753850236968845084330778838507/20054628636423160453365812428800"
+          },
+          "covariant_mass11": {
+            "absolute_bound": "115263461845619639001178749446974750067537726918166152660437107843914133761479623576059990005489830635292862867598924171/26904933715410873079321275395328436890936266535531227537986119075327549852551683356387790887925180478259200000",
+            "denominator_absolute_lower": "123008/4100625",
+            "denominator_factors": [
+              {
+                "absolute_lower": "1/10",
+                "factor": "J",
+                "power": 3
+              },
+              {
+                "absolute_lower": "4/125",
+                "factor": "R=Lambda^2-J*z",
+                "power": 1
+              },
+              {
+                "absolute_lower": "31/1000",
+                "factor": "D=Lambda^2-J0*z",
+                "power": 2
+              }
+            ],
+            "weighted_numerator_L1": "115263461845619639001178749446974750067537726918166152660437107843914133761479623576059990005489830635292862867598924171/896909500331333827237999194507419611130134039755647924711842559290981351734194089516841872153016008704000000000"
+          },
+          "covariant_mass12_factor": {
+            "absolute_bound": "91626504134373881686159714369789808183638055295431990417997976645445766632283482741339190177085784123157/78303662930297645156159052262456496510818445052518589474453238873182417162902662985689795133440",
+            "denominator_absolute_lower": "984064/102515625",
+            "denominator_factors": [
+              {
+                "absolute_lower": "1/10",
+                "factor": "J",
+                "power": 2
+              },
+              {
+                "absolute_lower": "4/125",
+                "factor": "R=Lambda^2-J*z",
+                "power": 2
+              },
+              {
+                "absolute_lower": "31/1000",
+                "factor": "D=Lambda^2-J0*z",
+                "power": 2
+              }
+            ],
+            "weighted_numerator_L1": "10180722681597097965128857152198867575959783921714665601999775182827307403587053637926576686342864902573/906371598356836155328184147247580981083081334828166215035245597887783183305342076908994560000000"
+          },
+          "covariant_mass22": {
+            "absolute_bound": "23711180149567834455518360776028092618368971852476649459554655259371822455150394373636406632199405100909841/75856673463725843745029081879254730994855368644627383553376575158395466626561954767386989035520000",
+            "denominator_absolute_lower": "29791/2278125000",
+            "denominator_factors": [
+              {
+                "absolute_lower": "1/10",
+                "factor": "J",
+                "power": 2
+              },
+              {
+                "absolute_lower": "4/125",
+                "factor": "R=Lambda^2-J*z",
+                "power": 1
+              },
+              {
+                "absolute_lower": "31/1000",
+                "factor": "D=Lambda^2-J0*z",
+                "power": 3
+              }
+            ],
+            "weighted_numerator_L1": "7903726716522611485172786925342697539456323950825549819851551753123940818383464791212135544066468366969947/1933592743161250464700126180794839426310573514300087925408523942160604124384729764072521728000000000000"
+          },
+          "mass11": {
+            "absolute_bound": "192701878624996063451709889915000606658962485168684526328534692546708957896922342769/136930647520324785542705556307576184976630002007860469254424480600178032640000",
+            "denominator_absolute_lower": "15872/18225",
+            "denominator_factors": [
+              {
+                "absolute_lower": "1/10",
+                "factor": "J",
+                "power": 2
+              },
+              {
+                "absolute_lower": "4/125",
+                "factor": "R=Lambda^2-J*z",
+                "power": 1
+              },
+              {
+                "absolute_lower": "31/1000",
+                "factor": "D=Lambda^2-J0*z",
+                "power": 1
+              }
+            ],
+            "weighted_numerator_L1": "192701878624996063451709889915000606658962485168684526328534692546708957896922342769/157230408962822531282498031987498486088651826272256618709796254973427712000000"
+          },
+          "mass12_factor": {
+            "absolute_bound": "3252271430338591505757605103398978985434923432415348889320725400828803/15940825399049183533376263956024333017020253698325304926189649920",
+            "denominator_absolute_lower": "126976/455625",
+            "denominator_factors": [
+              {
+                "absolute_lower": "1/10",
+                "factor": "J",
+                "power": 1
+              },
+              {
+                "absolute_lower": "4/125",
+                "factor": "R=Lambda^2-J*z",
+                "power": 2
+              },
+              {
+                "absolute_lower": "31/1000",
+                "factor": "D=Lambda^2-J0*z",
+                "power": 1
+              }
+            ],
+            "weighted_numerator_L1": "3252271430338591505757605103398978985434923432415348889320725400828803/57200089563711128460453631118979860216732713987678514498764800000"
+          },
+          "mass22": {
+            "absolute_bound": "1696567467983058776838036855995961635023688070043797197601019060820624987/3088534921065779309591651141479714522047674154050527829449244672000",
+            "denominator_absolute_lower": "961/2531250",
+            "denominator_factors": [
+              {
+                "absolute_lower": "1/10",
+                "factor": "J",
+                "power": 1
+              },
+              {
+                "absolute_lower": "4/125",
+                "factor": "R=Lambda^2-J*z",
+                "power": 1
+              },
+              {
+                "absolute_lower": "31/1000",
+                "factor": "D=Lambda^2-J0*z",
+                "power": 2
+              }
+            ],
+            "weighted_numerator_L1": "1696567467983058776838036855995961635023688070043797197601019060820624987/8135123849061138269931183092477135675268652656025388728713216000000000"
+          }
+        },
+        "connection_operator_bound": "121903769251184844225421653894192535/81129638414606681695789005144064",
+        "covariant_mass_operator_bound": "430089732808775328024082196687733531301808614754102166290426451433003217783324116516085789248456143751673143886376524171/26904933715410873079321275395328436890936266535531227537986119075327549852551683356387790887925180478259200000",
+        "mass_operator_bound": "472069867245383917930356082362626870303647614738444321689783477577832961493456102769/136930647520324785542705556307576184976630002007860469254424480600178032640000"
+      },
+      "tensor": {
+        "connection_operator_bound": "0",
+        "covariant_mass_operator_bound": "132",
+        "mass_operator_bound": "30"
+      },
+      "unitary": {
+        "coefficient_bounds": {
+          "connection_factor": {
+            "absolute_bound": "8/3",
+            "denominator_absolute_lower": "3",
+            "denominator_factors": [
+              {
+                "absolute_lower": "3",
+                "factor": "Theta/x",
+                "power": 1
+              }
+            ],
+            "weighted_numerator_L1": "8"
+          },
+          "covariant_mass11": {
+            "absolute_bound": "1354002404095374730370035011/25600000",
+            "denominator_absolute_lower": "512000/19683",
+            "denominator_factors": [
+              {
+                "absolute_lower": "1/10",
+                "factor": "J",
+                "power": 3
+              },
+              {
+                "absolute_lower": "3",
+                "factor": "Theta/x",
+                "power": 3
+              },
+              {
+                "absolute_lower": "1/9",
+                "factor": "abs(x)",
+                "power": 3
+              }
+            ],
+            "weighted_numerator_L1": "50148237188717582606297593/36450"
+          },
+          "covariant_mass12_factor": {
+            "absolute_bound": "3995111396899704387123/400000",
+            "denominator_absolute_lower": "6400/6561",
+            "denominator_factors": [
+              {
+                "absolute_lower": "1/10",
+                "factor": "J",
+                "power": 2
+              },
+              {
+                "absolute_lower": "3",
+                "factor": "Theta/x",
+                "power": 4
+              },
+              {
+                "absolute_lower": "1/9",
+                "factor": "abs(x)",
+                "power": 4
+              }
+            ],
+            "weighted_numerator_L1": "98644725849375416966/10125"
+          },
+          "covariant_mass22": {
+            "absolute_bound": "693341182679909540409/320000",
+            "denominator_absolute_lower": "6400/2187",
+            "denominator_factors": [
+              {
+                "absolute_lower": "1/10",
+                "factor": "J",
+                "power": 2
+              },
+              {
+                "absolute_lower": "3",
+                "factor": "Theta/x",
+                "power": 3
+              },
+              {
+                "absolute_lower": "1/9",
+                "factor": "abs(x)",
+                "power": 3
+              }
+            ],
+            "weighted_numerator_L1": "25679303062218871867/4050"
+          },
+          "mass11": {
+            "absolute_bound": "5507769229658243127/320000",
+            "denominator_absolute_lower": "6400/729",
+            "denominator_factors": [
+              {
+                "absolute_lower": "1/10",
+                "factor": "J",
+                "power": 2
+              },
+              {
+                "absolute_lower": "3",
+                "factor": "Theta/x",
+                "power": 2
+              },
+              {
+                "absolute_lower": "1/9",
+                "factor": "abs(x)",
+                "power": 2
+              }
+            ],
+            "weighted_numerator_L1": "203991452950305301/1350"
+          },
+          "mass12_factor": {
+            "absolute_bound": "449084505629223/160000",
+            "denominator_absolute_lower": "80/243",
+            "denominator_factors": [
+              {
+                "absolute_lower": "1/10",
+                "factor": "J",
+                "power": 1
+              },
+              {
+                "absolute_lower": "3",
+                "factor": "Theta/x",
+                "power": 3
+              },
+              {
+                "absolute_lower": "1/9",
+                "factor": "abs(x)",
+                "power": 3
+              }
+            ],
+            "weighted_numerator_L1": "16632759467749/18000"
+          },
+          "mass22": {
+            "absolute_bound": "981745860447/2000",
+            "denominator_absolute_lower": "80/81",
+            "denominator_factors": [
+              {
+                "absolute_lower": "1/10",
+                "factor": "J",
+                "power": 1
+              },
+              {
+                "absolute_lower": "3",
+                "factor": "Theta/x",
+                "power": 2
+              },
+              {
+                "absolute_lower": "1/9",
+                "factor": "abs(x)",
+                "power": 2
+              }
+            ],
+            "weighted_numerator_L1": "109082873383/225"
+          }
+        },
+        "connection_operator_bound": "80/3",
+        "covariant_mass_operator_bound": "1356559275389390541177793731/25600000",
+        "mass_operator_bound": "5516750919770827587/320000"
+      }
+    },
+    "covariant_potential_derivative_bound": "9*q/ell^3",
+    "full_window_energy_ratio": [
+      "7/11",
+      "11/7"
+    ],
+    "local_window_half_length": "ell0/100",
+    "not_an_interacting_cutoff_or_optimized_threshold": true,
+    "potential_eigenvalue_bounds": [
+      "q/(2*ell^2)",
+      "3*q/(2*ell^2)"
+    ],
+    "q_threshold": "100000000000000000000",
+    "relative_free_energy_rate_bound": "18/ell",
+    "threshold_comparison_margins": [
+      "99999999999999999000",
+      "15999994483249080229172413/160000",
+      "1203440724610609458822206269/25600000",
+      "6846532376015767207268032431460878892749137473522719815106485585687211848522422167038506543897231/68465323760162392771352778153788092488315001003930234627212240300089016320000",
+      "2690493371110997575123352211508761492405893122251314139044509741242328533822165117855454972276432258577463856248326856113623475829/26904933715410873079321275395328436890936266535531227537986119075327549852551683356387790887925180478259200000",
+      "99999999999999999940",
+      "99999999999999999868"
+    ]
+  },
+  "verification_boundary": [
+    "the pinned physical Hamiltonian and all-time J bounds are imported certified inputs; their source chain is checked",
+    "exact compact identities and coefficient denominator/L1 bounds establish the all-time chart estimates",
+    "independent original-time fixtures test the implementation but do not replace the written all-time derivation",
+    "matrix energy and elementary interval/Gronwall lemmas are written proofs, not Lean formalizations"
+  ],
+  "written_proof": "notes/normalization.md"
+}
