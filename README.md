@@ -12,7 +12,11 @@ around a pre-registered problems document and a certificate-gated ledger.
   All 32 M0/M1 sector-row verdicts are decided: minimal optional groups are
   C or D without extra matter, and CD with rolling canonical matter.
   This is an all-time linear-principal result, not UV or nonlinear completion.
-- P8 S5: [nonlinear D-witness extension and perturbative-control work](problems/P8/s5/README.md) (underway; no strong-coupling or UV verdict).
+- P8 S5: [nonlinear D-witness preparation](problems/P8/s5/README.md),
+  [physical cubic/quartic scalar-tensor reduction](problems/P8/s5/physical/README.md),
+  and [exact oscillator/adiabatic-indicator bounds](problems/P8/s5/control/README.md).
+  Physical exchange/contact amplitudes and an all-time weak-coupling window
+  remain open; no strong-coupling or UV verdict.
 
 ## Layout
 
