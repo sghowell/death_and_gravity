@@ -14,9 +14,11 @@ around a pre-registered problems document and a certificate-gated ledger.
   This is an all-time linear-principal result, not UV or nonlinear completion.
 - P8 S5: [nonlinear D-witness preparation](problems/P8/s5/README.md),
   [physical cubic/quartic scalar-tensor reduction](problems/P8/s5/physical/README.md),
-  and [exact oscillator/adiabatic-indicator bounds](problems/P8/s5/control/README.md).
-  Physical exchange/contact amplitudes and an all-time weak-coupling window
-  remain open; no strong-coupling or UV verdict.
+  [exact oscillator/adiabatic-indicator bounds](problems/P8/s5/control/README.md),
+  and [hard finite-time tree control / UV applicability](problems/P8/s5/scattering/README.md).
+  The D-only finite-time, nonexceptional cubic/quartic tree criterion now has
+  a uniform sufficient scale choice. Inclusive scattering, all-orders control,
+  M1 interactions and UV admissibility remain open; no UV completion verdict.
 
 ## Layout
 
