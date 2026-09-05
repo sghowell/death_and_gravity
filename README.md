@@ -18,9 +18,12 @@ around a pre-registered problems document and a certificate-gated ledger.
   interval in that fixed testbed, without assuming a short averaging duration.
   The new [reference-stress and absolute-QSEI calculation](problems/P8/a/applicability/reference/README.md)
   computes the positive reference effective energy and removes the conditional
-  reference-stress parameter for this testbed. Its reference state is not an
-  exact semiclassical source for the radiation metric; self-consistent
-  cosmological application remains open.
+  reference-stress parameter for this testbed. The further
+  [whole-patch source obstruction](problems/P8/a/applicability/reference/asymptotics/README.md)
+  proves that changing the Hadamard state cannot make the exact radiation
+  metric self-consistent on its entire patch with the specified field and
+  ordinary radiation sources. Finite slabs, backreacted metrics and a
+  self-consistent cosmological focusing application remain open.
 - P8(b): [completed scoped classification and verification commands](problems/P8/README.md).
   All 32 M0/M1 sector-row verdicts are decided: minimal optional groups are
   C or D without extra matter, and CD with rolling canonical matter.
@@ -30,8 +33,8 @@ around a pre-registered problems document and a certificate-gated ledger.
   [exact oscillator/adiabatic-indicator bounds](problems/P8/s5/control/README.md),
   and [hard finite-time tree control / UV applicability](problems/P8/s5/scattering/README.md).
   The D-only finite-time, nonexceptional cubic/quartic tree criterion now has
-  a uniform sufficient scale choice. Inclusive scattering, all-orders control,
-  M1 interaction control and UV admissibility remain open; no UV completion verdict.
+  a uniform sufficient scale choice. Inclusive scattering, all-orders control
+  and UV admissibility remain open; no UV completion verdict.
 - P8 CD/M1: [nonlinear preparation and principal-cone robustness](problems/P8/s5/matter/README.md).
   The matter branch now has a regular nonlinear spatial chart, its required
   canonical boundary, seven-velocity Legendre reduction and quartic invariant
@@ -43,8 +46,12 @@ around a pre-registered problems document and a certificate-gated ledger.
   [coupled canonical normalization and free-energy bound](problems/P8/s5/matter/physical/control/README.md)
   retains finite-momentum mixing and all time-dependent generators, and gives
   a uniform sufficient local band with energy variation below a factor of two.
-  Its conservative q>=10^20 threshold is not an interacting cutoff;
-  M1 interaction control remains open.
+  Its conservative q>=10^20 threshold is not an interacting cutoff. The
+  subsequent [M1 hard-channel tree estimate](problems/P8/s5/matter/physical/control/tree/README.md)
+  bounds all retained cubic/quartic transition blocks, including both scalar
+  and both tensor internal channels, on the declared finite-time momentum
+  domain. A deliberately loose M*tau=10^324 suffices; this is not an optimized
+  physical scale, higher-order/loop control, or UV admissibility.
   Exact mixing mismatch forces a superluminal principal mode with frozen
   canonical matter; a specified one-sided covariant deformation stays causal
   within the exceptional relation. Neither result computes loop corrections.

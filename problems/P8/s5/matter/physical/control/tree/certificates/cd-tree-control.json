@@ -1,0 +1,753 @@
+{
+  "claim": "P8-S5.8.CD",
+  "coupled_free_initialization_and_CCR_residuals": {
+    "Hamiltonian_preserves_CCR_00": "0",
+    "Hamiltonian_preserves_CCR_01": "0",
+    "Hamiltonian_preserves_CCR_02": "0",
+    "Hamiltonian_preserves_CCR_03": "0",
+    "Hamiltonian_preserves_CCR_10": "0",
+    "Hamiltonian_preserves_CCR_11": "0",
+    "Hamiltonian_preserves_CCR_12": "0",
+    "Hamiltonian_preserves_CCR_13": "0",
+    "Hamiltonian_preserves_CCR_20": "0",
+    "Hamiltonian_preserves_CCR_21": "0",
+    "Hamiltonian_preserves_CCR_22": "0",
+    "Hamiltonian_preserves_CCR_23": "0",
+    "Hamiltonian_preserves_CCR_30": "0",
+    "Hamiltonian_preserves_CCR_31": "0",
+    "Hamiltonian_preserves_CCR_32": "0",
+    "Hamiltonian_preserves_CCR_33": "0",
+    "coordinate_CCR_00": "0",
+    "coordinate_CCR_01": "0",
+    "coordinate_CCR_10": "0",
+    "coordinate_CCR_11": "0",
+    "full_covariant_energy_rate_00": "0",
+    "full_covariant_energy_rate_01": "0",
+    "full_covariant_energy_rate_02": "0",
+    "full_covariant_energy_rate_03": "0",
+    "full_covariant_energy_rate_10": "0",
+    "full_covariant_energy_rate_11": "0",
+    "full_covariant_energy_rate_12": "0",
+    "full_covariant_energy_rate_13": "0",
+    "full_covariant_energy_rate_20": "0",
+    "full_covariant_energy_rate_21": "0",
+    "full_covariant_energy_rate_22": "0",
+    "full_covariant_energy_rate_23": "0",
+    "full_covariant_energy_rate_30": "0",
+    "full_covariant_energy_rate_31": "0",
+    "full_covariant_energy_rate_32": "0",
+    "full_covariant_energy_rate_33": "0",
+    "initial_energy_matrix_00": "0",
+    "initial_energy_matrix_01": "0",
+    "initial_energy_matrix_10": "0",
+    "initial_energy_matrix_11": "0",
+    "mixed_CCR_00": "0",
+    "mixed_CCR_01": "0",
+    "mixed_CCR_10": "0",
+    "mixed_CCR_11": "0",
+    "momentum_CCR_00": "0",
+    "momentum_CCR_01": "0",
+    "momentum_CCR_10": "0",
+    "momentum_CCR_11": "0",
+    "orthogonal_initial_basis_00": "0",
+    "orthogonal_initial_basis_01": "0",
+    "orthogonal_initial_basis_10": "0",
+    "orthogonal_initial_basis_11": "0",
+    "positive_frequency_square_00": "0",
+    "positive_frequency_square_01": "0",
+    "positive_frequency_square_10": "0",
+    "positive_frequency_square_11": "0"
+  },
+  "coupled_free_omission_controls": {
+    "P_is_not_Ydot": [
+      "-omega*y1",
+      "omega*y0"
+    ],
+    "dropping_the_mixed_free_Hamiltonian": [
+      "-omega*(p0*y1 - p1*y0)"
+    ],
+    "one_scalar_species_omits_a_CCR_channel": [
+      "0",
+      "0",
+      "0",
+      "I"
+    ]
+  },
+  "date": "2026-09-05",
+  "exact_positive_series_majorants": {
+    "Hamiltonian_series_coefficients": [
+      "799744/25",
+      "746496000000000000499402913626931200000000000000000000000000000000",
+      "329238328320000000097083923853229756465534863652810747287923471155200000000000000000000000000000000000000000000000000000000000000000",
+      "7635292878232100573372387172632399032910033830538746840700397867566314357159312857791908819280041124823040000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "525277538942110230258061488777926459662118398208739214206396610180749161942761793033995835786848858827294866899570336228116692826271949205045248000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    ],
+    "Wick_factor": 720,
+    "cubic_block_bound_at_sufficient_scale": "1717940897606087996028395980124579160666615461756397638545882063750631503519446325435876614544788748784536567449313148166280940322713594202426363859395237661946648467136060556333787712763211622411103403285835301411/2328306436538696289062500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "cubic_kernel_bound": "5497410872327112412828118764295327303695224357987897725304286464647746337154705257610174349881629609872588800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "cubic_transition_block_bound_numerator": "737849997167903263344013862197293350082624296725166657632619245928194940696333086777446300456106560325834430771089810903697900863418257307403643662429888809620835886315791087172918388612463571018278978438696155960254765465600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "domain_checks": {
+      "S5_7_q_threshold": "100000000000000000000",
+      "canonical_boundary_bounds": {
+        "gamma": {
+          "boundary_operator_bound_over_q": "40577242582050412379306654864614029394563192290192753/356811923176489970264571492362373784095686656000000",
+          "z_times_boundary_coefficients": {
+            "11": {
+              "absolute_bound": "40415521705022611221273329031182626897325243464592753/356811923176489970264571492362373784095686656000000",
+              "denominator_absolute_lower": "2048/81",
+              "denominator_factors": [
+                {
+                  "absolute_lower": "1/10",
+                  "factor": "J",
+                  "power": 1
+                },
+                {
+                  "absolute_lower": "4/125",
+                  "factor": "R=Lambda^2-J*z",
+                  "power": 1
+                }
+              ],
+              "weighted_numerator_L1": "40415521705022611221273329031182626897325243464592753/14112190320945159956753071719410291265503232000000"
+            },
+            "22": {
+              "absolute_bound": "3896966904345268553042593551290808807/6287546977132017831423647898664960000",
+              "denominator_absolute_lower": "62/5625",
+              "denominator_factors": [
+                {
+                  "absolute_lower": "4/125",
+                  "factor": "R=Lambda^2-J*z",
+                  "power": 1
+                },
+                {
+                  "absolute_lower": "31/1000",
+                  "factor": "D=Lambda^2-J0*z",
+                  "power": 1
+                }
+              ],
+              "weighted_numerator_L1": "1298988968115089517680864517096936269/190147590034234410224505480806400000000"
+            },
+            "12_factor": {
+              "absolute_bound": "1470842808228564154281464956797231/32451855365842672678315602057625600",
+              "denominator_absolute_lower": "16384/2025",
+              "denominator_factors": [
+                {
+                  "absolute_lower": "4/125",
+                  "factor": "R=Lambda^2-J*z",
+                  "power": 2
+                }
+              ],
+              "weighted_numerator_L1": "163426978692062683809051661866359/445658414142736898963684720640000"
+            }
+          }
+        },
+        "unitary": {
+          "boundary_operator_bound_over_q": "42828424431/2000000",
+          "z_times_boundary_coefficients": {
+            "11": {
+              "absolute_bound": "334391412/15625",
+              "denominator_absolute_lower": "80/27",
+              "denominator_factors": [
+                {
+                  "absolute_lower": "1/10",
+                  "factor": "J",
+                  "power": 1
+                },
+                {
+                  "absolute_lower": "3",
+                  "factor": "Theta/x",
+                  "power": 1
+                },
+                {
+                  "absolute_lower": "1/9",
+                  "factor": "abs(x)",
+                  "power": 1
+                }
+              ],
+              "weighted_numerator_L1": "1783420864/28125"
+            },
+            "22": {
+              "absolute_bound": "4689/10000",
+              "denominator_absolute_lower": "1/3",
+              "denominator_factors": [
+                {
+                  "absolute_lower": "3",
+                  "factor": "Theta/x",
+                  "power": 1
+                },
+                {
+                  "absolute_lower": "1/9",
+                  "factor": "abs(x)",
+                  "power": 1
+                }
+              ],
+              "weighted_numerator_L1": "1563/10000"
+            },
+            "12_factor": {
+              "absolute_bound": "5264739/4000000",
+              "denominator_absolute_lower": "1/9",
+              "denominator_factors": [
+                {
+                  "absolute_lower": "3",
+                  "factor": "Theta/x",
+                  "power": 2
+                },
+                {
+                  "absolute_lower": "1/9",
+                  "factor": "abs(x)",
+                  "power": 2
+                }
+              ],
+              "weighted_numerator_L1": "584971/4000000"
+            }
+          }
+        }
+      },
+      "chart_switch_abs_x": "9/50",
+      "common_boundary_bound_over_q": "42828424431/2000000",
+      "common_terminal_phase_seed": "10000000000000000000000000000000000",
+      "derivative_bound": "10000000000000",
+      "ell_and_scale_factor_ratio_enclosure": [
+        "1/2",
+        "2"
+      ],
+      "free_column_coordinate_norm_upper": "1",
+      "free_column_energy_upper": "27500000000000/7",
+      "free_column_momentum_norm_upper": "100000000000000",
+      "free_energy_ratio_upper": "11/7",
+      "local_and_fixed_squared_momentum_upper": "1000000000000000000000000000",
+      "margins": {
+        "York_denominator_above_one": "2499999999999999999999",
+        "centre_high_q": "9800000000000000000000",
+        "derivative_band": "2000000000000",
+        "ell_ratio_lower_above_half": "49/100",
+        "ell_ratio_upper_below_two": "99/100",
+        "full_window_duration_below_one": "49/50",
+        "gamma_window": "593/9900",
+        "initial_frequency_upper": "1",
+        "mode_coordinate_squared_below_one": "1749999989/1750000000",
+        "mode_energy_below_half_MODE_P": "322500000000000/7",
+        "mode_momentum_squared_below_MODE_P_squared": "69999999999999945000000000000/7",
+        "scale_factor_exponential": "95/99",
+        "scale_factor_upper_below_two": "91/95",
+        "unitary_window": "97/1650",
+        "whole_window_high_q": "525000000000000000000",
+        "whole_window_q_upper": "936000000000000000000000000"
+      },
+      "physical_momentum_enclosure": [
+        "50000000000",
+        "4000000000000"
+      ],
+      "proper_subset_squared_lower": "2500000000000000000000",
+      "terminal_phase_seed_bounds": {
+        "chart_coordinate_vector_norm": "60",
+        "chart_momentum_vector_norm": "5910322571478000013800000000000000",
+        "matter_density_perturbation": "7683419342921400017940000000000000",
+        "matter_field": "60",
+        "pre_mixed_metric_momentum": "5910322571478000013800000000000036",
+        "tensor_coordinate_entry": "6",
+        "tensor_momentum_entry": "200000000000024",
+        "zeta": "2955161285739000006900000000000000"
+      }
+    },
+    "exchange_factor": 24,
+    "momentum_correction_majorants": [
+      "13136640000000000000000000000000000000000000",
+      "20430105141964800000000000000000000000000000000000000000000000000000000000000000000000",
+      "31772901968396632424448000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    ],
+    "not_a_necessary_scale_or_all_orders_cutoff": true,
+    "quartic_Hamiltonian_kernel_bound": "378199828038319365785804271920107050956725246710292234228605559330139396598788490984477001766531178355652304167690642084244018834915803427632578560000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "quartic_connected_tree_block_bound_numerator": "97350350317856652053531383572173679193186805294106618770896986514652001726631885452945649169228496910851567271755355085494948457173255135770330812906330626372765886601879737667112902227979493321654565480435271320475049639095460095289690853240647905310428706325782855668075193578972172324483135107392129717741465020558815795330600183876909082314934794455643282782752923508435767164909274947880222720000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "quartic_tree_block_bound_at_sufficient_scale": "72531663118196019570180314460526167745282355915089412607920904841014744137698326597322262204608691417315279894884940300505569917837720465488978335936613847593043660075872941067153887620552996785681371003713660925980694323104217719502516726583725143455288340394037109366115326865741738918783616354608632413850326106368613090612441438344798298414748008888694109605813714495625918481431361249/745058059692382812500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "scale_restoration": {
+      "action_prefactor": "(M*ell0)^2",
+      "dimensionless_H3_factor": "1/(M*ell0)",
+      "dimensionless_H4_factor": "1/(M*ell0)^2",
+      "ell0_lower_bound": "tau",
+      "physical_Hamiltonian_extra_factor": "1/ell0"
+    },
+    "series_coefficients": {
+      "eta": [
+        "0",
+        "256000000000000000000000000000000000",
+        "419040000000000000000000000000000000000000000000000000000000000000000000",
+        "790041600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "1568548800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+      ],
+      "matter_gradient": [
+        "0",
+        "0",
+        "1440000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "172800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "62208000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+      ],
+      "momentum": [
+        "8",
+        "13136640720000000000000000000000000000000000",
+        "20430105141964800000000000000000000000000000000000000000000000000000000000000000000000",
+        "31772901968396632424448000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "0"
+      ],
+      "rho": [
+        "0",
+        "2916000000000000000000000000000000000000000000000000000000000000",
+        "5423760000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "1994544000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "937225728000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+      ],
+      "shear2": [
+        "0",
+        "0",
+        "53940979741516400102400000000000000000000000000000000000000000000000000000000000000000000",
+        "112874421502046189206416420864000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "135234370801434030319436262170582753280000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+      ],
+      "sigma": [
+        "0",
+        "118229852880000000000000000000000000000000000",
+        "183871088153547609600000000000000000000000000000000000000000000000000000000000000000000",
+        "285956338360942725268367808000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "343147710619089771317353658880000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+      ]
+    },
+    "stationary_coefficient_majorants": [
+      {
+        "compact_bound": "1112/25",
+        "fixed_unit_bound": "71168/25",
+        "powers": "0,0,0,0,0",
+        "unit_weight": -2
+      },
+      {
+        "compact_bound": "8",
+        "fixed_unit_bound": "512",
+        "powers": "1,0,0,0,0",
+        "unit_weight": -1
+      },
+      {
+        "compact_bound": "1/2",
+        "fixed_unit_bound": "32",
+        "powers": "0,1,0,0,0",
+        "unit_weight": 0
+      },
+      {
+        "compact_bound": "16/5",
+        "fixed_unit_bound": "1024/5",
+        "powers": "0,0,1,0,0",
+        "unit_weight": -1
+      },
+      {
+        "compact_bound": "165923/24",
+        "fixed_unit_bound": "1327384/3",
+        "powers": "2,0,0,0,0",
+        "unit_weight": 0
+      },
+      {
+        "compact_bound": "550",
+        "fixed_unit_bound": "35200",
+        "powers": "1,1,0,0,0",
+        "unit_weight": 1
+      },
+      {
+        "compact_bound": "3520",
+        "fixed_unit_bound": "225280",
+        "powers": "1,0,1,0,0",
+        "unit_weight": 0
+      },
+      {
+        "compact_bound": "605/8",
+        "fixed_unit_bound": "4840",
+        "powers": "0,2,0,0,0",
+        "unit_weight": 2
+      },
+      {
+        "compact_bound": "968",
+        "fixed_unit_bound": "61952",
+        "powers": "0,1,1,0,0",
+        "unit_weight": 1
+      },
+      {
+        "compact_bound": "957423/80",
+        "fixed_unit_bound": "3829692/5",
+        "powers": "0,0,2,0,0",
+        "unit_weight": 0
+      },
+      {
+        "compact_bound": "2",
+        "fixed_unit_bound": "128",
+        "powers": "0,0,0,1,0",
+        "unit_weight": 0
+      },
+      {
+        "compact_bound": "1/2",
+        "fixed_unit_bound": "32",
+        "powers": "0,0,0,0,1",
+        "unit_weight": 0
+      },
+      {
+        "compact_bound": "5182449921125/48",
+        "fixed_unit_bound": "20729799684500/3",
+        "powers": "3,0,0,0,0",
+        "unit_weight": 1
+      },
+      {
+        "compact_bound": "20317621294475/384",
+        "fixed_unit_bound": "20317621294475/6",
+        "powers": "2,1,0,0,0",
+        "unit_weight": 2
+      },
+      {
+        "compact_bound": "1014883168630/3",
+        "fixed_unit_bound": "64952522792320/3",
+        "powers": "2,0,1,0,0",
+        "unit_weight": 1
+      },
+      {
+        "compact_bound": "68579047625/8",
+        "fixed_unit_bound": "548632381000",
+        "powers": "1,2,0,0,0",
+        "unit_weight": 3
+      },
+      {
+        "compact_bound": "1752696457325/16",
+        "fixed_unit_bound": "7010785829300",
+        "powers": "1,1,1,0,0",
+        "unit_weight": 2
+      },
+      {
+        "compact_bound": "16737611421355/32",
+        "fixed_unit_bound": "33475222842710",
+        "powers": "1,0,2,0,0",
+        "unit_weight": 1
+      },
+      {
+        "compact_bound": "1000",
+        "fixed_unit_bound": "64000",
+        "powers": "1,0,0,1,0",
+        "unit_weight": 1
+      },
+      {
+        "compact_bound": "250",
+        "fixed_unit_bound": "16000",
+        "powers": "1,0,0,0,1",
+        "unit_weight": 1
+      },
+      {
+        "compact_bound": "153968949255/256",
+        "fixed_unit_bound": "153968949255/4",
+        "powers": "0,3,0,0,0",
+        "unit_weight": 4
+      },
+      {
+        "compact_bound": "2949764069571/256",
+        "fixed_unit_bound": "2949764069571/4",
+        "powers": "0,2,1,0,0",
+        "unit_weight": 3
+      },
+      {
+        "compact_bound": "155116345265497/1280",
+        "fixed_unit_bound": "155116345265497/20",
+        "powers": "0,1,2,0,0",
+        "unit_weight": 2
+      },
+      {
+        "compact_bound": "275",
+        "fixed_unit_bound": "17600",
+        "powers": "0,1,0,1,0",
+        "unit_weight": 2
+      },
+      {
+        "compact_bound": "275/4",
+        "fixed_unit_bound": "4400",
+        "powers": "0,1,0,0,1",
+        "unit_weight": 2
+      },
+      {
+        "compact_bound": "92256735846649/200",
+        "fixed_unit_bound": "738053886773192/25",
+        "powers": "0,0,3,0,0",
+        "unit_weight": 1
+      },
+      {
+        "compact_bound": "1760",
+        "fixed_unit_bound": "112640",
+        "powers": "0,0,1,1,0",
+        "unit_weight": 1
+      },
+      {
+        "compact_bound": "440",
+        "fixed_unit_bound": "28160",
+        "powers": "0,0,1,0,1",
+        "unit_weight": 1
+      },
+      {
+        "compact_bound": "858153387896680859370125/73728",
+        "fixed_unit_bound": "858153387896680859370125/1152",
+        "powers": "4,0,0,0,0",
+        "unit_weight": 2
+      },
+      {
+        "compact_bound": "4085265509322642611625/512",
+        "fixed_unit_bound": "4085265509322642611625/8",
+        "powers": "3,1,0,0,0",
+        "unit_weight": 3
+      },
+      {
+        "compact_bound": "26113961780729739130025/512",
+        "fixed_unit_bound": "26113961780729739130025/8",
+        "powers": "3,0,1,0,0",
+        "unit_weight": 2
+      },
+      {
+        "compact_bound": "13498047517790193325225/6144",
+        "fixed_unit_bound": "13498047517790193325225/96",
+        "powers": "2,2,0,0,0",
+        "unit_weight": 4
+      },
+      {
+        "compact_bound": "345099318862766890468885/12288",
+        "fixed_unit_bound": "345099318862766890468885/192",
+        "powers": "2,1,1,0,0",
+        "unit_weight": 3
+      },
+      {
+        "compact_bound": "871664741939931438079713/8192",
+        "fixed_unit_bound": "871664741939931438079713/128",
+        "powers": "2,0,2,0,0",
+        "unit_weight": 2
+      },
+      {
+        "compact_bound": "10239323121125/96",
+        "fixed_unit_bound": "20478646242250/3",
+        "powers": "2,0,0,1,0",
+        "unit_weight": 2
+      },
+      {
+        "compact_bound": "10239323121125/384",
+        "fixed_unit_bound": "10239323121125/6",
+        "powers": "2,0,0,0,1",
+        "unit_weight": 2
+      },
+      {
+        "compact_bound": "71706574256834625625/256",
+        "fixed_unit_bound": "71706574256834625625/4",
+        "powers": "1,3,0,0,0",
+        "unit_weight": 5
+      },
+      {
+        "compact_bound": "2749728830205179992125/512",
+        "fixed_unit_bound": "2749728830205179992125/8",
+        "powers": "1,2,1,0,0",
+        "unit_weight": 4
+      },
+      {
+        "compact_bound": "20336609767240654964725/512",
+        "fixed_unit_bound": "20336609767240654964725/8",
+        "powers": "1,1,2,0,0",
+        "unit_weight": 3
+      },
+      {
+        "compact_bound": "147698443875/4",
+        "fixed_unit_bound": "2363175102000",
+        "powers": "1,1,0,1,0",
+        "unit_weight": 3
+      },
+      {
+        "compact_bound": "147698443875/16",
+        "fixed_unit_bound": "590793775500",
+        "powers": "1,1,0,0,1",
+        "unit_weight": 3
+      },
+      {
+        "compact_bound": "110181652759979902736085/1024",
+        "fixed_unit_bound": "110181652759979902736085/16",
+        "powers": "1,0,3,0,0",
+        "unit_weight": 2
+      },
+      {
+        "compact_bound": "943939512675/4",
+        "fixed_unit_bound": "15103032202800",
+        "powers": "1,0,1,1,0",
+        "unit_weight": 2
+      },
+      {
+        "compact_bound": "943939512675/16",
+        "fixed_unit_bound": "3775758050700",
+        "powers": "1,0,1,0,1",
+        "unit_weight": 2
+      },
+      {
+        "compact_bound": "7265052416465846805/512",
+        "fixed_unit_bound": "7265052416465846805/8",
+        "powers": "0,4,0,0,0",
+        "unit_weight": 6
+      },
+      {
+        "compact_bound": "742797890108364396207/2048",
+        "fixed_unit_bound": "742797890108364396207/32",
+        "powers": "0,3,1,0,0",
+        "unit_weight": 5
+      },
+      {
+        "compact_bound": "331314937156212987734163/81920",
+        "fixed_unit_bound": "331314937156212987734163/1280",
+        "powers": "0,2,2,0,0",
+        "unit_weight": 4
+      },
+      {
+        "compact_bound": "65144511025/16",
+        "fixed_unit_bound": "260578044100",
+        "powers": "0,2,0,1,0",
+        "unit_weight": 4
+      },
+      {
+        "compact_bound": "65144511025/64",
+        "fixed_unit_bound": "65144511025",
+        "powers": "0,2,0,0,1",
+        "unit_weight": 4
+      },
+      {
+        "compact_bound": "4518518595003998804533347/204800",
+        "fixed_unit_bound": "4518518595003998804533347/3200",
+        "powers": "0,1,3,0,0",
+        "unit_weight": 3
+      },
+      {
+        "compact_bound": "1664772320365/32",
+        "fixed_unit_bound": "3329544640730",
+        "powers": "0,1,1,1,0",
+        "unit_weight": 3
+      },
+      {
+        "compact_bound": "1664772320365/128",
+        "fixed_unit_bound": "1664772320365/2",
+        "powers": "0,1,1,0,1",
+        "unit_weight": 3
+      },
+      {
+        "compact_bound": "222449021261360044316687929/4096000",
+        "fixed_unit_bound": "222449021261360044316687929/64000",
+        "powers": "0,0,4,0,0",
+        "unit_weight": 2
+      },
+      {
+        "compact_bound": "16174896944811/64",
+        "fixed_unit_bound": "16174896944811",
+        "powers": "0,0,2,1,0",
+        "unit_weight": 2
+      },
+      {
+        "compact_bound": "16174896944811/256",
+        "fixed_unit_bound": "16174896944811/4",
+        "powers": "0,0,2,0,1",
+        "unit_weight": 2
+      },
+      {
+        "compact_bound": "250",
+        "fixed_unit_bound": "16000",
+        "powers": "0,0,0,2,0",
+        "unit_weight": 2
+      },
+      {
+        "compact_bound": "125",
+        "fixed_unit_bound": "8000",
+        "powers": "0,0,0,1,1",
+        "unit_weight": 2
+      },
+      {
+        "compact_bound": "125/8",
+        "fixed_unit_bound": "1000",
+        "powers": "0,0,0,0,2",
+        "unit_weight": 2
+      }
+    ],
+    "sufficient_M_tau": "1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "sufficient_M_tau_power10": 324,
+    "target_block_norm": "1/1000",
+    "window": {
+      "Fourier_measure": "d^3k/(2*pi)^3; fixed total momentum fibers on R^3",
+      "Schur_measure_majorant": "134217728000301989888000301989888000176160768000066060288000016515072000002752512000000294912000000018432000000000512",
+      "external_k_max": "1000000000000",
+      "external_k_min": "100000000000",
+      "half_duration_over_ell0": "1/100",
+      "momentum_species_measure_upper": "256000000000192000000000048000000000004",
+      "propagating_columns": 4,
+      "proper_subset_k_min": "100000000000"
+    }
+  },
+  "formulation": "FORMULATION.md",
+  "homogeneous_scale_restoration_residuals": {
+    "canonical_matter_action_prefactor": "0",
+    "covariant_action_prefactor": "0",
+    "cubic_canonical_power": "0",
+    "homogeneous_order_0": "0",
+    "homogeneous_order_1": "0",
+    "homogeneous_order_2": "0",
+    "homogeneous_order_3": "0",
+    "homogeneous_order_4": "0",
+    "physical_time_cancels_Hamiltonian_unit": "0",
+    "quartic_canonical_power": "0"
+  },
+  "independent_free_energy_exponential_enclosure": {
+    "exponent": "4/11",
+    "lower": "9616399468997/6684781703985",
+    "rational_energy_upper": "11/7",
+    "upper": "803656241344043/558656756690175"
+  },
+  "matter_source_and_mixed_boundary_omission_controls": {
+    "matter_York_quadratic_source": "-I*P*gradient/2",
+    "matter_eta_nonlinear_second_order": "-3*P*zeta - 3*l*zeta**2/2",
+    "matter_gradient_metric_cubic": "-2*gradient**2*zeta",
+    "matter_mixed_boundary_shift": "3*l*zeta",
+    "metric_mixed_boundary_shift": "3*l*s"
+  },
+  "not_established": [
+    "an optimized or observationally realistic duration, a necessary cutoff, or control at a separately specified M*tau",
+    "inclusive, soft, forward or zero-mode transitions; vacuum production or a full Fock-space operator norm",
+    "a global vacuum, an in/out S matrix, or chart-independent/global fixed-comoving mode control",
+    "higher tree orders, loops, radiative protection or a perturbative remainder bound to all orders",
+    "nonlinear PDE, BKL or backreaction stability; UV matching/admissibility/completion; full P8 completion"
+  ],
+  "operational_contract": {
+    "all_nonempty_proper_subset_momenta": "norm>=10^11; total signed spatial momentum zero",
+    "background": "fixed CD/M1, unchanged physical matter metric and covariant tube",
+    "canonical_phase_map": "Q=a^-3/2*T^-1*Y; p=a^-3/2*T^T*(P-S*Y); gamma swap and both mixed matter shifts retained",
+    "external_band_in_fixed_ell0_units": [
+      "10^11",
+      "10^12"
+    ],
+    "free_evolution": "exact coupled canonical Hamiltonian evolution, with two scalar and two TT initial-mode columns",
+    "free_scalar_columns": "R=W(left)^1/2; U0=(2R)^-1/2; P0=-i*(R/2)^1/2; Ydot0=P0-Omega(left)*U0",
+    "initial_state_meaning": "local Gaussian complex structure; not generally the ground state of E-P^T*Omega*Y",
+    "norm": "Schur bounds in fixed-total-momentum fibers of continuum one/two-particle spaces on R^3",
+    "observable": "connected cubic 1-to-2/2-to-1 and hard quartic-order 2-to-2 transition blocks",
+    "parameters_chosen_for_this_scoped_gate_not_preregistered": true,
+    "quantum_ordering": "tree terms only; contractions within one vertex and other loop/order-dependent effects excluded",
+    "quartic_order": "one H4 plus two time-ordered H3 insertions, including both scalar and both tensor internal columns",
+    "scale": "one sufficient finite M*tau works at all center times",
+    "target_block_norm": "1/1000",
+    "window": "abs(t-t0)<=ell0/100 at any finite t0; ell0=tau*sqrt(1+u0^2); a0=1"
+  },
+  "prior_S5_7_CD_sha256": "a95282c853fdcce4e29e1e221a71e058d230b4bba466bbdb627f093e4ac3f66b",
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "2fe96023ef48060870b6244dde8f304f81d678428040815d20b95c333d69607c",
+    "README.md": "540f71129a500d0267d9f5b87ad2c43a56f06303d987231aced04ecaa4c3946c",
+    "notes/tree-bound.md": "93054c878c43193ce1500bb6ac70ae4c765154ba3b60b7ef0f22b5aa60121d42",
+    "src/p8_m1_tree/__init__.py": "691f1900e6e7967217519bff3acffcc5a76ac42ac34d2182403f4956d7f31876",
+    "src/p8_m1_tree/free.py": "d38f3758edebca9a8238966dcaba4c1e6e2234aaa4fe77edaa512b0a9f083b3c",
+    "src/p8_m1_tree/majorant.py": "3e6282d0c7ae49051ab90a915a94e52156f472388d8be654737461d3ccb3e49c",
+    "src/p8_m1_tree/verify.py": "b67371df91ed7ad1e0153c7d3fe6ecd278299a8ffbf9a9682f8d2dced20ddd3e",
+    "tests/conftest.py": "c64365b51199586752cf5df51c70d7ae0acddeab8257808090c5a88440c5ca6c",
+    "tests/test_m1_tree_free.py": "694f59141bcf281a3639881d412884cdd3249a1d29feef9a20226c9aeaf3d5d7",
+    "tests/test_m1_tree_majorant.py": "d34b8c06ad572489543c23fea4fa21cf7a5228ff1473422cca3388375f484c6a",
+    "tests/test_m1_tree_report.py": "376a171be898cb827d44984bcbc4e3672e95102226980998c5907fd4fe07c590"
+  },
+  "status": "SCOPED_NONEXCEPTIONAL_FINITE_TIME_M1_CUBIC_QUARTIC_TREE_CONTROL; LOOPS_AND_UV_OPEN",
+  "verification_boundary": [
+    "prior physical Hamiltonian and coupled free-control certificates are immutable inputs, replayed through S5.7",
+    "positive-series induction bounds all retained physical kernel assignments without a complete expanded H4",
+    "the matrix/free-ODE, finite-tree combinatoric and continuum Schur arguments are written proofs",
+    "exact rational arithmetic certifies all operational scale and coefficient inequalities; no sampled-angle coverage claim"
+  ],
+  "written_proof": "notes/tree-bound.md"
+}
