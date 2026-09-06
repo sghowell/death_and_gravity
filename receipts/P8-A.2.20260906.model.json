@@ -1,0 +1,72 @@
+{
+  "claim_id": "P8-A.2",
+  "closes": [],
+  "created": "2026-09-06T22:25:09+00:00",
+  "evidence_sha256": [
+    "1a7369c03a25787c04fac0bf38189206e5331e43d3e48306a9ebb187763e9ed2",
+    "429676d3f8192cb1009d71ca9a9cafe7370223b0be2c0ae2cd3f7a225b97fe80",
+    "8b809ddc958eee442ce78ffa6b27971f60656127788e0d14041c2ee17ea790ba",
+    "a64f6a8fe8e8154491da913d895fdb77b9d60ed3b321ae8d144d406c72a60956"
+  ],
+  "findings": [
+    {
+      "dimension": "assumption_explicitness",
+      "severity": "warning",
+      "text": "The operative sentence carries no worldline or observable qualifier, while the evidence establishes the bound only along comoving worldlines of the fixed patch and only for the effective energy density: the certificate scopes coverage to 'all normals to a constant-t FLRW slice are comoving; no other slices/backgrounds', and the formulation fixes the comoving observer and the observable E=T(U,U)-Tr(T)/2. Inside the statement, the restriction surfaces only as the trailing 'general-background/geodesic coverage ... remain open', which names what is uncovered but not the covered class; read alone, 'any Hadamard state and real compact positive-proper-time H2_0 sampling' admits non-comoving proper-time samplings that no evidence file treats. The pinned formulation discloses the boundary, so the promotion as stated is not invalidated, but these scope words are missing from the statement text. [Statement sentence 2 ('The positive-type difference QSEI for any Hadamard state and real compact positive-proper-time H2_0 sampling has Q=...') vs radiation-qsei.json fixed_background_and_field_map.all_normals_scope and FORMULATION.md 'The observer is comoving, with physical proper time t... The observable is the effective energy density E=T(U,U)-Tr(T)/2']"
+    },
+    {
+      "dimension": "assumption_explicitness",
+      "severity": "note",
+      "text": "'the stated conditional duration multiplier' has no referent within the statement text itself; it resolves only through the pin formulation_version=FORMULATION.md@429676d3, whose multiplier formula agrees exactly with the certificate's general_multiplier field. The clause is checkable, but not self-contained in the leveled text. [Statement phrase 'gives the stated conditional duration multiplier' vs FORMULATION.md 'C=1+max(0,beta-111/256)*(L/t_min)^4/pi^4' and radiation-qsei.json reference_state_conditional_bridge.general_multiplier]"
+    },
+    {
+      "dimension": "evidence_support",
+      "severity": "note",
+      "text": "The Hadamard property of the rescaled reference (the one-sentence wavefront argument 'Its Hadamard wavefront set is preserved by the smooth nonvanishing factors and the conformal light cones') and the positive-type worldline lemma's applicability to arbitrary Hadamard states are written-only steps: the 2026-09-06 PASS machine-checks the surrounding identities (canonical_mode_Wronskian, rescaled_Klein_Gordon, all residuals simplified to '0') but not these. They are disclosed via written_proof: 'notes/derivation.md' plus the status field, which is exactly this schema's boundary-disclosure route, so they are permitted at CERTIFIED under this ledger; this receipt attests the statement only within that disclosed boundary. [Statement clauses 'constructs a reference Hadamard state' and 'for any Hadamard state' vs notes/derivation.md sections 1-2 and radiation-qsei.json written_proof / status]"
+    },
+    {
+      "dimension": "evidence_support",
+      "severity": "note",
+      "text": "Clause-by-clause check against the certificate: the statement's density hddot^2-3*hdot^2/(8*t^2)+105*h^2/(256*t^4) and prefactor hbar/(16*pi^2) match proper_time_density/overall_proper_time_prefactor; '0<=Q<=hbar*norm(hddot)^2/(16*pi^2)' matches exact_comparison; 'no assumed short averaging duration' matches scope.assumed_small_duration_for_difference_bound=false; 'retains the actual reference EED' matches scope.renormalized_reference_EED; 'beta is not derived' matches example_with_UNESTABLISHED_beta_1.reference_bound_is_derived_here=false; the closing open list is a subset of not_established. Independent hand re-derivations reproduce the evidence: Hardy completion coefficient (3/8)*(9/4)=216/256 with 216/256-111/256=105/256; beta=1, L/t_c=1/2 gives t_min=(3/4)t_c, (L/t_min)^4=16/81, multiplier 1+145/(1296*pi^4)~1.0011486 inside validated_multiplier (2002297/2000000, 10011487/10000000); first benchmark h=(t-1)^2(2-t)^2 has ascending coefficients [4,-12,13,-6,1] and flat norm exactly 4/5; the second benchmark polynomial has h=hdot=0 at t=1 and t=2. No mismatch found. [radiation-qsei.json proper_time_density, overall_proper_time_prefactor, exact_comparison, scope.*, reference_state_conditional_bridge.*, not_established vs statement sentences 2-5]"
+    },
+    {
+      "dimension": "evidence_support",
+      "severity": "note",
+      "text": "The SymPy-vs-FLINT cross-engine equality check and the Arb positivity/strict-comparison checks run only for the first benchmark polynomial; the second benchmark is reproduced by independent.replay((4,-8,1,7,-5,1)) alone and carries no validated fields. The statement's identities are separately machine-checked symbolically, so nothing in THIS promotion rests on the single-engine second benchmark. [verify.py benchmark() vs radiation-qsei.json second_independent_FLINT_benchmark]"
+    },
+    {
+      "dimension": "internal_consistency",
+      "severity": "note",
+      "text": "The enclosed value (0.7965831, 0.7965832) is the raw curved integral -75587/1280+(2763/32)*log(2), not a curved/flat ratio; 'normalized' evidently means the prefactor/scale-normalized functional, as in derivation.md's parallel phrase 'normalized flat norm is 4/5'. The values are mutually consistent (0.79658 < 4/5, matching positive_and_strictly_below_flat_norm=true), and derivation section 3's intermediate density and boundary functions reproduce the certified proper_time_density term-by-term (checked: h^2 coefficient 249/256-9/16=105/256; hdot^2 coefficient 5/2-23/8=-3/8; flat_upper_bound_decomposition differs from proper_time_density by d/dt[9h^2/(16t^3)], vanishing on H2_0). Only the field name is confusable; no substantive inconsistency among statement, certificate, and notes. [radiation-qsei.json independent_FLINT_benchmark.validated_normalized_curved_norm vs notes/derivation.md section 5 'the normalized flat norm is 4/5']"
+    },
+    {
+      "dimension": "ledger_consistency",
+      "severity": "note",
+      "text": "The A.1 pin is enforced at replay (sha equality with f719c980... plus full prior.validate_report revalidation) and recorded in prior_A1_sha256, but the evidence bundle nowhere displays that p8a.verify.REPORT resolves to the declared focusing.json path; the identification rides on the p8a package under problems/P8/a/src, which is inside the verifier's binary_hash inputs, and on the exit=0 PASS. Everything else lines up: formulation_version @429676d3 equals both source_sha256['FORMULATION.md'] and the evidence file's own sha256; the sole claim dependency P8-A.1 is CERTIFIED and standing CURRENT, so the level cap admits CERTIFIED; the four table-import entries are IMPORTED and are not counted as verification; the PASS run's binary_hash 35daadfe... equals the current v1 stamp. [Dependency 'problems/P8/a/certificates/focusing.json (path dependency)' vs verify.py PRIOR_SHA/prior_checks() and radiation-qsei.json prior_A1_sha256; formulation_version vs source_sha256['FORMULATION.md']]"
+    },
+    {
+      "dimension": "confidence_calibration",
+      "severity": "note",
+      "text": "The evidence type matches this ledger's CERTIFIED meaning: exact machine-replayed identities, outward 192-bit Arb enclosures (precision_bits=192), and a disclosed written-proof remainder, with no kernel-checked claim made. The statement's hedges (conditional bridge, underived beta, enumerated open items, 'in this testbed') claim no more than status 'RADIATION_DIFFERENCE_QSEI_DERIVED; ABSOLUTE_REFERENCE_AND_SEE_APPLICATION_OPEN' and not_established support. No overclaim found beyond the scope-word omission recorded separately under assumption_explicitness. ['promotion requested: CERTIFIED' vs radiation-qsei.json scope, not_established, status; claim Notes 'not FORMALIZED']"
+    },
+    {
+      "dimension": "decision_soundness",
+      "severity": "note",
+      "text": "Promotion timing is sound: the PASS replay postdates the current v1 stamp with identical binary_hash and exit 0 against fail_exit_codes [3]; a FAIL fixture exists in the declaration; the sole dependency is CURRENT so no upstream STALE condition applies; and this is the designed route for re-earning a legacy CERTIFIED row ('not re-earned' until promote with a certified-verifier PASS). No reason to defer was identified; under this ledger's rules the warning above stays on record for the author and does not veto CERTIFIED. [Evidence entry 'p8a_radiation v1 -> PASS at 2026-09-06T21:40:24+00:00' vs stamp 'stamped 2026-09-06T21:38:43+00:00'; dependency P8-A.1 'standing CURRENT']"
+    }
+  ],
+  "id": "P8-A.2.20260906.model",
+  "provenance": {
+    "cost_usd": "2.1170",
+    "model": "claude-fable-5",
+    "request_digest": "91e481288083a9787773d42a2cdabdc2a466dcadd6a90c8acd3f0ea2fea84336",
+    "response_digest": "688ab456d6ab1b3ebd5c10fb2f738279aa457b7c99bee80cecd09bb7b5163764",
+    "run_id": "review-P8-A.2-8fc127-s1",
+    "transport": "ClaudeCodeClient"
+  },
+  "reviewer": "model",
+  "statement_sha256": "1e7b45aa0274662f8482ebbf8fdfddbad0ea33befe688365ac37fc67553bd272",
+  "target_level": "CERTIFIED",
+  "verdict": "REVISE",
+  "waivers": []
+}

@@ -44,19 +44,37 @@ evidence:
   verdict: PASS
   verifier: p8a_response
   version: '1'
+- binary_hash: b6ff90d6d44001db5c7a09b134b6f1d00ed30b50b9846b77328fb17a273479e2
+  golden_suite_hash: 138db5077da9994eed97d47e5760b3ed870638c37afc4f2c4add33363b572113
+  note: argv=['.venv/bin/python', 'tools/empiricist_check.py', 'p8a_response', 'problems/P8/a/applicability/reference/asymptotics/backreaction/response/certificates/radiation-response.json']
+    cwd=. exit=0 env_sha256=a26d1bfd2b3aaf57d2eb5d15ac6517291bb506545d911c1e508f3bd6f2d153d0
+  path: problems/P8/a/applicability/reference/asymptotics/backreaction/response/certificates/radiation-response.json
+  stamped: '2026-09-06T23:29:32+00:00'
+  verdict: PASS
+  verifier: p8a_response
+  version: '1'
 formulation_version: problems/P8/a/applicability/reference/asymptotics/backreaction/response/FORMULATION.md@6d6b9763
   (adopted 2026-09-05)
 id: P8-A.6
 kind: statement
-legacy_level: CERTIFIED
+legacy_level: null
 level: CONJECTURED
 n: null
 notes: 'imported from CLAIMS.md; level note: source-based Hadamard and retarded finite-part
   proof; exact Born/subtraction/trace/clock/conservation identities, independent geometric
   and Fraction-only preparation audits, omission controls and pinned A.5 replay; written
-  second-order correction argument, not FORMALIZED'
+  second-order correction argument, not FORMALIZED
+
+  promoted to CERTIFIED on receipt P8-A.6.20260906.model.2 (REVISE: 1 open warning(s)
+  for the author, no blocking finding)
+
+  demoted to CONJECTURED: the CERTIFIED promotion at 23:29 UTC used receipt P8-A.6.20260906.model.2,
+  a sample that produced no review (usage limit); withdrawn pending a real second
+  sample'
 problem: P8(a), prepared-state first stress response and second-order backreaction
-receipts: []
+receipts:
+- P8-A.6.20260906.model.2
+- P8-A.6.20260906.model
 source:
   kind: table
   ref: P8-A.6

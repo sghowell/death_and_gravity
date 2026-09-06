@@ -1,0 +1,62 @@
+{
+  "claim_id": "P8-A.4",
+  "closes": [],
+  "created": "2026-09-06T22:53:29+00:00",
+  "evidence_sha256": [
+    "05d8484a9f39cc4c47a6a6441d7ab589aea78ca449773bdc3cad72bd42dc5eec",
+    "0891f0a33a5c76eef3113e2667acaf726d64094674f5d500c651e502065a958b",
+    "e11fd7bc4105dca34295af3e6946c55748ade183128b85dbf7c4606763aa7231",
+    "e51261c0d65842acec3f3735b672dbbac59f1e09e6fa10bd4c954bf7459c4038"
+  ],
+  "findings": [
+    {
+      "dimension": "internal_consistency",
+      "severity": "warning",
+      "text": "The statement's third sentence attributes the every-state limit to the dependency: 'A.3 gives lim t^4*E_omega=hbar/(5120*pi^2)>0, locally uniformly in space for each fixed state.' P8-A.3's recorded statement certifies E_ref=hbar/(5120*pi^2*t^4) for the transported Minkowski reference state only, asserts nothing about arbitrary Hadamard states, and carries no locally-uniform-convergence clause. The limit for E_omega over the whole admitted state class is precisely what this promotion's own evidence derives (FORMULATION.md 'Derived statement'; notes/proof.md \u00a73 'Adding A.3's evaluated term produces...'; certificate fields universal_proper_EED_coefficient and proper_time_state_difference). The exact statement text the receipt binds to therefore contradicts the certified content of the dependency it cites. [Statement sentence 3 ('A.3 gives lim t^4*E_omega=...') vs P8-A.3 dependency statement; FORMULATION.md 'Derived statement'; notes/proof.md \u00a73]"
+    },
+    {
+      "dimension": "assumption_explicitness",
+      "severity": "warning",
+      "text": "The statement's phrase 'finite constant gravitational couplings' omits the certified sign/nondegeneracy scope words: the certificate has scope.couplings = 'finite constants; b,kappa>0; ell,alpha,beta arbitrary' and FORMULATION.md hypothesizes 'finite constants b>0, kappa>0'. On the statement's literal broader class, the degenerate choice kappa=0 with b=ell=0 makes the displayed equation impose nothing on the state, so 'requires this limit to vanish, so no admitted state solves that whole-patch ansatz' fails as worded. The constraint is load-bearing for the statement text yet lives only in the pinned formulation and certificate scope, not in the statement the receipt binds to. [Statement sentence 4 ('finite constant gravitational couplings') vs radiation-asymptotics.json scope.couplings and FORMULATION.md 'Hypotheses and source class', bullet 4]"
+    },
+    {
+      "dimension": "internal_consistency",
+      "severity": "note",
+      "text": "verification_boundary[0] calls the general Hadamard smooth-difference and smooth wave Cauchy statements 'written primary-source inputs', but notes/proof.md \u00a71 explicitly declines the cited Sahlmann--Verch Thm 5.8 hypotheses ('we do not import its extra state-level regularity assumptions') and substitutes its own wavefront argument, and \u00a72 derives the noncompact-data case in-house from the compact-data Prop 3.3 via cutoff/gluing. The load-bearing versions of both inputs are the notes' own written arguments; the boundary's provenance wording understates the in-house share of the un-machine-checked steps, though the operative disclosure ('not finite arithmetic proofs') remains accurate. [radiation-asymptotics.json verification_boundary[0] vs notes/proof.md \u00a7\u00a71-2]"
+    },
+    {
+      "dimension": "evidence_support",
+      "severity": "note",
+      "text": "I checked every machine-verified artifact against the statement's quantified sentences: the replay certifies exact symbolic identities (all residuals '0'), the polynomial double-Cauchy benchmark, the coherent/kernel/restricted-domain/negative-fluid controls, one Arb-enclosed jet-bound example, and the hash-pinned A.3 import; I independently reconfirmed the point-split expansion (eta^-6/-5/-4 powers), the (p-1)(q-1) Leibniz table, the t^4=A^4*eta^8/16 clock conversion (320*16=5120), and the enclosure -1/10000+1/(320*pi^2) in [2.1662869e-4, 2.166287e-4]. None of these artifacts touches an arbitrary admitted state's data ('polynomial_benchmark_proves_general_smooth_PDE_theorem': false; 'conditional_on_the_supplied_state_jet_bounds': true), so the universal quantifiers 'For every state...' and 'no admitted state solves' rest wholly on notes/proof.md inside the disclosed boundary. That is admissible at CERTIFIED under this ledger's disclosed-written-steps rule, and the disclosure flags are set truthfully; recorded so the receipt shows exactly where machine support stops. [radiation-asymptotics.json two_variable_Cauchy_benchmark.polynomial_benchmark_proves_general_smooth_PDE_theorem, state_specific_quantitative_residual_example.conditional_on_the_supplied_state_jet_bounds, verification_boundary[0,2]]"
+    },
+    {
+      "dimension": "confidence_calibration",
+      "severity": "note",
+      "text": "The statement's second sentence, 'No quasifree, homogeneity, decay, finite-energy or extra higher-point regularity assumption is needed', is a proof-minimality assertion whose sole warrant is un-machine-checked prose: notes/proof.md \u00a71's refusal of SV 5.8's extra hypotheses and \u00a72's cutoff localization. No certificate field or replay can check 'is needed'. Given the ledger's CERTIFIED definition admits disclosed written steps and the Notes concede 'not FORMALIZED', the requested level does not overclaim, but this clause is certified only at the strength of the written argument, not at the strength of the arithmetic replays that back the rest of the certificate. [Statement sentence 2 vs notes/proof.md \u00a7\u00a71-2 and radiation-asymptotics.json verification_boundary]"
+    },
+    {
+      "dimension": "ledger_consistency",
+      "severity": "note",
+      "text": "Pins were verified: formulation_version @0891f0a3 matches both the FORMULATION.md evidence sha256 and the certificate's source_sha256 entry; verify.py PRIOR_SHA equals certificate prior_A3_sha256 (dc762112...); the PASS entry's binary_hash matches the current v1 stamp; the level cap holds (sole claim dependency P8-A.3 is CERTIFIED, standing CURRENT). Two residual gaps: (a) verification_boundary[3] claims import 'only after hash-pinned A.3/A.2/A.1 replay', but this claim's dependency record pins only the A.3 certificate path -- the A.2/A.1 pins are enforced invisibly inside prior.build_report(), so their staleness reaches this claim only through A.3's own standing; (b) binary_hash covers the declaration and the five input trees but not the executing environment ('.venv/bin/python', sympy, the validated/Arb layer) -- environment identity is witnessed only by the single per-run env_sha256 (22b3830d...) on the PASS entry, so an environment substitution altering simplify/enclosure behavior would not move the stamp. [Dependencies list vs radiation-asymptotics.json verification_boundary[3] and verify.py prior_checks(); p8a_asymptotics v1 declaration (argv/env/inputs) vs PASS entry env_sha256]"
+    },
+    {
+      "dimension": "decision_soundness",
+      "severity": "note",
+      "text": "The promotion gate's procedural requirements are met (fresh PASS at 2026-09-06T21:40:28 by the declared verifier, stamp current, dependency CURRENT, IMPORTED entries correctly carrying no verification weight), so the timing of the promotion is in order. One thinness observation: the golden suite's only PASS fixture is the promoted certificate itself, stamped 90 seconds before the promotion replay (21:38:50 vs 21:40:28), so the stamp adds no PASS coverage independent of the evidence file and discriminating power rests solely on the single FAIL mutation fixture 'claims/fixtures/p8a_asymptotics/fail-mutated.json'. This bears on the gate's robustness, not its outcome. [p8a_asymptotics v1 fixtures PASS ['problems/P8/a/applicability/reference/asymptotics/certificates/radiation-asymptotics.json'], stamp 2026-09-06T21:38:50 vs PASS evidence entry 2026-09-06T21:40:28]"
+    }
+  ],
+  "id": "P8-A.4.20260906.model",
+  "provenance": {
+    "cost_usd": "2.2735",
+    "model": "claude-fable-5",
+    "request_digest": "d0907e0d148013e0b9cae5ab043f1a04b60aab62e7ef4f5cbe09034179eda05a",
+    "response_digest": "de2ebf3297a44f1461a2cd166a522a24ff4ae7e782dc4daa995ff299cc256b29",
+    "run_id": "review-P8-A.4-56defd-s1",
+    "transport": "ClaudeCodeClient"
+  },
+  "reviewer": "model",
+  "statement_sha256": "6d7ae1a9b72bda8478580aa9d7fe4551f1fcb1b7dcb165aa27350d9175f3c2b6",
+  "target_level": "CERTIFIED",
+  "verdict": "REVISE",
+  "waivers": []
+}

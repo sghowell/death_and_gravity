@@ -1,0 +1,62 @@
+{
+  "claim_id": "P8-A.6",
+  "closes": [],
+  "created": "2026-09-06T23:29:22+00:00",
+  "evidence_sha256": [
+    "1101c2c2977716ef3bcf452ab02f69abb91ba43c7720df0920384099a1c1e868",
+    "2f5e34bcfbcd5c3561c6c683b02cd1642ce187883d08c8a16dc8dc162a1d0e97",
+    "6d6b9763d4c8ead9f34e522d34a531e3deb8e849bbec57f7f9be2cda5f7cc319",
+    "8cff5d0a71bc5af87600328a88deeacc2608eb9f0320004ab2cf45196d6c8398"
+  ],
+  "findings": [
+    {
+      "dimension": "assumption_explicitness",
+      "severity": "warning",
+      "text": "The three certified rational constants are proved only at the named calibration 'lambda=2*sqrt(2)*A*eta_star^2, gamma=0', which the certificate itself labels 'a new declared normalization, not scheme independence' (scope.named_calibration). FORMULATION.md conditions the constants on that calibration ('For the named calibration ... the code proves exact rational derivative bounds') and states 'Changing lambda/gamma requires the explicit scheme terms and corresponding bound'; rho1/p1/E1 carry gamma*I1 terms, so at generic retained gamma the certified constants do not bound the Einstein-defect coefficients. The statement's clauses 'Exact rational derivative bounds are derived for a specified C-infinity preparation' and 'They bound the actual second-order Einstein-defect coefficients' carry no calibration qualifier, and the immediately preceding sentence asserts 'finite curvature/scale freedom are retained', so the statement text overstates the prescription scope of the certified bounds. [Statement sentences 3-4 vs radiation-response.json scope.named_calibration and FORMULATION.md 'Computable bounds and one fully specified smooth preparation']"
+    },
+    {
+      "dimension": "assumption_explicitness",
+      "severity": "note",
+      "text": "The certified sups are restricted to the observation envelope '[2*eta_star,3*eta_star]' with T=2*eta_*, eta_-=2*eta_*, C=2 (FORMULATION.md: 'With T=2*eta_*, eta_-=2*eta_*, C=2, it proves sup|rho1|<=...'; certificate field specific_smooth_preparation.observation_envelope), and the defect-coefficient bounding is further restricted to 'any compact target inside the plateau' (notes/proof.md section 8). The statement attaches no domain qualifier to the bound clauses; only the later residual clause says 'compact-slab'. [Statement 'Exact rational derivative bounds are derived...' vs radiation-response.json specific_smooth_preparation.observation_envelope and proof.md section 8]"
+    },
+    {
+      "dimension": "ledger_consistency",
+      "severity": "note",
+      "text": "The written, non-machine steps behind the 'qualitative compact-slab actual residual O(epsilon^3)' clause -- smooth extension of r beyond the target, the temporal cutoff into the common past, positivity of a_epsilon*exp(epsilon^2*r) for small epsilon, and re-application of the A.5 smooth-state theorem to the corrected family -- are not named in the certificate's verification_boundary field: item 1 covers the A.5 written inputs generically and item 4 only the identity audit 'without the assembly oracle'. Disclosure of these steps rests on written_proof -> notes/proof.md sections 8-9. This satisfies the ledger's disclosure rule ('disclosed in one of those places'), but the schema's primary channel for this later P8(a) certificate (the verification_boundary field, which is present) is silent on that clause. Remaining ledger checks found no discrepancy: dependency cap respected (A.5 CERTIFIED/CURRENT), the four table-import entries are correctly non-verifying, and formulation_version @6d6b9763 equals source_sha256['FORMULATION.md']. [radiation-response.json verification_boundary (five items) vs notes/proof.md section 8 and the ledger's CERTIFIED disclosure rule]"
+    },
+    {
+      "dimension": "evidence_support",
+      "severity": "note",
+      "text": "Verification record: from the certified recurrence outputs alone (switch_derivative_bounds '1','27/4','9963/64'; Q_norm_constants '4','43','14699/16'; V_norm_constants '16763/16','41317779/1024','88898062245/32768') I recomputed K_norm_constants '42390611/512' and '90228813829/16384' via the FORMULATION interface L0=T*B1+C*B0, L1=T*B2+C*B1+B0/eta_- at T=eta_-=2*eta_star, C=2, and then reproduced the density response constant '1365615131563/125829120' exactly from the displayed rho1 formula on eta>=2*eta_star -- the machine-replayed content genuinely yields the statement's quantitative clauses. The sole verifying evidence is the single p8a_response v1 PASS (exit 0, binary_hash equal to the current stamp, declared FAIL fixture present); the clauses resting on written inputs (identification of the differentiated mode expression with the 'actual' derivative; distributional limit and coincidence exchange) are exactly those disclosed in verification_boundary items 1-2, which the ledger permits at CERTIFIED. [radiation-response.json exact_independent_bounds fields; PASS evidence entry of 2026-09-06T21:40:36+00:00; verification_boundary items 1-2]"
+    },
+    {
+      "dimension": "internal_consistency",
+      "severity": "note",
+      "text": "Verification record: the certificate's 'actual_fixed_proper_time_first_response' density and EED expressions match FORMULATION.md's displayed rho1/E1 term-by-term under V=-Q''-3*Q'/eta, including the gamma*I1_rho and gamma*I1_E pieces and coefficient ratios (e.g. 3V''/480, -12V'/480, 13V/480, 6Q'/480, -K''/32, K'/8, -K/8). proof.md's internal checks recompute exactly: the monomial control K=D^n*[log(sqrt(2)*A*eta*D/lambda)+5/6-H_n]; the clock identity b'/eta^7-b/eta^8=Q'/eta^7-2*J/eta^9; the plateau potential 32*d/(A^2*eta^6) vs the wrong coefficient 48; the elementary margins 11/4-1631/600=19/600, 8-(11/4)^2=7/16, 99193/31104-3=5881/31104; F_E's 72=(24+3*40)/2; and log(3)+5/6<2 via exp(7/6)>3. Statement, certificate scope flags, negative controls (1/6, 1/2, 1 omission errors matching sections 2-3) and the section 9 limits agree. No discrepancy found between statement, evidence and notes. [radiation-response.json actual_fixed_proper_time_first_response and negative_controls vs FORMULATION.md formulas and notes/proof.md sections 3, 5, 7-8]"
+    },
+    {
+      "dimension": "confidence_calibration",
+      "severity": "note",
+      "text": "Verification record: each denial in the closing sentence 'No finite-amplitude remainder bound, exact/stable SEE solution, perturbed all-sampler QSEI or cosmological focusing theorem is established' matches a false certificate scope flag (finite_epsilon_RSET_remainder_bound, exact_SEE_solution_or_stability_theorem, quantitative_perturbed_QSEI_or_all_sampler_bound, cosmological_focusing_or_P8a_completion) and the status suffix 'FINITE_AMPLITUDE_SEE_QSEI_OPEN'; boundary item 5 confines the numbers to the first derivative at zero, matching 'first parameter derivative' in the statement. With the written steps disclosed as boundary/notes items, CERTIFIED does not overclaim beyond the calibration-scope defect already recorded under assumption_explicitness. [Statement final sentence vs radiation-response.json scope flags, status, and verification_boundary item 5]"
+    },
+    {
+      "dimension": "decision_soundness",
+      "severity": "note",
+      "text": "Verification record: the pinned path dependency sha a7e1766a... is triple-consistent (FORMULATION.md pin, certificate prior_A5_sha256, verify.py PRIOR_SHA) and is actively replayed inside prior_checks() during the 2026-09-06 run, so the STALE trigger was live at promotion time; the verifier stamp (2026-09-06T21:39:02, binary_hash b6ff90d6...) precedes the PASS run (21:40:36) with identical binary_hash; argv of the run matches the registry declaration with {evidence} bound to the committed certificate. Nothing procedural defers this promotion; under this ledger's rules the REVISE verdict records the assumption_explicitness warning for the author without vetoing CERTIFIED. [Dependencies block, p8a_response v1 registry stamp vs PASS evidence entry, verify.py prior_checks()]"
+    }
+  ],
+  "id": "P8-A.6.20260906.model",
+  "provenance": {
+    "cost_usd": "2.4864",
+    "model": "claude-fable-5",
+    "request_digest": "6f5033062db946ccb0091d56f0bb423a807c1017c3ffb9b74c8ba21d485c2875",
+    "response_digest": "8fb064c5034ae146a922cf7a7afadcf9904adfa247900c331fdf902ee0842061",
+    "run_id": "review-P8-A.6-a1d3d8-s1",
+    "transport": "ClaudeCodeClient"
+  },
+  "reviewer": "model",
+  "statement_sha256": "78b16f1cef046047a62aa4b37f9db6cd20e462c80841c271e395ec42b5eadd0a",
+  "target_level": "CERTIFIED",
+  "verdict": "REVISE",
+  "waivers": []
+}

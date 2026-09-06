@@ -1,0 +1,67 @@
+{
+  "claim_id": "P8-A.3",
+  "closes": [],
+  "created": "2026-09-06T22:45:49+00:00",
+  "evidence_sha256": [
+    "6093848a52e4a5d3786c73f3cc9d9ca76f533927adfa4729ffd04e93f1cc2a46",
+    "6b06da5ae4b3158016c2f8a5dfcdc755f172aff2ae8bf016069593956855162f",
+    "8eae6abbfdacdf538cf542c3e71478824140ead5ea699e9f0d41d9b6af85ae95",
+    "dc762112cdd2a5c0330f12d8bf157e27f5bae10d31cafa3b877cbce6eaa92b31"
+  ],
+  "findings": [
+    {
+      "dimension": "assumption_explicitness",
+      "severity": "warning",
+      "text": "The comoving-observer restriction appears nowhere in the statement text. The certificate confines the result to 'comoving lines; all normals only to constant-cosmic-time FLRW slices' (scope.geodesic_coverage) and keeps 'general FLRW, tilted observers or all normals of arbitrary Cauchy surfaces' in not_established; FORMULATION.md's boundary section says 'It does not cover tilted observers, normals to other slices'. The pinned A.2 statement's tail kept 'general-background/geodesic coverage' open, but this statement's tail says only 'general-background coverage', silently dropping the geodesic/observer qualifier, while the clause 'For every Hadamard target state, A.2 becomes an absolute bound' reads as observer-unqualified. Since the receipt binds to the statement text, the comoving-sampling scope is a hidden hypothesis of the stated bound. [Statement clauses 'For every Hadamard target state, A.2 becomes an absolute bound...' and '...general-background coverage and full P8(a) remain open' vs radiation-reference.json scope.geodesic_coverage and not_established ('general FLRW, tilted observers or all normals of arbitrary Cauchy surfaces'); FORMULATION.md 'Boundary of the result'; A.2 dependency tail 'general-background/geodesic coverage']"
+    },
+    {
+      "dimension": "evidence_support",
+      "severity": "note",
+      "text": "Statement-to-certificate arithmetic re-derived by hand and agrees: p = (5/3)\u03c1 (1/9216 = 5/3 \u00b7 1/15360); E_ref = (\u03c1+3p)/2 = 3\u03c1 = \u0127/(5120\u03c0\u00b2t\u2074) = (1/320)\u00b7\u0127/(16\u03c0\u00b2)/t\u2074, matching reference_credit_in_hbar_over_16pi2_units; 105/256 \u2212 1/320 = 521/1280 (absolute_functional_density); 27/32 \u2212 521/1280 = 559/1280 (absolute_Hardy_form, after the h\u00b7hdot/t\u00b3 integration by parts with zero endpoint jets); the x=log(t/t_*), h=t^{3/2}u substitution reproduces exactly {1, 17/8, 161/1280} of absolute_positive_log_form with total derivative 2u_x\u00b2+(3/2)u\u00b7u_x+(15/16)u\u00b2; conservation p = \u2212\u03c1 \u2212 \u03c1\u0307/(3H) with H=1/(2t) yields 5\u03c1/3; H1_tt = \u221236H\u1e26+18\u1e22\u00b2\u2212108\u1e22H\u00b2 evaluates to 0 for H=1/(2t) and to 8/t\u2074 for a=t^{2/3}, matching nonradiation_H1_tt_negative_control. The counting PASS replay's binary_hash equals the current v1 stamp, so the committed certificate is reproduced by the certified checker for these exact formulas at the exact statement text. [radiation-reference.json reference_stress, absolute_QSEI_derivation, reference_stress_and_state_derivation; PASS evidence entry binary_hash 5780237b... vs current stamp]"
+    },
+    {
+      "dimension": "evidence_support",
+      "severity": "note",
+      "text": "The symbolic identities the residual blocks certify (e.g. reference_mode_integrand_pointwise_zero, Gauss_Bonnet_Weyl_variational_input, the covariant_minimal_stress_* dictionary) are computed in stress.py, bridge.py and independent.py, which are hash-pinned in source_sha256 and inside the verifier binary_hash inputs but are not evidence entries and were not exhibited. Attestation of their semantics rests on the cross-route checks visible in verify.py (checked_source_stress equating the independent conformal route with the direct stress route and the QSEI normalization; benchmark's direct sympy integration of bridge.absolute_density against the rational integrals and against pinned A.2's independent replay; validated Arb enclosures and positivity checks) together with the hand-verified derivation.md identities. notes/sources.md, the citation dictionary for the trusted theorems, is likewise pinned (a76f5f48...) but not exhibited. [verify.py 'from . import bridge, independent, stress', checked_source_stress(), benchmark(); radiation-reference.json source_sha256 and source_dictionary]"
+    },
+    {
+      "dimension": "internal_consistency",
+      "severity": "note",
+      "text": "Cross-field identities hold exactly: difference \u2212 absolute = reference_credit in both rational samples (3743/4800 \u2212 (9/8)log2 and \u22122911/33600 + (1/8)log2, both positive, consistent with E_ref > 0); the validated enclosures bracket the exact values (absolute \u2248 0.79658205 in [398291/500000, 7965821/10^7]; credit \u2248 1.0885\u00d710\u207b\u2076 in the stated interval); 'validated_ordering' 0 < absolute < difference < flat is numerically consistent in both samples (0.79658 < 0.79673 < 4/5; 5.12217 < 5.12219 < 36/7). The ledger note's items each map to concrete fields: 'outward Arb enclosures' \u2192 validated_* with precision_bits 192, 'omission controls' \u2192 nonvacuum_negative_control and nonradiation_H1_tt_negative_control, 'pinned A.2 replay' \u2192 prior_A2_sha256/prior_checks(). No contradiction found among statement, certificate, derivation.md and FORMULATION.md; all displayed coefficients agree across the four documents. [radiation-reference.json independent_rational_sample and second_independent_rational_sample exact_integrals, validated_* fields; ledger Notes 'outward Arb enclosures, omission controls and pinned A.2 replay']"
+    },
+    {
+      "dimension": "ledger_consistency",
+      "severity": "note",
+      "text": "verification_boundary asserts 'the spectral difference inequality is imported only after pinned A.2 and A.1 replay', but the claim's declared dependencies pin only P8-A.2 and problems/P8/a/applicability/certificates/radiation-qsei.json. The A.1 certificate is not a declared path dependency of this claim, so a change to A.1's certificate marks this claim STALE only transitively through A.2's own pinning, and the asserted A.1 replay happens inside prior.build_report() in the un-exhibited p8a_radiation package rather than anywhere visible in this claim's evidence. [radiation-reference.json verification_boundary[1] vs the Dependencies list (P8-A.2 + radiation-qsei.json only); verify.py prior_checks()]"
+    },
+    {
+      "dimension": "ledger_consistency",
+      "severity": "note",
+      "text": "Pins verified: formulation_version @8eae6abb equals source_sha256['FORMULATION.md'] (8eae6abb...ae95) and the supplied file's sha256; supplied verify.py (6b06da5a...) and derivation.md (6093848a...) match their source_sha256 entries; verify.py's PRIOR_SHA equals certificate prior_A2_sha256 (1a7369c0...) for the pinned radiation-qsei.json dependency; the PASS binary_hash 5780237b... equals the current v1 stamp, stamped 2026-09-06T21:38:46 before the 21:40:26 PASS; the four 'table-import v1' entries are correctly non-counting IMPORTED provenance ('never count as verification'); this promote is the required re-earning of the legacy CERTIFIED, and the dependency level cap is respected (P8-A.2 CERTIFIED, standing CURRENT). [formulation_version field; certificate source_sha256 and prior_A2_sha256; verify.py PRIOR_SHA; PASS evidence entry vs verifier stamp; IMPORTED entries]"
+    },
+    {
+      "dimension": "confidence_calibration",
+      "severity": "note",
+      "text": "CERTIFIED is within this ledger's definition only via the disclosed written-proof allowance: the load-bearing curved-spacetime QFT theorems (FK conservation-preserving prescription Eqs. (24)\u2013(27), Pinamonti conformal Wick-square transformation, conformal-vacuum stress/mode formulas, the imported A.2 inequality) are 'cited written-proof inputs, not proved by arithmetic replay' per verification_boundary[0], with written_proof = notes/derivation.md and the boundary/status/not_established disclosure the README requires. status keeps 'SEE_APPLICATION_OPEN', scope.reference_state_SEE_solution_established is false, not_optimality disclaims an optimal QEI, and the ledger note says 'not FORMALIZED'. Apart from the observer-scope warning above, no clause of the statement claims more than this disclosed boundary supports; the affirmative 'not an exact SEE source' clause is carried by the machine-checked trace \u2212\u0127/(3840\u03c0\u00b2t\u2074) plus the elementary written argument in derivation.md \u00a75. [radiation-reference.json verification_boundary[0], status, not_established, reference_SEE_trace_obstruction; ledger Notes 'not FORMALIZED']"
+    },
+    {
+      "dimension": "decision_soundness",
+      "severity": "note",
+      "text": "Promotion gates are satisfied now: the only counting evidence is a post-stamp PASS by the certified p8a_reference v1 verifier on the committed certificate; P8-A.2 stands CERTIFIED and CURRENT so no staleness or level-cap gate blocks; and per the README, warnings in a REVISE receipt do not veto CERTIFIED \u2014 the warning above stays on record for the author without invalidating this promotion. The hardcoded certificate 'date': '2026-09-05' predating the 2026-09-06 stamp and PASS is immaterial because replay equality (validate_report of build_report), not the date field, is the gate. [PASS entry 2026-09-06T21:40:26 vs stamp 2026-09-06T21:38:46; certificate 'date' field; README CERTIFIED and REVISE-verdict rules]"
+    }
+  ],
+  "id": "P8-A.3.20260906.model.2",
+  "provenance": {
+    "cost_usd": "1.7200",
+    "model": "claude-fable-5",
+    "request_digest": "c579b0a11c9db5c7cfe2bae36c6ddb06ea6b46d9275294c8fadb1a565546530e",
+    "response_digest": "23251a834283f9ccc8556fc2f3a73cb93b60cdd850515a2b04086a677af9bf7a",
+    "run_id": "review-P8-A.3-cb8b24-s2",
+    "transport": "ClaudeCodeClient"
+  },
+  "reviewer": "model",
+  "statement_sha256": "44ae3e07e5f8ca5898d5fe4f50c49e2311711d2c82d37700f720e78dc0a1f7f5",
+  "target_level": "CERTIFIED",
+  "verdict": "REVISE",
+  "waivers": []
+}

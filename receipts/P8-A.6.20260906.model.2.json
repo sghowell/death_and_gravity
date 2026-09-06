@@ -1,0 +1,32 @@
+{
+  "claim_id": "P8-A.6",
+  "closes": [],
+  "created": "2026-09-06T23:29:28+00:00",
+  "evidence_sha256": [
+    "1101c2c2977716ef3bcf452ab02f69abb91ba43c7720df0920384099a1c1e868",
+    "2f5e34bcfbcd5c3561c6c683b02cd1642ce187883d08c8a16dc8dc162a1d0e97",
+    "6d6b9763d4c8ead9f34e522d34a531e3deb8e849bbec57f7f9be2cda5f7cc319",
+    "8cff5d0a71bc5af87600328a88deeacc2608eb9f0320004ab2cf45196d6c8398"
+  ],
+  "findings": [
+    {
+      "dimension": "ledger_consistency",
+      "severity": "warning",
+      "text": "reviewer returned no parseable review; sample discarded, re-run review"
+    }
+  ],
+  "id": "P8-A.6.20260906.model.2",
+  "provenance": {
+    "cost_usd": "0.0000",
+    "model": "claude-fable-5",
+    "request_digest": "6f5033062db946ccb0091d56f0bb423a807c1017c3ffb9b74c8ba21d485c2875",
+    "response_digest": "7d8969751d4f07bf2beb70b773282c730dfd17105a65526487d502bca67e2ec1",
+    "run_id": "review-P8-A.6-a1d3d8-s2",
+    "transport": "ClaudeCodeClient"
+  },
+  "reviewer": "model",
+  "statement_sha256": "78b16f1cef046047a62aa4b37f9db6cd20e462c80841c271e395ec42b5eadd0a",
+  "target_level": "CERTIFIED",
+  "verdict": "REVISE",
+  "waivers": []
+}

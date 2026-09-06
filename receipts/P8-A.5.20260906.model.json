@@ -1,0 +1,67 @@
+{
+  "claim_id": "P8-A.5",
+  "closes": [],
+  "created": "2026-09-06T23:13:49+00:00",
+  "evidence_sha256": [
+    "37e3e29f6978f0eaecf3b87a802fc0909f545529082866a8cc31b5a43eae1b9e",
+    "64f5e3c58433d655ffe53cd5dfc31307a2b24fa3cc984578e796a55576c11fff",
+    "a7e1766a16778920c5784b9c52f997497a6e22259c48d956c8ca50ca60770930",
+    "dd3a0f1521c4234fee47f296768061cdd1d97e13d915c84967151983f27c64d9"
+  ],
+  "findings": [
+    {
+      "dimension": "ledger_consistency",
+      "severity": "warning",
+      "text": "depends_on records only P8-A.4 and A.4's certificate path, yet the promoted statement's constant d=kappa*hbar/(46080*pi^2) and the proof's inputs rho_ref=hbar/(15360*pi^2*t^4), p_ref=5*rho_ref/3 (FORMULATION.md 'The pinned reference has rho_ref=...'; proof.md S1 'the pinned A.3 density') are A.3 content not recoverable from A.4's statement text, which carries only the EED limit hbar/(5120*pi^2) and no pressure ratio. The A.3/A.2/A.1 reliance the certificate itself discloses (verification_boundary: 'the reference quantum stress is imported only after unchanged A.4/A.3/A.2/A.1 replay'; scope.prescription: 'A.3 prescription') is enforced only inside verify.py prior_checks() recursion, not by any depends_on entry or pinned path for A.3. The depends_on-based level cap and the pinned-path staleness rule therefore hold for this promotion only via facts outside the recorded dependency list (A.4's transitive chain and its CURRENT standing). Not blocking: the replay gate demonstrably enforces the chain (PRIOR_SHA pin plus prior.build_report() recursion), and A.4 CERTIFIED/CURRENT makes a sub-CERTIFIED A.3 implausible. [Claim 'Dependencies' field; certificate verification_boundary item 4 and scope.prescription; verify.py prior_checks()/PRIOR_SHA; FORMULATION.md 'The pinned reference has rho_ref=hbar/(15360*pi^2*t^4)']"
+    },
+    {
+      "dimension": "evidence_support",
+      "severity": "note",
+      "text": "Independently re-derived and confirmed the machine-replayed quantitative content backing each positive clause: (1-z-L^4)/z^2 power coefficients 5/72, -13/48, 37/6912, 13/432, 5/5832, -1/729, -1/6561 and Bernstein values b0=5/72, b1=67/1152, b2=77797/1658880, b6=p(1/4)=4271/1679616 on [0,1/4] (nonnegativity is a valid positivity certificate; endpoint minima 67/72, 477/512 justify taking fourth roots); frozen-defect constants 7/3, 35/9, 7 via (2-z)/(1-z)^2 increasing (derivative (3-z)/(1-z)^3>0) to 28/9 at z=1/4; surrogate coefficients 48 and 256 with exact solution y=4*A^2*(t^2-4*epsilon*d) satisfying ydot^2=16*A^2*y+256*epsilon*d*A^4; d=kappa*hbar/(46080*pi^2) from rho_ref with p=5*rho/3 and exact background conservation of (rho_ref, 5*rho_ref/3); conformal clock/potential coefficient 32 (with 48 negative control); nonunique-completion second-order changes 3*(t*f'+f)/t^2 and -2*f''-3*f'/t+f/t^2; slab example values 7/768, 35/2304, 7/256, 1/2304, 115/12288, 289/18432, 231/8192. All match the committed fields; each statement clause maps to zero residuals or rational certificates at the requested level. [certificate independent_rational_Taylor_and_defect_certificates, Einstein_clock_curvature_and_completion_identities.residuals, finite_slab_arithmetic_example, strongest_explicit_bounds]"
+    },
+    {
+      "dimension": "evidence_support",
+      "severity": "note",
+      "text": "The clause 'Smooth temporal preparation and retarded Hadamard-state transport give an actual compact-slab SEE residual O(epsilon^2)' rests wholly on notes/proof.md S4, with Hollands-Wald Lemma 6.2, Hadamard propagation, and positivity under Cauchy evolution as undischarged literature inputs; this is permitted at CERTIFIED because it is disclosed in verification_boundary items 1-2 and written_proof. I checked the S4 chain against the formulation: radicand positivity on the cutoff support (4*epsilon_bar*d/t_pre^2<1), footprint compactification via the g_tt=1 spatial cutoff, metric agreement on causal footprints with uniqueness/finite propagation in each two-point variable, smoothness-to-mean-value bound, and the identity D_actual=D_frozen-kappa*epsilon*(rho_epsilon-rho_ref). The last step requires rho_{epsilon=0}=rho_ref exactly at finite t, i.e., the pinned A.3 evaluation (see the ledger_consistency warning); the frozen-defect substitution on J is legitimate because chi is 'equal to one on a neighborhood of J'. No gap found at written-proof standard. [notes/proof.md S4 ('rho_epsilon-rho_ref=epsilon*r_rho(epsilon,t)'); certificate verification_boundary items 1-2; FORMULATION.md 'equal to one on a neighborhood of J']"
+    },
+    {
+      "dimension": "assumption_explicitness",
+      "severity": "note",
+      "text": "Two hypotheses are carried by the pinned formulation rather than the statement text: the O(epsilon^2) residual constant's dependence on slab, preparation, prescription and couplings appears only as FORMULATION.md 'The constant can depend on the slab, preparation, prescription and couplings' (the statement says only 'with no computed response constant'); and 'loop-order ones' means fixed finite coefficients with an explicit epsilon prefactor, defined only via FORMULATION.md 'Fixed finite loop-order curvature-squared terms may be included with an explicit epsilon prefactor' and scope.fixed_finite_loop_order_curvature_squared_couplings_allowed. Both bind through formulation_version @dd3a0f15, so the statement is not wrong, but these scope qualifiers live outside the statement. [Statement phrases 'with no computed response constant' and 'loop-order ones enter the residual'; FORMULATION.md; certificate scope]"
+    },
+    {
+      "dimension": "internal_consistency",
+      "severity": "note",
+      "text": "Statement vs certificate vs notes cross-check found no contradictions; only lexical variances on disclaimed items: the statement's 'new incompleteness theorem' appears in the certificate as 'a new focusing theorem, realistic-field cosmological calibration, or full P8(a) completion' (not_established item 6), and 'physical epsilon=1 error' is covered by strongest_explicit_bounds.actual_response ('qualitative O(epsilon^2) only') plus FORMULATION.md 'no ... control at epsilon=1 is inferred'. Since these are negative claims, the variance cannot produce overclaim. The certificate 'date' 2026-09-05 precedes the 2026-09-06 stamp and PASS; immaterial because the replay reproduces the committed bytes. The A.5 construction is consistent with the A.4 dependency's whole-patch no-go: no exact SEE solution is claimed (not_established item 1) and A.4 'does not exclude finite slabs'. [certificate not_established, strongest_explicit_bounds.actual_response, date field; statement final sentence; A.4 statement text]"
+    },
+    {
+      "dimension": "ledger_consistency",
+      "severity": "note",
+      "text": "Pin and evidence bookkeeping verified: formulation_version @dd3a0f15 equals source_sha256['FORMULATION.md'] prefix dd3a0f1521c4...; certificate prior_A4_sha256 equals PRIOR_SHA in verify.py (05d8484a...); the four 'table-import v1' IMPORTED entries carry no registry stamp by design and correctly do not count as verification. Notably, although *.md files are outside the verifier's binary_hash inputs, the single PASS still content-binds notes/proof.md@64f5e3c5 and FORMULATION.md@dd3a0f15 because build_report() recomputes source_sha256 over them and validate_report requires byte equality with the committed certificate. [certificate source_sha256 and prior_A4_sha256; verify.py PRIOR_SHA and build_report(); IMPORTED evidence entries; verifier declaration inputs list]"
+    },
+    {
+      "dimension": "confidence_calibration",
+      "severity": "note",
+      "text": "CERTIFIED matches this ledger's semantics for this evidence mix: every quantitative clause is backed by exact rational/symbolic machine replay, and the only written-proof-supported clause (the qualitative residual) is flagged as such in status ('...QUALITATIVE_COMPACT_SLAB_RSET_RESIDUAL_DERIVED; QUANTITATIVE_SEE_QSEI_OPEN'), strongest_explicit_bounds.actual_response ('qualitative O(epsilon^2) only; numerical bound conditional on supplied response constants'), and scope flags (numerical_actual_RSET_response_bound_derived: false; QSEI_on_perturbed_metric_quantitatively_calibrated: false). The synthetic response interface is triply fenced (actual_response_status CONDITIONAL_INPUT_NOT_DERIVED; numerical_actual_quantum_response_certified: false; synthetic_response_inputs_are_claimed_actual_quantum_bounds: false), matching 'with no computed response constant'. Nothing in the statement outruns the disclosed boundary; FORMALIZED is correctly not claimed ('not FORMALIZED' in the level note). [certificate status, strongest_explicit_bounds, scope, finite_slab_arithmetic_example.synthetic_conditional_response_interface; claim Notes]"
+    },
+    {
+      "dimension": "decision_soundness",
+      "severity": "note",
+      "text": "The promotion gate is satisfied now: PASS at 2026-09-06T21:40:31+00:00 under the registry stamp of 2026-09-06T21:38:55+00:00 with identical binary_hash 61375c821d8e...; exit 0 against declared fail_exit_codes [3]; a FAIL fixture (claims/fixtures/p8a_backreaction/fail-mutated.json) demonstrates mutation sensitivity; the sole recorded dependency P8-A.4 is CERTIFIED and standing CURRENT, so the level cap is met as recorded; the binary_hash inputs cover the entire five-package src chain, so any prior-checker change invalidates the stamp, and any prior-certificate change fails the replay at run time. The warning above concerns the dependency record's completeness, not the timing or mechanics of this promotion. [Evidence PASS entry (argv/exit/binary_hash); verifier registry stamp and fixtures; claim depends_on]"
+    }
+  ],
+  "id": "P8-A.5.20260906.model",
+  "provenance": {
+    "cost_usd": "3.2613",
+    "model": "claude-fable-5",
+    "request_digest": "2fc2f395cb4c75b801a5da53f1272f19cb0a5338649320c9ddf3678f4542edfa",
+    "response_digest": "cf91d98876966f7fc59f37c4b38a6b42f3c1a2b7ba01eba81360f13ee63dacc6",
+    "run_id": "review-P8-A.5-f973b6-s1",
+    "transport": "ClaudeCodeClient"
+  },
+  "reviewer": "model",
+  "statement_sha256": "c1b36de2fa83903527afacf8db30938a6e0cbbca97c2bbcebf4dbb3d73aceaee",
+  "target_level": "CERTIFIED",
+  "verdict": "REVISE",
+  "waivers": []
+}

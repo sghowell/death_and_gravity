@@ -1,0 +1,72 @@
+{
+  "claim_id": "P8-A.3",
+  "closes": [],
+  "created": "2026-09-06T22:39:16+00:00",
+  "evidence_sha256": [
+    "6093848a52e4a5d3786c73f3cc9d9ca76f533927adfa4729ffd04e93f1cc2a46",
+    "6b06da5ae4b3158016c2f8a5dfcdc755f172aff2ae8bf016069593956855162f",
+    "8eae6abbfdacdf538cf542c3e71478824140ead5ea699e9f0d41d9b6af85ae95",
+    "dc762112cdd2a5c0330f12d8bf157e27f5bae10d31cafa3b877cbce6eaa92b31"
+  ],
+  "findings": [
+    {
+      "dimension": "evidence_support",
+      "severity": "note",
+      "text": "Replay chain and committed arithmetic verified against the statement's constants: the PASS entry's binary_hash equals the current v1 stamp and postdates it (stamped 21:38:46, PASS 21:40:26); 105/256 \u2212 1/320 = 521/1280 matches absolute_functional_density; the Hardy IBP bookkeeping gives (2160\u22121080\u2212559)/1280 = 521/1280 with the boundary term killed exactly by the recorded endpoint_jets; the log-clock substitution h=t^(3/2)u yields precisely the positive_log_coefficients (1, 17/8, 161/1280) plus the exact derivative 2u_x^2+3uu_x/2+15u^2/16 stated in derivation.md; both sample polynomials satisfy h=hdot=0 at t=1,2; the flat rows 4/5 and 36/7 are correct; difference \u2212 absolute equals reference_credit exactly in both samples (14972/19200\u2212(9/8)log2 and \u22122911/33600+(1/8)log2); both enclosures contain the true values (\u22480.79658205 and \u22481.08854e-6). The evidence supports every displayed constant of the statement at the disclosed boundary. [evidence PASS entry (binary_hash 5780237b\u2026); radiation-reference.json fields absolute_QSEI_derivation, independent_rational_sample, second_independent_rational_sample]"
+    },
+    {
+      "dimension": "evidence_support",
+      "severity": "note",
+      "text": "The discriminating mathematics executes inside stress.py, bridge.py, independent.py and p8a_radiation.validated, which are hash-pinned (source_sha256; verifier binary_hash inputs) but not in the reviewed evidence set \u2014 verify.py shows orchestration only. Within benchmark(), only the 'absolute' row gets an in-file second route (direct SymPy integration) and only 'difference' is tied to the pinned A.2 replay; the 'flat' and 'reference_credit' rows rest on independent.py plus the symbolic residual reference_plus_difference_credit. I recomputed both 'flat' rows and both credit relations as correct, so the committed data is right; the in-verifier cross-check for those two rows is simply thinner. [verify.py benchmark() and checked_source_stress(); radiation-reference.json source_sha256]"
+    },
+    {
+      "dimension": "assumption_explicitness",
+      "severity": "warning",
+      "text": "The statement carries no observer/worldline scope, yet rho, p, E_ref and the bounded E_omega are comoving-observer quantities and the bound holds along comoving lines only: certificate scope.geodesic_coverage reads 'comoving lines; all normals only to constant-cosmic-time FLRW slices', not_established includes 'general FLRW, tilted observers or all normals of arbitrary Cauchy surfaces', and FORMULATION's boundary section says 'does not cover tilted observers, normals to other slices'. The dependency A.2's certified text keeps both markers ('positive-proper-time' sampling; 'general-background/geodesic coverage \u2026 remain open'); this statement writes only 'compact positive-time H2_0 sampling' and its open list drops the geodesic/observer item ('general-background coverage and full P8(a) remain open'), leaving a still-open restriction disclosed only in the certificate and formulation, not in the text the receipt binds to. [statement phrases 'on compact positive-time H2_0 sampling' and 'new cosmological focusing, general-background coverage and full P8(a) remain open'; radiation-reference.json scope.geodesic_coverage and not_established[3]; FORMULATION.md 'Boundary of the result']"
+    },
+    {
+      "dimension": "assumption_explicitness",
+      "severity": "note",
+      "text": "The bound's direction, normalization and observable are implicit: the statement says 'A.2 becomes an absolute bound with B=integral(\u2026)' without stating integral h^2*E_omega dt >= \u2212hbar*B/(16*pi^2). The prefactor and direction are recoverable only through A.2's text ('Q=hbar/(16*pi^2) times the integral') and the certificate field absolute_bound; the statement never names the observable it bounds. [statement 'A.2 becomes an absolute bound with B=integral(hddot^2-3*hdot^2/(8*t^2)+521*h^2/(1280*t^4))'; radiation-reference.json absolute_QSEI_derivation.absolute_bound]"
+    },
+    {
+      "dimension": "internal_consistency",
+      "severity": "note",
+      "text": "Statement, certificate, FORMULATION and derivation.md cross-check with no contradiction: p=5*rho/3 matches 1/9216 vs 1/15360; E_ref=(rho+3p)/2=3rho matches 1/5120; the 521/1280 density, the \u2212559/1280 Hardy term and the (1, 17/8, 161/1280) log form agree across all four documents; verify.py's decimal enclosure literals equal the committed rational strings (0.7965820=398291/500000, 0.7965821=7965821/10000000, 0.0000010885=2177/2000000000, 0.0000010886=5443/5000000000), so validate_report equality is coherent; the nonvacuum control values (Wick-square, density, minimal\u2212conformal excesses) transform consistently between derivation.md's a-variables and the certificate's A,t variables under a^4=4A^2t^2; the second sample's ordering 0 < absolute (\u22485.12218) < difference (\u22485.12219) < flat (36/7) holds numerically. [statement constants; radiation-reference.json reference_stress, absolute_Hardy_form, nonvacuum_negative_control; FORMULATION.md 'Reference result' and 'Absolute bound'; verify.py enclosure literals]"
+    },
+    {
+      "dimension": "ledger_consistency",
+      "severity": "note",
+      "text": "Cap and pins verified: the sole depends_on entry P8-A.2 is CERTIFIED and standing CURRENT, so promotion to CERTIFIED respects the lowest-dependency cap; the pinned path dependency radiation-qsei.json is hash-locked twice (certificate prior_A2_sha256 = verify.py PRIOR_SHA = 1a7369c0\u2026, re-checked at every replay in prior_checks()); formulation_version @8eae6abb equals both the evidence file's sha256 and source_sha256['FORMULATION.md']; the four IMPORTED table-import entries are correctly non-verifying under the ledger rule; the PASS entry's argv/cwd match the v1 declaration, and a FAIL fixture plus golden_suite_hash are on record for discrimination. [Dependencies section; radiation-reference.json prior_A2_sha256 and source_sha256; p8a_reference v1 declaration and stamp; evidence entries]"
+    },
+    {
+      "dimension": "ledger_consistency",
+      "severity": "note",
+      "text": "verification_boundary asserts the spectral inequality is 'imported only after pinned A.2 and A.1 replay', but verify.py's prior_checks() directly replays only A.2, and neither P8-A.1 nor its certificate appears in this claim's depends_on; any A.1 replay and pin are inherited implicitly inside p8a_radiation.verify.build_report. The cap rule is satisfied through A.2 alone, but this boundary sentence asserts more than the declared dependency graph and the shown code exhibit. [radiation-reference.json verification_boundary[1]; verify.py prior_checks(); claim Dependencies list]"
+    },
+    {
+      "dimension": "confidence_calibration",
+      "severity": "note",
+      "text": "CERTIFIED is within this ledger's semantics rather than an overclaim: the non-machine steps (FK conservation-preserving prescription theorems, Pinamonti Wick-square transfer giving <Phi^2>_ref=0, Carlson\u2013Anderson mode formula, Hollands\u2013Wald freedom classification) are disclosed exactly through the channels the README licenses (verification_boundary, written_proof=notes/derivation.md, source_dictionary, status), and every displayed constant is inside the machine-checked residual/enclosure set. The statement's hedges ('not an exact SEE source', 'remain open'), unconditional_absolute_multiplier '1' with assumed_short_duration=false backing 'No short-duration or unevaluated reference parameter', and the level note 'not FORMALIZED' are all calibrated. The only wording that risks over-reading is the missing observer scope, flagged separately as a warning. [radiation-reference.json verification_boundary, written_proof, status, absolute_QSEI_derivation.assumed_short_duration and unconditional_absolute_multiplier_for_fixed_prescription; claim Notes 'not FORMALIZED']"
+    },
+    {
+      "dimension": "decision_soundness",
+      "severity": "note",
+      "text": "Promoting now is sound: the PASS was produced under the currently stamped binary (identical binary_hash 5780237b\u2026, stamp 2026-09-06T21:38:46 precedes run 21:40:26); the sole dependency is CURRENT so no STALE hazard exists at promotion time; and the promotion replaces table-import evidence with a replayed certificate, re-earning the legacy CERTIFIED rather than resting on it. Nothing in the record argues for deferral; the single warning is textual and, per the ledger's own rule, does not veto CERTIFIED. [p8a_reference v1 stamp vs evidence PASS timestamps; claim level line 'CONJECTURED (legacy table said CERTIFIED)'; P8-A.2 standing CURRENT]"
+    }
+  ],
+  "id": "P8-A.3.20260906.model",
+  "provenance": {
+    "cost_usd": "2.2405",
+    "model": "claude-fable-5",
+    "request_digest": "c579b0a11c9db5c7cfe2bae36c6ddb06ea6b46d9275294c8fadb1a565546530e",
+    "response_digest": "0a5ae1fa99324b8655ba14fc2c5ac8ab793789355edc1406b9dd91d88eb15297",
+    "run_id": "review-P8-A.3-cb8b24-s1",
+    "transport": "ClaudeCodeClient"
+  },
+  "reviewer": "model",
+  "statement_sha256": "44ae3e07e5f8ca5898d5fe4f50c49e2311711d2c82d37700f720e78dc0a1f7f5",
+  "target_level": "CERTIFIED",
+  "verdict": "REVISE",
+  "waivers": []
+}

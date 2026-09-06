@@ -45,18 +45,29 @@ evidence:
   verdict: PASS
   verifier: p8a_backreaction
   version: '1'
+- binary_hash: 61375c821d8e330dd5fb04fb1d75e287f774fedc094a34e7700055c9e794703f
+  golden_suite_hash: 8fe50858fe2b39487e573a4703b62916bbc354d391b55bd900412b0917094eec
+  note: argv=['.venv/bin/python', 'tools/empiricist_check.py', 'p8a_backreaction',
+    'problems/P8/a/applicability/reference/asymptotics/backreaction/certificates/radiation-backreaction.json']
+    cwd=. exit=0 env_sha256=a9442656fd21227d0449fd04c00cd50efac4a3bb45bb1269dd63a45a0b16160e
+  path: problems/P8/a/applicability/reference/asymptotics/backreaction/certificates/radiation-backreaction.json
+  stamped: '2026-09-06T23:21:42+00:00'
+  verdict: PASS
+  verifier: p8a_backreaction
+  version: '1'
 formulation_version: problems/P8/a/applicability/reference/asymptotics/backreaction/FORMULATION.md@dd3a0f15
 id: P8-A.5
 kind: statement
-legacy_level: CERTIFIED
-level: CONJECTURED
+legacy_level: null
+level: CERTIFIED
 n: null
 notes: 'imported from CLAIMS.md; level note: exact Einstein/conservation/clock/curvature
   identities, independent rational polynomial and omission checks, explicit finite-domain
   bounds and pinned A.4 replay; written source-based smooth-state and local causal-footprint
   proof, not FORMALIZED'
 problem: P8(a), compact-slab first-order radiation backreaction
-receipts: []
+receipts:
+- P8-A.5.20260906.model.2
 source:
   kind: table
   ref: P8-A.5

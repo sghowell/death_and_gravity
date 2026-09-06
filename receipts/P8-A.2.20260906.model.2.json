@@ -1,0 +1,57 @@
+{
+  "claim_id": "P8-A.2",
+  "closes": [],
+  "created": "2026-09-06T22:32:12+00:00",
+  "evidence_sha256": [
+    "1a7369c03a25787c04fac0bf38189206e5331e43d3e48306a9ebb187763e9ed2",
+    "429676d3f8192cb1009d71ca9a9cafe7370223b0be2c0ae2cd3f7a225b97fe80",
+    "8b809ddc958eee442ce78ffa6b27971f60656127788e0d14041c2ee17ea790ba",
+    "a64f6a8fe8e8154491da913d895fdb77b9d60ed3b321ae8d144d406c72a60956"
+  ],
+  "findings": [
+    {
+      "dimension": "assumption_explicitness",
+      "severity": "warning",
+      "text": "The phrase 'gives the stated conditional duration multiplier' has no antecedent inside the statement text the receipt binds to: the multiplier formula appears only in certificate field reference_state_conditional_bridge.general_multiplier ('1+max(0,beta-111/256)*(L/t_min)^4/pi^4') and in FORMULATION.md@429676d3 ('C=1+max(0,beta-111/256)*(L/t_min)^4/pi^4'), and none of its scope parameters (support '(t_c-L/2,t_c+L/2), 0<L<2*t_c', t_min=t_c-L/2, zero endpoint traces of h and hdot per 'Poincare_domain') appear in the statement. Every other quantitative element of the statement (Q integrand, 0<=Q<=hbar*||hddot||^2/(16*pi^2), the E_ref>=-beta*hbar/(16*pi^2*t^4) form) is inlined; this one component is determinate only through the pinned external artifacts, so drift between statement text and certificate on it would be undetectable at statement level. [Statement, sentence 4 ('gives the stated conditional duration multiplier'); certificate field reference_state_conditional_bridge.general_multiplier; FORMULATION.md section 'Absolute and geometric bridges are conditional']"
+    },
+    {
+      "dimension": "evidence_support",
+      "severity": "note",
+      "text": "The load-bearing steps behind 'constructs a reference Hadamard state' and 'for any Hadamard state' are written-only, not machine-replayed: the wavefront-set claim ('Its Hadamard wavefront set is preserved by the smooth nonvanishing factors and the conformal light cones'), positivity of the rescaled bisolution, the positive-frequency restriction ('discarding the nonnegative target-state term'), and the C_c^infinity-to-H2_0 density extension. Neither residuals block (fixed_background_and_field_map.residuals covers KG/Wronskian/coordinate identities; difference_QSEI_derivation.residuals covers IBP/spectral/positive-square identities) checks these. This is permitted at CERTIFIED under this ledger's schema-1 boundary disclosure (status + not_established + written_proof + named notes file), which this certificate uses in place of a verification_boundary field; recorded so the receipt shows exactly where the machine boundary lies. [notes/derivation.md sections 1-2; radiation-qsei.json fields written_proof, status, fixed_background_and_field_map.residuals, difference_QSEI_derivation.residuals]"
+    },
+    {
+      "dimension": "internal_consistency",
+      "severity": "note",
+      "text": "Two compressions in the statement resolve only via the certificate, though consistently: (1) the statement gives Q's integrand but never the inequality direction; the actual bound 'integral h^2*(E_omega-E_reference) dt >= -Q[h]' exists only in difference_QSEI_derivation.bound; (2) 'the exact field map chi=a*phi constructs a reference Hadamard state' compresses the actual construction, which is the conformally rescaled Minkowski vacuum W0_Mink/[a(eta)*a(eta')] (fixed_background_and_field_map.reference_two_point) \u2014 the field map alone constructs no state. No contradiction found between statement, certificate, derivation.md, and FORMULATION.md on any checked item, including the 111/256 credit vs the all-duration threshold -111*hbar/(4096*pi^2*t^4) (equal to beta=111/256 in the statement's 16*pi^2 normalization). [Statement sentences 1-2 vs radiation-qsei.json fields difference_QSEI_derivation.bound and fixed_background_and_field_map.reference_two_point; reference_state_conditional_bridge.all_duration_C1_sufficient_if_separately_proved]"
+    },
+    {
+      "dimension": "ledger_consistency",
+      "severity": "note",
+      "text": "Only the certificate carries a PASS entry (p8a_radiation v1, 2026-09-06T21:40:24, binary_hash 35daadfe... matching the current stamp); the other three evidence files carry table-import IMPORTED stamps, which never count as verification. Their coverage is transitive and was verified to close: verify.py is inside the verifier's binary_hash input 'problems/P8/a/applicability/src'; derivation.md and FORMULATION.md are pinned by the certificate's source_sha256 (recomputed from disk in build_report and compared by validate_report). Checked consistent: formulation_version @429676d3 equals source_sha256['FORMULATION.md'] prefix; PRIOR_SHA in verify.py equals certificate prior_A1_sha256 (f719c980...); dependency P8-A.1 is CERTIFIED and CURRENT, so the level cap admits CERTIFIED. Residual gap: the identification of prior.REPORT (in package p8a under problems/P8/a/src, pinned by binary_hash but not exhibited in this packet) with the listed path dependency problems/P8/a/certificates/focusing.json could not be directly confirmed from the materials provided. [Evidence entries for verify.py/derivation.md/FORMULATION.md ('table-import v1 -> IMPORTED'); verifier declaration inputs; verify.py prior_checks() and PRIOR_SHA; radiation-qsei.json prior_A1_sha256 and source_sha256]"
+    },
+    {
+      "dimension": "confidence_calibration",
+      "severity": "note",
+      "text": "Independent recomputation found no overclaim in the numbers or hedges: Hardy completion (216-111)/256 = 105/256 reproduces proper_time_density; the Parseval chain hbar/(4*pi^3) with coefficients u^4/4, u^2/2, (2/3)u^3 yields hbar/(16*pi^2) with weights 1, 2, 8/3 and the positive form [f''+(4/3)(f/eta)']^2+(2/9)[(f/eta)']^2 expands exactly; Q0 = 145/(4096*pi^2); multiplier 1+145/(1296*pi^4) ~ 1.0011486 lies strictly inside (2002297/2000000, 10011487/10000000); flat norms 4/5 and 36/7 recomputed exactly; curved norm -75587/1280+(2763/32)*log(2) ~ 0.7965831 sits inside the Arb enclosure and strictly below 4/5; both benchmark polynomials satisfy p=p'=0 at t=1,2. Statement hedges ('beta is not derived', 'remain open', 'no assumed short averaging duration') match scope.absolute_QSEI_is_unconditionally_derived=false, assumed_small_duration_for_difference_bound=false, example_with_UNESTABLISHED_beta_1.reference_bound_is_derived_here=false, and the eight-item not_established list. CERTIFIED, as this ledger defines it (exact replay plus disclosed written boundary), is not overclaimed; the only calibration-sensitive phrase is the Hadamard construction covered by the evidence_support note. [Statement sentences 2-5 vs radiation-qsei.json fields difference_QSEI_derivation, independent_FLINT_benchmark, second_independent_FLINT_benchmark, reference_state_conditional_bridge, scope, not_established]"
+    },
+    {
+      "dimension": "decision_soundness",
+      "severity": "note",
+      "text": "Ordering and freshness verified against the promotion prerequisites: the PASS replay (2026-09-06T21:40:24, exit=0, env_sha256 recorded) postdates the current verifier stamp (2026-09-06T21:38:43) with identical binary_hash 35daadfe...; the replay re-executes the A.1 pin (prior_checks raises on any change to the prior certificate) and full build_report/validate_report dict equality, and the golden suite includes a FAIL fixture (claims/fixtures/p8a_radiation/fail-mutated.json). The single warning above is non-vetoing under this ledger's rule that 'Warnings in a receipt (a REVISE verdict) do not veto CERTIFIED.' No grounds found to defer this promotion. [Evidence entry 'p8a_radiation v1 -> PASS at 2026-09-06T21:40:24+00:00' vs verifier stamp 'stamped 2026-09-06T21:38:43+00:00'; verify.py prior_checks() and validate_report()]"
+    }
+  ],
+  "id": "P8-A.2.20260906.model.2",
+  "provenance": {
+    "cost_usd": "1.8236",
+    "model": "claude-fable-5",
+    "request_digest": "91e481288083a9787773d42a2cdabdc2a466dcadd6a90c8acd3f0ea2fea84336",
+    "response_digest": "e4c31cdcf2e2c90aa60569aacdaa36518a574bfa6e9fe5661095206990cfe2c2",
+    "run_id": "review-P8-A.2-8fc127-s2",
+    "transport": "ClaudeCodeClient"
+  },
+  "reviewer": "model",
+  "statement_sha256": "1e7b45aa0274662f8482ebbf8fdfddbad0ea33befe688365ac37fc67553bd272",
+  "target_level": "CERTIFIED",
+  "verdict": "REVISE",
+  "waivers": []
+}

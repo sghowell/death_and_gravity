@@ -1,0 +1,77 @@
+{
+  "claim_id": "P8-A.4",
+  "closes": [],
+  "created": "2026-09-06T23:02:29+00:00",
+  "evidence_sha256": [
+    "05d8484a9f39cc4c47a6a6441d7ab589aea78ca449773bdc3cad72bd42dc5eec",
+    "0891f0a33a5c76eef3113e2667acaf726d64094674f5d500c651e502065a958b",
+    "e11fd7bc4105dca34295af3e6946c55748ade183128b85dbf7c4606763aa7231",
+    "e51261c0d65842acec3f3735b672dbbac59f1e09e6fa10bd4c954bf7459c4038"
+  ],
+  "findings": [
+    {
+      "dimension": "internal_consistency",
+      "severity": "warning",
+      "text": "The every-Hadamard-state limit is this claim's own derived result, not A.3's. The recorded P8-A.3 statement supplies only the reference-state value 'E_ref=hbar/(5120*pi^2*t^4)' and explicitly leaves 'full P8(a)' open; FORMULATION.md presents 'lim_(t -> 0+) t^4*E_omega(t,x) = hbar/(5120*pi^2)' under the heading 'Derived statement', built from this checkpoint's O(eta^-6) remainder plus the A.3 coefficient; the certificate's verification_boundary says the absolute reference EED is 'imported' via hash-pinned A.3 replay. The bound statement text misassigns provenance of its central limit for arbitrary states, conflicting with the evidence's own division of labor. [Statement clause 'A.3 gives lim t^4*E_omega=hbar/(5120*pi^2)>0' vs P8-A.3 dependency statement, FORMULATION.md 'Derived statement', and certificate verification_boundary item 4]"
+    },
+    {
+      "dimension": "assumption_explicitness",
+      "severity": "warning",
+      "text": "The certified extra-source class is 'only ordinary homogeneous comoving radiation rho=C/a^4, p=rho/3, finite C>=0' (certificate scope.additional_sources; FORMULATION.md 'Hypotheses and source class'). The statement drops 'homogeneous comoving', the perfect-fluid form rho=C/a^4, and finiteness/nonnegativity of C, so its literal class also admits inhomogeneous or anisotropic traceless sources. The evidence certifies nothing about those: proof.md Section 4 computes E(T_rad)=C/a^4 only for the comoving homogeneous fluid, and scope.other_traceful_or_quantum_sources_included=false excludes only traceful/quantum sources, not wider traceless ones. [Statement phrase 'only additional ordinary traceless radiation' vs certificate scope.additional_sources and notes/proof.md Section 4]"
+    },
+    {
+      "dimension": "assumption_explicitness",
+      "severity": "warning",
+      "text": "The certified hypotheses restrict couplings to 'finite constants; b,kappa>0; ell,alpha,beta arbitrary' (certificate scope.couplings; FORMULATION.md: 'finite constants b>0, kappa>0'). These positivity scope words are absent from the statement. Under the statement's literal coupling class, the degenerate choice b=ell=alpha=beta=kappa=0 turns the displayed equation 'b*G_FK+ell*g_FK+alpha*I+beta*J=-kappa*(T_omega+T_rad)' into 0=0, satisfied by every admitted state, against the clause 'so no admitted state solves that whole-patch ansatz'. kappa>0 is also load-bearing in proof.md Section 4's error polynomial term 'abs(ell)*A^4*eta^8/kappa'. Only the pinned FORMULATION.md rescues the intended class. [Statement phrase 'finite constant gravitational couplings' vs certificate scope.couplings and FORMULATION.md hypothesis line 'finite constants b>0, kappa>0, arbitrary finite ell,alpha,beta']"
+    },
+    {
+      "dimension": "internal_consistency",
+      "severity": "note",
+      "text": "The certified O(eta^-6) quantity is the state-difference remainder (certificate field 'state_difference'; FORMULATION.md: 'the difference is O_(omega,x)(eta^(-6))'), while E_omega itself is O(eta^-8). Parsed as the full EED, the clause would contradict the adjacent limit clause (t^4*O(t^-3) tends to 0, not hbar/(5120*pi^2)); context forces the difference reading, but the phrase admits the wrong parse. [Statement phrase 'State-dependent EED is O(eta^-6)' vs certificate 'state_difference' field and FORMULATION.md 'Exact state-dependent remainder interface']"
+    },
+    {
+      "dimension": "evidence_support",
+      "severity": "note",
+      "text": "Checked and confirmed: the PASS entry's binary_hash equals the current v1 stamp 7e45a631...; recorded argv/cwd match the declaration; verify.py PRIOR_SHA equals certificate prior_A3_sha256 dc762112... and gates build_report on A.3 replay; source_sha256 entries for notes/proof.md (e11fd7bc...) and FORMULATION.md (0891f0a3...) equal the evidence files' hashes. Independent spot re-derivations reproduce certificate values: EED=3*rho with p=5*rho/3 gives hbar/(5120*pi^2*t^4); A^4*eta^8=16*t^4 gives the 1/320 vs 1/5120 ratio; C=3*A^2*b/kappa matches the Friedmann density; excluded-fluid trace hbar/(3840*pi^2*t^4) and its conservation; point-split coefficients (p-1)(q-1); P(1/100)=1/10000; the enclosure [21662869/10^11, 2166287/10^10] straddles 1/(320*pi^2)-1/10000. The machine layer supports every identity the statement invokes, within the disclosed boundary. [PASS entry binary_hash vs p8a_asymptotics v1 stamp; certificate fields prior_A3_sha256, source_sha256, EED_scaling_and_SEE_derivation, state_specific_quantitative_residual_example]"
+    },
+    {
+      "dimension": "evidence_support",
+      "severity": "note",
+      "text": "The universal-state content (smoothness of the difference from the microlocal condition via the symmetric-wavefront argument; the cutoff/finite-propagation Kirchhoff construction for arbitrary noncompact data; two-step Cauchy uniqueness giving F_tilde=F) is a written argument outside machine replay, exactly as verification_boundary items 1-2 disclose, and the certificate flags 'polynomial_benchmark_proves_general_smooth_PDE_theorem': false. I audited proof.md Sections 1-2 against its cited inputs (Sahlmann--Verch Prop. 3.3 and Thms 5.5/5.8, used only through the distributional wavefront argument) and found the assembly correct; this ledger's CERTIFIED semantics accept disclosed written steps, but nothing beyond hash-pinning verifies proof.md mechanically. [Certificate verification_boundary items 1-2 and two_variable_Cauchy_benchmark.polynomial_benchmark_proves_general_smooth_PDE_theorem; notes/proof.md Sections 1-2]"
+    },
+    {
+      "dimension": "evidence_support",
+      "severity": "note",
+      "text": "The boundary's 'written primary-source inputs' are catalogued in notes/sources.md, hash-pinned by source_sha256 (83c74484...) but absent from the claim's four evidence entries, so the citation dictionary was not directly reviewable in this packet; proof.md's inline citations were the references actually audited. [Certificate fields source_dictionary and source_sha256['notes/sources.md'] vs the claim's evidence entry list]"
+    },
+    {
+      "dimension": "ledger_consistency",
+      "severity": "note",
+      "text": "Checked and confirmed: the level cap holds (sole claim dependency P8-A.3 is CERTIFIED and CURRENT); the pinned path dependency radiation-reference.json is the same file verify.py freezes as PRIOR_SHA dc762112..., so any change fails replay and correctly stales the claim; formulation_version @0891f0a3 equals both the evidence FORMULATION.md hash and the certificate's source_sha256 entry; the four table-import IMPORTED entries carry no verification weight and a qualifying command-verifier PASS exists; the stamp (2026-09-06T21:38:50Z) precedes the PASS run (2026-09-06T21:40:28Z). No inconsistency found. [depends_on rows (P8-A.3; problems/P8/a/applicability/reference/certificates/radiation-reference.json), formulation_version field, IMPORTED evidence entries, verifier stamp vs PASS timestamps]"
+    },
+    {
+      "dimension": "confidence_calibration",
+      "severity": "note",
+      "text": "Checked against verification_boundary, the six not_established items, the false-valued scope flags (finite_slab_SEE_incompatibility_established, uniform_over_states_rate_or_positive_onset_time_established, new_incompleteness_theorem_established, all_state_pointwise_nonnegative_EED_at_all_times_established), and status 'BACKREACTED_APPLICATION_OPEN': the statement's final sentence mirrors these limits, the notes say 'not FORMALIZED', and no clause asserts machine-checked-proof or kernel-checked status. The requested level does not overclaim under this ledger's CERTIFIED semantics; residual calibration risk is confined to the wording defects filed as warnings. [Certificate not_established, scope flags, and status fields vs statement final sentence 'The theorem does not exclude finite slabs, ...']"
+    },
+    {
+      "dimension": "decision_soundness",
+      "severity": "warning",
+      "text": "All mechanical gates for promoting now hold (dependency CERTIFIED and CURRENT, fresh stamp preceding the PASS replay, exact pinned formulation and prior hashes). But the receipt binds to the exact statement text, so promoting now freezes into the certified record the misassigned provenance clause ('A.3 gives lim t^4*E_omega=...') and the two under-specified hypothesis phrases ('only additional ordinary traceless radiation'; 'finite constant gravitational couplings'). The promotion is premature while those text defects stand, though under this ledger's rules these warnings do not veto CERTIFIED. [Promotion request CONJECTURED->CERTIFIED for the statement text phrases cited in the internal_consistency and assumption_explicitness warnings]"
+    }
+  ],
+  "id": "P8-A.4.20260906.model.2",
+  "provenance": {
+    "cost_usd": "2.2620",
+    "model": "claude-fable-5",
+    "request_digest": "d0907e0d148013e0b9cae5ab043f1a04b60aab62e7ef4f5cbe09034179eda05a",
+    "response_digest": "ebb3c3f79127fb66bd8947ab8a3839aef2ef230a124d1f9cf3643959d2440da9",
+    "run_id": "review-P8-A.4-56defd-s2",
+    "transport": "ClaudeCodeClient"
+  },
+  "reviewer": "model",
+  "statement_sha256": "6d7ae1a9b72bda8478580aa9d7fe4551f1fcb1b7dcb165aa27350d9175f3c2b6",
+  "target_level": "CERTIFIED",
+  "verdict": "REVISE",
+  "waivers": []
+}

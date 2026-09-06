@@ -1,0 +1,61 @@
+{
+  "claim_id": "P8-A.1",
+  "closes": [],
+  "created": "2026-09-06T21:56:19+00:00",
+  "evidence_sha256": [
+    "98bea029773ac2382da256177be0a8909f14e013e75242f1071f4d53e2acbc96",
+    "a5f620920c3d96d8eefe77e829e5b648eb7aae626fd9ca8b58d759940ac8f066",
+    "e0e4bd0d9b04213567ded0f8e57b48b0de44833c205c072b4610a6d12c75ed45",
+    "f719c98068848003e296260d3ff6b03d32acad40662b9c9980f61c39175f209e"
+  ],
+  "findings": [
+    {
+      "dimension": "evidence_support",
+      "severity": "warning",
+      "text": "The only non-import verification is exit=0 of an unspecified tool: argv shows 'tools/empiricist_check.py p8a problems/P8/a/certificates/focusing.json', but empiricist_check.py is absent from the evidence set and from focusing.json's source_sha256 map, and 'binary 0da0a4630f7b' is a truncated identifier matching no hash anywhere in the evidence. Nothing recorded establishes that this PASS re-executed the exact SymPy/FLINT/outward-Arb replay defined in src/p8a/verify.py (build_report + validate_report against the JSON) or even compared source_sha256 to disk, rather than performing a shallow schema/existence check. The CERTIFIED level note rests precisely on 'independent FLINT integration and infinite-tail reconstruction, outward Arb enclosures', yet no evidence entry records those computations being run by an identified verifier. [Evidence entry 'problems/P8/a/certificates/focusing.json: p8a v1 -> PASS at 2026-09-06T21:40:22+00:00 (binary 0da0a4630f7b)' and its argv note]"
+    },
+    {
+      "dimension": "evidence_support",
+      "severity": "warning",
+      "text": "Three of the four evidence files carry only 'table-import v1 -> IMPORTED', which is provenance, not verification. In particular notes/focusing.md is the certificate's declared 'written_proof' and carries the Sobolev/H2-density extension, the index-form/focal-point lemma, and the global causal argument that give 'meets the optimized sufficient focusing test' its meaning; no verifier identity is recorded as having checked that prose. Likewise no execution of 'p8a.verify --check' (the replay whose passing would tie the certificate to these sources via its source_sha256 map) appears anywhere in the evidence \u2014 verify.py exists in the ledger only as an imported file, not as a run check. [Evidence entries for problems/P8/a/src/p8a/verify.py, problems/P8/a/notes/focusing.md, problems/P8/a/FORMULATION.md (all 'table-import v1 -> IMPORTED at 2026-09-05') vs certificate field 'written_proof': 'notes/focusing.md']"
+    },
+    {
+      "dimension": "ledger_consistency",
+      "severity": "warning",
+      "text": "The claim is promoted to CERTIFIED while still bound to formulation_version 'legacy-table', yet every frozen input the statement's numbers depend on \u2014 partition ratio r=3/4, angle p(x)=3x^2-2x^3, fixed initial cutoff, extended domain [-1/2,1], the Fewster\u2013Kontou Ricci sign convention, and K as the trace of the second fundamental form \u2014 lives only in FORMULATION.md (sha e0e4bd0d...), which the certificate names in its 'hypotheses' field and hashes in source_sha256 but which the ledger's formulation_version field does not identify. The receipt would bind to statement text whose defined terms ('the frozen two-coefficient tail family', 'the same partition', '-K') resolve through a formulation document the version field does not name. [Ledger field 'formulation_version: legacy-table' vs focusing.json fields 'hypotheses': 'FORMULATION.md; ...' and source_sha256['FORMULATION.md']=e0e4bd0d...]"
+    },
+    {
+      "dimension": "assumption_explicitness",
+      "severity": "warning",
+      "text": "The statement's closing assumption list ('Local QEI applicability, field/state calibration and cosmological validity are assumptions/open work') omits the geometric setup on which the sufficiency of the test rests: unit-speed timelike geodesics normal to a smooth spacelike initial surface (hence a vorticity-free / hypersurface-orthogonal congruence), K defined as the trace of that surface's second fundamental form, and a fixed sign convention that FORMULATION.md warns is not universal ('These are not the Ricci-sign conventions of arXiv:2209.04347v3'). These hypotheses appear only in FORMULATION.md and notes/focusing.md \u00a73 ('on a hypersurface-orthogonal geodesic congruence without a focal point'); in the bound statement text '-K*tau=9/2' is a convention-dependent symbol with no in-statement definition, which is aggravated by the legacy-table formulation binding. [Statement phrases 'Thus contraction -K*tau=9/2 meets the optimized sufficient focusing test' and 'Local QEI applicability, field/state calibration and cosmological validity are assumptions/open work']"
+    },
+    {
+      "dimension": "internal_consistency",
+      "severity": "note",
+      "text": "Checked statement-vs-evidence and found exact agreement: 4.4445507<nu*tau<4.4445508 equals validated_enclosures.optimized_threshold (44445507/10000000, 11111377/2500000); 4.8747718\u20134.8747719 equals cubic_threshold (24373859/5000000, 48747719/10000000); '8.825--8.826 percent' equals improvement_percent (353/40, 4413/500); 'meets the optimized ... but not that cubic test' matches separating_contraction_example (minus_K_times_tau=9/2, true/false) and the ordering 4.4445508<9/2<4.8747718; the parameter clause matches Q2_over_tau_squared=1/1000000, Q0_times_tau_squared=1/100, rho0_times_tau_squared=0; source_sha256 entries for verify.py (a5f62092...), notes/focusing.md (98bea029...), FORMULATION.md (e0e4bd0d...) equal the evidence-file hashes; support ratios 14/25, 2/7, bad ratio 6/5, and first window (-5/16,9/16) recompute exactly from r=3/4 and T(c)=1-c; the z^0 coefficient of E(p,p), i.e. integral (p'')^2=12, reproduces initial_localized_norm[0]=768 after division by (1-r)^3; and the \u00a73 identity J[g]=-K+integral[3(g'-theta*g/3)^2+sigma^2*g^2] follows from the stated integration by parts with theta'=rho-theta^2/3-sigma^2, g(0)=1, g(1)=0. Minor: verify.py hardcodes 'date': '2026-09-05', so the certificate's date field is frozen replay text, not a generation timestamp \u2014 the 2026-09-06 PASS a day after the certificate date is therefore expected, not a discrepancy. [Statement numeric clauses vs focusing.json validated_enclosures, parameters, separating_contraction_example, support_coverage, independent_FLINT_replay, source_sha256; verify.py build_report(); notes/focusing.md \u00a71\u2013\u00a74]"
+    },
+    {
+      "dimension": "confidence_calibration",
+      "severity": "note",
+      "text": "Against the ledger's level semantics (CERTIFIED = machine-checked exact algebra plus outward Arb enclosures plus disclosed written lemmas, explicitly 'not FORMALIZED'), the level does not numerically overclaim: the statement confines optimality to 'the frozen two-coefficient tail family', mirrored by the certificate's optimality_scope ('unique minimum in the frozen two-coefficient family only'); the nine-item not_established list covers each disclaimed item in the statement's final sentence; uniqueness rests on both exact zero residuals (stationarity_0/1, quadratic_reconstruction, completed_square_constant) and Arb-certified Sylvester minors. Calibration of the 'sufficient focusing test' clause remains contingent on the unverified written_proof flagged under evidence_support, since the machine checks 'its algebra, not the entire differential geometry or global causal theory in a proof assistant' (notes/focusing.md \u00a73). [Notes field 'written Sobolev/index-form/global-causal lemmas; not FORMALIZED'; focusing.json fields 'optimality_scope', 'not_established', 'status'; notes/focusing.md \u00a73]"
+    },
+    {
+      "dimension": "decision_soundness",
+      "severity": "warning",
+      "text": "Promoting now mints a CERTIFIED receipt anchored to the two weakest records in the entry: a formulation_version ('legacy-table') that does not identify the hashed FORMULATION.md actually governing the statement's symbols, and a single PASS ('p8a v1', binary 0da0a4630f7b) whose checking semantics are unrecorded \u2014 the exact items a CERTIFIED receipt exists to pin. The substantive basis for restoring the legacy level is otherwise in order: the demotion-on-import was followed by a fresh 2026-09-06 machine check, the dependency field '(none)' is consistent with FORMULATION.md's declaration that the checkpoint 'does not depend on completing P8(b)' and with 'an exclusion of the P8(b) bounce witnesses' being listed as not established. The unsoundness is in promoting on the current records, not in the claim's substance. [Promotion request CONJECTURED->CERTIFIED taken together with 'formulation_version: legacy-table', the 'p8a v1 -> PASS' evidence entry, and Dependencies '(none)']"
+    }
+  ],
+  "id": "P8-A.1.20260906.model.2",
+  "provenance": {
+    "cost_usd": "1.8422",
+    "model": "claude-fable-5",
+    "request_digest": "e9f6ab8e3c024e14da16ed3eece36d9a7c49f3a16b4e6def5ccdc919ab86425c",
+    "response_digest": "b13029f94c1462e303e370ffd1d9ac36fd5835fefadec39621b5d641eadcac79",
+    "run_id": "review-P8-A.1-be1819-s2",
+    "transport": "ClaudeCodeClient"
+  },
+  "reviewer": "model",
+  "statement_sha256": "3db9b01f02a275fd508042df1720acf9364dc762cb97a1916edd7aaf3ed507b9",
+  "target_level": "CERTIFIED",
+  "verdict": "REVISE"
+}

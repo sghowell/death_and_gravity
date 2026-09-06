@@ -1,0 +1,66 @@
+{
+  "claim_id": "P8-A.1",
+  "closes": [],
+  "created": "2026-09-06T21:50:09+00:00",
+  "evidence_sha256": [
+    "98bea029773ac2382da256177be0a8909f14e013e75242f1071f4d53e2acbc96",
+    "a5f620920c3d96d8eefe77e829e5b648eb7aae626fd9ca8b58d759940ac8f066",
+    "e0e4bd0d9b04213567ded0f8e57b48b0de44833c205c072b4610a6d12c75ed45",
+    "f719c98068848003e296260d3ff6b03d32acad40662b9c9980f61c39175f209e"
+  ],
+  "findings": [
+    {
+      "dimension": "ledger_consistency",
+      "severity": "warning",
+      "text": "The claim header records formulation_version 'legacy-table', but every operative definition the bound statement text leans on -- 'the explicit local geometric QEI', the allowed windows I_c with T(c)=tau-c, the extended geodesic domain, and the Ricci/K sign conventions -- exists only in problems/P8/a/FORMULATION.md (sha e0e4bd0d...), which the certificate itself declares via its 'hypotheses': 'FORMULATION.md' field and pins in source_sha256. A CERTIFIED receipt issued under the 'legacy-table' formulation identifier binds statement text whose defining document is not the formulation version registered in the ledger. [claim field 'formulation_version: legacy-table' vs focusing.json fields 'hypotheses' and source_sha256['FORMULATION.md']]"
+    },
+    {
+      "dimension": "evidence_support",
+      "severity": "warning",
+      "text": "The only non-import verification is the 'p8a v1 -> PASS' entry on focusing.json, whose recorded argv invokes tools/empiricist_check.py -- a script that is neither an evidence file nor listed in the certificate's source_sha256 manifest -- and whose binary identifier '0da0a4630f7b' is a truncated 12-hex hash. Nothing in the ledger records that 'p8a v1' executes the exact/validated replay (src/p8a/verify.py --check, whose validate_report performs the byte-for-byte certificate comparison and source-hash recomputation) on which CERTIFIED-level support rests. The other three evidence files (verify.py, notes/focusing.md, FORMULATION.md) carry only 'table-import v1 -> IMPORTED' entries, which attest provenance, not verification; their integrity is assured only transitively, via the unverified assumption about what 'p8a v1' runs. [evidence entry 'problems/P8/a/certificates/focusing.json: p8a v1 -> PASS at 2026-09-06T21:40:22+00:00', note argv=['.venv/bin/python','tools/empiricist_check.py','p8a',...]]"
+    },
+    {
+      "dimension": "evidence_support",
+      "severity": "note",
+      "text": "Two sources pinned by the certificate's source_sha256 manifest -- README.md (00c0d665...) and notes/sources.md (ea521f4f..., named in FORMULATION.md as 'The source-equation dictionary') -- are absent from the evidence set, so the full manifest the PASS implicitly vouches for cannot be inspected from the ledger. The three evidence source files that are present (verify.py a5f62092..., notes/focusing.md 98bea029..., FORMULATION.md e0e4bd0d...) match the manifest exactly. [focusing.json source_sha256 entries 'README.md' and 'notes/sources.md' vs the five listed evidence entries]"
+    },
+    {
+      "dimension": "assumption_explicitness",
+      "severity": "note",
+      "text": "The statement phrase 'smooth extended geodesic domain' omits the quantitative hypothesis of smooth backward extension to proper time -tau/2 (FORMULATION.md hypothesis 1; certificate parameters.extended_geodesic_domain_over_tau=['-1/2','1']). This is load-bearing: the first allowed window is (-5/16,9/16)*tau (support_coverage.first_window_over_tau), and notes/focusing.md section 1 states 'its negative-time part is available' only because of that extension. The receipt text under-specifies the hypothesis it depends on. [statement phrase 'smooth extended geodesic domain' vs FORMULATION.md hypothesis 1 and focusing.json support_coverage.first_window_over_tau]"
+    },
+    {
+      "dimension": "assumption_explicitness",
+      "severity": "note",
+      "text": "The phrases 'initial Ricci upper bound' (with rho0=0) and 'contraction -K*tau=9/2' are meaningful only under the frozen conventions -- rho=R_mu_nu U^mu U^nu with timelike convergence rho<=0, K the trace of the second fundamental form (K=3H) -- which FORMULATION.md fixes and explicitly contrasts with arXiv:2209.04347v3 ('These are not the Ricci-sign conventions of...'). None of this convention-fixing appears in the statement text the receipt binds to. Likewise, the sufficiency of the 'focusing test' additionally uses a hypersurface-orthogonal normal congruence and the boundary data g(0)=1, g(1)=0, theta(0)=K (notes/focusing.md section 3), hypotheses not named in the statement. [statement phrases 'initial Ricci upper bound' and 'contraction -K*tau=9/2' vs FORMULATION.md 'Frozen geometric problem' and notes/focusing.md section 3]"
+    },
+    {
+      "dimension": "internal_consistency",
+      "severity": "note",
+      "text": "Consistency verified by independent recomputation, no mismatch found: all five numeric intervals in the statement equal the certificate rationals (optimized_threshold 44445507/10000000 to 11111377/2500000 = 4.4445507-4.4445508; cubic_threshold 24373859/5000000 to 48747719/10000000 = 4.8747718-4.8747719; improvement_percent 353/40 to 4413/500 = 8.825-8.826, all strict:true; separating_contraction_example minus_K_times_tau 9/2 with optimized true / cubic false, and 4.4445508 < 9/2 < 4.8747718 holds). I reproduced by hand: initial_localized_norm exactly (768, 6848/35, 1728/715); coverage ratios 14/25, 2/7, and bad ratio 6/5; the 'tail' polynomial from FORMULATION.md's q(s)=p+c0*psi+c1*psi*(2s-1) with endpoint conditions q(0)=q'(0)=q'(1)=0, q(1)=1; the section-3 integration-by-parts identity J[g]=-K+integral[3(g'-theta*g/3)^2+sigma^2 g^2]; and the cubic threshold ~4.874772 by two independent routes (evaluating cubic_threshold_exact at z=pi^2, and reassembling 24/5 + (1/100)(13/35) + 10^-6*S(p) from tail_basis_gram plus initial_localized_norm). verify.py's build_report emits exactly the certificate's fields, including the hardcoded date 2026-09-05 and enclosure digit strings. [focusing.json validated_enclosures / independent_FLINT_replay / support_coverage / finite_family_optimization vs statement numerals, verify.py build_report, notes/focusing.md sections 1-4]"
+    },
+    {
+      "dimension": "confidence_calibration",
+      "severity": "note",
+      "text": "CERTIFIED is calibrated only under a level semantics in which written, non-mechanized lemmas may back that level: the H2-density transfer of the smooth-test QEI ('Thus the assumed QEI applies to these H2 products', notes/focusing.md section 1) and the no-focal-point strictness plus global causal step (section 3; FORMULATION.md: 'The machine checks its algebra, not the entire differential geometry or global causal theory in a proof assistant') are not machine-checked. This state is disclosed in the Notes ('written Sobolev/index-form/global-causal lemmas; not FORMALIZED') and in the certificate status 'CONDITIONAL_LOCAL_QEI_FOCUSING_OPTIMIZATION; PHYSICAL_APPLICATION_OPEN'. The numeric content of the statement is fully covered by outward 192-bit Arb enclosures, and every scope caveat matches not_established and optimality_scope ('unique minimum in the frozen two-coefficient family only'), so no overclaim beyond that disclosed reading was found. [Notes field 'not FORMALIZED'; notes/focusing.md sections 1 and 3; FORMULATION.md 'What counts as certified'; focusing.json 'status', 'not_established', 'validated_enclosures']"
+    },
+    {
+      "dimension": "decision_soundness",
+      "severity": "note",
+      "text": "Checked: the empty dependency list is correct (FORMULATION.md: 'It does not depend on completing P8(b)', mirrored by not_established's 'an exclusion of the P8(b) bounce witnesses'); the claim id binds ('claim': 'P8-A.1' in focusing.json); the fresh PASS (2026-09-06) postdates the certificate date (2026-09-05); and the three source evidence files hash-match the certificate manifest. The promotion decision therefore has no independent timing, dependency, or binding obstacle; its soundness turns entirely on resolving the two warnings recorded above (unanchored formulation version; unpinned verifier semantics behind the sole non-import PASS). [claim fields 'Dependencies: (none)' and evidence-entry timestamps vs FORMULATION.md and focusing.json 'claim'/'not_established'/source_sha256]"
+    }
+  ],
+  "id": "P8-A.1.20260906.model",
+  "provenance": {
+    "cost_usd": "2.3605",
+    "model": "claude-fable-5",
+    "request_digest": "e9f6ab8e3c024e14da16ed3eece36d9a7c49f3a16b4e6def5ccdc919ab86425c",
+    "response_digest": "b9f2eb5ef13fb976e8c2ee39ccb22e2886856746129b72ed5ee09909c119daae",
+    "run_id": "review-P8-A.1-be1819-s1",
+    "transport": "ClaudeCodeClient"
+  },
+  "reviewer": "model",
+  "statement_sha256": "3db9b01f02a275fd508042df1720acf9364dc762cb97a1916edd7aaf3ed507b9",
+  "target_level": "CERTIFIED",
+  "verdict": "REVISE"
+}

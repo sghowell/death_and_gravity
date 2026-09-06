@@ -45,18 +45,32 @@ evidence:
   verdict: PASS
   verifier: p8a_asymptotics
   version: '1'
+- binary_hash: 7e45a6318b5d74cbdef5de8eb8f37e743689411f3249419188134875c5fdec93
+  golden_suite_hash: 54363f2b91457f78c2bba7f81ca4266f273c0a1754d37249be8c789e1683c65d
+  note: argv=['.venv/bin/python', 'tools/empiricist_check.py', 'p8a_asymptotics',
+    'problems/P8/a/applicability/reference/asymptotics/certificates/radiation-asymptotics.json']
+    cwd=. exit=0 env_sha256=22b3830db4cb48a7fd8c7884932753763d7945884adec0759a27c3bc319eefe9
+  path: problems/P8/a/applicability/reference/asymptotics/certificates/radiation-asymptotics.json
+  stamped: '2026-09-06T23:02:31+00:00'
+  verdict: PASS
+  verifier: p8a_asymptotics
+  version: '1'
 formulation_version: problems/P8/a/applicability/reference/asymptotics/FORMULATION.md@0891f0a3
 id: P8-A.4
 kind: statement
-legacy_level: CERTIFIED
-level: CONJECTURED
+legacy_level: null
+level: CERTIFIED
 n: null
 notes: 'imported from CLAIMS.md; level note: written Hadamard/wave Cauchy argument
   with arbitrary noncompact data and both bisolution variables; exact independent
   rational polynomial/exponent checks, source/domain omission controls, a state-specific
-  outward Arb residual example and pinned A.3 replay; not FORMALIZED'
+  outward Arb residual example and pinned A.3 replay; not FORMALIZED
+
+  promoted to CERTIFIED on receipt P8-A.4.20260906.model.2 (REVISE: 4 open warning(s)
+  for the author, no blocking finding)'
 problem: P8(a), whole-patch exact-radiation semiclassical obstruction
-receipts: []
+receipts:
+- P8-A.4.20260906.model.2
 source:
   kind: table
   ref: P8-A.4

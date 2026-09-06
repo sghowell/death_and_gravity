@@ -44,18 +44,31 @@ evidence:
   verdict: PASS
   verifier: p8a_radiation
   version: '1'
+- binary_hash: 35daadfe52c74c6546a4b5a66a41b96193fa8209c487a31d189c5c4007dc0bf7
+  golden_suite_hash: 8e67ceef6535270b5ea563197c7d3a388077f3566f9cc7f32732223db8e6eb40
+  note: argv=['.venv/bin/python', 'tools/empiricist_check.py', 'p8a_radiation', 'problems/P8/a/applicability/certificates/radiation-qsei.json']
+    cwd=. exit=0 env_sha256=42e41cd59a2b7aae9293e1487069b29a11ec54f24c6ee1db330394644167be10
+  path: problems/P8/a/applicability/certificates/radiation-qsei.json
+  stamped: '2026-09-06T22:32:13+00:00'
+  verdict: PASS
+  verifier: p8a_radiation
+  version: '1'
 formulation_version: problems/P8/a/applicability/FORMULATION.md@429676d3
 id: P8-A.2
 kind: statement
-legacy_level: CERTIFIED
-level: CONJECTURED
+legacy_level: null
+level: CERTIFIED
 n: null
 notes: 'imported from CLAIMS.md; level note: exact field/CCR, spectral, coordinate
   and IBP identities; independent FLINT proper/conformal positive-form integrals,
   outward Arb enclosures, primary-source positive-type lemma and written sampling-domain
-  proof; not FORMALIZED'
+  proof; not FORMALIZED
+
+  promoted to CERTIFIED on receipt P8-A.2.20260906.model.2 (REVISE: 1 open warning(s)
+  for the author, no blocking finding)'
 problem: P8(a), fixed radiation FLRW and massless minimally coupled scalar
-receipts: []
+receipts:
+- P8-A.2.20260906.model.2
 source:
   kind: table
   ref: P8-A.2

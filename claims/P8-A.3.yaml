@@ -44,18 +44,31 @@ evidence:
   verdict: PASS
   verifier: p8a_reference
   version: '1'
+- binary_hash: 5780237be8adc557fd0ee1852539cf84bf9400ec794a8dd92caed18888af1baa
+  golden_suite_hash: 59d1a3ec1b8662e6356e4cf7755d6e0299ea5aed42af477a72f2c6d41ff1e834
+  note: argv=['.venv/bin/python', 'tools/empiricist_check.py', 'p8a_reference', 'problems/P8/a/applicability/reference/certificates/radiation-reference.json']
+    cwd=. exit=0 env_sha256=afdd997afd4bb951e41e81faaf7f015d227793d7426fdb2190b1557bdccf6872
+  path: problems/P8/a/applicability/reference/certificates/radiation-reference.json
+  stamped: '2026-09-06T22:45:51+00:00'
+  verdict: PASS
+  verifier: p8a_reference
+  version: '1'
 formulation_version: problems/P8/a/applicability/reference/FORMULATION.md@8eae6abb
 id: P8-A.3
 kind: statement
-legacy_level: CERTIFIED
-level: CONJECTURED
+legacy_level: null
+level: CERTIFIED
 n: null
 notes: 'imported from CLAIMS.md; level note: primary-source renormalization/state
   dictionary and written proof; exact stress, mode, convention and weighted-Sobolev
   identities; independent rational conformal stress/integrals, outward Arb enclosures,
-  omission controls and pinned A.2 replay; not FORMALIZED'
+  omission controls and pinned A.2 replay; not FORMALIZED
+
+  promoted to CERTIFIED on receipt P8-A.3.20260906.model.2 (REVISE: 1 open warning(s)
+  for the author, no blocking finding)'
 problem: P8(a), fixed radiation FLRW reference stress and absolute QSEI
-receipts: []
+receipts:
+- P8-A.3.20260906.model.2
 source:
   kind: table
   ref: P8-A.3

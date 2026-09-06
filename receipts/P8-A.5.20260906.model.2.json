@@ -1,0 +1,67 @@
+{
+  "claim_id": "P8-A.5",
+  "closes": [],
+  "created": "2026-09-06T23:21:39+00:00",
+  "evidence_sha256": [
+    "37e3e29f6978f0eaecf3b87a802fc0909f545529082866a8cc31b5a43eae1b9e",
+    "64f5e3c58433d655ffe53cd5dfc31307a2b24fa3cc984578e796a55576c11fff",
+    "a7e1766a16778920c5784b9c52f997497a6e22259c48d956c8ca50ca60770930",
+    "dd3a0f1521c4234fee47f296768061cdd1d97e13d915c84967151983f27c64d9"
+  ],
+  "findings": [
+    {
+      "dimension": "evidence_support",
+      "severity": "note",
+      "text": "Machine-replayed layer independently reproduced: d=1/46080 in kappa*hbar/pi^2 units follows from A.3's rho_ref=hbar/(15360*pi^2*t^4) via qdot+q/t=d/t^3; scale_fourth ODE constant 256 and the exact solution scale_fourth=4*A^2*(t^2-4*d*epsilon); frozen defects 3z^2(2-z)/(4t^2(1-z)^2), 5z^2(2-z)/(4t^2(1-z)^2) with endpoint constants 7/3, 35/9, 7 and ratio max 28/9 at z=1/4; Bernstein values 5/72, 67/1152, 4271/1679616 and 0, 7/768 match the listed power coefficients at z=0, first derivative, and z=1/4; slab-example arithmetic (7/768, 35/2304, 7/256, 1/2304, 115/12288, 289/18432, 231/8192, radicand 3/4) and the quarter-root enclosure bracketing 0.75^(1/4) all check. This supports sentences 1-2 of the statement at the recorded PASS whose binary_hash 61375c... equals the current v1 stamp. [radiation-backreaction.json: independent_rational_Taylor_and_defect_certificates, Einstein_clock_curvature_and_completion_identities, finite_slab_arithmetic_example; PASS entry 2026-09-06T21:40:31+00:00]"
+    },
+    {
+      "dimension": "evidence_support",
+      "severity": "note",
+      "text": "The statement's clause 'actual compact-slab SEE residual O(epsilon^2)' rests entirely outside machine replay: notes/proof.md section 4 (causal-footprint reduction, O(eps^2) bookkeeping D_actual = D_frozen - kappa*eps*(rho_eps-rho_ref), both terms O(eps^2)) plus three cited literature inputs (Hollands-Wald Lemma 6.2, Hadamard propagation, positivity under Cauchy evolution). This is admissible at CERTIFIED only because verification_boundary items 1-2 disclose exactly these steps; I verified the disclosure matches proof.md's actual structure and that the O(eps^2) counting is correct given the certified frozen-defect bounds and the written smoothness input. [radiation-backreaction.json verification_boundary[0]-[1]; notes/proof.md section 4]"
+    },
+    {
+      "dimension": "ledger_consistency",
+      "severity": "note",
+      "text": "verification_boundary claims import 'only after unchanged A.4/A.3/A.2/A.1 replay', but the visible checker directly pins and replays only A.4 (PRIOR_SHA 05d8484a..., prior.validate_report/build_report in prior_checks()); the A.3/A.2/A.1 replay is inherited through p8a_asymptotics.verify inside the verifier's hashed inputs and is not directly evidenced in this packet. depends_on likewise names only P8-A.4 and the A.4 certificate path. Checked against: verify.py prior_checks(), the verifier declaration's inputs list, and the claim's dependency list; the certificate's prior_A4_sha256 equals verify.py's PRIOR_SHA, so the locked path dependency is enforced. [radiation-backreaction.json verification_boundary[3] vs verify.py prior_checks(); depends_on]"
+    },
+    {
+      "dimension": "internal_consistency",
+      "severity": "note",
+      "text": "Field 'Itt_order_zero_coupling_linear_control': '-126*d/t**6' drops the epsilon factor that the sibling field 'Itt_exact' ('-18*d*epsilon*(...)') and proof.md section 5 ('-126*epsilon*d/t^6') both carry; it is the epsilon-linear coefficient, but the certificate does not mark the convention change between adjacent fields. Substance is consistent (linearizing Itt_exact gives -126*d*epsilon/t^6). [radiation-backreaction.json Einstein_clock_curvature_and_completion_identities.Itt_order_zero_coupling_linear_control vs Itt_exact and notes/proof.md section 5]"
+    },
+    {
+      "dimension": "internal_consistency",
+      "severity": "note",
+      "text": "The statement's denial 'or new incompleteness theorem is established' has no verbatim counterpart in the certificate: not_established phrases the non-claims as 'physical singularity/bounce' and 'a new focusing theorem'. As a denial it needs no positive evidence and nothing in the evidence contradicts it; the lexical gap between statement text and certificate fields is recorded only. All other statement clauses were traced to exact fields (first_order_relative_scale with modes fixed per scope, scale_fourth, certified_Taylor_domain, the two false curvature-squared scope flags, the two false surrogate scope flags). [statement final sentence vs radiation-backreaction.json not_established[4]-[5] and scope]"
+    },
+    {
+      "dimension": "assumption_explicitness",
+      "severity": "note",
+      "text": "Scope words present only in the pinned formulation, not the statement text: 'compact-slab' omits 'positive-time'/'bounded away from zero' (FORMULATION.md 'compact positive-time slabs'; proof.md section 4 'compact slab J bounded away from zero'); zero cosmological term (scope 'cosmological_term': '0') and the flat-FLRW target metric are unstated; smallness of epsilon for the residual clause is carried implicitly by O-notation and FORMULATION.md 'For sufficiently small epsilon'. Harmless under the formulation_version pin @dd3a0f15, whose sha the certificate's source_sha256 confirms. [statement phrase 'compact-slab'; FORMULATION.md 'Actual state family and qualitative residual theorem'; radiation-backreaction.json scope.cosmological_term]"
+    },
+    {
+      "dimension": "confidence_calibration",
+      "severity": "note",
+      "text": "Checked each denial against a disclosed field: 'no computed response constant' matches numerical_actual_RSET_response_bound_derived=false, actual_response_status='CONDITIONAL_INPUT_NOT_DERIVED', synthetic_response_inputs_are_claimed_actual_quantum_bounds=false, and strongest_explicit_bounds.actual_response 'qualitative O(epsilon^2) only'; QSEI denial matches the three false QSEI scope flags; 'no nearby exact SEE solution' matches nearby_exact_SEE_solution_or_stability_theorem_established=false and not_established[0]. The hybrid machine+written composition sits inside this ledger's stated CERTIFIED semantics (written steps disclosed in verification_boundary), and the status string flags QUANTITATIVE_SEE_QSEI_OPEN; no overclaim found relative to the level definition. [radiation-backreaction.json scope, not_established, status, strongest_explicit_bounds vs statement sentences 3-6]"
+    },
+    {
+      "dimension": "decision_soundness",
+      "severity": "note",
+      "text": "Timing and gating checked: verifier stamp 2026-09-06T21:38:55 precedes the PASS run 21:40:31 with identical binary_hash 61375c...; exit 0 with fail_exit_codes [3] and a committed FAIL fixture shows the checker can reject; the four IMPORTED entries carry no verification weight, so promotion rests solely on the fresh PASS; dependency P8-A.4 is CERTIFIED and CURRENT, so the min-dependency-level rule permits CERTIFIED; direct re-earning of the legacy CERTIFIED level via promote is the ledger's sanctioned route and no VERIFIED_N rung is required by the level semantics. No reason found to defer. [evidence entry 'p8a_backreaction v1 -> PASS at 2026-09-06T21:40:31+00:00'; current stamp record; dependency line 'P8-A.4 [CERTIFIED, standing CURRENT]']"
+    }
+  ],
+  "id": "P8-A.5.20260906.model.2",
+  "provenance": {
+    "cost_usd": "2.0738",
+    "model": "claude-fable-5",
+    "request_digest": "2fc2f395cb4c75b801a5da53f1272f19cb0a5338649320c9ddf3678f4542edfa",
+    "response_digest": "b30659705e702d0001682b9224753290041ca82f250b0665018bfda1e288756c",
+    "run_id": "review-P8-A.5-f973b6-s2",
+    "transport": "ClaudeCodeClient"
+  },
+  "reviewer": "model",
+  "statement_sha256": "c1b36de2fa83903527afacf8db30938a6e0cbbca97c2bbcebf4dbb3d73aceaee",
+  "target_level": "CERTIFIED",
+  "verdict": "PASS",
+  "waivers": []
+}

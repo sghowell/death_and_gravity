@@ -1,0 +1,67 @@
+{
+  "claim_id": "P8-A.1",
+  "closes": [],
+  "created": "2026-09-06T22:06:29+00:00",
+  "evidence_sha256": [
+    "98bea029773ac2382da256177be0a8909f14e013e75242f1071f4d53e2acbc96",
+    "a5f620920c3d96d8eefe77e829e5b648eb7aae626fd9ca8b58d759940ac8f066",
+    "e0e4bd0d9b04213567ded0f8e57b48b0de44833c205c072b4610a6d12c75ed45",
+    "f719c98068848003e296260d3ff6b03d32acad40662b9c9980f61c39175f209e"
+  ],
+  "findings": [
+    {
+      "dimension": "ledger_consistency",
+      "severity": "warning",
+      "text": "The README's CERTIFIED definition binds the review receipt to \"the certificate's own disclosed `verification_boundary`\", but focusing.json (schema 1) contains no `verification_boundary` field. The machine-replay vs written-step boundary is dispersed across `written_proof: \"notes/focusing.md\"`, `status`, `not_established`, `finite_family_optimization.optimality_scope`, and FORMULATION.md's 'What counts as certified' section (bound only indirectly via `source_sha256`). The receipt therefore has no single in-certificate object to attest within, which the level's stated mechanics presuppose. [problems/P8/a/certificates/focusing.json top-level keys vs README CERTIFIED row phrase 'disclosed `verification_boundary`']"
+    },
+    {
+      "dimension": "evidence_support",
+      "severity": "warning",
+      "text": "The statement asserts \"strict support coverage\" and FORMULATION.md's 'What counts as certified' lists \"Strict support containment for every partition member\" as certified, yet in verify.py build_report() the fields \"strict_containment\": True and \"first_window_over_tau\": [\"-5/16\", \"9/16\"] are hardcoded literals. No machine assertion visible in the supplied evidence compares interior_width_over_allowed_window=14/25 or first_width_over_allowed_window=2/7 against 1, checks [0,1/4] \u2282 (-5/16,9/16), or checks -5/16 \u2265 -1/2 (extended-domain fit). If partition.validate_coverage() enforces these, that source (sha e916c069..., not in the evidence set) is where it happens; the promotion record as supplied does not demonstrate it, and the golden FAIL fixture only exercises JSON-equality replay, not semantic coverage violations. By contrast, Gram positivity is genuinely machine-validated (validated.positive(gram[0,0]), validated.positive(gram.det())) despite its own mirrored hardcoded True fields. [problems/P8/a/src/p8a/verify.py build_report() literals '\"strict_containment\": True' and '\"first_window_over_tau\"'; FORMULATION.md 'What counts as certified' bullet 2; certificate support_coverage]"
+    },
+    {
+      "dimension": "evidence_support",
+      "severity": "note",
+      "text": "The p8a v1 identity hashes only tools/empiricist_check.py and problems/P8/a/src; the interpreter and math stack (.venv/bin/python, SymPy, FLINT/Arb used by independent.py and validated.py) sit outside binary_hash and are captured only as env_sha256=58ad6da6... on the PASS entry, so replay identity rests on an environment recorded but not stamped. notes/focusing.md and FORMULATION.md are likewise outside binary_hash and bound only through the replayed source_sha256 comparison (verified: evidence shas 98bea029... and e0e4bd0d... equal the certificate's entries). [p8a v1 declaration inputs ['tools/empiricist_check.py', 'problems/P8/a/src'] vs PASS note 'env_sha256=58ad6da6...']"
+    },
+    {
+      "dimension": "assumption_explicitness",
+      "severity": "note",
+      "text": "Scope facts carried only by the pinned formulation, absent from the statement text: spacetime dimension 4 and the trace convention \"K is the **trace** of the initial second fundamental form, so K=3H\" (on which the numeral -K*tau=9/2 depends and which a mean-curvature reader would misread); the Fewster--Kontou Ricci sign convention making \"initial Ricci upper bound\" mean convergence; partition ratio r=3/4 and the trial shape q(s)=p+c0\u00b7s\u00b2(1-s)\u00b2+c1\u00b7s\u00b2(1-s)\u00b2(2s-1) behind \"the frozen two-coefficient tail family\"; the specific backward extension to -tau/2 behind \"smooth extended geodesic domain\"; and hypersurface-orthogonality of the congruence (notes/focusing.md \u00a73), implicit in \"sufficient focusing test\" though it follows from normality to a Cauchy surface in the pinned setup. All are fixed via formulation_version@e0e4bd0d, so this is a readability gap of the bound text, not a hidden hypothesis. [statement phrases '-K*tau=9/2', 'smooth extended geodesic domain', 'frozen two-coefficient tail family' vs FORMULATION.md 'Frozen geometric problem' ('K is the **trace**...K=3H', dimension 4, r=3/4, '[-tau/2,tau]')]"
+    },
+    {
+      "dimension": "internal_consistency",
+      "severity": "note",
+      "text": "Cross-checked with no discrepancy: statement numerals vs validated_enclosures (44445507/10^7 and 11111377/2500000 = 4.4445507\u20134.4445508; 24373859/5000000 and 48747719/10^7 = 4.8747718\u20134.8747719; 353/40 and 4413/500 = 8.825\u20138.826); statement parameters vs certificate parameters (10^-6 = 1/1000000, 0.01 = 1/100, rho0=0 \u21d4 rho0\u00b7tau\u00b2=0); separation ordering 4.4445508 < 9/2 < 4.8747718 vs separating_contraction_example and the machine checks validated.positive(Rational(9,2)-minimum) and positive(baseline-Rational(9,2)); notes \u00a72 known answer 768 + (6848/35)z + (1728/715)z\u00b2 vs independent_FLINT_replay.initial_localized_norm; ratios 14/25, 2/7, 6/5 and window (-5/16, 9/16) re-derived from r=3/4 and T(c)=1-c; \u222bp\u00b2=13/35 and the rho0 bridge factor 22/35 re-derived; notes \u00a74 approximate coefficients lie inside the coefficient_0/coefficient_1 enclosures; every enclosure decimal string in verify.py equals the committed rational endpoint. Sole temporal oddity: 'date': '2026-09-05' is hardcoded in build_report and predates the PASS timestamp 2026-09-06T21:40:22 \u2014 an authoring date reproduced by design, not a defect. [statement numerals vs certificate validated_enclosures / parameters / separating_contraction_example; notes/focusing.md \u00a7\u00a71\u20134 vs verify.py build_report()]"
+    },
+    {
+      "dimension": "ledger_consistency",
+      "severity": "note",
+      "text": "Pinning chain verified: formulation_version @e0e4bd0d equals source_sha256['FORMULATION.md'] = e0e4bd0d9b04...; evidence shas for verify.py (a5f62092...) and notes/focusing.md (98bea029...) equal the certificate's source_sha256 entries; empty depends_on is consistent with FORMULATION's 'does not depend on completing P8(b)', making the lowest-dependency-level cap vacuous; the four 'table-import v1 -> IMPORTED' entries are correctly non-counting per the README's IMPORTED rule; the PASS binary_hash 0da0a463... equals the current v1 stamp and the PASS (21:40:22) postdates the stamp (21:38:41). The CONJECTURED\u2192CERTIFIED jump violates no stated rule ('level names the strongest evidence on record'), and the run itself contains the second-engine substance (FLINT vs SymPy). [claim header formulation_version@e0e4bd0d; certificate source_sha256; evidence entry binary_hash vs 'current stamp: v1']"
+    },
+    {
+      "dimension": "confidence_calibration",
+      "severity": "note",
+      "text": "CERTIFIED materially rests on written steps outside machine replay \u2014 the H2-density transfer of the assumed QEI (notes \u00a71), the index-form/focal-point implication and global corollary (notes \u00a73: 'The certificate checks the algebraic identities and constants; it does not formalize that global causal theorem') \u2014 which the README permits at CERTIFIED when disclosed. Disclosure exists via written_proof, hypotheses, not_established, and status, and the statement text itself carries the hedges ('assumptions/open work; no universal optimum, improvement over every published theorem, or full P8(a) completion is claimed'), so the level does not overclaim, modulo the missing boundary object flagged in the ledger_consistency warning and the coverage-check gap flagged under evidence_support. The statement claims only 'meets the optimized sufficient focusing test', not incompleteness, matching the machine-checked comparison against 9/2. [statement final sentence; notes/focusing.md \u00a73; certificate fields written_proof / not_established / status]"
+    },
+    {
+      "dimension": "decision_soundness",
+      "severity": "note",
+      "text": "Procedurally the promotion is ripe: fresh stamp (2026-09-06T21:38:41) precedes the PASS (21:40:22) under the same binary_hash, exit=0 against fail_exit_codes [3], hash coherence holds, dependencies are empty, and the IMPORTED entries carry no weight. Residual weakness: the stamp's golden suite uses the promoted evidence file itself as its only PASS fixture ('fixtures PASS [problems/P8/a/certificates/focusing.json]'), so stamping and promotion evidence are not independent artifacts, and the single FAIL fixture demonstrates only that a mutated certificate fails equality replay, not that semantic violations (e.g., a coverage ratio \u2265 1, cf. the evidence_support warning) are caught. The two warnings above are the only defects standing between this record and a clean receipt. [p8a v1 stamp fields 'fixtures PASS [...]' / 'FAIL [claims/fixtures/p8a/fail-mutated.json]'; evidence entry note 'exit=0']"
+    }
+  ],
+  "id": "P8-A.1.20260906.model.3",
+  "provenance": {
+    "cost_usd": "2.0339",
+    "model": "claude-fable-5",
+    "request_digest": "f895e85f5f88517af2d864b3adf9bc72e223d344af6e938a3da1e48afa1e9b05",
+    "response_digest": "8b7d69bfafd91ad78ee42d1e9399cd82b77fe4397772fe9a93d235e535cd0dda",
+    "run_id": "review-P8-A.1-c31df5-s1",
+    "transport": "ClaudeCodeClient"
+  },
+  "reviewer": "model",
+  "statement_sha256": "3db9b01f02a275fd508042df1720acf9364dc762cb97a1916edd7aaf3ed507b9",
+  "target_level": "CERTIFIED",
+  "verdict": "REVISE",
+  "waivers": []
+}
