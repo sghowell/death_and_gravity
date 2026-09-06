@@ -6,7 +6,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/s5/control/certificates/adiabatic.json
   stamped: '2026-09-04'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -14,7 +14,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/s5/control/src/p8_control/verify.py
   stamped: '2026-09-04'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -22,19 +22,23 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/s5/control/notes/oscillators.md
   stamped: '2026-09-04'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 formulation_version: legacy-table
 id: P8-S5.3a.D
 kind: statement
-level: CERTIFIED
+legacy_level: CERTIFIED
+level: HEURISTIC
 n: null
 notes: 'imported from CLAIMS.md; level note: generic quadratic-completion/IBP identities,
   independent original-cosmic-time differentiation, exact rational majorants and written
   covering-domain lemmas; scoped exact reduction and bounds only'
 problem: P8(b), D-only M0
 receipts: []
+source:
+  kind: table
+  ref: P8-S5.3a.D
 standing: CURRENT
 statement: Including the expanding volume factor, the exact scalar/tensor quadratic
   actions have oscillator form with Omega² ell²=q+mu in the stated covering charts.

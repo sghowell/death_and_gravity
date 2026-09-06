@@ -1,0 +1,50 @@
+coverage: null
+depends_on: []
+evidence:
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P4/notes/s4-reduction.md
+  stamped: '2026-08-31'
+  verdict: IMPORTED
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P4/src/p4/validated/tc_leading.py
+  stamped: '2026-08-31'
+  verdict: IMPORTED
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P4/results/theorem_c/tc_leading.json
+  stamped: '2026-08-31'
+  verdict: IMPORTED
+  verifier: table-import
+  version: '1'
+formulation_version: legacy-table
+id: P4-7
+kind: statement
+legacy_level: CONJECTURED
+level: HEURISTIC
+n: null
+notes: imported from CLAIMS.md
+problem: P4
+receipts: []
+source:
+  kind: table
+  ref: P4-7
+standing: CURRENT
+statement: 'Structure of E at large |κ| in the closed right half-plane: E(κ) = C κ^{−q}
+  e^{Φ₊κ}(1 + d/κ + O(1/κ²)) with Φ₊ = 0.86161 (= ∫μ₊dx), q = 0.997 ≈ 1, C = 0.6326,
+  d ≈ −8.5, single WKB term on all three rays |κ| ∈ [30, 300] (θ = 0, π/4, π/2; joint
+  fit residual 4.9e−3 in ln|E|; the earlier p ≈ 0.7 real-ray reading was the d/κ correction
+  aliasing into the power on |κ| ≤ 60); factorisation C = c_s D_∞ e^{−J} κ^{−1} with
+  D_∞ = 2.0389 (κ-free centre determinant) and J(δ*=0.05) = 6.274 in the stated Levinson
+  frame'
+substatus: null
+supersedes: []
+updated: '2026-08-31'

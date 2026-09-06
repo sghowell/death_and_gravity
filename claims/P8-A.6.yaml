@@ -6,7 +6,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/a/applicability/reference/asymptotics/backreaction/response/certificates/radiation-response.json
   stamped: '2026-09-05'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -14,7 +14,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/a/applicability/reference/asymptotics/backreaction/response/src/p8a_response/verify.py
   stamped: '2026-09-05'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -22,7 +22,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/a/applicability/reference/asymptotics/backreaction/response/notes/proof.md
   stamped: '2026-09-05'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -30,13 +30,14 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/a/applicability/reference/asymptotics/backreaction/response/FORMULATION.md
   stamped: '2026-09-05'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 formulation_version: legacy-table
 id: P8-A.6
 kind: statement
-level: CERTIFIED
+legacy_level: CERTIFIED
+level: HEURISTIC
 n: null
 notes: 'imported from CLAIMS.md; level note: source-based Hadamard and retarded finite-part
   proof; exact Born/subtraction/trace/clock/conservation identities, independent geometric
@@ -44,6 +45,9 @@ notes: 'imported from CLAIMS.md; level note: source-based Hadamard and retarded 
   second-order correction argument, not FORMALIZED'
 problem: P8(a), prepared-state first stress response and second-order backreaction
 receipts: []
+source:
+  kind: table
+  ref: P8-A.6
 standing: CURRENT
 statement: For A.5's past-prepared massless minimal Hadamard family, the actual first
   parameter derivative of the Wick square and physical density, pressure and EED is

@@ -6,7 +6,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P9/results/summary.md
   stamped: '2026-08-26'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -14,7 +14,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P9/results/certificates/lkr_L1.5_D4_r2/state.json
   stamped: '2026-08-26'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -22,7 +22,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P9/results/certificates/lkr_L10_D4_r2/state.json
   stamped: '2026-08-26'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -30,7 +30,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P9/results/certificates/lkr_L1_D4_r2/state.json
   stamped: '2026-08-26'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -38,7 +38,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P9/results/certificates/lkr_L2_D4_r2/state.json
   stamped: '2026-08-26'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -46,7 +46,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P9/results/certificates/lkr_L3_D4_r2/state.json
   stamped: '2026-08-26'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -54,19 +54,23 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P9/results/certificates/lkr_L5_D4_r2/state.json
   stamped: '2026-08-26'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 formulation_version: legacy-table
 id: P9-3
 kind: statement
-level: CERTIFIED
+legacy_level: CERTIFIED
+level: HEURISTIC
 n: null
 notes: 'imported from CLAIMS.md; level note: for all rows (chains + feasible points
   at each row''s own T); the L = 1.5, Δ = 4 chain is being re-run with the post-review
   rigor fixes (v1; evidence not resolved in repo: feasible_L*_D4_r2.json'
 problem: P9
 receipts: []
+source:
+  kind: table
+  ref: P9-3
 standing: CURRENT
 statement: 'Same statement (refined class, Δ = 4, each row at its own recorded T):
   L = 1: max_F H₀ ∈ [69.6497, 69.8431] (replayed value 69.843019; class-min χ² 1596.60,

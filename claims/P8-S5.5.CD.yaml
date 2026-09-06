@@ -6,7 +6,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/s5/matter/certificates/cd-matter.json
   stamped: '2026-09-05'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -14,7 +14,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/s5/matter/src/p8_m1/verify.py
   stamped: '2026-09-05'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -22,7 +22,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/s5/matter/notes/nonlinear.md
   stamped: '2026-09-05'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -30,13 +30,14 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/s5/matter/FORMULATION.md
   stamped: '2026-09-05'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 formulation_version: legacy-table
 id: P8-S5.5.CD
 kind: statement
-level: CERTIFIED
+legacy_level: CERTIFIED
+level: HEURISTIC
 n: null
 notes: 'imported from CLAIMS.md; level note: full nonlinear ADM/IBP identities, independent
   metric/matter Legendre and literal bounce checks, generic stationary recurrence,
@@ -44,6 +45,9 @@ notes: 'imported from CLAIMS.md; level note: full nonlinear ADM/IBP identities, 
   lemmas, not FORMALIZED'
 problem: P8(b), fixed CD/M1
 receipts: []
+source:
+  kind: table
+  ref: P8-S5.5.CD
 standing: CURRENT
 statement: The regular spatial map h_ij=T^(-1/2) hat_h_ij, T=1+(N^-2-1)/d^3, removes
   lapse derivatives after retaining the additional local canonical primitive required

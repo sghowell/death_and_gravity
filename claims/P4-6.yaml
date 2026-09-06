@@ -6,7 +6,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P4/notes/s2-theorem-b.md
   stamped: '2026-08-31'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -14,7 +14,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P4/results/theorem_b/analyticity_R.json
   stamped: '2026-08-31'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -22,7 +22,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P4/results/theorem_b/krawczyk.json
   stamped: '2026-08-31'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -30,7 +30,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P4/results/theorem_b/winding_R.json
   stamped: '2026-08-31'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -38,7 +38,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P4/tests/test_validated_modes_stage3.py
   stamped: '2026-08-31'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -46,13 +46,14 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P4/src/p4/validated/tc_reduce.py
   stamped: '2026-08-31'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 formulation_version: legacy-table
 id: P4-6
 kind: statement
-level: CERTIFIED
+legacy_level: CERTIFIED
+level: HEURISTIC
 n: null
 notes: 'imported from CLAIMS.md; level note: rigorous winding number 2 via 290 contour
   tiles with κ-Taylor-model enclosures; 432 analyticity boxes; Krawczyk enclosures)
@@ -61,13 +62,16 @@ notes: 'imported from CLAIMS.md; level note: rigorous winding number 2 via 290 c
   invariance as an fmpq_mpoly identity + certified exponents at both singular ends),
   certify4 index range and Krawczyk remainder/Cauchy-radius formalities fixed (enclosures
   unchanged), cached tubes validated, winding and analyticity cover reproduced from
-  documented commands and stored (results/theorem_b/*.json). Remaining caveats: ~~gauge
+  documented commands and stored (results/theorem_b/.json). Remaining caveats: ~~gauge
   identity is a ball identity to order 38~~ closed 2026-08-31: the gauge vector (A′,
   N′+κN, W′, V′) solves the 4D linearised system as an exact fmpq_mpoly identity for
-  every κ (S4-1, `tc_reduce.gauge_residual`, tests/test_tc_reduction.py); exclusion
+  every κ (S4-1, tc_reduce.gauge_residual, tests/test_tc_reduction.py); exclusion
   outside R (Theorem C) open'
 problem: P4
 receipts: []
+source:
+  kind: table
+  ref: P4-6
 standing: CURRENT
 statement: 'Theorem B (mode count in the rectangle): for the linearized EC problem
   in the KHA sonic-point gauge, the matching function E (zeros = analytic-at-sonic-point,

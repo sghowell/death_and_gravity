@@ -6,7 +6,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/certificates/witness-C.json
   stamped: '2026-09-04'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -14,7 +14,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/src/p8/candidate_cert.py
   stamped: '2026-09-04'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -22,19 +22,23 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/notes/s2-rational-witnesses.md
   stamped: '2026-09-04'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 formulation_version: legacy-table
 id: P8-2.C
 kind: statement
-level: CERTIFIED
+legacy_level: CERTIFIED
+level: HEURISTIC
 n: null
 notes: 'imported from CLAIMS.md; level note: exact reconstruction; FLINT rational
   Sturm, exact Bernstein domain/remainder/derivative bounds; written canonical-tail
   and completeness lemmas'
 problem: P8(b), M0
 receipts: []
+source:
+  kind: table
+  ref: P8-2.C
 standing: CURRENT
 statement: 'Exact C-only covariant witness with d=1+t², a=d^(1/4), phi=t, A1=A3=K=0,
   F2=−T/2+3T(1−X)/(4d²), T=1−1/(2d), and reconstructed rational F: all-time complete

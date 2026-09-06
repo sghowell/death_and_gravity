@@ -6,13 +6,14 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P9/results/summary.md
   stamped: '2026-08-30'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 formulation_version: legacy-table
 id: P9-4
 kind: statement
-level: CERTIFIED
+legacy_level: CERTIFIED
+level: HEURISTIC
 n: null
 notes: 'imported from CLAIMS.md; level note: for all five rows (chains of Arb-verified
   dual certificates + certified feasible points at each row''s own T; all five chains
@@ -21,6 +22,9 @@ notes: 'imported from CLAIMS.md; level note: for all five rows (chains of Arb-ve
   feasible_L1.5_D4_r2_*.json'
 problem: P9
 receipts: []
+source:
+  kind: table
+  ref: P9-4
 standing: CURRENT
 statement: 'Variants of P9-2 (C(G₃₇₃, 1.5), M'' ∈ [0,40], Δ = 4, Planck r_d box, each
   at its own recorded T; values at r_lo): Pantheon+ with the BGS D_V row: max_F H₀

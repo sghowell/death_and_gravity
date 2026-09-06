@@ -6,7 +6,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/s5/matter/physical/control/tree/certificates/cd-tree-control.json
   stamped: '2026-09-05'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -14,7 +14,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/s5/matter/physical/control/tree/src/p8_m1_tree/verify.py
   stamped: '2026-09-05'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -22,7 +22,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/s5/matter/physical/control/tree/notes/tree-bound.md
   stamped: '2026-09-05'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -30,13 +30,14 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/s5/matter/physical/control/tree/FORMULATION.md
   stamped: '2026-09-05'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 formulation_version: legacy-table
 id: P8-S5.8.CD
 kind: statement
-level: CERTIFIED
+legacy_level: CERTIFIED
+level: HEURISTIC
 n: null
 notes: 'imported from CLAIMS.md; level note: pinned full free-control replay, exact
   coupled initial CCR and scale identities, rational canonical/denominator/series
@@ -44,6 +45,9 @@ notes: 'imported from CLAIMS.md; level note: pinned full free-control replay, ex
   induction, finite-tree and continuum Schur lemmas, not FORMALIZED'
 problem: P8(b), fixed CD/M1 finite-time hard-channel trees
 receipts: []
+source:
+  kind: table
+  ref: P8-S5.8.CD
 standing: CURRENT
 statement: On abs(t-t0)<=ell0/100 at every finite center, external initial physical
   momenta in ell0 units lie in [10^11,10^12] and every nonempty proper signed subset

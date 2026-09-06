@@ -6,7 +6,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P9/b/src/p9b/witnesses.py
   stamped: '2026-08-31'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -14,7 +14,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P9/b/certificates/P9b-1.KB.json
   stamped: '2026-08-31'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -22,7 +22,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P9/b/certificates/P9b-1.KBH.json
   stamped: '2026-08-31'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -30,7 +30,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P9/b/certificates/P9b-1.KBM.json
   stamped: '2026-08-31'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -38,7 +38,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P9/b/certificates/P9b-1.KBMH.json
   stamped: '2026-08-31'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -46,7 +46,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P9/b/certificates/P9b-1.KBT.json
   stamped: '2026-08-31'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -54,7 +54,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P9/b/certificates/P9b-1.KBTH.json
   stamped: '2026-08-31'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -62,7 +62,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P9/b/certificates/P9b-1.KBTM.json
   stamped: '2026-08-31'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -70,7 +70,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P9/b/certificates/P9b-1.KBTMH.json
   stamped: '2026-08-31'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -78,7 +78,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P9/b/certificates/P9b-1.KH.json
   stamped: '2026-08-31'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -86,7 +86,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P9/b/certificates/P9b-1.KM.json
   stamped: '2026-08-31'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -94,7 +94,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P9/b/certificates/P9b-1.KMH.json
   stamped: '2026-08-31'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -102,7 +102,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P9/b/certificates/P9b-1.KT.json
   stamped: '2026-08-31'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -110,7 +110,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P9/b/certificates/P9b-1.KTH.json
   stamped: '2026-08-31'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -118,7 +118,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P9/b/certificates/P9b-1.KTM.json
   stamped: '2026-08-31'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -126,7 +126,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P9/b/certificates/P9b-1.KTMH.json
   stamped: '2026-08-31'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -134,7 +134,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P9/b/tests/test_s3_witnesses.py
   stamped: '2026-08-31'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -142,18 +142,22 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P9/b/notes/s3-witnesses.md
   stamped: '2026-08-31'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 formulation_version: legacy-table
 id: P9b-1.rows
 kind: statement
-level: CERTIFIED
+legacy_level: CERTIFIED
+level: HEURISTIC
 n: null
 notes: 'imported from CLAIMS.md; level note: 15 certificate JSONs; braiding master
   target matched exactly to the derived eigen-speed for the 8 α_B rows'
 problem: P9(b)
 receipts: []
+source:
+  kind: table
+  ref: P9b-1.rows
 standing: CURRENT
 statement: 'Ladder rows S ≠ {α_K}, all 15: (E) — explicit witnesses on F* (α_K = 1;
   α_T = −1/10, α_M = 1/2, α_H = 1, α_B^BS = a/2 as constants/rational functions per

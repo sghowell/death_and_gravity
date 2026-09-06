@@ -6,7 +6,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/s5/matter/physical/control/certificates/cd-free-control.json
   stamped: '2026-09-05'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -14,7 +14,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/s5/matter/physical/control/src/p8_m1_control/verify.py
   stamped: '2026-09-05'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -22,7 +22,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/s5/matter/physical/control/notes/normalization.md
   stamped: '2026-09-05'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -30,13 +30,14 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/s5/matter/physical/control/FORMULATION.md
   stamped: '2026-09-05'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 formulation_version: legacy-table
 id: P8-S5.7.CD
 kind: statement
-level: CERTIFIED
+legacy_level: CERTIFIED
+level: HEURISTIC
 n: null
 notes: 'imported from CLAIMS.md; level note: generic canonical and covariant-energy
   identities, exact compact rational parity arithmetic and denominator/L1 bounds,
@@ -45,6 +46,9 @@ notes: 'imported from CLAIMS.md; level note: generic canonical and covariant-ene
   lemmas, not FORMALIZED'
 problem: P8(b), fixed CD/M1 coupled quadratic control
 receipts: []
+source:
+  kind: table
+  ref: P8-S5.7.CD
 standing: CURRENT
 statement: The full finite-q two-scalar Hamiltonian has an exact volume/kinetic canonical
   normalization retaining the symmetric momentum boundary and antisymmetric connection.

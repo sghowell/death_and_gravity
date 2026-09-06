@@ -6,7 +6,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/a/certificates/focusing.json
   stamped: '2026-09-05'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -14,7 +14,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/a/src/p8a/verify.py
   stamped: '2026-09-05'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -22,7 +22,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/a/notes/focusing.md
   stamped: '2026-09-05'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -30,19 +30,23 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/a/FORMULATION.md
   stamped: '2026-09-05'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 formulation_version: legacy-table
 id: P8-A.1
 kind: statement
-level: CERTIFIED
+legacy_level: CERTIFIED
+level: HEURISTIC
 n: null
 notes: 'imported from CLAIMS.md; level note: exact localization/endpoint/focusing
   identities, independent FLINT integration and infinite-tail reconstruction, outward
   Arb enclosures and written Sobolev/index-form/global-causal lemmas; not FORMALIZED'
 problem: P8(a), conditional 4D timelike focusing
 receipts: []
+source:
+  kind: table
+  ref: P8-A.1
 standing: CURRENT
 statement: 'Under the explicit local geometric QEI with T(t)=tau-t, smooth extended
   geodesic domain, and initial Ricci upper bound on [0,tau/4], an H2 polynomial-angle

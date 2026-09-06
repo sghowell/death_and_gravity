@@ -6,7 +6,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/s5/certificates/d-nonlinear.json
   stamped: '2026-09-04'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -14,7 +14,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/s5/src/p8_s5/verify.py
   stamped: '2026-09-04'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -22,13 +22,14 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/s5/notes/nonlinear-d.md
   stamped: '2026-09-04'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 formulation_version: legacy-table
 id: P8-S5.1.D
 kind: statement
-level: CERTIFIED
+legacy_level: CERTIFIED
+level: HEURISTIC
 n: null
 notes: 'imported from CLAIMS.md; level note: independent nonlinear/quadratic bridges,
   generic stationary-series and literal bounce checks, exact FLINT/coefficient-norm
@@ -36,6 +37,9 @@ notes: 'imported from CLAIMS.md; level note: independent nonlinear/quadratic bri
   normalization only'
 problem: P8(b), D-only M0
 receipts: []
+source:
+  kind: table
+  ref: P8-S5.1.D
 standing: CURRENT
 statement: For the fixed D witness, h_ij=exp(2 omega) hat_h_ij with omega=(N^-4-1)/(2(1+u²)^3)
   removes lapse derivatives exactly. A full six-component Legendre transform gives

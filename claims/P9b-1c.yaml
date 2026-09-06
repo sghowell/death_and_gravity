@@ -6,7 +6,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P9/b/src/p9b/fiducial.py
   stamped: '2026-08-31'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -14,7 +14,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P9/b/tests/test_s2_rows.py
   stamped: '2026-08-31'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -22,18 +22,22 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P9/b/notes/s2-nogo-rows.md
   stamped: '2026-08-31'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 formulation_version: legacy-table
 id: P9b-1c
 kind: statement
-level: CONJECTURED
+legacy_level: CONJECTURED
+level: HEURISTIC
 n: null
 notes: 'imported from CLAIMS.md; level note: 2026-08-31 (S2 float near-witnesses);
   superseded same day by P9b-1 (S3 Arb certification'
 problem: P9(b)
 receipts: []
+source:
+  kind: table
+  ref: P9b-1c
 standing: CURRENT
 statement: 'Classification conjecture after S2: every ladder row except {α_K} admits
   a stable crossing, so the minimal sets are exactly the four two-operator rows {α_K,α_B},

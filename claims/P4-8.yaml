@@ -6,7 +6,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P4/notes/s4-energy.md
   stamped: '2026-08-31'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -14,7 +14,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P4/src/p4/validated/tc_energy.py
   stamped: '2026-08-31'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -22,7 +22,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P4/results/theorem_c/tc_energy.json
   stamped: '2026-08-31'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -30,19 +30,23 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P4/tests/test_tc_energy.py
   stamped: '2026-08-31'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 formulation_version: legacy-table
 id: P4-8
 kind: statement
-level: CERTIFIED
+legacy_level: CERTIFIED
+level: HEURISTIC
 n: null
 notes: 'imported from CLAIMS.md; level note: conditional on Lemma D (deep tail x ≤
   −4.5: same pointwise conditions, float-validated with relative margin ≥ 0.39 on
   [−16, −4.5]; exact closing computation identified — to be closed in S4-3'
 problem: P4
 receipts: []
+source:
+  kind: table
+  ref: P4-8
 standing: CURRENT
 statement: 'Direct-energy exclusion (Theorem C, part 1): in the class of P4-6 there
   is no eigenvalue with Re κ ≥ 6, hence E(κ) ≠ 0 on {Re κ ≥ 6} — via the GHJS-transfer

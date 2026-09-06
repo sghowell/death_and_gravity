@@ -6,7 +6,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P4/notes/numerics-report.md
   stamped: '2026-08-25'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -14,17 +14,21 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P4/tests/test_shoot.py
   stamped: '2026-08-25'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 formulation_version: legacy-table
 id: P4-1
 kind: statement
-level: CONJECTURED
+legacy_level: CONJECTURED
+level: HEURISTIC
 n: null
 notes: imported from CLAIMS.md
 problem: P4
 receipts: []
+source:
+  kind: table
+  ref: P4-1
 standing: CURRENT
 statement: The Evans–Coleman CSS solution of Einstein–Euler (p = ρ/3) crosses its
   sonic point (a saddle) along the branch V₁ > 0 with V₀ = 0.112439401388092; V has

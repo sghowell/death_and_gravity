@@ -6,7 +6,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/s6/certificates/vacuum-extension.json
   stamped: '2026-09-04'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -14,7 +14,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/s6/src/p8_uv/verify.py
   stamped: '2026-09-04'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -22,7 +22,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/s6/notes/vacuum-extension.md
   stamped: '2026-09-04'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -30,19 +30,23 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/s6/FORMULATION.md
   stamped: '2026-09-04'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 formulation_version: legacy-table
 id: P8-S6.1.D
 kind: statement
-level: CERTIFIED
+legacy_level: CERTIFIED
+level: HEURISTIC
 n: null
 notes: 'imported from CLAIMS.md; level note: exact branch, canonical normalization,
   Ia and independent amplitude/massive-mediator checks; pinned prior sign; written
   all-orders smoothness and analytic-identity lemmas, not formalized'
 problem: P8(b), D-only M0; conditional UV branch
 receipts: []
+source:
+  kind: table
+  ref: P8-S6.1.D
 standing: CURRENT
 statement: An explicit smooth D-only extension agrees with the full pinned action
   on an open set containing its entire clock tube and has a constant-clock Minkowski

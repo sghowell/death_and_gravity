@@ -6,7 +6,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/a/applicability/reference/asymptotics/certificates/radiation-asymptotics.json
   stamped: '2026-09-05'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -14,7 +14,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/a/applicability/reference/asymptotics/src/p8a_asymptotics/verify.py
   stamped: '2026-09-05'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -22,7 +22,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/a/applicability/reference/asymptotics/notes/proof.md
   stamped: '2026-09-05'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -30,13 +30,14 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/a/applicability/reference/asymptotics/FORMULATION.md
   stamped: '2026-09-05'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 formulation_version: legacy-table
 id: P8-A.4
 kind: statement
-level: CERTIFIED
+legacy_level: CERTIFIED
+level: HEURISTIC
 n: null
 notes: 'imported from CLAIMS.md; level note: written Hadamard/wave Cauchy argument
   with arbitrary noncompact data and both bisolution variables; exact independent
@@ -44,6 +45,9 @@ notes: 'imported from CLAIMS.md; level note: written Hadamard/wave Cauchy argume
   outward Arb residual example and pinned A.3 replay; not FORMALIZED'
 problem: P8(a), whole-patch exact-radiation semiclassical obstruction
 receipts: []
+source:
+  kind: table
+  ref: P8-A.4
 standing: CURRENT
 statement: For every state with a microlocal Hadamard two-point distribution of the
   specified free massless minimal scalar on the entire radiation patch (0,infinity)_eta

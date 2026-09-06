@@ -6,7 +6,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P9/results/certificates/feasible_L1.5_D4.json
   stamped: '2026-08-25'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -14,18 +14,22 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P9/src/p9/certify_feasible.py
   stamped: '2026-08-25'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 formulation_version: legacy-table
 id: P9-1
 kind: statement
-level: CERTIFIED
+legacy_level: CERTIFIED
+level: HEURISTIC
 n: null
 notes: 'imported from CLAIMS.md; level note: exact class check + ball-arithmetic χ²
   enclosures; certificate = the point'
 problem: P9
 receipts: []
+source:
+  kind: table
+  ref: P9-1
 standing: CURRENT
 statement: 'For the class C(G, L=1.5), M'' ∈ [0,40], frozen inputs, and T = χ²(ũ*)
   + 4 with the recorded reference point: an explicit class member with χ² ≤ T has

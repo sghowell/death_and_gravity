@@ -6,7 +6,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/s5/matter/certificates/cd-matter.json
   stamped: '2026-09-05'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -14,7 +14,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/s5/matter/src/p8_m1/robustness.py
   stamped: '2026-09-05'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -22,7 +22,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/s5/matter/notes/robustness.md
   stamped: '2026-09-05'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -30,19 +30,23 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/s5/matter/FORMULATION.md
   stamped: '2026-09-05'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 formulation_version: legacy-table
 id: P8-S5.5.cone
 kind: statement
-level: CERTIFIED
+legacy_level: CERTIFIED
+level: HEURISTIC
 n: null
 notes: 'imported from CLAIMS.md; level note: exact congruence/characteristic/chart
   and covariant-jet/tail identities, positive/negative controls, pinned prior geometry
   and written real-matrix/asymptotic lemmas; not FORMALIZED'
 problem: P8(b), canonical-matter principal robustness
 receipts: []
+source:
+  kind: table
+  ref: P8-S5.5.cone
 standing: CURRENT
 statement: For positive-definite K=[[A,B],[B,Q]] and G=[[C,D],[D,Q]] with Q>0, define
   k=A-B^2/Q, a=A-C, b=B-D, s=(a-2Bb/Q)/k and r^2=b^2/(kQ). Exact squared speeds are

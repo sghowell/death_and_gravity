@@ -6,7 +6,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/s5/scattering/certificates/tree-control.json
   stamped: '2026-09-04'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -14,7 +14,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/s5/scattering/src/p8_scattering/verify.py
   stamped: '2026-09-04'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -22,7 +22,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/s5/scattering/notes/finite-time.md
   stamped: '2026-09-04'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -30,13 +30,14 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/s5/scattering/FORMULATION.md
   stamped: '2026-09-04'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 formulation_version: legacy-table
 id: P8-S5.3b.D
 kind: statement
-level: CERTIFIED
+legacy_level: CERTIFIED
+level: HEURISTIC
 n: null
 notes: 'imported from CLAIMS.md; level note: independent frequency/velocity bridges
   and free-field contact/exchange cancellation; exact Fraction majorants, all-time
@@ -44,6 +45,9 @@ notes: 'imported from CLAIMS.md; level note: independent frequency/velocity brid
   lemmas; scoped exact facts and stated analytic lemmas'
 problem: P8(b), D-only M0
 receipts: []
+source:
+  kind: table
+  ref: P8-S5.3b.D
 standing: CURRENT
 statement: Under the explicit finite-time, continuum momentum-fiber hard-transfer
   contract, one common sufficient M*tau>=10^270 bounds connected cubic and quartic-order

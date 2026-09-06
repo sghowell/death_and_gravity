@@ -6,7 +6,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/s5/matter/physical/control/tree/loops/tensor/scalars/certificates/cd-weyl-scalars.json
   stamped: '2026-09-05'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -14,7 +14,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/s5/matter/physical/control/tree/loops/tensor/scalars/src/p8_m1_weyl_scalar/verify.py
   stamped: '2026-09-05'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -22,7 +22,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/s5/matter/physical/control/tree/loops/tensor/scalars/notes/scalar-response.md
   stamped: '2026-09-05'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -30,13 +30,14 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/s5/matter/physical/control/tree/loops/tensor/scalars/FORMULATION.md
   stamped: '2026-09-05'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 formulation_version: legacy-table
 id: P8-S5.11.CD
 kind: statement
-level: CERTIFIED
+legacy_level: CERTIFIED
+level: HEURISTIC
 n: null
 notes: 'imported from CLAIMS.md; level note: independent four-index scalar/gauge/clock
   and full canonical-Hamiltonian audits; exact stationary/action/observable-map identities,
@@ -44,6 +45,9 @@ notes: 'imported from CLAIMS.md; level note: independent four-index scalar/gauge
   replay; written stationary-action and time-ordered evolution proof, not FORMALIZED'
 problem: P8(b), same constant-Weyl candidate, coupled scalar response
 receipts: []
+source:
+  kind: table
+  ref: P8-S5.11.CD
 standing: CURRENT
 statement: For S5.10's unchanged CD/M1+cC integral C_Weyl^2 candidate, exact scalar
   geometry gives (4cC/3) integral a^3*q^2*Lensing^2. A partial Legendre transform

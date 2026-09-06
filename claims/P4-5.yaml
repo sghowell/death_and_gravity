@@ -6,7 +6,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P4/notes/s2-validated-shooting.md
   stamped: '2026-08-29'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -14,7 +14,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P4/notes/modelling-scope.md
   stamped: '2026-08-29'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -22,7 +22,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P4/tests/test_validated_shoot_matching.py
   stamped: '2026-08-29'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -30,13 +30,14 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P4/tests/test_derivation.py
   stamped: '2026-08-29'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 formulation_version: legacy-table
 id: P4-5
 kind: statement
-level: CERTIFIED
+legacy_level: CERTIFIED
+level: HEURISTIC
 n: null
 notes: 'imported from CLAIMS.md; level note: — adversarial review 2026-08-26: "proven
   as stated" modulo modelling scope; modelling scope closed 2026-08-29: exact symbolic
@@ -47,6 +48,9 @@ notes: 'imported from CLAIMS.md; level note: — adversarial review 2026-08-26: 
   conventions'
 problem: P4
 receipts: []
+source:
+  kind: table
+  ref: P4-5
 standing: CURRENT
 statement: 'Theorem A (existence): the constraint-reduced CSS Einstein–Euler system
   at k = 1/3 (KHA variables) has a solution on (−∞, 0.1) that is the analytic EC-branch

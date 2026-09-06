@@ -6,7 +6,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/certificates/classification.json
   stamped: '2026-09-04'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -14,7 +14,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/src/p8/verify_all.py
   stamped: '2026-09-04'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -22,7 +22,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/notes/s3-classification.md
   stamped: '2026-09-04'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -30,13 +30,14 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/notes/s4-review.md
   stamped: '2026-09-04'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 formulation_version: legacy-table
 id: P8-3
 kind: statement
-level: CERTIFIED
+legacy_level: CERTIFIED
+level: HEURISTIC
 n: null
 notes: 'imported from CLAIMS.md; level note: for the frozen linear classification
   (exact algebra, all-time rational/Arb certificates, finite lattice enumeration and
@@ -45,6 +46,9 @@ notes: 'imported from CLAIMS.md; level note: for the frozen linear classificatio
   strong coupling and UV completion remain unestablished'
 problem: P8(b)
 receipts: []
+source:
+  kind: table
+  ref: P8-3
 standing: CURRENT
 statement: 'Under FORMULATION v1.1''s all-time covariant-tube, fixed physical matter
   frame, conventional GR/scalar tails and strict linear-principal health/speed contract,

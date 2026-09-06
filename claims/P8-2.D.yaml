@@ -6,7 +6,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/certificates/witness-D.json
   stamped: '2026-09-04'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -14,7 +14,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/src/p8/candidate_cert.py
   stamped: '2026-09-04'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -22,18 +22,22 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/notes/s2-rational-witnesses.md
   stamped: '2026-09-04'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 formulation_version: legacy-table
 id: P8-2.D
 kind: statement
-level: CERTIFIED
+legacy_level: CERTIFIED
+level: HEURISTIC
 n: null
 notes: 'imported from CLAIMS.md; level note: exact reconstruction; FLINT rational
   Sturm and exact Bernstein certificates plus written analytic lemmas'
 problem: P8(b), M0
 receipts: []
+source:
+  kind: table
+  ref: P8-2.D
 standing: CURRENT
 statement: Exact D-only covariant witness with d=1+t², a=d, phi=t, F2=−1/2, A1=K=0,
   A3=4/d³ and reconstructed rational F satisfies the same all-time linear-principal,

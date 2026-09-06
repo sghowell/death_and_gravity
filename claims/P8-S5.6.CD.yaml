@@ -6,7 +6,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/s5/matter/physical/certificates/cd-interactions.json
   stamped: '2026-09-05'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -14,7 +14,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/s5/matter/physical/src/p8_m1_physical/verify.py
   stamped: '2026-09-05'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -22,7 +22,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/s5/matter/physical/notes/reduction.md
   stamped: '2026-09-05'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -30,13 +30,14 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/s5/matter/physical/FORMULATION.md
   stamped: '2026-09-05'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 formulation_version: legacy-table
 id: P8-S5.6.CD
 kind: statement
-level: CERTIFIED
+legacy_level: CERTIFIED
+level: HEURISTIC
 n: null
 notes: 'imported from CLAIMS.md; level note: generic York/canonical/stationary/matrix-Legendre
   identities, 35 exact symbolic-time quadratic residuals, exact rational-time fixtures,
@@ -44,6 +45,9 @@ notes: 'imported from CLAIMS.md; level note: generic York/canonical/stationary/m
   and fixed-momentum regularity lemmas, not FORMALIZED'
 problem: P8(b), fixed CD/M1 physical interactions
 receipts: []
+source:
+  kind: table
+  ref: P8-S5.6.CD
 standing: CURRENT
 statement: In the frozen small-field auxiliary-metric spatial gauge, all three matter-sourced
   momentum constraints are recursively solved through degree three, giving cubic/quartic

@@ -6,7 +6,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/s6/matching/certificates/parent-tests.json
   stamped: '2026-09-04'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -14,7 +14,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/s6/matching/src/p8_matching/frames.py
   stamped: '2026-09-04'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -22,7 +22,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/s6/matching/src/p8_matching/horndeski.py
   stamped: '2026-09-04'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -30,7 +30,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/s6/matching/notes/frame-tests.md
   stamped: '2026-09-04'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -38,19 +38,23 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/s6/matching/FORMULATION.md
   stamped: '2026-09-04'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 formulation_version: legacy-table
 id: P8-S6.2.frames
 kind: statement
-level: CERTIFIED
+legacy_level: CERTIFIED
+level: HEURISTIC
 n: null
 notes: 'imported from CLAIMS.md; level note: direct tensor-action pullback, inverse
   and ADM/Horndeski identities, exact roots and prior-map bridge; written concavity
   and map-obstruction lemmas, not formalized'
 problem: P8(b), fixed D-only M0; selected exact parent/frame ansatzes
 receipts: []
+source:
+  kind: table
+  ref: P8-S6.2.frames
 standing: CURRENT
 statement: Pulling back an Einstein/NEC-scalar parent gives G_T/M^2=C^(3/2)/sqrt(W),
   F_T/M^2=sqrt(CW). Positive constant tensor tails and a growing in both tails would

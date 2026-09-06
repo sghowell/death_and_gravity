@@ -6,7 +6,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/s5/physical/certificates/interactions.json
   stamped: '2026-09-04'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -14,7 +14,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/s5/physical/src/p8_physical/verify.py
   stamped: '2026-09-04'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -22,19 +22,23 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/s5/physical/notes/reduction.md
   stamped: '2026-09-04'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 formulation_version: legacy-table
 id: P8-S5.2.D
 kind: statement
-level: CERTIFIED
+legacy_level: CERTIFIED
+level: HEURISTIC
 n: null
 notes: 'imported from CLAIMS.md; level note: independent curvature identities, generic
   York and Legendre identities, old full quadratic bridges, symmetry/negative controls
   and exact report replay; scoped exact reduction and bounds only'
 problem: P8(b), D-only M0
 receipts: []
+source:
+  kind: table
+  ref: P8-S5.2.D
 standing: CURRENT
 statement: In the small-field auxiliary-metric spatial gauge, all three momentum constraints
   are recursively solved through third order, yielding canonical cubic/quartic scalar

@@ -6,18 +6,22 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P4/tests/test_perturb.py
   stamped: '2026-08-25'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 formulation_version: legacy-table
 id: P4-2
 kind: statement
-level: CONJECTURED
+legacy_level: CONJECTURED
+level: HEURISTIC
 n: null
 notes: 'imported from CLAIMS.md; evidence not resolved in repo: numerics-report.md
   §C (argument principle)'
 problem: P4
 receipts: []
+source:
+  kind: table
+  ref: P4-2
 standing: CURRENT
 statement: 'Linearized CSS problem (KHA sonic-point gauge): exactly one non-gauge
   eigenvalue in [0,15]×[−14,14], κ₁ = 2.8105525488 (γ = 0.355801922); gauge eigenvalue

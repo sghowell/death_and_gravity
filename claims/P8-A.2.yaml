@@ -6,7 +6,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/a/applicability/certificates/radiation-qsei.json
   stamped: '2026-09-05'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -14,7 +14,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/a/applicability/src/p8a_radiation/verify.py
   stamped: '2026-09-05'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -22,7 +22,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/a/applicability/notes/derivation.md
   stamped: '2026-09-05'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -30,13 +30,14 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/a/applicability/FORMULATION.md
   stamped: '2026-09-05'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 formulation_version: legacy-table
 id: P8-A.2
 kind: statement
-level: CERTIFIED
+legacy_level: CERTIFIED
+level: HEURISTIC
 n: null
 notes: 'imported from CLAIMS.md; level note: exact field/CCR, spectral, coordinate
   and IBP identities; independent FLINT proper/conformal positive-form integrals,
@@ -44,6 +45,9 @@ notes: 'imported from CLAIMS.md; level note: exact field/CCR, spectral, coordina
   proof; not FORMALIZED'
 problem: P8(a), fixed radiation FLRW and massless minimally coupled scalar
 receipts: []
+source:
+  kind: table
+  ref: P8-A.2
 standing: CURRENT
 statement: On a=A*eta, eta>0, the exact field map chi=a*phi constructs a reference
   Hadamard state. The positive-type difference QSEI for any Hadamard state and real

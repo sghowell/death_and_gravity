@@ -6,7 +6,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P9/b/src/p9b/positivity.py
   stamped: '2026-08-31'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -14,18 +14,22 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P9/b/notes/s4-positivity.md
   stamped: '2026-08-31'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 formulation_version: legacy-table
 id: P9b-2
 kind: statement
-level: CERTIFIED
+legacy_level: CERTIFIED
+level: HEURISTIC
 n: null
-notes: 'imported from CLAIMS.md; level note: conditional on POS (certificates/P9b-2.*.json;
+notes: 'imported from CLAIMS.md; level note: conditional on POS (certificates/P9b-2..json;
   tests/test_s4_positivity.py'
 problem: P9(b)
 receipts: []
+source:
+  kind: table
+  ref: P9b-2
 standing: CURRENT
 statement: 'Positivity intersection, conditional on POS (frozen: MN 1904.05874 (16)–(17);
   α-form (10) α_B^BS ≤ 2α_T/(1+α_T), side condition 1+α_T > 0, applied pointwise on

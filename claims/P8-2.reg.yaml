@@ -6,7 +6,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/certificates/a25-regression.json
   stamped: '2026-09-04'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -14,7 +14,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/certificates/s1-derived-action.json
   stamped: '2026-09-04'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -22,13 +22,14 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/notes/s2-benchmarks.md
   stamped: '2026-09-04'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 formulation_version: legacy-table
 id: P8-2.reg
 kind: statement
-level: CERTIFIED
+legacy_level: CERTIFIED
+level: HEURISTIC
 n: null
 notes: 'imported from CLAIMS.md; level note: within regression scope (457 Arb core
   tiles plus explicit analytic infinite-tail bounds; independent exact source discrepancy
@@ -36,6 +37,9 @@ notes: 'imported from CLAIMS.md; level note: within regression scope (457 Arb co
   is promoted to an M1/strict-tail witness'
 problem: P8(b), external regressions
 receipts: []
+source:
+  kind: table
+  ref: P8-2.reg
 standing: CURRENT
 statement: Corrected/reconstructed A25 v2 section-3 M0 benchmark at tau=10, epsilon=5,
   w=2, u=1/10 has healthy subluminal principal modes and one regular gamma crossing

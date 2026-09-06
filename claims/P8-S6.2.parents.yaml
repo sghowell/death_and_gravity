@@ -6,7 +6,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/s6/matching/certificates/parent-tests.json
   stamped: '2026-09-04'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -14,7 +14,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/s6/matching/src/p8_matching/verify.py
   stamped: '2026-09-04'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -22,7 +22,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/s6/matching/notes/parent-tests.md
   stamped: '2026-09-04'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -30,19 +30,23 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/s6/matching/FORMULATION.md
   stamped: '2026-09-04'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 formulation_version: legacy-table
 id: P8-S6.2.parents
 kind: statement
-level: CERTIFIED
+legacy_level: CERTIFIED
+level: HEURISTIC
 n: null
 notes: 'imported from CLAIMS.md; level note: exact stationary/mixed-gap controls,
   independent metric variation and conformal geometry, FLINT target sign, and written
   matrix/calculus/error lemmas; not formalized'
 problem: P8(b), fixed D-only M0; selected classical/tree parent ansatzes
 receipts: []
+source:
+  kind: table
+  ref: P8-S6.2.parents
 standing: CURRENT
 statement: Stable stationary elimination of affine-X heavy scalars gives P_XX>=0,
   whereas the pinned tube has F_XX<0 at every finite time and F_XX(0,1)=-10M^2/tau^2,

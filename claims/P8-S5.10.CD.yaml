@@ -6,7 +6,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/s5/matter/physical/control/tree/loops/tensor/certificates/cd-weyl-tensor.json
   stamped: '2026-09-05'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -14,7 +14,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/s5/matter/physical/control/tree/loops/tensor/src/p8_m1_weyl/verify.py
   stamped: '2026-09-05'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -22,7 +22,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/s5/matter/physical/control/tree/loops/tensor/notes/tensor-response.md
   stamped: '2026-09-05'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -30,13 +30,14 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/s5/matter/physical/control/tree/loops/tensor/FORMULATION.md
   stamped: '2026-09-05'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 formulation_version: legacy-table
 id: P8-S5.10.CD
 kind: statement
-level: CERTIFIED
+legacy_level: CERTIFIED
+level: HEURISTIC
 n: null
 notes: 'imported from CLAIMS.md; level note: exact off-shell operator/action and observable-map
   identities, dynamic four-index TT audit, compact extrema and rational finite-window/residual
@@ -44,6 +45,9 @@ notes: 'imported from CLAIMS.md; level note: exact off-shell operator/action and
   EFT-scope proofs, not FORMALIZED'
 problem: P8(b), separately named constant-Weyl tensor candidate
 receipts: []
+source:
+  kind: table
+  ref: P8-S5.10.CD
 standing: CURRENT
 statement: Adding constant cC times integral C_Weyl^2 preserves the exact CD/M1 background.
   In the original physical tensor variable, the first-order reduced equation has friction

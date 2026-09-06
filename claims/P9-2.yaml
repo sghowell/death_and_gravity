@@ -6,7 +6,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P9/results/certificates/lkr_L1.5_D4_r2/state.json
   stamped: '2026-08-26'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -14,13 +14,14 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P9/src/p9/run_lkr_certified.py
   stamped: '2026-08-26'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 formulation_version: legacy-table
 id: P9-2
 kind: statement
-level: CERTIFIED
+legacy_level: CERTIFIED
+level: HEURISTIC
 n: null
 notes: 'imported from CLAIMS.md; level note: chain of 3915 conic dual certificates
   verified in ball arithmetic, 5 tightening passes + final bound; re-run after the
@@ -29,6 +30,9 @@ notes: 'imported from CLAIMS.md; level note: chain of 3915 conic dual certificat
   archived); verify3.py'
 problem: P9
 receipts: []
+source:
+  kind: table
+  ref: P9-2
 standing: CURRENT
 statement: 'Same F as P9-1r (C(G₃₇₃, 1.5), M'' ∈ [0,40], frozen DESI DR2 BAO + Pantheon+
   with C̃ := (WᵀW)⁻¹ as recorded, r_d ≥ 146.57 Mpc, T = 1383.7251890839852): every

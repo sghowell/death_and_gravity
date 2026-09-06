@@ -6,7 +6,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/a/applicability/reference/certificates/radiation-reference.json
   stamped: '2026-09-05'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -14,7 +14,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/a/applicability/reference/src/p8a_reference/verify.py
   stamped: '2026-09-05'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -22,7 +22,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/a/applicability/reference/notes/derivation.md
   stamped: '2026-09-05'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -30,13 +30,14 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/a/applicability/reference/FORMULATION.md
   stamped: '2026-09-05'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 formulation_version: legacy-table
 id: P8-A.3
 kind: statement
-level: CERTIFIED
+legacy_level: CERTIFIED
+level: HEURISTIC
 n: null
 notes: 'imported from CLAIMS.md; level note: primary-source renormalization/state
   dictionary and written proof; exact stress, mode, convention and weighted-Sobolev
@@ -44,6 +45,9 @@ notes: 'imported from CLAIMS.md; level note: primary-source renormalization/stat
   omission controls and pinned A.2 replay; not FORMALIZED'
 problem: P8(a), fixed radiation FLRW reference stress and absolute QSEI
 receipts: []
+source:
+  kind: table
+  ref: P8-A.3
 standing: CURRENT
 statement: For the free real massless minimally coupled scalar on a=A*eta, eta>0,
   the transported Minkowski reference state has rho=hbar/(15360*pi^2*t^4), p=5*rho/3

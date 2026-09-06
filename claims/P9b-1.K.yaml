@@ -7,7 +7,7 @@ evidence:
   note: inherited from P9b-0 (as recorded)
   path: problems/P9/b/derivation/rows.py
   stamped: '2026-08-31'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -15,7 +15,7 @@ evidence:
   note: inherited from P9b-0 (as recorded)
   path: problems/P9/b/tests/test_s2_rows.py
   stamped: '2026-08-31'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -23,17 +23,21 @@ evidence:
   note: inherited from P9b-0 (as recorded)
   path: problems/P9/b/notes/s2-nogo-rows.md
   stamped: '2026-08-31'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 formulation_version: legacy-table
 id: P9b-1.K
 kind: statement
-level: CERTIFIED
+legacy_level: CERTIFIED
+level: HEURISTIC
 n: null
 notes: 'imported from CLAIMS.md; level note: = P9b-0'
 problem: P9(b)
 receipts: []
+source:
+  kind: table
+  ref: P9b-1.K
 standing: CURRENT
 statement: 'Ladder row S = {α_K}: (N) — no stable crossing on any family-B background
   within the frozen bounds (stronger unbounded-α_K statement proven by P9b-0)'

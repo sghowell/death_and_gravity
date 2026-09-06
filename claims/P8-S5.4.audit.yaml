@@ -6,7 +6,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/s5/scattering/certificates/tree-control.json
   stamped: '2026-09-04'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -14,7 +14,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/s5/scattering/src/p8_scattering/uv_audit.py
   stamped: '2026-09-04'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -22,19 +22,23 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/s5/scattering/notes/uv-applicability.md
   stamped: '2026-09-04'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 formulation_version: legacy-table
 id: P8-S5.4.audit
 kind: statement
-level: CERTIFIED
+legacy_level: CERTIFIED
+level: HEURISTIC
 n: null
 notes: 'imported from CLAIMS.md; level note: exact sign/integration/limit checks and
   primary-source applicability audit; scoped exact facts and stated analytic lemmas;
   not a UV verdict'
 problem: P8(b), D-only M0
 receipts: []
+source:
+  kind: table
+  ref: P8-S5.4.audit
 standing: CURRENT
 statement: The specified polynomial continuation of the D witness to X=0 has F(phi,0)<0
   at every finite phi, so it has no finite constant-clock Minkowski vacuum. Its complete

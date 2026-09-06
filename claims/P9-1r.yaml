@@ -6,18 +6,22 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P9/results/certificates/feasible_L1.5_D4_r2.json
   stamped: '2026-08-26'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 formulation_version: legacy-table
 id: P9-1r
 kind: statement
-level: CERTIFIED
+legacy_level: CERTIFIED
+level: HEURISTIC
 n: null
 notes: 'imported from CLAIMS.md; level note: exact class check + ball-arithmetic χ²
   enclosures'
 problem: P9
 receipts: []
+source:
+  kind: table
+  ref: P9-1r
 standing: CURRENT
 statement: 'Refined class C(G₃₇₃, L=1.5), M'' ∈ [0,40], T = 1383.7251890839852 (=
   upper(χ²(ũ*) + 4) for the recorded reference point, χ² ∈ 1379.72518908 ± 4×10⁻⁹):

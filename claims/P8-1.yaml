@@ -6,7 +6,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/certificates/s1-derived-action.json
   stamped: '2026-09-04'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -14,7 +14,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/src/p8/verify_all.py
   stamped: '2026-09-04'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -22,18 +22,22 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/notes/s1-derived-action.md
   stamped: '2026-09-04'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 formulation_version: legacy-table
 id: P8-1
 kind: statement
-level: CERTIFIED
+legacy_level: CERTIFIED
+level: HEURISTIC
 n: null
 notes: 'imported from CLAIMS.md; level note: exact covariant/action/chart identities
   plus the stated regular-ODE lemma; linear scope, not nonlinear Dirac formalization'
 problem: P8(b)
 receipts: []
+source:
+  kind: table
+  ref: P8-1
 standing: CURRENT
 statement: In the frozen (+---), X=phi_dot² covariant quadratic-DHOST Ia class on
   a timelike tube, derive the metric background equations, GT=−2(F2−XA1), FT=−2F2,

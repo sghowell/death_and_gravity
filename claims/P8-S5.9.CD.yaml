@@ -6,7 +6,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/s5/matter/physical/control/tree/loops/certificates/cd-matter-loop.json
   stamped: '2026-09-05'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -14,7 +14,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/s5/matter/physical/control/tree/loops/src/p8_m1_loops/verify.py
   stamped: '2026-09-05'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -22,7 +22,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/s5/matter/physical/control/tree/loops/notes/one-loop.md
   stamped: '2026-09-05'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -30,13 +30,14 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/s5/matter/physical/control/tree/loops/FORMULATION.md
   stamped: '2026-09-05'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 formulation_version: legacy-table
 id: P8-S5.9.CD
 kind: statement
-level: CERTIFIED
+legacy_level: CERTIFIED
+level: HEURISTIC
 n: null
 notes: 'imported from CLAIMS.md; level note: primary heat-kernel input with exact
   basis, determinant/sign, off-shell and CD variational identities; rational all-time
@@ -44,6 +45,9 @@ notes: 'imported from CLAIMS.md; level note: primary heat-kernel input with exac
   pinned S5.8 replay; written EFT scope proof, not FORMALIZED'
 problem: P8(b), isolated canonical-matter one-loop counterterms
 receipts: []
+source:
+  kind: table
+  ref: P8-S5.9.CD
 standing: CURRENT
 statement: The isolated real massless minimal M1 scalar determinant has bulk heat-kernel
   coefficient A2=C_Weyl^2/120-E4/360+R^2/72+BoxR/30 in the stated representative.

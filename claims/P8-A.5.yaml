@@ -6,7 +6,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/a/applicability/reference/asymptotics/backreaction/certificates/radiation-backreaction.json
   stamped: '2026-09-05'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -14,7 +14,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/a/applicability/reference/asymptotics/backreaction/src/p8a_backreaction/verify.py
   stamped: '2026-09-05'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -22,7 +22,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/a/applicability/reference/asymptotics/backreaction/notes/proof.md
   stamped: '2026-09-05'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -30,13 +30,14 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/a/applicability/reference/asymptotics/backreaction/FORMULATION.md
   stamped: '2026-09-05'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 formulation_version: legacy-table
 id: P8-A.5
 kind: statement
-level: CERTIFIED
+legacy_level: CERTIFIED
+level: HEURISTIC
 n: null
 notes: 'imported from CLAIMS.md; level note: exact Einstein/conservation/clock/curvature
   identities, independent rational polynomial and omission checks, explicit finite-domain
@@ -44,6 +45,9 @@ notes: 'imported from CLAIMS.md; level note: exact Einstein/conservation/clock/c
   proof, not FORMALIZED'
 problem: P8(a), compact-slab first-order radiation backreaction
 receipts: []
+source:
+  kind: table
+  ref: P8-A.5
 standing: CURRENT
 statement: For the frozen massless minimal reference, Einstein gravity plus conserved
   classical radiation with fixed normalization and time origin gives a/a0=1-epsilon*d/t^2+O(epsilon^2),

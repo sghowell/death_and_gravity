@@ -6,7 +6,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/a/applicability/reference/asymptotics/backreaction/response/remainder/certificates/radiation-remainder.json
   stamped: '2026-09-05'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -14,7 +14,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/a/applicability/reference/asymptotics/backreaction/response/remainder/src/p8a_remainder/verify.py
   stamped: '2026-09-05'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -22,7 +22,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/a/applicability/reference/asymptotics/backreaction/response/remainder/notes/proof.md
   stamped: '2026-09-05'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -30,13 +30,14 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P8/a/applicability/reference/asymptotics/backreaction/response/remainder/FORMULATION.md
   stamped: '2026-09-05'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 formulation_version: legacy-table
 id: P8-A.7
 kind: statement
-level: CERTIFIED
+legacy_level: CERTIFIED
+level: HEURISTIC
 n: null
 notes: 'imported from CLAIMS.md; level note: exact covariance/retarded-Green/finite-clock/trace/conservation
   identities, rational IR/UV and fractional-jet majorants, independent covariant and
@@ -44,6 +45,9 @@ notes: 'imported from CLAIMS.md; level note: exact covariance/retarded-Green/fin
   finite-amplitude Hadamard/subtraction proof, not FORMALIZED'
 problem: P8(a), actual finite-amplitude prepared-state stress remainder
 receipts: []
+source:
+  kind: table
+  ref: P8-A.7
 standing: CURRENT
 statement: For the unchanged A.5/A.6 massless minimal Hadamard preparation, the actual
   Wick square equals an explicit retarded Born functional on the exact finite metric

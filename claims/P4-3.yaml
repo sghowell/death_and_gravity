@@ -6,7 +6,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P4/src/p4/validated/tc_monotone.py
   stamped: '2026-08-31'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -14,7 +14,7 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P4/results/theorem_c/tc_monotone.json
   stamped: '2026-08-31'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 - binary_hash: null
@@ -22,18 +22,22 @@ evidence:
   note: imported from CLAIMS.md
   path: problems/P4/notes/s4-energy.md
   stamped: '2026-08-31'
-  verdict: PASS
+  verdict: IMPORTED
   verifier: table-import
   version: '1'
 formulation_version: legacy-table
 id: P4-3
 kind: statement
-level: CERTIFIED
+legacy_level: CERTIFIED
+level: HEURISTIC
 n: null
 notes: 'imported from CLAIMS.md; level note: promoted from CONJECTURED 2026-08-31,
   S4-2'
 problem: P4
 receipts: []
+source:
+  kind: table
+  ref: P4-3
 standing: CURRENT
 statement: On the closed sound cone of the EC profile, V_z increases monotonically
   to 1/√3, ρ̂ decreases, w = 1/3 − V_z² decreases and stays > 0 on the open cone,
