@@ -1,0 +1,24 @@
+name: p8a_asymptotics
+version: '1'
+argv:
+- .venv/bin/python
+- tools/empiricist_check.py
+- p8a_asymptotics
+- '{evidence}'
+cwd: .
+env:
+  PYTHONPATH: problems/P8/a/src:problems/P8/a/applicability/src:problems/P8/a/applicability/reference/src:problems/P8/a/applicability/reference/asymptotics/src
+inputs:
+- tools/empiricist_check.py
+- problems/P8/a/src
+- problems/P8/a/applicability/src
+- problems/P8/a/applicability/reference/src
+- problems/P8/a/applicability/reference/asymptotics/src
+fixtures:
+  pass:
+  - problems/P8/a/applicability/reference/asymptotics/certificates/radiation-asymptotics.json
+  fail:
+  - claims/fixtures/p8a_asymptotics/fail-mutated.json
+fail_exit_codes:
+- 3
+timeout_s: 1800

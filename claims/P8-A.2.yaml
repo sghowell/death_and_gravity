@@ -33,11 +33,20 @@ evidence:
   verdict: IMPORTED
   verifier: table-import
   version: '1'
+- binary_hash: 35daadfe52c74c6546a4b5a66a41b96193fa8209c487a31d189c5c4007dc0bf7
+  golden_suite_hash: 8e67ceef6535270b5ea563197c7d3a388077f3566f9cc7f32732223db8e6eb40
+  note: argv=['.venv/bin/python', 'tools/empiricist_check.py', 'p8a_radiation', 'problems/P8/a/applicability/certificates/radiation-qsei.json']
+    cwd=. exit=0 env_sha256=42e41cd59a2b7aae9293e1487069b29a11ec54f24c6ee1db330394644167be10
+  path: problems/P8/a/applicability/certificates/radiation-qsei.json
+  stamped: '2026-09-06T21:40:24+00:00'
+  verdict: PASS
+  verifier: p8a_radiation
+  version: '1'
 formulation_version: legacy-table
 id: P8-A.2
 kind: statement
 legacy_level: CERTIFIED
-level: HEURISTIC
+level: CONJECTURED
 n: null
 notes: 'imported from CLAIMS.md; level note: exact field/CCR, spectral, coordinate
   and IBP identities; independent FLINT proper/conformal positive-form integrals,
@@ -60,4 +69,4 @@ statement: On a=A*eta, eta>0, the exact field map chi=a*phi constructs a referen
   general-background/geodesic coverage and full P8(a) remain open
 substatus: null
 supersedes: []
-updated: '2026-09-05'
+updated: '2026-09-06'

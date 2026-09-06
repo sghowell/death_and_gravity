@@ -33,11 +33,20 @@ evidence:
   verdict: IMPORTED
   verifier: table-import
   version: '1'
+- binary_hash: 0da0a4630f7b30825ae3f02116cab51c99077ee5bff8b21fc0da52798324813d
+  golden_suite_hash: f2c1155ab4f04930b64353ca538d30aa95ce9b76f290fab6da28392eaca7708c
+  note: argv=['.venv/bin/python', 'tools/empiricist_check.py', 'p8a', 'problems/P8/a/certificates/focusing.json']
+    cwd=. exit=0 env_sha256=58ad6da6548dce11735abb7c40f5605574b56095385fffe4ac7d2867a76609f7
+  path: problems/P8/a/certificates/focusing.json
+  stamped: '2026-09-06T21:40:22+00:00'
+  verdict: PASS
+  verifier: p8a
+  version: '1'
 formulation_version: legacy-table
 id: P8-A.1
 kind: statement
 legacy_level: CERTIFIED
-level: HEURISTIC
+level: CONJECTURED
 n: null
 notes: 'imported from CLAIMS.md; level note: exact localization/endpoint/focusing
   identities, independent FLINT integration and infinite-tail reconstruction, outward
@@ -60,4 +69,4 @@ statement: 'Under the explicit local geometric QEI with T(t)=tau-t, smooth exten
   completion is claimed'
 substatus: null
 supersedes: []
-updated: '2026-09-05'
+updated: '2026-09-06'

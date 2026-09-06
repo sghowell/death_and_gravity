@@ -33,11 +33,21 @@ evidence:
   verdict: IMPORTED
   verifier: table-import
   version: '1'
+- binary_hash: 61375c821d8e330dd5fb04fb1d75e287f774fedc094a34e7700055c9e794703f
+  golden_suite_hash: 8fe50858fe2b39487e573a4703b62916bbc354d391b55bd900412b0917094eec
+  note: argv=['.venv/bin/python', 'tools/empiricist_check.py', 'p8a_backreaction',
+    'problems/P8/a/applicability/reference/asymptotics/backreaction/certificates/radiation-backreaction.json']
+    cwd=. exit=0 env_sha256=a9442656fd21227d0449fd04c00cd50efac4a3bb45bb1269dd63a45a0b16160e
+  path: problems/P8/a/applicability/reference/asymptotics/backreaction/certificates/radiation-backreaction.json
+  stamped: '2026-09-06T21:40:31+00:00'
+  verdict: PASS
+  verifier: p8a_backreaction
+  version: '1'
 formulation_version: legacy-table
 id: P8-A.5
 kind: statement
 legacy_level: CERTIFIED
-level: HEURISTIC
+level: CONJECTURED
 n: null
 notes: 'imported from CLAIMS.md; level note: exact Einstein/conservation/clock/curvature
   identities, independent rational polynomial and omission checks, explicit finite-domain
@@ -61,4 +71,4 @@ statement: For the frozen massless minimal reference, Einstein gravity plus cons
   error, transferred QSEI constant or new incompleteness theorem is established
 substatus: null
 supersedes: []
-updated: '2026-09-05'
+updated: '2026-09-06'

@@ -33,11 +33,20 @@ evidence:
   verdict: IMPORTED
   verifier: table-import
   version: '1'
+- binary_hash: 5780237be8adc557fd0ee1852539cf84bf9400ec794a8dd92caed18888af1baa
+  golden_suite_hash: 59d1a3ec1b8662e6356e4cf7755d6e0299ea5aed42af477a72f2c6d41ff1e834
+  note: argv=['.venv/bin/python', 'tools/empiricist_check.py', 'p8a_reference', 'problems/P8/a/applicability/reference/certificates/radiation-reference.json']
+    cwd=. exit=0 env_sha256=afdd997afd4bb951e41e81faaf7f015d227793d7426fdb2190b1557bdccf6872
+  path: problems/P8/a/applicability/reference/certificates/radiation-reference.json
+  stamped: '2026-09-06T21:40:26+00:00'
+  verdict: PASS
+  verifier: p8a_reference
+  version: '1'
 formulation_version: legacy-table
 id: P8-A.3
 kind: statement
 legacy_level: CERTIFIED
-level: HEURISTIC
+level: CONJECTURED
 n: null
 notes: 'imported from CLAIMS.md; level note: primary-source renormalization/state
   dictionary and written proof; exact stress, mode, convention and weighted-Sobolev
@@ -62,4 +71,4 @@ statement: For the free real massless minimally coupled scalar on a=A*eta, eta>0
   focusing, general-background coverage and full P8(a) remain open
 substatus: null
 supersedes: []
-updated: '2026-09-05'
+updated: '2026-09-06'

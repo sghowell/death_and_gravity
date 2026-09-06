@@ -1,0 +1,21 @@
+name: p8a
+version: '1'
+argv:
+- .venv/bin/python
+- tools/empiricist_check.py
+- p8a
+- '{evidence}'
+cwd: .
+env:
+  PYTHONPATH: problems/P8/a/src
+inputs:
+- tools/empiricist_check.py
+- problems/P8/a/src
+fixtures:
+  pass:
+  - problems/P8/a/certificates/focusing.json
+  fail:
+  - claims/fixtures/p8a/fail-mutated.json
+fail_exit_codes:
+- 3
+timeout_s: 1800

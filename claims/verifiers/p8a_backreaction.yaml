@@ -1,0 +1,25 @@
+name: p8a_backreaction
+version: '1'
+argv:
+- .venv/bin/python
+- tools/empiricist_check.py
+- p8a_backreaction
+- '{evidence}'
+cwd: .
+env:
+  PYTHONPATH: problems/P8/a/src:problems/P8/a/applicability/src:problems/P8/a/applicability/reference/src:problems/P8/a/applicability/reference/asymptotics/src:problems/P8/a/applicability/reference/asymptotics/backreaction/src
+inputs:
+- tools/empiricist_check.py
+- problems/P8/a/src
+- problems/P8/a/applicability/src
+- problems/P8/a/applicability/reference/src
+- problems/P8/a/applicability/reference/asymptotics/src
+- problems/P8/a/applicability/reference/asymptotics/backreaction/src
+fixtures:
+  pass:
+  - problems/P8/a/applicability/reference/asymptotics/backreaction/certificates/radiation-backreaction.json
+  fail:
+  - claims/fixtures/p8a_backreaction/fail-mutated.json
+fail_exit_codes:
+- 3
+timeout_s: 1800
