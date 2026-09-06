@@ -1,0 +1,117 @@
+{
+  "actual_zero_vector_outside_contract_control": {
+    "coincident_lapse_identity": "0",
+    "h_function": "(-reconstructed_y**2*sqrt(reconstructed_rho*(reconstructed_y + 1)**3/(3*reconstructed_y**3) + reconstructed_y**(-2)) + sqrt(reconstructed_rho*(reconstructed_y + 1)**3/3 + reconstructed_y**2))/(reconstructed_y + 1)**2",
+    "initial_H": "0",
+    "initial_H_prime": "1/6",
+    "initial_Nf": "1/2",
+    "initial_Ng": "1/2",
+    "initial_null": "1",
+    "initial_y_prime": "-sqrt(21)/3"
+  },
+  "claim": "P8-S6.8.COMPOSITE",
+  "controls": [
+    "Independent full source and physical-clock audits, no main cone-engine import",
+    "Actual locally reconstructed Q=0,c=y bounce with hprime=1/6 and zero vector speed fails the strict vector premise",
+    "Asymmetric positive-vector local bounce data have one tensor cone outside matter",
+    "An exact proportional de Sitter canonical-source solution meets the stated TT/vector subset without bouncing; no scalar health is inferred",
+    "Beta=0, one tensor only, omitted source pressure and squared-speed averaging controls are outside or alter the hypotheses"
+  ],
+  "date": "2026-09-06",
+  "domain": {
+    "action": "Pinned full HR with constant G,F,m4>0, constant real beta_n, constant positive affine alpha,beta; shared canonical scalar",
+    "additional_all_mode_formal_principal_contract": "Both tensor speeds<=1 relative to composite matter and regular Xi>0 with vector speed squared>0, at every time",
+    "constraint_domain": "k>0 for the relative vector; no Xi=0 kinetic degeneracy or Xi<0 formal high-k ghost included",
+    "geometry": "Smooth regular positive finite common-flat lapses/scales on the positive root, on a connected time interval",
+    "null_source": "rho+p>=0 on the full source-aware equations, not separate conservation of induced g/f matter",
+    "physical_metric": "g_eff=g(alpha I+beta sqrt(g^-1 f))^2,Ne=Ng*s,Ae=a*r,dT=Ne*dt"
+  },
+  "exact_residuals": {
+    "full_lapse_background_monotonicity": {
+      "coincident_physical_lapse": "0",
+      "full_lapse_dynamic_error": "0",
+      "full_lapse_effective_Hubble_on_dynamic_branch": "0",
+      "full_lapse_ratio_derivative_at_coincident_cones": "0",
+      "literal_full_g_null_source_at_coincident_cones": "0",
+      "null_coefficient_is_positive": "0",
+      "physical_Hubble_monotonicity": "0"
+    },
+    "literal_physical_tensor_and_vector_cones": {
+      "coincident_cone_stiffness": "0",
+      "coincident_vector_speed": "0",
+      "f_cone_order": "0",
+      "g_cone_order": "0",
+      "general_pressure_stiffness_split": "0",
+      "literal_f_physical_principal_cone": "0",
+      "literal_g_physical_principal_cone": "0",
+      "positive_tensor_cone_weights_sum_one": "0",
+      "pressure_branch_coincident_vector_zero": "0",
+      "weighted_tensor_speeds_equal_matter_speed": "0"
+    }
+  },
+  "formulation": "FORMULATION.md",
+  "implication_chain": [
+    "Both tensor cones no faster than composite matter force c=y everywhere",
+    "At c=y, mu=y*Q and cVeff^2=mu/Xi; Xi>0 and strict vector speed imply Q>0",
+    "Undivided source-aware Q*B=0 implies B=0 everywhere",
+    "c=y,B=0 imply ydot=0, constant r, H_eff=H_g/r and Ne=Ng*r",
+    "Full g null equation gives dH_eff/dT=-alpha*r*(rho+p)/(2G)<=0",
+    "No contraction-to-expansion transition, including arbitrary degenerate zero sets"
+  ],
+  "independent_Fraction_replay": {
+    "coefficientwise_identities": {
+      "f_speed_squared_cleared": "0",
+      "g_speed_squared_cleared": "0",
+      "positive_weights_sum_cleared": "0",
+      "pressure_stiffness_coefficient_identity": "0",
+      "squared_speed_average_gap_cleared": "0",
+      "tensor_velocity_convex_sum_cleared": "0"
+    },
+    "f_speed_fixture": "35/34",
+    "g_speed_fixture": "14/17",
+    "positive_null_monotonicity_fixture": "-98/11"
+  },
+  "not_established": [
+    "A general composite, bimetric, DHOST or ultraviolet-completion exclusion",
+    "A light-only finite-band EFT verdict or controlled parent matching",
+    "A safe rolling heavy threshold or cutoff, quantum front velocity, subcutoff growth, or positivity amplitude",
+    "A canonical rolling mass gap identified with mu or vanishing from mu=0 alone",
+    "Stability, completeness or physical admissibility of the outside-contract local controls",
+    "Completion of S6 or original P8"
+  ],
+  "omission_and_domain_controls": {
+    "f_can_exceed_matter_cone": "7/9",
+    "g_can_exceed_matter_cone": "5/4",
+    "omitted_pressure_falsely_keeps_relative_stiffness": "m4*y*(beta1 + 2*beta2*y + beta3*y**2)",
+    "single_metric_beta_zero_does_not_force_c_equal_y": "0",
+    "squared_speed_not_velocity_average": "alpha*beta*(-c + y)**2/(y*(alpha + beta*c)**2)"
+  },
+  "pointwise_pressure_branch_consequence": "Q=0 and Xi>0 imply either a tensor cone exceeds matter or the relative vector speed is zero",
+  "prior_S6_7_composite_modes_sha256": "018295c17af163cc80801e3dc2a9d7309184e4d1f5eca319b2a59ea85f064090",
+  "schema": 1,
+  "source_audit": "notes/sources.md",
+  "source_sha256": {
+    "FORMULATION.md": "3970d62d56eb6933347b4233b6aa923ea88bfb411b9dc39c0f85d4137ba4ab78",
+    "README.md": "a904e99463131d8324b4819b6de7fced9872f7873bfc86f251b5c3b3f936bb48",
+    "notes/proof.md": "207f9f09ee35393813accdd2f21e8ad4bd2ab7f3bd1996004ffdc9889722b2b4",
+    "notes/sources.md": "4bf5adf3c593f220befff2ad5d64975bbd34ba01383d09300d2eaad0702f579d",
+    "src/p8_composite_cones/__init__.py": "3859029f034fbaf52f1b6d1ee2a9f7ddf347747b5177b96aa5bbbb201c5809f4",
+    "src/p8_composite_cones/background.py": "0d6e35d0dcb3a566c30d4b5c9e6f9cb204ebcc67eb00d6a7832251ba37b595dc",
+    "src/p8_composite_cones/cone.py": "a7565f6647507e58c83ae74f59f02e05effede36f19dbc033e44ce5d18586c7a",
+    "src/p8_composite_cones/independent.py": "ade60d77803e52d47905f28ddff3f4abfb23c6e251d4f42d47dd45e1c7e70477",
+    "src/p8_composite_cones/verify.py": "922c9de803f57bdebe01472d718fc720417f249a1ce89b56ecb4aebb8683929d",
+    "tests/conftest.py": "01bbd5d419b9d0f4227aacd9862eb55bcb5fcec3850dac5613d8b460be2ab25c",
+    "tests/test_composite_cones.py": "bbd5cbefb9d9166b4c1db77f2edc89f610e1786bce517992283f27c71c019c37",
+    "tests/test_composite_cones_certificate.py": "65e23e0f0ced7d243ec2d89854da188a8b09f2500433bc51ac4bbfd0ca4a5d7f",
+    "tests/test_composite_cones_covariant_audit.py": "92e73db7a114402ca0006e250c204b61e7a13c540896e6cc765366c6e2ddfd21"
+  },
+  "status": "NO_BOUNCE_UNDER_EXPLICIT_ALL_MODE_SUBLUMINAL_TENSOR_AND_STRICT_VECTOR_PRINCIPAL_CONTRACT; GENERAL_EFT_MATCHING_AND_P8_OPEN",
+  "tensor_principal_cones": {
+    "both_subluminal_iff": "c=y",
+    "f_squared": "c**2*(alpha + beta*y)**2/(y**2*(alpha + beta*c)**2)",
+    "g_squared": "(alpha + beta*y)**2/(alpha + beta*c)**2",
+    "positive_velocity_average": "(alpha/r)*cg+(beta*y/r)*cf=1"
+  },
+  "verification_boundary": "Written characteristic/order/connected-interval/analytic-control proofs plus exact coefficient identities and pinned full lineage; not Lean formalized",
+  "written_proof": "notes/proof.md"
+}

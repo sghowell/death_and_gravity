@@ -74,6 +74,12 @@ around a pre-registered problems document and a certificate-gated ledger.
   proves that this short interval cannot meet the comoving focusing test.
   Longer-domain control, realistic fields and cosmological incompleteness
   remain open.
+  The [full Einstein--logarithm response block](problems/P8/a/applicability/reference/asymptotics/backreaction/response/remainder/residual/existence/preparation/continuation/README.md)
+  has now been resummed without deleting any causal pole or full-map
+  remainder. Its fast growing pole obstructs a small unweighted long-time
+  inverse estimate, but does not prove a runaway of the actual solution.
+  A weighted inverse bound supplies a concrete next continuation test;
+  geometric barriers and the actual growing-mode forcing remain essential.
 - P8(b): [completed scoped classification and verification commands](problems/P8/README.md).
   All 32 M0/M1 sector-row verdicts are decided: minimal optional groups are
   C or D without extra matter, and CD with rolling canonical matter.
@@ -161,8 +167,15 @@ around a pre-registered problems document and a certificate-gated ledger.
   leading sign for reconstructed CD when `m*tau>sqrt(24)`; this does not
   prove scalar health, a finite-window cutoff or controlled matching.
   General matching and UV positivity remain open.
+  The [all-mode principal-cone extension](problems/P8/s6/matching/composite/perturbations/cones/README.md)
+  now excludes every contraction-to-expansion transition in this constant
+  positive-affine parent class if both tensor cones must lie inside the
+  composite matter cone and the vector principal speed must be strictly
+  positive throughout. It covers all degeneracies and parent mass scales.
+  This is an explicit fundamental TT/vector requirement, not automatically
+  a restriction on a light-only EFT below a verified heavy threshold.
 
-The [current P8 continuation audit](docs/assessment-2026-09-06-p8-exact-qsei-vector-screen.md) separates
+The [current P8 continuation audit](docs/assessment-2026-09-06-p8-resummed-response-cone-boundary.md) separates
 completed certificate gates from the outstanding original research questions.
 P8 is not marked finished or closed.
 

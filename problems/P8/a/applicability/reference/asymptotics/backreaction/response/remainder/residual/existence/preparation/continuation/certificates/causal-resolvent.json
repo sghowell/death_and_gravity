@@ -1,0 +1,175 @@
+{
+  "claim": "P8-A.13",
+  "date": "2026-09-06",
+  "derived_constants": {
+    "independent_Fraction_replay": {
+      "A11_existing_length": "1/10000000000",
+      "W0_upper": "491/15",
+      "beta_lower": "-53/60",
+      "beta_upper": "11/30",
+      "c": "62500000000000/3",
+      "damped_pair_step_absolute_cap": "8/3",
+      "delta": "1/100000000000000",
+      "isolated_log_pole_upper": "3",
+      "norm_lower_at_10_to_minus_4": "2037035976334486086268445688409378161051444514507475667444469093322035492644368175201544663/8761417852444192627619839206015561635935827874017",
+      "norm_lower_at_10_to_minus_5": "1071005887/1003833",
+      "positive_pole_lower": "1000000",
+      "positive_pole_upper": "2000000",
+      "positive_step_residue_lower": "1/17",
+      "rounded_W0_upper": "33",
+      "scale": "5/2",
+      "strict_margins": {
+        "W0_less_than_33": "4/15",
+        "e_greater_than_8_over_3": "1/24",
+        "exp_five_halves_greater_than_10": "329/384",
+        "hundred_micro_norm_above_10_to_28": "2037035976334398472089921246483101962659384358891116309165728923322035492644368175201544663/8761417852444192627619839206015561635935827874017",
+        "lower_pole_test": "16400000000000/3",
+        "ten_micro_norm_above_1000": "67172887/1003833",
+        "upper_pole_test": "76900000000000/3",
+        "weighted_denominator": "769/120"
+      },
+      "weighted_norm_upper": "240/769",
+      "weighted_sigma": "2000000"
+    },
+    "named_symbolic_parameters": {
+      "Lambert_argument": "80000000000000*exp(-19/15 + 2*EulerGamma)/3",
+      "beta": "-19/30 - log(5/4) + EulerGamma",
+      "c": "62500000000000/3",
+      "delta": "1/100000000000000",
+      "scale": "5/2"
+    },
+    "rational_gate": {
+      "A11_existing_length": "1/10000000000",
+      "W0_upper": "491/15",
+      "beta_lower": "-53/60",
+      "beta_upper": "11/30",
+      "c": "62500000000000/3",
+      "damped_pair_step_absolute_cap": "8/3",
+      "delta": "1/100000000000000",
+      "isolated_log_pole_upper": "3",
+      "norm_lower_at_10_to_minus_4": "2037035976334486086268445688409378161051444514507475667444469093322035492644368175201544663/8761417852444192627619839206015561635935827874017",
+      "norm_lower_at_10_to_minus_5": "1071005887/1003833",
+      "positive_pole_lower": "1000000",
+      "positive_pole_upper": "2000000",
+      "positive_step_residue_lower": "1/17",
+      "rounded_W0_upper": "33",
+      "scale": "5/2",
+      "strict_margins": {
+        "W0_less_than_33": "4/15",
+        "e_greater_than_8_over_3": "1/24",
+        "exp_five_halves_greater_than_10": "329/384",
+        "hundred_micro_norm_above_10_to_28": "2037035976334398472089921246483101962659384358891116309165728923322035492644368175201544663/8761417852444192627619839206015561635935827874017",
+        "lower_pole_test": "16400000000000/3",
+        "ten_micro_norm_above_1000": "67172887/1003833",
+        "upper_pole_test": "76900000000000/3",
+        "weighted_denominator": "769/120"
+      },
+      "weighted_norm_upper": "240/769",
+      "weighted_sigma": "2000000"
+    }
+  },
+  "exact_residuals": {
+    "causal_multiplier_poles_cut_and_units": {
+      "Einstein_sign_at_log_pole": "0",
+      "Lambert_root_relation": "0",
+      "angular_count_strict_monotonicity": "0",
+      "full_normalized_log_and_Einstein_multiplier": "0",
+      "log_only_limit": "0",
+      "named_argument_scale_cancellation": "0",
+      "nonreal_root_real_equation": "0",
+      "positive_Neumann_resummation": "0",
+      "positive_cut_jump": "0",
+      "proper_growth_rate_units": "0",
+      "simple_pole_residue": "0"
+    },
+    "full_equation_and_map_decomposition": {
+      "double_primitive_derivative": "0",
+      "double_primitive_initial_value": "0",
+      "full_integrated_map_without_dropped_terms": "0",
+      "full_unforced_trace_in_S": "0",
+      "named_local_coefficient_not_changed": "0"
+    }
+  },
+  "formulation": "FORMULATION.md",
+  "full_map_dictionary": "notes/decomposition.md",
+  "negative_controls": {
+    "causal_zero_past_homogeneous_solution_is_only_zero": true,
+    "forcing_projection_not_fixed_by_the_energy_constraint_alone": true,
+    "full_rolling_Frechet_derivative_computed": false,
+    "omitted_positive_pole_Laplace_error": "weight/(-p + s)",
+    "omitting_the_two_damped_poles_is_also_wrong": true
+  },
+  "next_falsifiable_gate": "notes/next-step.md",
+  "not_established": [
+    "macroscopic continuation or an a posteriori error bound for the actual A11 SEE solution",
+    "nonlinear runaway, instability, generic no-go or a necessary maximum step length",
+    "the actual remainder forcing has a nonzero or zero growing-pole projection",
+    "the initial energy constraint alone selects a no-growing solution",
+    "physical validity at the frozen comparator pole timescale",
+    "a no-runaway final boundary prescription, order-reduced model or quantum state reset",
+    "cosmological incompleteness or completion of original P8a or P8"
+  ],
+  "prior_sha256": {
+    "A11": "8dba8215c5a28e2a6379c09e4d452838449065c396e10888aa733b186799456f"
+  },
+  "schema": 1,
+  "source_audit": "notes/sources.md",
+  "source_sha256": {
+    "FORMULATION.md": "b496bad4e9873811b89336ffb370ccd5b77119b66a2680dc8ca3c4c7817bcdaf",
+    "README.md": "075bbc0f3c8239831978dd5d81a10fd3984f6f24e08a2cb50e546e77c7c3e9a8",
+    "notes/decomposition.md": "25baad2a7bd1f68831cfc7d78608ddcb8c1a5c9ad5e1152d46fe95ffdd41309c",
+    "notes/next-step.md": "cef97f17b6f7ee8c7223916c90925391b17ef83d7a3ff8e99da633dabc40dc12",
+    "notes/resolvent.md": "e6b04f0905c3be91612102574353527e76ded0397a5fcc98350ee1d53e52dbaf",
+    "notes/sources.md": "5860bf26871b78efe5547b06c398a51a74d6d7fb57dfbdafc9483ebbd9b2b5db",
+    "src/p8a_continuation/__init__.py": "88d95402de4415efbb7ea61e359c2415b80990670d9888f001af94adf42729e6",
+    "src/p8a_continuation/bounds.py": "608ddc061dd86294f4c1d98875831d70c35c3bcf7a53dff5c5ffd45779b52319",
+    "src/p8a_continuation/decomposition.py": "14930b4f9cb4277ac2fcd833fce918633dbe75d19fc586fbd9382e841a0c4347",
+    "src/p8a_continuation/independent.py": "42bcb921edf5131110bd1dd963b49215dbd1ed98cad1f0dc973c661bd9302533",
+    "src/p8a_continuation/resolvent.py": "1557e511dc533e761c16ced295415804fb7ea0e29e83f0387f43dea3557aba25",
+    "src/p8a_continuation/verify.py": "d33c4151e787fee058ce836502602975c62778776a58bc1031e4376784261928",
+    "tests/conftest.py": "7cbea3104263a31bd52c58f4bfc8c6c04253e89b0efb6aa7d9434ecfc10d75c7",
+    "tests/test_continuation_bounds.py": "fa424c64fd4126765e777df31c47958f59c63b622cec1119bec29739e9112a9b",
+    "tests/test_continuation_covariant_audit.py": "6c1d2c505dcff391c0f175f065239437cba20401cf34b85e059906a92a0ded9f",
+    "tests/test_continuation_decomposition.py": "543bafab28a1bfae091eb9d9c984cf5c27b4786ec43a356aa8417a357128562c",
+    "tests/test_continuation_poles.py": "7b3afd7668ad02d3ad3179072d389ee38fe176f9b31c51eb276f2654858aceaa",
+    "tests/test_continuation_report.py": "6e585f0562ef33db4eaea1494cff61a529e847ce12000fea175a5537197e233b"
+  },
+  "status": "EXACT_FROZEN_CAUSAL_BLOCK_CERTIFIED; ACTUAL_ROLLING_CONTINUATION_AND_P8_OPEN",
+  "theorem": {
+    "C0_norm": "integral_0^L Kf; same supremum on smooth flat input",
+    "bounded_forcing_condition": "the causal response is bounded iff the complete forcing moment integral_0^infinity exp(-p0 t) g(t) dt vanishes",
+    "causal_block": "[log(s)+beta-c/s^2]/2, beta=gamma_E-19/30-log(af/2), c=af^2/(30delta)",
+    "condition_imposed_on_actual_state": false,
+    "cut_density": "2/[(log(r)+beta-c/r^2)^2+pi^2]",
+    "duration_norm_examples": "norm>1000 at L=10^-5; norm>10^28 at L=10^-4, only for the frozen comparator",
+    "exact_inverse": "2/[log(s)+beta-c/s^2], principal logarithm, Laplace line right of positive pole",
+    "full_kernel_nonnegative": true,
+    "full_rolling_Frechet_derivative": false,
+    "model_changed": false,
+    "nature": "exact frozen constant-coefficient linear resolvent and exact preconditioner decomposition of the full A11 map",
+    "nonnegativity_proof": "convergent positive Volterra-Neumann series in an exponential weight beyond the growing pole",
+    "norm_lower": "[exp(10^6 L)-1]/17-8/3",
+    "pole_count": "exactly three on the principal s sheet: W0,W1,W-1 of 2c exp(2beta)",
+    "pole_locations": "one positive simple pole, one strictly left-half-plane conjugate pair",
+    "positive_pole_bracket": "10^6<p0<2*10^6",
+    "reference_calibration": "af=5/2, delta=10^-14; af is a preconditioner choice, not a new physical solution",
+    "residues": "2p_j/(1+W_j)",
+    "scheme": "same massless minimal field, transported actual state, ordinary radiation, lambda=2sqrt(2) A eta_star^2, gamma=0, epsilon=1",
+    "weighted_norm": "at sigma=2*10^6, norm<=240/769; unweighting costs exp(sigma L)",
+    "whole_remaining_map_retained": [
+      "baseline residual",
+      "rolling Einstein coefficient divided by delta",
+      "anomaly history",
+      "auxiliary a^2 h q difference",
+      "actual nonlinear mode-response derivative and local coefficient difference"
+    ]
+  },
+  "verification_boundary": [
+    "A11 certificate and complete earlier A lineage replayed without writes",
+    "Complete trace and fixed-point difference algebra checked with independent covariant audit",
+    "Pole count and contour/inverse/positivity arguments are written analytic proofs, not numerical root sampling",
+    "All rational brackets, growth examples and weighted bounds independently reconstructed with Fraction",
+    "No rounded special-function evaluation, a priori rolling stability assumption or new finite counterterm used"
+  ],
+  "written_proof": "notes/resolvent.md"
+}
