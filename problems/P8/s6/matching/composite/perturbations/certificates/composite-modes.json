@@ -1,0 +1,209 @@
+{
+  "TT": {
+    "kinetic": "G*a^3/(8Ng),F*b^3/(8Nf)>0 per TT contraction",
+    "mass_boundary": "mu is algebraic relative stiffness, not a computed rolling canonical gap or growth rate",
+    "mu": "y*(-alpha*beta*p*(alpha + beta*c)*(alpha + beta*y) + m4*(beta1 + beta2*(c + y) + beta3*c*y))",
+    "normalization": "TT contraction prefactor1/8; literal diagonal exp D=diag(1,-1,0) has norm2 and relative L2=-Ng*a^3*mu*(gamma-h)^2/4"
+  },
+  "analytic_bounce_screen": {
+    "Xi_over_m4_at_zero": "6",
+    "Xprime": "-2",
+    "Yprime": "-2",
+    "cprime": "sqrt(21)*(-12*A - 5)/21",
+    "free": "A=7/36,mu/m4=-u^2/18+O(u^3),cVeff^2=-u^2/108+O(u^3)",
+    "frozen_CD": "A=4,mu/m4=-23u^2/3+O(u^3),cVeff^2=-23u^2/18+O(u^3)",
+    "independent_scale_guard": "For CD h=4u/[(m*tau)^2+u^2],A=4/(m*tau)^2 and mu/m4=[(m*tau)^2-24]u^2/[3(m*tau)^2]+O(u^3). m*tau>sqrt24 reverses only the leading sign; equality requires higher jets",
+    "initial": "y=c=1,rho_bar=p_bar=1/2,Ng=Nf=1/2; X=-Y=sqrt(7/3); A=hprime(0) with h=H_eff/m",
+    "mu_over_m4_u2": "1/3 - 2*A",
+    "parameters": "G=F=M^2,m4=M^2*m^2,alpha=beta=1,beta_n=(0,0,1,0,0); u=m*T; rho,p divided by M^2*m^2",
+    "physical_speed_u2": "1/18 - A/3",
+    "proof": "Analyticity and the exact nonzero negative quadratic coefficient imply a two-sided punctured neighborhood with mu<0,cVeff^2<0 while Xi,K_T remain positive",
+    "yprime": "-sqrt(21)/3"
+  },
+  "claim": "P8-S6.7.COMPOSITE",
+  "date": "2026-09-06",
+  "domain": {
+    "action": "Pinned HR plus one canonical scalar on g_eff=g(alpha I+beta sqrt(g^-1 f))^2; +---; G,F,m4,alpha,beta>0 and constant real beta_n",
+    "background": "Full source-aware background equations; common flat positive-root FLRW, smooth positive finite a,b,Ng,Nf",
+    "physical_frame": "Ae=a*(alpha+beta*y),Ne=Ng*(alpha+beta*c),dT=Ne*dt; physical metric is g_eff, not old CD/M1 g",
+    "source": "rho+p=(D_eff chi)^2; induced g/f sources are not separately conserved",
+    "sufficient_Xi_domain": "P>0,rho>0,rho+p>0; all hold near the two frozen bounce points; no arbitrary-beta positivity theorem",
+    "vector_chart": "k>0 fixed nonzero comoving wavenumber, Xi>0; sufficiently small transverse shifts on the positive analytic square-root branch"
+  },
+  "exact_jet_and_threshold_controls": {
+    "CD_frozen_negative_speed_coefficient": "-23/18",
+    "free_frozen_negative_speed_coefficient": "-1/108",
+    "independent_scale_reverses_leading_sign": "1/450",
+    "threshold_does_not_determine_higher_jets": "0"
+  },
+  "exact_residuals": {
+    "actual_clock_generic_acceleration_jets": {
+      "density_at_bounce": "0",
+      "f_null_equation_jet": "0",
+      "free_actual_acceleration": "0",
+      "free_negative_mu": "0",
+      "free_negative_speed": "0",
+      "frozen_CD_negative_mu": "0",
+      "frozen_CD_negative_speed": "0",
+      "g_null_equation_jet": "0",
+      "generic_acceleration_mu": "0",
+      "generic_physical_speed": "0",
+      "independent_interaction_to_duration_scale": "0",
+      "independent_scale_sign_threshold": "0",
+      "lapse_ratio_actual_clock": "0",
+      "positive_finite_initial_Xi": "0",
+      "ratio_actual_clock": "0",
+      "relative_lapse_ratio_actual_clock": "0"
+    },
+    "full_vector_constraints_and_canonical_time_boundary": {
+      "canonical_time_boundary": "0",
+      "full_positive_completed_square": "0",
+      "literal_vector_inertia": "0",
+      "literal_vector_stiffness": "0",
+      "physical_clock_inertia": "0",
+      "physical_clock_stiffness": "0",
+      "physical_principal_speed": "0",
+      "positive_constraint_determinant": "0",
+      "stationary_action": "0"
+    },
+    "independent_physical_scale_restoration": {
+      "CD_acceleration_in_interaction_clock": "0",
+      "Einstein_interaction_energy_units": "0",
+      "TT_and_shift_stiffness_units": "0",
+      "canonical_scalar_energy_units": "0"
+    },
+    "literal_source_aware_TT": {
+      "f_extrinsic_curvature_kinetic": "0",
+      "g_extrinsic_curvature_kinetic": "0",
+      "literal_source_aware_TT_stiffness": "0",
+      "literal_spatial_gradient": "0",
+      "pressure_branch_factorization": "0"
+    },
+    "literal_two_by_two_shift_and_effective_metric": {
+      "effective_determinant_at_zero": "0",
+      "effective_inverse_lapse_at_zero": "0",
+      "finite_Xi_no_division_by_mu": "0",
+      "literal_D_w_at_zero": "0",
+      "literal_W_w_at_zero": "0",
+      "literal_affine_effective_determinant": "0",
+      "literal_effective_inverse_numerator": "0",
+      "literal_matter_plus_potential_shift": "0",
+      "literal_potential_shift": "0",
+      "positive_trace_at_zero": "0",
+      "relative_block_determinant": "0",
+      "square_root_matrix_0_0": "0",
+      "square_root_matrix_0_1": "0",
+      "square_root_matrix_1_0": "0",
+      "square_root_matrix_1_1": "0"
+    }
+  },
+  "finite_shift": {
+    "Xi": "2*y**2*(alpha*beta*rho*(alpha + beta*y)**2 + alpha*beta*y*(alpha + beta*c)*(alpha + beta*y)*(p + rho)/(c + y) + m4*(beta1 + 2*beta2*y + beta3*y**2))/(c + y)",
+    "Z_v": "alpha*beta*rho*(alpha + beta*y)**2 + alpha*beta*y*(alpha + beta*c)*(alpha + beta*y)*(p + rho)/(c + y) + m4*(beta1 + 2*beta2*y + beta3*y**2)",
+    "matter_rule": "Hold chi_dot fixed; vary both sqrt|g_eff| and g_eff^00",
+    "root": "S2=(M+c*y I)/sqrt[(c+y)^2-w],w=b^2(sigma_f-sigma_g)^2/Ng^2",
+    "zero_mu": "Xi is evaluated by its algebraic expression, never by dividing mu/cV^2 at mu=0"
+  },
+  "formulation": "FORMULATION.md",
+  "independent_Fraction_coefficients_and_controls": {
+    "coefficientwise_identities": {
+      "TT_source_polynomial": "0",
+      "first_shift_stationarity": "0",
+      "full_completed_square": "0",
+      "quadratic_root_generic_acceleration": "0",
+      "second_shift_stationarity": "0",
+      "stationary_vector_action": "0",
+      "transverse_shift_matter_quotient_rule": "0",
+      "transverse_shift_potential_polynomial": "0"
+    },
+    "exact_spring_K_at_mu_zero": "1/48",
+    "free_mu_u2": "-1/18",
+    "frozen_CD_mu_u2": "-23/3",
+    "m_tau_5_mu_u2": "1/75",
+    "printed_4_12_minus_literal_frequency_fixture": "-3/2"
+  },
+  "nonzero_omission_controls": {
+    "shift": {
+      "omit_inverse_effective_metric": "beta*(-c + y)*(2*alpha + beta*c + beta*y)",
+      "omit_shift_matter": "alpha*beta*(alpha + beta*y)*(alpha*c*rho + alpha*p*y + 2*alpha*rho*y + beta*c*p*y + 2*beta*c*rho*y + beta*rho*y**2)/(2*(c + y)**2)"
+    },
+    "tensor": {
+      "omitted_matter_pressure_changes_TT": "-Ng*a**3*alpha*beta*p*y*(alpha + beta*c)*(alpha + beta*y)/4"
+    },
+    "vector": {
+      "extra_source_mass_factor_changes_speed": "-G*mu*(alpha + beta*y)**2/(Xi*(alpha + beta*c)**2*(F*y**2 + G))",
+      "omit_composite_clock_and_ruler": "-beta*mu*(-c + y)*(2*alpha + beta*c + beta*y)/(Xi*(alpha + beta*c)**2)",
+      "zero_mu_does_not_fix_canonical_frequency": "-rate**2"
+    }
+  },
+  "not_established": [
+    "A numerical width of the negative-principal interval, a quantitative accumulated growth bound or large instability below a known cutoff",
+    "Full coupled scalar constraints, kinetic/gradient matrices, finite-band evolution, nonlinear interactions or a background-dependent BD-mode cutoff",
+    "A physical rolling tensor/vector heavy-mode gap, or vanishing such a gap merely from mu=0",
+    "Health for independently rescaled CD beyond the sign of the leading vector coefficient; the threshold equality is undecided",
+    "A globally controlled CD solution, old free-M1 matter-frame matching, positivity closure or S6/P8 completion",
+    "A quantum front-velocity verdict or a general exclusion of composite, bimetric or ultraviolet-completed theories"
+  ],
+  "positive_domain_coefficients": {
+    "positive_K_at_mu_zero": "G*a**3/(16*Ng*(G*k**2/(Xi*a**2) + 1 + G*c/(F*y**3)))",
+    "positive_Xi": "2*y**2*(alpha*beta*positive_null*y*(alpha + beta*c)*(alpha + beta*y)/(c + y) + alpha*beta*positive_rho*(alpha + beta*y)**2 + positive_P)/(c + y)",
+    "positive_Z_v": "alpha*beta*positive_null*y*(alpha + beta*c)*(alpha + beta*y)/(c + y) + alpha*beta*positive_rho*(alpha + beta*y)**2 + positive_P",
+    "positive_physical_K_at_mu_zero": "G*a**3*(alpha + beta*c)/(16*(G*k**2/(Xi*a**2) + 1 + G*c/(F*y**3)))"
+  },
+  "primary_source_audit": "notes/sources.md",
+  "primary_sources": {
+    "composite_matter_coupling": "https://arxiv.org/pdf/1408.1678",
+    "generic_constraint_and_EFT_caution": "https://arxiv.org/pdf/1409.3834",
+    "higher_source_order_completion": "https://arxiv.org/pdf/1804.04671",
+    "specified_flat_normalization_cutoff_upper_bound": "https://arxiv.org/pdf/1506.00666",
+    "unreduced_TT_vector_action_and_dictionary": "https://arxiv.org/pdf/1501.02790"
+  },
+  "prior_S6_6_composite_background_sha256": "7708eebb7f10be8bad523029aa7a53921c943fd6f7df66691b71651d090ec06f",
+  "schema": 1,
+  "source_normalization_audit": {
+    "4_11_C_matches_literal": "0",
+    "printed_4_12_K_over_literal": "2",
+    "printed_4_12_U_over_literal": "2*F*y**2/(F*y**2 + G)",
+    "printed_frequency_over_literal": "F*y**2/(F*y**2 + G)"
+  },
+  "source_sha256": {
+    "FORMULATION.md": "8c99ed3a4c725f5eadbbdf53662a8083894722aa5593abf9b2de2ea88d1d6b8e",
+    "README.md": "84f5fccd73a45d179ab0eab5b3d23801e568018c10dd76eb642b9592caf55504",
+    "notes/modes.md": "e4694f98f303d4def92139a4f1342f6b383564a596aa72207b7624b42d94d356",
+    "notes/sources.md": "bea8ae6e6d02135eb18bf2a8a64381882ae105d2397d59dca6c95d5408250344",
+    "src/p8_composite_modes/__init__.py": "018417488430252bacf04a9ed7dbc773d3168a11db92a8e51a74b4f867475ac6",
+    "src/p8_composite_modes/independent.py": "70b319e73f116f0ebcfd01d4a1fbbcd442a8d04d489e60799f3a3c8d2c0efbd6",
+    "src/p8_composite_modes/jets.py": "3f6dc6e60a396885d8d1ee6ccf08803c9f5374aaaf346ed9abcb8f4d9c86ed00",
+    "src/p8_composite_modes/model.py": "02e130a0a1d6b198acff1aa84ac742a31b13f3d3f909b5ad2ec8406bc71f800e",
+    "src/p8_composite_modes/shift.py": "28676cf488f0ad63b2fda6aeeed993906b8e0859d1e58564af1124c3b1e3d385",
+    "src/p8_composite_modes/tensor.py": "d6c991fb22200ea937cd77d02b91a8119dc5319e01d1a087396b6c01fb970fee",
+    "src/p8_composite_modes/vector.py": "0fa4197a5fced6b76be77d847d5a64eb3ca9f33f720a41ded3a62a0939741acf",
+    "src/p8_composite_modes/verify.py": "740a819b71acd620da6f9214a0668ed7ea856aad7efd03d23b0f225acc6e8a83",
+    "tests/conftest.py": "10c2fdf997d749cfa3a44663c613816902549bcd3a99df2882adb77293cd49ad",
+    "tests/test_composite_modes.py": "91b487ebe28d3ef065926e8b3265a26d61f3e9b0c954c0d58364bfaf9ac37254",
+    "tests/test_composite_modes_certificate.py": "2deb22523840ff456417eff280495d94ca27b21721b3d4a9a3981527f2d14f97",
+    "tests/test_composite_modes_covariant_audit.py": "2ce1225e6d7c3684de330906aba0a25ea560ee53faf3077297fff4b5aeef3e02",
+    "tests/test_composite_modes_independent.py": "95ca41cacd89a0f6fbb1879d1f233bea2465790d1a76fc77ed41e584adaf2cc7"
+  },
+  "status": "TWO_FROZEN_COMPOSITE_BOUNCES_FAIL_LOCAL_FORMAL_VECTOR_PRINCIPAL_HEALTH; INDEPENDENT_SCALE_CAN_REVERSE_LEADING_SIGN; GLOBAL_SCALAR_CUTOFF_MATCHING_OPEN",
+  "vector": {
+    "C": "1/(G*k**2/(Xi*a**2) + 1 + G*c/(F*y**3))",
+    "K": "G*a**3/(16*Ng*(G*k**2/(Xi*a**2) + 1 + G*c/(F*y**3)))",
+    "K_T": "G*a**3*(alpha + beta*c)/(16*(G*k**2/(Xi*a**2) + 1 + G*c/(F*y**3)))",
+    "U": "Ng*a**3*mu/16",
+    "U_T": "a**3*mu/(16*(alpha + beta*c))",
+    "canonical_normalization": "Q=sqrt(2K_T)q,Omega_T^2=U_T/K_T-(sqrt(K_T))_TT/sqrt(K_T); full time boundary retained",
+    "completed_square": "A0=k^2/2,B0=F*y^3*k^2/(2G*c),C0=a^2*Xi/(2G); harmonic inertia=(A0^-1+B0^-1+C0^-1)^-1",
+    "field": "q=k(E-S),spatial vector convention h_ij=i(k_i E_j+k_j E_i)/2",
+    "mu_zero_boundary": "K_T remains positive; mu=0 alone establishes neither vanishing physical gap nor strong coupling",
+    "physical_principal_speed_squared": "mu*(alpha + beta*y)**2/(Xi*(alpha + beta*c)**2)"
+  },
+  "verification_boundary": [
+    "Literal TT source variation and 3D spatial curvature; full 2x2 root/effective-metric source variation",
+    "Exact finite-k two-shift constraint elimination, not a singular mu/cV chart at the bounce",
+    "Physical clock and ruler, k-dependent inertia and normalization time boundary retained",
+    "Independent Fraction coefficient normal forms, exact sign controls, root-owned independent covariant tests",
+    "Pinned background action and full prior lineage replayed without modifications"
+  ],
+  "written_proof": "notes/modes.md"
+}

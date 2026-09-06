@@ -64,8 +64,16 @@ around a pre-registered problems document and a certificate-gated ledger.
   specified short slab. A conserved auxiliary source turns off halfway
   through, leaving the full unforced equation with unchanged ordinary
   radiation. The quantum state co-evolves with the metric; no final
-  covariance or energy datum is reset. Whole-target continuation, QSEI
-  transfer, realistic fields and cosmological focusing remain open.
+  covariance or energy datum is reset. That construction alone does not
+  supply whole-target continuation or transfer the old QSEI.
+  The [fresh QSEI on the actual exact solution](problems/P8/a/applicability/reference/asymptotics/backreaction/response/remainder/residual/existence/preparation/qsei/README.md)
+  now bounds every Hadamard target state and compact proper-time sampler
+  on the source-free half-slab with coefficient `2*hbar/(16*pi²)`.
+  It uses only quantitative first-derivative potential bounds and derives
+  a positive actual reference credit. A separate index-form estimate
+  proves that this short interval cannot meet the comoving focusing test.
+  Longer-domain control, realistic fields and cosmological incompleteness
+  remain open.
 - P8(b): [completed scoped classification and verification commands](problems/P8/README.md).
   All 32 M0/M1 sector-row verdicts are decided: minimal optional groups are
   C or D without extra matter, and CD with rolling canonical matter.
@@ -144,11 +152,17 @@ around a pre-registered problems document and a certificate-gated ledger.
   changes the physical metric and uses one shared canonical matter source.
   Its pressure branch admits a regular free-scalar bounce and an exact
   local CD reconstruction on `|T|<=tau/64` with a reconstructed potential.
-  The free example is not CD at any time scale. This surviving background
-  construction does not establish coupled-mode stability, controlled
-  matching, a safe cutoff or UV positivity. General matching remains open.
+  The free example is not CD at any time scale. The subsequent
+  [literal rolling tensor/vector screen](problems/P8/s6/matching/composite/perturbations/README.md)
+  retains the composite source and eliminates both vector shifts without
+  dividing by the vanishing tensor stiffness. Both frozen bounces have
+  a negative vector principal coefficient near their bounces, despite
+  positive vector inertia. An independent parent mass can reverse the
+  leading sign for reconstructed CD when `m*tau>sqrt(24)`; this does not
+  prove scalar health, a finite-window cutoff or controlled matching.
+  General matching and UV positivity remain open.
 
-The [current P8 continuation audit](docs/assessment-2026-09-06-p8-prepared-see-composite-bounce.md) separates
+The [current P8 continuation audit](docs/assessment-2026-09-06-p8-exact-qsei-vector-screen.md) separates
 completed certificate gates from the outstanding original research questions.
 P8 is not marked finished or closed.
 
