@@ -117,6 +117,11 @@ around a pre-registered problems document and a certificate-gated ledger.
   yet its full two-lapse equations forbid a regular CD bounce with the
   specified canonical matter. A finite-window mismatch excludes evasion by
   shifting the bounce time. This rejects that parent, not general UV matching.
+  The [arbitrary-parameter regular-flat HR theorem](problems/P8/s6/matching/bimetric/general/README.md)
+  extends the background obstruction to every constant HR interaction
+  polynomial, including roots and branch switching, with two separate
+  minimally coupled NEC matter sectors. It does not inherit the beta1
+  vacuum spectrum or exclude other geometries and matter couplings.
   General derivative/curvature or quantum matching mechanisms remain open.
 
 ## Layout

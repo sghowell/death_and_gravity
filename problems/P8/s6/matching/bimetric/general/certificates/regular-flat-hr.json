@@ -1,0 +1,217 @@
+{
+  "claim": "P8-S6.4.HR",
+  "date": "2026-09-06",
+  "exact_residuals": {
+    "both_Noether_and_undivided_Bianchi_relations": {
+      "dynamic_Hubble_identity_without_dividing_H": "0",
+      "f_Noether_matter_balance": "0",
+      "f_interaction_null_factor": "0",
+      "f_undivided_Bianchi_factor": "0",
+      "g_Noether_matter_balance": "0",
+      "g_interaction_null_factor": "0",
+      "g_undivided_Bianchi_factor": "0",
+      "positive_weighted_interaction_cancellation": "0"
+    },
+    "explicit_omission_and_outside_domain_points": {
+      "forbidden_f_NEC_EL_Nf": "0",
+      "forbidden_f_NEC_EL_Ng": "0",
+      "forbidden_f_NEC_EL_a": "0",
+      "forbidden_f_NEC_EL_b": "0",
+      "forbidden_g_NEC_EL_Nf": "0",
+      "forbidden_g_NEC_EL_Ng": "0",
+      "forbidden_g_NEC_EL_a": "0",
+      "forbidden_g_NEC_EL_b": "0",
+      "negative_c_formal_weighted_equation": "0",
+      "omitted_f_acceleration_EL_Nf": "0",
+      "omitted_f_acceleration_EL_Ng": "0",
+      "omitted_f_acceleration_EL_a": "0",
+      "omitted_f_acceleration_EL_b": "0",
+      "regular_ratio_two_EL_Nf": "0",
+      "regular_ratio_two_EL_Ng": "0",
+      "regular_ratio_two_EL_a": "0",
+      "regular_ratio_two_EL_b": "0"
+    },
+    "full_two_lapse_and_separate_matter_variation": {
+      "EL_Nf": "0",
+      "EL_Ng": "0",
+      "EL_a": "0",
+      "EL_b": "0",
+      "f_Einstein_boundary": "0",
+      "f_matter_null_stress": "0",
+      "full_elementary_symmetric_potential": "0",
+      "g_Einstein_boundary": "0",
+      "g_matter_null_stress": "0"
+    },
+    "independent_Fraction_to_symbolic_bridge": {
+      "EL_Nf": "0",
+      "EL_Ng": "0",
+      "EL_a": "0",
+      "EL_b": "0",
+      "full_Lagrangian": "0",
+      "full_potential": "0"
+    },
+    "nonzero_P_and_root_cases": {
+      "complete_dynamic_derivative_identity": "0",
+      "double_root_at_y_one": "0",
+      "double_root_factorization": "0",
+      "dynamic_derivative_at_stationarity": "0",
+      "dynamic_f_null_from_full_Euler_equations": "0",
+      "dynamic_g_null_from_full_Euler_equations": "0",
+      "dynamic_weighted_cancellation": "0",
+      "g_only_dynamic_specialization": "0",
+      "identically_zero_polynomial_with_free_cosmological_terms": "0",
+      "root_g_equation_requires_no_dynamic_relation": "0",
+      "root_g_null_without_f_acceleration_assumption": "0",
+      "simple_root_at_y_one": "0"
+    },
+    "physical_CD_window_mismatch": {
+      "CD_bounce_derivative": "0",
+      "CD_left_window_H": "0",
+      "CD_right_window_H": "0",
+      "CD_window_derivative_positive_margin": "0"
+    }
+  },
+  "formulation": "FORMULATION.md",
+  "full_algebraic_control_points": {
+    "forbidden_f_NEC": {
+      "EL_Nf": "0",
+      "EL_Ng": "0",
+      "EL_a": "0",
+      "EL_b": "0"
+    },
+    "forbidden_g_NEC": {
+      "EL_Nf": "0",
+      "EL_Ng": "0",
+      "EL_a": "0",
+      "EL_b": "0"
+    },
+    "omitted_f_acceleration": {
+      "EL_Nf": "0",
+      "EL_Ng": "0",
+      "EL_a": "0",
+      "EL_b": "3/5"
+    },
+    "regular_ratio_two": {
+      "EL_Nf": "0",
+      "EL_Ng": "0",
+      "EL_a": "0",
+      "EL_b": "0"
+    }
+  },
+  "full_case_split": {
+    "P_nonzero": "P(y0)!=0 gives a neighborhood with P!=0 by continuity; undivided Bianchi then yields Hf=Hg/y there; at stationarity DfHf=Hdot_g/(c*y)",
+    "P_zero": "at any P(y0)=0, g interaction null stress vanishes and -2G Hdot_g=rho_g+p_g>=0 directly; never divide by P or infer a dynamic branch relation",
+    "coverage": "simple/double/isolated roots, branch-switching points, algebraic intervals and the identically zero polynomial are included pointwise"
+  },
+  "independent_Fraction_coefficient_calculation": {
+    "arithmetic": "exact Fraction Laurent coefficients; arbitrary independent couplings and jets",
+    "full_Euler_equation_term_counts": {
+      "EL_Nf": 7,
+      "EL_Ng": 7,
+      "EL_a": 11,
+      "EL_b": 11
+    },
+    "omission_control_nonzero_term_counts": {
+      "omitting_lapse_ratio_in_weight": 12,
+      "wrong_beta2_Bianchi_coefficient": 2
+    },
+    "zero_coefficient_residuals": {
+      "EL_Nf": 0,
+      "EL_Ng": 0,
+      "EL_a": 0,
+      "EL_b": 0,
+      "f_interaction_null_factor": 0,
+      "g_interaction_null_factor": 0,
+      "potential_lapse_f_density": 0,
+      "potential_lapse_g_density": 0,
+      "potential_scale_f_pressure": 0,
+      "potential_scale_g_pressure": 0,
+      "undivided_f_Bianchi": 0,
+      "undivided_g_Bianchi": 0,
+      "weighted_interaction_cancellation": 0
+    }
+  },
+  "nonzero_P_weighted_equation": "-2*(G+F*y^2)*Hdot_g=(rho_g+p_g)+c*y^3*(rho_f+p_f)",
+  "not_established": [
+    "Any healthy arbitrary-beta Minkowski or rolling spectrum; arbitrary-beta vacuum matching is not inherited from beta1",
+    "An exclusion of non-bidiagonal/non-common-FLRW metrics, non-flat spatial curvature, singular or other square-root branches",
+    "An exclusion of quantum/NEC-violating/nonminimal/derivative/shared doubly coupled matter or other metric-frame proposals",
+    "An exclusion of every degenerate bounce, all bimetric modifications or general UV completions",
+    "A controlled alternative parent, radiative closure, finite-gravity positivity, or a physical interaction cutoff",
+    "Completion of S6, P8(b), P8(a), or P8"
+  ],
+  "positive_and_omission_controls": {
+    "algebraic_branch_dynamic_derivative_inference_error": "-1/4",
+    "dropped_f_acceleration_full_equation_error": "3/5",
+    "forbidden_f_null_stress": "-1/2",
+    "forbidden_g_null_stress": "-2/5",
+    "formal_negative_c_can_make_weighted_NEC_sum_negative": "-4",
+    "formal_negative_c_loses_positive_second_matter_weight": "-1",
+    "regular_stationary_ratio_two_is_not_y_one": "1",
+    "zero_lapse_has_zero_metric_determinant": "0",
+    "zero_polynomial_is_a_covered_case_not_a_divisor": "0"
+  },
+  "positive_expressions": {
+    "CD_stationary_derivative": "4/tau**2",
+    "CD_window_derivative_margin": "48/(25*tau**2)",
+    "CD_window_endpoint_margin": "8/(5*tau)",
+    "dynamic_positive_inertia": "2*M_f_squared*y**2 + 2*M_g_squared",
+    "root_positive_inertia": "2*M_g_squared",
+    "second_matter_positive_weight": "c*y**3"
+  },
+  "primary_source_audit": "notes/sources.md",
+  "primary_sources": {
+    "general_FLRW_equations_and_Bianchi_polynomial": "https://arxiv.org/pdf/1111.1655",
+    "interaction_NEC_anticorrelation_not_physical_matter_NEC": "https://arxiv.org/pdf/1206.3814",
+    "regular_bimetric_extremality_and_hidden_matter_scope": "https://arxiv.org/pdf/1211.0214"
+  },
+  "prior_S6_3_beta1_sha256": "013bc7948f07384ccf6637894c87d73195e5bb8773909f8a8e36c8d41dfda284",
+  "robust_CD_mismatch": "On [-tau/2,tau/2] in physical g cosmic time, simultaneous endpoint H errors <8/(5tau) and uniform Hdot error <48/(25tau^2) are impossible",
+  "root_equation": "-2*G*Hdot_g=rho_g+p_g",
+  "schema": 1,
+  "scope_of_controls": "forbidden-NEC jets are algebraic controls, not healthy solutions; formal c<0 continuation only tests positivity failure, not the original positive-root action",
+  "source_sha256": {
+    "FORMULATION.md": "4c85ab66dc038810be3e6ac240a1062dc39cd0312a04469a13ff843f07fad3b5",
+    "README.md": "1ee90ceb49d006fd718b337c36c3abbd0b13f9e52a5f65896db79aef5f1649fa",
+    "notes/no-bounce.md": "d27a70ba035ebc4ac386dca3c2e9d86f76c2b8a93e5462f22a9b8b39d3a26e3f",
+    "notes/sources.md": "99384ae9232428a928520b92a76b733aa264b1cc32063826d83255def2caf698",
+    "src/p8_bimetric_general/__init__.py": "92e64c1f07a1cd538d22bcf1fb14c0e3c1cca1a05bbc730e04497078c2c39e13",
+    "src/p8_bimetric_general/background.py": "ac49b51bb104542452973cd3ffef83b8b7e6aafb03ae06d4021a75bfb6ecaf57",
+    "src/p8_bimetric_general/obstruction.py": "0c69345f49fa9888d70dc9a9326b9f2c8c2bb6de76ac33209cd3432f22293f2a",
+    "src/p8_bimetric_general/polynomial.py": "db7cbd7c893b9cd8bdb74b7202ceee36a44150f9dbac27fc110f57bc219ebb4a",
+    "src/p8_bimetric_general/verify.py": "d554623dd75dee9833f58cd19a3c68db4701921d84ff41e44a21c6ba84b2b49f",
+    "tests/conftest.py": "bc271a02ea1caac02603579d0cc83825addd9a5dde08e96d2d1e513324885a15",
+    "tests/test_general_background.py": "9aa92f6a9e31a702a9d574b07d5ce8d32e624f1f828176d31d86e80e40b97cf3",
+    "tests/test_general_certificate.py": "8e10e812dab192595e748c2d4451b5569d5e2287fcf2152fd910939e74519755",
+    "tests/test_general_covariant_audit.py": "d9b6c59090cfa9e582e8cd98930646f227babdc196ba89a37e2ec7e59a62a566",
+    "tests/test_general_polynomial.py": "ca9c2793341cef5741917199e41798edb1b6eee27751220b7e1c76f1ebceb8ad"
+  },
+  "stationary_equations": {
+    "P": "m_fourth*(beta1 + 2*beta2*y + beta3*y**2)",
+    "dynamic_f_null": "-2*Hdot_g*M_f_squared/(c*y) - rho_f_plus_p_f - m_fourth*(c - y)*(beta1 + 2*beta2*y + beta3*y**2)/(c*y**3)",
+    "dynamic_g_null": "-2*Hdot_g*M_g_squared - m_fourth*(-c + y)*(beta1 + 2*beta2*y + beta3*y**2) - rho_g_plus_p_g",
+    "dynamic_positive_inertia": "2*M_f_squared*y**2 + 2*M_g_squared",
+    "dynamic_weighted_null": "Hdot_g*(-2*M_f_squared*y**2 - 2*M_g_squared) - c*rho_f_plus_p_f*y**3 - rho_g_plus_p_g",
+    "root_g_null": "-2*Hdot_g*M_g_squared - rho_g_plus_p_g",
+    "root_positive_inertia": "2*M_g_squared",
+    "second_matter_positive_weight": "c*y**3"
+  },
+  "status": "ARBITRARY_BETA_REGULAR_COMMON_FLAT_HR_NONDEGENERATE_BOUNCE_OBSTRUCTED_WITH_SEPARATE_NEC_MATTER; GENERAL_PARENT_AND_UV_MATCHING_OPEN",
+  "theorem_domain": {
+    "geometry": "both metrics have a common spatially flat FLRW foliation and positive-root square-root eigenvalues (c,y,y,y)",
+    "gravity": "positive G=M_g^2,F=M_f^2; constant arbitrary real beta0,...,beta4; positive m4 (zero interaction included by all beta_i=0)",
+    "physical_frame": "g is the fixed physical metric; no added old DHOST action or derivative metric-frame change",
+    "primary_matter": "all minimally coupled classical NEC matter on g, no matter on f",
+    "regularity": "a,b,Ng,Nf smooth and finite, positive and nonzero in a neighborhood of the stationary slice",
+    "separate_sector_extension": "two independently minimally coupled, separately conserved matter sectors, NEC in their own metrics; no shared doubly coupled field",
+    "target": "H_g=0 with D_g H_g>0, including CD; no vacuum/mass-gap/perturbation-health assumption for arbitrary beta"
+  },
+  "verification_boundary": [
+    "Pinned beta1 and both of its input lineages are replayed without prior-file edits",
+    "Arbitrary-coupling and jet identities are coefficientwise exact, not rational sampling or interval interpolation",
+    "Independent full covariant/source/branch audit is hashed and tested separately",
+    "Pointwise root-case coverage, continuity and intermediate-value implications have written proofs, not formalized global PDE proofs",
+    "Literature sources supply compatible identities and scope cautions; no global novelty claim is made"
+  ],
+  "written_proof": "notes/no-bounce.md"
+}
