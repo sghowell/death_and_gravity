@@ -1,5 +1,9 @@
 coverage: null
-depends_on: []
+depends_on:
+- P8-A.3
+- P8-A.5
+- P8-A.6
+- problems/P8/a/applicability/reference/asymptotics/backreaction/response/certificates/radiation-response.json
 evidence:
 - binary_hash: null
   golden_suite_hash: null
@@ -52,7 +56,17 @@ evidence:
   verdict: PASS
   verifier: p8a_remainder
   version: '1'
-formulation_version: legacy-table
+- binary_hash: debb5446b4d56b24b5a699340baec4f8abc1b279d1304c4a294952f39a95ff6a
+  golden_suite_hash: 353c875d7fd59cc1de36844fd4f62e64461c7d13725dfd3e468b1bd83761ae09
+  note: reverify; argv=['.venv/bin/python', 'tools/empiricist_check.py', 'p8a_remainder',
+    'problems/P8/a/applicability/reference/asymptotics/backreaction/response/remainder/certificates/radiation-remainder.json']
+    cwd=. exit=0 env_sha256=5bc2938b211979ad18a91414c61c2fcf521968e5988d13723eec6c9548008dc2
+  path: problems/P8/a/applicability/reference/asymptotics/backreaction/response/remainder/certificates/radiation-remainder.json
+  stamped: '2026-09-06T21:13:50+00:00'
+  verdict: PASS
+  verifier: p8a_remainder
+  version: '2'
+formulation_version: FORMULATION.md@bb415f07 (adopted 2026-09-05)
 id: P8-A.7
 kind: statement
 legacy_level: CERTIFIED
@@ -61,13 +75,16 @@ n: null
 notes: 'imported from CLAIMS.md; level note: exact covariance/retarded-Green/finite-clock/trace/conservation
   identities, rational IR/UV and fractional-jet majorants, independent covariant and
   Fraction-only Taylor/constant audits, omission controls and pinned A.6 replay; written
-  finite-amplitude Hadamard/subtraction proof, not FORMALIZED'
+  finite-amplitude Hadamard/subtraction proof, not FORMALIZED; 2026-09-06: dependencies
+  and formulation pin added after two reviewer samples blocked on the empty dependency
+  list (the certificate pins A.6 sha 1101c2c2..., the statement scopes A.5/A.6 and
+  cites A.3)'
 problem: P8(a), actual finite-amplitude prepared-state stress remainder
 receipts: []
 source:
   kind: table
   ref: P8-A.7
-standing: CURRENT
+standing: CHALLENGED
 statement: For the unchanged A.5/A.6 massless minimal Hadamard preparation, the actual
   Wick square equals an explicit retarded Born functional on the exact finite metric
   plus an all-frequency nonlinear mode remainder with two actual-conformal-time derivatives.

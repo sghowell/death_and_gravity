@@ -1,0 +1,76 @@
+{
+  "claim_id": "P8-A.7",
+  "closes": null,
+  "created": "2026-09-06T21:10:22+00:00",
+  "evidence_sha256": [
+    "1de4b521475f7f7a0351255198523fed745adee91896ab955544e483ecc21025",
+    "bb415f07620ef7a0119cf94397cb1384f993109cd11309fe0e112924cf216eaf",
+    "cc4ec02bcb23e0ef01d0fb58ad4b95a3bb602a5bbbfc6871d044b2a09a78e963",
+    "ead0aa7554986474cbdeb58614674943f7f5487c170c19ca37869bede737114d"
+  ],
+  "findings": [
+    {
+      "dimension": "ledger_consistency",
+      "severity": "blocking",
+      "text": "The ledger records 'Dependencies: (none)', but the evidence declares and exercises a dependency chain: FORMULATION.md opens 'The immutable dependency is A.6, certificate SHA256 1101c2c2\u2026'; verify.py imports `from p8a_response import verify as prior` and prior_checks() re-executes A.6's full replay (prior.build_report()), aborting if the pinned certificate changed; the certificate records prior_A6_sha256 and its verification_boundary says the state and past density are 'pinned through A.6 and every earlier dependency'; the bound statement itself invokes 'the unchanged A.5/A.6 \u2026 preparation' and 'the corresponding positive A.3 reference component'. A CERTIFIED node with an empty dependency edge set misrepresents the certification basis \u2014 revisions or demotions of P8-A.3/A.5/A.6 would not propagate to this claim \u2014 so the promotion as stated is invalid. [Claim header 'Dependencies: (none)' vs certificates/radiation-remainder.json field 'prior_A6_sha256', src/p8a_remainder/verify.py:prior_checks(), FORMULATION.md line 'The immutable dependency is A.6\u2026', statement phrases 'unchanged A.5/A.6' and 'positive A.3 reference component']"
+    },
+    {
+      "dimension": "ledger_consistency",
+      "severity": "warning",
+      "text": "formulation_version is 'legacy-table', yet every substantive receipt binds to the versioned artifact instead: the certificate's 'formulation' field is 'FORMULATION.md', source_sha256 pins it at bb415f07\u2026, and FORMULATION.md says 'Adopted 2026-09-05'. verify.py's validate_report compares certificate JSON to a replay only and never touches the ledger's statement text, so at version 'legacy-table' the receipt binds to a sentence (imported from CLAIMS.md) that no recorded verifier ever checked, while the machine-checked formulation is a different, dated document. [Claim header 'formulation_version: legacy-table' vs certificates/radiation-remainder.json fields 'formulation' and source_sha256['FORMULATION.md']=bb415f07\u2026; FORMULATION.md 'Adopted 2026-09-05'; verify.py:validate_report]"
+    },
+    {
+      "dimension": "ledger_consistency",
+      "severity": "warning",
+      "text": "The two PASS receipts carry the identical verifier identity 'p8a_remainder v1' but different binaries \u2014 '(binary 7debe2e08b30)' at 2026-09-06T19:28:29+00:00 vs '(binary 479182a7912b)' at 20:02:43+00:00 \u2014 and only the second records exit=0 and env_sha256=5bc2938b\u2026. The recorded verifier identity therefore does not uniquely pin which checking code produced each PASS; the version label did not change while the binary did. [Evidence entries for problems/P8/a/\u2026/certificates/radiation-remainder.json: 'p8a_remainder v1 -> PASS' at 19:28:29 (binary 7debe2e08b30) and at 20:02:43 (binary 479182a7912b)]"
+    },
+    {
+      "dimension": "assumption_explicitness",
+      "severity": "warning",
+      "text": "In the bound statement, the scope restriction 'on 2<=y<=3' attaches only to the delta=10^-12 one-percent sentence. The preceding clause 'and explicit quadratic finite-amplitude error constants' carries no domain qualifier, yet those constants are derived only on the observation envelope and the 3*eta_star active history: the certificate's calibration_geometry_bounds reads 'history<=3eta_star; a^-4<=1/(8A^4eta_star^4), |a'/a|<=2/eta_star on y in[2,3]' (a^-4<=1/(8A^4eta_star^4) fails for y<2), and proof.md Section 5 derives them 'On the observation envelope'. As written, the statement licenses reading the stress-error constants as history-wide. [Statement clause 'and explicit quadratic finite-amplitude error constants' vs certificates/radiation-remainder.json 'derived_finite_geometry.calibration_geometry_bounds' and notes/proof.md Section 5]"
+    },
+    {
+      "dimension": "assumption_explicitness",
+      "severity": "note",
+      "text": "The statement's symbols epsilon, d, t_star (in 'delta=4*epsilon*d/t_star^2') and the phrase 'A.3 reference component' are undefined in the bound text; their meanings live in FORMULATION.md ('d=kappa*hbar/(46080*pi\u00b2)', 'delta=16*epsilon*d/(A\u00b2*eta_*\u2074)') and in prior A.3/A.5 formulations (proof.md Section 7's rho_ref/p_ref/E_ref), i.e., in artifacts of claims that the dependency list does not name. The receipt-bound sentence is not self-contained. [Statement 'delta=4*epsilon*d/t_star^2' and 'positive A.3 reference component'; FORMULATION.md 'd=kappa*hbar/(46080*pi\u00b2)'; notes/proof.md Section 7 reference scales]"
+    },
+    {
+      "dimension": "evidence_support",
+      "severity": "note",
+      "text": "Only certificates/radiation-remainder.json carries PASS receipts; notes/proof.md and FORMULATION.md carry only 'table-import v1 -> IMPORTED', which is ingestion, not verification. The certificate's own verification_boundary states the IR Volterra and UV retarded-residual inequalities and coincidence-limit domination 'are written analytic proofs, not finite sampling claims', so the support for the statement's opening identity ('the actual Wick square equals \u2026 plus an all-frequency nonlinear mode remainder') and for the M_j bounds rests on prose (proof.md Sections 2\u20134) with no recorded reviewer or checker. This matches the level note 'written \u2026 proof, not FORMALIZED', but it is the load-bearing unmachine-checked gap for this CERTIFIED receipt. [Evidence entries 'table-import v1 -> IMPORTED' for notes/proof.md and FORMULATION.md; certificates/radiation-remainder.json 'verification_boundary' second item; notes/proof.md Sections 2\u20134]"
+    },
+    {
+      "dimension": "evidence_support",
+      "severity": "note",
+      "text": "FORMULATION.md is truncated in the review bundle ('\u2026 (truncated; 8187 bytes total)') immediately after 'Certified finite-family calibration'. The untruncated tail \u2014 which proof.md Section 7 says contains 'the displayed rounded upper bounds in the formulation' \u2014 could not be inspected here; only its sha256 (bb415f07\u2026, matching the certificate's source_sha256) was checkable. The formulation-side display of the rounded bounds 8/9/17\u00d710^14 was therefore verified only indirectly through the certificate's rounded_stress_error_upper_bounds and verify.py's hardcoded rounded dict. [FORMULATION.md excerpt terminator '\u2026 (truncated; 8187 bytes total)'; notes/proof.md Section 7; verify.py checked_bounds() rounded = {density: 8*10**14, pressure: 9*10**14, EED: 17*10**14}]"
+    },
+    {
+      "dimension": "internal_consistency",
+      "severity": "note",
+      "text": "Cross-checks performed with no mismatch found: delta_bar 2048/190897521 equals 1/(24*b0+12*b1) recomputed from b0=20461/128, b1=61013499/8192, matching proof.md Section 7's four caps; IR_exponent_at_delta_bar 491064/63632507 equals 9*delta_bar*b0/2; UV_exponent_at_delta_bar = 1/2; conformal_Hubble_extra_at_delta_bar 11008/190897521 equals delta_bar*P1/2 with P1=43/4; b0 reproduces exactly from the mode_potential_jet_ring first array via the Section 6 enclosure rules (2*(P2/4+3*P1/4)+1849/64=20461/128); ring term counts equal fractional_jet_ring_term_counts [3,6,11,18,29,43]; rounded bounds minus stress_error_constants equal the recorded strict_rounded_bound_margins, all positive; the statement's delta=4*epsilon*d/t_star^2 is exactly the certificate's delta=16*epsilon*d/(A^2*eta_star^4) under t_star=A*eta_star^2/2; the three uniform_reference_scale_error_ratios evaluate to \u22480.49%, 0.31%, 0.34%, all below 1%; Wick_C2 first constant equals m0/8 as proof.md Section 7 states; file sha256s in the bundle match source_sha256. [certificates/radiation-remainder.json fields delta_bar, IR/UV/Hubble exponents, mode_potential_jet_ring, fractional_jet_ring_term_counts, stress_error_constants, strict_rounded_bound_margins, uniform_reference_scale_error_ratios, Wick_C2_remainder_constants vs notes/proof.md Sections 6\u20137 and the statement's '0<=delta<=2048/190897521', 'delta=4*epsilon*d/t_star^2']"
+    },
+    {
+      "dimension": "confidence_calibration",
+      "severity": "note",
+      "text": "The statement's word 'certify' is warranted exactly up to the disclosed boundary and no further: symbolic residuals (all '0' fields), exact-rational Fraction-only replay, negative controls, and the pinned A.6 re-replay are machine-checked, while the analytic inequality derivations are written-only, and the 'independent' audits are same-repository, same-author implementations (src/p8a_remainder/independent.py; independent_fractional_jet_audit runs with 'eta_star_and_A': '1 in this algebra-only control' and 'control_is_the_physical_smooth_cutoff': false). Given the ledger's own level note 'written \u2026 proof, not FORMALIZED', CERTIFIED-below-FORMALIZED does not overclaim the evidence, but the receipt's warrant is precisely the six verification_boundary items, not an end-to-end mechanical proof. [certificates/radiation-remainder.json 'verification_boundary' and 'independent_fractional_jet_audit'; claim Notes 'written finite-amplitude Hadamard/subtraction proof, not FORMALIZED']"
+    },
+    {
+      "dimension": "decision_soundness",
+      "severity": "warning",
+      "text": "Promoting now is out of sequence: the PASS runs' actual basis (pinned FORMULATION.md bb415f07\u2026 and pinned A.6 certificate 1101c2c2\u2026, whose replay verify.py:prior_checks() executes) diverges from the promotion's stated basis (empty dependency list, formulation_version 'legacy-table'). The receipt minted by this promotion would assert CERTIFIED status detached from the A.6/A.5/A.3 chain whose ledger levels cannot be confirmed from this record, and bound to legacy text no verifier checked, one day after table import. [Promotion request CONJECTURED -> CERTIFIED with 'Dependencies: (none)' and 'formulation_version: legacy-table'; verify.py:prior_checks(); evidence entries dated 2026-09-05 (import) and 2026-09-06 (PASS)]"
+    }
+  ],
+  "id": "P8-A.7.20260906.model.2",
+  "provenance": {
+    "cost_usd": "1.9021",
+    "model": "claude-fable-5",
+    "request_digest": "2bfebb4bcb61f215a85d9582978a9f022d76fa16446a7dbc6dfbddb4fee2e678",
+    "response_digest": "c89e425599039993696a4df11766001c7415edc91014b5880952cec886c40add",
+    "run_id": "review-P8-A.7-c7aa3f-s2",
+    "transport": "ClaudeCodeClient"
+  },
+  "reviewer": "model",
+  "statement_sha256": "6ad085163c22bb7f2c5c9894d5e8a63c6a2267d44f1de040db42f3103ae749df",
+  "target_level": "CERTIFIED",
+  "verdict": "BLOCK"
+}

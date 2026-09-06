@@ -1,0 +1,81 @@
+{
+  "claim_id": "P8-A.7",
+  "closes": null,
+  "created": "2026-09-06T21:03:11+00:00",
+  "evidence_sha256": [
+    "1de4b521475f7f7a0351255198523fed745adee91896ab955544e483ecc21025",
+    "bb415f07620ef7a0119cf94397cb1384f993109cd11309fe0e112924cf216eaf",
+    "cc4ec02bcb23e0ef01d0fb58ad4b95a3bb602a5bbbfc6871d044b2a09a78e963",
+    "ead0aa7554986474cbdeb58614674943f7f5487c170c19ca37869bede737114d"
+  ],
+  "findings": [
+    {
+      "dimension": "ledger_consistency",
+      "severity": "blocking",
+      "text": "The ledger records 'Dependencies: (none)', but the evidence base is explicitly conditional on other ledger claims: FORMULATION.md opens 'The immutable dependency is A.6, certificate SHA256 1101c2c2...'; verify.py prior_checks() hard-fails if the pinned A.6 certificate changes; the statement itself is scoped 'For the unchanged A.5/A.6 massless minimal Hadamard preparation' and benchmarks errors against 'the corresponding positive A.3 reference component' (proof.md \u00a77 imports rho_ref/p_ref/E_ref from A.3). A CERTIFIED entry with an empty dependency list detaches this claim from the A.3/A.5/A.6 entries its own evidence pins, so upstream demotion or change would not propagate; the promotion as stated is invalid on this record. [Claim header 'Dependencies: (none)' vs FORMULATION.md ('The immutable dependency is A.6...'), verify.py PRIOR_SHA/prior_checks(), statement phrase 'unchanged A.5/A.6', proof.md \u00a77 A.3 references]"
+    },
+    {
+      "dimension": "ledger_consistency",
+      "severity": "warning",
+      "text": "formulation_version is 'legacy-table', but every fresh PASS receipt validates a certificate bound to FORMULATION.md 'Adopted 2026-09-05' (pinned sha bb415f07...). The receipt binds to the legacy table statement while the machine evidence certifies the new formulation document; the version field was never migrated, so the level's binding text and the evidence's binding text are two different artifacts. [Claim header 'formulation_version: legacy-table' vs certificate fields 'formulation': 'FORMULATION.md' and source_sha256['FORMULATION.md']]"
+    },
+    {
+      "dimension": "ledger_consistency",
+      "severity": "warning",
+      "text": "The two PASS receipts share the identity 'p8a_remainder v1' but carry different binary hashes: 7debe2e08b30 at 2026-09-06T19:28:29Z and 479182a7912b at 2026-09-06T20:02:43Z; the first also lacks exit code and env_sha256. The verifier identity therefore does not resolve to a unique artifact, and no note explains what changed between the run and the 'reverify' 34 minutes later. [Evidence entries for certificates/radiation-remainder.json: 'p8a_remainder v1 -> PASS ... (binary 7debe2e08b30)' and '(binary 479182a7912b); note: reverify']"
+    },
+    {
+      "dimension": "internal_consistency",
+      "severity": "warning",
+      "text": "The certificate's verification_boundary asserts 'the finite-family derivative majorants and all numerical constants are exact rational enclosures, replayed separately using fractions only', but verify.py checked_bounds() injects replay['Wick_C2_remainder_constants'] = stress.wick_calibration_bounds(...) (and rounded_stress_error_upper_bounds, strict_rounded_bound_margins, nonnegative_amplitude_polynomial_audit, and the overwritten physical_amplitude_interpretation string) directly into the section titled 'independently_replayed_uniform_bounds' with no comparison against the Fraction-only independent computation. The section title and boundary bullet overstate the independence of those specific fields. [verify.py checked_bounds() assignments into `replay` vs certificate verification_boundary[2] and independently_replayed_uniform_bounds.Wick_C2_remainder_constants]"
+    },
+    {
+      "dimension": "evidence_support",
+      "severity": "warning",
+      "text": "The statement clause 'all-frequency nonlinear mode remainder with two actual-conformal-time derivatives' is quantitatively backed at the Wick-C2 level only by single-implementation constants: stress_error_constants are cross-checked against the independent replay ('!= replay[\"stress_error_constants\"]' guard in verify.py), but Wick_C2_remainder_constants have no such guard and are computed once by stress.wick_calibration_bounds and written into the certificate. The C2 part of the claimed control thus lacks the dual-computation evidence the rest of the constants have. [certificate independently_replayed_uniform_bounds.Wick_C2_remainder_constants; verify.py checked_bounds() (no comparison for that field)]"
+    },
+    {
+      "dimension": "evidence_support",
+      "severity": "note",
+      "text": "The load-bearing analytic steps are prose, not machine-replayed: the IR Volterra iteration (proof.md \u00a72), the UV Gronwall/retarded-residual estimate (\u00a73), and the Hadamard coincidence expansion with 'dominated convergence removes spatial splitting' (\u00a74) that establishes the Wick-square decomposition asserted in the statement's first sentence. The machine PASS covers algebraic residuals (sympy simplify==0) and rational arithmetic only. This is disclosed in verification_boundary ('written analytic proofs, not finite sampling claims') and in the level note ('written finite-amplitude Hadamard/subtraction proof, not FORMALIZED'), so it matches the declared basis, but the equality itself is outside replay. [notes/proof.md \u00a7\u00a72-4; certificate verification_boundary[1]; Notes level note]"
+    },
+    {
+      "dimension": "evidence_support",
+      "severity": "note",
+      "text": "FORMULATION.md is supplied truncated ('... (truncated; 8187 bytes total)'), so agreement between the promoted statement text and the full formulation \u2014 including the 'displayed rounded upper bounds in the formulation' that proof.md \u00a77 says the rational comparisons prove \u2014 could only be checked through the pinned sha256 (bb415f07..., which matches the certificate), not by content inspection. [Evidence file FORMULATION.md truncation marker; proof.md \u00a77 'rational comparisons prove the displayed rounded upper bounds in the formulation']"
+    },
+    {
+      "dimension": "assumption_explicitness",
+      "severity": "warning",
+      "text": "The certified constants are envelope-restricted: derived_finite_geometry.calibration_geometry_bounds pins 'history<=3eta_star; a^-4<=1/(8A^4eta_star^4), |a'/a|<=2/eta_star on y in[2,3]', and proof.md \u00a75 derives them only on the observation envelope with active history starting at y=1. In the statement, the qualifier '2<=y<=3' is attached only to the delta=10^-12 one-percent sentence; the clause 'explicit quadratic finite-amplitude error constants' (and the C2 remainder clause) carries no envelope restriction, leaving the constants' domain hypothesis implicit in the binding text. [Statement clause 'explicit quadratic finite-amplitude error constants' vs certificate derived_finite_geometry.calibration_geometry_bounds and proof.md \u00a75]"
+    },
+    {
+      "dimension": "assumption_explicitness",
+      "severity": "note",
+      "text": "The statement's 'delta=4*epsilon*d/t_star^2' uses t_star, epsilon and d without defining them; parsing requires the certificate's physical_amplitude_interpretation ('t_star=A*eta_star^2/2') and FORMULATION.md's 'd=kappa*hbar/(46080*pi^2)'. Because the formulation_version is the stale 'legacy-table', the binding text is not self-contained on these symbols. (Checked consistent: 4*eps*d/t_star^2 = 16*eps*d/(A^2*eta_star^4) as in the certificate's finite_amplitude field.) [Statement phrase 'delta=4*epsilon*d/t_star^2' vs certificate ...accuracy_example.physical_amplitude_interpretation and FORMULATION.md delta definition]"
+    },
+    {
+      "dimension": "confidence_calibration",
+      "severity": "note",
+      "text": "Numeric spot-checks of the statement's claims against the certificate pass: delta_bar=2048/190897521 equals the exact minimum of the four \u00a77 caps computed from b0=20461/128 and b1=61013499/8192 (1/(24b0+12b1)=8192/763590084=2048/190897521); the three uniform_reference_scale_error_ratios \u2248 4.9e-3 (density), 3.1e-3 (pressure), 3.4e-3 (EED), all strictly below 1e-2; rounded bounds 8e14/9e14/1.7e15 strictly dominate the exact stress_error_constants (positive strict_rounded_bound_margins). CERTIFIED is calibrated only under the reading that ledger CERTIFIED semantics admit written analytic proofs plus machine-replayed algebra, which the level note asserts but nothing in the packet defines. [certificate delta_bar, U_derivative_bounds_through_5_per_delta, uniform_reference_scale_error_ratios, strict_rounded_bound_margins; Notes 'written ... proof, not FORMALIZED']"
+    },
+    {
+      "dimension": "decision_soundness",
+      "severity": "warning",
+      "text": "The promotion is requested one day after import and on the same day as an unexplained verifier-binary change (PASS at 19:28 under binary 7debe2e08b30, 'reverify' PASS at 20:02 under 479182a7912b), while the ledger record contradicts the evidence's own declared bindings (empty dependency field vs 'immutable dependency is A.6'; legacy-table formulation_version vs FORMULATION.md-bound certificate). Promoting now would mint a CERTIFIED receipt on a record whose dependency, formulation, and verifier-identity fields are unstable or wrong. [Evidence entry 'note: reverify; ...' (2026-09-06T20:02:43Z); claim header fields 'Dependencies: (none)' and 'formulation_version: legacy-table']"
+    }
+  ],
+  "id": "P8-A.7.20260906.model",
+  "provenance": {
+    "cost_usd": "2.9293",
+    "model": "claude-fable-5",
+    "request_digest": "2bfebb4bcb61f215a85d9582978a9f022d76fa16446a7dbc6dfbddb4fee2e678",
+    "response_digest": "ba3176761e4aa2dbe9ae5bab647a64f9b54c9f29a0dc70f967d1f9026bb77062",
+    "run_id": "review-P8-A.7-c7aa3f-s1",
+    "transport": "ClaudeCodeClient"
+  },
+  "reviewer": "model",
+  "statement_sha256": "6ad085163c22bb7f2c5c9894d5e8a63c6a2267d44f1de040db42f3103ae749df",
+  "target_level": "CERTIFIED",
+  "verdict": "BLOCK"
+}
