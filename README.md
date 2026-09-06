@@ -53,6 +53,13 @@ around a pre-registered problems document and a certificate-gated ledger.
   on that target interval. Its proof controls both mode frequencies and
   uses the actual positive reference EED. Exact SEE, realistic-field
   extensions and the cosmological focusing application remain open.
+  The [actual-response continuity and causal-inverse gate](problems/P8/a/applicability/reference/asymptotics/backreaction/response/remainder/residual/existence/README.md)
+  now gives quantitative two-potential bounds in the norm of the first
+  potential derivative, retaining the full nonzero preparation history.
+  A separate positive pole/cut inverse has exact compact-interval norms.
+  The complete SEE map, compatible smooth initial data and interval
+  enclosure still require proof; the abstract contraction check is not
+  an actual solution certificate.
 - P8(b): [completed scoped classification and verification commands](problems/P8/README.md).
   All 32 M0/M1 sector-row verdicts are decided: minimal optional groups are
   C or D without extra matter, and CD with rolling canonical matter.
@@ -122,7 +129,16 @@ around a pre-registered problems document and a certificate-gated ledger.
   polynomial, including roots and branch switching, with two separate
   minimally coupled NEC matter sectors. It does not inherit the beta1
   vacuum spectrum or exclude other geometries and matter couplings.
+  Its [root-covered monotonicity extension](problems/P8/s6/matching/bimetric/general/monotonic/README.md)
+  excludes every contraction-to-expansion transition in that regular class,
+  including degenerate bounces, and gives a sharp endpoint-only CD Hubble
+  mismatch. It keeps the zero-polynomial exception separate and does not
+  claim unweighted Hubble monotonicity on an interacting branch.
   General derivative/curvature or quantum matching mechanisms remain open.
+
+The [P8 closure audit](docs/assessment-2026-09-06-p8-closure-audit.md) separates
+completed certificate gates from the outstanding original research questions.
+P8 is not marked finished or closed.
 
 ## Layout
 

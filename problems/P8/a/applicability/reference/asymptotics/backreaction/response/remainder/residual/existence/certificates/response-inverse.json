@@ -1,0 +1,254 @@
+{
+  "claim": "P8-A.10",
+  "conditional_fixed_point_gate": {
+    "domain_or_input_bounds_proved_by_numeric_API": false,
+    "illustrative_inputs_are_actual_SEE_data": false,
+    "necessary_inputs": "proved concrete map on a closed positive-radius C0 ball; full Lipschitz Lambda, operator bound C, fixed-point residual eta, radius r",
+    "verified_inequalities": "q=C*Lambda<1 and eta+q*r<=r; unique ball fixed point then has error <=eta/(1-q)"
+  },
+  "date": "2026-09-06",
+  "derived_constants": {
+    "actual_mode_ball": {
+      "delta": "1/100000000000000",
+      "full": {
+        "amplitude_cap": "183040497/409600000000000000",
+        "derivative": "674760507137467948317974103/83886079325239511859200000000000000",
+        "derivative_cap": "61013499/409600000000000000",
+        "duration": "3",
+        "exponential_upper": "204800000000000000/204799998352635527",
+        "higher_derivative": "24424287362123109561/83886079325239511859200000000000000",
+        "quadratic_derivative": "1647364473/204800000000000000",
+        "split": "1/3",
+        "strength": "1647364473/409600000000000000",
+        "value": "2024281521412403844953922309/83886079325239511859200000000000000"
+      },
+      "full_derivative_rounded_upper": "1/100000000",
+      "full_rounding_gap": "164100286114927170274025897/83886079325239511859200000000000000",
+      "margin_factor": "2",
+      "prepared_U1": "61013499/8192",
+      "shared": {
+        "amplitude_cap": "183040497/409600000000000000",
+        "derivative": "45570430516170566195196452985122588892875766161/654029160862560749221603874671086136721408000000000000000",
+        "derivative_cap": "61013499/409600000000000000",
+        "duration": "3",
+        "exponential_upper": "204800000000000000/204799998352635527",
+        "future_length": "1/4",
+        "higher_derivative": "8141429120707703187/335544317300958047436800000000000000",
+        "log_ratio_upper": "5458772605170662061251/2192803656723648029880",
+        "quadratic_derivative": "222511792059523063457354734183/3193501787712022161915904000000000000000",
+        "split": "1/3",
+        "strength": "1647364473/409600000000000000",
+        "value": "45570430516170566195196452985122588892875766161/2616116643450242996886415498684344546885632000000000000000"
+      },
+      "shared_derivative_rounded_upper": "1/10000000000",
+      "shared_rounding_gap": "19832485570085508726963934481986024779265033839/654029160862560749221603874671086136721408000000000000000"
+    },
+    "independent_Fraction_replay": {
+      "dyson_allocation_checks": {
+        "3": {
+          "infrared": "54",
+          "total": "162",
+          "ultraviolet": "108"
+        },
+        "4": {
+          "infrared": "243",
+          "total": "486",
+          "ultraviolet": "243"
+        },
+        "5": {
+          "infrared": "4374/5",
+          "total": "1458",
+          "ultraviolet": "2916/5"
+        },
+        "6": {
+          "infrared": "13122/5",
+          "total": "19683/5",
+          "ultraviolet": "6561/5"
+        },
+        "7": {
+          "infrared": "236196/35",
+          "total": "236196/25",
+          "ultraviolet": "472392/175"
+        },
+        "8": {
+          "infrared": "531441/35",
+          "total": "708588/35",
+          "ultraviolet": "177147/35"
+        },
+        "9": {
+          "infrared": "1062882/35",
+          "total": "9565938/245",
+          "ultraviolet": "2125764/245"
+        }
+      },
+      "inverse_calibration": {
+        "abstract_ball_margin": "17/30",
+        "abstract_distance": "3/20",
+        "abstract_q": "1/3",
+        "high_cut_norm_upper": "16/51",
+        "length": "1/179769313486231590772930519078902473361797697894230657273430081157732675805500963132708477322407536021120113879871393357658789768814416622492847430639474124377767893424865485276302219601246094119453082952085005768838150682342462881473913110540827237163350510684586298239947245938479716304835356329624224137216",
+        "low_cut_norm_upper": "1/1675975991242824637446753124775730765934920727574049172215445180465220503759193372100234287270862928461253982273310756356719235351493321243304206125760512",
+        "norm_upper": "4820624853842065177160233212056628225824186495891377902719350078130514783183606401338170048214692099326897532561776009575724833957589916649939225975781558471145414476574379868998037179861504451036283692038296585049333736082275278768042542376542458714332708408492474796320187308841444392071335463154534353941514703666240370005608369533590889949239804793515165830374702952870061109802070889824440762959977167169639141574826920835715466519740585175251701441381793639/15365741721621582752198243363430502469814594455653767064917928374041015871397745404265417028684331066604485885040661030522622908239817859321681282797803688403026985038557860807913735746725219560439890337500847352867183079844141819322816342903384363276861074713557166819887892639920311106125187795294634923610845753744627496467441375845621898312075652001230664311583475194552443536707001945824731920834468699270007482316434019482274208184279382140987861809921785856",
+        "pole_norm_upper": "240/179769313486231590772930519078902473361797697894230657273430081157732675805500963132708477322407536021120113879871393357658789768814416622492847430639474124377767893424865485276302219601246094119453082952085005768838150682342462881473913110540827237163350510684586298239947245938479716304835356329624224137213",
+        "rounded_gap": "301289053365129073572514575753539264114011655993211118919959379883157173948975400083635628013418256207931095785111000598482802122349369790621201623486337663196913869611573733639874735713568735777013087128652532573060623865771994339562905257918995711287649829359914143642443571131992643303727135277010620595433880915302128816872089081616409488118745873561722273486455445314086735766929758783803210651512399253696685863984418991709269541685875538410919161925468313/15365741721621582752198243363430502469814594455653767064917928374041015871397745404265417028684331066604485885040661030522622908239817859321681282797803688403026985038557860807913735746725219560439890337500847352867183079844141819322816342903384363276861074713557166819887892639920311106125187795294634923610845753744627496467441375845621898312075652001230664311583475194552443536707001945824731920834468699270007482316434019482274208184279382140987861809921785856",
+        "split": "13407807929942597099574024998205846127479365820592393377723561443721764030073546976801874298166903427690031858186486050853753882811946569946433649006084096"
+      },
+      "mode_calibration": {
+        "derivative_cap": "61013499/409600000000000000",
+        "full_derivative": "674760507137467948317974103/83886079325239511859200000000000000",
+        "full_rounding_gap": "164100286114927170274025897/83886079325239511859200000000000000",
+        "full_value": "2024281521412403844953922309/83886079325239511859200000000000000",
+        "log_ratio_upper": "5458772605170662061251/2192803656723648029880",
+        "prepared_U1": "61013499/8192",
+        "shared_derivative": "45570430516170566195196452985122588892875766161/654029160862560749221603874671086136721408000000000000000",
+        "shared_higher": "8141429120707703187/335544317300958047436800000000000000",
+        "shared_quadratic": "222511792059523063457354734183/3193501787712022161915904000000000000000",
+        "shared_rounding_gap": "19832485570085508726963934481986024779265033839/654029160862560749221603874671086136721408000000000000000",
+        "shared_value": "45570430516170566195196452985122588892875766161/2616116643450242996886415498684344546885632000000000000000",
+        "strength": "1647364473/409600000000000000"
+      },
+      "polynomial_checks": {
+        "factorial_gap_factored": "(n-3)*(3*n-2)/(2*(n-1)*(n-2))",
+        "pi_integral_polynomial_part": "22/7",
+        "pi_integral_remainder": "-4/(1+x^2)",
+        "pi_squared_upper_gap": "6/49"
+      }
+    },
+    "isolated_inverse_and_conditional_example": {
+      "abstract_conditional_example": {
+        "distance_upper": "3/20",
+        "q_upper": "1/3",
+        "radius": "1",
+        "self_map_margin": "17/30"
+      },
+      "example_is_a_SEE_solution": false,
+      "isolated_inverse": {
+        "B": "1",
+        "high_cut_norm_upper": "16/51",
+        "length": "1/179769313486231590772930519078902473361797697894230657273430081157732675805500963132708477322407536021120113879871393357658789768814416622492847430639474124377767893424865485276302219601246094119453082952085005768838150682342462881473913110540827237163350510684586298239947245938479716304835356329624224137216",
+        "low_cut_norm_upper": "1/1675975991242824637446753124775730765934920727574049172215445180465220503759193372100234287270862928461253982273310756356719235351493321243304206125760512",
+        "n": "512",
+        "norm_upper": "4820624853842065177160233212056628225824186495891377902719350078130514783183606401338170048214692099326897532561776009575724833957589916649939225975781558471145414476574379868998037179861504451036283692038296585049333736082275278768042542376542458714332708408492474796320187308841444392071335463154534353941514703666240370005608369533590889949239804793515165830374702952870061109802070889824440762959977167169639141574826920835715466519740585175251701441381793639/15365741721621582752198243363430502469814594455653767064917928374041015871397745404265417028684331066604485885040661030522622908239817859321681282797803688403026985038557860807913735746725219560439890337500847352867183079844141819322816342903384363276861074713557166819887892639920311106125187795294634923610845753744627496467441375845621898312075652001230664311583475194552443536707001945824731920834468699270007482316434019482274208184279382140987861809921785856",
+        "pole_argument_upper": "3/179769313486231590772930519078902473361797697894230657273430081157732675805500963132708477322407536021120113879871393357658789768814416622492847430639474124377767893424865485276302219601246094119453082952085005768838150682342462881473913110540827237163350510684586298239947245938479716304835356329624224137216",
+        "pole_norm_upper": "240/179769313486231590772930519078902473361797697894230657273430081157732675805500963132708477322407536021120113879871393357658789768814416622492847430639474124377767893424865485276302219601246094119453082952085005768838150682342462881473913110540827237163350510684586298239947245938479716304835356329624224137213",
+        "split": "13407807929942597099574024998205846127479365820592393377723561443721764030073546976801874298166903427690031858186486050853753882811946569946433649006084096"
+      },
+      "rounded_norm_cap": "1/3"
+    }
+  },
+  "exact_residuals": {
+    "actual_Dyson_and_Abel_response": {
+      "abel_outer_endpoint": "0",
+      "abel_time_derivative": "0",
+      "factorial_majorant_gap": "0",
+      "higher_tail_coefficient": "0",
+      "localized_quadratic_integral": "0",
+      "oscillator_radial_ibp": "0",
+      "oscillator_second_order": "0",
+      "phase_derivative_transfer": "0",
+      "quadratic_kernel_derivative": "0",
+      "quadratic_kernel_outer_endpoint": "0",
+      "quadratic_total_kernel_mass": "0"
+    },
+    "causal_log_pole_cut_and_polynomial_data": {
+      "Laplace_multiplier_degree_1": "0",
+      "Laplace_multiplier_degree_2": "0",
+      "Laplace_multiplier_degree_3": "0",
+      "Laplace_multiplier_degree_4": "0",
+      "classical_pi_upper_identity": "0",
+      "integrated_cut": "0",
+      "integrated_pole": "0",
+      "log_convolution_degree_1": "0",
+      "log_convolution_degree_2": "0",
+      "log_convolution_degree_3": "0",
+      "log_convolution_degree_4": "0",
+      "log_tail_antiderivative": "0",
+      "pi_squared_upper_margin": "0",
+      "positive_cut_density_jump": "0",
+      "simple_positive_pole_residue": "0"
+    }
+  },
+  "formulation": "FORMULATION.md",
+  "inverse_theorem": {
+    "C1_endomorphism_or_automatic_C1_inverse": false,
+    "Laplace_multiplier": "(beta+log(s))/(8*pi^2) acting on f-f(0)",
+    "abstract_dyadic_example": "beta>=-1, L=2^-1024 gives norm<1/3; not a physical proper-time or SEE interval",
+    "causal_kernel": "8*pi^2*[p*exp(p*t)+integral_0^infinity exp(-r*t)/((log(r)+beta)^2+pi^2) dr], p=exp(-beta)>0",
+    "exact_C0_norm": "8*pi^2*[exp(p*L)-1+integral_0^infinity (1-exp(-r*L))/(r*((log(r)+beta)^2+pi^2)) dr]",
+    "finite_stress_prescription_changed": false,
+    "finite_upper_bound": "8*pi^2*[exp(p*L)-1+sqrt(L)/pi^2+1/(beta-log(L)/2)] for beta-log(L)/2>0",
+    "full_SEE_map_identified_with_isolated_operator": false,
+    "operator": "D_beta f=[(beta-EulerGamma)*(f-f(0))-integral_0^t log(t-s)*f'(s) ds]/(8*pi^2)",
+    "pole_omitted": false
+  },
+  "mode_theorem": {
+    "actual_calibration": "dimensionless delta=10^-14, T<=3, M=2*delta*b1 with b1 from pinned A7, future L=1/4; derivative coefficients <10^-8 and <10^-10",
+    "actual_state_scope": "agrees with the actual transported Hadamard state's nonlinear Wick term for smooth past-flat geometries; generic C1 inputs are not asserted Hadamard",
+    "analytic_strength_domain": "all finite M>=0,T>0",
+    "bounds": "||U'||,||V'||<=M; D=||U'-V'||, z=M*T^3",
+    "calibration_clock": "eta_star is the last free slice; the original state is freely propagated from y=1/2; T is only a history upper bound, not an unproved future extension",
+    "domain": "real U,V in C1[0,T], U(0)=V(0)=0, common original plane-wave data; no sign or mass-gap requirement",
+    "full_SEE_Lipschitz_constant": false,
+    "full_derivative_coefficient": "2*z+18*z^2*exp(2*z)",
+    "full_value_coefficient": "T*(2*z+18*z^2*exp(2*z))",
+    "functional": "R=integral k*(|w_k|^2-1-F1_k) dk; quadratic Abel limit plus absolutely convergent higher Dyson orders",
+    "higher_potential_derivatives_needed": false,
+    "rational_API_strength_domain": "0<=M*T^3<=1/4",
+    "shared_derivative_coefficient": "M*T*L^2*(5/4+log(T/L)/2)+18*M^2*T^5*L*exp(2*M*T^3)",
+    "shared_history": "U=V on [0,T-L], 0<L<=T; retain original nonzero prepared history",
+    "shared_value_coefficient": "L times shared derivative coefficient",
+    "uniqueness_from_density_of_smooth_past_flat_subset": false
+  },
+  "negative_controls": {
+    "C1_domain_control": "D_beta[t] has an unbounded initial derivative and J_beta[1] is not C1 at zero",
+    "discarding_common_prehistory": "would lose the future-past mixed quadratic and marked Dyson terms",
+    "inexact_or_outside_domain_inputs": "rejected, including booleans, binary floats, nonfinite values, forbidden order, nonpositive duration/split, and failed strict contraction",
+    "missing_pole_Laplace_defect": "p/(-p + s)",
+    "nonzero_initial_potential": "derivative transfer acquires -sin(k*t)*U(0)/k at first order",
+    "quadratic_absolute_UV_majorant": "integral k^-1 diverges; exact two-mode oscillatory/Abel cancellation is required"
+  },
+  "not_established": [
+    "Full actual SEE functional self-map, gravitational/geometric Lipschitz constants or long-interval shadowing",
+    "Exact compatible initial Einstein constraint with fixed radiation and a joint metric/state preparation",
+    "A smooth Hadamard exact solution, or transfer of A9's fixed-metric QSEI to such a solution",
+    "An arbitrary-state, massive/interacting/realistic-field response theorem",
+    "A cosmological incompleteness theorem or completion of P8a/P8"
+  ],
+  "prior_sha256": {
+    "A7_calibration_input": "cc4ec02bcb23e0ef01d0fb58ad4b95a3bb602a5bbbfc6871d044b2a09a78e963",
+    "A9": "514b4ee50201a13c45dd02ca7bd4879dd58c95453740a0466c5c9c215b04cf20"
+  },
+  "remaining_obligations": "notes/see-gap.md",
+  "schema": 1,
+  "source_audit": "notes/sources.md",
+  "source_sha256": {
+    "FORMULATION.md": "9181539c8fa7346039fa0c13e1c1bbaf10b3fd06b812bef57029a79fc0d1ca55",
+    "README.md": "b2f6c14fb864aa3e6c7e4e02949c80c5f754c210060fcb8800880a3f279fe5ab",
+    "notes/inverse.md": "af4d96fcc5ee5c3bc18360d9d04df50d8df361eb4346cef65c76215fcc027658",
+    "notes/mode-response.md": "fd0e42491d6f31b73b5a4b633a25747ffff9f82925f2fc99a2c7b9f923fbc242",
+    "notes/see-gap.md": "9e983a43e9707edbe68fb88c9fad4745276eaac26234cda68d54fdd472798304",
+    "notes/sources.md": "db895c61bb555ca651a068d0d5ca417478e5b508ddff4012427bba61ee20e1df",
+    "src/p8a_existence/__init__.py": "83db7038a362c8042b4e81e0446d28213a34ea555a25db105f183c487c0df127",
+    "src/p8a_existence/independent.py": "f687da2adf0a26a85b8924cd2d04632d0d80394357afd7d1aa733fb0b9e2233c",
+    "src/p8a_existence/log_inverse.py": "026390e90e6e34871a79faf3aab78537270b0237b47be67f9484f9a9066cbd79",
+    "src/p8a_existence/mode_lipschitz.py": "12e5ba1828dd6351005cd5edb819dd3a2dfeb10b93bf29fc9d6d38da9b0fe529",
+    "src/p8a_existence/verify.py": "8cdfe09db9826d4d9802fc390be951037e3b471c5a39ea27e9655c8bbfcca7df",
+    "tests/conftest.py": "8b6f6291420bee6a01e77f3fea18155154f955ef925bc10a0890a6ca9f96ad84",
+    "tests/test_existence_certificate.py": "084644a9b493e4f607e9383f127764080cf217d942ee2fa3da69241ae81135ed",
+    "tests/test_log_inverse.py": "a86edc05bd49ed34c02f7c82672e1a4e8c98a20cefdaa40392b2f11f173130e1",
+    "tests/test_mode_lipschitz.py": "f5ae9861009afffb6501e9a7091cccc8e69d85fed76660193268a55b769f176a",
+    "tests/test_response_covariant_audit.py": "70a7122915794de110065ff493592038bbcf7c5da9895551297ca77393018cfa"
+  },
+  "status": "ACTUAL_NONLINEAR_C1_RESPONSE_AND_ISOLATED_CAUSAL_INVERSE_CERTIFIED; FULL_SEE_EXISTENCE_AND_P8_OPEN",
+  "verification_boundary": [
+    "Pinned A9 and its A8/A7 lineage are replayed without old-file edits",
+    "New constants have independently assembled Fraction-only checks; no sampled proof of an infinite-frequency claim",
+    "Independent actual quadratic product, radial measure, Abel, initial endpoint and clock-normalization tests are hashed",
+    "Integral convergence, keyhole contour, marked simplex and Banach implications are explicit written proofs, not formalized PDE results",
+    "Independent review corrected the C1 extension-density wording before the source hashes were frozen"
+  ],
+  "written_proofs": [
+    "notes/mode-response.md",
+    "notes/inverse.md"
+  ]
+}

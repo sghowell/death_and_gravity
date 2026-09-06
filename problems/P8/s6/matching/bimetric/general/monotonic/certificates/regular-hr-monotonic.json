@@ -1,0 +1,149 @@
+{
+  "boundary_root_argument": "closed root set decomposes into its interior and boundary; every boundary point is approached from {P!=0}; Dg Z is continuous",
+  "claim": "P8-S6.5.HR",
+  "control_backgrounds": {
+    "P_identically_zero": "G=F=m4=1,beta=(3,0,0,0,3),a=e^t,b=e^-t,Ng=Nf=1,no matter: Hg=1,Zdot>0,all four equations exact",
+    "P_nonzero_H_not_monotone": "G=F=m4=1,beta=(-2,5/4,0,0,7/4),y=1+t,H=sqrt((7y^2+5/y)/12),c=y+1/H,rho_g=3H^2+2-15y/4,n_g=-rho_g'/(3H),f vacuum; all four equations exact",
+    "interacting_control_domain": "9/10<=y<=11/10; n_g>0 and local positive-kinetic canonical reconstruction exists; Hdot(0)=3/8>0 but Zdot(0)=-sqrt(2)/16<0",
+    "scope": "exact background controls, not vacuum/perturbation/quantum health claims"
+  },
+  "date": "2026-09-06",
+  "distinction_controls": {
+    "NEC_numerator_positive_on_nine_tenths_to_eleven_tenths": "2258/605",
+    "decoupled_Z_increases_although_H_is_constant": "2*exp(-4*t)/(1 + exp(-4*t))**(3/2)",
+    "interacting_H_increases_at_centre": "3/8",
+    "interacting_Z_decreases_at_centre": "-sqrt(2)/16",
+    "interacting_matter_NEC_at_centre": "1/2",
+    "static_parent_attains_endpoint_error_threshold": "8/5"
+  },
+  "domain": {
+    "gravity": "G,F,m4>0; arbitrary constant real beta0,...,beta4; same HR action as pinned S6.4",
+    "interval": "connected regular interval; smooth positive finite a,b,Ng,Nf at every point; no uniform tail bound or continuation across singular endpoints assumed",
+    "matter": "primary g-only NEC matter; extension to independent separately conserved minimally coupled NEC matter on each metric; no shared doubly coupled field",
+    "metric_and_clock": "fixed physical g; positive-root common spatially flat FLRW metrics; Dg=Ng^-1*d/dt",
+    "topology": "no restriction on number of root-set components, isolated crossings, branch switches or accumulation points"
+  },
+  "exact_residuals": {
+    "constant_ratio_roots_and_decoupled_exception": {
+      "constant_ratio_root_interval_formula": "0",
+      "zero_polynomial_f_interaction_null": "0",
+      "zero_polynomial_g_Hubble_equation": "0",
+      "zero_polynomial_g_interaction_null": "0"
+    },
+    "decoupled_de_sitter": {
+      "EL_Nf": "0",
+      "EL_Ng": "0",
+      "EL_a": "0",
+      "EL_b": "0",
+      "constant_physical_Hubble": "0",
+      "positive_Z_derivative_in_decoupled_case": "0"
+    },
+    "full_lapse_and_differentiated_Bianchi_identity": {
+      "dynamic_Hubble_ratio_derivative": "0",
+      "exact_normalized_Hubble_derivative": "0",
+      "full_parent_null_balance": "0",
+      "lapse_retaining_off_branch_Z_identity": "0",
+      "off_branch_differentiated_constraint": "0",
+      "physical_volume_ratio_weight": "0",
+      "undivided_Bianchi_to_dynamic_error": "0"
+    },
+    "interacting_increasing_H": {
+      "Hdot_at_centre": "0",
+      "Zdot_at_centre": "0",
+      "canonical_null_stress": "0",
+      "f_Friedmann": "0",
+      "f_null": "0",
+      "g_Friedmann": "0",
+      "g_matter_conservation": "0",
+      "g_null": "0",
+      "literal_EL_Nf": "0",
+      "literal_EL_Ng": "0",
+      "literal_EL_a": "0",
+      "literal_EL_b": "0",
+      "n_g_at_centre": "0",
+      "positive_null_numerator_interval_lower_bound": "0"
+    },
+    "sharp_CD_endpoint_mismatch": {
+      "left_CD_endpoint": "0",
+      "right_CD_endpoint": "0",
+      "static_parent_saturates_left_error": "0",
+      "static_parent_saturates_right_error": "0"
+    },
+    "static_sharp_endpoint_control": {
+      "EL_Nf": "0",
+      "EL_Ng": "0",
+      "EL_a": "0",
+      "EL_b": "0"
+    }
+  },
+  "formulation": "FORMULATION.md",
+  "identically_zero_exception": "P identically zero: Dg Hg=-n_g/(2G)<=0; Z need not be monotone and is not used",
+  "independent_Fraction_coefficients": {
+    "arithmetic": "coefficientwise Fraction Laurent algebra, reusing only the pinned polynomial primitive",
+    "nonzero_omission_term_counts": {
+      "omitting_c_in_weight": 6,
+      "omitting_ratio_derivative": 2
+    },
+    "zero_coefficient_residuals": {
+      "full_dynamic_weighted_derivative": 0,
+      "inertia_chain_rule": 0,
+      "off_branch_derivative_correction": 0,
+      "physical_volume_ratio": 0,
+      "undivided_branch_error": 0
+    }
+  },
+  "interior_root_identity": "Dg Z=-n_g/(2G*sqrt(A))<=0 where P(y)=0 on an open interval; y is locally constant",
+  "nonzero_polynomial_monotone": "P not identically zero: A=G+F*y^2, Z=Hg/sqrt(A), Dg Z<=0 throughout the connected interval",
+  "not_established": [
+    "Unweighted Hg monotonicity on interacting branches, or Z monotonicity for P identically zero",
+    "Healthy arbitrary-beta vacuum or rolling perturbations, a parent matching construction, radiative/interaction control",
+    "An exclusion of non-flat or non-common-FLRW/non-bidiagonal metrics, other/singular square-root branches, or singular-endpoint continuation",
+    "An exclusion of quantum/NEC-violating/nonminimal/derivative/shared matter, time-dependent interaction coefficients or changed physical frames",
+    "A general bimetric or UV-completion exclusion, or completion of S6/P8"
+  ],
+  "off_branch_identity": "2*A^(3/2)*Dg Z+n_g+c*y^3*n_f=E_weighted-2F*c*y^3*Df(Hf-Hg/y)",
+  "open_dynamic_identity": "-2*A^(3/2)*Dg Z=n_g+c*y^3*n_f on {P(y)!=0}",
+  "positive_expressions": {
+    "dynamic_denominator": "2*(M_f_squared*y**2 + M_g_squared)**(3/2)",
+    "inertia": "M_f_squared*y**2 + M_g_squared",
+    "interacting_control_NEC_numerator_lower_bound": "2258/605",
+    "root_denominator": "2*M_g_squared*sqrt(M_f_squared*y**2 + M_g_squared)",
+    "second_matter_weight": "c*y**3",
+    "sharp_CD_endpoint_radius": "8/(5*tau)"
+  },
+  "primary_source_audit": "notes/sources.md",
+  "primary_sources": {
+    "interaction_null_anticorrelation": "https://arxiv.org/pdf/1206.3814",
+    "parent_equations_and_polynomial": "https://arxiv.org/pdf/1111.1655",
+    "regular_extremality_and_source_hypotheses": "https://arxiv.org/pdf/1211.0214"
+  },
+  "prior_S6_4_HR_sha256": "e137b2392930eb9cec1abbac0dffb676de0f4e41e3388ede7d52923f13cd1118",
+  "schema": 1,
+  "sharp_CD_endpoint_mismatch": "max(|Hparent(-tau/2)+8/(5tau)|, |Hparent(tau/2)-8/(5tau)|)>=8/(5tau) in physical g cosmic time; no Hdot error assumption",
+  "sharpness": "regular static beta1 Minkowski parent with H=0 attains equality at both endpoints",
+  "sign_conclusion": "for t2>t1, Hg(t1)<=0 implies Hg(t2)<=0; Hg(t1)<0 implies Hg(t2)<0; hence no contraction-to-expansion transition of any degeneracy",
+  "source_sha256": {
+    "FORMULATION.md": "d54a9387b27b1fa2a1c6942f47ded824ff37c779426080e4bbbd6bd6739be968",
+    "README.md": "79ad4e8352f33967c84bd004fff0d351c28406aac98672479929a74997a96045",
+    "notes/monotonicity.md": "4488caf32c4000114def81efb01cce39a841ac042e965e679573c0a46e25f588",
+    "notes/sources.md": "02ff1dd84aab3e6d9eef3f09b7f05bea87663053591935c489ed3b3975c3ee0a",
+    "src/p8_bimetric_monotonic/__init__.py": "9e1d8026ce2769251ea0dbef51a6ea2c89d655c75ad5cb413165840bde047104",
+    "src/p8_bimetric_monotonic/controls.py": "b0b9db92dd307d0effc7f9cee0426c7a77cfde9a287f224a1f00643f1c2a6f5a",
+    "src/p8_bimetric_monotonic/flow.py": "a1febed7aac88a2246cc83b4e0ab2e38699d4f7a752eb357b93f9eebe3e74989",
+    "src/p8_bimetric_monotonic/fraction_checks.py": "130214aea8620ef937348c213b45a64b4b8a6702238d74252a80ff8000fec4ba",
+    "src/p8_bimetric_monotonic/verify.py": "a9dc8ae34c5a6c927aee4ddc20ec86159692679a6bc48534e79ec7f90ca8a3d2",
+    "tests/conftest.py": "8fab4dd62b03383497b2074f7ece2a2cd51f3e66c02686bb9e5b9d2beba6202e",
+    "tests/test_monotonic_certificate.py": "b0f19f28545f008978182fc9d2417889b1fcfb88ef4f30ee55dc1e90e85c3657",
+    "tests/test_monotonic_covariant_audit.py": "dda49cfe4aee80de34a791c7af6ac6fedb3baa1fef0a2e1382c641c6c945113d",
+    "tests/test_monotonic_flow.py": "e572242ce94153520a5738bb21ffb2468cb1d94f1b4ddba5aa1a9eb9c78be5e4"
+  },
+  "status": "REGULAR_COMMON_FLAT_HR_CONTRACTION_TO_EXPANSION_OBSTRUCTED_INCLUDING_DEGENERATE_TRANSITIONS; GENERAL_PARENT_AND_UV_MATCHING_OPEN",
+  "verification_boundary": [
+    "Pinned S6.4 and its replayable lineage are checked without edits",
+    "Exact symbolic and independent Fraction coefficient identities are replayed; controls bridge to all four pinned Euler equations",
+    "Independent covariant/root/control audit is hashed and tested separately",
+    "Root-set topology, continuity, mean-value and canonical-reconstruction arguments are written proofs, not formalized PDE or UV results",
+    "Primary sources support equations and scope distinctions; no global novelty assertion"
+  ],
+  "written_proof": "notes/monotonicity.md"
+}
