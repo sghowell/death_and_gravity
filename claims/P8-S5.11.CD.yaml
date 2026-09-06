@@ -1,0 +1,63 @@
+coverage: null
+depends_on: []
+evidence:
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P8/s5/matter/physical/control/tree/loops/tensor/scalars/certificates/cd-weyl-scalars.json
+  stamped: '2026-09-05'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P8/s5/matter/physical/control/tree/loops/tensor/scalars/src/p8_m1_weyl_scalar/verify.py
+  stamped: '2026-09-05'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P8/s5/matter/physical/control/tree/loops/tensor/scalars/notes/scalar-response.md
+  stamped: '2026-09-05'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P8/s5/matter/physical/control/tree/loops/tensor/scalars/FORMULATION.md
+  stamped: '2026-09-05'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+formulation_version: legacy-table
+id: P8-S5.11.CD
+kind: statement
+level: CERTIFIED
+n: null
+notes: 'imported from CLAIMS.md; level note: independent four-index scalar/gauge/clock
+  and full canonical-Hamiltonian audits; exact stationary/action/observable-map identities,
+  rational coupled finite-band/Neumann majorants and omission controls, pinned S5.10
+  replay; written stationary-action and time-ordered evolution proof, not FORMALIZED'
+problem: P8(b), same constant-Weyl candidate, coupled scalar response
+receipts: []
+standing: CURRENT
+statement: For S5.10's unchanged CD/M1+cC integral C_Weyl^2 candidate, exact scalar
+  geometry gives (4cC/3) integral a^3*q^2*Lensing^2. A partial Legendre transform
+  has auxiliary Hessian diag(-2J,-2q^2/3), regular through gamma crossing for q>0.
+  The explicit off-shell derivative phase map gives a rank-one first-order two-scalar
+  Hamiltonian correction, with separate physical lapse/shift/spatial-metric and matter-density
+  reconstruction. Retaining the full coupled whitening, connection and momentum boundary,
+  independent epsilon=abs(cC)/(M*tau)^2<=10^-116 on the declared finite window/band
+  bounds equal-reduced-data evolution error by 10^115*epsilon, its first Born remainder
+  by 10^229*epsilon^2, the branch phase map by 10^84*epsilon, and equal-chosen-pulled-old-phase-data
+  error by 10^116*epsilon; the chosen reduced momentum Hessian remains positive. These
+  are not physical-metric same-data or exact higher-derivative branch approximation
+  bounds. No unknown matching coefficient, higher-order operator, full loop/nonlinear/causal-cone
+  or UV verdict is established
+substatus: null
+supersedes: []
+updated: '2026-09-05'

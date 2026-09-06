@@ -1,0 +1,46 @@
+coverage: null
+depends_on: []
+evidence:
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P9/b/derivation/rows.py
+  stamped: '2026-08-31'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P9/b/tests/test_s2_rows.py
+  stamped: '2026-08-31'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P9/b/notes/s2-nogo-rows.md
+  stamped: '2026-08-31'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+formulation_version: legacy-table
+id: P9b-0
+kind: statement
+level: CERTIFIED
+n: null
+notes: 'imported from CLAIMS.md; level note: exact sympy identity chain from the frozen
+  action; sign lemma machine-checked three ways'
+problem: P9(b)
+receipts: []
+standing: CURRENT
+statement: 'Frozen EFT (GLV14 eq. (86)), S = {α_K}, family B (flat FLRW + dust): the
+  exact identity I1: α_K c_s² = 3 Ω_DE (1+w_DE) holds, and consequently no pair (α_K,
+  background) with α_K > 0 and c_s² ≥ 0 on J admits a w_DE = −1 crossing (D1) — on
+  the phantom side f < 0 forces α_K c_s² < 0. Holds for ALL α_K > 0 (the frozen bound
+  α_K ≤ 10³ is not needed); auxiliary hypotheses: none beyond D1, family B, D2(i)–(ii).
+  Escapes recorded: ghost phase or the degenerate c_s² → 0 boundary (outside D2/D3)'
+substatus: null
+supersedes: []
+updated: '2026-08-31'

@@ -1,0 +1,52 @@
+coverage: null
+depends_on: []
+evidence:
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P8/s5/certificates/d-nonlinear.json
+  stamped: '2026-09-04'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P8/s5/src/p8_s5/verify.py
+  stamped: '2026-09-04'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P8/s5/notes/nonlinear-d.md
+  stamped: '2026-09-04'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+formulation_version: legacy-table
+id: P8-S5.1.D
+kind: statement
+level: CERTIFIED
+n: null
+notes: 'imported from CLAIMS.md; level note: independent nonlinear/quadratic bridges,
+  generic stationary-series and literal bounce checks, exact FLINT/coefficient-norm
+  bounds, and the stated analytic lemmas; scoped algebraic reduction and principal
+  normalization only'
+problem: P8(b), D-only M0
+receipts: []
+standing: CURRENT
+statement: For the fixed D witness, h_ij=exp(2 omega) hat_h_ij with omega=(N^-4-1)/(2(1+u²)^3)
+  removes lapse derivatives exactly. A full six-component Legendre transform gives
+  h_NN=-2J with 1/(2(1+u²))<J<=2/(1+u²), recovering the earlier Theta/Lambda/J independently.
+  The stationary Hamiltonian is expanded through fourth invariant order, retaining
+  the second-order lapse correction; dimensionful M,tau restoration solves the covariant
+  background equations. Local background units compactify both tails, give a uniformly
+  nonzero normalized lapse Hessian, bounded covering principal kinetic charts and
+  explicit uniform bounds for all 34 invariant coefficients. This is local algebraic
+  lapse reduction, not fully momentum-reduced physical vertices, nonlinear stability,
+  a cutoff hierarchy or UV completion
+substatus: null
+supersedes: []
+updated: '2026-09-04'

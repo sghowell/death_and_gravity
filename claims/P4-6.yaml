@@ -1,0 +1,81 @@
+coverage: null
+depends_on: []
+evidence:
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P4/notes/s2-theorem-b.md
+  stamped: '2026-08-31'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P4/results/theorem_b/analyticity_R.json
+  stamped: '2026-08-31'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P4/results/theorem_b/krawczyk.json
+  stamped: '2026-08-31'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P4/results/theorem_b/winding_R.json
+  stamped: '2026-08-31'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P4/tests/test_validated_modes_stage3.py
+  stamped: '2026-08-31'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P4/src/p4/validated/tc_reduce.py
+  stamped: '2026-08-31'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+formulation_version: legacy-table
+id: P4-6
+kind: statement
+level: CERTIFIED
+n: null
+notes: 'imported from CLAIMS.md; level note: rigorous winding number 2 via 290 contour
+  tiles with κ-Taylor-model enclosures; 432 analyticity boxes; Krawczyk enclosures)
+  — adversarial review 2026-08-30: "proven as stated for the zero count of E"; its
+  items closed the same day: E = 0 ⟺ eigenvalue now exact for every κ ∈ R (constraint-surface
+  invariance as an fmpq_mpoly identity + certified exponents at both singular ends),
+  certify4 index range and Krawczyk remainder/Cauchy-radius formalities fixed (enclosures
+  unchanged), cached tubes validated, winding and analyticity cover reproduced from
+  documented commands and stored (results/theorem_b/*.json). Remaining caveats: ~~gauge
+  identity is a ball identity to order 38~~ closed 2026-08-31: the gauge vector (A′,
+  N′+κN, W′, V′) solves the 4D linearised system as an exact fmpq_mpoly identity for
+  every κ (S4-1, `tc_reduce.gauge_residual`, tests/test_tc_reduction.py); exclusion
+  outside R (Theorem C) open'
+problem: P4
+receipts: []
+standing: CURRENT
+statement: 'Theorem B (mode count in the rectangle): for the linearized EC problem
+  in the KHA sonic-point gauge, the matching function E (zeros = analytic-at-sonic-point,
+  regular-centre perturbations) is analytic on a neighbourhood of R = [0,15]×[−14,14]
+  and has exactly two zeros there, both simple and real: the pure-gauge zero κ̄ ∈
+  [0.35569919907, 0.35569920835] (= 2 − A₀ + 2ω₀/3, generator verified) and κ₁ ∈ [2.81055254439,
+  2.81055255326]; hence exactly one non-gauge eigenvalue with Re κ ≥ 0 in R and γ
+  = 1/κ₁ ∈ [0.3558019218, 0.3558019231]'
+substatus: null
+supersedes: []
+updated: '2026-08-31'

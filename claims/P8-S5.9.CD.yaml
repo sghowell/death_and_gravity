@@ -1,0 +1,62 @@
+coverage: null
+depends_on: []
+evidence:
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P8/s5/matter/physical/control/tree/loops/certificates/cd-matter-loop.json
+  stamped: '2026-09-05'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P8/s5/matter/physical/control/tree/loops/src/p8_m1_loops/verify.py
+  stamped: '2026-09-05'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P8/s5/matter/physical/control/tree/loops/notes/one-loop.md
+  stamped: '2026-09-05'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P8/s5/matter/physical/control/tree/loops/FORMULATION.md
+  stamped: '2026-09-05'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+formulation_version: legacy-table
+id: P8-S5.9.CD
+kind: statement
+level: CERTIFIED
+n: null
+notes: 'imported from CLAIMS.md; level note: primary heat-kernel input with exact
+  basis, determinant/sign, off-shell and CD variational identities; rational all-time
+  bounds, independent lapse-first and four-index TT checks, omission controls and
+  pinned S5.8 replay; written EFT scope proof, not FORMALIZED'
+problem: P8(b), isolated canonical-matter one-loop counterterms
+receipts: []
+standing: CURRENT
+statement: The isolated real massless minimal M1 scalar determinant has bulk heat-kernel
+  coefficient A2=C_Weyl^2/120-E4/360+R^2/72+BoxR/30 in the stated representative.
+  In frozen physical variables its nonzero acceleration Hessian proves nonclosure
+  of the strict quadratic-DHOST-plus-free-matter truncation modulo total derivatives,
+  not modulo derivative field redefinitions. On CD, the four-dimensional local A2
+  variational tensor is I_R2/72 with orthonormal component magnitude at most 84/ell^4.
+  At hbar=1, a constant logarithmic scale increment has source-size ratio at most
+  (7/6)*abs(log(mu/mu0))/(M*ell)^2 against the positive reference M^2/ell^2, uniformly
+  at most (7/6)*abs(log(mu/mu0))*10^-648 at S5.8's sufficient scale. These required
+  higher operators are permitted by S6; finite coefficients, nonlocal/anomaly/state
+  contributions and other coupled loops are unbounded. No full-theory noncancellation,
+  radiative stability, corrected causal-cone or UV verdict is proved
+substatus: null
+supersedes: []
+updated: '2026-09-05'

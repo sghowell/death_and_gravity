@@ -1,0 +1,61 @@
+coverage: null
+depends_on: []
+evidence:
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P8/a/applicability/reference/certificates/radiation-reference.json
+  stamped: '2026-09-05'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P8/a/applicability/reference/src/p8a_reference/verify.py
+  stamped: '2026-09-05'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P8/a/applicability/reference/notes/derivation.md
+  stamped: '2026-09-05'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P8/a/applicability/reference/FORMULATION.md
+  stamped: '2026-09-05'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+formulation_version: legacy-table
+id: P8-A.3
+kind: statement
+level: CERTIFIED
+n: null
+notes: 'imported from CLAIMS.md; level note: primary-source renormalization/state
+  dictionary and written proof; exact stress, mode, convention and weighted-Sobolev
+  identities; independent rational conformal stress/integrals, outward Arb enclosures,
+  omission controls and pinned A.2 replay; not FORMALIZED'
+problem: P8(a), fixed radiation FLRW reference stress and absolute QSEI
+receipts: []
+standing: CURRENT
+statement: For the free real massless minimally coupled scalar on a=A*eta, eta>0,
+  the transported Minkowski reference state has rho=hbar/(15360*pi^2*t^4), p=5*rho/3
+  and positive effective energy E_ref=hbar/(5120*pi^2*t^4) in the stated conservation-preserving
+  Hadamard prescription. The usual massless scaling-class finite stress ambiguities
+  vanish on this patch; independently introduced cosmological/Einstein couplings are
+  not hidden in the matter stress. For every Hadamard target state, A.2 becomes an
+  absolute bound with B=integral(hddot^2-3*hdot^2/(8*t^2)+521*h^2/(1280*t^4)), and
+  0<=B<=norm(hddot)^2 on compact positive-time H2_0 sampling. No short-duration or
+  unevaluated reference parameter is needed in this testbed. The reference field alone
+  or with classical traceless radiation is not an exact SEE source; new cosmological
+  focusing, general-background coverage and full P8(a) remain open
+substatus: null
+supersedes: []
+updated: '2026-09-05'

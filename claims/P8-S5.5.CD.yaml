@@ -1,0 +1,59 @@
+coverage: null
+depends_on: []
+evidence:
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P8/s5/matter/certificates/cd-matter.json
+  stamped: '2026-09-05'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P8/s5/matter/src/p8_m1/verify.py
+  stamped: '2026-09-05'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P8/s5/matter/notes/nonlinear.md
+  stamped: '2026-09-05'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P8/s5/matter/FORMULATION.md
+  stamped: '2026-09-05'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+formulation_version: legacy-table
+id: P8-S5.5.CD
+kind: statement
+level: CERTIFIED
+n: null
+notes: 'imported from CLAIMS.md; level note: full nonlinear ADM/IBP identities, independent
+  metric/matter Legendre and literal bounce checks, generic stationary recurrence,
+  exact FLINT signs and polynomial coefficient majorants; written local reduction/bounding
+  lemmas, not FORMALIZED'
+problem: P8(b), fixed CD/M1
+receipts: []
+standing: CURRENT
+statement: The regular spatial map h_ij=T^(-1/2) hat_h_ij, T=1+(N^-2-1)/d^3, removes
+  lapse derivatives after retaining the additional local canonical primitive required
+  by F2_phi. A full seven-velocity metric/matter Legendre transform recovers the prior
+  Theta, Lambda, J and matter-mixing coefficients; omitting the primitive gives J-bridge
+  error 18 at the bounce. Stationary lapse elimination reaches third order and the
+  Hamiltonian fourth invariant order, with exact all-time 1/10<dJ<8 and explicit uniform
+  bounds for all 85 recorded lapse/Hamiltonian invariant coefficients in fixed local
+  background units. The matter-sourced spatial constraints, physical vertices, interaction
+  window, loops and UV remain open
+substatus: null
+supersedes: []
+updated: '2026-09-05'

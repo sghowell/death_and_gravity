@@ -1,0 +1,56 @@
+coverage: null
+depends_on: []
+evidence:
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P4/notes/s4-energy.md
+  stamped: '2026-08-31'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P4/src/p4/validated/tc_energy.py
+  stamped: '2026-08-31'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P4/results/theorem_c/tc_energy.json
+  stamped: '2026-08-31'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P4/tests/test_tc_energy.py
+  stamped: '2026-08-31'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+formulation_version: legacy-table
+id: P4-8
+kind: statement
+level: CERTIFIED
+n: null
+notes: 'imported from CLAIMS.md; level note: conditional on Lemma D (deep tail x ≤
+  −4.5: same pointwise conditions, float-validated with relative margin ≥ 0.39 on
+  [−16, −4.5]; exact closing computation identified — to be closed in S4-3'
+problem: P4
+receipts: []
+standing: CURRENT
+statement: 'Direct-energy exclusion (Theorem C, part 1): in the class of P4-6 there
+  is no eigenvalue with Re κ ≥ 6, hence E(κ) ≠ 0 on {Re κ ≥ 6} — via the GHJS-transfer
+  Liouville normal form v″ = 𝒬v with exactly κ-rational 𝒬 (κ²-density = (μ₊−μ₋)²/4
+  > 0), boundary terms vanishing in the class, and pointwise interval conditions certified
+  in order-2 jet arithmetic on x ∈ [−4.5, 0] incl. the sonic endpoint (two exact identities:
+  QNm = D¹⁰·QN_red in the ring; QN_red(u₀) ≡ 0 in ℚ(V₀,√3)); tube 14520 + sonic 16666
+  + closing boxes, zero failures'
+substatus: null
+supersedes: []
+updated: '2026-08-31'

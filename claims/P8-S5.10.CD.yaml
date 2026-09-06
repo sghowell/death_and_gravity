@@ -1,0 +1,61 @@
+coverage: null
+depends_on: []
+evidence:
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P8/s5/matter/physical/control/tree/loops/tensor/certificates/cd-weyl-tensor.json
+  stamped: '2026-09-05'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P8/s5/matter/physical/control/tree/loops/tensor/src/p8_m1_weyl/verify.py
+  stamped: '2026-09-05'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P8/s5/matter/physical/control/tree/loops/tensor/notes/tensor-response.md
+  stamped: '2026-09-05'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P8/s5/matter/physical/control/tree/loops/tensor/FORMULATION.md
+  stamped: '2026-09-05'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+formulation_version: legacy-table
+id: P8-S5.10.CD
+kind: statement
+level: CERTIFIED
+n: null
+notes: 'imported from CLAIMS.md; level note: exact off-shell operator/action and observable-map
+  identities, dynamic four-index TT audit, compact extrema and rational finite-window/residual
+  majorants, omission controls and pinned S5.9 replay; written energy/Duhamel and
+  EFT-scope proofs, not FORMALIZED'
+problem: P8(b), separately named constant-Weyl tensor candidate
+receipts: []
+standing: CURRENT
+statement: Adding constant cC times integral C_Weyl^2 preserves the exact CD/M1 background.
+  In the original physical tensor variable, the first-order reduced equation has friction
+  3H+8(cC/M^2)(Hddot-2H Hdot) and gradient coefficient 1-16(cC/M^2)Hdot. The derivative
+  field map required for action reduction is explicit. For independent epsilon=abs(cC)/(M*tau)^2<=10^-30,
+  the declared centre-data momentum/window domain gives energy ratio in [3/5,5/3],
+  same-data energy-norm evolution error <=10^15 epsilon, first-Born remainder <=10^30
+  epsilon^2, and a dimensionless original-fourth-order residual <=10^38 epsilon^2
+  times the current norm. The leading gradient shift changes sign, not a UV front-velocity
+  or full quantum-superluminality verdict. No exact-fourth-order branch approximation,
+  scalar-sector health, complete loop correction, unknown matching bound or UV completion
+  is established; old actions and certificates are unchanged
+substatus: null
+supersedes: []
+updated: '2026-09-05'

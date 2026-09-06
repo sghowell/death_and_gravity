@@ -1,0 +1,59 @@
+coverage: null
+depends_on: []
+evidence:
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P8/a/applicability/certificates/radiation-qsei.json
+  stamped: '2026-09-05'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P8/a/applicability/src/p8a_radiation/verify.py
+  stamped: '2026-09-05'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P8/a/applicability/notes/derivation.md
+  stamped: '2026-09-05'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P8/a/applicability/FORMULATION.md
+  stamped: '2026-09-05'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+formulation_version: legacy-table
+id: P8-A.2
+kind: statement
+level: CERTIFIED
+n: null
+notes: 'imported from CLAIMS.md; level note: exact field/CCR, spectral, coordinate
+  and IBP identities; independent FLINT proper/conformal positive-form integrals,
+  outward Arb enclosures, primary-source positive-type lemma and written sampling-domain
+  proof; not FORMALIZED'
+problem: P8(a), fixed radiation FLRW and massless minimally coupled scalar
+receipts: []
+standing: CURRENT
+statement: On a=A*eta, eta>0, the exact field map chi=a*phi constructs a reference
+  Hadamard state. The positive-type difference QSEI for any Hadamard state and real
+  compact positive-proper-time H2_0 sampling has Q=hbar/(16*pi^2) times the integral
+  of hddot^2-3*hdot^2/(8*t^2)+105*h^2/(256*t^4). Positive-form and weighted-Hardy
+  identities give 0<=Q<=hbar*norm(hddot)^2/(16*pi^2) with no assumed short averaging
+  duration in this testbed. The absolute bound retains the actual reference EED; a
+  supplied lower bound E_ref>=-beta*hbar/(16*pi^2*t^4) gives the stated conditional
+  duration multiplier, but beta is not derived. Reference stress, SEE self-consistency,
+  general-background/geodesic coverage and full P8(a) remain open
+substatus: null
+supersedes: []
+updated: '2026-09-05'

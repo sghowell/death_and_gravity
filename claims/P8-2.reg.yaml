@@ -1,0 +1,48 @@
+coverage: null
+depends_on: []
+evidence:
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P8/certificates/a25-regression.json
+  stamped: '2026-09-04'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P8/certificates/s1-derived-action.json
+  stamped: '2026-09-04'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P8/notes/s2-benchmarks.md
+  stamped: '2026-09-04'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+formulation_version: legacy-table
+id: P8-2.reg
+kind: statement
+level: CERTIFIED
+n: null
+notes: 'imported from CLAIMS.md; level note: within regression scope (457 Arb core
+  tiles plus explicit analytic infinite-tail bounds; independent exact source discrepancy
+  and strong-gravity checks); neither interacting A25 matter nor weaker source asymptotics
+  is promoted to an M1/strict-tail witness'
+problem: P8(b), external regressions
+receipts: []
+standing: CURRENT
+statement: Corrected/reconstructed A25 v2 section-3 M0 benchmark at tau=10, epsilon=5,
+  w=2, u=1/10 has healthy subluminal principal modes and one regular gamma crossing
+  at all finite times. Printed D and Sigma are retained as nonzero negative controls;
+  independent covariant Sigma sets the reconstruction. Separate exact strong-gravity
+  model has complete physical geometry but total tensor integral pi²/2 and GT→0; it
+  is not in the frozen witness class
+substatus: null
+supersedes: []
+updated: '2026-09-04'

@@ -1,0 +1,60 @@
+coverage: null
+depends_on: []
+evidence:
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P4/notes/s2-validated-shooting.md
+  stamped: '2026-08-29'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P4/notes/modelling-scope.md
+  stamped: '2026-08-29'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P4/tests/test_validated_shoot_matching.py
+  stamped: '2026-08-29'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P4/tests/test_derivation.py
+  stamped: '2026-08-29'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+formulation_version: legacy-table
+id: P4-5
+kind: statement
+level: CERTIFIED
+n: null
+notes: 'imported from CLAIMS.md; level note: — adversarial review 2026-08-26: "proven
+  as stated" modulo modelling scope; modelling scope closed 2026-08-29: exact symbolic
+  derivation of the KHA CSS system from spherically symmetric Einstein–Euler (residuals
+  cancel identically) plus an independent exact-rational jet check sharing no code,
+  Bianchi identity, and the reduced⇒full/gluing lemmas (notes/modelling-scope.md,
+  9 exact tests); the theorem is now a statement about Einstein–Euler up to the stated
+  conventions'
+problem: P4
+receipts: []
+standing: CURRENT
+statement: 'Theorem A (existence): the constraint-reduced CSS Einstein–Euler system
+  at k = 1/3 (KHA variables) has a solution on (−∞, 0.1) that is the analytic EC-branch
+  sonic-point solution for x ≥ −0.05 with sonic velocity V₀* = 0.11243940138810 ±
+  3×10⁻¹⁵, is the regular-centre solution for x ≤ −3 with certified limits (n∞ = 1.2365999611913
+  ± 4.3×10⁻¹⁴, w∞ = 5.82098013164 ± 5.4×10⁻¹²), lies in a certified tube in between,
+  and has exactly one zero of V on the closed sound cone (Hunter (a)); the matching
+  map has a unique zero in the stated (V₀, a, μ) box (Krawczyk)'
+substatus: null
+supersedes: []
+updated: '2026-08-29'

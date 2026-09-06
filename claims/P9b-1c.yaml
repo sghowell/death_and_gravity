@@ -1,0 +1,48 @@
+coverage: null
+depends_on: []
+evidence:
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P9/b/src/p9b/fiducial.py
+  stamped: '2026-08-31'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P9/b/tests/test_s2_rows.py
+  stamped: '2026-08-31'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P9/b/notes/s2-nogo-rows.md
+  stamped: '2026-08-31'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+formulation_version: legacy-table
+id: P9b-1c
+kind: statement
+level: CONJECTURED
+n: null
+notes: 'imported from CLAIMS.md; level note: 2026-08-31 (S2 float near-witnesses);
+  superseded same day by P9b-1 (S3 Arb certification'
+problem: P9(b)
+receipts: []
+standing: CURRENT
+statement: 'Classification conjecture after S2: every ladder row except {α_K} admits
+  a stable crossing, so the minimal sets are exactly the four two-operator rows {α_K,α_B},
+  {α_K,α_T}, {α_K,α_M}, {α_K,α_H} — refuting the folklore that braiding is the unique
+  single-field rescue. Evidence: float near-witnesses on F* for all 7 no-braiding
+  E-candidate rows (α_K = 1; e.g. {K,T}: α_T = −1/10, min c_s² = 0.076, c_T² = 0.9;
+  {K,M}: α_M = 1/2 on J = [0.6,1], min c_s² = 0.304; {K,H}: α_H = 1, min c_s² = 0.280;
+  all D2/D3 checks pass), the S1 KGB reproduction for {α_K,α_B}, and the exact combined-row
+  offset/inheritance identities'
+substatus: null
+supersedes: []
+updated: '2026-08-31'

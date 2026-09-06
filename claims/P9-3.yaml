@@ -1,0 +1,79 @@
+coverage: null
+depends_on: []
+evidence:
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P9/results/summary.md
+  stamped: '2026-08-26'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P9/results/certificates/lkr_L1.5_D4_r2/state.json
+  stamped: '2026-08-26'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P9/results/certificates/lkr_L10_D4_r2/state.json
+  stamped: '2026-08-26'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P9/results/certificates/lkr_L1_D4_r2/state.json
+  stamped: '2026-08-26'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P9/results/certificates/lkr_L2_D4_r2/state.json
+  stamped: '2026-08-26'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P9/results/certificates/lkr_L3_D4_r2/state.json
+  stamped: '2026-08-26'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P9/results/certificates/lkr_L5_D4_r2/state.json
+  stamped: '2026-08-26'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+formulation_version: legacy-table
+id: P9-3
+kind: statement
+level: CERTIFIED
+n: null
+notes: 'imported from CLAIMS.md; level note: for all rows (chains + feasible points
+  at each row''s own T); the L = 1.5, Δ = 4 chain is being re-run with the post-review
+  rigor fixes (v1; evidence not resolved in repo: feasible_L*_D4_r2.json'
+problem: P9
+receipts: []
+standing: CURRENT
+statement: 'Same statement (refined class, Δ = 4, each row at its own recorded T):
+  L = 1: max_F H₀ ∈ [69.6497, 69.8431] (replayed value 69.843019; class-min χ² 1596.60,
+  i.e. this class fits 217 units worse than ΛCDM); L = 2: [69.5876, 70.0717]; L =
+  3: [69.7561, 70.6184]; L = 5: [70.2001, 71.9731]; L = 10: [71.6439, 76.2758] (relaxation
+  loose for this class: ρ brackets ≈ 1 dex; would need further grid refinement); L
+  = 1.5, Δ = 1: [68.3373, 68.9288]; L = 1.5, Δ = 9: [70.5562, 70.7971]'
+substatus: null
+supersedes: []
+updated: '2026-08-26'

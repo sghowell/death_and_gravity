@@ -1,0 +1,68 @@
+coverage: null
+depends_on: []
+evidence:
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P8/s6/matching/certificates/parent-tests.json
+  stamped: '2026-09-04'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P8/s6/matching/src/p8_matching/frames.py
+  stamped: '2026-09-04'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P8/s6/matching/src/p8_matching/horndeski.py
+  stamped: '2026-09-04'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P8/s6/matching/notes/frame-tests.md
+  stamped: '2026-09-04'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P8/s6/matching/FORMULATION.md
+  stamped: '2026-09-04'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+formulation_version: legacy-table
+id: P8-S6.2.frames
+kind: statement
+level: CERTIFIED
+n: null
+notes: 'imported from CLAIMS.md; level note: direct tensor-action pullback, inverse
+  and ADM/Horndeski identities, exact roots and prior-map bridge; written concavity
+  and map-obstruction lemmas, not formalized'
+problem: P8(b), fixed D-only M0; selected exact parent/frame ansatzes
+receipts: []
+standing: CURRENT
+statement: Pulling back an Einstein/NEC-scalar parent gives G_T/M^2=C^(3/2)/sqrt(W),
+  F_T/M^2=sqrt(CW). Positive constant tensor tails and a growing in both tails would
+  force its log(a_E) to violate concavity, excluding every regular map in this parent
+  class regardless of large finite frame derivatives. For the exact D geometry, common
+  tensor-value error at t=(-L*tau,0,L*tau) necessarily exceeds or equals (((1+L^2)^2-1)/((1+L^2)^2+1));
+  equality is not a construction. Separately, every smooth invertible one-clock disformal
+  map of the exact open D tube to quartic Horndeski must have J_map/C=1-2/(1+u^2)^3
+  on X=1, so loses invertibility at u=+-sqrt(2^(1/3)-1). This failed map is not a
+  pathology in the original witness; S5's spatial-only map remains regular. Neither
+  result excludes general additional-field/operator, tube-deforming or quantum matching
+  mechanisms or closes P8
+substatus: null
+supersedes: []
+updated: '2026-09-04'

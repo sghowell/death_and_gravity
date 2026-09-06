@@ -1,0 +1,47 @@
+coverage: null
+depends_on: []
+evidence:
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P8/s5/scattering/certificates/tree-control.json
+  stamped: '2026-09-04'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P8/s5/scattering/src/p8_scattering/uv_audit.py
+  stamped: '2026-09-04'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P8/s5/scattering/notes/uv-applicability.md
+  stamped: '2026-09-04'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+formulation_version: legacy-table
+id: P8-S5.4.audit
+kind: statement
+level: CERTIFIED
+n: null
+notes: 'imported from CLAIMS.md; level note: exact sign/integration/limit checks and
+  primary-source applicability audit; scoped exact facts and stated analytic lemmas;
+  not a UV verdict'
+problem: P8(b), D-only M0
+receipts: []
+standing: CURRENT
+statement: The specified polynomial continuation of the D witness to X=0 has F(phi,0)<0
+  at every finite phi, so it has no finite constant-clock Minkowski vacuum. Its complete
+  bounce has finite conformal-time length pi*tau and fixed-comoving-mode k_physical/E_ref
+  tends to zero in both tails. These facts do not exclude UV completion. The applicability
+  audit identifies missing stationary/vacuum matching and gravitational dispersion/IR
+  assumptions; no positivity prior is applied and no row is excluded
+substatus: null
+supersedes: []
+updated: '2026-09-04'

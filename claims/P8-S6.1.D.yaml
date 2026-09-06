@@ -1,0 +1,60 @@
+coverage: null
+depends_on: []
+evidence:
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P8/s6/certificates/vacuum-extension.json
+  stamped: '2026-09-04'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P8/s6/src/p8_uv/verify.py
+  stamped: '2026-09-04'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P8/s6/notes/vacuum-extension.md
+  stamped: '2026-09-04'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P8/s6/FORMULATION.md
+  stamped: '2026-09-04'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+formulation_version: legacy-table
+id: P8-S6.1.D
+kind: statement
+level: CERTIFIED
+n: null
+notes: 'imported from CLAIMS.md; level note: exact branch, canonical normalization,
+  Ia and independent amplitude/massive-mediator checks; pinned prior sign; written
+  all-orders smoothness and analytic-identity lemmas, not formalized'
+problem: P8(b), D-only M0; conditional UV branch
+receipts: []
+standing: CURRENT
+statement: An explicit smooth D-only extension agrees with the full pinned action
+  on an open set containing its entire clock tube and has a constant-clock Minkowski
+  vacuum with healthy massive scalar quadratic action and arbitrary coefficient lambda
+  of ((partial psi)^2)^2. Independent vacuum plane-wave expansion gives b2=4 lambda,
+  so the tube does not fix even this leading scalar positivity diagnostic. Recomputing
+  the Ia dependents preserves their identities and nonzero denominator. Under the
+  separate stronger requirement of connected global real coefficient analyticity plus
+  exact open-tube equality, the identity theorem and pinned F(phi,0)<0 instead exclude
+  a finite constant-clock Minkowski vacuum for this specific witness. Neither statement
+  proves controlled vacuum-to-bounce matching, finite-gravity positivity, UV completion
+  or a row exclusion
+substatus: null
+supersedes: []
+updated: '2026-09-04'

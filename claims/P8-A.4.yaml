@@ -1,0 +1,61 @@
+coverage: null
+depends_on: []
+evidence:
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P8/a/applicability/reference/asymptotics/certificates/radiation-asymptotics.json
+  stamped: '2026-09-05'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P8/a/applicability/reference/asymptotics/src/p8a_asymptotics/verify.py
+  stamped: '2026-09-05'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P8/a/applicability/reference/asymptotics/notes/proof.md
+  stamped: '2026-09-05'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P8/a/applicability/reference/asymptotics/FORMULATION.md
+  stamped: '2026-09-05'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+formulation_version: legacy-table
+id: P8-A.4
+kind: statement
+level: CERTIFIED
+n: null
+notes: 'imported from CLAIMS.md; level note: written Hadamard/wave Cauchy argument
+  with arbitrary noncompact data and both bisolution variables; exact independent
+  rational polynomial/exponent checks, source/domain omission controls, a state-specific
+  outward Arb residual example and pinned A.3 replay; not FORMALIZED'
+problem: P8(a), whole-patch exact-radiation semiclassical obstruction
+receipts: []
+standing: CURRENT
+statement: For every state with a microlocal Hadamard two-point distribution of the
+  specified free massless minimal scalar on the entire radiation patch (0,infinity)_eta
+  times R3, the smooth rescaled state difference extends as a flat bisolution through
+  eta=0. No quasifree, homogeneity, decay, finite-energy or extra higher-point regularity
+  assumption is needed. State-dependent EED is O(eta^-6), while A.3 gives lim t^4*E_omega=hbar/(5120*pi^2)>0,
+  locally uniformly in space for each fixed state. The exact-radiation SEE with finite
+  constant gravitational couplings and only additional ordinary traceless radiation
+  requires this limit to vanish, so no admitted state solves that whole-patch ansatz.
+  The theorem does not exclude finite slabs, nearby backreacted metrics, other fields
+  or arbitrary traceful extra sources, and gives no state-uniform onset time or new
+  incompleteness theorem
+substatus: null
+supersedes: []
+updated: '2026-09-05'

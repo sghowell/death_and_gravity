@@ -1,0 +1,50 @@
+coverage: null
+depends_on: []
+evidence:
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P8/s5/physical/certificates/interactions.json
+  stamped: '2026-09-04'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P8/s5/physical/src/p8_physical/verify.py
+  stamped: '2026-09-04'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P8/s5/physical/notes/reduction.md
+  stamped: '2026-09-04'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+formulation_version: legacy-table
+id: P8-S5.2.D
+kind: statement
+level: CERTIFIED
+n: null
+notes: 'imported from CLAIMS.md; level note: independent curvature identities, generic
+  York and Legendre identities, old full quadratic bridges, symmetry/negative controls
+  and exact report replay; scoped exact reduction and bounds only'
+problem: P8(b), D-only M0
+receipts: []
+standing: CURRENT
+statement: In the small-field auxiliary-metric spatial gauge, all three momentum constraints
+  are recursively solved through third order, yielding canonical cubic/quartic scalar
+  and both-polarization tensor kernels for arbitrary nonexceptional rational spatial
+  momenta and TT polarizations. The full geometry, canonical time boundaries, kinetic-normalization
+  derivatives and scalar/tensor quartic Legendre correction are retained. Exact quadratic
+  bridges, generic construction lemmas and replay fixtures support the reduction;
+  14 fixed-momentum symbolic phase kernels have explicit all-time bounds. Zero-mode/forward
+  limits, physical cubic exchange, on-shell amplitudes, a cutoff hierarchy, nonlinear
+  stability and UV completion remain unestablished
+substatus: null
+supersedes: []
+updated: '2026-09-04'

@@ -1,0 +1,62 @@
+coverage: null
+depends_on: []
+evidence:
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P8/s6/matching/certificates/parent-tests.json
+  stamped: '2026-09-04'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P8/s6/matching/src/p8_matching/verify.py
+  stamped: '2026-09-04'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P8/s6/matching/notes/parent-tests.md
+  stamped: '2026-09-04'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P8/s6/matching/FORMULATION.md
+  stamped: '2026-09-04'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+formulation_version: legacy-table
+id: P8-S6.2.parents
+kind: statement
+level: CERTIFIED
+n: null
+notes: 'imported from CLAIMS.md; level note: exact stationary/mixed-gap controls,
+  independent metric variation and conformal geometry, FLINT target sign, and written
+  matrix/calculus/error lemmas; not formalized'
+problem: P8(b), fixed D-only M0; selected classical/tree parent ansatzes
+receipts: []
+standing: CURRENT
+statement: Stable stationary elimination of affine-X heavy scalars gives P_XX>=0,
+  whereas the pinned tube has F_XX<0 at every finite time and F_XX(0,1)=-10M^2/tau^2,
+  requiring a second-jet matching remainder at least as large as that target jet in
+  the stated coefficient convention. A classical minimal Einstein/positive-field-metric
+  parent cannot realize the physical bounce and needs a null-stress discrepancy at
+  least 4M^2/tau^2. For a nonminimal Q(Phi)R parent with positive Einstein-frame field
+  metric, q=Q/M^2 must satisfy 4q0+q2-3q1^2/(2q0)<=0 at the exact bounce; simultaneous
+  normalized errors in q0 from 1 and in its first two physical-time jets therefore
+  require epsilon>=4/7. This is a necessary condition, not a construction. An exact
+  nonminimal background control escapes with jets (1,0,-6) but has Q->0 tails and
+  is not an accepted P8 witness. These are scoped matching obstructions, not a DHOST
+  positivity condition, general UV no-go, whole-row exclusion or proof that the splice
+  has no parent
+substatus: null
+supersedes: []
+updated: '2026-09-04'

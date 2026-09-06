@@ -1,0 +1,40 @@
+coverage: null
+depends_on: []
+evidence:
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P9/results/certificates/lkr_L1.5_D4_r2/state.json
+  stamped: '2026-08-26'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P9/src/p9/run_lkr_certified.py
+  stamped: '2026-08-26'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+formulation_version: legacy-table
+id: P9-2
+kind: statement
+level: CERTIFIED
+n: null
+notes: 'imported from CLAIMS.md; level note: chain of 3915 conic dual certificates
+  verified in ball arithmetic, 5 tightening passes + final bound; re-run after the
+  adversarial review with outward-rounded base brackets and pass arithmetic — result
+  unchanged, 69.841751…; evidence not resolved in repo: dual vectors not in git; v0
+  archived); verify3.py'
+problem: P9
+receipts: []
+standing: CURRENT
+statement: 'Same F as P9-1r (C(G₃₇₃, 1.5), M'' ∈ [0,40], frozen DESI DR2 BAO + Pantheon+
+  with C̃ := (WᵀW)⁻¹ as recorded, r_d ≥ 146.57 Mpc, T = 1383.7251890839852): every
+  feasible (ũ, M'') has H₀ ≤ 69.8418 km s⁻¹ Mpc⁻¹ (certified value 69.841749…, rounded
+  up). Hence max_F H₀ ∈ [69.5227, 69.8418] (lower bound rounded down, upper rounded
+  up)'
+substatus: null
+supersedes: []
+updated: '2026-08-26'

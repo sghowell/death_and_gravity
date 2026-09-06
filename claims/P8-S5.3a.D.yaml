@@ -1,0 +1,49 @@
+coverage: null
+depends_on: []
+evidence:
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P8/s5/control/certificates/adiabatic.json
+  stamped: '2026-09-04'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P8/s5/control/src/p8_control/verify.py
+  stamped: '2026-09-04'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P8/s5/control/notes/oscillators.md
+  stamped: '2026-09-04'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+formulation_version: legacy-table
+id: P8-S5.3a.D
+kind: statement
+level: CERTIFIED
+n: null
+notes: 'imported from CLAIMS.md; level note: generic quadratic-completion/IBP identities,
+  independent original-cosmic-time differentiation, exact rational majorants and written
+  covering-domain lemmas; scoped exact reduction and bounds only'
+problem: P8(b), D-only M0
+receipts: []
+standing: CURRENT
+statement: Including the expanding volume factor, the exact scalar/tensor quadratic
+  actions have oscillator form with Omega² ell²=q+mu in the stated covering charts.
+  Exact rational majorants bound mu and its first two physical-time derivatives uniformly
+  through the bounce and both compact tail limits. The conservative sufficient local-frequency
+  domain q>=10^14 has q/2<=Omega² ell²<=3q/2, abs(Omegadot)/Omega²<=5 sqrt(2)/sqrt(q),
+  and abs(Omegaddot)/Omega³<=92/q. This is a pointwise linear-mode diagnostic band,
+  not a necessary threshold, a global WKB solution error, an interacting cutoff, or
+  a proved weak-coupling window
+substatus: null
+supersedes: []
+updated: '2026-09-04'

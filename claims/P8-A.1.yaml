@@ -1,0 +1,59 @@
+coverage: null
+depends_on: []
+evidence:
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P8/a/certificates/focusing.json
+  stamped: '2026-09-05'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P8/a/src/p8a/verify.py
+  stamped: '2026-09-05'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P8/a/notes/focusing.md
+  stamped: '2026-09-05'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P8/a/FORMULATION.md
+  stamped: '2026-09-05'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+formulation_version: legacy-table
+id: P8-A.1
+kind: statement
+level: CERTIFIED
+n: null
+notes: 'imported from CLAIMS.md; level note: exact localization/endpoint/focusing
+  identities, independent FLINT integration and infinite-tail reconstruction, outward
+  Arb enclosures and written Sobolev/index-form/global-causal lemmas; not FORMALIZED'
+problem: P8(a), conditional 4D timelike focusing
+receipts: []
+standing: CURRENT
+statement: 'Under the explicit local geometric QEI with T(t)=tau-t, smooth extended
+  geodesic domain, and initial Ricci upper bound on [0,tau/4], an H2 polynomial-angle
+  partition has strict support coverage and an exactly summed infinite derivative
+  tail. For Q2/tau^2=10^-6, Q0*tau^2=0.01 and rho0=0, the unique minimum within the
+  frozen two-coefficient tail family has 4.4445507<nu*tau<4.4445508, versus 4.8747718<nu_cubic*tau<4.8747719
+  in the same partition: 8.825--8.826 percent improvement. Thus contraction -K*tau=9/2
+  meets the optimized sufficient focusing test but not that cubic test. Local QEI
+  applicability, field/state calibration and cosmological validity are assumptions/open
+  work; no universal optimum, improvement over every published theorem, or full P8(a)
+  completion is claimed'
+substatus: null
+supersedes: []
+updated: '2026-09-05'

@@ -1,0 +1,61 @@
+coverage: null
+depends_on: []
+evidence:
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P8/a/applicability/reference/asymptotics/backreaction/response/certificates/radiation-response.json
+  stamped: '2026-09-05'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P8/a/applicability/reference/asymptotics/backreaction/response/src/p8a_response/verify.py
+  stamped: '2026-09-05'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P8/a/applicability/reference/asymptotics/backreaction/response/notes/proof.md
+  stamped: '2026-09-05'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P8/a/applicability/reference/asymptotics/backreaction/response/FORMULATION.md
+  stamped: '2026-09-05'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+formulation_version: legacy-table
+id: P8-A.6
+kind: statement
+level: CERTIFIED
+n: null
+notes: 'imported from CLAIMS.md; level note: source-based Hadamard and retarded finite-part
+  proof; exact Born/subtraction/trace/clock/conservation identities, independent geometric
+  and Fraction-only preparation audits, omission controls and pinned A.5 replay; written
+  second-order correction argument, not FORMALIZED'
+problem: P8(a), prepared-state first stress response and second-order backreaction
+receipts: []
+standing: CURRENT
+statement: For A.5's past-prepared massless minimal Hadamard family, the actual first
+  parameter derivative of the Wick square and physical density, pressure and EED is
+  an explicit retarded logarithmic kernel plus local terms in the named GS-H_lambda,gamma
+  prescription. The unchanged past fixes the radiation integration constant; proper-time
+  conversion and finite curvature/scale freedom are retained. Exact rational derivative
+  bounds are derived for a specified C-infinity preparation, not supplied as synthetic
+  response inputs. They bound the actual second-order Einstein-defect coefficients.
+  A smooth second-order metric correction constructed from the density coefficient
+  cancels both physical components and gives a qualitative compact-slab actual residual
+  O(epsilon^3). No finite-amplitude remainder bound, exact/stable SEE solution, perturbed
+  all-sampler QSEI or cosmological focusing theorem is established
+substatus: null
+supersedes: []
+updated: '2026-09-05'

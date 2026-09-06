@@ -1,0 +1,60 @@
+coverage: null
+depends_on: []
+evidence:
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P8/a/applicability/reference/asymptotics/backreaction/certificates/radiation-backreaction.json
+  stamped: '2026-09-05'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P8/a/applicability/reference/asymptotics/backreaction/src/p8a_backreaction/verify.py
+  stamped: '2026-09-05'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P8/a/applicability/reference/asymptotics/backreaction/notes/proof.md
+  stamped: '2026-09-05'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P8/a/applicability/reference/asymptotics/backreaction/FORMULATION.md
+  stamped: '2026-09-05'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+formulation_version: legacy-table
+id: P8-A.5
+kind: statement
+level: CERTIFIED
+n: null
+notes: 'imported from CLAIMS.md; level note: exact Einstein/conservation/clock/curvature
+  identities, independent rational polynomial and omission checks, explicit finite-domain
+  bounds and pinned A.4 replay; written source-based smooth-state and local causal-footprint
+  proof, not FORMALIZED'
+problem: P8(a), compact-slab first-order radiation backreaction
+receipts: []
+standing: CURRENT
+statement: For the frozen massless minimal reference, Einstein gravity plus conserved
+  classical radiation with fixed normalization and time origin gives a/a0=1-epsilon*d/t^2+O(epsilon^2),
+  d=kappa*hbar/(46080*pi^2). A specified conserved order-reduced fluid has exact a_OR^4=4*A^2*(t^2-4*epsilon*d);
+  rational bounds control its Taylor remainder and frozen-reference Einstein defects
+  for 0<=4*epsilon*d/t^2<=1/4. Smooth temporal preparation and retarded Hadamard-state
+  transport give an actual compact-slab SEE residual O(epsilon^2), with no computed
+  response constant. Independent order-zero curvature-squared couplings are excluded;
+  loop-order ones enter the residual. The surrogate is not an exact quantum source
+  or unique higher-order completion. No nearby exact SEE solution, physical epsilon=1
+  error, transferred QSEI constant or new incompleteness theorem is established
+substatus: null
+supersedes: []
+updated: '2026-09-05'

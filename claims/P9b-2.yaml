@@ -1,0 +1,47 @@
+coverage: null
+depends_on: []
+evidence:
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P9/b/src/p9b/positivity.py
+  stamped: '2026-08-31'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P9/b/notes/s4-positivity.md
+  stamped: '2026-08-31'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+formulation_version: legacy-table
+id: P9b-2
+kind: statement
+level: CERTIFIED
+n: null
+notes: 'imported from CLAIMS.md; level note: conditional on POS (certificates/P9b-2.*.json;
+  tests/test_s4_positivity.py'
+problem: P9(b)
+receipts: []
+standing: CURRENT
+statement: 'Positivity intersection, conditional on POS (frozen: MN 1904.05874 (16)–(17);
+  α-form (10) α_B^BS ≤ 2α_T/(1+α_T), side condition 1+α_T > 0, applied pointwise on
+  J under MN''s flat-space-transfer assumption and their trajectory-level (12)-usage;
+  BS14 α_B convention, S1 map). Applicability is part of the statement: POS applies
+  to exactly the 7 Horndeski rows (for cubic braiding the α-form (10) is MN''s quartic
+  example-model prior — frozen as an assumption, not derived from their (16)–(17);
+  on {K,M} it is vacuous and satisfied by saturation); the 8 α_H rows are outside
+  its domain (GLPV operators absent from MN''s amplitudes — no verdict). Arb-certified
+  (128-bit, outward): {K,M}''s witness satisfies POS (exact saturation 0 ≤ 0); the
+  other 6 frozen witnesses violate POS at every a ∈ J (certified margins ≥ 2/9); POS-compatible
+  replacement witnesses are certified (full D1–D3 stability + strict POS) for {K,B},
+  {K,B,T}, {K,B,M}, {K,T,M}, {K,B,T,M}; row {K,T} is excluded entirely — POS forces
+  α_T ≥ 0 and the exact identity α_K c_s² = f̂ − 2α_T then contradicts D2 at any crossing
+  (whole row, family B). Conditional on POS, stable crossing survives on 6 of 7 applicable
+  rows; minimal sets within POS''s domain: {α_K,α_B}, {α_K,α_M}'
+substatus: null
+supersedes: []
+updated: '2026-08-31'

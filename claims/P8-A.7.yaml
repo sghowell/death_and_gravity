@@ -1,0 +1,62 @@
+coverage: null
+depends_on: []
+evidence:
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P8/a/applicability/reference/asymptotics/backreaction/response/remainder/certificates/radiation-remainder.json
+  stamped: '2026-09-05'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P8/a/applicability/reference/asymptotics/backreaction/response/remainder/src/p8a_remainder/verify.py
+  stamped: '2026-09-05'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P8/a/applicability/reference/asymptotics/backreaction/response/remainder/notes/proof.md
+  stamped: '2026-09-05'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P8/a/applicability/reference/asymptotics/backreaction/response/remainder/FORMULATION.md
+  stamped: '2026-09-05'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+formulation_version: legacy-table
+id: P8-A.7
+kind: statement
+level: CERTIFIED
+n: null
+notes: 'imported from CLAIMS.md; level note: exact covariance/retarded-Green/finite-clock/trace/conservation
+  identities, rational IR/UV and fractional-jet majorants, independent covariant and
+  Fraction-only Taylor/constant audits, omission controls and pinned A.6 replay; written
+  finite-amplitude Hadamard/subtraction proof, not FORMALIZED'
+problem: P8(a), actual finite-amplitude prepared-state stress remainder
+receipts: []
+standing: CURRENT
+statement: For the unchanged A.5/A.6 massless minimal Hadamard preparation, the actual
+  Wick square equals an explicit retarded Born functional on the exact finite metric
+  plus an all-frequency nonlinear mode remainder with two actual-conformal-time derivatives.
+  Keeping identical exact anomaly, length/finite prescription and past density gives
+  exact full density, pressure and EED error identities, including a required history
+  integral. Derived rational potential jets through order five and cutoff jets through
+  seven certify 0<=delta<=2048/190897521, delta=4*epsilon*d/t_star^2, and explicit
+  quadratic finite-amplitude error constants. At delta=10^-12 all three errors are
+  below 1% of the corresponding positive A.3 reference component at the same proper
+  time on 2<=y<=3. The Born functional is not asserted to be a positive state; no
+  finite error for a different metric family, exact/stable SEE solution, perturbed
+  all-sampler QSEI or cosmological focusing theorem follows
+substatus: null
+supersedes: []
+updated: '2026-09-05'

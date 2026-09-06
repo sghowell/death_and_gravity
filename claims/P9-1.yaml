@@ -1,0 +1,35 @@
+coverage: null
+depends_on: []
+evidence:
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P9/results/certificates/feasible_L1.5_D4.json
+  stamped: '2026-08-25'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P9/src/p9/certify_feasible.py
+  stamped: '2026-08-25'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+formulation_version: legacy-table
+id: P9-1
+kind: statement
+level: CERTIFIED
+n: null
+notes: 'imported from CLAIMS.md; level note: exact class check + ball-arithmetic χ²
+  enclosures; certificate = the point'
+problem: P9
+receipts: []
+standing: CURRENT
+statement: 'For the class C(G, L=1.5), M'' ∈ [0,40], frozen inputs, and T = χ²(ũ*)
+  + 4 with the recorded reference point: an explicit class member with χ² ≤ T has
+  H₀ = 69.5313 at r_lo, i.e. max_F H₀ ≥ 69.5313'
+substatus: null
+supersedes: []
+updated: '2026-08-25'

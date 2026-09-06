@@ -1,0 +1,59 @@
+coverage: null
+depends_on: []
+evidence:
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P8/s5/matter/certificates/cd-matter.json
+  stamped: '2026-09-05'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P8/s5/matter/src/p8_m1/robustness.py
+  stamped: '2026-09-05'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P8/s5/matter/notes/robustness.md
+  stamped: '2026-09-05'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+- binary_hash: null
+  golden_suite_hash: null
+  note: imported from CLAIMS.md
+  path: problems/P8/s5/matter/FORMULATION.md
+  stamped: '2026-09-05'
+  verdict: PASS
+  verifier: table-import
+  version: '1'
+formulation_version: legacy-table
+id: P8-S5.5.cone
+kind: statement
+level: CERTIFIED
+n: null
+notes: 'imported from CLAIMS.md; level note: exact congruence/characteristic/chart
+  and covariant-jet/tail identities, positive/negative controls, pinned prior geometry
+  and written real-matrix/asymptotic lemmas; not FORMALIZED'
+problem: P8(b), canonical-matter principal robustness
+receipts: []
+standing: CURRENT
+statement: For positive-definite K=[[A,B],[B,Q]] and G=[[C,D],[D,Q]] with Q>0, define
+  k=A-B^2/Q, a=A-C, b=B-D, s=(a-2Bb/Q)/k and r^2=b^2/(kQ). Exact squared speeds are
+  1-s/2 plus or minus sqrt(s^2/4+r^2); healthy causal scalar modes are equivalent
+  to b=0 and 0<=a<k. Any nonzero mismatch b forces c_plus^2>1 regardless of the gravitational
+  diagonal buffer. Crossing-safe CD invariants recover the covariant exceptional relation.
+  The explicit deformation delta_F=epsilon*J_star(phi)*(X-1)^2/(4d^2) preserves the
+  pinned background/tube/tails and gives speeds squared {1,1/(1+epsilon/d^2)}, healthy
+  and causal for fixed finite epsilon>=0. This is a principal matrix theorem and a
+  one-sided covariant family, not a radiative-correction computation, mismatch margin,
+  finite-k result or technical-naturalness/UV verdict
+substatus: null
+supersedes: []
+updated: '2026-09-05'
