@@ -89,6 +89,14 @@ around a pre-registered problems document and a certificate-gated ledger.
   proper H2 samplers, now allowing a rigorously bounded negative reference
   contribution. The actual comoving focusing test still fails on this
   domain; realistic fields and cosmological incompleteness remain open.
+  A separate [free-Maxwell conformal QSEI](problems/P8/a/fields/maxwell/README.md)
+  now supplies an exact photon-field inequality for every Hadamard target
+  state and compact proper H2 sampler on a smooth flat-FLRW conformal
+  strip. It retains the trace anomaly and an explicit independent finite
+  curvature-counterterm parameter, without the scalar history-duration
+  restriction. Its source-complete focusing dictionary is conditional;
+  it does not remove the initial pointwise premise or certify cosmological
+  incompleteness. No scalar field or renormalization choice was replaced.
 - P8(b): [completed scoped classification and verification commands](problems/P8/README.md).
   All 32 M0/M1 sector-row verdicts are decided: minimal optional groups are
   C or D without extra matter, and CD with rolling canonical matter.
@@ -189,8 +197,17 @@ around a pre-registered problems document and a certificate-gated ledger.
   cannot realize the proposed parametric mass-led hierarchy by changing
   the parent mass-to-duration ratio. This does not exclude every other
   state or a genuinely controlled nonadiabatic light-only reduction.
+  The [large-asymmetry tensor-response theorem](problems/P8/s6/matching/composite/perturbations/cones/matching/asymptotics/README.md)
+  now solves the limiting background flow and proves growth of an actual
+  time-dependent homogeneous relative-tensor column, with its physical
+  composite projection retained. Finite positive-parameter backgrounds
+  and normalized responses converge on each fixed forward interval.
+  The individual-metric limit is singular: keeping physical metric
+  perturbations small makes their absolute composite amplitude vanish.
+  No finite-amplitude, finite-band, growing-window or general UV verdict
+  follows from this normalized response theorem.
 
-The [current P8 continuation audit](docs/assessment-2026-09-06-p8-extended-qsei-light-reduction.md) separates
+The [current P8 continuation audit](docs/assessment-2026-09-06-p8-maxwell-asymptotic-response.md) separates
 completed certificate gates from the outstanding original research questions.
 P8 is not marked finished or closed.
 

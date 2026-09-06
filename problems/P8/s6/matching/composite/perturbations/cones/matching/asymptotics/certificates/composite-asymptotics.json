@@ -1,0 +1,195 @@
+{
+  "actual_limiting_homogeneous_response": {
+    "comparison": "H(u)>=cosh(u/2) for every u>=0",
+    "equation": "Hsecond=D_H(u)*H, H0=1,Hprime0=0; l=0 in the exact limit",
+    "positive_retarded_identity": "H-cosh(u/2)=integral_0^u 2sinh((u-s)/2)*(D_H(s)-1/4)*H(s) ds",
+    "scope": "Full time-dependent limiting k=0 equation, not a frozen diagonal or a finite-k spectral statement",
+    "state_control": "Zero heavy data give the exact zero homogeneous solution; growth is not compulsory for all states"
+  },
+  "claim": "P8-S6.10.COMPOSITE",
+  "date": "2026-09-06",
+  "domain": {
+    "CD_duration": "m*tau=2/sqrt(11epsilon)",
+    "action": "Constant G=F=M^2,m4=M^2*m^2,alpha=beta=1,beta_n=(0,0,1,0,0), canonical shared composite matter",
+    "finite_background_existence": "Sufficiently small positive epsilon depending on each fixed forward interval [0,L]",
+    "finite_parameter_family": "epsilon=1/Y>0,y0=Y,rhobar0=9/Y^2,h=11epsilon*u/(1+11epsilon*u^2/4)",
+    "matter": "Positive canonical null source with a locally reconstructed potential for each finite member; density/potential may be negative",
+    "mode": "Exact fixed-charge k=0 relative tensor, J=0,l0=0,H0=1,Hprime0=0; unit normalized linear column",
+    "physical_frame": "Pinned +--- composite g_eff, physical u=m*T, Ae(0)=1; not original CD/M1 frame",
+    "scaled_variables": "e=1/y=epsilon*z,eta=rhobar/e^2,j=h/e,a_current=hprime/e",
+    "time_direction": "u>=0 only for the explicit orbit bounds; not a two-sided bounce-duration theorem"
+  },
+  "exact_limiting_trajectory": {
+    "R": "-11*u/(2*sinh(u) + 12*cosh(u) - 11) + (12*sinh(u) + 2*cosh(u))/(2*sinh(u) + 12*cosh(u) - 11)",
+    "a": "11/(2*sinh(u) + 12*cosh(u) - 11)",
+    "eta": "3*(-11*u/(2*sinh(u) + 12*cosh(u) - 11) + (12*sinh(u) + 2*cosh(u))/(2*sinh(u) + 12*cosh(u) - 11))**2 - 3",
+    "j": "11*u/(2*sinh(u) + 12*cosh(u) - 11)",
+    "positive_R_numerator": "-11*u + 12*sinh(u) + 2*cosh(u)",
+    "u": "u",
+    "v": "(12*sinh(u) + 2*cosh(u))/(2*sinh(u) + 12*cosh(u) - 11)",
+    "z": "2*sinh(u) + 12*cosh(u) - 11",
+    "zprime": "12*sinh(u) + 2*cosh(u)"
+  },
+  "exact_residuals": {
+    "complete_canonical_coefficient_limits": {
+      "N_relative": "0",
+      "N_sum": "0",
+      "N_sum_over_e": "0",
+      "mass_squared": "0",
+      "mass_squared_prime": "0",
+      "mass_squared_second": "0",
+      "omega": "0",
+      "omega_over_e": "0",
+      "omega_prime_over_e": "0",
+      "physical_source_relative": "0",
+      "theta_relative": "0",
+      "theta_sum": "0",
+      "theta_sum_over_e": "0"
+    },
+    "exact_forward_limiting_flow_and_comparison": {
+      "comparison_cosine_hyperbolic_solution": "0",
+      "density_sign_crossing_identity": "0",
+      "exact_scale_first_integral": "0",
+      "full_time_R_flow": "0",
+      "full_time_a_flow": "0",
+      "full_time_heavy_coefficient": "0",
+      "full_time_j_flow": "0",
+      "full_time_v_flow": "0",
+      "general_mass_led_positive_margin": "0",
+      "general_relative_normalization_curvature": "0",
+      "integrable_scale_equation": "0",
+      "integrable_scale_initial": "0",
+      "integrable_scale_velocity_initial": "0",
+      "positive_R_numerator_derivative": "0",
+      "tuned_second_derivative_survives": "0",
+      "uniform_heavy_coefficient_quarter_margin": "0",
+      "uniform_v_squared_lower": "0",
+      "uniform_v_squared_upper_square": "0"
+    },
+    "full_scaled_positive_root_CD_ODE": {
+      "full_CD_hsecond_scaled_limit": "0",
+      "full_CD_lapse_sum": "0",
+      "full_CD_physical_scale": "0",
+      "full_CD_scaled_hprime": "0",
+      "full_shared_matter_scaled_density_flow": "0",
+      "immutable_reconstruction_ratio_bridge": "0",
+      "null_source_has_positive_scaled_limit": "0",
+      "physical_composite_source_projection": "0",
+      "positive_root_scaled_y_flow": "0"
+    },
+    "physical_projection_time_and_tidal_jets": {
+      "initial_heavy_growth_coefficient": "0",
+      "initial_physical_tensor_tidal_derivative": "0",
+      "initial_physical_tensor_time_dependence": "0"
+    }
+  },
+  "fixed_interval_convergence": {
+    "background": "Analytic scaled vector field on a compact positive-root tube; error <=B_L*epsilon*(exp(K_L*L)-1)/K_L",
+    "canonical": "Regularized kinetic/coefficient jets are analytic on the same tube despite f_relative=O(epsilon)",
+    "mode": "Matched J=0 canonical data give (H,Hprime,l)->(H_limit,Hprime_limit,0), O_L(epsilon)",
+    "not_computed": "Numerical tube/propagator bounds, epsilon_*(L), or an estimate on growing intervals",
+    "physical": "Composite projection and required time derivatives converge on the same fixed interval",
+    "quantifiers": "For each fixed finite L and tolerance, sufficiently small positive epsilon gives regular finite backgrounds and uniform convergence on [0,L]"
+  },
+  "formulation": "FORMULATION.md",
+  "forward_interval_bounds": {
+    "R": "(zprime-11u)prime=z>=1 and initial numerator=2 imply R>0",
+    "heavy_coefficient": "D_H=N_R-m_alg^2=3(a+1)^2/(4v^2)+(-v^2+4v-2)/4",
+    "positive_margin": "D_H-1/4=3(a+1)^2/(4v^2)+(v-1)*(3-v)/4>=0",
+    "upper_square": "140/19-v^2=(11z-19)^2/(19z^2)",
+    "v_squared": "v^2=1+22/z-19/z^2, 1<=v^2<=140/19<9",
+    "z": "z>=1, zprime>0"
+  },
+  "general_fixed_scaling_screen": "At a centre with fixed eta0>0,a0>=0, v0=sqrt(1+eta0/3)>1 and N_R-(3/4)m_alg^2=[3(a0+1)^2+v0^2(3v0-2)]/(4v0^2)>0",
+  "general_leading_jets": {
+    "N_relative": "(3*a**2 + 6*a + 3*v**4 - 2*v**2 + 3)/(4*v**2)",
+    "a": "a",
+    "aprime": "-a*v",
+    "general_hierarchy_margin": "(3*a**2 + 6*a + 3*v**3 - 2*v**2 + 3)/(4*v**2)",
+    "heavy_growth_coefficient": "-(-3*a**2 - 6*a + v**4 - 4*v**3 + 2*v**2 - 3)/(4*v**2)",
+    "mass_squared": "v**2 - v",
+    "mass_squared_prime": "(2*v - 1)*(a - v**2 + 1)",
+    "mass_squared_second": "2*a**2 - 10*a*v**2 + 3*a*v + 4*a + 6*v**4 - 2*v**3 - 8*v**2 + 2*v + 2",
+    "theta_relative": "(-a + 3*v**2 - 1)/(2*v)",
+    "v": "v",
+    "vprime": "a - v**2 + 1",
+    "vsecond": "-a*v - 2*v*(a - v**2 + 1)"
+  },
+  "independent_Fraction_replay": {
+    "coefficientwise_identities": {
+      "full_relative_normalization_derivative": "0",
+      "general_mass_led_positive_margin": "0",
+      "scale_first_integral_mod_hyperbolic_identity": "0",
+      "source_projection_cleared": "0",
+      "uniform_heavy_quarter_margin": "0",
+      "v_upper_bound_square": "0"
+    },
+    "exact_forward_growth_and_domain_fixtures": {
+      "backward_z_min_is_below_one_square_margin": "4",
+      "backward_z_min_is_positive_square_margin": "19",
+      "initial_N_relative": "59/2",
+      "initial_heavy_growth_coefficient": "55/2",
+      "initial_mass_squared": "2",
+      "initial_vprime": "8",
+      "initial_vsecond": "-54",
+      "projected_first_coefficient_of_sqrt2": "-2",
+      "projected_second_coefficient_of_sqrt2": "-10",
+      "strict_v_squared_upper_below_nine": "31/19"
+    }
+  },
+  "not_established": [
+    "A regular two-metric geometry at epsilon=0",
+    "Finite-Y all-time instability, a nonlinear instability, or growth for every initial state",
+    "A uniform finite-amplitude physical two-metric perturbation family for H0=1",
+    "A bound on a CD-duration or logarithmically growing window, or an interchange of Y and time limits",
+    "A finite-k gap, dispersion relation, vector/scalar health, cutoff, ghost or ultraviolet verdict",
+    "A general exclusion of nonadiabatic finite-band light-only reductions or other HR states/actions",
+    "A globally free old M1 matter action or original CD/M1 physical-frame matching",
+    "Completion of S6, P8(b), or P8"
+  ],
+  "omission_amplitude_and_direction_controls": {
+    "backward_z_below_one_margin": "13/90",
+    "lost_normalization_acceleration": "59/2",
+    "nonzero_normalized_source_limit": "-1/sqrt(kappa)",
+    "omitted_normalization_false_acceleration": "-2",
+    "small_metric_amplitude_absolute_projection_limit": "0",
+    "true_initial_heavy_acceleration": "55/2",
+    "zero_heavy_data_unforced_solution": "0"
+  },
+  "physical_projection": {
+    "constant_gauge_invariant_difference": "abs(gamma_eff(u)-gamma_eff(0))>=2max{0,cosh(u/2)-sqrt(2)}/M",
+    "exact": "gamma_eff=(l+Rsrc*H)/f_sum, Rsrc=(e*kappa-1)/[(1+e)sqrt(kappa)]",
+    "fixed_gauge_amplitude_bound": "abs(gamma_eff)>=2cosh(u/2)/M",
+    "initial_tidal_jet": "gamma_eff_second(0)=-20sqrt(2)/M in u time, nonzero physical linearized tidal curvature",
+    "initial_time_jet": "gamma_eff_prime(0)=-4sqrt(2)/M in u time",
+    "limit": "f_sum=M/2,Rsrc=-sqrt(v),gamma_eff=-(2/M)sqrt(v)*H"
+  },
+  "prior_S6_9_composite_light_sha256": "36c899d2b82957f2fc83df8e7bc66582cbf77829fbed8b64724d2d39c2086e48",
+  "schema": 1,
+  "singular_limit_and_amplitude_guard": {
+    "individual_geometry": "N_g and a_g vanish as epsilon->0; endpoint is not a regular two-metric parent solution",
+    "normalized_column": "H0=1 implies relative metric delta=H/f_relative=O(1/epsilon), not uniform small metric amplitude",
+    "scalar_clock": "Positive at finite epsilon but degenerates in the limit; no uniform reconstructed-potential derivative bounds",
+    "small_metric_family": "Multiply the linear column by epsilon*epsilon_lin on a fixed interval; relative metrics remain small and absolute composite amplitude tends to0",
+    "surviving_statement": "Normalized linear growth ratios and tidal derivatives, not finite nonlinear instability or unsuppressed absolute response at fixed small metric amplitude"
+  },
+  "source_audit": "notes/sources.md",
+  "source_sha256": {
+    "FORMULATION.md": "d2df44f94e2dc2e85687325a5b6a4b77d58cc943950a0452c185856fa6f94767",
+    "README.md": "9a54a58b1606908a0707ff5572fbfc32968542b5b9aaafc211a7d67f33c49e7f",
+    "notes/proof.md": "a8478ea05aa2899cfca1bbe703a5dc4a957bf230fe3331bdf1e5898890169bdc",
+    "notes/sources.md": "bf022fd732a2e561b300b74a76e6929e150877a204e530f0a11517cc52896da2",
+    "src/p8_composite_asymptotics/__init__.py": "a98541066c582678e90f3008eca1aa716562a38a59502de6f73224391ae700b3",
+    "src/p8_composite_asymptotics/independent.py": "dabff91cb3eba3a8b3e7669601357c2f6f8b5759a396caa42c65b2e17e53d8dc",
+    "src/p8_composite_asymptotics/limiting.py": "073900a51deea2c0b1b228d74a869e24adafaaa3655f260b819192a1a04d9f2e",
+    "src/p8_composite_asymptotics/scaled.py": "0a3e126417bbf69f3c0a57b7d365989847d771083fb41495cff79825d611c01d",
+    "src/p8_composite_asymptotics/verify.py": "6a606cc142e9120dc2d443de7fc072e212c1b9643ca963dd6417035c27439eec",
+    "tests/conftest.py": "ed271ee3f88fc51151269e8b091d0d0a4ca32837349715e8b7c74737c0c94345",
+    "tests/test_composite_asymptotics.py": "699898a01e82c3767975aff0ec218be042eb643928e8e77394c0f96d73ac8862",
+    "tests/test_composite_asymptotics_certificate.py": "efddb06d9517a69fc784e786436be875eb6a10e8abddfaa1ebb9b3716499fd7f",
+    "tests/test_composite_asymptotics_covariant_audit.py": "eab2600f65690f2312210b69a4e51929011cd01b4f345689c2a19bf89c7ddf5c"
+  },
+  "status": "EXACT_LARGE_ASYMMETRY_LIMITING_HOMOGENEOUS_RESPONSE_AND_FIXED_INTERVAL_CONVERGENCE; GENERAL_MATCHING_AND_P8_OPEN",
+  "verification_boundary": "Written positivity/comparison/compact-Gronwall proofs plus exact source/ODE/canonical/Fraction identities and independent audits; not Lean formalized, no numerical finite-Y threshold",
+  "written_proof": "notes/proof.md"
+}

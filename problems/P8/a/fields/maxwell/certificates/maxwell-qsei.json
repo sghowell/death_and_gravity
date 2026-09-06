@@ -1,0 +1,483 @@
+{
+  "claim": "P8-A.16",
+  "conditional_geometric_dictionary": {
+    "Ricci": "R_UU=Lambda-kappa(E_Maxwell+E_other)",
+    "all_A1_extended_normal_windows_verified": false,
+    "constants": "Q2=kappa B2; Q0=kappa B0+max(Lambda,0)+kappa max(-ell_other,0), with E_other>=ell_other",
+    "equation": "G_FK+Lambda g_FK=-kappa(T_Maxwell+T_other), kappa>0",
+    "initial_pointwise_Ricci_requirement_removed": false,
+    "naive_small_quantum_constant_example_focuses": false,
+    "negative_control": "Hmax*tau<=1 forces |K|tau<=3, below the frozen zeta=0 A1 gradient floor4 even at zero quantum ratios",
+    "new_K_threshold_or_global_causal_hypotheses_verified": false,
+    "new_SEE_solution_asserted": false,
+    "separate_cosmological_Einstein_and_extra_source_choices_retained": true
+  },
+  "date": "2026-09-06",
+  "derived_constants": {
+    "envelope_controls": {
+      "arithmetic_minus_beta": {
+        "beta_M": "-1",
+        "derivative_coefficient_pi_squared_over_hbar": "529/1152",
+        "hubble_jet_caps": [
+          "1",
+          "1",
+          "1",
+          "1"
+        ],
+        "proper_duration": "1",
+        "reference_loss_numerator": "864",
+        "sampler_factor": "23/12",
+        "zero_coefficient_pi_squared_over_hbar": "3/10"
+      },
+      "arithmetic_plus_beta": {
+        "beta_M": "1",
+        "derivative_coefficient_pi_squared_over_hbar": "529/1152",
+        "hubble_jet_caps": [
+          "1",
+          "1",
+          "1",
+          "1"
+        ],
+        "proper_duration": "1",
+        "reference_loss_numerator": "864",
+        "sampler_factor": "23/12",
+        "zero_coefficient_pi_squared_over_hbar": "3/10"
+      },
+      "beta_M_fixed_by_scalar_gamma": false,
+      "named_zero_type_D_arithmetic": {
+        "beta_M": "0",
+        "derivative_coefficient_pi_squared_over_hbar": "529/1152",
+        "hubble_jet_caps": [
+          "1",
+          "1",
+          "1",
+          "1"
+        ],
+        "proper_duration": "1",
+        "reference_loss_numerator": "558",
+        "sampler_factor": "23/12",
+        "zero_coefficient_pi_squared_over_hbar": "31/160"
+      },
+      "physical_calibration": false
+    },
+    "focusing_incompatibility": {
+      "A1_zeta_zero_gradient_lower": "4",
+      "K_trace_times_tau_cap": "3",
+      "small_Q2_implies_focusing": false,
+      "strict_incompatibility_gap": "1"
+    },
+    "independent_Fraction_replay": {
+      "engine": "stdlib Fraction; curvature contractions and inverse-metric variation",
+      "envelope_controls": {
+        "arithmetic_minus_beta": {
+          "beta_M": "-1",
+          "derivative_coefficient_pi_squared_over_hbar": "529/1152",
+          "hubble_jet_caps": [
+            "1",
+            "1",
+            "1",
+            "1"
+          ],
+          "proper_duration": "1",
+          "reference_loss_numerator": "864",
+          "sampler_factor": "23/12",
+          "zero_coefficient_pi_squared_over_hbar": "3/10"
+        },
+        "arithmetic_plus_beta": {
+          "beta_M": "1",
+          "derivative_coefficient_pi_squared_over_hbar": "529/1152",
+          "hubble_jet_caps": [
+            "1",
+            "1",
+            "1",
+            "1"
+          ],
+          "proper_duration": "1",
+          "reference_loss_numerator": "864",
+          "sampler_factor": "23/12",
+          "zero_coefficient_pi_squared_over_hbar": "3/10"
+        },
+        "beta_M_fixed_by_scalar_gamma": false,
+        "named_zero_type_D_arithmetic": {
+          "beta_M": "0",
+          "derivative_coefficient_pi_squared_over_hbar": "529/1152",
+          "hubble_jet_caps": [
+            "1",
+            "1",
+            "1",
+            "1"
+          ],
+          "proper_duration": "1",
+          "reference_loss_numerator": "558",
+          "sampler_factor": "23/12",
+          "zero_coefficient_pi_squared_over_hbar": "31/160"
+        },
+        "physical_calibration": false
+      },
+      "focusing_incompatibility": {
+        "A1_zeta_zero_gradient_lower": "4",
+        "K_trace_times_tau_cap": "3",
+        "small_Q2_implies_focusing": false,
+        "strict_incompatibility_gap": "1"
+      },
+      "imports_primary_formula_modules": false,
+      "proper_IBP_coefficients": {
+        "first": {
+          "0,1,0,0": "5",
+          "2,0,0,0": "5/2"
+        },
+        "zero": {
+          "0,0,0,1": "-3/2",
+          "0,2,0,0": "3/4",
+          "1,0,1,0": "-3/2",
+          "2,1,0,0": "9/4",
+          "4,0,0,0": "9/16"
+        }
+      },
+      "radiation_control": {
+        "absolute_zero_times_t_fourth": "4601/1280",
+        "finite_ambiguity_in_EED": "0",
+        "finite_ambiguity_in_density": "0",
+        "operator_first_times_t": "-1",
+        "operator_zero_times_t_squared": "15/16",
+        "proper_time_positive": true,
+        "reference_EED_pi_squared_t_fourth_over_hbar": "31/2560",
+        "reference_rho_pi_squared_t_fourth_over_hbar": "31/7680",
+        "squared_first_times_t_squared": "-15/8",
+        "squared_zero_times_t_fourth": "945/256"
+      },
+      "source_controls": {
+        "Lambda=-1,other_lower=-2": {
+          "Q0_quantum_pi_squared": "3/5",
+          "Q2_pi_squared": "529/576",
+          "coarsened_source": "4",
+          "raw_source": "3",
+          "upward_coarsening_gap": "1"
+        },
+        "Lambda=-1,other_lower=2": {
+          "Q0_quantum_pi_squared": "3/5",
+          "Q2_pi_squared": "529/576",
+          "coarsened_source": "0",
+          "raw_source": "-5",
+          "upward_coarsening_gap": "5"
+        },
+        "Lambda=1,other_lower=-2": {
+          "Q0_quantum_pi_squared": "3/5",
+          "Q2_pi_squared": "529/576",
+          "coarsened_source": "5",
+          "raw_source": "5",
+          "upward_coarsening_gap": "0"
+        },
+        "Lambda=1,other_lower=2": {
+          "Q0_quantum_pi_squared": "3/5",
+          "Q2_pi_squared": "529/576",
+          "coarsened_source": "1",
+          "raw_source": "-3",
+          "upward_coarsening_gap": "4"
+        }
+      },
+      "stress_jet_coefficients": {
+        "EED": {
+          "beta_M": {
+            "0,0,0,1": "18",
+            "0,2,0,0": "90",
+            "1,0,1,0": "90",
+            "2,1,0,0": "108"
+          },
+          "universal": {
+            "2,1,0,0": "-372",
+            "4,0,0,0": "-186"
+          }
+        },
+        "I_EED": {
+          "beta_M": {},
+          "universal": {
+            "0,0,0,1": "18",
+            "0,2,0,0": "90",
+            "1,0,1,0": "90",
+            "2,1,0,0": "108"
+          }
+        },
+        "I_rho": {
+          "beta_M": {},
+          "universal": {
+            "0,2,0,0": "18",
+            "1,0,1,0": "-36",
+            "2,1,0,0": "-108"
+          }
+        },
+        "I_trace": {
+          "beta_M": {},
+          "universal": {
+            "0,0,0,1": "-36",
+            "0,2,0,0": "-144",
+            "1,0,1,0": "-252",
+            "2,1,0,0": "-432"
+          }
+        },
+        "pressure": {
+          "beta_M": {
+            "0,0,0,1": "12",
+            "0,2,0,0": "54",
+            "1,0,1,0": "72",
+            "2,1,0,0": "108"
+          },
+          "universal": {
+            "2,1,0,0": "-248",
+            "4,0,0,0": "-186"
+          }
+        },
+        "rho": {
+          "beta_M": {
+            "0,2,0,0": "18",
+            "1,0,1,0": "-36",
+            "2,1,0,0": "-108"
+          },
+          "universal": {
+            "4,0,0,0": "186"
+          }
+        },
+        "trace": {
+          "beta_M": {
+            "0,0,0,1": "-36",
+            "0,2,0,0": "-144",
+            "1,0,1,0": "-252",
+            "2,1,0,0": "-432"
+          },
+          "universal": {
+            "2,1,0,0": "744",
+            "4,0,0,0": "744"
+          }
+        }
+      }
+    },
+    "proper_IBP_coefficients": {
+      "first": {
+        "0,1,0,0": "5",
+        "2,0,0,0": "5/2"
+      },
+      "zero": {
+        "0,0,0,1": "-3/2",
+        "0,2,0,0": "3/4",
+        "1,0,1,0": "-3/2",
+        "2,1,0,0": "9/4",
+        "4,0,0,0": "9/16"
+      }
+    },
+    "radiation_control": {
+      "absolute_zero_times_t_fourth": "4601/1280",
+      "finite_ambiguity_in_EED": "0",
+      "finite_ambiguity_in_density": "0",
+      "operator_first_times_t": "-1",
+      "operator_zero_times_t_squared": "15/16",
+      "proper_time_positive": true,
+      "reference_EED_pi_squared_t_fourth_over_hbar": "31/2560",
+      "reference_rho_pi_squared_t_fourth_over_hbar": "31/7680",
+      "squared_first_times_t_squared": "-15/8",
+      "squared_zero_times_t_fourth": "945/256"
+    },
+    "source_controls": {
+      "Lambda=-1,other_lower=-2": {
+        "Q0_quantum_pi_squared": "3/5",
+        "Q2_pi_squared": "529/576",
+        "coarsened_source": "4",
+        "raw_source": "3",
+        "upward_coarsening_gap": "1"
+      },
+      "Lambda=-1,other_lower=2": {
+        "Q0_quantum_pi_squared": "3/5",
+        "Q2_pi_squared": "529/576",
+        "coarsened_source": "0",
+        "raw_source": "-5",
+        "upward_coarsening_gap": "5"
+      },
+      "Lambda=1,other_lower=-2": {
+        "Q0_quantum_pi_squared": "3/5",
+        "Q2_pi_squared": "529/576",
+        "coarsened_source": "5",
+        "raw_source": "5",
+        "upward_coarsening_gap": "0"
+      },
+      "Lambda=1,other_lower=2": {
+        "Q0_quantum_pi_squared": "3/5",
+        "Q2_pi_squared": "529/576",
+        "coarsened_source": "1",
+        "raw_source": "-3",
+        "upward_coarsening_gap": "4"
+      }
+    },
+    "stress_jet_coefficients": {
+      "EED": {
+        "beta_M": {
+          "0,0,0,1": "18",
+          "0,2,0,0": "90",
+          "1,0,1,0": "90",
+          "2,1,0,0": "108"
+        },
+        "universal": {
+          "2,1,0,0": "-372",
+          "4,0,0,0": "-186"
+        }
+      },
+      "I_EED": {
+        "beta_M": {},
+        "universal": {
+          "0,0,0,1": "18",
+          "0,2,0,0": "90",
+          "1,0,1,0": "90",
+          "2,1,0,0": "108"
+        }
+      },
+      "I_rho": {
+        "beta_M": {},
+        "universal": {
+          "0,2,0,0": "18",
+          "1,0,1,0": "-36",
+          "2,1,0,0": "-108"
+        }
+      },
+      "I_trace": {
+        "beta_M": {},
+        "universal": {
+          "0,0,0,1": "-36",
+          "0,2,0,0": "-144",
+          "1,0,1,0": "-252",
+          "2,1,0,0": "-432"
+        }
+      },
+      "pressure": {
+        "beta_M": {
+          "0,0,0,1": "12",
+          "0,2,0,0": "54",
+          "1,0,1,0": "72",
+          "2,1,0,0": "108"
+        },
+        "universal": {
+          "2,1,0,0": "-248",
+          "4,0,0,0": "-186"
+        }
+      },
+      "rho": {
+        "beta_M": {
+          "0,2,0,0": "18",
+          "1,0,1,0": "-36",
+          "2,1,0,0": "-108"
+        },
+        "universal": {
+          "4,0,0,0": "186"
+        }
+      },
+      "trace": {
+        "beta_M": {
+          "0,0,0,1": "-36",
+          "0,2,0,0": "-144",
+          "1,0,1,0": "-252",
+          "2,1,0,0": "-432"
+        },
+        "universal": {
+          "2,1,0,0": "744",
+          "4,0,0,0": "744"
+        }
+      }
+    }
+  },
+  "exact_residuals": {
+    "Maxwell_reference_and_FK_variation": {
+      "EED_not_energy_when_trace_nonzero": "0",
+      "FK_R_squared_density": "0",
+      "FK_R_squared_trace": "0",
+      "FK_scalar_and_G00": "0",
+      "HH_to_FK_physical_density_sign": "0",
+      "full_reference_conservation": "0",
+      "quadratic_tensor_density": "0",
+      "quadratic_tensor_trace": "0",
+      "radiation_finite_ambiguity_vanishes": "0",
+      "universal_Euler_anomaly": "0"
+    },
+    "conditional_SEE_and_A1_dictionary": {
+      "additional_matter_EED_not_omitted": "0",
+      "cosmological_Ricci_sign": "0",
+      "explicit_gravitational_curvature_source_if_moved": "0",
+      "frozen_A1_gradient_floor": "0",
+      "radiation_EED_is_its_positive_density": "0"
+    },
+    "curvature_envelope_scaling": {
+      "curvature_loss_fourth_power": "0",
+      "dimensionless_sampler_factor": "0"
+    },
+    "exact_conformal_and_proper_functional": {
+      "Maxwell_two_polarization_coefficient": "0",
+      "conformal_energy_measure_weight": "0",
+      "exact_compact_support_IBP": "0",
+      "flat_proper_operator": "0",
+      "proper_clock_second_derivative": "0",
+      "radiation_absolute_coefficient": "0"
+    },
+    "pinned_general_proper_clock": {
+      "sampler_first": "0",
+      "sampler_second": "0",
+      "sampler_zero": "0",
+      "weighted_first": "0"
+    }
+  },
+  "formulation": "FORMULATION.md",
+  "not_established": [
+    "interacting QED, charged or massive realistic fields, boundaries or nontrivial topological flux sectors",
+    "an exact new Maxwell semiclassical Einstein solution or controlled EFT validity",
+    "a concrete cosmological focusing example, maximal extension or incompleteness conclusion",
+    "a QEIs-only singularity theorem without initial geometric/pointwise hypotheses",
+    "arbitrary boosted/null-geodesic or other-hypersurface bounds",
+    "completion of original P8a or P8"
+  ],
+  "prior_sha256": {
+    "A1": "f719c98068848003e296260d3ff6b03d32acad40662b9c9980f61c39175f209e",
+    "A12": "f72698170ee7ca0468b42ceaa098e69e1a26054c6ffdbf6321f1968eaefd6584"
+  },
+  "schema": 1,
+  "source_audit": "notes/sources.md",
+  "source_sha256": {
+    "FORMULATION.md": "dd3cc36bece31ff4d194f77565480ef89f5f40928fba6a863e403169f0f8023c",
+    "README.md": "0f834356792ebaf866ae1917fe30f88a846d617c100252bcfeed32d2c879dd43",
+    "notes/proof.md": "7dd061b2b485f2bca1a86e23f4eb4e4d82bf8551f9adf1fb3d50d26aed153b3f",
+    "notes/sources.md": "93432711a1fb7ae5172c5a7f7006c622a22685f6bd5ae1d8efaa58028825b255",
+    "src/p8a_maxwell/__init__.py": "97fce1ba111c6ba94731c219fb31a5ce1c81fa74013aee6ef37f1df08b83f180",
+    "src/p8a_maxwell/bounds.py": "257165b2b52d2ac00efd5b36edd0d0c0a12c0671d094955e18ae793b6caf77d7",
+    "src/p8a_maxwell/domain.py": "b899aeb1833deb2a7519d8fabf83126b12c4724d4f8bd5f5fa6e77dee0cec01f",
+    "src/p8a_maxwell/focusing.py": "b341651d9535e4a0a4495550086c14f62d7f003ed3cb2e678608c796f141f5dc",
+    "src/p8a_maxwell/functional.py": "1496b25ce0e2e02196db02a007112aa7db32bfe43d5af4e3108613789f0677a1",
+    "src/p8a_maxwell/independent.py": "9fb6482cbb4776d22528d7d0f543f6bc086b9a2798ef01b77675f6b8643c5c8a",
+    "src/p8a_maxwell/stress.py": "7a1d2286411eb6eeead0b848631685e8ab909f1b179aee34ab4c7665b84fed9c",
+    "src/p8a_maxwell/verify.py": "0bab91d19811aae27547a05fa6f794ea4030c6154aab1b93b0051d2115b9bcdc",
+    "tests/conftest.py": "8bb70a7f83a4e3797e6e182cf172592c47634c4dbe93551d70037464d60bc124",
+    "tests/test_maxwell_bounds.py": "c7e6b70f5e24d1bec0343581d20139d5c716c14d4dcb84a9b733898b8374f5cf",
+    "tests/test_maxwell_covariant_audit.py": "ee4b283a2b58cb7999484c3967293332f03a85ca8e8d35dfb0dcc09be734d452",
+    "tests/test_maxwell_functional.py": "0a34b444c5f63f77514e00585af6c5f1d0bd7005b56ebb71c9e161211467f64c",
+    "tests/test_maxwell_independent.py": "51be78c5581bfeab5588e2ca9db821b7f48cddf536db21e5c5f3cc80cf7b0fbe",
+    "tests/test_maxwell_report.py": "9e918b935a747a552a3b608f7a4a923826bd901372c861fd954376b5c87a22fc",
+    "tests/test_maxwell_stress.py": "43da7cf64386d91a28efb1263deee87cf280aad17938c38fef8eb0e0de443eed"
+  },
+  "status": "FREE_MAXWELL_CONFORMAL_ALL_HADAMARD_H2_QSEI_CERTIFIED; CONDITIONAL_FOCUSING_AND_P8_OPEN",
+  "theorem": {
+    "absolute_bound": "integral f^2 E_target >= -hbar/(8pi^2) integral |f''-2Hf'+(3H^2/4-3Hdot/2)f|^2 + integral f^2 E_conf",
+    "clock": "dt=a deta, F=a^(-3/2) f(t(eta)); no approximation",
+    "counterterm_source_boundary": "printed Markowicz H1 not imported; independently conserved FK inverse-metric R^2 variation defines beta_M",
+    "field": "one free real physical Maxwell field, two polarizations, energy=(electric^2+magnetic^2)/2",
+    "finite_beta_inherited_from_scalar_gamma": false,
+    "geometry": "smooth spatially flat conformal strip I_eta times R^3, a>0; comoving timelike geodesics",
+    "global_target_state_extension_assumed": false,
+    "optimal_coefficient_claimed": false,
+    "optional_named_specialization": "zero type D means beta_M=0; not silently fixed for the generic theorem",
+    "radiation_control": "R=0 removes finite beta, not the anomaly; absolute IBP zeroth coefficient=4601/(1280t^4)",
+    "reference": "actual conformal transport of the restricted Minkowski Maxwell vacuum; zero flat reference stress",
+    "renormalization_family": "hbar/(2880pi^2) times [62 H3_FK + beta_M I_FK], beta_M real constant and explicit",
+    "samplers": "all real smooth compact samplers; real H2_0 extension on compact proper subintervals, both zero boundary traces",
+    "target_states": "all physical Maxwell Hadamard states on that strip; no target homogeneity, quasifree, zero-mean or SEE assumption"
+  },
+  "verification_boundary": [
+    "A1 and A12 report hashes checked; both replayed read-only with their source-hashed lineage",
+    "Symbolic identities cross-checked by Fraction-only curvature-contraction and source-sign polynomial engine",
+    "Independent coordinate audit checks every diagonal curvature stress, conservation, physical sign, radiation integration and strip measure",
+    "Distributional positivity, local algebra identification, Sobolev density and causal geometry are written proofs, not proof-assistant formalizations"
+  ],
+  "written_proof": "notes/proof.md"
+}
