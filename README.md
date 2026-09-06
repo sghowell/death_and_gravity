@@ -41,6 +41,18 @@ around a pre-registered problems document and a certificate-gated ledger.
   positive radiation-reference component. The approximation is not a state
   or a self-consistent solution; SEE shadowing, backreacted QSEI control and a
   cosmological focusing application remain open.
+  The subsequent [actual-reference stress and SEE-residual certificate](problems/P8/a/applicability/reference/asymptotics/backreaction/response/remainder/residual/README.md)
+  retains the full anomaly and both conserved histories. On the unchanged
+  prepared metric, delta<=10^-14 gives less than 1% error against the actual
+  radiation reference and residuals below 10^-17 of the specified classical
+  reference scales. This includes an explicit physical-amplitude regime,
+  but neither an exact nor a nearby semiclassical solution is established.
+  The [actual perturbed all-sampler QSEI](problems/P8/a/applicability/reference/asymptotics/backreaction/response/remainder/residual/qsei/README.md)
+  now bounds every Hadamard target state with coefficient
+  `5*hbar/(16*pi²)` times the proper-time second-derivative sampler norm
+  on that target interval. Its proof controls both mode frequencies and
+  uses the actual positive reference EED. Exact SEE, realistic-field
+  extensions and the cosmological focusing application remain open.
 - P8(b): [completed scoped classification and verification commands](problems/P8/README.md).
   All 32 M0/M1 sector-row verdicts are decided: minimal optional groups are
   C or D without extra matter, and CD with rolling canonical matter.
@@ -100,6 +112,11 @@ around a pre-registered problems document and a certificate-gated ledger.
   conventional scalar parents, including regular frame changes with the
   required tensor tails. An exact D-to-quartic-Horndeski map loses
   invertibility at two finite times; this is not a singularity of D itself.
+  A new [beta1 bimetric parent screen](problems/P8/s6/matching/bimetric/README.md)
+  has a positive quadratic vacuum spectrum and source-aware flat tree matching,
+  yet its full two-lapse equations forbid a regular CD bounce with the
+  specified canonical matter. A finite-window mismatch excludes evasion by
+  shifting the bounce time. This rejects that parent, not general UV matching.
   General derivative/curvature or quantum matching mechanisms remain open.
 
 ## Layout

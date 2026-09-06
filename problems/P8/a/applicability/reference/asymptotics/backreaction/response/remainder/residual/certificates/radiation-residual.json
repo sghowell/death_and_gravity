@@ -1,0 +1,263 @@
+{
+  "actual_SEE_residual": "delta^2/(A^2*eta_star^4)*[c_i/1922+2880*(C1_i+delta*C2_i)], c_i=(3,5,9)",
+  "actual_stress_error_units": "hbar*(delta*C1+delta^2*C2)/(pi^2*A^4*eta_star^8)",
+  "amplitude_domain": "0<=delta<=2048/190897521, delta=16*epsilon*d/(A^2*eta_star^4), d=kappa*hbar/(46080*pi^2)",
+  "claim": "P8-A.8",
+  "correct_clock_log_kernel_identities": {
+    "absolute_log_integral_at_full_span": "0",
+    "absolute_log_integral_at_zero_span_limit": "0",
+    "absolute_log_integral_monotonic_derivative": "0",
+    "local_log_first_derivative": "0",
+    "local_log_second_derivative": "0"
+  },
+  "date": "2026-09-06",
+  "effective_anomaly_variable": "S=Rmode-K/2+U/10; W_eff=W-hbar*R/(240*pi^2); no scheme change",
+  "exact_plateau_reference_and_frozen_residual_identities": {
+    "Euler_EED_ratio": "0",
+    "Euler_density_ratio": "0",
+    "Euler_pressure_ratio": "0",
+    "continuous_frozen_ratio_at_zero": "0",
+    "exact_Hc": "0",
+    "exact_U": "0",
+    "exact_quantum_source_coupling_restoration": "0",
+    "frozen_EED_normalization": "0",
+    "frozen_density_normalization": "0",
+    "frozen_pressure_normalization": "0",
+    "literal_1922_denominator": "0"
+  },
+  "exact_trace_conservation_and_anomaly_identities": {
+    "effective_anomaly_Wick_term": "0",
+    "exact_EED_definition": "0",
+    "exact_full_conservation": "0",
+    "exact_raw_scheme_trace": "0",
+    "finite_I_conservation": "0",
+    "finite_I_trace": "0"
+  },
+  "formulation": "FORMULATION.md",
+  "generic_reconstructed_physical_stress": {
+    "EED": "C/a(eta)**4 + gamma*(3*(-12*(Derivative(a(eta), (eta, 2))/a(eta)**2 - 2*Derivative(a(eta), eta)**2/a(eta)**3)/a(eta) - 24*Derivative(a(eta), eta)**2/a(eta)**4)*((Derivative(a(eta), (eta, 2))/a(eta)**2 - 2*Derivative(a(eta), eta)**2/a(eta)**3)/a(eta) + 3*Derivative(a(eta), eta)**2/a(eta)**4)/2 + (3*(Derivative(a(eta), (eta, 2))/a(eta)**2 - 2*Derivative(a(eta), eta)**2/a(eta)**3)/a(eta) + 3*Derivative(a(eta), eta)**2/a(eta)**4)*(12*(Derivative(a(eta), (eta, 2))/a(eta)**2 - 2*Derivative(a(eta), eta)**2/a(eta)**3)/a(eta) + 24*Derivative(a(eta), eta)**2/a(eta)**4)/2 + (6*(Derivative(a(eta), (eta, 2))/a(eta)**2 - 2*Derivative(a(eta), eta)**2/a(eta)**3)/a(eta) + 12*Derivative(a(eta), eta)**2/a(eta)**4)**2/2 + 3*(-(-6*(Derivative(a(eta), (eta, 2))/a(eta)**2 - 2*Derivative(a(eta), eta)**2/a(eta)**3)*Derivative(a(eta), eta)/a(eta)**2 + 6*(Derivative(a(eta), (eta, 3))/a(eta)**2 - 6*Derivative(a(eta), eta)*Derivative(a(eta), (eta, 2))/a(eta)**3 + 6*Derivative(a(eta), eta)**3/a(eta)**4)/a(eta) + 24*Derivative(a(eta), eta)*Derivative(a(eta), (eta, 2))/a(eta)**4 - 48*Derivative(a(eta), eta)**3/a(eta)**5)*Derivative(a(eta), eta)/a(eta)**2 + (-6*(Derivative(a(eta), (eta, 2))/a(eta)**2 - 2*Derivative(a(eta), eta)**2/a(eta)**3)*Derivative(a(eta), (eta, 2))/a(eta)**2 + 12*(Derivative(a(eta), (eta, 2))/a(eta)**2 - 2*Derivative(a(eta), eta)**2/a(eta)**3)*Derivative(a(eta), eta)**2/a(eta)**3 - 12*(Derivative(a(eta), (eta, 3))/a(eta)**2 - 6*Derivative(a(eta), eta)*Derivative(a(eta), (eta, 2))/a(eta)**3 + 6*Derivative(a(eta), eta)**3/a(eta)**4)*Derivative(a(eta), eta)/a(eta)**2 + 6*(Derivative(a(eta), (eta, 4))/a(eta)**2 - 8*Derivative(a(eta), eta)*Derivative(a(eta), (eta, 3))/a(eta)**3 - 6*Derivative(a(eta), (eta, 2))**2/a(eta)**3 + 36*Derivative(a(eta), eta)**2*Derivative(a(eta), (eta, 2))/a(eta)**4 - 24*Derivative(a(eta), eta)**4/a(eta)**5)/a(eta) + 24*Derivative(a(eta), eta)*Derivative(a(eta), (eta, 3))/a(eta)**4 + 24*Derivative(a(eta), (eta, 2))**2/a(eta)**4 - 240*Derivative(a(eta), eta)**2*Derivative(a(eta), (eta, 2))/a(eta)**5 + 240*Derivative(a(eta), eta)**4/a(eta)**6)/a(eta))/a(eta) + 3*(-6*(Derivative(a(eta), (eta, 2))/a(eta)**2 - 2*Derivative(a(eta), eta)**2/a(eta)**3)*Derivative(a(eta), eta)/a(eta)**2 + 6*(Derivative(a(eta), (eta, 3))/a(eta)**2 - 6*Derivative(a(eta), eta)*Derivative(a(eta), (eta, 2))/a(eta)**3 + 6*Derivative(a(eta), eta)**3/a(eta)**4)/a(eta) + 24*Derivative(a(eta), eta)*Derivative(a(eta), (eta, 2))/a(eta)**4 - 48*Derivative(a(eta), eta)**3/a(eta)**5)*Derivative(a(eta), eta)/a(eta)**3) + hbar*(J(eta)/8 - L(eta)/32 + S(eta)*Derivative(a(eta), eta)**2/(4*a(eta)**2) + Derivative(S(eta), (eta, 2))/16 - Derivative(S(eta), eta)*Derivative(a(eta), eta)/(4*a(eta)) + Derivative(a(eta), (eta, 2))**2/(64*a(eta)**2) - Derivative(a(eta), eta)**2*Derivative(a(eta), (eta, 2))/(480*a(eta)**3) + Derivative(a(eta), eta)**4/(320*a(eta)**4))/(pi**2*a(eta)**4)",
+    "density": "C/a(eta)**4 + gamma*((3*(Derivative(a(eta), (eta, 2))/a(eta)**2 - 2*Derivative(a(eta), eta)**2/a(eta)**3)/a(eta) + 3*Derivative(a(eta), eta)**2/a(eta)**4)*(12*(Derivative(a(eta), (eta, 2))/a(eta)**2 - 2*Derivative(a(eta), eta)**2/a(eta)**3)/a(eta) + 24*Derivative(a(eta), eta)**2/a(eta)**4) - (6*(Derivative(a(eta), (eta, 2))/a(eta)**2 - 2*Derivative(a(eta), eta)**2/a(eta)**3)/a(eta) + 12*Derivative(a(eta), eta)**2/a(eta)**4)**2/2 - 6*(-6*(Derivative(a(eta), (eta, 2))/a(eta)**2 - 2*Derivative(a(eta), eta)**2/a(eta)**3)*Derivative(a(eta), eta)/a(eta)**2 + 6*(Derivative(a(eta), (eta, 3))/a(eta)**2 - 6*Derivative(a(eta), eta)*Derivative(a(eta), (eta, 2))/a(eta)**3 + 6*Derivative(a(eta), eta)**3/a(eta)**4)/a(eta) + 24*Derivative(a(eta), eta)*Derivative(a(eta), (eta, 2))/a(eta)**4 - 48*Derivative(a(eta), eta)**3/a(eta)**5)*Derivative(a(eta), eta)/a(eta)**3) + hbar*((Derivative(a(eta), (eta, 2))/a(eta) + Derivative(a(eta), eta)**2/a(eta)**2)*S(eta)/8 + J(eta)/8 - L(eta)/32 - Derivative(S(eta), eta)*Derivative(a(eta), eta)/(8*a(eta)) + Derivative(a(eta), eta)**4/(960*a(eta)**4))/(pi**2*a(eta)**4)",
+    "pressure": "C/(3*a(eta)**4) + gamma*((-12*(Derivative(a(eta), (eta, 2))/a(eta)**2 - 2*Derivative(a(eta), eta)**2/a(eta)**3)/a(eta) - 24*Derivative(a(eta), eta)**2/a(eta)**4)*((Derivative(a(eta), (eta, 2))/a(eta)**2 - 2*Derivative(a(eta), eta)**2/a(eta)**3)/a(eta) + 3*Derivative(a(eta), eta)**2/a(eta)**4) + (6*(Derivative(a(eta), (eta, 2))/a(eta)**2 - 2*Derivative(a(eta), eta)**2/a(eta)**3)/a(eta) + 12*Derivative(a(eta), eta)**2/a(eta)**4)**2/2 + 2*(-(-6*(Derivative(a(eta), (eta, 2))/a(eta)**2 - 2*Derivative(a(eta), eta)**2/a(eta)**3)*Derivative(a(eta), eta)/a(eta)**2 + 6*(Derivative(a(eta), (eta, 3))/a(eta)**2 - 6*Derivative(a(eta), eta)*Derivative(a(eta), (eta, 2))/a(eta)**3 + 6*Derivative(a(eta), eta)**3/a(eta)**4)/a(eta) + 24*Derivative(a(eta), eta)*Derivative(a(eta), (eta, 2))/a(eta)**4 - 48*Derivative(a(eta), eta)**3/a(eta)**5)*Derivative(a(eta), eta)/a(eta)**2 + (-6*(Derivative(a(eta), (eta, 2))/a(eta)**2 - 2*Derivative(a(eta), eta)**2/a(eta)**3)*Derivative(a(eta), (eta, 2))/a(eta)**2 + 12*(Derivative(a(eta), (eta, 2))/a(eta)**2 - 2*Derivative(a(eta), eta)**2/a(eta)**3)*Derivative(a(eta), eta)**2/a(eta)**3 - 12*(Derivative(a(eta), (eta, 3))/a(eta)**2 - 6*Derivative(a(eta), eta)*Derivative(a(eta), (eta, 2))/a(eta)**3 + 6*Derivative(a(eta), eta)**3/a(eta)**4)*Derivative(a(eta), eta)/a(eta)**2 + 6*(Derivative(a(eta), (eta, 4))/a(eta)**2 - 8*Derivative(a(eta), eta)*Derivative(a(eta), (eta, 3))/a(eta)**3 - 6*Derivative(a(eta), (eta, 2))**2/a(eta)**3 + 36*Derivative(a(eta), eta)**2*Derivative(a(eta), (eta, 2))/a(eta)**4 - 24*Derivative(a(eta), eta)**4/a(eta)**5)/a(eta) + 24*Derivative(a(eta), eta)*Derivative(a(eta), (eta, 3))/a(eta)**4 + 24*Derivative(a(eta), (eta, 2))**2/a(eta)**4 - 240*Derivative(a(eta), eta)**2*Derivative(a(eta), (eta, 2))/a(eta)**5 + 240*Derivative(a(eta), eta)**4/a(eta)**6)/a(eta))/a(eta) + 4*(-6*(Derivative(a(eta), (eta, 2))/a(eta)**2 - 2*Derivative(a(eta), eta)**2/a(eta)**3)*Derivative(a(eta), eta)/a(eta)**2 + 6*(Derivative(a(eta), (eta, 3))/a(eta)**2 - 6*Derivative(a(eta), eta)*Derivative(a(eta), (eta, 2))/a(eta)**3 + 6*Derivative(a(eta), eta)**3/a(eta)**4)/a(eta) + 24*Derivative(a(eta), eta)*Derivative(a(eta), (eta, 2))/a(eta)**4 - 48*Derivative(a(eta), eta)**3/a(eta)**5)*Derivative(a(eta), eta)/a(eta)**3) + hbar*((-Derivative(a(eta), (eta, 2))/a(eta) + 3*Derivative(a(eta), eta)**2/a(eta)**2)*S(eta)/24 + J(eta)/24 - L(eta)/96 + Derivative(S(eta), (eta, 2))/24 - Derivative(S(eta), eta)*Derivative(a(eta), eta)/(8*a(eta)) + Derivative(a(eta), (eta, 2))**2/(96*a(eta)**2) - Derivative(a(eta), eta)**2*Derivative(a(eta), (eta, 2))/(720*a(eta)**3) + Derivative(a(eta), eta)**4/(576*a(eta)**4))/(pi**2*a(eta)**4)"
+  },
+  "independently_replayed_finite_bounds": {
+    "Euler_first_constants": {
+      "EED": "3/327680",
+      "density": "1/491520",
+      "pressure": "1/196608"
+    },
+    "R_squared_history_second_constants": {
+      "EED": "5442482773/8388608",
+      "density": "1255957563/2097152",
+      "pressure": "2930567647/12582912"
+    },
+    "correct_clock_kernel_rational_margins": {
+      "exp_two_series_lower_minus_log_argument_upper": "1/2",
+      "local_factor_cap_margin": "1/6",
+      "local_log_argument_fourth_power_lower_minus_one": "49/32"
+    },
+    "derivative_first_constants": {
+      "EED": "2948361117242498697065567/8198986095824732160",
+      "density": "88144557413334127921/6405457887363072",
+      "pressure": "192796740742488533080369/819898609582473216"
+    },
+    "effective_S_Born_norm_constants": [
+      "936154549/81920",
+      "2181627700381/5242880",
+      "2723067004932233206313567/64054578873630720"
+    ],
+    "finite_physical_amplitude_example": {
+      "actual_SEE_residual_bracket_constants": {
+        "EED": "1992823701129/1922",
+        "density": "77539322883/1922",
+        "pressure": "1306394778245/1922"
+      },
+      "actual_SEE_residual_over_reference_classical_scales": {
+        "EED": "53806239930483/19220000000000000000000000000000",
+        "density": "2093561717841/19220000000000000000000000000000",
+        "pressure": "21163595407569/3844000000000000000000000000000"
+      },
+      "actual_reference_state_density_pressure_EED_positive_on_target": true,
+      "all_classical_scale_ratios_below_1e_minus_17": true,
+      "all_reference_ratios_below_one_percent": true,
+      "delta_bar": "2048/190897521",
+      "delta_upper": "1/100000000000000",
+      "normalization_denominators": "positive A.3 quantum components, or positive zeroth-order classical Einstein/radiation components; never unknown actual values",
+      "physical_epsilon_one_regime": "t_star=A*eta_star^2/2 >= 2*10^7*sqrt(d), with d=kappa*hbar/(46080*pi^2)",
+      "positivity_claim_for_arbitrary_Hadamard_states": false,
+      "reference_stress_error_ratios": {
+        "EED": "2362071537/312500000000",
+        "density": "34464933/39062500000",
+        "pressure": "13936095441/1562500000000"
+      },
+      "the_metric_is_an_exact_or_nearby_SEE_solution": false
+    },
+    "first_constants": {
+      "EED": "2948361117317562656683103/8198986095824732160",
+      "density": "440722787131830326773/32027289436815360",
+      "pressure": "64265580248886251019707/273299536527491072"
+    },
+    "independent_Laurent_controls": [
+      {
+        "S_power": 5,
+        "a_power": 2,
+        "all_exact_Laurent_residuals_zero": true,
+        "control_is_a_physical_flat_past_state": false,
+        "pressure_at_eta_one_in_hbar_over_pi2_units": "97/720",
+        "rho_at_eta_one_in_hbar_over_pi2_units": "-61/240"
+      },
+      {
+        "S_power": 7,
+        "a_power": 2,
+        "all_exact_Laurent_residuals_zero": true,
+        "control_is_a_physical_flat_past_state": false,
+        "pressure_at_eta_one_in_hbar_over_pi2_units": "127/240",
+        "rho_at_eta_one_in_hbar_over_pi2_units": "-197/240"
+      },
+      {
+        "S_power": 5,
+        "a_power": 3,
+        "all_exact_Laurent_residuals_zero": true,
+        "control_is_a_physical_flat_past_state": false,
+        "pressure_at_eta_one_in_hbar_over_pi2_units": "231/320",
+        "rho_at_eta_one_in_hbar_over_pi2_units": "457/320"
+      },
+      {
+        "S_power": 6,
+        "a_power": 4,
+        "all_exact_Laurent_residuals_zero": true,
+        "control_is_a_physical_flat_past_state": false,
+        "pressure_at_eta_one_in_hbar_over_pi2_units": "143/45",
+        "rho_at_eta_one_in_hbar_over_pi2_units": "361/60"
+      }
+    ],
+    "kernel_norm_constants": [
+      "186969009/8192",
+      "435544567289/524288",
+      "544268329651755679275091/6405457887363072"
+    ],
+    "literal_frozen_denominator": 1922,
+    "monotone_amplitude_polynomials": {
+      "EED": {
+        "actual_SEE_residual_polynomial": "delta**2*(4896000000000000000*delta + 1992729600009/1922)",
+        "actual_stress_error_polynomial": "1700000000000000*delta**2 + 360000*delta",
+        "positive_coefficients_and_monotonicity_on_closed_interval": true
+      },
+      "density": {
+        "actual_SEE_residual_polynomial": "delta**2*(2304000000000000000*delta + 77495040003/1922)",
+        "actual_stress_error_polynomial": "800000000000000*delta**2 + 14000*delta",
+        "positive_coefficients_and_monotonicity_on_closed_interval": true
+      },
+      "pressure": {
+        "actual_SEE_residual_polynomial": "delta**2*(2592000000000000000*delta + 1306344960005/1922)",
+        "actual_stress_error_polynomial": "900000000000000*delta**2 + 236000*delta",
+        "positive_coefficients_and_monotonicity_on_closed_interval": true
+      }
+    },
+    "plateau_rational_margins": {
+      "Euler_EED_slope_margin": "120298903/25165824",
+      "Euler_density_slope_margin": "11851935/4194304",
+      "Euler_pressure_slope_margin": "37652957/8388608",
+      "frozen_ratio_positive_polynomial_coefficients": [
+        "1/32",
+        "97/992",
+        "2/961"
+      ],
+      "literal_denominator": "1922",
+      "positive_target_radicand_floor": "31/32",
+      "target_y_twelfth_lower_bound": "4096"
+    },
+    "rounded_first_constants": {
+      "EED": 360000,
+      "density": 14000,
+      "pressure": 236000
+    },
+    "rounded_second_constants": {
+      "EED": 1700000000000000,
+      "density": 800000000000000,
+      "pressure": 900000000000000
+    },
+    "second_constants": {
+      "EED": "30517880127550356020491779983935724039743930425887/18673159166535356680433003759927296",
+      "density": "14466457904385351523424457574186854139233700053443/18673159166535356680433003759927296",
+      "pressure": "15525494977826573083290451647460053023892132764841/18673159166535356680433003759927296"
+    },
+    "strict_first_rounding_margins": {
+      "EED": "3273877179340920916897/8198986095824732160",
+      "density": "7659264983584713227/32027289436815360",
+      "pressure": "233110371601641972293/273299536527491072"
+    },
+    "strict_second_rounding_margins": {
+      "EED": "1226490455559750336244326407940679160256069574113/18673159166535356680433003759927296",
+      "density": "472069428842933820921945433754982660766299946557/18673159166535356680433003759927296",
+      "pressure": "1280348272055247929099251736474513376107867235159/18673159166535356680433003759927296"
+    }
+  },
+  "literal_1922_dictionary": "1922=2*31^2; 2048/(961*4096)=1/1922; not a power or typographical shorthand",
+  "negative_controls": {
+    "discard_J": "(a(eta)*Derivative(a(eta), (eta, 3)) - Derivative(a(eta), eta)*Derivative(a(eta), (eta, 2)))*S(eta)/(8*pi**2*a(eta)**6)",
+    "discard_L": "Derivative(a(eta), eta)*Derivative(a(eta), (eta, 2))**2/(32*pi**2*a(eta)**7)",
+    "input_rejections": "inexact/negative/nonfinite norms, missing jets, invalid amplitude and scales, unsupported coefficient selectors or alternate numeric scheme arguments",
+    "omit_U_over_10_changes_trace": "(-a(eta)**2*Derivative(a(eta), (eta, 4)) + 4*a(eta)*Derivative(a(eta), eta)*Derivative(a(eta), (eta, 3)) + 3*a(eta)*Derivative(a(eta), (eta, 2))**2 - 6*Derivative(a(eta), eta)**2*Derivative(a(eta), (eta, 2)))/(80*pi**2*a(eta)**7)",
+    "required_initial_density_check_not_replaced_by_conservation": true,
+    "wrong_past_constant_can_still_be_conserved": true,
+    "wrong_past_constant_density_shift": "a(eta)**(-4)"
+  },
+  "prior_A7_sha256": "cc4ec02bcb23e0ef01d0fb58ad4b95a3bb602a5bbbfc6871d044b2a09a78e963",
+  "schema": 1,
+  "scope": {
+    "FK_convention": "+---; R=+6*(Hdot+2H^2), GS Box equals FK Box; physical-sign residuals have opposite FK component signs",
+    "absolute_stress_scheme_independent": false,
+    "actual_finite_amplitude_SEE_residual_bound": true,
+    "actual_finite_amplitude_stress_vs_A3_reference_bound": true,
+    "actual_past_data_fix_homogeneous_constant_to_zero": true,
+    "all_geodesic_focusing_or_P8a_completion": false,
+    "exact_or_nearby_SEE_solution_or_stability": false,
+    "extra_curvature_sources_automatically_bounded": false,
+    "field": "one real free massless minimally coupled scalar",
+    "generic_gamma_or_other_lambda_covered_by_numeric_constants": false,
+    "generic_symbolic_gamma_and_radiation_constant_retained": true,
+    "named_prescription": "raw H_lambda with lambda=2*sqrt(2)*A*eta_star^2, physical gamma=0, no additional alpha*R Wick shift",
+    "past_Cauchy_slice": "y=1/2, with active history starting at y=1 because all potential and remainder data vanish before preparation",
+    "perturbed_QSEI_or_all_sampler_bound": false,
+    "physical_epsilon_one_in_explicit_regime": true,
+    "positive_EED_for_arbitrary_Hadamard_states": false,
+    "positive_components_for_specified_transported_state_in_accuracy_regime": true,
+    "same_A7_metric_family_and_exact_clock": true,
+    "second_order_corrected_metric_family_certified": false,
+    "self_consistent_past_initial_data_certified": false,
+    "small_residual_on_entire_off_shell_preparation_interval": false,
+    "source_model": "Einstein plus separately conserved ordinary radiation, zero Lambda, no additional explicit curvature-squared gravitational sources",
+    "state": "same positive zero-mean homogeneous isotropic quasifree Hadamard state transported from the unchanged radiation past",
+    "target": "2<=y<=3; compact interior targets retain the original near-target plateau"
+  },
+  "source_boundary": "notes/sources.md",
+  "source_sha256": {
+    "FORMULATION.md": "33df9af31143c0306b7d730458c2bbbe79b99e0ceaf43b0bf8b008d321b120f4",
+    "README.md": "39329a9e47be32ad3fd3a235b81e39eb27974dd278cedc01dd5493f395328d2a",
+    "notes/proof.md": "950c19aac806edc22e085267a5f506d2e3857be422a77e67f73a8cffadffc976",
+    "notes/sources.md": "70cbf293cbbb49546fcdb0b130abdcb0ca40818deb6a29db329e6f42c24014ef",
+    "src/p8a_residual/__init__.py": "325df8652f3e36e1aa12da235428bddcae7bef476d4aedcdc115f44bb21b6e92",
+    "src/p8a_residual/bounds.py": "919efe503642d7007f7b14e23efdb3aaf330a8336cb52e863080b4b40f3934c0",
+    "src/p8a_residual/independent.py": "4788b76d5a22d4c33debc8668f44f9bf709bf981a7f1b08a45cc33f94219a427",
+    "src/p8a_residual/kernel.py": "3fd7a7ebba7b7d32c39e3cc025dc943de786ce4738d6e94b8d728c96ca4b1cb1",
+    "src/p8a_residual/plateau.py": "ccc9c9cd51e2ea1269732cf04448b2b1b814de77205a54ed324a6d6fa3e0c501",
+    "src/p8a_residual/reconstruction.py": "21c50f7fe5c5d7e38cb803b34e915324691141cc4b47b4138d99b39fb7d4ff9e",
+    "src/p8a_residual/verify.py": "28f061ba9e58a543580ef9b3e600d8e968be7e8bf894c9462e70ff9795568cd0",
+    "tests/conftest.py": "780dc5eb5b301279faa924a89d352faec0d8e93fa5e4c13a65dac9eddf89ee84",
+    "tests/test_residual_bounds.py": "dba9e14b492283aeb81f5d2ee25ec3c25032e74344923a9da1128678468b9afb",
+    "tests/test_residual_covariant_audit.py": "e29a3607d9b75f00a515429f19180e8df78a0f5a450521de12b21ff32fc38d80",
+    "tests/test_residual_reconstruction.py": "bdc7d85804ffd89e48531d16b0bf7cf1c97b160068f6b55832dfabab68ea873c",
+    "tests/test_residual_report.py": "1f4233bde9d406d003c7f7703dcc142623136127ffa4fb7e822484691315b839"
+  },
+  "state_fixed_histories": "J'=U'*S, L'=(a'/a)*U^2; both integrals and C/a^4 are fixed by the actual radiation past",
+  "status": "FINITE_ACTUAL_REFERENCE_STRESS_AND_SEE_RESIDUAL_CERTIFIED; EXACT_SEE_QSEI_FOCUSING_OPEN",
+  "verification_boundary": [
+    "A.7 and every earlier pinned state, prescription, all-frequency bound and source hash are replayed unchanged",
+    "the analytic norm estimate differentiates the integrable retarded logarithm through the smooth flat-past source, not through a singular unregulated endpoint",
+    "generic trace/conservation and finite tensor identities are symbolic; independent Laurent controls test nonzero-curvature algebra without claiming physical states",
+    "a separate Fraction-only assembly from the pinned A.7 report verifies every numeric stress and residual coefficient and finite-interval ratio",
+    "the certificate bounds an actual equation residual only on the specified target plateau; residual size is not an exact-solution or shadowing theorem",
+    "positivity is proved only for the chosen transported state in the small-amplitude accuracy regime; full two-point QSEI and cosmological focusing remain open"
+  ],
+  "written_proof": "notes/proof.md"
+}
