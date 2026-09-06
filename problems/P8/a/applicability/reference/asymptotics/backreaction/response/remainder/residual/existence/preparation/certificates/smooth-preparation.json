@@ -1,0 +1,278 @@
+{
+  "claim": "P8-A.11",
+  "date": "2026-09-06",
+  "derived_constants": {
+    "full_map": {
+      "A8_inputs": {
+        "S0": "1318182540856554203412197589708287364630697/11463013392554019132538880000000000000000000000000000",
+        "S1": "11927499269971566614048897880139377452974819/2865753348138504783134720000000000000000000000000000",
+        "U0_per_delta": "20461/128",
+        "U1_per_delta": "61013499/8192",
+        "source_derived": "697853905947/61504000000000000000"
+      },
+      "actual_gate": {
+        "ball_margin": "2331744615375526899529297346361281775182719226804404906691338970075585982743/2812499999718750000000000000000000000000000000000000000000000000000000000000000000",
+        "center_image": "5454606066924252021514382763676863595455208181/94696969687500000000000000000000000000000000000000000",
+        "contraction": "318753584155572815431725485557515376032261090219895093308661029924414017257/2812499999718750000000000000000000000000000000000000000000000000000000000000",
+        "fixed_point_distance": "162001800187650285038977168081202848785019682975700000000000000000000/2493746415563177184568274514442484623967738909780104906691338970075585982743",
+        "self_map": "480755384343223100470702653638718224817280773195595093308661029924414017257/2812499999718750000000000000000000000000000000000000000000000000000000000000000000"
+      },
+      "auxiliary_P_cap": "1/1000000",
+      "auxiliary_P_derived": "53156260548225000000030160590001093750035157812743/140625000000000000000000000000000000000000000000000000000",
+      "auxiliary_q_cap": "1/50000000",
+      "auxiliary_q_derived": "400000001/40000000000000000",
+      "background_q_and_qprime_cap": "1/100000000",
+      "center": {
+        "P_difference": "45000000001500000000027/156250000000000000000000000000",
+        "q_difference": "45000000001500000000027/6250000000000000000000000000000000000000",
+        "rhs": "1800000000465000000014580000000243/6250000000000000000000000000000000000000"
+      },
+      "delta": "1/100000000000000",
+      "geometry": {
+        "a_max": "3",
+        "a_min": "2",
+        "background_uprime_cap": "1/10000000000",
+        "h_max": "1/2",
+        "h_min": "1/3",
+        "history": "3",
+        "history_uprime_cap": "1/100000",
+        "u_cap": "1/500000000000"
+      },
+      "initial_background_label": "5/2",
+      "inverse_bound": "100001111201111/499999999950000",
+      "inverse_cap": "21/100",
+      "length": "1/10000000000",
+      "local_cap": "17/30",
+      "mode_response": {
+        "exponential_upper": "2",
+        "higher": "2187/25000000000000000000",
+        "log_history_ratio_upper": "32",
+        "quadratic": "207/40000000000000000000000000",
+        "strength": "27/100000",
+        "total": "3499200207/40000000000000000000000000"
+      },
+      "pairs": {
+        "Einstein_P": "300000000000000000000000000000001/4000000000000000000000000000000000000000",
+        "P": "10546875000000005860590001093750035157812743/140625000000000000000000000000000000000000000000000",
+        "auxiliary_Sprime": "421875000094922109433725096495648916156365505170314687/5625000000000000000000000000000000000000000000000000000000000",
+        "curvature_P": "3750000000700000000001/90000000000000000000000000000000000000000000",
+        "local_Wick_terms": "68000000003000000000000000000000600040001/120000000000000000000000000000000000000000",
+        "metric_gains": {
+          "a_squared": "3/1000000000000000000000000000000",
+          "d": "1/12000000000000000000000000000000",
+          "dprime": "1/400000000000000000000",
+          "h": "1/200000000000000000000",
+          "inverse_a_squared": "1/12000000000000000000000000000000",
+          "log_a": "1/6000000000000000000000000000000",
+          "u": "1/10000000000"
+        },
+        "q": "10546875000000005860590001093761753907812743/5625000000000000000000000000000000000000000000000000000000000",
+        "rhs_without_mode_response": "3187500422015625094922109433725124622523963031365505170314687/5625000000000000000000000000000000000000000000000000000000000",
+        "source_P": "135000000000000000000027/15625000000000000000000000000000000000000000000000"
+      },
+      "radius": "1/1000000",
+      "rhs_lipschitz": "3187500422015625586997138543100124622523963031365505170314687/5625000000000000000000000000000000000000000000000000000000000",
+      "rounded": {
+        "ball_margin": "817/1000000000",
+        "center_image": "63/1000000000",
+        "center_rhs": "3/10000000",
+        "contraction": "3/25",
+        "rhs_lipschitz": "567/1000",
+        "self_map": "183/1000000000"
+      },
+      "source_cap": "3/250000000",
+      "strict_margins": {
+        "A10_rational_strength": "24973/100000",
+        "a_upper_first_exit_margin": "5/19",
+        "auxiliary_P": "87468739451774999999969839409998906249964842187257/140625000000000000000000000000000000000000000000000000000",
+        "auxiliary_q": "399999999/40000000000000000",
+        "background_derivative": "20906501/819200000000000000",
+        "background_observation_stays_on_plateau": "4999999999/10000000000",
+        "background_q": "457202353161304211098143002410291712635369303/45852053570216076530155520000000000000000000000000000",
+        "background_qprime": "409492356081417944641947410889734202823470027/45852053570216076530155520000000000000000000000000000",
+        "e_squared_upper_below_ten": "1",
+        "exp_half_partial_sum_above_three_halves": "1/8",
+        "exp_three_partial_sum_above_ten": "3",
+        "exp_two_partial_sum_above_three": "2",
+        "full_history_derivative": "7372738986501/819200000000000000",
+        "future_potential": "128443/320000000000000000",
+        "h_derivative_margin": "124999999997/1500000000000",
+        "h_lower_first_exit_margin": "1249999999/30000000000",
+        "h_upper_first_exit_margin": "833333333/10000000000",
+        "initial_a_fourth_lower": "588489999999999/100000000000000",
+        "initial_a_fourth_upper": "663510000000001/100000000000000",
+        "initial_h_fourth_lower": "1422023773193363082885742187499050781250000000081/244140624999999812500000000000047999999999999995904",
+        "initial_h_fourth_upper": "207862147578485630176685474537308304398148148125/45776367187499964843750000000008999999999999999232",
+        "inverse_cap_margin": "4998888788389/499999999950000",
+        "pi_integral_lower_minus_three": "769/45045",
+        "response_exponential_argument": "24973/50000",
+        "rounded_ball": "817/1000000000",
+        "rounded_center_rhs": "74999999534999999985419999999757/6250000000000000000000000000000000000000",
+        "rounded_contraction": "187497045890620891020030198299127642332258780441463807797191/187500000000000000000000000000000000000000000000000000000000000",
+        "rounded_rhs_lipschitz": "1874577984374413002861456899875377476036968634494829685313/5625000000000000000000000000000000000000000000000000000000000",
+        "source": "40194094053/61504000000000000000"
+      }
+    },
+    "independent_Fraction_replay": {
+      "actual_state_inputs": "unchanged pinned A7 mode norms and A8 raw-scheme density defect",
+      "constants": {
+        "Einstein_P": "300000000000000000000000000000001/4000000000000000000000000000000000000000",
+        "S0": "1318182540856554203412197589708287364630697/11463013392554019132538880000000000000000000000000000",
+        "S1": "11927499269971566614048897880139377452974819/2865753348138504783134720000000000000000000000000000",
+        "actual_center_image": "5454606066924252021514382763676863595455208181/94696969687500000000000000000000000000000000000000000",
+        "actual_contraction": "318753584155572815431725485557515376032261090219895093308661029924414017257/2812499999718750000000000000000000000000000000000000000000000000000000000000",
+        "actual_distance": "162001800187650285038977168081202848785019682975700000000000000000000/2493746415563177184568274514442484623967738909780104906691338970075585982743",
+        "actual_self_map": "480755384343223100470702653638718224817280773195595093308661029924414017257/2812499999718750000000000000000000000000000000000000000000000000000000000000000000",
+        "auxiliary_P_derived": "53156260548225000000030160590001093750035157812743/140625000000000000000000000000000000000000000000000000000",
+        "auxiliary_Sprime": "421875000094922109433725096495648916156365505170314687/5625000000000000000000000000000000000000000000000000000000000",
+        "auxiliary_q_derived": "400000001/40000000000000000",
+        "center_P": "45000000001500000000027/156250000000000000000000000000",
+        "center_q": "45000000001500000000027/6250000000000000000000000000000000000000",
+        "center_rhs": "1800000000465000000014580000000243/6250000000000000000000000000000000000000",
+        "curvature_P": "3750000000700000000001/90000000000000000000000000000000000000000000",
+        "highest_jet_contraction": "1062434687/8923750000",
+        "inverse_bound": "100001111201111/499999999950000",
+        "local_Wick_terms": "68000000003000000000000000000000600040001/120000000000000000000000000000000000000000",
+        "pair_P": "10546875000000005860590001093750035157812743/140625000000000000000000000000000000000000000000000",
+        "pair_q": "10546875000000005860590001093761753907812743/5625000000000000000000000000000000000000000000000000000000000",
+        "response_higher": "2187/25000000000000000000",
+        "response_quadratic": "207/40000000000000000000000000",
+        "rhs_lipschitz": "3187500422015625586997138543100124622523963031365505170314687/5625000000000000000000000000000000000000000000000000000000000",
+        "rounded_self_map": "183/1000000000",
+        "source_P": "135000000000000000000027/15625000000000000000000000000000000000000000000000",
+        "source_derived": "697853905947/61504000000000000000"
+      },
+      "infinite_frequency_or_smoothness_proved_by_finite_samples": false,
+      "majorant_integration": "Fraction polynomial coefficients integrated exactly; no binary floating point",
+      "strict_margins": {
+        "auxiliary_P": "87468739451774999999969839409998906249964842187257/140625000000000000000000000000000000000000000000000000000",
+        "auxiliary_q": "399999999/40000000000000000",
+        "background_derivative": "20906501/819200000000000000",
+        "background_q": "457202353161304211098143002410291712635369303/45852053570216076530155520000000000000000000000000000",
+        "background_qprime": "409492356081417944641947410889734202823470027/45852053570216076530155520000000000000000000000000000",
+        "center_rhs_cap": "74999999534999999985419999999757/6250000000000000000000000000000000000000",
+        "contraction_cap": "187497045890620891020030198299127642332258780441463807797191/187500000000000000000000000000000000000000000000000000000000000",
+        "full_history_derivative": "7372738986501/819200000000000000",
+        "future_potential": "128443/320000000000000000",
+        "initial_a_lower": "588489999999999/100000000000000",
+        "initial_a_upper": "663510000000001/100000000000000",
+        "initial_h_lower": "1422023773193363082885742187499050781250000000081/244140624999999812500000000000047999999999999995904",
+        "initial_h_upper": "207862147578485630176685474537308304398148148125/45776367187499964843750000000008999999999999999232",
+        "inverse_cap": "4998888788389/499999999950000",
+        "rhs_cap": "1874577984374413002861456899875377476036968634494829685313/5625000000000000000000000000000000000000000000000000000000000",
+        "rounded_ball": "817/1000000000",
+        "smooth_block": "8415313/8923750000",
+        "source": "40194094053/61504000000000000000"
+      }
+    },
+    "smooth_highest_block": {
+      "Frechet_cap": "169479/624662500",
+      "higher_Frechet_cap": "6561/4997300000",
+      "highest_jet_contraction": "1062434687/8923750000",
+      "highest_jet_margin": "7861315313/8923750000",
+      "quadratic_Frechet_cap": "27/100000",
+      "strength": "27/100000"
+    }
+  },
+  "exact_residuals": {
+    "complete_shared_history_map": {
+      "all_local_and_state_difference_terms": "0",
+      "wick_derivative_to_auxiliary": "0"
+    },
+    "full_actual_trace_constraint_and_conserved_source": {
+      "actual_stress_trace_in_q": "0",
+      "density_defect_source_sign": "0",
+      "fixed_radiation_not_adjusted_by_source": "0",
+      "full_constraint_propagation": "0",
+      "full_trace_equation_normalization": "0",
+      "integrated_auxiliary_equation": "0",
+      "inverse_hubble_derivative": "0",
+      "local_coefficient_derivative": "0",
+      "named_prescription_singular_split": "0",
+      "source_integration_by_parts": "0",
+      "weighted_source_conserved_on_unknown_metric": "0",
+      "weighted_source_trace": "0"
+    },
+    "smoothness_majorant_allocation": {
+      "highest_block_norm_allocation": "0",
+      "larger_Dyson_coefficient_gap": "0",
+      "polarized_quadratic_kernel_mass": "0",
+      "second_order_derivative_transfer": "0"
+    }
+  },
+  "formulation": "FORMULATION.md",
+  "negative_controls": {
+    "free_radiation_past_required_c_at_a_one": "-1/960",
+    "naive_radiation_pressure_conservation_defect": "Derivative(c(x), x)/a(x)**4",
+    "trace_only_constraint_integration_constant": "C_initial"
+  },
+  "not_established": [
+    "whole-A8-target SEE continuation or long-time shadowing/stability",
+    "A9 QSEI transfer to the new exact solution or focusing/incompleteness hypotheses",
+    "uniform smallness of all higher curvature jets or preparation pressure derivatives",
+    "massive/interacting/realistic-field or semiclassical-fluctuation control",
+    "completion of original P8a or P8"
+  ],
+  "prior_sha256": {
+    "A10": "c37ee6cb74eb8383abbddf2f240c28676671e57b9f114dd8ec2195267de2d3ce",
+    "A7": "cc4ec02bcb23e0ef01d0fb58ad4b95a3bb602a5bbbfc6871d044b2a09a78e963",
+    "A8": "dbd88193542224b3eeb76e18923744f3317791ad46961caca3562a1525ba56d1"
+  },
+  "remaining_obligations": "notes/remaining.md",
+  "schema": 1,
+  "source_audit": "notes/sources.md",
+  "source_sha256": {
+    "FORMULATION.md": "65ff4e30684bb8b8b6a34c2ec7599bcf735377041f013432906aa5d62a0e3e26",
+    "README.md": "b47dc0c6cba6de1625526e47764cee0542dd3463c94fe56f40d02bbf0b7a3789",
+    "notes/construction.md": "714d873fd5daf95bc16eaf6fec6d9812a075b73832b6bfd6198210cc1a0941e9",
+    "notes/contraction.md": "329fa3561d76fd80bd9544e6f37150163d60dd2626f97e28f2cc4c05251762f3",
+    "notes/regularity.md": "3b7b22df18159e665ffd9746585ce7957a700aca2afc37c82eca5bcfd7564595",
+    "notes/remaining.md": "b37b2e6b267f7937e4a120ee5ea98f25ca4d0d5091772e8b5acf8a01c019b7e7",
+    "notes/sources.md": "a9d54dd90822f55287149026aa8c0aaa9e1c2f3de15948580a704d14f23b9a1f",
+    "src/p8a_preparation/__init__.py": "beade33b091bce5d8a894fe203565379015c97793e3a87dc7f22f274aef4c9c6",
+    "src/p8a_preparation/actual_map.py": "72cdc79091b50a21ba3cdd6e96b100345736fcab5c9c731c29deff60c16bc87f",
+    "src/p8a_preparation/bounds.py": "f4ed076a4e3a256167ab5ff4993b56c2256b9d7fd2f088bee26bfad74769c3e9",
+    "src/p8a_preparation/independent.py": "7fefa9194788d89e6ea7eff821e1688869f9ae2b6090463a03ea4d93ed2f7171",
+    "src/p8a_preparation/regularity.py": "6f6cf88828ba671749aa4114203bbe11cf919eedb153d1f0b17373a58eb43393",
+    "src/p8a_preparation/verify.py": "5d5f257f9c8d9ed66576a638c4f03822102af6cfff8f4fa7088a44667936a935",
+    "tests/conftest.py": "3d1323d5d4698458d078bee648520b932241a4222036d4471644fd276f235826",
+    "tests/test_actual_map.py": "7c73b17afa815590bded95622f262689dba98af9be7051d46bc4b2f4fd4332c8",
+    "tests/test_bounds.py": "506425edab0a1473f73c845cf306f32c1fbb288e1fc179409d117095baed02ec",
+    "tests/test_preparation_certificate.py": "a4a87ebf793ea8280ff662baff95c2e748dee549633d5df0f1e541bf4ec9c82b",
+    "tests/test_preparation_covariant_audit.py": "d351874464561bd17b61547a902802fe7b190093201d5c3ce80e50323038ac2f",
+    "tests/test_regularity.py": "23203cf8f40ce616aeeb98d20f613bbb5b4ea9e6ff2f45adb7419ba19d5ea1c1"
+  },
+  "status": "SMOOTH_ACTUAL_LOCAL_SEE_WITH_CONSERVED_JOINT_PREPARATION_CERTIFIED; WHOLE_TARGET_AND_P8_OPEN",
+  "theorem": {
+    "actual_state": "positive original vacuum transported on the newly constructed smooth metric; Hadamard propagation then identifies the actual mode stress",
+    "ball": "X=u'-ubar', X(0)=0, ||X||<=10^-6; all original nonzero mode history retained",
+    "common_history": "unchanged A8 through y=5/2 and a following flat-start neighborhood; no final covariance frozen while changing metric jets",
+    "complete_trace": "q''+2hq'=u/(60delta)-[u^2/4+h^2(u+h^2)/30]/a^2+8c'/(ha^2)",
+    "cutoff": "smooth 0<=chi_L<=1, equals1 on[0,L/4], equals0 on[L/2,L], L=10^-10",
+    "energy_constraint": "C=3a'^2-3-2880delta(P_rho+c); C'=a^4 h Dtrace; C(0)=0 exactly",
+    "external_source": "prescribed c=chi_L cbar; rho_ext=F c/a^4, p_ext=F[c/(3a^4)-c'/(3h a^4)], F=hbar/(pi^2 A^4 eta_star^8)",
+    "fixed_classical_source": "ordinary radiation rho_rad=3 A^2/(kappa a_phys^4); zero Lambda",
+    "fixed_point_X_upper": "(63/1000000000)/(1-3/25) <72/1000000000",
+    "fixed_prescription": "lambda=2sqrt(2) A eta_star^2, gamma=0; no new Wick shift or explicit curvature-squared gravity",
+    "full_map_center_upper": "63/1000000000",
+    "full_map_contraction_upper": "3/25",
+    "physical_amplitude": "epsilon=1, delta=10^-14, kappa hbar=2880pi^2 delta A^2 eta_star^4",
+    "physical_field": "one free massless minimally coupled scalar in the original prepared positive quasifree Hadamard vacuum",
+    "smoothness": "all Picard iterates have common flat start; every highest-jet block bounded by the same strict contraction on the same slab",
+    "source_globally_compact_in_time": false,
+    "unforced_SEE_domain": "x0+L/2 < eta/eta_star-1 < x0+L; smooth full pointwise equation and fixed radiation",
+    "uniqueness_scope": "the specified data, cutoff and closed ball; not all possible states or preparations"
+  },
+  "verification_boundary": [
+    "A10/A8/A7 pins and their lineage replayed; no immutable old file is edited",
+    "Fraction-only polynomial integration independently checks all new full-map constants",
+    "Physical-clock normalization, nonradiation source integration and constraint propagation have separate algebraic controls",
+    "Larger intervals and failed self-map assumptions are explicitly rejected by conditional arithmetic tests",
+    "Infinite-frequency convergence, smoothness induction, Banach and Hadamard arguments are written analytic proofs, not finite sampled or Lean proofs"
+  ],
+  "written_proofs": [
+    "notes/construction.md",
+    "notes/contraction.md",
+    "notes/regularity.md"
+  ]
+}

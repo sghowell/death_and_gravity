@@ -1,0 +1,238 @@
+{
+  "claim": "P8-S6.6.COMPOSITE",
+  "date": "2026-09-06",
+  "domain": {
+    "action": "HR with G,F,m4>0 and constant real beta_n; one positive-kinetic canonical scalar coupled only to g_eff=g(alpha I+beta sqrt(g^-1 f))^2; alpha,beta>0",
+    "geometry": "common flat FLRW on the positive square-root branch; smooth positive finite a,b,Ng,Nf",
+    "matter": "one shared composite-coupled field; rho+p=(D_eff chi)^2>=0; no separate conservation imposed on the induced g/f sources; no nonnegative-potential assumption",
+    "physical_frame": "g_eff and its cosmic time T are prescribed physical; neither g nor f alone is the target metric"
+  },
+  "dynamic_branch": "On any connected open B=0 branch, Z=Hg/sqrt(G+F y^2) is nonincreasing in g time and H_eff=Hg/(alpha+beta y), excluding contraction-to-expansion there",
+  "exact_residuals": {
+    "both_source_aware_undivided_Bianchi_factors": {
+      "f_full_Noether_identity": "0",
+      "f_pressure_branch_null_rewrite": "0",
+      "f_undivided_source_aware_Bianchi": "0",
+      "g_full_Noether_identity": "0",
+      "g_pressure_branch_null_rewrite": "0",
+      "g_undivided_source_aware_Bianchi": "0",
+      "positive_weighted_shared_matter_null": "0"
+    },
+    "branches_and_bounce_intersections": {
+      "Q_B_zero_intersection_acceleration": "0",
+      "dynamic_bounce_effective_acceleration": "0",
+      "effective_Hubble_off_branch": "0",
+      "pressure_quadratic_discriminant_without_division": "0",
+      "undivided_kinematic_error": "0",
+      "weighted_normalized_Hubble_off_branch": "0"
+    },
+    "free_canonical_regular_bounce": {
+      "actual_clock_H_second": "0",
+      "actual_clock_H_third": "0",
+      "actual_clock_a_fourth": "0",
+      "actual_clock_a_second": "0",
+      "actual_clock_a_third": "0",
+      "bounce_Hubble": "0",
+      "bounce_acceleration": "0",
+      "bounce_both_lapses": "0",
+      "bounce_ratio_velocity": "0",
+      "bounce_scalar_velocity": "0",
+      "composite_Hubble": "0",
+      "double_pressure_root": "0",
+      "f_Friedmann": "0",
+      "f_null": "0",
+      "f_scale_kinematics": "0",
+      "free_scalar_conservation": "0",
+      "free_scalar_current": "0",
+      "g_Friedmann": "0",
+      "g_null": "0",
+      "g_scale_kinematics": "0",
+      "maximum_pressure_factorization": "0",
+      "non_CD_shape_invariant": "0",
+      "physical_clock": "0",
+      "positive_kinetic_density": "0",
+      "pressure_branch": "0",
+      "ratio_kinematics": "0",
+      "scale_Hubble_fourth_jet_bridge": "0",
+      "scale_derivative": "0"
+    },
+    "literal_lapse_scale_scalar_variation": {
+      "EL_Nf": "0",
+      "EL_Ng": "0",
+      "EL_a": "0",
+      "EL_b": "0",
+      "positive_kinetic_null": "0",
+      "scalar_energy_identity_without_dividing_chidot": "0",
+      "scalar_lapse_retaining_variation": "0",
+      "unchanged_gravitational_interaction_only": "0"
+    },
+    "local_exact_CD_reconstruction": {
+      "canonical_potential_and_density": "0",
+      "canonical_potential_and_pressure": "0",
+      "canonical_scalar_equation_with_field_clock": "0",
+      "exact_CD_bounce_acceleration": "0",
+      "exact_CD_scale_Hubble": "0",
+      "f_Friedmann": "0",
+      "f_kinematics": "0",
+      "f_null": "0",
+      "g_Friedmann": "0",
+      "g_kinematics": "0",
+      "g_null": "0",
+      "initial_Nf": "0",
+      "initial_Ng": "0",
+      "initial_X": "0",
+      "initial_Y": "0",
+      "initial_potential_value": "0",
+      "initial_rhoprime": "0",
+      "initial_varphi_prime": "0",
+      "initial_yprime": "0",
+      "matter_conservation": "0",
+      "physical_clock": "0",
+      "pressure_branch": "0"
+    },
+    "physical_scale_restoration": {
+      "Einstein_to_interaction_units": "0",
+      "physical_Hubble": "0",
+      "physical_energy_restore": "0",
+      "physical_scalar_kinetic": "0"
+    }
+  },
+  "formulation": "FORMULATION.md",
+  "free_bounce": {
+    "bounce": "y=1: Ng=Nf=1/2,varphi_prime=1,H_eff=0,dH_eff/dT=7/(36tau^2)>0",
+    "branch": "X=+sqrt(y(2+5y)/3),Y=-sqrt((5+2y)/(3y^2)); D=(y+5)X-(5y+1)Y>0; Ng=-(5y+1)Y/D,Nf=(y+5)X/D,yprime=6y(1+y)XY/D",
+    "double_root": "Q=2y-p_bar(1+y)^2=-(y-1)^2/2 at p_bar=1/2, but yprime=-sqrt(7/3)!=0; no inverse y(p) chart or division by p_y",
+    "not_CD_at_any_time_scale": "Normalized a_eff has a_second=7/36,a_fourth=-97/432 and a_fourth-(3/2)*a_second^2=-9/32, whereas every positively time-rescaled normalized CD shape has this invariant zero",
+    "parameters": "G=F=M^2,m4=M^2/tau^2,alpha=beta=1,beta_n=(0,0,1,0,0),V=0; formulas use u=T/tau and chi=M varphi",
+    "scope": "Exact local regular bounce with nonzero free canonical kinetic energy; not CD even after positive time rescaling, not an all-time controlled-curvature or EFT verdict",
+    "source": "rho_bar=p_bar=2y/(1+y)^2; a_eff=[(1+y)^2/(4y)]^(1/6); a_eff^3 varphi_prime=1"
+  },
+  "independent_Fraction_coefficients": {
+    "arithmetic": "coefficientwise Fraction Laurent algebra; positive denominator clearing and composite substitution",
+    "double_root_acceleration": "7/36",
+    "full_Euler_term_counts": {
+      "EL_Nf": 7,
+      "EL_Ng": 7,
+      "EL_a": 11,
+      "EL_b": 11
+    },
+    "nonzero_omission_term_counts": {
+      "omitting_Neff_chain_rule": 16,
+      "omitting_pressure_in_Bianchi": 6,
+      "omitting_relative_lapse_weight": 20
+    },
+    "zero_coefficient_residuals": {
+      "EL_Nf": 0,
+      "EL_Ng": 0,
+      "EL_a": 0,
+      "EL_b": 0,
+      "effective_Hubble_kinematics": 0,
+      "f_pressure_null_rewrite": 0,
+      "g_pressure_null_rewrite": 0,
+      "source_aware_f_Bianchi": 0,
+      "source_aware_g_Bianchi": 0,
+      "undivided_branch_kinematics": 0,
+      "weighted_shared_null": 0
+    }
+  },
+  "local_CD": {
+    "ODE": "X=sqrt(y^2+(1+y)^3 rho_bar/3),Y=-sqrt(y^-2+(1+y)^3 rho_bar/(3y^3)); yprime=y(1+y)[XY-Hbar(X+Y)]/(X-yY),rho_bar_prime=-3Hbar[rho_bar+2y/(1+y)^2]",
+    "existence_scope": "Constructs one analytic local potential on the traversed field interval and an exact CD solution there; it does not solve a potential prescribed in advance or the full free M1 action",
+    "field_and_potential": "varphi_prime=sqrt(rho_bar+p_bar)>0; V(chi(T))=M^2[rho_bar-p_bar]/(2tau^2),chi=M varphi",
+    "lapses": "Ng=[(1+y)Hbar-yY]/(X-yY),Nf=[X-(1+y)Hbar]/(X-yY)",
+    "parameters": "same gravitational parameters; reconstructed canonical potential, not V=0",
+    "proven_window": "|T|<=tau/64: 3/4<y<5/4,1/4<rho_bar<3/4,1/7<Ng,Nf<6/7,rho_bar+p_bar>1/2; analytic ODE and strict no-exit bounds",
+    "target": "a_eff=(1+u^2)^2,Hbar=4u/(1+u^2),u=T/tau; initial y=1,rho_bar=1/2"
+  },
+  "local_CD_exact_rational_box": {
+    "D_upper": "43/8",
+    "X2_lower": "775/768",
+    "X2_upper": "1129/256",
+    "Y2_upper": "535/108",
+    "delta_u": "1/64",
+    "density_speed_upper": "15/64",
+    "h_upper": "1/16",
+    "null_lower": "59/108",
+    "ratio_speed_upper": "17055/2048",
+    "rho_max": "3/4",
+    "rho_min": "1/4",
+    "strict_positive_margins": {
+      "X_lower_above_one": "7/768",
+      "X_upper_below_9_over_4": "167/256",
+      "density_no_exit": "63/256",
+      "density_speed_below_quarter": "1/64",
+      "lapse_lower_above_one_seventh": "41/2408",
+      "minusY_upper_below_5_over_2": "35/27",
+      "null_lower_above_half": "5/108",
+      "positive_lapse_numerator": "55/64",
+      "ratio_no_exit": "7/64",
+      "ratio_speed_below_nine": "1377/2048"
+    },
+    "y_max": "5/4",
+    "y_min": "3/4"
+  },
+  "nondegenerate_bounce_intersections": "At H_eff=B=0 both constituent Hubbles vanish; Q!=0 invokes the open dynamical branch, Q=0 gives explicitly nonpositive effective acceleration. Thus a CD bounce has B!=0 and a pressure-branch neighborhood",
+  "nonzero_distinction_controls": {
+    "double_root_has_nonzero_time_velocity": "-sqrt(21)/3",
+    "free_bounce_is_not_CD_at_same_tau": "-137/36",
+    "free_bounce_is_not_CD_under_any_positive_time_rescaling": "-9/32",
+    "individual_expanding_Hubble_decreases_at_composite_bounce": "-4",
+    "old_P_factor_is_not_new_Q": 2
+  },
+  "not_established": [
+    "A global CD solution, globally specified unique reconstructed potential, or full-CD realization by a free M1 scalar",
+    "Recovery of the pinned CD/M1 perturbation action in a changed or unchanged physical frame",
+    "Full rolling tensor/vector/two-scalar stability, finite-band normalization, interactions or cutoff hierarchy",
+    "Generic nonlinear absence of the BD mode or a healthy ultraviolet completion of the bare composite coupling",
+    "A computed background-dependent ghost scale; the quoted flat-vacuum upper bound is not a guaranteed safe cutoff here",
+    "Smallness of omitted curvature/loop/higher-source terms or inheritance of trimetric completion beyond leading order",
+    "S6 matching, positivity closure, quantum cone conclusions, or completion of P8"
+  ],
+  "positive_branch_factors": {
+    "effective_lapse_ratio": "alpha + beta*c",
+    "effective_scale_ratio": "alpha + beta*y",
+    "inertia": "M_f_squared*y**2 + M_g_squared",
+    "intersection_acceleration_coefficient": "(alpha + beta*y)**2*(alpha**2/M_g_squared + beta**2*c**2/(M_f_squared*y**2))/(2*(alpha + beta*c)**2)",
+    "weighted_null": "(alpha + beta*c)*(alpha + beta*y)**3"
+  },
+  "pressure_branch": "Q=0 gives Dg Hg=-alpha r^3(rho+p)/(2G), Df Hf=-beta r^3(rho+p)/(2F y^3); individual Hubble monotonicity does not exclude a composite bounce",
+  "primary_source_audit": "notes/sources.md",
+  "primary_sources": {
+    "composite_metric_and_matter_action": "https://arxiv.org/pdf/1408.1678",
+    "cosmological_branches": "https://arxiv.org/pdf/1501.02790",
+    "flat_vacuum_cutoff_upper_bound": "https://arxiv.org/pdf/1506.00666",
+    "generic_constraint_and_EFT_boundary": "https://arxiv.org/pdf/1409.3834",
+    "higher_source_order_trimetric_completion": "https://arxiv.org/pdf/1804.04671"
+  },
+  "prior_S6_5_separate_matter_sha256": "0efd16fa4f02f45f35448e2056fb37c863c29c2ed09203c3351ba9515baff031",
+  "prior_scope": "Only gravitational conventions, immutable evidence lineage and exclusion boundary are inherited; the separate-matter physical-g theorem is not applied to composite matter",
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "6b7ee5dd064a5983b328434efe7c44b4449818c10d2f1b910cb4cfe4cbf765e5",
+    "README.md": "4d6cf5ed1c2ab7db697c17a7c4a051dd4a5153ff4e564a3e42b0d09f4268df2c",
+    "notes/background.md": "4c56a0c27e16b0e54619ad64dbae8dfa806d9bdd75800ee2787aa95e87400fe5",
+    "notes/sources.md": "4fe2f401909a6dcf4b5ba6b69c28ab5fda8bb3e0e183000e8633df7314422fe1",
+    "src/p8_composite/__init__.py": "d3dcf6b6fe72afd415b6f8b195ad2ba5ae0e17d6425a04c17edbdc83ab328329",
+    "src/p8_composite/background.py": "22151e62d55dfe4f3d2e2f5ebab5840bbeeb2f44cbd1c75f62ca375a23d41822",
+    "src/p8_composite/bounce.py": "6777993a7b9382bf4c3d0d23698d3bbc84d1fa9050c38781589f26c02a413276",
+    "src/p8_composite/branches.py": "4fe21ad6a7208b5cae13ca6c24acdbf4033725ddc49b717eab798a3ae576c766",
+    "src/p8_composite/independent.py": "1530d5c0c6c7d0dc88a84c4b0fbe8a8b119b88a5b0efb0ba2ee0c0a423e1d44d",
+    "src/p8_composite/reconstruction.py": "a84ee64886f34013e012a712af6082c12eb6591fb08cc72f37aca38c6b9f1aa5",
+    "src/p8_composite/verify.py": "c1fe341ec4f19aa561b4f194ede1a0cab492822e65af9ae3e2ee244526975653",
+    "tests/conftest.py": "2be030c515e4529faa8e12434383fd563c2173f54e839a6a11a933040616f89a",
+    "tests/test_composite_background.py": "830e60e56417d48a202e71e93ed634936e4e8932d8e086162f57e27d9a58b8af",
+    "tests/test_composite_certificate.py": "a1145f03e1ef465f6e1ecc89ace6432a35ea3b4c5799a62832338f22b56ecea2",
+    "tests/test_composite_covariant_audit.py": "1411a02225731234b78bf1981b04a65af3f6fe84ebdde9363c214ef1b79e3897",
+    "tests/test_composite_independent.py": "40089fa9e2eec090b280701e2024145331b8c8fccba21c6e7f110bc4802999ba"
+  },
+  "status": "NEW_PHYSICAL_COMPOSITE_METRIC_HAS_REGULAR_FREE_SCALAR_BOUNCE_AND_LOCAL_EXACT_CD_WITH_RECONSTRUCTED_POTENTIAL; GLOBAL_MATCHING_AND_EFT_HEALTH_OPEN",
+  "undivided_Bianchi": "[m4(beta1+2 beta2 y+beta3 y^2)-alpha beta(alpha+beta y)^2 p]*(Ng bdot-Nf adot)=0",
+  "verification_boundary": [
+    "Pinned old lineage replayed without changes; old exclusion hypotheses are explicitly changed",
+    "Literal source-aware action variations and independent Fraction coefficients, not only substituted Friedmann guesses",
+    "Both equations in each algebraic branch are retained; pressure double roots and bounce intersections never require dividing H, B, Q or p_y",
+    "Exact rational bounds plus written analytic ODE continuation/inverse-function proof; no numerical integration used as an existence oracle",
+    "Primary sources provide the coupling/branch/cutoff evidence dictionary; no global novelty claim"
+  ],
+  "written_proof": "notes/background.md"
+}

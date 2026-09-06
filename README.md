@@ -57,9 +57,15 @@ around a pre-registered problems document and a certificate-gated ledger.
   now gives quantitative two-potential bounds in the norm of the first
   potential derivative, retaining the full nonzero preparation history.
   A separate positive pole/cut inverse has exact compact-interval norms.
-  The complete SEE map, compatible smooth initial data and interval
-  enclosure still require proof; the abstract contraction check is not
-  an actual solution certificate.
+  That gate alone does not prove the complete SEE map or compatible smooth
+  initial data; its abstract contraction check is not an actual solution.
+  The new [conserved joint preparation and smooth local SEE construction](problems/P8/a/applicability/reference/asymptotics/backreaction/response/remainder/residual/existence/preparation/README.md)
+  supplies a full-map contraction and a smooth actual-state solution on a
+  specified short slab. A conserved auxiliary source turns off halfway
+  through, leaving the full unforced equation with unchanged ordinary
+  radiation. The quantum state co-evolves with the metric; no final
+  covariance or energy datum is reset. Whole-target continuation, QSEI
+  transfer, realistic fields and cosmological focusing remain open.
 - P8(b): [completed scoped classification and verification commands](problems/P8/README.md).
   All 32 M0/M1 sector-row verdicts are decided: minimal optional groups are
   C or D without extra matter, and CD with rolling canonical matter.
@@ -134,9 +140,15 @@ around a pre-registered problems document and a certificate-gated ledger.
   including degenerate bounces, and gives a sharp endpoint-only CD Hubble
   mismatch. It keeps the zero-polynomial exception separate and does not
   claim unweighted Hubble monotonicity on an interacting branch.
-  General derivative/curvature or quantum matching mechanisms remain open.
+  The new [composite-metric background construction](problems/P8/s6/matching/composite/README.md)
+  changes the physical metric and uses one shared canonical matter source.
+  Its pressure branch admits a regular free-scalar bounce and an exact
+  local CD reconstruction on `|T|<=tau/64` with a reconstructed potential.
+  The free example is not CD at any time scale. This surviving background
+  construction does not establish coupled-mode stability, controlled
+  matching, a safe cutoff or UV positivity. General matching remains open.
 
-The [P8 closure audit](docs/assessment-2026-09-06-p8-closure-audit.md) separates
+The [current P8 continuation audit](docs/assessment-2026-09-06-p8-prepared-see-composite-bounce.md) separates
 completed certificate gates from the outstanding original research questions.
 P8 is not marked finished or closed.
 
