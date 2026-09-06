@@ -1,0 +1,325 @@
+{
+  "actual_centre_jets": {
+    "1": {
+      "A": "A",
+      "D": "0",
+      "N_relative": "9*A/2 - 9/4",
+      "N_sum": "12*A**2/7 - A/14 + 67/84",
+      "Routh_frequency_squared": "9/4 - 9*A/2",
+      "c": "1",
+      "c_heavy_squared": "1",
+      "c_light_squared": "1",
+      "c_prime": "sqrt(21)*(-12*A - 5)/21",
+      "c_second": "48*A**2/7 + 40*A/7 + 25/21",
+      "heavy_diagonal_at_zero_k": "-12*A**2/7 + A/14 - 67/84",
+      "initial_y": "1",
+      "mass_squared": "0",
+      "mu": "0",
+      "omega": "sqrt(21)*(3*A - 4)/21",
+      "omega_prime": "0",
+      "rho_second": "-3*A",
+      "theta_relative": "0",
+      "theta_sum": "0",
+      "y_prime": "-sqrt(21)/3",
+      "y_second": "7/3"
+    },
+    "2": {
+      "A": "A",
+      "D": "-666*17**(1/4)*26**(3/4)/6517 + 765*17**(3/4)*26**(1/4)/6517",
+      "N_relative": "-12*sqrt(442)*A**2/361 + 1299*A**2/722 + 795*sqrt(442)*A/70756 + 228939*A/70756 - 454213*sqrt(442)/4457628 + 106077263/142644096",
+      "N_sum": "1568*sqrt(442)*A**2/79781 + 67835*A**2/79781 - 1898255*A/919828 + 198215*sqrt(442)*A/1839656 - 300037201409/6490306368 + 14441671901*sqrt(442)/6490306368",
+      "Routh_frequency_squared": "-1299*A**2/722 + 12*sqrt(442)*A**2/361 - 228939*A/70756 - 795*sqrt(442)*A/70756 - 76457*sqrt(442)/4457628 + 257325553/142644096",
+      "c": "sqrt(442)/13",
+      "c_heavy_squared": "175531/13034 - 3791*sqrt(442)/6517",
+      "c_light_squared": "46631/6517 - 1928*sqrt(442)/6517",
+      "c_prime": "3*(-376*A - 16*sqrt(442)*A - 289)/(52*(sqrt(13) + sqrt(34)))",
+      "c_second": "3*(167631360*sqrt(34)*A**2 + 271189248*sqrt(13)*A**2 + 114781368*sqrt(34)*A + 186157344*sqrt(13)*A + 36568564*sqrt(13) + 23184109*sqrt(34))/(5408*(10369*sqrt(13) + 6421*sqrt(34)))",
+      "heavy_diagonal_at_zero_k": "-1619*A**2/722 + 484*sqrt(442)*A**2/79781 - 361675*A/70756 + 200969*sqrt(442)*A/919828 - 1748611885*sqrt(442)/811288296 + 44540744407/998508672",
+      "initial_y": "2",
+      "mass_squared": "107/42 - 5*sqrt(442)/42",
+      "mu": "4/3 - 2*sqrt(442)/39",
+      "omega": "3*17**(3/4)*26**(1/4)*(16*sqrt(442)*A + 376*A - 1037)/(68*(sqrt(13) + sqrt(34))*(sqrt(442) + 104))",
+      "omega_prime": "(-11749025613997952*2**(1/4)*221**(3/4)*A**2 - 123504552419055808*1768**(1/4)*A**2 + 8289084807381472*2**(1/4)*221**(3/4)*A + 87134084201389472*1768**(1/4)*A - 8362704705168630*2**(1/4)*221**(3/4) - 87906826748260689*1768**(1/4))/(14144*(20396762308126*sqrt(13) + 12612276533389*sqrt(34)))",
+      "rho_second": "-17*A/6",
+      "theta_relative": "(-2632*A - 112*sqrt(442)*A + 174*sqrt(442) + 4607)/(8*(85*sqrt(34) + 148*sqrt(13)))",
+      "theta_sum": "(247520*A + 13160*sqrt(442)*A - 586092 + 2159*sqrt(442))/(1768*(85*sqrt(34) + 148*sqrt(13)))",
+      "y_prime": "-3*sqrt(442)/(2*sqrt(13) + 2*sqrt(34))",
+      "y_second": "3*(-544*sqrt(34)*A - 712*sqrt(13)*A + 1343*sqrt(34) + 2210*sqrt(13))/(8*(115*sqrt(13) + 73*sqrt(34)))"
+    }
+  },
+  "canonical_map_and_boundary": {
+    "Euler_diagonals": "V_LL=q^2*cL^2-N_sum; V_HH=m_alg^2+q^2*cH^2-N_relative-4omega^2",
+    "adjoint": "B=2omega*(dT-theta_sum)+q^2D; Bstar=-2omega*dT-2omegaprime-2omega*theta_sum+q^2D",
+    "boundary": "Lpre=Lpost-dT[(theta_sum*l^2+theta_relative*H^2)/2]",
+    "inverse": "h=l/f_sum-w2*H/f_relative; gamma=l/f_sum+w1*H/f_relative",
+    "map": "l=f_sum*(w1*h+w2*gamma), H=f_relative*(gamma-h), f_sum=sqrt(2K_sum), f_relative=sqrt(2K_relative)",
+    "post_momenta": "p_l=lprime-2omega*H, p_H=Hprime",
+    "rotation": "omega=sqrt(w1*w2)*dT log sqrt(K2/K1)=f_sum*w2prime/(2*f_relative)"
+  },
+  "claim": "P8-S6.9.COMPOSITE",
+  "date": "2026-09-06",
+  "domain": {
+    "CD_duration": "u=m*T,h=He/m,A=4/(m*tau)^2 for finite CD duration; A=0 is included only as an algebraic endpoint",
+    "TT_scope": "Two independent TT polarizations, identical two-field action per real contraction; no scalar/vector elimination",
+    "action": "Constant G,F,m4>0, constant real beta_n, constant alpha,beta>0; canonical matter shared through the composite metric",
+    "general_mass": "Real m_alg^2, including zero or negative; nonzero interval needed only for the formal inverse-mass representative",
+    "geometry": "Sufficiently smooth regular common-flat positive-root geometry, positive finite lapses/scales; no denominator degeneracy",
+    "matter_matching": "Local analytically reconstructed canonical potential; not one globally free old M1 action across the parameter family",
+    "physical_frame": "+--- g_eff=g(alpha I+beta sqrt(g^-1 f))^2, Ae=a*r, Ne=Ng*s, dT=Ne*dt",
+    "screen_data": "rho/(M^2*m^2)=1/2,y0=1 or 2,h0=hsecond0=0,hprime0=A>=0",
+    "screen_model": "G=F=M^2,m4=M^2*m^2,alpha=beta=1,beta_n=(0,0,1,0,0)",
+    "wave_number": "q=k/Ae for fixed comoving k; exact fixed-charge reduction is separately k=0 only"
+  },
+  "domain_controls": {
+    "general_mass_domain": "real; zero and negative allowed in exact identities",
+    "infinite": "rejected",
+    "not_a_number": "rejected",
+    "ordinary_float": "rejected",
+    "symbolic_float": "rejected",
+    "zero_mass_inverse_representative": "rejected"
+  },
+  "exact_residuals": {
+    "actual_full_reconstruction_ODE_jets": {
+      "asymmetric_locked_cone_formula": "0",
+      "asymmetric_moving_eigenvector_formula": "0",
+      "asymmetric_positive_mass_formula": "0",
+      "symmetric_N_relative": "0",
+      "symmetric_N_sum": "0",
+      "symmetric_Routh_not_parametrically_above_locked_normalization": "0",
+      "symmetric_actual_lapse_clock": "0",
+      "symmetric_actual_ratio_clock": "0",
+      "symmetric_heavy_diagonal_equals_light": "0",
+      "symmetric_lapse_second_not_omitted": "0",
+      "symmetric_locked_luminal": "0",
+      "symmetric_omega": "0",
+      "symmetric_omega_prime_zero": "0",
+      "symmetric_positive_N_completion": "0",
+      "symmetric_positive_Routh_countercontrol": "0",
+      "symmetric_ratio_second_not_omitted": "0",
+      "symmetric_theta_relative_zero": "0",
+      "symmetric_theta_sum_zero": "0",
+      "symmetric_zero_algebraic_mass": "0"
+    },
+    "exact_fixed_charge_zero_k_reduction": {
+      "exact_zero_k_Noether_charge": "0",
+      "fixed_charge_Routh_equation": "0"
+    },
+    "full_action_boundary_Eulers_and_Hamiltonian": {
+      "formal_adjoint_with_surface_term": "0",
+      "full_canonical_Hamiltonian": "0",
+      "full_normalization_time_boundary": "0",
+      "heavy_Euler_with_forcing": "0",
+      "light_Euler_with_adjoint": "0"
+    },
+    "physical_clock_and_weighted_fields": {
+      "frozen_relative_algebraic_mass": "0",
+      "locked_principal_speed": "0",
+      "weight_sum": "0",
+      "weighted_kinetic_with_rotating_eigenvector": "0"
+    },
+    "retarded_and_inverse_mass_equation_identities": {
+      "exact_mass_led_heavy_residual": "0",
+      "formal_local_action_first_inverse_mass": "0",
+      "retarded_equation_keeps_homogeneous_data": "0"
+    }
+  },
+  "fixed_charge_zero_momentum": {
+    "charge": "J=2K_sum*(uprime-w2prime*delta)=f_sum*(p_l-theta_sum*l), Jprime=0",
+    "countercontrol": "At y0=1,A=4/25: m_alg^2=0 but Omega_Routh^2/m^2=153/100>0",
+    "exact_equation": "Hsecond+(m_alg^2-N_relative)*H=-w2prime*J/f_relative",
+    "scope": "Fixed-charge k=0 equation only; neither full finite-k spectrum nor a positive retarded Green bound"
+  },
+  "formulation": "FORMULATION.md",
+  "independent_Fraction_replay": {
+    "coefficientwise_identities": {
+      "formal_adjoint_full_time_surface": "0",
+      "symmetric_N_positive_completion": "0",
+      "symmetric_Routh_hierarchy_difference": "0",
+      "weighted_kinetic_and_moving_ratio": "0"
+    },
+    "exact_hierarchy_and_countercontrol": {
+      "mass_led_ratio": "50/9",
+      "mass_upper": "9/200",
+      "small_A_omega_lower_above_third": "28919/1229088",
+      "sqrt442_lower": "18879/250000",
+      "sqrt442_upper": "186/25",
+      "symmetric_positive_Routh_at_4_over_25": "153/100"
+    }
+  },
+  "not_established": [
+    "A finite-k physical spectral gap, eigenmode evolution, growth rate, or positive heavy Green bound",
+    "The absence of all canonical frequencies from zero mu or a negative diagonal canonical potential",
+    "Failure of every nonadiabatic finite-window light-only reduction or every other canonical split",
+    "A statement about all initial ratios, densities, HR coefficients, or parent states",
+    "A general composite/bimetric/ultraviolet exclusion or application of the all-mode S6.8 contract to a light-only theory",
+    "A scalar/vector health result, cutoff, quantum cone, state, positivity amplitude, or global vacuum",
+    "Matching to the original frozen CD/M1 physical metric and free matter action",
+    "Completion of S6, P8(b), or P8"
+  ],
+  "omission_controls": {
+    "omitted_homogeneous_heavy_data_light_forcing": "-2",
+    "omitted_nonconstant_mass_derivatives_residual": "-12",
+    "omitted_rotating_weight_heavy_forcing": "2",
+    "omitted_time_boundary_changes_momentum": "-1"
+  },
+  "physical_coefficients": {
+    "D": "sqrt(F)*sqrt(G)*a**3*y**(3/2)*(alpha + beta*c)*(c**2*(alpha + beta*y)**2/(y**2*(alpha + beta*c)**2) - (alpha + beta*y)**2/(alpha + beta*c)**2)/(8*sqrt(c)*(F*a**3*y**3*(alpha + beta*c)/(8*c) + G*a**3*(alpha + beta*c)/8))",
+    "K1": "G*a**3*(alpha + beta*c)/8",
+    "K2": "F*a**3*y**3*(alpha + beta*c)/(8*c)",
+    "K_relative": "F*G*a**6*y**3*(alpha + beta*c)**2/(64*c*(F*a**3*y**3*(alpha + beta*c)/(8*c) + G*a**3*(alpha + beta*c)/8))",
+    "c_heavy_squared": "(alpha + beta*y)**2*(F*y**5 + G*c**3)/(y**2*(alpha + beta*c)**2*(F*y**3 + G*c))",
+    "c_light_squared": "c*(alpha + beta*y)**2*(F*c*y + G)/((alpha + beta*c)**2*(F*y**3 + G*c))",
+    "mass_squared": "-(F*y**3 + G*c)*(alpha**3*beta*p + alpha**2*beta**2*c*p + alpha**2*beta**2*p*y + alpha*beta**3*c*p*y - beta1*m4 - beta2*c*m4 - beta2*m4*y - beta3*c*m4*y)/(F*G*y**2*(alpha + beta*c)**2)",
+    "relative_stiffness_T": "a**3*y*(-alpha*beta*p*(alpha + beta*c)*(alpha + beta*y) + m4*(beta1 + beta2*(c + y) + beta3*c*y))/(8*(alpha + beta*c))"
+  },
+  "prior_S6_8_composite_cones_sha256": "89145c7a91981f72941a30e902b7e83aa231f4f4c97440c8e6f454ba339c340a",
+  "proved_screen": [
+    "y0=1: zero algebraic mass prevents the mass-led inverse-mass representative through the centre",
+    "y0=2: 0<m_alg^2/m^2<9/200 and 0<c_locked^2<1",
+    "y0=2,all A>=0: max{Hdot_eff,omega^2}/m_alg^2>50/9",
+    "Both specified states: N_sum>0 and Omega_Routh^2<3N_sum for A>=0",
+    "Changing m*tau cannot produce the stated parametric mass-led/slow-background hierarchy at these specified data"
+  ],
+  "retarded_and_local_representative": {
+    "causal_action_guard": "The retarded inverse is not substituted as a symmetric single-copy effective action",
+    "conditional_approximation": "A specified full propagator C_I gives phase error <=C_I*(initial phase error+integral abs(R_H)); no advantageous C_I or small bound supplied here",
+    "exact_heavy_residual": "-(dT^2+V_HH-m_alg^2)[B*l/m_alg^2]",
+    "exact_light_equation": "(D_L-Bstar*G_R*B)l+Bstar*H_hom=0",
+    "formal_local_action_correction": "+(B*l)^2/(2*m_alg^2), with complete coefficient derivatives",
+    "local_pair": "H0=-B*l/m_alg^2, D_L*l-Bstar*(B*l/m_alg^2)=0, only on nonzero mass interval",
+    "required_research_inputs": [
+      "Uniform positive gap and derivative estimates for a proposed mass-led expansion",
+      "Chosen finite band, light derivative class and bounded mixing/background rates",
+      "Actual heavy/full Green bound and matched or suppressed homogeneous heavy data",
+      "Physical inverse-map bounds and omitted scalar/vector/cutoff/matching analysis"
+    ],
+    "retarded_solution": "H=H_hom-G_R*B*l for specified heavy initial data and zero-initial-response retarded G_R"
+  },
+  "samples_at_m_tau_5": {
+    "1": {
+      "N_relative": "-153/100",
+      "N_sum": "43579/52500",
+      "Routh_frequency_squared": "153/100",
+      "c_light_squared": "1",
+      "mass_squared": "0",
+      "omega": "-88*sqrt(21)/525",
+      "theta_sum": "0"
+    },
+    "2": {
+      "N_relative": "116558645087/89152560000 - 281245441*sqrt(442)/2786017500",
+      "N_sum": "-641832837303053/13791901032000 + 11897405718001*sqrt(442)/5304577320000",
+      "Routh_frequency_squared": "110568114913/89152560000 - 50423309*sqrt(442)/2786017500",
+      "c_light_squared": "46631/6517 - 1928*sqrt(442)/6517",
+      "mass_squared": "107/42 - 5*sqrt(442)/42",
+      "omega": "442**(1/4)*(-24421*sqrt(17) + 1088*sqrt(26))/(1700*(46*sqrt(13) + 39*sqrt(34)))",
+      "theta_sum": "(-2732444 + 21323*sqrt(442))/(8840*(85*sqrt(34) + 148*sqrt(13)))"
+    }
+  },
+  "schema": 1,
+  "source_audit": "notes/sources.md",
+  "source_sha256": {
+    "FORMULATION.md": "9c5998b6c3311f4c35e2aa41e5c3acb66d8fea7578e1552fd7c5c6226669630e",
+    "README.md": "273d5504ac196c2e14453dffa09968cb9e01e41df38d7df8ddfb81e138b6fe34",
+    "notes/proof.md": "a83480b0217d0c0d391f165af38b9cfc42685583ef99f25ef38c8dc286d7d69f",
+    "notes/sources.md": "43cbcd42bec196b62052bbdde08e6ab2a65c13c6331b1c2e2f6b434d7deffb26",
+    "src/p8_composite_light/__init__.py": "0128c782ed0026bdedb983b6130a8802d29ab3c36b59f2dd565e0f8b93a535d0",
+    "src/p8_composite_light/background.py": "63ff7a12037261272fd3109e76fbb80839f23f034a713dd5b7ef248083e4a407",
+    "src/p8_composite_light/bounds.py": "594ddb02e79bf9d51dc14a49aeb2e9e321fa6c8b754dd20bba9ece0d2439c9ff",
+    "src/p8_composite_light/canonical.py": "514d5ecf1118bbc09dd01c2908f0a03928cb2b573d565c245ba22f50f7a7ee30",
+    "src/p8_composite_light/independent.py": "fc45ba5099ecacda90f789f8a150ff89fbd43c0b493faba5b75f4a666159da1f",
+    "src/p8_composite_light/verify.py": "d9040a5c9ca5eccf2b46d029818208925f31bf1950d5e0f69afe0dcd127d3fc5",
+    "tests/conftest.py": "01bbd5d419b9d0f4227aacd9862eb55bcb5fcec3850dac5613d8b460be2ab25c",
+    "tests/test_composite_light.py": "59b90c24ef78d985f5e58edeb6c3dfb7b1f8792743c365679129b6f081abf228",
+    "tests/test_composite_light_certificate.py": "8286fc55df5ba0b6313b6c3d6e0df68c8e2e2ccd07e0652ffc746c9a2e6c0fa5",
+    "tests/test_composite_light_covariant_audit.py": "3c1aabaf9cff5bda96965ea55fdb0c8ecaa5a148e69075930b88fb4758342c29"
+  },
+  "status": "EXACT_ROLLING_TWO_TT_AND_SPECIFIED_MASS_LED_HIERARCHY_SCREENS; GENERAL_LIGHT_ONLY_MATCHING_AND_P8_OPEN",
+  "strict_hierarchy_enclosures": {
+    "N_sum_coefficients_in_A": {
+      "0": {
+        "constant": "-300037201409/6490306368",
+        "lower": "84657745091/154531104000",
+        "root_coefficient": "14441671901/6490306368",
+        "upper": "30631214461/32451531840"
+      },
+      "1": {
+        "constant": "-1898255/919828",
+        "lower": "5290939/26280800",
+        "root_coefficient": "198215/1839656",
+        "upper": "50706/229957"
+      },
+      "2": {
+        "constant": "67835/79781",
+        "lower": "12599687/9972625",
+        "root_coefficient": "1568/79781",
+        "upper": "505383/398905"
+      }
+    },
+    "Routh_frequency_coefficients_in_A": {
+      "0": {
+        "constant": "257325553/142644096",
+        "lower": "1027285621/713220480",
+        "root_coefficient": "-76457/4457628",
+        "upper": "1225551329/849072000"
+      },
+      "1": {
+        "constant": "-228939/70756",
+        "lower": "-245793/70756",
+        "root_coefficient": "-795/70756",
+        "upper": "-3509307/1010800"
+      },
+      "2": {
+        "constant": "-1299/722",
+        "lower": "-99309/90250",
+        "root_coefficient": "12/361",
+        "upper": "-3951/3610"
+      }
+    },
+    "Routh_to_locked_normalization_bound": "N_sum>1/2,Omega_Routh^2<3/2, hence Omega_Routh^2<3N_sum in units m^2",
+    "all_A_domain": "A>=0 at y0=2,rho0=1/2,CD h0=hsecond0=0",
+    "asymmetric_mass_squared_over_m_squared": {
+      "constant": "107/42",
+      "lower": "1/42",
+      "root_coefficient": "-5/42",
+      "upper": "9/200"
+    },
+    "conditional_locked_speed_squared": {
+      "constant": "46631/6517",
+      "lower": "28787/32585",
+      "root_coefficient": "-1928/6517",
+      "upper": "108939/116375"
+    },
+    "ratio_meaning": "max{Hdot_eff,omega^2}/m_alg^2 > 50/9; not an obstruction to every nonadiabatic reduction",
+    "root_interval": {
+      "lower": "10511/500",
+      "square": "442",
+      "upper": "106/5"
+    },
+    "small_A_domain": "0<=A<=1/4",
+    "small_A_omega_squared_lower": "146205/409696",
+    "strict_mass_led_ratio_lower": "50/9",
+    "strict_positive_margins": {
+      "N_sum_constant_above_half": "7392193091/154531104000",
+      "N_sum_linear_positive": "5290939/26280800",
+      "N_sum_quadratic_positive": "12599687/9972625",
+      "Routh_constant_below_three_halves": "48056671/849072000",
+      "Routh_linear_negative": "3509307/1010800",
+      "Routh_quadratic_negative": "3951/3610",
+      "locked_cone_positive": "28787/32585",
+      "locked_cone_subluminal": "7436/116375",
+      "omega_squared_above_one_third_for_small_A": "28919/1229088",
+      "positive_mass_lower": "1/42",
+      "positive_omega_numerator_for_small_A": "855",
+      "strict_root_lower": "18879/250000",
+      "strict_root_upper": "186/25"
+    }
+  },
+  "units": {
+    "comparison": "Hdot_eff/m^2=A; all hierarchy ratios use the same physical clock",
+    "first_order": "theta,omega,He have dimension mass; centre jets report them divided by m",
+    "physical_time": "T is composite proper time; u=m*T only in centre-jet evaluation",
+    "second_order": "N,m_alg^2,Omega_Routh^2,Hdot_eff have dimension mass^2; centre jets report them divided by m^2"
+  },
+  "verification_boundary": "Written exact action/ODE/retarded-identity and rational inequality proof plus separate Fraction and independent covariant audits; not a computer-formalized analytic propagator theorem",
+  "written_proof": "notes/proof.md"
+}

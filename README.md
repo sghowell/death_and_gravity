@@ -80,6 +80,15 @@ around a pre-registered problems document and a certificate-gated ledger.
   inverse estimate, but does not prove a runaway of the actual solution.
   A weighted inverse bound supplies a concrete next continuation test;
   geometric barriers and the actual growing-mode forcing remain essential.
+  The [same-source weighted SEE extension](problems/P8/a/applicability/reference/asymptotics/backreaction/response/remainder/residual/existence/preparation/continuation/extension/README.md)
+  now completes that test on a 10,000-times longer smooth interval, with
+  the state, data and original source-off time unchanged. Its complete
+  map and pointwise barriers are certified; no causal pole is removed.
+  A [fresh longer-domain QSEI](problems/P8/a/applicability/reference/asymptotics/backreaction/response/remainder/residual/existence/preparation/continuation/extension/qsei/README.md)
+  retains coefficient `2*hbar/(16*pi²)` for all Hadamard targets and
+  proper H2 samplers, now allowing a rigorously bounded negative reference
+  contribution. The actual comoving focusing test still fails on this
+  domain; realistic fields and cosmological incompleteness remain open.
 - P8(b): [completed scoped classification and verification commands](problems/P8/README.md).
   All 32 M0/M1 sector-row verdicts are decided: minimal optional groups are
   C or D without extra matter, and CD with rolling canonical matter.
@@ -174,8 +183,14 @@ around a pre-registered problems document and a certificate-gated ledger.
   positive throughout. It covers all degeneracies and parent mass scales.
   This is an explicit fundamental TT/vector requirement, not automatically
   a restriction on a light-only EFT below a verified heavy threshold.
+  The [exact rolling light/relative tensor reduction](problems/P8/s6/matching/composite/perturbations/cones/matching/README.md)
+  now keeps the full normalization boundary, moving weights, retarded
+  heavy response and its initial data. Two specified CD-center states
+  cannot realize the proposed parametric mass-led hierarchy by changing
+  the parent mass-to-duration ratio. This does not exclude every other
+  state or a genuinely controlled nonadiabatic light-only reduction.
 
-The [current P8 continuation audit](docs/assessment-2026-09-06-p8-resummed-response-cone-boundary.md) separates
+The [current P8 continuation audit](docs/assessment-2026-09-06-p8-extended-qsei-light-reduction.md) separates
 completed certificate gates from the outstanding original research questions.
 P8 is not marked finished or closed.
 
