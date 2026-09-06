@@ -20,10 +20,14 @@ As kept by the Empiricist claim ledger on this branch:
 - CERTIFIED here means: the committed certificate is reproduced exactly by the checker's
   read-only replay (`build_report()` compared with `validate_report`), AND an independent
   review receipt with no blocking finding attests that the certificate establishes THIS
-  statement within the certificate's own disclosed `verification_boundary`. Written
-  analytic steps that the certificate declares outside machine replay are permitted at
-  CERTIFIED provided they are disclosed there; they are not machine-checked. FORMALIZED
-  is reserved for kernel-checked proofs.
+  statement within the verification boundary the certificate discloses. That boundary
+  is disclosed differently across certificate schemas: a `verification_boundary` field
+  where present (later P8(a) certificates), otherwise the `status`, `not_established`
+  and `written_proof` fields together with the named notes file. Written analytic steps
+  the certificate places outside machine replay are permitted at CERTIFIED provided they
+  are disclosed in one of those places; they are not machine-checked. Warnings in a
+  receipt (a REVISE verdict) do not veto CERTIFIED; they stay on record for the author.
+  FORMALIZED is reserved for kernel-checked proofs.
 - A claim's level may not exceed the lowest level among the claims it depends on
   (`depends_on`); pinned prior certificates are locked path dependencies, so a change to
   a prior certificate makes the claim STALE.
