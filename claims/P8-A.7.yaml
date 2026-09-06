@@ -33,11 +33,20 @@ evidence:
   verdict: IMPORTED
   verifier: table-import
   version: '1'
+- binary_hash: 7debe2e08b30ae79abd274ee21105cbdea1d2f2f0c4f1a3316011c5514cb65be
+  golden_suite_hash: 353c875d7fd59cc1de36844fd4f62e64461c7d13725dfd3e468b1bd83761ae09
+  note: argv=['.venv/bin/python', 'tools/empiricist_check.py', 'p8a_remainder', 'problems/P8/a/applicability/reference/asymptotics/backreaction/response/remainder/certificates/radiation-remainder.json']
+    cwd=.
+  path: problems/P8/a/applicability/reference/asymptotics/backreaction/response/remainder/certificates/radiation-remainder.json
+  stamped: '2026-09-06T19:28:29+00:00'
+  verdict: PASS
+  verifier: p8a_remainder
+  version: '1'
 formulation_version: legacy-table
 id: P8-A.7
 kind: statement
 legacy_level: CERTIFIED
-level: HEURISTIC
+level: CONJECTURED
 n: null
 notes: 'imported from CLAIMS.md; level note: exact covariance/retarded-Green/finite-clock/trace/conservation
   identities, rational IR/UV and fractional-jet majorants, independent covariant and
@@ -63,4 +72,4 @@ statement: For the unchanged A.5/A.6 massless minimal Hadamard preparation, the 
   all-sampler QSEI or cosmological focusing theorem follows
 substatus: null
 supersedes: []
-updated: '2026-09-05'
+updated: '2026-09-06'
