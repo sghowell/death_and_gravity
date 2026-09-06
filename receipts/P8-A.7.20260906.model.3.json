@@ -1,0 +1,71 @@
+{
+  "claim_id": "P8-A.7",
+  "closes": [],
+  "created": "2026-09-06T21:22:47+00:00",
+  "evidence_sha256": [
+    "1de4b521475f7f7a0351255198523fed745adee91896ab955544e483ecc21025",
+    "bb415f07620ef7a0119cf94397cb1384f993109cd11309fe0e112924cf216eaf",
+    "cc4ec02bcb23e0ef01d0fb58ad4b95a3bb602a5bbbfc6871d044b2a09a78e963",
+    "ead0aa7554986474cbdeb58614674943f7f5487c170c19ca37869bede737114d"
+  ],
+  "findings": [
+    {
+      "dimension": "evidence_support",
+      "severity": "warning",
+      "text": "The receipt binds the statement to FORMULATION.md@bb415f07, but the evidence packet contains only the first ~5.5KB of the 8187-byte file, cutting off inside 'Certified finite-family calibration'. The unshown tail is load-bearing: notes/proof.md \u00a77 states 'rational comparisons prove the displayed rounded upper bounds in the formulation', so the statement's 'explicit quadratic finite-amplitude error constants' binds to displayed formulation bounds that could not be compared against the certificate fields rounded_stress_error_upper_bounds and stress_error_constants. Statement-to-formulation agreement is verified only for the untruncated portion. [Evidence files: problems/P8/.../remainder/FORMULATION.md, marker '... (truncated; 8187 bytes total)']"
+    },
+    {
+      "dimension": "evidence_support",
+      "severity": "warning",
+      "text": "No evidence entry records execution of the pinned tests/*.py suite (test_remainder_gelfand_dikii_audit.py, test_remainder_stress.py, etc. appear only as sha256 pins in source_sha256), and verify.py's --check path does not invoke them. An audit layer that the certificate's own verification boundary cites as an independent derivation, and that the ledger notes invoke as 'independent covariant ... audits', has no execution receipt anywhere in the evidence entries. [Certificate verification_boundary[3] ('parent-owned tests derive mode, curvature and conservation identities independently') vs the evidence entries (only tools/empiricist_check.py runs)]"
+    },
+    {
+      "dimension": "evidence_support",
+      "severity": "note",
+      "text": "The semantic core of the replay is present only as sha256 pins; in particular the claimed independence of the Fraction-only audit (independent.py, sha 1c780c41...) from the ring code it audits cannot be confirmed from the packet. The cross-checks possible from the presented data all pass: delta_bar=1/(24*b0+12*b1)=2048/190897521 exactly; IR_remainder_constants[0]+UV_remainder_constants[0] equals integrated_mode_remainder_constants[0]; C_rho=[2m1+(4+delta_bar*b0+3*delta_bar*b1)*m0]/64 and the p/E/Wick analogues match the certificate constants to displayed precision; the 1% ratios equal C*delta^2*(960|576|320)*3^8 at delta=10^-12. [Certificate source_sha256 entries for src/p8a_remainder/geometry.py, independent.py, kernel.py, mode_bounds.py, stress.py]"
+    },
+    {
+      "dimension": "assumption_explicitness",
+      "severity": "warning",
+      "text": "The stress-error and Wick-C2 constants are derived under geometry bounds valid only on the observation envelope: a^4>=8*A^4*eta_star^4 and a^2>=2*A^2*eta_star^2 fail below y=2 (e.g. y=1.4, f~1 gives a^2~1.96*A^2*eta_star^2), and the history cap T=3*eta_star presumes observation by y=3. In the statement the qualifier 'on 2<=y<=3' attaches grammatically only to the delta=10^-12 sentence; the error-constants clause, to which the receipt binds, carries no envelope or history-duration scope word. [Statement clause 'and explicit quadratic finite-amplitude error constants' vs certificate derived_finite_geometry.calibration_geometry_bounds ('history<=3eta_star; a^-4<=1/(8A^4eta_star^4), |a'/a|<=2/eta_star on y in[2,3]')]"
+    },
+    {
+      "dimension": "internal_consistency",
+      "severity": "note",
+      "text": "'P1' is defined twice in the written proof with incompatible meanings. Only the \u00a76 reading (P1 = p'-jet bound = 43/4, matching p_derivative_bounds_through_7[1]) makes \u00a77's cap coherent and reproduces delta_bar: min{1/2, 128/184149, 1/(24b0+12b1), 8/43} = 2048/190897521, which is the certified value; under the \u00a73 reading the cap 'delta<=2/P1' is not even dimensionally meaningful. The machine-checked value is unambiguous; the written proof supporting the CERTIFIED level is not. [notes/proof.md: \u00a73 'P0=3B0\u00b2/8, P1=3B0*B1/4, P2=3*(B1\u00b2+B0*B2)/4' vs \u00a77 domain cap 'delta<=2/P1' and \u00a76 'Pj=sum_(r=0)^j binomial(j,r)*(4)_(j-r)*Sr']"
+    },
+    {
+      "dimension": "ledger_consistency",
+      "severity": "warning",
+      "text": "Two distinct binaries are recorded under the same verifier identity 'p8a_remainder v1', the earliest run lacks exit code and env_sha256, and the v1->v2 change on promotion day carries no note of what changed. The per-run target sha is also absent from the entries (the certificate sha cc4ec02b... is listed once, statically), so the ledger cannot show that all three PASSes checked the same bytes. The verifier identity the receipt relies on does not uniquely identify the checking code. [Evidence entries: 'p8a_remainder v1 -> PASS at 2026-09-06T19:28:29 (binary 7debe2e08b30)' with no exit/env fields; 'p8a_remainder v1 -> PASS at 2026-09-06T20:02:43 (binary 479182a7912b)'; 'p8a_remainder v2 -> PASS at 2026-09-06T21:13:50 (binary debb5446b4d5)']"
+    },
+    {
+      "dimension": "ledger_consistency",
+      "severity": "warning",
+      "text": "Every substantive dependency stands at HEURISTIC while the claim requests CERTIFIED, and the record contains no ledger rule licensing a level above all of a claim's inputs. The pin prior_A6_sha256=1101c2c2... fixes A.6's bytes, not its epistemic level. The statement's subject 'the actual Wick square' of 'the unchanged A.5/A.6 ... preparation' presupposes existence and Hadamard property of the transported state, and the 1% denominators are A.3's reference values; none of that content is established anywhere above HEURISTIC. [Dependencies block: 'P8-A.3 [HEURISTIC, standing CURRENT]', 'P8-A.5 [HEURISTIC, ...]', 'P8-A.6 [HEURISTIC, ...]' vs 'promotion requested: CERTIFIED'; pin at certificate field prior_A6_sha256 and verify.py PRIOR_SHA]"
+    },
+    {
+      "dimension": "confidence_calibration",
+      "severity": "warning",
+      "text": "The CERTIFIED tag is fully earned only by the machine-replayed rational/symbolic layer, which is internally coherent under every recomputation performed here. The statement's truth additionally consumes (i) the unformalized written analysis (IR Volterra, UV Gronwall, dominated-convergence removal of the spatial splitting in proof.md \u00a7\u00a72-4, including the 5/6 finite part whose derivation is deferred to A.6: 'The exact Born term has the spatial finite part calculated in A.6') and (ii) HEURISTIC-level state-construction and reference inputs. A single CERTIFIED tag conveys uniform confidence that the chain does not have at its root. [Statement opening 'the actual Wick square equals an explicit retarded Born functional...'; certificate verification_boundary[1] ('written analytic proofs, not finite sampling claims'); notes 'written finite-amplitude Hadamard/subtraction proof, not FORMALIZED']"
+    },
+    {
+      "dimension": "decision_soundness",
+      "severity": "warning",
+      "text": "The CERTIFIED request is made on the same day the dependency list was first populated and the verifier was rebuilt twice (three binaries, two versions inside two hours), with the dependency-level gap unresolved and the binding formulation only partially present in the review packet. Nothing in the record shows these process facts were settled before requesting promotion, and the current-level annotation 'CONJECTURED (legacy table said CERTIFIED)' shows the legacy CERTIFIED tag was already once deemed unreliable enough to demote on import. [Notes line '2026-09-06: dependencies and formulation pin added after two reviewer samples blocked on the empty dependency list' together with same-day verifier runs at 19:28:29, 20:02:43 and 21:13:50 on 2026-09-06]"
+    }
+  ],
+  "id": "P8-A.7.20260906.model.3",
+  "provenance": {
+    "cost_usd": "2.7053",
+    "model": "claude-fable-5",
+    "request_digest": "fd0fa25dbb0850f2d4b8d3ee64cd6c40ac35ddd4b5e83dcf8ae31b9b049bfa82",
+    "response_digest": "b6af0f76fcb44b3132c704b42af4ed63f08be9e5b9186fa565785efcb9a10544",
+    "run_id": "review-P8-A.7-e5e1cb-s1",
+    "transport": "ClaudeCodeClient"
+  },
+  "reviewer": "model",
+  "statement_sha256": "6ad085163c22bb7f2c5c9894d5e8a63c6a2267d44f1de040db42f3103ae749df",
+  "target_level": "CERTIFIED",
+  "verdict": "REVISE"
+}

@@ -1,0 +1,81 @@
+{
+  "claim_id": "P8-A.7",
+  "closes": [],
+  "created": "2026-09-06T21:28:49+00:00",
+  "evidence_sha256": [
+    "1de4b521475f7f7a0351255198523fed745adee91896ab955544e483ecc21025",
+    "bb415f07620ef7a0119cf94397cb1384f993109cd11309fe0e112924cf216eaf",
+    "cc4ec02bcb23e0ef01d0fb58ad4b95a3bb602a5bbbfc6871d044b2a09a78e963",
+    "ead0aa7554986474cbdeb58614674943f7f5487c170c19ca37869bede737114d"
+  ],
+  "findings": [
+    {
+      "dimension": "ledger_consistency",
+      "severity": "warning",
+      "text": "Level inversion: promotion to CERTIFIED while all three claim dependencies stand at HEURISTIC, and the proof imports substantive lemmas from them rather than merely their definitions: notes/proof.md Sec.4 takes the Born spatial finite part and 'The constant is still 5/6' from A.6, Sec.6 relies on 'A.6 proves the smooth-switch derivative recurrence' (source of the certified P_j and hence b_j, delta_bar), and Sec.7 takes rho_ref/p_ref/E_ref denominators from A.3. The certified constants therefore chain through HEURISTIC-level provenance, while the CERTIFIED level as recorded carries no conditional annotation. [Dependencies block (P8-A.3/A.5/A.6 each '[HEURISTIC, standing CURRENT]'); notes/proof.md Sec.4 ('spatial finite part calculated in A.6', 'The constant is still 5/6'), Sec.6, Sec.7]"
+    },
+    {
+      "dimension": "ledger_consistency",
+      "severity": "warning",
+      "text": "Verifier identity is ambiguous: 'p8a_remainder v1' is recorded with two distinct binary hashes (7debe2e08b30 at 19:28:29, 479182a7912b at 20:02:43), so the recorded verifier identity does not uniquely determine the code that checked the evidence; the first v1 entry also lacks the exit and env_sha256 fields the second carries, and nothing records what changed between v1 and v2 (debb5446b4d5) 71 minutes later. [Evidence entries for certificates/radiation-remainder.json, 2026-09-06T19:28:29 / 20:02:43 / 21:13:50]"
+    },
+    {
+      "dimension": "assumption_explicitness",
+      "severity": "warning",
+      "text": "The statement clause 'and explicit quadratic finite-amplitude error constants' carries no domain scope, but the constants are derived only on the observation envelope: the certificate's calibration bounds 'a^-4<=1/(8A^4eta_star^4), |a'/a|<=2/eta_star on y in[2,3]' and proof.md Sec.5 ('On the observation envelope') enter C_rho, C_p, C_E and the Wick C2 constants. In the bound text 'on 2<=y<=3' is attached only to the delta=10^-12 sentence, leaving the constants' validity region implicit. [Statement, third sentence, vs certificate derived_finite_geometry.calibration_geometry_bounds and notes/proof.md Sec.5, Sec.7]"
+    },
+    {
+      "dimension": "assumption_explicitness",
+      "severity": "note",
+      "text": "'t_star' in the bound text 'delta=4*epsilon*d/t_star^2' is defined neither in the statement nor in any dependency statement (A.5 gives epsilon and d but only 'fixed normalization and time origin'); its definition t_star=A*eta_star^2/2 appears only in evidence fields, one of which is labeled an 'interpretation'. [Statement, third sentence; certificate independently_replayed_uniform_bounds.actual_finite_amplitude_accuracy_example.physical_amplitude_interpretation; notes/proof.md Sec.7]"
+    },
+    {
+      "dimension": "evidence_support",
+      "severity": "note",
+      "text": "The statement's first sentence (exact Wick-square decomposition) rests on written-proof-only analytic steps: the coincidence expansion with constant 5/6, 'coincidence-limit domination', and the dominated-convergence interchange through two derivatives in proof.md Sec.4 are explicitly outside the machine replay per verification_boundary ('written analytic proofs, not finite sampling claims'). This matches the recorded CERTIFIED semantics ('written finite-amplitude Hadamard/subtraction proof, not FORMALIZED') but the machine evidence checks only algebraic identities and rational arithmetic. [notes/proof.md Sec.4; certificate verification_boundary, second bullet; Notes level note]"
+    },
+    {
+      "dimension": "evidence_support",
+      "severity": "note",
+      "text": "The 'all_three_ratios_strictly_below_one_percent': true verdict is produced inside src/p8a_remainder/independent.py, which is sha-pinned (1c780c41...) but not exhibited; the shown verify.py checked_bounds() never compares the three uniform_reference_scale_error_ratios to 1/100 itself. Manual evaluation of the exhibited exact rationals confirms the claim (max ratio ~4.88e-3 for density at y=3 against rho_ref=hbar/(960*pi^2*A^4*eta_star^8*y^8) from A.3), so the statement is supported, but the certified comparison itself rides on unexhibited code. [certificate independently_replayed_uniform_bounds.actual_finite_amplitude_accuracy_example; src/p8a_remainder/verify.py checked_bounds()]"
+    },
+    {
+      "dimension": "evidence_support",
+      "severity": "note",
+      "text": "Of the four negative_controls, 'local_adiabatic_subtraction_alone_leaves_linear_U5' is a hard-coded string in verify.py build_report(), unlike the clock and history controls which pass through verified_exclusion(); the cited 'independent symbolic audit' of exact-Born cancellation is only referenced (presumably in the sha-pinned tests), not demonstrated in the exhibited evidence. [certificate negative_controls.local_adiabatic_subtraction_alone_leaves_linear_U5; src/p8a_remainder/verify.py build_report()]"
+    },
+    {
+      "dimension": "internal_consistency",
+      "severity": "note",
+      "text": "Cross-checks performed, all passing: delta_bar recomputed as 1/(24*b0+12*b1)=2048/190897521 from b0=20461/128, b1=61013499/8192, matching the statement, proof.md Sec.7 caps, and UV_exponent_at_delta_bar=1/2 exactly (delta_bar*(12b0+6b1)=1/2); IR exponent 491064/63632507 = delta_bar*9*b0/2 confirmed; b0 recomputed from the U formula with P1=43/4, P2=14699/64 ((P2+3P1)/2+P1^2/4=20461/128); certificate stress-error expressions match FORMULATION.md identities under U=-a''/a; statement's delta=4*epsilon*d/t_star^2 equals certificate's 16*epsilon*d/(A^2*eta_star^4) under t_star=A*eta_star^2/2; evidence file sha256s (verify.py ead0aa75, proof.md 1de4b521, FORMULATION.md bb415f07) match certificate source_sha256 and the formulation_version pin. Caveat: FORMULATION.md was truncated in the review packet after the calibration section; the tail was checked only via its pinned sha. [certificate derived_finite_geometry / independently_replayed_uniform_bounds vs notes/proof.md Secs.5-7, FORMULATION.md, evidence sha256 headers, formulation_version field]"
+    },
+    {
+      "dimension": "ledger_consistency",
+      "severity": "note",
+      "text": "Only A.6 is hash-pinned (verify.py PRIOR_SHA = certificate prior_A6_sha256 = the 1101c2c2... cited in Notes); the A.3 and A.5 dependencies and the listed path dependency radiation-response.json carry no hash in the dependency block. Transitive pinning is asserted ('pinned through A.6 and every earlier dependency') but not exhibited in the evidence. [Dependencies block; src/p8a_remainder/verify.py PRIOR_SHA; certificate verification_boundary, first bullet]"
+    },
+    {
+      "dimension": "confidence_calibration",
+      "severity": "note",
+      "text": "The statement's negative-scope sentence matches the certificate's scope flags (Born_functional_claimed_positive_state, A6_epsilon_linear_formula..., finite_amplitude_SEE_solution_shadowing_or_stability, quantitative_perturbed_QSEI..., all_geodesic_focusing... all false) and the 'SEE_QSEI_FOCUSING_OPEN' status, so the level does not overclaim on those axes; the residual calibration exposure is that CERTIFIED reads unconditional while essential proof inputs stand at HEURISTIC (see the ledger_consistency warning). [Statement, final sentence, vs certificate scope and status fields]"
+    },
+    {
+      "dimension": "decision_soundness",
+      "severity": "note",
+      "text": "The prior blocking condition (empty dependency list) is addressed per the 2026-09-06 note, and the promotion rests on a PASS from a verifier introduced at 21:13:50 the same day, after two same-day binary changes with no recorded diff or soak period; timing is otherwise reasonable (fresh pinned-A.6 replay, dependencies standing CURRENT), but the promotion as stated inherits the open warnings above. [Notes ('2026-09-06: dependencies and formulation pin added...'); evidence entry timestamps 2026-09-06T19:28:29/20:02:43/21:13:50]"
+    }
+  ],
+  "id": "P8-A.7.20260906.model.4",
+  "provenance": {
+    "cost_usd": "2.1327",
+    "model": "claude-fable-5",
+    "request_digest": "fd0fa25dbb0850f2d4b8d3ee64cd6c40ac35ddd4b5e83dcf8ae31b9b049bfa82",
+    "response_digest": "0fcd717d90a83b193a01d2ffefe6c8d4e2f2b12968ec74419701adedd8c91b27",
+    "run_id": "review-P8-A.7-e5e1cb-s2",
+    "transport": "ClaudeCodeClient"
+  },
+  "reviewer": "model",
+  "statement_sha256": "6ad085163c22bb7f2c5c9894d5e8a63c6a2267d44f1de040db42f3103ae749df",
+  "target_level": "CERTIFIED",
+  "verdict": "REVISE"
+}
