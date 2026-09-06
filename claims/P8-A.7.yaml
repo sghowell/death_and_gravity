@@ -42,6 +42,16 @@ evidence:
   verdict: PASS
   verifier: p8a_remainder
   version: '1'
+- binary_hash: 479182a7912bc8a5c06a8891d2db800da607c6146c1d97f2695974699d0b2fc0
+  golden_suite_hash: 353c875d7fd59cc1de36844fd4f62e64461c7d13725dfd3e468b1bd83761ae09
+  note: reverify; argv=['.venv/bin/python', 'tools/empiricist_check.py', 'p8a_remainder',
+    'problems/P8/a/applicability/reference/asymptotics/backreaction/response/remainder/certificates/radiation-remainder.json']
+    cwd=. exit=0 env_sha256=5bc2938b211979ad18a91414c61c2fcf521968e5988d13723eec6c9548008dc2
+  path: problems/P8/a/applicability/reference/asymptotics/backreaction/response/remainder/certificates/radiation-remainder.json
+  stamped: '2026-09-06T20:02:43+00:00'
+  verdict: PASS
+  verifier: p8a_remainder
+  version: '1'
 formulation_version: legacy-table
 id: P8-A.7
 kind: statement
