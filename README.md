@@ -34,7 +34,12 @@ around a pre-registered problems document and a certificate-gated ledger.
   with explicit history and renormalization dependence and rational bounds
   for a specified smooth preparation. A second-order metric correction
   improves the actual compact-slab residual to qualitative O(epsilon^3).
-  Finite-amplitude error bounds, backreacted QSEI control and a self-consistent
+  The new [finite-amplitude stress remainder](problems/P8/a/applicability/reference/asymptotics/backreaction/response/remainder/README.md)
+  bounds the actual prepared state's full stress against a retarded Born
+  functional on the exact metric, with all-frequency and two-derivative
+  control. A certified small-amplitude example has error below 1% of each
+  positive radiation-reference component. The approximation is not a state
+  or a self-consistent solution; SEE shadowing, backreacted QSEI control and a
   cosmological focusing application remain open.
 - P8(b): [completed scoped classification and verification commands](problems/P8/README.md).
   All 32 M0/M1 sector-row verdicts are decided: minimal optional groups are
@@ -79,7 +84,14 @@ around a pre-registered problems document and a certificate-gated ledger.
   evolution and original-equation residual bounds under a stated coefficient
   bound. The physical metric variable and its derivative field map are kept
   distinct. This controls one local operator's order-reduced tensor response,
-  not the full quantum correction, scalar sector or high-frequency causal cone.
+  not the full quantum correction or high-frequency causal cone. Its new
+  [coupled scalar extension](problems/P8/s5/matter/physical/control/tree/loops/tensor/scalars/README.md)
+  derives regular first-order phase equations through the crossing, with
+  physical lapse/shift reconstruction and both scalar channels retained.
+  Exact rational bounds control the chosen reduced evolution and phase map
+  on the declared finite band under an independent coefficient bound.
+  These are not exact higher-derivative branch, physical-metric same-data,
+  full loop or UV-completion results.
 - P8 S6: [conditional UV framework and vacuum-extension test](problems/P8/s6/README.md).
   A smooth clock tube does not fix the vacuum positivity coefficient. The
   adopted vacuum/Regge framework requires controlled matching to the bounce;
