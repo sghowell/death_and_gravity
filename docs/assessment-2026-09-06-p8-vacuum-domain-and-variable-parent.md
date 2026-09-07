@@ -214,7 +214,8 @@ Its 16 direct sources include 32 separately authored audit cases. It
 checks 34 exact primary residuals and ten independent Fraction Laurent
 fixtures, plus the separate Fourier/IBP replay. All 67 ordinary child
 tests passed in 6.66 seconds; the standalone read-only replay, Ruff and
-scoped diff check passed.
+pre-staging scoped diff check passed. The later staged whitespace audit
+found the two nonfunctional EOF-blank-line exceptions recorded below.
 
 The frozen VARIABLE report has SHA256
 `335cd52028baf56b30c75377aa7e6edd7ec86db2799f49b13f467242674fc4d0`.
@@ -229,6 +230,14 @@ All 32 direct source hashes match and all 65 local Markdown links in the
 audit also passed together: 97 tests in 8.31 seconds. All ten ordinary
 regression-runner tests passed in 0.15 seconds. No ancestor certificate or
 unrelated P4/P9 work is changed by these additions.
+
+The default staged `git diff --check` reports one extra blank line at EOF
+in each separately authored audit test. The pre-staging check did not
+inspect those then-untracked files. Both files are already source-hashed
+by the frozen reports, so their exact verified bytes are retained rather
+than rewriting certificate inputs for a cosmetic change. With only
+`blank-at-eof` excluded, the full staged whitespace check passes; no other
+whitespace exception is accepted.
 
 The combined P8 suite passed **2,276 tests in 418.20 seconds** with the
 explicitly opt-in [exact regression runner](p8-exact-regression-runner.md).
