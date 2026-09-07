@@ -1,0 +1,1197 @@
+{
+  "canonical_action_source_and_endpoint_maps": {
+    "asinh_source": "(delta/8 + proper_time_over_tau**2)**(3/4)*prescribed_q(proper_time_over_tau)*spring(proper_time_over_tau)/sqrt(kinetic(proper_time_over_tau))",
+    "canonical_field": "Y=sqrt(k)*Q",
+    "canonical_source_bound_or_zero_data_response_proved_here": false,
+    "canonical_source_weight": "spring(proper_time_over_tau)/sqrt(kinetic(proper_time_over_tau))",
+    "endpoint_Q_QT": [
+      [
+        "sqrt(kinetic_value)/(delta/8 + proper_time_over_tau**2)**(1/4)",
+        "0"
+      ],
+      [
+        "2*sqrt(7)*sqrt(kinetic_value)*(delta/8 + proper_time_over_tau**2)**(1/4)*(kinetic_u/(2*kinetic_value) - proper_time_over_tau/(delta/4 + 2*proper_time_over_tau**2))/7",
+        "2*sqrt(7)*sqrt(kinetic_value)*tau*(delta/8 + proper_time_over_tau**2)**(1/4)/7"
+      ]
+    ],
+    "endpoint_Q_Qu": [
+      [
+        "sqrt(kinetic_value)/(delta/8 + proper_time_over_tau**2)**(1/4)",
+        "0"
+      ],
+      [
+        "2*sqrt(7)*sqrt(kinetic_value)*(delta/8 + proper_time_over_tau**2)**(1/4)*(kinetic_u/(2*kinetic_value) - proper_time_over_tau/(delta/4 + 2*proper_time_over_tau**2))/7",
+        "2*sqrt(7)*sqrt(kinetic_value)*(delta/8 + proper_time_over_tau**2)**(1/4)/7"
+      ]
+    ],
+    "explicit_u_boundary": "-canonical_Y(proper_time_over_tau)**2*Derivative(kinetic(proper_time_over_tau), proper_time_over_tau)/(8*kinetic(proper_time_over_tau))",
+    "physical_metric_not_redefined": true,
+    "wave_state": "(psi,psi_t/rho); Y=sqrt(r)*psi; r=sqrt(u²+delta/8)"
+  },
+  "claim": "P8-S6.35.OWN_SCATTERING",
+  "controls": {
+    "actual_k_u_and_physical_time_column_retained": true,
+    "bounded_remainder_not_jointly_continuous_or_derivative_bounded": true,
+    "conditional_remainder_premise_discharged_in_this_report": true,
+    "fictitious_free_exterior_not_physical_vacuum": true,
+    "fixed_physical_window_not_fixed_low_frequency_EFT_band": true,
+    "full_reference_tails_included": true,
+    "homogeneous_data_not_zero_data_source_loading": true,
+    "literal_delta_zero_not_an_action": true,
+    "ordinary_Gauss_not_Olver_normalized_function": true,
+    "own_f16_not_coupled_relative80": true,
+    "rejected_inputs": 32,
+    "retarded_single_copy_variational_action_not_assumed": true,
+    "time_transfer_det_plus_one_radial_det_minus_one": true
+  },
+  "date": "2026-09-07",
+  "exact_residual_count": 72,
+  "exact_residuals": {
+    "frozen_action_profile_endpoint_and_domain_interfaces": {
+      "fraction_and_Arb_delta_domain": "0",
+      "fraction_and_Arb_v_domain": "0",
+      "fraction_and_connection_pole_cap": "0",
+      "fraction_and_connection_window": "0",
+      "frozen_joint_F": "0",
+      "frozen_joint_b_cubed": "0",
+      "frozen_profile_D": "0",
+      "frozen_profile_H": "0",
+      "frozen_profile_J": "0",
+      "frozen_profile_L": "0",
+      "frozen_profile_Q": "0",
+      "frozen_profile_R": "0",
+      "frozen_tensor_density_in_u_units": "0",
+      "independent_actual_endpoint_00": "0",
+      "independent_actual_endpoint_01": "0",
+      "independent_actual_endpoint_10": "0",
+      "independent_actual_endpoint_11": "0",
+      "own_f_not_coupled_frequency": "0"
+    },
+    "independent_canonical_action_source_and_clock": {
+      "asinh_clock_derivative": "0",
+      "asinh_full_potential_and_source": "0",
+      "canonical_action_Euler": "0",
+      "canonical_action_boundary": "0",
+      "canonical_equation_and_source": "0",
+      "dimensionless_endpoint_determinant": "0",
+      "physical_endpoint_determinant": "0",
+      "radial_to_sech": "0",
+      "reference_frequency": "0"
+    },
+    "reference_connection_and_finite_window_algebra": {
+      "Wronskian_modulus": "0",
+      "asinh_clock_derivative": "0",
+      "canonical_map_determinant": "0",
+      "coefficient16_Liouville": "0",
+      "energy_symmetric_factor": "0",
+      "even_ODE_pullback": "0",
+      "even_parameter_product": "0",
+      "even_parameter_sum": "0",
+      "gamma_A_modulus_recurrence": "0",
+      "gamma_B_reflection": "0",
+      "odd_ODE_pullback": "0",
+      "odd_parameter_product": "0",
+      "odd_parameter_sum": "0",
+      "physical_log_phase": "0",
+      "physical_map_determinant": "0",
+      "pi_upper_polynomial_integral": "0",
+      "pi_upper_positive_integral_division": "0",
+      "power_unitarity_00": "0",
+      "power_unitarity_01": "0",
+      "power_unitarity_10": "0",
+      "power_unitarity_11": "0",
+      "radial_determinant": "0",
+      "radial_involution_00": "0",
+      "radial_involution_01": "0",
+      "radial_involution_10": "0",
+      "radial_involution_11": "0",
+      "real_radial_formula_00": "0",
+      "real_radial_formula_01": "0",
+      "real_radial_formula_10": "0",
+      "real_radial_formula_11": "0",
+      "reflected_flux": "0",
+      "rho_squared": "0",
+      "right_Jost_hypergeometric": "0",
+      "tail_difference_numerator": "0",
+      "tail_rationalization": "0",
+      "time_determinant": "0",
+      "time_inverse_00": "0",
+      "time_inverse_01": "0",
+      "time_inverse_10": "0",
+      "time_inverse_11": "0",
+      "wave_frame_determinant": "0",
+      "wave_unitarity_00": "0",
+      "wave_unitarity_01": "0",
+      "wave_unitarity_10": "0",
+      "wave_unitarity_11": "0"
+    }
+  },
+  "finite_window_margins": {
+    "budget_gate": "1/200",
+    "central_integral_upper": "121/25000",
+    "conditional_premise": "actual canonical remainder |R_delta(u)|<=44 on the full fixed window",
+    "data_scope": "homogeneous input transfer, not a zero-data matter/source response",
+    "delta_max": "1/1000000",
+    "effective_B_gate": "1/80",
+    "effective_B_lower": "239/15960",
+    "endpoint_input": "(Q,Q_u)=(Q,tau*Q_T), with actual k=b^3/N and k_u",
+    "exp_one_upper": "49/18",
+    "exp_seventeen_fourths_upper": "14641/192",
+    "exp_three_fifths_upper": "1549/850",
+    "exterior_scope": "fictitious free exterior only; no physical vacuum extension",
+    "half_width": "1/100",
+    "perturbation_budget_upper": "2311/500000",
+    "reference_B_lower": "1/40",
+    "reference_flow_upper": "2",
+    "remainder_bound": "44",
+    "small_radius_upper": "1/2000",
+    "tail_integral_upper": "3/3200",
+    "transfer_error_gate": "1/80",
+    "transfer_error_upper": "4/399"
+  },
+  "formulation": "FORMULATION.md",
+  "fraction_partial_jet_potential_proof": {
+    "A_v_cap": "129",
+    "combined_remainder_derivative_bound": false,
+    "combined_remainder_jointly_continuous": false,
+    "corner_data": {
+      "A": "16",
+      "A_v": "-48",
+      "F": "-8",
+      "F_v": "-24",
+      "F_vv": "-2080",
+      "Q": "16",
+      "Q_v": "-240",
+      "T_zeta": "0",
+      "b": "2",
+      "b_v": "-8",
+      "b_vv": "-56",
+      "b_vvv": "-4800",
+      "delta": "0",
+      "ell": "-16",
+      "ell_v": "-432",
+      "implicit_denominator": "1",
+      "pump": "-16",
+      "v": "0",
+      "zeta_v": "204",
+      "zeta_vv": "8808",
+      "zeta_vvv": "670824"
+    },
+    "d4_cap": "1001/1000",
+    "delta_max": "1/100",
+    "derived_potential_bound": "345169/8000",
+    "fixed_physical_window_transfer_proved": false,
+    "horizontal_corner_limit": "15",
+    "literal_delta_zero_allowed": false,
+    "low_frequency_EFT_or_UV_verdict": false,
+    "outward_enclosures": {
+      "A": {
+        "lower": "15199609/1000000",
+        "upper": "16926839/1000000"
+      },
+      "A_v": {
+        "lower": "-128747179/1000000",
+        "upper": "37954017/1000000"
+      },
+      "F": {
+        "lower": "-800843/100000",
+        "upper": "-3987331/500000"
+      },
+      "F_v": {
+        "lower": "-30106379/1000000",
+        "upper": "-18389939/1000000"
+      },
+      "F_vv": {
+        "lower": "-2410372467/1000000",
+        "upper": "-897136443/500000"
+      },
+      "T_zeta": {
+        "lower": "-1/200000",
+        "upper": "1627/1000000"
+      },
+      "b_v": {
+        "lower": "-417623/50000",
+        "upper": "-7734093/1000000"
+      },
+      "b_vv": {
+        "lower": "-84755373/1000000",
+        "upper": "-3821299/125000"
+      },
+      "b_vvv": {
+        "lower": "-3938441959/500000",
+        "upper": "-2075078677/1000000"
+      },
+      "ell": {
+        "lower": "-10626997/500000",
+        "upper": "-2285643/200000"
+      },
+      "ell_v": {
+        "lower": "-243973209/250000",
+        "upper": "78589613/1000000"
+      },
+      "pump": {
+        "lower": "-21449173/1000000",
+        "upper": "-2841831/250000"
+      },
+      "zeta_v": {
+        "lower": "7210673/40000",
+        "upper": "229776553/1000000"
+      },
+      "zeta_vv": {
+        "lower": "6615653821/1000000",
+        "upper": "5618356151/500000"
+      },
+      "zeta_vvv": {
+        "lower": "21146970439/50000",
+        "upper": "59553662629/62500"
+      }
+    },
+    "pole_polynomials": {
+      "D_lower_delta_coefficients": [
+        0,
+        4,
+        6,
+        4,
+        1
+      ],
+      "D_lower_other_coefficients": [
+        0,
+        0,
+        12,
+        8,
+        2
+      ],
+      "E_numerator": [
+        20,
+        40,
+        30,
+        8
+      ],
+      "E_upper": [
+        0,
+        40,
+        90,
+        72,
+        20
+      ],
+      "Z_minus_D_identity": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "potential_cap": "44",
+    "pump_cap": "22",
+    "radius": "1/100",
+    "strict_margins": {
+      "A_v_below_129": "252821/1000000",
+      "d4_upper": "5999399959999/10000000000000000",
+      "implicit_denominator_positive": "39880870770508907078252295548215760171414439265224661144438390453143581847502142667433466826261570282729334152470503/39945855249543445897027550007979709763703064762400000000000000000000000000000000000000000000000000000000000000000000",
+      "negative_F": "3987331/500000",
+      "negative_b_v": "7734093/1000000",
+      "potential_below_44": "6831/8000",
+      "pump_below_22": "550827/1000000"
+    },
+    "vertical_corner_limit": "24"
+  },
+  "independent_Acb_connection_corroboration": {
+    "boundaries": [
+      "Gamma and hypergeometric identity proofs remain analytic and source-backed",
+      "finite point checks are not a uniform ODE or asymptotic remainder estimate",
+      "no physical S-matrix, matter forcing, vacuum, quantum production, or UV claim"
+    ],
+    "checks": {
+      "cross_precision_coefficients_overlap": true,
+      "precision_128_passes": true,
+      "precision_256_passes": true
+    },
+    "cross_precision_coefficient_overlap": {
+      "A": true,
+      "B_closed": true,
+      "B_gamma": true,
+      "E_plus": true,
+      "O_plus": true
+    },
+    "delta_fixtures": [
+      "1",
+      "1/1000000"
+    ],
+    "engine": "python-flint Acb/Arb rigorous balls",
+    "outer_enclosure_grid_denominator": 1000000000,
+    "precisions_bits": [
+      128,
+      256
+    ],
+    "role": "numerical corroboration, not proof of the analytic connection",
+    "runs": [
+      {
+        "checks": {
+          "B_strict_lower_1_over_40": true,
+          "B_strict_upper_1_over_30": true,
+          "all_residuals_below_rational_cap": true,
+          "all_residuals_contain_zero": true,
+          "missing_radial_phase_disjoint": true,
+          "reflected_flux_not_B_squared": true,
+          "rho_strict_rational_interval": true,
+          "wrong_B_sign_disjoint": true,
+          "wrong_Wronskian_orientation_disjoint": true,
+          "wrong_unit_Jost_x_amplitude_disjoint": true
+        },
+        "outer_rational_enclosures": {
+          "A": {
+            "imag": [
+              "-252062893/500000000",
+              "-100825157/200000000"
+            ],
+            "real": [
+              "54012441/62500000",
+              "864199057/1000000000"
+            ]
+          },
+          "B_abs": [
+            "31349917/1000000000",
+            "15674959/500000000"
+          ],
+          "B_closed": {
+            "imag": [
+              "31349917/1000000000",
+              "15674959/500000000"
+            ],
+            "real": [
+              "0",
+              "0"
+            ]
+          },
+          "B_gamma": {
+            "imag": [
+              "31349917/1000000000",
+              "15674959/500000000"
+            ],
+            "real": [
+              "-1/1000000000",
+              "1/1000000000"
+            ]
+          },
+          "E_plus": {
+            "imag": [
+              "25343439/50000000",
+              "506868781/1000000000"
+            ],
+            "real": [
+              "-791634737/1000000000",
+              "-49477171/62500000"
+            ]
+          },
+          "O_plus": {
+            "imag": [
+              "33182813/200000000",
+              "82957033/500000000"
+            ],
+            "real": [
+              "113715623/1000000000",
+              "14214453/125000000"
+            ]
+          }
+        },
+        "precision_bits": 128,
+        "residual_absolute_cap": "1/18446744073709551616",
+        "residual_checks": {
+          "Gamma_A_modulus": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "Gamma_B_reflection": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "asymptotic_parity_Wronskian": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "radial_1/1000000_00": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "radial_1/1000000_01": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "radial_1/1000000_10": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "radial_1/1000000_11": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "radial_1/1000000_determinant": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "radial_1_00": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "radial_1_01": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "radial_1_10": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "radial_1_11": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "radial_1_determinant": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "scattering_flux_sum": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "time_transfer_determinant": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "unit_flux": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "x_-1/4_Jost_parity_value": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "x_-1/4_Jost_parity_x_derivative": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "x_-1/4_Jost_time_Wronskian": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "x_-1/4_left_right_Jost_t_derivative": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "x_-1/4_left_right_Jost_value": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "x_-1/4_parity_Wronskian": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "x_-1_Jost_parity_value": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "x_-1_Jost_parity_x_derivative": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "x_-1_Jost_time_Wronskian": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "x_-1_left_right_Jost_t_derivative": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "x_-1_left_right_Jost_value": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "x_-1_parity_Wronskian": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "x_0_Jost_parity_value": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "x_0_Jost_parity_x_derivative": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "x_0_Jost_time_Wronskian": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "x_0_left_right_Jost_t_derivative": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "x_0_left_right_Jost_value": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "x_0_parity_Wronskian": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "x_1/4_Jost_parity_value": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "x_1/4_Jost_parity_x_derivative": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "x_1/4_Jost_time_Wronskian": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "x_1/4_left_right_Jost_t_derivative": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "x_1/4_left_right_Jost_value": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "x_1/4_parity_Wronskian": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "x_1_Jost_parity_value": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "x_1_Jost_parity_x_derivative": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "x_1_Jost_time_Wronskian": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "x_1_left_right_Jost_t_derivative": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "x_1_left_right_Jost_value": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "x_1_parity_Wronskian": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          }
+        },
+        "residual_count": 46
+      },
+      {
+        "checks": {
+          "B_strict_lower_1_over_40": true,
+          "B_strict_upper_1_over_30": true,
+          "all_residuals_below_rational_cap": true,
+          "all_residuals_contain_zero": true,
+          "missing_radial_phase_disjoint": true,
+          "reflected_flux_not_B_squared": true,
+          "rho_strict_rational_interval": true,
+          "wrong_B_sign_disjoint": true,
+          "wrong_Wronskian_orientation_disjoint": true,
+          "wrong_unit_Jost_x_amplitude_disjoint": true
+        },
+        "outer_rational_enclosures": {
+          "A": {
+            "imag": [
+              "-252062893/500000000",
+              "-100825157/200000000"
+            ],
+            "real": [
+              "54012441/62500000",
+              "864199057/1000000000"
+            ]
+          },
+          "B_abs": [
+            "31349917/1000000000",
+            "15674959/500000000"
+          ],
+          "B_closed": {
+            "imag": [
+              "31349917/1000000000",
+              "15674959/500000000"
+            ],
+            "real": [
+              "0",
+              "0"
+            ]
+          },
+          "B_gamma": {
+            "imag": [
+              "31349917/1000000000",
+              "15674959/500000000"
+            ],
+            "real": [
+              "-1/1000000000",
+              "1/1000000000"
+            ]
+          },
+          "E_plus": {
+            "imag": [
+              "25343439/50000000",
+              "506868781/1000000000"
+            ],
+            "real": [
+              "-791634737/1000000000",
+              "-49477171/62500000"
+            ]
+          },
+          "O_plus": {
+            "imag": [
+              "33182813/200000000",
+              "82957033/500000000"
+            ],
+            "real": [
+              "113715623/1000000000",
+              "14214453/125000000"
+            ]
+          }
+        },
+        "precision_bits": 256,
+        "residual_absolute_cap": "1/340282366920938463463374607431768211456",
+        "residual_checks": {
+          "Gamma_A_modulus": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "Gamma_B_reflection": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "asymptotic_parity_Wronskian": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "radial_1/1000000_00": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "radial_1/1000000_01": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "radial_1/1000000_10": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "radial_1/1000000_11": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "radial_1/1000000_determinant": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "radial_1_00": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "radial_1_01": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "radial_1_10": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "radial_1_11": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "radial_1_determinant": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "scattering_flux_sum": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "time_transfer_determinant": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "unit_flux": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "x_-1/4_Jost_parity_value": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "x_-1/4_Jost_parity_x_derivative": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "x_-1/4_Jost_time_Wronskian": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "x_-1/4_left_right_Jost_t_derivative": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "x_-1/4_left_right_Jost_value": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "x_-1/4_parity_Wronskian": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "x_-1_Jost_parity_value": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "x_-1_Jost_parity_x_derivative": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "x_-1_Jost_time_Wronskian": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "x_-1_left_right_Jost_t_derivative": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "x_-1_left_right_Jost_value": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "x_-1_parity_Wronskian": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "x_0_Jost_parity_value": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "x_0_Jost_parity_x_derivative": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "x_0_Jost_time_Wronskian": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "x_0_left_right_Jost_t_derivative": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "x_0_left_right_Jost_value": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "x_0_parity_Wronskian": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "x_1/4_Jost_parity_value": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "x_1/4_Jost_parity_x_derivative": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "x_1/4_Jost_time_Wronskian": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "x_1/4_left_right_Jost_t_derivative": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "x_1/4_left_right_Jost_value": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "x_1/4_parity_Wronskian": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "x_1_Jost_parity_value": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "x_1_Jost_parity_x_derivative": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "x_1_Jost_time_Wronskian": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "x_1_left_right_Jost_t_derivative": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "x_1_left_right_Jost_value": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          },
+          "x_1_parity_Wronskian": {
+            "absolute_value_below_cap": true,
+            "contains_zero": true
+          }
+        },
+        "residual_count": 46
+      }
+    ],
+    "x_fixtures": [
+      "-1",
+      "-1/4",
+      "0",
+      "1/4",
+      "1"
+    ]
+  },
+  "independent_Arb_total_jet_cover": {
+    "boxes": [
+      {
+        "box": {
+          "delta": [
+            "0",
+            "1/200"
+          ],
+          "v": [
+            "0",
+            "1/20000"
+          ],
+          "zeta": [
+            "11",
+            "12"
+          ]
+        },
+        "checks": {
+          "canonical_pump_below22": true,
+          "implicit_denominator_positive": true,
+          "kinetic_positive": true,
+          "mass_numerator_derivative_below129": true,
+          "scale_derivative_negative": true
+        }
+      },
+      {
+        "box": {
+          "delta": [
+            "0",
+            "1/200"
+          ],
+          "v": [
+            "0",
+            "1/20000"
+          ],
+          "zeta": [
+            "12",
+            "13"
+          ]
+        },
+        "checks": {
+          "canonical_pump_below22": true,
+          "implicit_denominator_positive": true,
+          "kinetic_positive": true,
+          "mass_numerator_derivative_below129": true,
+          "scale_derivative_negative": true
+        }
+      },
+      {
+        "box": {
+          "delta": [
+            "1/200",
+            "1/100"
+          ],
+          "v": [
+            "0",
+            "1/20000"
+          ],
+          "zeta": [
+            "11",
+            "12"
+          ]
+        },
+        "checks": {
+          "canonical_pump_below22": true,
+          "implicit_denominator_positive": true,
+          "kinetic_positive": true,
+          "mass_numerator_derivative_below129": true,
+          "scale_derivative_negative": true
+        }
+      },
+      {
+        "box": {
+          "delta": [
+            "1/200",
+            "1/100"
+          ],
+          "v": [
+            "0",
+            "1/20000"
+          ],
+          "zeta": [
+            "12",
+            "13"
+          ]
+        },
+        "checks": {
+          "canonical_pump_below22": true,
+          "implicit_denominator_positive": true,
+          "kinetic_positive": true,
+          "mass_numerator_derivative_below129": true,
+          "scale_derivative_negative": true
+        }
+      },
+      {
+        "box": {
+          "delta": [
+            "0",
+            "1/200"
+          ],
+          "v": [
+            "1/20000",
+            "1/10000"
+          ],
+          "zeta": [
+            "11",
+            "12"
+          ]
+        },
+        "checks": {
+          "canonical_pump_below22": true,
+          "implicit_denominator_positive": true,
+          "kinetic_positive": true,
+          "mass_numerator_derivative_below129": true,
+          "scale_derivative_negative": true
+        }
+      },
+      {
+        "box": {
+          "delta": [
+            "0",
+            "1/200"
+          ],
+          "v": [
+            "1/20000",
+            "1/10000"
+          ],
+          "zeta": [
+            "12",
+            "13"
+          ]
+        },
+        "checks": {
+          "canonical_pump_below22": true,
+          "implicit_denominator_positive": true,
+          "kinetic_positive": true,
+          "mass_numerator_derivative_below129": true,
+          "scale_derivative_negative": true
+        }
+      },
+      {
+        "box": {
+          "delta": [
+            "1/200",
+            "1/100"
+          ],
+          "v": [
+            "1/20000",
+            "1/10000"
+          ],
+          "zeta": [
+            "11",
+            "12"
+          ]
+        },
+        "checks": {
+          "canonical_pump_below22": true,
+          "implicit_denominator_positive": true,
+          "kinetic_positive": true,
+          "mass_numerator_derivative_below129": true,
+          "scale_derivative_negative": true
+        }
+      },
+      {
+        "box": {
+          "delta": [
+            "1/200",
+            "1/100"
+          ],
+          "v": [
+            "1/20000",
+            "1/10000"
+          ],
+          "zeta": [
+            "12",
+            "13"
+          ]
+        },
+        "checks": {
+          "canonical_pump_below22": true,
+          "implicit_denominator_positive": true,
+          "kinetic_positive": true,
+          "mass_numerator_derivative_below129": true,
+          "scale_derivative_negative": true
+        }
+      }
+    ],
+    "exact_partition_box_count": 8,
+    "independent_univariate_implicit_recurrence": true,
+    "precision_bits": 256,
+    "whole_domain_not_sampled_grid": true
+  },
+  "not_established": [
+    "A physical-g/clock or full nonlinear parent/CD solution",
+    "A fixed-source zero-data response or conserved matter/free-chi source matching",
+    "An actual asymptotic parent vacuum, quantum state or physical scattering S matrix",
+    "A vanishing-error outer dressing, uniform derivative expansion or all-order remainder",
+    "A fixed physical low-frequency EFT band, cutoff, scalar health or full CD dictionary",
+    "Positivity/V/G applicability, UV completion or original P8 closure"
+  ],
+  "physical_contract_nonunit_calibration": {
+    "delta": "1/1000000",
+    "dimensionless_velocity": "Q_u=tau*Q_T",
+    "endpoint_wave_state": "(psi,psi_t/rho), with actual k and k_u",
+    "fixed_temporal_band_or_EFT_cutoff": false,
+    "homogeneous_mixing_lower": "1/80",
+    "physical_duration": "1/25",
+    "physical_half_width": "1/50",
+    "physical_potential_remainder_upper": "11",
+    "tau": "2",
+    "zero_data_matter_response": false
+  },
+  "potential_domain": "|u|<=1/100, 0<delta<=1/100; u=T/tau, c=2+delta",
+  "prior_sha256": {
+    "S6_33_recursively_rebuilt": "727811a8563584cc511e749ff038eadaa416f02aae268a15fa4f90eb8ca4b6b3",
+    "same_unchanged_action_metric_clock_and_free_chi": true,
+    "sibling_of_S6_34_not_dependent_on_its_shrinking_pulse": true
+  },
+  "probe_and_state_contract": "same off-shell physical g=eta and clock theta=T; q=0, prescribed incoming homogeneous Q data; exact own-f isotropic background only",
+  "proof_checks": {
+    "premise_discharge": {
+      "actual_mixing_above_one_over_80": true,
+      "all_actual_coefficient_checks": true,
+      "fictitious_free_exterior_not_a_parent_vacuum": true,
+      "incoming_homogeneous_data_explicit_not_automatically_zero": true,
+      "positive_delta_subdomain": true,
+      "reference_error_below_one_over_80": true,
+      "same_original_physical_metric_and_clock": true,
+      "same_physical_window": true,
+      "whole_remainder_below_connection_premise": true
+    },
+    "reference_and_transfer_margins": {
+      "actual_delta_subset": true,
+      "budget_below_gate": true,
+      "budget_value": true,
+      "central_integral_value": true,
+      "effective_B_above_gate": true,
+      "error_below_gate": true,
+      "exp_geometric_error": true,
+      "exp_one_below_11_over_4": true,
+      "exp_product_below_80": true,
+      "exp_product_bound": true,
+      "pi_rho_below_17_over_4": true,
+      "reference_energy_factor_below_two": true,
+      "rho_above_5_over_4": true,
+      "rho_below_4_over_3": true,
+      "small_radius_strict": true,
+      "tail_integral_value": true
+    },
+    "whole_box_potential": {
+      "A_v_below_129": true,
+      "D_lower_coefficients_nonnegative": true,
+      "E_positive_coefficients": true,
+      "E_upper_constant_zero": true,
+      "E_upper_nonconstant_positive": true,
+      "corner_A": true,
+      "corner_A_v": true,
+      "corner_log_k_v": true,
+      "d4_upper": true,
+      "directional_formula": true,
+      "horizontal_corner": true,
+      "implicit_denominator_positive": true,
+      "negative_F": true,
+      "negative_b_v": true,
+      "pole_difference_identity": true,
+      "potential_below_44": true,
+      "pump_below_22": true,
+      "vertical_corner": true
+    }
+  },
+  "reference_Gauss_connection": {
+    "A": "gamma(-sqrt(7)*I/2)*gamma(1 - sqrt(7)*I/2)/(gamma(-1/2 - sqrt(7)*I/2)*gamma(3/2 - sqrt(7)*I/2))",
+    "A_abs_squared": "coth(sqrt(7)*pi/2)**2",
+    "B": "I/sinh(sqrt(7)*pi/2)",
+    "B_abs_squared": "csch(sqrt(7)*pi/2)**2",
+    "radial_singular_max": "coth(sqrt(7)*pi/4)",
+    "radial_singular_min": "tanh(sqrt(7)*pi/4)",
+    "reflected_flux": "sech(sqrt(7)*pi/2)**2",
+    "rho": "sqrt(7)/2",
+    "right_Jost": "exp(sqrt(7)*I*t/2)*hyper((-1/2, 3/2), (1 - sqrt(7)*I/2,), 1/2 - tanh(t)/2)",
+    "t": "t",
+    "transmitted_flux": "tanh(sqrt(7)*pi/2)**2"
+  },
+  "reference_parity_basis": {
+    "E_plus": "8**(1/4 + sqrt(7)*I/4)*sqrt(pi)*gamma(sqrt(7)*I/2)/(gamma(-1/4 + sqrt(7)*I/4)*gamma(3/4 + sqrt(7)*I/4))",
+    "O_plus": "8**(-1/4 + sqrt(7)*I/4)*sqrt(pi)*gamma(sqrt(7)*I/2)/(2*gamma(1/4 + sqrt(7)*I/4)*gamma(5/4 + sqrt(7)*I/4))",
+    "Wronskian_x": "1",
+    "a": "-1/4 + sqrt(7)*I/4",
+    "b": "-1/4 - sqrt(7)*I/4",
+    "even": "hyper((-1/4 - sqrt(7)*I/4, -1/4 + sqrt(7)*I/4), (1/2,), -8*x**2)",
+    "odd": "x*hyper((1/4 - sqrt(7)*I/4, 1/4 + sqrt(7)*I/4), (3/2,), -8*x**2)",
+    "p_minus": "1/2 - sqrt(7)*I/2",
+    "p_plus": "1/2 + sqrt(7)*I/2",
+    "x": "x"
+  },
+  "reference_time_transfer": [
+    [
+      "gamma(sqrt(7)*I/2)*gamma(1 + sqrt(7)*I/2)/(gamma(-1/2 + sqrt(7)*I/2)*gamma(3/2 + sqrt(7)*I/2))",
+      "I/sinh(sqrt(7)*pi/2)"
+    ],
+    [
+      "-I/sinh(sqrt(7)*pi/2)",
+      "gamma(-sqrt(7)*I/2)*gamma(1 - sqrt(7)*I/2)/(gamma(-1/2 - sqrt(7)*I/2)*gamma(3/2 - sqrt(7)*I/2))"
+    ]
+  ],
+  "schema": 1,
+  "source_audit": "notes/sources.md",
+  "source_sha256": {
+    "FORMULATION.md": "5947a76b16ce22aeb5eca27543c14c35f68ae2edf74bf4e030ef179e50572bb3",
+    "README.md": "11bad94782a564fbfa58552a286603fc03dc0ebfea19f3a676a960474efb24d3",
+    "notes/connection.md": "f7dee833f9a1c6add866a45a05e9412b65740ee69ab8c40847241a9ff27ceda9",
+    "notes/interfaces.md": "7a29f633e2cee0b69f38c1c8c6bcada8bebe59fc0601ab9184f9ac96dda91cb6",
+    "notes/potential.md": "9e812a5a2c2591fbed9982093e4a4ad37e0b3b8abc80f8505f9a9508e8ee3756",
+    "notes/sources.md": "a12c28b2b08c6e4cc41461c2b88f34a2010892b971f449b79dac35ebe0fed26a",
+    "src/p8_own_scattering/__init__.py": "0b0c739dd8ab0682056ede5daa94225f834d134bcbaf15ebb797e43fa4233798",
+    "src/p8_own_scattering/action.py": "f99d1ac6cc3d898ea60acc51f122e35025c72e344ca8e8f049ffc66808ecbffb",
+    "src/p8_own_scattering/arb_audit.py": "f699633254132edd3bb1c58650456c6ad16e95f920b6787a0144af080f8613cc",
+    "src/p8_own_scattering/bridges.py": "c39285642547f3491b867a0723086e626741b95fe2da5dea55d7e328365b1560",
+    "src/p8_own_scattering/connection.py": "da5eab884e1cbe1b4692d18d1e836a326b5ecbdbb965c28d02fc703005cafd54",
+    "src/p8_own_scattering/connection_audit.py": "7d15e7d3874a85f5f6480686fc748333cd30e50c8d58fea08f6b641085388db2",
+    "src/p8_own_scattering/jets.py": "77b27f7404bc49824c4ab47f3f7fa2d962aea30ed1e6b78125db389dfb22065e",
+    "src/p8_own_scattering/potential.py": "8eb7b502dc4f55bc6b2870f0bf5935fbcc1a5c40bafdd2ac43bdcbd4ac82efa0",
+    "src/p8_own_scattering/verify.py": "1539dd0ee8a5418feaa5baa7c482911e1b5eaf06ea751715b538c6c728304b20",
+    "tests/conftest.py": "3cf3d09eb9832d4eca328774c948f80ba6849e13e347bc8cee0a0346564ebf72",
+    "tests/test_own_scattering_arb_audit.py": "347a52561f30ba8a5f6a49044a88976033cf5e5edfa49d32a076333e8e817e35",
+    "tests/test_own_scattering_certificate.py": "98bc6ff05c41c1481a436a2218607f91a0a5a3eabf4d3a5d5ccf91d6fa4fbfb9",
+    "tests/test_own_scattering_connection.py": "68dc6173808d281d4a70b329407c06a75fa380480215d7b57e9b3a5a7667b34a",
+    "tests/test_own_scattering_connection_audit.py": "c545324f94c404ed0477d03a0342651e2fd1ee1de427f6582ac0012852e76560",
+    "tests/test_own_scattering_interfaces.py": "c81a99382b361a06bebe32d1741e6a4beff9bdf99acfcb8b1970761ca22bb2e1",
+    "tests/test_own_scattering_jets.py": "432504c9de4f532bc784532b01849811b6f5d9d55de278abac0b8315085a7af6",
+    "tests/test_own_scattering_potential.py": "2510e36494626066d32e190047f75f692428ab49f405aa935b45ef05e16ae359"
+  },
+  "status": "EXACT_OWN_F_FIXED_PHYSICAL_WINDOW_HOMOGENEOUS_TRANSFER; ORIGINAL_P8_OPEN",
+  "transfer_domain": "|T|<=tau/100, 0<delta<=10^-6; M,tau>0",
+  "verification_boundary": "Written exact-jet, pole-cancellation, source-audited connection and energy/Duhamel proof; independent Fraction and Arb derivations, Acb corroboration; not proof-assistant formalization",
+  "written_proofs": [
+    "notes/potential.md",
+    "notes/connection.md",
+    "notes/interfaces.md"
+  ]
+}

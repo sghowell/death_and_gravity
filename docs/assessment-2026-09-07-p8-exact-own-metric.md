@@ -66,16 +66,49 @@ solution of the physical-g equations. The retarded equation is used
 directly, not inserted into a single-copy action and silently declared
 to be a variational effective action.
 
-The next calculation tests a comparison on a fixed physical-time window.
-It requires independently controlled canonical-potential derivatives,
-actual endpoint maps and the correctly normalized reference scattering
-equation. That continuation is separate from these frozen checkpoints;
-it does not yet supply a fixed-band source theorem or an EFT cutoff.
+## The homogeneous transfer is now controlled on a fixed physical window
+
+[S6.35](../problems/P8/s6/matching/variable/reduction/exact/scattering/FORMULATION.md)
+proves a uniform bound on the complete canonical tensor potential of the
+actual own-f branch. Partial Fraction Taylor jets and independently
+constructed univariate Arb jets bound the needed implicit derivatives.
+Exact pole cancellation gives |V_delta-16/(delta+8u^2)|<44 on the full
+u=T/tau window |u|<=1/100, for 0<delta<=1/100.
+
+This bounded remainder is not jointly continuous at the excluded corner:
+two positive-delta approach paths give limits 24 and 15. No derivative
+bound on the combined remainder is inferred from its bounded value.
+The proof retains the entire canonical pump and both source weights.
+
+The correctly normalized own-f reference has log-wave frequency sqrt(7)/2,
+not the coupled-relative sqrt(39)/2. Its Gamma/Gauss connection has
+|B|>1/40, with the physical delta phase and left/right orientation explicit.
+The source audit distinguishes ordinary Gauss functions from normalized
+Olver functions. Independent Acb calculations corroborate the signs,
+Wronskians, finite-point Cauchy data and phase dictionary at two precisions.
+
+For 0<delta<=10^-6, a balanced energy/Duhamel estimate includes the central
+actual remainder and both missing reference tails. It gives a transfer
+error below 4/399<1/80 and an actual mixing coefficient above
+239/15960>1/80. Exact maps retain k_u and distinguish Q_u from Q_T. The
+physical duration is tau/50, independent of delta. The free exterior is
+only a mathematical endpoint convention, not a parent vacuum.
+
+This result prescribes incoming homogeneous data. Zero data and zero q
+still give zero response. The next child tests whether a single fixed
+smooth metric pulse, with zero initial hidden data, produces separated
+original-Q endpoint outputs as delta tends to zero. That source-loading
+and phase argument is separate work; no fixed-band or EFT verdict follows
+from the homogeneous matrix element alone.
 
 The original CD/source dictionary, a controlled physical-domain inverse,
 higher-operator remainder and adopted positivity/V/G requirements remain
-open. The scoped P8(a) photon result is unchanged. There is no current
-mathematical task requiring new user authority.
+open. The scoped P8(a) photon result is unchanged: a fresh completion
+audit found no missing lemma for its adopted free-Maxwell/global-flat-FLRW
+objective. Other fields, unrestricted spacetimes, interacting QED and
+observational fitting are stronger optional projects, not newly imposed
+prerequisites. There is no current mathematical task requiring new user
+authority.
 
 ## Verification
 
@@ -110,3 +143,21 @@ fallbacks and 128 reference comparisons. The new scattering candidate
 was explicitly excluded while under construction. The ordinary replays
 again used no adapter, both seeds were zero, and the diagnosed host
 timer plugin was disabled.
+
+S6.35 pins 23 sources with 72 exact identities, 18 potential checks,
+16 connection/propagation checks, 9 interface checks and 32 rejected-input
+controls. Its independent Arb total-jet engine covers eight full boxes;
+its independent Acb connection engine verifies 46 residual enclosures at
+each of 128 and 256 bits. Residual enclosures corroborate, rather than
+replace, the source-backed analytic connection. All 122 non-certificate
+scientific tests passed in 2.24 seconds. All 139 ordinary tests passed in
+202.96 seconds, and the separate ordinary CLI replay passed. The report
+SHA-256 is
+`c77d6d3e41d81c5d2bda33aeba201fe438620d872f3e9f2d49fde5469194641e`.
+
+The extended full P8 regression passed all 3,476 tests in 666.62 seconds,
+with 6,509 checked exact descents, 4,554 original-domain fallbacks and
+128 reference comparisons. The next fixed-pulse child was explicitly
+excluded while under construction. The ordinary certificate and CLI
+replays used no adapter; both seeds were zero and the host timer plugin
+was disabled. Frozen sources and unrelated P4/P9 work remain unchanged.

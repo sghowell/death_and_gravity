@@ -367,6 +367,12 @@ around a pre-registered problems document and a certificate-gated ledger.
   pulse leaves a nonzero hidden response after it ends. Its shrinking
   physical duration and off-shell input are explicit, so it is not a
   fixed low-frequency matter-source or controlled-EFT exclusion.
+  The [fixed-window own-f transfer](problems/P8/s6/matching/variable/reduction/exact/scattering/README.md)
+  now bounds the complete canonical potential uniformly and retains the
+  actual endpoint normalization. A finite propagation comparison proves
+  nonzero homogeneous mixing on a fixed physical-time interval. Its
+  incoming data and fictitious free exterior are explicit; it is not a
+  zero-data matter response, a physical vacuum or an EFT cutoff.
 
 The [current P8 continuation audit](docs/assessment-2026-09-07-p8-exact-own-metric.md) separates
 the completed scoped P8(a) objective and certificate gates from the
