@@ -1,0 +1,875 @@
+{
+  "claim": "P8-S6.11.COMPOSITE",
+  "date": "2026-09-06",
+  "domain": {
+    "constant_model": "G=F=M\u00b2>0,m4=M\u00b2m\u00b2,m>0,alpha=beta=1,beta_n=(0,0,1,0,0)",
+    "family": "epsilon=1/Y>0,z0=1,eta0=9,R0=sqrt(1+3(1+epsilon)^3),Ae=(1+11epsilon*u\u00b2/4)\u00b2",
+    "frame": "Positive-root +--- composite effective metric, not original CD/M1 matter frame",
+    "internal_matter": "Shared canonical scalar with the pinned family's reconstructed potential; positive null source, density/potential need not be positive",
+    "parameter": {
+      "inclusive_upper": "2^(-187116)",
+      "negative_binary_exponent": 187116,
+      "strict_lower": "0"
+    },
+    "retarded_data": "Both TT metric fields and their fluxes vanish initially, and the locked candidate has the same zero data",
+    "small_metric_amplitude": {
+      "inclusive_lower": "0",
+      "inclusive_upper": "2^(-67162)",
+      "negative_binary_exponent": 67162
+    },
+    "spatial_band": "kbar=kcom/m in [1/16,1/8]; physical effective momentum m*kbar/Ae(u)",
+    "time": "u=mT in [0,1], physical composite proper time T"
+  },
+  "exact_comparison_and_tube_margins": {
+    "exp_lower_partial_sum": "8/3",
+    "exp_upper_below_11_over_4": "137/4320",
+    "exp_upper_geometric_tail": "11743/4320",
+    "finite_full_minus_locked_lower": "1/75",
+    "finite_full_positive_lower": "3643/115200",
+    "finite_locked_positive_lower": "1723/115200",
+    "light_kernel_linear_lower_factor": "383/384",
+    "one_third_relative_mismatch_margin": "1/360",
+    "pulse_integral": "1/30",
+    "pulse_linear_moment": "1/60",
+    "relative_kernel_above_one_eighth": "3/304",
+    "relative_kernel_coefficient_lower": "41/304",
+    "z1_upper": "81/8",
+    "z_upper_below_11": "7/8"
+  },
+  "exact_regular_flux_problem": {
+    "constraints": "The external TT stress carries no linear scalar/vector source; full background constraints replay the pinned reconstruction",
+    "locked": "g=epsilon L,f=L; (C_lock Lprime)prime+V_lock L=p, C_lock=Af+epsilon\u00b2Ag,V_lock=Vf+epsilon\u00b2Vg",
+    "output": "R=Gamma/(epsilon sigma)=(zg+f)/(1+e)",
+    "regularity": "All required kinetic/constraint denominators positive on certified finite member; no division by relative mass or Hubble rate",
+    "variables": "g=h_g/sigma,f=h_f/(epsilon sigma),Pg=Ag*gprime,Pf=Af*fprime"
+  },
+  "exact_residuals": {
+    "exact_background_flux_and_locked_action": {
+      "full_f_force": "0",
+      "full_g_force": "0",
+      "limit_Af": "0",
+      "limit_Ag": "0",
+      "limit_Vf": "0",
+      "limit_Vg": "0",
+      "limit_W": "0",
+      "limit_lock_C": "0",
+      "limit_lock_V": "0",
+      "literal_locked_action": "0",
+      "old_full_density_flow": "0",
+      "old_full_root_lambda": "0",
+      "physical_clock_lapse_sum": "0",
+      "positive_canonical_null_source": "0"
+    },
+    "limiting_normalization_and_pulse": {
+      "physical_relative_full_potential": "0",
+      "physical_relative_normalization": "0",
+      "physical_relative_output_weight": "0",
+      "physical_relative_source_weight": "0",
+      "positive_pulse_maximum": "0",
+      "pulse_zero_endpoint_derivatives": "0",
+      "pulse_zero_endpoints": "0",
+      "source_first_moment": "0",
+      "source_pulse_integral": "0"
+    },
+    "physical_clock_probe_and_metric_source": {
+      "absolute_metric_response_scale": "0",
+      "normalized_u_source": "0",
+      "physical_probe_stress_units": "0",
+      "physical_to_u_source": "0",
+      "rescaled_source_action": "0"
+    }
+  },
+  "finite_parameter_theorem": {
+    "absolute_vs_normalized": "Physical probe and composite response vanish as epsilon*sigma; the source-normalized relative error does not",
+    "constants": "Explicit sufficient unoptimized exact rational gates, not floating-point propagation or a physical cutoff estimate",
+    "small_metric": "Each individual metric polarization amplitude <=1/128<1/100 under the sigma gate",
+    "u1_absolute_mismatch": "R_epsilon-L_epsilon>=1/75",
+    "u1_positive_outputs": "Both R_epsilon and L_epsilon strictly positive for the positive pulse",
+    "u1_relative_mismatch": "(R_epsilon-L_epsilon)/R_epsilon>=1/3; (2/3)R_epsilon-L_epsilon>=1/360",
+    "uniform_output_errors": "Both |R_epsilon-R0| and |L_epsilon-L0| <=2^-10<1/600 on the whole fixed interval and band"
+  },
+  "formulation": "FORMULATION.md",
+  "independent_Fraction_replay": {
+    "Fraction_comparison_margins": {
+      "finite_absolute_mismatch": "1/75",
+      "finite_relative_error_margin": "1/360",
+      "heavy_band_coefficient": "41/304",
+      "pulse_first_moment": "1/60",
+      "pulse_integral": "1/30"
+    },
+    "coefficientwise_identities": {
+      "locked_potential_cancels_relative_mass": "0",
+      "relative_mass_energy_square": "0",
+      "source_factor_is_physical_composite_weight": "0"
+    }
+  },
+  "limiting_causal_response": {
+    "causality": "Explicit zero-data initial value problem, no replacement of retarded inverse by a symmetric single-copy action; other homogeneous data would add a response",
+    "comparison": "D_H-v\u00b2q>=41/304>1/8; G_H>=sqrt(8)sinh((u-s)/sqrt(8))>=u-s; (383/384)(u-s)<=G_L<=u-s",
+    "kernel": "K0(u,s)=G_L(u,s)+sqrt(v(u))*G_H(u,s)*sqrt(v(s))",
+    "light": "fsecond+q*f=p",
+    "physical_output": "R0=f+sqrt(v)*chi",
+    "pulse_at_u1": "I=1/60, (383/384)I<=L0<=I, relative contribution H0>=I, R0=L0+H0",
+    "relative": "chi=(z/sqrt(v))*g; chisecond+(v\u00b2q-D_H)*chi=sqrt(v)*p"
+  },
+  "not_established": [
+    "Failure of every second-order EFT or every nonadiabatic light-only reduction without its own source, memory, locality and error contract",
+    "A regular two-metric geometry at epsilon zero or a uniform finite-nonlinear-amplitude theorem",
+    "Uniform small parent proper-time curvature, an EFT cutoff hierarchy, or a temporal-frequency-limited probe",
+    "A finite-k spectral, scalar/vector-health, ghost, quantum-state or ultraviolet verdict",
+    "Uniformity on a growing logY interval or a full CD-duration window",
+    "Original-frame CD/M1 matching, globally free internal M1 matter, or completion of S6/P8"
+  ],
+  "outward_rational_finite_parameter_bounds": {
+    "background_error_power_of_two": 52763,
+    "background_parameter_derivative": 350559,
+    "background_state_Lipschitz": 26372,
+    "box": {
+      "R": [
+        "1/10",
+        "3"
+      ],
+      "epsilon": [
+        "0",
+        "1/10000"
+      ],
+      "q": [
+        "1/256",
+        "1/64"
+      ],
+      "u": [
+        "0",
+        "1"
+      ],
+      "z": [
+        "1/2",
+        "12"
+      ]
+    },
+    "epsilon_range": {
+      "inclusive_upper": "2^(-187116)",
+      "negative_binary_exponent": 187116,
+      "strict_lower": "0"
+    },
+    "initial_R_offset_majorant": 3,
+    "output_error_power_of_two": 187106,
+    "output_norm": 13,
+    "output_parameter_state_derivative": 158,
+    "phase_bound_power_of_two": 67148,
+    "phase_error_power_of_two": 187101,
+    "phase_matrix_norm": 33572,
+    "phase_matrix_parameter_state_derivative": 68152776910250,
+    "phase_source_norm": 12,
+    "phase_source_parameter_state_derivative": 145,
+    "positive_box_coefficients": [
+      "X_bar",
+      "CD_denominator",
+      "lapse_numerator",
+      "lapse_denominator",
+      "root_denominator",
+      "kappa",
+      "A_g",
+      "A_f",
+      "C_lock",
+      "null_over_e"
+    ],
+    "prepared_initial_difference": 3039038489,
+    "prepared_initial_size": 1450,
+    "prepared_output_error_power_of_two": 187103,
+    "prepared_phase_bound_power_of_two": 67155,
+    "prepared_phase_error_power_of_two": 187098,
+    "rational_margins": {
+      "R_lower_tube": "521/7040",
+      "R_upper_tube": "127/128",
+      "error_gate": "53/76800",
+      "parameter_box": "399/10240000",
+      "small_metric": "7/3200",
+      "z_lower_tube": "63/128",
+      "z_upper_tube": "127/128"
+    },
+    "records": {
+      "A_e": {
+        "partials_epsilon_z_R": [
+          {
+            "absolute_integer_majorant": 6,
+            "lower": "0",
+            "upper": "1476801017/268435456"
+          },
+          {
+            "absolute_integer_majorant": 0,
+            "lower": "0",
+            "upper": "0"
+          },
+          {
+            "absolute_integer_majorant": 0,
+            "lower": "0",
+            "upper": "0"
+          }
+        ],
+        "value": {
+          "absolute_integer_majorant": 2,
+          "lower": "1",
+          "upper": "4297329855/4294967296"
+        }
+      },
+      "A_f": {
+        "partials_epsilon_z_R": [
+          {
+            "absolute_integer_majorant": 982746173,
+            "lower": "-1055215668241213625/1073741824",
+            "upper": "427675256881215487/2147483648"
+          },
+          {
+            "absolute_integer_majorant": 29595112,
+            "lower": "-127110036868193853/4294967296",
+            "upper": "496989499814931/4294967296"
+          },
+          {
+            "absolute_integer_majorant": 671545,
+            "lower": "-6053978111023/2147483648",
+            "upper": "1442131446789163/2147483648"
+          }
+        ],
+        "value": {
+          "absolute_integer_majorant": 259,
+          "lower": "8279337/2147483648",
+          "upper": "1111987687731/4294967296"
+        }
+      },
+      "A_g": {
+        "partials_epsilon_z_R": [
+          {
+            "absolute_integer_majorant": 21166296,
+            "lower": "-18333579873238755/4294967296",
+            "upper": "45454273278058243/2147483648"
+          },
+          {
+            "absolute_integer_majorant": 638945,
+            "lower": "-152615537465/4294967296",
+            "upper": "686061350992693/1073741824"
+          },
+          {
+            "absolute_integer_majorant": 14493,
+            "lower": "-62246296189095/4294967296",
+            "upper": "21352774339/4294967296"
+          }
+        ],
+        "value": {
+          "absolute_integer_majorant": 1450,
+          "lower": "41594915/4294967296",
+          "upper": "1556343251599/1073741824"
+        }
+      },
+      "CD_denominator": {
+        "partials_epsilon_z_R": [
+          {
+            "absolute_integer_majorant": 3,
+            "lower": "0",
+            "upper": "11/4"
+          },
+          {
+            "absolute_integer_majorant": 0,
+            "lower": "0",
+            "upper": "0"
+          },
+          {
+            "absolute_integer_majorant": 0,
+            "lower": "0",
+            "upper": "0"
+          }
+        ],
+        "value": {
+          "absolute_integer_majorant": 2,
+          "lower": "1",
+          "upper": "4296148413/4294967296"
+        }
+      },
+      "C_lock": {
+        "partials_epsilon_z_R": [
+          {
+            "absolute_integer_majorant": 982746173,
+            "lower": "-2110431336574202563/2147483648",
+            "upper": "855350515917657063/4294967296"
+          },
+          {
+            "absolute_integer_majorant": 29595112,
+            "lower": "-127110036868195381/4294967296",
+            "upper": "248494763644771/2147483648"
+          },
+          {
+            "absolute_integer_majorant": 671545,
+            "lower": "-12107956845239/4294967296",
+            "upper": "721065723394635/1073741824"
+          }
+        ],
+        "value": {
+          "absolute_integer_majorant": 259,
+          "lower": "8279337/2147483648",
+          "upper": "555993875029/2147483648"
+        }
+      },
+      "N_f": {
+        "partials_epsilon_z_R": [
+          {
+            "absolute_integer_majorant": 975166703,
+            "lower": "-4188309096358821745/4294967296",
+            "upper": "850800006267235401/4294967296"
+          },
+          {
+            "absolute_integer_majorant": 29436680,
+            "lower": "-63214788328528801/2147483648",
+            "upper": "124036085393183/1073741824"
+          },
+          {
+            "absolute_integer_majorant": 667951,
+            "lower": "-6042166138089/2147483648",
+            "upper": "1434412210066445/2147483648"
+          }
+        ],
+        "value": {
+          "absolute_integer_majorant": 259,
+          "lower": "4154093/1073741824",
+          "upper": "1110022102969/4294967296"
+        }
+      },
+      "N_g": {
+        "partials_epsilon_z_R": [
+          {
+            "absolute_integer_majorant": 116373,
+            "lower": "-249908139118781/2147483648",
+            "upper": "50500709654449/2147483648"
+          },
+          {
+            "absolute_integer_majorant": 3516,
+            "lower": "-15099252156933/4294967296",
+            "upper": "420846625/2147483648"
+          },
+          {
+            "absolute_integer_majorant": 80,
+            "lower": "-117530623/4294967296",
+            "upper": "85654512545/1073741824"
+          }
+        ],
+        "value": {
+          "absolute_integer_majorant": 1,
+          "lower": "0",
+          "upper": "66283965/2147483648"
+        }
+      },
+      "Rprime": {
+        "partials_epsilon_z_R": [
+          {
+            "absolute_integer_majorant": 350559,
+            "lower": "-740024912374983/4294967296",
+            "upper": "376409816963429/1073741824"
+          },
+          {
+            "absolute_integer_majorant": 3994,
+            "lower": "-1885978482193/4294967296",
+            "upper": "2143862217743/536870912"
+          },
+          {
+            "absolute_integer_majorant": 22379,
+            "lower": "-4393027120591/1073741824",
+            "upper": "24028353491853/1073741824"
+          }
+        ],
+        "value": {
+          "absolute_integer_majorant": 2237,
+          "lower": "-2401690697677/1073741824",
+          "upper": "1070012135745/4294967296"
+        }
+      },
+      "V_f": {
+        "partials_epsilon_z_R": [
+          {
+            "absolute_integer_majorant": 15276175,
+            "lower": "-65610667761845883/4294967296",
+            "upper": "6658403468306181/2147483648"
+          },
+          {
+            "absolute_integer_majorant": 460754,
+            "lower": "-1978921098108251/4294967296",
+            "upper": "1939162537361/1073741824"
+          },
+          {
+            "absolute_integer_majorant": 10455,
+            "lower": "-188940018219/4294967296",
+            "upper": "44903858950419/4294967296"
+          }
+        ],
+        "value": {
+          "absolute_integer_majorant": 5,
+          "lower": "64829/4294967296",
+          "upper": "8676817967/2147483648"
+        }
+      },
+      "V_g": {
+        "partials_epsilon_z_R": [
+          {
+            "absolute_integer_majorant": 218760095,
+            "lower": "-939567451185130855/4294967296",
+            "upper": "93610169059851907/2147483648"
+          },
+          {
+            "absolute_integer_majorant": 6603229,
+            "lower": "-28360651652430487/4294967296",
+            "upper": "1601637066209/4294967296"
+          },
+          {
+            "absolute_integer_majorant": 149835,
+            "lower": "-220755587747/4294967296",
+            "upper": "643533127870535/4294967296"
+          }
+        ],
+        "value": {
+          "absolute_integer_majorant": 58,
+          "lower": "416881/4294967296",
+          "upper": "62175360193/1073741824"
+        }
+      },
+      "V_lock": {
+        "partials_epsilon_z_R": [
+          {
+            "absolute_integer_majorant": 15276177,
+            "lower": "-65610677168529943/4294967296",
+            "upper": "13316808860749851/4294967296"
+          },
+          {
+            "absolute_integer_majorant": 460754,
+            "lower": "-1978921382047089/4294967296",
+            "upper": "969581270685/536870912"
+          },
+          {
+            "absolute_integer_majorant": 10455,
+            "lower": "-94470010215/2147483648",
+            "upper": "44903865393291/4294967296"
+          }
+        ],
+        "value": {
+          "absolute_integer_majorant": 5,
+          "lower": "64829/4294967296",
+          "upper": "2169204803/536870912"
+        }
+      },
+      "W": {
+        "partials_epsilon_z_R": [
+          {
+            "absolute_integer_majorant": 127695063222,
+            "lower": "-111260012555413530133/4294967296",
+            "upper": "548446120399112066917/4294967296"
+          },
+          {
+            "absolute_integer_majorant": 3841705387,
+            "lower": "-227914296310604925/536870912",
+            "upper": "8249999497631268935/2147483648"
+          },
+          {
+            "absolute_integer_majorant": 87172386,
+            "lower": "-374402545759309975/4294967296",
+            "upper": "41372356151792389/4294967296"
+          }
+        ],
+        "value": {
+          "absolute_integer_majorant": 33568,
+          "lower": "-144172697698853/4294967296",
+          "upper": "15314911554413/4294967296"
+        }
+      },
+      "X_bar": {
+        "partials_epsilon_z_R": [
+          {
+            "absolute_integer_majorant": 49,
+            "lower": "-25527273475/4294967296",
+            "upper": "6446281179/134217728"
+          },
+          {
+            "absolute_integer_majorant": 1,
+            "lower": "-26591/536870912",
+            "upper": "859505/2147483648"
+          },
+          {
+            "absolute_integer_majorant": 1,
+            "lower": "0",
+            "upper": "15471085/4294967296"
+          }
+        ],
+        "value": {
+          "absolute_integer_majorant": 2,
+          "lower": "4292415325/4294967296",
+          "upper": "2157766955/2147483648"
+        }
+      },
+      "e": {
+        "partials_epsilon_z_R": [
+          {
+            "absolute_integer_majorant": 12,
+            "lower": "1/2",
+            "upper": "12"
+          },
+          {
+            "absolute_integer_majorant": 1,
+            "lower": "0",
+            "upper": "429497/4294967296"
+          },
+          {
+            "absolute_integer_majorant": 0,
+            "lower": "0",
+            "upper": "0"
+          }
+        ],
+        "value": {
+          "absolute_integer_majorant": 1,
+          "lower": "0",
+          "upper": "1288491/1073741824"
+        }
+      },
+      "eta": {
+        "partials_epsilon_z_R": [
+          {
+            "absolute_integer_majorant": 867,
+            "lower": "-464970392157/536870912",
+            "upper": "115080172085/1073741824"
+          },
+          {
+            "absolute_integer_majorant": 1,
+            "lower": "-968691/134217728",
+            "upper": "3836017/4294967296"
+          },
+          {
+            "absolute_integer_majorant": 18,
+            "lower": "2567725459/4294967296",
+            "upper": "18"
+          }
+        ],
+        "value": {
+          "absolute_integer_majorant": 24,
+          "lower": "-1594506609/536870912",
+          "upper": "24"
+        }
+      },
+      "initial_root": {
+        "partials_epsilon_z_R": [
+          {
+            "absolute_integer_majorant": 3,
+            "lower": "2415647331/1073741824",
+            "upper": "4832804625/2147483648"
+          },
+          {
+            "absolute_integer_majorant": 0,
+            "lower": "0",
+            "upper": "0"
+          },
+          {
+            "absolute_integer_majorant": 0,
+            "lower": "0",
+            "upper": "0"
+          }
+        ],
+        "value": {
+          "absolute_integer_majorant": 3,
+          "lower": "2",
+          "upper": "8590901003/4294967296"
+        }
+      },
+      "j": {
+        "partials_epsilon_z_R": [
+          {
+            "absolute_integer_majorant": 1452,
+            "lower": "-1452",
+            "upper": "0"
+          },
+          {
+            "absolute_integer_majorant": 45,
+            "lower": "-47257632543/1073741824",
+            "upper": "0"
+          },
+          {
+            "absolute_integer_majorant": 0,
+            "lower": "0",
+            "upper": "0"
+          }
+        ],
+        "value": {
+          "absolute_integer_majorant": 22,
+          "lower": "0",
+          "upper": "22"
+        }
+      },
+      "kappa": {
+        "partials_epsilon_z_R": [
+          {
+            "absolute_integer_majorant": 146569,
+            "lower": "-490434745665/16777216",
+            "upper": "629505199956273/4294967296"
+          },
+          {
+            "absolute_integer_majorant": 4429,
+            "lower": "-1046261471/4294967296",
+            "upper": "19018651638049/4294967296"
+          },
+          {
+            "absolute_integer_majorant": 101,
+            "lower": "-431553392227/4294967296",
+            "upper": "148038723/4294967296"
+          }
+        ],
+        "value": {
+          "absolute_integer_majorant": 11,
+          "lower": "166979351/4294967296",
+          "upper": "21577669581/2147483648"
+        }
+      },
+      "lambda": {
+        "partials_epsilon_z_R": [
+          {
+            "absolute_integer_majorant": 3729,
+            "lower": "-7099103520787/4294967296",
+            "upper": "8006035386305/2147483648"
+          },
+          {
+            "absolute_integer_majorant": 45,
+            "lower": "-60022207/4294967296",
+            "upper": "190357815255/4294967296"
+          },
+          {
+            "absolute_integer_majorant": 2,
+            "lower": "-4710752835/4294967296",
+            "upper": "-1868619395/2147483648"
+          }
+        ],
+        "value": {
+          "absolute_integer_majorant": 26,
+          "lower": "-108082033733/4294967296",
+          "upper": "-425265975/4294967296"
+        }
+      },
+      "lapse_denominator": {
+        "partials_epsilon_z_R": [
+          {
+            "absolute_integer_majorant": 1454,
+            "lower": "-390236004345/268435456",
+            "upper": "264"
+          },
+          {
+            "absolute_integer_majorant": 45,
+            "lower": "-23657170869/536870912",
+            "upper": "4724467/2147483648"
+          },
+          {
+            "absolute_integer_majorant": 1,
+            "lower": "1",
+            "upper": "1"
+          }
+        ],
+        "value": {
+          "absolute_integer_majorant": 26,
+          "lower": "429496729/4294967296",
+          "upper": "13435946201/536870912"
+        }
+      },
+      "lapse_numerator": {
+        "partials_epsilon_z_R": [
+          {
+            "absolute_integer_majorant": 271,
+            "lower": "-1162119932611/4294967296",
+            "upper": "213773533729/4294967296"
+          },
+          {
+            "absolute_integer_majorant": 1,
+            "lower": "-2421085/1073741824",
+            "upper": "228827995/4294967296"
+          },
+          {
+            "absolute_integer_majorant": 1,
+            "lower": "0",
+            "upper": "15471085/4294967296"
+          }
+        ],
+        "value": {
+          "absolute_integer_majorant": 2,
+          "lower": "1044723013/1073741824",
+          "upper": "2157766955/2147483648"
+        }
+      },
+      "null_over_e": {
+        "partials_epsilon_z_R": [
+          {
+            "absolute_integer_majorant": 321,
+            "lower": "-183238563939/2147483648",
+            "upper": "1376637076845/4294967296"
+          },
+          {
+            "absolute_integer_majorant": 1,
+            "lower": "-3054521/4294967296",
+            "upper": "11596419/4294967296"
+          },
+          {
+            "absolute_integer_majorant": 1,
+            "lower": "0",
+            "upper": "11596419/536870912"
+          }
+        ],
+        "value": {
+          "absolute_integer_majorant": 3,
+          "lower": "8553949421/4294967296",
+          "upper": "2182272905/1073741824"
+        }
+      },
+      "output_f": {
+        "partials_epsilon_z_R": [
+          {
+            "absolute_integer_majorant": 12,
+            "lower": "-12",
+            "upper": "-2142338945/4294967296"
+          },
+          {
+            "absolute_integer_majorant": 1,
+            "lower": "-429497/4294967296",
+            "upper": "0"
+          },
+          {
+            "absolute_integer_majorant": 0,
+            "lower": "0",
+            "upper": "0"
+          }
+        ],
+        "value": {
+          "absolute_integer_majorant": 1,
+          "lower": "4289819509/4294967296",
+          "upper": "1"
+        }
+      },
+      "output_g": {
+        "partials_epsilon_z_R": [
+          {
+            "absolute_integer_majorant": 144,
+            "lower": "-144",
+            "upper": "-16737023/67108864"
+          },
+          {
+            "absolute_integer_majorant": 1,
+            "lower": "4284665545/4294967296",
+            "upper": "1"
+          },
+          {
+            "absolute_integer_majorant": 0,
+            "lower": "0",
+            "upper": "0"
+          }
+        ],
+        "value": {
+          "absolute_integer_majorant": 12,
+          "lower": "1072454877/2147483648",
+          "upper": "12"
+        }
+      },
+      "root_denominator": {
+        "partials_epsilon_z_R": [
+          {
+            "absolute_integer_majorant": 85,
+            "lower": "-25312525111/4294967296",
+            "upper": "11278119387/134217728"
+          },
+          {
+            "absolute_integer_majorant": 1,
+            "lower": "-26591/536870912",
+            "upper": "3007501/4294967296"
+          },
+          {
+            "absolute_integer_majorant": 1,
+            "lower": "0",
+            "upper": "20625049/4294967296"
+          }
+        ],
+        "value": {
+          "absolute_integer_majorant": 2,
+          "lower": "4292415325/4294967296",
+          "upper": "2165497901/2147483648"
+        }
+      },
+      "zprime": {
+        "partials_epsilon_z_R": [
+          {
+            "absolute_integer_majorant": 44738,
+            "lower": "-24018106158915/536870912",
+            "upper": "21297310562361/1073741824"
+          },
+          {
+            "absolute_integer_majorant": 532,
+            "lower": "-2283868517085/4294967296",
+            "upper": "108802300217/4294967296"
+          },
+          {
+            "absolute_integer_majorant": 14,
+            "lower": "1868619395/4294967296",
+            "upper": "14132258505/1073741824"
+          }
+        ],
+        "value": {
+          "absolute_integer_majorant": 302,
+          "lower": "212632987/4294967296",
+          "upper": "324246101199/1073741824"
+        }
+      }
+    },
+    "rounding": "Exact Fraction operations rounded OUTWARD after each operation to 32 binary places; integer-isqrt radical enclosure",
+    "sigma_amplitude_range": {
+      "inclusive_lower": "0",
+      "inclusive_upper": "2^(-67162)",
+      "negative_binary_exponent": 67162
+    }
+  },
+  "physical_probe": {
+    "action_divided_by_m_source": "Jbar=J_u/m=M\u00b2 epsilon sigma p/4",
+    "background_conservation": "Time divergence is proportional to spatial trace and spatial divergence to ki eij; both vanish for arbitrary C1 Pi(T)",
+    "literal_u_action_source": "J_u=m M\u00b2 epsilon sigma p/4",
+    "physical_stress": "Pi=-2m J_u/Ae\u00b3=-M\u00b2m\u00b2 epsilon sigma p/(2Ae\u00b3)",
+    "polarization": "One real TT polarization eij eij=1, eii=0, ki eij=0; both polarizations obey identical equations",
+    "pulse": "p(u)=u\u00b2(1-u)\u00b2 on [0,1], extended by zero, C1",
+    "scope": "External infinitesimal conserved probe, not supplied by the internal scalar background; no microscopic probe or temporal-bandlimit claim",
+    "stress_convention": "delta Sprobe=(1/2) integral sqrt|g_eff| T^ij delta g_eff,ij; T^ij=Pi eij/Ae\u00b2,T^0mu=0,delta g_eff,ij=-Ae\u00b2Gamma eij"
+  },
+  "prepared_source_free_positive_control": {
+    "data": "p=0; h_g=h_f=epsilon*sigma*l0 and equal u derivatives epsilon*sigma*v0, |l0|,|v0|<=1; exact H0=Hprime0=0",
+    "finite_error": "|R_epsilon-L_epsilon|<=2^187104*epsilon<1/600 under the same parameter gate",
+    "full_initial_flux": "(epsilon*l0,epsilon*Ag*v0,l0,Af*v0,l0,C_lock*v0)",
+    "limit": "g=0,f=L and both physical outputs agree",
+    "scope": "Prepared source-free light data, not universal matching under arbitrary physical sources or relative initial data"
+  },
+  "prior_S6_10_composite_asymptotics_sha256": "bfb0b74a2d50a508a5e5fc346b59a31958c9f9a8ccfad621d4caa34883e90eef",
+  "schema": 1,
+  "source_audit": "notes/sources.md",
+  "source_band_initial_data_and_omission_controls": {
+    "finite_family_initial_R_parameter_derivative": "9/4",
+    "larger_band_cannot_use_positive_kernel_bound": "-121/76",
+    "limiting_retarded_physical_kernel_initial_derivative": "3",
+    "locked_kernel_initial_derivative": "1",
+    "missing_locked_kinetic_at_epsilon_1_over_10000_R1": "1/100020001",
+    "omitted_relative_source_output_contribution": "2",
+    "opposite_source_pulse_linear_moment": "-1/60",
+    "wrong_constant_initial_R_changes_eta_derivative": "-27",
+    "zero_source_zero_data_response": "0"
+  },
+  "source_sha256": {
+    "FORMULATION.md": "700242ef121b7fb6e3d85b191f9c741dc3fda0ddf5011a42e18e172a8932a8c0",
+    "README.md": "b262246f8e3e44da9686283600fdfda4edf3ef15ab818ba0efff55a03e03e762",
+    "notes/proof.md": "beb682cf94978b15647ed57f2d14a1fb5185313cf39d13874b76513d895ed511",
+    "notes/sources.md": "6f7499179acceca1f032fb8d268e552152d666230c1fc022f0a363884825b7cc",
+    "src/p8_composite_response/__init__.py": "120cc31560c2c41d5e1f47c1fb2d0f0e953c3a7813d48a8fa6231da38f576ee0",
+    "src/p8_composite_response/bounds.py": "7822de10ffceb20f35de1ca5e7fc17737202769a48d8d6253c25b44198acaed0",
+    "src/p8_composite_response/independent.py": "7b06a15436d2991ca06213e022ec585e5248634fa689b868b1a75ca3ede00425",
+    "src/p8_composite_response/intervals.py": "b5e4c92777d7a13b0f0f26d005098c974fe5ab93ee8797050e58560c2a1975a1",
+    "src/p8_composite_response/model.py": "55adf2414f1e2e19f8f74ab52888351c1201577e88626fb7de65dd492528b9cf",
+    "src/p8_composite_response/response.py": "2c1eeabe20a7a468fb7ad9b8877f42630b721bd1a7372ea3fea46e780bf93330",
+    "src/p8_composite_response/verify.py": "4e85aa504177abc967e872e0f0452998f592a469e9748b4d115043f519d75251",
+    "tests/conftest.py": "ed271ee3f88fc51151269e8b091d0d0a4ca32837349715e8b7c74737c0c94345",
+    "tests/test_composite_response.py": "07af718af9df2afd100768ddc621c3e066d7ebf1fcb88a52d3950571174e16a3",
+    "tests/test_composite_response_certificate.py": "5e4fafa1b1f8d5d7e324d3e67e8358d7face36b55b83c8c00f66fc42a4cf53c3",
+    "tests/test_composite_response_covariant_audit.py": "4ece3002d895079218b5c2d8162dfddb194584be9f0b99d31e96e45721bd6afa",
+    "tests/test_composite_response_intervals.py": "25e87ab117cd563e4734bf3ba2cc4e4371b209dbc7f9684e4acb163109b92f1c"
+  },
+  "status": "EXPLICIT_FINITE_PARAMETER_PHYSICAL_TT_SOURCE_RESPONSE_SCREEN_FOR_LOCKED_ACTION; GENERAL_MATCHING_AND_P8_OPEN",
+  "verification_boundary": "Written continuation/Volterra/Gronwall proof, exact symbolic and separate Fraction algebra, outward interval AD and source-hashed immutable replay; not proof-assistant formalized",
+  "written_proof": "notes/proof.md"
+}

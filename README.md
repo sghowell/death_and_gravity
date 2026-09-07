@@ -97,6 +97,14 @@ around a pre-registered problems document and a certificate-gated ledger.
   restriction. Its source-complete focusing dictionary is conditional;
   it does not remove the initial pointwise premise or certify cosmological
   incompleteness. No scalar field or renormalization choice was replaced.
+  The subsequent [photon-QSEI contraction-history theorem](problems/P8/a/fields/maxwell/focusing/README.md)
+  now removes the initial pointwise SEC premise. In a stipulated global
+  flat-FLRW spacetime, a quantified short contraction history and relative
+  future curvature bounds imply timelike incompleteness when the explicit
+  quantum/source margin is nonnegative. Its rational constants admit
+  macroscopic scales. The geometric hypotheses are not inferred from the
+  QSEI or observations; a smooth complete comparison metric shows that
+  geometry alone does not imply the result.
 - P8(b): [completed scoped classification and verification commands](problems/P8/README.md).
   All 32 M0/M1 sector-row verdicts are decided: minimal optional groups are
   C or D without extra matter, and CD with rolling canonical matter.
@@ -206,8 +214,16 @@ around a pre-registered problems document and a certificate-gated ledger.
   perturbations small makes their absolute composite amplitude vanish.
   No finite-amplitude, finite-band, growing-window or general UV verdict
   follows from this normalized response theorem.
+  The [finite-parameter physical tensor-source test](problems/P8/s6/matching/composite/perturbations/cones/matching/asymptotics/response/README.md)
+  now controls an external conserved TT pulse on a fixed nonzero spatial
+  momentum band. For an explicit, very conservative positive-parameter
+  range, the specified locked-action response misses at least one third
+  of the source-normalized full response. Both individual metric amplitudes
+  can remain uniformly small, while prepared source-free light data give
+  a positive control. This excludes the stated response contract, not all
+  light-only theories, other parents, or UV-compatible bounce rows.
 
-The [current P8 continuation audit](docs/assessment-2026-09-06-p8-maxwell-asymptotic-response.md) separates
+The [current P8 continuation audit](docs/assessment-2026-09-06-p8-photon-focusing-finite-response.md) separates
 completed certificate gates from the outstanding original research questions.
 P8 is not marked finished or closed.
 
