@@ -380,8 +380,15 @@ around a pre-registered problems document and a certificate-gated ledger.
   The [route verdicts](docs/assessment-2026-09-07-p8-matching-route-verdicts.md)
   exclude two precisely bounded reduction strategies, not all two-metric
   parents or parameter-dependent phase-retaining descriptions.
+  A different [exact auxiliary connection lift](problems/P8/s6/matching/affine/README.md)
+  now reproduces the complete original CD/M1 action, including the
+  off-trajectory scalar terms, without changing its physical metric or
+  free matter. All 60 non-gauge connection components are eliminated with
+  a uniform inverse bound on the target tube. This removes the retained
+  two-metric coefficient mismatch but is not a propagating UV parent;
+  a kinetic extension still needs its own full constraint analysis.
 
-The [current P8 continuation audit](docs/assessment-2026-09-07-p8-exact-own-metric.md) separates
+The [current P8 continuation audit](docs/assessment-2026-09-07-p8-affine-cd-lift.md) separates
 the completed scoped P8(a) objective and certificate gates from the
 outstanding P8(b) UV-matching and positivity questions.
 P8 is not marked finished or closed.
