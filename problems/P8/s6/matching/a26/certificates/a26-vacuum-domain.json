@@ -1,0 +1,266 @@
+{
+  "checked_omission_controls": {
+    "A5_pole_small_field_order": 4,
+    "degenerate_F2_not_classified": true,
+    "generic_Euler_outputs": [
+      "2",
+      "1/2",
+      "16/9"
+    ],
+    "homogeneous_Euler": "0",
+    "invalid_inputs_rejected": 8,
+    "nonadditivity": "-13/18",
+    "printed_A4_regular_difference_not_dropped": true,
+    "r_zero_generic_verdict": false,
+    "regularity_is_physical_instability": false,
+    "source_cancellation_checked_before_regularity_claim": true
+  },
+  "claim": "P8-S6.19.A26",
+  "date": "2026-09-06",
+  "exact_residuals": {
+    "complete_coefficients_and_analytic_numerator": {
+      "Ia_A3_residue": "0",
+      "Ia_A4_residue": "0",
+      "Ia_A5_residue": "0",
+      "Z_at_zero": "0",
+      "Z_nonzero_derivative": "0",
+      "difference_has_no_pole": "0",
+      "h_at_zero": "0",
+      "h_slope": "0",
+      "printed_A3_residue": "0",
+      "printed_A4_residue": "0",
+      "printed_A5_residue": "0",
+      "printed_parenthesis_regular_difference": "0",
+      "removable_a1_over_g1": "0",
+      "removable_r_over_g1": "0",
+      "scale_at_zero": "0"
+    },
+    "complete_reconstructed_source_cancellation": {
+      "all_Q_terms_cancel_on_reconstructed_trajectory": "0",
+      "chosen_b_spectral_dictionary": "0",
+      "chosen_fractional_exponent": "0",
+      "constant_B_W2_control": "0",
+      "exact_entropy_shift": "0",
+      "finite_regular_Q2": "0",
+      "linear_source_vanishes_on_clock_background": "0",
+      "one_IBP_full_linear_source": "0"
+    },
+    "full_symmetric_H_Euler_and_nonzero_bulk": {
+      "additivity_defect": "0",
+      "bulk_cubic_spatial_average": "0",
+      "bulk_quadratic_is_a_time_boundary": "0",
+      "bulk_quartic_raw": "0",
+      "bulk_quartic_time_IBP": "0",
+      "full_third_jet_divergence": "0",
+      "generic_diagonal_euler": "0",
+      "gradient_of_X_current": "0",
+      "quadratic_boundary_chain_rule": "0",
+      "rank_one_homogeneous_control": "0",
+      "unit_diagonal": "0"
+    }
+  },
+  "formulation": "FORMULATION.md",
+  "independent_Fraction_replay": {
+    "Fourier_moments": {
+      "g2_grad2": "3/4",
+      "g2_lap_hess": "1",
+      "g4": "9/4",
+      "grad2_lap_hess": "0",
+      "grad4": "5/4"
+    },
+    "Laurent_fixtures": [
+      {
+        "a": "1/7",
+        "g": "1/5",
+        "printed_A4": false,
+        "residues": [
+          "9/35",
+          "-9/35",
+          "-27/245"
+        ]
+      },
+      {
+        "a": "1/7",
+        "g": "1/5",
+        "printed_A4": true,
+        "residues": [
+          "9/35",
+          "-9/35",
+          "-27/245"
+        ]
+      },
+      {
+        "a": "3",
+        "g": "2/3",
+        "printed_A4": false,
+        "residues": [
+          "-5/3",
+          "5/3",
+          "25/3"
+        ]
+      },
+      {
+        "a": "3",
+        "g": "2/3",
+        "printed_A4": true,
+        "residues": [
+          "-5/3",
+          "5/3",
+          "25/3"
+        ]
+      },
+      {
+        "a": "2/5",
+        "g": "1/5",
+        "printed_A4": false,
+        "residues": [
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "a": "2/5",
+        "g": "1/5",
+        "printed_A4": true,
+        "residues": [
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "a": "-2",
+        "g": "0",
+        "printed_A4": false,
+        "residues": [
+          "2",
+          "-2",
+          "-4"
+        ]
+      },
+      {
+        "a": "-2",
+        "g": "0",
+        "printed_A4": true,
+        "residues": [
+          "2",
+          "-2",
+          "-4"
+        ]
+      },
+      {
+        "a": "7/11",
+        "g": "-3/4",
+        "printed_A4": false,
+        "residues": [
+          "-47/22",
+          "47/22",
+          "-2209/1210"
+        ]
+      },
+      {
+        "a": "7/11",
+        "g": "-3/4",
+        "printed_A4": true,
+        "residues": [
+          "-47/22",
+          "47/22",
+          "-2209/1210"
+        ]
+      }
+    ],
+    "analytic_background": {
+      "Zprime": "-1/20",
+      "a1_over_g1": "107/52",
+      "hprime": "13/60",
+      "r_over_g1": "-3/52"
+    },
+    "bulk_after_IBP": {
+      "fourth_difference": "24",
+      "int_T2_Tp2": "-1/2",
+      "int_Tp4": "0"
+    }
+  },
+  "literal_domain": {
+    "coefficient_values": "a=a1(phi0),g=g1(phi0),f=1/2-g!=0,r=2g-a!=0 at a defined finite coefficient point",
+    "primary_version": "arXiv:2606.03302v1, 2 June 2026; HTML equations (1)-(4),(17),(19),(23)-(24),(28),(31)",
+    "printed_A4": "Literal printed parentheses are default; earlier-Ia comparison differs by 3F2(1-A1^2)/(2(F2-XA1)^2), regular here",
+    "regular_source_points": "Generic phi!=0 points give ordinary lower-derivative Taylor terms; no such expansion is silently assumed for the literal nonsmooth potential at phi=0",
+    "restriction": "Fixed Minkowski metric; phi=phi0+epsilon psi with timelike dpsi on a compact local domain",
+    "signature": "(-,+,+,+); X=(partial phi)^2 without 1/2; rolling source clock X=-1; constant clock X=0"
+  },
+  "not_established": [
+    "A physical ghost, gradient instability, tachyon or failure of the source's rolling X=-1 perturbative calculation",
+    "Absence of every isolated formal stationary point, or the next-order result at an isolated r=0 point",
+    "A UV no-completion theorem for a separately named smooth off-tube repair, higher operators or common parent",
+    "Equivalence of interacting source chi to frozen canonical free M1",
+    "A common-parent V/G/B certificate, quartic scattering reconstruction, finite-gravity Regge/IR or loop bound",
+    "Global field-space analyticity of an unknown parent, or a universal DHOST/bounce exclusion",
+    "Closure of S6, P8(b), or P8"
+  ],
+  "primary_independent_bridges": {
+    "Laurent_fixtures_checked": 10,
+    "direct_quartic_minus_Fraction_log_IBP": "0",
+    "fourth_finite_difference_multiplier": "24"
+  },
+  "primary_sources": [
+    "https://arxiv.org/html/2606.03302v1",
+    "https://arxiv.org/html/2501.09985v2"
+  ],
+  "prior_context_sha256": {
+    "S6_1_smooth_extension_context": "6a7ab2a7bf6719d3829795779a876dab0694a5b99383726c14f0880515d2d7d4",
+    "adopted_S6_contract": "d00df35d5821b05baa61e897725a22ed1ac21d0536b74bdaece3ab0093215901"
+  },
+  "schema": 1,
+  "source_audit": "notes/sources.md",
+  "source_regularity": {
+    "Q": "C2 not C3 at phi0=0; second derivative Holder exponent9/250",
+    "W2": "C1 not C2 for the stated B'(0)>0 example; W2 itself finite",
+    "absolute_power": "509/250",
+    "b": "9/500",
+    "b_choice": "Explicit audit choice, not a printed numerical b; source Eq21 gives n_s=24/25 for epsilon_background=10",
+    "background_control": "xi=chi-B(phi); linear source zero at X=-1,Boxphi=-3H; constant B gives W2=0",
+    "entropy_IBP": "-Q(partial xi)^2-W2 xi^2+2xi[(Q'B'+QB'')(X+1)+QB'(Boxphi+3H)]",
+    "full_source": "Q[X B'^2-(partial chi)^2]+W2(B^2-chi^2); zero identically for chi=B(phi)",
+    "scope": "Literal-coordinate coefficient differentiability only, not a reduced instability verdict; chi=B(phi) supplies an explicit full-action restricted countercheck at phi0=0,chi0=B(0)"
+  },
+  "source_sha256": {
+    "FORMULATION.md": "f312057a88d72af0054774edc2c0bc370ed289145bf8afb9c65b0874262e5849",
+    "README.md": "6014c87dc3e23b63666cc7f1fba92f8cd9c2dcbf7036ab618ed998f826cb2a34",
+    "notes/proof.md": "d81e619d63f2d8cf90871aab60f5be4f347ae5f298e2930c4d778471edb325b6",
+    "notes/sources.md": "4e9dcdf07049c0a5583c1d409d4a0c3c787318fe1cd4b13f6968b28ff21286ab",
+    "src/p8_a26_vacuum/__init__.py": "351d8541b3577bc8e3fdb50476ce631dbbc569e1a1b482c1f00fb192f255af28",
+    "src/p8_a26_vacuum/coefficients.py": "9fcb18591868ac89603ccb144b54d3a7bb97c18eeeca7583c8d4e6c2ff0f72f6",
+    "src/p8_a26_vacuum/independent.py": "4d2afe772c34e0d554bde5fc2eb54b89a0a391899048a2922c9da23e3bae4cbe",
+    "src/p8_a26_vacuum/jets.py": "bab4f7d76e69e6e4661e8809008fd50200742485ee55509d7bde73f5f86d2b25",
+    "src/p8_a26_vacuum/regularity.py": "072fe84acc1c4f620800eb974e6d0d0ac1e988ec690a6f5f16bcf95c008dc89c",
+    "src/p8_a26_vacuum/verify.py": "fcffd56ba2ebda7b4fb6d79a14f1f04f2980902dd86ab2b05fec614c362ecdf5",
+    "tests/conftest.py": "ed271ee3f88fc51151269e8b091d0d0a4ca32837349715e8b7c74737c0c94345",
+    "tests/test_a26_coefficients.py": "665ae9714e632e82f563cf2dcf5484fd7f34ec0b665d272568c40cfd406c2f9e",
+    "tests/test_a26_independent_audit.py": "920b0410096eef2f9a687e2840cb0efdbe15acf170582d372176745b83f08611",
+    "tests/test_a26_jets.py": "e2fa66ba20a110736d1adafdeac4b89f27e6d623378fab76f92435ddb5668257",
+    "tests/test_a26_regularity.py": "69843b10daf7411baa21a85f7fe8279ccba51706400e858188404f543169bb47",
+    "tests/test_a26_report.py": "a3800934823843dad310859e2a88ac3a214e3f4417e67728feeddf5a6f7e0f93"
+  },
+  "status": "LITERAL_A26_GENERIC_CONSTANT_CLOCK_NONQUADRATIC_DOMAIN; MODIFIED_MATCHING_AND_P8_B_OPEN",
+  "theorem": {
+    "Euler_counterexample": "E(psi1)=2,E(psi2)=1/2,E(psi1+psi2)=16/9; defect=-13/18",
+    "Laurent_residues_A3_A4_A5": [
+      "r",
+      "-r",
+      "-r^2/(2f)"
+    ],
+    "boundary_invariant_identity": "L=div(log|X| J)/2-log|X|*((Boxpsi)^2-Hesspsi^2)/2",
+    "bulk_counterexample": "psi=t+l*T(t)*(cos x+cos y); nonzero compact-time T; integrated l^4 coefficient=-int T^2*T'^2/2<0",
+    "extension_excluded": "A smooth full action agreeing with the literal action at nonzero X near0 on an open finite-phi neighborhood, even modulo boundary terms",
+    "fourth_difference": "Weights (1,1,-4,-4,6) at k=(2,-2,1,-1,0); quartic multiplier24, identical boundary jets",
+    "full_diagonal_Euler": "-2*d0*d1*d2/X, after all six symmetric-H derivatives; embedded 2+1 slice in flat 4D",
+    "interpretation": "No bilinear derivative-sector vacuum Hessian for generic r!=0; regular lower-derivative terms cannot cancel it",
+    "isolated_points": "No claim of the same leading obstruction at r=0; no nondegenerate expansion or healthy Einstein vacuum verdict at f=0",
+    "open_phi_neighborhood": "Z=9(1+z^2)h-2[z^2 tanh(z+.1)+tanh z] is analytic with Z'(0)=-1/20; every open finite interval has regular f!=0,r!=0,phi!=0 points",
+    "small_field_limit": "epsilon^-2 sum_(i=3..5) Ai Li -> r (L3[psi]-L4[psi])/Xpsi; A5 first enters epsilon^4"
+  },
+  "verification_boundary": "Written variational/analytic argument plus exact symbolic, separate Fraction and independently authored audits; not proof-assistant formalized",
+  "written_proof": "notes/proof.md"
+}

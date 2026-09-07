@@ -284,8 +284,20 @@ around a pre-registered problems document and a certificate-gated ledger.
   lapses and moving matter onto the auxiliary coframe are not equivalent
   extensions of that result.
   These are named parent-class results, not universal DHOST or UV verdicts.
+  The [literal June-2026 vacuum-domain audit](problems/P8/s6/matching/a26/README.md)
+  now shows a generic nonquadratic constant-clock action limit, using full
+  variational and independent bulk calculations. It excludes an unchanged
+  smooth vacuum chart, not separately specified off-tube repairs or the
+  source's rolling perturbative calculation.
+  A new [variable-coupling parent](problems/P8/s6/matching/variable/README.md)
+  genuinely evades the constant-interaction locking identity and supplies
+  an actual local CD-shaped bounce with free canonical matter. Its full
+  moving-weight tensor operator has a nonadiabatic shrinking-layer limit:
+  a growing center mass does not alone establish controlled heavy-mode
+  elimination. Full scalar/vector health, physical sourced matching and
+  the vacuum/finite-gravity UV requirements remain separate open checks.
 
-The [current P8 continuation audit](docs/assessment-2026-09-06-p8-tree-and-determinant-parents.md) separates
+The [current P8 continuation audit](docs/assessment-2026-09-06-p8-vacuum-domain-and-variable-parent.md) separates
 the completed scoped P8(a) objective and certificate gates from the
 outstanding P8(b) UV-matching and positivity questions.
 P8 is not marked finished or closed.

@@ -1,0 +1,756 @@
+{
+  "action_and_physical_frame": {
+    "Einstein_terms": "-M\u00b2/2 integral(sqrt|g| R_B[g]+sqrt|f| R_B[f]); both constant positive Einstein coefficients M\u00b2",
+    "actual_matter_metric": "g, with actual proper clock dT=N_g dt; no implicit conformal or composite frame",
+    "beta_units": "beta_n(phi)=M\u00b2/tau\u00b2*b_n(u(phi/M),c); functions of the dynamical clock, never external beta(t)",
+    "interaction": "-2 integral sqrt|g| sum beta_n(phi) e_n(sqrt(g^-1 f)); positive diagonal FLRW root",
+    "optional_f_scalar": "An absent or constant free f scalar contributes no source; beta is independent of it",
+    "signature_curvature": "+---; R_B=-6(DH+2H\u00b2); 3M\u00b2 H\u00b2=rho; -2M\u00b2 DH=rho+p",
+    "two_literal_scalar_actions": "+1/2 integral sqrt|g|[(partial phi)\u00b2_g+(partial chi)\u00b2_g]; phi interaction-sourced, chi exactly free"
+  },
+  "actual_local_solution": {
+    "analytic_action": "Strict positive kbar plus denominator separation gives an analytic inverse clock and analytic beta_n(phi) on each fixed-c local range",
+    "domain": "M,tau>0; |u|<=1/10, u=T/tau; c=1 or any fixed 2<c<=4; no uniform bounded beta as c->2+",
+    "equations": "Both lapse equations, both null/spatial equations, phi and chi equations, and sourced undivided Bianchi hold exactly; remaining FLRW components vanish by symmetry",
+    "geometry": "N_g=1,N_f=c,a=(1+u\u00b2)\u00b2,b=2/(1+u\u00b2)\u00b2,y=2/(1+u\u00b2)^4,H_g=h/tau,H_f=-h/(c*tau),h=4u/(1+u\u00b2)",
+    "original_target_boundary": "Locally the same CD scale factor and free-chi trajectory, not the original DHOST clock/action/physical operator matching",
+    "positive_canonical_clocks": "nbar=2(y\u00b3/c-1)h'; chi_T=M/(10tau*a\u00b3); kbar=nbar-1/(100a^6); phi=M integral_0^u sqrt(kbar)dv",
+    "profiles": "b1=y\u00b3h'/[c(c-y)]; b2=b3=0; b4=3h\u00b2/(2c\u00b2)-b1/y\u00b3; b0=(3h\u00b2-nbar/2)/2-3b1*y",
+    "uniform_clock_bounds": "kbar>3599/100 for c=1; kbar>449/100 for 2<c<=4; bare clock positivity is not reduced coupled-scalar health"
+  },
+  "checked_controls": {
+    "finite_canonical_correction_limits": {
+      "correction_at_center_limit": "kbar**2 - 18/5",
+      "correction_second_at_center_limit": "-24*kbar**2/5 - 252/5"
+    },
+    "invalid_exact_domain_calls_rejected": 20,
+    "limiting_operator_omission_control": {
+      "limiting_algebraic_representative": "x**2/10 + 1/80",
+      "limiting_exact_particular": "x**2/12 + 1/96",
+      "omitted_derivative_residual": "1/5",
+      "particular_to_algebraic_ratio": "5/6",
+      "source_scope": "Limiting ODE constant forcing only; not a specified physical-metric source or retarded matching exclusion"
+    },
+    "literal_TT_shift_controls": {
+      "c1_center_f_tensor_speed_squared": "1/4",
+      "c1_center_shift_coefficient": "-128/3",
+      "c4_center_f_tensor_speed_squared": "4",
+      "c4_center_shift_coefficient": "8/3"
+    },
+    "source_aware_background_controls": {
+      "c1_center": {
+        "D_f_h_f": "-4",
+        "P": "-64",
+        "a": "1",
+        "b": "2",
+        "b0": "178",
+        "b1": "-32",
+        "b4": "4",
+        "chi_speed": "1/10",
+        "h": "0",
+        "h_f": "0",
+        "h_u": "4",
+        "kbar": "5599/100",
+        "nbar": "56",
+        "y": "2"
+      },
+      "c4_center": {
+        "D_f_h_f": "-1/4",
+        "P": "8",
+        "a": "1",
+        "b": "2",
+        "b0": "-26",
+        "b1": "4",
+        "b4": "-1/2",
+        "chi_speed": "1/10",
+        "h": "0",
+        "h_f": "0",
+        "h_u": "4",
+        "kbar": "799/100",
+        "nbar": "8",
+        "y": "2"
+      },
+      "constant_beta_tree_hypothesis": "NOT_SATISFIED; free chi conserved, interacting clock not separately conserved",
+      "omitted_clock_exchange_at_c1_u1over10": "23118320408832000000000000000000000000000/111382896029646556094505161631629288099"
+    }
+  },
+  "claim": "P8-S6.20.VARIABLE",
+  "complete_canonical_map": {
+    "actual_inverse": "gamma_g=l/fsum-w2*Q/fR; gamma_f=l/fsum+w1*Q/fR; retain this map for physical data/source comparisons",
+    "boundary": "-(theta_sum*l\u00b2+theta_relative*Q\u00b2)'/2",
+    "connections": "theta_i=f_i'/f_i,N_i=theta_i'+theta_i\u00b2,omega=w2'/(2sqrt(w1w2)); all primes d/du",
+    "coordinates": "l=fsum*(w1 gamma_g+w2 gamma_f),Q=fR*(gamma_f-gamma_g); restore both f by M; action in u has overall 1/tau",
+    "diagonals": "V_LL=qbar\u00b2*c_L\u00b2-N_sum; V_HH=mbar\u00b2+qbar\u00b2*c_H\u00b2-N_relative-4omega\u00b2",
+    "future_retarded_data": "A retarded inverse would give Q=Q_hom-G_R B l; no homogeneous-data or physical-source suppression supplied here",
+    "mixed_operators": "B=2omega partial_u-2omega theta_sum+qbar\u00b2D; B*=-2omega partial_u-2omega'-2omega theta_sum+qbar\u00b2D",
+    "weights_M_equals_one": "K1=a\u00b3/8,K2=b\u00b3/(8c),Ksum=K1+K2,KR=K1K2/Ksum,w_i=K_i/Ksum; fsum=sqrt(2Ksum),fR=sqrt(2KR)"
+  },
+  "date": "2026-09-06",
+  "exact_residuals": {
+    "actual_canonical_center_data": {
+      "Nrelative_center": "0",
+      "Nsum_center": "0",
+      "c4_light_cone_wider": "0",
+      "c4_positive_diagonal_not_a_rolling_gap": "0",
+      "locked_center_cone": "0",
+      "mass_center": "0",
+      "rotation_center_zero": "0",
+      "rotation_derivative_not_omitted": "0"
+    },
+    "actual_metric_and_canonical_scalar_solution": {
+      "actual_f_Hubble": "0",
+      "actual_g_Hubble": "0",
+      "canonical_g_null_sum": "0",
+      "clock_equation_times_strictly_positive_clock_speed": "0",
+      "f_lapse": "0",
+      "f_null": "0",
+      "free_chi_equation": "0",
+      "g_lapse": "0",
+      "g_null": "0",
+      "optional_constant_f_clock": "0",
+      "undivided_source_aware_Bianchi": "0"
+    },
+    "canonical_action_boundary_and_adjoint": {
+      "formal_adjoint_surface_term": "0",
+      "full_normalization_time_boundary": "0",
+      "heavy_equation_keeps_rotating_forcing": "0",
+      "light_equation_keeps_adjoint_connection": "0"
+    },
+    "canonical_and_optional_conformal_source_bookkeeping": {
+      "canonical_clock_is_sourced": "0",
+      "conformal_matter_exchange_cancels_locally": "0"
+    },
+    "exact_inner_equation_and_nonadiabatic_limits": {
+      "divergent_center_mass": "0",
+      "exact_mass_squared_variation_ratio": "0",
+      "inner_heavy_first_derivative_cross": "0",
+      "inner_heavy_potential": "0",
+      "inner_heavy_zero_order_cross": "0",
+      "inner_light_first_derivative_cross": "0",
+      "inner_light_potential": "0",
+      "inner_light_zero_order_cross": "0",
+      "locked_cone_excess_same_order": "0",
+      "nonvanishing_frequency_variation_limit": "0",
+      "nonvanishing_mass_squared_variation_limit": "0"
+    },
+    "exact_transverse_shift_elimination": {
+      "high_k_relative_kinetic_sign": "0",
+      "literal_two_shift_reduction": "0"
+    },
+    "full_moving_weight_normalization": {
+      "actual_relative_algebraic_mass": "0",
+      "actual_relative_normalization": "0",
+      "actual_rotating_weight": "0",
+      "actual_sum_normalization": "0",
+      "full_high_frequency_gradient_eigenvalues": "0",
+      "full_high_frequency_gradient_trace": "0",
+      "literal_weighted_kinetic_map": "0",
+      "locked_light_gradient": "0",
+      "positive_square_root_weights": "0"
+    },
+    "literal_TT_elementary_potential_and_shift": {
+      "beta1_actual_spring": "0",
+      "literal_TT_potential_norm_two": "0",
+      "literal_f_EH_inertia": "0",
+      "literal_g_EH_inertia": "0",
+      "literal_two_by_two_shift": "0",
+      "own_metric_scalar_TT_volume": "0",
+      "relative_algebraic_mass": "0"
+    },
+    "literal_source_aware_two_lapse_action": {
+      "combined_two_lapse_reciprocity": "0",
+      "literal_f_lapse_density": "0",
+      "literal_f_null": "0",
+      "literal_f_scalar_force": "0",
+      "literal_g_lapse_density": "0",
+      "literal_g_null": "0",
+      "literal_g_scalar_force": "0",
+      "source_aware_f_Bianchi": "0",
+      "source_aware_g_Bianchi": "0"
+    },
+    "literal_spatial_curvature_gradient": {
+      "literal_spatial_TT_gradient": "0"
+    }
+  },
+  "formulation": "FORMULATION.md",
+  "independent_Fraction_replay": {
+    "actual_background_Fraction_fixtures": [
+      {
+        "actual_Euler_residuals": {
+          "chi": "0",
+          "clock_times_speed": "0",
+          "f_lapse": "0",
+          "f_null": "0",
+          "g_lapse": "0",
+          "g_null": "0",
+          "sourced_Bianchi": "0"
+        },
+        "c": "1",
+        "u": "0",
+        "values": {
+          "D_f_h_f": "-4",
+          "P": "-64",
+          "a": "1",
+          "b": "2",
+          "b0": "178",
+          "b1": "-32",
+          "b4": "4",
+          "chi_speed": "1/10",
+          "h": "0",
+          "h_f": "0",
+          "h_u": "4",
+          "kbar": "5599/100",
+          "nbar": "56",
+          "y": "2"
+        }
+      },
+      {
+        "actual_Euler_residuals": {
+          "chi": "0",
+          "clock_times_speed": "0",
+          "f_lapse": "0",
+          "f_null": "0",
+          "g_lapse": "0",
+          "g_null": "0",
+          "sourced_Bianchi": "0"
+        },
+        "c": "1",
+        "u": "1/10",
+        "values": {
+          "D_f_h_f": "-39600/10201",
+          "P": "-633600000000000000000000000000/10597700375847867079735088599",
+          "a": "10201/10000",
+          "b": "20000/10201",
+          "b0": "177283146060455334844184383581324457800/1102800950788579763311932293382468199",
+          "b1": "-316800000000000000000000000000/10597700375847867079735088599",
+          "b4": "4351046917200/978679849399",
+          "chi_speed": "100000000000/1061520150601",
+          "h": "40/101",
+          "h_f": "-40/101",
+          "h_u": "39600/10201",
+          "kbar": "544253447613547998123632880800/11494742132376223120464911401",
+          "nbar": "544355457613547998123632880800/11494742132376223120464911401",
+          "y": "200000000/104060401"
+        }
+      },
+      {
+        "actual_Euler_residuals": {
+          "chi": "0",
+          "clock_times_speed": "0",
+          "f_lapse": "0",
+          "f_null": "0",
+          "g_lapse": "0",
+          "g_null": "0",
+          "sourced_Bianchi": "0"
+        },
+        "c": "4",
+        "u": "0",
+        "values": {
+          "D_f_h_f": "-1/4",
+          "P": "8",
+          "a": "1",
+          "b": "2",
+          "b0": "-26",
+          "b1": "4",
+          "b4": "-1/2",
+          "chi_speed": "1/10",
+          "h": "0",
+          "h_f": "0",
+          "h_u": "4",
+          "kbar": "799/100",
+          "nbar": "8",
+          "y": "2"
+        }
+      },
+      {
+        "actual_Euler_residuals": {
+          "chi": "0",
+          "clock_times_speed": "0",
+          "f_lapse": "0",
+          "f_null": "0",
+          "g_lapse": "0",
+          "g_null": "0",
+          "sourced_Bianchi": "0"
+        },
+        "c": "4",
+        "u": "1/10",
+        "values": {
+          "D_f_h_f": "-2475/10201",
+          "P": "39600000000000000000000000000/5971631505320200570414911401",
+          "a": "10201/10000",
+          "b": "20000/10201",
+          "b0": "-12668443071315875674382584251324457800/621410369067853704757804416767531801",
+          "b1": "19800000000000000000000000000/5971631505320200570414911401",
+          "b4": "-249440432325/551470150601",
+          "chi_speed": "100000000000/1061520150601",
+          "h": "40/101",
+          "h_f": "-10/101",
+          "h_u": "39600/10201",
+          "kbar": "69053447613547998123632880800/11494742132376223120464911401",
+          "nbar": "69155457613547998123632880800/11494742132376223120464911401",
+          "y": "200000000/104060401"
+        }
+      },
+      {
+        "actual_Euler_residuals": {
+          "chi": "0",
+          "clock_times_speed": "0",
+          "f_lapse": "0",
+          "f_null": "0",
+          "g_lapse": "0",
+          "g_null": "0",
+          "sourced_Bianchi": "0"
+        },
+        "c": "5/2",
+        "u": "-1/10",
+        "values": {
+          "D_f_h_f": "-6336/10201",
+          "P": "101376000000000000000000000000/2657765129086587040384911401",
+          "a": "10201/10000",
+          "b": "20000/10201",
+          "b0": "-31335383669143767508342944117324457800/276568105096567011143857074737531801",
+          "b1": "50688000000000000000000000000/2657765129086587040384911401",
+          "b4": "-650087506752/245440150601",
+          "chi_speed": "100000000000/1061520150601",
+          "h": "-40/101",
+          "h_f": "16/101",
+          "h_u": "39600/10201",
+          "kbar": "164093447613547998123632880800/11494742132376223120464911401",
+          "nbar": "164195457613547998123632880800/11494742132376223120464911401",
+          "y": "200000000/104060401"
+        }
+      },
+      {
+        "actual_Euler_residuals": {
+          "chi": "0",
+          "clock_times_speed": "0",
+          "f_lapse": "0",
+          "f_null": "0",
+          "g_lapse": "0",
+          "g_null": "0",
+          "sourced_Bianchi": "0"
+        },
+        "c": "3",
+        "u": "1/20",
+        "values": {
+          "D_f_h_f": "-212800/482403",
+          "P": "57123065036800000000000000000000000000/2835100299093222487383997535531696803",
+          "a": "160801/160000",
+          "b": "320000/160801",
+          "b0": "-4613752203247824367226667319080612554238806053600/73307079568637068975637731218121717353545461603",
+          "b1": "28561532518400000000000000000000000000/2835100299093222487383997535531696803",
+          "b4": "-16422697454708800/12721393941621609",
+          "chi_speed": "409600000000000/4157825282402401",
+          "h": "80/401",
+          "h_f": "-80/1203",
+          "h_u": "638400/160801",
+          "kbar": "35023392960052295535745055566862083200/2779849069011803569389614128910565601",
+          "nbar": "35050370891152455535745055566862083200/2779849069011803569389614128910565601",
+          "y": "51200000000/25856961601"
+        }
+      },
+      {
+        "actual_Euler_residuals": {
+          "chi": "0",
+          "clock_times_speed": "0",
+          "f_lapse": "0",
+          "f_null": "0",
+          "g_lapse": "0",
+          "g_null": "0",
+          "sourced_Bianchi": "0"
+        },
+        "c": "201/100",
+        "u": "0",
+        "values": {
+          "D_f_h_f": "-40000/40401",
+          "P": "640000/201",
+          "a": "1",
+          "b": "2",
+          "b0": "-1921198/201",
+          "b1": "320000/201",
+          "b4": "-40000/201",
+          "chi_speed": "1/10",
+          "h": "0",
+          "h_f": "0",
+          "h_u": "4",
+          "kbar": "478999/20100",
+          "nbar": "4792/201",
+          "y": "2"
+        }
+      }
+    ],
+    "canonical_second_jet_Fraction_fixtures": [
+      {
+        "D_squared": "1/18",
+        "K1": "1/8",
+        "K2": "1",
+        "N_relative": "14/3",
+        "N_sum": "-14/3",
+        "c": "1",
+        "c_heavy_squared": "11/12",
+        "c_light_squared": "1/3",
+        "mass_squared": "-144",
+        "mass_variation_ratio": "29/216",
+        "omega_prime_squared": "128/9"
+      },
+      {
+        "D_squared": "45/784",
+        "K1": "1/8",
+        "K2": "2/5",
+        "N_relative": "22/7",
+        "N_sum": "-22/7",
+        "c": "5/2",
+        "c_heavy_squared": "127/112",
+        "c_light_squared": "10/7",
+        "mass_squared": "672/5",
+        "mass_variation_ratio": "-375/784",
+        "omega_prime_squared": "1280/49"
+      },
+      {
+        "D_squared": "75/242",
+        "K1": "1/8",
+        "K2": "1/3",
+        "N_relative": "30/11",
+        "N_sum": "-30/11",
+        "c": "3",
+        "c_heavy_squared": "59/44",
+        "c_light_squared": "21/11",
+        "mass_squared": "176/3",
+        "mass_variation_ratio": "-783/968",
+        "omega_prime_squared": "3456/121"
+      },
+      {
+        "D_squared": "2",
+        "K1": "1/8",
+        "K2": "1/4",
+        "N_relative": "2",
+        "N_sum": "-2",
+        "c": "4",
+        "c_heavy_squared": "2",
+        "c_light_squared": "3",
+        "mass_squared": "24",
+        "mass_variation_ratio": "-19/12",
+        "omega_prime_squared": "32"
+      },
+      {
+        "D_squared": "32321001/2004002000000",
+        "K1": "1/8",
+        "K2": "100/201",
+        "N_relative": "3594/1001",
+        "N_sum": "-3594/1001",
+        "c": "201/100",
+        "c_heavy_squared": "40120601/40040000",
+        "c_light_squared": "50451/50050",
+        "mass_squared": "1601600/201",
+        "mass_variation_ratio": "-164298807/801600800",
+        "omega_prime_squared": "23155200/1002001"
+      }
+    ],
+    "coefficientwise_identities": {
+      "algebraic_omission_residual_one_fifth": "0",
+      "exact_inner_denominator_division": "0",
+      "exact_limiting_forced_particular": "0",
+      "forced_particular_ratio_five_sixths": "0",
+      "limiting_inner_denominator": "0",
+      "literal_norm_two_TT_elementary_coefficient": "0"
+    }
+  },
+  "literal_tensor_and_vector_result": {
+    "algebraic_mass": "tau\u00b2 m_alg\u00b2=2y*h'*(y\u00b3+c)/[c(c-y)]; neither its sign nor a center canonical diagonal is a rolling gap theorem",
+    "full_principal_cones": "Squared speeds 1 and c\u00b2/y\u00b2 relative to actual g; second is wider on 2<c<=4",
+    "literal_relative_shift_coefficient": "a^5*y\u00b2*P/[2N_g(c+y)]",
+    "locked_coefficient_only": "c_L\u00b2=(1+c*y)/(1+y\u00b3/c), not a controlled integrated-out physical light mode",
+    "mu": "mu=2y[beta1+beta2(c+y)+beta3*c*y]; mu=yP for this beta1-only family",
+    "scalar_TT_response": "Homogeneous canonical scalar action has unit determinant under traceless exponential spatial perturbations; no independent TT matter response assumed",
+    "unit_TT_polarization": "e_ij e_ij=1; S_T=1/8 integral dT a\u00b3{M\u00b2[gamma_gdot\u00b2-q\u00b2gamma_g\u00b2]+M\u00b2y\u00b3/c[gamma_fdot\u00b2-(c/y)\u00b2q\u00b2gamma_f\u00b2]-mu(gamma_f-gamma_g)\u00b2}",
+    "vector_schur": "K_relative=AB*C_s*k\u00b2/[AB*k\u00b2+(A+B)C_s], A,B>0; negative at sufficiently high formal k for c=1; positive kinetic for c>2, not a full vector-health claim"
+  },
+  "not_established": [
+    "No full reduced scalar constraints, scalar/vector health, or physical subcutoff growth-rate conclusion",
+    "No rolling spectral gap or adiabatic elimination inferred from algebraic mass height or a frozen canonical diagonal",
+    "No light-only matching exclusion from the wider full tensor cone, locked coefficient, or limiting normalized forcing",
+    "No complete-CD solution or uniform coefficient/physical-window limit as c->2+",
+    "No original DHOST C/D operator and physical-source/data map; no loop, cutoff, positivity or UV-completion result",
+    "No change to completed scoped photon objective or frozen linear classification; original S6, P8(b) and P8 remain open"
+  ],
+  "primary_independent_bridges": {
+    "actual_background_profiles": [
+      {
+        "c": "1",
+        "primary_minus_independent": {
+          "D_f_h_f": "0",
+          "P": "0",
+          "a": "0",
+          "b": "0",
+          "b0": "0",
+          "b1": "0",
+          "b4": "0",
+          "chi_speed": "0",
+          "h": "0",
+          "h_f": "0",
+          "h_u": "0",
+          "kbar": "0",
+          "nbar": "0",
+          "y": "0"
+        },
+        "u": "0"
+      },
+      {
+        "c": "1",
+        "primary_minus_independent": {
+          "D_f_h_f": "0",
+          "P": "0",
+          "a": "0",
+          "b": "0",
+          "b0": "0",
+          "b1": "0",
+          "b4": "0",
+          "chi_speed": "0",
+          "h": "0",
+          "h_f": "0",
+          "h_u": "0",
+          "kbar": "0",
+          "nbar": "0",
+          "y": "0"
+        },
+        "u": "1/10"
+      },
+      {
+        "c": "4",
+        "primary_minus_independent": {
+          "D_f_h_f": "0",
+          "P": "0",
+          "a": "0",
+          "b": "0",
+          "b0": "0",
+          "b1": "0",
+          "b4": "0",
+          "chi_speed": "0",
+          "h": "0",
+          "h_f": "0",
+          "h_u": "0",
+          "kbar": "0",
+          "nbar": "0",
+          "y": "0"
+        },
+        "u": "0"
+      },
+      {
+        "c": "4",
+        "primary_minus_independent": {
+          "D_f_h_f": "0",
+          "P": "0",
+          "a": "0",
+          "b": "0",
+          "b0": "0",
+          "b1": "0",
+          "b4": "0",
+          "chi_speed": "0",
+          "h": "0",
+          "h_f": "0",
+          "h_u": "0",
+          "kbar": "0",
+          "nbar": "0",
+          "y": "0"
+        },
+        "u": "1/10"
+      },
+      {
+        "c": "5/2",
+        "primary_minus_independent": {
+          "D_f_h_f": "0",
+          "P": "0",
+          "a": "0",
+          "b": "0",
+          "b0": "0",
+          "b1": "0",
+          "b4": "0",
+          "chi_speed": "0",
+          "h": "0",
+          "h_f": "0",
+          "h_u": "0",
+          "kbar": "0",
+          "nbar": "0",
+          "y": "0"
+        },
+        "u": "-1/10"
+      },
+      {
+        "c": "3",
+        "primary_minus_independent": {
+          "D_f_h_f": "0",
+          "P": "0",
+          "a": "0",
+          "b": "0",
+          "b0": "0",
+          "b1": "0",
+          "b4": "0",
+          "chi_speed": "0",
+          "h": "0",
+          "h_f": "0",
+          "h_u": "0",
+          "kbar": "0",
+          "nbar": "0",
+          "y": "0"
+        },
+        "u": "1/20"
+      },
+      {
+        "c": "201/100",
+        "primary_minus_independent": {
+          "D_f_h_f": "0",
+          "P": "0",
+          "a": "0",
+          "b": "0",
+          "b0": "0",
+          "b1": "0",
+          "b4": "0",
+          "chi_speed": "0",
+          "h": "0",
+          "h_f": "0",
+          "h_u": "0",
+          "kbar": "0",
+          "nbar": "0",
+          "y": "0"
+        },
+        "u": "0"
+      }
+    ],
+    "canonical_second_jets": [
+      {
+        "c": "1",
+        "primary_minus_independent": {
+          "D_squared": "0",
+          "K1": "0",
+          "K2": "0",
+          "N_relative": "0",
+          "N_sum": "0",
+          "c_heavy_squared": "0",
+          "c_light_squared": "0",
+          "mass_squared": "0",
+          "mass_variation_ratio": "0",
+          "omega_prime_squared": "0"
+        }
+      },
+      {
+        "c": "5/2",
+        "primary_minus_independent": {
+          "D_squared": "0",
+          "K1": "0",
+          "K2": "0",
+          "N_relative": "0",
+          "N_sum": "0",
+          "c_heavy_squared": "0",
+          "c_light_squared": "0",
+          "mass_squared": "0",
+          "mass_variation_ratio": "0",
+          "omega_prime_squared": "0"
+        }
+      },
+      {
+        "c": "3",
+        "primary_minus_independent": {
+          "D_squared": "0",
+          "K1": "0",
+          "K2": "0",
+          "N_relative": "0",
+          "N_sum": "0",
+          "c_heavy_squared": "0",
+          "c_light_squared": "0",
+          "mass_squared": "0",
+          "mass_variation_ratio": "0",
+          "omega_prime_squared": "0"
+        }
+      },
+      {
+        "c": "4",
+        "primary_minus_independent": {
+          "D_squared": "0",
+          "K1": "0",
+          "K2": "0",
+          "N_relative": "0",
+          "N_sum": "0",
+          "c_heavy_squared": "0",
+          "c_light_squared": "0",
+          "mass_squared": "0",
+          "mass_variation_ratio": "0",
+          "omega_prime_squared": "0"
+        }
+      },
+      {
+        "c": "201/100",
+        "primary_minus_independent": {
+          "D_squared": "0",
+          "K1": "0",
+          "K2": "0",
+          "N_relative": "0",
+          "N_sum": "0",
+          "c_heavy_squared": "0",
+          "c_light_squared": "0",
+          "mass_squared": "0",
+          "mass_variation_ratio": "0",
+          "omega_prime_squared": "0"
+        }
+      }
+    ]
+  },
+  "primary_source": "https://arxiv.org/pdf/2501.16442; section4.1 and AppendixB, with source/frame/interaction dictionary in notes/sources.md; no novelty, cutoff or model-realization claim",
+  "prior_context_sha256": {
+    "P8_B_curvature_dictionary": "73dd18f7a4b56a0205f9fbc6a4b09b213a3c280b3f0274414a255635b04e2b09",
+    "S6_17_constant_beta_tree_scope_and_replay": "d3d4c612fd0942bc66f0005ed21b76d23ca86285a461d87b32e1a2d79f242bb2",
+    "adopted_S6_matching_contract": "d00df35d5821b05baa61e897725a22ed1ac21d0536b74bdaece3ab0093215901",
+    "original_CD_matter_trajectory_context": "caf8c8e688a7565b9d00f921c099a28da00f97522ed26ad182a8227eb80cd4dd"
+  },
+  "schema": 1,
+  "shrinking_inner_window_theorem": {
+    "center_mass": "mbar0\u00b2=16(c+8)/[c(c-2)] ~80/(c-2)",
+    "compact_continuation": "After exact epsilon\u00b2 denominator removal all scaled coefficients extend smoothly to epsilon0 on fixed compact x sets; uniform first-order coefficient convergence gives Cauchy-propagator convergence for convergent data",
+    "exact_mass_profile": "mbar\u00b2=16(1-u\u00b2)(8+c*d^12)/[c*d^14*(c*d^4-2)]",
+    "exact_second_ratio": "(mbar\u00b2)''0/(mbar0\u00b2)\u00b2=-c(7c\u00b2+146c-240)/[8(c+8)\u00b2] ->-1/5",
+    "explicit_local_domain_choice": "0<epsilon<=min(1,1/[10 max(1,X)]) keeps |x|<=X inside the certified actual-clock interval",
+    "forcing_control": "For limiting constant normalized forcing, R=(1+8x\u00b2)/96 is exact; algebraic R0=(1+8x\u00b2)/80 has residual1/5 and particular ratio5/6. No equal retarded data or physical TT source was imposed",
+    "full_canonical_ratios": "V_HH-mbar\u00b2 and its second derivative are analytic finite at (u,c)=(0,2), so full V_HH has the same -1/5 ratio and positive-square-root -1/10 ratio for small positive epsilon",
+    "limiting_action_guard": "epsilon0 is not a regular finite-coefficient parent; beta profiles diverge",
+    "limiting_equations": "l_xx=0; Q_xx+80/(1+8x\u00b2)Q=0; all scaled off-diagonal potential and derivative coefficients tend to zero",
+    "physical_projection_limit": "gamma_g ->2(l-2Q)/(M sqrt5); nonzero relative projection with finite canonical normalization, not a source-response assertion",
+    "scaling": "c=2+epsilon\u00b2,u=epsilon*x,epsilon>0; fixed finite x interval and bounded fixed dimensionless momenta kappa=tau*kcom",
+    "window_guard": "Only |T|<=epsilon*tau*X. No computed epsilon threshold, fixed physical/CD window, growing momentum band or retarded physical matching error"
+  },
+  "source_audit": "notes/sources.md",
+  "source_sha256": {
+    "FORMULATION.md": "7fe1157bf7e4fb4f0396a3801e4041342ace6d561e7ddfc34dcb99604f24ecd1",
+    "README.md": "7c91e5fca48f9b40e408d2d5dac70107dafc07ff25d01d0f2eab0301796cd689",
+    "notes/proof.md": "f89302886541f3a9d6ae6f39804439dd35067857a3dcc1b4e0933993de29b146",
+    "notes/sources.md": "3157a93689f9184012657f74995f85277ecee12c5c3bcd33db6b83931fe541b1",
+    "src/p8_variable_beta/__init__.py": "a1c9dae991ae7df0cbbcc94026da9e16dde6aba56c7f8c3bcdc5a63664d0dde2",
+    "src/p8_variable_beta/background.py": "6ac744b619d2498144ad7079cbb1e641384f68b4a744c49f732e9db7eb41ffab",
+    "src/p8_variable_beta/canonical.py": "7510ac1c5005c0675607b9fd3e388d0b72a7cb61fba3f075dcb93896253b7ed7",
+    "src/p8_variable_beta/independent.py": "ca1ed566f302cf56e0c53c4b22606c2e7de24b38d88ab5fa7654520c37ead9d1",
+    "src/p8_variable_beta/inner.py": "db51650f2157159f9b3188ca64e61360efa58b8c235c928f1e1b4a112ce6437d",
+    "src/p8_variable_beta/model.py": "336b05c6d76a4ab56ae9385f998aaa93ce0425682d9815860b1f550c40d6c52b",
+    "src/p8_variable_beta/tensors.py": "97b85766a7c3b61b66dd389fcb90d51ca43131f62b1203b270d0ba11da91d3cd",
+    "src/p8_variable_beta/verify.py": "038e0b41939c89c440b4ce3e57351fc37b31206e2233dc10adedd4a35f2fd4ba",
+    "tests/conftest.py": "ed271ee3f88fc51151269e8b091d0d0a4ca32837349715e8b7c74737c0c94345",
+    "tests/test_variable_beta.py": "636c353fe48753e84a510e607bfea28b20cfe40f233b31064100d77c232b665f",
+    "tests/test_variable_certificate.py": "70477be9b3f1b037f1627328a1cfdddb01aa748bf5c8e75dbb4447d7e11f4648",
+    "tests/test_variable_independent_audit.py": "330dcb7c8f691180b265c144de36a8d99db85810dc3acdaef12d1b731f9e4357"
+  },
+  "status": "ACTUAL_LOCAL_VARIABLE_BETA_CD_TRAJECTORY_AND_NONADIABATIC_INNER_TENSOR; ORIGINAL_P8_OPEN",
+  "strict_rational_clock_domain_margins": {
+    "c1_clock_squared_lower_bound": "3599/100",
+    "d12_below_8_over_7": "112224789076211955371593/7000000000000000000000000",
+    "h_u_above_3": "8997/10201",
+    "positive_branch_clock_squared_lower_bound": "449/100",
+    "y_above_1": "95939599/104060401"
+  },
+  "undivided_source_identities": {
+    "U_V_P": "U=beta0+3beta1*y+3beta2*y\u00b2+beta3*y\u00b3; V=beta1+3beta2*y+3beta3*y\u00b2+beta4*y\u00b3; P=2(beta1+2beta2*y+beta3*y\u00b2)",
+    "clock_forces": "F_g=-2(U_phi_g+c V_phi_g); F_f=-2(U_phi_f+c V_phi_f)/(c*y\u00b3)",
+    "combined_balance": "C_g=c B; C_f=-B/(c*y\u00b3); B=3P(yH_f-H_g)+2(U_phi_f*q_f-V_phi_g*q_g)",
+    "consequence": "On-shell B=0, not the old velocity factor. No division by P,H,or clock speed in the generic identity",
+    "literal_nulls": "nu_Ig=(y-c)P; nu_If=(c-y)P/(c*y\u00b3)",
+    "optional_conformal_dictionary": "For h=A\u00b2g, matter balance is alpha*q*(rho_E-3p_E), clock force its negative; physical H_h=A^-1(H_g+alpha*q); the actual fixture uses A=1"
+  },
+  "verification_boundary": "Exact identities, independent coefficient/Fraction/Taylor outputs and separately authored audits support the written inverse-function and compact-ODE proof; no proof-assistant formalization",
+  "written_proof": "notes/proof.md"
+}
