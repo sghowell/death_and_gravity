@@ -1,0 +1,797 @@
+{
+  "claim": "P8-A.18",
+  "date": "2026-09-06",
+  "derived_constants": {
+    "calibration": {
+      "COST_UPPER": "13000000",
+      "expanded_affine_cost": {
+        "C0": "1440182116554809/112500000",
+        "C0_upper_margin": "22317883445191/112500000",
+        "C_at_abs_beta_one": "5166086527218319/393750000",
+        "Cbeta": "3345309847373/10500000",
+        "Cbeta_upper_margin": "133154690152627/10500000",
+        "future_V0": "809472",
+        "future_Vbeta": "26468352",
+        "future_caps": [
+          "4",
+          "128",
+          "16384",
+          "1048576"
+        ],
+        "past_V0": "91910133/5000",
+        "past_Vbeta": "980163/25",
+        "past_caps": [
+          "21/10",
+          "9",
+          "70",
+          "800"
+        ]
+      },
+      "generic_finite_beta_remains_explicit": true,
+      "tight_reference_regression": {
+        "C0": "1583767184219/126000",
+        "C0_upper_margin": "54232815781/126000",
+        "C_at_abs_beta_one": "1583819645147/126000",
+        "Cbeta": "364312/875",
+        "Cbeta_upper_margin": "11374635688/875",
+        "future_V0": "14880",
+        "future_Vbeta": "34560",
+        "future_caps": [
+          "2",
+          "8",
+          "64",
+          "768"
+        ],
+        "past_V0": "14880",
+        "past_Vbeta": "34560",
+        "past_caps": [
+          "2",
+          "8",
+          "64",
+          "768"
+        ]
+      },
+      "tight_regression_is_not_used_as_future_geometry": true,
+      "uniform_bound_on_abs_beta_required": false,
+      "universal_gate": {
+        "future_gradient": "18/5",
+        "future_relative_caps_or_actual_SEE_verified": false,
+        "history_gain": "2009079/350000",
+        "margin_above_one_eighth": "3329/350000",
+        "quantum_cost_upper": "13/100",
+        "sigma_upper": "5",
+        "source_cost_upper": "1313/700",
+        "source_weight": "1313/3500",
+        "strict_focusing_margin_lower": "47079/350000",
+        "weighted_delta_upper": "1/100000000"
+      }
+    },
+    "controls": {
+      "all_p_complete_geometric_family": {
+        "actual_quantum_SEE_solution_asserted": false,
+        "covers_every_reference_power_in_interval": true,
+        "cutoff_ends_at_dimensionless_time": "1/8",
+        "future_cap_margins_from_global_bounds": [
+          "0",
+          "26",
+          "8032",
+          "418048"
+        ],
+        "future_log_scale_factor_loss_upper": "125000000001/250000000000",
+        "future_static_by_time_over_tau": "125000000001/1000000000000",
+        "future_timelike_and_null_complete": true,
+        "geometric_assumptions_alone_force_incompleteness": false,
+        "mollifier_width_over_tau": "1/1000000000000",
+        "past_C3_error_upper": [
+          "51/500000000000",
+          "261/31250000000",
+          "2463/3906250000",
+          "216606/244140625"
+        ],
+        "power_range": [
+          "1/2",
+          "2/3"
+        ],
+        "raw_global_jet_caps_through_four": [
+          "4",
+          "102",
+          "8352",
+          "630528",
+          "887218176"
+        ],
+        "strict_past_tube_margins": [
+          "4999999949/500000000000",
+          "15624999739/31250000000",
+          "11718747537/3906250000",
+          "3906033394/244140625"
+        ]
+      },
+      "rejected_past_caps_as_future_caps": {
+        "QSEI_used_in_this_exclusion": false,
+        "Taylor_Hubble_upper": "-142985347/62554080",
+        "initial_upper_jets": [
+          "-199/100",
+          "-11/2",
+          "-33"
+        ],
+        "rejected_as_nontrivial_cosmological_calibration": true,
+        "strict_incompatibility_gap": "4707907/62554080",
+        "test_time_over_tau": "1/20",
+        "third_jet_upper_on_test_interval": "128000000/130321",
+        "tight_future_required_Hubble_lower": "-42/19"
+      }
+    },
+    "dictionary": {
+      "Lambda_positive_fraction_of_actual_3H0_squared_upper_unanchored": "50000/118803",
+      "Lambda_positive_fraction_of_reference_3Hstar_squared_upper": "5/12",
+      "anchored_scales_tau_one": {
+        "actual_observed_H0_range": [
+          "2",
+          "2"
+        ],
+        "actual_short_history_duration": "1/100",
+        "anchored_at_observer": true,
+        "reference_Hstar": "2",
+        "reference_power_law_age_is_actual_quantum_age": false,
+        "reference_power_law_age_range": [
+          "1/4",
+          "1/3"
+        ],
+        "tau": "1"
+      },
+      "observed_cosmological_parameters_used": false,
+      "ordinary_matter_nonnegative_EED_is_separate_assumption": true,
+      "pure_Maxwell_specialization_has_other_EED_zero": true,
+      "signed_source_controls": {
+        "Lambda=-1,other_lower=-2": {
+          "Lambda": "-1",
+          "actual_field_state_source_or_metric_verified": false,
+          "beta_M": "-7",
+          "exact_delta": "0",
+          "exact_weighted_delta": "0",
+          "other_EED_lower": "-2",
+          "rational_delta_upper": "0",
+          "rational_weighted_delta_upper": "0",
+          "separate_source_penalty": "4",
+          "sigma": "4",
+          "sufficient_quantum_budget": true,
+          "sufficient_source_budget": true
+        },
+        "Lambda=-1,other_lower=2": {
+          "Lambda": "-1",
+          "actual_field_state_source_or_metric_verified": false,
+          "beta_M": "-7",
+          "exact_delta": "0",
+          "exact_weighted_delta": "0",
+          "other_EED_lower": "2",
+          "rational_delta_upper": "0",
+          "rational_weighted_delta_upper": "0",
+          "separate_source_penalty": "0",
+          "sigma": "0",
+          "sufficient_quantum_budget": true,
+          "sufficient_source_budget": true
+        },
+        "Lambda=1,other_lower=-2": {
+          "Lambda": "1",
+          "actual_field_state_source_or_metric_verified": false,
+          "beta_M": "-7",
+          "exact_delta": "0",
+          "exact_weighted_delta": "0",
+          "other_EED_lower": "-2",
+          "rational_delta_upper": "0",
+          "rational_weighted_delta_upper": "0",
+          "separate_source_penalty": "5",
+          "sigma": "5",
+          "sufficient_quantum_budget": true,
+          "sufficient_source_budget": true
+        },
+        "Lambda=1,other_lower=2": {
+          "Lambda": "1",
+          "actual_field_state_source_or_metric_verified": false,
+          "beta_M": "-7",
+          "exact_delta": "0",
+          "exact_weighted_delta": "0",
+          "other_EED_lower": "2",
+          "rational_delta_upper": "0",
+          "rational_weighted_delta_upper": "0",
+          "separate_source_penalty": "1",
+          "sigma": "1",
+          "sufficient_quantum_budget": true,
+          "sufficient_source_budget": true
+        }
+      },
+      "unanchored_scales_tau_one": {
+        "actual_observed_H0_range": [
+          "199/100",
+          "201/100"
+        ],
+        "actual_short_history_duration": "1/100",
+        "anchored_at_observer": false,
+        "reference_Hstar": "2",
+        "reference_power_law_age_is_actual_quantum_age": false,
+        "reference_power_law_age_range": [
+          "1/4",
+          "1/3"
+        ],
+        "tau": "1"
+      }
+    },
+    "geometry": {
+      "anchored_C3_slice": {
+        "actual_contraction_lower": "2487/1300",
+        "actual_quantum_SEE_solution_asserted": false,
+        "anchored_at_observer": true,
+        "baseline_contraction_lower": "25/13",
+        "error_caps": [
+          "1/100",
+          "1/2",
+          "3",
+          "16"
+        ],
+        "expanded_past_caps": [
+          "21/10",
+          "9",
+          "70",
+          "800"
+        ],
+        "future_relative_caps_verified_by_tube": false,
+        "log_scale_factor_error_upper": "1/10000",
+        "observed_H0_times_tau_range": [
+          "2",
+          "2"
+        ],
+        "reference_jet_caps": [
+          "2",
+          "8",
+          "64",
+          "768"
+        ],
+        "scale_factor_comparison_is_normalized_at_observer": true,
+        "strict_cap_margins": [
+          "9/100",
+          "1/2",
+          "3",
+          "16"
+        ],
+        "strict_contraction_margin": "17/1300"
+      },
+      "contraction": "19/10",
+      "dimensionless_history_interval": [
+        "-1/100",
+        "0"
+      ],
+      "power_law_geometries_are_quantum_SEE_solutions": false,
+      "power_range": [
+        "1/2",
+        "2/3"
+      ],
+      "ratio": "1/100",
+      "reference_Hstar_times_tau": "2",
+      "reference_age_over_tau_range": [
+        "1/4",
+        "1/3"
+      ],
+      "this_tube_Ricci_upper_times_tau_squared": "-355022373/106090000",
+      "this_tube_demonstrates_initial_SEC_violation": false,
+      "unanchored_C3_tube": {
+        "actual_contraction_lower": "2487/1300",
+        "actual_quantum_SEE_solution_asserted": false,
+        "anchored_at_observer": false,
+        "baseline_contraction_lower": "25/13",
+        "error_caps": [
+          "1/100",
+          "1/2",
+          "3",
+          "16"
+        ],
+        "expanded_past_caps": [
+          "21/10",
+          "9",
+          "70",
+          "800"
+        ],
+        "future_relative_caps_verified_by_tube": false,
+        "log_scale_factor_error_upper": "1/10000",
+        "observed_H0_times_tau_range": [
+          "199/100",
+          "201/100"
+        ],
+        "reference_jet_caps": [
+          "2",
+          "8",
+          "64",
+          "768"
+        ],
+        "scale_factor_comparison_is_normalized_at_observer": true,
+        "strict_cap_margins": [
+          "9/100",
+          "1/2",
+          "3",
+          "16"
+        ],
+        "strict_contraction_margin": "17/1300"
+      }
+    },
+    "independent_Fraction_replay": {
+      "calibration": {
+        "COST_UPPER": "13000000",
+        "expanded_affine_cost": {
+          "C0": "1440182116554809/112500000",
+          "C0_upper_margin": "22317883445191/112500000",
+          "C_at_abs_beta_one": "5166086527218319/393750000",
+          "Cbeta": "3345309847373/10500000",
+          "Cbeta_upper_margin": "133154690152627/10500000",
+          "future_V0": "809472",
+          "future_Vbeta": "26468352",
+          "future_caps": [
+            "4",
+            "128",
+            "16384",
+            "1048576"
+          ],
+          "past_V0": "91910133/5000",
+          "past_Vbeta": "980163/25",
+          "past_caps": [
+            "21/10",
+            "9",
+            "70",
+            "800"
+          ]
+        },
+        "generic_finite_beta_remains_explicit": true,
+        "tight_reference_regression": {
+          "C0": "1583767184219/126000",
+          "C0_upper_margin": "54232815781/126000",
+          "C_at_abs_beta_one": "1583819645147/126000",
+          "Cbeta": "364312/875",
+          "Cbeta_upper_margin": "11374635688/875",
+          "future_V0": "14880",
+          "future_Vbeta": "34560",
+          "future_caps": [
+            "2",
+            "8",
+            "64",
+            "768"
+          ],
+          "past_V0": "14880",
+          "past_Vbeta": "34560",
+          "past_caps": [
+            "2",
+            "8",
+            "64",
+            "768"
+          ]
+        },
+        "tight_regression_is_not_used_as_future_geometry": true,
+        "uniform_bound_on_abs_beta_required": false,
+        "universal_gate": {
+          "future_gradient": "18/5",
+          "future_relative_caps_or_actual_SEE_verified": false,
+          "history_gain": "2009079/350000",
+          "margin_above_one_eighth": "3329/350000",
+          "quantum_cost_upper": "13/100",
+          "sigma_upper": "5",
+          "source_cost_upper": "1313/700",
+          "source_weight": "1313/3500",
+          "strict_focusing_margin_lower": "47079/350000",
+          "weighted_delta_upper": "1/100000000"
+        }
+      },
+      "controls": {
+        "all_p_complete_geometric_family": {
+          "actual_quantum_SEE_solution_asserted": false,
+          "covers_every_reference_power_in_interval": true,
+          "cutoff_ends_at_dimensionless_time": "1/8",
+          "future_cap_margins_from_global_bounds": [
+            "0",
+            "26",
+            "8032",
+            "418048"
+          ],
+          "future_log_scale_factor_loss_upper": "125000000001/250000000000",
+          "future_static_by_time_over_tau": "125000000001/1000000000000",
+          "future_timelike_and_null_complete": true,
+          "geometric_assumptions_alone_force_incompleteness": false,
+          "mollifier_width_over_tau": "1/1000000000000",
+          "past_C3_error_upper": [
+            "51/500000000000",
+            "261/31250000000",
+            "2463/3906250000",
+            "216606/244140625"
+          ],
+          "power_range": [
+            "1/2",
+            "2/3"
+          ],
+          "raw_global_jet_caps_through_four": [
+            "4",
+            "102",
+            "8352",
+            "630528",
+            "887218176"
+          ],
+          "strict_past_tube_margins": [
+            "4999999949/500000000000",
+            "15624999739/31250000000",
+            "11718747537/3906250000",
+            "3906033394/244140625"
+          ]
+        },
+        "rejected_past_caps_as_future_caps": {
+          "QSEI_used_in_this_exclusion": false,
+          "Taylor_Hubble_upper": "-142985347/62554080",
+          "initial_upper_jets": [
+            "-199/100",
+            "-11/2",
+            "-33"
+          ],
+          "rejected_as_nontrivial_cosmological_calibration": true,
+          "strict_incompatibility_gap": "4707907/62554080",
+          "test_time_over_tau": "1/20",
+          "third_jet_upper_on_test_interval": "128000000/130321",
+          "tight_future_required_Hubble_lower": "-42/19"
+        }
+      },
+      "cubic_moments": {
+        "cross": "1/2",
+        "first": "6/5",
+        "pole_first": "12",
+        "pole_zero": "13/3",
+        "second": "12",
+        "zeroth": "13/35"
+      },
+      "dictionary": {
+        "Lambda_positive_fraction_of_actual_3H0_squared_upper_unanchored": "50000/118803",
+        "Lambda_positive_fraction_of_reference_3Hstar_squared_upper": "5/12",
+        "anchored_scales_tau_one": {
+          "actual_observed_H0_range": [
+            "2",
+            "2"
+          ],
+          "actual_short_history_duration": "1/100",
+          "anchored_at_observer": true,
+          "reference_Hstar": "2",
+          "reference_power_law_age_is_actual_quantum_age": false,
+          "reference_power_law_age_range": [
+            "1/4",
+            "1/3"
+          ],
+          "tau": "1"
+        },
+        "observed_cosmological_parameters_used": false,
+        "ordinary_matter_nonnegative_EED_is_separate_assumption": true,
+        "pure_Maxwell_specialization_has_other_EED_zero": true,
+        "signed_source_controls": {
+          "Lambda=-1,other_lower=-2": {
+            "Lambda": "-1",
+            "actual_field_state_source_or_metric_verified": false,
+            "beta_M": "-7",
+            "exact_delta": "0",
+            "exact_weighted_delta": "0",
+            "other_EED_lower": "-2",
+            "rational_delta_upper": "0",
+            "rational_weighted_delta_upper": "0",
+            "separate_source_penalty": "4",
+            "sigma": "4",
+            "sufficient_quantum_budget": true,
+            "sufficient_source_budget": true
+          },
+          "Lambda=-1,other_lower=2": {
+            "Lambda": "-1",
+            "actual_field_state_source_or_metric_verified": false,
+            "beta_M": "-7",
+            "exact_delta": "0",
+            "exact_weighted_delta": "0",
+            "other_EED_lower": "2",
+            "rational_delta_upper": "0",
+            "rational_weighted_delta_upper": "0",
+            "separate_source_penalty": "0",
+            "sigma": "0",
+            "sufficient_quantum_budget": true,
+            "sufficient_source_budget": true
+          },
+          "Lambda=1,other_lower=-2": {
+            "Lambda": "1",
+            "actual_field_state_source_or_metric_verified": false,
+            "beta_M": "-7",
+            "exact_delta": "0",
+            "exact_weighted_delta": "0",
+            "other_EED_lower": "-2",
+            "rational_delta_upper": "0",
+            "rational_weighted_delta_upper": "0",
+            "separate_source_penalty": "5",
+            "sigma": "5",
+            "sufficient_quantum_budget": true,
+            "sufficient_source_budget": true
+          },
+          "Lambda=1,other_lower=2": {
+            "Lambda": "1",
+            "actual_field_state_source_or_metric_verified": false,
+            "beta_M": "-7",
+            "exact_delta": "0",
+            "exact_weighted_delta": "0",
+            "other_EED_lower": "2",
+            "rational_delta_upper": "0",
+            "rational_weighted_delta_upper": "0",
+            "separate_source_penalty": "1",
+            "sigma": "1",
+            "sufficient_quantum_budget": true,
+            "sufficient_source_budget": true
+          }
+        },
+        "unanchored_scales_tau_one": {
+          "actual_observed_H0_range": [
+            "199/100",
+            "201/100"
+          ],
+          "actual_short_history_duration": "1/100",
+          "anchored_at_observer": false,
+          "reference_Hstar": "2",
+          "reference_power_law_age_is_actual_quantum_age": false,
+          "reference_power_law_age_range": [
+            "1/4",
+            "1/3"
+          ],
+          "tau": "1"
+        }
+      },
+      "engine": "stdlib Fraction, polynomial integration, all-p extrema and transitive pinned Maxwell EED coefficients",
+      "geometry": {
+        "anchored_C3_slice": {
+          "actual_contraction_lower": "2487/1300",
+          "actual_quantum_SEE_solution_asserted": false,
+          "anchored_at_observer": true,
+          "baseline_contraction_lower": "25/13",
+          "error_caps": [
+            "1/100",
+            "1/2",
+            "3",
+            "16"
+          ],
+          "expanded_past_caps": [
+            "21/10",
+            "9",
+            "70",
+            "800"
+          ],
+          "future_relative_caps_verified_by_tube": false,
+          "log_scale_factor_error_upper": "1/10000",
+          "observed_H0_times_tau_range": [
+            "2",
+            "2"
+          ],
+          "reference_jet_caps": [
+            "2",
+            "8",
+            "64",
+            "768"
+          ],
+          "scale_factor_comparison_is_normalized_at_observer": true,
+          "strict_cap_margins": [
+            "9/100",
+            "1/2",
+            "3",
+            "16"
+          ],
+          "strict_contraction_margin": "17/1300"
+        },
+        "contraction": "19/10",
+        "dimensionless_history_interval": [
+          "-1/100",
+          "0"
+        ],
+        "power_law_geometries_are_quantum_SEE_solutions": false,
+        "power_range": [
+          "1/2",
+          "2/3"
+        ],
+        "ratio": "1/100",
+        "reference_Hstar_times_tau": "2",
+        "reference_age_over_tau_range": [
+          "1/4",
+          "1/3"
+        ],
+        "this_tube_Ricci_upper_times_tau_squared": "-355022373/106090000",
+        "this_tube_demonstrates_initial_SEC_violation": false,
+        "unanchored_C3_tube": {
+          "actual_contraction_lower": "2487/1300",
+          "actual_quantum_SEE_solution_asserted": false,
+          "anchored_at_observer": false,
+          "baseline_contraction_lower": "25/13",
+          "error_caps": [
+            "1/100",
+            "1/2",
+            "3",
+            "16"
+          ],
+          "expanded_past_caps": [
+            "21/10",
+            "9",
+            "70",
+            "800"
+          ],
+          "future_relative_caps_verified_by_tube": false,
+          "log_scale_factor_error_upper": "1/10000",
+          "observed_H0_times_tau_range": [
+            "199/100",
+            "201/100"
+          ],
+          "reference_jet_caps": [
+            "2",
+            "8",
+            "64",
+            "768"
+          ],
+          "scale_factor_comparison_is_normalized_at_observer": true,
+          "strict_cap_margins": [
+            "9/100",
+            "1/2",
+            "3",
+            "16"
+          ],
+          "strict_contraction_margin": "17/1300"
+        }
+      },
+      "imports_new_primary_formula_modules": false
+    }
+  },
+  "exact_residuals": {
+    "all_p_proper_clock_and_history": {
+      "history_increases_with_power": "0",
+      "minimum_history_at_radiation_edge": "0",
+      "observer_jet_0": "0",
+      "observer_jet_1": "0",
+      "observer_jet_2": "0",
+      "observer_jet_3": "0",
+      "proper_clock_jet_0": "0",
+      "proper_clock_jet_1": "0",
+      "proper_clock_jet_2": "0",
+      "proper_clock_jet_3": "0",
+      "reference_Hstar_times_tau": "0",
+      "scale_factor_time_orientation": "0"
+    },
+    "complete_geometric_family_and_tight_envelope_exclusion": {
+      "raw_C3_flat_future_join_0": "0",
+      "raw_C3_flat_future_join_1": "0",
+      "raw_C3_flat_future_join_2": "0",
+      "raw_C3_flat_future_join_3": "0",
+      "raw_C3_join_0": "0",
+      "raw_C3_join_1": "0",
+      "raw_C3_join_2": "0",
+      "raw_C3_join_3": "0",
+      "rejected_tight_future_gap": "0",
+      "switch_first_factor": "0",
+      "switch_fourth_coefficient_majorant": "0",
+      "switch_second_factor": "0",
+      "switch_third_factor": "0"
+    },
+    "finite_beta_and_sourced_focusing_margin": {
+      "finite_beta_joint_gate": "0",
+      "robust_history_gain": "0",
+      "universal_final_margin": "0",
+      "universal_margin_excess": "0"
+    },
+    "physical_clock_and_signed_source_dictionary": {
+      "ordinary_dust_EED": "0",
+      "ordinary_radiation_EED": "0",
+      "perfect_fluid_EED": "0",
+      "proper_Planck_dictionary_c_one": "0",
+      "reference_Lambda_fraction": "0",
+      "seconds_Planck_dictionary": "0"
+    }
+  },
+  "formulation": "FORMULATION.md",
+  "geometric_nonvacuity_controls": {
+    "actual_allowed_Maxwell_SEE_solution": false,
+    "complete_family": "all p in[1/2,2/3]: compact future P7 cutoff at1/8, positive unit-L1 mollification width1e-12",
+    "future_timelike_and_null_complete": true,
+    "geometric_assumptions_alone_force_incompleteness": false,
+    "raw_regularity": "C3 and W4,infinity before mollification; smooth afterwards",
+    "rejected_tight_future": "c=d gives a Taylor contradiction atx1/20 with gap4707907/62554080 before any QSEI",
+    "satisfies_actual_past_tube_and_final_future_caps": true
+  },
+  "literal_objective_assessment": "notes/closure.md",
+  "not_established": [
+    "observed-universe parameter fit or an actual quantum SEE solution equal to a classical power-law/comparison metric",
+    "conditional future curvature bounds derived from the QSEI or the actual short history",
+    "a quantum energy inequality for added ordinary matter without its own explicit assumptions",
+    "interacting QED, arbitrary realistic fields, null/boosted focusing or arbitrary inhomogeneous spacetimes",
+    "curvature blow-up, maximal inextendibility, optimal constants or fundamental EFT validity at an endpoint",
+    "root-level closure of P8a, P8b or P8 as a whole"
+  ],
+  "observer_and_physical_dictionary": {
+    "actual_H0_times_tau_unanchored": [
+      "199/100",
+      "201/100"
+    ],
+    "observed_parameters_or_actual_quantum_comparator_used": false,
+    "optional_anchored_slice": "E(0)=0 makes actual H0*tau=2; relative fixed-endpoint neighborhood only",
+    "ordinary_matter_corollary": "nonnegative radiation/dust EED requires explicit separate rho>=0 and equation-of-state assumptions",
+    "pure_Maxwell_specialization": "T_other=0,ell=0; Lambda remains separately specified",
+    "reference_Hstar_times_tau": "2",
+    "reference_Lambda_fraction_upper": "5/12",
+    "reference_age_not_actual_quantum_age": "T_star/tau=p/2 in[1/4,1/3]",
+    "scale_factor_comparison": "normalized a(s)/a(0) versus normalized reference, or matched a(0)",
+    "seconds_Planck_gate": "tau_seconds/t_P>=1e4*sqrt((1+abs(beta_M))/pi)",
+    "unanchored_actual_Lambda_fraction_upper": "50000/118803"
+  },
+  "prior_sha256": {
+    "A17": "22cfba547368b420767bbe87068c5b45fb556992c9e37a389091525f3e2ef62a"
+  },
+  "schema": 1,
+  "scope_assessment": {
+    "actual_SEE_witness_required_for_conditional_theorem": false,
+    "proved_specialization": "free-photon global spatially flat FLRW incompleteness with realistic-field and cosmological-strength constants under explicit geometry and source assumptions",
+    "root_P8_completion_declared": false,
+    "unrestricted_field_or_spacetime_theorem": false
+  },
+  "source_audit": "notes/sources.md",
+  "source_sha256": {
+    "FORMULATION.md": "3a4e45f789e6ca80faaa3cbc8de704f94b9f94eb29e503a024e9a796bca79908",
+    "README.md": "cccee81f3b4847f03814dd7f1392cdc76f4e4537e8e5423ff0d50f14843fdf3d",
+    "notes/closure.md": "354f333e12644356bbc58c1566a46362e0057f6a147e5831eefd6ac60308fa3d",
+    "notes/proof.md": "3f9a7195a50a051709dbb2e30b165d54f9f1386a69280d2456ce6a086e48da33",
+    "notes/sources.md": "98ccf7b8bcf098bb1e9ff651e38ae3de4aef1143a423cb4c12ec41096860a181",
+    "src/p8a_maxwell_cosmology/__init__.py": "545b5af6733fd49f1e019cebe5adc238c8d78f5bd0bde27a49710d1b6576efce",
+    "src/p8a_maxwell_cosmology/calibration.py": "19312032c9b6845a2b1d9e1baeeb8aa1de8c8abd978fd72844ed97fc89dfc2df",
+    "src/p8a_maxwell_cosmology/controls.py": "c4c322e182c6e14cc6f1a1a3f8d396918d423e70f6f9237caf702067339b7fbd",
+    "src/p8a_maxwell_cosmology/dictionary.py": "b2243a7fa0b7ede467e5cd600d058b133597d326370a47a88f9ce95da3be6cba",
+    "src/p8a_maxwell_cosmology/geometry.py": "f87c846caf01d75d226ab5d0f9f9decae07d45d9f1ffee74ec553e595f6cbb53",
+    "src/p8a_maxwell_cosmology/independent.py": "72ed4be481a6db782ac72fc4de17ff855bddb0b608447c2374bc895c1852cf08",
+    "src/p8a_maxwell_cosmology/verify.py": "c4db15f4ca8d7bf07de9e59a69d3950a4824391561b79f4f9e0d6b733e88f859",
+    "tests/conftest.py": "dd453e74648d1e08e3703d871358f0ac2acd009e2fe7f74d2f2a0305461db4f7",
+    "tests/test_maxwell_cosmology_calibration.py": "f82e276a47fd1e053b0caf8a2189f643430cd7df2a2c861b0715f305aa2c83aa",
+    "tests/test_maxwell_cosmology_controls.py": "f9d290a2511540b57d60114196c79042f43909db2fb141db6eb2e84124be3410",
+    "tests/test_maxwell_cosmology_covariant_audit.py": "673cb024da6e817bf132e3365119ad6d9a3f60a7f5a57718f306686919e7ab67",
+    "tests/test_maxwell_cosmology_dictionary.py": "1b615f866cf4fef8efe67c23d42351b65c31aee4c23159bc2cc6bb1f766998f1",
+    "tests/test_maxwell_cosmology_geometry.py": "6d8c920542d858a48cc54cb86da0e2e7d3a9fdfd11e531368f79bcd40c6ffe8d",
+    "tests/test_maxwell_cosmology_independent.py": "91594cd96c536e853fc8c09590907da3d719db9f35888eb71f4234f3189aa4de",
+    "tests/test_maxwell_cosmology_report.py": "404e1f888fb474e2b3a729ec68b0aa62a372813418a091a3074d3dd4a6eec203"
+  },
+  "status": "ROBUST_FREE_PHOTON_FLAT_FLRW_COSMOLOGICAL_STRENGTH_INCOMPLETENESS_CALIBRATION_CERTIFIED; ROOT_SCOPE_ASSESSMENT_SEPARATE",
+  "theorem": {
+    "C3_error_caps": [
+      "1/100",
+      "1/2",
+      "3",
+      "16"
+    ],
+    "actual_field": "one physical free Maxwell field, arbitrary Hadamard state, no added state symmetry or quasifree restriction",
+    "actual_history": "[-tau/100,0] including smooth endpoint neighborhoods actually exists and lies in the stated C3 tube",
+    "actual_past_caps": [
+      "21/10",
+      "9",
+      "70",
+      "800"
+    ],
+    "actual_past_contraction": "H<=-(19/10)/tau",
+    "actual_source_equation": "G_FK+Lambda g_FK=-kappa(T_Maxwell+T_other), E_other>=ell",
+    "conclusion": "upper endpoint of I_s<=tau; all directed timelike curve lengths from s0<=tau; stipulated spacetime timelike geodesically incomplete",
+    "direction": "s is the chosen contracting proper normal parameter; past incompleteness follows with s=T_star-T in an expanding interpretation",
+    "future_cap_form": "|H^(j)(s)|<=c_j/(tau-s)^(j+1),0<=s<tau,j0..3, only if a normal reaches tau",
+    "future_caps_conditional_on_reaching_tau": [
+      "4",
+      "128",
+      "16384",
+      "1048576"
+    ],
+    "future_caps_derived_from_history_or_QSEI": false,
+    "future_pointwise_SEC_imposed": false,
+    "generic_quantum_gate": "delta(1+abs(beta_M))<=1e-8, delta=kappa*hbar/(8*pi^2*tau^2)",
+    "initial_SEC_is_an_independent_energy_premise": false,
+    "prescription": "same A16 conserved real beta_M R^2 family, separately fixed Lambda/Newton coupling; no inherited scalar gamma",
+    "reference_family": "H_p(x)=-p/(p/2-x), p in [1/2,2/3], x=s/tau in [-1/100,0]",
+    "source_gate": "sigma=tau^2[max(Lambda,0)+kappa max(-ell,0)]<=5",
+    "spacetime": "stipulated smooth positive global spatially flat FLRW product I_s times R^3",
+    "strict_margin_lower": "47079/350000 >1/8",
+    "this_small_calibration_tube_has_initial_timelike_convergence": true
+  },
+  "verification_boundary": [
+    "A17 report and full source-hashed lineage replayed read-only before importing the A16 photon coefficient polynomial",
+    "Continuous all-p/all-history bounds and smooth noncompact complete comparator proved analytically, not sampled numerically",
+    "Independent stdlib Fraction polynomial and pinned-coefficient reconstruction checks the complete core calibration",
+    "Parent-owned covariant/time-orientation/Leibniz/source and omission audit included unchanged",
+    "Machine algebra and source hashes support written proofs; no proof-assistant formalization is claimed"
+  ],
+  "written_proof": "notes/proof.md"
+}

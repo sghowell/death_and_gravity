@@ -1,0 +1,210 @@
+{
+  "claim": "P8-S6.12.COMPOSITE",
+  "conditional_flat_vacuum_positive_coefficients": {
+    "physical_FP_mass_squared_over_m2": "1/4",
+    "physical_Planck_squared_over_M2": "1/2",
+    "relative_Planck_squared_over_M2": "2",
+    "relative_auxiliary_probe_residue_times_M2": "1/2"
+  },
+  "conditional_proportional_vacuum": {
+    "TT_quadratic_action": "-[M_eff\u00b2 D gamma\u00b2+M_relative\u00b2(D+m_FP\u00b2)Delta_TT\u00b2]/8+j gamma/4; M_eff\u00b2=M\u00b2/2,M_relative\u00b2=2M\u00b2,m_FP\u00b2=m\u00b2/4,D=partial_T\u00b2+kphys\u00b2",
+    "all_beta_vacuum_shift": "beta_eff=(-3/8,-3/8,5/8,-3/8,-3/8)",
+    "full_FP_invariant": "-M\u00b2m\u00b2[tr(Delta\u00b2)-(tr Delta)\u00b2]/16, with five constrained source-free massive polarizations at flat quadratic order",
+    "full_conserved_source": "Massless response carries (P2-P0/2)/(M_eff\u00b2D); massive P2 has zero projection onto physical sources here, not negative norm or zero mass",
+    "independent_relative_probe": "A diagnostic nonphysical relative source would see positive residue 1/(2M\u00b2) and the massive pole; it is not added as a matter coupling",
+    "physical_geometry_and_clock": "g=f=mathcalG/4, physical mathcalG Minkowski, T=2T_g; conventional g-clock relative mass m\u00b2 becomes physical m\u00b2/4",
+    "physical_source_action": "For eij eij=1, delta mathcalG_ij=-gamma eij and delta Sprobe=(1/2) integral T^ij delta mathcalG_ij, the term j gamma/4 has j=-2Pi_TT",
+    "physical_source_response": "gamma=j/(M_eff\u00b2D), relative physical-source residue zero; stationary source functional j\u00b2/(8M_eff\u00b2D)",
+    "required_fixed_potential_jet": "V(psi_v)=-3M\u00b2m\u00b2/8, V_A(psi_v)=0 and canonically normalized Hessian nonnegative; positive clock mass when that vacuum contract requires it, free chi remains massless",
+    "same_potential_negative_control": "Pinned rolling centre V_b/(M\u00b2m\u00b2)=9epsilon\u00b2/2-epsilon/(1+epsilon)\u00b2 differs from constant vacuum -3/8 by at least 3749/10000 for 0<epsilon<=1/10000",
+    "scope": "Flat quadratic vacuum audit under these potential-jet assumptions; not existence of the required same-potential vacuum and rolling action, nor full-parent health"
+  },
+  "date": "2026-09-06",
+  "distinct_light_classes": {
+    "explicit_M1_extension": "Separately named class with positive field metric Z_AB(psi), V(psi), plus exact independent free chi kinetic term (partial chi)\u00b2/2; no chi potential, mixed kinetic or chi dependence in Z,V",
+    "pinned_parent": "One shared positive-kinetic canonical scalar with its reconstructed rolling potential; no automatic identification with old CD/M1",
+    "potential_matching": "Any vacuum and rolling claims must concern one specified action/potential; no off-tube extension or same-potential construction is supplied here",
+    "tree_input_restriction": "Canonical light action contains no preinserted C/D or higher-derivative operators; arbitrary prescribed inputs would instead be retained"
+  },
+  "exact_residuals": {
+    "conserved_physical_source_projector": {
+      "physical_source_GR_projector": "0",
+      "relative_five_spin2_components": "0",
+      "relative_source_projection_zero": "0"
+    },
+    "exact_Cayley_and_full_potential": {
+      "beta2_exact_even_density": "0",
+      "beta2_full_trace_mass_and_quartic": "0",
+      "equal_metric_Einstein_scaling": "0",
+      "general_exchange_reverses_beta_indices": "0",
+      "physical_volume_is_independent_of_relative_field": "0",
+      "symmetric_potential_even": "0"
+    },
+    "original_CD_M1_physical_and_operator_dictionary": {
+      "actual_null_residual_with_exact_free_M1": "0",
+      "approximate_null_budget_reduces_to_exact": "0",
+      "old_CD_DHOST_jet": "0",
+      "old_CD_X_curvature_jet": "0",
+      "old_free_M1_charge_is_nonzero_constant": "0",
+      "physical_time_H_left": "0",
+      "physical_time_H_right": "0",
+      "physical_time_Hdot_at_bounce": "0",
+      "physical_time_free_chi_charge_restoration": "0",
+      "target_background_is_pinned_CD_after_time_restore": "0"
+    },
+    "physical_vacuum_mass_source_and_shifts": {
+      "exact_TT_mass_basis_and_residues": "0",
+      "f_vacuum_equation_with_all_beta_shifts": "0",
+      "full_relative_Fierz_Pauli_tensor": "0",
+      "g_vacuum_equation_with_all_beta_shifts": "0",
+      "massless_source_stationarity": "0",
+      "physical_clock_FP_mass_from_shifted_betas": "0",
+      "physical_source_functional_has_no_massive_pole": "0",
+      "unsourced_relative_stationarity": "0",
+      "vacuum_cosmological_constant_cancellation": "0"
+    },
+    "stationary_branch_and_complete_differential_operator": {
+      "complete_linear_operator_includes_kinetic_derivative": "0",
+      "nonstationary_substitution_chain_rule": "0",
+      "rolling_even_action_zero_branch_off_shell": "0",
+      "source_preserved_on_exact_branch": "0",
+      "stationary_light_action_derivative": "0"
+    }
+  },
+  "exact_tree_branch": {
+    "action": "S[mathcalG,0,psi;J]=integral sqrt|mathcalG|[-M\u00b2R[mathcalG]/4-3M\u00b2m\u00b2/8+L_light]+Sprobe[mathcalG;J]",
+    "diagrammatic_check": "Every vertex has even relative degree; a nonempty connected heavy subgraph with no heavy external legs has E>=V and at least one loop",
+    "loops": "Evenness permits light-dependent heavy log determinants; no quantum cancellation or radiative closure is established",
+    "no_new_tree_operators": "No relative-sector-induced C/D DHOST or curvature-squared operators at any derivative order on this exact branch; existing light GR/matter trees remain",
+    "potential": "-M\u00b2m\u00b2 sqrt|mathcalG| [6-2e2(Delta)+6e4(Delta)]/16",
+    "relative_equation": "E_Delta[mathcalG,0,psi;J]=0 off shell in all light histories and sources, retaining metric/time derivatives",
+    "stationarity": "Light variation of the substituted action equals the full light variation because the functional chain-rule term multiplies E_Delta=0"
+  },
+  "formulation": "FORMULATION.md",
+  "functional_elimination_contract": {
+    "causal_option": "Specify regular gauge/constraints and a well-posed relative initial-value problem with zero relative canonical and auxiliary data; uniqueness then selects Delta=0",
+    "conditional_existence": "K||r||<=(1-eta)*radius makes that contraction map the ball to itself; residual norm includes any boundary/initial-data mismatch",
+    "conditional_residual": "If E(h)=Lh+N(h)=r, N(0)=0, ||L^-1||<=K and ||L^-1(N(h)-N(k))||<=eta||h-k|| with eta<1 in a complete ball, then ||h||<=K||r||/(1-eta)",
+    "continuation": "The selected zero branch is open by local uniqueness and closed by continuity, hence persists on the connected domain; this is configuration-space continuation, not a required physical-time vacuum-to-bounce trajectory",
+    "failure_controls": "Positive algebraic mass does not exclude resonant boundary kernels, nonzero heavy data, distinct saddles, or an inverse loss at branch joining",
+    "fixture_scope": "The exact API's rational K=2,eta=1/4,r=3/100 calculation is illustrative arithmetic, not a computed bimetric-CD estimate",
+    "not_supplied": "An actual rolling-CD constrained inverse norm, nonlinear well-posedness, state selection, or same-potential off-tube extension",
+    "stationary_option": "A continuously differentiable relative equation on specified Banach spaces, continuous selected solution functional, common zero-relative boundary/state prescription, and an isomorphism of its full constrained linearization along a connected parameter domain"
+  },
+  "independent_Fraction_replay": {
+    "Fraction_physical_matching_fixtures": {
+      "CD_endpoint_H_times_tau": "8/5",
+      "constant_vacuum_potential_gap": "3749/10000",
+      "f_vacuum_constraint": "0",
+      "free_M1_null_budget": "801/100",
+      "g_vacuum_constraint": "0",
+      "old_CD_centre_A3": "1",
+      "old_CD_centre_curvature_X_slope": "-1/2",
+      "physical_Planck_squared_over_M_squared": "1/2",
+      "physical_mass_squared_over_m_squared": "1/4"
+    },
+    "coefficientwise_identities": {
+      "all_beta_vacuum_shift_is_relative_independent": "0",
+      "literal_beta2_determinant": "0",
+      "physical_volume_source_identity": "0",
+      "vacuum_relative_FP_and_quartic": "0"
+    }
+  },
+  "model_and_frame": {
+    "chart": "Delta=(I-S)(I+S)^-1 is mathcalG-self-adjoint; I+-Delta invertible, g/f Lorentzian and selected real positive-root chart connected to Delta=0",
+    "exchange": "g<->f sends Delta->-Delta and leaves mathcalG, every prescribed light field and physical source fixed",
+    "general_parity_scope": "Same stationary identity for constant beta_n=beta_(4-n), equal Einstein coefficients, exchange-compatible gravitational boundary terms and physical-metric-only sources",
+    "gravity": "Equal positive constants M\u00b2, interaction scale m>0, bare beta=(0,0,1,0,0), +--- convention; each EH term -M\u00b2 sqrt|g_i| R[g_i]/2",
+    "map": "g=mathcalG(I+Delta)\u00b2/4, f=mathcalG(I-Delta)\u00b2/4, S=(I+Delta)^-1(I-Delta)",
+    "physical_metric": "mathcalG=g_eff=g(I+sqrt(g^-1 f))\u00b2 with fixed alpha=beta=1; the literal full light and external source actions depend on mathcalG alone"
+  },
+  "negative_and_positive_controls": {
+    "checked_values": {
+      "NEC_violation_is_outside_null_obstruction": "-1",
+      "approximate_actual_null_residual_fixture": "78081/10000",
+      "asymmetric_beta0_relative_tadpole_over_M2m2": "-1/16",
+      "bare_beta2_wrong_physical_mass_over_m2": "1",
+      "branch_switch_inverse_loss": "0",
+      "conditional_ball_fixture": "True",
+      "conditional_not_computed_CD_residual_fixture": "2/25",
+      "dropping_exact_free_chi_understates_null_budget": "1/100",
+      "even_heavy_operator_can_generate_light_loop_dependence": "1",
+      "exact_actual_null_residual_budget": "801/100",
+      "heavy_degree_2_and_4_component_minimum_loops": "2",
+      "negative_root_outside_positive_chart": "-1",
+      "nonzero_heavy_initial_state": "1",
+      "nonzero_solution_with_zero_Dirichlet_data": "1",
+      "omitted_vacuum_shift_mass_error_over_m2": "3/4",
+      "oversized_chi_error_rejected": "True",
+      "positive_mass_Dirichlet_resonant_equation": "0",
+      "pure_heavy_degree_2_component_minimum_loops": "1",
+      "resonant_left_boundary": "0",
+      "resonant_right_boundary": "0",
+      "same_potential_gap_for_epsilon_at_most_1_over_10000": "3749/10000",
+      "singular_Cayley_plus_determinant": "0",
+      "static_GR_sharp_endpoint_error_threshold": "8/5",
+      "symmetry_breaking_relative_source": "1",
+      "wrong_clock_mass_over_m2": "1"
+    },
+    "same_potential_gap_positive_remainder_identity": "0",
+    "same_potential_mismatch_polynomial_coefficients_descending": [
+      36,
+      72,
+      39,
+      -2,
+      3
+    ]
+  },
+  "not_established": [
+    "An exclusion of nonzero-relative backgrounds, other boundary/data/state prescriptions or singular/noninvertible stationary branches",
+    "An exclusion of the whole composite parent family, other parents, the old CD/M1 row or all ultraviolet possibilities",
+    "A required physical-time history from vacuum to the bounce",
+    "Actual CD heavy-operator invertibility, quantitative heavy-gap separation, cutoff hierarchy or nonlinear full-parent health",
+    "Quantum or mixed-loop matching, positivity, radiative closure, or cancellation of allowed heavy loop operators",
+    "A common reconstructed rolling potential and conventional vacuum, or silently adding the old free chi to an unchanged one-scalar background",
+    "Completion of the adopted S6 matching gate, P8(b), P8(a), or P8"
+  ],
+  "original_CD_M1_matching_obstruction": {
+    "NEC_null_equation": "-2M_target\u00b2 Hdot=Z_AB psidot^A psidot^B+chidot\u00b2>=0 on this canonical branch",
+    "actual_null_residual": "In -2M_target\u00b2Hdot=n_clock+chidot\u00b2+R_null with n_clock>=0, the exact target requires R_null<=-(801/100)M_target\u00b2/tau\u00b2",
+    "approximate_residual_domain": "If |tau\u00b2Hdot-4|<=epsilon_Hdot<4 and |tau chidot/M_target-1/10|<=epsilon_chidot<1/10, both errors nonnegative, then -R_null/(M_target\u00b2/tau\u00b2)>=2(4-epsilon_Hdot)+(1/10-epsilon_chidot)\u00b2",
+    "error_scope": "An actual omitted null-equation residual evaluated on the physical solution/field map; not a per-operator or loop smallness assertion without the needed norm dictionary",
+    "finite_window_metric_error": "On [-tau/2,tau/2], any Hubble approximation with endpoint errors both strictly below 8/(5tau) would require increasing H and is impossible; no Hdot error premise needed",
+    "operator_dictionary": "Frozen original physical metric and nondifferential clock dictionary, original M=tau=1 coefficient normalization; target F2_X(0,1)=-1/2,A3(0,1)=1 whereas this canonical zero branch has both zero",
+    "operator_remainder_budgets": "Target=branch+remainder requires |R_F2X(0,1)|>=1/2 and |R_A3(0,1)|>=1; not invariant under unaccounted derivative or matter-metric changes",
+    "physical_normalization": "M_target\u00b2=M_eff\u00b2=M\u00b2/2, H_CD=4T/(tau\u00b2+T\u00b2), chidot_CD=M_target/[10tau(1+(T/tau)\u00b2)^6]",
+    "sharp_endpoint_control": "Static GR H=0 reaches the endpoint threshold, but is not claimed to have the old nonzero rolling M1 charge"
+  },
+  "prior_art": {
+    "audited_equations": "2.7,4.11-4.15,4.20-4.22,4.23-4.35",
+    "boundary": "Proportional GR/source results are prior art; exact selected-branch proof is not generic nonlinear equivalence or a novelty claim",
+    "primary_source": "https://arxiv.org/pdf/1409.3146"
+  },
+  "prior_report_sha256": {
+    "S6_11_composite_response": "34fa2ee35c2b33557e84b8fc181a202bed4793ed00d6aa8b76964ebbdc5dbe12",
+    "original_32_row_classification": "4e82b45d3d1daed0a5e4698f1dd39fa51e2eb09b6efcf3cf5caac3a12d45dec8",
+    "original_CD_matter_witness": "caf8c8e688a7565b9d00f921c099a28da00f97522ed26ad182a8227eb80cd4dd"
+  },
+  "schema": 1,
+  "source_audit": "notes/sources.md",
+  "source_sha256": {
+    "FORMULATION.md": "f88ff3c48a13854e7bde149a6c72638e24c9af57d8773d71c59f88cf9c87ec9a",
+    "README.md": "44ba6b37a3b99faba54c3b6192a72e7a6616a8eefca0069bf130f1f22e01ecc3",
+    "notes/proof.md": "361d5b4683ebe1bb878fa927c81b2af263cd44a7c2f405a612e044d609306239",
+    "notes/sources.md": "ff43e68258845a6c4660d3d8d681bb1f9f8ceea590e93413ada11481f6a5e2ff",
+    "src/p8_composite_vacuum/__init__.py": "d6bd6f5c31450d590dc8e80c9a92b49b805286179ae715b3312c5e884e7dadba",
+    "src/p8_composite_vacuum/branch.py": "81d411acebe9ac1d5d43e743b406667d80de490d2a1de0201fb5d6afc6d48d9b",
+    "src/p8_composite_vacuum/cayley.py": "f0c85b057b7ad9c7b18c7db5fe28a8080e36e34bb9b329c936c43a75e7d6c654",
+    "src/p8_composite_vacuum/independent.py": "2202d326cc5bb28f252329954030a5201bdf74f01878e418647fdb4fedf3dfcf",
+    "src/p8_composite_vacuum/matching.py": "c837a700b3ee35ed4a040135d65e2511b8f365d7303f4f6b9e22a2c4e2e1b1cb",
+    "src/p8_composite_vacuum/vacuum.py": "9999506fd9c9679e13898673fdf98b8950479783be5a1a1c0832cf8637abc608",
+    "src/p8_composite_vacuum/verify.py": "5879202e5cf4bfa37f430d888230b4c06554b4b1b9655f956a9b7872f0b74683",
+    "tests/conftest.py": "ed271ee3f88fc51151269e8b091d0d0a4ca32837349715e8b7c74737c0c94345",
+    "tests/test_composite_vacuum.py": "056b86b332a4b2d29bc301b315d6402958e8b14c3fc1d8bd96f39738fd4f6375",
+    "tests/test_composite_vacuum_certificate.py": "db813c6d07a9db60202b911b3f036b18a0c362e094e19213a45595978f7ba0e7",
+    "tests/test_composite_vacuum_covariant_audit.py": "e7b3acaf88f676444af7d2e67a97766f402d23a9ac3a219426df5bca1057a04c"
+  },
+  "status": "EXACT_SOURCE_PRESERVING_ZERO_RELATIVE_CANONICAL_TREE_BRANCH_MATCHING_OBSTRUCTION; OTHER_PARENT_BRANCHES_AND_P8_OPEN",
+  "verification_boundary": "Source-hashed immutable replay, exact SymPy and independent coefficientwise Fraction algebra, full root covariant/source/FP audits, and explicit written functional theorems; not proof-assistant formalized",
+  "written_proof": "notes/proof.md"
+}

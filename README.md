@@ -105,6 +105,17 @@ around a pre-registered problems document and a certificate-gated ledger.
   macroscopic scales. The geometric hypotheses are not inferred from the
   QSEI or observations; a smooth complete comparison metric shows that
   geometry alone does not imply the result.
+  A [robust cosmological-strength photon calibration](problems/P8/a/fields/maxwell/focusing/cosmology/README.md)
+  now covers a C3 neighborhood of radiation-to-dust histories, with an
+  explicit cosmological-constant/source budget and every fixed finite
+  photon prescription coefficient. A smooth complete comparison family
+  verifies that the chosen past/future geometric bounds do not force
+  incompleteness by themselves. This establishes the stated photon,
+  global-flat-FLRW specialization, not an observed-universe or unrestricted
+  field/spacetime theorem.
+  **P8(a)'s photon/global-flat-FLRW objective is complete in this explicit
+  scope.** The pure-Maxwell specialization uses only the photon QSEI as
+  its energy input; added matter needs its separate stated energy bound.
 - P8(b): [completed scoped classification and verification commands](problems/P8/README.md).
   All 32 M0/M1 sector-row verdicts are decided: minimal optional groups are
   C or D without extra matter, and CD with rolling canonical matter.
@@ -222,9 +233,17 @@ around a pre-registered problems document and a certificate-gated ledger.
   can remain uniformly small, while prepared source-free light data give
   a positive control. This excludes the stated response contract, not all
   light-only theories, other parents, or UV-compatible bounce rows.
+  The [source-preserving symmetric vacuum-branch audit](problems/P8/s6/matching/composite/vacuum/README.md)
+  gives a direct operator and background matching obstruction. Its exact
+  zero-relative tree branch is GR plus the prescribed canonical light
+  matter, with no induced C/D operators. Correct vacuum/source and mass
+  normalization and a conditional functional-branch uniqueness theorem
+  prevent confusing this branch with the asymmetric bounce solutions.
+  It rules out the named matching route, not the entire parent or row.
 
-The [current P8 continuation audit](docs/assessment-2026-09-06-p8-photon-focusing-finite-response.md) separates
-completed certificate gates from the outstanding original research questions.
+The [current P8 continuation audit](docs/assessment-2026-09-06-p8-photon-cosmology-vacuum-branch.md) separates
+the completed scoped P8(a) objective and certificate gates from the
+outstanding P8(b) UV-matching and positivity questions.
 P8 is not marked finished or closed.
 
 ## Layout
