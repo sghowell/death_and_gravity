@@ -340,8 +340,15 @@ around a pre-registered problems document and a certificate-gated ledger.
   infimum with endpoint regularity distinguished from L2 attainment.
   The specified low temporal band contains at most one third of the
   source's squared norm; this band is not a physical EFT cutoff.
+  The [source-preserving reduction audit](problems/P8/s6/matching/variable/reduction/README.md)
+  now derives the actual stationary-hidden-metric action through four
+  derivatives. Its retained scalar-tensor coefficients miss the CD
+  structure, and a separate curvature-square operator remains. The
+  necessary coefficient remainder is quantified; small background
+  lapse error alone does not control the relevant derivative norms.
+  Higher orders and a controlled source-preserving reduction remain open.
 
-The [current P8 continuation audit](docs/assessment-2026-09-07-p8-quantitative-preparation-cost.md) separates
+The [current P8 continuation audit](docs/assessment-2026-09-07-p8-source-preserving-reduction.md) separates
 the completed scoped P8(a) objective and certificate gates from the
 outstanding P8(b) UV-matching and positivity questions.
 P8 is not marked finished or closed.
