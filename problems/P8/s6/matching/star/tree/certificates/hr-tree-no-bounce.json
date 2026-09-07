@@ -1,0 +1,920 @@
+{
+  "action_and_domain": {
+    "Einstein_coefficients": "Every constant G_v>=0; distinguished actual physical vertex has G_r>0; zero-EH vertices retain all their algebraic equations",
+    "geometry": "Finite connected acyclic tree; all actual metrics smooth regular common spatially flat FLRW with positive finite lapses/scales on a connected interval",
+    "interaction": "-2 sum_oriented_edges sqrt|g_i| sum_n beta_en e_n(sqrt(g_i^-1 g_j)); finite constant real beta0..4 of mass dimension four",
+    "old_normalization_dictionary": "S6.16 uses -2 beta; S6.5 m4*beta_old=2*beta_here",
+    "physical_metric_and_clock": "The actual vertex metric g_r; dT=N_r dt; component y_i=a_i/a_r,c_i=N_i/N_r, NOT c_i/y_i",
+    "signature_and_curvature": "+---; R_B=-6(DH+2H\u00b2); EH=-G R_B/2; 3G H\u00b2=rho, -2G DH=rho+p",
+    "sources": "Each independent matter action couples to one vertex only; separately conserved on shell, isotropic and n_i=rho_i+p_i>=0; absent sources zero"
+  },
+  "actual_controls": {
+    "NEC_outside_domain": "Aligned a=1+T\u00b2 with tuned edges and separate conserved fluids rho=3H\u00b2,p=-2H'-rho has n(0)=-4; not positive canonical matter",
+    "actual_selected_subset": "P=(0,2),C_root=(0,2),A_C=2,N_C=4/(3T\u00b2); erroneous A_all=3 leaves residual +2/(3T\u00b2)",
+    "mixed_algebraic_family": "G=(1,1,1),a_i=T^(1/3),N=(1,1/(3T),1),edges1->0 beta=(0,1,-1/2,0,1/2),2->0 tuned beta1; separate phi0,phi2=sqrt(2/3)logT,phi1 constant",
+    "nonempty_expanding_family": "Any finite tree with beta=(-3,1,0,0,-1), aligned a=T^(1/3),N=1,separate free phi_i=sqrt(2G_i/3)logT solves all equations; checked G=(1,0,2,3) branched orientation",
+    "zero_target_outside_domain": "G=(0,1),all beta/source zero,a=(1+T\u00b2,1),N=1 solves all equations with undetermined target H'(0)=2"
+  },
+  "all_point_component_theorem": {
+    "algebraic_strata": "Includes isolated/persistent/multiple/accumulated roots, identically zero P and arbitrary branch histories without differentiating membership or requiring finite switches",
+    "bounded_comparison": "H_r'=lambda_C H_r-eta_C, eta_C=N_C/(2A_C)>=0; |lambda_C|<=max_all_i |D_r log(a_i/a_r)| locally bounded on compact regular intervals",
+    "clock_kinematics": "H_i=H_r/y_i; y_i'=(c_i-y_i)H_r; D_i=c_i^-1 D_r",
+    "fixed_subset_identity": "-2 A_C H_r'+H_r (A_C')_fixed_C=N_C, A_C=sum_C G_i y_i\u00b2>=G_r>0, N_C=sum_C c_i y_i\u00b3 n_i>=0",
+    "not_a_global_all_vertex_K": "Only the fixed selected subset is differentiated; actual mixed-algebraic control rejects the full-vertex kinetic sum",
+    "optional_integrating_factor": "Bounded measurable lambda_C(T) gives exp(-integral lambda dT) H_r nonincreasing; a diagnostic, not a physical or canonical field map",
+    "positive_part_proof": "Y=max(H_r,0) is AC with Y'<=M_*Y a.e.; Gronwall from Y(T0)=0 gives sign preservation; W=-H_r comparison also preserves strict negativity",
+    "selection": "At each T* select C* through edges with P(T*)!=0; all internal locks hold on a common neighborhood; boundary nulls vanish at T*",
+    "statement": "H_r(T0)<=0 implies H_r(T)<=0 at every later point of the same connected regular physical-time interval; strict negativity remains strict"
+  },
+  "checked_controls": {
+    "CD_endpoint_equality_control": {
+      "necessary_normalized_endpoint_error": "8/5",
+      "status": "INCONCLUSIVE"
+    },
+    "actual_algebraic_active_component": [
+      0,
+      2
+    ],
+    "actual_false_all_vertex_inertia_residual": "2/(3*T**2)",
+    "actual_nonNEC_null_at_bounce": -4,
+    "actual_zero_target_Hprime_at_zero": 2,
+    "cycle_unit_flux_divergences_algebraic_only": [
+      0,
+      0,
+      0
+    ],
+    "invalid_domain_calls_rejected": 15,
+    "nonconserved_vertex_fluxes_algebraic_only": [
+      "1",
+      "0"
+    ],
+    "static_tuned_connected_tree_edge_stresses": {
+      "P": "2",
+      "null_i": "0",
+      "null_j": "0",
+      "pressure_i": "0",
+      "pressure_j": "0",
+      "rho_i": "0",
+      "rho_j": "0"
+    },
+    "strict_CD_endpoint_test": {
+      "necessary_normalized_endpoint_error": "8/5",
+      "status": "EXCLUDED_WITH_ACTUAL_VERTEX_METRIC_AND_PROPER_CLOCK"
+    },
+    "wrong_weight_and_normalization_defects": {
+      "raw_J_normalization_omission": "1",
+      "wrong_one_lapse_Bianchi_weight": "-12",
+      "wrong_two_lapse_null_weight": "4"
+    }
+  },
+  "claim": "P8-S6.17.TREE",
+  "conditional_actual_CD_matching": {
+    "half_window": "L=1/2 gives 8/(5tau); errors strictly below this at both endpoints force a forbidden sign change",
+    "necessary_budget": "With the actual vertex-metric/proper-time/endpoint dictionary, max_endpoint |H_r-H_CD| >=4L/[tau(1+L\u00b2)] at T=+-L*tau",
+    "not_supplied": "No original DHOST/free-matter operator map, composite-frame identification, approximate-action-to-parent solution theorem or physical vacuum-to-bounce trajectory is supplied or assumed",
+    "sharpness": "Equality remains inconclusive and is attained by a tuned-beta1 static Minkowski tree with zero sources"
+  },
+  "date": "2026-09-06",
+  "exact_residuals": {
+    "actual_background_and_separate_source_controls": {
+      "NEC_violating_lapse_residual": "0",
+      "NEC_violating_null_residual": "0",
+      "NEC_violating_separate_conservation": "0",
+      "actual_mixed_fixed_component_null": "0",
+      "mixed_lapse_0": "0",
+      "mixed_lapse_1": "0",
+      "mixed_lapse_2": "0",
+      "mixed_separate_scalar_current_0": "0",
+      "mixed_separate_scalar_current_1": "0",
+      "mixed_separate_scalar_current_2": "0",
+      "mixed_spatial_0": "0",
+      "mixed_spatial_1": "0",
+      "mixed_spatial_2": "0",
+      "stiff_lapse_0": "0",
+      "stiff_lapse_1": "0",
+      "stiff_lapse_2": "0",
+      "stiff_lapse_3": "0",
+      "stiff_separate_scalar_current_0": "0",
+      "stiff_separate_scalar_current_1": "0",
+      "stiff_separate_scalar_current_2": "0",
+      "stiff_separate_scalar_current_3": "0",
+      "stiff_spatial_0": "0",
+      "stiff_spatial_1": "0",
+      "stiff_spatial_2": "0",
+      "stiff_spatial_3": "0",
+      "zero_target_lapse_0": "0",
+      "zero_target_lapse_1": "0",
+      "zero_target_separate_scalar_current_0": "0",
+      "zero_target_separate_scalar_current_1": "0",
+      "zero_target_spatial_0": "0",
+      "zero_target_spatial_1": "0"
+    },
+    "literal_edge_variations_and_reciprocal_weights": {
+      "i_null_polynomial": "0",
+      "i_undivided_Bianchi": "0",
+      "j_null_polynomial": "0",
+      "j_undivided_Bianchi": "0",
+      "literal_elementary_symmetric_action": "0",
+      "literal_oriented_flux": "0",
+      "null_reciprocity_one_lapse": "0",
+      "proper_Bianchi_reciprocity_two_lapses": "0",
+      "reverse_edge_beta_dictionary": "0"
+    },
+    "literal_vertex_EH_sources_and_zero_EH_identity": {
+      "canonical_source_null_nonnegative": "0",
+      "lapse_first_EH_and_canonical_source": "0",
+      "scale_first_EH_and_canonical_source": "0",
+      "separate_scalar_on_shell_conservation": "0",
+      "vertex_Bianchi_including_zero_EH": "0",
+      "zero_EH_vertex_same_identity": "0"
+    },
+    "singleton_component": {
+      "bounded_coefficient_weighted_average": "0",
+      "component_source_reconstruction": "0",
+      "fixed_component_weighted_null": "0",
+      "fixed_stratum_normalized_identity": "0",
+      "internal_clock_ratio_kinematics_0": "0",
+      "target_kinetic_lower_bound": "0"
+    },
+    "three_vertex_fixed_component": {
+      "bounded_coefficient_weighted_average": "0",
+      "component_source_reconstruction": "0",
+      "fixed_component_weighted_null": "0",
+      "fixed_stratum_normalized_identity": "0",
+      "internal_clock_ratio_kinematics_0": "0",
+      "internal_clock_ratio_kinematics_1": "0",
+      "internal_clock_ratio_kinematics_2": "0",
+      "target_kinetic_lower_bound": "0"
+    }
+  },
+  "formulation": "FORMULATION.md",
+  "independent_Fraction_replay": {
+    "Gaussian_incidence_fixtures": [
+      {
+        "divergences": [
+          "1/2",
+          "-1/2"
+        ],
+        "edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "fluxes": [
+          "1/2"
+        ],
+        "rank": 1,
+        "vertices": 2
+      },
+      {
+        "divergences": [
+          "1/2",
+          "-7/6",
+          "17/12",
+          "-3/4"
+        ],
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "fluxes": [
+          "1/2",
+          "-2/3",
+          "3/4"
+        ],
+        "rank": 3,
+        "vertices": 4
+      },
+      {
+        "divergences": [
+          "-23/12",
+          "1/2",
+          "2/3",
+          "3/4"
+        ],
+        "edges": [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "fluxes": [
+          "1/2",
+          "-2/3",
+          "3/4"
+        ],
+        "rank": 3,
+        "vertices": 4
+      },
+      {
+        "divergences": [
+          "1/2",
+          "1/6",
+          "53/60",
+          "-3/4",
+          "1/30",
+          "-5/6"
+        ],
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "fluxes": [
+          "1/2",
+          "-2/3",
+          "3/4",
+          "-4/5",
+          "5/6"
+        ],
+        "rank": 5,
+        "vertices": 6
+      }
+    ],
+    "coefficientwise_identities": {
+      "conditional_two_vertex_weighted_null": "0",
+      "literal_i_Bianchi_cleared": "0",
+      "literal_i_null_coframe_polynomial": "0",
+      "literal_j_null_coframe_polynomial": "0",
+      "reciprocal_Bianchi_two_lapses": "0",
+      "reciprocal_null_one_lapse": "0"
+    },
+    "component_first_jet_fixtures": [
+      {
+        "A": "1",
+        "A_fixed_prime": "0",
+        "G": [
+          "1"
+        ],
+        "H": "0",
+        "Hprime": "-1",
+        "c": [
+          "1"
+        ],
+        "component": [
+          0
+        ],
+        "component_log_rate_bound": "0",
+        "eta": "1",
+        "lambda": "0",
+        "nulls": [
+          "2"
+        ],
+        "root": 0,
+        "weighted_source": "2",
+        "y": [
+          "1"
+        ],
+        "yprimes": {
+          "0": "0"
+        }
+      },
+      {
+        "A": "19",
+        "A_fixed_prime": "8",
+        "G": [
+          "1",
+          "0",
+          "2"
+        ],
+        "H": "-2/3",
+        "Hprime": "-343/114",
+        "c": [
+          "1",
+          "3",
+          "2"
+        ],
+        "component": [
+          0,
+          1,
+          2
+        ],
+        "component_log_rate_bound": "1/3",
+        "eta": "109/38",
+        "lambda": "4/19",
+        "nulls": [
+          "1",
+          "0",
+          "2"
+        ],
+        "root": 0,
+        "weighted_source": "109",
+        "y": [
+          "1",
+          "2",
+          "3"
+        ],
+        "yprimes": {
+          "0": "0",
+          "1": "-2/3",
+          "2": "2/3"
+        }
+      },
+      {
+        "A": "2",
+        "A_fixed_prime": "0",
+        "G": [
+          "1",
+          "1",
+          "1"
+        ],
+        "H": "1/3",
+        "Hprime": "-1",
+        "c": [
+          "1",
+          "1/3",
+          "1"
+        ],
+        "component": [
+          0,
+          2
+        ],
+        "component_log_rate_bound": "0",
+        "eta": "1",
+        "lambda": "0",
+        "nulls": [
+          "2",
+          "0",
+          "2"
+        ],
+        "root": 0,
+        "weighted_source": "4",
+        "y": [
+          "1",
+          "1",
+          "1"
+        ],
+        "yprimes": {
+          "0": "0",
+          "2": "0"
+        }
+      },
+      {
+        "A": "15/2",
+        "A_fixed_prime": "15/7",
+        "G": [
+          "0",
+          "3",
+          "2"
+        ],
+        "H": "5/7",
+        "Hprime": "-1271/1470",
+        "c": [
+          "3",
+          "1",
+          "2"
+        ],
+        "component": [
+          0,
+          1,
+          2
+        ],
+        "component_log_rate_bound": "5/14",
+        "eta": "29/30",
+        "lambda": "1/7",
+        "nulls": [
+          "0",
+          "1",
+          "2"
+        ],
+        "root": 1,
+        "weighted_source": "29/2",
+        "y": [
+          "2",
+          "1",
+          "3/2"
+        ],
+        "yprimes": {
+          "0": "5/7",
+          "1": "0",
+          "2": "5/14"
+        }
+      },
+      {
+        "A": "1",
+        "A_fixed_prime": "0",
+        "G": [
+          "1",
+          "0",
+          "7"
+        ],
+        "H": "2",
+        "Hprime": "-3/2",
+        "c": [
+          "1",
+          "1",
+          "5"
+        ],
+        "component": [
+          0
+        ],
+        "component_log_rate_bound": "0",
+        "eta": "3/2",
+        "lambda": "0",
+        "nulls": [
+          "3",
+          "0",
+          "4"
+        ],
+        "root": 0,
+        "weighted_source": "3",
+        "y": [
+          "1",
+          "2",
+          "9"
+        ],
+        "yprimes": {
+          "0": "0"
+        }
+      }
+    ],
+    "literal_edge_stress_fixtures": [
+      {
+        "P": "2",
+        "beta": [
+          "-3",
+          "1",
+          "0",
+          "0",
+          "-1"
+        ],
+        "c": "1",
+        "null_i": "0",
+        "null_j": "0",
+        "pressure_i": "0",
+        "pressure_j": "0",
+        "rho_i": "0",
+        "rho_j": "0",
+        "y": "1"
+      },
+      {
+        "P": "-24",
+        "beta": [
+          "1",
+          "-2",
+          "3/2",
+          "-4",
+          "5"
+        ],
+        "c": "3/2",
+        "null_i": "-12",
+        "null_j": "1",
+        "pressure_i": "38",
+        "pressure_j": "5/4",
+        "rho_i": "-50",
+        "rho_j": "-1/4",
+        "y": "2"
+      },
+      {
+        "P": "0",
+        "beta": [
+          "0",
+          "1",
+          "-1",
+          "1",
+          "0"
+        ],
+        "c": "2",
+        "null_i": "0",
+        "null_j": "0",
+        "pressure_i": "-2",
+        "pressure_j": "-2",
+        "rho_i": "2",
+        "rho_j": "2",
+        "y": "1"
+      },
+      {
+        "P": "0",
+        "beta": [
+          "0",
+          "1",
+          "-1/2",
+          "0",
+          "1/2"
+        ],
+        "c": "3",
+        "null_i": "0",
+        "null_j": "0",
+        "pressure_i": "-3",
+        "pressure_j": "0",
+        "rho_i": "3",
+        "rho_j": "0",
+        "y": "1"
+      },
+      {
+        "P": "0",
+        "beta": [
+          "2",
+          "0",
+          "0",
+          "0",
+          "-3"
+        ],
+        "c": "2/3",
+        "null_i": "0",
+        "null_j": "0",
+        "pressure_i": "-4",
+        "pressure_j": "6",
+        "rho_i": "4",
+        "rho_j": "-6",
+        "y": "3/2"
+      }
+    ]
+  },
+  "literal_identities": {
+    "edge_P": "P=2(beta1+2beta2*y+beta3*y\u00b2)",
+    "edge_nulls": "I_i=(y-c)P; I_j=(c-y)P/(c*y\u00b3)",
+    "one_lapse_null_reciprocity": "N_i*a_i\u00b3*I_i+N_j*a_j\u00b3*I_j=0",
+    "source_aware_balance": "C_i=D_i rho_ie+3H_i I_i=3Pc(yH_j-H_i); C_j=-C_i/(c\u00b2y\u00b3)",
+    "tree_incidence": "B_tree F=0 and finite-tree injectivity imply F_e=0 for every edge",
+    "two_lapse_Bianchi_flux": "F_e=N_i\u00b2*a_i\u00b3*C_i=3N_i*N_j*a_i\u00b2*P*(a_jH_j-a_iH_i)=-N_j\u00b2*a_j\u00b3*C_j",
+    "undivided_lock": "P_e(y_e)*(a_jH_j-a_iH_i)=0; no H or P division at a zero"
+  },
+  "not_established": [
+    "No theorem for cycles, infinite graphs, nonpairwise or derivative interactions, or variable coefficients",
+    "No theorem for shared/nonconserved/non-NEC matter, negative Einstein coefficients or a zero-EH physical target without an additional positive-component guarantee",
+    "No continuation through singular/nonpositive root/lapse domains and no nonflat or anisotropic extension",
+    "No scalar/vector/tensor stability, ghost, quantum, UV, positivity or cutoff verdict",
+    "No universal parent exclusion, original C/D operator matching, or closure of S6, P8(b) or P8"
+  ],
+  "oriented_tree_pruning_fixtures": [
+    {
+      "edges": [],
+      "nonzero_divergence_control_fluxes": [],
+      "vertex_count": 1,
+      "zero_fluxes": []
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ]
+      ],
+      "nonzero_divergence_control_fluxes": [
+        "1"
+      ],
+      "vertex_count": 2,
+      "zero_fluxes": [
+        "0"
+      ]
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "nonzero_divergence_control_fluxes": [
+        "1",
+        "-2",
+        "3"
+      ],
+      "vertex_count": 4,
+      "zero_fluxes": [
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "edges": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "nonzero_divergence_control_fluxes": [
+        "1",
+        "-2",
+        "3"
+      ],
+      "vertex_count": 4,
+      "zero_fluxes": [
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "nonzero_divergence_control_fluxes": [
+        "1",
+        "-2",
+        "3",
+        "-4",
+        "5"
+      ],
+      "vertex_count": 6,
+      "zero_fluxes": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    }
+  ],
+  "primary_independent_bridges": {
+    "Gaussian_vs_leaf_incidence": [
+      {
+        "primary_minus_independent_fluxes": [
+          "0"
+        ],
+        "vertices": 2
+      },
+      {
+        "primary_minus_independent_fluxes": [
+          "0",
+          "0",
+          "0"
+        ],
+        "vertices": 4
+      },
+      {
+        "primary_minus_independent_fluxes": [
+          "0",
+          "0",
+          "0"
+        ],
+        "vertices": 4
+      },
+      {
+        "primary_minus_independent_fluxes": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "vertices": 6
+      }
+    ],
+    "fixed_component_first_jets": [
+      {
+        "component": [
+          0
+        ],
+        "primary_minus_independent": {
+          "A": "0",
+          "A_fixed_prime": "0",
+          "Hprime": "0",
+          "component_log_rate_bound": "0",
+          "eta": "0",
+          "lambda": "0",
+          "weighted_source": "0",
+          "yprimes": "0"
+        },
+        "root": 0,
+        "vertices": 1
+      },
+      {
+        "component": [
+          0,
+          1,
+          2
+        ],
+        "primary_minus_independent": {
+          "A": "0",
+          "A_fixed_prime": "0",
+          "Hprime": "0",
+          "component_log_rate_bound": "0",
+          "eta": "0",
+          "lambda": "0",
+          "weighted_source": "0",
+          "yprimes": "0"
+        },
+        "root": 0,
+        "vertices": 3
+      },
+      {
+        "component": [
+          0,
+          2
+        ],
+        "primary_minus_independent": {
+          "A": "0",
+          "A_fixed_prime": "0",
+          "Hprime": "0",
+          "component_log_rate_bound": "0",
+          "eta": "0",
+          "lambda": "0",
+          "weighted_source": "0",
+          "yprimes": "0"
+        },
+        "root": 0,
+        "vertices": 3
+      },
+      {
+        "component": [
+          0,
+          1,
+          2
+        ],
+        "primary_minus_independent": {
+          "A": "0",
+          "A_fixed_prime": "0",
+          "Hprime": "0",
+          "component_log_rate_bound": "0",
+          "eta": "0",
+          "lambda": "0",
+          "weighted_source": "0",
+          "yprimes": "0"
+        },
+        "root": 1,
+        "vertices": 3
+      },
+      {
+        "component": [
+          0
+        ],
+        "primary_minus_independent": {
+          "A": "0",
+          "A_fixed_prime": "0",
+          "Hprime": "0",
+          "component_log_rate_bound": "0",
+          "eta": "0",
+          "lambda": "0",
+          "weighted_source": "0",
+          "yprimes": "0"
+        },
+        "root": 0,
+        "vertices": 3
+      }
+    ],
+    "literal_edge_stresses": [
+      {
+        "c": "1",
+        "primary_minus_independent": {
+          "P": "0",
+          "null_i": "0",
+          "null_j": "0",
+          "pressure_i": "0",
+          "pressure_j": "0",
+          "rho_i": "0",
+          "rho_j": "0"
+        },
+        "y": "1"
+      },
+      {
+        "c": "3/2",
+        "primary_minus_independent": {
+          "P": "0",
+          "null_i": "0",
+          "null_j": "0",
+          "pressure_i": "0",
+          "pressure_j": "0",
+          "rho_i": "0",
+          "rho_j": "0"
+        },
+        "y": "2"
+      },
+      {
+        "c": "2",
+        "primary_minus_independent": {
+          "P": "0",
+          "null_i": "0",
+          "null_j": "0",
+          "pressure_i": "0",
+          "pressure_j": "0",
+          "rho_i": "0",
+          "rho_j": "0"
+        },
+        "y": "1"
+      },
+      {
+        "c": "3",
+        "primary_minus_independent": {
+          "P": "0",
+          "null_i": "0",
+          "null_j": "0",
+          "pressure_i": "0",
+          "pressure_j": "0",
+          "rho_i": "0",
+          "rho_j": "0"
+        },
+        "y": "1"
+      },
+      {
+        "c": "2/3",
+        "primary_minus_independent": {
+          "P": "0",
+          "null_i": "0",
+          "null_j": "0",
+          "pressure_i": "0",
+          "pressure_j": "0",
+          "rho_i": "0",
+          "rho_j": "0"
+        },
+        "y": "3/2"
+      }
+    ]
+  },
+  "primary_sources": {
+    "cosmological_edge_balance_and_branch_dictionary": "https://arxiv.org/pdf/2304.09205",
+    "reciprocal_edges_and_tree_leaf_stripping_prior_art": "https://arxiv.org/pdf/2410.10976"
+  },
+  "prior_context_sha256": {
+    "S6_16_constant_star_action_and_controls": "54f23dfd05d7580969550d06ac4a72adc5faa61988be9e7c95eeb199fb546353",
+    "S6_5_bimetric_monotonicity_context": "0efd16fa4f02f45f35448e2056fb37c863c29c2ed09203c3351ba9515baff031",
+    "adopted_S6_matching_contract": "d00df35d5821b05baa61e897725a22ed1ac21d0536b74bdaece3ab0093215901",
+    "original_CD_matter_witness_context": "caf8c8e688a7565b9d00f921c099a28da00f97522ed26ad182a8227eb80cd4dd",
+    "original_P8_B_curvature_dictionary": "73dd18f7a4b56a0205f9fbc6a4b09b213a3c280b3f0274414a255635b04e2b09"
+  },
+  "schema": 1,
+  "source_audit": "notes/sources.md",
+  "source_sha256": {
+    "FORMULATION.md": "4c2df02076b4f37e83afe77bfa64776c669b5da86e6e935e1ce842ccd65d83da",
+    "README.md": "653e4eae74e225362ace8e7a9fa6483b638bb5f6fcc7cebe27094b4dca2e3aec",
+    "notes/proof.md": "d3206b693032ae48d7fa4b1bd7eb2a2a13e89b5ffad510f1e4c482030a481629",
+    "notes/sources.md": "fda88dfb19ed34c11f425d8b6d25db2b5e34ed74ddcb8aaea08d00bb5de8e997",
+    "src/p8_hr_tree/__init__.py": "49e2211b14329184607cc81c36f19c2e2abba5685644838a4a3c83cac46d5570",
+    "src/p8_hr_tree/components.py": "51fb2e14d389c86d97ab216eaf58b06e74b607bd1d82b2972f8caa36a024f240",
+    "src/p8_hr_tree/controls.py": "21be270d8da4e13382853f2259e5cb3d5a463f214178730b9a787c1fa0c84aa5",
+    "src/p8_hr_tree/edge.py": "9f2c7ec271ee3d3c3f82ae36351caaabd4d51b0496e7aeb078bac96f3c519178",
+    "src/p8_hr_tree/graph.py": "19ebf3b58b83e6b5f8864e1c17d689c22f35c598adde3201a02e4620d9d833b0",
+    "src/p8_hr_tree/independent.py": "fafe3289d93d279a43ed0278de207af1950742ccee81025ccf786a4978542485",
+    "src/p8_hr_tree/verify.py": "ae41d74ba77195e3690f58bef4c54230f62acf3bc59dff82dae6ac309632e6c4",
+    "tests/conftest.py": "ed271ee3f88fc51151269e8b091d0d0a4ca32837349715e8b7c74737c0c94345",
+    "tests/test_hr_tree.py": "e1e3892724edd105ef8283ea16be8dd739c9c13e77776b6827188739c34902b8",
+    "tests/test_hr_tree_certificate.py": "2ba8d723a1c6040d0718e5c5ccb3af46d1d2517fc95700c6d0acf7d11f5b2f20",
+    "tests/test_hr_tree_independent_audit.py": "c964649f18e5e78a2a991e6f0729e19fb6712f91dbd3ee65d34aa39940e1b9cf"
+  },
+  "status": "FINITE_HR_TREE_SEPARATE_NEC_PHYSICAL_SIGN_PRESERVATION; ORIGINAL_P8_OPEN",
+  "verification_boundary": "Exact symbolic and independent Fraction/coefficient/first-jet/Gaussian replay plus separately authored covariant audits support the written all-point real-analysis proof; no proof-assistant formalization or numerical enumeration of branch histories",
+  "written_proof": "notes/proof.md"
+}

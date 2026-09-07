@@ -1,0 +1,599 @@
+{
+  "actual_controls": {
+    "meaning": "Actual regular backgrounds, not a bounce, perturbative-health or original C/D matching witness",
+    "rolling": "lambda=1,beta=(1,-1,1),G=(1,2,3),y=(1,2,3),Lambda=(-8,1/2,-8/81); a_i=y_i T^(1/3),n_i=y_i,phi_i=sqrt(2G_i/3)log(T/T*)",
+    "rolling_Einstein_and_scalar": "Each rho_m,i=p_m,i=G_i/(3y_i\u00b2T\u00b2); S_N=2,S_a=2T^(1/3),K=36,normalized derivative=-1/(18T\u00b2); all individual Einstein and scalar equations vanish",
+    "vacuum": "Same beta,G,y; a_i=y_i exp(H0 T),n_i=y_i,zero matter,Lambda_i=3H0\u00b2/y_i\u00b2-rho_int,i/G_i; normalized derivative zero for any fixed real H0"
+  },
+  "auxiliary_source_preserving_identity": {
+    "chart": "A positive auxiliary-w chart only where applicable; the direct determinant proof needs actual positive EH coframes and nonzero sums, not positive w",
+    "map": "L_aux=lambda det w(3-tr(w^-1 U)),B=-3lambda/2,p_i=lambda beta_i/2; invertible stationary w=U gives -lambda detU",
+    "source_location": "Matter remains on original EH leaves; adding matter on w changes its Euler equation and generally its stationary value"
+  },
+  "checked_omission_controls": {
+    "canonical_source_moved_to_w_Euler": [
+      "-1/2",
+      "1/2",
+      "1/2",
+      "1/2"
+    ],
+    "correct_K": "19",
+    "correct_weighted_source": "325",
+    "invalid_domain_calls_rejected": 8,
+    "singular_time_sum": {
+      "S_N": "0",
+      "S_a": "2",
+      "actual_solution": false,
+      "dot_S_a": "0",
+      "unlocked_velocities": [
+        "1",
+        "-1",
+        "0"
+      ]
+    },
+    "spatial_zero_sum_interaction_stresses": "all zero; not a classification of S_N-zero branches",
+    "wrong_inverse_ratio_K": "11/9",
+    "wrong_unweighted_source": "3"
+  },
+  "claim": "P8-S6.18.DETERMINANT",
+  "date": "2026-09-06",
+  "exact_residuals": {
+    "actual_clock_weighted_Einstein_identity": {
+      "K_chain_rule": "0",
+      "bounce_without_H_division": "0",
+      "normalized_monotonicity": "0",
+      "proper_clock_leaf_null": "0",
+      "weighted_null_combination": "0"
+    },
+    "actual_solutions_auxiliary_map_and_countercontrols": {
+      "Einstein_00_0": "0",
+      "Einstein_00_1": "0",
+      "Einstein_00_2": "0",
+      "Einstein_space_0": "0",
+      "Einstein_space_1": "0",
+      "Einstein_space_2": "0",
+      "auxiliary_diagonal_Euler_0": "0",
+      "auxiliary_diagonal_Euler_1": "0",
+      "auxiliary_diagonal_Euler_2": "0",
+      "auxiliary_diagonal_Euler_3": "0",
+      "auxiliary_stationary_value": "0",
+      "canonical_scalar_0": "0",
+      "canonical_scalar_1": "0",
+      "canonical_scalar_2": "0",
+      "moved_canonical_source_changes_auxiliary_lapse": "0",
+      "singular_sum_Bianchi_only_0": "0",
+      "singular_sum_Bianchi_only_1": "0",
+      "singular_sum_Bianchi_only_2": "0",
+      "stiff_K36": "0",
+      "stiff_scaled_H_prime": "0",
+      "vacuum_00_0": "0",
+      "vacuum_00_1": "0",
+      "vacuum_00_2": "0",
+      "vacuum_space_0": "0",
+      "vacuum_space_1": "0",
+      "vacuum_space_2": "0"
+    },
+    "literal_determinant_and_unfactored_Bianchi": {
+      "density_0": "0",
+      "density_1": "0",
+      "density_2": "0",
+      "pressure_0": "0",
+      "pressure_1": "0",
+      "pressure_2": "0",
+      "unfactored_Bianchi_0": "0",
+      "unfactored_Bianchi_1": "0",
+      "unfactored_Bianchi_2": "0",
+      "weighted_interaction_null_sum": "0"
+    }
+  },
+  "fixed_action_domain": {
+    "action": "-sum_i G_i/2 sqrt|g_i|(R_B+2Lambda_i)-lambda det(sum_i beta_i e_i)+sum_i S_m,i[g_i,psi_i]",
+    "constants": "lambda=m^4>0; finite G_i>0; real constant beta_i,Lambda_i; finite nonempty metric set",
+    "curvature_and_clock": "+---,R_B=-6(DH+2H\u00b2); 3G_i H_i\u00b2=G_i Lambda_i+rho_m,i+rho_int,i; physical dT=n_r dt",
+    "geometry": "Common aligned diagonal positive smooth flat-FLRW coframes, connected open chart; not every relative-Lorentz branch",
+    "physical_sources": "Independent on-shell homogeneous/isotropic sources each minimally coupled to its own actual EH metric, separately conserved and NEC; no matter on summed or auxiliary metric",
+    "regular_sum": "S_a=sum beta_i a_i !=0 and S_N=sum beta_i n_i !=0 everywhere in the theorem interval",
+    "signs": "Same-sign nonzero beta is a sufficient source-paper specialization, not necessary in the algebraic proof; mixed signs get no health verdict"
+  },
+  "formulation": "FORMULATION.md",
+  "independent_Fraction_replay": {
+    "actual_scalar_Einstein_fixtures": [
+      {
+        "Hs": [
+          "8/3",
+          "4/3",
+          "8/9"
+        ],
+        "Lambda": [
+          "-8",
+          "1/2",
+          "-8/81"
+        ],
+        "S_N": "2",
+        "S_a": "1",
+        "T": "1/8",
+        "matter_rho": [
+          "64/3",
+          "32/3",
+          "64/9"
+        ]
+      },
+      {
+        "Hs": [
+          "1/3",
+          "1/6",
+          "1/9"
+        ],
+        "Lambda": [
+          "-8",
+          "1/2",
+          "-8/81"
+        ],
+        "S_N": "2",
+        "S_a": "2",
+        "T": "1",
+        "matter_rho": [
+          "1/3",
+          "1/6",
+          "1/9"
+        ]
+      },
+      {
+        "Hs": [
+          "1/24",
+          "1/48",
+          "1/72"
+        ],
+        "Lambda": [
+          "-8",
+          "1/2",
+          "-8/81"
+        ],
+        "S_N": "2",
+        "S_a": "4",
+        "T": "8",
+        "matter_rho": [
+          "1/192",
+          "1/384",
+          "1/576"
+        ]
+      }
+    ],
+    "actual_vacuum_Einstein_fixtures": [
+      {
+        "H0": "-2",
+        "Hs": [
+          "-2",
+          "-1",
+          "-2/3"
+        ],
+        "Lambda": [
+          "4",
+          "7/2",
+          "100/81"
+        ],
+        "scaled_H_prime": "0"
+      },
+      {
+        "H0": "0",
+        "Hs": [
+          "0",
+          "0",
+          "0"
+        ],
+        "Lambda": [
+          "-8",
+          "1/2",
+          "-8/81"
+        ],
+        "scaled_H_prime": "0"
+      },
+      {
+        "H0": "3/2",
+        "Hs": [
+          "3/2",
+          "3/4",
+          "1/2"
+        ],
+        "Lambda": [
+          "-5/4",
+          "35/16",
+          "211/324"
+        ],
+        "scaled_H_prime": "0"
+      }
+    ],
+    "coefficientwise_identities": {
+      "density_numerator_0": "0",
+      "density_numerator_1": "0",
+      "density_numerator_2": "0",
+      "literal_weighted_null_sum": "0",
+      "pressure_numerator_0": "0",
+      "pressure_numerator_1": "0",
+      "pressure_numerator_2": "0",
+      "unfactored_Bianchi_cleared_0": "0",
+      "unfactored_Bianchi_cleared_1": "0",
+      "unfactored_Bianchi_cleared_2": "0"
+    },
+    "full_auxiliary_stationary_directions": 16,
+    "full_coframe_first_jet_directions": 192,
+    "literal_stress_fixtures": [
+      {
+        "S_N": "14",
+        "S_a": "20",
+        "a": [
+          "2",
+          "3",
+          "4"
+        ],
+        "beta": [
+          "1",
+          "2",
+          "3"
+        ],
+        "directions": "48",
+        "lambda": "1",
+        "n": [
+          "1",
+          "2",
+          "3"
+        ],
+        "nulls": [
+          "-400",
+          "-800/27",
+          "25"
+        ],
+        "pressure": [
+          "-1400",
+          "-5600/9",
+          "-350"
+        ],
+        "rho": [
+          "1000",
+          "16000/27",
+          "375"
+        ],
+        "weighted_null": "0"
+      },
+      {
+        "S_N": "2",
+        "S_a": "2",
+        "a": [
+          "1",
+          "2",
+          "3"
+        ],
+        "beta": [
+          "1",
+          "-1",
+          "1"
+        ],
+        "directions": "48",
+        "lambda": "1",
+        "n": [
+          "1",
+          "2",
+          "3"
+        ],
+        "nulls": [
+          "0",
+          "0",
+          "0"
+        ],
+        "pressure": [
+          "-8",
+          "1",
+          "-8/27"
+        ],
+        "rho": [
+          "8",
+          "-1",
+          "8/27"
+        ],
+        "weighted_null": "0"
+      },
+      {
+        "S_N": "0",
+        "S_a": "2",
+        "a": [
+          "1",
+          "2",
+          "1"
+        ],
+        "beta": [
+          "1",
+          "1",
+          "-1"
+        ],
+        "directions": "48",
+        "lambda": "1",
+        "n": [
+          "1",
+          "1",
+          "2"
+        ],
+        "nulls": [
+          "8",
+          "1",
+          "-8"
+        ],
+        "pressure": [
+          "0",
+          "0",
+          "0"
+        ],
+        "rho": [
+          "8",
+          "1",
+          "-8"
+        ],
+        "weighted_null": "0"
+      },
+      {
+        "S_N": "7",
+        "S_a": "10",
+        "a": [
+          "2",
+          "3",
+          "4"
+        ],
+        "beta": [
+          "1",
+          "0",
+          "2"
+        ],
+        "directions": "48",
+        "lambda": "1",
+        "n": [
+          "1",
+          "2",
+          "3"
+        ],
+        "nulls": [
+          "-50",
+          "0",
+          "25/12"
+        ],
+        "pressure": [
+          "-175",
+          "0",
+          "-175/6"
+        ],
+        "rho": [
+          "125",
+          "0",
+          "125/4"
+        ],
+        "weighted_null": "0"
+      }
+    ],
+    "physical_clock_fixtures": [
+      {
+        "Gs": [
+          "1",
+          "2",
+          "3"
+        ],
+        "H": "-2",
+        "Hprime": "-121/36",
+        "K": "36",
+        "Kprime": "56",
+        "cs": [
+          "1",
+          "3/2",
+          "1/3"
+        ],
+        "nulls": [
+          "1",
+          "2",
+          "3"
+        ],
+        "weighted_null": "130",
+        "yprimes": [
+          "0",
+          "-2",
+          "4"
+        ],
+        "ys": [
+          "1",
+          "2",
+          "3"
+        ]
+      },
+      {
+        "Gs": [
+          "2",
+          "1"
+        ],
+        "H": "0",
+        "Hprime": "-6/17",
+        "K": "17/4",
+        "Kprime": "0",
+        "cs": [
+          "1",
+          "7"
+        ],
+        "nulls": [
+          "3",
+          "0"
+        ],
+        "weighted_null": "3",
+        "yprimes": [
+          "0",
+          "0"
+        ],
+        "ys": [
+          "1",
+          "3/2"
+        ]
+      },
+      {
+        "Gs": [
+          "3"
+        ],
+        "H": "4",
+        "Hprime": "0",
+        "K": "3",
+        "Kprime": "0",
+        "cs": [
+          "1"
+        ],
+        "nulls": [
+          "0"
+        ],
+        "weighted_null": "0",
+        "yprimes": [
+          "0"
+        ],
+        "ys": [
+          "1"
+        ]
+      }
+    ]
+  },
+  "not_established": [
+    "A theorem through persistent S_N=0,S_a!=0 or any classified singular-sum continuation",
+    "Actual solution or perturbative health of the Bianchi-only singular countercontrol",
+    "Uniqueness of the common-Lorentz branch or a no-bounce theorem for nonaligned coframes",
+    "An unchanged theorem after moving matter to the composite/auxiliary metric, using variable/derivative interactions, nonflat slices or physical NEC violation",
+    "Scalar/vector/tensor health, a quantum cutoff, Regge/loop control or a full/light-EFT UV verdict from the paper's high-density cone speeds",
+    "Original C/D matching, a universal parent exclusion, or closure of S6, P8(b), or P8"
+  ],
+  "primary_independent_bridges": {
+    "full_coframe_variation": [
+      {
+        "active": [
+          0,
+          1,
+          2
+        ],
+        "primary_minus_independent": {
+          "S_N": "0",
+          "S_a": "0",
+          "nulls": "0",
+          "pressure": "0",
+          "rho": "0"
+        },
+        "regular_sum": true
+      },
+      {
+        "active": [
+          0,
+          1,
+          2
+        ],
+        "primary_minus_independent": {
+          "S_N": "0",
+          "S_a": "0",
+          "nulls": "0",
+          "pressure": "0",
+          "rho": "0"
+        },
+        "regular_sum": true
+      },
+      {
+        "active": [
+          0,
+          1,
+          2
+        ],
+        "primary_minus_independent": {
+          "S_N": "0",
+          "S_a": "0",
+          "nulls": "0",
+          "pressure": "0",
+          "rho": "0"
+        },
+        "regular_sum": false
+      },
+      {
+        "active": [
+          0,
+          2
+        ],
+        "primary_minus_independent": {
+          "S_N": "0",
+          "S_a": "0",
+          "nulls": "0",
+          "pressure": "0",
+          "rho": "0"
+        },
+        "regular_sum": true
+      }
+    ],
+    "proper_clock_and_null_sources": [
+      {
+        "active_count": 3,
+        "primary_minus_independent": {
+          "Hprime": "0",
+          "K": "0",
+          "Kprime": "0",
+          "weighted_null": "0",
+          "yprimes": "0"
+        }
+      },
+      {
+        "active_count": 2,
+        "primary_minus_independent": {
+          "Hprime": "0",
+          "K": "0",
+          "Kprime": "0",
+          "weighted_null": "0",
+          "yprimes": "0"
+        }
+      },
+      {
+        "active_count": 1,
+        "primary_minus_independent": {
+          "Hprime": "0",
+          "K": "0",
+          "Kprime": "0",
+          "weighted_null": "0",
+          "yprimes": "0"
+        }
+      }
+    ]
+  },
+  "primary_sources": [
+    "https://arxiv.org/pdf/2607.24347",
+    "https://arxiv.org/pdf/1804.04671"
+  ],
+  "prior_context_sha256": {
+    "S6_13_literal_auxiliary_action": "062ea71b4fcb139af3ea727f013eeeb3a340b6e37207cb872e372eacce09631e",
+    "S6_16_frozen_STAR_and_arithmetic_lineage": "54f23dfd05d7580969550d06ac4a72adc5faa61988be9e7c95eeb199fb546353",
+    "adopted_S6_matching_contract": "d00df35d5821b05baa61e897725a22ed1ac21d0536b74bdaece3ab0093215901"
+  },
+  "schema": 1,
+  "source_audit": "notes/sources.md",
+  "source_sha256": {
+    "FORMULATION.md": "ef9afc08b72a39a61574e1fe304b4599a0a6f49fa3374f6a4496697feaf3870f",
+    "README.md": "9742f11d329fac3f93501f9e119d5b6542c3fcb979e19e23df38950ac46e440d",
+    "notes/proof.md": "02f3e6da7c0d7f8f4fcd10a3932fc7ecb877cc9aa34e030f187c650a61db70fd",
+    "notes/sources.md": "efa9cba2c45042cea92b5e00bf89fe9eedb10b7a49276b9b149c1f20b23d5ca9",
+    "src/p8_determinant/__init__.py": "05b80bc0687400144e350ceda3273bf54201468d4b8e74c5fa23b92240bf3c33",
+    "src/p8_determinant/background.py": "d149f36a9557f580102c4515055b0ac5f1d5b773d247465e31b9cc89e504df29",
+    "src/p8_determinant/controls.py": "c2e84db08bb4e7b7352765b723804e9aa1165e1635eecc816986d0741626b49b",
+    "src/p8_determinant/independent.py": "aee4b3d1406c666b3d04f3c711f5e4400d65207b9819064fe29bb6a091db7683",
+    "src/p8_determinant/potential.py": "95955f180bcc706cea71c393d65ba2296fb47c9b16ed870b0075b6eed74bcf20",
+    "src/p8_determinant/verify.py": "edb4a81cfb95493421d0e493141a5eabc2fcd1fcf6844645e624f0423ca4b9ec",
+    "tests/conftest.py": "ed271ee3f88fc51151269e8b091d0d0a4ca32837349715e8b7c74737c0c94345",
+    "tests/test_determinant_action.py": "f4607d9d29f8c86808b069534d187faeb82dce9a415cbbe9366f3678d298e42f",
+    "tests/test_determinant_independent_audit.py": "d1c4bf137a5d17414330585e19047c3ab68f42c2cbf5023373243404d5c82182",
+    "tests/test_determinant_report.py": "5f3b31e4fab3282b29d4d44071bd008dc7c79ac9d121df7e4b7431ba83ea8377"
+  },
+  "status": "REGULAR_ALIGNED_FLAT_DETERMINANT_SUM_SEPARATE_NEC_SOURCES_NO_BOUNCE; MATCHING_AND_P8_B_OPEN",
+  "theorem": {
+    "conclusion": "H(T0)<=0 implies H(T)<=0 for every later T in the same regular interval; no degenerate or ordinary contraction-to-expansion",
+    "exact_identity": "K H'-H K'/2=-sum_active c_i y_i^4(rho_m,i+p_m,i)/2",
+    "interaction": "rho_int,i=lambda beta_i S_a\u00b3/a_i\u00b3; p_int,i=-lambda beta_i S_N S_a\u00b2/(n_i a_i\u00b2)",
+    "kinematics": "y_i=a_i/a_r,c_i=n_i/(n_r y_i),y_r=c_r=1; H_i=H/y_i,y_i'=y_i(c_i-1)H",
+    "literal_null_sum": "sum_i n_i a_i\u00b3 (rho_int,i+p_int,i)=0, without dividing by either sum",
+    "locking_domain": "For active beta_i!=0 and regular sum, dot a_i/n_i=dot S_a/S_N even at simultaneous zero velocities",
+    "monotonicity": "(H/sqrtK)'=-sum_active c_i y_i^4(rho_m,i+p_m,i)/(2K^(3/2))<=0",
+    "positive_weight": "K=sum_active G_i y_i\u00b2>0; K'=2H sum_active G_i y_i\u00b2(c_i-1)",
+    "unfactored_Bianchi": "3lambda beta_i S_a\u00b2/(n_i a_i\u00b3)[dot S_a-S_N dot a_i/n_i]=0",
+    "zero_beta": "Omit disconnected fields from active K; if the physical beta_r=0, its separate flat GR H'=-nu_r/(2G_r)<=0 applies without assumptions on unrelated sums"
+  },
+  "verification_boundary": "Literal symbolic, separate Fraction/full-coframe/adjugate replay and reserved independent audit support the written monotonicity proof; not proof-assistant formalized",
+  "written_proof": "notes/proof.md"
+}

@@ -273,9 +273,19 @@ around a pre-registered problems document and a certificate-gated ledger.
   it excludes contraction-to-expansion through arbitrary algebraic-branch
   zero sets. Actual solutions verify the algebraic-kinetic exception and
   the necessary exclusion of an undetermined disconnected center.
+  The [finite-tree extension](problems/P8/s6/matching/star/tree/README.md)
+  now permits separately conserved NEC matter on every vertex and
+  zero-kinetic intermediate vertices, provided the physical vertex has
+  a positive Einstein coefficient. An instantaneous-component proof
+  handles arbitrary branch changes without an incorrect all-vertex
+  kinetic sum. The [non-pairwise determinant result](problems/P8/s6/matching/determinant/README.md)
+  independently excludes a bounce on regular aligned flat-FLRW branches,
+  with matter kept on the actual Einstein metrics. Singular summed
+  lapses and moving matter onto the auxiliary coframe are not equivalent
+  extensions of that result.
   These are named parent-class results, not universal DHOST or UV verdicts.
 
-The [current P8 continuation audit](docs/assessment-2026-09-06-p8-star-parent-no-bounce.md) separates
+The [current P8 continuation audit](docs/assessment-2026-09-06-p8-tree-and-determinant-parents.md) separates
 the completed scoped P8(a) objective and certificate gates from the
 outstanding P8(b) UV-matching and positivity questions.
 P8 is not marked finished or closed.
