@@ -294,10 +294,23 @@ around a pre-registered problems document and a certificate-gated ledger.
   an actual local CD-shaped bounce with free canonical matter. Its full
   moving-weight tensor operator has a nonadiabatic shrinking-layer limit:
   a growing center mass does not alone establish controlled heavy-mode
-  elimination. Full scalar/vector health, physical sourced matching and
-  the vacuum/finite-gravity UV requirements remain separate open checks.
+  elimination. The [fixed-slice physical response theorem](problems/P8/s6/matching/variable/response/README.md)
+  now includes the full coupled outer evolution, both actual metric-data
+  maps and fixed conserved g-only source preparation. Relative-mode
+  responses retain a logarithmic phase; prepared-light leakage has a
+  vanishing bound, without a proved low-temporal-frequency window.
+  The [scalar/vector constraint audit](problems/P8/s6/matching/variable/perturbations/README.md)
+  independently reconstructs the quadratic action and gives regular
+  scalar constraint elimination through the bounce. It also demonstrates
+  why a center-frozen observable equation is not a uniform scalar
+  high-frequency test. The vector kinetic and principal calculations do
+  not settle scalar health. A separate [all-time background exploration](problems/P8/s6/matching/variable/global/README.md)
+  remains unpromoted: its physical metric is complete, but its second
+  metric has finite null affine tails and its relative algebraic mass
+  tends to zero. Scalar health, controlled sourced light reduction and
+  the vacuum/finite-gravity UV requirements remain open checks.
 
-The [current P8 continuation audit](docs/assessment-2026-09-06-p8-vacuum-domain-and-variable-parent.md) separates
+The [current P8 continuation audit](docs/assessment-2026-09-06-p8-physical-response-and-regular-constraints.md) separates
 the completed scoped P8(a) objective and certificate gates from the
 outstanding P8(b) UV-matching and positivity questions.
 P8 is not marked finished or closed.

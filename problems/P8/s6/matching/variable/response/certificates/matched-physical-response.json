@@ -1,0 +1,278 @@
+{
+  "checked_controls": {
+    "B_zero_still_leaves_transmission_phase": true,
+    "all_invalid_exact_domain_calls_rejected": 23,
+    "delta_1e_minus21_transfer_error_upper": "1/250",
+    "full_mass_remainder_joint_analyticity": false,
+    "mass_remainder_center_limit": "-32",
+    "mass_remainder_punctured_limit": "-141",
+    "omega_zero_does_not_remove_C_center": "48/5",
+    "physical_center_heavy_to_light_source_ratio": "-2",
+    "power_basis_determinant_minus_one_is_not_Cauchy_symplectic_test": true,
+    "prepared_light_error_retains_source_L1": true,
+    "whole_box_error_upper_is_not_small": "40"
+  },
+  "claim": "P8-S6.21.RESPONSE",
+  "continuous_coefficient_margins": {
+    "A_below_28": "12/7",
+    "C_below_28": "29/25",
+    "E_ratio_below_160": 2,
+    "analytic_B_correction_below_30": "1/25",
+    "d12_below_8over7": "112224789076211955371593/7000000000000000000000000",
+    "denominator_delta_v_coefficient": "39599/1000000",
+    "denominator_v2_coefficient": "99/5000",
+    "endpoint_frelative_squared_above_sixteenth": "1899/14416",
+    "endpoint_frelative_squared_below_1": "5/7",
+    "endpoint_fsum_squared_above_quarter": "499/804",
+    "endpoint_fsum_squared_below_4": "1899/700",
+    "gradient_square_below_5": "3/7",
+    "mass_delta_derivative_below_3_rminus4": "23/50",
+    "normalization_N_below_8": "16/25",
+    "omega_derivative_below_9": "3/5",
+    "omega_over_u_below_7": "1/7",
+    "theta_derivative_below_7": "26/175",
+    "total_bounded_B_below_200": 18
+  },
+  "date": "2026-09-06",
+  "exact_connection": {
+    "A": "gamma(-sqrt(39)*I/2)*gamma(1 - sqrt(39)*I/2)/(gamma(-1/2 - sqrt(39)*I/2)*gamma(3/2 - sqrt(39)*I/2))",
+    "B": "i/sinh(pi*mu)",
+    "S_power": "[[-conj(B),conj(A)*(4sqrt2/epsilon)^(2i mu)],[A*(epsilon/(4sqrt2))^(2i mu),-B]]",
+    "moduli": "|A|\u00b2-|B|\u00b2=1; 0<|B|<1/1000; ||S||<2; power-coordinate determinant=-1 from radial orientation",
+    "normalization": "Unitary complex power coordinates Z+-=(C1-+i C2)/sqrt2; real data have conjugate pair; left positive-frequency exponent is opposite right",
+    "phase_control": "A carries a nonvanishing log-epsilon transmission phase even if B is set to zero; no reflection-only or quantum-production inference"
+  },
+  "exact_operator_and_norm": {
+    "actual_endpoint_map": "P_delta^side=C_delta(side*a*) W_side(a*) Psi_side(a*); no delta0 physical-map substitution",
+    "full_equations": "l''+A*l+C*Q+u*d_cross*Q'=j_l; Q''+B*Q+E*l+u*f_cross*l'=j_Q, including both moving-weight adjoints",
+    "outer_waves": "Full delta0 coupled punctured Volterra solution, ||R||<=64r, both wave norms<=exp(64r); factorial Picard tail exposed",
+    "physical_clock": "C_delta maps canonical fields divided by M to (gamma_g,tau*gamma_g,T,gamma_f,tau*gamma_f,T); raw derivatives keep explicit tau factors",
+    "regularity_dictionary": "b_analytic=B-mass is analytic; b_delta=B-80/(delta+8u\u00b2) is only bounded, with different mass-only path limits -32,-141",
+    "state_norm": "Euclidean (l,l',Q/sqrt(r),(uQ'-Q/2)/(mu sqrt(r))); induced operator norm; mu=sqrt(39)/2"
+  },
+  "exact_residuals": {
+    "actual_g_source_and_g_jet_observability": {
+      "TT_energy_balance_trace": "0",
+      "TT_spatial_balance": "0",
+      "actual_g_source_normalization": "0",
+      "actual_unsourced_f_equation": "0",
+      "center_heavy": "0",
+      "center_light": "0",
+      "g_only_source_off_jet_observability": "0",
+      "source_heavy_physical_projection": "0",
+      "source_light_physical_projection": "0"
+    },
+    "full_operator_and_both_chart_maps": {
+      "analytic_correction_not_mass_remainder": "0",
+      "full_inner_chain_rule": "0",
+      "full_outer_chain_rule_side_-1": "0",
+      "full_outer_chain_rule_side_1": "0",
+      "indicial_mu": "0",
+      "matching_boundary_side_-1": "0",
+      "matching_boundary_side_1": "0",
+      "physical_map_determinant": "0",
+      "relative_normalization": "0",
+      "sum_normalization": "0"
+    },
+    "hypergeometric_connection_and_phase": {
+      "Wronskian_modulus": "0",
+      "gamma_B_reflection": "0",
+      "hypergeometric_ODE_pullback": "0",
+      "orientation_determinant": "0",
+      "physical_scaling_phase": "0",
+      "positive_frequency_reverses_at_left": "0",
+      "power_connection_inverse": "0",
+      "unitary_power_basis": "0"
+    },
+    "mass_pole_and_nonanalytic_path_controls": {
+      "exact_mass_numerator_denominator": "0",
+      "mass_outer_leading_coefficient": "0",
+      "mass_remainder_center_path": "0",
+      "mass_remainder_punctured_path": "0",
+      "mixed_denominator_square": "0",
+      "positive_denominator_difference": "0"
+    }
+  },
+  "formulation": "FORMULATION.md",
+  "independent_Fraction_interval_replay": {
+    "analytic_interval_jet_cover": {
+      "analytic_c_derivative_abs_upper": {
+        "A": "2269433/1000000",
+        "C": "3152577/1000000",
+        "E": "1831839/1000000",
+        "b_analytic": "78593/40000",
+        "d_cross": "721803/500000",
+        "f_cross": "721803/500000",
+        "j_heavy": "50197/1000000",
+        "j_light": "2967/31250"
+      },
+      "closed_c_box": [
+        "2",
+        "201/100"
+      ],
+      "closed_k_box": [
+        "1",
+        "2"
+      ],
+      "closed_u_box": [
+        "-1/10",
+        "1/10"
+      ],
+      "physical_source_projection_abs_upper": {
+        "j_heavy": "182243/200000",
+        "j_light": "121211/250000"
+      },
+      "u_subintervals": 40
+    },
+    "exp9_lower_taylor": "16541017/4480",
+    "norms": {
+      "exp_two_thirds_upper": "41/21",
+      "full_telescoping_coefficient": "36050",
+      "inner_remainder_over_radius_upper": "6743/96",
+      "mass_remainder_upper": "1211/8",
+      "middle_telescoping_coefficient": "17925/2",
+      "nontrivial_adapted_transfer_error_upper": "1/250",
+      "outer_difference_over_delta_rminus2_upper": "22993/22500",
+      "outer_remainder_over_radius_upper": "377/6",
+      "source_coefficient_before_enlargement": "2560008"
+    },
+    "strict_reflection_modulus_upper": "1/1000"
+  },
+  "independent_primary_bridges": {
+    "norm_constants_equal": {
+      "exp_two_thirds_upper": true,
+      "full_telescoping_coefficient": true,
+      "inner_remainder_over_radius_upper": true,
+      "mass_remainder_upper": true,
+      "middle_telescoping_coefficient": true,
+      "nontrivial_adapted_transfer_error_upper": true,
+      "outer_difference_over_delta_rminus2_upper": true,
+      "outer_remainder_over_radius_upper": true,
+      "source_coefficient_before_enlargement": true
+    },
+    "primary_to_independent_actual_coefficient_bridges": [
+      {
+        "c": "2",
+        "eight_values_and_eight_derivatives_inside_exact_interval_jets": true,
+        "kbar": "1",
+        "u": "0"
+      },
+      {
+        "c": "401/200",
+        "eight_values_and_eight_derivatives_inside_exact_interval_jets": true,
+        "kbar": "2",
+        "u": "-1/100"
+      },
+      {
+        "c": "201/100",
+        "eight_values_and_eight_derivatives_inside_exact_interval_jets": true,
+        "kbar": "3/2",
+        "u": "1/10"
+      }
+    ]
+  },
+  "matched_transfer_theorem": {
+    "boundary_and_tails": "Exact fractional-weight overlap differs from sign map by<=m/8; both Jost tails and both physical phase errors together<=2m",
+    "charts": "m=delta^(1/3), epsilon=sqrt(delta), eta=delta/(8m\u00b2)=m/8, z=asinh(sqrt8*u/epsilon); overlapping at u=+-m",
+    "endpoint_norms": "||P_delta^side||<3000, ||(P_delta^side)^-1||<280, in the dimensionless actual physical Cauchy clock",
+    "finite_example": "At delta<=1e-21 this error is <=1/250; at delta=1e-9 the bound40 is not small",
+    "inner_L1": "integral||remainder|| dz<=144m; full propagator<4; direct Duhamel error<=4*2*144m=1152m",
+    "inner_exact": "Q=sqrt(r_e)*psi,r_e=sqrt(u\u00b2+delta/8); psi_zz+[39/4+3/4 sech\u00b2z]psi=0 is the universal block; full coupled remainder norm<=72r_e",
+    "operator_error": "||(P_delta^+)^-1 T_phys_delta P_delta^- -diag(I2,S_epsilon_real)||<=40000delta^(1/3)",
+    "outer_difference": "||M_delta-M0||<=2delta/r\u00b2, all mass variation treated separately; each normalized outer transfer differs from I by<=8m"
+  },
+  "norm_calibration": {
+    "adapted_endpoint_P_inverse_norm_upper": "280",
+    "adapted_endpoint_P_norm_upper": "3000",
+    "analytic_c_derivative_upper": "8",
+    "bounded_B_minus_pole_upper": "200",
+    "delta_max": "1/1000000000",
+    "exp_margin_below_2": "1/21",
+    "exp_two_thirds_upper": "41/21",
+    "fixed_momentum_max": "2",
+    "fixed_momentum_min": "1",
+    "fixed_slice": "1/100",
+    "fixed_slice_W_inverse_norm_upper": "14",
+    "fixed_slice_W_norm_upper": "40",
+    "full_margin_below_40000": "3950",
+    "full_telescoping_coefficient": "36050",
+    "inner_eta_over_t": "1/8",
+    "inner_exponent_margin_below_two_thirds": "34/375",
+    "inner_perturbation_exponent_max": "72/125",
+    "inner_remainder_margin_below_72": "169/96",
+    "inner_remainder_over_radius_upper": "6743/96",
+    "mass_remainder_margin_below_152": "5/8",
+    "mass_remainder_upper": "1211/8",
+    "match_radius": "t=delta^(1/3)",
+    "middle_margin_below_9000": "75/2",
+    "middle_telescoping_coefficient": "17925/2",
+    "nontrivial_adapted_transfer_error_upper": "1/250",
+    "nontrivial_delta": "1/1000000000000000000000",
+    "outer_difference_margin_below_2": "22007/22500",
+    "outer_difference_over_delta_rminus2_upper": "22993/22500",
+    "outer_remainder_margin_below_64": "7/6",
+    "outer_remainder_over_radius_upper": "377/6",
+    "physical_C_inverse_norm_upper": "10",
+    "physical_C_map_norm_upper": "32",
+    "source_coefficient_before_enlargement": "2560008",
+    "source_margin_below_3000000": "439992",
+    "t_max": "1/1000",
+    "upper_box_error_not_small": "40"
+  },
+  "not_established": [
+    "No delta0 regular full action or uniform global-background continuation",
+    "No reduced scalar/vector health, temporal spectral gap or heavy-state suppression supplied by the physical model",
+    "No sharp prepared-light leakage order or controlled omission error below the O(delta) center locked-cone excess",
+    "Fixed source duration and spatial k band are not a low temporal band; a compact pulse is not band-limited",
+    "No nonlinear finite-amplitude source/backreaction, vacuum-production or particle-number claim",
+    "No original DHOST C/D operator/source match, light-only EFT exclusion, positivity or UV-completion verdict",
+    "No change to completed scoped photon objective, adopted S6 contract or original P8 open status"
+  ],
+  "physical_source_and_data": {
+    "conserved_probe": "delta T^ij=a^-2 Pi(u)e^ij cos(kcom z), delta T^0mu=0, unit transverse traceless polarization; arbitrary smooth time Pi",
+    "fixed_source": "Full delta0 punctured homogeneous target and a fixed smooth flat cutoff on(-2a*,-a*); one fixed sigma0 for every positive delta; retarded zero initial data",
+    "g_only_observability": "After the source ends, (g,g',f,f')->(g,g',g'',g''') has determinant (U_TT/Kg)\u00b2>0 at fixed punctured slices; raw proper jets retain tau^-j",
+    "literal_probe_action": "+1/2 integral dT a\u00b3 Pi gamma_g; sigma=tau\u00b2Pi/M\u00b2; normalized forcing a\u00b3sigma/(2fsum),-a\u00b3w2sigma/(2fR)",
+    "loading_operator": "gamma_f=zeta gamma_f,target; gamma_g=gamma_f+[(Kf gamma_f')'+Gf kbar\u00b2 gamma_f]/U_TT; sigma0=4/a\u00b3[(Kg gamma_g')'+Gg kbar\u00b2 gamma_g+U_TT(gamma_g-gamma_f)]",
+    "outgoing_error": "40000delta^(1/3)||C||+(2+40000delta^(1/3))*3e6 delta S",
+    "paired_targets": "C=(0,0,1,0) and C=(1,0,0,0), relative and prepared regular-light outer data, respectively",
+    "prepared_light": "Vanishing bounded relative leakage, not a sharp O(delta) or certified low-temporal-band result",
+    "relative_response": "For nonzero prepared relative data, two log-phase subsequences give different physical outputs; finite endpoint maps cannot erase full/g-four-jet nonconvergence",
+    "source_error": "Incoming outer coefficient error<=3e6 delta S, S=integral|sigma0|du, finite and explicit; no invented S value"
+  },
+  "prior_sha256": {
+    "S6_20_actual_variable_background_and_complete_canonical_TT": "335cd52028baf56b30c75377aa7e6edd7ec86db2799f49b13f467242674fc4d0",
+    "adopted_S6_contract_unchanged": "d00df35d5821b05baa61e897725a22ed1ac21d0536b74bdaece3ab0093215901"
+  },
+  "schema": 1,
+  "source_audit": "notes/sources.md",
+  "source_sha256": {
+    "FORMULATION.md": "706dad8b4bf333461e6075f9569788d1c758fe867dd7f7330cdd400feace4540",
+    "README.md": "f027b454dd392838b65ec3838a83fcfe0cd3e0447139674f4e4373c38e2514ef",
+    "notes/proof.md": "4b0f3469f62dac5934a8a4748bf8d015a286c1e21c36a5327184f8f25949c522",
+    "notes/sources.md": "18d4771eed235a1c7a6c05495b8d24c248f0a8917a55585ab8bca57d22c4c4be",
+    "src/p8_variable_response/__init__.py": "8bc3516086d6d1c1c978c0dd1d1ef5e2942b1c5d9131d44e40cab47c65391a5f",
+    "src/p8_variable_response/bounds.py": "801fba843f57da4d3c1d2605716ee0585f76a57218dfd8f916d0c5e3862b770b",
+    "src/p8_variable_response/connection.py": "738c42ea6660ecd290fd1a960314c4d5b0e4803818793778f9ae6b38607efac4",
+    "src/p8_variable_response/exact.py": "8d41e2362ca7a58319d4ab1a543b0832d88de7d0b98678a6e8085d4609124b6c",
+    "src/p8_variable_response/independent.py": "45b098c8d62c7653e0de49bf82b8258c4760a0084c234ba8772fba268af9123f",
+    "src/p8_variable_response/operator.py": "5647c271c85c7a421ef5dcadcfe57224137007cbf2d400c38d14510608f440cb",
+    "src/p8_variable_response/source.py": "087511191323d261768dfa4d982ae544f503d8262d0bef8e0e7a29789008fe24",
+    "src/p8_variable_response/verify.py": "1e69fc6b8d4be66c3131876d619420615ad99de09becaa0fcf953294be281a4f",
+    "tests/conftest.py": "ed271ee3f88fc51151269e8b091d0d0a4ca32837349715e8b7c74737c0c94345",
+    "tests/test_matched_bounds.py": "9758868abe4f976348ab8e517b7039cb2d5dd6b9385f0bb77b1a42ddca07fd9f",
+    "tests/test_matched_operator.py": "7d8024f2ec8b1207a068dede874319eacff130bbc06f50480a4bf00b4265cd55",
+    "tests/test_matched_report.py": "02b89ae5ff6f04bf283bee6e255471f27bbad849629008f45b344b8d5bb21929",
+    "tests/test_response_independent_audit.py": "e9bf807e8aae415f3893f9bc817aad45ae59fa9716f9773be06d88487c8af9de"
+  },
+  "status": "FULL_FIXED_SLICE_PHYSICAL_TT_TRANSFER_AND_SOURCE_PREPARATION_BOUNDS; ORIGINAL_S6_P8_OPEN",
+  "unchanged_action_and_physical_frame": {
+    "clock_and_coefficients": "u=T/tau, c=2+delta, a=(1+u\u00b2)\u00b2,b=2/(1+u\u00b2)\u00b2; each finite positive delta is an actual member of the pinned family",
+    "domain": "M,tau>0; 0<delta<=1e-9, 1<=kbar=tau*kcom<=2; slices u=+-1/100; optional source support(-2/100,-1/100)",
+    "parent": "Exact S6.20 variable-beta canonical-clock/free-chi action and actual local solution; not an original C/D operator match",
+    "signature_curvature": "+---; R_B=-6(DH+2H\u00b2); Einstein action -M\u00b2R_B/2; actual physical metric g",
+    "singular_limit": "delta=0 only defines regular punctured outer operators; it is not a regular full parent at u=0"
+  },
+  "verification_boundary": "Exact action/chart/connection identities, full continuous Fraction interval jets, independent norm arithmetic and separately authored audits support the written linear-ODE estimates; no proof-assistant formalization or numerical propagator sampling substituted for the proof",
+  "written_proof": "notes/proof.md"
+}
