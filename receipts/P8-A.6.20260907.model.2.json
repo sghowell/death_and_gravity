@@ -1,0 +1,68 @@
+{
+  "claim_id": "P8-A.6",
+  "closes": [],
+  "created": "2026-09-07T00:07:16+00:00",
+  "evidence_sha256": [
+    "1101c2c2977716ef3bcf452ab02f69abb91ba43c7720df0920384099a1c1e868",
+    "2f5e34bcfbcd5c3561c6c683b02cd1642ce187883d08c8a16dc8dc162a1d0e97",
+    "6d6b9763d4c8ead9f34e522d34a531e3deb8e849bbec57f7f9be2cda5f7cc319",
+    "8cff5d0a71bc5af87600328a88deeacc2608eb9f0320004ab2cf45196d6c8398"
+  ],
+  "findings": [
+    {
+      "dimension": "ledger_consistency",
+      "severity": "warning",
+      "text": "The claim record carries two mutually exclusive descriptions of the same receipt ID P8-A.6.20260906.model.2: the promotion note records it as '(REVISE: 1 open warning(s) for the author, no blocking finding)' while the demotion note records it as 'a sample that produced no review (usage limit)'. One of these notes is false as written. Consequently it is indeterminate whether a genuine open warning exists that must remain on record under the ledger rule 'Warnings in a receipt (a REVISE verdict) do not veto CERTIFIED; they stay on record for the author', and the receipt lineage for this re-promotion ('pending a real second sample') cannot be reconstructed from the record. [Claim P8-A.6 Notes: 'promoted to CERTIFIED on receipt P8-A.6.20260906.model.2 (REVISE: 1 open warning(s) for the author, no blocking finding)' vs 'demoted to CONJECTURED: the CERTIFIED promotion at 23:29 UTC used receipt P8-A.6.20260906.model.2, a sample that produced no review (usage limit)']"
+    },
+    {
+      "dimension": "assumption_explicitness",
+      "severity": "warning",
+      "text": "The sentences 'Exact rational derivative bounds are derived for a specified C-infinity preparation' and 'They bound the actual second-order Einstein-defect coefficients' carry no calibration or domain qualifier, yet the certificate proves the three rational constants only under scope.named_calibration ('lambda=2*sqrt(2)*A*eta_star^2, gamma=0; a new declared normalization, not scheme independence') and only on specific_smooth_preparation.observation_envelope ('[2*eta_star,3*eta_star]'), with FORMULATION.md conditioning them on 'For the named calibration lambda=2*sqrt(2)*A*eta_*^2 and gamma=0 ... With T=2*eta_*, eta_-=2*eta_*, C=2' and stating 'Changing lambda/gamma requires the explicit scheme terms and corresponding bound.' The statement's phrase 'finite curvature/scale freedom are retained' does not convey that the numerical bounds, and therefore the defect-coefficient bounds, hold only at that declared calibration on that envelope. [Statement sentences 3-4 vs certificates/radiation-response.json fields scope.named_calibration and specific_smooth_preparation.observation_envelope; FORMULATION.md section 'Computable bounds and one fully specified smooth preparation']"
+    },
+    {
+      "dimension": "evidence_support",
+      "severity": "note",
+      "text": "Clause-by-clause mapping to machine-checked fields verified: kernel/stress/defect identities all recorded '0' via verified_residuals (kernel_identities, stress_clock_anomaly_and_scheme_identities, asymptotic_defect_and_second_correction_identities); rational bounds cross-checked in checked_bounds() against the Fraction-only replay with elementary margins required positive; negative controls (omission errors 1/6, 1/2, 1, monomial-history flag false) and the FAIL fixture claims/fixtures/p8a_response/fail-mutated.json present; two post-stamp PASS runs with binary_hash b6ff90d6... equal to the current stamp. The load-bearing word 'actual' (identification of the differentiated mode sum with the renormalized observable) and the O(epsilon^3) conclusion rest on written arguments \u2014 HW Lemma 6.2 localization, coincidence/derivative exchange, the retarded finite-part limit, and the A.5 smooth-state theorem application (notes/proof.md sections 1-3 and 8) \u2014 disclosed in verification_boundary items 1-2 and written_proof, which this ledger's CERTIFIED semantics permit. The finer analytic glue of the bound chain (e.g., sup_{y>=1} e^-y*y^m <= m^m/e^m in section 7, the Leibniz/triangle assembly in section 6) is likewise written rather than replayed and is only implicitly covered by boundary item 3's 'agree with a separate Fraction-only implementation'. [certificates/radiation-response.json verification_boundary items 1-3, kernel_identities, negative_controls; src/p8a_response/verify.py verified_residuals/checked_bounds; notes/proof.md sections 1-3, 6-8]"
+    },
+    {
+      "dimension": "evidence_support",
+      "severity": "note",
+      "text": "'a separate Fraction-only implementation' (verification_boundary item 3) and the claim note's 'independent geometric and Fraction-only preparation audits' denote code paths inside the same hashed source tree (independent.py, tests/) executed within a single p8a_response v1 run under one binary_hash; this is intra-run cross-implementation agreement, not second-engine reproduction. Adequate for CERTIFIED replay, but 'independent' here should not be read as the VERIFIED_N sense of 'independently re-run by a second implementation/engine'. [certificates/radiation-response.json verification_boundary item 3; claim Notes 'independent geometric and Fraction-only preparation audits'; verifier p8a_response v1 inputs list]"
+    },
+    {
+      "dimension": "internal_consistency",
+      "severity": "note",
+      "text": "Recomputation found no mismatch among statement, certificate and notes: (3m/8)^m coefficient sums reproduce r_derivative_bounds[2]=2025/256; S1=4*(9/16+2*9/16)=27/4 matches switch_derivative_bounds[1]; q_0=4, q_1=43, q_2=14699/16 and v_0=q_2+3*q_1=16763/16 match Q_norm_constants/V_norm_constants; L0=2*(v_0+v_1)=42390611/512 matches K_norm_constants[0]; e-enclosures 65/24 and 1631/600 with margins 1/24, 19/600, 7/16, 5881/31104 all recompute exactly; the switch polynomials satisfy P_(n+1)=y^2*(P_n-P_n'); the certificate's actual_fixed_proper_time_first_response.density equals FORMULATION.md's rho1 under V=-Q''-3*Q'/eta including the gamma*I1_rho and Q'/(240*eta^7) terms; the +5/6 constant is consistent with omit_Hadamard_finite_piece_error=1/6 and omit_spatial_finite_constant_error=1; the response_constants match the three sup bounds displayed in FORMULATION.md in the same units. [certificates/radiation-response.json specific_smooth_preparation.exact_independent_bounds and actual_fixed_proper_time_first_response vs FORMULATION.md 'Actual retarded formulas'/'Computable bounds' and notes/proof.md section 7]"
+    },
+    {
+      "dimension": "ledger_consistency",
+      "severity": "note",
+      "text": "Pin and cap hygiene verified: verify.py PRIOR_SHA a7e1766a... equals both the recorded prior_A5_sha256 and the pinned path dependency, and prior_checks() re-validates the A.5 report; source_sha256['FORMULATION.md']=6d6b9763... equals formulation_version @6d6b9763; dependency P8-A.5 is CERTIFIED and standing CURRENT so the level cap is respected; IMPORTED table-import entries are not relied on for verification. Residual observation: notes/proof.md section 4 asserts rho0 'agrees with pinned A.3' and scope.gamma_dictionary invokes A.3 ('finite massless curvature freedom not fixed by A.3'), yet depends_on lists only P8-A.5 and the A.5 certificate path, so the A.3 pin is reached only transitively through A.5. [src/p8a_response/verify.py PRIOR_SHA/prior_checks; certificates/radiation-response.json prior_A5_sha256, source_sha256, scope.gamma_dictionary; notes/proof.md section 4; claim Dependencies list]"
+    },
+    {
+      "dimension": "confidence_calibration",
+      "severity": "note",
+      "text": "Checked the requested level against the ledger's CERTIFIED definition: the statement's closing sentence tracks the false scope flags (finite_epsilon_RSET_remainder_bound, uniform_parameter_interval_response_bound, numerical_cubic_residual_remainder_bound, exact_SEE_solution_or_stability_theorem, quantitative_perturbed_QSEI_or_all_sampler_bound, cosmological_focusing_or_P8a_completion) and the status suffix 'FINITE_AMPLITUDE_SEE_QSEI_OPEN'; boundary item 5 correctly limits the numerical bounds to 'the first parameter derivative at zero, not a uniform epsilon neighborhood'; FORMULATION.md's 'The replay certifies elementary algebra and enclosures conditional on the stated primary Hadamard/state theorems, not those theorems themselves' calibrates the certificate accurately. The only calibration gap found lives in the statement text itself and is filed under assumption_explicitness. [certificates/radiation-response.json scope flags, status, verification_boundary item 5; FORMULATION.md 'Consequence and boundary']"
+    },
+    {
+      "dimension": "decision_soundness",
+      "severity": "note",
+      "text": "Timing checked against the record: both p8a_response v1 PASS runs (2026-09-06T21:40:36Z and 23:29:32Z, exit=0, identical env_sha256) postdate the 21:39:02Z stamp with matching binary_hash b6ff90d6...; the prior demotion was procedural (a void receipt), not evidentiary, and no source, formulation, or dependency changed since. Nothing in the evidence argues for delay; the sole unmet precondition this promotion leaves behind is the contradictory receipt history filed as a ledger_consistency warning, which concerns the record rather than the certificate. [Evidence entries at 2026-09-06T21:40:36+00:00 and 2026-09-06T23:29:32+00:00; verifier stamp 'stamped 2026-09-06T21:39:02+00:00'; claim Notes demotion line]"
+    }
+  ],
+  "id": "P8-A.6.20260907.model.2",
+  "provenance": {
+    "cost_usd": "1.5673",
+    "model": "claude-fable-5",
+    "request_digest": "d16b04f6eb9b6c4c86f075740caa32fc0c2b5ba7e10db4191f8e33c06767327a",
+    "response_digest": "5ae2c2bd43b5216378f8707def95f47e535e73589699dfa3e97d908687a110fc",
+    "run_id": "review-P8-A.6-6bbdbe-s2",
+    "transport": "ClaudeCodeClient"
+  },
+  "reviewer": "model",
+  "statement_sha256": "78b16f1cef046047a62aa4b37f9db6cd20e462c80841c271e395ec42b5eadd0a",
+  "target_level": "CERTIFIED",
+  "usable": true,
+  "verdict": "REVISE",
+  "waivers": []
+}

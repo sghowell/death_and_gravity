@@ -66,11 +66,20 @@ evidence:
   verdict: PASS
   verifier: p8a_remainder
   version: '2'
+- binary_hash: debb5446b4d56b24b5a699340baec4f8abc1b279d1304c4a294952f39a95ff6a
+  golden_suite_hash: 353c875d7fd59cc1de36844fd4f62e64461c7d13725dfd3e468b1bd83761ae09
+  note: argv=['.venv/bin/python', 'tools/empiricist_check.py', 'p8a_remainder', 'problems/P8/a/applicability/reference/asymptotics/backreaction/response/remainder/certificates/radiation-remainder.json']
+    cwd=. exit=0 env_sha256=5bc2938b211979ad18a91414c61c2fcf521968e5988d13723eec6c9548008dc2
+  path: problems/P8/a/applicability/reference/asymptotics/backreaction/response/remainder/certificates/radiation-remainder.json
+  stamped: '2026-09-07T00:24:17+00:00'
+  verdict: PASS
+  verifier: p8a_remainder
+  version: '2'
 formulation_version: FORMULATION.md@bb415f07 (adopted 2026-09-05)
 id: P8-A.7
 kind: statement
-legacy_level: CERTIFIED
-level: CONJECTURED
+legacy_level: null
+level: CERTIFIED
 n: null
 notes: 'imported from CLAIMS.md; level note: exact covariance/retarded-Green/finite-clock/trace/conservation
   identities, rational IR/UV and fractional-jet majorants, independent covariant and
@@ -83,11 +92,12 @@ notes: 'imported from CLAIMS.md; level note: exact covariance/retarded-Green/fin
   -> v2 binary debb5446 (21:13, version bumped for that declaration change); the checked
   bytes are the same pinned certificate (locked sha in claims.lock.json) each time'
 problem: P8(a), actual finite-amplitude prepared-state stress remainder
-receipts: []
+receipts:
+- P8-A.7.20260907.model.2
 source:
   kind: table
   ref: P8-A.7
-standing: CHALLENGED
+standing: CURRENT
 statement: For the unchanged A.5/A.6 massless minimal Hadamard preparation, the actual
   Wick square equals an explicit retarded Born functional on the exact finite metric
   plus an all-frequency nonlinear mode remainder with two actual-conformal-time derivatives.
@@ -102,4 +112,4 @@ statement: For the unchanged A.5/A.6 massless minimal Hadamard preparation, the 
   all-sampler QSEI or cosmological focusing theorem follows
 substatus: null
 supersedes: []
-updated: '2026-09-06'
+updated: '2026-09-07'

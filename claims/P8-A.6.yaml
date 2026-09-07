@@ -53,12 +53,21 @@ evidence:
   verdict: PASS
   verifier: p8a_response
   version: '1'
+- binary_hash: b6ff90d6d44001db5c7a09b134b6f1d00ed30b50b9846b77328fb17a273479e2
+  golden_suite_hash: 138db5077da9994eed97d47e5760b3ed870638c37afc4f2c4add33363b572113
+  note: argv=['.venv/bin/python', 'tools/empiricist_check.py', 'p8a_response', 'problems/P8/a/applicability/reference/asymptotics/backreaction/response/certificates/radiation-response.json']
+    cwd=. exit=0 env_sha256=a26d1bfd2b3aaf57d2eb5d15ac6517291bb506545d911c1e508f3bd6f2d153d0
+  path: problems/P8/a/applicability/reference/asymptotics/backreaction/response/certificates/radiation-response.json
+  stamped: '2026-09-07T00:07:21+00:00'
+  verdict: PASS
+  verifier: p8a_response
+  version: '1'
 formulation_version: problems/P8/a/applicability/reference/asymptotics/backreaction/response/FORMULATION.md@6d6b9763
   (adopted 2026-09-05)
 id: P8-A.6
 kind: statement
 legacy_level: null
-level: CONJECTURED
+level: CERTIFIED
 n: null
 notes: 'imported from CLAIMS.md; level note: source-based Hadamard and retarded finite-part
   proof; exact Born/subtraction/trace/clock/conservation identities, independent geometric
@@ -70,11 +79,15 @@ notes: 'imported from CLAIMS.md; level note: source-based Hadamard and retarded 
 
   demoted to CONJECTURED: the CERTIFIED promotion at 23:29 UTC used receipt P8-A.6.20260906.model.2,
   a sample that produced no review (usage limit); withdrawn pending a real second
-  sample'
+  sample
+
+  promoted to CERTIFIED on receipt P8-A.6.20260907.model.2 (REVISE: 2 open warning(s)
+  for the author, no blocking finding)'
 problem: P8(a), prepared-state first stress response and second-order backreaction
 receipts:
 - P8-A.6.20260906.model.2
 - P8-A.6.20260906.model
+- P8-A.6.20260907.model.2
 source:
   kind: table
   ref: P8-A.6
@@ -92,4 +105,4 @@ statement: For A.5's past-prepared massless minimal Hadamard family, the actual 
   all-sampler QSEI or cosmological focusing theorem is established
 substatus: null
 supersedes: []
-updated: '2026-09-06'
+updated: '2026-09-07'

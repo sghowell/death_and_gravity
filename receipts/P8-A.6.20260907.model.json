@@ -1,0 +1,68 @@
+{
+  "claim_id": "P8-A.6",
+  "closes": [],
+  "created": "2026-09-07T00:01:23+00:00",
+  "evidence_sha256": [
+    "1101c2c2977716ef3bcf452ab02f69abb91ba43c7720df0920384099a1c1e868",
+    "2f5e34bcfbcd5c3561c6c683b02cd1642ce187883d08c8a16dc8dc162a1d0e97",
+    "6d6b9763d4c8ead9f34e522d34a531e3deb8e849bbec57f7f9be2cda5f7cc319",
+    "8cff5d0a71bc5af87600328a88deeacc2608eb9f0320004ab2cf45196d6c8398"
+  ],
+  "findings": [
+    {
+      "dimension": "ledger_consistency",
+      "severity": "warning",
+      "text": "The two Notes entries attribute mutually exclusive contents to the same receipt: the promotion note records a REVISE verdict with '1 open warning(s) for the author, no blocking finding', while the demotion note records that the identical receipt 'produced no review (usage limit)'. At most one can be true; if the demotion note is accurate, the '1 open warning' the ledger says is on record for the author was never produced by any review and cannot be located in the evidence for this promotion. The receipt history this promotion supersedes is therefore self-contradictory as recorded. [Claim Notes: 'promoted to CERTIFIED on receipt P8-A.6.20260906.model.2 (REVISE: 1 open warning(s) for the author, no blocking finding)' vs 'demoted to CONJECTURED: the CERTIFIED promotion at 23:29 UTC used receipt P8-A.6.20260906.model.2, a sample that produced no review (usage limit)']"
+    },
+    {
+      "dimension": "assumption_explicitness",
+      "severity": "warning",
+      "text": "The statement omits that the three rational response constants, and therefore the bounds on the second-order Einstein-defect coefficients, are proved only under the declared calibration lambda=2*sqrt(2)*A*eta_*^2, gamma=0. FORMULATION.md scopes the bounds with 'For the named calibration ... the code proves exact rational derivative bounds' and adds 'Changing lambda/gamma requires the explicit scheme terms and corresponding bound'; the certificate marks it 'a new declared normalization, not scheme independence'. In the statement, 'a specified C-infinity preparation' names only the cutoff, and the immediately preceding clause 'finite curvature/scale freedom are retained' makes the omission material: a reader of the bound statement text alone can take the numeric bounds and the clause 'They bound the actual second-order Einstein-defect coefficients' to hold across the retained lambda/gamma freedom, which the evidence does not establish. [Statement: 'Exact rational derivative bounds are derived for a specified C-infinity preparation' / 'They bound the actual second-order Einstein-defect coefficients' vs radiation-response.json scope.named_calibration and FORMULATION.md 'Computable bounds and one fully specified smooth preparation']"
+    },
+    {
+      "dimension": "evidence_support",
+      "severity": "warning",
+      "text": "The clause 'gives a qualitative compact-slab actual residual O(epsilon^3)' rests on the written notes/proof.md \u00a78 argument (smooth extension and cutoff of r, scale-factor positivity for small epsilon, unchanged first metric/state variations, re-application of A.5's smooth-state theorem to the corrected family); only the algebraic cancellation identities are machine-replayed (asymptotic_defect_and_second_correction_identities all '0'). The certificate's verification_boundary, which the ledger README designates as the disclosure locus when the field is present, does not name this written step: bullets 1-2 disclose the state-theory inputs and the finite-part/coincidence-exchange arguments, and bullet 4 ('independent parent geometry tests derive ... second-order correction without the assembly oracle') covers only the derivation of the correction identities, not the residual-order argument. Disclosure of the written support for this statement clause is inferential (bullet 1's 'replayed through A.5', the scope key's word 'qualitative', written_proof) rather than stated in the boundary. [Statement: 'gives a qualitative compact-slab actual residual O(epsilon^3)'; radiation-response.json verification_boundary bullets 1 and 4 vs notes/proof.md \u00a78 'The same smooth-state theorem therefore makes the actual corrected defect O(epsilon\u00b3)']"
+    },
+    {
+      "dimension": "internal_consistency",
+      "severity": "note",
+      "text": "Checked by direct expansion under V=-Q''-3Q'/eta: all three certificate stress expressions (density, pressure, EED, including the gamma tensors I1_rho/I1_p/I1_E and the Q'/eta^7 clock terms) reduce exactly to FORMULATION.md's displayed formulas; Wick_square_first_response and retarded_kernel strings match F1 and K verbatim; the three response_constants equal FORMULATION's suprema. Spot-replay of the \u00a77 recurrences reproduces S2=9963/64, q2=14699/16, v0=16763/16 (=q2+3q1), and the |K| bound coefficient 2(v0+v1)=42390611/512; the elementary margins are arithmetically exact (65/24-8/3=1/24, 11/4-1631/600=19/600, 8-(11/4)^2=7/16, 99193/31104-3=5881/31104). No discrepancy found among statement, certificate, verify.py, formulation, and notes. [radiation-response.json actual_fixed_proper_time_first_response, specific_smooth_preparation.exact_independent_bounds, elementary_identity_and_margins vs FORMULATION.md 'Actual retarded formulas' and bounds section, notes/proof.md \u00a7\u00a76-7]"
+    },
+    {
+      "dimension": "ledger_consistency",
+      "severity": "note",
+      "text": "Dependency ceiling holds: requested CERTIFIED equals P8-A.5's CERTIFIED (standing CURRENT). The pinned path dependency is consistent three ways: verify.py PRIOR_SHA, certificate prior_A5_sha256, and the FORMULATION.md pin all read a7e1766a...0930, and prior_checks() re-validates the A.5 replay before building the report. The bound formulation_version @6d6b9763 matches source_sha256['FORMULATION.md'] = 6d6b9763d4c8.... The four table-import entries are IMPORTED and correctly carry no verification weight. Direct CONJECTURED-to-CERTIFIED promotion is compatible with the README's 'strongest evidence on record' semantics, which nowhere require passing through VERIFIED_N; the Fraction-only second implementation checked inside the verifier additionally supplies a second-implementation cross-check. [depends_on P8-A.5; verify.py PRIOR_SHA; radiation-response.json prior_A5_sha256 and source_sha256['FORMULATION.md']; formulation_version problems/P8/a/.../response/FORMULATION.md@6d6b9763]"
+    },
+    {
+      "dimension": "evidence_support",
+      "severity": "note",
+      "text": "Machine coverage of the statement's replayable clauses is adequate: both PASS entries (21:40:36Z and 23:29:32Z) carry binary_hash b6ff90d6... matching the stamp made at 21:39:02Z, with identical env_sha256; validate_report enforces byte-level equality with the committed certificate (sha256 1101c2c2...), and files outside the verifier's hashed inputs (tests/, notes/, FORMULATION.md) are pinned inside the certificate via source_sha256, so mutating them flips the replay to FAIL. The kernel/local-term identities, past-fixed integration constant, proper-time conversion, subtraction-length shift, rational bounds, and cancellation identities in the statement are all covered by this replay; the 23:29:32Z PASS remains a valid replay independent of the withdrawn receipt it accompanied. The remaining written steps for the first-sentence kernel claim (distributional finite-part limit, coincidence exchange, Hadamard/state inputs) are explicitly disclosed in verification_boundary bullets 1-2, as this ledger's CERTIFIED definition permits. [Evidence PASS entries 2026-09-06T21:40:36+00:00 and 2026-09-06T23:29:32+00:00; p8a_response v1 stamp 2026-09-06T21:39:02+00:00; verify.py build_report()/validate_report(); radiation-response.json verification_boundary bullets 1-2]"
+    },
+    {
+      "dimension": "confidence_calibration",
+      "severity": "note",
+      "text": "The statement's closing negations match every false scope flag (finite_epsilon_RSET_remainder_bound, exact_SEE_solution_or_stability_theorem, quantitative_perturbed_QSEI_or_all_sampler_bound, cosmological_focusing_or_P8a_completion, all false), and its 'first parameter derivative' and 'qualitative' wording tracks verification_boundary bullet 5 ('first parameter derivative at zero, not a uniform epsilon neighborhood') and the scope key qualitative_corrected_actual_compact_slab_residual_O_epsilon_cubed. Apart from the calibration-scope omission and the \u00a78 boundary-disclosure gap flagged above, CERTIFIED does not overclaim relative to the disclosed boundary; the level note 'written second-order correction argument, not FORMALIZED' correctly reserves the stronger level. [Statement final sentence 'No finite-amplitude remainder bound...'; radiation-response.json scope false flags and verification_boundary bullet 5; claim Notes level note]"
+    },
+    {
+      "dimension": "decision_soundness",
+      "severity": "note",
+      "text": "The precondition set by the demotion ('withdrawn pending a real second sample') is satisfied by this genuinely produced review. Dependencies are CERTIFIED and CURRENT, the verifier stamp is current with fixture PASS/FAIL coverage, and two stamped PASS replays exist for the exact committed certificate. Under the ledger rule that 'Warnings in a receipt (a REVISE verdict) do not veto CERTIFIED', the three warnings here do not gate the promotion; they stay on record for the author. Timing is coherent: certificate dated 2026-09-05, stamp and replays 2026-09-06, promotion requested 2026-09-06. [Claim Notes 'withdrawn pending a real second sample'; ledger README 'Warnings in a receipt (a REVISE verdict) do not veto CERTIFIED'; dependency P8-A.5 [CERTIFIED, standing CURRENT]; p8a_response v1 stamp record]"
+    }
+  ],
+  "id": "P8-A.6.20260907.model",
+  "provenance": {
+    "cost_usd": "2.1819",
+    "model": "claude-fable-5",
+    "request_digest": "d16b04f6eb9b6c4c86f075740caa32fc0c2b5ba7e10db4191f8e33c06767327a",
+    "response_digest": "5d05b040f5e29f87ec8c34d05595b18d468b5f24f04bf136491d66e952ad1832",
+    "run_id": "review-P8-A.6-6bbdbe-s1",
+    "transport": "ClaudeCodeClient"
+  },
+  "reviewer": "model",
+  "statement_sha256": "78b16f1cef046047a62aa4b37f9db6cd20e462c80841c271e395ec42b5eadd0a",
+  "target_level": "CERTIFIED",
+  "usable": true,
+  "verdict": "REVISE",
+  "waivers": []
+}

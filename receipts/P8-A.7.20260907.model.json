@@ -1,0 +1,71 @@
+{
+  "claim_id": "P8-A.7",
+  "closes": [
+    "P8-A.7.20260906.model",
+    "P8-A.7.20260906.model.2"
+  ],
+  "created": "2026-09-07T00:14:42+00:00",
+  "evidence_sha256": [
+    "1de4b521475f7f7a0351255198523fed745adee91896ab955544e483ecc21025",
+    "bb415f07620ef7a0119cf94397cb1384f993109cd11309fe0e112924cf216eaf",
+    "cc4ec02bcb23e0ef01d0fb58ad4b95a3bb602a5bbbfc6871d044b2a09a78e963",
+    "ead0aa7554986474cbdeb58614674943f7f5487c170c19ca37869bede737114d"
+  ],
+  "findings": [
+    {
+      "dimension": "internal_consistency",
+      "severity": "warning",
+      "text": "verification_boundary[2] asserts 'the finite-family derivative majorants and all numerical constants are exact rational enclosures, replayed separately using fractions only', but checked_bounds() in verify.py computes Wick_C2_remainder_constants via the primary implementation (stress.wick_calibration_bounds) and writes them into the 'independently_replayed_uniform_bounds' block with no Fraction-only counterpart and no equality raise \u2014 unlike stress_error_constants, integrated_mode_remainder_constants and IR/UV_remainder_constants, which are compared against independent.replay output. nonnegative_amplitude_polynomial_audit, rounded_stress_error_upper_bounds and strict_rounded_bound_margins are likewise primary-side insertions under that heading. The claim Notes' 'Fraction-only Taylor/constant audits' inherits this overstatement for the Wick C2 family. The constants themselves check out against proof.md \u00a77's formulas (m0/8, (m1+4m0)/8, [m2+8m1+(24+2*delta_bar*b0)*m0]/8, verified numerically against the pinned fractions), so the defect is the redundancy disclosure, not the values. [radiation-remainder.json fields verification_boundary[2] and independently_replayed_uniform_bounds.Wick_C2_remainder_constants; src/p8a_remainder/verify.py checked_bounds()]"
+    },
+    {
+      "dimension": "assumption_explicitness",
+      "severity": "warning",
+      "text": "The statement clause 'certify 0<=delta<=2048/190897521, delta=4*epsilon*d/t_star^2, and explicit quadratic finite-amplitude error constants' carries no time/domain qualifier, but the certified constants (stress_error_constants in units hbar*delta^2/(pi^2*A^4*eta_star^8), and the Wick C2 constants via a^-2<=1/(2*A^2*eta_star^2)) are derived only under derived_finite_geometry.calibration_geometry_bounds: 'history<=3eta_star; a^-4<=1/(8A^4eta_star^4), |a'/a|<=2/eta_star on y in[2,3]' (FORMULATION: 'The observation envelope is 2<=y<=3'). The statement attaches 'on 2<=y<=3' only to the delta=10^-12 sentence, so the constants clause reads as unrestricted while the evidence restricts it to the observation envelope. [Statement sentence 'Derived rational potential jets ... error constants' vs radiation-remainder.json derived_finite_geometry.calibration_geometry_bounds and FORMULATION.md 'observation envelope']"
+    },
+    {
+      "dimension": "assumption_explicitness",
+      "severity": "note",
+      "text": "t_star is undefined within the bound statement text ('delta=4*epsilon*d/t_star^2'); it resolves only through the certificate's physical_amplitude_interpretation ('t_star=A*eta_star^2/2') and FORMULATION.md, and epsilon, d resolve only through the A.5 dependency statement. I verified the relation is exactly equivalent to the certificate's primitive 'delta=16*epsilon*d/(A^2*eta_star^4)' under that definition, so this is a self-containment gap in the statement, not a mismatch. [Statement phrase 'delta=4*epsilon*d/t_star^2' vs radiation-remainder.json independently_replayed_uniform_bounds.actual_finite_amplitude_accuracy_example.physical_amplitude_interpretation and finite_amplitude field]"
+    },
+    {
+      "dimension": "ledger_consistency",
+      "severity": "note",
+      "text": "Two distinct verifier binaries (7debe2e0... at 19:28 and 479182a7... at 20:02) are both recorded under the identity 'p8a_remainder v1'; the declaration change (gaining fail_exit_codes [3]) initially shipped without a version bump, making 'v1' ambiguous as a verifier identity, and the earliest v1 PASS ran under a declaration lacking declared fail exit codes. This is disclosed in the Notes and remediated by v2 (debb5446, stamped 21:13:46), whose PASS at 21:13:50 on the same locked certificate sha (cc4ec02b...) is the entry the promotion can rest on. Other ledger gates verified clean: dependency floor equals target (A.3/A.5/A.6 all CERTIFIED, CURRENT), the path dependency radiation-response.json sha 1101c2c2... matches prior_A6_sha256, verify.py PRIOR_SHA and the FORMULATION pin, and formulation_version bb415f07 matches source_sha256['FORMULATION.md']. [Notes 'verifier history' entry; evidence entries at 2026-09-06T19:28:29 and 20:02:43 vs current stamp v2 debb5446]"
+    },
+    {
+      "dimension": "evidence_support",
+      "severity": "note",
+      "text": "The statement's lead identity ('actual Wick square equals ... Born functional ... plus an all-frequency nonlinear mode remainder') and the all-frequency M_j bounds rest on written Volterra/Gronwall and dominated-convergence/coincidence-limit steps in proof.md \u00a7\u00a72-4 that the replay does not machine-check; this reliance is disclosed in verification_boundary[1] and is permitted at CERTIFIED under this ledger's README semantics. I confirmed the machine replay covers every quantitative clause of the statement: delta_bar 2048/190897521 (recomputed as min cap 1/(24*b0+12*b1) from b0=20461/128, b1=61013499/8192), U jets through order 5 and p jets through 7, quadratic amplitude degree (nonnegative_amplitude_polynomial_audit minimum_amplitude_degree 2), exact density/pressure/EED identities including the J history term with its negative control (omitted_retarded_history_breaks_stress_conservation nonzero), the negative-scope sentence against the scope flags (all false as stated), and the delta=10^-12 ratios (~4.88e-3, 3.14e-3, 3.43e-3 < 1/100 against A.3-derived rho_ref=hbar/(960*pi^2*A^4*eta_star^8*y^8), p_ref, E_ref). [notes/proof.md \u00a7\u00a72-4 vs radiation-remainder.json verification_boundary[1] and the machine-derived certificate fields]"
+    },
+    {
+      "dimension": "internal_consistency",
+      "severity": "note",
+      "text": "verification_boundary[3] cites 'parent-owned tests derive mode, curvature and conservation identities independently', but tests/*.py are only hash-pinned in source_sha256; the recorded replay command (tools/empiricist_check.py p8a_remainder <cert>) does not execute them and no evidence entry records a test run, so that independent derivation is not evidenced in this ledger record. The identities themselves are recomputed inside build_report via verified_residuals (all '0'), so the substance is covered by the primary replay. [radiation-remainder.json verification_boundary[3] vs evidence entry argv and source_sha256 tests/* entries]"
+    },
+    {
+      "dimension": "confidence_calibration",
+      "severity": "note",
+      "text": "Checked the CERTIFIED target against the README requirements: read-only replay equality (validate_report vs build_report, v2 PASS under the current stamp), a disclosed verification_boundary field, and written-analytic reliance disclosed in boundary[1]; the Notes' 'written finite-amplitude Hadamard/subtraction proof, not FORMALIZED' is accurately calibrated, and I recomputed the exponent caps (IR 491064/63632507 = (9/2)*delta_bar*b0 <= 1/2, UV exactly 1/2) and margin arithmetic (e.g. 8*10^14 - C_rho equals the pinned density margin) without finding numeric overclaim. Residual defect: the statement's verb 'certify' spans 'delta=4*epsilon*d/t_star^2', which is a definitional unit conversion (physical_amplitude_interpretation), not a certified inequality like the other listed items. The two warning findings are the only calibration-relevant defects, and per the README a REVISE receipt does not veto CERTIFIED. [Statement phrase 'certify 0<=delta<=2048/190897521, delta=4*epsilon*d/t_star^2'; README CERTIFIED semantics vs radiation-remainder.json status/verification_boundary]"
+    },
+    {
+      "dimension": "decision_soundness",
+      "severity": "note",
+      "text": "Promotion order checks clean against the evidence: dependency floor equals the requested level (all depends_on CERTIFIED and CURRENT), the pinned A.6 certificate is replayed inside prior_checks() with sha matching the depends_on path entry, the formulation pin matches, and the cause of the two prior blocked samples (empty dependency list) is remediated in the claim record dated 2026-09-06. Residual observation: the v2 stamp (21:13:46) and the promotion-supporting PASS (21:13:50) were produced 4 seconds apart in the same pipeline run, so the stamp contributes no temporal independence; it still binds via binary_hash debb5446 and golden_suite_hash 353c875d over the declared inputs and fixtures, and the checked bytes are the same locked certificate sha across all three runs. [Verifier registry 'current stamp ... stamped 2026-09-06T21:13:46' vs evidence entry 'PASS at 2026-09-06T21:13:50'; Notes remediation entry dated 2026-09-06]"
+    }
+  ],
+  "id": "P8-A.7.20260907.model",
+  "provenance": {
+    "cost_usd": "2.5066",
+    "model": "claude-fable-5",
+    "request_digest": "317add03270776e2029b154bc4da8d9045075ef38da00ff0660730b39fe0ad93",
+    "response_digest": "abf53db4efb446a04d9ce4ba65c309e840c8616e71115259ee562667830ad42d",
+    "run_id": "review-P8-A.7-b33bb7-s1",
+    "transport": "ClaudeCodeClient"
+  },
+  "reviewer": "model",
+  "statement_sha256": "6ad085163c22bb7f2c5c9894d5e8a63c6a2267d44f1de040db42f3103ae749df",
+  "target_level": "CERTIFIED",
+  "usable": true,
+  "verdict": "REVISE",
+  "waivers": []
+}

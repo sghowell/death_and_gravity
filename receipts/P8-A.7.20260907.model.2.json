@@ -1,0 +1,81 @@
+{
+  "claim_id": "P8-A.7",
+  "closes": [
+    "P8-A.7.20260906.model",
+    "P8-A.7.20260906.model.2"
+  ],
+  "created": "2026-09-07T00:24:12+00:00",
+  "evidence_sha256": [
+    "1de4b521475f7f7a0351255198523fed745adee91896ab955544e483ecc21025",
+    "bb415f07620ef7a0119cf94397cb1384f993109cd11309fe0e112924cf216eaf",
+    "cc4ec02bcb23e0ef01d0fb58ad4b95a3bb602a5bbbfc6871d044b2a09a78e963",
+    "ead0aa7554986474cbdeb58614674943f7f5487c170c19ca37869bede737114d"
+  ],
+  "findings": [
+    {
+      "dimension": "evidence_support",
+      "severity": "note",
+      "text": "The load-bearing inequalities \u2014 the IR Volterra/Gronwall bounds (proof.md \u00a72), the UV retarded-residual Gronwall estimate (\u00a73), and the dominated-convergence passage that yields the headline Wick decomposition (\u00a74, 'dominated convergence removes spatial splitting') \u2014 have no machine check; replay verifies only downstream symbolic identities (mode_and_retarded_Green_identities, exact_metric_retarded_kernel_identities, all '0') and rational arithmetic. This is disclosed (verification_boundary bullets 2\u20133) and permitted at CERTIFIED, but the statement's single verb 'certify' also spans these written-proof-backed steps. My replay cross-checks all reproduce exactly: delta_bar = 1/(24*b0+12*b1) = 2048/190897521; b0 = 20461/128 and b1 = 61013499/8192 re-derive term-by-term from mode_potential_jet_ring rows 1\u20132 under the \u00a76 enclosure rules; UV exponent 1/2 and IR exponent 491064/63632507 at delta_bar match; 960*3^8*C_rho*10^-24 \u2248 4.880e-3, 576*3^8*C_p*10^-24 \u2248 3.14e-3, 320*3^8*C_E*10^-24 \u2248 3.43e-3, all < 1/100, matching the certificate ratios. [notes/proof.md \u00a7\u00a72\u20134; certificate fields verification_boundary (bullets 2\u20133), mode_and_retarded_Green_identities; statement phrase 'certify 0<=delta<=2048/190897521']"
+    },
+    {
+      "dimension": "evidence_support",
+      "severity": "note",
+      "text": "The 'independent' audits (Fraction-only constant replay, exact Taylor jet audit) execute inside the same p8a_remainder process and binary as the primary computation (verify.py checked_bounds() calling independent.replay), so implementation independence is not engine/run independence, and no second-engine record exists. Separately, the A.3 reference denominators (960, 576, 320 times y^8) enter as constants re-derived in proof.md \u00a77 rather than being read from A.3's certificate; I verified the transcription against the A.3 dependency statement (rho=hbar/(15360*pi^2*t^4) with t=A*eta_*^2*y^2/2 gives 1/960; p=5*rho/3 gives 1/576; E_ref gives 1/320) \u2014 correct, but only ledger staleness on A.3 guards it. [src/p8a_remainder/verify.py checked_bounds(); notes/proof.md \u00a77 reference scales; certificate field actual_finite_amplitude_accuracy_example.denominator]"
+    },
+    {
+      "dimension": "evidence_support",
+      "severity": "note",
+      "text": "Several replay-compared certificate fields are hardcoded prose in verify.py rather than computed: physical_amplitude_interpretation ('t_star=A*eta_star^2/2, delta=4*epsilon*d/t_star^2; epsilon=1 and t_star>=2*10^6*sqrt(d) suffice'), both units strings, and the rounded-cap dict (the caps are at least margin-checked against computed constants). The statement clause 'delta=4*epsilon*d/t_star^2' is therefore certified only as byte-matched prose; the algebra is consistent with the computed field finite_amplitude = 'delta=16*epsilon*d/(A^2*eta_star^4)' given t_star=A*eta_star^2/2, and t_star>=2*10^6*sqrt(d) does imply delta<=10^-12, but neither implication is a checked residual. [src/p8a_remainder/verify.py checked_bounds() literal assignments; certificate fields physical_amplitude_interpretation vs finite_amplitude]"
+    },
+    {
+      "dimension": "assumption_explicitness",
+      "severity": "note",
+      "text": "t_star, d and epsilon are undefined in the bound statement text: d and epsilon resolve only through the A.5 dependency statement (d=kappa*hbar/(46080*pi^2)), and t_star only through the certificate's physical_amplitude_interpretation field ('t_star=A*eta_star^2/2'). A reader of the statement alone cannot ground the middle item of the 'certify' list. [statement phrase 'delta=4*epsilon*d/t_star^2']"
+    },
+    {
+      "dimension": "assumption_explicitness",
+      "severity": "note",
+      "text": "The observation-envelope restriction appears in the statement only in the 1%-example sentence ('on 2<=y<=3'); the error-constants clause carries no domain wording, yet the constants bound the stress errors only on that envelope (calibration_geometry_bounds: 'a^-4<=1/(8A^4eta_star^4), |a'/a|<=2/eta_star on y in[2,3]') under the active-history convention starting at y=1 with Cauchy slice y=1/2 (proof.md \u00a75), none of which is in the statement text. [statement phrase 'explicit quadratic finite-amplitude error constants'; certificate field derived_finite_geometry.calibration_geometry_bounds; notes/proof.md \u00a75]"
+    },
+    {
+      "dimension": "internal_consistency",
+      "severity": "note",
+      "text": "Minor drift only: the fourth domain cap is named '2/P1' in proof.md \u00a77 but '2/||p'||' in FORMULATION.md (both equal 8/43 and are non-binding), and the certificate 'date' 2026-09-05 is a constant hardcoded in build_report while every recorded replay is dated 2026-09-06. All substantive cross-file comparisons agree: the three expressions in exact_stress_error_in_hbar_over_pi2_units match FORMULATION's rho_err/p_err/E_err with U=-a''/a; Wick_C2_remainder_constants[0] equals m0/8 as proof \u00a77 states; integrated_mode_remainder_constants[0] equals IR[0]+UV[0] exactly; ring term counts [3,6,11,18,29,43] match the listed rows; delta_bar equals the exact minimum of the four caps. [notes/proof.md \u00a77 'delta<=2/P1' vs FORMULATION.md 'Certified finite-family calibration'; certificate field 'date' vs evidence PASS timestamps]"
+    },
+    {
+      "dimension": "ledger_consistency",
+      "severity": "note",
+      "text": "The tag 'p8a_remainder v1' covers two different binaries (7debe2e0 at 19:28, 479182a7 at 20:02) because the declaration gained fail_exit_codes [3] without a version bump; v2 arrived an hour later. The 20:02 evidence line therefore attests a different declaration than the 19:28 line under the same version label. The promotion is carried by the v2 PASS whose binary debb5446 matches the current stamp (stamped 21:13:46, PASS 21:13:50) on the locked certificate bytes, so the ambiguity is historical only. [Notes 'verifier history'; evidence entries 2026-09-06T19:28:29, 20:02:43, 21:13:50; verifier stamp for p8a_remainder v2]"
+    },
+    {
+      "dimension": "ledger_consistency",
+      "severity": "note",
+      "text": "The earliest PASS note (19:28) records neither exit code nor env_sha256 (both present on the 20:02 and 21:13 entries) and ran under the pre-fail_exit_codes declaration, making it the weakest of the three attestations. Everything else in the ledger is coherent against level semantics: deps A.3/A.5/A.6 all CERTIFIED and CURRENT so the level cap is satisfied; the A.6 path dependency is pinned both in the ledger and at runtime (verify.py prior_checks raises on drift from sha 1101c2c2...); FORMULATION.md@bb415f07 matches the certificate's source_sha256 entry; the four table-import entries remain non-counting IMPORTED. [evidence entry 2026-09-06T19:28:29 vs later entries; Dependencies list; certificate fields prior_A6_sha256, source_sha256['FORMULATION.md']]"
+    },
+    {
+      "dimension": "confidence_calibration",
+      "severity": "note",
+      "text": "The status string 'FINITE_AMPLITUDE_ACTUAL_RSET_BORN_ON_EXACT_GEOMETRY_ERROR_CERTIFIED' and the Notes level note list machine-replayed identities and written-proof results in one undifferentiated series; only verification_boundary separates them. The level itself does not overclaim: CERTIFIED (not FORMALIZED) matches README semantics for exact certificate replay plus disclosed written analytic steps, and each hedge in the statement's final sentence maps one-to-one onto a false scope flag (Born_functional_claimed_positive_state, A6_second_order_corrected_metric_jets_certified_here, finite_amplitude_SEE_solution_shadowing_or_stability, quantitative_perturbed_QSEI_or_all_sampler_bound, all_geodesic_focusing_or_P8a_completion). [certificate fields 'status' and 'scope'; Notes level note; statement final sentence]"
+    },
+    {
+      "dimension": "decision_soundness",
+      "severity": "note",
+      "text": "The promotion jumps CONJECTURED to CERTIFIED with no VERIFIED_N-style second-engine record; the only implementation diversity is the in-process Fraction-only audit (see evidence_support note). The README imposes no sequential level traversal, and every promote precondition holds at this timestamp: locked certificate cc4ec02b..., stamped v2 verifier PASS matching binary debb5446, all dependencies CURRENT at CERTIFIED, formulation pin bb415f07 matching, and the 2026-09-06 remediation of the previously blocking empty dependency list on record. The same-day triple verifier churn is the only timing blemish and is already documented. [promotion request CONJECTURED -> CERTIFIED; Notes 2026-09-06 remediation and verifier-history entries; current stamp p8a_remainder v2]"
+    }
+  ],
+  "id": "P8-A.7.20260907.model.2",
+  "provenance": {
+    "cost_usd": "2.3828",
+    "model": "claude-fable-5",
+    "request_digest": "317add03270776e2029b154bc4da8d9045075ef38da00ff0660730b39fe0ad93",
+    "response_digest": "0ddf7f039a82e69a774722a2d5464664e437ce82d1f9a1c90999fbc93fdc1c04",
+    "run_id": "review-P8-A.7-b33bb7-s2",
+    "transport": "ClaudeCodeClient"
+  },
+  "reviewer": "model",
+  "statement_sha256": "6ad085163c22bb7f2c5c9894d5e8a63c6a2267d44f1de040db42f3103ae749df",
+  "target_level": "CERTIFIED",
+  "usable": true,
+  "verdict": "PASS",
+  "waivers": []
+}
