@@ -1,0 +1,638 @@
+{
+  "action_and_domain": {
+    "B_curvature": "+---; R_B=-6(DH+2H\u00b2), Einstein_B00=+3H\u00b2, EH=-Gi R_B/2; not the opposite A/FK convention",
+    "action": "Sum -Gi/2 det(ei) R[gi] -2det(u)[B+tr(u^-1 sum pi ei)] -2sum bi det(ei) +epsilon Sm[h], h=u^T eta u",
+    "actual_geometry": "Connected smooth regular common spatially flat homogeneous interval, positive lapse/scale entries and the parent coframe/root domain",
+    "conservation": "Full Einstein equations imply the interaction Bianchi factor, not an extra independent interaction NEC or twice-assumed matter conservation",
+    "constants": "Gi>0; pi,bi,B constant real of either sign; I={i:pi!=0} nonempty; one or two active links, no disconnected metric in K",
+    "excluded_operators": "No u Einstein/other derivative terms, other pairwise potential, direct e/v matter, or added derivative source operators",
+    "physical_clock": "T is actual h proper time; Ri=au/ai,ci=Ri ni/nu,d taui/dT=ci/Ri>0",
+    "physical_source": "Actual u-only isotropic n_h=epsilon(rho+p)>=0; positive canonical matter is sufficient but strict rolling is unnecessary",
+    "units": "Gi,K mass\u00b2; pi,bi,B,n_h mass4; H_u mass; Kprime mass3; H_u/sqrtK dimensionless; no implicit old-M1 Planck dictionary"
+  },
+  "checked_controls": {
+    "actual_solution_and_domain_guards": {
+      "actual_deSitter_H_u": "1/2",
+      "actual_endpoint_b8_pminus1_H_squared_at_R3over2": "37/12",
+      "all_zero_links_arbitrary_metric_H_prime_at_zero": "2",
+      "kinematic_degenerate_crossing_needs_NEC_violation": "-6*T**2",
+      "positive_cap_does_not_supply_full_vacuum_E_u00": "-2",
+      "same_example_calibrated_E_e00": "0",
+      "same_example_calibrated_E_v00": "0",
+      "singular_TT_hessian": "0",
+      "wrong_other_action_cap_counterexample_R": "3/2"
+    },
+    "complementary_three_slice_tests": {
+      "exact_CD_r_half_L1": {
+        "CD_scale_growth": "4",
+        "L": "1",
+        "necessary_error_threshold_when_positive": "1/3",
+        "r": "1/2",
+        "scale_error": "0",
+        "status": "EXCLUDED_BY_NEGATIVE_LINK_CONCAVITY",
+        "strict_chord_margin": "1"
+      },
+      "geometry_error_threshold_inconclusive": {
+        "CD_scale_growth": "4",
+        "L": "1",
+        "necessary_error_threshold_when_positive": "1/3",
+        "r": "1/2",
+        "scale_error": "1/3",
+        "status": "INCONCLUSIVE",
+        "strict_chord_margin": "0"
+      },
+      "relative_geometry_error_control": {
+        "CD_scale_growth": "4",
+        "L": "1",
+        "necessary_error_threshold_when_positive": "1/3",
+        "r": "1/2",
+        "scale_error": "1/10",
+        "status": "EXCLUDED_BY_NEGATIVE_LINK_CONCAVITY",
+        "strict_chord_margin": "7/10"
+      },
+      "smaller_window_inconclusive": {
+        "CD_scale_growth": "4",
+        "L": "1",
+        "necessary_error_threshold_when_positive": "-3/7",
+        "r": "1/10",
+        "scale_error": "0",
+        "status": "INCONCLUSIVE",
+        "strict_chord_margin": "-3/5"
+      },
+      "strict_equality_inconclusive": {
+        "CD_scale_growth": "4",
+        "L": "1",
+        "necessary_error_threshold_when_positive": "0",
+        "r": "1/4",
+        "scale_error": "0",
+        "status": "INCONCLUSIVE",
+        "strict_chord_margin": "0"
+      }
+    },
+    "monotonicity_and_actual_endpoint_bounds": {
+      "CD_half_duration_endpoint_threshold": "8/5",
+      "CD_unit_duration_endpoint_threshold": "2",
+      "degenerate_crossing_required_negative_null": "-6*T**2",
+      "exact_positive_margin": "3",
+      "near_zero_Hubble_positive_margin": "5/2",
+      "positive_bounce_H0_residual": "(2*G_f*R_g**2 + 2*G_g*R_f**2 + R_f**2*R_g**2*n_h)/(R_f**2*R_g**2)",
+      "uncontrolled_connection_is_inconclusive": "-2"
+    },
+    "nonunit_physical_vacuum_mass": {
+      "K_f0": "3",
+      "K_g0": "2",
+      "P_f0": "-2",
+      "P_g0": "1",
+      "S0": "-1",
+      "m_FP0_squared": "10/3",
+      "q_eff0": "4"
+    }
+  },
+  "claim": "P8-S6.15.AUXILIARY",
+  "complementary_individual_cone_tail_proof": {
+    "extra_contract": "Every active individual Einstein cone ci<=1; not a hidden premise of the primary theorem",
+    "finite_CD_test": "r=Ri(0)/Rcap in(0,1],L>0; r(1+L\u00b2)\u00b2(1-epsa)>1+epsa,0<=epsa<1, is a sufficient strict three-slice obstruction",
+    "global_tails": "If au grows without bound at both physical tails, the finite endpoints exist; no infinite Einstein proper-time premise and no vacuum needed",
+    "negative_link": "pi<0 implies bi>0 and Ri<=Rcap=(bi/|pi|)^(1/3), while DiHi<=0; bi<=0 has no regular real flat-FLRW point",
+    "nonnegative_links": "u null identity +NEC+ci<=1 force n_h=0 and ci=1 on active links; constant Hi and constraint fix constant Ri, so Hu is constant",
+    "three_slice": "log ai is concave in ordered proper taui, ai>=au/Rcap; two finite endpoints above any fixed middle value contradict the chord inequality"
+  },
+  "conditional_actual_CD_matching": {
+    "half_duration": "8/(5tau)",
+    "light_only_scope": "Constrains even an asymmetric light-only proposal if it claims this controlled actual full-parent background match; not a universal reduction or source/operator matching theorem",
+    "matter_and_vacuum_guards": "No identification of one internal scalar with old DHOST clock plus free chi, and no physical vacuum-to-bounce trajectory premise",
+    "necessary_maximum_endpoint_error": "max_\u00b1 |Hu(\u00b1Ltau)-HCD(\u00b1Ltau)| >=4L/[tau(1+L\u00b2)],L>0",
+    "required_dictionary": "An actual full-parent solution and matching identification of its actual h/proper T with the original CD target at both endpoints; reduced approximate equations alone do not supply this",
+    "strictness": "Equality is inconclusive; no Hubble-derivative error premise is required",
+    "target": "aCD=(1+(T/tau)\u00b2)\u00b2, HCD=4T/(tau\u00b2+T\u00b2),tau>0",
+    "unit_duration": "2/tau"
+  },
+  "conditional_actual_residual_budget": {
+    "hypotheses": "K>=kappa>0,Hu'>=a>0,n_h>=nu>=0,|Hu|<=eta,|K'|<=D",
+    "lower_bound": "2K Hu'-Hu K'+n_h>=2kappa*a+nu-eta*D",
+    "meaning": "A positive bound is a necessary combined actual-equation correction cancellation, not a computed omitted-operator, loop, field-map or cutoff error estimate",
+    "numeric_domain": "Exact finite rational values and explicit sign gates; reject bool, ordinary/SymPy Float, nonfinite and nonreal values"
+  },
+  "date": "2026-09-06",
+  "exact_residuals": {
+    "actual_singular_disconnected_and_deSitter_controls": {
+      "actual_deSitter_nonzero_link_E_e": "0",
+      "actual_deSitter_nonzero_link_E_u": "0",
+      "actual_deSitter_nonzero_link_E_v": "0",
+      "all_zero_arbitrary_u_positive_bounce": "0",
+      "all_zero_arbitrary_u_proper_clock": "0",
+      "all_zero_links_full_arbitrary_u_E_e": "0",
+      "all_zero_links_full_arbitrary_u_E_u": "0",
+      "all_zero_links_full_arbitrary_u_E_v": "0",
+      "general_TT_auxiliary_Hessian": "0",
+      "mixed_singular_full_flat_E_e": "0",
+      "mixed_singular_full_flat_E_u": "0",
+      "mixed_singular_full_flat_E_v": "0",
+      "singular_TT_is_a_constraint_not_an_inverse": "0"
+    },
+    "complementary_cone_cap_and_three_slice_identities": {
+      "arbitrary_positive_duration_secant_chord_identity": "0",
+      "negative_link_cap_cube_gap": "0",
+      "negative_link_endpoint_forced_positive": "0",
+      "nonnegative_links_NEC_deficit_sum": "0",
+      "proper_clock_log_scale_concavity": "0",
+      "strict_three_slice_geometry_error_threshold": "0"
+    },
+    "conditional_flat_vacuum_and_full_FP_invariant": {
+      "actual_physical_vacuum_mass_normalization": "0",
+      "calibrated_flat_E_e": "0",
+      "calibrated_flat_E_u": "0",
+      "calibrated_flat_E_v": "0",
+      "calibrated_total_vacuum_density": "0",
+      "general_ratio_EH_kinetic_f": "0",
+      "general_ratio_EH_kinetic_g": "0",
+      "literal_full_FP_trace_invariant": "0",
+      "same_action_weight_loss_calibrated_lapse": "0",
+      "same_action_weight_loss_factorization": "0"
+    },
+    "literal_full_covariant_and_lapse_retaining_background": {
+      "lapse_retaining_action_variation": "0",
+      "literal_full_covariant_lapse": "0",
+      "literal_full_covariant_spatial_1": "0",
+      "literal_full_covariant_spatial_2": "0",
+      "literal_full_covariant_spatial_3": "0",
+      "ordered_clock_dictionary": "0",
+      "physical_TT_characteristic_ratio": "0",
+      "physical_TT_gradient_pullback": "0",
+      "physical_TT_kinetic_pullback": "0",
+      "scale_retaining_action_variation": "0",
+      "undivided_null_identity": "0"
+    },
+    "one_nonzero_link_Bianchi_and_physical_monotonicity": {
+      "full_Einstein_Bianchi_residual_0": "0",
+      "full_combined_equation_residual": "0",
+      "normalized_monotonic_equation": "0",
+      "ordered_ratio_derivative_0": "0",
+      "proper_to_physical_Raychaudhuri_0": "0",
+      "regular_zero_Hubble_residual": "0",
+      "source_balance_factorization_0": "0"
+    },
+    "two_nonzero_link_Bianchi_and_physical_monotonicity": {
+      "full_Einstein_Bianchi_residual_0": "0",
+      "full_Einstein_Bianchi_residual_1": "0",
+      "full_combined_equation_residual": "0",
+      "normalized_monotonic_equation": "0",
+      "ordered_ratio_derivative_0": "0",
+      "ordered_ratio_derivative_1": "0",
+      "proper_to_physical_Raychaudhuri_0": "0",
+      "proper_to_physical_Raychaudhuri_1": "0",
+      "regular_zero_Hubble_residual": "0",
+      "source_balance_factorization_0": "0",
+      "source_balance_factorization_1": "0"
+    }
+  },
+  "formulation": "FORMULATION.md",
+  "independent_Fraction_replay": {
+    "actual_positive_NEC_rolling_fixtures": [
+      {
+        "A": "2",
+        "H_u_prime": "-5",
+        "H_u_squared": "7/6",
+        "K": "1/2",
+        "K_prime_over_H_u": "6",
+        "N": "2/7",
+        "actual_combined_residual": "0",
+        "q": "1",
+        "rho": "6"
+      },
+      {
+        "A": "3/2",
+        "H_u_prime": "-43/18",
+        "H_u_squared": "19/27",
+        "K": "8/9",
+        "K_prime_over_H_u": "16/3",
+        "N": "3/8",
+        "actual_combined_residual": "0",
+        "q": "1",
+        "rho": "4"
+      },
+      {
+        "A": "9/10",
+        "H_u_prime": "-2729/4050",
+        "H_u_squared": "271/1215",
+        "K": "200/81",
+        "K_prime_over_H_u": "-80/27",
+        "N": "9/4",
+        "actual_combined_residual": "0",
+        "q": "-1",
+        "rho": "4/3"
+      },
+      {
+        "A": "11/12",
+        "H_u_prime": "-4787/8712",
+        "H_u_squared": "397/2178",
+        "K": "288/121",
+        "K_prime_over_H_u": "-288/121",
+        "N": "11/6",
+        "actual_combined_residual": "0",
+        "q": "-1",
+        "rho": "12/11"
+      }
+    ],
+    "coefficientwise_identities": {
+      "combined_monotonic_equation_residual": "0",
+      "full_traceful_FP_stationary_determinant": "0",
+      "source_Bianchi_factorization_cleared": "0",
+      "source_balance_from_full_Einstein_residuals": "0",
+      "unequal_proper_duration_secant_chord": "0"
+    },
+    "off_shell_source_dynamics_normalization_fixtures": [
+      {
+        "K": "4",
+        "K_prime": "8/3",
+        "Z_prime": "59/126",
+        "combined_residual": "6829/819",
+        "inputs": {
+          "H_u": "-2/3",
+          "H_u_prime": "5/7",
+          "links": [
+            {
+              "G": "4",
+              "R": "1",
+              "c": "1/2",
+              "p": "2"
+            }
+          ],
+          "n_h": "11/13"
+        },
+        "links": 1
+      },
+      {
+        "K": "4",
+        "K_prime": "-8/3",
+        "Z_prime": "31/126",
+        "combined_residual": "3917/819",
+        "inputs": {
+          "H_u": "-2/3",
+          "H_u_prime": "5/7",
+          "links": [
+            {
+              "G": "16",
+              "R": "2",
+              "c": "3/2",
+              "p": "-3"
+            }
+          ],
+          "n_h": "11/13"
+        },
+        "links": 1
+      },
+      {
+        "K": "4",
+        "K_prime": "-4/3",
+        "Z_prime": "19/63",
+        "combined_residual": "4645/819",
+        "inputs": {
+          "H_u": "-2/3",
+          "H_u_prime": "5/7",
+          "links": [
+            {
+              "G": "1",
+              "R": "1",
+              "c": "1/2",
+              "p": "1"
+            },
+            {
+              "G": "3",
+              "R": "1",
+              "c": "3/2",
+              "p": "2"
+            }
+          ],
+          "n_h": "11/13"
+        },
+        "links": 2
+      },
+      {
+        "K": "4",
+        "K_prime": "4/3",
+        "Z_prime": "26/63",
+        "combined_residual": "6101/819",
+        "inputs": {
+          "H_u": "-2/3",
+          "H_u_prime": "5/7",
+          "links": [
+            {
+              "G": "1",
+              "R": "1",
+              "c": "2",
+              "p": "-2"
+            },
+            {
+              "G": "3",
+              "R": "1",
+              "c": "1/3",
+              "p": "1"
+            }
+          ],
+          "n_h": "11/13"
+        },
+        "links": 2
+      },
+      {
+        "K": "4",
+        "K_prime": "-2/3",
+        "Z_prime": "83/252",
+        "combined_residual": "5009/819",
+        "inputs": {
+          "H_u": "-2/3",
+          "H_u_prime": "5/7",
+          "links": [
+            {
+              "G": "1",
+              "R": "1",
+              "c": "3/4",
+              "p": "1"
+            },
+            {
+              "G": "3",
+              "R": "1",
+              "c": "5/4",
+              "p": "-1"
+            }
+          ],
+          "n_h": "11/13"
+        },
+        "links": 2
+      }
+    ],
+    "same_action_mixed_weight_fixtures": [
+      {
+        "R_f": "1",
+        "R_g": "1",
+        "S": "-1",
+        "S0": "-1"
+      },
+      {
+        "R_f": "3/2",
+        "R_g": "1/2",
+        "S": "-10/3",
+        "S0": "-1"
+      },
+      {
+        "R_f": "2",
+        "R_g": "3/4",
+        "S": "-13/6",
+        "S0": "-1"
+      }
+    ]
+  },
+  "independent_actual_local_solution_bridge": [
+    {
+      "A": "2",
+      "primary_minus_independent": {
+        "K": "0",
+        "K_prime": "0",
+        "combined_residual": "0",
+        "normalized_equation_residual": "0"
+      },
+      "q": "1"
+    },
+    {
+      "A": "3/2",
+      "primary_minus_independent": {
+        "K": "0",
+        "K_prime": "0",
+        "combined_residual": "0",
+        "normalized_equation_residual": "0"
+      },
+      "q": "1"
+    },
+    {
+      "A": "9/10",
+      "primary_minus_independent": {
+        "K": "0",
+        "K_prime": "0",
+        "combined_residual": "0",
+        "normalized_equation_residual": "0"
+      },
+      "q": "-1"
+    },
+    {
+      "A": "11/12",
+      "primary_minus_independent": {
+        "K": "0",
+        "K_prime": "0",
+        "combined_residual": "0",
+        "normalized_equation_residual": "0"
+      },
+      "q": "-1"
+    }
+  ],
+  "independent_source_dynamics_normalization_bridge": [
+    {
+      "inputs": {
+        "H_u": "-2/3",
+        "H_u_prime": "5/7",
+        "links": [
+          {
+            "G": "4",
+            "R": "1",
+            "c": "1/2",
+            "p": "2"
+          }
+        ],
+        "n_h": "11/13"
+      },
+      "primary_minus_independent": {
+        "K": "0",
+        "K_prime": "0",
+        "combined_residual": "0",
+        "normalized_Hubble_prime": "0"
+      }
+    },
+    {
+      "inputs": {
+        "H_u": "-2/3",
+        "H_u_prime": "5/7",
+        "links": [
+          {
+            "G": "16",
+            "R": "2",
+            "c": "3/2",
+            "p": "-3"
+          }
+        ],
+        "n_h": "11/13"
+      },
+      "primary_minus_independent": {
+        "K": "0",
+        "K_prime": "0",
+        "combined_residual": "0",
+        "normalized_Hubble_prime": "0"
+      }
+    },
+    {
+      "inputs": {
+        "H_u": "-2/3",
+        "H_u_prime": "5/7",
+        "links": [
+          {
+            "G": "1",
+            "R": "1",
+            "c": "1/2",
+            "p": "1"
+          },
+          {
+            "G": "3",
+            "R": "1",
+            "c": "3/2",
+            "p": "2"
+          }
+        ],
+        "n_h": "11/13"
+      },
+      "primary_minus_independent": {
+        "K": "0",
+        "K_prime": "0",
+        "combined_residual": "0",
+        "normalized_Hubble_prime": "0"
+      }
+    },
+    {
+      "inputs": {
+        "H_u": "-2/3",
+        "H_u_prime": "5/7",
+        "links": [
+          {
+            "G": "1",
+            "R": "1",
+            "c": "2",
+            "p": "-2"
+          },
+          {
+            "G": "3",
+            "R": "1",
+            "c": "1/3",
+            "p": "1"
+          }
+        ],
+        "n_h": "11/13"
+      },
+      "primary_minus_independent": {
+        "K": "0",
+        "K_prime": "0",
+        "combined_residual": "0",
+        "normalized_Hubble_prime": "0"
+      }
+    },
+    {
+      "inputs": {
+        "H_u": "-2/3",
+        "H_u_prime": "5/7",
+        "links": [
+          {
+            "G": "1",
+            "R": "1",
+            "c": "3/4",
+            "p": "1"
+          },
+          {
+            "G": "3",
+            "R": "1",
+            "c": "5/4",
+            "p": "-1"
+          }
+        ],
+        "n_h": "11/13"
+      },
+      "primary_minus_independent": {
+        "K": "0",
+        "K_prime": "0",
+        "combined_residual": "0",
+        "normalized_Hubble_prime": "0"
+      }
+    }
+  ],
+  "nonempty_and_outside_hypothesis_controls": {
+    "actual_all_zero_links": "All links/endpoints/B/V=0,constant free scalar,e=v=I,u=(1+t\u00b2)I solves all equations; T=t+t\u00b3/3 and Hu'(0)=2, but I empty and the physical auxiliary metric is undetermined",
+    "actual_deSitter": "Gi=pi=1,B=-6,bi=-5/8,e=v=u with H=1/2,constant free scalar solves all equations and demonstrates allowed zero-NEC expansion",
+    "actual_local_rolling_family": "Gi=epsilon=1,pi=q,B=-6q,bi=-q,V=0,e=v=r; N=A/(6A-5),rho=p=12q(A-1)/A,Hr\u00b2=2q(A\u00b3-1)/3,dA/dt=-6Hr A(A-1)/(6A-5)",
+    "actual_singular_flat": "pg=1,pf=-1,B=0,bg=-1,bf=1,e=v=u=I,zero source solves full equations but S=0 and uTT imposes gamma_g=gamma_f; main background theorem still applies",
+    "calibration_only_not_vacuum": "pg=-2,pf=1,bg=2,bf=-1,B=4 at identity coframes satisfies Einstein calibration but fails the actual u equation",
+    "degenerate_kinematic_only": "K=1,Hu=T\u00b3 requires n_h=-6T\u00b2; this is an exact NEC diagnostic, not a full parent solution",
+    "rolling_domain": "Positive Hr root,a_r>0,A>5/6,q(A-1)>0; q<0 strictly 5/6<A<1 and q>0 requires A>1; analytic local ODE, no uniform duration or healthy negative-q vacuum-spectrum claim",
+    "rolling_full_equations": "a_r'=Hr a_r,psi'=N sqrt(2rho),Hr'=-6qA\u00b3(A-1)/(6A-5),Hu=Hr/A; all lapses, accelerations, u equations, scalar current and normalized identity hold"
+  },
+  "not_established": [
+    "A no-bounce theorem for extra potential/derivative operators, u kinetics, direct e/v matter, non-NEC/quantum sources, anisotropic/curved or singular geometries",
+    "The theorem for an empty nonzero-link index set or an invertible auxiliary construction in that underdetermined case",
+    "A vacuum from endpoint calibration alone or a regular TT inverse at S=0 without the separate calibrated positive-FP premise",
+    "A scalar/vector stability, positive heavy propagator, finite-band light-only control, cutoff or loop theorem from the vacuum mass or full tensor cones",
+    "A controlled actual CD matching dictionary or full matter/operator match merely from reduced equations",
+    "A universal exclusion across every parent or a replacement of adopted S6 by full UV completion",
+    "An alteration to the completed scoped photon objective or frozen linear classification; closure of adopted S6 or original P8"
+  ],
+  "primary_full_background_theorem": {
+    "conclusion": "No negative-to-positive physical Hubble sign change on the connected regular interval, including every degenerate bounce",
+    "exact_residual_combination": "2sum Ei-2U=2K Hu'-Hu K'+n_h",
+    "full_Einstein_equations": "3Gi Hi\u00b2=2pi Ri\u00b3+2bi; Gi(2DiHi+3Hi\u00b2)=2pi Ri\u00b3/ci+2bi",
+    "no_extra_premises": "No cone condition, flat vacuum, tail/completeness assumption, Hubble division, uniform tail bound on K, or auxiliary TT inverse",
+    "on_shell_identity": "2K Hu'-Hu K'=-n_h; (Hu/sqrtK)'=-n_h/(2K^(3/2))<=0",
+    "physical_Einstein_residuals": "Ei=Ki[Hu'+(1-ci)Hu\u00b2]-(pi/Ri)(1-ci)",
+    "ratio_and_positive_normalizer": "Ri'=Ri(1-ci)Hu; K=sum_active Gi/Ri\u00b2>0; K'=-2Hu sum_active Ki(1-ci)",
+    "singular_TT_scope": "Includes sum pi/Ri=0 background points/intervals; no singular TT inverse is used or claimed",
+    "source_residual": "U=sum_active(pi/Ri)(ci-1)-n_h/2",
+    "undivided_source_Bianchi": "Di rhoi+3Hi(rhoi+pressure_i)=6pi Ri\u00b3(Ri Hu-Hi)/ci=0, hence Hi=Ri Hu for every active link, even at Hi=Hu=0"
+  },
+  "primary_source_audit": {
+    "1206_3814": {
+      "url": "https://arxiv.org/pdf/1206.3814",
+      "use": "Section4 interaction effective-NEC anticorrelation, explicitly distinct from actual physical matter NEC"
+    },
+    "1211_0214": {
+      "url": "https://arxiv.org/pdf/1211.0214",
+      "use": "Prior proper-velocity Bianchi lock and extremum relations, eq15/18-19; differing branch restrictions and arbitrary hidden matter, not our u-only NEC theorem"
+    },
+    "1804_04671": {
+      "url": "https://arxiv.org/pdf/1804.04671",
+      "use": "Chosen auxiliary action/source equations and actual-vierbein distinction; endpoint extension explicit; no cutoff imported"
+    },
+    "novelty": "No general novelty claim; scoped full-source theorem derived here, not imported from prior papers or a mutable successor"
+  },
+  "prior_context_sha256": {
+    "S6_14_actual_auxiliary_action_and_cones": "ab280acf8d20fb2ae18d75c265deecd59832e993ba0338e9e5c8f7691c0a7e6e",
+    "adopted_S6_controlled_matching_contract": "d00df35d5821b05baa61e897725a22ed1ac21d0536b74bdaece3ab0093215901",
+    "conditional_original_CD_M1_endpoint_target": "caf8c8e688a7565b9d00f921c099a28da00f97522ed26ad182a8227eb80cd4dd",
+    "original_B_curvature_and_physical_metric": "73dd18f7a4b56a0205f9fbc6a4b09b213a3c280b3f0274414a255635b04e2b09"
+  },
+  "schema": 1,
+  "separate_same_action_vacuum_and_TT_inverse": {
+    "actual_physical_vacuum_mass": "Ki0=Gi/Ri0\u00b2>0,qeff0=2Pg0Pf0/S0,mFP0\u00b2=qeff0*(1/Kg0+1/Kf0)",
+    "constant_potential": "Beffective=B+epsilon V0/2=-3S0,Pi0=pi/Ri0,S0=sumPi0; endpoint calibration or positive cap alone does not prove a vacuum",
+    "full_traceful_FP_quadratic": "Pg0 Pf0/(4S0)*[(tr(H-J))\u00b2-tr((H-J)\u00b2)]",
+    "limits": "No scalar/vector health, positive rolling Green inverse, gap/adiabatic control, light-only or universal vacuum inference; primary no-bounce needs none of these additional premises",
+    "literal_stationary_density": "-2S0 det(I+(Pg0 H+Pf0 J)/(2S0))+2Pg0 det(I+H/2)+2Pf0 det(I+J/2),S0!=0",
+    "mixed_positive_FP": "Genuine mixed links and finite positive mFP0\u00b2 imply S0<0, hence S<=S0<0 throughout every regular same-action flat-FLRW point",
+    "physical_full_tensor_corollary": "For homogeneous canonical scalars without independent TT matter response: KTT_i=Gi/(ci Ri\u00b2),FTT_i=Gi ci/Ri\u00b2; nonsingular algebraic TT elimination adds no derivatives and full squared cones are ci\u00b2",
+    "premise": "Actual positive Lorentz-flat proportional vacuum of this same action, zero scalar gradient and full u/scalar equations, then ei0=u0/Ri0 and bi=-pi Ri0\u00b3",
+    "sign_free_weight_loss": "Pi-Pi0=-3Gi Hi\u00b2/[2Ri Ri0(Ri\u00b2+Ri Ri0+Ri0\u00b2)]<=0 from the calibrated lapse residual"
+  },
+  "source_audit": "notes/sources.md",
+  "source_sha256": {
+    "FORMULATION.md": "554dde5a5f82e1eefc73975b8c3120c7eca4b99456dafd0774c97f35dd606642",
+    "README.md": "63812507002ef3079702a09fbe032beeba20989bdd8efb8687e8d6fda9bc061a",
+    "notes/proof.md": "39aeeb0b4e006f3dbb26d9783254065a7dcbd120ed18a49184cc5148e7a96d35",
+    "notes/sources.md": "49261253c97585cabae5fd84ba77f23c3d289b19dfffc9108d072d75b9d05b66",
+    "src/p8_trimetric_global/__init__.py": "622fa1672a3c012d2f0be80de0dd6d595bde995a7a6497ae3e01f3969d7e3763",
+    "src/p8_trimetric_global/background.py": "1e95dd2b9a99a9da27dfe5b976c0b76f236129266df1493f48bf9626499b63b8",
+    "src/p8_trimetric_global/guards.py": "4fc441791db372c661c6f68e99cb05b8ff45e2ec83ff861ce9a931fff758c52b",
+    "src/p8_trimetric_global/independent.py": "dfd9904da1a329a500665bfaa59a1a117c856b7c92d6bab6d66d78c518103bf8",
+    "src/p8_trimetric_global/monotonic.py": "6dbb7ed8d55f9983f43c1c80c1bbafe1d19da57f325afcfdfd11e1ee999eb1b7",
+    "src/p8_trimetric_global/obstruction.py": "3af0379886df388844beeebf97b92d859b5a0f6a59c074c555b78f5a99294f97",
+    "src/p8_trimetric_global/vacuum.py": "e1961141cd3ab1f259d0795cc196f7aebb2a39ba29d23bb0260b6f20b95001c5",
+    "src/p8_trimetric_global/verify.py": "ec0bbf03a8c4622422649aac96d71a719d99333262eb7c6ce1757b9522df8a06",
+    "tests/conftest.py": "ed271ee3f88fc51151269e8b091d0d0a4ca32837349715e8b7c74737c0c94345",
+    "tests/test_auxiliary_global.py": "09fa09731a63afa8092c9801331a8aaf4c3c50b01169ab68f4d4e67cdd27901c",
+    "tests/test_auxiliary_global_certificate.py": "3295021321317c9595d6274db7e2631291b59ccd081b8230f4694ea2707c02f3",
+    "tests/test_auxiliary_global_independent_audit.py": "b6be8e06242d9870a69d7d365e3f01b6d208a8a07e12b75f628723d58dba14a4"
+  },
+  "status": "ALL_LINK_SIGNS_ACTUAL_PHYSICAL_HUBBLE_MONOTONICITY; SPECIFIED_AUXILIARY_PARENT_NO_BOUNCE; P8_OPEN",
+  "verification_boundary": "Exact symbolic plus independent coefficientwise Fraction/Dual checks and genuine local-solution fixtures, separately authored covariant action audit and written global calculus proof; not proof-assistant formalized or finite sampling of all time",
+  "written_proof": "notes/proof.md"
+}

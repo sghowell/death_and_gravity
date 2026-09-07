@@ -261,8 +261,21 @@ around a pre-registered problems document and a certificate-gated ledger.
   warning that asymmetric light-only reductions need a separate test.
   Actual rolling solutions, retained probe contacts and mixed-sign
   countercontrols keep this a scoped matching theorem, not a UV no-go.
+  The [full-background auxiliary no-bounce theorem](problems/P8/s6/matching/trimetric/cones/global/README.md)
+  now closes that exact parent route for all constant link signs and
+  asymmetries: the complete Einstein/Bianchi equations make the physical
+  Hubble rate divided by a positive kinetic weight nonincreasing. No
+  cone bound, vacuum or tensor-Hessian inverse is needed. A conditional
+  endpoint mismatch also obstructs accurate actual-background matching.
+  The broader [constant star-interaction theorem](problems/P8/s6/matching/star/README.md)
+  allows every constant square-root interaction coefficient and an
+  optional healthy central Einstein term. With only central NEC matter,
+  it excludes contraction-to-expansion through arbitrary algebraic-branch
+  zero sets. Actual solutions verify the algebraic-kinetic exception and
+  the necessary exclusion of an undetermined disconnected center.
+  These are named parent-class results, not universal DHOST or UV verdicts.
 
-The [current P8 continuation audit](docs/assessment-2026-09-06-p8-auxiliary-tensor-cones.md) separates
+The [current P8 continuation audit](docs/assessment-2026-09-06-p8-star-parent-no-bounce.md) separates
 the completed scoped P8(a) objective and certificate gates from the
 outstanding P8(b) UV-matching and positivity questions.
 P8 is not marked finished or closed.

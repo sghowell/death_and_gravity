@@ -1,0 +1,516 @@
+{
+  "action_and_domain": {
+    "curvature": "+---, R_B=-6(DH+2H\u00b2), physical Einstein lapse 3G H\u00b2=rho",
+    "geometry": "Finite star, common smooth regular positive spatially flat FLRW/root chart on a connected open interval",
+    "kinetics": "EH=-G R_B/2; finite positive leaf G_i, optional constant G_u>=0",
+    "nontriviality": "G_u>0 or at least one genuine beta1..3 link; endpoint-only leaves are omitted from kinetic combinations",
+    "physical_clock": "dT=n_u dt; R_i=a_u/a_i,N_i=n_u/n_i,c_i=R_i/N_i>0; D_tau_i=(R_i/c_i)D_T",
+    "potential": "-2 sum_i sqrt|g_i| sum_n beta_in e_n(sqrt(g_i^-1 h)), all constant real beta0..4",
+    "source": "Only central homogeneous/isotropic on-shell physical matter; n_h=rho_m+p_m>=0; positive canonical scalar metric sufficient"
+  },
+  "actual_controls": {
+    "algebraic_equations": "A=3/2,B=J=0,H_i=1,H_u=1/(3T); leaf rho,p=3,-3; central interaction zero; scalar rho=p=1/(3T\u00b2)",
+    "algebraic_solution": "G_u=G_i=1,beta=(0,1,-1/2,0,1/2),a_u=a_i=T^(1/3),n_u=1,n_i=1/(3T),phi=sqrt(2/3)logT,V=0,T>0",
+    "disconnected_exception": "G_u=0,all beta=0,zero matter,Minkowski leaf: arbitrary h and a_u=1+T\u00b2 with H_u'(0)=2; no physical gravity claim",
+    "original_auxiliary_subfamily": "Two leaves beta_i3=p_i,beta_i0=b_i,other beta=0,central -2B det(u),G_u=0; J_i=p_i R_i\u00b2",
+    "wrong_all_K": "K_all=2 gives 2K_all H_u'-H_u K_all'+n_h=-2/(3T\u00b2), not zero"
+  },
+  "checked_controls": {
+    "Hprime_with_Gu3": "-1/4",
+    "actual_algebraic_false_all_K_normalized_defect": "-sqrt(2)/(12*T**2)",
+    "actual_disconnected_physical_Hprime_at_zero": "2",
+    "correct_N_central_null": "5/2",
+    "exact_root_classifications": {
+      "double_positive_root": {
+        "identically_zero": "False",
+        "kind": "genuine",
+        "positive_roots": [
+          [
+            "1",
+            "2"
+          ]
+        ]
+      },
+      "endpoint_only": {
+        "identically_zero": "True",
+        "kind": "endpoint_only",
+        "positive_roots": []
+      },
+      "irrational_positive_root": {
+        "identically_zero": "False",
+        "kind": "genuine",
+        "positive_roots": [
+          [
+            "sqrt(2)",
+            "1"
+          ]
+        ]
+      },
+      "linear_positive_root": {
+        "identically_zero": "False",
+        "kind": "genuine",
+        "positive_roots": [
+          [
+            "1",
+            "1"
+          ]
+        ]
+      },
+      "old_nonzero_beta3": {
+        "identically_zero": "False",
+        "kind": "genuine",
+        "positive_roots": []
+      },
+      "two_positive_roots": {
+        "identically_zero": "False",
+        "kind": "genuine",
+        "positive_roots": [
+          [
+            "1",
+            "1"
+          ],
+          [
+            "2",
+            "1"
+          ]
+        ]
+      }
+    },
+    "invalid_domain_calls_rejected": 7,
+    "wrong_c_in_place_of_N_null": "-15",
+    "wrong_omitted_Gu_Hprime": "-1"
+  },
+  "claim": "P8-S6.16.STAR",
+  "date": "2026-09-06",
+  "exact_residuals": {
+    "actual_algebraic_solution_and_original_action": {
+      "actual_K_dynamic": "0",
+      "algebraic_false_formula_nonzero_control": "0",
+      "canonical_scalar": "0",
+      "central_00": "0",
+      "central_space": "0",
+      "leaf_00": "0",
+      "leaf_space": "0",
+      "original_auxiliary_J": "0",
+      "original_auxiliary_u_density": "0",
+      "unfactored_bianchi": "0"
+    },
+    "literal_lapse_scale_variation_and_Bianchi": {
+      "A_derivative": "0",
+      "central_density": "0",
+      "central_null": "0",
+      "central_pressure": "0",
+      "leaf_density": "0",
+      "leaf_null": "0",
+      "leaf_pressure": "0",
+      "literal_eigenvalue_polynomial": "0",
+      "paired_null_cancellation": "0",
+      "reciprocal_derivative": "0",
+      "unfactored_bianchi": "0"
+    },
+    "proper_clocks_and_dynamic_combination": {
+      "K_derivative": "0",
+      "bounce_without_H_division": "0",
+      "scaled_H_derivative": "0",
+      "single_leaf_clock_and_raychaudhuri": "0",
+      "two_leaf_central_null_cancellation": "0"
+    }
+  },
+  "formulation": "FORMULATION.md",
+  "independent_Fraction_replay": {
+    "actual_algebraic_branch_fixtures": [
+      {
+        "H_i": "1",
+        "H_u": "8/3",
+        "T": "1/8",
+        "a_u": "1/2",
+        "n_i": "8/3",
+        "null_m": "128/3",
+        "rho_m": "64/3",
+        "wrong_all_K_undivided_defect": "-128/3"
+      },
+      {
+        "H_i": "1",
+        "H_u": "1/3",
+        "T": "1",
+        "a_u": "1",
+        "n_i": "1/3",
+        "null_m": "2/3",
+        "rho_m": "1/3",
+        "wrong_all_K_undivided_defect": "-2/3"
+      },
+      {
+        "H_i": "1",
+        "H_u": "1/24",
+        "T": "8",
+        "a_u": "2",
+        "n_i": "1/24",
+        "null_m": "1/96",
+        "rho_m": "1/192",
+        "wrong_all_K_undivided_defect": "-1/96"
+      },
+      {
+        "H_i": "1",
+        "H_u": "1/81",
+        "T": "27",
+        "a_u": "3",
+        "n_i": "1/81",
+        "null_m": "2/2187",
+        "rho_m": "1/2187",
+        "wrong_all_K_undivided_defect": "-2/2187"
+      }
+    ],
+    "coefficientwise_identities": {
+      "A_derivative": "0",
+      "A_from_elementary_subsets": "0",
+      "B_from_elementary_subsets": "0",
+      "B_reciprocity_derivative": "0",
+      "central_null_from_scale_variation_cleared": "0",
+      "dynamic_star_residual_combination": "0",
+      "four_eigenvalue_expansion": "0",
+      "leaf_null_from_scale_variation": "0",
+      "unfactored_leaf_Bianchi": "0",
+      "weighted_null_cancellation_cleared": "0"
+    },
+    "finite_dynamic_star_fixtures": [
+      {
+        "G_u": "0",
+        "Gs": [
+          "2"
+        ],
+        "H": "-2",
+        "Hprime": "-33/4",
+        "K": "2/9",
+        "Kprime": "-2/3",
+        "Rprimes": [
+          "9/2"
+        ],
+        "Rs": [
+          "3"
+        ],
+        "comparison_coefficient": "-3/2",
+        "cs": [
+          "7/4"
+        ],
+        "log_rate_cap": "3/2",
+        "nh": "5"
+      },
+      {
+        "G_u": "3",
+        "Gs": [
+          "2",
+          "5"
+        ],
+        "H": "0",
+        "Hprime": "-18/23",
+        "K": "161/36",
+        "Kprime": "0",
+        "Rprimes": [
+          "0",
+          "0"
+        ],
+        "Rs": [
+          "3",
+          "2"
+        ],
+        "comparison_coefficient": "0",
+        "cs": [
+          "7/4",
+          "1/3"
+        ],
+        "log_rate_cap": "0",
+        "nh": "7"
+      },
+      {
+        "G_u": "1",
+        "Gs": [
+          "2",
+          "3",
+          "4"
+        ],
+        "H": "3/5",
+        "Hprime": "-1143/26425",
+        "K": "151/36",
+        "Kprime": "-11/30",
+        "Rprimes": [
+          "3/10",
+          "-2/5",
+          "-9/5"
+        ],
+        "Rs": [
+          "1",
+          "2",
+          "3"
+        ],
+        "comparison_coefficient": "-33/755",
+        "cs": [
+          "1/2",
+          "4/3",
+          "2"
+        ],
+        "log_rate_cap": "3/5",
+        "nh": "1/7"
+      },
+      {
+        "G_u": "2",
+        "Gs": [],
+        "H": "-1",
+        "Hprime": "-3/4",
+        "K": "2",
+        "Kprime": "0",
+        "Rprimes": [],
+        "Rs": [],
+        "comparison_coefficient": "0",
+        "cs": [],
+        "log_rate_cap": "0",
+        "nh": "3"
+      }
+    ],
+    "literal_coframe_jet_directions": 24,
+    "literal_disconnected_euler_fixtures": [
+      {
+        "H_u": "-1",
+        "H_u_prime": "0",
+        "T": "-1",
+        "a_u": "2",
+        "added_Gu1_constraint_defect": "3"
+      },
+      {
+        "H_u": "0",
+        "H_u_prime": "2",
+        "T": "0",
+        "a_u": "1",
+        "added_Gu1_constraint_defect": "0"
+      },
+      {
+        "H_u": "4/5",
+        "H_u_prime": "-6/25",
+        "T": "2",
+        "a_u": "5",
+        "added_Gu1_constraint_defect": "48/25"
+      }
+    ],
+    "literal_stress_fixtures": [
+      {
+        "N": "5/2",
+        "R": "7/3",
+        "beta": [
+          "1",
+          "-2",
+          "3",
+          "-4",
+          "5"
+        ],
+        "jets": [
+          "800",
+          "592",
+          "592",
+          "592",
+          "-928",
+          "-688",
+          "-688",
+          "-688"
+        ],
+        "null_i": "88/27",
+        "null_u": "-176/1715",
+        "pressure_i": "296/9",
+        "pressure_u": "-688/245",
+        "rho_i": "-800/27",
+        "rho_u": "928/343"
+      },
+      {
+        "N": "3",
+        "R": "1",
+        "beta": [
+          "0",
+          "1",
+          "-1/2",
+          "0",
+          "1/2"
+        ],
+        "jets": [
+          "-3",
+          "-1",
+          "-1",
+          "-1",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "null_i": "0",
+        "null_u": "0",
+        "pressure_i": "-3",
+        "pressure_u": "0",
+        "rho_i": "3",
+        "rho_u": "0"
+      },
+      {
+        "N": "4/9",
+        "R": "21/20",
+        "beta": [
+          "2",
+          "0",
+          "0",
+          "-2",
+          "3"
+        ],
+        "jets": [
+          "1261/432",
+          "-17/2",
+          "-17/2",
+          "-17/2",
+          "931/32",
+          "1561/72",
+          "1561/72",
+          "1561/72"
+        ],
+        "null_i": "-5341/2000",
+        "null_u": "109/21",
+        "pressure_i": "-51/25",
+        "pressure_u": "223/21",
+        "rho_i": "-1261/2000",
+        "rho_u": "-38/7"
+      }
+    ]
+  },
+  "literal_identities": {
+    "central_null": "G_u H_u'=-n_h/2-sum_i J_i(1-c_i)/R_i\u00b3",
+    "dynamic_leaf": "R_i'=R_i(1-c_i)H_u; (G_i/R_i\u00b2)[H_u'+(1-c_i)H_u\u00b2]=J_i(1-c_i)/R_i\u00b3",
+    "interaction_nulls": "n_leaf=2(R-N)J; n_center=2J(1-c)/R\u00b3; n_center+n_leaf/(N R\u00b3)=0",
+    "polynomials": "A=beta0+3beta1R+3beta2R\u00b2+beta3R\u00b3; B=beta1+3beta2R+3beta3R\u00b2+beta4R\u00b3; J=beta1+2beta2R+beta3R\u00b2",
+    "unfactored_Bianchi": "6 N_i J_i(R_i)(R_i H_u-H_i)=0; no division by J_i, H_u, null density or auxiliary Hessian"
+  },
+  "not_established": [
+    "Any theorem for a disconnected nondynamical G_u=0 center with no genuine link",
+    "A globally exact all-leg monotonic quantity across persistent algebraic strata",
+    "Scalar/vector/tensor health, a stationary massive spectrum or a Wilsonian cutoff",
+    "A statement on nonflat, multimetric-matter, leaf-matter, graph-cycle, derivative-mixing, variable-coefficient or non-NEC models",
+    "A continuation through singular, zero or sign-changing lapse/root domains",
+    "A UV-positivity/Regge/loop verdict, universal DHOST-row exclusion or original C/D matching",
+    "Closure of S6, P8(b), or P8"
+  ],
+  "primary_independent_bridges": {
+    "independent_clock_rate_fixtures": [
+      {
+        "G_u": "0",
+        "leaf_count": 1,
+        "primary_minus_independent": {
+          "Hprime": "0",
+          "K": "0",
+          "Kprime": "0",
+          "Rprimes": "0"
+        }
+      },
+      {
+        "G_u": "3",
+        "leaf_count": 2,
+        "primary_minus_independent": {
+          "Hprime": "0",
+          "K": "0",
+          "Kprime": "0",
+          "Rprimes": "0"
+        }
+      },
+      {
+        "G_u": "1",
+        "leaf_count": 3,
+        "primary_minus_independent": {
+          "Hprime": "0",
+          "K": "0",
+          "Kprime": "0",
+          "Rprimes": "0"
+        }
+      },
+      {
+        "G_u": "2",
+        "leaf_count": 0,
+        "primary_minus_independent": {
+          "Hprime": "0",
+          "K": "0",
+          "Kprime": "0",
+          "Rprimes": "0"
+        }
+      }
+    ],
+    "literal_coframe_stresses": [
+      {
+        "N": "5/2",
+        "R": "7/3",
+        "primary_minus_independent": {
+          "null_i": "0",
+          "null_u": "0",
+          "pressure_i": "0",
+          "pressure_u": "0",
+          "rho_i": "0",
+          "rho_u": "0"
+        }
+      },
+      {
+        "N": "3",
+        "R": "1",
+        "primary_minus_independent": {
+          "null_i": "0",
+          "null_u": "0",
+          "pressure_i": "0",
+          "pressure_u": "0",
+          "rho_i": "0",
+          "rho_u": "0"
+        }
+      },
+      {
+        "N": "4/9",
+        "R": "21/20",
+        "primary_minus_independent": {
+          "null_i": "0",
+          "null_u": "0",
+          "pressure_i": "0",
+          "pressure_u": "0",
+          "rho_i": "0",
+          "rho_u": "0"
+        }
+      }
+    ]
+  },
+  "primary_sources": [
+    "https://arxiv.org/pdf/1206.3814",
+    "https://arxiv.org/pdf/1211.0214"
+  ],
+  "prior_context_sha256": {
+    "S6_13_literal_auxiliary_action": "062ea71b4fcb139af3ea727f013eeeb3a340b6e37207cb872e372eacce09631e",
+    "S6_14_physical_u_and_curvature_lineage": "ab280acf8d20fb2ae18d75c265deecd59832e993ba0338e9e5c8f7691c0a7e6e",
+    "adopted_S6_conditional_matching_contract": "d00df35d5821b05baa61e897725a22ed1ac21d0536b74bdaece3ab0093215901"
+  },
+  "schema": 1,
+  "source_audit": "notes/sources.md",
+  "source_sha256": {
+    "FORMULATION.md": "0d1c0e380a971ad34df22dfd7e98ecf692438e38d59a0b3754f485527302e094",
+    "README.md": "6547d88cc549d23247631319b628b196456128a463e49511b8c49affe8371ed3",
+    "notes/proof.md": "76ece3a408bbe7618e2e5b3976b30874bd4d4f6b0b39893a38ac5e7170456816",
+    "notes/sources.md": "43fe7744738c167d2143f4ec475d295b8dc0bf8ced396440a233402fcfb0ff03",
+    "src/p8_star/__init__.py": "d3f73a3c3cfbcc0b551cc24749354eedebc0400845d33aca3550a508db968755",
+    "src/p8_star/background.py": "af68b48f288b7c52b725d0285c3d8159ea10448c6411a1c1967805c8b0899ab6",
+    "src/p8_star/branches.py": "a41e500e469f598c30fef95d29124078d6ca1e3c1e1a16332e280fd23d0b69a4",
+    "src/p8_star/exact.py": "ae78dea5e969c70e3fec53a5710ff27796d508d4937752dafcee192a6b9fae42",
+    "src/p8_star/independent.py": "25faebe47d7e60bbee84cf21149b600f765104d50f713e681194f86592970b22",
+    "src/p8_star/potential.py": "8c0dfe2a6d6082ed92edfdc4ed2492ae7226e9df635e6f255d5a142b7a33ee29",
+    "src/p8_star/verify.py": "9004b256004e85c18f3285817d5e0e5c46ed536c1b36f7dea7df25d37973e6b8",
+    "tests/conftest.py": "ed271ee3f88fc51151269e8b091d0d0a4ca32837349715e8b7c74737c0c94345",
+    "tests/test_star_branches.py": "dac072565a0749f4838de4647631b27b09a5af213685bac2eec74b023e9d0e19",
+    "tests/test_star_no_bounce_independent_audit.py": "a61a403a0c56a94066de12f06e5ef926651fb80799f108b2c3896c1edc49dc0c",
+    "tests/test_star_potential.py": "add476a0e1709989c4a9b4d0211942ef90b9f06cfef1b1661e25db829b4321cd",
+    "tests/test_star_report.py": "90f9f07f78f5159c35e270a1c02b4467edfa9353197916ab52f89e9f8aa688a1"
+  },
+  "status": "CONSTANT_STAR_SINGLE_NEC_SOURCE_REGULAR_FLAT_NO_BOUNCE; MATCHING_AND_P8_B_OPEN",
+  "theorem": {
+    "algebraic_interior": "A genuine J_i has finitely many roots: R_i constant, H_i constant, H_u=c_i H_i/R_i and H_u'=(c_i'/c_i)H_u",
+    "arbitrary_zero_sets": "For C1 F_i=H_i-R_i H_u, F_i=F_i'=0 on the complement and hence boundaries of {J_i=0}; no finite-switch premise",
+    "compact_comparison": "C=max_genuine sup(|R_i'/R_i|,|c_i'/c_i|)<infinity; H_u'>=0 is not assumed; for H_u>=0, H_u'<=C H_u",
+    "fixed_dynamic_stratum": "K_D=G_u+sum_dynamic G_i/R_i\u00b2>0 gives (H_u/sqrt K_D)'=-n_h/(2 K_D^(3/2))",
+    "global_proof": "Positive part Y=max(H_u,0) is AC and Y'<=CY a.e.; exp(-C(T-T0))Y nonincreasing; exhaust compact intervals",
+    "not_global_exact_K": "Algebraic legs cannot generally be included in a single exact all-leg monotonicity identity",
+    "statement": "H_u(T0)<=0 implies H_u(T)<=0 for all later T in the same regular interval; no contraction-to-expansion, including degenerate transitions"
+  },
+  "verification_boundary": "Exact symbolic plus separate Fraction/polynomial/first-jet replay and reserved covariant audit support the written topology/positive-part proof; not proof-assistant formalized",
+  "written_proof": "notes/proof.md"
+}
