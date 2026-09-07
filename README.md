@@ -347,8 +347,17 @@ around a pre-registered problems document and a certificate-gated ledger.
   necessary coefficient remainder is quantified; small background
   lapse error alone does not control the relevant derivative norms.
   Higher orders and a controlled source-preserving reduction remain open.
+  The [general-interaction theorem](problems/P8/s6/matching/variable/reduction/general/README.md)
+  extends the retained-order mismatch to regular proportional roots with
+  all five ordinary potential coefficients. It also proves genuine
+  next-order freedom that leaves the lower action unchanged.
+  A separate [first-omitted-action tensor audit](problems/P8/s6/matching/variable/reduction/sixth/README.md)
+  retains all differentiated coefficients: an individual finite term
+  cancels against the previous formal order on the specified off-shell
+  probe. Neither that cancellation nor the general theorem supplies an
+  all-order error bound or the actual full CD propagation equation.
 
-The [current P8 continuation audit](docs/assessment-2026-09-07-p8-source-preserving-reduction.md) separates
+The [current P8 continuation audit](docs/assessment-2026-09-07-p8-higher-order-freedom.md) separates
 the completed scoped P8(a) objective and certificate gates from the
 outstanding P8(b) UV-matching and positivity questions.
 P8 is not marked finished or closed.

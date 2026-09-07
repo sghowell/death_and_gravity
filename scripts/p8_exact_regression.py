@@ -6,6 +6,8 @@ Only univariate Gaussian polynomials with a separate real/imaginary unit
 phase per operand descend to the corresponding real coefficient domain.
 Both cofactor identities are checked on every descent; all other cases use
 the original implementation. The temporary method replacement is restored.
+Pytest defaults to importlib collection so independently frozen checkpoints
+may retain duplicate test basenames. An explicit import-mode argument wins.
 """
 
 import sys
@@ -92,8 +94,17 @@ def exact_runner():
         PolyElement._gcd = ORIGINAL_GCD
 
 
+def pytest_arguments(arguments):
+    """Isolate checkpoint test modules without changing frozen filenames."""
+    result = list(arguments)
+    if not any(value == "--import-mode" or value.startswith("--import-mode=")
+               for value in result):
+        result.insert(0, "--import-mode=importlib")
+    return result
+
+
 def main(args=None):
-    arguments = sys.argv[1:] if args is None else args
+    arguments = list(sys.argv[1:] if args is None else args)
     print("Exact GCD adapter self-check:", self_check(), flush=True)
     if arguments == ["--self-check"]:
         return 0
@@ -101,7 +112,7 @@ def main(args=None):
 
     with exact_runner() as counts:
         try:
-            return pytest.main(arguments)
+            return pytest.main(pytest_arguments(arguments))
         finally:
             print("Exact GCD runner counters:", dict(counts), flush=True)
 

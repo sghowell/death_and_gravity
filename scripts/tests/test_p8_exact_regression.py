@@ -70,3 +70,35 @@ def test_bad_real_cofactor_result_fails_closed(monkeypatch):
     monkeypatch.setattr(runner, "ORIGINAL_GCD", lambda left, right: (left, left, right))
     with pytest.raises(ArithmeticError, match="cofactor"):
         runner.descended_gcd((x+1)*(x+2), (x+1)*(x+3), Counter())
+
+
+@pytest.mark.parametrize("arguments", [[], ["problems/P8", "-q"], ("problems/P8", "--collect-only")])
+def test_default_collection_isolates_duplicate_frozen_basenames(arguments):
+    before = list(arguments)
+    assert runner.pytest_arguments(arguments) == ["--import-mode=importlib", *before]
+    assert list(arguments) == before
+
+
+@pytest.mark.parametrize("mode", ["prepend", "append", "importlib"])
+@pytest.mark.parametrize("separate", [False, True])
+def test_explicit_import_mode_is_preserved(mode, separate):
+    option = ["--import-mode", mode] if separate else ["--import-mode="+mode]
+    arguments = ["problems/P8", *option, "-q"]
+    assert runner.pytest_arguments(arguments) == arguments
+    assert runner.pytest_arguments(arguments) is not arguments
+
+
+@pytest.mark.parametrize("exit_code", [0, 2])
+def test_main_passes_isolated_arguments_and_restores_exact_runner(monkeypatch, exit_code):
+    received = []
+    original = PolyElement._gcd
+
+    def fake_pytest(arguments):
+        assert PolyElement._gcd is not original
+        received.append(arguments)
+        return exit_code
+
+    monkeypatch.setattr(pytest, "main", fake_pytest)
+    assert runner.main(["problems/P8", "-q"]) == exit_code
+    assert received == [["--import-mode=importlib", "problems/P8", "-q"]]
+    assert PolyElement._gcd is original
