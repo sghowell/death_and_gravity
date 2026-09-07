@@ -1,0 +1,218 @@
+{
+  "actual_matter_frame_and_constraint": {
+    "actual_vs_leading": "Physical h=h0+epsilon h1+O(epsilon\u00b2); frozen h0 is not the exact matter frame; constant V agrees with h=[B/B_eff]\u00b2h0",
+    "canonical_gradient": "J_u=det(u)[(Y/2-V)u^-T-eta u w w^T], w=h^-1 k,k=partial psi",
+    "canonical_source": "t=Y/2-2V; calT=u[-(Y/12+V/6)I+w k^T/2]",
+    "first_order": "u1=(3/B)calT(u0); h1=u0^T eta u1+u1^T eta u0=[3kk^T-(Y0/2+V)h0]/B",
+    "fixture_scope": "A local off-shell source/constraint dictionary witness, not a full cosmological solution",
+    "local_formal_branch": "For fixed e,v,k, regular u0 and B!=0, the epsilon=0 u-Jacobian of C is (B/3)I; finite-dimensional analytic IFT supplies a local branch for canonical analytic matter, without a computed finite radius",
+    "metric_vierbein_boundary": "The sourced effective vierbein theory cannot generically be replaced by the old metric-only composite action; no finite-source, temporal-cutoff or original free-M1 error estimate follows from these formal coefficients",
+    "omission_control": "At e=diag(1,2,3,4),v=I,B=-6,p_g=p_f=1,V=0,k=(1,1,0,0),Y0=5/9, the antisymmetric epsilon coefficient 01=-1/6 and h1_01=-1/2",
+    "source_lorentz_constraint": "With both links nonzero, p_f(e^T eta v-v^T eta e)=epsilon[e^T eta calT(u0)-calT(u0)^T eta e]+O(epsilon\u00b2), with analogous second constraint"
+  },
+  "checked_negative_and_positive_controls": {
+    "actual_source_metric_and_lorentz_constraint": {
+      "actual_h_correction_01": "-1/2",
+      "constant_V_h_correction_over_V_h0": "-1/B",
+      "leading_e_v_antisymmetric_01": "0",
+      "positive_canonical_timelike_Y": "5/9",
+      "required_e_v_antisymmetric_epsilon_coefficient_01": "-1/6"
+    },
+    "chosen_parent_no_flat_and_cancellation": {
+      "B_zero_still_fails_g_Euler_00": "-2",
+      "actual_action_at_formal_cancel_over_B_h0_volume": "9/32",
+      "both_links_zero_B_zero_flat_equations": "0",
+      "dropping_e_f_equations_false_vacuum_u_Euler_00": "0",
+      "formal_cancel_is_not_small_epsilon_V_over_B": "2/3",
+      "old_beta2_with_vacuum_shift_middle_minor": "-1/4",
+      "only_one_nonzero_link_still_fails_g_Euler_00": "-2",
+      "original_regular_f_flat_Euler_00": "-2",
+      "original_regular_g_flat_Euler_00": "-2",
+      "pure_beta2_middle_minor": "-1"
+    },
+    "separately_named_beta4_extension": {
+      "different_parent_interaction": "The beta4 extension changes the action; the original no-flat theorem cannot exclude it",
+      "negative_link_changes_mass_sign": "-2",
+      "omitting_beta4g_restores_nonzero_g_Euler_00": "-2",
+      "positive_vacuum_mass_squared_G_F_q_1": "2",
+      "unequal_Einstein_coefficients_need_source_rediagonalization": "-F + G"
+    }
+  },
+  "claim": "P8-S6.13.AUXILIARY",
+  "date": "2026-09-06",
+  "exact_chosen_parent_prerequisite_failure": {
+    "both_zero_links": "Outside the premise; B_eff=0 can leave free Einstein metrics and undetermined u, not an invertible auxiliary-parent construction",
+    "constant_potential": "-epsilon V det(u) merely shifts B_eff=B+epsilon V/2 in the exact full action and cannot repair E_e/E_v",
+    "domain": "Any constant nonsingular vierbein triple with at least one nonzero link; hence in particular the stipulated regular common Lorentz-invariant Minkowski vacuum",
+    "excluded_boundary": "Singular u is not a regular physical metric or allowed inverse chart",
+    "identity": "Einstein[g]=Einstein[f]=0; u^T E_e=-2p_g det(u)I and u^T E_v=-2p_f det(u)I",
+    "independence": "No auxiliary equation, B division, Q inverse, matter truncation or FP formula is used; any source acting only on u leaves the contradiction unchanged",
+    "interpretation": "A failure of this chosen parent's additional S6 flat-vacuum prerequisite, not a refutation of the source's ghost-free degree-of-freedom construction or exclusion of curved vacua",
+    "invertible_nonzero_residual": "det(E_e)=16p_g^4 det(u)^3 for a nonzero g link, and similarly f; either equation contradicts a full flat solution"
+  },
+  "exact_elimination_and_action_nonidentity": {
+    "FP_caution": "A cancelled truncated geometric potential would remove its whole relative interaction, but this is not an actual flat parent vacuum; do not compute a physical Minkowski mass around a nonsolution",
+    "extra_domain_for_elimination": "B!=0 and det(Q)!=0; formulas using p_f/p_g additionally require p_g!=0, unlike the undivided theorem",
+    "full_constant_V_resummation": "Where B_eff!=0, u=-3Q/B_eff and L_eff=54det(Q)/B_eff\u00b3; relative to fixed h0 volume, L_eff=(2B/3)[B/B_eff]\u00b3 sqrt|h0|",
+    "geometric_coefficients": "beta_n=-54p_g^(4-n)p_f^n/B\u00b3=C r^n, C=-54p_g^4/B\u00b3,r=p_f/p_g",
+    "not_old_beta2_parent": "beta1 beta3-beta2\u00b2=0; old bare beta2 value is -1 and its S6.12 vacuum-shifted value is -1/4; endpoint-only beta0/beta4 shifts do not change this minor",
+    "truncated_cancellation_control": "First-order coefficient 2B/3-epsilon V vanishes at epsilon V/B=2/3, but the full coefficient is 9B/32 and u=3u0/4",
+    "vacuum_solution": "u0=-3Q/B; V_eff=-54det(Q)/B\u00b3; sqrt|h0|=81det(Q)/B\u2074",
+    "weights": "Actual u0 weights a=-3p_g/B,b=-3p_f/B have b/a=r; source equation 3.3 uses their opposite common sign in the metric square"
+  },
+  "exact_residuals": {
+    "canonical_actual_matter_vierbein_dictionary": {
+      "actual_matter_metric_correction_00": "0",
+      "actual_matter_metric_correction_01": "0",
+      "actual_matter_metric_correction_11": "0",
+      "canonical_source_trace": "0",
+      "canonical_trace_reversal_00": "0",
+      "canonical_trace_reversal_01": "0",
+      "constant_potential_full_B_shift": "0",
+      "literal_canonical_u_Euler_0": "0",
+      "literal_canonical_u_Euler_1": "0",
+      "literal_canonical_u_Euler_2": "0",
+      "literal_canonical_u_Euler_3": "0"
+    },
+    "exact_auxiliary_vacuum_and_restricted_coefficients": {
+      "constant_V_first_order_metric_rescaling": "0",
+      "effective_physical_volume_dictionary": "0",
+      "f_flat_lapse_geometric_polynomial": "0",
+      "fixed_composite_weight_ratio": "0",
+      "full_action_does_not_share_truncated_cancellation": "0",
+      "g_flat_lapse_geometric_polynomial": "0",
+      "geometric_first_coefficient": "0",
+      "geometric_last_coefficient": "0",
+      "geometric_middle_minor": "0",
+      "literal_constant_V_exact_stationary_action": "0",
+      "literal_vacuum_auxiliary_stationary_action": "0",
+      "truncated_vacuum_cancellation": "0"
+    },
+    "full_e_f_u_Euler_and_undivided_source_map": {
+      "flat_f_link_undivided_contraction": "0",
+      "flat_g_link_undivided_contraction": "0",
+      "literal_diagonal_e_Euler_0": "0",
+      "literal_diagonal_e_Euler_1": "0",
+      "literal_diagonal_e_Euler_2": "0",
+      "literal_diagonal_e_Euler_3": "0",
+      "literal_diagonal_u_Euler_0": "0",
+      "literal_diagonal_u_Euler_1": "0",
+      "literal_diagonal_u_Euler_2": "0",
+      "literal_diagonal_u_Euler_3": "0",
+      "literal_diagonal_v_Euler_0": "0",
+      "literal_diagonal_v_Euler_1": "0",
+      "literal_diagonal_v_Euler_2": "0",
+      "literal_diagonal_v_Euler_3": "0",
+      "undivided_trace_reduced_source_Euler_0": "0",
+      "undivided_trace_reduced_source_Euler_1": "0",
+      "undivided_trace_reduced_source_Euler_2": "0",
+      "undivided_trace_reduced_source_Euler_3": "0"
+    },
+    "separate_beta4_flat_and_FP_countercontrol": {
+      "beta4_extension_f_flat_Euler": "0",
+      "beta4_extension_g_flat_Euler": "0",
+      "beta4_extension_u_flat_Euler": "0",
+      "beta4_extension_zero_vacuum_density": "0",
+      "equal_Einstein_physical_clock_mass_normalization": "0",
+      "exact_extended_relative_FP_and_quartic": "0",
+      "full_FP_trace_invariant": "0",
+      "general_positive_kinetic_mass_eigenvalues": "0"
+    }
+  },
+  "formulation": "FORMULATION.md",
+  "full_variation_and_source": {
+    "e_equation": "E_e=G det(e) eta e Einstein[g]^{up,up}-2p_g det(u)u^-T",
+    "f_equation": "E_v=F det(v) eta v Einstein[f]^{up,up}-2p_f det(u)u^-T",
+    "gradient_convention": "delta L=tr(E_e^T delta e+E_v^T delta v+E_u^T delta u), J_u=delta L_m/delta u, with compact variations or EH boundary terms",
+    "matter_equation": "epsilon delta S_m/delta psi=0 retained separately",
+    "source_convention": "T is the explicitly normalized inverse-vierbein source matrix, not an assumed identification with another physical-stress convention",
+    "source_trace_reversal": "T=u J_u^T u/(2det u), t=tr(u^-1 T),calT=(t/3)u-T; C=Q+(B/3)u-epsilon calT",
+    "u_equation": "E_u=-2det(u)[s u^-T-u^-T Q^T u^-T]+epsilon J_u; s=B+tr(u^-1 Q)",
+    "undivided_equivalence": "E_u=2det(u)u^-T[C^T-tr(u^-1 C)u^T]u^-T, and E_u=0 iff C=0 without dividing B"
+  },
+  "independent_Fraction_replay": {
+    "Fraction_vacuum_source_and_extension_fixtures": {
+      "beta4_extension_f_flat_residual": "0",
+      "beta4_extension_g_flat_residual": "0",
+      "beta4_extension_u_flat_residual": "0",
+      "exact_constant_V_action_at_formal_cancel": "9/32",
+      "extension_mass_squared_G_F_q_1": "2",
+      "original_f_flat_residual": "-2",
+      "original_g_flat_residual": "-2",
+      "required_antisymmetric_constraint_coefficient": "-1/6"
+    },
+    "coefficientwise_identities": {
+      "full_beta4_extended_relative_determinant": "0",
+      "geometric_middle_minor": "0",
+      "truncated_vs_exact_constant_V_remainder": "0"
+    },
+    "full_matrix_first_jet_directions_checked": 64
+  },
+  "not_established": [
+    "No-vacuum exclusion across added beta4 terms, other links/potentials, derivative matter couplings or other trimetric/completion actions",
+    "A contradiction of the source's degree-of-freedom construction, or a requirement that every consistent cosmology possess a Minkowski vacuum",
+    "A flat-spectrum verdict from a truncated cancellation or a mass formula evaluated on a nonsolution",
+    "Original beta2 composite-action identity, frozen physical matter-metric identity or old CD/M1 matching",
+    "A full rolling solution, quantitative finite-source remainder, strong-coupling/cutoff hierarchy, nonlinear or quantum health of the extension",
+    "A required physical-time trajectory between vacuum and bounce",
+    "Closure of S6, either original P8 track, or P8"
+  ],
+  "primary_source_boundary": {
+    "elimination": "Sections 3-4, equations 3.1-3.8 and 4.11-4.16",
+    "metric_vierbein_caution": "Section 5.1 explicitly retains first-order symmetrization differences",
+    "model": "Sections 2.1-2.3, equations 2.1-2.17",
+    "scope": "No generic novelty claim, no import of full UV or a numerical cutoff from the title's ghost-free completion statement",
+    "source": "https://arxiv.org/pdf/1804.04671"
+  },
+  "prior_context_sha256": {
+    "S6_12_source_preserving_branch": "b06bfa4c45aa4e7ad5b0bd4a2c5c928d9616534b69e4c765a2d752966c78462e",
+    "adopted_S6_contract": "d00df35d5821b05baa61e897725a22ed1ac21d0536b74bdaece3ab0093215901"
+  },
+  "schema": 1,
+  "separately_named_beta4_countercontrol": {
+    "TT_kernel": "-[G D h_g\u00b2+F D h_f\u00b2+q(h_g-h_f)\u00b2]/8, D=partial_T\u00b2+kphys\u00b2",
+    "equal_Einstein_dictionary": "gamma=(h_g+h_f)/2,Delta_TT=(h_g-h_f)/4 have coefficients 2G,8G and relative mass 2q/G",
+    "exact_flat_data": "p_g=p_f=q>0,B=-6q,beta4g=beta4f=-q,V=0,e=v=u=I; with constant V use B=-6q-epsilon V/2",
+    "exact_source_free_solution": "u0=(e+v)/2; L_eff,int=-q det(e+v)/4+2q(det e+det v)",
+    "flat_checks": "All three full Euler matrices and total vacuum density vanish; omitting either compensating beta4 restores the respective nonzero equation",
+    "full_relative_invariant": "e=r(I+Delta),v=r(I-Delta),r=(e+v)/2; L_int=4q det(r)[e2(Delta)+e4(Delta)] with quadratic FP term -2q det(r)[trDelta\u00b2-(trDelta)\u00b2]",
+    "mass_and_residue": "Generalized mass eigenvalues 0,q(1/G+1/F); relative kinetic coefficient GF/(G+F)>0 for G,F,q>0",
+    "new_action": "Add -2beta4g det(e)-2beta4f det(v), genuinely changing the specified parent without changing the auxiliary equation",
+    "physical_clock": "h=g=f=eta at the vacuum, no extra constant time rescaling",
+    "scope": "A real extended-parent flat quadratic countercontrol, not a rolling CD/M1 match, all-mode stability or UV/cutoff result",
+    "unequal_Einstein_guard": "Physical average source coordinate is not the massless eigenmode unless G=F; no source-decoupling verdict imported"
+  },
+  "source_audit": "notes/sources.md",
+  "source_sha256": {
+    "FORMULATION.md": "ce97000c589e4f123e772799e78514307d90ba2334198b9e9c4714eab1dd370c",
+    "README.md": "684c02aed2422cca70c796f0510fccedd28a63d1942337992257b6afb1b4984b",
+    "notes/proof.md": "17455995445ccab4c30899062085695f958b1f92aec9bb2418193d90510ff463",
+    "notes/sources.md": "57b37e7a735db0abdeca36d41930467d5323e1bc1c711f9caaa1cd59fb3330a4",
+    "src/p8_trimetric/__init__.py": "a4e0916b155094ce642f4ed14936b08af724fbc6f178e3af3389b282ba3d50bf",
+    "src/p8_trimetric/extension.py": "a0d41f4e9056786d01df57bcd779a6fac94afa652cee9fd498469049b0ca27a0",
+    "src/p8_trimetric/independent.py": "e2964f368cd8023e6dd2bdd3d8f639a5bcc07a76312362177c9df97a645df885",
+    "src/p8_trimetric/matter.py": "2bb15496ce74f52e5bdb30a4e35536b51d4b473a3d26c6a07f9482f40cb7530e",
+    "src/p8_trimetric/model.py": "481b7fd14b48e354ddb1542697ac63f8bfb5239d5bad13be38f28c4601e9c790",
+    "src/p8_trimetric/vacuum.py": "722858ff72aa4de64f1f620e21435eb30ca48c6a4dd3c2f9a48149b9eb4f6809",
+    "src/p8_trimetric/verify.py": "6861eb9a28af99aa5f26b9fea7a83c63fbd80e0236cbe07c059ca8cdeff71c42",
+    "tests/conftest.py": "ed271ee3f88fc51151269e8b091d0d0a4ca32837349715e8b7c74737c0c94345",
+    "tests/test_trimetric.py": "15202249f01cd1f8f5057b98e9851eb08d1289c547635276081128464c0620e0",
+    "tests/test_trimetric_certificate.py": "a3357780f8089ceebb74161b7491e59485ed7ed36605ec2e72d620863933db37",
+    "tests/test_trimetric_covariant_audit.py": "2dd8e212a15637bea0f38496416f961cd66f04c043932d5a7ab7ddac83dcaa09"
+  },
+  "specified_parent": {
+    "chosen_action_omissions": "No h EH term and no separate g/f cosmological terms; the latter would be source beta4g,beta4f, excluded by n>=2=0",
+    "epsilon_dictionary": "Source matter-strength bookkeeping parameter, not the old composite asymmetry epsilon=1/Y",
+    "gravitational_action": "-(G/2)sqrt|g|R[g]-(F/2)sqrt|f|R[f]-2 det(u)[B+tr(u^-1 Q)], G,F>0,Q=p_g e+p_f v",
+    "matter": "epsilon S_m[h,psi]; canonical dictionary L_m=det(u)[Y/2-V], Y=partial psi h^-1 partial psi",
+    "parameters": "B,p_g,p_f constant real; no-flat result needs either link nonzero, not B!=0 or link positivity",
+    "physical_matter_frame": "Actual h=u^T eta u only, with no direct e/v matter action; h is auxiliary but remains the full prescribed physical source metric",
+    "root_domain": "Parent real square-root/symmetrization constraints are additionally required; ambient noncommuting variation fixtures are not assumed to solve them",
+    "source_model": "arXiv:1804.04671 section 2.1 choice m_h\u00b2=0 and beta_n^g=beta_n^f=0 for n>=2; not the paper's general trimetric action",
+    "units": "G,F have mass dimension 2; B,p_g,p_f,beta4g,beta4f,V dimension 4; frames and epsilon dimension 0; psi dimension 1",
+    "vierbein_dictionary": "g=e^T eta e,f=v^T eta v,h=u^T eta u; eta=diag(1,-1,-1,-1); real invertible positive-orientation frames"
+  },
+  "status": "CHOSEN_AUXILIARY_PARENT_FAILS_REGULAR_CONSTANT_FLAT_VACUUM_PREREQUISITE; NAMED_BETA4_EXTENSION_SURVIVES_THIS_SCREEN; P8_OPEN",
+  "verification_boundary": "Exact symbolic replay, independent Fraction full-matrix jets and coefficientwise polynomial identities, root covariant audits and written proof; not proof-assistant formalized",
+  "written_proof": "notes/proof.md"
+}

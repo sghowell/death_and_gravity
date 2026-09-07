@@ -116,6 +116,12 @@ around a pre-registered problems document and a certificate-gated ledger.
   **P8(a)'s photon/global-flat-FLRW objective is complete in this explicit
   scope.** The pure-Maxwell specialization uses only the photon QSEI as
   its energy input; added matter needs its separate stated energy bound.
+  An [actual thermal-photon SEE solution](problems/P8/a/fields/maxwell/thermal/README.md)
+  now realizes the anchored radiation history in the named beta_M=0,
+  Lambda=0 prescription, retaining the photon anomaly. Its exact low
+  branch has a finite mathematical endpoint; fundamental EFT control at
+  that endpoint is not claimed. This is optional strengthening, not a
+  replacement of the all-Hadamard theorem or a new completion prerequisite.
 - P8(b): [completed scoped classification and verification commands](problems/P8/README.md).
   All 32 M0/M1 sector-row verdicts are decided: minimal optional groups are
   C or D without extra matter, and CD with rolling canonical matter.
@@ -240,8 +246,15 @@ around a pre-registered problems document and a certificate-gated ledger.
   normalization and a conditional functional-branch uniqueness theorem
   prevent confusing this branch with the asymmetric bounce solutions.
   It rules out the named matching route, not the entire parent or row.
+  A [full auxiliary-parent audit](problems/P8/s6/matching/trimetric/README.md)
+  shows that the selected source-paper model has no regular constant flat
+  vacuum when either link is nonzero. The actual matter metric and its
+  source-dependent Lorentz constraint differ from a frozen composite
+  truncation. A separately named beta4 extension restores a healthy flat
+  quadratic vacuum and lies outside that exclusion; rolling matching and
+  UV consistency are not inferred from its vacuum data.
 
-The [current P8 continuation audit](docs/assessment-2026-09-06-p8-photon-cosmology-vacuum-branch.md) separates
+The [current P8 continuation audit](docs/assessment-2026-09-06-p8-photon-realization-auxiliary-parent.md) separates
 the completed scoped P8(a) objective and certificate gates from the
 outstanding P8(b) UV-matching and positivity questions.
 P8 is not marked finished or closed.
