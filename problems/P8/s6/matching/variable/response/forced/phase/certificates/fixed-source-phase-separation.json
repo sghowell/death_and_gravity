@@ -1,0 +1,163 @@
+{
+  "calibration": {
+    "additional_feedback_error_over_r_fourth": "50500303/375000",
+    "amplitude_over_r_squared_lower": "294990345063/3554687500000",
+    "claimed_separation_over_r_squared": "3/20",
+    "deficit_over_r": "1/100",
+    "moment_over_r_three_halves": "294993/1750000",
+    "phase_separation_over_r_squared_lower": "197/1250",
+    "r": "1/1000",
+    "rounded_amplitude_over_r_squared_lower": "2/25",
+    "rounded_response_error_over_r_fourth": "1200",
+    "simplified_response_error_over_r_fourth": "425500303/375000",
+    "smooth_pulse_deficit_over_r_upper": "1/200",
+    "smooth_transition_width_over_r": "1/800"
+  },
+  "claim": "P8-S6.27.PHASE",
+  "controls": {
+    "C_infinity_sources_exist_with_deficit_at_most_r_over_200": true,
+    "actual_K_zero_admitted": true,
+    "actual_subsequence_limits_not_assumed": true,
+    "conditional_numeric_bound_does_not_certify_a_profile": true,
+    "constant_source_class_is_delta_independent": true,
+    "no_parametrically_low_RMS_proxy_hierarchy_claim": true,
+    "rejected_inputs": 20
+  },
+  "date": "2026-09-07",
+  "exact_residuals": {
+    "double_clock_scale": "0",
+    "moment_denominator_modulus": "0",
+    "physical_constant_product": "0",
+    "physical_map_squared_ratio": "0",
+    "physical_source_squared_ratio": "0",
+    "radial_moment_primitive": "0",
+    "source_lower_polynomial": "0",
+    "source_upper_cubic": "0"
+  },
+  "formulation": "FORMULATION.md",
+  "independent_Fraction_bridges": [
+    {
+      "comparisons": 12,
+      "deficit_over_r": "0",
+      "r": "1/1000"
+    },
+    {
+      "comparisons": 12,
+      "deficit_over_r": "1/200",
+      "r": "1/1000"
+    },
+    {
+      "comparisons": 12,
+      "deficit_over_r": "1/100",
+      "r": "1/1000"
+    },
+    {
+      "comparisons": 12,
+      "deficit_over_r": "0",
+      "r": "1/10000"
+    },
+    {
+      "comparisons": 12,
+      "deficit_over_r": "1/200",
+      "r": "1/10000"
+    },
+    {
+      "comparisons": 12,
+      "deficit_over_r": "1/100",
+      "r": "1/10000"
+    },
+    {
+      "comparisons": 12,
+      "deficit_over_r": "0",
+      "r": "1/1000000"
+    },
+    {
+      "comparisons": 12,
+      "deficit_over_r": "1/200",
+      "r": "1/1000000"
+    },
+    {
+      "comparisons": 12,
+      "deficit_over_r": "1/100",
+      "r": "1/1000000"
+    }
+  ],
+  "independent_binomial_and_norm_checks": {
+    "all_continuous_margins_at_max_radius": true,
+    "inverse_ninth_nonnegative_coefficients": [
+      "0",
+      "0",
+      "45",
+      "240",
+      "630",
+      "1008",
+      "1050",
+      "720",
+      "315",
+      "80",
+      "9"
+    ],
+    "rectangular_moment_lower": "5/28",
+    "smooth_deficit_fraction": "1/200"
+  },
+  "not_established": [
+    "No exclusion of a delta-dependent or memory-retaining effective description",
+    "No conclusion for every source, long/approximately bandlimited preparation, selected correlated data or delta-retuned profiles",
+    "No small RMS/stiffness-proxy hierarchy, actual rolling spectral gap or cutoff",
+    "No nonlinear/quantum/global/scalar/vector, C/D matching or UV verdict",
+    "No exact leading asymptotic equality for the actual full response, only a nonzero limsup-liminf lower bound",
+    "No original S6 or P8 closure and no frozen ancestor edit"
+  ],
+  "prior_sha256": {
+    "S6_26_actual_source_and_recursive_prepared_response_parent_contract": "0050320c15694cab2cc40aa8c3e82eaa345283a29d8347c0990e999c669ac755"
+  },
+  "proof_chain": {
+    "Jost_connection": "c-a-b=-i*mu; zero/one-argument Gauss connection with uniform tails on v in[r/2,r]; |A|^2-|B|^2=1",
+    "actual_separation": "Finite limsup(g)-liminf(g)>3r^2/20; no assumption that actual g converges on either selected sequence",
+    "amplitude": "C=bg0(r)*sqrt(r)*conj(A)/mu*integral sqrt(v)jH0(v)sigma(-v)exp(i mu log(v/r))dv; |C|>2r^2/25",
+    "continuous_moment": "Rectangular moment>5/28; smoothing loss<=1/100; actual source-weight loss<=4r^2; actual map ratio>=1-9r^2",
+    "full_error": "Actual endpoint differs from ag*l0+bg*G0(jH*sigma) by<1200r^4, all coupled/pole terms controlled",
+    "light_limit": "The ordinary light Volterra equation has a finite fixed-source delta0 limit",
+    "physical_phase": "mu log(32r^2/delta), mu=sqrt39/2; reflected contribution is delta-independent",
+    "sequences": "delta_n^+=32r^2 exp[-(pi/2-argC+2pi n)/mu], delta_n^-=32r^2 exp[-(3pi/2-argC+2pi n)/mu]"
+  },
+  "schema": 1,
+  "source_audit": "notes/sources.md",
+  "source_sha256": {
+    "FORMULATION.md": "67695d710fd1f7c5665b34e2b957bc6c1289d5fb1599fd65b485360a38762fc1",
+    "README.md": "f77b4b5690efc1dcf3de00f7b7f4c3191e78a5db6c1893e4b261ab9611df2a34",
+    "notes/proof.md": "146e363814b7ccb5cf01c14fa2ea3afa708482904dc7950c39da0e5cce856e0f",
+    "notes/sources.md": "4cb8196e5ff0a522a772700d88fadd3011dc93f1457acb03acb27f553030ce1b",
+    "src/p8_forced_phase/__init__.py": "307c94573b3948b28a13302035c93b01178101743547fdf27d706d063ecfda06",
+    "src/p8_forced_phase/core.py": "85c5fb8f9836cf48245f3e83944e558b58b5c4e56528fc13d846aee76a688265",
+    "src/p8_forced_phase/independent.py": "20ee9002d0345fac7b7e329ed10cabf407b825fb23872c9c15804551fffbf94f",
+    "src/p8_forced_phase/verify.py": "5787d24685be679bbd19392a4aa018def2ca638c26b8678a9425fe68810c0e88",
+    "tests/conftest.py": "3def7d304b57ad0960387265b846fc3dea00836f3e488cdfc0088b2b9e6bee2c",
+    "tests/test_phase_certificate.py": "2a6deb61a7dac682e004818fbbf7239ed17cc2be517cfdf8f2abe4c21818209d",
+    "tests/test_phase_core.py": "67e57cb0b3bbd48d354c286baa766e3df55af31acd44fbb76fa31b02e0b0031d",
+    "tests/test_phase_independent_audit.py": "ef5a8e69fe6e595ad3d2a55ecded16436acbb6cccf3b5c3e4e214c09dcd8eb19"
+  },
+  "status": "FIXED_SMOOTH_PHYSICAL_SOURCE_NO_DELTA_RESPONSE_LIMIT; ORIGINAL_S6_P8_OPEN",
+  "strict_continuous_margins": {
+    "cubic_envelope": "999996999999/1000000000000",
+    "frequency_upper_bound_squared": "13/16",
+    "full_feedback_and_pole_error": "24499697/375000",
+    "inverse_ninth_positive": "999991/1000000",
+    "moment_root_twelve_bound_squared": "1/4",
+    "moment_survives_pulse_smoothing": "294993/1750000",
+    "nonzero_physical_phase_amplitude": "10615345063/3554687500000",
+    "radial_two_power_bound_squared": "1/64",
+    "smooth_pulse_deficit": "1/200",
+    "source_near_constant_domain": "2999993999984999979999984999993999999/1000000000000000000000000000000000000",
+    "strict_limsup_liminf_separation": "19/2500"
+  },
+  "unchanged_physical_problem": {
+    "action_and_source": "Full S6.26/S6.20 coupled TT action; actual g matter frame; sigma=tau^2 Pi/M^2",
+    "data": "All four physical Cauchy data zero at u=-r; measured gamma_g at u=r",
+    "domain": "Fixed0<r<=1/1000, fixed0<=K<=4;0<delta<=min(1e-9,r^2/100)",
+    "pulse": "Fixed delta-independent real0<=sigma<=1, supported[-r,-r/2], integral(1-sigma)<=r/100",
+    "smooth_examples": "C-infinity compact pulses inside(-r,-r/2), built with r/800 transition widths"
+  },
+  "verification_boundary": "Written uniform special-function/Volterra/limsup proof with exact physical-weight, moment and continuous rational bounds, independent Fraction reconstruction and separately authored audit; not numerical phase sampling or proof-assistant formalization",
+  "written_proof": "notes/proof.md"
+}

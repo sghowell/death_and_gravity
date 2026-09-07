@@ -318,6 +318,10 @@ around a pre-registered problems document and a certificate-gated ledger.
   now bounds the full physical tensor response for specified zero data and
   bounded conserved TT forcing. Its approximation retains heavy-field
   memory; it is not a local EFT or a delta-convergent fixed-window bound.
+  A [fixed smooth-source theorem](problems/P8/s6/matching/variable/response/forced/phase/README.md)
+  now proves that a specified fixed pulse class retains a nonvanishing
+  phase-dependent physical response as the center algebraic mass grows.
+  It does not exclude all low-energy descriptions or source preparations.
   A separate [all-time background exploration](problems/P8/s6/matching/variable/global/README.md)
   remains unpromoted: its physical metric is complete, but its second
   metric has finite null affine tails and its relative algebraic mass
@@ -326,8 +330,12 @@ around a pre-registered problems document and a certificate-gated ledger.
   source assumptions without excluding physical-g completeness.
   Global scalar health, a sourced local light-only reduction and
   the vacuum/finite-gravity UV requirements remain open checks.
+  The [local vacuum prerequisite audit](problems/P8/s6/matching/variable/vacuum/README.md)
+  finds no proportional constant-clock Minkowski vacuum within this
+  unchanged action's specified local field interval. Separately named
+  smooth extensions remain possible, with matching obligations intact.
 
-The [current P8 continuation audit](docs/assessment-2026-09-07-p8-causal-response-and-global-boundary.md) separates
+The [current P8 continuation audit](docs/assessment-2026-09-07-p8-fixed-source-and-local-vacuum-obstructions.md) separates
 the completed scoped P8(a) objective and certificate gates from the
 outstanding P8(b) UV-matching and positivity questions.
 P8 is not marked finished or closed.
