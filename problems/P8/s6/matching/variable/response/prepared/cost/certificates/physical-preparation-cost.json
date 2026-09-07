@@ -1,0 +1,737 @@
+{
+  "Hermite_and_source_cost": {
+    "analytic_gramian_lower": "1/40000000000000000",
+    "ell": "1/100",
+    "full_wave_norm": "2",
+    "hermite_derivative_bounds": [
+      "2",
+      "17",
+      "171",
+      "2971",
+      "36005",
+      "499025",
+      "5020519"
+    ],
+    "light_dual_kernel_suprema": [
+      "2121/200000",
+      "10201/20000"
+    ],
+    "physical_frame_Frobenius_squared": "10010733/4000000",
+    "physical_frame_entry_majorants": [
+      [
+        1,
+        0,
+        "1/5",
+        0
+      ],
+      [
+        "1/100",
+        "1/100",
+        "101/1000",
+        "13/20"
+      ],
+      [
+        1,
+        0,
+        "1/20",
+        0
+      ],
+      [
+        "1/100",
+        "1/100",
+        "13/500",
+        "13/80"
+      ]
+    ],
+    "regular_even_L2_lower": "900",
+    "regular_light_L2_lower": "19",
+    "scaled_endpoint_norm_factor": "4",
+    "source_L1": "20000000",
+    "source_L2": "200000000",
+    "source_coefficient_bounds": [
+      [
+        "14",
+        "91",
+        "33896",
+        "21745",
+        "10427"
+      ],
+      [
+        "3",
+        "4733",
+        "11539",
+        "1139718",
+        "1087204"
+      ],
+      [
+        "153",
+        "1258",
+        "606335",
+        "1272779",
+        "56985890"
+      ]
+    ],
+    "source_normalization": "sigma=tau\u00b2 Pi/M\u00b2; S_probe=(1/2) integral dT a\u00b3 Pi gamma_g",
+    "source_second_derivative_L2": "400000000000000",
+    "source_sup": "2000000000",
+    "source_sup_per_scaled_endpoint_linf": "445826321",
+    "source_uu_sup_per_scaled_endpoint_linf": "762987669721436"
+  },
+  "claim": "P8-S6.29.COST",
+  "continuous_K_energy_and_singular_value_bounds": {
+    "duration_one_exponential_upper": "3401/1960",
+    "ell": "1/100",
+    "energy_remainder_entry_sum_upper": "21453/700000",
+    "generic_minimum_source_L2_lower": "5/4",
+    "generic_minimum_source_L2_upper": "2000000/3",
+    "input_norm_upper": "1/2000",
+    "input_squared_upper": "209/900000000",
+    "logarithmic_energy_exponent": "11/20",
+    "midpoint_scaled_outer_singular_lower": "3/500000",
+    "midpoint_to_any_K_distance": "3/2",
+    "momentum_generator_derivative_entry_sum_upper": "1819/10500000",
+    "momentum_generator_derivative_upper": "1/5000",
+    "radius_upper": "1/50",
+    "source_map_K_difference_upper": "3/1000000",
+    "sqrt_radius_upper": "1/7",
+    "uniform_Frobenius_gramian_lower": "9/4000000000000",
+    "uniform_Frobenius_gramian_upper": "16/25",
+    "uniform_scaled_outer_gramian_lower": "9/1000000000000"
+  },
+  "controls": {
+    "H0_2_minimum_at_boundary_budget_not_assumed": true,
+    "Omega_zero_lowpass_exactly_zero": true,
+    "computed_band_moments_and_optimizer_not_claimed": true,
+    "continuous_K_not_inferred_from_a_point_Gramian": true,
+    "parameterized_cost_function_does_not_certify_a_loading_map": true,
+    "rejected_inputs": 34,
+    "source_K_zero_not_imported_from_wider_ancestor_domain": true,
+    "zero_source_zero_target_admitted": true
+  },
+  "date": "2026-09-07",
+  "exact_residuals": {
+    "Fourier_kernel_KKT_and_target_algebra": {
+      "KKT_budget_monotonicity": "0",
+      "dual_moment_constraint": "0",
+      "dual_moment_positive_root_threshold": "0",
+      "dual_moment_sphere": "0",
+      "exact_prepared_target_coefficient": "0",
+      "finite_rank_moment_kernel": "0",
+      "physical_source_L1_from_L2": "0",
+      "two_coordinate_KKT_constraint": "0"
+    },
+    "additional_parent_source_bridges": {
+      "literal_K_f": "0",
+      "literal_K_g": "0",
+      "literal_spring": "0",
+      "physical_source_map_0": "0",
+      "physical_source_map_1": "0",
+      "physical_source_map_2": "0",
+      "physical_source_map_3": "0"
+    },
+    "literal_full_generator_and_energy_chart": {
+      "actual_physical_g_input_0": "0",
+      "actual_physical_g_input_1": "0",
+      "actual_physical_g_input_2": "0",
+      "actual_physical_g_input_3": "0",
+      "full_physical_generator_0": "0",
+      "full_physical_generator_1": "0",
+      "full_physical_generator_10": "0",
+      "full_physical_generator_11": "0",
+      "full_physical_generator_12": "0",
+      "full_physical_generator_13": "0",
+      "full_physical_generator_14": "0",
+      "full_physical_generator_15": "0",
+      "full_physical_generator_2": "0",
+      "full_physical_generator_3": "0",
+      "full_physical_generator_4": "0",
+      "full_physical_generator_5": "0",
+      "full_physical_generator_6": "0",
+      "full_physical_generator_7": "0",
+      "full_physical_generator_8": "0",
+      "full_physical_generator_9": "0",
+      "indicial_frequency": "0",
+      "literal_punctured_spring": "0",
+      "physical_f_friction": "0",
+      "physical_g_friction": "0",
+      "scaled_outer_actual_source_0": "0",
+      "scaled_outer_actual_source_1": "0",
+      "scaled_outer_actual_source_2": "0",
+      "scaled_outer_actual_source_3": "0",
+      "scaled_outer_clock_chain_0": "0",
+      "scaled_outer_clock_chain_1": "0",
+      "scaled_outer_clock_chain_10": "0",
+      "scaled_outer_clock_chain_11": "0",
+      "scaled_outer_clock_chain_12": "0",
+      "scaled_outer_clock_chain_13": "0",
+      "scaled_outer_clock_chain_14": "0",
+      "scaled_outer_clock_chain_15": "0",
+      "scaled_outer_clock_chain_2": "0",
+      "scaled_outer_clock_chain_3": "0",
+      "scaled_outer_clock_chain_4": "0",
+      "scaled_outer_clock_chain_5": "0",
+      "scaled_outer_clock_chain_6": "0",
+      "scaled_outer_clock_chain_7": "0",
+      "scaled_outer_clock_chain_8": "0",
+      "scaled_outer_clock_chain_9": "0"
+    },
+    "literal_source_Hermite_and_boundary_jets": {
+      "Hermite_left_0_0": "0",
+      "Hermite_left_0_1": "0",
+      "Hermite_left_0_2": "0",
+      "Hermite_left_0_3": "0",
+      "Hermite_left_1_0": "0",
+      "Hermite_left_1_1": "0",
+      "Hermite_left_1_2": "0",
+      "Hermite_left_1_3": "0",
+      "Hermite_left_2_0": "0",
+      "Hermite_left_2_1": "0",
+      "Hermite_left_2_2": "0",
+      "Hermite_left_2_3": "0",
+      "Hermite_left_3_0": "0",
+      "Hermite_left_3_1": "0",
+      "Hermite_left_3_2": "0",
+      "Hermite_left_3_3": "0",
+      "Hermite_left_4_0": "0",
+      "Hermite_left_4_1": "0",
+      "Hermite_left_4_2": "0",
+      "Hermite_left_4_3": "0",
+      "Hermite_left_5_0": "0",
+      "Hermite_left_5_1": "0",
+      "Hermite_left_5_2": "0",
+      "Hermite_left_5_3": "0",
+      "Hermite_right_0_0": "0",
+      "Hermite_right_0_1": "0",
+      "Hermite_right_0_2": "0",
+      "Hermite_right_0_3": "0",
+      "Hermite_right_1_0": "0",
+      "Hermite_right_1_1": "0",
+      "Hermite_right_1_2": "0",
+      "Hermite_right_1_3": "0",
+      "Hermite_right_2_0": "0",
+      "Hermite_right_2_1": "0",
+      "Hermite_right_2_2": "0",
+      "Hermite_right_2_3": "0",
+      "Hermite_right_3_0": "0",
+      "Hermite_right_3_1": "0",
+      "Hermite_right_3_2": "0",
+      "Hermite_right_3_3": "0",
+      "Hermite_right_4_0": "0",
+      "Hermite_right_4_1": "0",
+      "Hermite_right_4_2": "0",
+      "Hermite_right_4_3": "0",
+      "Hermite_right_5_0": "0",
+      "Hermite_right_5_1": "0",
+      "Hermite_right_5_2": "0",
+      "Hermite_right_5_3": "0",
+      "inverse_spring": "0",
+      "literal_g_source_operator": "0",
+      "literal_unsourced_f": "0",
+      "physical_source_B2": "0",
+      "target_source_derivative_zero_0": "0",
+      "target_source_derivative_zero_1": "0",
+      "target_source_derivative_zero_2": "0",
+      "target_source_derivative_zero_3": "0",
+      "target_source_value_zero_0": "0",
+      "target_source_value_zero_1": "0",
+      "target_source_value_zero_2": "0",
+      "target_source_value_zero_3": "0"
+    }
+  },
+  "formulation": "FORMULATION.md",
+  "independent_Fraction_energy_replay": {
+    "duration_one_exponential_upper": "3401/1960",
+    "ell": "1/100",
+    "energy_remainder_entry_sum_upper": "21453/700000",
+    "generic_minimum_source_L2_lower": "5/4",
+    "generic_minimum_source_L2_upper": "2000000/3",
+    "input_norm_upper": "1/2000",
+    "input_squared_upper": "209/900000000",
+    "logarithmic_energy_exponent": "11/20",
+    "midpoint_scaled_outer_singular_lower": "3/500000",
+    "midpoint_to_any_K_distance": "3/2",
+    "momentum_generator_derivative_entry_sum_upper": "1819/10500000",
+    "momentum_generator_derivative_upper": "1/5000",
+    "radius_upper": "1/50",
+    "source_map_K_difference_upper": "3/1000000",
+    "sqrt_radius_upper": "1/7",
+    "uniform_Frobenius_gramian_lower": "9/4000000000000",
+    "uniform_Frobenius_gramian_upper": "16/25",
+    "uniform_scaled_outer_gramian_lower": "9/1000000000000"
+  },
+  "independent_Fraction_source_Hermite_replay": {
+    "all_equal": true,
+    "exact_scalar_function_or_polynomial_comparisons": 291,
+    "independent_hermite_derivative_bounds": [
+      2,
+      17,
+      171,
+      2971,
+      36005,
+      499025,
+      5020519
+    ],
+    "independent_source_L2_raw": "891652642/5",
+    "independent_source_coefficient_bounds": [
+      [
+        14,
+        91,
+        33896,
+        21745,
+        10427
+      ],
+      [
+        3,
+        4733,
+        11539,
+        1139718,
+        1087204
+      ],
+      [
+        153,
+        1258,
+        606335,
+        1272779,
+        56985890
+      ]
+    ],
+    "independent_source_second_derivative_L2_raw": "1525975339442872/5"
+  },
+  "independent_rational_Gramian_LDL": {
+    "arithmetic": "exact unrounded Fraction intervals",
+    "pivot_lower_bounds": [
+      "3342440274524361298625509/50000000000000000000000000000000",
+      "8350441082489451079716950593556281646386480528463/167122013726218064931275450000000000000000000000000000000",
+      "1756195632083910601689582744493466858711007765547936705342315444476679645748421971049856624614541353033997694283252345161840261562421319289834861571/6929276148965175618376122709789510284887992637975234947015500878918031745531407685887740003383258576804720177814739165382150000000000000000000000000000000",
+      "54801235257204154033666041641029087649926906506794596446412870030844284645132583131718629056870884950909489675028868179259375332650410959361132814929337144034296100086747715549446557078163656308409627726040548071035958500999608467646301421190246732489818326872132033617550431783715830268451190707174162579848884155554689037018950798465890071/37977142779762843405160411953866002880603276563599219246732699626382909679099355386209235995389726929067283292145798762610174149682639898295601961586124911660428453196830009083339889842147647928586930652441737040349199993626993581444888660362517156143867086979652365318772185189187399727107034248859203754724421762591300000000000000000000000000000000"
+    ],
+    "shift": "9/250000000000",
+    "strict_positive_pivots": 4
+  },
+  "literal_rational_to_Arb_coefficient_bridges": [
+    {
+      "K": "5/2",
+      "Taylor_orders": 4,
+      "comparisons": 64,
+      "x": "0"
+    },
+    {
+      "K": "5/2",
+      "Taylor_orders": 4,
+      "comparisons": 64,
+      "x": "1/3"
+    },
+    {
+      "K": "5/2",
+      "Taylor_orders": 4,
+      "comparisons": 64,
+      "x": "2/3"
+    },
+    {
+      "K": "5/2",
+      "Taylor_orders": 4,
+      "comparisons": 64,
+      "x": "1"
+    }
+  ],
+  "not_established": [
+    "No numerically computed band moments, spectral optimizer or sharp minimum",
+    "No automatic H0^2 attainment or feasibility at the exact minimum L2 budget",
+    "No claim the actual controls are mostly in the calibrated temporal band",
+    "No fixed peak/derivative budget for approximating the spectral infimum",
+    "No raw physical derivative error substituted for the bounded normalized endpoint error",
+    "No nonlinear stress/backreaction or quantum preparation/production bound",
+    "No generic sourced local EFT, rolling gap/cutoff, vacuum positivity, C/D operator matching or original P8 closure"
+  ],
+  "prior_sha256": {
+    "S6_23_prepared_and_recursive_response_variable_parent_contract": "a8d89126980dd8ec458b3161bc8b397f74211736f02e64d4e9e29b95e43a0ade"
+  },
+  "proof_chain": {
+    "calibrated_budget": "unitv,S1e6: unconstrained spectral optimizer has norm^2<=2e12/3; infimum>722/3 and<=4e12/9",
+    "construction": "degree11 physical f Hermite jets0..5, exact g/source recovery, C1 zero-extended H0^2 source",
+    "continuous_momentum": "duration-resolved energy bound exp(11(t-s)/20), K derivative<1/5000, inputnorm<1/2000",
+    "finite_delta": "fixed source:42e+delta(8600||v||+12600000S); actual prepared target uses8400; exampledelta1e-17,S1e6<1e-3",
+    "finite_rank_interface": "nine uncomputed actual moments; sinc degree8 kernel error<=1/(3*11!)",
+    "light_cost": "actual symplectic source kernels give >19||v|| and >900|v_even| for nonzero targets/components",
+    "midpoint": "64closedTaylorsteps,order18,256bitArb; continuous interval Taylor remainder and four strict LDL pivots",
+    "spectrum": "sinc operator norm<=1/3, tail>=2I/3; exact L2 optimizer/dual, H0^2 infimum equality for strict budgets",
+    "uniform_Gramian": "9/(4e12) I <= C C* <=16/25 I on full K interval"
+  },
+  "schema": 1,
+  "source_audit": "notes/sources.md",
+  "source_sha256": {
+    "FORMULATION.md": "de8560500390e286012ce0138ff47bfe9aa8ae8155a75e5a2436a60b6a818e3b",
+    "README.md": "64a48d2eda0d7e2508b678f844463a7a3e1b03232c93b908cbc035946d78c732",
+    "notes/construction.md": "caae86206eef4bd081a6626f5afbcf2a4ceee9825d43c6bb6e7ca32610adc581",
+    "notes/gramian.md": "e1400dc4443ab57efa8104c6509bede4c44e63e1a437b7dc3f963afea830f5e5",
+    "notes/optimization.md": "d6c731a05742dc710c0dfac0df6c254c75bff99f3e3244078d69c720bfcaee88",
+    "notes/sources.md": "42e26e60bfb1b2b8c3e4dfb4b3df09c23e5857b63311a71388170125ff2816b3",
+    "src/p8_preparation_cost/__init__.py": "8bb8de1df3977015a12091dfefa6d0c5cce34d5097775d9dec47db70fd063921",
+    "src/p8_preparation_cost/construction.py": "9c408d38fe0413429094a27222ec29a65261826956fe073d44e0de268830b37d",
+    "src/p8_preparation_cost/construction_independent.py": "a10d46ad49ae1a493add80696d32a116e702f3590de3eba97ef8f45c393170af",
+    "src/p8_preparation_cost/core.py": "6e9c6d4ec963563860e81e501fbf4d00499d6395f4616f0781221bd691b4bda8",
+    "src/p8_preparation_cost/gramian.py": "5db002ca890927436ea483dba26b9e3db0a9fb1d5478a4e77d4100cdb4ef10f7",
+    "src/p8_preparation_cost/independent.py": "eadf99aaa88c30917539ddc6db08bd2c8c431cb53a601094b1f908cdc5712ef6",
+    "src/p8_preparation_cost/spectral.py": "655f150263de48e5b6b0adb6fbc6c6b7ebe2e071d72edec18f347fe3c2440a90",
+    "src/p8_preparation_cost/verify.py": "c6c83a4943cfa3b76fb7b77e31b10339fe0b250c9981d0b5cac11fec8fd489f8",
+    "tests/conftest.py": "cf1d612d388d52eb40a371cc78649d7e114d8a26f57c09b7b239ea913edc07b7",
+    "tests/test_cost_certificate.py": "4e872b908a221622cad136db4c0ddf1f8975fe047960691f52797031bbfade03",
+    "tests/test_cost_construction.py": "11fe628fbc50979e7a35e440e83aee23a78fd55f92f7018a50a7544913df349a",
+    "tests/test_cost_gramian.py": "dc150c8f6873b9e361a65d70ad90733a824d7b81ca66bfe93568dadc49f78098",
+    "tests/test_cost_gramian_independent_audit.py": "f59266bb46c14f576b6f34e7462455ba8046146759d6b6d810805b78dd5a597a",
+    "tests/test_cost_source_independent_audit.py": "574c4d765ae6ddf60265e95d8bd9e108f5950776cb970da3e6e492c096306352",
+    "tests/test_cost_spectral.py": "42569c7ba932b46294ab7ebdad7dbf9bfb76a7e15b4ca12a782eaaf718be94f1"
+  },
+  "spectral_envelopes_and_exact_remainder": {
+    "Hermite_control": {
+      "claims_mostly_low_band": false,
+      "source_L1_upper": "20000000",
+      "source_L2_upper": "200000000",
+      "source_second_derivative_L2_upper": "400000000000000",
+      "source_sup_Sobolev_upper": "400000000000/3",
+      "tail_energy_upper": "40000000000000000"
+    },
+    "actual_prepared_error": "31500000021/250000000000000",
+    "band": {
+      "band_energy_fraction_upper": "1/3",
+      "exact_trace": "1/pi",
+      "length": "1/100",
+      "lowpass_norm_upper": "1/3",
+      "omega": "100",
+      "tail_coercivity_lower": "2/3",
+      "tail_energy_fraction_lower": "2/3"
+    },
+    "delta_example": "1/100000000000000000",
+    "even_tail_cost_lower": "540000",
+    "gramian_lower_input": "9/4000000000000",
+    "gramian_upper_input": "16/25",
+    "limit_target_error": "63000000043/500000000000000",
+    "regular_even_norm_lower_input": "900",
+    "regular_light_norm_lower_input": "19",
+    "sinc": {
+      "actual_band_moments_computed": false,
+      "band_gramian_error_upper": "1/187110000",
+      "moment_degrees_required": 8,
+      "operator_error_upper": "1/119750400",
+      "order": 4
+    },
+    "unit_target_budget": "1000000",
+    "unit_target_envelope": {
+      "H0_2_attainment_claimed": false,
+      "optimizer_numerically_computed": false,
+      "source_minimum_norm_squared_lower": "361",
+      "source_minimum_norm_squared_upper": "4000000000000/9",
+      "spectral_optimizer_norm_squared_upper": "2000000000000/3",
+      "strict_squared_budget_margin": "1000000000000/3",
+      "tail_cost_infimum_lower": "722/3",
+      "tail_cost_infimum_upper": "4000000000000/9"
+    }
+  },
+  "status": "ACTUAL_FULL_SOURCE_COST_AND_SPECTRAL_INFIMUM_BOUNDS; ORIGINAL_S6_P8_OPEN",
+  "strict_continuous_margins": {
+    "Hermite_and_true_light_source_cost": {
+      "physical_ag_squared": "60448632499906234999/305175781250000000000",
+      "physical_bf_squared": "3532848025462243641809427476358382060896624099205999043704999/72759576141834259033203125000000000000000000000000000000000000",
+      "physical_bg_squared": "4/5",
+      "physical_first_map_derivatives": "7/25",
+      "prepared_D_on_J": "7699969997/58593750000000",
+      "prepared_g_even_on_J": "749/125000",
+      "prepared_g_odd_on_J": "67/75000",
+      "prepared_volume_on_J": "1854882499906234999/244140625000000000000",
+      "regular_even_L2_lower": "911/20000",
+      "regular_light_L2_lower": "241795514499/4000000000000",
+      "scaled_physical_frame_norm": "5989267/4000000",
+      "source_L1": "54173679/25",
+      "source_L2": "108347358/5",
+      "source_second_derivative_L2": "474024660557128/5",
+      "source_sup": "216694716"
+    },
+    "full_source_map_energy": {
+      "d_fourth_continuous": "328087489999/39062500000000",
+      "energy_exponent_equals_half_plus_margin": "1/20",
+      "energy_remainder": "13547/700000",
+      "momentum_derivative": "281/10500000",
+      "propagator_norm": "519/1960",
+      "singular_value_perturbation": "3/1000000",
+      "source_norm_squared": "1/56250000",
+      "sqrt_radius": "1/2450"
+    },
+    "spectral_and_finite_delta_cost": {
+      "distinct_actual_prepared_target_error": "1/500000000000000",
+      "finite_delta_example_below_one_thousandth": "436999999957/500000000000000",
+      "finite_sinc_operator_error_below_10_minus_8": "1543/935550000000",
+      "positive_band_coercivity": "2/3",
+      "positive_unit_cost_floor": "722/3",
+      "strict_unit_optimizer_budget": "1000000000000/3"
+    }
+  },
+  "unchanged_physical_problem": {
+    "action": "S6.20 full two-tensor action, positive Einstein terms and actual g matter frame",
+    "frequency": "0<=Omega<=100 in u=T/tau; actual sigma Fourier energy, measure domega/(2pi)",
+    "limiting_loading_map": "Full punctured delta0 equation into true Psi-normalized four-state endpoint frame",
+    "preparation_domain": "J=(-1/50,-1/100), K in[1,4], all four physical data zero on the left",
+    "source": "sigma=tau^2 Pi/M^2; literal external TT source; physical derivative-state input(0,2,0,0)",
+    "source_class": "Real zero-extended H0^2(J); signed; compact support may meet J boundary; fixed independently of delta",
+    "target": "Lv in true Frobenius coordinates, not raw Y or raw physical g"
+  },
+  "validated_midpoint_Gramian": {
+    "closed_x_interval": [
+      "0",
+      "1"
+    ],
+    "endpoint_transform": [
+      [
+        [
+          "111890628736303885254549/500000000000000000000000",
+          "223781257472607770509099/1000000000000000000000000"
+        ],
+        [
+          "0",
+          "0"
+        ],
+        [
+          "894051577726382513872673/1000000000000000000000000",
+          "447025788863191256936337/500000000000000000000000"
+        ],
+        [
+          "0",
+          "0"
+        ]
+      ],
+      [
+        [
+          "-43626535655607584837/125000000000000000000000",
+          "-69802457048972135739/200000000000000000000000"
+        ],
+        [
+          "111890628736303885254549/500000000000000000000000",
+          "223781257472607770509099/1000000000000000000000000"
+        ],
+        [
+          "751134265199130097771/1000000000000000000000000",
+          "187783566299782524443/250000000000000000000000"
+        ],
+        [
+          "894051577726382513872673/1000000000000000000000000",
+          "447025788863191256936337/500000000000000000000000"
+        ]
+      ],
+      [
+        [
+          "-4472940713993186875119561/1000000000000000000000000",
+          "-111823517849829671877989/25000000000000000000000"
+        ],
+        [
+          "0",
+          "0"
+        ],
+        [
+          "111823517849829671877989/25000000000000000000000",
+          "4472940713993186875119561/1000000000000000000000000"
+        ],
+        [
+          "0",
+          "0"
+        ]
+      ],
+      [
+        [
+          "357864212399169767772023/500000000000000000000000",
+          "715728424798339535544047/1000000000000000000000000"
+        ],
+        [
+          "1432487477222674573132099/1000000000000000000000000",
+          "14324874772226745731321/10000000000000000000000"
+        ],
+        [
+          "-715728424798339535544047/1000000000000000000000000",
+          "-357864212399169767772023/500000000000000000000000"
+        ],
+        [
+          "-14324874772226745731321/10000000000000000000000",
+          "-1432487477222674573132099/1000000000000000000000000"
+        ]
+      ]
+    ],
+    "full_L2_du_scaling": "1/250000",
+    "local_entry_remainder_upper": "6147003044537/10000000000000000000000000000000000000000",
+    "midpoint_K": "5/2",
+    "midpoint_scaled_outer_lower": "9/250000000000",
+    "normalized_physical_gramian": [
+      [
+        [
+          "5763168136041924573641/40000000000000000000000",
+          "72039601700524057170513/500000000000000000000000"
+        ],
+        [
+          "8888095825744962563199/250000000000000000000000",
+          "35552383302979850252797/1000000000000000000000000"
+        ],
+        [
+          "17997432854249567841803/1000000000000000000000000",
+          "4499358213562391960451/250000000000000000000000"
+        ],
+        [
+          "78238699161456863693571/1000000000000000000000000",
+          "19559674790364215923393/250000000000000000000000"
+        ]
+      ],
+      [
+        [
+          "8888095825744962563199/250000000000000000000000",
+          "35552383302979850252797/1000000000000000000000000"
+        ],
+        [
+          "351267300135668636304719/1000000000000000000000000",
+          "4390841251695857953809/12500000000000000000000"
+        ],
+        [
+          "-6837728091436655834547/1000000000000000000000000",
+          "-3418864045718327917273/500000000000000000000000"
+        ],
+        [
+          "-10917125432413234171531/1000000000000000000000000",
+          "-1091712543241323417153/100000000000000000000000"
+        ]
+      ],
+      [
+        [
+          "17997432854249567841803/1000000000000000000000000",
+          "4499358213562391960451/250000000000000000000000"
+        ],
+        [
+          "-6837728091436655834547/1000000000000000000000000",
+          "-3418864045718327917273/500000000000000000000000"
+        ],
+        [
+          "2882960092060914205819/1000000000000000000000000",
+          "144148004603045710291/50000000000000000000000"
+        ],
+        [
+          "451262467013253296559/40000000000000000000000",
+          "1410195209416416551747/125000000000000000000000"
+        ]
+      ],
+      [
+        [
+          "78238699161456863693571/1000000000000000000000000",
+          "19559674790364215923393/250000000000000000000000"
+        ],
+        [
+          "-10917125432413234171531/1000000000000000000000000",
+          "-1091712543241323417153/100000000000000000000000"
+        ],
+        [
+          "451262467013253296559/40000000000000000000000",
+          "1410195209416416551747/125000000000000000000000"
+        ],
+        [
+          "23101718860567252077269/500000000000000000000000",
+          "46203437721134504154539/1000000000000000000000000"
+        ]
+      ]
+    ],
+    "order": 18,
+    "precision_bits": 256,
+    "scaled_outer_gramian": [
+      [
+        [
+          "3344240274524361298625509/50000000000000000000000000000000",
+          "6688480549048722597251019/100000000000000000000000000000000"
+        ],
+        [
+          "10028596525647331588832739/100000000000000000000000000000000",
+          "501429826282366579441637/5000000000000000000000000000000"
+        ],
+        [
+          "-74658489289133153812517657/100000000000000000000000000000000",
+          "-9332311161141644226564707/12500000000000000000000000000000"
+        ],
+        [
+          "-561885794291214036338891/20000000000000000000000000000000",
+          "-2809428971456070181694453/100000000000000000000000000000000"
+        ]
+      ],
+      [
+        [
+          "10028596525647331588832739/100000000000000000000000000000000",
+          "501429826282366579441637/5000000000000000000000000000000"
+        ],
+        [
+          "10022511037480578955725207/50000000000000000000000000000000",
+          "4009004414992231582290083/20000000000000000000000000000000"
+        ],
+        [
+          "-124019609320110513858107997/100000000000000000000000000000000",
+          "-31004902330027628464526999/25000000000000000000000000000000"
+        ],
+        [
+          "18512324166264184226958431/50000000000000000000000000000000",
+          "578510130195755757092451/1562500000000000000000000000000"
+        ]
+      ],
+      [
+        [
+          "-74658489289133153812517657/100000000000000000000000000000000",
+          "-9332311161141644226564707/12500000000000000000000000000000"
+        ],
+        [
+          "-124019609320110513858107997/100000000000000000000000000000000",
+          "-31004902330027628464526999/25000000000000000000000000000000"
+        ],
+        [
+          "444028953662136888808365413/50000000000000000000000000000000",
+          "222014476831068444404182707/25000000000000000000000000000000"
+        ],
+        [
+          "-79136147419855607737455693/100000000000000000000000000000000",
+          "-9892018427481950967181961/12500000000000000000000000000000"
+        ]
+      ],
+      [
+        [
+          "-561885794291214036338891/20000000000000000000000000000000",
+          "-2809428971456070181694453/100000000000000000000000000000000"
+        ],
+        [
+          "18512324166264184226958431/50000000000000000000000000000000",
+          "578510130195755757092451/1562500000000000000000000000000"
+        ],
+        [
+          "-79136147419855607737455693/100000000000000000000000000000000",
+          "-9892018427481950967181961/12500000000000000000000000000000"
+        ],
+        [
+          "86689151537305847131934503/25000000000000000000000000000000",
+          "346756606149223388527738021/100000000000000000000000000000000"
+        ]
+      ]
+    ],
+    "shifted_LDL_pivot_intervals": [
+      [
+        "13369761098097445194502037833/200000000000000000000000000000000000",
+        "33424402745243612986255094627/500000000000000000000000000000000000"
+      ],
+      [
+        "49966134899315395878106505439/1000000000000000000000000000000000000",
+        "6245766862414424484763313957/125000000000000000000000000000000000"
+      ],
+      [
+        "3960089937447376920040028663/15625000000000000000000000000000000",
+        "126722877998316061441281000987/500000000000000000000000000000000000"
+      ],
+      [
+        "18037571828075520497006467/12500000000000000000000000000000000",
+        "1443005746246041639761759313/1000000000000000000000000000000000000"
+      ]
+    ],
+    "step_matrix_norm_upper": "25964446325407902152716187/1000000000000000000000000",
+    "steps": 64
+  },
+  "verification_boundary": "Written full operator, interval-ODE, continuous-parameter, Hermite, Hilbert-space and Fourier proofs; exact symbolic/Fraction replays and independent source/Gramian audits. Finite KKT tests are not substituted for the functional theorem; not FORMALIZED.",
+  "written_proofs": [
+    "notes/gramian.md",
+    "notes/construction.md",
+    "notes/optimization.md"
+  ]
+}

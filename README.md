@@ -334,8 +334,14 @@ around a pre-registered problems document and a certificate-gated ledger.
   finds no proportional constant-clock Minkowski vacuum within this
   unchanged action's specified local field interval. Separately named
   smooth extensions remain possible, with matching obligations intact.
+  The [quantitative preparation-cost theorem](problems/P8/s6/matching/variable/response/prepared/cost/README.md)
+  now bounds the actual full loading Gramian continuously in momentum,
+  constructs finite-cost physical sources, and controls their spectral
+  infimum with endpoint regularity distinguished from L2 attainment.
+  The specified low temporal band contains at most one third of the
+  source's squared norm; this band is not a physical EFT cutoff.
 
-The [current P8 continuation audit](docs/assessment-2026-09-07-p8-fixed-source-and-local-vacuum-obstructions.md) separates
+The [current P8 continuation audit](docs/assessment-2026-09-07-p8-quantitative-preparation-cost.md) separates
 the completed scoped P8(a) objective and certificate gates from the
 outstanding P8(b) UV-matching and positivity questions.
 P8 is not marked finished or closed.
