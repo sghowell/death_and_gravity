@@ -1,0 +1,533 @@
+{
+  "center_physical_g_principal": {
+    "Fpi_coefficient_at_center": "0",
+    "Fpi_coefficient_derivative_at_center": "256*(9*c**2 - 18*c + 16)/(c**2*(c - 2)**2)",
+    "gradient": [
+      [
+        "256*(9*c**2 - 22*c + 144)/(c**2*(c - 2)**2)",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "-(801*c - 6400)/(100*c)",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "1"
+      ]
+    ],
+    "helicity_speed_squared": "3*c**2/40 - 11*c/60 + 6/5",
+    "kinetic": [
+      [
+        "30720/(c**2*(c - 2)**2)",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "-(801*c - 6400)/(100*c)",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "1"
+      ]
+    ],
+    "weight_second_log_jet": "-2*(15*c - 22)/(c - 2)"
+  },
+  "claim": "P8-S6.24.MICROLOCAL",
+  "constructive_uniform_Cauchy_inverse": {
+    "domain": "K >= 2000000/delta_min\u00b2, 0<delta_min<=2, 2+delta_min<=c<=4",
+    "leading_absolute_lower_factor_times_delta_squared": "33/716800",
+    "leading_cubic_numerator": "c^4*d^18*(c*d^4-2)^2*(u^2-1)/344064",
+    "lower_numerator_polynomial_coefficient_norms": [
+      "1350089458148381845276738299352774732223894096895450193521/87500000000000000000000000000000000000000000000000000000",
+      "1734225776110334812910194445073467938960880215014278123627654394201/125000000000000000000000000000000000000000000000000000000000000000",
+      "4073305640141289792549065183568750439586051180483392208328281/7000000000000000000000000000000000000000000000000000000000000"
+    ],
+    "not_cutoff": "Sufficient exact Cauchy-symbol threshold; not a physical cutoff",
+    "relative_determinant_error_upper": "6944/20625",
+    "rounded_bounds_n0_n1_n2": [
+      16,
+      14,
+      1
+    ]
+  },
+  "continuous_Bernstein_coefficient_count": 611,
+  "continuous_positive_principal_forms": {
+    "gradient_minor_lower": {
+      "count": 222,
+      "minimum": "42556026740352551745683163943849190482971843788935595134103564469722249349/39062500000000000000000000000000000000000000000000000000000000000000"
+    },
+    "gradient_trace_upper": {
+      "count": 190,
+      "minimum": "25208"
+    },
+    "kinetic_minor_lower": {
+      "count": 112,
+      "minimum": "1191746799342540301477506458428900045601255731075755621/19531250000000000000000000000000000000000000000000"
+    },
+    "kinetic_trace_upper": {
+      "count": 87,
+      "minimum": "6502"
+    }
+  },
+  "date": "2026-09-07",
+  "exact_symbolic_residual_count": 188,
+  "exact_symbolic_residuals": {
+    "leading_stationary_action_and_center_dictionary": {
+      "center_gradient_0": "0",
+      "center_gradient_1": "0",
+      "center_gradient_2": "0",
+      "center_gradient_3": "0",
+      "center_gradient_4": "0",
+      "center_gradient_5": "0",
+      "center_gradient_6": "0",
+      "center_gradient_7": "0",
+      "center_gradient_8": "0",
+      "center_kinetic_0": "0",
+      "center_kinetic_1": "0",
+      "center_kinetic_2": "0",
+      "center_kinetic_3": "0",
+      "center_kinetic_4": "0",
+      "center_kinetic_5": "0",
+      "center_kinetic_6": "0",
+      "center_kinetic_7": "0",
+      "center_kinetic_8": "0",
+      "final_L1_no_velocity_0": "0",
+      "final_L1_no_velocity_1": "0",
+      "final_L1_no_velocity_2": "0",
+      "kinetic_symmetric_0": "0",
+      "kinetic_symmetric_1": "0",
+      "kinetic_symmetric_2": "0",
+      "kinetic_symmetric_3": "0",
+      "kinetic_symmetric_4": "0",
+      "kinetic_symmetric_5": "0",
+      "kinetic_symmetric_6": "0",
+      "kinetic_symmetric_7": "0",
+      "kinetic_symmetric_8": "0",
+      "nonuniform_second_log_weight_jet": "0",
+      "nonvanishing_center_boundary_derivative": "0",
+      "stationary_equation_0": "0",
+      "stationary_equation_1": "0",
+      "stationary_equation_2": "0",
+      "stationary_equation_3": "0",
+      "stationary_equation_4": "0",
+      "strict_center_superluminal_excess": "0",
+      "vanishing_center_boundary_coefficient": "0"
+    },
+    "literal_Stueckelberg_action_and_boundaries": {
+      "F0_actual_configuration_boundary_0": "0",
+      "F0_actual_configuration_boundary_1": "0",
+      "F0_actual_configuration_boundary_2": "0",
+      "F0_actual_configuration_boundary_3": "0",
+      "F0_actual_configuration_boundary_4": "0",
+      "F0_actual_configuration_boundary_5": "0",
+      "F0_actual_configuration_boundary_6": "0",
+      "F0_actual_configuration_boundary_7": "0",
+      "F1_actual_configuration_boundary_0": "0",
+      "F1_actual_configuration_boundary_1": "0",
+      "F1_actual_configuration_boundary_2": "0",
+      "F1_actual_configuration_boundary_3": "0",
+      "F1_actual_configuration_boundary_4": "0",
+      "F1_actual_configuration_boundary_5": "0",
+      "F1_actual_configuration_boundary_6": "0",
+      "F1_actual_configuration_boundary_7": "0",
+      "L0_no_xif_velocity": "0",
+      "L1_no_velocity_0": "0",
+      "L1_no_velocity_1": "0",
+      "L1_no_velocity_3": "0",
+      "L1_no_velocity_4": "0",
+      "L1_no_velocity_5": "0",
+      "literal_K2_cancellation": "0"
+    },
+    "weighted_auxiliary_completion_and_inverse": {
+      "exact_stationary_completion_0_0": "0",
+      "exact_stationary_completion_0_1": "0",
+      "exact_stationary_completion_0_10": "0",
+      "exact_stationary_completion_0_2": "0",
+      "exact_stationary_completion_0_3": "0",
+      "exact_stationary_completion_0_4": "0",
+      "exact_stationary_completion_0_5": "0",
+      "exact_stationary_completion_0_6": "0",
+      "exact_stationary_completion_0_7": "0",
+      "exact_stationary_completion_0_8": "0",
+      "exact_stationary_completion_0_9": "0",
+      "exact_stationary_completion_10_10": "0",
+      "exact_stationary_completion_1_1": "0",
+      "exact_stationary_completion_1_10": "0",
+      "exact_stationary_completion_1_2": "0",
+      "exact_stationary_completion_1_3": "0",
+      "exact_stationary_completion_1_4": "0",
+      "exact_stationary_completion_1_5": "0",
+      "exact_stationary_completion_1_6": "0",
+      "exact_stationary_completion_1_7": "0",
+      "exact_stationary_completion_1_8": "0",
+      "exact_stationary_completion_1_9": "0",
+      "exact_stationary_completion_2_10": "0",
+      "exact_stationary_completion_2_2": "0",
+      "exact_stationary_completion_2_3": "0",
+      "exact_stationary_completion_2_4": "0",
+      "exact_stationary_completion_2_5": "0",
+      "exact_stationary_completion_2_6": "0",
+      "exact_stationary_completion_2_7": "0",
+      "exact_stationary_completion_2_8": "0",
+      "exact_stationary_completion_2_9": "0",
+      "exact_stationary_completion_3_10": "0",
+      "exact_stationary_completion_3_3": "0",
+      "exact_stationary_completion_3_4": "0",
+      "exact_stationary_completion_3_5": "0",
+      "exact_stationary_completion_3_6": "0",
+      "exact_stationary_completion_3_7": "0",
+      "exact_stationary_completion_3_8": "0",
+      "exact_stationary_completion_3_9": "0",
+      "exact_stationary_completion_4_10": "0",
+      "exact_stationary_completion_4_4": "0",
+      "exact_stationary_completion_4_5": "0",
+      "exact_stationary_completion_4_6": "0",
+      "exact_stationary_completion_4_7": "0",
+      "exact_stationary_completion_4_8": "0",
+      "exact_stationary_completion_4_9": "0",
+      "exact_stationary_completion_5_10": "0",
+      "exact_stationary_completion_5_5": "0",
+      "exact_stationary_completion_5_6": "0",
+      "exact_stationary_completion_5_7": "0",
+      "exact_stationary_completion_5_8": "0",
+      "exact_stationary_completion_5_9": "0",
+      "exact_stationary_completion_6_10": "0",
+      "exact_stationary_completion_6_6": "0",
+      "exact_stationary_completion_6_7": "0",
+      "exact_stationary_completion_6_8": "0",
+      "exact_stationary_completion_6_9": "0",
+      "exact_stationary_completion_7_10": "0",
+      "exact_stationary_completion_7_7": "0",
+      "exact_stationary_completion_7_8": "0",
+      "exact_stationary_completion_7_9": "0",
+      "exact_stationary_completion_8_10": "0",
+      "exact_stationary_completion_8_8": "0",
+      "exact_stationary_completion_8_9": "0",
+      "exact_stationary_completion_9_10": "0",
+      "exact_stationary_completion_9_9": "0",
+      "leading_auxiliary_literal_hessian_0": "0",
+      "leading_auxiliary_literal_hessian_1": "0",
+      "leading_auxiliary_literal_hessian_10": "0",
+      "leading_auxiliary_literal_hessian_11": "0",
+      "leading_auxiliary_literal_hessian_12": "0",
+      "leading_auxiliary_literal_hessian_13": "0",
+      "leading_auxiliary_literal_hessian_14": "0",
+      "leading_auxiliary_literal_hessian_15": "0",
+      "leading_auxiliary_literal_hessian_16": "0",
+      "leading_auxiliary_literal_hessian_17": "0",
+      "leading_auxiliary_literal_hessian_18": "0",
+      "leading_auxiliary_literal_hessian_19": "0",
+      "leading_auxiliary_literal_hessian_2": "0",
+      "leading_auxiliary_literal_hessian_20": "0",
+      "leading_auxiliary_literal_hessian_21": "0",
+      "leading_auxiliary_literal_hessian_22": "0",
+      "leading_auxiliary_literal_hessian_23": "0",
+      "leading_auxiliary_literal_hessian_24": "0",
+      "leading_auxiliary_literal_hessian_3": "0",
+      "leading_auxiliary_literal_hessian_4": "0",
+      "leading_auxiliary_literal_hessian_5": "0",
+      "leading_auxiliary_literal_hessian_6": "0",
+      "leading_auxiliary_literal_hessian_7": "0",
+      "leading_auxiliary_literal_hessian_8": "0",
+      "leading_auxiliary_literal_hessian_9": "0",
+      "no_remaining_xif_velocity": "0",
+      "principal_kinetic_not_changed_by_completion_0": "0",
+      "principal_kinetic_not_changed_by_completion_1": "0",
+      "principal_kinetic_not_changed_by_completion_2": "0",
+      "principal_kinetic_not_changed_by_completion_3": "0",
+      "principal_kinetic_not_changed_by_completion_4": "0",
+      "principal_kinetic_not_changed_by_completion_5": "0",
+      "principal_kinetic_not_changed_by_completion_6": "0",
+      "principal_kinetic_not_changed_by_completion_7": "0",
+      "principal_kinetic_not_changed_by_completion_8": "0",
+      "weighted_inverse_0": "0",
+      "weighted_inverse_1": "0",
+      "weighted_inverse_10": "0",
+      "weighted_inverse_11": "0",
+      "weighted_inverse_12": "0",
+      "weighted_inverse_13": "0",
+      "weighted_inverse_14": "0",
+      "weighted_inverse_15": "0",
+      "weighted_inverse_16": "0",
+      "weighted_inverse_17": "0",
+      "weighted_inverse_18": "0",
+      "weighted_inverse_19": "0",
+      "weighted_inverse_2": "0",
+      "weighted_inverse_20": "0",
+      "weighted_inverse_21": "0",
+      "weighted_inverse_22": "0",
+      "weighted_inverse_23": "0",
+      "weighted_inverse_24": "0",
+      "weighted_inverse_3": "0",
+      "weighted_inverse_4": "0",
+      "weighted_inverse_5": "0",
+      "weighted_inverse_6": "0",
+      "weighted_inverse_7": "0",
+      "weighted_inverse_8": "0",
+      "weighted_inverse_9": "0"
+    }
+  },
+  "exact_time_normalization_and_energy": {
+    "estimate": "For each fixed positive delta_min, E(u)<=exp(C_delta*abs(u-u0))*E(u0), uniformly in all K above the stated threshold",
+    "formula": "C_delta=4 sup||S'||+512 sup(||R||+||V||), finite at each fixed positive delta_min",
+    "matrix_bound": "(1/4)I < U-normalized K_s,G_s <64I",
+    "normalized_Mv_degrees": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        -1,
+        0
+      ]
+    ],
+    "normalized_Rq_degrees": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "numeric_scope": "No optimized or expanded numerical C_delta is reported; boundedness follows from the explicit rational formulas on the compactified1/K box",
+    "order_k_energy_skew_identity_count": 36
+  },
+  "formulation": "FORMULATION.md",
+  "generic_rational_symbol": {
+    "det_C_degree": 0,
+    "groups": {
+      "Mq_plus_K_kinetic_inverse_gradient": {
+        "degree_bounds": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "upper_degree": 0
+      },
+      "Mv": {
+        "degree_bounds": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            -1,
+            0
+          ]
+        ],
+        "upper_degree": 0
+      },
+      "Sigma_qq": {
+        "degree_bounds": [
+          [
+            null,
+            0,
+            0
+          ],
+          [
+            0,
+            null,
+            -1
+          ],
+          [
+            0,
+            -1,
+            null
+          ]
+        ],
+        "upper_degree": 0
+      },
+      "Sigma_qv_minus_kinetic": {
+        "degree_bounds": [
+          [
+            -1,
+            -1,
+            -1
+          ],
+          [
+            -1,
+            -1,
+            -1
+          ],
+          [
+            -1,
+            -1,
+            -1
+          ]
+        ],
+        "upper_degree": -1
+      },
+      "Sigma_vv": {
+        "degree_bounds": [
+          [
+            null,
+            -2,
+            -2
+          ],
+          [
+            -2,
+            null,
+            -2
+          ],
+          [
+            -2,
+            -2,
+            null
+          ]
+        ],
+        "upper_degree": -2
+      }
+    },
+    "leading_detC_times_det_kinetic_minus_one": "0",
+    "parameter_field": "Exact Q(u,c,K); no interpolation or pointwise-in-time proof",
+    "zero_polynomial_degree_encoding": "null, not a nonfinite physical coefficient"
+  },
+  "independent_replay": {
+    "independence_boundary": "The Fraction phase is independently polarized; the Bernstein conversion consumes supplied primary margin polynomials and is not an independent derivation of them",
+    "independent_supplied_polynomial_Bernstein_coefficients": 611,
+    "literal_polarization_Fraction_Taylor_Cauchy_fixtures": [
+      {
+        "K": "1",
+        "all_equal": true,
+        "c": "4",
+        "exact_scalar_comparisons": 127,
+        "u": "0"
+      },
+      {
+        "K": "7/2",
+        "all_equal": true,
+        "c": "3",
+        "exact_scalar_comparisons": 127,
+        "u": "0"
+      },
+      {
+        "K": "100",
+        "all_equal": true,
+        "c": "201/100",
+        "exact_scalar_comparisons": 127,
+        "u": "0"
+      },
+      {
+        "K": "7",
+        "all_equal": true,
+        "c": "4",
+        "exact_scalar_comparisons": 127,
+        "u": "1/100"
+      },
+      {
+        "K": "7",
+        "all_equal": true,
+        "c": "4",
+        "exact_scalar_comparisons": 127,
+        "u": "-1/100"
+      },
+      {
+        "K": "500000",
+        "all_equal": true,
+        "c": "4",
+        "exact_scalar_comparisons": 127,
+        "u": "1/10"
+      }
+    ],
+    "total_exact_scalar_comparisons": 1373
+  },
+  "normalization_and_actual_action": {
+    "curvature": "+---; R_B=-6(Hdot+2H\u00b2), Einstein action -M\u00b2R_B/2; no A-track sign import",
+    "physical_metric": "Same g, positive canonical sourced phi and free chi of frozen S6.20/S6.22",
+    "physical_smallness": "Energy uses fixed spatial derivative weights; no uniform unweighted raw-metric amplitude or source-response assertion",
+    "principal_weight": "Pi=U*pi,U=a\u00b2yP/2; actual time connections retained, not uniform atc2",
+    "regular_chart": "q=(pi=-e/K,xi=3(a\u00b3wz-PE)/(2aK),chi_B=z+wxi), no H division",
+    "units": "u=T/tau,K=(tau*kcom)^2,overall action(Mtau)^2; physical squared speeds=eigenvalues(a\u00b2 K_s^-1 G_s)"
+  },
+  "not_established": [
+    "No finite-band light-only scalar matching or physical-source response; superluminal full principal cone is not that exclusion",
+    "No cutoff, joint c->2 heavy-mode reduction, rolling spectral gap, instantaneous ground state or all-band positivity",
+    "No global/nonlinear scalar health, loop or UV completion and no original DHOST/free-matter operator match",
+    "No transfer to exploratory variable-lapse G1 or sibling tensor response without its own actual dictionary",
+    "Completed scoped photon objective and frozen original linear classification unchanged; original P8 remains open"
+  ],
+  "omission_and_scope_controls": {
+    "c4_correct_gradient": "800",
+    "c4_final_boundary_coefficient_at_center": "0",
+    "c4_gradient_with_omitted_boundary_NOT_correct": "448",
+    "c4_its_time_derivative": "352",
+    "correct_c4_center_helicity_speed_squared": "5/3",
+    "discarded_nonuniform_Psi_f_chart": "Frozen S6.22 documents apparent center5 and its time/momentum degree drop; it is not the new scalar cone",
+    "finite_K_chart_zero": "sqrt(193)-13; positive and below1, not within the high-K gate",
+    "invalid_calls_rejected": 13,
+    "joint_c_to_2_second_weight_jet_residue": "-16"
+  },
+  "prior_context_sha256": {
+    "S6_22_literal_scalar_action_and_regular_constraints_with_recursive_pins": "9cb56291ce32499293a65ee1355e9b13d3abc4d429643f76c0dcf63e9b71a9b1"
+  },
+  "schema": 1,
+  "source_audit": "notes/sources.md",
+  "source_sha256": {
+    "FORMULATION.md": "30e90575e2b24744c5e2e4db5dd6184eff299eb4c85a6912a7fa94348d013b84",
+    "README.md": "69ca30d7c1516e654b8510ad328a0de13cc54b16f2135abc1e22174f2c20c370",
+    "notes/review.md": "bff499c1490ee35175766d1946dffc24e2d2596a99cce414aa0971c4186ad4e7",
+    "notes/sources.md": "9ae3e76aeb868011e9c1d093c72cf06a6aab97b9c1ab67df934a07d026a40409",
+    "src/p8_variable_microlocal/__init__.py": "2b0d479cdf734a4374f7f4e1c671b4f4534b08761615f7ca818cae9308d0f57a",
+    "src/p8_variable_microlocal/bounds.py": "a1acccfdf71f8419c4071985aa8042ef2db4bbd441efc7ad73de4b1bf25d1fa8",
+    "src/p8_variable_microlocal/domain.py": "d2b53e8149b24d2846a9a5b9694ba2bfedb0c15354114866fb35e64f87b15927",
+    "src/p8_variable_microlocal/energy.py": "3def4f080f003c28b427a639413c033a01c7dd357eab7cef1c05253da48a7ccf",
+    "src/p8_variable_microlocal/independent.py": "29b2302f58338319e5cffecdfaf345892ab73d403ffa99eb02d5682a75dd32c9",
+    "src/p8_variable_microlocal/leading.py": "7517efddf75559b53922d0b3d3d1d8772b70023b7ff2d66ff2032c254a7682d5",
+    "src/p8_variable_microlocal/physical.py": "a976c590f5d6b330b485023631a44d5150bf7047c0a7abce7ed7c6a781bdef8b",
+    "src/p8_variable_microlocal/rational.py": "caa89f5eb3c808c27705e58916126adab9e936a39708d31ffc588fb9b244013e",
+    "src/p8_variable_microlocal/stueckelberg.py": "80c0a1df83176389a9a3b897e44e8c82aed25b61b6729b741075dddc256121b2",
+    "src/p8_variable_microlocal/symbol.py": "34429fd8e7222480951c20d9a26cd0e5aff059325fe75be7e62292f9229a885e",
+    "src/p8_variable_microlocal/verify.py": "7cdb7ee6f4c7e444a2ccf7f52fe72ec207d4b1cb3542d8f6f1cd543480e5345b",
+    "src/p8_variable_microlocal/weighted.py": "68e0f6f54175d738611ebeb5a5d9a90840547c977ecb951e5322a7ed9b09fa94",
+    "tests/conftest.py": "dc08cb641e86c126e5765daf7296f548ba51ab96a6705a16e5a3ff6d9a68f2c9",
+    "tests/test_microlocal_certificate.py": "12c9f4431bfc3c604eacd8dac0be84ca83e060f361abefcf9f9435f7e17d7387",
+    "tests/test_microlocal_core.py": "4171aa208267c78944c224f664f72b0938ad4ee3a0fbdede18db9689b7389903",
+    "tests/test_microlocal_independent_audit.py": "415c6535676cc436a4b7610c37f9e42d78f7dcb7b6fe925cd6727318a73dc96e",
+    "tests/test_microlocal_symbol.py": "9c10ced9832b934c6f9d82577ce36a1a849e216a9b4f8166e5d8a395491db504"
+  },
+  "status": "EXACT_UNIFORM_LOCAL_SCALAR_PRINCIPAL_KINETIC_GRADIENT_AND_ENERGY; LIGHT_ONLY_MATCHING_AND_ORIGINAL_P8_OPEN",
+  "verification_boundary": "Exact source-aware algebra, generic rational symbol identities, continuous Bernstein bounds, independent Fraction/Taylor Cauchy fixtures and root action audits; written uniform proof, not proof-assistant formalized",
+  "written_proof": "notes/review.md"
+}
