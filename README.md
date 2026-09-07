@@ -373,6 +373,13 @@ around a pre-registered problems document and a certificate-gated ledger.
   nonzero homogeneous mixing on a fixed physical-time interval. Its
   incoming data and fictitious free exterior are explicit; it is not a
   zero-data matter response, a physical vacuum or an EFT cutoff.
+  A [fixed-pulse zero-data theorem](problems/P8/s6/matching/variable/reduction/exact/scattering/forcing/README.md)
+  now proves separated original-Q endpoint outputs from one unchanged
+  smooth prescribed metric pulse, on a fixed physical duration. Both
+  propagation errors and the exact original-field readout are retained.
+  The [route verdicts](docs/assessment-2026-09-07-p8-matching-route-verdicts.md)
+  exclude two precisely bounded reduction strategies, not all two-metric
+  parents or parameter-dependent phase-retaining descriptions.
 
 The [current P8 continuation audit](docs/assessment-2026-09-07-p8-exact-own-metric.md) separates
 the completed scoped P8(a) objective and certificate gates from the

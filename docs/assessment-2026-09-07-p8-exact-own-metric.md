@@ -95,11 +95,35 @@ physical duration is tau/50, independent of delta. The free exterior is
 only a mathematical endpoint convention, not a parent vacuum.
 
 This result prescribes incoming homogeneous data. Zero data and zero q
-still give zero response. The next child tests whether a single fixed
-smooth metric pulse, with zero initial hidden data, produces separated
-original-Q endpoint outputs as delta tends to zero. That source-loading
-and phase argument is separate work; no fixed-band or EFT verdict follows
-from the homogeneous matrix element alone.
+still give zero response. Source loading requires a separate argument;
+no fixed-band or EFT verdict follows from the homogeneous matrix alone.
+
+## One fixed pulse now produces separated original-field outputs
+
+[S6.36](../problems/P8/s6/matching/variable/reduction/exact/scattering/forcing/FORMULATION.md)
+uses zero hidden data at u=-1/100 and one fixed smooth prescribed metric
+pulse. Its physical shape and tau are independent of delta. A first-zero
+Green-function proof loads a strictly nonzero state before u=-1/200;
+ordinary coefficient convergence is used only on this fixed punctured
+loading interval, not at the singular center.
+
+The source has ended before propagation through the central half-window.
+Its full perturbation budget is below 507/125000<1/200. Two explicit
+parameter sequences have reference phases differing by pi/2. Both actual
+comparison errors are retained; neither is assumed to converge. A single
+phase offset is fixed by the loaded limiting state, not fitted per delta.
+Returning to the original Q, the paired limiting lower separation is
+greater than 237eta/42560>eta/200. Thus the actual original-field endpoint
+does not converge, on the fixed physical experiment of duration 3tau/200.
+
+This is a prescribed off-shell metric input, not a conserved matter
+source, an undriven g/clock solution, a certified low-frequency band or
+an all-order EFT exclusion. Parameter-dependent descriptions retaining
+the phase are not ruled out. The [route synthesis](assessment-2026-09-07-p8-matching-route-verdicts.md)
+states the resulting conditional error floor and its direct original-g
+Euler readout, separately from the retained-order coefficient obstruction.
+Those two precise reduction routes are excluded under their stated
+hypotheses; ordinary two-metric theories as a whole are not.
 
 The original CD/source dictionary, a controlled physical-domain inverse,
 higher-operator remainder and adopted positivity/V/G requirements remain
@@ -161,3 +185,16 @@ with 6,509 checked exact descents, 4,554 original-domain fallbacks and
 excluded while under construction. The ordinary certificate and CLI
 replays used no adapter; both seeds were zero and the host timer plugin
 was disabled. Frozen sources and unrelated P4/P9 work remain unchanged.
+
+S6.36 pins 17 sources with 64 exact identities, 22 loading checks,
+17 propagation checks, 11 independent-bound checks, 14 interface checks
+and 45 rejected-input controls. All 102 non-certificate scientific tests
+passed in 1.15 seconds. All 119 ordinary tests passed in 207.76 seconds,
+and the separate ordinary CLI replay passed. The report SHA-256 is
+`ad8ff0c26ba6eaf145d319c5fe9f91915c27376766542d7208a1a6382d3b68c4`.
+
+The extended full P8 regression passed all 3,595 tests in 680.45 seconds,
+with 6,509 checked exact descents, 4,554 original-domain fallbacks and
+128 reference comparisons. The new affine candidate was explicitly
+excluded while under construction. Ordinary tests and CLI used no
+adapter; both seeds were zero and the host timer plugin was disabled.
