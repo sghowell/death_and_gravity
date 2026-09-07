@@ -1,0 +1,326 @@
+{
+  "Green_and_pulse_calibration": {
+    "claim": "P8-S6.34.OWN_RETARDED",
+    "green": {
+      "R_margin": "313/38304",
+      "R_over_distance_lower": "7495/38304",
+      "R_target": "3/16",
+      "R_x_lower": "1415/12768",
+      "R_x_margin": "691/63840",
+      "R_x_target": "1/10",
+      "direct_R_margin": "899/242592",
+      "direct_Volterra_R_over_distance_lower": "46385/242592",
+      "flux_lower": "283/608",
+      "k_max": "21/5",
+      "k_min": "19/5",
+      "left": "-1/4",
+      "positive_flux_bootstrap": true,
+      "right": "0",
+      "s_max": "65",
+      "s_min": "42",
+      "width": "1/4"
+    },
+    "normalization": "(k Q_x)_x+s(Q-q)=0; k(a)R_x(a,a)=1; Q=Q_x=0 at x=-1/4",
+    "physical_clock": "x=T/(tau*sqrt(delta)), 0<delta<=1/625",
+    "pulse": {
+      "area_floor_over_eta": "5/64",
+      "area_margin_over_eta": "1/64",
+      "eta": "eta",
+      "plateau_left": "-29/128",
+      "plateau_right": "-19/128",
+      "plateau_width": "5/64",
+      "profile": "eta*Piecewise((0, x >= -17/128), (1, x <= -19/128), (exp(-1/(-64*x - 17/2))/(exp(-1/(64*x + 19/2)) + exp(-1/(-64*x - 17/2))), True))*Piecewise((0, x <= -31/128), (1, x >= -29/128), (exp(-1/(64*x + 31/2))/(exp(-1/(64*x + 31/2)) + exp(-1/(-64*x - 29/2))), True))",
+      "ramp_width": "1/64",
+      "support_left": "-31/128",
+      "support_right": "-17/128",
+      "x": "x"
+    },
+    "response": {
+      "Q_final_lower_over_eta": "63/1024",
+      "Q_final_sharper_lower_over_eta": "7495/116736",
+      "Q_whole_window_upper_over_eta": "975/2432",
+      "Q_x_final_lower_over_eta": "21/80",
+      "Q_x_final_sharper_lower_over_eta": "1415/4864",
+      "Q_x_whole_window_upper_over_eta": "325/152",
+      "delta_max": "1/625",
+      "endpoint_distance_min": "1/8",
+      "physical_Q_time_derivative_lower": "21*eta/(80*sqrt(delta)*tau)",
+      "physical_window_duration": "sqrt(delta)*tau/4",
+      "pulse_area_min_over_eta": "1/16",
+      "pulse_left": "-1/4",
+      "pulse_right": "-1/8",
+      "pulse_width": "1/8"
+    },
+    "scope": "linear own-f response to prescribed off-shell physical metric; no physical matter-source, full-parent, fixed low-frequency EFT or Green-selected action claim"
+  },
+  "claim": "P8-S6.34.OWN_RETARDED",
+  "controls": {
+    "causal_equation_not_silently_a_single_copy_variational_action": true,
+    "flux_jump_is_one_not_R_derivative_one": true,
+    "literal_action_derivative_factor_two_recorded": true,
+    "longer_interval_bootstrap_rejected": true,
+    "prescribed_metric_is_not_a_conserved_matter_source": true,
+    "rejected_inputs": 34,
+    "shrinking_duration_is_not_a_fixed_low_frequency_class": true,
+    "whole_variable_kinetic_derivative_retained": true,
+    "zero_hidden_data_at_left_endpoint_explicit": true
+  },
+  "date": "2026-09-07",
+  "domain": "0<delta<=1/625; x=T/(tau sqrt(delta)) in[-1/4,0]; M,tau>0",
+  "exact_residual_count": 36,
+  "exact_residuals": {
+    "exact_Green_and_pulse_constants": {
+      "derivative_floor": "0",
+      "derivative_margin": "0",
+      "direct_Volterra_floor": "0",
+      "direct_kernel_margin": "0",
+      "endpoint_Q_lower": "0",
+      "endpoint_Qx_lower": "0",
+      "explicit_plateau_width": "0",
+      "explicit_pulse_area_margin": "0",
+      "first_zero_flux": "0",
+      "inherited_v_radius": "0",
+      "positive_flux_integral_floor": "0",
+      "sharp_kernel_margin": "0",
+      "whole_window_Q_upper": "0",
+      "whole_window_Qx_upper": "0"
+    },
+    "independent_interfaces_and_Green_recalculation": {
+      "delta_max": "0",
+      "independent_Q0_floor": "0",
+      "independent_Qx0_floor": "0",
+      "independent_R_ratio": "0",
+      "independent_R_x": "0",
+      "k_max": "0",
+      "k_min": "0",
+      "left": "0",
+      "right": "0",
+      "s_max": "0",
+      "s_min": "0",
+      "width": "0"
+    },
+    "literal_time_action_and_original_metric_readout": {
+      "exact_center_s": "0",
+      "first_order_trace_zero": "0",
+      "full_variable_coefficient_own_Euler": "0",
+      "literal_delta_max": "0",
+      "literal_physical_action_bridge": "0",
+      "momentum_coordinate_first_equation": "0",
+      "momentum_coordinate_second_equation": "0",
+      "original_physical_g_Euler": "0",
+      "physical_to_inner_action_measure": "0",
+      "zero_germ_readout": "0"
+    }
+  },
+  "finite_delta_coefficient_box": {
+    "delta_max": "1/625",
+    "domain_v_identity": "0",
+    "equation": "(k*Q_x)_x+s*(Q-q)=0",
+    "fixed_physical_low_frequency_band_claim": false,
+    "flux_normalization": "K_f=M\u00b2*k; s=delta*tau\u00b2*nu/M\u00b2",
+    "full_parent_background_claim": false,
+    "gap_max": "3/2",
+    "gap_min": "1",
+    "gap_polynomials": {
+      "P": [
+        4,
+        6,
+        4,
+        1
+      ],
+      "d4_minus_one_minus_vP": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "d_fourth": [
+        1,
+        4,
+        6,
+        4,
+        1
+      ],
+      "four_d4_minus_P": [
+        0,
+        10,
+        20,
+        15,
+        4
+      ]
+    },
+    "inherited_rational_enclosures": {
+      "N": [
+        "12411/6250",
+        "2019531/1000000"
+      ],
+      "Q": [
+        "997703/62500",
+        "16"
+      ],
+      "b": [
+        "199/100",
+        "201/100"
+      ],
+      "b_cubed": [
+        "3989207/500000",
+        "8012009/1000000"
+      ]
+    },
+    "k_lower": "987657/250000",
+    "k_max": "21/5",
+    "k_min": "19/5",
+    "k_upper": "1008683/250000",
+    "literal_delta_zero_allowed": false,
+    "physical_time": "T=tau*sqrt(delta)*x",
+    "s_lower": "42355819/1000000",
+    "s_max": "65",
+    "s_min": "42",
+    "s_upper": "1608/25",
+    "spatial_fourier_mode": "homogeneous tensor probe",
+    "strict_margins": {
+      "delta_below_parent_cap": "21/2500",
+      "k_above_19over5": "37657/250000",
+      "k_below_21over5": "41317/250000",
+      "positive_parent_N": "12411/6250",
+      "positive_parent_Q": "997703/62500",
+      "positive_parent_b_cubed": "3989207/500000",
+      "s_above_42": "355819/1000000",
+      "s_below_65": "17/25"
+    },
+    "v_max": "1/10000",
+    "width": "1/4",
+    "x_max": "0",
+    "x_min": "-1/4",
+    "x_zero_is_an_allowed_literal_observation": true
+  },
+  "formulation": "FORMULATION.md",
+  "germ_local_minimax_Q0_error_per_amplitude": "63/2048",
+  "independent_Green_inequalities": {
+    "Q0_lower_per_amplitude": "63/1024",
+    "Qx0_lower_per_amplitude": "21/80",
+    "R_margin": "313/38304",
+    "R_over_duration": "7495/38304",
+    "R_x": "1415/12768",
+    "R_x_margin": "691/63840",
+    "positive_flux": "283/608",
+    "proof_boundary": "constant inequalities in a variable-coefficient first-zero/Volterra argument, not a constant-frequency approximation"
+  },
+  "input_state_contract": "zero history OR prescribed smooth0<=q<=eta supported inside(-1/4,-1/8), integral(q)>=eta/16; Q=Q_x=0 at-1/4; positive lower bounds concern the pulse subclass",
+  "literal_original_g_readout": {
+    "c_max": "1251/625",
+    "eta": "pulse_amplitude",
+    "hidden0": "hidden_at_observation",
+    "is_a_conserved_matter_source_or_on_shell_physical_g_claim": false,
+    "margin_over_three_amplitudes": "1039*pulse_amplitude/1112",
+    "normalized_Euler_magnitude_lower": "4375*pulse_amplitude/1112",
+    "normalized_original_g_Euler_at_zero_germ": "-128*hidden_at_observation/c",
+    "original_g_Euler_convention": "E_g=-2 delta S_T/delta q; literal action derivative has half this magnitude",
+    "physical_Euler_magnitude_lower": "4375*M_squared*pulse_amplitude/(1112*delta*tau**2)",
+    "response_lower": "63*pulse_amplitude/1024",
+    "s_center": "128/c"
+  },
+  "not_established": [
+    "An undriven physical-g/clock or full nonlinear parent solution",
+    "A prescribed conserved matter stress, free-chi source loading or full source matching",
+    "A fixed physical temporal band, cutoff, or general controlled-EFT exclusion",
+    "A nonlinear hidden response, full covariant CD coefficient match or scalar health",
+    "A variational single-copy action obtained merely by inserting a retarded inverse",
+    "Positivity/V/G applicability, UV completion or original P8 closure"
+  ],
+  "physical_numeric_calibration": {
+    "E_g_convention": "-2 times the literal norm-two action Euler derivative",
+    "M_squared": "3",
+    "Q0_lower": "63/102400",
+    "QT0_lower": "21/640",
+    "Qx0_lower": "21/8000",
+    "amplitude": "1/100",
+    "c": "1251/625",
+    "canonical_matter_source_or_undriven_physical_g_solution": false,
+    "delta": "1/625",
+    "fixed_physical_low_frequency_band_claim": false,
+    "germ_local_minimax_Q0_error_lower": "63/204800",
+    "literal_g_action_derivative_magnitude_lower": "328125/35584",
+    "normalized_original_g_equation_magnitude_lower": "175/4448",
+    "physical_original_g_equation_magnitude_lower": "328125/17792",
+    "physical_window_duration": "1/50",
+    "tau": "2"
+  },
+  "prior_sha256": {
+    "S6_33_recursively_rebuilt": "727811a8563584cc511e749ff038eadaa416f02aae268a15fa4f90eb8ca4b6b3",
+    "same_unchanged_action_physical_metric_clock_and_free_chi": true,
+    "uses_actual_finite_delta_own_f_background_not_a_limiting_substitute": true
+  },
+  "proof_checks": {
+    "Green_and_pulse": {
+      "R_x_above_target": true,
+      "derivative_floor": true,
+      "derivative_margin": true,
+      "direct_R_above_target": true,
+      "direct_Volterra_floor": true,
+      "direct_kernel_margin": true,
+      "endpoint_Q_lower": true,
+      "endpoint_Qx_lower": true,
+      "explicit_plateau_width": true,
+      "explicit_pulse_area_margin": true,
+      "first_zero_flux": true,
+      "first_zero_flux_positive": true,
+      "inherited_v_radius": true,
+      "positive_flux_integral_floor": true,
+      "positive_history_response": true,
+      "positive_history_velocity": true,
+      "pulse_area_strict_margin": true,
+      "pulse_support_inside": true,
+      "sharp_R_above_target": true,
+      "sharp_kernel_margin": true,
+      "whole_window_Q_upper": true,
+      "whole_window_Qx_upper": true
+    },
+    "coefficient_box": {
+      "delta_below_parent_cap": true,
+      "domain_v_identity": true,
+      "gap_identity": true,
+      "gap_max_from_width": true,
+      "gap_numerator_positive": true,
+      "gap_upper_constant_zero": true,
+      "gap_upper_other_coefficients_positive": true,
+      "k_above_19over5": true,
+      "k_below_21over5": true,
+      "outward_k_lower": true,
+      "outward_k_upper": true,
+      "outward_s_lower": true,
+      "outward_s_upper": true,
+      "positive_parent_N": true,
+      "positive_parent_Q": true,
+      "positive_parent_b_cubed": true,
+      "s_above_42": true,
+      "s_below_65": true
+    }
+  },
+  "schema": 1,
+  "source_audit": "notes/sources.md",
+  "source_sha256": {
+    "FORMULATION.md": "10350addfedb6bbe25f8b78b0c68140328f8c42557b45917ca0f9c4e6601cf42",
+    "README.md": "d0b501bb2569549ee65a615b21b7339bf26e01b8a9957bcc7495f78f07eb3323",
+    "notes/bounds.md": "88e84ef00c2b67498b5e4298ef8cb4ada2608875ee0a3cbb796dbe29dcd26ed3",
+    "notes/green.md": "b8510dc0035f4365330ddc954c28ff49b828db441cc620470288e68b5a614cc5",
+    "notes/sources.md": "d2d8ab79d0ff3c800f8a13183c16d7069b4f98750c794eb3f001dcd7edfdb539",
+    "src/p8_own_retarded/__init__.py": "47a6ebcbcb2e146721db0fa16b356597cd0a90736c9021c12b62a9c6c31ec9bf",
+    "src/p8_own_retarded/action.py": "058915888db0d17d41193302a85851a5a829ff453b05f9e4c739ff3c01fa1733",
+    "src/p8_own_retarded/bounds.py": "6f2d0d3e7f75882a979a288df144631cde0399cc13a95e2a493188366c06eb16",
+    "src/p8_own_retarded/green.py": "6c16dd5eb5ce189499e5a188efc62b5e7a8676b65a0156b5e0edb85f326e0522",
+    "src/p8_own_retarded/verify.py": "c0ae4cf4b2091d18d9ab95459e7a99c77072cce9450a34f8d43b6ea895727ef6",
+    "tests/conftest.py": "0875f4c9394fb689a5de0531e9a2c1cdea9f08c96bc5be3fd8406b0ecfd0aff9",
+    "tests/test_own_retarded_action_audit.py": "6e18d42ce27512ad18a6dc235de95813e9bef59bb434529d0ce66a7f0ba7e438",
+    "tests/test_own_retarded_bounds.py": "a621bec876528e849fc6df918f855eeadeedb547cc49aab3a826f5fb600f140c",
+    "tests/test_own_retarded_certificate.py": "98ddb2a8b51cf1ee0308ce60904294ea988852aba1bbe24375f41f820747bae7",
+    "tests/test_own_retarded_green.py": "9dac351f22d61a010fbb5a6cb408b8245b4be1d6ab5c3602c11dcd0b111508a2"
+  },
+  "status": "FINITE_DELTA_RETARDED_OWN_F_HISTORY_AND_ORIGINAL_G_EQUATION_READOUT; ORIGINAL_P8_OPEN",
+  "verification_boundary": "Written continuous finite-parameter coefficient and first-zero/Volterra proof, exact margins and three separately authored scientific audits; not proof-assistant formalization",
+  "written_proofs": [
+    "notes/bounds.md",
+    "notes/green.md"
+  ]
+}

@@ -362,6 +362,11 @@ around a pre-registered problems document and a certificate-gated ledger.
   parity assumption. Its exact tensor action distinguishes the own-f
   and coupled-relative inner equations; an exact background alone does
   not choose a causal inverse or solve the physical-g/clock equations.
+  A [specified retarded own-f response](problems/P8/s6/matching/variable/reduction/exact/retarded/README.md)
+  now has a finite-parameter history bound: a smooth prescribed metric
+  pulse leaves a nonzero hidden response after it ends. Its shrinking
+  physical duration and off-shell input are explicit, so it is not a
+  fixed low-frequency matter-source or controlled-EFT exclusion.
 
 The [current P8 continuation audit](docs/assessment-2026-09-07-p8-exact-own-metric.md) separates
 the completed scoped P8(a) objective and certificate gates from the

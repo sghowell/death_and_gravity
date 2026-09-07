@@ -43,15 +43,34 @@ retarded, advanced or Feynman inverse. Convergence of the coefficient
 equations implies convergence of solutions only with convergent inner-
 coordinate data and inputs. It is not a fixed physical-window theorem.
 
-## Next discriminating check
+## A specified causal inverse has now been tested
 
-The next child explicitly selects zero initial hidden data and a retarded
-own-f response to a prescribed smooth metric pulse. Its target is a
-finite-parameter history bound, not just a limiting equation. The pulse
-duration is proportional to tau sqrt(c-2), so such a result must not be
-promoted into a fixed physical low-frequency EFT exclusion. A prescribed
-metric history is also not automatically a conserved free-chi source or
-a solution of the physical-g equations.
+[S6.34](../problems/P8/s6/matching/variable/reduction/exact/retarded/FORMULATION.md)
+selects zero initial hidden data and a retarded own-f response to a
+prescribed smooth metric pulse. Positive finite-parameter coefficient
+bounds give a Green kernel with an explicit positive-flux margin.
+For every admitted pulse, the hidden endpoint response is at least
+63eta/1024 even though the pulse and all its derivatives have vanished
+near observation. Its inner-time velocity is at least 21eta/80.
+
+The zero history and pulse have the same entire final metric germ and
+the same zero initial hidden state. No exact map of the final germ alone
+can reproduce both outputs. The original physical-metric equation has
+a separately normalized nonzero readout too; its literal variational
+derivative differs by the explicitly recorded factor of two.
+
+The pulse duration is proportional to tau sqrt(c-2). This is not a fixed
+physical low-frequency EFT exclusion. A prescribed metric history is
+also not automatically a conserved free-chi source or an undriven
+solution of the physical-g equations. The retarded equation is used
+directly, not inserted into a single-copy action and silently declared
+to be a variational effective action.
+
+The next calculation tests a comparison on a fixed physical-time window.
+It requires independently controlled canonical-potential derivatives,
+actual endpoint maps and the correctly normalized reference scattering
+equation. That continuation is separate from these frozen checkpoints;
+it does not yet supply a fixed-band source theorem or an EFT cutoff.
 
 The original CD/source dictionary, a controlled physical-domain inverse,
 higher-operator remainder and adopted positivity/V/G requirements remain
@@ -77,3 +96,17 @@ and the diagnosed host faulthandler timer plugin is disabled. The separate
 retarded child was explicitly excluded from this checkpoint's regression
 while still under construction. Frozen ancestors and unrelated P4/P9
 work remain untouched.
+
+S6.34 pins 15 additional sources with 36 exact identities, 18 coefficient
+checks, 22 Green/pulse checks and 34 rejected-input controls. Its 61
+non-certificate scientific tests passed in 0.90 seconds. All 77 ordinary
+tests passed in 208.14 seconds, and its separate ordinary CLI replay
+passed in 189.96 seconds. The report SHA-256 is
+`2df0d5ccf888ef7192606ba78463541a189d051a6fe8c5aab95ec2508e5ae0a6`.
+
+The extended full P8 regression passed all 3,337 tests in 701.59 seconds,
+with the same 6,509 checked exact descents, 4,552 original-domain
+fallbacks and 128 reference comparisons. The new scattering candidate
+was explicitly excluded while under construction. The ordinary replays
+again used no adapter, both seeds were zero, and the diagnosed host
+timer plugin was disabled.
