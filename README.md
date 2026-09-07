@@ -299,6 +299,12 @@ around a pre-registered problems document and a certificate-gated ledger.
   maps and fixed conserved g-only source preparation. Relative-mode
   responses retain a logarithmic phase; prepared-light leakage has a
   vanishing bound, without a proved low-temporal-frequency window.
+  The [convergent prepared-sector theorem](problems/P8/s6/matching/variable/response/prepared/README.md)
+  strengthens that fixed-light upper rate to order delta and proves a
+  positive restricted physical normalization. Its controlled center
+  response differs from the locked-field approximation. Exact preparation
+  by a retuned g-only source is explicit, but this selected source-free
+  sector is not yet a general sourced, spatially local EFT.
   The [scalar/vector constraint audit](problems/P8/s6/matching/variable/perturbations/README.md)
   independently reconstructs the quadratic action and gives regular
   scalar constraint elimination through the bounce. It also demonstrates
@@ -310,7 +316,7 @@ around a pre-registered problems document and a certificate-gated ledger.
   tends to zero. Scalar health, controlled sourced light reduction and
   the vacuum/finite-gravity UV requirements remain open checks.
 
-The [current P8 continuation audit](docs/assessment-2026-09-06-p8-physical-response-and-regular-constraints.md) separates
+The [current P8 continuation audit](docs/assessment-2026-09-07-p8-prepared-tensor-sector.md) separates
 the completed scoped P8(a) objective and certificate gates from the
 outstanding P8(b) UV-matching and positivity questions.
 P8 is not marked finished or closed.
