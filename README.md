@@ -253,8 +253,16 @@ around a pre-registered problems document and a certificate-gated ledger.
   truncation. A separately named beta4 extension restores a healthy flat
   quadratic vacuum and lies outside that exclusion; rolling matching and
   UV consistency are not inferred from its vacuum data.
+  Its [actual-matter tensor-cone extension](problems/P8/s6/matching/trimetric/cones/README.md)
+  now rules out the positive-link exchange-symmetric rolling route against
+  the prescribed subluminal condition: the physical common tensor is
+  faster than matter even after relative-mode elimination. A more general
+  positive-link identity constrains full-parent cones, with an explicit
+  warning that asymmetric light-only reductions need a separate test.
+  Actual rolling solutions, retained probe contacts and mixed-sign
+  countercontrols keep this a scoped matching theorem, not a UV no-go.
 
-The [current P8 continuation audit](docs/assessment-2026-09-06-p8-photon-realization-auxiliary-parent.md) separates
+The [current P8 continuation audit](docs/assessment-2026-09-06-p8-auxiliary-tensor-cones.md) separates
 the completed scoped P8(a) objective and certificate gates from the
 outstanding P8(b) UV-matching and positivity questions.
 P8 is not marked finished or closed.

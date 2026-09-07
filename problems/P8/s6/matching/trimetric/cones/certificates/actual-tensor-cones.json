@@ -1,0 +1,268 @@
+{
+  "action_and_domain": {
+    "B_curvature": "+---; R_B=-6(Hdot+2H\u00b2), Einstein_B00=+3H\u00b2, EH=-G R_B/2; not the opposite A/FK curvature convention",
+    "action": "The pinned S6.13 auxiliary action, now allowing explicit -2beta4g det(e)-2beta4f det(v); no u EH or other derivative terms",
+    "actual_physical_metric": "h=u^T eta u, not its vacuum approximation and not either Einstein metric",
+    "constants": "G,F,p_g,p_f,epsilon>0; B,beta4g,beta4f constant real; positivity of links is an explicit premise, not inferred from vacuum mass",
+    "geometry": "Actual regular common spatially flat smooth solution, all six lapse/scale entries positive, parent symmetrization and root domain",
+    "matter_for_background_identity": "Homogeneous isotropic density rho and pressure p; n_h=epsilon(rho+p)",
+    "matter_for_tensor_action": "Homogeneous positive-field-metric canonical scalar(s) on h, with no independent TT anisotropic response; isotropy alone is insufficient for a general medium",
+    "physical_normalization": "epsilon multiplies bare matter; fixed canonically normalized free-chi stress is not suppressed by changing epsilon"
+  },
+  "checked_controls": {
+    "background_hypotheses": {
+      "mixed_sign_actual_null_stress": "2",
+      "mixed_sign_auxiliary_c_e": "1/2",
+      "mixed_sign_auxiliary_c_f": "1",
+      "mixed_sign_auxiliary_lapse": "0",
+      "mixed_sign_auxiliary_space": "0",
+      "mixed_sign_full_flat_e": "0",
+      "mixed_sign_full_flat_relative_spring": "4",
+      "mixed_sign_full_flat_u": "0",
+      "mixed_sign_full_flat_v": "0",
+      "nonrolling_symmetric_gap": "0"
+    },
+    "conditional_error_budgets": {
+      "actual_example_F_minus_G": "24/7",
+      "actual_example_speed_gap": "6",
+      "actual_example_squared_gap": "48",
+      "nonrolling_has_no_strict_gap": "0",
+      "protected_cone_margin": "95/28",
+      "protected_kinetic_margin": "3/56"
+    },
+    "tensor_source_clock_and_symmetry": {
+      "auxiliary_tensor_denominator_zero_outside_domain": "0",
+      "dropping_actual_clock_at_A2_N2over7_misses_squared_speed": "48",
+      "dropping_probe_contact_at_A2_q1_j1": "1",
+      "source_free_relative_projection": "0",
+      "unequal_Einstein_even_odd_kinetic_cross_coefficient": "-F/4 + G/4"
+    }
+  },
+  "claim": "P8-S6.14.AUXILIARY",
+  "countercontrols_scope": {
+    "mixed_sign_actual_flat": "p_g=-2,p_f=1,B=3,beta4g=2,beta4f=-1,e=v=u=I,zero matter solves all Euler equations; u=2e-v and literal flat relative spring=4>0",
+    "mixed_sign_auxiliary_only": "n_e=1/2,n_v=n_u=a_e=a_v=a_u=1,p_g=-2,p_f=1,B=5/2,epsilon=1,rho=p=1 gives c_e=1/2,c_f=1; only u equations, e/v fail for these static frames",
+    "mixed_sign_flat_limit": "Positive mass 4(1/G+1/F) and positive EH kinetics are flat quadratic controls only, not full rolling/quantum health",
+    "nonrolling": "n_h=0 has no strict positive gap; the positive-link flat vacuum remains a valid control"
+  },
+  "date": "2026-09-06",
+  "exact_auxiliary_TT_and_external_probe": {
+    "algebraic_density": "L_alg/sqrt|h|=-[P_g(gamma_e-gamma_u)\u00b2+P_f(gamma_v-gamma_u)\u00b2]/4+j gamma_u",
+    "auxiliary_map": "gamma_u=(P_g gamma_e+P_f gamma_v+2j)/(P_g+P_f)",
+    "boundary": "The local source contact is retained and does not cancel a propagating common response; no scalar auxiliary inverse is inferred from this nonzero TT denominator",
+    "polarization": "tr(E)=0,tr(E\u00b2)=1, spatial coframes exp(gamma_i E/2)",
+    "source_normalization": "S_j=int dT d\u00b3x a_h\u00b3 j gamma_u; for canonical variational stress deltaS=-1/2 int sqrt|h| T^munu deltah_munu, j=Pi_TT/2 (opposite plus-variation stress uses j=-Pi_TT/2)",
+    "source_scope": "External infinitesimal physical TT probe, separately background-conserved for any smooth time profile, not the internal canonical scalar and no probe positivity assumption",
+    "stationary_action": "-P_gP_f(gamma_e-gamma_v)\u00b2/[4(P_g+P_f)]+j(P_g gamma_e+P_f gamma_v)/(P_g+P_f)+j\u00b2/(P_g+P_f)"
+  },
+  "exact_residuals": {
+    "actual_free_scalar_local_rolling_solution": {
+      "Friedmann_constraint_is_preserved": "0",
+      "actual_free_scalar_current_equation": "0",
+      "actual_free_scalar_energy_equation": "0",
+      "actual_physical_Hubble_conversion": "0",
+      "actual_tensor_speed_gap": "0",
+      "actual_u_lapse": "0",
+      "actual_u_space": "0",
+      "both_Einstein_lapse": "0",
+      "both_Einstein_spatial": "0"
+    },
+    "conditional_coefficient_error_thresholds": {
+      "conditional_free_M1_vacuum_scale_dictionary": "0",
+      "exact_squared_speed_excess": "0",
+      "physical_coefficient_remainder_budget": "0"
+    },
+    "full_covariant_background_cones": {
+      "full_covariant_u_lapse": "0",
+      "full_covariant_u_spatial": "0",
+      "symmetric_lapse": "0",
+      "symmetric_space": "0",
+      "symmetric_speed_gap": "0",
+      "undivided_weighted_null_cone_identity": "0"
+    },
+    "literal_TT_source_and_physical_clock": {
+      "common_tensor_physical_cone": "0",
+      "exact_physical_clock_and_volume": "0",
+      "full_auxiliary_completed_square": "0",
+      "literal_diagonal_exponential_unit_TT": "0",
+      "source_response_includes_contact": "0",
+      "sourced_auxiliary_stationarity": "0",
+      "symmetric_auxiliary_weight": "0",
+      "symmetric_contact_normalization": "0",
+      "symmetric_even_odd_action": "0",
+      "vacuum_relative_mass_dictionary": "0"
+    }
+  },
+  "formulation": "FORMULATION.md",
+  "general_full_parent_cone_theorem": {
+    "full_u_equations": "B+3(P_g+P_f)=-epsilon rho/2; B+P_g(c_e+2)+P_f(c_f+2)=epsilon p/2",
+    "positive_weight_bound": "max(c_e,c_f)>=1+n_h/[2(P_g+P_f)]>1 if n_h>0",
+    "quadratic_light_countercontrol": "K=diag(100,1),gradient=diag(25,4),positive heavy relative spring: high squared cones 1/4,4 but locked light squared speed 29/101; not claimed a parent background",
+    "scope": "At least one full EH tensor principal cone, not both individually and not an asymmetric finite-band light-only matching exclusion",
+    "undivided_identity": "P_g(c_e-1)+P_f(c_f-1)=n_h/2, with no Hubble, B or source-expansion division",
+    "weights_and_speeds": "P_g=p_g a_e/a_u,P_f=p_f a_v/a_u,c_e=a_u n_e/(n_u a_e),c_f=a_u n_v/(n_u a_v)"
+  },
+  "independent_Fraction_replay": {
+    "coefficientwise_identities": {
+      "auxiliary_stationary_action_cleared": "0",
+      "exact_speed_square_excess": "0",
+      "full_sourced_auxiliary_completed_square": "0",
+      "weighted_cone_from_two_full_u_equations": "0"
+    },
+    "full_rolling_Fraction_fixtures": {
+      "101/100": {
+        "H_r_squared": "30301/1500000",
+        "N": "101/106",
+        "c_T": "53/50",
+        "rho": "12/101"
+      },
+      "2": {
+        "H_r_squared": "14/3",
+        "N": "2/7",
+        "c_T": "7",
+        "rho": "6"
+      },
+      "5/4": {
+        "H_r_squared": "61/96",
+        "N": "1/2",
+        "c_T": "5/2",
+        "rho": "12/5"
+      },
+      "7/6": {
+        "H_r_squared": "127/324",
+        "N": "7/12",
+        "c_T": "2",
+        "rho": "12/7"
+      }
+    },
+    "independent_physical_clock_pullbacks": [
+      {
+        "A": "2",
+        "F_T_h": "7/2",
+        "G": "1",
+        "G_T_h": "1/14",
+        "N": "2/7",
+        "common_speed_squared": "49",
+        "physical_measure_ratio": "7/16"
+      },
+      {
+        "A": "3/2",
+        "F_T_h": "32/15",
+        "G": "2",
+        "G_T_h": "40/27",
+        "N": "5/4",
+        "common_speed_squared": "36/25",
+        "physical_measure_ratio": "32/135"
+      }
+    ],
+    "literal_source_lapse_scale_jet_directions": 2,
+    "mixed_sign_auxiliary_ce_cf": [
+      "1/2",
+      "1"
+    ],
+    "mixed_sign_flat_spring": "4"
+  },
+  "independent_physical_clock_bridge": [
+    {
+      "inputs": {
+        "A": "2",
+        "G": "1",
+        "N": "2/7"
+      },
+      "primary_minus_independent": {
+        "F_T_h": "0",
+        "G_T_h": "0",
+        "common_speed_squared": "0"
+      }
+    },
+    {
+      "inputs": {
+        "A": "3/2",
+        "G": "2",
+        "N": "5/4"
+      },
+      "primary_minus_independent": {
+        "F_T_h": "0",
+        "G_T_h": "0",
+        "common_speed_squared": "0"
+      }
+    }
+  ],
+  "nonempty_actual_local_solution": {
+    "analytic_ODE": "A'=-6H_r A(A-1)/(6A-5),a_r'=H_r a_r,psi'=N sqrt(2rho),H_r=positive square root",
+    "constraints": "rho=p=12q(A-1)/(epsilon A),N=A/(6A-5),H_r\u00b2=2q(A\u00b3-1)/(3G)",
+    "domain_and_clock": "A=1+x>1,a_r>0,t common-r proper time; dT=N dt physical h time",
+    "existence": "Analytic local ODE and open positive domain give a local actual rolling family for every A0>1,a_r0>0; no numeric uniform time radius computed",
+    "full_equations": "H_r'=-6qA\u00b3(A-1)/[G(6A-5)]; both Einstein lapses/accelerations, all u components and actual free-scalar current equation vanish",
+    "initial_A2": {
+      "A": "2",
+      "D_h_psi": "2*sqrt(3)*sqrt(q)/sqrt(epsilon)",
+      "H_r_prime": "-48*q/(7*G)",
+      "H_r_squared": "14*q/(3*G)",
+      "N": "2/7",
+      "physical_speed": "7",
+      "rho": "6*q/epsilon"
+    },
+    "same_specified_extension": "B=-6q,beta4g=beta4f=-q,G=F,q,G,epsilon>0; one free canonical scalar V=0",
+    "scope": "H_h=H_r/A>0, so this non-vacuous example is expanding, not CD, a bounce, global solution, scalar/vector-health or cutoff witness"
+  },
+  "not_established": [
+    "A universal asymmetric light-only matching exclusion from a full-parent high-frequency cone",
+    "The common-channel theorem on an exchange-breaking branch, mixed/negative links, singular lapses, or noncanonical/quantum anisotropic sources",
+    "A stationary massive pole or positive heavy Green function inferred from a cosmological algebraic mass",
+    "An original CD/M1 background/operator match, or scalar/vector stability of the auxiliary extension",
+    "A bound on finite-band time advance, higher-operator or loop correction, cutoff or UV completion",
+    "A closed causal curve or universal UV inconsistency solely from a cone comparison",
+    "An exclusion across changed actions, additional u kinetic terms, or all trimetric/composite possibilities",
+    "Closure of S6, either original P8 track, or P8"
+  ],
+  "primary_source": {
+    "url": "https://arxiv.org/pdf/1804.04671",
+    "used_for": "Action/source equations 2.1-2.17 and actual-vierbein warning section 5.1, not a rolling TT formula or imported cutoff"
+  },
+  "prior_context_sha256": {
+    "S6_13_actual_auxiliary_parent": "062ea71b4fcb139af3ea727f013eeeb3a340b6e37207cb872e372eacce09631e",
+    "conditional_original_CD_M1_free_chi": "caf8c8e688a7565b9d00f921c099a28da00f97522ed26ad182a8227eb80cd4dd",
+    "original_B_curvature_and_physical_cone_contract": "73dd18f7a4b56a0205f9fbc6a4b09b213a3c280b3f0274414a255635b04e2b09"
+  },
+  "quantitative_conditional_error_budget": {
+    "coefficient_threshold": "If |deltaG|<=E_G,|deltaF|<=E_F,G_T,h-E_G>0, then Fnew-Gnew>=G_T,h delta(2+delta)-E_G-E_F",
+    "conditional_M1_comparison": "If the frozen canonical free-chi velocity M_target/(10tau) is preserved, other matter is positive canonical, and 2G=M_target\u00b2 with m0\u00b2=2q/G, then c_T-1>=A/[100(m0 tau)\u00b2]",
+    "exact_gap": "delta=A n_h/(4q); c_T\u00b2-1=delta(2+delta),F_T,h-G_T,h=G_T,h delta(2+delta)",
+    "meaning": "A positive margin preserves the faster cone; an error sum at least the uncorrected gap is necessary, not sufficient, to repair it in that physical two-derivative representative",
+    "not_an_error_estimate": "No actual omitted-operator, loop, background-displacement, nonlocal/dispersive or cutoff bound is supplied; one-scalar example is not identified with old clock-plus-chi matter",
+    "numeric_interface": "Exact finite real inputs only; reject bool, floats, nonfinite values and unstated/wrong sign domains"
+  },
+  "schema": 1,
+  "source_audit": "notes/sources.md",
+  "source_sha256": {
+    "FORMULATION.md": "9bba6b72a50de2d31d9dcbdda9bc0097150accc2f0d5465214863f69bb6f385d",
+    "README.md": "591dcf407bd52f1646a7685ec3657affdb01a6bb9d49eff8ca89c15592e905ff",
+    "notes/proof.md": "f500580706159ff0b5141b3dce0b3c1fc6abe13928887425898d09272ecc735e",
+    "notes/sources.md": "108ec594b05b10bca8c015c4808b77ab77973f0123ae11924b2549be5dbe8809",
+    "src/p8_trimetric_cones/__init__.py": "bc418a6f9daf493e23f3ccdc8cc12679612402ccd91a2309d5cf45c31e381b6f",
+    "src/p8_trimetric_cones/background.py": "6198f2131d7b18821ceaf214d82d5a99076cbac01054897a5f7e05508e5a75da",
+    "src/p8_trimetric_cones/bounds.py": "abf6164d6bb1bca60610ca61e02854ee031096231a487e8abb759fe34410e703",
+    "src/p8_trimetric_cones/independent.py": "2fb8443ca438483778bb96d2bd671536d763021c1b5da520ba51e16c623b2cc0",
+    "src/p8_trimetric_cones/rolling.py": "09b0796603df9f336239c63122973199e3a288635113ff2a05b75ad9ce27f412",
+    "src/p8_trimetric_cones/tensor.py": "eb9f69c5fca196c74dbf1e384fe308fba6c377d315a539a407f8e643365a3b11",
+    "src/p8_trimetric_cones/verify.py": "39dea656581f40a37b6552675a4cfcb1d7eae02e92e968aaa12b3c48c65a2f74",
+    "tests/conftest.py": "ed271ee3f88fc51151269e8b091d0d0a4ca32837349715e8b7c74737c0c94345",
+    "tests/test_trimetric_cones.py": "5a2ada2d8d6cea406c184b6b1fc82c4641cfd324e2e7bb46ffcd3fec7e3df473",
+    "tests/test_trimetric_cones_certificate.py": "f9ad750ca5a5c7c4e790855d259ff77968f26c400be57f18dede643e1ca2b909",
+    "tests/test_trimetric_cones_covariant_audit.py": "17e58968dc1607f1b9174f7c310940f1c4ec1eb1a31b47ab6fe8c8e76ac00302"
+  },
+  "status": "POSITIVE_LINK_FULL_TENSOR_CONE_OBSTRUCTION; SYMMETRIC_PHYSICAL_COMMON_CHANNEL_EXCEEDS_MATTER_CONE; P8_OPEN",
+  "symmetric_physical_common_channel": {
+    "additional_hypotheses": "G=F,p_g=p_f=q>0,beta4g=beta4f,e=v=r; u=diag(N,A,A,A)r,N,A>0, with B and common endpoint arbitrary where such actual solutions exist",
+    "exact_speed": "c_T=A/N=1+A n_h/(4q)>1 when n_h>0",
+    "matching_scope": "The common physical tensor already exceeds the actual matter cone; integrating out only the relative channel cannot fix this exact symmetric quadratic action",
+    "normalization": "f_c=sqrt(a_h\u00b3G_T,h)/2,Y=f_c gamma,theta=D_T log f_c; canonical boundary -(theta Y\u00b2)'/2 and frequency c_T\u00b2kphys\u00b2-f_c''/f_c",
+    "physical_TT_coefficients": "G_T,h=2GN/A\u00b3>0,F_T,h=2G/(NA)>0; F_T,h/G_T,h=A\u00b2/N\u00b2",
+    "relative_mass_caution": "Relative algebraic mass 2qA\u00b2/(GN)>0 is not an adiabatic gap or canonical-frequency theorem; common cosmological channel is not a stationary mass pole",
+    "source_and_projection": "gamma=(gamma_e+gamma_v)/2,delta=(gamma_e-gamma_v)/2; gamma_u=gamma+A j/q; physical source j gamma and contact A j\u00b2/(2q)",
+    "time_dependence": "Exact exchange symmetry decouples common and odd tensor channels despite time-dependent A,N; unequal Einstein coefficients do not inherit this"
+  },
+  "verification_boundary": "Exact symbolic and independent Fraction/polynomial replay plus separately authored covariant/action/source audit and written local-existence/positive-weight proof; not proof-assistant formalized",
+  "written_proof": "notes/proof.md"
+}
