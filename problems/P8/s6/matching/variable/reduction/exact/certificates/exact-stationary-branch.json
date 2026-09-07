@@ -1,0 +1,358 @@
+{
+  "actual_domain": "M,tau>0; c=2+delta; 0<delta<=1/100; |T|<=tau/100",
+  "calibration": {
+    "box_proof": "separate exact Fraction interval certificate supplies the uniform Banach/positive-lapse margins",
+    "center_b_second": "-2*c*(c + 2)/tau**2",
+    "center_lapse": "c**2/2",
+    "center_metric00": "c**4/4",
+    "claim": "P8-S6.33.EXACT_STATIONARY",
+    "joint_IFT_derivative": -32,
+    "normalized_center_mass": "own-f16 and coupled-relative80 are different inner operators",
+    "physical_domain": "0<delta<=1/100, |T|<=tau/100; c=2+delta; M,tau>0",
+    "regularity": "b C2, N C1 and positive; parity follows from local uniqueness, not an initial assumption",
+    "scope": "exact isotropic own-f on fixed g=eta, theta=T; not a full-parent/CD solution, selected Green inverse or controlled matching"
+  },
+  "center_jets": {
+    "N_center": "c**2/2",
+    "N_uu_center": "(27*c**4 - 12*c**3 - 236*c**2 + 592*c - 512)/4",
+    "b_center": "2",
+    "b_uu_center": "-2*c*(c + 2)",
+    "b_uuuu_center": "-12*(9*c**5 + 14*c**4 - 82*c**3 + 44*c**2 + 168*c - 256)/c",
+    "joint_zeta_c_center": "0",
+    "joint_zeta_center_as_function_c": "3*(c + 2)**2/(2*c)",
+    "joint_zeta_v_center": "204",
+    "metric00_center": "c**4/4",
+    "metric00_center_defect": "(c - 2)**2*(c + 2)**2/4",
+    "retained_metric00_center": "2*c**2 - 4"
+  },
+  "claim": "P8-S6.33.EXACT_STATIONARY",
+  "controls": {
+    "analytic_background_not_a_selected_tensor_inverse": true,
+    "lapse_uses_total_implicit_derivative": true,
+    "literal_c_equals_2_excluded": true,
+    "no_division_by_scale_velocity_at_center": true,
+    "original_physical_g_clock_and_free_chi_unchanged": true,
+    "own_f_inner_16_not_coupled_relative_80": true,
+    "parity_proved_not_assumed": true,
+    "rejected_inputs": 35
+  },
+  "date": "2026-09-07",
+  "exact_residual_count": 51,
+  "exact_residuals": {
+    "independent_four_coordinate_action_and_frozen_profile_bridges": {
+      "literal_coordinate_EH_boundary": "0",
+      "literal_coordinate_full_EH_to_ADM": "0",
+      "literal_coordinate_full_potential": "0",
+      "literal_coordinate_isotropic_action": "0",
+      "literal_coordinate_lapse_equation": "0",
+      "literal_coordinate_physical_EH": "0",
+      "literal_coordinate_spatial_equation": "0",
+      "literal_coordinate_tensor_action": "0",
+      "literal_coordinate_tensor_f_Euler": "0",
+      "literal_coordinate_tensor_g_Euler": "0",
+      "unchanged_frozen_B1": "0",
+      "unchanged_frozen_B4": "0",
+      "unchanged_frozen_algebraic_r_cubed": "0",
+      "whole_algebraic_factor": "0"
+    },
+    "literal_equations_local_uniqueness_center_and_inner": {
+      "center_no_bdd_division": "0",
+      "center_spatial_solution": "0",
+      "fixed_center_F": "0",
+      "fixed_center_Jacobian": "0",
+      "fixed_center_equation": "0",
+      "inner_D_limit": "0",
+      "inner_coupled_center_mass": "0",
+      "inner_own_center_K": "0",
+      "inner_own_center_mass": "0",
+      "inner_own_vs_relative": "0",
+      "joint_F_v": "0",
+      "joint_F_zeta": "0",
+      "joint_T_v_log": "0",
+      "joint_T_zeta_log": "0",
+      "joint_b_v_log": "0",
+      "joint_b_zeta_log": "0",
+      "joint_center_G": "0",
+      "joint_center_G_zeta": "0",
+      "joint_center_lapse": "0",
+      "joint_center_zeta_c": "0",
+      "joint_center_zeta_v": "0",
+      "joint_factor_F": "0",
+      "literal_EH_boundary": "0",
+      "literal_f_tensor_equation": "0",
+      "literal_g_tensor_equation": "0",
+      "literal_tensor_potential": "0",
+      "log_root_derivative": "0",
+      "profile_beta1": "0",
+      "profile_center_N_uu": "0",
+      "profile_center_b_uu": "0",
+      "profile_center_lapse": "0",
+      "profile_exact_center_defect": "0",
+      "profile_exact_metric00": "0",
+      "profile_retained_metric00": "0",
+      "profile_root_ratio": "0",
+      "regular_H": "0",
+      "unfactored_consistency": "0"
+    }
+  },
+  "exact_tensor_action": "M**2*Derivative(q_g(t), t)**2/4 + M**2*b(t)**3*Derivative(q_f(t), t)**2/(4*N(t)) - (q_f(t) - q_g(t))**2*b(t)*beta1(t)/2",
+  "fixed_c_local_Jacobian": "96/(c*(c - 2))",
+  "formulation": "FORMULATION.md",
+  "fraction_whole_box": {
+    "b": [
+      "199/100",
+      "201/100"
+    ],
+    "checks": {
+      "D_nonnegative_on_closed_box": true,
+      "all_checks_are_boolean": true,
+      "contraction_below_one_hundredth": true,
+      "cube_root_lower": true,
+      "cube_root_upper": true,
+      "implicit_derivative_denominator": true,
+      "lapse_above_19over10": true,
+      "lapse_below_21over10": true,
+      "negative_F": true,
+      "negative_total_scale_derivative": true,
+      "outward_contains_A": true,
+      "outward_contains_F": true,
+      "outward_contains_J": true,
+      "outward_contains_N": true,
+      "outward_contains_Q": true,
+      "outward_contains_R": true,
+      "outward_contains_T": true,
+      "outward_contains_T_v": true,
+      "outward_contains_T_zeta": true,
+      "outward_contains_b_cubed": true,
+      "outward_contains_b_total_v": true,
+      "outward_contains_b_v": true,
+      "outward_contains_zeta_v": true,
+      "positive_A": true,
+      "positive_J": true,
+      "positive_Q": true,
+      "positive_R": true,
+      "scale_above_19over10": true,
+      "scale_below_21over10": true,
+      "self_map_lower": true,
+      "self_map_upper": true
+    },
+    "contraction_upper": "1/100",
+    "delta_zero_is_only_desingularized_limit": true,
+    "domain": {
+      "delta": [
+        "0",
+        "1/100"
+      ],
+      "v": [
+        "0",
+        "1/10000"
+      ],
+      "zeta": [
+        "11",
+        "13"
+      ]
+    },
+    "full_parent_solution": false,
+    "literal_delta_positive": true,
+    "outward_enclosures": {
+      "A": [
+        "199997/200000",
+        "1"
+      ],
+      "F": [
+        "-800843/100000",
+        "-3987331/500000"
+      ],
+      "J": [
+        "9993/5000",
+        "402401/200000"
+      ],
+      "N": [
+        "1981609/1000000",
+        "2042137/1000000"
+      ],
+      "Q": [
+        "1987067/125000",
+        "16"
+      ],
+      "R": [
+        "124291/1000000",
+        "15733/125000"
+      ],
+      "T": [
+        "11864487/1000000",
+        "12164087/1000000"
+      ],
+      "T_v": [
+        "183845547/1000000",
+        "56451139/250000"
+      ],
+      "T_zeta": [
+        "-1/200000",
+        "1627/1000000"
+      ],
+      "b_cubed": [
+        "1986251/250000",
+        "125713/15625"
+      ],
+      "b_total_v": [
+        "-325707/40000",
+        "-7934789/1000000"
+      ],
+      "b_v": [
+        "-8142511/1000000",
+        "-7934789/1000000"
+      ],
+      "zeta_v": [
+        "91922371/500000",
+        "226172497/1000000"
+      ]
+    },
+    "strict_margins": {
+      "contraction_below_one_hundredth": "8373/1000000",
+      "cube_root_lower": "12881/200000",
+      "cube_root_upper": "74969/1000000",
+      "implicit_derivative_denominator": "998373/1000000",
+      "lapse_above_19over10": "81609/1000000",
+      "lapse_below_21over10": "57863/1000000",
+      "negative_F": "3987331/500000",
+      "negative_total_scale_derivative": "7934789/1000000",
+      "positive_A": "199997/200000",
+      "positive_J": "9993/5000",
+      "positive_Q": "1987067/125000",
+      "positive_R": "124291/1000000",
+      "scale_above_19over10": "9/100",
+      "scale_below_21over10": "9/100",
+      "self_map_lower": "864487/1000000",
+      "self_map_upper": "835913/1000000"
+    },
+    "tensor_Green_inverse_selected": false,
+    "u_half_width": "1/100"
+  },
+  "independent_arb_whole_box": {
+    "box": {
+      "delta": [
+        "0",
+        "1/100"
+      ],
+      "v": [
+        "0",
+        "1/10000"
+      ],
+      "zeta": [
+        "11",
+        "13"
+      ]
+    },
+    "endpoint_is_only_analytic_extension": true,
+    "precision_bits": 256,
+    "strict_rational_enclosures": {
+      "F": {
+        "lower": "-81/10",
+        "strict": true,
+        "upper": "-79/10"
+      },
+      "N": {
+        "lower": "19/10",
+        "strict": true,
+        "upper": "21/10"
+      },
+      "Q": {
+        "lower": "15",
+        "strict": true,
+        "upper": "17"
+      },
+      "R": {
+        "lower": "3/25",
+        "strict": true,
+        "upper": "13/100"
+      },
+      "T": {
+        "lower": "11",
+        "strict": true,
+        "upper": "13"
+      },
+      "T_zeta": {
+        "lower": "-1/100",
+        "strict": true,
+        "upper": "1/100"
+      },
+      "b": {
+        "lower": "19/10",
+        "strict": true,
+        "upper": "21/10"
+      },
+      "b_v": {
+        "lower": "-83/10",
+        "strict": true,
+        "upper": "-77/10"
+      }
+    },
+    "whole_box_not_grid": true
+  },
+  "inner_equation_coefficients": {
+    "coupled_algebraic_center_mass_squared": "(8*c**2 + 128)/(c*tau**2*(c - 2))",
+    "coupled_relative_inner_coefficient": "80/(8*x**2 + 1)",
+    "g_inner_coefficient": "64/(8*x**2 + 1)",
+    "own_f_center_K": "16*M**2/c**2",
+    "own_f_center_mass_squared": "8*c/(tau**2*(c - 2))",
+    "own_f_inner_coefficient": "16/(8*x**2 + 1)"
+  },
+  "joint_center_IFT_Jacobian": "-32",
+  "not_established": [
+    "The physical-g/clock equations or a full complete stable CD/parent cosmology",
+    "A unique own-f functional on a neighborhood of all physical metrics/clocks",
+    "Tensor homogeneous data, a retarded/advanced/Feynman inverse or Green norm",
+    "Uniform all-order derivative expansion, full source/matter matching or a physical cutoff",
+    "Original CD coefficient equality, positivity/V/G applicability or original P8 completion"
+  ],
+  "numeric_center_calibration": {
+    "K_f": "160000/13467",
+    "M_squared": "3",
+    "N": "40401/20000",
+    "N_TT": "6771420427/1600000000",
+    "b": "2",
+    "b_TT": "-80601/20000",
+    "c": "201/100",
+    "coupled_relative_mass_squared": "400802/201",
+    "delta": "1/100",
+    "f00": "1632240801/400000000",
+    "full_parent_solution": false,
+    "own_f_mass_squared": "402",
+    "physical_cutoff_claimed": false,
+    "tau": "2"
+  },
+  "prior_sha256": {
+    "S6_32_recursively_rebuilt": "d392a734f46d8f4c1c39523c7dc3d41a88634ec0e3dfa645365c3b4d14eb344c",
+    "does_not_use_S6_31_deformed_interactions": true,
+    "same_off_shell_unit_volume_probe_not_actual_FLRW": true,
+    "same_unchanged_S6_20_parent_and_S6_30_physical_frame": true
+  },
+  "probe": "g=eta, theta=T; exact own-f only, not g/clock equations or the rolling CD solution",
+  "schema": 1,
+  "source_audit": "notes/sources.md",
+  "source_sha256": {
+    "FORMULATION.md": "4ffd2b4561596a988b0ac7d0c821f9c0a1d49ada552adc6031742eacff0decbe",
+    "README.md": "f13af73b4a23bb31cab6431eee8457f102c2897279cd53c4168dadfaa0996e04",
+    "notes/intervals.md": "278c6c483b91efee86f00ca102c5eff415ce48db8f045002bc4d5eefa033b29d",
+    "notes/sources.md": "cce69deba89acc3e7e69da3115e8838fdd6a00768a8ba4963a533143c507484b",
+    "notes/stationary.md": "55a388d9246cb6a274002d9fe59a816de4ceb7c94b5b10e23698ca31b94d1b87",
+    "src/p8_exact_stationary/__init__.py": "6225579bf94d2e3d5141f197c143280107bb7097fa0dfe571c2e176785abe5fe",
+    "src/p8_exact_stationary/audit.py": "3f79ac21f5302e077f0fdecd25896e3155afc929abeb5214c3e89ae2fab2d310",
+    "src/p8_exact_stationary/bridges.py": "aa3becf23c22e3ee30fbdc6cc1b6c2b289cdd972503308fdc4c78931541cc022",
+    "src/p8_exact_stationary/intervals.py": "9b8cb195b2d198ae380a70fb8eb422c85d197c9f45210aabac72d9f85cd70c67",
+    "src/p8_exact_stationary/stationary.py": "003017cdd3988829687b0f12256746c4fa5082abe06dd270425cbdb2732bf643",
+    "src/p8_exact_stationary/verify.py": "1658dbbfe6e983b2c6661dd8a9ebf4d9bdf3b8a3441937cc3103893bb8f72de0",
+    "tests/conftest.py": "4ef6177b2d9d0f4bb36c49a02db445cff1026337f1128b4c069e0906ba927eea",
+    "tests/test_exact_certificate.py": "a8113ae3172cf2f5ef33e055506388888dc2c7afc8186c32f5f0deaf933ea08e",
+    "tests/test_exact_independent_audit.py": "b6812e893668ba4839324b876672273febbd70294a0e9a67b9a2c1d9057d5fac",
+    "tests/test_exact_intervals.py": "f5056aeaf01dc641f2b8c92f882745a844ddefeb21f7af18493530d1abfca215",
+    "tests/test_exact_stationary.py": "2fcbac839a839e4cfdd415bd96439361cdd5eee4d7073af7c612a9e97c3b66d7"
+  },
+  "status": "EXACT_OWN_F_BACKGROUND_WITH_UNIFORM_POSITIVE_LAPSE_AND_DISTINCT_INNER_OPERATORS; ORIGINAL_P8_OPEN",
+  "verification_boundary": "Written Euler/analytic IFT and Banach proof, exact identities, independent Fraction and Arb whole-box enclosures; not proof-assistant formalization or controlled EFT",
+  "written_proofs": [
+    "notes/stationary.md",
+    "notes/intervals.md"
+  ]
+}

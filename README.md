@@ -356,8 +356,14 @@ around a pre-registered problems document and a certificate-gated ledger.
   cancels against the previous formal order on the specified off-shell
   probe. Neither that cancellation nor the general theorem supplies an
   all-order error bound or the actual full CD propagation equation.
+  The [exact own-f branch](problems/P8/s6/matching/variable/reduction/exact/README.md)
+  now has a uniform positive-lapse construction on the same off-shell
+  probe, with uniqueness through the turning point proved without a
+  parity assumption. Its exact tensor action distinguishes the own-f
+  and coupled-relative inner equations; an exact background alone does
+  not choose a causal inverse or solve the physical-g/clock equations.
 
-The [current P8 continuation audit](docs/assessment-2026-09-07-p8-higher-order-freedom.md) separates
+The [current P8 continuation audit](docs/assessment-2026-09-07-p8-exact-own-metric.md) separates
 the completed scoped P8(a) objective and certificate gates from the
 outstanding P8(b) UV-matching and positivity questions.
 P8 is not marked finished or closed.
