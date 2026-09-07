@@ -1,0 +1,68 @@
+{
+  "checked_controls": {
+    "invalid_exact_bound_inputs_rejected": 16,
+    "momentum_three_bound_example": "16/45",
+    "numeric_boundary": "Positive inputs calibrate a conditional bound; they do not certify a background solution",
+    "unit_momentum_bound_example": "16/15"
+  },
+  "claim": "P8-S6.25.RECIPROCAL",
+  "continuous_proof_chain": {
+    "CD_geometry": "For a=(1+u²)²,alpha2: (h/y)'=2(1+u²)²(1+7u²)>0",
+    "center": "z=h/c, z0=0, z'0=h'0/c0>0; actual source equation forces c0>y0 without dividing byh",
+    "finite_window": "Integral_u0^L b*c du <=alpha/z(u0)*(1/a(u0)-1/a(L))",
+    "geodesics": "f null dλ/du=bc/|p| and noncomoving timelike ds/du<=bc/|p|; g causal integrands bounded below positively",
+    "invariant": "D=h/y-z; D'+[P/(2y²z)]D=(h/y)'>=0, integrated only from a positive puncture",
+    "order": "D>0, c>y, z'>0 for every u>0; no finite future branch crossing",
+    "scale": "(a*a')'>=0 and nondegenerate bounce imply a>=a0 and a tends to infinity",
+    "tail": "Integral_u0^infinity b*c du <=alpha/(z(u0)*a(u0)), for every u0>0"
+  },
+  "date": "2026-09-07",
+  "exact_residual_count": 8,
+  "exact_source_and_differential_residuals": {
+    "CD_geometric_sign_polynomial": "0",
+    "affine_bound_remainder": "0",
+    "affine_primitive_derivative": "0",
+    "integrating_factor_equation": "0",
+    "lapse_order_identity": "0",
+    "literal_f_null_source": "0",
+    "literal_relative_shift_sign_prefactor": "0",
+    "reciprocal_scale_derivative": "0"
+  },
+  "formulation": "FORMULATION.md",
+  "hypotheses": {
+    "domain": "Specified future coordinate domain u>=0 with spatial R³; time-reflected hypotheses for past claims",
+    "geometry": "Positive C2 a; h=a'/a; h0=0,h'0>0; (a*a')'>=0; b=alpha/a,alpha>0",
+    "lapse_and_link": "Positive C1 c, finite at every finite u; positive continuous finite P=2(beta1+2beta2*y+beta3*y²)",
+    "normalization": "Dimensionless g time u=T/tau; beta=tau² beta_physical/M²; common positive Einstein coefficient divided out",
+    "source": "No additional f null stress; actual undivided f metric equation retained"
+  },
+  "not_established": [
+    "No requirement that original P8 make the second metric complete; physical g is complete here",
+    "No curvature singularity or common extension/inextendibility verdict",
+    "No conclusion about comoving f timelike completeness or global scalar health",
+    "No assertion for nonreciprocal scales, extra f null stress, P zeros/sign changes or dropped geometric hypothesis",
+    "No original C/D operator map, light-only exclusion, mass gap, cutoff, loop or UV verdict",
+    "No G1 certificate dependency or transfer of its separate mass asymptotics"
+  ],
+  "prior_context_sha256": {
+    "S6_20_source_aware_metric_and_shift_variations_with_recursive_pins": "335cd52028baf56b30c75377aa7e6edd7ec86db2799f49b13f467242674fc4d0"
+  },
+  "schema": 1,
+  "source_audit": "notes/sources.md",
+  "source_sha256": {
+    "FORMULATION.md": "64f9ea634bd47ed161301e318fde49f496a26bf5721d81a768b044af2db681c4",
+    "README.md": "630b2f6ece3952306a14e90c124e0fbf71a4938b4312dcde9f05a4f577120926",
+    "notes/proof.md": "8a0781b13166ae188a7f4fa4cb31e4abb445f9143f4d078234e79a5af896246a",
+    "notes/sources.md": "bd5f747020664a674843ff2057c5cd20ff4cf109862cfb7b5c65447a19f117c7",
+    "src/p8_reciprocal_geometry/__init__.py": "76d276f74705b06945e786641200e44f55914d6b40aeeabc186b3d22c6bae630",
+    "src/p8_reciprocal_geometry/identities.py": "84629cfa47335845328c993ac76e2201a5978600b6090dbf167025a9699609eb",
+    "src/p8_reciprocal_geometry/verify.py": "2a79c4027dd393e27ce2ad25619056e87d2bcb9651fd06a9c27726ceaf2079d7",
+    "tests/conftest.py": "1329f3da983aa5d046f739edc00709aa4cca867b5d65d8792a9e48381c9dbed9",
+    "tests/test_reciprocal_certificate.py": "7330bdae7ba66fe30e278ba28ab72bb65455b1a0293a345036024da20c1a60fa",
+    "tests/test_reciprocal_geometry.py": "6fa5c6469b28b9ed770f816d307c9255fb93c2d623deb13135687797a933ed7b",
+    "tests/test_reciprocal_independent_audit.py": "3fcae086ba79d0b8a2b115fd4a71cb0f8307a31955638f5e96458454bc272214"
+  },
+  "status": "CONDITIONAL_RECIPROCAL_F_AFFINE_INCOMPLETENESS_WITH_PHYSICAL_G_COMPLETENESS; ORIGINAL_P8_OPEN",
+  "verification_boundary": "Exact source and differential identities plus separately authored audit and continuous written integrating-factor/geodesic proof; not proof-assistant formalized",
+  "written_proof": "notes/proof.md"
+}

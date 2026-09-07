@@ -314,13 +314,20 @@ around a pre-registered problems document and a certificate-gated ledger.
   and gradient forms and a uniform energy estimate at each fixed c>2.
   The full-parent scalar cone is wider than the matter cone at the center;
   its mathematical high-frequency threshold is not an EFT cutoff.
+  The [causal actual-source theorem](problems/P8/s6/matching/variable/response/forced/README.md)
+  now bounds the full physical tensor response for specified zero data and
+  bounded conserved TT forcing. Its approximation retains heavy-field
+  memory; it is not a local EFT or a delta-convergent fixed-window bound.
   A separate [all-time background exploration](problems/P8/s6/matching/variable/global/README.md)
   remains unpromoted: its physical metric is complete, but its second
   metric has finite null affine tails and its relative algebraic mass
-  tends to zero. Global scalar health, controlled sourced light reduction and
+  tends to zero. A [conditional reciprocal-scale theorem](problems/P8/s6/matching/variable/global/reciprocal/README.md)
+  proves finite second-metric null tails under explicit geometric and
+  source assumptions without excluding physical-g completeness.
+  Global scalar health, a sourced local light-only reduction and
   the vacuum/finite-gravity UV requirements remain open checks.
 
-The [current P8 continuation audit](docs/assessment-2026-09-07-p8-uniform-scalar-principal-sector.md) separates
+The [current P8 continuation audit](docs/assessment-2026-09-07-p8-causal-response-and-global-boundary.md) separates
 the completed scoped P8(a) objective and certificate gates from the
 outstanding P8(b) UV-matching and positivity questions.
 P8 is not marked finished or closed.

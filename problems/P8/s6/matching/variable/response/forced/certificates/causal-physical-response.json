@@ -1,0 +1,234 @@
+{
+  "causal_calibration_at_r_1_over_100": {
+    "Bstar_GH_over_r2": "4747/75",
+    "F0_over_S": "1005003/1000000",
+    "GH_minus_G0_over_r4": "1642361/5625",
+    "GH_over_r2": "101/75",
+    "GL_over_r2": "20000/4991",
+    "Q_error_over_r4": "110758212869/375000000",
+    "RMS_over_stiffness_proxy_lower": "6/13",
+    "feedback": "5003/156250000",
+    "full_heavy_exp_upper": "18684721920121/11201217000000",
+    "full_heavy_exponent": "766261/1500000",
+    "g_error_over_r4": "915",
+    "heavy_perturbation_exponent": "16261/1500000",
+    "l_error_over_r4": "5030018/15625",
+    "l_over_r2": "786250000/156244997",
+    "r": "1/100",
+    "rho_over_r": "101/100",
+    "stiffness_endpoint_upper_times_r2": "100161/10000",
+    "stiffness_lower_times_r2": "79871039/8010000",
+    "u_GHprime_over_r2": "707/150"
+  },
+  "causal_reduction": {
+    "Jost": "f+(z)=exp(i mu z)*2F1(-1/2,3/2;1-i mu;(1-tanh z)/2); W=-2i mu; positive retarded jump1",
+    "approximation": "l0=GL(jL sigma); Qapp=G0[jH sigma-Bop l0]; gapp=ag*l0+bg*Qapp with actual delta-dependent map",
+    "errors": "N(l-l0)<323r^4S; ||Q-Qapp||inf<296r^4S; ||g-gapp||inf<915r^4S<=1000r^4S",
+    "exact_schur": "(L_L-Bopstar GH Bop)l=jL sigma-Bopstar GH(jH sigma); Q=GH(jH sigma-Bop l)",
+    "feedback": "<=320r^4(10+60r^2)<1/10000; exact causal Neumann series",
+    "finite_clock": "rho=sqrt(u^2+delta/8), z=asinh(sqrt8*u/sqrt(delta)), mu=sqrt39/2",
+    "fixed_example": "r=1/100 gives <=1e-5*S for every admitted delta, including K0; absolute C0 source-to-field bound only",
+    "heavy_norms": "GH:Linf->C0 <=101r^2/75; Bopstar GH:Linf->Linf <64r^2; GH-G0:Linf->C0 <292r^4",
+    "inverses": "All retarded with zero data at -r; GL=(d_u^2+A)^-1; GH=(d_u^2+B)^-1",
+    "light_norm": "N(l)=||l||inf+r||l'||inf; ||GL||Linf->N<5r^2; ||Bop||N->Linf<=10+60r^2",
+    "universal_kernel": "G0=sqrt(rho(u)rho(s))*Im[f+(z(u))*conj f+(z(s))]/mu for u>=s, zero otherwise"
+  },
+  "checked_controls": {
+    "RMS_is_not_an_exact_bandlimit_and_proxy_is_not_a_rolling_gap": true,
+    "RMS_over_stiffness_proxy_lower": "6/13",
+    "actual_K_zero_admitted": true,
+    "actual_full_source_diagonal": "2",
+    "b_delta_not_jointly_continuous_or_uniform_delta_differentiable": true,
+    "complementary_diagonal_limit": "8/5",
+    "fixed_r_error_bound_does_not_decrease_with_delta": true,
+    "impulse_diagonal_not_low_frequency_error_verdict": true,
+    "mass_remainder_center_path": "-32",
+    "mass_remainder_punctured_path": "-141",
+    "omitted_jH_source_fails_actual_g_diagonal": true,
+    "prepared_limit_source_diagonal": "2/5",
+    "rejected_exact_domain_calls": 26,
+    "retarded_kernel_zero_for_output_before_source": true
+  },
+  "claim": "P8-S6.26.FORCED",
+  "coefficient_envelope_at_r_1_over_100": {
+    "A": "95126926262986488190757572045966132098840686277618280293/12500000000000000000000000000000000000000000000000000000",
+    "C": "1503713139808506717959756620332213741690993504610765342007888613649543894930596259/156250000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "E_over_r_squared": "4740548323186281105550134315406078101054384277565705140883185129108140001/100000000000000000000000000000000000000000000000000000000000000000000000",
+    "ag_squared": "2001201300640153020121502060001/2500000000000000000000000000000",
+    "b_analytic": "7617457021717883197839554213945731482503678925139227232176183350244846107134085298965153219006200001/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "bg_squared": "16/5",
+    "c_upper": "2000001/1000000",
+    "d_upper": "10001/10000",
+    "dc_and_fc": "1200600420162030603012150003/125000000000000000000000000",
+    "jH_squared": "1000600150020001500060001/1250000000000000000000000",
+    "jL_squared": "2003604063434142987703220064242440086380860893247972226058462631416375302180001/10000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "mass_N_delta_derivative": "32",
+    "mass_N_v_derivative": "1008",
+    "mass_remainder": "1211/8",
+    "omega_over_u": "1200600420162030603012150003/250000000000000000000000000",
+    "omega_v": "2221903930470607771826908095431541987703757067395700579625615973120748055440009/62500000000000000000000000000000000000000000000000000000000000000000000000000",
+    "r": "1/100",
+    "t": "1/10000",
+    "theta_over_u": "18/5",
+    "theta_v": "2083231891287554556846535817818799800487029518990009/78125000000000000000000000000000000000000000000000",
+    "total_bounded_B": "161"
+  },
+  "date": "2026-09-07",
+  "exact_residuals": {
+    "actual_clock_retarded_kernel": {
+      "Wronskian_clock_cancellation": "0",
+      "actual_Liouville_chain_rule": "0",
+      "hypergeometric_to_Poschl_Teller": "0",
+      "pole_mu": "0",
+      "positive_retarded_jump": "0"
+    },
+    "literal_action_physical_source": {
+      "actual_A_including_K_zero": "0",
+      "actual_B_including_K_zero": "0",
+      "actual_algebraic_mass": "0",
+      "adjoint_derivative": "0",
+      "adjoint_multiplication": "0",
+      "full_formal_adjoint_boundary": "0",
+      "full_physical_retarded_diagonal": "0",
+      "literal_g_source_H": "0",
+      "literal_g_source_L": "0"
+    },
+    "positive_mass_pole_isolation": {
+      "D_positive_polynomial": "0",
+      "N_delta_derivative": "0",
+      "N_v_derivative": "0",
+      "actual_mass_v_formula": "0",
+      "mass_quotient_nonpositive": "0",
+      "mixed_denominator_bound": "0"
+    },
+    "symplectic_source_projection": {
+      "actual_full_source_diagonal": "0",
+      "nonprepared_complement_not_zero": "0",
+      "prepared_limit_physical_ag_squared": "0",
+      "prepared_limit_projection": "0",
+      "source_projection_closed_equation": "0",
+      "source_projection_first_derivative_cancellation": "0"
+    }
+  },
+  "formulation": "FORMULATION.md",
+  "independent_Fraction_replay": {
+    "continuous_polynomial_replay": {
+      "actual_center_retarded_source": "2",
+      "complementary_center_projection": "8/5",
+      "mass_center_remainder": "-32",
+      "mass_punctured_remainder": "-141",
+      "positive_polynomial_coefficients": 162,
+      "prepared_center_projection": "2/5",
+      "source_aware_schur_control": [
+        "9/11",
+        "-8/11"
+      ]
+    },
+    "exact_arithmetic_regression_rows": [
+      {
+        "causal_constants": 19,
+        "coefficient_constants": 21,
+        "r": "1/100"
+      },
+      {
+        "causal_constants": 19,
+        "coefficient_constants": 21,
+        "r": "1/1000"
+      },
+      {
+        "causal_constants": 19,
+        "coefficient_constants": 21,
+        "r": "1/1000000"
+      }
+    ]
+  },
+  "not_established": [
+    "No local-in-time derivative expansion or arbitrary-source local light-only EFT",
+    "No delta-convergence of the stated fixed-r error bound, or relative error where the response may vanish",
+    "No error budget resolving an O(delta) locked-cone effect or importing the prepared center coefficient for arbitrary forcing",
+    "No uniform raw physical derivative error from the C0 norm or a low-frequency error from the impulse diagonal",
+    "No identification of the declared RMS scale with a Fourier bandlimit or sqrt(B) with a rolling spectral gap/cutoff",
+    "No exclusion of other source/preparation/history classes or every possible low-energy reduction",
+    "No characteristic, causality-violation, positivity, UV, scalar/vector health or original C/D matching verdict",
+    "No nonlinear source/backreaction, quantum state-selection, particle-production or global background theorem",
+    "No change to the frozen physical prescription and no original S6/P8 closure"
+  ],
+  "prior_sha256": {
+    "S6_23_prepared_and_replayed_S6_21_S6_20_lineage": "a8d89126980dd8ec458b3161bc8b397f74211736f02e64d4e9e29b95e43a0ade",
+    "adopted_original_S6_contract": "d00df35d5821b05baa61e897725a22ed1ac21d0536b74bdaece3ab0093215901"
+  },
+  "schema": 1,
+  "source_and_scale_boundaries": {
+    "RMS_class": "Nonzero sigma in H1_0(I); Omega_sigma=||sigma'||2/||sigma||2>=pi/(2r)",
+    "center_limit": "Projected retarded diagonal tends2/5, full diagonal2, complement8/5; not low-band error lower bound",
+    "declared_hierarchy": "Omega_sigma/m_proxy>6/13; no parametrically small version of this particular RMS/proxy hierarchy via delta",
+    "prepared_projection": "Exact symplectic projection has closed-g source a^3 Wg/(2Omega)=a^3/(2Keff), not full source2",
+    "state_dependence": "Nonzero initial heavy data add a homogeneous causal response; not silently projected out",
+    "stiffness_proxy": "m_proxy=inf sqrt(B)>0; r^2 B>=8000/801-161r^2>9; r^2 B(r)<(13/4)^2"
+  },
+  "source_audit": "notes/sources.md",
+  "source_sha256": {
+    "FORMULATION.md": "dd8eb0ec7cf3c94eaf6ef27f1e49b3d42dfe0acc236c09a7bff91cf6d3bb1b21",
+    "README.md": "861efd908d8eab9c58ddc76f7e9eb033830078395f48a4e839f200fb2cb4691c",
+    "notes/proof.md": "b95f840da6cf76a1261ecf31dd7fc6b41ff75c6e15b5d45fa66934087eeaf50d",
+    "notes/sources.md": "187260b7837414aeb3a67ba86e44b4fa1a5a117148850c2f4b1f551be3f1c98b",
+    "src/p8_variable_forced/__init__.py": "8297691be40a204fb180d0cf5c2942b458ca7e2028537a512f5c53017cfd5914",
+    "src/p8_variable_forced/bounds.py": "ba9d0f237a552aecc1842a00c4ac138123f8c28da8c0ee7f252f7aac77e74b86",
+    "src/p8_variable_forced/coefficients.py": "4aacb44215f408aa31f0d95238447d7e86db2e4cf59bc3e1dd83bd9e72ed924c",
+    "src/p8_variable_forced/exact.py": "77e1752fbf5663a808416a1b9fe11803c1e204230112ac6307faf10eb17c5824",
+    "src/p8_variable_forced/independent.py": "2e9218443bd0fb5b97d251d0f8e73d09610d9938a812da4872d77da731453929",
+    "src/p8_variable_forced/kernel.py": "d8a945daf6782f3e7220d361018ba8cbebcdecc41d641c869fd291ac2bcf921f",
+    "src/p8_variable_forced/operator.py": "bd87775a1370867b3b1c95f241dfc5ed8de6642546ef175db9418cb57a707aee",
+    "src/p8_variable_forced/source.py": "28e6b7bd23306490b8e0d6173e0a70addfe6557e8c74415954e35324e8d8bf31",
+    "src/p8_variable_forced/verify.py": "9539ba94f70ecc91bfa8fdb79dc715d47c789766d2557d819e74fbb57031f2cf",
+    "tests/conftest.py": "91fe02a20bae89721837e9a663ac0e7e1cfc30aa7c5e01d8db0fee0d87ec272c",
+    "tests/test_forced_bounds.py": "5a842f517607b6dd3117360ebf5d7a697d64311fba05e925c03199026b01559d",
+    "tests/test_forced_independent_audit.py": "9718df4467fa79e00fd05de1942211d5452fbcbbe5cd9b565161b80283934de7",
+    "tests/test_forced_operator.py": "5f981d3e5a1af56f5a0fea842063bcd00c9bd808eb6c6441dc7f14d6bcfee46b",
+    "tests/test_forced_report.py": "182b09c5ed8e23ddf223dcf19cec9b7a820002f44f39f13a54893216163e27e9"
+  },
+  "status": "CAUSAL_NONLOCAL_PHYSICAL_G_RESPONSE_BOUND; ORIGINAL_S6_P8_OPEN",
+  "strict_continuous_margins": {
+    "causal_source_norms": {
+      "adjoint_heavy": "53/75",
+      "approximate_forcing": "4997/1000000",
+      "endpoint_stiffness": "683/1250",
+      "feedback": "5311/78125000",
+      "full_light": "151219982/156244997",
+      "heavy_error": "241787131/375000000",
+      "heavy_exponent": "77913/500000",
+      "heavy_propagator": "3717712079879/11201217000000",
+      "kernel_difference": "139/5625",
+      "light_Green": "4955/4991",
+      "light_error": "16857/15625",
+      "physical_error": "85",
+      "positive_stiffness": "7781039/8010000",
+      "rho_factor": "377/20000"
+    },
+    "literal_coefficients": {
+      "A": "17373073737013511809242427954033867901159313722381719707/12500000000000000000000000000000000000000000000000000000",
+      "C": "371286860191493282040243379667786258309006495389234657992111386350456105069403741/156250000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "D_delta_v_coefficient": "39599/1000000",
+      "D_v_squared_coefficient": "99/5000",
+      "E_over_r_squared": "1259451676813718894449865684593921898945615722434294859116814870891859999/100000000000000000000000000000000000000000000000000000000000000000000000",
+      "ag_squared": "498798699359846979878497939999/2500000000000000000000000000000",
+      "b_analytic": "1382542978282116802160445786054268517496321074860772767823816649755153892865914701034846780993799999/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "bg_squared": "4/5",
+      "dc_and_fc": "49399579837969396987849997/125000000000000000000000000",
+      "jH_squared": "249399849979998499939999/1250000000000000000000000",
+      "jL_squared": "7996395936565857012296779935757559913619139106752027773941537368583624697819999/10000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "mass_remainder": "5/8",
+      "theta_negative_on_box": "5997597678359240764108643920666020355036579753397879999/1000000000000000000000000000000000000000000000000000000"
+    }
+  },
+  "unchanged_physical_parent": {
+    "action": "Pinned VARIABLE full two-TT action, not a locked ansatz; source/matter metric g",
+    "actual_source": "sigma=tau^2 Pi/M^2; +1/2 integral dT a^3 Pi gamma_g; conserved external spatial TT polarization",
+    "clock_convention": "+---; R_B=-6(DH+2H^2); Einstein -M^2 R_B/2; u=T/tau; canonical fields divided by M",
+    "domain": "M,tau>0; 0<r<=1/100; I=[-r,r]; 0<delta<=min(1e-9,r^2/100); 0<=K=(tau*kcom)^2<=4",
+    "initial_data": "All four physical/canonical Cauchy data zero at -r; no implicit analytic or quantum state selection",
+    "source_class": "Arbitrary real L-infinity(I), norm S; smooth flat-past pulses included; fixed spatial K per mode"
+  },
+  "verification_boundary": "Full written retarded-ODE proof, exact literal source/clock identities, continuous positive-polynomial envelopes, independent Fraction replay and separately authored audits; not numerical mode sampling or proof-assistant formalization",
+  "written_proof": "notes/proof.md"
+}
