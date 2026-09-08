@@ -1,0 +1,221 @@
+{
+  "actual_compact_finite_local_actions": {
+    "0": {
+      "first_time_square": "0",
+      "second_time_square": "0",
+      "source_square": "-1652*constant_reference_mass**4/(6561*(u**2 + 1)**6)"
+    },
+    "1": {
+      "first_time_square": "-800*constant_reference_mass**2/(6561*(u**2 + 1)**6)",
+      "second_time_square": "0",
+      "source_square": "-128*constant_reference_mass**2*(917*u**2 + 164)/(6561*(u**2 + 1)**8)"
+    },
+    "2": {
+      "first_time_square": "(118640*u**2/19683 + 1360/729)/(u**2 + 1)**8",
+      "second_time_square": "628/(6561*(u**2 + 1)**6)",
+      "source_square": "(77888*u**4/2187 + 274240*u**2/6561 + 21632/6561)/(u**2 + 1)**10"
+    }
+  },
+  "actual_finite_local_operators": {
+    "0": "-3304*constant_reference_mass**4*source0/(6561*(u**2 + 1)**6)",
+    "1": "-256*constant_reference_mass**2*source0*(917*u**2 + 164)/(6561*(u**2 + 1)**8) + 1600*constant_reference_mass**2*source2/(6561*(u**2 + 1)**6)",
+    "2": "128*source0*(3651*u**4 + 4285*u**2 + 338)/(6561*(u**2 + 1)**10) + 320*source1*u*(1483*u**2 - 565)/(19683*(u**2 + 1)**9) - 160*source2*(1483*u**2 + 459)/(19683*(u**2 + 1)**8) + 1256*source4/(6561*(u**2 + 1)**6)"
+  },
+  "actual_radial_Laurent_coefficients": {
+    "0": {
+      "evanescent": "-11440*source0/(6561*(u**2 + 1)**6)",
+      "finite_MSbar_mu_m": "-3304*source0/(6561*(u**2 + 1)**6)",
+      "pole": "1808*source0/(2187*(u**2 + 1)**6)"
+    },
+    "1": {
+      "evanescent": "-544*source0*(17*u**2 + 29)/(6561*(u**2 + 1)**8) - 26624*source1*u/(6561*(u**2 + 1)**7) - 9776*source2/(19683*(u**2 + 1)**6)",
+      "finite_MSbar_mu_m": "-32*source0*(1837*u**2 + 961)/(6561*(u**2 + 1)**8) - 26624*source1*u/(6561*(u**2 + 1)**7) + 208*source2/(19683*(u**2 + 1)**6)",
+      "pole": "-128*source0*(43*u**2 + 13)/(729*(u**2 + 1)**8) + 3328*source2/(6561*(u**2 + 1)**6)"
+    },
+    "2": {
+      "evanescent": "-128*source0*(511525*u**4 + 212309*u**2 - 14016)/(98415*(u**2 + 1)**10) + 64*source1*u*(8125*u**2 + 15701)/(19683*(u**2 + 1)**9) + 32*source2*(11843*u**2 - 1065)/(19683*(u**2 + 1)**8) - 8192*source3*u/(6561*(u**2 + 1)**7) - 4328*source4/(98415*(u**2 + 1)**6)",
+      "finite_MSbar_mu_m": "-128*source0*(511525*u**4 + 212309*u**2 - 14016)/(98415*(u**2 + 1)**10) + 64*source1*u*(8125*u**2 + 15701)/(19683*(u**2 + 1)**9) + 32*source2*(11843*u**2 - 1065)/(19683*(u**2 + 1)**8) - 8192*source3*u/(6561*(u**2 + 1)**7) - 4328*source4/(98415*(u**2 + 1)**6)",
+      "pole": "128*source0*(2647*u**4 + 1922*u**2 - 53)/(2187*(u**2 + 1)**10) + 2048*source1*u*(17*u**2 - 12)/(2187*(u**2 + 1)**9) - 512*source2*(34*u**2 + 5)/(2187*(u**2 + 1)**8) + 512*source4/(6561*(u**2 + 1)**6)"
+    }
+  },
+  "checked_scalar_entries": 43,
+  "claim": "P8-S6.65.FINITE_LOCAL_MASS_RESPONSE",
+  "continuous_operator_coefficient_envelopes": {
+    "0": {
+      "0": "3304/6561",
+      "1": "0",
+      "2": "0",
+      "3": "0",
+      "4": "0"
+    },
+    "1": {
+      "0": "100672/6561",
+      "1": "0",
+      "2": "1600/6561",
+      "3": "0",
+      "4": "0"
+    },
+    "2": {
+      "0": "23288/729",
+      "1": "149720/19683",
+      "2": "132760/19683",
+      "3": "0",
+      "4": "1256/6561"
+    }
+  },
+  "controls": {
+    "finite_radial_and_counterterm_pieces_combined": true,
+    "full_D_polarization_and_rate_dependence_retained": true,
+    "homogeneous_source_only_no_spatial_bound": true,
+    "local_C4_norm_not_nonlocal_feedback_norm": true,
+    "native_order_validation_before_cache": true,
+    "rejected_inputs": 92,
+    "zero_order_full_potential_not_added_twice": true
+  },
+  "date": "2026-09-08",
+  "exact_residuals": {
+    "bounds_closed_finite_0_first_time_square": "0",
+    "bounds_closed_finite_0_second_time_square": "0",
+    "bounds_closed_finite_0_source_square": "0",
+    "bounds_closed_finite_1_first_time_square": "0",
+    "bounds_closed_finite_1_second_time_square": "0",
+    "bounds_closed_finite_1_source_square": "0",
+    "bounds_closed_finite_2_first_time_square": "0",
+    "bounds_closed_finite_2_second_time_square": "0",
+    "bounds_closed_finite_2_source_square": "0",
+    "canonical_L_independent_delta_log_frequency": "0",
+    "canonical_L_independent_delta_log_g": "0",
+    "canonical_L_independent_delta_rate": "0",
+    "canonical_L_independent_delta_source_A": "0",
+    "canonical_L_independent_delta_source_B": "0",
+    "canonical_L_independent_source_A": "0",
+    "canonical_L_independent_source_B": "0",
+    "canonical_T_independent_delta_log_frequency": "0",
+    "canonical_T_independent_delta_log_g": "0",
+    "canonical_T_independent_delta_rate": "0",
+    "canonical_T_independent_delta_source_A": "0",
+    "canonical_T_independent_delta_source_B": "0",
+    "canonical_T_independent_source_A": "0",
+    "canonical_T_independent_source_B": "0",
+    "compact_early_dimension_loss_formula_0": "0",
+    "compact_early_dimension_loss_formula_2": "0",
+    "compact_early_dimension_loss_formula_4": "0",
+    "compact_finite_self_adjoint_local_form_0": "0",
+    "compact_finite_self_adjoint_local_form_2": "0",
+    "compact_finite_self_adjoint_local_form_4": "0",
+    "compact_finite_static_response_matches_frozen_full_potential": "0",
+    "homogeneous_curved_response_pole_0": "0",
+    "homogeneous_curved_response_pole_2": "0",
+    "homogeneous_curved_response_pole_4": "0",
+    "variation_L_source_homogeneity_0": "0",
+    "variation_L_source_homogeneity_1": "0",
+    "variation_L_source_homogeneity_2": "0",
+    "variation_L_varied_Riccati_order_four": "0",
+    "variation_L_varied_Riccati_order_two": "0",
+    "variation_T_source_homogeneity_0": "0",
+    "variation_T_source_homogeneity_1": "0",
+    "variation_T_source_homogeneity_2": "0",
+    "variation_T_varied_Riccati_order_four": "0",
+    "variation_T_varied_Riccati_order_two": "0"
+  },
+  "formulation": "FORMULATION.md",
+  "moving_mode_source_variations": {
+    "L": {
+      "delta_P2": "-7*H**2*a_N*physical_momentum_fraction**3*source0/4 - H**2*a_N*physical_momentum_fraction**2*source0*spatial_dimension/2 + 13*H**2*a_N*physical_momentum_fraction**2*source0/4 + H**2*a_N*physical_momentum_fraction*source0*spatial_dimension/2 - 3*H**2*a_N*physical_momentum_fraction*source0/2 - 7*H*a_N*physical_momentum_fraction**2*source1/8 - H*a_N*physical_momentum_fraction*source1*spatial_dimension/4 + H*a_N*physical_momentum_fraction*source1 - 7*H*alpha1*physical_momentum_fraction**2*source0/8 - H*alpha1*physical_momentum_fraction*source0*spatial_dimension/4 + H*alpha1*physical_momentum_fraction*source0 - H*b_N*physical_momentum_fraction*source1/8 - H*beta1*physical_momentum_fraction*source0/8 - H_dot*a_N*physical_momentum_fraction**2*source0/4 + H_dot*a_N*physical_momentum_fraction*source0/4 - a_N*physical_momentum_fraction*source2/8 - alpha1*physical_momentum_fraction*source1/4 - alpha2*physical_momentum_fraction*source0/8 - b_N*source2/8 - beta1*source1/4 - beta2*source0/8",
+      "delta_P4": "1463*H**4*a_N*physical_momentum_fraction**5*source0/32 + 147*H**4*a_N*physical_momentum_fraction**4*source0*spatial_dimension/16 - 3689*H**4*a_N*physical_momentum_fraction**4*source0/32 + 5*H**4*a_N*physical_momentum_fraction**3*source0*spatial_dimension**2/32 - 253*H**4*a_N*physical_momentum_fraction**3*source0*spatial_dimension/16 + 1527*H**4*a_N*physical_momentum_fraction**3*source0/16 - H**4*a_N*physical_momentum_fraction**2*source0*spatial_dimension**3/16 + 5*H**4*a_N*physical_momentum_fraction**2*source0*spatial_dimension**2/32 + 53*H**4*a_N*physical_momentum_fraction**2*source0*spatial_dimension/8 - 217*H**4*a_N*physical_momentum_fraction**2*source0/8 + H**4*a_N*physical_momentum_fraction*source0*spatial_dimension**3/16 - 5*H**4*a_N*physical_momentum_fraction*source0*spatial_dimension**2/16 + 5*H**4*a_N*physical_momentum_fraction*source0/4 + 1463*H**3*a_N*physical_momentum_fraction**4*source1/64 + 147*H**3*a_N*physical_momentum_fraction**3*source1*spatial_dimension/32 - 693*H**3*a_N*physical_momentum_fraction**3*source1/16 + 5*H**3*a_N*physical_momentum_fraction**2*source1*spatial_dimension**2/64 - 77*H**3*a_N*physical_momentum_fraction**2*source1*spatial_dimension/16 + 361*H**3*a_N*physical_momentum_fraction**2*source1/16 - H**3*a_N*physical_momentum_fraction*source1*spatial_dimension**3/32 + H**3*a_N*physical_momentum_fraction*source1*spatial_dimension**2/8 + 5*H**3*a_N*physical_momentum_fraction*source1*spatial_dimension/8 - 5*H**3*a_N*physical_momentum_fraction*source1/2 + 1463*H**3*alpha1*physical_momentum_fraction**4*source0/64 + 147*H**3*alpha1*physical_momentum_fraction**3*source0*spatial_dimension/32 - 693*H**3*alpha1*physical_momentum_fraction**3*source0/16 + 5*H**3*alpha1*physical_momentum_fraction**2*source0*spatial_dimension**2/64 - 77*H**3*alpha1*physical_momentum_fraction**2*source0*spatial_dimension/16 + 361*H**3*alpha1*physical_momentum_fraction**2*source0/16 - H**3*alpha1*physical_momentum_fraction*source0*spatial_dimension**3/32 + H**3*alpha1*physical_momentum_fraction*source0*spatial_dimension**2/8 + 5*H**3*alpha1*physical_momentum_fraction*source0*spatial_dimension/8 - 5*H**3*alpha1*physical_momentum_fraction*source0/2 - 175*H**3*b_N*physical_momentum_fraction**3*source1/64 - 23*H**3*b_N*physical_momentum_fraction**2*source1*spatial_dimension/16 + 91*H**3*b_N*physical_momentum_fraction**2*source1/16 - 13*H**3*b_N*physical_momentum_fraction*source1*spatial_dimension**2/64 + 23*H**3*b_N*physical_momentum_fraction*source1*spatial_dimension/16 - 41*H**3*b_N*physical_momentum_fraction*source1/16 - 175*H**3*beta1*physical_momentum_fraction**3*source0/64 - 23*H**3*beta1*physical_momentum_fraction**2*source0*spatial_dimension/16 + 91*H**3*beta1*physical_momentum_fraction**2*source0/16 - 13*H**3*beta1*physical_momentum_fraction*source0*spatial_dimension**2/64 + 23*H**3*beta1*physical_momentum_fraction*source0*spatial_dimension/16 - 41*H**3*beta1*physical_momentum_fraction*source0/16 + 819*H**2*H_dot*a_N*physical_momentum_fraction**4*source0/32 + 97*H**2*H_dot*a_N*physical_momentum_fraction**3*source0*spatial_dimension/16 - 1759*H**2*H_dot*a_N*physical_momentum_fraction**3*source0/32 + 7*H**2*H_dot*a_N*physical_momentum_fraction**2*source0*spatial_dimension**2/32 - 133*H**2*H_dot*a_N*physical_momentum_fraction**2*source0*spatial_dimension/16 + 69*H**2*H_dot*a_N*physical_momentum_fraction**2*source0/2 - 7*H**2*H_dot*a_N*physical_momentum_fraction*source0*spatial_dimension**2/32 + 9*H**2*H_dot*a_N*physical_momentum_fraction*source0*spatial_dimension/4 - 41*H**2*H_dot*a_N*physical_momentum_fraction*source0/8 + 273*H**2*a_N*physical_momentum_fraction**3*source2/64 + 3*H**2*a_N*physical_momentum_fraction**2*source2*spatial_dimension/4 - 93*H**2*a_N*physical_momentum_fraction**2*source2/16 + H**2*a_N*physical_momentum_fraction*source2*spatial_dimension**2/64 - 7*H**2*a_N*physical_momentum_fraction*source2*spatial_dimension/16 + 25*H**2*a_N*physical_momentum_fraction*source2/16 + 273*H**2*alpha1*physical_momentum_fraction**3*source1/32 + 3*H**2*alpha1*physical_momentum_fraction**2*source1*spatial_dimension/2 - 93*H**2*alpha1*physical_momentum_fraction**2*source1/8 + H**2*alpha1*physical_momentum_fraction*source1*spatial_dimension**2/32 - 7*H**2*alpha1*physical_momentum_fraction*source1*spatial_dimension/8 + 25*H**2*alpha1*physical_momentum_fraction*source1/8 + 273*H**2*alpha2*physical_momentum_fraction**3*source0/64 + 3*H**2*alpha2*physical_momentum_fraction**2*source0*spatial_dimension/4 - 93*H**2*alpha2*physical_momentum_fraction**2*source0/16 + H**2*alpha2*physical_momentum_fraction*source0*spatial_dimension**2/64 - 7*H**2*alpha2*physical_momentum_fraction*source0*spatial_dimension/16 + 25*H**2*alpha2*physical_momentum_fraction*source0/16 + 17*H**2*b_N*physical_momentum_fraction**2*source2/64 - 3*H**2*b_N*physical_momentum_fraction*source2*spatial_dimension/16 + 5*H**2*b_N*physical_momentum_fraction*source2/16 - 3*H**2*b_N*source2*spatial_dimension**2/64 + 3*H**2*b_N*source2*spatial_dimension/16 - 3*H**2*b_N*source2/16 + 17*H**2*beta1*physical_momentum_fraction**2*source1/32 - 3*H**2*beta1*physical_momentum_fraction*source1*spatial_dimension/8 + 5*H**2*beta1*physical_momentum_fraction*source1/8 - 3*H**2*beta1*source1*spatial_dimension**2/32 + 3*H**2*beta1*source1*spatial_dimension/8 - 3*H**2*beta1*source1/8 + 17*H**2*beta2*physical_momentum_fraction**2*source0/64 - 3*H**2*beta2*physical_momentum_fraction*source0*spatial_dimension/16 + 5*H**2*beta2*physical_momentum_fraction*source0/16 - 3*H**2*beta2*source0*spatial_dimension**2/64 + 3*H**2*beta2*source0*spatial_dimension/16 - 3*H**2*beta2*source0/16 + 2*H*H_ddot*a_N*physical_momentum_fraction**3*source0 + 9*H*H_ddot*a_N*physical_momentum_fraction**2*source0*spatial_dimension/16 - 29*H*H_ddot*a_N*physical_momentum_fraction**2*source0/8 - 9*H*H_ddot*a_N*physical_momentum_fraction*source0*spatial_dimension/16 + 13*H*H_ddot*a_N*physical_momentum_fraction*source0/8 + 273*H*H_dot*a_N*physical_momentum_fraction**3*source1/32 + 73*H*H_dot*a_N*physical_momentum_fraction**2*source1*spatial_dimension/32 - 211*H*H_dot*a_N*physical_momentum_fraction**2*source1/16 + 3*H*H_dot*a_N*physical_momentum_fraction*source1*spatial_dimension**2/32 - 11*H*H_dot*a_N*physical_momentum_fraction*source1*spatial_dimension/8 + 31*H*H_dot*a_N*physical_momentum_fraction*source1/8 + 273*H*H_dot*alpha1*physical_momentum_fraction**3*source0/32 + 73*H*H_dot*alpha1*physical_momentum_fraction**2*source0*spatial_dimension/32 - 211*H*H_dot*alpha1*physical_momentum_fraction**2*source0/16 + 3*H*H_dot*alpha1*physical_momentum_fraction*source0*spatial_dimension**2/32 - 11*H*H_dot*alpha1*physical_momentum_fraction*source0*spatial_dimension/8 + 31*H*H_dot*alpha1*physical_momentum_fraction*source0/8 - 45*H*H_dot*b_N*physical_momentum_fraction**2*source1/32 - 33*H*H_dot*b_N*physical_momentum_fraction*source1*spatial_dimension/32 + 45*H*H_dot*b_N*physical_momentum_fraction*source1/16 - 5*H*H_dot*b_N*source1*spatial_dimension**2/32 + 5*H*H_dot*b_N*source1*spatial_dimension/8 - 5*H*H_dot*b_N*source1/8 - 45*H*H_dot*beta1*physical_momentum_fraction**2*source0/32 - 33*H*H_dot*beta1*physical_momentum_fraction*source0*spatial_dimension/32 + 45*H*H_dot*beta1*physical_momentum_fraction*source0/16 - 5*H*H_dot*beta1*source0*spatial_dimension**2/32 + 5*H*H_dot*beta1*source0*spatial_dimension/8 - 5*H*H_dot*beta1*source0/8 + H*a_N*physical_momentum_fraction**2*source3/2 + H*a_N*physical_momentum_fraction*source3*spatial_dimension/16 - 3*H*a_N*physical_momentum_fraction*source3/8 + 3*H*alpha1*physical_momentum_fraction**2*source2/2 + 3*H*alpha1*physical_momentum_fraction*source2*spatial_dimension/16 - 9*H*alpha1*physical_momentum_fraction*source2/8 + 3*H*alpha2*physical_momentum_fraction**2*source1/2 + 3*H*alpha2*physical_momentum_fraction*source1*spatial_dimension/16 - 9*H*alpha2*physical_momentum_fraction*source1/8 + H*alpha3*physical_momentum_fraction**2*source0/2 + H*alpha3*physical_momentum_fraction*source0*spatial_dimension/16 - 3*H*alpha3*physical_momentum_fraction*source0/8 + 3*H*b_N*physical_momentum_fraction*source3/16 + 9*H*beta1*physical_momentum_fraction*source2/16 + 9*H*beta2*physical_momentum_fraction*source1/16 + 3*H*beta3*physical_momentum_fraction*source0/16 + H_ddot*a_N*physical_momentum_fraction**2*source1/2 + 7*H_ddot*a_N*physical_momentum_fraction*source1*spatial_dimension/32 - 11*H_ddot*a_N*physical_momentum_fraction*source1/16 + H_ddot*alpha1*physical_momentum_fraction**2*source0/2 + 7*H_ddot*alpha1*physical_momentum_fraction*source0*spatial_dimension/32 - 11*H_ddot*alpha1*physical_momentum_fraction*source0/16 - H_ddot*b_N*physical_momentum_fraction*source1/8 - 5*H_ddot*b_N*source1*spatial_dimension/32 + 5*H_ddot*b_N*source1/16 - H_ddot*beta1*physical_momentum_fraction*source0/8 - 5*H_ddot*beta1*source0*spatial_dimension/32 + 5*H_ddot*beta1*source0/16 + 21*H_dot**2*a_N*physical_momentum_fraction**3*source0/16 + 5*H_dot**2*a_N*physical_momentum_fraction**2*source0*spatial_dimension/16 - 37*H_dot**2*a_N*physical_momentum_fraction**2*source0/16 - 5*H_dot**2*a_N*physical_momentum_fraction*source0*spatial_dimension/16 + H_dot**2*a_N*physical_momentum_fraction*source0 + 21*H_dot*a_N*physical_momentum_fraction**2*source2/32 + 5*H_dot*a_N*physical_momentum_fraction*source2*spatial_dimension/32 - 11*H_dot*a_N*physical_momentum_fraction*source2/16 + 21*H_dot*alpha1*physical_momentum_fraction**2*source1/16 + 5*H_dot*alpha1*physical_momentum_fraction*source1*spatial_dimension/16 - 11*H_dot*alpha1*physical_momentum_fraction*source1/8 + 21*H_dot*alpha2*physical_momentum_fraction**2*source0/32 + 5*H_dot*alpha2*physical_momentum_fraction*source0*spatial_dimension/32 - 11*H_dot*alpha2*physical_momentum_fraction*source0/16 + H_dot*b_N*physical_momentum_fraction*source2/32 - 3*H_dot*b_N*source2*spatial_dimension/32 + 3*H_dot*b_N*source2/16 + H_dot*beta1*physical_momentum_fraction*source1/16 - 3*H_dot*beta1*source1*spatial_dimension/16 + 3*H_dot*beta1*source1/8 + H_dot*beta2*physical_momentum_fraction*source0/32 - 3*H_dot*beta2*source0*spatial_dimension/32 + 3*H_dot*beta2*source0/16 + H_third*a_N*physical_momentum_fraction**2*source0/16 - H_third*a_N*physical_momentum_fraction*source0/16 + a_N*physical_momentum_fraction*source4/32 + alpha1*physical_momentum_fraction*source3/8 + 3*alpha2*physical_momentum_fraction*source2/16 + alpha3*physical_momentum_fraction*source1/8 + alpha4*physical_momentum_fraction*source0/32 + b_N*source4/32 + beta1*source3/8 + 3*beta2*source2/16 + beta3*source1/8 + beta4*source0/32",
+      "delta_U": "6*H**2*a_N*physical_momentum_fraction**3*source0 + H**2*a_N*physical_momentum_fraction**2*source0*spatial_dimension - 10*H**2*a_N*physical_momentum_fraction**2*source0 - H**2*a_N*physical_momentum_fraction*source0*spatial_dimension + 4*H**2*a_N*physical_momentum_fraction*source0 + 3*H*a_N*physical_momentum_fraction**2*source1 + H*a_N*physical_momentum_fraction*source1*spatial_dimension/2 - 3*H*a_N*physical_momentum_fraction*source1 + 3*H*alpha1*physical_momentum_fraction**2*source0 + H*alpha1*physical_momentum_fraction*source0*spatial_dimension/2 - 3*H*alpha1*physical_momentum_fraction*source0 + H_dot*a_N*physical_momentum_fraction**2*source0 - H_dot*a_N*physical_momentum_fraction*source0 + a_N*physical_momentum_fraction*source2/2 + alpha1*physical_momentum_fraction*source1 + alpha2*physical_momentum_fraction*source0/2",
+      "delta_log_frequency": "source0*(-a_N*physical_momentum_fraction + b_N)/2",
+      "delta_log_frequency_rate": "-H*a_N*physical_momentum_fraction**2*source0 + H*a_N*physical_momentum_fraction*source0 - a_N*physical_momentum_fraction*source1/2 - alpha1*physical_momentum_fraction*source0/2 + b_N*source1/2 + beta1*source0/2",
+      "delta_log_g": "a_N*physical_momentum_fraction*source0/2",
+      "delta_rate": "H*a_N*physical_momentum_fraction**2*source0 - H*a_N*physical_momentum_fraction*source0 + a_N*physical_momentum_fraction*source1/2 + alpha1*physical_momentum_fraction*source0/2",
+      "delta_source_A": "-a_N**2*physical_momentum_fraction*source0*(2 - physical_momentum_fraction)",
+      "delta_source_B": "b_N**2*source0",
+      "source_A": "a_N*physical_momentum_fraction",
+      "source_B": "-b_N"
+    },
+    "T": {
+      "delta_P2": "5*H**2*b_N*physical_momentum_fraction**3*source0/4 - 7*H**2*b_N*physical_momentum_fraction**2*source0/4 + H**2*b_N*physical_momentum_fraction*source0/2 + 5*H*b_N*physical_momentum_fraction**2*source1/8 - 5*H*b_N*physical_momentum_fraction*source1/8 + 5*H*beta1*physical_momentum_fraction**2*source0/8 - 5*H*beta1*physical_momentum_fraction*source0/8 + H_dot*b_N*physical_momentum_fraction**2*source0/4 - H_dot*b_N*physical_momentum_fraction*source0/4 + b_N*physical_momentum_fraction*source2/8 - b_N*source2/8 + beta1*physical_momentum_fraction*source1/4 - beta1*source1/4 + beta2*physical_momentum_fraction*source0/8 - beta2*source0/8",
+      "delta_P4": "-1105*H**4*b_N*physical_momentum_fraction**5*source0/32 + 2431*H**4*b_N*physical_momentum_fraction**4*source0/32 + 25*H**4*b_N*physical_momentum_fraction**3*source0*spatial_dimension**2/32 - 25*H**4*b_N*physical_momentum_fraction**3*source0*spatial_dimension/8 - 801*H**4*b_N*physical_momentum_fraction**3*source0/16 - 31*H**4*b_N*physical_momentum_fraction**2*source0*spatial_dimension**2/32 + 31*H**4*b_N*physical_momentum_fraction**2*source0*spatial_dimension/8 + 67*H**4*b_N*physical_momentum_fraction**2*source0/8 + 3*H**4*b_N*physical_momentum_fraction*source0*spatial_dimension**2/16 - 3*H**4*b_N*physical_momentum_fraction*source0*spatial_dimension/4 + H**4*b_N*physical_momentum_fraction*source0/4 - 1105*H**3*b_N*physical_momentum_fraction**4*source1/64 + 1989*H**3*b_N*physical_momentum_fraction**3*source1/64 + 25*H**3*b_N*physical_momentum_fraction**2*source1*spatial_dimension**2/64 - 25*H**3*b_N*physical_momentum_fraction**2*source1*spatial_dimension/16 - 14*H**3*b_N*physical_momentum_fraction**2*source1 - 25*H**3*b_N*physical_momentum_fraction*source1*spatial_dimension**2/64 + 25*H**3*b_N*physical_momentum_fraction*source1*spatial_dimension/16 + 3*H**3*b_N*physical_momentum_fraction*source1/16 - 1105*H**3*beta1*physical_momentum_fraction**4*source0/64 + 1989*H**3*beta1*physical_momentum_fraction**3*source0/64 + 25*H**3*beta1*physical_momentum_fraction**2*source0*spatial_dimension**2/64 - 25*H**3*beta1*physical_momentum_fraction**2*source0*spatial_dimension/16 - 14*H**3*beta1*physical_momentum_fraction**2*source0 - 25*H**3*beta1*physical_momentum_fraction*source0*spatial_dimension**2/64 + 25*H**3*beta1*physical_momentum_fraction*source0*spatial_dimension/16 + 3*H**3*beta1*physical_momentum_fraction*source0/16 - 663*H**2*H_dot*b_N*physical_momentum_fraction**4*source0/32 + 25*H**2*H_dot*b_N*physical_momentum_fraction**3*source0*spatial_dimension/16 + 1051*H**2*H_dot*b_N*physical_momentum_fraction**3*source0/32 + 13*H**2*H_dot*b_N*physical_momentum_fraction**2*source0*spatial_dimension**2/32 - 57*H**2*H_dot*b_N*physical_momentum_fraction**2*source0*spatial_dimension/16 - 45*H**2*H_dot*b_N*physical_momentum_fraction**2*source0/4 - 13*H**2*H_dot*b_N*physical_momentum_fraction*source0*spatial_dimension**2/32 + 2*H**2*H_dot*b_N*physical_momentum_fraction*source0*spatial_dimension - 7*H**2*H_dot*b_N*physical_momentum_fraction*source0/8 - 221*H**2*b_N*physical_momentum_fraction**3*source2/64 + 297*H**2*b_N*physical_momentum_fraction**2*source2/64 + 3*H**2*b_N*physical_momentum_fraction*source2*spatial_dimension**2/64 - 3*H**2*b_N*physical_momentum_fraction*source2*spatial_dimension/16 - H**2*b_N*physical_momentum_fraction*source2 - 3*H**2*b_N*source2*spatial_dimension**2/64 + 3*H**2*b_N*source2*spatial_dimension/16 - 3*H**2*b_N*source2/16 - 221*H**2*beta1*physical_momentum_fraction**3*source1/32 + 297*H**2*beta1*physical_momentum_fraction**2*source1/32 + 3*H**2*beta1*physical_momentum_fraction*source1*spatial_dimension**2/32 - 3*H**2*beta1*physical_momentum_fraction*source1*spatial_dimension/8 - 2*H**2*beta1*physical_momentum_fraction*source1 - 3*H**2*beta1*source1*spatial_dimension**2/32 + 3*H**2*beta1*source1*spatial_dimension/8 - 3*H**2*beta1*source1/8 - 221*H**2*beta2*physical_momentum_fraction**3*source0/64 + 297*H**2*beta2*physical_momentum_fraction**2*source0/64 + 3*H**2*beta2*physical_momentum_fraction*source0*spatial_dimension**2/64 - 3*H**2*beta2*physical_momentum_fraction*source0*spatial_dimension/16 - H**2*beta2*physical_momentum_fraction*source0 - 3*H**2*beta2*source0*spatial_dimension**2/64 + 3*H**2*beta2*source0*spatial_dimension/16 - 3*H**2*beta2*source0/16 - 7*H*H_ddot*b_N*physical_momentum_fraction**3*source0/4 + 5*H*H_ddot*b_N*physical_momentum_fraction**2*source0*spatial_dimension/16 + 13*H*H_ddot*b_N*physical_momentum_fraction**2*source0/8 - 5*H*H_ddot*b_N*physical_momentum_fraction*source0*spatial_dimension/16 + H*H_ddot*b_N*physical_momentum_fraction*source0/8 - 221*H*H_dot*b_N*physical_momentum_fraction**3*source1/32 + 25*H*H_dot*b_N*physical_momentum_fraction**2*source1*spatial_dimension/32 + 255*H*H_dot*b_N*physical_momentum_fraction**2*source1/32 + 5*H*H_dot*b_N*physical_momentum_fraction*source1*spatial_dimension**2/32 - 45*H*H_dot*b_N*physical_momentum_fraction*source1*spatial_dimension/32 - 7*H*H_dot*b_N*physical_momentum_fraction*source1/16 - 5*H*H_dot*b_N*source1*spatial_dimension**2/32 + 5*H*H_dot*b_N*source1*spatial_dimension/8 - 5*H*H_dot*b_N*source1/8 - 221*H*H_dot*beta1*physical_momentum_fraction**3*source0/32 + 25*H*H_dot*beta1*physical_momentum_fraction**2*source0*spatial_dimension/32 + 255*H*H_dot*beta1*physical_momentum_fraction**2*source0/32 + 5*H*H_dot*beta1*physical_momentum_fraction*source0*spatial_dimension**2/32 - 45*H*H_dot*beta1*physical_momentum_fraction*source0*spatial_dimension/32 - 7*H*H_dot*beta1*physical_momentum_fraction*source0/16 - 5*H*H_dot*beta1*source0*spatial_dimension**2/32 + 5*H*H_dot*beta1*source0*spatial_dimension/8 - 5*H*H_dot*beta1*source0/8 - 7*H*b_N*physical_momentum_fraction**2*source3/16 + 7*H*b_N*physical_momentum_fraction*source3/16 - 21*H*beta1*physical_momentum_fraction**2*source2/16 + 21*H*beta1*physical_momentum_fraction*source2/16 - 21*H*beta2*physical_momentum_fraction**2*source1/16 + 21*H*beta2*physical_momentum_fraction*source1/16 - 7*H*beta3*physical_momentum_fraction**2*source0/16 + 7*H*beta3*physical_momentum_fraction*source0/16 - 7*H_ddot*b_N*physical_momentum_fraction**2*source1/16 + 5*H_ddot*b_N*physical_momentum_fraction*source1*spatial_dimension/32 + H_ddot*b_N*physical_momentum_fraction*source1/8 - 5*H_ddot*b_N*source1*spatial_dimension/32 + 5*H_ddot*b_N*source1/16 - 7*H_ddot*beta1*physical_momentum_fraction**2*source0/16 + 5*H_ddot*beta1*physical_momentum_fraction*source0*spatial_dimension/32 + H_ddot*beta1*physical_momentum_fraction*source0/8 - 5*H_ddot*beta1*source0*spatial_dimension/32 + 5*H_ddot*beta1*source0/16 - 19*H_dot**2*b_N*physical_momentum_fraction**3*source0/16 + 3*H_dot**2*b_N*physical_momentum_fraction**2*source0*spatial_dimension/16 + 19*H_dot**2*b_N*physical_momentum_fraction**2*source0/16 - 3*H_dot**2*b_N*physical_momentum_fraction*source0*spatial_dimension/16 - 19*H_dot*b_N*physical_momentum_fraction**2*source2/32 + 3*H_dot*b_N*physical_momentum_fraction*source2*spatial_dimension/32 + 13*H_dot*b_N*physical_momentum_fraction*source2/32 - 3*H_dot*b_N*source2*spatial_dimension/32 + 3*H_dot*b_N*source2/16 - 19*H_dot*beta1*physical_momentum_fraction**2*source1/16 + 3*H_dot*beta1*physical_momentum_fraction*source1*spatial_dimension/16 + 13*H_dot*beta1*physical_momentum_fraction*source1/16 - 3*H_dot*beta1*source1*spatial_dimension/16 + 3*H_dot*beta1*source1/8 - 19*H_dot*beta2*physical_momentum_fraction**2*source0/32 + 3*H_dot*beta2*physical_momentum_fraction*source0*spatial_dimension/32 + 13*H_dot*beta2*physical_momentum_fraction*source0/32 - 3*H_dot*beta2*source0*spatial_dimension/32 + 3*H_dot*beta2*source0/16 - H_third*b_N*physical_momentum_fraction**2*source0/16 + H_third*b_N*physical_momentum_fraction*source0/16 - b_N*physical_momentum_fraction*source4/32 + b_N*source4/32 - beta1*physical_momentum_fraction*source3/8 + beta1*source3/8 - 3*beta2*physical_momentum_fraction*source2/16 + 3*beta2*source2/16 - beta3*physical_momentum_fraction*source1/8 + beta3*source1/8 - beta4*physical_momentum_fraction*source0/32 + beta4*source0/32",
+      "delta_U": "0",
+      "delta_log_frequency": "b_N*source0*(1 - physical_momentum_fraction)/2",
+      "delta_log_frequency_rate": "-H*b_N*physical_momentum_fraction**2*source0 + H*b_N*physical_momentum_fraction*source0 - b_N*physical_momentum_fraction*source1/2 + b_N*source1/2 - beta1*physical_momentum_fraction*source0/2 + beta1*source0/2",
+      "delta_log_g": 0,
+      "delta_rate": "0",
+      "delta_source_A": "0",
+      "delta_source_B": "b_N**2*source0*(1 - physical_momentum_fraction)**2",
+      "source_A": "0",
+      "source_B": "-b_N*(1 - physical_momentum_fraction)"
+    }
+  },
+  "named_exact_check_count": 43,
+  "normalization_and_prescription": "The local action component is integral a^3(A n''^2+B n'^2+C n^2)/(64*pi^2), and its normalized physical Euler operator is displayed. At mu=m the full radial Laurent finite part is combined with +4 partial_D E_loop,D in this normalization. No additional finite Y^2 Wilson matching coefficient is included or inferred. The flat potential is already present and not added again.",
+  "not_established": [
+    "The subtracted exact nonlocal response, its compatible-dimensional preparation estimates or integrated feedback norm",
+    "Spatially varying finite response, full metric/second-mass blocks or an arbitrary varied Cauchy-state family",
+    "Coupled quantum stability/cones, interactions, cutoff, finite Wilson matching, common UV parent, V/G/B or original P8 closure"
+  ],
+  "omitted_counterterm_adjoint_controls": {
+    "half_time_unit_mass_adjoint_fixture_2": "-218103808/512578125",
+    "half_time_unit_mass_adjoint_fixture_4": "-67108864/512578125",
+    "omitted_counterterm_finite_adjoint_defect_2": "-26624*constant_reference_mass**2*u/(6561*(u**2 + 1)**7)",
+    "omitted_counterterm_finite_adjoint_defect_4": "-8192*u/(6561*(u**2 + 1)**7)"
+  },
+  "prior_sha256": {
+    "S6_64_fully_rebuilt": "17a31b89b503e42852dc6b60c986e615c02c582cd4b72599b28774f8e1d235a5",
+    "original_clock_state_and_profile_preserved": true
+  },
+  "proof_checks": {
+    "actual_C4_to_C0_local_norm_below_1e_minus_39": true,
+    "derivative_quadratic_component_zero_to_first_order_1": true,
+    "derivative_quadratic_component_zero_to_first_order_2": true,
+    "exact_linear_source_operator_0": true,
+    "exact_linear_source_operator_1": true,
+    "exact_linear_source_operator_2": true,
+    "no_binary_float_0": true,
+    "no_binary_float_1": true,
+    "no_binary_float_2": true,
+    "nonnegative_continuous_coefficient_envelopes_0": true,
+    "nonnegative_continuous_coefficient_envelopes_1": true,
+    "nonnegative_continuous_coefficient_envelopes_2": true,
+    "omitted_finite_counterterm_adjoint_fixture_nonzero_1": true,
+    "omitted_finite_counterterm_adjoint_fixture_nonzero_2": true
+  },
+  "remaining_integral": "The exact selected-state causal response minus its varied local adiabatic orders 0,2,4 remains to be integrated with a justified common-dimensional limit and quantitative bounds. The local coefficient result and C4-to-C0 bound do not establish that remaining integral or a coupled feedback contraction.",
+  "scale_example": {
+    "C4_to_C0_upper_bound": "206506392019063/236196000000000000000000000000000000000000000000000000",
+    "by_adiabatic_half_order": {
+      "0": "413/472392000000000000000000000000000000000000",
+      "1": "799/29524500000000000000000000000000000000000000000",
+      "2": "19063/236196000000000000000000000000000000000000000000000000"
+    },
+    "scope": "Homogeneous finite local subtraction component only; not the nonlocal response or a feedback contraction",
+    "source_norm": "max over time derivatives zero through four on [-1/2,1/2]"
+  },
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "6e88bc3765ca3c3f9576b4adb5bf59ce999e4f8d2329cbcabba4a52e309538f7",
+    "README.md": "28f236363ce940c938f2ca2a66bdf0d70f3d315c33d30630e0527e04af183e4c",
+    "notes/bound.md": "4712b4157dabba7a17ceae8e4acc11ef00dfadeea1aad742c45cc70ac3a3e24f",
+    "notes/matching.md": "70eab5c5a75a8435fe7e3482fbdf9ff3546608c4b1d1d553fb57331a96d906d3",
+    "notes/variation.md": "2f03a7ce8dfbf995aa4327b343c7652d0f6c9b4a809efcab20d02f397e45c0a1",
+    "src/p8_vector_mass_adiabatic/__init__.py": "f5c39b99e5e92b1ecef811251262adce747c9d5e16052f7b7c2932705da6c2ee",
+    "src/p8_vector_mass_adiabatic/bounds.py": "8d58ea4a66d2b8b2398e2dcd70c902831c2e89c074cf6bda58bf65d454a6a017",
+    "src/p8_vector_mass_adiabatic/canonical.py": "cae785a7c749bd72b5d8a999e5387387c985e1dbcc9014de999fd0244a620f0a",
+    "src/p8_vector_mass_adiabatic/compact.py": "d8237a5fb3e6a7f16d390e9f5c60bea6d6484e22a8a404a29ffc9f8475662c7a",
+    "src/p8_vector_mass_adiabatic/jets.py": "109514d083d45d4b8e7b5e503610fdf0908259a300718e953fd08694c0f59c93",
+    "src/p8_vector_mass_adiabatic/radial.py": "43d79210479ff349cbb6f15cc2d78d5b573a6385f933dc2cbefa31b569c799fd",
+    "src/p8_vector_mass_adiabatic/variation.py": "29ca3fb88c296247ba80d66f882c3865e8472c1f8cb240b5635e6700766016e2",
+    "src/p8_vector_mass_adiabatic/verify.py": "406367ef29bd1350c738bf03ccf47dbd24936c29399e9636bb031312c09b8f48",
+    "tests/conftest.py": "d77205c4e9ac9ef8f109fbf1f7b40ccff285a06d950c9d204ae78fbd4e76abf1",
+    "tests/test_mass_adiabatic_certificate.py": "40e364d71a5f6815dec798710c9d408d62eeff1ac4f0fb5b32cb59cdac5d1b9f",
+    "tests/test_mass_adiabatic_science.py": "32bfc6ca2377b081f7032a22e607c23eabb53edfb07b1ccfa191250db9a84083"
+  },
+  "status": "HOMOGENEOUS_FINITE_LOCAL_SUBTRACTION_COMPONENT; ORIGINAL_P8_OPEN",
+  "verdict": "Independent moving-mode and varied Riccati calculations reproduce the complete homogeneous curved poles, and the finite radial-plus-counterterm local operator is self-adjoint, agrees with the frozen static potential and has the stated continuous bound. The nonlocal response and original P8 remain open.",
+  "verification_boundary": "Exact physical Hamiltonian, differentiated Riccati, polynomial radial, dimensional-counterterm, variational and continuous rational-envelope checks; not proof-assistant formalization",
+  "written_proofs": [
+    "notes/variation.md",
+    "notes/matching.md",
+    "notes/bound.md"
+  ]
+}
