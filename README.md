@@ -407,8 +407,14 @@ around a pre-registered problems document and a certificate-gated ledger.
   regular-tail kinetic obstruction. The deformation is still auxiliary
   on that trajectory and changes its physical quadratic action; it is
   not a new heavy sector, exact CD/M1 matching or a UV completion.
+  A separately [source-centered mass retuning](problems/P8/s6/matching/affine/kinetic/retuned/README.md)
+  preserves exact zero-curl matching and the primary lapse degeneracy,
+  and fixes the rolling kinetic signs. Its complete characteristic test
+  nevertheless finds a scalar cone wider than the matter cone. It is
+  not an accepted witness under the original contract; a positive
+  isolated mass and positive principal energy are insufficient.
 
-The [current P8 continuation audit](docs/assessment-2026-09-07-p8-ricci-difference.md) separates
+The [current P8 continuation audit](docs/assessment-2026-09-07-p8-retuned-trace-cone.md) separates
 the completed scoped P8(a) objective and certificate gates from the
 outstanding P8(b) UV-matching and positivity questions.
 P8 is not marked finished or closed.
