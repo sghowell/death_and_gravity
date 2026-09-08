@@ -1,0 +1,251 @@
+{
+  "actual_clock_local_coefficients_at_mu_mass": {
+    "0": {
+      "energy": "-(135*u**6 + 405*u**4 + 405*u**2 + 179)/(54*(u**2 + 1)**3)",
+      "pressure": "5/2"
+    },
+    "1": {
+      "energy": "-32*(1215*u**8 + 3645*u**6 + 3645*u**4 + 1136*u**2 + 7)/(243*(u**2 + 1)**5)",
+      "pressure": "80*(5*u**2 + 1)/(3*(u**2 + 1)**2)"
+    },
+    "2": {
+      "energy": "-32*(1701*u**10 + 3969*u**8 + 1782*u**6 - 1009*u**4 - 869*u**2 + 22)/(81*(u**2 + 1)**7)",
+      "pressure": "64*(7*u**4 - 1)/(u**2 + 1)**4"
+    }
+  },
+  "checked_scalar_entries": 45,
+  "claim": "P8-S6.53.VECTOR_CLOCK_MATCHING",
+  "complex_dimension_coefficient_and_tail_envelopes": {
+    "longitudinal": {
+      "S_deviation_upper": "14273753689/2048000000000000",
+      "coefficient_envelopes": {
+        "A": "221725/128",
+        "B": "3425874349/4096",
+        "B2": "3631/32",
+        "B4": "34914409/1024",
+        "P2": "223/32",
+        "P4": "1753689/2048"
+      },
+      "phase_imaginary_part_upper": "14273753689/2048000000000",
+      "reference_log_rate_upper": "4096203906321440/2047985726246311",
+      "reference_tail_integer_upper": "481856",
+      "reference_tail_upper": "51738865390928302033961127893559/107374182400000000000000000",
+      "residual_constant_upper": "1832407631440936415707843/1048576000000000000",
+      "residual_integer_upper": "1747521"
+    },
+    "transverse": {
+      "S_deviation_upper": "15297793689/2048000000000000",
+      "coefficient_envelopes": {
+        "A": "218157/128",
+        "B": "3202558765/4096",
+        "B2": "3887/32",
+        "B4": "33848393/1024",
+        "P2": "239/32",
+        "P4": "1793689/2048"
+      },
+      "phase_imaginary_part_upper": "15297793689/2048000000000",
+      "reference_log_rate_upper": "4096218240109408/2047984702206311",
+      "reference_tail_integer_upper": "481483",
+      "reference_tail_upper": "51698750410470835558424409346743/107374182400000000000000000",
+      "residual_constant_upper": "1726566994700777162297347/1048576000000000000",
+      "residual_integer_upper": "1646583"
+    }
+  },
+  "complex_dimension_continuation": "On |D-3|<=1/4, real I, k>=0 and m>=1000, analytically continue the canonical ODE and prepare v_+,v_- against f_\u00b1=(2W)^(-1/2) exp(\u2213i integral W). Do not conjugate D. At D=3 these are the frozen mode and conjugate; no noninteger-dimensional Hilbert space is claimed.",
+  "continuous_actual_clock_local_envelopes": {
+    "energy": {
+      "0": "4",
+      "1": "49537/648",
+      "2": "355657/2592"
+    },
+    "pressure": {
+      "0": "5/2",
+      "1": "60",
+      "2": "92"
+    }
+  },
+  "controls": {
+    "clock_mass_component_not_assumed_separately_conserved": true,
+    "complex_dimension_not_conjugated_in_analytic_pair": true,
+    "counterterm_variation_before_dimension_limit": true,
+    "lapse_variation_before_clock_restriction": true,
+    "rejected_inputs": 59,
+    "small_unsigned_first_variation_not_a_cone_or_VGB_verdict": true,
+    "spatial_average_continuation_explicit_not_silently_re_ranked": true
+  },
+  "counterterm_density": "Relative to 1/(64pi\u00b2 epsilon_DR): m^4 C4+m\u00b2R+2a4V_4-m\u00b2(delta_a ga2+delta_b gb2)-(delta_a ga4+delta_b gb4). C2=Rg/12-5Ricci/6, Z4=Tsc4+g boxR/6; ga2=-2C2_nn, gb2=6C2_spatial_average, ga4=-Z4_nn/2, gb4=3Z4_spatial_average/2. Tsc4 varies 2a4sc_4 in D+1 dimensions. Higher mass-curvature variations are not supplied.",
+  "date": "2026-09-08",
+  "dimensional_scalar_curvature_tensor": {
+    "R_D": "spatial_dimension*(H**2*spatial_dimension + H**2 + 2*H_dot)",
+    "box_R_D": "-2*spatial_dimension*(H**2*H_dot*spatial_dimension**2 + H**2*H_dot*spatial_dimension + 2*H*H_ddot*spatial_dimension + H*H_ddot + H_dot**2*spatial_dimension + H_dot**2 + H_third)",
+    "energy": "-spatial_dimension*(5*H**4*spatial_dimension**3 - 12*H**4*spatial_dimension**2 - 5*H**4*spatial_dimension - 12*H**4 + 36*H**2*H_dot*spatial_dimension**2 + 12*H**2*H_dot*spatial_dimension + 36*H*H_ddot*spatial_dimension + 12*H*H_ddot - 18*H_dot**2*spatial_dimension - 6*H_dot**2)/180",
+    "gradient_normal": "-spatial_dimension*(5*H**4*spatial_dimension**3 - 12*H**4*spatial_dimension**2 - 5*H**4*spatial_dimension - 12*H**4 - 24*H**2*H_dot*spatial_dimension**2 - 48*H**2*H_dot*spatial_dimension - 84*H*H_ddot*spatial_dimension - 48*H*H_ddot - 78*H_dot**2*spatial_dimension - 66*H_dot**2 - 60*H_third)/180",
+    "gradient_spatial_average": "(5*H**4*spatial_dimension**4 - 12*H**4*spatial_dimension**3 - 5*H**4*spatial_dimension**2 - 12*H**4*spatial_dimension - 4*H**2*H_dot*spatial_dimension**3 - 96*H**2*H_dot*spatial_dimension**2 - 20*H**2*H_dot*spatial_dimension - 48*H**2*H_dot - 48*H*H_ddot*spatial_dimension**2 - 36*H*H_ddot*spatial_dimension - 6*H_dot**2*spatial_dimension**2 - 42*H_dot**2*spatial_dimension - 24*H_third*spatial_dimension + 12*H_third)/180",
+    "pressure": "(5*H**4*spatial_dimension**4 - 12*H**4*spatial_dimension**3 - 5*H**4*spatial_dimension**2 - 12*H**4*spatial_dimension + 56*H**2*H_dot*spatial_dimension**3 - 36*H**2*H_dot*spatial_dimension**2 - 20*H**2*H_dot*spatial_dimension - 48*H**2*H_dot + 72*H*H_ddot*spatial_dimension**2 + 24*H*H_ddot*spatial_dimension + 54*H_dot**2*spatial_dimension**2 + 18*H_dot**2*spatial_dimension + 36*H_third*spatial_dimension + 12*H_third)/180"
+  },
+  "exact_residuals": {
+    "0_actual_clock_pole_is_retained": "0",
+    "0_ordinary_finite_matching_limit": "0",
+    "1_actual_clock_pole_is_retained": "0",
+    "1_ordinary_finite_matching_limit": "0",
+    "2_actual_clock_pole_is_retained": "0",
+    "2_ordinary_finite_matching_limit": "0",
+    "abstract_exact_WKB_residual_given_checked_cancellations": "0",
+    "actual_frozen_finite_flat_energy": "0",
+    "actual_frozen_finite_flat_pressure": "0",
+    "analytic_pair_Wronskian_without_complex_dimension_conjugation": "0",
+    "analytic_pair_exact_forced_equation": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        1,
+        2
+      ]
+    },
+    "analytic_pair_variation_constraint": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        1,
+        2
+      ]
+    },
+    "energy_local_coefficient_box_reconstruction_1": "0",
+    "energy_local_coefficient_box_reconstruction_2": "0",
+    "frozen_flat_finite_lapse_term_not_shifted": "0",
+    "full_metric_jet_lapse_variation_1": "0",
+    "full_metric_jet_lapse_variation_2": "0",
+    "full_metric_jet_lapse_variation_3": "0",
+    "full_metric_jet_lapse_variation_4": "0",
+    "longitudinal_complex_dimension_box_A": "0",
+    "longitudinal_complex_dimension_box_B": "0",
+    "longitudinal_complex_dimension_box_B2": "0",
+    "longitudinal_complex_dimension_box_B4": "0",
+    "longitudinal_complex_dimension_box_P2": "0",
+    "longitudinal_complex_dimension_box_P4": "0",
+    "longitudinal_complex_dimension_fourth_order_cancellation": "0",
+    "longitudinal_complex_dimension_second_order_cancellation": "0",
+    "pressure_local_coefficient_box_reconstruction_1": "0",
+    "pressure_local_coefficient_box_reconstruction_2": "0",
+    "second_order_finite_clock_energy_at_mu_mass": "0",
+    "second_order_mass_evanescent_coefficient": "0",
+    "transverse_complex_dimension_box_A": "0",
+    "transverse_complex_dimension_box_B": "0",
+    "transverse_complex_dimension_box_B2": "0",
+    "transverse_complex_dimension_box_B4": "0",
+    "transverse_complex_dimension_box_P2": "0",
+    "transverse_complex_dimension_box_P4": "0",
+    "transverse_complex_dimension_fourth_order_cancellation": "0",
+    "transverse_complex_dimension_second_order_cancellation": "0",
+    "zero_first_spatial_variation_of_linear_mass_terms_1": "0",
+    "zero_first_spatial_variation_of_linear_mass_terms_2": "0",
+    "zero_first_spatial_variation_of_linear_mass_terms_3": "0",
+    "zero_first_spatial_variation_of_linear_mass_terms_4": "0"
+  },
+  "first_variation_argument": "delta[(a_m-1)G]|clock=G_clock delta a_m before integration by parts. Time-dependent jet controls through order four confirm lapse alpha*ga+beta*gb and zero first homogeneous spatial variation. The mass deviations must not be erased before variation.",
+  "formulation": "FORMULATION.md",
+  "literal_component": "Unchanged S6.42 retained vector and physical clock; S6.47 finite potential and lapse jets, S6.50 exact fourth-order Gaussian preparation, S6.51 subtraction and S6.52 dimensional radial terms. Only first homogeneous metric variations on I=[-1/2,1/2].",
+  "local_boundary_terms": "Compactly supported Euler variations of boxR vanish. S6.49's nonzero noncompact infinite-time flux statement is unchanged.",
+  "mass_pole_extension_and_evanescent_energy": {
+    "mass_counterterm_evanescent_energy": {
+      "0": "0",
+      "1": "(3*H**2*a_N + 9*H**2*b_N + 8*H_dot*a_N - 6*H_dot*b_N)/3",
+      "2": "-(29*H**4*a_N + 87*H**4*b_N - 156*H**2*H_dot*a_N - 352*H**2*H_dot*b_N - 92*H*H_ddot*a_N - 162*H*H_ddot*b_N - 89*H_dot**2*a_N - 39*H_dot**2*b_N - 10*H_third*a_N - 12*H_third*b_N)/30"
+    },
+    "mass_poles_in_D": {
+      "0": "-3*a_N/2 - 9*b_N/2",
+      "1": "(H**2*a_N*spatial_dimension**2 - 9*H**2*a_N*spatial_dimension + 3*H**2*b_N*spatial_dimension**2 - 27*H**2*b_N*spatial_dimension - 8*H_dot*a_N*spatial_dimension + 6*H_dot*b_N*spatial_dimension - 30*H_dot*b_N)/6",
+      "2": "(5*H**4*a_N*spatial_dimension**4 - 12*H**4*a_N*spatial_dimension**3 - 5*H**4*a_N*spatial_dimension**2 - 12*H**4*a_N*spatial_dimension + 15*H**4*b_N*spatial_dimension**4 - 36*H**4*b_N*spatial_dimension**3 - 15*H**4*b_N*spatial_dimension**2 - 36*H**4*b_N*spatial_dimension - 24*H**2*H_dot*a_N*spatial_dimension**3 - 48*H**2*H_dot*a_N*spatial_dimension**2 - 12*H**2*H_dot*b_N*spatial_dimension**3 - 288*H**2*H_dot*b_N*spatial_dimension**2 - 60*H**2*H_dot*b_N*spatial_dimension - 144*H**2*H_dot*b_N - 84*H*H_ddot*a_N*spatial_dimension**2 - 48*H*H_ddot*a_N*spatial_dimension - 144*H*H_ddot*b_N*spatial_dimension**2 - 108*H*H_ddot*b_N*spatial_dimension - 78*H_dot**2*a_N*spatial_dimension**2 - 66*H_dot**2*a_N*spatial_dimension - 18*H_dot**2*b_N*spatial_dimension**2 - 126*H_dot**2*b_N*spatial_dimension - 60*H_third*a_N*spatial_dimension - 72*H_third*b_N*spatial_dimension + 36*H_third*b_N)/360"
+    }
+  },
+  "matched_finite_part": "F(3)+S6.52 radial local finite terms minus the epsilon coefficient of the explicitly continued counterterm metric variation. The flat finite term is preserved; switching off alpha,beta recovers the independent ordinary-Proca finite control. Pressure receives no added linear mass-counterterm first spatial variation.",
+  "matched_local_first_variation_coefficients": {
+    "0": {
+      "energy": "(6*a_N*log_mass_over_scale_squared - 5*a_N + 18*b_N*log_mass_over_scale_squared - 3*b_N + 12*log_mass_over_scale_squared - 10)/4",
+      "pressure": "-(6*log_mass_over_scale_squared - 5)/2",
+      "total_energy_counterterm_evanescent_coefficient": "0"
+    },
+    "1": {
+      "energy": "(9*H**2*a_N*log_mass_over_scale_squared - 3*H**2*a_N + 27*H**2*b_N*log_mass_over_scale_squared + 9*H**2*b_N + 18*H**2*log_mass_over_scale_squared - 30*H**2 + 12*H_dot*a_N*log_mass_over_scale_squared + 6*H_dot*b_N*log_mass_over_scale_squared - 2*H_dot*b_N)/3",
+      "pressure": "-2*(3*H**2 + 2*H_dot)*(3*log_mass_over_scale_squared - 5)/3",
+      "total_energy_counterterm_evanescent_coefficient": "10*H**2 + (3*H**2*a_N + 9*H**2*b_N + 8*H_dot*a_N - 6*H_dot*b_N)/3"
+    },
+    "2": {
+      "energy": "-(4*H**4*a_N + 12*H**4*b_N - 90*H**2*H_dot*a_N*log_mass_over_scale_squared + 28*H**2*H_dot*a_N - 270*H**2*H_dot*b_N*log_mass_over_scale_squared - 336*H**2*H_dot*b_N - 180*H**2*H_dot*log_mass_over_scale_squared - 360*H**2*H_dot - 75*H*H_ddot*a_N*log_mass_over_scale_squared - 66*H*H_ddot*a_N - 135*H*H_ddot*b_N*log_mass_over_scale_squared - 108*H*H_ddot*b_N - 60*H*H_ddot*log_mass_over_scale_squared - 120*H*H_ddot - 75*H_dot**2*a_N*log_mass_over_scale_squared - 102*H_dot**2*a_N - 45*H_dot**2*b_N*log_mass_over_scale_squared - 36*H_dot**2*b_N + 30*H_dot**2*log_mass_over_scale_squared + 60*H_dot**2 - 15*H_third*a_N*log_mass_over_scale_squared - 18*H_third*a_N - 15*H_third*b_N*log_mass_over_scale_squared - 4*H_third*b_N)/30",
+      "pressure": "-(log_mass_over_scale_squared + 2)*(18*H**2*H_dot + 12*H*H_ddot + 9*H_dot**2 + 2*H_third)/3",
+      "total_energy_counterterm_evanescent_coefficient": "-(33*H**4 - 102*H**2*H_dot - 14*H*H_ddot + 7*H_dot**2)/15 - (29*H**4*a_N + 87*H**4*b_N - 156*H**2*H_dot*a_N - 352*H**2*H_dot*b_N - 92*H*H_ddot*a_N - 162*H*H_ddot*b_N - 89*H_dot**2*a_N - 39*H_dot**2*b_N - 10*H_third*a_N - 12*H_third*b_N)/30"
+    }
+  },
+  "named_exact_check_count": 43,
+  "named_prescription": "Scalar-coefficient continuation: C4=2b_m\u00b2+a_m^(3/2)b_m^(1/2) independent of D. Fixed four-dimensional ordinary and scalar curvature pole coefficients evaluated as invariants in D+1 dimensions. Spatial contractions use three times the average P^munu T_munu/D, with the unit timelike clock normal. This is an explicit prescription, not unique UV data.",
+  "not_established": [
+    "Unique scheme-independent finite terms, unknown UV Wilson coefficients, quadratic/higher clock-mass curvature variations or extension of the timelike projector to X=0",
+    "All-order Hadamard admissibility, derivatives of the nonlocal state term, the full clock equation, all-time state control or other field/higher loops",
+    "Quantum-corrected bounce, constraints, cones or interacting cutoff; Lorentz-invariant vacuum, finite-gravity Regge remainder, V/G/B or original P8 closure"
+  ],
+  "physical_bound_boundary": "At mu=m0, restore tau^-4 and divide by M\u00b2/tau\u00b2. Explicit local coefficients plus S6.51's sharper D=3 integral bound give energy and pressure magnitudes below 10^-14 for M*tau=10^12,m0*tau=1000. No unknown complex-dimension prefactor is used as a physical error coefficient.",
+  "physical_scale_example": {
+    "M_tau": "1000000000000",
+    "energy_candidate_matched_total_over_reference_density": "51841169900859757/7464960000000000000000000000000",
+    "energy_finite_local_over_reference_density": "10368198148355657/1492992000000000000000000000000",
+    "m0_tau": "1000",
+    "pressure_candidate_matched_total_over_reference_density": "3125106104119/720000000000000000000000000",
+    "pressure_finite_local_over_reference_density": "208338333341/48000000000000000000000000",
+    "unique_scheme_or_full_quantum_bounce_claim": false
+  },
+  "prior_sha256": {
+    "S6_52_fully_rebuilt": "8dd43f663b78e611115ddd3264e79490d6fb7b3884e17524387b05638be6477d",
+    "no_frozen_finite_potential_or_lapse_jet_changed": true,
+    "original_action_physical_frame_and_Gaussian_preparation_retained": true
+  },
+  "proof_checks": {
+    "actual_flat_energy_envelope": true,
+    "complex_pressure_kinetic_weight_bound": true,
+    "complex_pressure_potential_weight_bound": true,
+    "complex_reference_product_energy_constant": true,
+    "complex_total_evolution_envelope_constant": true,
+    "complex_total_reference_tail_constant": true,
+    "dimension_disk_excludes_zero": true,
+    "fixed_prescription_energy_example_below_stated_bound": true,
+    "fixed_prescription_pressure_example_below_stated_bound": true,
+    "high_momentum_evolution_envelope_integrable": true,
+    "high_momentum_reference_tail_integrable": true,
+    "longitudinal_no_reference_zero_on_complex_dimension_disk": true,
+    "longitudinal_phase_bound_gives_mode_multiplier_below_two": true,
+    "longitudinal_uniform_complex_reference_tail_constant": true,
+    "longitudinal_uniform_complex_residual_constant": true,
+    "longitudinal_uniform_log_rate_bound": true,
+    "low_momentum_envelope_integrable": true,
+    "reference_physical_derivative_below_two_frequencies": true,
+    "transverse_no_reference_zero_on_complex_dimension_disk": true,
+    "transverse_phase_bound_gives_mode_multiplier_below_two": true,
+    "transverse_uniform_complex_reference_tail_constant": true,
+    "transverse_uniform_complex_residual_constant": true,
+    "transverse_uniform_log_rate_bound": true,
+    "uniform_complex_variation_exponent_below_quarter": true
+  },
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "aed273ab59b95a432257ebe741f3cf8d63cba93127d90264a8731320084e9f26",
+    "README.md": "3a8db01a3171e9661624599dbffb286502baf686a2115dac552e97cc0a5b9257",
+    "notes/bounds.md": "0e2a1ebe529bd2526699922f034dbc614c5865baa348184d0951b46b268ac5f4",
+    "notes/dimension-limit.md": "ff4293378d3b668cec7f2e26912b6f78e6b729fa701b226dc90cd6c1659f4bef",
+    "notes/prescription.md": "7cade0b092679938be84ecb85e862d03e5eca00a31bfd0abc1f0becc4431407b",
+    "src/p8_vector_clock_matching/__init__.py": "4f3bea78943604de8e72f5d24e851dccbd0a9fd486aaef559c2eb743c90c5a32",
+    "src/p8_vector_clock_matching/bounds.py": "950b5e7fbd1267bb9e86dceb77ee4d0d442075d8142db386fd14b50245316b5a",
+    "src/p8_vector_clock_matching/continuation.py": "aefbea26fabc2c45775ce3c67bfff34710df4a100d61de0c4380aa16d136ffba",
+    "src/p8_vector_clock_matching/counterterms.py": "2796fd9a5f62b673e995324961fbe3d6526279a1d2a0b21692a48b4eeca1d0e8",
+    "src/p8_vector_clock_matching/variation.py": "82c181da772b65875a713649c67a2a70ddeb8116733b70092ab154953e9ae452",
+    "src/p8_vector_clock_matching/verify.py": "e2e94d4c1a9b0969ac350756cb29e080710a6ffe7cc262c441a1fd2b069cafca",
+    "tests/conftest.py": "a3109380cdd9282d36fd769df20d5e723334026cafbe2de999a5f0a5d7a41aec",
+    "tests/test_clock_matching_certificate.py": "3535cd00623893add27270d3997f8419ae06d1a76c6e2b707bede6cfb75b218d",
+    "tests/test_clock_matching_science.py": "23934500a6251988c21904635b7371ca1d34b924c3ca565bada9afd0d81306cf"
+  },
+  "status": "FIXED_PRESCRIPTION_VECTOR_FIRST_METRIC_VARIATIONS_MATCHED_AND_BOUNDED; ORIGINAL_P8_OPEN",
+  "uniform_integrable_regulator_limit": "C=10000000,Ctail=1000000,Amax=25/16,nu\u00b2=m\u00b2+k\u00b2/Amax\u00b2. Combined evolution difference <=1000 C Amax/nu^4 and reference tail <=Ctail/omega^5. Radial powers at infinity are k^(-7/4),k^(-11/4); at zero k^(7/4). The analytic reciprocal-Gamma prefactor is bounded on the compact disk. Dominated convergence and Morera establish F(D) holomorphic near D=3 with limit exactly the S6.51 finite physical integral.",
+  "verdict": "The retained vector's finite first homogeneous metric variations are matched and continuously bounded in the named prescription, including a uniform regulator-limit proof. Original P8 remains open.",
+  "verification_boundary": "Exact symbolic variations, analytic bilinear-mode controls, continuous rational box bounds and written dominated-convergence proof; not proof-assistant formalization or a full quantum solution",
+  "written_proofs": [
+    "notes/prescription.md",
+    "notes/dimension-limit.md",
+    "notes/bounds.md"
+  ]
+}
