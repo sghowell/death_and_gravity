@@ -1,0 +1,444 @@
+{
+  "checked_scalar_entries": 82,
+  "claim": "P8-S6.71.ACOUSTIC_COVARIANCE_RESPONSE",
+  "controls": {
+    "independent_prepared_clock_shifts_retained": true,
+    "native_validation_before_cached_implementations": true,
+    "no_early_dimensional_transverse_pump_deletion": true,
+    "no_new_auxiliary_scalar_subtraction_or_C2_stress_bound": true,
+    "nonzero_initial_squeezing_variance_kernel_fixture": "-3/2",
+    "physical_output_and_second_mass_contacts_retained": true,
+    "rejected_inputs": 40,
+    "state_independent_Green_does_not_make_variance_response_state_independent": true
+  },
+  "date": "2026-09-08",
+  "exact_residuals": {
+    "Green_Bogoliubov_Wronskian_invariance": "0",
+    "L_background_covariance_half_rate": "0",
+    "L_dimensional_source_normalization": "0",
+    "L_energy_exact_physical_readout_row": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        1,
+        3
+      ]
+    },
+    "L_energy_full_physical_contact_and_history_row": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        1,
+        3
+      ]
+    },
+    "L_full_dimensional_acoustic_pump": "0",
+    "L_physical_dimensional_limit": "0",
+    "L_physical_frequency_source": "0",
+    "L_physical_moving_canonical_source": "0",
+    "L_potential_response_reproduces_acoustic_covariance_source": "0",
+    "L_pressure_exact_physical_readout_row": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        1,
+        3
+      ]
+    },
+    "L_pressure_full_physical_contact_and_history_row": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        1,
+        3
+      ]
+    },
+    "L_pump_dimensional_first_jet": "0",
+    "L_source_dimensional_first_jet": "0",
+    "T_background_covariance_half_rate": "0",
+    "T_dimensional_source_normalization": "0",
+    "T_energy_exact_physical_readout_row": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        1,
+        3
+      ]
+    },
+    "T_energy_full_physical_contact_and_history_row": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        1,
+        3
+      ]
+    },
+    "T_full_dimensional_acoustic_pump": "0",
+    "T_physical_dimensional_limit": "0",
+    "T_physical_frequency_source": "0",
+    "T_physical_moving_canonical_source": "0",
+    "T_potential_response_reproduces_acoustic_covariance_source": "0",
+    "T_pressure_exact_physical_readout_row": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        1,
+        3
+      ]
+    },
+    "T_pressure_full_physical_contact_and_history_row": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        1,
+        3
+      ]
+    },
+    "T_pump_dimensional_first_jet": "0",
+    "T_source_dimensional_first_jet": "0",
+    "exact_acoustic_covariance_generator": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        3
+      ]
+    },
+    "fixed_acoustic_time_tangent_equation": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        1
+      ]
+    },
+    "flat_mode_variance_response_sign": "0",
+    "flat_sine_Green_normalization": "0",
+    "full_physical_readout_variation": "0",
+    "linearized_pure_covariance_constraint_preserved": "0",
+    "longitudinal_acoustic_action_kinetic_vertex": "0",
+    "longitudinal_acoustic_action_potential_vertex": "0",
+    "mode_covariance_determinant_preserved": "0",
+    "mode_variance_retarded_kernel": "0",
+    "nonzero_initial_squeezing_changes_variance_kernel": "0",
+    "physical_covariance_pullback_including_rate_and_history": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        1
+      ]
+    },
+    "retarded_Green_is_real": "0",
+    "retarded_Green_unit_derivative_jump": "0",
+    "retarded_Green_zero_on_diagonal": "0",
+    "transverse_acoustic_action_kinetic_vertex": "0",
+    "transverse_acoustic_action_potential_vertex": "0",
+    "two_clock_shifts_are_not_identified": "0",
+    "varied_generator_replays_both_sources": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        3
+      ]
+    }
+  },
+  "finite_limit_policy": "Use the same physical adiabatic subtraction mapped through the positive D-independent clocks, retaining D-1 transverse multiplicity, both dimensional pump jets, analytic plus/minus modes and the S6.67 finite local term. The S6.68 finite C10-to-C0 response is unchanged; no independent scalar subtraction is introduced.",
+  "formulation": "FORMULATION.md",
+  "full_dimensional_pump_squares": {
+    "L": "comoving_momentum**2*mass**2*sqrt(mass_a)*sqrt(mass_b)*scale**(spatial_dimension - 1)/(comoving_momentum**2 + mass**2*mass_a*scale**2)",
+    "T": "scale**(spatial_dimension - 3)"
+  },
+  "generic_covariance_transport": {
+    "acoustic_generator": [
+      [
+        "2*acoustic_canonical_rate",
+        "2",
+        "0"
+      ],
+      [
+        "-acoustic_frequency_squared",
+        "0",
+        "1"
+      ],
+      [
+        "0",
+        "-2*acoustic_frequency_squared",
+        "-2*acoustic_canonical_rate"
+      ]
+    ],
+    "physical_to_acoustic": [
+      [
+        "acoustic_rate",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "1/acoustic_rate"
+      ]
+    ],
+    "varied_acoustic_generator": [
+      [
+        "2*varied_acoustic_canonical_rate",
+        "0",
+        "0"
+      ],
+      [
+        "-varied_acoustic_mass_potential",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "-2*varied_acoustic_mass_potential",
+        "-2*varied_acoustic_canonical_rate"
+      ]
+    ]
+  },
+  "generic_physical_readout_variation": {
+    "acoustic_variation": "acoustic_rate*(P*(readout_A*varied_log_acoustic_rate + varied_A) + S*readout_B*varied_U + S*(U + k**2)*(readout_B*varied_log_acoustic_rate + varied_B) + prepared_acoustic_time_shift*(P_prime*readout_A + S_prime*readout_B*(U + k**2)) + readout_A*varied_P + readout_B*varied_S*(U + k**2))/2",
+    "contact_only": "acoustic_rate*(P*(readout_A*varied_log_acoustic_rate + varied_A) + S*readout_B*varied_U + S*(U + k**2)*(readout_B*varied_log_acoustic_rate + varied_B) + prepared_acoustic_time_shift*(P_prime*readout_A + S_prime*readout_B*(U + k**2)))/2",
+    "physical_variation": "P*acoustic_rate*varied_A/2 + S*acoustic_rate*varied_B*(U + k**2)/2 + S*readout_B*(acoustic_rate**2*varied_U + 2*acoustic_rate**2*varied_log_acoustic_rate*(U + k**2))/(2*acoustic_rate) + acoustic_rate*readout_A*(P*varied_log_acoustic_rate + P_prime*prepared_acoustic_time_shift + varied_P)/2 + acoustic_rate*readout_B*(U + k**2)*(-S*varied_log_acoustic_rate + S_prime*prepared_acoustic_time_shift + varied_S)/2"
+  },
+  "named_exact_check_count": 46,
+  "not_established": [
+    "A C2-to-C0 norm for the full stress, an integrated logarithmic-remainder bound or a coupled causal inverse",
+    "Spatial response, independent initial states, quantum stability/cones, interactions, other loops, cutoff, finite Wilson matching, V/G/B or original P8 closure"
+  ],
+  "physical_readout_response_and_contact_rows": {
+    "L": {
+      "energy": {
+        "fixed_output_contact_row": [
+          [
+            "-2*physical_lapse_jet0*(1215*comoving_momentum**2*u**6 + 3645*comoving_momentum**2*u**4 + 3645*comoving_momentum**2*u**2 + 1097*comoving_momentum**2 + 486*positive_mass_squared*u**14 + 3402*positive_mass_squared*u**12 + 10206*positive_mass_squared*u**10 + 16640*positive_mass_squared*u**8 + 15530*positive_mass_squared*u**6 + 7986*positive_mass_squared*u**4 + 1922*positive_mass_squared*u**2 + 116*positive_mass_squared)/(6561*(u**2 + 1)**14) - physical_scale_jet0*(81*u**6 + 243*u**4 + 243*u**2 + 109)*(2*comoving_momentum**2 + positive_mass_squared*u**8 + 4*positive_mass_squared*u**6 + 6*positive_mass_squared*u**4 + 4*positive_mass_squared*u**2 + positive_mass_squared)/(81*(u**2 + 1)**11)",
+            "0",
+            "-2*physical_lapse_jet0*(-153*comoving_momentum**4*u**6 - 459*comoving_momentum**4*u**4 - 459*comoving_momentum**4*u**2 - 355*comoving_momentum**4 - 144*comoving_momentum**2*positive_mass_squared*u**14 - 1008*comoving_momentum**2*positive_mass_squared*u**12 - 3024*comoving_momentum**2*positive_mass_squared*u**10 - 5278*comoving_momentum**2*positive_mass_squared*u**8 - 5992*comoving_momentum**2*positive_mass_squared*u**6 - 4452*comoving_momentum**2*positive_mass_squared*u**4 - 1960*comoving_momentum**2*positive_mass_squared*u**2 - 382*comoving_momentum**2*positive_mass_squared + 9*positive_mass_squared**2*u**22 + 99*positive_mass_squared**2*u**20 + 495*positive_mass_squared**2*u**18 + 1485*positive_mass_squared**2*u**16 + 2970*positive_mass_squared**2*u**14 + 4158*positive_mass_squared**2*u**12 + 4158*positive_mass_squared**2*u**10 + 2970*positive_mass_squared**2*u**8 + 1485*positive_mass_squared**2*u**6 + 495*positive_mass_squared**2*u**4 + 99*positive_mass_squared**2*u**2 + 9*positive_mass_squared**2)/(729*(u**2 + 1)**14*(comoving_momentum**2 + positive_mass_squared*u**8 + 4*positive_mass_squared*u**6 + 6*positive_mass_squared*u**4 + 4*positive_mass_squared*u**2 + positive_mass_squared)**2) - 2*physical_scale_jet0*(9*comoving_momentum**4*u**6 + 27*comoving_momentum**4*u**4 + 27*comoving_momentum**4*u**2 + 5*comoving_momentum**4 + 18*comoving_momentum**2*positive_mass_squared*u**14 + 126*comoving_momentum**2*positive_mass_squared*u**12 + 378*comoving_momentum**2*positive_mass_squared*u**10 + 624*comoving_momentum**2*positive_mass_squared*u**8 + 606*comoving_momentum**2*positive_mass_squared*u**6 + 342*comoving_momentum**2*positive_mass_squared*u**4 + 102*comoving_momentum**2*positive_mass_squared*u**2 + 12*comoving_momentum**2*positive_mass_squared + 9*positive_mass_squared**2*u**22 + 99*positive_mass_squared**2*u**20 + 495*positive_mass_squared**2*u**18 + 1485*positive_mass_squared**2*u**16 + 2970*positive_mass_squared**2*u**14 + 4158*positive_mass_squared**2*u**12 + 4158*positive_mass_squared**2*u**10 + 2970*positive_mass_squared**2*u**8 + 1485*positive_mass_squared**2*u**6 + 495*positive_mass_squared**2*u**4 + 99*positive_mass_squared**2*u**2 + 9*positive_mass_squared**2)/(9*(u**2 + 1)**11*(comoving_momentum**2 + positive_mass_squared*u**8 + 4*positive_mass_squared*u**6 + 6*positive_mass_squared*u**4 + 4*positive_mass_squared*u**2 + positive_mass_squared)**2)"
+          ]
+        ],
+        "prepared_history_row": [
+          [
+            "4*comoving_momentum**2*prepared_longitudinal_time_shift*u*(81*u**6 + 243*u**4 + 243*u**2 + 109)/(81*(u**2 + 1)**10)",
+            "4*prepared_longitudinal_time_shift*(16*comoving_momentum**2 + 7*positive_mass_squared*u**8 + 28*positive_mass_squared*u**6 + 42*positive_mass_squared*u**4 + 28*positive_mass_squared*u**2 + 7*positive_mass_squared)/(81*(u**2 + 1)**11)",
+            "-4*comoving_momentum**2*prepared_longitudinal_time_shift*u*(9*comoving_momentum**2*u**6 + 27*comoving_momentum**2*u**4 + 27*comoving_momentum**2*u**2 + 5*comoving_momentum**2 + 9*positive_mass_squared*u**14 + 63*positive_mass_squared*u**12 + 189*positive_mass_squared*u**10 + 315*positive_mass_squared*u**8 + 315*positive_mass_squared*u**6 + 189*positive_mass_squared*u**4 + 63*positive_mass_squared*u**2 + 9*positive_mass_squared)/(9*(u**2 + 1)**10*(comoving_momentum**2 + positive_mass_squared*u**8 + 4*positive_mass_squared*u**6 + 6*positive_mass_squared*u**4 + 4*positive_mass_squared*u**2 + positive_mass_squared)**2)"
+          ]
+        ],
+        "response_row": [
+          [
+            "(comoving_momentum**2 + positive_mass_squared*(u**2 + 1)**4)*(81*u**6 + 243*u**4 + 243*u**2 + 109)/(162*(u**2 + 1)**11)",
+            "0",
+            "(9*comoving_momentum**2*u**6 + 27*comoving_momentum**2*u**4 + 27*comoving_momentum**2*u**2 + 5*comoving_momentum**2 + 9*positive_mass_squared*u**14 + 63*positive_mass_squared*u**12 + 189*positive_mass_squared*u**10 + 315*positive_mass_squared*u**8 + 315*positive_mass_squared*u**6 + 189*positive_mass_squared*u**4 + 63*positive_mass_squared*u**2 + 9*positive_mass_squared)/(18*(u**2 + 1)**11*(comoving_momentum**2 + positive_mass_squared*u**8 + 4*positive_mass_squared*u**6 + 6*positive_mass_squared*u**4 + 4*positive_mass_squared*u**2 + positive_mass_squared))"
+          ]
+        ],
+        "scope": "Rows multiply the acoustic covariance (variance,cross,momentum variance). The varied A/B already retain physical output normalization and second mass contacts."
+      },
+      "pressure": {
+        "fixed_output_contact_row": [
+          [
+            "-2*physical_lapse_jet0*(-comoving_momentum**2 + 8*positive_mass_squared*u**8 + 32*positive_mass_squared*u**6 + 48*positive_mass_squared*u**4 + 32*positive_mass_squared*u**2 + 8*positive_mass_squared)/(243*(u**2 + 1)**11) + physical_scale_jet0*(2*comoving_momentum**2 + positive_mass_squared*u**8 + 4*positive_mass_squared*u**6 + 6*positive_mass_squared*u**4 + 4*positive_mass_squared*u**2 + positive_mass_squared)/(3*(u**2 + 1)**8)",
+            "0",
+            "-2*physical_lapse_jet0*(3*comoving_momentum**4 + 22*comoving_momentum**2*positive_mass_squared*u**8 + 88*comoving_momentum**2*positive_mass_squared*u**6 + 132*comoving_momentum**2*positive_mass_squared*u**4 + 88*comoving_momentum**2*positive_mass_squared*u**2 + 22*comoving_momentum**2*positive_mass_squared + positive_mass_squared**2*u**16 + 8*positive_mass_squared**2*u**14 + 28*positive_mass_squared**2*u**12 + 56*positive_mass_squared**2*u**10 + 70*positive_mass_squared**2*u**8 + 56*positive_mass_squared**2*u**6 + 28*positive_mass_squared**2*u**4 + 8*positive_mass_squared**2*u**2 + positive_mass_squared**2)/(243*(u**2 + 1)**11*(comoving_momentum**2 + positive_mass_squared*u**8 + 4*positive_mass_squared*u**6 + 6*positive_mass_squared*u**4 + 4*positive_mass_squared*u**2 + positive_mass_squared)**2) - 2*physical_scale_jet0*(3*comoving_momentum**4 + 5*comoving_momentum**2*positive_mass_squared*u**8 + 20*comoving_momentum**2*positive_mass_squared*u**6 + 30*comoving_momentum**2*positive_mass_squared*u**4 + 20*comoving_momentum**2*positive_mass_squared*u**2 + 5*comoving_momentum**2*positive_mass_squared + positive_mass_squared**2*u**16 + 8*positive_mass_squared**2*u**14 + 28*positive_mass_squared**2*u**12 + 56*positive_mass_squared**2*u**10 + 70*positive_mass_squared**2*u**8 + 56*positive_mass_squared**2*u**6 + 28*positive_mass_squared**2*u**4 + 8*positive_mass_squared**2*u**2 + positive_mass_squared**2)/(3*(u**2 + 1)**8*(comoving_momentum**2 + positive_mass_squared*u**8 + 4*positive_mass_squared*u**6 + 6*positive_mass_squared*u**4 + 4*positive_mass_squared*u**2 + positive_mass_squared)**2)"
+          ]
+        ],
+        "prepared_history_row": [
+          [
+            "-4*comoving_momentum**2*prepared_longitudinal_time_shift*u/(3*(u**2 + 1)**7)",
+            "-2*prepared_longitudinal_time_shift*(2*comoving_momentum**2 + positive_mass_squared*u**8 + 4*positive_mass_squared*u**6 + 6*positive_mass_squared*u**4 + 4*positive_mass_squared*u**2 + positive_mass_squared)/(3*(u**2 + 1)**8)",
+            "-4*comoving_momentum**2*prepared_longitudinal_time_shift*u*(3*comoving_momentum**2 + positive_mass_squared*u**8 + 4*positive_mass_squared*u**6 + 6*positive_mass_squared*u**4 + 4*positive_mass_squared*u**2 + positive_mass_squared)/(3*(u**2 + 1)**7*(comoving_momentum**2 + positive_mass_squared*u**8 + 4*positive_mass_squared*u**6 + 6*positive_mass_squared*u**4 + 4*positive_mass_squared*u**2 + positive_mass_squared)**2)"
+          ]
+        ],
+        "response_row": [
+          [
+            "(-comoving_momentum**2/3 - positive_mass_squared*(u**2 + 1)**4/3)/(2*(u**2 + 1)**8)",
+            "0",
+            "(3*comoving_momentum**2 + positive_mass_squared*u**8 + 4*positive_mass_squared*u**6 + 6*positive_mass_squared*u**4 + 4*positive_mass_squared*u**2 + positive_mass_squared)/(6*(u**2 + 1)**8*(comoving_momentum**2 + positive_mass_squared*u**8 + 4*positive_mass_squared*u**6 + 6*positive_mass_squared*u**4 + 4*positive_mass_squared*u**2 + positive_mass_squared))"
+          ]
+        ],
+        "scope": "Rows multiply the acoustic covariance (variance,cross,momentum variance). The varied A/B already retain physical output normalization and second mass contacts."
+      }
+    },
+    "T": {
+      "energy": {
+        "fixed_output_contact_row": [
+          [
+            "-2*physical_lapse_jet0*positive_mass_squared*(63*u**6 + 189*u**4 + 189*u**2 + 25)/(729*(u**2 + 1)**10) - physical_scale_jet0*(162*comoving_momentum**2 + 81*positive_mass_squared*u**8 + 324*positive_mass_squared*u**6 + 486*positive_mass_squared*u**4 + 352*positive_mass_squared*u**2 + 109*positive_mass_squared)/(81*(u**2 + 1)**8)",
+            "0",
+            "-2*physical_scale_jet0/(u**2 + 1)**8"
+          ]
+        ],
+        "prepared_history_row": [
+          [
+            "0",
+            "28*positive_mass_squared*prepared_transverse_time_shift/(81*(u**2 + 1)**7)",
+            "0"
+          ]
+        ],
+        "response_row": [
+          [
+            "(comoving_momentum**2 + positive_mass_squared*(u**2 + 1)**4)*(81*comoving_momentum**2 + 81*positive_mass_squared*u**8 + 324*positive_mass_squared*u**6 + 486*positive_mass_squared*u**4 + 352*positive_mass_squared*u**2 + 109*positive_mass_squared)/(162*(u**2 + 1)**8*(comoving_momentum**2 + positive_mass_squared*u**8 + 4*positive_mass_squared*u**6 + 6*positive_mass_squared*u**4 + 4*positive_mass_squared*u**2 + positive_mass_squared))",
+            "0",
+            "1/(2*(u**2 + 1)**8)"
+          ]
+        ],
+        "scope": "Rows multiply the acoustic covariance (variance,cross,momentum variance). The varied A/B already retain physical output normalization and second mass contacts."
+      },
+      "pressure": {
+        "fixed_output_contact_row": [
+          [
+            "-14*physical_lapse_jet0*positive_mass_squared/(243*(u**2 + 1)**7) + physical_scale_jet0*(-2*comoving_momentum**2 + positive_mass_squared*u**8 + 4*positive_mass_squared*u**6 + 6*positive_mass_squared*u**4 + 4*positive_mass_squared*u**2 + positive_mass_squared)/(3*(u**2 + 1)**8)",
+            "0",
+            "-2*physical_scale_jet0/(3*(u**2 + 1)**8)"
+          ]
+        ],
+        "prepared_history_row": [
+          [
+            "0",
+            "-2*positive_mass_squared*prepared_transverse_time_shift/(3*(u**2 + 1)**4)",
+            "0"
+          ]
+        ],
+        "response_row": [
+          [
+            "-(comoving_momentum**2 + positive_mass_squared*(u**2 + 1)**4)*(-comoving_momentum**2 + positive_mass_squared*u**8 + 4*positive_mass_squared*u**6 + 6*positive_mass_squared*u**4 + 4*positive_mass_squared*u**2 + positive_mass_squared)/(6*(u**2 + 1)**8*(comoving_momentum**2 + positive_mass_squared*u**8 + 4*positive_mass_squared*u**6 + 6*positive_mass_squared*u**4 + 4*positive_mass_squared*u**2 + positive_mass_squared))",
+            "0",
+            "1/(6*(u**2 + 1)**8)"
+          ]
+        ],
+        "scope": "Rows multiply the acoustic covariance (variance,cross,momentum variance). The varied A/B already retain physical output normalization and second mass contacts."
+      }
+    }
+  },
+  "prepared_sector_covariance_sources": {
+    "L": {
+      "D": "comoving_momentum**2 + positive_mass_squared*(u**2 + 1)**4",
+      "bk": "4*comoving_momentum**2*u*(u**2 + 1)/(comoving_momentum**2 + positive_mass_squared*u**8 + 4*positive_mass_squared*u**6 + 6*positive_mass_squared*u**4 + 4*positive_mass_squared*u**2 + positive_mass_squared)",
+      "delta_U_fixed_sigma": "4*physical_lapse_jet0*positive_mass_squared*(u**2 + 1)/9 + 2*physical_scale_jet0*positive_mass_squared*(u**2 + 1)**4 - 8*positive_mass_squared*prepared_longitudinal_time_shift*u*(u**2 + 1)**5",
+      "delta_U_fixed_u": "4*physical_lapse_jet0*positive_mass_squared*(u**2 + 1)/9 + 2*physical_scale_jet0*positive_mass_squared*(u**2 + 1)**4",
+      "delta_bk_fixed_sigma": "-4*comoving_momentum**2*physical_scale_jet0*u*(u**2 + 1)*(-comoving_momentum**2 + positive_mass_squared*u**8 + 4*positive_mass_squared*u**6 + 6*positive_mass_squared*u**4 + 4*positive_mass_squared*u**2 + positive_mass_squared)/(comoving_momentum**2 + positive_mass_squared*u**8 + 4*positive_mass_squared*u**6 + 6*positive_mass_squared*u**4 + 4*positive_mass_squared*u**2 + positive_mass_squared)**2 + comoving_momentum**2*physical_scale_jet1*(u**2 + 1)**2/(comoving_momentum**2 + positive_mass_squared*u**8 + 4*positive_mass_squared*u**6 + 6*positive_mass_squared*u**4 + 4*positive_mass_squared*u**2 + positive_mass_squared) + 4*comoving_momentum**2*prepared_longitudinal_time_shift*(u**2 + 1)**2*(-3*comoving_momentum**2*u**2 - comoving_momentum**2 + 5*positive_mass_squared*u**10 + 19*positive_mass_squared*u**8 + 26*positive_mass_squared*u**6 + 14*positive_mass_squared*u**4 + positive_mass_squared*u**2 - positive_mass_squared)/(comoving_momentum**2 + positive_mass_squared*u**8 + 4*positive_mass_squared*u**6 + 6*positive_mass_squared*u**4 + 4*positive_mass_squared*u**2 + positive_mass_squared)**2 + 4*physical_lapse_jet0*u*(-81*comoving_momentum**4*u**6 - 243*comoving_momentum**4*u**4 - 243*comoving_momentum**4*u**2 - 101*comoving_momentum**4 - 81*comoving_momentum**2*positive_mass_squared*u**14 - 567*comoving_momentum**2*positive_mass_squared*u**12 - 1701*comoving_momentum**2*positive_mass_squared*u**10 - 2888*comoving_momentum**2*positive_mass_squared*u**8 - 3047*comoving_momentum**2*positive_mass_squared*u**6 - 2019*comoving_momentum**2*positive_mass_squared*u**4 - 779*comoving_momentum**2*positive_mass_squared*u**2 - 134*comoving_momentum**2*positive_mass_squared + 3*positive_mass_squared**2*u**16 + 24*positive_mass_squared**2*u**14 + 84*positive_mass_squared**2*u**12 + 168*positive_mass_squared**2*u**10 + 210*positive_mass_squared**2*u**8 + 168*positive_mass_squared**2*u**6 + 84*positive_mass_squared**2*u**4 + 24*positive_mass_squared**2*u**2 + 3*positive_mass_squared**2)/(81*(u**2 + 1)**2*(comoving_momentum**2 + positive_mass_squared*u**8 + 4*positive_mass_squared*u**6 + 6*positive_mass_squared*u**4 + 4*positive_mass_squared*u**2 + positive_mass_squared)**2) - 2*physical_lapse_jet1*(-8*comoving_momentum**2 + positive_mass_squared*u**8 + 4*positive_mass_squared*u**6 + 6*positive_mass_squared*u**4 + 4*positive_mass_squared*u**2 + positive_mass_squared)/(81*(u**2 + 1)*(comoving_momentum**2 + positive_mass_squared*u**8 + 4*positive_mass_squared*u**6 + 6*positive_mass_squared*u**4 + 4*positive_mass_squared*u**2 + positive_mass_squared))",
+      "delta_bk_fixed_u": "-4*comoving_momentum**2*physical_scale_jet0*u*(u**2 + 1)*(-comoving_momentum**2 + positive_mass_squared*u**8 + 4*positive_mass_squared*u**6 + 6*positive_mass_squared*u**4 + 4*positive_mass_squared*u**2 + positive_mass_squared)/(comoving_momentum**2 + positive_mass_squared*u**8 + 4*positive_mass_squared*u**6 + 6*positive_mass_squared*u**4 + 4*positive_mass_squared*u**2 + positive_mass_squared)**2 + comoving_momentum**2*physical_scale_jet1*(u**2 + 1)**2/(comoving_momentum**2 + positive_mass_squared*u**8 + 4*positive_mass_squared*u**6 + 6*positive_mass_squared*u**4 + 4*positive_mass_squared*u**2 + positive_mass_squared) + 4*physical_lapse_jet0*u*(-81*comoving_momentum**4*u**6 - 243*comoving_momentum**4*u**4 - 243*comoving_momentum**4*u**2 - 101*comoving_momentum**4 - 81*comoving_momentum**2*positive_mass_squared*u**14 - 567*comoving_momentum**2*positive_mass_squared*u**12 - 1701*comoving_momentum**2*positive_mass_squared*u**10 - 2888*comoving_momentum**2*positive_mass_squared*u**8 - 3047*comoving_momentum**2*positive_mass_squared*u**6 - 2019*comoving_momentum**2*positive_mass_squared*u**4 - 779*comoving_momentum**2*positive_mass_squared*u**2 - 134*comoving_momentum**2*positive_mass_squared + 3*positive_mass_squared**2*u**16 + 24*positive_mass_squared**2*u**14 + 84*positive_mass_squared**2*u**12 + 168*positive_mass_squared**2*u**10 + 210*positive_mass_squared**2*u**8 + 168*positive_mass_squared**2*u**6 + 84*positive_mass_squared**2*u**4 + 24*positive_mass_squared**2*u**2 + 3*positive_mass_squared**2)/(81*(u**2 + 1)**2*(comoving_momentum**2 + positive_mass_squared*u**8 + 4*positive_mass_squared*u**6 + 6*positive_mass_squared*u**4 + 4*positive_mass_squared*u**2 + positive_mass_squared)**2) - 2*physical_lapse_jet1*(-8*comoving_momentum**2 + positive_mass_squared*u**8 + 4*positive_mass_squared*u**6 + 6*positive_mass_squared*u**4 + 4*positive_mass_squared*u**2 + positive_mass_squared)/(81*(u**2 + 1)*(comoving_momentum**2 + positive_mass_squared*u**8 + 4*positive_mass_squared*u**6 + 6*positive_mass_squared*u**4 + 4*positive_mass_squared*u**2 + positive_mass_squared))",
+      "delta_matrix_fixed_sigma": [
+        [
+          "-8*comoving_momentum**2*physical_scale_jet0*u*(u**2 + 1)*(-comoving_momentum**2 + positive_mass_squared*u**8 + 4*positive_mass_squared*u**6 + 6*positive_mass_squared*u**4 + 4*positive_mass_squared*u**2 + positive_mass_squared)/(comoving_momentum**2 + positive_mass_squared*u**8 + 4*positive_mass_squared*u**6 + 6*positive_mass_squared*u**4 + 4*positive_mass_squared*u**2 + positive_mass_squared)**2 + 2*comoving_momentum**2*physical_scale_jet1*(u**2 + 1)**2/(comoving_momentum**2 + positive_mass_squared*u**8 + 4*positive_mass_squared*u**6 + 6*positive_mass_squared*u**4 + 4*positive_mass_squared*u**2 + positive_mass_squared) + 8*comoving_momentum**2*prepared_longitudinal_time_shift*(u**2 + 1)**2*(-3*comoving_momentum**2*u**2 - comoving_momentum**2 + 5*positive_mass_squared*u**10 + 19*positive_mass_squared*u**8 + 26*positive_mass_squared*u**6 + 14*positive_mass_squared*u**4 + positive_mass_squared*u**2 - positive_mass_squared)/(comoving_momentum**2 + positive_mass_squared*u**8 + 4*positive_mass_squared*u**6 + 6*positive_mass_squared*u**4 + 4*positive_mass_squared*u**2 + positive_mass_squared)**2 + 8*physical_lapse_jet0*u*(-81*comoving_momentum**4*u**6 - 243*comoving_momentum**4*u**4 - 243*comoving_momentum**4*u**2 - 101*comoving_momentum**4 - 81*comoving_momentum**2*positive_mass_squared*u**14 - 567*comoving_momentum**2*positive_mass_squared*u**12 - 1701*comoving_momentum**2*positive_mass_squared*u**10 - 2888*comoving_momentum**2*positive_mass_squared*u**8 - 3047*comoving_momentum**2*positive_mass_squared*u**6 - 2019*comoving_momentum**2*positive_mass_squared*u**4 - 779*comoving_momentum**2*positive_mass_squared*u**2 - 134*comoving_momentum**2*positive_mass_squared + 3*positive_mass_squared**2*u**16 + 24*positive_mass_squared**2*u**14 + 84*positive_mass_squared**2*u**12 + 168*positive_mass_squared**2*u**10 + 210*positive_mass_squared**2*u**8 + 168*positive_mass_squared**2*u**6 + 84*positive_mass_squared**2*u**4 + 24*positive_mass_squared**2*u**2 + 3*positive_mass_squared**2)/(81*(u**2 + 1)**2*(comoving_momentum**2 + positive_mass_squared*u**8 + 4*positive_mass_squared*u**6 + 6*positive_mass_squared*u**4 + 4*positive_mass_squared*u**2 + positive_mass_squared)**2) - 4*physical_lapse_jet1*(-8*comoving_momentum**2 + positive_mass_squared*u**8 + 4*positive_mass_squared*u**6 + 6*positive_mass_squared*u**4 + 4*positive_mass_squared*u**2 + positive_mass_squared)/(81*(u**2 + 1)*(comoving_momentum**2 + positive_mass_squared*u**8 + 4*positive_mass_squared*u**6 + 6*positive_mass_squared*u**4 + 4*positive_mass_squared*u**2 + positive_mass_squared))",
+          "0",
+          "0"
+        ],
+        [
+          "-4*physical_lapse_jet0*positive_mass_squared*(u**2 + 1)/9 - 2*physical_scale_jet0*positive_mass_squared*(u**2 + 1)**4 + 8*positive_mass_squared*prepared_longitudinal_time_shift*u*(u**2 + 1)**5",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "-8*physical_lapse_jet0*positive_mass_squared*(u**2 + 1)/9 - 4*physical_scale_jet0*positive_mass_squared*(u**2 + 1)**4 + 16*positive_mass_squared*prepared_longitudinal_time_shift*u*(u**2 + 1)**5",
+          "8*comoving_momentum**2*physical_scale_jet0*u*(u**2 + 1)*(-comoving_momentum**2 + positive_mass_squared*u**8 + 4*positive_mass_squared*u**6 + 6*positive_mass_squared*u**4 + 4*positive_mass_squared*u**2 + positive_mass_squared)/(comoving_momentum**2 + positive_mass_squared*u**8 + 4*positive_mass_squared*u**6 + 6*positive_mass_squared*u**4 + 4*positive_mass_squared*u**2 + positive_mass_squared)**2 - 2*comoving_momentum**2*physical_scale_jet1*(u**2 + 1)**2/(comoving_momentum**2 + positive_mass_squared*u**8 + 4*positive_mass_squared*u**6 + 6*positive_mass_squared*u**4 + 4*positive_mass_squared*u**2 + positive_mass_squared) - 8*comoving_momentum**2*prepared_longitudinal_time_shift*(u**2 + 1)**2*(-3*comoving_momentum**2*u**2 - comoving_momentum**2 + 5*positive_mass_squared*u**10 + 19*positive_mass_squared*u**8 + 26*positive_mass_squared*u**6 + 14*positive_mass_squared*u**4 + positive_mass_squared*u**2 - positive_mass_squared)/(comoving_momentum**2 + positive_mass_squared*u**8 + 4*positive_mass_squared*u**6 + 6*positive_mass_squared*u**4 + 4*positive_mass_squared*u**2 + positive_mass_squared)**2 - 8*physical_lapse_jet0*u*(-81*comoving_momentum**4*u**6 - 243*comoving_momentum**4*u**4 - 243*comoving_momentum**4*u**2 - 101*comoving_momentum**4 - 81*comoving_momentum**2*positive_mass_squared*u**14 - 567*comoving_momentum**2*positive_mass_squared*u**12 - 1701*comoving_momentum**2*positive_mass_squared*u**10 - 2888*comoving_momentum**2*positive_mass_squared*u**8 - 3047*comoving_momentum**2*positive_mass_squared*u**6 - 2019*comoving_momentum**2*positive_mass_squared*u**4 - 779*comoving_momentum**2*positive_mass_squared*u**2 - 134*comoving_momentum**2*positive_mass_squared + 3*positive_mass_squared**2*u**16 + 24*positive_mass_squared**2*u**14 + 84*positive_mass_squared**2*u**12 + 168*positive_mass_squared**2*u**10 + 210*positive_mass_squared**2*u**8 + 168*positive_mass_squared**2*u**6 + 84*positive_mass_squared**2*u**4 + 24*positive_mass_squared**2*u**2 + 3*positive_mass_squared**2)/(81*(u**2 + 1)**2*(comoving_momentum**2 + positive_mass_squared*u**8 + 4*positive_mass_squared*u**6 + 6*positive_mass_squared*u**4 + 4*positive_mass_squared*u**2 + positive_mass_squared)**2) + 4*physical_lapse_jet1*(-8*comoving_momentum**2 + positive_mass_squared*u**8 + 4*positive_mass_squared*u**6 + 6*positive_mass_squared*u**4 + 4*positive_mass_squared*u**2 + positive_mass_squared)/(81*(u**2 + 1)*(comoving_momentum**2 + positive_mass_squared*u**8 + 4*positive_mass_squared*u**6 + 6*positive_mass_squared*u**4 + 4*positive_mass_squared*u**2 + positive_mass_squared))"
+        ]
+      ],
+      "log_rate_variation": "physical_lapse_jet0*(81*u**6 + 243*u**4 + 243*u**2 + 77)/(81*(u**2 + 1)**3) - physical_scale_jet0",
+      "matrix": [
+        [
+          "8*comoving_momentum**2*u*(u**2 + 1)/(comoving_momentum**2 + positive_mass_squared*u**8 + 4*positive_mass_squared*u**6 + 6*positive_mass_squared*u**4 + 4*positive_mass_squared*u**2 + positive_mass_squared)",
+          "2",
+          "0"
+        ],
+        [
+          "-comoving_momentum**2 - positive_mass_squared*(u**2 + 1)**4",
+          "0",
+          "1"
+        ],
+        [
+          "0",
+          "-2*comoving_momentum**2 - 2*positive_mass_squared*(u**2 + 1)**4",
+          "-8*comoving_momentum**2*u*(u**2 + 1)/(comoving_momentum**2 + positive_mass_squared*u**8 + 4*positive_mass_squared*u**6 + 6*positive_mass_squared*u**4 + 4*positive_mass_squared*u**2 + positive_mass_squared)"
+        ]
+      ],
+      "prepared_shift": "prepared_longitudinal_time_shift",
+      "rate": "(u**2 + 1)**(-2)"
+    },
+    "T": {
+      "D": "comoving_momentum**2 + positive_mass_squared*(u**2 + 1)**4",
+      "bk": "0",
+      "delta_U_fixed_sigma": "28*physical_lapse_jet0*positive_mass_squared*(u**2 + 1)/81 + 2*physical_scale_jet0*positive_mass_squared*(u**2 + 1)**4 - 8*positive_mass_squared*prepared_transverse_time_shift*u*(u**2 + 1)**5",
+      "delta_U_fixed_u": "28*physical_lapse_jet0*positive_mass_squared*(u**2 + 1)/81 + 2*physical_scale_jet0*positive_mass_squared*(u**2 + 1)**4",
+      "delta_bk_fixed_sigma": "0",
+      "delta_bk_fixed_u": "0",
+      "delta_matrix_fixed_sigma": [
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "-28*physical_lapse_jet0*positive_mass_squared*(u**2 + 1)/81 - 2*physical_scale_jet0*positive_mass_squared*(u**2 + 1)**4 + 8*positive_mass_squared*prepared_transverse_time_shift*u*(u**2 + 1)**5",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "-56*physical_lapse_jet0*positive_mass_squared*(u**2 + 1)/81 - 4*physical_scale_jet0*positive_mass_squared*(u**2 + 1)**4 + 16*positive_mass_squared*prepared_transverse_time_shift*u*(u**2 + 1)**5",
+          "0"
+        ]
+      ],
+      "log_rate_variation": "physical_lapse_jet0 - physical_scale_jet0",
+      "matrix": [
+        [
+          "0",
+          "2",
+          "0"
+        ],
+        [
+          "-comoving_momentum**2 - positive_mass_squared*(u**2 + 1)**4",
+          "0",
+          "1"
+        ],
+        [
+          "0",
+          "-2*comoving_momentum**2 - 2*positive_mass_squared*(u**2 + 1)**4",
+          "0"
+        ]
+      ],
+      "prepared_shift": "prepared_transverse_time_shift",
+      "rate": "(u**2 + 1)**(-2)"
+    }
+  },
+  "prior_sha256": {
+    "S6_70_fully_rebuilt": "daab6d10f0dfa4190153fa63f5bb6eed9829c1ae73a0704eac34efb5c5b0da10",
+    "physical_state_and_finite_prescription_unchanged": true
+  },
+  "proof_checks": {
+    "analytic_plus_minus_modes_not_conjugated_at_complex_dimension": true,
+    "dimensional_pump_jets_retained_before_the_finite_limit": true,
+    "full_covariance_and_tangent_constraints_retained": true,
+    "full_stress_norm_remains_C10_to_C0_not_C2_to_C0": true,
+    "initial_zero_response_does_not_remove_unvaried_state_mixing": true,
+    "no_coupled_causal_inverse_or_original_P8_closure_claim": true,
+    "no_independently_renormalized_auxiliary_scalar_is_substituted": true,
+    "physical_readout_rate_volume_and_mass_contacts_retained": true,
+    "positive_original_acoustic_rate": true,
+    "prepared_shift_not_assumed_zero_at_the_final_endpoint": true,
+    "retarded_covariance_green_uses_the_actual_selected_modes": true,
+    "subtraction_is_the_transformed_frozen_physical_subtraction": true,
+    "two_sector_clocks_have_separate_prepared_shifts": true
+  },
+  "retarded_initial_policy": "The exact selected normalized modes define the covariance response. Varied initial data vanish on the prepared neighborhood; unvaried initial squeezing is retained. The two acoustic shifts start at zero but need not vanish at the final endpoint.",
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "c013e153ac5704718ed4d8643605e7413aa913e7fe15aa7c6534b2d6ac3dbcb7",
+    "README.md": "5cc5e6351228e86d3ee1cadd2a4f2b4e815e51aa6f6275bf99be8920ac1e0f79",
+    "notes/limit.md": "31f76f5d6cd790b89d0274ffaee6d15e6fe9349ed2db68146f35a66a95a2d5fa",
+    "notes/readout.md": "533cfed6409ae9464ded11e5703c43d5a348ea121958a4f1251ebffb5d2a2272",
+    "notes/transport.md": "77324cff23b2fee85ce72783e5eea647f9577aa244035058c4aef1cbe95cea2f",
+    "src/p8_vector_acoustic_response/__init__.py": "3a62af8469862c996fb81c46de36635ddca6926230b656a9d8d84b9d26bcd8d5",
+    "src/p8_vector_acoustic_response/dimensional.py": "efd38951f9ffdc5d01190e3c40ec337608767cbf2d4c309259c46f81220e7aa1",
+    "src/p8_vector_acoustic_response/proofs.py": "f61ed7eae9bbb97cfe214012c40b2c5a506fe82e1a652ca101514de5f6607d03",
+    "src/p8_vector_acoustic_response/readout.py": "33bac6ea749f1fcee9597ac2c3bff8ed6f959932587a82fdebe70e513c822fa2",
+    "src/p8_vector_acoustic_response/source.py": "3ed7712c96a294697633806c439d0dee0f15f992f7c47362925c6d91a56a1e3a",
+    "src/p8_vector_acoustic_response/transport.py": "369b562adfd7e3491a243b61033ca2999d4d79d401057a5a7d5ca42c34f55c97",
+    "src/p8_vector_acoustic_response/verify.py": "730dc67e3c0cc7eee0e2c122e8d72a78a64e739351e4122da28f6325ea79ea77",
+    "tests/conftest.py": "85751c86406f59517c4d9bdfbe903546b400fcbcd0c8eb4ed1e4b2c7f3770903",
+    "tests/test_acoustic_response_certificate.py": "052e48637b4a6670fd4fc96375bbe793b66ed90e8dff8150e1dd7111b498be03",
+    "tests/test_acoustic_response_science.py": "de872beb198deeb4620af1bcaf2dcc951c876909f2a6527bb6074695aff2a76e"
+  },
+  "status": "EXACT_PREPARED_ACOUSTIC_COVARIANCE_AND_PHYSICAL_READOUT_BRIDGE; ORIGINAL_P8_OPEN",
+  "verdict": "Exact moving-clock covariance and tangent transport reproduce both physical source vertices and all four physical energy/pressure response rows. The retarded mode Green function has the fixed normalization and Kubo sign, while its variance kernel retains the selected state. Both prepared time shifts, physical output/mass contacts and dimensional pump jets remain. This is an exact representation of the already finite prepared response, not a new no-loss stress or coupled-inverse theorem.",
+  "verification_boundary": "Exact covariance, Green, source, physical readout and dimensional identities with written prepared-state and unchanged-regulator arguments. Not proof-assistant formalization.",
+  "written_proofs": [
+    "notes/transport.md",
+    "notes/readout.md",
+    "notes/limit.md"
+  ]
+}
