@@ -1,0 +1,279 @@
+{
+  "S4_mode_and_domain_boundary": "The unit-S4 ratio trace is coexact-vector heat trace minus one scalar constant mode. For 0<s<=1 its difference from 1/(2s\u00b2)-1/s-11/30 is <=1609s/1728. This independent spectral bound is not transferred to the actual noncompact Lorentzian FLRW metric.",
+  "actual_physical_metric_invariants_and_coefficients": {
+    "Gauss_Bonnet": "1536*u**2*(3*u**2 + 1)/(u**2 + 1)**4",
+    "Gauss_Bonnet_boundary_flux": "512*u**3*(u**2 + 1)**3",
+    "Gauss_Bonnet_boundary_identity": "0",
+    "Gauss_Bonnet_boundary_ninth_power_growth_identity": "0",
+    "R": "24*(7*u**2 + 1)/(u**2 + 1)**2",
+    "Ricci2": "192*(37*u**4 + 10*u**2 + 1)/(u**2 + 1)**4",
+    "Riemann2": "192*(5*u**2 - 2*u + 1)*(5*u**2 + 2*u + 1)/(u**2 + 1)**4",
+    "boxR": "48*(63*u**4 - 14*u**2 - 5)/(u**2 + 1)**4",
+    "box_R_boundary_flux": "48*u*(u**2 + 1)**3*(7*u**2 - 5)",
+    "box_R_boundary_identity": "0",
+    "box_R_boundary_ninth_power_growth_identity": "0",
+    "local_a4_mod_divergence": "-8*(259*u**4 + 98*u**2 - 5)/(5*(u**2 + 1)**4)",
+    "local_a4_with_divergence": "-8*(77*u**4 + 14*u**2 - 3)/(u**2 + 1)**4",
+    "sharp_global_scalar_curvature_upper_identity": "0"
+  },
+  "boundary_terms": "a\u00b3 boxR=-(a\u00b3R')' and a\u00b3 GB=(8a\u00b3H\u00b3)'; normalized fluxes grow as 336u^9 and 512u^9. No vanishing infinite-time flux or finite spacetime action is assumed. Dropping boxR changes the local coefficient.",
+  "checked_scalar_entries": 81,
+  "claim": "P8-S6.49.VECTOR_CURVATURE",
+  "continuous_binomial_envelopes": {
+    "Gauss_Bonnet": {
+      "absolute_upper": "768",
+      "binomial_coefficients": [
+        "0",
+        "384",
+        "768",
+        "0",
+        "0"
+      ],
+      "power": 4
+    },
+    "R": {
+      "absolute_upper": "84",
+      "binomial_coefficients": [
+        "24",
+        "84",
+        "0"
+      ],
+      "power": 2
+    },
+    "Ricci2": {
+      "absolute_upper": "1184",
+      "binomial_coefficients": [
+        "192",
+        "480",
+        "1184",
+        "0",
+        "0"
+      ],
+      "power": 4
+    },
+    "Riemann2": {
+      "absolute_upper": "800",
+      "binomial_coefficients": [
+        "192",
+        "288",
+        "800",
+        "0",
+        "0"
+      ],
+      "power": 4
+    },
+    "boxR": {
+      "absolute_upper": "504",
+      "binomial_coefficients": [
+        "-240",
+        "-168",
+        "504",
+        "0",
+        "0"
+      ],
+      "power": 4
+    },
+    "local_a4_mod_divergence": {
+      "absolute_upper": "1036/15",
+      "binomial_coefficients": [
+        "8",
+        "-196/5",
+        "-1036/15",
+        "0",
+        "0"
+      ],
+      "power": 4
+    },
+    "local_a4_with_divergence": {
+      "absolute_upper": "308/3",
+      "binomial_coefficients": [
+        "24",
+        "-28",
+        "-308/3",
+        "0",
+        "0"
+      ],
+      "power": 4
+    }
+  },
+  "controls": {
+    "actual_noncompact_boundary_flux_not_set_to_zero": true,
+    "finite_cochain_contact_factor_not_silently_dropped": true,
+    "local_pole_and_S4_error_not_full_FLRW_in_in_error": true,
+    "massive_vector_minus_one_scalar_not_Maxwell_minus_two": true,
+    "on_clock_coefficients_not_full_off_clock_quantum_variation": true,
+    "rejected_inputs": 22,
+    "sphere_scalar_constant_mode_retained_in_ratio": true,
+    "twenty_parameter_curvature_tensor_not_constant_curvature_only": true
+  },
+  "date": "2026-09-08",
+  "determinant_prescription": "Euclidean +1/2 Tr log(D1+m0\u00b2)-1/2 Tr log(D0+m0\u00b2), D1=-nabla\u00b2+Ricci on one-forms and D0=-nabla\u00b2 on scalars. Dimensional regularization sets scaleless contact traces to zero; finite cochain controls retain their contact determinant and scalar constant mode.",
+  "exact_residuals": {
+    "Euler_Maclaurin_spectral_constant": "0",
+    "Gauss_Bonnet_basis_with_total_derivative": "0",
+    "Gauss_Bonnet_boundary_identity": "0",
+    "Gauss_Bonnet_boundary_ninth_power_growth_identity": "0",
+    "Hodge_Proca_operator_factorization": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "Hodge_vector_minus_scalar_coefficient_0": "0",
+    "Hodge_vector_minus_scalar_coefficient_2": "0",
+    "Hodge_vector_minus_scalar_coefficient_4": "0",
+    "Ricci_symmetry": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "S4_Hodge_eigenvalue_half_shift": "0",
+    "S4_vector_multiplicity_half_shift": "0",
+    "actual_clock_p": "0",
+    "actual_clock_spatial_mass_derivative_zero": "0",
+    "actual_clock_spatial_mass_one": "0",
+    "actual_clock_temporal_mass_derivative_zero": "0",
+    "actual_clock_temporal_mass_one": "0",
+    "actual_metric_R": "0",
+    "actual_metric_Ricci2": "0",
+    "actual_metric_Riemann2": "0",
+    "actual_rolling_local_a4_mod_divergence_form": "0",
+    "actual_rolling_local_a4_rational_form": "0",
+    "box_R_boundary_identity": "0",
+    "box_R_boundary_ninth_power_growth_identity": "0",
+    "d_squared_zero_cochain": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        3
+      ]
+    },
+    "determinant_ratio_including_contact_factor": "0",
+    "flat_S6_47_pole_weight": "0",
+    "global_binomial_envelope_reconstruction_Gauss_Bonnet": "0",
+    "global_binomial_envelope_reconstruction_R": "0",
+    "global_binomial_envelope_reconstruction_Ricci2": "0",
+    "global_binomial_envelope_reconstruction_Riemann2": "0",
+    "global_binomial_envelope_reconstruction_boxR": "0",
+    "global_binomial_envelope_reconstruction_local_a4_mod_divergence": "0",
+    "global_binomial_envelope_reconstruction_local_a4_with_divergence": "0",
+    "independent_S4_heat_coefficients": "0",
+    "mass_weighted_heat_coefficient": "0",
+    "periodic_Bernoulli_six_bound_polynomial": "0",
+    "physical_FLRW_Weyl_squared_zero": "0",
+    "scalar_constant_mode_is_retained": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        1
+      ]
+    },
+    "scalar_constant_mode_subtraction": "0",
+    "sharp_global_scalar_curvature_upper_identity": "0",
+    "trace_E_is_minus_R": "0",
+    "trace_E_squared_is_Ricci_norm": "0",
+    "trace_connection_curvature_squared_is_minus_Riemann_norm": "0",
+    "vanishing_extra_half_shift_mode": "0"
+  },
+  "formulation": "FORMULATION.md",
+  "independent_S4_spectral_control": {
+    "Euler_Maclaurin_bound_before_exponential": "179/288",
+    "approximation": "-proper_time**5/30240 + 11*proper_time**4/12096 - 13*proper_time**3/5040 - 197*proper_time**2/10080 - 5*proper_time/63 - 11/30 - 1/proper_time + 1/(2*proper_time**2)",
+    "eigenvalue": "(ell + 1)*(ell + 2)",
+    "leading": "-11/30 - 1/proper_time + 1/(2*proper_time**2)",
+    "multiplicity": "ell*(ell + 3)*(2*ell + 3)/2",
+    "polynomial_tail_bound": "59/576",
+    "sixth_derivative_norm_envelopes": {
+      "1": "2124",
+      "3": "14016"
+    },
+    "trace_remainder_over_t_upper_for_0_lt_t_le_1": "1609/1728"
+  },
+  "literal_component": "Unchanged S6.42 retained vector at fixed light fields. Actual p(phi,x=-1)=1/2 and a=b=1 all along the clock make the mass tensor covariantly constant. Off-clock mass variations remain nonzero.",
+  "local_heat_coefficients": {
+    "pole_weight": "-R**2/8 + R*m0_squared/2 + 29*Ricci_squared/60 - Riemann_squared/15 - box_R/15 + 3*m0_squared**2/2",
+    "proca": {
+      "0": "3",
+      "2": "-R/2",
+      "4": "-(15*R**2 - 58*Ricci_squared + 8*Riemann_squared + 8*box_R)/120"
+    },
+    "scalar": {
+      "0": "1",
+      "2": "R/6",
+      "4": "R**2/72 - Ricci_squared/180 + Riemann_squared/180 + box_R/30"
+    },
+    "vector": {
+      "0": "4",
+      "2": "-R/3",
+      "4": "-R**2/9 + 43*Ricci_squared/90 - 11*Riemann_squared/180 - box_R/30"
+    }
+  },
+  "named_exact_check_count": 44,
+  "not_established": [
+    "Finite curved/in-in quantum remainder, complete mass/metric variations, full quantum stress tensor or renormalized bounce",
+    "Quantum-corrected constrained spectrum/cones, other field loops, finite higher matching operators, higher-loop error or interacting cutoff",
+    "Lorentz-invariant vacuum, finite-gravity Regge remainder, V/G/B admissibility or original P8 closure"
+  ],
+  "physical_scale_example": {
+    "absolute_local_curvature_pole_correction_over_flat_pole_weight": "18375077/1125000000000",
+    "finite_curved_or_in_in_remainder": false,
+    "m0_tau": "1000",
+    "scalar_curvature_over_mass_squared": "49/1000000"
+  },
+  "pole_ratio_boundary": "For Rm=m0*tau>0 the absolute curvature correction to the pole weight over its flat 3m0^4/2 is <=49/(3Rm\u00b2)+616/(9Rm^4). This is not a finite quantum error or an observable ratio.",
+  "prior_sha256": {
+    "S6_48_fully_rebuilt": "b9b4e4c22c1f824bf101e902b6ebdb9a3535e1b7e59f51a5288fbf3e359c47e2",
+    "no_frozen_action_or_finite_counterterm_changed": true,
+    "original_all64_action_and_physical_clock_geometry_retained": true
+  },
+  "proof_checks": {
+    "Euler_Maclaurin_derivative_tail_envelope": true,
+    "Euler_Maclaurin_polynomial_tail_envelope": true,
+    "all_binomial_powers_nonnegative_integers": true,
+    "complete_S4_trace_error_envelope": true,
+    "global_binomial_convex_envelope_Gauss_Bonnet": true,
+    "global_binomial_convex_envelope_R": true,
+    "global_binomial_convex_envelope_Ricci2": true,
+    "global_binomial_convex_envelope_Riemann2": true,
+    "global_binomial_convex_envelope_boxR": true,
+    "global_binomial_convex_envelope_local_a4_mod_divergence": true,
+    "global_binomial_convex_envelope_local_a4_with_divergence": true,
+    "global_scalar_curvature_positive_numerator": true,
+    "independent_cubic_Gaussian_sixth_derivative_envelope": true,
+    "independent_linear_Gaussian_sixth_derivative_envelope": true,
+    "local_a4_absolute_envelope_308_over_3": true,
+    "no_local_pole_to_finite_quantum_error_transfer": true,
+    "noncompact_boundary_flux_not_assumed_zero": true,
+    "periodic_B6_lower_above_negative_upper": true,
+    "periodic_B6_upper": true,
+    "sixth_derivative_EM_prefactor": true,
+    "unit_proper_time_exponential_envelope": true
+  },
+  "regulator_and_pole_normalization": "d=4-2epsilon_DR; Gamma_pole=-1/(32pi\u00b2 epsilon_DR)*integral sqrt(g)[3m0^4/2+m0\u00b2*R/2+a4]. The flat term is exactly S6.47. Lorentzian evaluations concern local invariant counterterm functions, not a finite Lorentzian determinant.",
+  "schema": 1,
+  "sharp_scalar_curvature_and_units": "For every real u, 0<R*tau\u00b2<=49 by an exact square identity; |a4*tau^4|<=308/3 including boxR. R=24(1+7u\u00b2)/(1+u\u00b2)\u00b2/tau\u00b2 and a4=-8(77u^4+14u\u00b2-3)/(1+u\u00b2)^4/tau^4.",
+  "source_sha256": {
+    "FORMULATION.md": "5a3854e302c9f7ff72ae55f723bb1bf36ad60c03ca07b471128d5fb9e7f1fbdd",
+    "README.md": "a930f491d6b881f4053217a354b61b8979942c1b889b58f1d63ab7282600ac6d",
+    "notes/local.md": "559262fd8567d12ccb3bb8065399a25727aae90d0d37a9bdd66a76e1facd589a",
+    "notes/spectral.md": "9b6143f265e763b1e5222e6f3ba90717ee6d72aaeaf36efe68fe17b471923269",
+    "src/p8_vector_curvature/__init__.py": "afbd8c28bfab86e0ee7a062b5deffa07c25fa9640c61acde034be73daeaca6b1",
+    "src/p8_vector_curvature/geometry.py": "f2948d3db618b13672e2ad15b5dec5785aef8ea3e6aae286549b63d616a88319",
+    "src/p8_vector_curvature/heat.py": "eb4bbaf859df60e8f97a9fd6aced73d20472663630d75ded028c16d6e23b7107",
+    "src/p8_vector_curvature/sphere.py": "aae3717bcb96967dfcf934d572d7d01665a51ee41505f921764cd5b4cd96eec6",
+    "src/p8_vector_curvature/verify.py": "8dff5044b6a920b48bd7df2cd6615331ce4815deb020ffa0099eb56c893071c8",
+    "tests/conftest.py": "78595ca64600ba663cebcc1f8257a2c02500fd3bbf18701cd89b8e2a444c2be7",
+    "tests/test_curvature_certificate.py": "4e3f4e468ee11b8ee0cc878cad7ee75f9941bc24634b28852f2718df31b3a45c",
+    "tests/test_curvature_science.py": "398705f8a4009f5bb920c207b5c5f99381c718b6f211cc1e6fa1f2d99ce6c42b"
+  },
+  "status": "LOCAL_VECTOR_CURVATURE_POLE_AND_GLOBAL_COEFFICIENT_BOUNDS_CERTIFIED; ORIGINAL_P8_OPEN",
+  "verdict": "The retained vector's on-clock local curvature pole, all-time physical invariant coefficient bounds and a bounded independent spectral control are established. Original P8 remains open.",
+  "verification_boundary": "Universal local Laplace-type coefficient input with explicit tensor contractions, finite Hodge complex control, direct physical metric curvature, exact continuous rational envelopes and bounded Euler-Maclaurin spectral derivation; not proof-assistant formalization",
+  "written_proofs": [
+    "notes/local.md",
+    "notes/spectral.md"
+  ]
+}
