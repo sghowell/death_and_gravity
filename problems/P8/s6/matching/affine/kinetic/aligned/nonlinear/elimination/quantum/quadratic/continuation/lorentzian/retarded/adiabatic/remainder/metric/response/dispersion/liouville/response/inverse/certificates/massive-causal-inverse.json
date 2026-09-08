@@ -1,0 +1,433 @@
+{
+  "causal_kernel_endpoint_constants_and_representation": {
+    "density_over_sqrt_z_at_threshold": [
+      [
+        "67001424075*positive_h**2/34630803488",
+        "-154675575*positive_h/129219416"
+      ],
+      [
+        "-154675575*positive_h/129219416",
+        "357075/482162"
+      ]
+    ],
+    "density_times_log_tau_over_mass2_squared_at_infinity": [
+      [
+        "149597361*positive_h**2/30482432",
+        "-4831245*positive_h/1905152"
+      ],
+      [
+        "-4831245*positive_h/1905152",
+        "156025/119072"
+      ]
+    ],
+    "high_frequency_density_vector": [
+      [
+        "-12231*positive_h/3904"
+      ],
+      [
+        "395/244"
+      ]
+    ],
+    "instantaneous_inverse_matrix": [
+      [
+        "98415*positive_h**2/15616",
+        "-1215*positive_h/976"
+      ],
+      [
+        "-1215*positive_h/976",
+        "15/61"
+      ]
+    ],
+    "integrated_kernel": "-integral_(4m^2)^infinity rho(tau)/tau*(1-cos(sqrt(tau)*t)) dtau",
+    "kernel": "R_infinity*delta(t)-2*theta(t)*integral_(2m)^infinity rho(Omega^2)*sin(Omega*t) dOmega",
+    "positive_static_spectral_moment": [
+      [
+        "83121309*positive_h**2/49768192",
+        "-2745657*positive_h/3110512"
+      ],
+      [
+        "-2745657*positive_h/3110512",
+        "181803/388814"
+      ]
+    ],
+    "regular_kernel_large_time": "O(t^(-3/2)) at fixed positive m",
+    "regular_kernel_small_time": "O(1/[t*log(1/t)^2]) at fixed positive m",
+    "spectral_representation": "R(p)=R_infinity-integral_(4m^2)^infinity rho(tau)/(p+tau) dtau"
+  },
+  "checked_scalar_entries": 100,
+  "claim": "P8-S6.72.MASSIVE_CAUSAL_INVERSE",
+  "controls": {
+    "actual_curved_remainder_and_full_tree_plus_loop_inverse_not_claimed": true,
+    "causal_distribution_inverse_not_a_generic_C1_endomorphism": true,
+    "leading_log_spurious_root_not_used_as_an_exact_pole": true,
+    "mass_is_strictly_positive_no_massless_continuation": true,
+    "native_validation_before_symbolic_conversion": true,
+    "nonzero_instantaneous_matrix_not_deleted": true,
+    "oscillatory_cut_integral_not_replaced_by_absolute_frequency_integral": true,
+    "positive_density_sign_not_reversed": true,
+    "rejected_inputs": 38
+  },
+  "date": "2026-09-08",
+  "exact_cut_density_and_positive_Gram": {
+    "density_numerator": [
+      [
+        "-4*sqrt(momentum_fraction)*(3*momentum_fraction**2 - 2*momentum_fraction + 3)*(900*cut_atanh_sqrt_z**2*momentum_fraction**5 - 1800*cut_atanh_sqrt_z**2*momentum_fraction**4 + 900*cut_atanh_sqrt_z**2*momentum_fraction**3 - 1800*cut_atanh_sqrt_z*momentum_fraction**(9/2) + 3000*cut_atanh_sqrt_z*momentum_fraction**(7/2) - 91935*cut_atanh_sqrt_z*momentum_fraction**(5/2) + 73560*cut_atanh_sqrt_z*momentum_fraction**(3/2) - 99945*cut_atanh_sqrt_z*sqrt(momentum_fraction) - 225*pi**2*momentum_fraction**5 + 900*momentum_fraction**4 + 450*pi**2*momentum_fraction**4 - 225*pi**2*momentum_fraction**3 - 1200*momentum_fraction**3 + 91135*momentum_fraction**2 - 43315*momentum_fraction - 65794)/(1476225*positive_h**2) + 4*sqrt(momentum_fraction)*(45*cut_atanh_sqrt_z*momentum_fraction**(5/2) - 30*cut_atanh_sqrt_z*momentum_fraction**(3/2) + 45*cut_atanh_sqrt_z*sqrt(momentum_fraction) - 45*momentum_fraction**2 + 15*momentum_fraction + 16)*(120*cut_atanh_sqrt_z*momentum_fraction**(9/2) - 240*cut_atanh_sqrt_z*momentum_fraction**(7/2) + 120*cut_atanh_sqrt_z*momentum_fraction**(5/2) - 120*momentum_fraction**4 + 200*momentum_fraction**3 - 6129*momentum_fraction**2 + 4904*momentum_fraction - 6663)/(1476225*positive_h**2)",
+        "8*sqrt(momentum_fraction)*(23*momentum_fraction**2 - 12*momentum_fraction + 21)*(900*cut_atanh_sqrt_z**2*momentum_fraction**5 - 1800*cut_atanh_sqrt_z**2*momentum_fraction**4 + 900*cut_atanh_sqrt_z**2*momentum_fraction**3 - 1800*cut_atanh_sqrt_z*momentum_fraction**(9/2) + 3000*cut_atanh_sqrt_z*momentum_fraction**(7/2) - 91935*cut_atanh_sqrt_z*momentum_fraction**(5/2) + 73560*cut_atanh_sqrt_z*momentum_fraction**(3/2) - 99945*cut_atanh_sqrt_z*sqrt(momentum_fraction) - 225*pi**2*momentum_fraction**5 + 900*momentum_fraction**4 + 450*pi**2*momentum_fraction**4 - 225*pi**2*momentum_fraction**3 - 1200*momentum_fraction**3 + 91135*momentum_fraction**2 - 43315*momentum_fraction - 65794)/(119574225*positive_h**3) - 8*sqrt(momentum_fraction)*(345*cut_atanh_sqrt_z*momentum_fraction**(5/2) - 180*cut_atanh_sqrt_z*momentum_fraction**(3/2) + 315*cut_atanh_sqrt_z*sqrt(momentum_fraction) - 345*momentum_fraction**2 + 65*momentum_fraction - 134)*(120*cut_atanh_sqrt_z*momentum_fraction**(9/2) - 240*cut_atanh_sqrt_z*momentum_fraction**(7/2) + 120*cut_atanh_sqrt_z*momentum_fraction**(5/2) - 120*momentum_fraction**4 + 200*momentum_fraction**3 - 6129*momentum_fraction**2 + 4904*momentum_fraction - 6663)/(119574225*positive_h**3)"
+      ],
+      [
+        "8*sqrt(momentum_fraction)*(23*momentum_fraction**2 - 12*momentum_fraction + 21)*(900*cut_atanh_sqrt_z**2*momentum_fraction**5 - 1800*cut_atanh_sqrt_z**2*momentum_fraction**4 + 900*cut_atanh_sqrt_z**2*momentum_fraction**3 - 1800*cut_atanh_sqrt_z*momentum_fraction**(9/2) + 3000*cut_atanh_sqrt_z*momentum_fraction**(7/2) - 91935*cut_atanh_sqrt_z*momentum_fraction**(5/2) + 73560*cut_atanh_sqrt_z*momentum_fraction**(3/2) - 99945*cut_atanh_sqrt_z*sqrt(momentum_fraction) - 225*pi**2*momentum_fraction**5 + 900*momentum_fraction**4 + 450*pi**2*momentum_fraction**4 - 225*pi**2*momentum_fraction**3 - 1200*momentum_fraction**3 + 91135*momentum_fraction**2 - 43315*momentum_fraction - 65794)/(119574225*positive_h**3) - 8*sqrt(momentum_fraction)*(345*cut_atanh_sqrt_z*momentum_fraction**(5/2) - 180*cut_atanh_sqrt_z*momentum_fraction**(3/2) + 315*cut_atanh_sqrt_z*sqrt(momentum_fraction) - 345*momentum_fraction**2 + 65*momentum_fraction - 134)*(120*cut_atanh_sqrt_z*momentum_fraction**(9/2) - 240*cut_atanh_sqrt_z*momentum_fraction**(7/2) + 120*cut_atanh_sqrt_z*momentum_fraction**(5/2) - 120*momentum_fraction**4 + 200*momentum_fraction**3 - 6129*momentum_fraction**2 + 4904*momentum_fraction - 6663)/(119574225*positive_h**3)",
+        "-16*sqrt(momentum_fraction)*(179*momentum_fraction**2 - 70*momentum_fraction + 147)*(900*cut_atanh_sqrt_z**2*momentum_fraction**5 - 1800*cut_atanh_sqrt_z**2*momentum_fraction**4 + 900*cut_atanh_sqrt_z**2*momentum_fraction**3 - 1800*cut_atanh_sqrt_z*momentum_fraction**(9/2) + 3000*cut_atanh_sqrt_z*momentum_fraction**(7/2) - 91935*cut_atanh_sqrt_z*momentum_fraction**(5/2) + 73560*cut_atanh_sqrt_z*momentum_fraction**(3/2) - 99945*cut_atanh_sqrt_z*sqrt(momentum_fraction) - 225*pi**2*momentum_fraction**5 + 900*momentum_fraction**4 + 450*pi**2*momentum_fraction**4 - 225*pi**2*momentum_fraction**3 - 1200*momentum_fraction**3 + 91135*momentum_fraction**2 - 43315*momentum_fraction - 65794)/(9685512225*positive_h**4) + 16*sqrt(momentum_fraction)*(2685*cut_atanh_sqrt_z*momentum_fraction**(5/2) - 1050*cut_atanh_sqrt_z*momentum_fraction**(3/2) + 2205*cut_atanh_sqrt_z*sqrt(momentum_fraction) - 2685*momentum_fraction**2 + 155*momentum_fraction - 7102)*(120*cut_atanh_sqrt_z*momentum_fraction**(9/2) - 240*cut_atanh_sqrt_z*momentum_fraction**(7/2) + 120*cut_atanh_sqrt_z*momentum_fraction**(5/2) - 120*momentum_fraction**4 + 200*momentum_fraction**3 - 6129*momentum_fraction**2 + 4904*momentum_fraction - 6663)/(9685512225*positive_h**4)"
+      ]
+    ],
+    "determinant_modulus_squared": "16*pi**2*momentum_fraction*(120*cut_atanh_sqrt_z*momentum_fraction**(9/2) - 240*cut_atanh_sqrt_z*momentum_fraction**(7/2) + 120*cut_atanh_sqrt_z*momentum_fraction**(5/2) - 120*momentum_fraction**4 + 200*momentum_fraction**3 - 6129*momentum_fraction**2 + 4904*momentum_fraction - 6663)**2/(9685512225*positive_h**4) + 64*(900*cut_atanh_sqrt_z**2*momentum_fraction**5 - 1800*cut_atanh_sqrt_z**2*momentum_fraction**4 + 900*cut_atanh_sqrt_z**2*momentum_fraction**3 - 1800*cut_atanh_sqrt_z*momentum_fraction**(9/2) + 3000*cut_atanh_sqrt_z*momentum_fraction**(7/2) - 91935*cut_atanh_sqrt_z*momentum_fraction**(5/2) + 73560*cut_atanh_sqrt_z*momentum_fraction**(3/2) - 99945*cut_atanh_sqrt_z*sqrt(momentum_fraction) - 225*pi**2*momentum_fraction**5 + 900*momentum_fraction**4 + 450*pi**2*momentum_fraction**4 - 225*pi**2*momentum_fraction**3 - 1200*momentum_fraction**3 + 91135*momentum_fraction**2 - 43315*momentum_fraction - 65794)**2/(2179240250625*positive_h**4)",
+    "determinant_real_part": "8*(900*cut_atanh_sqrt_z**2*momentum_fraction**5 - 1800*cut_atanh_sqrt_z**2*momentum_fraction**4 + 900*cut_atanh_sqrt_z**2*momentum_fraction**3 - 1800*cut_atanh_sqrt_z*momentum_fraction**(9/2) + 3000*cut_atanh_sqrt_z*momentum_fraction**(7/2) - 91935*cut_atanh_sqrt_z*momentum_fraction**(5/2) + 73560*cut_atanh_sqrt_z*momentum_fraction**(3/2) - 99945*cut_atanh_sqrt_z*sqrt(momentum_fraction) - 225*pi**2*momentum_fraction**5 + 900*momentum_fraction**4 + 450*pi**2*momentum_fraction**4 - 225*pi**2*momentum_fraction**3 - 1200*momentum_fraction**3 + 91135*momentum_fraction**2 - 43315*momentum_fraction - 65794)/(1476225*positive_h**2)",
+    "minus_determinant_imaginary_part_over_pi": "-4*sqrt(momentum_fraction)*(120*cut_atanh_sqrt_z*momentum_fraction**(9/2) - 240*cut_atanh_sqrt_z*momentum_fraction**(7/2) + 120*cut_atanh_sqrt_z*momentum_fraction**(5/2) - 120*momentum_fraction**4 + 200*momentum_fraction**3 - 6129*momentum_fraction**2 + 4904*momentum_fraction - 6663)/(98415*positive_h**2)",
+    "positive_Gram_numerator": [
+      [
+        "pi**2*sqrt(momentum_fraction)*(3*momentum_fraction**2 - 2*momentum_fraction + 3)*(8*momentum_fraction**5 - 16*momentum_fraction**4 + 8*momentum_fraction**3)/(13122*positive_h**2) - (2*sqrt(momentum_fraction)*(23*momentum_fraction**2 - 12*momentum_fraction + 21)*(345*cut_atanh_sqrt_z*momentum_fraction**(5/2) - 180*cut_atanh_sqrt_z*momentum_fraction**(3/2) + 315*cut_atanh_sqrt_z*sqrt(momentum_fraction) - 345*momentum_fraction**2 + 65*momentum_fraction - 134)/(98415*positive_h**2) - 2*sqrt(momentum_fraction)*(179*momentum_fraction**2 - 70*momentum_fraction + 147)*(45*cut_atanh_sqrt_z*momentum_fraction**(5/2) - 30*cut_atanh_sqrt_z*momentum_fraction**(3/2) + 45*cut_atanh_sqrt_z*sqrt(momentum_fraction) - 45*momentum_fraction**2 + 15*momentum_fraction + 16)/(98415*positive_h**2))*(45*cut_atanh_sqrt_z*momentum_fraction**(5/2) - 30*cut_atanh_sqrt_z*momentum_fraction**(3/2) + 45*cut_atanh_sqrt_z*sqrt(momentum_fraction) - 45*momentum_fraction**2 + 15*momentum_fraction + 16)/15 + 2*(sqrt(momentum_fraction)*(3*momentum_fraction**2 - 2*momentum_fraction + 3)*(345*cut_atanh_sqrt_z*momentum_fraction**(5/2) - 180*cut_atanh_sqrt_z*momentum_fraction**(3/2) + 315*cut_atanh_sqrt_z*sqrt(momentum_fraction) - 345*momentum_fraction**2 + 65*momentum_fraction - 134)/(1215*positive_h) - sqrt(momentum_fraction)*(23*momentum_fraction**2 - 12*momentum_fraction + 21)*(45*cut_atanh_sqrt_z*momentum_fraction**(5/2) - 30*cut_atanh_sqrt_z*momentum_fraction**(3/2) + 45*cut_atanh_sqrt_z*sqrt(momentum_fraction) - 45*momentum_fraction**2 + 15*momentum_fraction + 16)/(1215*positive_h))*(345*cut_atanh_sqrt_z*momentum_fraction**(5/2) - 180*cut_atanh_sqrt_z*momentum_fraction**(3/2) + 315*cut_atanh_sqrt_z*sqrt(momentum_fraction) - 345*momentum_fraction**2 + 65*momentum_fraction - 134)/(1215*positive_h)",
+        "-pi**2*sqrt(momentum_fraction)*(23*momentum_fraction**2 - 12*momentum_fraction + 21)*(8*momentum_fraction**5 - 16*momentum_fraction**4 + 8*momentum_fraction**3)/(531441*positive_h**3) + 2*(2*sqrt(momentum_fraction)*(23*momentum_fraction**2 - 12*momentum_fraction + 21)*(345*cut_atanh_sqrt_z*momentum_fraction**(5/2) - 180*cut_atanh_sqrt_z*momentum_fraction**(3/2) + 315*cut_atanh_sqrt_z*sqrt(momentum_fraction) - 345*momentum_fraction**2 + 65*momentum_fraction - 134)/(98415*positive_h**2) - 2*sqrt(momentum_fraction)*(179*momentum_fraction**2 - 70*momentum_fraction + 147)*(45*cut_atanh_sqrt_z*momentum_fraction**(5/2) - 30*cut_atanh_sqrt_z*momentum_fraction**(3/2) + 45*cut_atanh_sqrt_z*sqrt(momentum_fraction) - 45*momentum_fraction**2 + 15*momentum_fraction + 16)/(98415*positive_h**2))*(345*cut_atanh_sqrt_z*momentum_fraction**(5/2) - 180*cut_atanh_sqrt_z*momentum_fraction**(3/2) + 315*cut_atanh_sqrt_z*sqrt(momentum_fraction) - 345*momentum_fraction**2 + 65*momentum_fraction - 134)/(1215*positive_h) - 4*(sqrt(momentum_fraction)*(3*momentum_fraction**2 - 2*momentum_fraction + 3)*(345*cut_atanh_sqrt_z*momentum_fraction**(5/2) - 180*cut_atanh_sqrt_z*momentum_fraction**(3/2) + 315*cut_atanh_sqrt_z*sqrt(momentum_fraction) - 345*momentum_fraction**2 + 65*momentum_fraction - 134)/(1215*positive_h) - sqrt(momentum_fraction)*(23*momentum_fraction**2 - 12*momentum_fraction + 21)*(45*cut_atanh_sqrt_z*momentum_fraction**(5/2) - 30*cut_atanh_sqrt_z*momentum_fraction**(3/2) + 45*cut_atanh_sqrt_z*sqrt(momentum_fraction) - 45*momentum_fraction**2 + 15*momentum_fraction + 16)/(1215*positive_h))*(2685*cut_atanh_sqrt_z*momentum_fraction**(5/2) - 1050*cut_atanh_sqrt_z*momentum_fraction**(3/2) + 2205*cut_atanh_sqrt_z*sqrt(momentum_fraction) - 2685*momentum_fraction**2 + 155*momentum_fraction - 7102)/(98415*positive_h**2)"
+      ],
+      [
+        "-pi**2*sqrt(momentum_fraction)*(23*momentum_fraction**2 - 12*momentum_fraction + 21)*(8*momentum_fraction**5 - 16*momentum_fraction**4 + 8*momentum_fraction**3)/(531441*positive_h**3) - (-4*sqrt(momentum_fraction)*(23*momentum_fraction**2 - 12*momentum_fraction + 21)*(2685*cut_atanh_sqrt_z*momentum_fraction**(5/2) - 1050*cut_atanh_sqrt_z*momentum_fraction**(3/2) + 2205*cut_atanh_sqrt_z*sqrt(momentum_fraction) - 2685*momentum_fraction**2 + 155*momentum_fraction - 7102)/(7971615*positive_h**3) + 4*sqrt(momentum_fraction)*(179*momentum_fraction**2 - 70*momentum_fraction + 147)*(345*cut_atanh_sqrt_z*momentum_fraction**(5/2) - 180*cut_atanh_sqrt_z*momentum_fraction**(3/2) + 315*cut_atanh_sqrt_z*sqrt(momentum_fraction) - 345*momentum_fraction**2 + 65*momentum_fraction - 134)/(7971615*positive_h**3))*(45*cut_atanh_sqrt_z*momentum_fraction**(5/2) - 30*cut_atanh_sqrt_z*momentum_fraction**(3/2) + 45*cut_atanh_sqrt_z*sqrt(momentum_fraction) - 45*momentum_fraction**2 + 15*momentum_fraction + 16)/15 + 2*(-2*sqrt(momentum_fraction)*(3*momentum_fraction**2 - 2*momentum_fraction + 3)*(2685*cut_atanh_sqrt_z*momentum_fraction**(5/2) - 1050*cut_atanh_sqrt_z*momentum_fraction**(3/2) + 2205*cut_atanh_sqrt_z*sqrt(momentum_fraction) - 2685*momentum_fraction**2 + 155*momentum_fraction - 7102)/(98415*positive_h**2) + 2*sqrt(momentum_fraction)*(23*momentum_fraction**2 - 12*momentum_fraction + 21)*(345*cut_atanh_sqrt_z*momentum_fraction**(5/2) - 180*cut_atanh_sqrt_z*momentum_fraction**(3/2) + 315*cut_atanh_sqrt_z*sqrt(momentum_fraction) - 345*momentum_fraction**2 + 65*momentum_fraction - 134)/(98415*positive_h**2))*(345*cut_atanh_sqrt_z*momentum_fraction**(5/2) - 180*cut_atanh_sqrt_z*momentum_fraction**(3/2) + 315*cut_atanh_sqrt_z*sqrt(momentum_fraction) - 345*momentum_fraction**2 + 65*momentum_fraction - 134)/(1215*positive_h)",
+        "2*pi**2*sqrt(momentum_fraction)*(179*momentum_fraction**2 - 70*momentum_fraction + 147)*(8*momentum_fraction**5 - 16*momentum_fraction**4 + 8*momentum_fraction**3)/(43046721*positive_h**4) + 2*(-4*sqrt(momentum_fraction)*(23*momentum_fraction**2 - 12*momentum_fraction + 21)*(2685*cut_atanh_sqrt_z*momentum_fraction**(5/2) - 1050*cut_atanh_sqrt_z*momentum_fraction**(3/2) + 2205*cut_atanh_sqrt_z*sqrt(momentum_fraction) - 2685*momentum_fraction**2 + 155*momentum_fraction - 7102)/(7971615*positive_h**3) + 4*sqrt(momentum_fraction)*(179*momentum_fraction**2 - 70*momentum_fraction + 147)*(345*cut_atanh_sqrt_z*momentum_fraction**(5/2) - 180*cut_atanh_sqrt_z*momentum_fraction**(3/2) + 315*cut_atanh_sqrt_z*sqrt(momentum_fraction) - 345*momentum_fraction**2 + 65*momentum_fraction - 134)/(7971615*positive_h**3))*(345*cut_atanh_sqrt_z*momentum_fraction**(5/2) - 180*cut_atanh_sqrt_z*momentum_fraction**(3/2) + 315*cut_atanh_sqrt_z*sqrt(momentum_fraction) - 345*momentum_fraction**2 + 65*momentum_fraction - 134)/(1215*positive_h) - 4*(-2*sqrt(momentum_fraction)*(3*momentum_fraction**2 - 2*momentum_fraction + 3)*(2685*cut_atanh_sqrt_z*momentum_fraction**(5/2) - 1050*cut_atanh_sqrt_z*momentum_fraction**(3/2) + 2205*cut_atanh_sqrt_z*sqrt(momentum_fraction) - 2685*momentum_fraction**2 + 155*momentum_fraction - 7102)/(98415*positive_h**2) + 2*sqrt(momentum_fraction)*(23*momentum_fraction**2 - 12*momentum_fraction + 21)*(345*cut_atanh_sqrt_z*momentum_fraction**(5/2) - 180*cut_atanh_sqrt_z*momentum_fraction**(3/2) + 315*cut_atanh_sqrt_z*sqrt(momentum_fraction) - 345*momentum_fraction**2 + 65*momentum_fraction - 134)/(98415*positive_h**2))*(2685*cut_atanh_sqrt_z*momentum_fraction**(5/2) - 1050*cut_atanh_sqrt_z*momentum_fraction**(3/2) + 2205*cut_atanh_sqrt_z*sqrt(momentum_fraction) - 2685*momentum_fraction**2 + 155*momentum_fraction - 7102)/(98415*positive_h**2)"
+      ]
+    ],
+    "positive_cut_weight": [
+      [
+        "2*sqrt(momentum_fraction)*(179*momentum_fraction**2 - 70*momentum_fraction + 147)/(6561*positive_h**2)",
+        "sqrt(momentum_fraction)*(23*momentum_fraction**2 - 12*momentum_fraction + 21)/(81*positive_h)"
+      ],
+      [
+        "sqrt(momentum_fraction)*(23*momentum_fraction**2 - 12*momentum_fraction + 21)/(81*positive_h)",
+        "sqrt(momentum_fraction)*(3*momentum_fraction**2 - 2*momentum_fraction + 3)/2"
+      ]
+    ],
+    "real_cut_matrix": [
+      [
+        "-4*(2685*cut_atanh_sqrt_z*momentum_fraction**(5/2) - 1050*cut_atanh_sqrt_z*momentum_fraction**(3/2) + 2205*cut_atanh_sqrt_z*sqrt(momentum_fraction) - 2685*momentum_fraction**2 + 155*momentum_fraction - 7102)/(98415*positive_h**2)",
+        "-2*(345*cut_atanh_sqrt_z*momentum_fraction**(5/2) - 180*cut_atanh_sqrt_z*momentum_fraction**(3/2) + 315*cut_atanh_sqrt_z*sqrt(momentum_fraction) - 345*momentum_fraction**2 + 65*momentum_fraction - 134)/(1215*positive_h)"
+      ],
+      [
+        "-2*(345*cut_atanh_sqrt_z*momentum_fraction**(5/2) - 180*cut_atanh_sqrt_z*momentum_fraction**(3/2) + 315*cut_atanh_sqrt_z*sqrt(momentum_fraction) - 345*momentum_fraction**2 + 65*momentum_fraction - 134)/(1215*positive_h)",
+        "-(45*cut_atanh_sqrt_z*momentum_fraction**(5/2) - 30*cut_atanh_sqrt_z*momentum_fraction**(3/2) + 45*cut_atanh_sqrt_z*sqrt(momentum_fraction) - 45*momentum_fraction**2 + 15*momentum_fraction + 16)/15"
+      ]
+    ],
+    "substitution": {
+      "cut_atanh_sqrt_z": "atanh(sqrt(momentum_fraction)) for 0<z<1"
+    }
+  },
+  "exact_residuals": {
+    "adjugate_is_linear_in_two_dimensions": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "causal_sine_Laplace_normalization": "0",
+    "complex_dispersion_strict_sign_scalar": "0",
+    "cut_Gram_fixture_strictly_positive": "0",
+    "cut_determinant_imaginary_sign": "0",
+    "cut_determinant_real_part": "0",
+    "cut_endpoint_matrix_unchanged": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "cut_real_threshold_matches_direct_endpoint": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "finite_threshold_by_polynomial_integral": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "finite_trace_moment_bound_is_exact": "0",
+    "high_density_constant_by_exact_schur_complement": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "inverse_cut_Gram_cross_terms_cancel": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "inverse_density_imaginary_part": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "inverse_infinity_explicit": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "inverse_infinity_has_rank_one": "0",
+    "inverse_infinity_inverse_congruence": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "inverse_positive_spectral_Gram_numerator": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "leading_cut_density_limit": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "leading_cut_inverse_limit": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "local_matrix_exact_congruence": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "mass_scaling_of_threshold_coordinate": "0",
+    "physical_spectral_Gram": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "positive_high_frequency_complement": "0",
+    "positive_subthreshold_first_chart_diagonal": "0",
+    "primitive_moment_normalization": "0",
+    "spectral_matrix_exact_congruence": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "spectral_variable_change": "0",
+    "static_moment_strict_determinant": "0",
+    "static_moment_sum_rule_matrix": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "static_spectral_moment_inverse_congruence": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "strict_cut_weight_determinant": "0",
+    "strict_interior_spectral_determinant": "0",
+    "subthreshold_positive_weight": "0",
+    "subthreshold_weight_below_one": "0",
+    "three_radial_moments_have_the_same_cut_weight": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "threshold_density_constant_by_exact_inverse": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "threshold_density_rank_one": "0",
+    "threshold_matrix_exact_congruence": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "threshold_negative_determinant": "0",
+    "threshold_negative_scale_diagonal": "0"
+  },
+  "first_sheet_block_and_endpoint_matrices": {
+    "chart": [
+      [
+        "1",
+        "0"
+      ],
+      [
+        "-16/(81*positive_h)",
+        "1"
+      ]
+    ],
+    "infinity_chart_constant": [
+      [
+        "15616/(98415*positive_h**2)",
+        "604/(1215*positive_h)"
+      ],
+      [
+        "604/(1215*positive_h)",
+        "14/15"
+      ]
+    ],
+    "inverse_infinity": [
+      [
+        "98415*positive_h**2/15616",
+        "-1215*positive_h/976"
+      ],
+      [
+        "-1215*positive_h/976",
+        "15/61"
+      ]
+    ],
+    "local_matrix": [
+      [
+        "1256/(6561*positive_h**2)",
+        "-76/(243*positive_h)"
+      ],
+      [
+        "-76/(243*positive_h)",
+        "-4"
+      ]
+    ],
+    "spectral_matrix": [
+      [
+        "16*(179*momentum_fraction**2 - 70*momentum_fraction + 147)/(6561*positive_h**2)",
+        "8*(23*momentum_fraction**2 - 12*momentum_fraction + 21)/(81*positive_h)"
+      ],
+      [
+        "8*(23*momentum_fraction**2 - 12*momentum_fraction + 21)/(81*positive_h)",
+        "4*(3*momentum_fraction**2 - 2*momentum_fraction + 3)"
+      ]
+    ],
+    "static_moment_determinant": "177147*positive_h**2/99536384",
+    "static_spectral_moment": [
+      [
+        "83121309*positive_h**2/49768192",
+        "-2745657*positive_h/3110512"
+      ],
+      [
+        "-2745657*positive_h/3110512",
+        "181803/388814"
+      ]
+    ],
+    "threshold_chart_matrix": [
+      [
+        "15736/(98415*positive_h**2)",
+        "524/(1215*positive_h)"
+      ],
+      [
+        "524/(1215*positive_h)",
+        "-16/15"
+      ]
+    ],
+    "threshold_determinant": "-526352/(1476225*positive_h**2)",
+    "threshold_matrix": [
+      [
+        "28408/(98415*positive_h**2)",
+        "268/(1215*positive_h)"
+      ],
+      [
+        "268/(1215*positive_h)",
+        "-16/15"
+      ]
+    ]
+  },
+  "formulation": "FORMULATION.md",
+  "function_space_boundary": "Rinf times the identity plus a matrix L1 causal convolution is bounded on C0 and on bounded continuous half-line inputs. The exact positive moment also bounds its primitive. No numerical L1 norm is supplied; only the regular part has norm tending to zero on short intervals.",
+  "named_exact_check_count": 40,
+  "not_established": [
+    "The actual curved selected-state no-loss stress remainder, full tree-plus-loop causal inverse, spatial or independent-state response",
+    "Quantum stability/cones, interactions, other loops, cutoff, finite Wilson matching, common-parent V/G/B or original P8 closure"
+  ],
+  "prepared_primitive_examples": {
+    "h_interval_maximum": {
+      "domain": "For f(0)=0, ||Rop f||_C0 <= trace(Rinf)||f||_C0 + 2*trace(M)*T*||fprime||_C0. The L1 proof also gives a C0 endomorphism, but no numerical L1 norm is supplied.",
+      "h": "125/64",
+      "instantaneous_spectral_norm_upper": "1553463015/63963136",
+      "primitive_spectral_norm_upper": "1394087584389/101925257216"
+    },
+    "h_one": {
+      "domain": "For f(0)=0, ||Rop f||_C0 <= trace(Rinf)||f||_C0 + 2*trace(M)*T*||fprime||_C0. The L1 proof also gives a C0 endomorphism, but no numerical L1 norm is supplied.",
+      "h": "1",
+      "instantaneous_spectral_norm_upper": "102255/15616",
+      "primitive_spectral_norm_upper": "106392093/24884096"
+    }
+  },
+  "prior_sha256": {
+    "S6_71_fully_rebuilt": "8c1f2be8713fee678e977a07941510692cfd2f98a984b36db0e6cb180dbeb4c3",
+    "exact_massive_S6_69_block_not_replaced_by_leading_log": true
+  },
+  "proof_checks": {
+    "causal_regular_kernel_L1_proof_covers_both_time_endpoints": true,
+    "cut_banks_strictly_positive_spectral_weight_off_threshold": true,
+    "instantaneous_term_precludes_full_small_interval_inverse_norm_limit_zero": true,
+    "inverse_instantaneous_part_nonzero_rank_one": true,
+    "not_the_full_curved_tree_plus_loop_inverse_or_a_quantum_health_verdict": true,
+    "oscillatory_cut_integral_not_claimed_absolutely_convergent_in_frequency": true,
+    "positive_real_axis_gap_reused_only_for_the_exact_massive_block": true,
+    "static_spectral_moment_positive_determinant": true,
+    "static_spectral_moment_positive_first_minor": true,
+    "strict_nonreal_imaginary_part_from_interior_positive_spectral_matrix": true,
+    "subthreshold_chart_positive_first_and_negative_second_diagonals": true,
+    "threshold_density_coefficient_nonzero": true,
+    "threshold_matrix_nonsingular": true,
+    "ultraviolet_density_coefficient_nonzero": true,
+    "variable_coefficient_congruence_only_defines_a_preconditioner": true
+  },
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "b001fb1278f0d793e698edd5d6f7217a0b124796e68d95ad7fe7a7a09af1de5d",
+    "README.md": "e7fbe39123e6cbd908978880fea5b6df5f091f41f76feb62f460adf2f3c24b9f",
+    "notes/causal-kernel.md": "ffd751a86b97abb4f3e69df35bec8df09c3b3dacc4c00659ea832686760438e3",
+    "notes/first-sheet.md": "ef37c78fdd21faf31d52835ccf9b95b3f6a3007b9fbd29c3a4c9a6a7380eaea5",
+    "notes/next-curved.md": "296122f823e6ceb7cb0a641d5bbaa7f5c02d593fdd55c4b477ea923f5b68557f",
+    "src/p8_vector_dispersion_inverse/__init__.py": "42e87e376ba77b8a0a3c068a52dc088506079bcce7a537e6d2eb49ba58f0bdf7",
+    "src/p8_vector_dispersion_inverse/block.py": "aa89e63b8c9778e61d13982c9bfb9c8d68015695041403a8fe0b076dc2528074",
+    "src/p8_vector_dispersion_inverse/cut.py": "4e1781962a054c11582114defaa438591aafad63515ea7604599e2c19ea29d84",
+    "src/p8_vector_dispersion_inverse/kernel.py": "5ff1869b105ee67e28dbf300742ae05322b1e4d20056079639a35fbf4e498f49",
+    "src/p8_vector_dispersion_inverse/proofs.py": "f0e16ca2b6e8d2f875968e3b9789fc51bcd5d843ad0895eab3b19af91290de28",
+    "src/p8_vector_dispersion_inverse/verify.py": "4b55647df799d33af17e2e3a0f313866b2c710b293763fc8e48c48f7ff3d40f4",
+    "tests/conftest.py": "85751c86406f59517c4d9bdfbe903546b400fcbcd0c8eb4ed1e4b2c7f3770903",
+    "tests/test_massive_inverse_certificate.py": "898edfd52ca9940b37bc9ec3b2ae4ad3f124982edff7cfa25e4e33b17640f669",
+    "tests/test_massive_inverse_science.py": "51836114f1b52fc06a45066573e39f0eddb68a86e2c45ec05b48977017648080"
+  },
+  "status": "EXACT_ISOLATED_FLAT_MASSIVE_BLOCK_CAUSAL_L1_INVERSE; ORIGINAL_P8_OPEN",
+  "variable_h_policy": "The exact matrix congruence defines S(t) B_1 S(t) with the inner multiplication inside the convolution. Its inverse is S(t)^-1 Rop_1 S(t)^-1. This is a defined preconditioner, not a derived curved-response identity.",
+  "verdict": "The exact isolated flat massive dispersion block is zero-free on its first sheet and both cut banks. The inverse has a positive cut density, a fully determined nonzero rank-one instantaneous matrix and an integrable regular retarded kernel. This advances from real-axis matrix invertibility to an actual causal C0 inverse of that block only.",
+  "verification_boundary": "Exact symbolic matrix, sign, cut, endpoint and moment anchors with written first-sheet, keyhole contour, Abel-limit and time-endpoint proofs. Not proof-assistant formalization.",
+  "written_proofs": [
+    "notes/first-sheet.md",
+    "notes/causal-kernel.md",
+    "notes/next-curved.md"
+  ]
+}
