@@ -1,0 +1,247 @@
+{
+  "canonical_covariance_identity": "W=F(Sigma+iJ/2), C^+=Tr(A W B W^T)/2, delta M=-J B. i(C^+-conj(C^+))=Tr(A F(delta M Sigma+Sigma delta M^T)F^T)/2. All real symmetric input/output/covariance matrices and general real F are symbolic; no stationarity is assumed.",
+  "canonical_insertions": {
+    "L": {
+      "J": "(alpha*momentum_squared*p**2 - beta*mass**4*v**2 - 2*beta*mass**2*momentum_squared*v**2 - beta*momentum_squared**2*v**2)/(2*(mass**2 + momentum_squared))",
+      "J_matrix": [
+        [
+          "(-2*beta*mass**4 - 4*beta*mass**2*momentum_squared - 2*beta*momentum_squared**2)/(2*(mass**2 + momentum_squared))",
+          "0"
+        ],
+        [
+          "0",
+          "alpha*momentum_squared/(mass**2 + momentum_squared)"
+        ]
+      ],
+      "contact": "-alpha**2*momentum_squared*p**2/(mass**2 + momentum_squared)",
+      "g_squared": "mass**2*momentum_squared*scale**3/(mass**2 + momentum_squared)"
+    },
+    "T": {
+      "J": "-beta*mass**2*v**2/2",
+      "J_matrix": [
+        [
+          "-beta*mass**2",
+          "0"
+        ],
+        [
+          "0",
+          "0"
+        ]
+      ],
+      "contact": "0",
+      "g_squared": "scale"
+    }
+  },
+  "checked_scalar_entries": 147,
+  "claim": "P8-S6.64.RETARDED_MASS_RESPONSE",
+  "constraint_and_contact": {
+    "Euler_identity": "0",
+    "energy_identity": "0",
+    "local_contact_density": "-alpha**2*divergence_of_momentum**2/(mass**2*scale**3)",
+    "reduced_constraint_energy": "divergence_of_momentum**2/(2*a_mass*mass**2*scale**3)",
+    "solution": "-divergence_of_momentum/(a_mass*mass**2*scale**3)",
+    "source_contact_identity": "0"
+  },
+  "controls": {
+    "finite_cutoff_not_claimed_microcausal": true,
+    "mass_only_source_not_full_metric_lapse": true,
+    "native_index_validation_before_cache": true,
+    "no_early_dimensional_finite_limit": true,
+    "rejected_inputs": 140,
+    "retarded_background_support_not_finite_perturbed_cone": true,
+    "temporal_constraint_contact_retained": true
+  },
+  "date": "2026-09-08",
+  "exact_residuals": {
+    "bubble_LL_explicit_polarization_sum": "0",
+    "bubble_LT_explicit_polarization_sum": "0",
+    "bubble_LT_zero_external_momentum_vanishes": "0",
+    "bubble_TL_explicit_polarization_sum": "0",
+    "bubble_TL_zero_external_momentum_vanishes": "0",
+    "bubble_TT_explicit_polarization_sum": "0",
+    "bubble_two_Wick_pairings_and_covariant_index_sum": "0",
+    "bubble_zero_external_longitudinal_canonical_pair_vertex": "0",
+    "canonical_Euler_identity": "0",
+    "canonical_L_contact": "0",
+    "canonical_L_fixed_clock_map_source_generator": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "canonical_L_frozen_physical_Hamiltonian": "0",
+    "canonical_L_mass_insertion": "0",
+    "canonical_T_contact": "0",
+    "canonical_T_fixed_clock_map_source_generator": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "canonical_T_frozen_physical_Hamiltonian": "0",
+    "canonical_T_mass_insertion": "0",
+    "canonical_energy_identity": "0",
+    "canonical_source_contact_identity": "0",
+    "causal_Kubo_equals_exact_canonical_covariance": "0",
+    "causal_commutator_factorization": "0",
+    "causal_moving_front_Taylor_control_0": "0",
+    "causal_moving_front_Taylor_control_1": "0",
+    "causal_moving_front_Taylor_control_2": "0",
+    "causal_real_response": "0",
+    "causal_spacelike_current_commutator_zero": "0",
+    "clock_L_actual_mass_only_clock_insertion": "0",
+    "clock_T_actual_mass_only_clock_insertion": "0",
+    "clock_actual_flat_time_pole_0": "0",
+    "clock_actual_flat_time_pole_2": "0",
+    "clock_actual_flat_time_pole_4": "0",
+    "clock_actual_nonzero_omitted_contact_UV_residue": "0",
+    "clock_frozen_spatial_lapse_mass_derivative": "0",
+    "clock_frozen_temporal_lapse_mass_derivative": "0",
+    "clock_physical_clock_Hubble": "0",
+    "clock_physical_clock_scale": "0",
+    "clock_selected_initial_Wronskian": "0",
+    "clock_selected_initial_covariance_determinant": "0",
+    "clock_temporal_profile_ratio": "0",
+    "clock_two_density_volumes_cancel_four_field_normalizations": "0",
+    "flat_Abel_static_sine_integral": "0",
+    "flat_Kubo_sign": "0",
+    "flat_L_Abel_static_response_equals_vacuum_energy_derivative": "0",
+    "flat_T_Abel_static_response_equals_vacuum_energy_derivative": "0",
+    "flat_exact_sine_transform_frequency_coefficient_0": "0",
+    "flat_exact_sine_transform_frequency_coefficient_2": "0",
+    "flat_exact_sine_transform_frequency_coefficient_4": "0",
+    "flat_radial_Gamma_residue_-1": "0",
+    "flat_radial_Gamma_residue_-3": "0",
+    "flat_radial_Gamma_residue_1": "0",
+    "flat_retarded_frequency_pole_matches_frozen_Feynman_0": "0",
+    "flat_retarded_frequency_pole_matches_frozen_Feynman_2": "0",
+    "flat_retarded_frequency_pole_matches_frozen_Feynman_4": "0",
+    "modes_constrained_Wightman_0": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "modes_constrained_Wightman_1": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "modes_flat_longitudinal_polarization_norm": "0",
+    "modes_on_shell_Proca_divergence": "0",
+    "modes_regular_isotropic_zero_momentum_0": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "modes_regular_isotropic_zero_momentum_1": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "modes_transverse_projector_idempotent_0": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        3
+      ]
+    },
+    "modes_transverse_projector_idempotent_1": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        3
+      ]
+    },
+    "modes_transverse_projector_rank_0": "0",
+    "modes_transverse_projector_rank_1": "0",
+    "modes_unit_direction_0": "0",
+    "modes_unit_direction_1": "0"
+  },
+  "flat_frequency_kernel": "-alpha**2*omega*(-mass**2/omega**2 + 1)/2 + (beta**2*mass**4/omega + omega**3*(alpha*(-mass**2/omega**2 + 1) + beta)**2/2)/(-external_frequency_squared + 4*omega**2)",
+  "flat_pole_and_omitted_contact_controls": {
+    "fourth_frequency_residue_times_pi_squared": "(alpha + beta)**2/512",
+    "omitted_contact_UV_residue_times_pi_squared": "3*alpha**2*mass**4/64",
+    "omitted_longitudinal_contact_per_momentum": "alpha**2*omega*(-mass**2/omega**2 + 1)/2",
+    "second_frequency_residue_times_pi_squared": "-mass**2*(alpha + beta)*(5*alpha + beta)/256",
+    "static_residue_times_pi_squared": "3*mass**4*(alpha**2 + 2*alpha*beta + 5*beta**2)/256"
+  },
+  "formulation": "FORMULATION.md",
+  "general_momentum_connected_integrands": {
+    "LL": "(alpha_0*pL_0_0*pL_0_1*physical_k_0_0*physical_k_0_1/(omega_0_0*omega_0_1) + angle_cosine*beta_0*omega_0_0*omega_0_1*vL_0_0*vL_0_1)*(alpha_1*physical_k_1_0*physical_k_1_1*conjugate(pL_1_0)*conjugate(pL_1_1)/(omega_1_0*omega_1_1) + angle_cosine*beta_1*omega_1_0*omega_1_1*conjugate(vL_1_0)*conjugate(vL_1_1))/2",
+    "LT": "beta_0*beta_1*mass**2*omega_0_0*omega_1_0*vL_0_0*vT_0_1*(1 - angle_cosine**2)*conjugate(vL_1_0)*conjugate(vT_1_1)/2",
+    "TL": "beta_0*beta_1*mass**2*omega_0_1*omega_1_1*vL_0_1*vT_0_0*(1 - angle_cosine**2)*conjugate(vL_1_1)*conjugate(vT_1_0)/2",
+    "TT": "beta_0*beta_1*mass**4*vT_0_0*vT_0_1*(angle_cosine**2 + 1)*conjugate(vT_1_0)*conjugate(vT_1_1)/2"
+  },
+  "mode_normalization": "Displayed U vectors in code are a^(3/2) times the physical orthonormal modes. V=m^2 diag(alpha,-beta,-beta,-beta). Pair vertices include a^3 and the density-volume factors cancel. Two transverse polarizations and one constrained longitudinal polarization are retained.",
+  "named_exact_check_count": 65,
+  "not_established": [
+    "The dimensionally regulated combined finite bare/contact/local response, finite matching or integrated feedback bounds",
+    "Full metric and second mass-source blocks, general varied Cauchy covariance, or finite off-clock cones",
+    "Coupled quantum stability, interacting cutoff, common UV parent, V/G/B or original P8 closure"
+  ],
+  "prepared_source_and_causal_boundary": "n is smooth and compactly supported strictly after u0=-1/2, zero on an initial neighborhood. This fixes the original initial covariance for this restricted perturbative mass-source response only. Ordinary-Proca CCR prove background-cone support away from coincidence. Local contacts/counterterms do not enlarge that support; they do not establish a finite off-clock cone or an arbitrary compatible varied-state family.",
+  "prior_sha256": {
+    "S6_63_fully_rebuilt": "13944f63c00a27e4ef8d7d4f7d9e596fbdc8906e3b3014e42281e3a75a35da10",
+    "original_clock_state_and_fixed_profiles_unchanged": true
+  },
+  "proof_checks": {
+    "LL_no_binary_float_in_kernel": true,
+    "LT_no_binary_float_in_kernel": true,
+    "TL_no_binary_float_in_kernel": true,
+    "TT_angular_weight_positive": true,
+    "TT_no_binary_float_in_kernel": true,
+    "actual_spatial_mass_jet_positive": true,
+    "actual_temporal_mass_jet_positive": true,
+    "mixed_angular_weight_is_real_square_on_unit_circle": true,
+    "omitted_contact_UV_fixture_nonzero": true,
+    "omitted_contact_static_fixture_nonzero": true,
+    "selected_initial_surface_unchanged": true,
+    "temporal_mode_determined_by_longitudinal_momentum": true,
+    "three_physical_polarizations_only": true
+  },
+  "retarded_formula": "For this parity-invariant selected state, R_bubble=-2 theta(u-s) Im integral d^3p/(2pi)^3 sum C_sector^+(u,s,p,K-p). Add -delta(u-s) integral d^3p/(2pi)^3 alpha(u)^2 z(u,p)|p_L(u,p)|^2, independent of external K. These are coordinate-density responses; normalize the output by a(u)^3 when comparing to the physical normalized counterterm.",
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "6aa2810825e7352494c05baf899bd32ee6eaae1bb274046f7df1deb31248a9bd",
+    "README.md": "0c6e447a5c363b6ef8d66f12c101bc46c0386faf7d79f49ed09546b9a8191e58",
+    "notes/bubble.md": "071f40a0b226d8d7d942c5ab5daae2b4dcbfe06e04c2c5a00b02329e0673f6d0",
+    "notes/causal.md": "a226d10b291130ec671b0362e1366e91613392639eab821e8ab75ed206078059",
+    "notes/constraint.md": "41cc31fe9f443bfe43509127f81e7bb2db2cadad5c513fead689faabefb7c72f",
+    "src/p8_vector_retarded/__init__.py": "d906371072e951c937f52c7f260656eed89449685e7898dd903b4652d44af437",
+    "src/p8_vector_retarded/bubble.py": "7a0da50317bc9712553dc1c14f874da6ff6fb9122bb3f2576b01ba83f08ab0ac",
+    "src/p8_vector_retarded/canonical.py": "a95b723be2aaa3b353ad0335181891a32868f30700e2b20ff8507ef60910b4ff",
+    "src/p8_vector_retarded/causal.py": "4a8638d6ea8a30f91f6f574a968cca578f55b0a84733ef2c5b80778cdf66a451",
+    "src/p8_vector_retarded/clock.py": "b399d8544b913719804673376f456a2d99b2e2833b41bf628eb9e28f2fac155d",
+    "src/p8_vector_retarded/flat.py": "44b23082ee1bc25270ca3a0ebd2f23b1623cb34d1388d1263d4906722364dc41",
+    "src/p8_vector_retarded/modes.py": "1259bab5c68c63c0dac914ae4b8a2595ded7fcf23b82dc6817282ba258906294",
+    "src/p8_vector_retarded/verify.py": "3fdedf672d106fcd679f3402a601c5eb57d2b253a50beb1e53e597e30f4583b1",
+    "tests/conftest.py": "d77205c4e9ac9ef8f109fbf1f7b40ccff285a06d950c9d204ae78fbd4e76abf1",
+    "tests/test_retarded_certificate.py": "111474272957df693698dbc9f6b7ab1227bc761361f692fba93169544d6d5037",
+    "tests/test_retarded_science.py": "028da326761a0d96ac01cc5786f0b85f0b520a95d1dfe4af0b35f75262a87e45"
+  },
+  "status": "BARE_SELECTED_STATE_MASS_RESPONSE_AND_CONTACT; ORIGINAL_P8_OPEN",
+  "unchanged_clock_profiles": {
+    "H": "4*u/(u**2 + 1)",
+    "a": "(u**2 + 1)**2",
+    "alpha": "4/(9*(u**2 + 1)**3)",
+    "beta": "28/(81*(u**2 + 1)**3)",
+    "initial_time": "-1/2"
+  },
+  "verdict": "The constrained selected-state bare mass-response integrands, temporal contact, exact homogeneous covariance identity and all three flat time-frequency UV poles agree. The finite matched causal kernel and original P8 remain open.",
+  "verification_boundary": "Exact canonical, polarization, Wick, covariance, Gamma-residue and frozen Feynman comparisons, with written constrained-field and causal-support arguments; not proof-assistant formalization",
+  "written_proofs": [
+    "notes/constraint.md",
+    "notes/bubble.md",
+    "notes/causal.md"
+  ]
+}
