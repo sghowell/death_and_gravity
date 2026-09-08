@@ -1,0 +1,361 @@
+{
+  "checked_scalar_entries": 72,
+  "claim": "P8-S6.73.PREPARED_COUPLED_CAUSAL_INVERSE",
+  "controls": {
+    "common_dimensional_diagonal_matched_before_finite_limit": true,
+    "finite_inverse_constants_not_claimed_numerically_small": true,
+    "finite_nonlogarithmic_fourth_Taylor_contact_retained": true,
+    "linear_retarded_existence_not_a_quantum_health_or_P8_closure_claim": true,
+    "matter_reconstruction_uses_negative_sign_from_literal_action": true,
+    "native_validation_before_cached_implementations": true,
+    "nonzero_instantaneous_inverse_not_dropped_for_contraction": true,
+    "prepared_initial_squeezing_and_fixed_tadpole_profiles_not_reset": true,
+    "rejected_inputs": 40
+  },
+  "coupling_and_preparation_policy": "Fix m>=1000,L>0 and margin epsilon in (0,1/100] on I. Q=64*pi^2*L^2 times the S6.68 physical vector-plus-fixed-tadpole force response, gamma=1/(64*pi^2*L^2). The equations E f+gamma Q f=g have the prepared zero-past inverse, with zero independent matter charge and clock forcing fixed by the Ward identity. No new action or state is introduced.",
+  "date": "2026-09-08",
+  "exact_residuals": {
+    "LN0_full_dimensional_all_momentum_fourth_Taylor_contact": "0",
+    "LN1_full_dimensional_all_momentum_fourth_Taylor_contact": "0",
+    "LZ0_full_dimensional_all_momentum_fourth_Taylor_contact": "0",
+    "LZ1_full_dimensional_all_momentum_fourth_Taylor_contact": "0",
+    "TN0_full_dimensional_all_momentum_fourth_Taylor_contact": "0",
+    "TN1_full_dimensional_all_momentum_fourth_Taylor_contact": "0",
+    "TZ0_full_dimensional_all_momentum_fourth_Taylor_contact": "0",
+    "TZ1_full_dimensional_all_momentum_fourth_Taylor_contact": "0",
+    "all_fourth_multiplier_commutators_retained": "0",
+    "connection_diagonal_explicit": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "connection_diagonal_is_antisymmetric": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "effective_two_current_variation": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        1
+      ]
+    },
+    "explicit_local_two_metric_equations": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        1
+      ]
+    },
+    "fourth_local_instantaneous_coefficient": "0",
+    "fourth_local_regular_IBP_kernel": "0",
+    "fourth_primitive_subleading_is_log_not_inverse_lag": "0",
+    "generic_leading_bilocal_pair": "0",
+    "generic_subleading_connection_not_dropped": "0",
+    "leading_geometry_diagonal": "0",
+    "leading_geometry_first_lag_jet": "0",
+    "literal_density_replays_S6_57": "0",
+    "local_order_0_independent_IBP": "0",
+    "local_order_1_independent_IBP": "0",
+    "local_order_2_independent_IBP": "0",
+    "local_order_3_independent_IBP": "0",
+    "log_kernel_small_interval_integral": "0",
+    "longitudinal_first_dimensional_pair_jet": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        1
+      ]
+    },
+    "longitudinal_high_pair_full_dimension": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        1
+      ]
+    },
+    "matter_charge_evolution": "0",
+    "normalized_highest_kernel_four_derivative_bridge": "0",
+    "normalized_log_matches_exact_massive_symbol": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "physical_local_principal_matrix": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "physical_point_chart_has_no_bounce_denominator": "0",
+    "physical_point_chart_preserves_both_Euler_currents": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        1
+      ]
+    },
+    "physical_rank_one_pole_matches_existing_full_local_pole": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "proper_momentum_scale_cancels_for_every_dimension": "0",
+    "radial_leading_Abel_limit": "0",
+    "radial_subleading_Abel_limit": "0",
+    "singular_power_1_four_primitive": "0",
+    "singular_power_2_four_primitive": "0",
+    "singular_power_3_four_primitive": "0",
+    "singular_power_4_four_primitive": "0",
+    "singular_power_5_four_primitive": "0",
+    "transverse_high_pair_full_dimension": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        1
+      ]
+    },
+    "transverse_no_first_dimensional_highest_finite_jet": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "transverse_no_physical_highest_log": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        1
+      ]
+    },
+    "zero_charge_matter_sign": "0"
+  },
+  "formulation": "FORMULATION.md",
+  "full_dimensional_fourth_adiabatic_contacts": {
+    "L": [
+      [
+        "(a_N*physical_momentum_fraction + b_N)**2/32",
+        "(a_N*physical_momentum_fraction + b_N)*(2*physical_momentum_fraction + 2*spatial_dimension - 4)/32"
+      ],
+      [
+        "(a_N*physical_momentum_fraction + b_N)*(2*physical_momentum_fraction + 2*spatial_dimension - 4)/32",
+        "(2*physical_momentum_fraction + 2*spatial_dimension - 4)**2/32"
+      ]
+    ],
+    "T": [
+      [
+        "b_N**2*(1 - physical_momentum_fraction)**2/32",
+        "b_N*(1 - physical_momentum_fraction)*(-2*physical_momentum_fraction + 2*spatial_dimension - 4)/32"
+      ],
+      [
+        "b_N*(1 - physical_momentum_fraction)*(-2*physical_momentum_fraction + 2*spatial_dimension - 4)/32",
+        "(-2*physical_momentum_fraction + 2*spatial_dimension - 4)**2/32"
+      ]
+    ]
+  },
+  "function_space_estimates_and_domains": {
+    "inverse_route": "Rpre=Rinf(t) multiplication plus a uniformly L1 Volterra kernel; Rpre V remains a Volterra kernel with an integrable scalar majorant.",
+    "local_fourth_derivative": "I4(c f'''')=c(t)f(t)+integral local_kernel(4)(t,s)f(s)ds for prepared f.",
+    "subleading_kernel_class": "For each diagonal derivative order n, norm((partial_t+partial_s)^n V(t,s))<=C_n*(1+abs(log(t-s))) on the compact causal triangle.",
+    "uniform_C0_short_interval_bound": "C_0*T*(2-log(T)) for 0<T<=1, with C_0 finite but not numerically evaluated.",
+    "weighted_norm_route": "Choose lambda>0 so integral_0^1 exp(-lambda*r)*w(r)dr<1, for the derived integrable majorant w. Dominated convergence gives such a lambda; the full finite-interval Neumann inverse follows."
+  },
+  "literal_classical_matter_reduction": {
+    "effective_two_metric_density": "(J_e(time) - 3*theta(time)**2)*n(time)**2 - 9*ell(time)**2*v(time)**2/2 - 3*ell(time)*n(time)*v(time)*w(time) + 6*n(time)*theta(time)*Derivative(v(time), time) - 3*Derivative(v(time), time)**2",
+    "highest_metric_derivative_order": 2,
+    "literal_homogeneous_density": "(J_e(time) - 3*theta(time)**2 + w(time)**2/2)*n(time)**2 - 3*ell(time)*matter(time)*Derivative(v(time), time) + 6*n(time)*theta(time)*Derivative(v(time), time) + n(time)*w(time)*Derivative(matter(time), time) + Derivative(matter(time), time)**2/2 - 3*Derivative(v(time), time)**2",
+    "matter_reconstruction_rate": "-3*ell(time)*v(time) - n(time)*w(time)",
+    "metric_Euler_currents": [
+      [
+        "2*J_e(time)*n(time) - 3*ell(time)*v(time)*w(time) - 6*n(time)*theta(time)**2 + 6*theta(time)*Derivative(v(time), time)"
+      ],
+      [
+        "-3*(3*ell(time)*v(time) + n(time)*w(time))*ell(time) - 18*H(time)*n(time)*theta(time) + 18*H(time)*Derivative(v(time), time) - 6*n(time)*Derivative(theta(time), time) - 6*theta(time)*Derivative(n(time), time) + 6*Derivative(v(time), (time, 2))"
+      ]
+    ],
+    "normalized_matter_Euler": "-3*H(time)*n(time)*w(time) - 3*H(time)*Derivative(matter(time), time) - 3*ell(time)*Derivative(v(time), time) - n(time)*Derivative(w(time), time) - w(time)*Derivative(n(time), time) - Derivative(matter(time), (time, 2))",
+    "physical_effective_density": "-9*(-delta(time)*n(time) + zeta(time))**2*ell(time)**2/2 - 3*(-delta(time)*n(time) + zeta(time))*ell(time)*n(time)*w(time) + (J_e(time) - 3*theta(time)**2)*n(time)**2 - 3*(-delta(time)*Derivative(n(time), time) - n(time)*Derivative(delta(time), time) + Derivative(zeta(time), time))**2 + 6*(-delta(time)*Derivative(n(time), time) - n(time)*Derivative(delta(time), time) + Derivative(zeta(time), time))*n(time)*theta(time)",
+    "physical_metric_Euler_currents": [
+      [
+        "18*H(time)*delta(time)**2*Derivative(n(time), time) + 18*H(time)*delta(time)*n(time)*theta(time) + 18*H(time)*delta(time)*n(time)*Derivative(delta(time), time) - 18*H(time)*delta(time)*Derivative(zeta(time), time) + 2*J_e(time)*n(time) - 9*delta(time)**2*ell(time)**2*n(time) + 6*delta(time)**2*Derivative(n(time), (time, 2)) + 9*delta(time)*ell(time)**2*zeta(time) + 6*delta(time)*ell(time)*n(time)*w(time) + 6*delta(time)*n(time)*Derivative(delta(time), (time, 2)) + 6*delta(time)*n(time)*Derivative(theta(time), time) + 12*delta(time)*Derivative(delta(time), time)*Derivative(n(time), time) - 6*delta(time)*Derivative(zeta(time), (time, 2)) - 3*ell(time)*w(time)*zeta(time) - 6*n(time)*theta(time)**2 - 6*n(time)*theta(time)*Derivative(delta(time), time) + 6*theta(time)*Derivative(zeta(time), time)"
+      ],
+      [
+        "-18*H(time)*delta(time)*Derivative(n(time), time) - 18*H(time)*n(time)*theta(time) - 18*H(time)*n(time)*Derivative(delta(time), time) + 18*H(time)*Derivative(zeta(time), time) + 9*delta(time)*ell(time)**2*n(time) - 6*delta(time)*Derivative(n(time), (time, 2)) - 9*ell(time)**2*zeta(time) - 3*ell(time)*n(time)*w(time) - 6*n(time)*Derivative(delta(time), (time, 2)) - 6*n(time)*Derivative(theta(time), time) - 6*theta(time)*Derivative(n(time), time) - 12*Derivative(delta(time), time)*Derivative(n(time), time) + 6*Derivative(zeta(time), (time, 2))"
+      ]
+    ],
+    "zero_prepared_charge": "3*ell(time)*v(time) + n(time)*w(time) + Derivative(matter(time), time)"
+  },
+  "local_four_primitive_kernels": {
+    "0": "output_time**3*local_coefficient(source_time)/6 - output_time**2*source_time*local_coefficient(source_time)/2 + output_time*source_time**2*local_coefficient(source_time)/2 - source_time**3*local_coefficient(source_time)/6",
+    "1": "-output_time**3*Derivative(local_coefficient(source_time), source_time)/6 + output_time**2*source_time*Derivative(local_coefficient(source_time), source_time)/2 + output_time**2*local_coefficient(source_time)/2 - output_time*source_time**2*Derivative(local_coefficient(source_time), source_time)/2 - output_time*source_time*local_coefficient(source_time) + source_time**3*Derivative(local_coefficient(source_time), source_time)/6 + source_time**2*local_coefficient(source_time)/2",
+    "2": "output_time**3*Derivative(local_coefficient(source_time), (source_time, 2))/6 - output_time**2*source_time*Derivative(local_coefficient(source_time), (source_time, 2))/2 - output_time**2*Derivative(local_coefficient(source_time), source_time) + output_time*source_time**2*Derivative(local_coefficient(source_time), (source_time, 2))/2 + 2*output_time*source_time*Derivative(local_coefficient(source_time), source_time) + output_time*local_coefficient(source_time) - source_time**3*Derivative(local_coefficient(source_time), (source_time, 2))/6 - source_time**2*Derivative(local_coefficient(source_time), source_time) - source_time*local_coefficient(source_time)",
+    "3": "-output_time**3*Derivative(local_coefficient(source_time), (source_time, 3))/6 + output_time**2*source_time*Derivative(local_coefficient(source_time), (source_time, 3))/2 + 3*output_time**2*Derivative(local_coefficient(source_time), (source_time, 2))/2 - output_time*source_time**2*Derivative(local_coefficient(source_time), (source_time, 3))/2 - 3*output_time*source_time*Derivative(local_coefficient(source_time), (source_time, 2)) - 3*output_time*Derivative(local_coefficient(source_time), source_time) + source_time**3*Derivative(local_coefficient(source_time), (source_time, 3))/6 + 3*source_time**2*Derivative(local_coefficient(source_time), (source_time, 2))/2 + 3*source_time*Derivative(local_coefficient(source_time), source_time) + local_coefficient(source_time)",
+    "4": "output_time**3*Derivative(local_coefficient(source_time), (source_time, 4))/6 - output_time**2*source_time*Derivative(local_coefficient(source_time), (source_time, 4))/2 - 2*output_time**2*Derivative(local_coefficient(source_time), (source_time, 3)) + output_time*source_time**2*Derivative(local_coefficient(source_time), (source_time, 4))/2 + 4*output_time*source_time*Derivative(local_coefficient(source_time), (source_time, 3)) + 6*output_time*Derivative(local_coefficient(source_time), (source_time, 2)) - source_time**3*Derivative(local_coefficient(source_time), (source_time, 4))/6 - 2*source_time**2*Derivative(local_coefficient(source_time), (source_time, 3)) - 6*source_time*Derivative(local_coefficient(source_time), (source_time, 2)) - 4*Derivative(local_coefficient(source_time), source_time)"
+  },
+  "named_exact_check_count": 47,
+  "not_established": [
+    "Numerical smallness or physical quantum stability/cones of the full inverse; nonlinear neighborhood-uniform semiclassical existence",
+    "Spatial response, arbitrary independent initial data, other loops, interactions, cutoff, finite Wilson/common-parent V/G/B matching or original P8 closure"
+  ],
+  "physical_current_UV_coefficients": {
+    "flat_fourth_order_pole": [
+      [
+        "512/(6561*positive_h**2)",
+        "32/(81*positive_h)"
+      ],
+      [
+        "32/(81*positive_h)",
+        "2"
+      ]
+    ],
+    "generic_acoustic_vertex_polynomial_coefficients": [
+      "A_s*A_t*pump_s**2*pump_t**2 + A_s*B_t*U_t*pump_s**2 + A_t*B_s*U_s*pump_t**2 + B_s*B_t*U_s*U_t",
+      "2*I*A_s*A_t*pump_s**2*pump_t - 2*I*A_s*A_t*pump_s*pump_t**2 - 2*I*A_s*B_t*U_t*pump_s + 2*I*A_t*B_s*U_s*pump_t",
+      "-A_s*A_t*pump_s**2 + 4*A_s*A_t*pump_s*pump_t - A_s*A_t*pump_t**2 - A_s*B_t*U_t + A_s*B_t*pump_s**2 - A_t*B_s*U_s + A_t*B_s*pump_t**2 + B_s*B_t*U_s + B_s*B_t*U_t",
+      "2*I*A_s*A_t*pump_s - 2*I*A_s*A_t*pump_t - 2*I*A_s*B_t*pump_s + 2*I*A_t*B_s*pump_t",
+      "A_s*A_t - A_s*B_t - A_t*B_s + B_s*B_t"
+    ],
+    "longitudinal_leading_pair_bimatrix": [
+      [
+        "4096/(6561*positive_h_s*positive_h_t)",
+        "256/(81*positive_h_t)"
+      ],
+      [
+        "256/(81*positive_h_s)",
+        "16"
+      ]
+    ],
+    "normalization": "Q=64*pi^2 times the unscaled Gaussian physical current response. For D=3 the normalized radial leading retarded kernel is 8*b(t)b(s)^T*k^4*sin(2*k*Delta_sigma)/(a(t)^4*a(s)).",
+    "normalized_four_primitive_inverse_lag_bimatrix": [
+      [
+        "1024/(6561*positive_h_s*positive_h_t)",
+        "64/(81*positive_h_t)"
+      ],
+      [
+        "64/(81*positive_h_s)",
+        "4"
+      ]
+    ],
+    "physical_dimensional_longitudinal": {
+      "A": [
+        [
+          "-1 + 4/(9*positive_h)"
+        ],
+        [
+          "spatial_dimension"
+        ]
+      ],
+      "B": [
+        [
+          "-1 - 28/(81*positive_h)"
+        ],
+        [
+          "2 - spatial_dimension"
+        ]
+      ],
+      "pair": [
+        [
+          "64/(81*positive_h)"
+        ],
+        [
+          "2*(spatial_dimension - 1)"
+        ]
+      ]
+    },
+    "physical_dimensional_transverse": {
+      "A": [
+        [
+          "-1"
+        ],
+        [
+          "spatial_dimension - 2"
+        ]
+      ],
+      "B": [
+        [
+          "-1"
+        ],
+        [
+          "4 - spatial_dimension"
+        ]
+      ],
+      "pair": [
+        [
+          "0"
+        ],
+        [
+          "2*(spatial_dimension - 3)"
+        ]
+      ]
+    }
+  },
+  "prior_sha256": {
+    "S6_72_fully_rebuilt": "b08b73a0d78522e358e864177984c8627a7643974126448a701c256a62001684",
+    "original_physical_state_prescription_and_fixed_tadpole_retained": true
+  },
+  "proof_checks": {
+    "actual_physical_Hamiltonian_vertices_and_instantaneous_contacts_retained": true,
+    "all_order_state_used_for_finite_time_derivative_expansions_not_reselected": true,
+    "classical_physical_metric_operator_is_local_order_at_most_two": true,
+    "complex_dimensional_initial_mixing_remainder_integrable": true,
+    "every_remaining_local_input_derivative_is_at_most_three_after_reference_removal": true,
+    "finite_constants_not_promoted_to_numerical_smallness_or_stability": true,
+    "fixed_highest_finite_local_matrix_and_exact_massive_constant_retained": true,
+    "literal_matter_charge_reduction_retains_negative_reconstruction_sign": true,
+    "longitudinal_first_dimensional_pair_jet_retained": true,
+    "nonzero_instantaneous_inverse_is_kept_before_Volterra_composition": true,
+    "not_a_nonlinear_neighborhood_spatial_initial_state_or_VGB_theorem": true,
+    "physical_mass_and_state_domain_not_extended_to_massless_case": true,
+    "positive_common_clock_rate_bounds": true,
+    "proper_momentum_scale_identity_holds_before_dimensional_finite_part": true,
+    "smoothness_uses_diagonal_kernel_derivatives_and_prepared_endpoints": true,
+    "subleading_four_primitive_kernel_is_integrable_logarithm": true,
+    "transverse_highest_square_first_dimensional_jet_vanishes": true,
+    "weighted_C0_inverse_does_not_assume_small_gamma_inverse": true
+  },
+  "schema": 1,
+  "singular_power_four_primitive_shapes": {
+    "1": "positive_lag**3*log(positive_lag)/6",
+    "2": "-positive_lag**2*log(positive_lag)/2",
+    "3": "positive_lag*log(positive_lag)/2",
+    "4": "-log(positive_lag)/6",
+    "5": "1/(24*positive_lag)"
+  },
+  "source_sha256": {
+    "FORMULATION.md": "5bc65c61f88fc86c057d717fdd6459c313526379ab7bda9f61a95ffe30532892",
+    "README.md": "deed3b215bb662c6e9e79401d34d96fb4c0c06fd8bb7bf1d870ca08681ca5f3f",
+    "notes/kernel.md": "1e07c36fa384b1baabb24c76af384a67bc61d839680af97cbc6b0998b3937acc",
+    "notes/matching.md": "64bb71091d95a8a6e78b93490f12982f6d21f3252300799d8bf85b453fe9b586",
+    "notes/scope.md": "592d99c61c3f35989dfbf4a4fc3d238f727b1a3e221fbe5c775efc8f15f269e5",
+    "notes/volterra.md": "f1d05eca8c24cf76c0041638f14efa95764232b9c0a7e307abbeb0f62836a0c6",
+    "src/p8_prepared_volterra/__init__.py": "82f732401bf5b80cabaaa2b49993136c45eb01b99f8c1eafaf36ca7718ecfa42",
+    "src/p8_prepared_volterra/primitive.py": "50b3346e3fe1e6ea1f7e4775a382e5cf7cf5fb8499c2a69efa5d9d7c8a9a0a70",
+    "src/p8_prepared_volterra/proofs.py": "49221d35f99a56b0478642bee71e6d569512604cdaa254e09fa81a58b3672d37",
+    "src/p8_prepared_volterra/tree.py": "05c00b63d461d8d4ead5e31de56e3202db24b8a70b60d6dfe607d6a6ce84a92c",
+    "src/p8_prepared_volterra/verify.py": "17fad4ebf8beaa3eff997431e3849fda4346238f49c9a053613d626760f889b8",
+    "src/p8_prepared_volterra/vertices.py": "80d61e406ff906e0aa7991c993df6bfdc0dd3074747bc3d64e184d0c1215fac5",
+    "tests/conftest.py": "85751c86406f59517c4d9bdfbe903546b400fcbcd0c8eb4ed1e4b2c7f3770903",
+    "tests/test_prepared_volterra_certificate.py": "ac5085a3af89519ecebb82eeca04758ddb46ac1ef6d1144ad8b7892a88d8cfee",
+    "tests/test_prepared_volterra_science.py": "921dfdba6048e8e78e89a89bb771bef1a93c1504293bc57852ef7807518f4055"
+  },
+  "status": "PREPARED_HOMOGENEOUS_TREE_PLUS_RETAINED_GAUSSIAN_NO_LOSS_CAUSAL_INVERSE; ORIGINAL_P8_OPEN",
+  "verdict": "The actual prepared physical-current response has I4 Q=S B_m S+V, with an integrable logarithmic Volterra remainder in a no-loss C0 norm. Full-dimensional all-momentum fourth Taylor contacts retain the finite nonlogarithmic channel. Literal charge elimination gives a local second-order classical metric operator. The exact massive inverse and a weighted Volterra argument yield a unique smooth prepared homogeneous solution of the full retained linear tree-plus-Gaussian-vector-plus-fixed-tadpole forced equations on I. Constants are finite but not numerically evaluated.",
+  "verification_boundary": "Exact physical vertex, dimensional all-momentum Taylor, time-primitive and literal Euler anchors plus written finite-WKB, common-dimensional extension, logarithmic-remainder and weighted-Volterra proofs. Not proof-assistant formalization.",
+  "written_proofs": [
+    "notes/kernel.md",
+    "notes/matching.md",
+    "notes/volterra.md",
+    "notes/scope.md"
+  ]
+}
