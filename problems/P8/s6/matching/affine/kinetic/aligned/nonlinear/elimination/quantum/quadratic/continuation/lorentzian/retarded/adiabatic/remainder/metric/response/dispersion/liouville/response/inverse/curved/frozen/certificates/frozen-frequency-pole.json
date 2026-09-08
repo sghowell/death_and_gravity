@@ -1,0 +1,458 @@
+{
+  "actual_pair_vertices_and_Gram": {
+    "Gram": [
+      [
+        "(37451*momentum_fraction**2 - 22018*momentum_fraction + 35643)/6561",
+        "2*(335*momentum_fraction**2 - 210*momentum_fraction + 327)/81"
+      ],
+      [
+        "2*(335*momentum_fraction**2 - 210*momentum_fraction + 327)/81",
+        "4*(3*momentum_fraction**2 - 2*momentum_fraction + 3)"
+      ]
+    ],
+    "finite_fourth": [
+      [
+        "-7357/6561",
+        "-562/243"
+      ],
+      [
+        "-562/243",
+        "-4"
+      ]
+    ],
+    "pairs": {
+      "L": [
+        [
+          "(117*momentum_fraction + 109)/81"
+        ],
+        [
+          "2*(momentum_fraction + 1)"
+        ]
+      ],
+      "T": [
+        [
+          "-109*(momentum_fraction - 1)/81"
+        ],
+        [
+          "-2*(momentum_fraction - 1)"
+        ]
+      ]
+    }
+  },
+  "checked_scalar_entries": 64,
+  "claim": "P8-S6.74.FROZEN_COUPLED_FREQUENCY_POLE",
+  "constant_source_chart": [
+    [
+      "1",
+      "0"
+    ],
+    [
+      "1/2",
+      "1"
+    ]
+  ],
+  "continuous_frequency_bracket_bounds": {
+    "ZZ_positive_lower_on_entire_band": "53999999999999999999905624189999999991/9000000000000",
+    "exact_block_entrywise_absolute_upper_on_band": [
+      [
+        "302",
+        "428"
+      ],
+      [
+        "428",
+        "604"
+      ]
+    ],
+    "exp_100_positive_series_single_term": "122070312500000000000000000000/781539759",
+    "finite_fourth_entrywise_absolute_upper": [
+      [
+        "2",
+        "3"
+      ],
+      [
+        "3",
+        "4"
+      ]
+    ],
+    "fixed_profile_box": {
+      "energy": "51841171393851757/7464960000000000000000000000000000000000000000000000000",
+      "pressure": "3125106248119/720000000000000000000000000000000000000000000000000"
+    },
+    "full_lower_order_entrywise_error_upper": "16666666666666666667/96000000000000000000000000000000000",
+    "local_second_entrywise_absolute_max": "19999856",
+    "local_zero_entrywise_absolute_max": "22500239999424",
+    "log_argument_upper": "25000000000000000001",
+    "lower_endpoint": {
+      "NN_lower": "22258821999991/9000000000000",
+      "NN_upper": "2995945500001/1000000000000",
+      "ZZ_lower": "53999999999999999999999989752499999991/9000000000000",
+      "both_off_diagonal_absolute_upper": "6822500000009/9000000000000",
+      "determinant_comparison": "600988193999756999999999862678107652384546551/40500000000000000000",
+      "frequency": "1000000000000",
+      "gamma_s4_lower": "1/640",
+      "gamma_s4_upper": "1/576"
+    },
+    "normalized_tadpole_entrywise_upper": "84242272974349549/1296",
+    "pair_Gram_entrywise_integer_upper": [
+      [
+        "12",
+        "17"
+      ],
+      [
+        "17",
+        "24"
+      ]
+    ],
+    "pair_Gram_entrywise_raw_upper": [
+      [
+        "24946/2187",
+        "1340/81"
+      ],
+      [
+        "1340/81",
+        "24"
+      ]
+    ],
+    "parameters": {
+      "L": "1000000000000000000000000",
+      "margin": "1/1000000",
+      "mass": "1000"
+    },
+    "pi_lower_partial_sum": "135904/45045",
+    "pi_upper": "22/7",
+    "positive_real_open_frequency_bracket": [
+      "1000000000000",
+      "10000000000000"
+    ],
+    "rounded_entrywise_error_upper": "1/1000000000000",
+    "upper_endpoint": {
+      "NN_lower": "-47160522428000009/9000000000000",
+      "NN_upper": "-12627491999999/1000000000000",
+      "ZZ_lower": "5399999999999999999999905624189999999991/9000000000000",
+      "both_off_diagonal_absolute_upper": "66875135000000009/9000000000000",
+      "determinant_comparison": "-153424027799987849998879247687664964491151758287/20250000000000000000",
+      "frequency": "10000000000000",
+      "gamma_s4_lower": "125/8",
+      "gamma_s4_upper": "625/36"
+    }
+  },
+  "controls": {
+    "finite_fourth_contact_not_double_counted": true,
+    "lower_local_matrices_not_symmetrized": true,
+    "massive_bubble_kept_exact_not_just_leading_log": true,
+    "native_validation_before_cached_implementations": true,
+    "nonzero_background_and_chart_jets_kept": true,
+    "physical_Euler_coefficients_frozen_after_variation": true,
+    "rejected_inputs": 28,
+    "stationary_diagnostic_not_promoted_to_actual_curved_instability": true,
+    "sub_Planckian_not_promoted_to_below_justified_interacting_cutoff": true,
+    "tadpole_is_fixed_Euler_Hessian_not_reselected_stress_Jacobian": true
+  },
+  "date": "2026-09-08",
+  "diagnostic_definition_and_domain": {
+    "block": "Breg(s)=Freg-(1/4) integral_0^1 y^2 Mreg(y^2)/(1+4*m^2/s^2-y^2) dy.",
+    "definition": "Freeze all coefficients of the actual physical Euler differential operators at u=0 after variation, then apply the constant T=[[1,0],[1/2,1]] congruence. Keep the exact h=1 flat massive vacuum bubble, the actual frozen local rows of all three adiabatic orders, and the already-fixed tadpole within its proven profile box.",
+    "not_claimed": "No unique or simple root, actual nonstationary pole, bound on omitted curved/state kernel, justified interacting cutoff, EFT-valid instability, removal of pole residues, or original P8 closure.",
+    "symbol": "Kfr(s)=E0+s^2 E2+(s^4 Breg(s)+C0+s^2 C2+Ctad)/(64*pi^2*L^2), where Ctad=64*pi^2*L^2 times the constant-chart physical tadpole Hessian.",
+    "uniformity": "For every fixed real pair of tadpole values with absolute energy and pressure bounded by the specified profile box, the determinant has a zero strictly inside (10^12,10^13). The ZZ entry stays positive, so the matrix inverse has an uncancelled positive-real pole."
+  },
+  "exact_residuals": {
+    "L_actual_pair_in_constant_chart": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        1
+      ]
+    },
+    "T_actual_pair_in_constant_chart": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        1
+      ]
+    },
+    "actual_finite_local_frozen_coefficient_0": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "actual_finite_local_frozen_coefficient_1": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "actual_finite_local_frozen_coefficient_2": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "actual_finite_local_frozen_coefficient_3": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "actual_finite_local_frozen_coefficient_4": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "actual_physical_tree_frozen_coefficient_0": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "actual_physical_tree_frozen_coefficient_1": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "actual_physical_tree_frozen_coefficient_2": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "block_absolute_integer_majorant": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "constant_chart_determinant": "0",
+    "curved_bounce_jets_not_set_to_zero": "0",
+    "fixed_tadpole_constant_chart_Hessian": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "frozen_fourth_contact_equals_dispersion_contact": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "log_majorant_primitive": "0",
+    "longitudinal_pair_entrywise_upper_slack": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        1
+      ]
+    },
+    "pi_lower_integrand_positive_remainder": "0",
+    "pi_upper_positive_integral": "0",
+    "positive_pair_Gram_replays_actual_spectral_matrix": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "radial_denominator_comparison": "0",
+    "time_dependent_chart_second_jet_retained": "0",
+    "transverse_pair_entrywise_upper_slack": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        1
+      ]
+    },
+    "tree_only_determinant_has_no_bracket_zero": "0"
+  },
+  "fixed_tadpole_Euler_contact": [
+    [
+      "2*fixed_selected_energy - 13*fixed_selected_pressure/4",
+      "3*fixed_selected_energy - 9*fixed_selected_pressure/2"
+    ],
+    [
+      "3*fixed_selected_energy - 9*fixed_selected_pressure/2",
+      "-9*fixed_selected_pressure"
+    ]
+  ],
+  "formulation": "FORMULATION.md",
+  "frozen_local_Gaussian_Euler_coefficients": {
+    "0": [
+      [
+        "(697897*constant_reference_mass**4 + 855392*constant_reference_mass**2 + 10020608)/52488",
+        "(6867*constant_reference_mass**4 + 39776*constant_reference_mass**2 - 84864)/324"
+      ],
+      [
+        "(763*constant_reference_mass**4 + 1760*constant_reference_mass**2 + 8960)/36",
+        "3*(15*constant_reference_mass**4 + 160*constant_reference_mass**2 - 384)/2"
+      ]
+    ],
+    "1": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ],
+    "2": [
+      [
+        "(35917*constant_reference_mass**2 - 7740)/6561",
+        "2*(1243*constant_reference_mass**2 - 8676)/243"
+      ],
+      [
+        "2*(1243*constant_reference_mass**2 - 972)/243",
+        "4*(5*constant_reference_mass**2 - 36)"
+      ]
+    ],
+    "3": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ],
+    "4": [
+      [
+        "-7357/6561",
+        "-562/243"
+      ],
+      [
+        "-562/243",
+        "-4"
+      ]
+    ]
+  },
+  "frozen_tree_Euler_coefficients": {
+    "0": [
+      [
+        "749377/250000",
+        "-3/200"
+      ],
+      [
+        "-3/200",
+        "-9/100"
+      ]
+    ],
+    "1": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ],
+    "2": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "6"
+      ]
+    ]
+  },
+  "named_exact_check_count": 24,
+  "not_established": [
+    "Root uniqueness, simplicity, complete spectrum or actual nonstationary growth estimate",
+    "Numerical curved/state-dependent kernel error, justified interacting cutoff or omitted-loop/operator budgets",
+    "Physical quantum stability/cones, finite Wilson matching, common-parent V/G/B or original P8 closure"
+  ],
+  "physical_background_bounce_jets": {
+    "Derivative(H(time), (time, 2))": "0",
+    "Derivative(H(time), time)": "4",
+    "Derivative(J_e(time), (time, 2))": "-365631/125000",
+    "Derivative(J_e(time), time)": "0",
+    "Derivative(delta(time), (time, 2))": "-3",
+    "Derivative(delta(time), time)": "0",
+    "Derivative(ell(time), (time, 2))": "-6/5",
+    "Derivative(ell(time), time)": "0",
+    "Derivative(theta(time), (time, 2))": "0",
+    "Derivative(theta(time), time)": "3",
+    "Derivative(w(time), (time, 2))": "-3/2",
+    "Derivative(w(time), time)": "0",
+    "H(time)": "0",
+    "J_e(time)": "749377/500000",
+    "delta(time)": "1/2",
+    "ell(time)": "1/10",
+    "theta(time)": "0",
+    "w(time)": "1/20"
+  },
+  "prior_sha256": {
+    "S6_67_coefficient_report_already_replayed_in_parent_chain": "4ab3213760790f7309b69596c347d21c2a20552f7d010a12b500f6552b1cbaa0",
+    "S6_68_fixed_profile_report_already_replayed_in_parent_chain": "b67525a295507e7c6e9a05a01c5f51e36abca7f004bd8d2b570bcb81bb9aabe7",
+    "S6_73_fully_rebuilt": "da5b7d2da91c6904d6b4fafdd58f231ae8ff01a7423c6c58e25efd2cad9c077f"
+  },
+  "proof_checks": {
+    "NN_finite_fourth_coefficient_below_minus_one": true,
+    "ZZ_positive_throughout_bracket_prevents_inverse_cancellation": true,
+    "actual_profile_box_is_strictly_positive": true,
+    "all_lower_order_error_below_one_e_minus_12": true,
+    "exact_massive_bubble_not_leading_log_approximation": true,
+    "finite_fourth_entrywise_absolute_majorants": true,
+    "fixed_tadpole_absolute_entries_below_one_e15": true,
+    "fixed_tadpole_profiles_not_reselected": true,
+    "frequency_units_are_inverse_bounce_time_not_Planck_units": true,
+    "local_second_absolute_entries_below_one_e9": true,
+    "local_zero_absolute_entries_below_one_e15": true,
+    "log_bound_100_from_exact_positive_series": true,
+    "lower_NN_above_two": true,
+    "lower_ZZ_above_five_e24": true,
+    "lower_determinant_strictly_positive": true,
+    "lower_off_diagonal_below_one": true,
+    "no_actual_bounce_instability_or_original_P8_closure": true,
+    "no_actual_curved_kernel_error_or_EFT_cutoff_is_claimed": true,
+    "nonsymmetric_local_rows_not_silently_symmetrized": true,
+    "pi_lower_above_three": true,
+    "pi_upper_square_below_ten": true,
+    "positive_pair_Gram_entrywise_majorants": true,
+    "upper_NN_below_minus_twelve": true,
+    "upper_ZZ_above_five_e26": true,
+    "upper_determinant_strictly_negative": true,
+    "upper_off_diagonal_below_ten_thousand": true
+  },
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "9f8fa6e90dfbf361203ca2985298e32abaac26a1c2da62113044de7366a429df",
+    "README.md": "dc0df85dd156ea1f37cdc6b225f342124e4e64f2a4b6e340008830c779e080bc",
+    "notes/bracket.md": "c0b3c35fd89d69b09a3aa3165be6b7f4cea10dc2ad099c15e747d13d050abf8a",
+    "notes/coefficients.md": "1ee040a0f2922df4a6c384b54379af82309deb57cd66380055d518576bd600fb",
+    "notes/scope.md": "5890fdcfaba5da470289cae2f650450256efffaebef6c339ea8f4dc98cd8527d",
+    "src/p8_bounce_frequency/__init__.py": "5932c5442c07959e5b4e0947e59b530ff643d40fead6fbdb081297427538fe3c",
+    "src/p8_bounce_frequency/bracket.py": "b2aff9679d8cf5b30c2715d25b8a61dbf54a86ff6282a2b7c7384b229014ef9c",
+    "src/p8_bounce_frequency/coefficients.py": "310cbffab939f571326470cebe31b0373f6f98eed7cc99e16a08d273c3b13219",
+    "src/p8_bounce_frequency/verify.py": "02bcaf268de568eb5d0b3ac44feff669d42bf88877a7b89a7604164bb2d42918",
+    "tests/conftest.py": "ea62b610d08100c9242a7a7062e55666cc9d83ad51bc05caf9401fad4eeb164b",
+    "tests/test_bounce_frequency_certificate.py": "aed76e831739cd2436f9e3880f8d19d58cc8303870803485b50de6ad30638969",
+    "tests/test_bounce_frequency_science.py": "9788aa11dc27a7dddead53c2b8d527c377ec29b86354ae4fccc8530d329128f2"
+  },
+  "status": "EXACT_POSITIVE_REAL_POLE_OF_DEFINED_FROZEN_TREE_PLUS_GAUSSIAN_DIAGNOSTIC; ACTUAL_CURVED_STABILITY_AND_ORIGINAL_P8_OPEN",
+  "verdict": "For every fixed tadpole pair in the proven profile box, the defined frozen full tree-plus-Gaussian symbol has an uncancelled positive-real inverse pole strictly between 10^12 and 10^13 inverse bounce-time units. The determinant signs are exact continuous-band inequalities retaining all finite local terms and the exact massive bubble. This is not an actual evolving-bounce instability theorem or an EFT-domain verdict.",
+  "verification_boundary": "Exact rational/symbolic coefficient replay and continuous inequalities with a written analytic intermediate-value/noncancellation proof. No floating-point root finder or proof-assistant formalization.",
+  "written_proofs": [
+    "notes/coefficients.md",
+    "notes/bracket.md",
+    "notes/scope.md"
+  ]
+}
