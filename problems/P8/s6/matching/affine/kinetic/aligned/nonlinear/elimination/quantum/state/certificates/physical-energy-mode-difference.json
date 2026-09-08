@@ -1,0 +1,218 @@
+{
+  "actual_clock_mass_direction": {
+    "a_N": "4/(9*h)",
+    "b_N": "28/(81*h)",
+    "h": "h"
+  },
+  "all_momentum_integral_and_units": "integral d\u00b3k/(2pi)\u00b3 /nu_k^4=(25/16)\u00b3/(8pi*m). Summing all three polarizations gives abs(Delta rho)<=12C/m and abs(Delta p)<=108C/(5m), uniformly on I in tau=1 units. Physical densities are tau^-4 times these. Each difference is absolutely integrable; the individual unsubtracted integrals are not assigned finite values.",
+  "checked_scalar_entries": 45,
+  "claim": "P8-S6.50.VECTOR_STATE",
+  "continuous_WKB_envelopes": {
+    "longitudinal": {
+      "S_deviation_upper": "24003219/4000000000000",
+      "coefficient_envelopes": {
+        "A": "3249/2",
+        "B": "12828497/16",
+        "B2": "104",
+        "B4": "129761/4",
+        "P2": "6",
+        "P4": "3219/4"
+      },
+      "reference_log_rate_absolute_upper": "8000368123323/3999975996781",
+      "residual_constant_integer_upper": "1665185",
+      "residual_over_inverse_frequency_fourth_upper": "26642954130054751363/16000000000000"
+    },
+    "transverse": {
+      "S_deviation_upper": "112013843/16000000000000",
+      "coefficient_envelopes": {
+        "A": "6753/4",
+        "B": "24893281/32",
+        "B2": "119",
+        "B4": "262453/8",
+        "P2": "7",
+        "P4": "13843/16"
+      },
+      "reference_log_rate_absolute_upper": "32001680497220/15999887986157",
+      "residual_constant_integer_upper": "1634089",
+      "residual_over_inverse_frequency_fourth_upper": "104581650208900981627/64000000000000"
+    }
+  },
+  "controls": {
+    "all_momenta_bounded_continuously_not_only_sampled": true,
+    "clock_mass_variation_cannot_be_omitted": true,
+    "evolution_difference_not_full_renormalized_energy_or_VGB": true,
+    "finite_Gaussian_preparation_not_called_all_order_Hadamard": true,
+    "physical_lapse_energy_not_canonical_oscillator_Hamiltonian": true,
+    "rejected_inputs": 40,
+    "second_order_reference_has_nonzero_order_inverse_frequency_squared_residual": true
+  },
+  "date": "2026-09-08",
+  "domain_and_state_preparation": "u in [-1/2,1/2], every real comoving momentum, m=m0*tau>=1000. Positive W=omega*(1+P2/omega\u00b2+P4/omega^4); exact modes match f=(2W)^(-1/2)exp(-i integral W du) and f' at u=-1/2. Wronskian i and positive Gaussian polarization covariance. No all-order Hadamard claim.",
+  "exact_WKB_reference_coefficients": {
+    "longitudinal": {
+      "A": "(6048*physical_momentum_fraction**4*u**4 - 8288*physical_momentum_fraction**3*u**4 + 1120*physical_momentum_fraction**3*u**2 + 2726*physical_momentum_fraction**2*u**4 - 924*physical_momentum_fraction**2*u**2 + 22*physical_momentum_fraction**2 - 111*physical_momentum_fraction*u**4 + 54*physical_momentum_fraction*u**2 - 3*physical_momentum_fraction + 3*u**4 + 2*u**2 - 1)/(u**2 + 1)**4",
+      "B": "-(4213440*physical_momentum_fraction**6*u**6 - 10194016*physical_momentum_fraction**5*u**6 + 1223264*physical_momentum_fraction**5*u**4 + 8498340*physical_momentum_fraction**4*u**6 - 2388648*physical_momentum_fraction**4*u**4 + 81732*physical_momentum_fraction**4*u**2 - 2811488*physical_momentum_fraction**3*u**6 + 1439386*physical_momentum_fraction**3*u**4 - 118428*physical_momentum_fraction**3*u**2 + 714*physical_momentum_fraction**3 + 306299*physical_momentum_fraction**2*u**6 - 268697*physical_momentum_fraction**2*u**4 + 41605*physical_momentum_fraction**2*u**2 - 631*physical_momentum_fraction**2 - 4395*physical_momentum_fraction*u**6 + 6185*physical_momentum_fraction*u**4 - 1477*physical_momentum_fraction*u**2 + 39*physical_momentum_fraction + 10*u**6 - 24*u**4 - 30*u**2 + 4)/(u**2 + 1)**6",
+      "B2": "-2*u*(168*physical_momentum_fraction**3*u**2 - 134*physical_momentum_fraction**2*u**2 + 22*physical_momentum_fraction**2 + 9*physical_momentum_fraction*u**2 - 3*physical_momentum_fraction - u**2 - 1)/(u**2 + 1)**3",
+      "B4": "2*u*(70224*physical_momentum_fraction**5*u**4 - 135268*physical_momentum_fraction**4*u**4 + 16772*physical_momentum_fraction**4*u**2 + 79396*physical_momentum_fraction**3*u**4 - 24050*physical_momentum_fraction**3*u**2 + 714*physical_momentum_fraction**3 - 14139*physical_momentum_fraction**2*u**4 + 8246*physical_momentum_fraction**2*u**2 - 631*physical_momentum_fraction**2 + 335*physical_momentum_fraction*u**4 - 298*physical_momentum_fraction*u**2 + 39*physical_momentum_fraction - 2*u**4 + 2*u**2 + 4)/(u**2 + 1)**5",
+      "P2": "-(14*physical_momentum_fraction**2*u**2 - physical_momentum_fraction*u**2 + physical_momentum_fraction + u**2 + 1)/(u**2 + 1)**2",
+      "P4": "(5852*physical_momentum_fraction**4*u**4 - 8260*physical_momentum_fraction**3*u**4 + 1092*physical_momentum_fraction**3*u**2 + 2697*physical_momentum_fraction**2*u**4 - 950*physical_momentum_fraction**2*u**2 + 21*physical_momentum_fraction**2 - 109*physical_momentum_fraction*u**4 + 54*physical_momentum_fraction*u**2 - 5*physical_momentum_fraction + 2*u**4 - 2)/(2*(u**2 + 1)**4)",
+      "S": "inverse_frequency_squared**2*(5852*physical_momentum_fraction**4*u**4 - 8260*physical_momentum_fraction**3*u**4 + 1092*physical_momentum_fraction**3*u**2 + 2697*physical_momentum_fraction**2*u**4 - 950*physical_momentum_fraction**2*u**2 + 21*physical_momentum_fraction**2 - 109*physical_momentum_fraction*u**4 + 54*physical_momentum_fraction*u**2 - 5*physical_momentum_fraction + 2*u**4 - 2)/(2*(u**2 + 1)**4) - inverse_frequency_squared*(14*physical_momentum_fraction**2*u**2 - physical_momentum_fraction*u**2 + physical_momentum_fraction + u**2 + 1)/(u**2 + 1)**2 + 1",
+      "U": "16*u**2*(3*physical_momentum_fraction**2 - physical_momentum_fraction + 1/4)/(u**2 + 1)**2 + (physical_momentum_fraction + 1/2)*(-8*u**2/(u**2 + 1)**2 + 4/(u**2 + 1))",
+      "reference_log_rate": "-2*inverse_frequency_squared*u*(-70224*inverse_frequency_squared*physical_momentum_fraction**5*u**4 + 135268*inverse_frequency_squared*physical_momentum_fraction**4*u**4 - 16772*inverse_frequency_squared*physical_momentum_fraction**4*u**2 - 79396*inverse_frequency_squared*physical_momentum_fraction**3*u**4 + 24050*inverse_frequency_squared*physical_momentum_fraction**3*u**2 - 714*inverse_frequency_squared*physical_momentum_fraction**3 + 14139*inverse_frequency_squared*physical_momentum_fraction**2*u**4 - 8246*inverse_frequency_squared*physical_momentum_fraction**2*u**2 + 631*inverse_frequency_squared*physical_momentum_fraction**2 - 335*inverse_frequency_squared*physical_momentum_fraction*u**4 + 298*inverse_frequency_squared*physical_momentum_fraction*u**2 - 39*inverse_frequency_squared*physical_momentum_fraction + 2*inverse_frequency_squared*u**4 - 2*inverse_frequency_squared*u**2 - 4*inverse_frequency_squared + 168*physical_momentum_fraction**3*u**6 + 336*physical_momentum_fraction**3*u**4 + 168*physical_momentum_fraction**3*u**2 - 134*physical_momentum_fraction**2*u**6 - 246*physical_momentum_fraction**2*u**4 - 90*physical_momentum_fraction**2*u**2 + 22*physical_momentum_fraction**2 + 9*physical_momentum_fraction*u**6 + 15*physical_momentum_fraction*u**4 + 3*physical_momentum_fraction*u**2 - 3*physical_momentum_fraction - u**6 - 3*u**4 - 3*u**2 - 1)/((u**2 + 1)**5*(inverse_frequency_squared**2*(5852*physical_momentum_fraction**4*u**4 - 8260*physical_momentum_fraction**3*u**4 + 1092*physical_momentum_fraction**3*u**2 + 2697*physical_momentum_fraction**2*u**4 - 950*physical_momentum_fraction**2*u**2 + 21*physical_momentum_fraction**2 - 109*physical_momentum_fraction*u**4 + 54*physical_momentum_fraction*u**2 - 5*physical_momentum_fraction + 2*u**4 - 2)/(2*(u**2 + 1)**4) - inverse_frequency_squared*(14*physical_momentum_fraction**2*u**2 - physical_momentum_fraction*u**2 + physical_momentum_fraction + u**2 + 1)/(u**2 + 1)**2 + 1)) - 4*physical_momentum_fraction*u/(u**2 + 1)",
+      "residual": "inverse_frequency_squared**2*(-inverse_frequency_squared*(5852*physical_momentum_fraction**4*u**4 - 8260*physical_momentum_fraction**3*u**4 + 1092*physical_momentum_fraction**3*u**2 + 2697*physical_momentum_fraction**2*u**4 - 950*physical_momentum_fraction**2*u**2 + 21*physical_momentum_fraction**2 - 109*physical_momentum_fraction*u**4 + 54*physical_momentum_fraction*u**2 - 5*physical_momentum_fraction + 2*u**4 - 2)**2/(4*(u**2 + 1)**8) + 3*(2*inverse_frequency_squared*u*(70224*physical_momentum_fraction**5*u**4 - 135268*physical_momentum_fraction**4*u**4 + 16772*physical_momentum_fraction**4*u**2 + 79396*physical_momentum_fraction**3*u**4 - 24050*physical_momentum_fraction**3*u**2 + 714*physical_momentum_fraction**3 - 14139*physical_momentum_fraction**2*u**4 + 8246*physical_momentum_fraction**2*u**2 - 631*physical_momentum_fraction**2 + 335*physical_momentum_fraction*u**4 - 298*physical_momentum_fraction*u**2 + 39*physical_momentum_fraction - 2*u**4 + 2*u**2 + 4)/(u**2 + 1)**5 - 2*u*(168*physical_momentum_fraction**3*u**2 - 134*physical_momentum_fraction**2*u**2 + 22*physical_momentum_fraction**2 + 9*physical_momentum_fraction*u**2 - 3*physical_momentum_fraction - u**2 - 1)/(u**2 + 1)**3)**2/(4*(inverse_frequency_squared**2*(5852*physical_momentum_fraction**4*u**4 - 8260*physical_momentum_fraction**3*u**4 + 1092*physical_momentum_fraction**3*u**2 + 2697*physical_momentum_fraction**2*u**4 - 950*physical_momentum_fraction**2*u**2 + 21*physical_momentum_fraction**2 - 109*physical_momentum_fraction*u**4 + 54*physical_momentum_fraction*u**2 - 5*physical_momentum_fraction + 2*u**4 - 2)/(2*(u**2 + 1)**4) - inverse_frequency_squared*(14*physical_momentum_fraction**2*u**2 - physical_momentum_fraction*u**2 + physical_momentum_fraction + u**2 + 1)/(u**2 + 1)**2 + 1)**2) - (inverse_frequency_squared*(5852*physical_momentum_fraction**4*u**4 - 8260*physical_momentum_fraction**3*u**4 + 1092*physical_momentum_fraction**3*u**2 + 2697*physical_momentum_fraction**2*u**4 - 950*physical_momentum_fraction**2*u**2 + 21*physical_momentum_fraction**2 - 109*physical_momentum_fraction*u**4 + 54*physical_momentum_fraction*u**2 - 5*physical_momentum_fraction + 2*u**4 - 2)/(2*(u**2 + 1)**4) - (14*physical_momentum_fraction**2*u**2 - physical_momentum_fraction*u**2 + physical_momentum_fraction + u**2 + 1)/(u**2 + 1)**2)*(6048*physical_momentum_fraction**4*u**4 - 8288*physical_momentum_fraction**3*u**4 + 1120*physical_momentum_fraction**3*u**2 + 2726*physical_momentum_fraction**2*u**4 - 924*physical_momentum_fraction**2*u**2 + 22*physical_momentum_fraction**2 - 111*physical_momentum_fraction*u**4 + 54*physical_momentum_fraction*u**2 - 3*physical_momentum_fraction + 3*u**4 + 2*u**2 - 1)/((u**2 + 1)**4*(inverse_frequency_squared**2*(5852*physical_momentum_fraction**4*u**4 - 8260*physical_momentum_fraction**3*u**4 + 1092*physical_momentum_fraction**3*u**2 + 2697*physical_momentum_fraction**2*u**4 - 950*physical_momentum_fraction**2*u**2 + 21*physical_momentum_fraction**2 - 109*physical_momentum_fraction*u**4 + 54*physical_momentum_fraction*u**2 - 5*physical_momentum_fraction + 2*u**4 - 2)/(2*(u**2 + 1)**4) - inverse_frequency_squared*(14*physical_momentum_fraction**2*u**2 - physical_momentum_fraction*u**2 + physical_momentum_fraction + u**2 + 1)/(u**2 + 1)**2 + 1)) + (14*physical_momentum_fraction**2*u**2 - physical_momentum_fraction*u**2 + physical_momentum_fraction + u**2 + 1)*(5852*physical_momentum_fraction**4*u**4 - 8260*physical_momentum_fraction**3*u**4 + 1092*physical_momentum_fraction**3*u**2 + 2697*physical_momentum_fraction**2*u**4 - 950*physical_momentum_fraction**2*u**2 + 21*physical_momentum_fraction**2 - 109*physical_momentum_fraction*u**4 + 54*physical_momentum_fraction*u**2 - 5*physical_momentum_fraction + 2*u**4 - 2)/(u**2 + 1)**6 - (4213440*physical_momentum_fraction**6*u**6 - 10194016*physical_momentum_fraction**5*u**6 + 1223264*physical_momentum_fraction**5*u**4 + 8498340*physical_momentum_fraction**4*u**6 - 2388648*physical_momentum_fraction**4*u**4 + 81732*physical_momentum_fraction**4*u**2 - 2811488*physical_momentum_fraction**3*u**6 + 1439386*physical_momentum_fraction**3*u**4 - 118428*physical_momentum_fraction**3*u**2 + 714*physical_momentum_fraction**3 + 306299*physical_momentum_fraction**2*u**6 - 268697*physical_momentum_fraction**2*u**4 + 41605*physical_momentum_fraction**2*u**2 - 631*physical_momentum_fraction**2 - 4395*physical_momentum_fraction*u**6 + 6185*physical_momentum_fraction*u**4 - 1477*physical_momentum_fraction*u**2 + 39*physical_momentum_fraction + 10*u**6 - 24*u**4 - 30*u**2 + 4)/((u**2 + 1)**6*(inverse_frequency_squared**2*(5852*physical_momentum_fraction**4*u**4 - 8260*physical_momentum_fraction**3*u**4 + 1092*physical_momentum_fraction**3*u**2 + 2697*physical_momentum_fraction**2*u**4 - 950*physical_momentum_fraction**2*u**2 + 21*physical_momentum_fraction**2 - 109*physical_momentum_fraction*u**4 + 54*physical_momentum_fraction*u**2 - 5*physical_momentum_fraction + 2*u**4 - 2)/(2*(u**2 + 1)**4) - inverse_frequency_squared*(14*physical_momentum_fraction**2*u**2 - physical_momentum_fraction*u**2 + physical_momentum_fraction + u**2 + 1)/(u**2 + 1)**2 + 1)))"
+    },
+    "transverse": {
+      "A": "-(physical_momentum_fraction - 1)*(4320*physical_momentum_fraction**3*u**4 - 3456*physical_momentum_fraction**2*u**4 + 864*physical_momentum_fraction**2*u**2 + 442*physical_momentum_fraction*u**4 - 380*physical_momentum_fraction*u**2 + 18*physical_momentum_fraction + 3*u**4 + 2*u**2 - 1)/(u**2 + 1)**4",
+      "B": "(physical_momentum_fraction - 1)*(3182400*physical_momentum_fraction**5*u**6 - 5410080*physical_momentum_fraction**4*u**6 + 954720*physical_momentum_fraction**4*u**4 + 2849516*physical_momentum_fraction**3*u**6 - 1252168*physical_momentum_fraction**3*u**4 + 65916*physical_momentum_fraction**3*u**2 - 487596*physical_momentum_fraction**2*u**6 + 437082*physical_momentum_fraction**2*u**4 - 59928*physical_momentum_fraction**2*u**2 + 594*physical_momentum_fraction**2 + 16285*physical_momentum_fraction*u**6 - 33469*physical_momentum_fraction*u**4 + 10439*physical_momentum_fraction*u**2 - 287*physical_momentum_fraction + 10*u**6 - 24*u**4 - 30*u**2 + 4)/(u**2 + 1)**6",
+      "B2": "2*u*(physical_momentum_fraction - 1)*(120*physical_momentum_fraction**2*u**2 - 42*physical_momentum_fraction*u**2 + 18*physical_momentum_fraction - u**2 - 1)/(u**2 + 1)**3",
+      "B4": "-2*u*(physical_momentum_fraction - 1)*(53040*physical_momentum_fraction**4*u**4 - 66300*physical_momentum_fraction**3*u**4 + 13260*physical_momentum_fraction**3*u**2 + 21064*physical_momentum_fraction**2*u**4 - 11582*physical_momentum_fraction**2*u**2 + 594*physical_momentum_fraction**2 - 1257*physical_momentum_fraction*u**4 + 1816*physical_momentum_fraction*u**2 - 287*physical_momentum_fraction - 2*u**4 + 2*u**2 + 4)/(u**2 + 1)**5",
+      "P2": "(physical_momentum_fraction - 1)*(10*physical_momentum_fraction*u**2 + u**2 + 1)/(u**2 + 1)**2",
+      "P4": "-(physical_momentum_fraction - 1)*(4420*physical_momentum_fraction**3*u**4 - 3536*physical_momentum_fraction**2*u**4 + 884*physical_momentum_fraction**2*u**2 + 423*physical_momentum_fraction*u**4 - 398*physical_momentum_fraction*u**2 + 19*physical_momentum_fraction + 2*u**4 - 2)/(2*(u**2 + 1)**4)",
+      "S": "-inverse_frequency_squared**2*(physical_momentum_fraction - 1)*(4420*physical_momentum_fraction**3*u**4 - 3536*physical_momentum_fraction**2*u**4 + 884*physical_momentum_fraction**2*u**2 + 423*physical_momentum_fraction*u**4 - 398*physical_momentum_fraction*u**2 + 19*physical_momentum_fraction + 2*u**4 - 2)/(2*(u**2 + 1)**4) + inverse_frequency_squared*(physical_momentum_fraction - 1)*(10*physical_momentum_fraction*u**2 + u**2 + 1)/(u**2 + 1)**2 + 1",
+      "U": "2/(u**2 + 1)",
+      "reference_log_rate": "2*inverse_frequency_squared*u*(physical_momentum_fraction - 1)*(-53040*inverse_frequency_squared*physical_momentum_fraction**4*u**4 + 66300*inverse_frequency_squared*physical_momentum_fraction**3*u**4 - 13260*inverse_frequency_squared*physical_momentum_fraction**3*u**2 - 21064*inverse_frequency_squared*physical_momentum_fraction**2*u**4 + 11582*inverse_frequency_squared*physical_momentum_fraction**2*u**2 - 594*inverse_frequency_squared*physical_momentum_fraction**2 + 1257*inverse_frequency_squared*physical_momentum_fraction*u**4 - 1816*inverse_frequency_squared*physical_momentum_fraction*u**2 + 287*inverse_frequency_squared*physical_momentum_fraction + 2*inverse_frequency_squared*u**4 - 2*inverse_frequency_squared*u**2 - 4*inverse_frequency_squared + 120*physical_momentum_fraction**2*u**6 + 240*physical_momentum_fraction**2*u**4 + 120*physical_momentum_fraction**2*u**2 - 42*physical_momentum_fraction*u**6 - 66*physical_momentum_fraction*u**4 - 6*physical_momentum_fraction*u**2 + 18*physical_momentum_fraction - u**6 - 3*u**4 - 3*u**2 - 1)/((u**2 + 1)**5*(-inverse_frequency_squared**2*(physical_momentum_fraction - 1)*(4420*physical_momentum_fraction**3*u**4 - 3536*physical_momentum_fraction**2*u**4 + 884*physical_momentum_fraction**2*u**2 + 423*physical_momentum_fraction*u**4 - 398*physical_momentum_fraction*u**2 + 19*physical_momentum_fraction + 2*u**4 - 2)/(2*(u**2 + 1)**4) + inverse_frequency_squared*(physical_momentum_fraction - 1)*(10*physical_momentum_fraction*u**2 + u**2 + 1)/(u**2 + 1)**2 + 1)) - 4*physical_momentum_fraction*u/(u**2 + 1)",
+      "residual": "inverse_frequency_squared**2*(-inverse_frequency_squared*(physical_momentum_fraction - 1)**2*(4420*physical_momentum_fraction**3*u**4 - 3536*physical_momentum_fraction**2*u**4 + 884*physical_momentum_fraction**2*u**2 + 423*physical_momentum_fraction*u**4 - 398*physical_momentum_fraction*u**2 + 19*physical_momentum_fraction + 2*u**4 - 2)**2/(4*(u**2 + 1)**8) + (physical_momentum_fraction - 1)**2*(10*physical_momentum_fraction*u**2 + u**2 + 1)*(4420*physical_momentum_fraction**3*u**4 - 3536*physical_momentum_fraction**2*u**4 + 884*physical_momentum_fraction**2*u**2 + 423*physical_momentum_fraction*u**4 - 398*physical_momentum_fraction*u**2 + 19*physical_momentum_fraction + 2*u**4 - 2)/(u**2 + 1)**6 + (physical_momentum_fraction - 1)*(-inverse_frequency_squared*(physical_momentum_fraction - 1)*(4420*physical_momentum_fraction**3*u**4 - 3536*physical_momentum_fraction**2*u**4 + 884*physical_momentum_fraction**2*u**2 + 423*physical_momentum_fraction*u**4 - 398*physical_momentum_fraction*u**2 + 19*physical_momentum_fraction + 2*u**4 - 2)/(2*(u**2 + 1)**4) + (physical_momentum_fraction - 1)*(10*physical_momentum_fraction*u**2 + u**2 + 1)/(u**2 + 1)**2)*(4320*physical_momentum_fraction**3*u**4 - 3456*physical_momentum_fraction**2*u**4 + 864*physical_momentum_fraction**2*u**2 + 442*physical_momentum_fraction*u**4 - 380*physical_momentum_fraction*u**2 + 18*physical_momentum_fraction + 3*u**4 + 2*u**2 - 1)/((u**2 + 1)**4*(-inverse_frequency_squared**2*(physical_momentum_fraction - 1)*(4420*physical_momentum_fraction**3*u**4 - 3536*physical_momentum_fraction**2*u**4 + 884*physical_momentum_fraction**2*u**2 + 423*physical_momentum_fraction*u**4 - 398*physical_momentum_fraction*u**2 + 19*physical_momentum_fraction + 2*u**4 - 2)/(2*(u**2 + 1)**4) + inverse_frequency_squared*(physical_momentum_fraction - 1)*(10*physical_momentum_fraction*u**2 + u**2 + 1)/(u**2 + 1)**2 + 1)) + (physical_momentum_fraction - 1)*(3182400*physical_momentum_fraction**5*u**6 - 5410080*physical_momentum_fraction**4*u**6 + 954720*physical_momentum_fraction**4*u**4 + 2849516*physical_momentum_fraction**3*u**6 - 1252168*physical_momentum_fraction**3*u**4 + 65916*physical_momentum_fraction**3*u**2 - 487596*physical_momentum_fraction**2*u**6 + 437082*physical_momentum_fraction**2*u**4 - 59928*physical_momentum_fraction**2*u**2 + 594*physical_momentum_fraction**2 + 16285*physical_momentum_fraction*u**6 - 33469*physical_momentum_fraction*u**4 + 10439*physical_momentum_fraction*u**2 - 287*physical_momentum_fraction + 10*u**6 - 24*u**4 - 30*u**2 + 4)/((u**2 + 1)**6*(-inverse_frequency_squared**2*(physical_momentum_fraction - 1)*(4420*physical_momentum_fraction**3*u**4 - 3536*physical_momentum_fraction**2*u**4 + 884*physical_momentum_fraction**2*u**2 + 423*physical_momentum_fraction*u**4 - 398*physical_momentum_fraction*u**2 + 19*physical_momentum_fraction + 2*u**4 - 2)/(2*(u**2 + 1)**4) + inverse_frequency_squared*(physical_momentum_fraction - 1)*(10*physical_momentum_fraction*u**2 + u**2 + 1)/(u**2 + 1)**2 + 1)) + 3*(-2*inverse_frequency_squared*u*(physical_momentum_fraction - 1)*(53040*physical_momentum_fraction**4*u**4 - 66300*physical_momentum_fraction**3*u**4 + 13260*physical_momentum_fraction**3*u**2 + 21064*physical_momentum_fraction**2*u**4 - 11582*physical_momentum_fraction**2*u**2 + 594*physical_momentum_fraction**2 - 1257*physical_momentum_fraction*u**4 + 1816*physical_momentum_fraction*u**2 - 287*physical_momentum_fraction - 2*u**4 + 2*u**2 + 4)/(u**2 + 1)**5 + 2*u*(physical_momentum_fraction - 1)*(120*physical_momentum_fraction**2*u**2 - 42*physical_momentum_fraction*u**2 + 18*physical_momentum_fraction - u**2 - 1)/(u**2 + 1)**3)**2/(4*(-inverse_frequency_squared**2*(physical_momentum_fraction - 1)*(4420*physical_momentum_fraction**3*u**4 - 3536*physical_momentum_fraction**2*u**4 + 884*physical_momentum_fraction**2*u**2 + 423*physical_momentum_fraction*u**4 - 398*physical_momentum_fraction*u**2 + 19*physical_momentum_fraction + 2*u**4 - 2)/(2*(u**2 + 1)**4) + inverse_frequency_squared*(physical_momentum_fraction - 1)*(10*physical_momentum_fraction*u**2 + u**2 + 1)/(u**2 + 1)**2 + 1)**2))"
+    }
+  },
+  "exact_evolution_comparison": "nu_k\u00b2=m\u00b2+k_com\u00b2/(25/16)\u00b2. The variation-of-constants column-sum exponent J_k<=2C/nu_k^5. Both squared-mode and squared-physical-derivative differences are <=8C/nu_k^5 times their reference values. The physical reference energy per polarization is <=2omega/a_s\u00b3.",
+  "exact_residuals": {
+    "clock_sensitive_longitudinal_lapse_energy": "0",
+    "clock_sensitive_transverse_lapse_energy": "0",
+    "direct_spatial_dimensional_zero_point_residue": "0",
+    "fixed_comoving_inverse_frequency_derivative": "0",
+    "fixed_comoving_momentum_fraction_derivative": "0",
+    "full_lapse_local_pole_value_plus_N_derivative": "0",
+    "full_temporal_constraint": "0",
+    "lapse_variation_and_temporal_elimination_commute": "0",
+    "longitudinal_WKB_fourth_order_cancellation": "0",
+    "longitudinal_WKB_second_order_cancellation": "0",
+    "longitudinal_coefficient_box_reconstruction_A": "0",
+    "longitudinal_coefficient_box_reconstruction_B": "0",
+    "longitudinal_coefficient_box_reconstruction_B2": "0",
+    "longitudinal_coefficient_box_reconstruction_B4": "0",
+    "longitudinal_coefficient_box_reconstruction_P2": "0",
+    "longitudinal_coefficient_box_reconstruction_P4": "0",
+    "longitudinal_exact_fourth_order_WKB_residual": "0",
+    "longitudinal_original_canonical_frequency_correction": "0",
+    "physical_longitudinal_canonical_energy": "0",
+    "physical_longitudinal_canonical_pressure": "0",
+    "physical_transverse_canonical_energy": "0",
+    "physical_transverse_canonical_pressure": "0",
+    "radial_resolvent_square_integral": "0",
+    "reference_physical_derivative_norm": "0",
+    "transverse_WKB_fourth_order_cancellation": "0",
+    "transverse_WKB_second_order_cancellation": "0",
+    "transverse_coefficient_box_reconstruction_A": "0",
+    "transverse_coefficient_box_reconstruction_B": "0",
+    "transverse_coefficient_box_reconstruction_B2": "0",
+    "transverse_coefficient_box_reconstruction_B4": "0",
+    "transverse_coefficient_box_reconstruction_P2": "0",
+    "transverse_coefficient_box_reconstruction_P4": "0",
+    "transverse_exact_fourth_order_WKB_residual": "0",
+    "transverse_original_canonical_frequency_correction": "0",
+    "unit_canonical_Wronskian": "0",
+    "variation_of_constants_exact_forced_equation": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        1,
+        2
+      ]
+    },
+    "variation_of_constants_preserves_CCR": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "variation_of_constants_readout_constraint": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        1,
+        2
+      ]
+    },
+    "zero_momentum_canonical_energy_chart_limit": "0",
+    "zero_momentum_canonical_pressure_chart_limit": "0"
+  },
+  "formulation": "FORMULATION.md",
+  "literal_component": "Unchanged S6.42 retained canonical vector at fixed light fields, actual rolling physical FLRW metric, zero Gaussian mean and vanishing source first variation. The physical lapse variation retains nonzero a_N and b_N. Other determinants and affine contact/measure terms are not supplied.",
+  "local_pole_boundary": "d=4-2epsilon_DR: the zero-point Gamma residue is -m0^4/(64pi\u00b2 epsilon_DR). Including two transverse and one longitudinal mode gives 3+3a_N/2+9b_N/2=3+20/(9h)=C+C_N, not C. No finite or derivative counterterm matching is inferred.",
+  "local_pole_control": {
+    "direct_spatial_dimensional_zero_point_residue": "0",
+    "full_lapse_local_pole_value_plus_N_derivative": "0",
+    "omitting_clock_variation_pole_difference": "20/(9*h)",
+    "relative_pole": "3*(a_N + 3*b_N + 2)/2"
+  },
+  "named_exact_check_count": 40,
+  "not_established": [
+    "Full reference adiabatic subtraction, covariant finite mass/metric counterterm matching, all-order Hadamard admissibility or full renormalized quantum energy",
+    "All-time state tails, other field loops, higher-loop error, corrected bounce/constraints/cones, finite higher matching operators or interacting cutoff",
+    "Lorentz-invariant vacuum, finite-gravity Regge remainder, V/G/B admissibility or original P8 closure"
+  ],
+  "physical_canonical_energy_and_pressure": {
+    "omega2": "m0_squared + physical_momentum_squared",
+    "pL": "(-canonical_mode**2*(m0_squared + physical_momentum_squared) + (2*physical_momentum_squared/(m0_squared + physical_momentum_squared) + 1)*(-H*canonical_mode*(physical_momentum_squared/(m0_squared + physical_momentum_squared) + 1/2) + canonical_mode_dot)**2)/(6*a_scale**3)",
+    "pT": "(canonical_mode**2*(-m0_squared + physical_momentum_squared) + (-H*canonical_mode/2 + canonical_mode_dot)**2)/(6*a_scale**3)",
+    "rateL": "H*(physical_momentum_squared/(m0_squared + physical_momentum_squared) + 1/2)",
+    "rateT": "H/2",
+    "rhoL": "(canonical_mode**2*(b_N + 1)*(m0_squared + physical_momentum_squared) + (-H*canonical_mode*(physical_momentum_squared/(m0_squared + physical_momentum_squared) + 1/2) + canonical_mode_dot)**2*(-a_N*physical_momentum_squared/(m0_squared + physical_momentum_squared) + 1))/(2*a_scale**3)",
+    "rhoT": "(canonical_mode**2*(b_N*m0_squared + m0_squared + physical_momentum_squared) + (-H*canonical_mode/2 + canonical_mode_dot)**2)/(2*a_scale**3)",
+    "z": "physical_momentum_squared/(m0_squared + physical_momentum_squared)"
+  },
+  "physical_scale_example": {
+    "M_tau": "1000000000000",
+    "full_renormalized_energy_or_all_order_Hadamard_claim": false,
+    "m0_tau": "1000",
+    "physical_lapse_energy_evolution_difference_over_reference_density": "3/125000000000000000000",
+    "pressure_evolution_difference_over_reference_density": "27/625000000000000000000"
+  },
+  "prior_sha256": {
+    "S6_49_fully_rebuilt": "4f6bcb4fd4d93d4df5deef50c35c7a83f340a6280625001860a8cc1bf0f75669",
+    "no_frozen_action_or_finite_counterterm_changed": true,
+    "original_all64_action_physical_frame_and_clock_retained": true
+  },
+  "proof_checks": {
+    "actual_lapse_kinetic_weight_lower": true,
+    "actual_lapse_potential_weight_upper_below_three_halves": true,
+    "finite_evolution_difference_not_full_renormalized_energy": true,
+    "global_scale_factor_on_compact_interval": true,
+    "initial_to_final_time_length_one": true,
+    "longitudinal_common_residual_constant": true,
+    "longitudinal_positive_WKB_reference": true,
+    "longitudinal_reference_log_rate_below_four": true,
+    "maximum_variation_of_constants_exponent_below_quarter": true,
+    "positive_mass_floor": true,
+    "pressure_absolute_weight_ratio": true,
+    "reference_energy_frequency_numerator_upper_four": true,
+    "reference_rate_plus_half_log_rate_below_five": true,
+    "three_polarization_integrated_energy_constant": true,
+    "transverse_common_residual_constant": true,
+    "transverse_positive_WKB_reference": true,
+    "transverse_reference_log_rate_below_four": true
+  },
+  "reference_and_residual_bounds": "omega/2<W<3omega/2, abs(W'/W)<4, abs(f''+(omega\u00b2-U)f)<=C*abs(f)/omega^4, C=2000000. These follow from an exact rational residual and continuous polynomial-box bounds, not an unbounded asymptotic expansion.",
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "f2043112fa03c336708d6f73e782697d0c3cb38d7ffd5b116ba1c90ca5a49945",
+    "README.md": "558d1ae739677c858eb2d25f1e6028e01e9ba3eacbf3e86775e113b6c957692f",
+    "notes/comparison.md": "f90dbf643e2dc4e42ab3dd777482591fb7e7e91530eebe4d7ea0de283f339c21",
+    "notes/energy.md": "0cc44fcc6b96b5c5d23037ba1c2e8916bff4bc30763c5839dc9718aa1d53e9d4",
+    "src/p8_vector_state/__init__.py": "a7525caa47d5e94d62d1bddae46eab8733c931900aa3ba642d2eb0ce50cc77e4",
+    "src/p8_vector_state/comparison.py": "a15c151558a93ca8ddc8fb9e760452a998a23bb440c658aad5120d206f7d38ad",
+    "src/p8_vector_state/energy.py": "aca2dbf8d552fc4c0ee822615657f598cb7ee08c17807f6436c3926a56112263",
+    "src/p8_vector_state/verify.py": "2af86f10b2df7071e4c708c516ffae82dc6a60315cc3a8ba87d43c96d8749aa7",
+    "src/p8_vector_state/wkb.py": "40f34ac3f0cd8f55c5e31352964b4a210fca7fc4ce49019f40c16b355657704f",
+    "tests/conftest.py": "a3109380cdd9282d36fd769df20d5e723334026cafbe2de999a5f0a5d7a41aec",
+    "tests/test_state_certificate.py": "a30edf5454ecba9c63892be1de8d6d39d131417f8eca27cb30cd54d9bbc5950a",
+    "tests/test_state_comparison.py": "02c61ddbc98415fa93cb54f3061f72c8bad635e2378e3d1734a5c1efc53a5453",
+    "tests/test_state_energy.py": "8522dda261a8dfdce1fa9a5c83d04a712dc7dabd76982ad900fcce73338063a4"
+  },
+  "status": "PHYSICAL_VECTOR_ENERGY_AND_FINITE_CURVED_MODE_DIFFERENCE_CERTIFIED; ORIGINAL_P8_OPEN",
+  "verdict": "The actual physical vector lapse/pressure forms and a finite all-momentum exact-mode/WKB evolution difference on the rolling bounce interval are established. Original P8 remains open.",
+  "verification_boundary": "Exact physical lapse/constraint variation, actual fixed-comoving WKB residual, continuous rational envelopes, Wronskian/CCR controls, variation-of-constants proof and analytic momentum integral; not proof-assistant formalization",
+  "written_proofs": [
+    "notes/energy.md",
+    "notes/comparison.md"
+  ]
+}
