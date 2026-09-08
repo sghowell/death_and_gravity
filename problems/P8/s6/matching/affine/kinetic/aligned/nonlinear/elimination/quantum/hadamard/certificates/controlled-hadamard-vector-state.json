@@ -1,0 +1,331 @@
+{
+  "Proca_reference_construction": "Use a_aux=1+chi(u+3)(a_actual-1), flat for u<=-2 and physical for u>=-1. It is smooth and >=1, hence globally hyperbolic on R times R³. A constrained positive Minkowski Proca seed propagates to this auxiliary spacetime, then from the shared Cauchy neighborhood to the actual one. The auxiliary geometry is not a physical model change.",
+  "all_order_Hadamard_comparison": "On the compact auxiliary past interval, arbitrary fixed-order WKB references match the flat initial data and have mixing O(k^(-2N-1)). The new Cauchy data have the complete same WKB asymptotics. Their relative mixing with the propagated Proca Hadamard reference is faster than every inverse power. Physical vector reconstruction and its finite spacetime derivatives grow only polynomially on compact intervals, giving a smooth two-point difference. Positivity and CCR are retained, so the new state is Hadamard.",
+  "all_order_recurrence": "For S=1+sum P_n t^n, t=omega^-2, L=lambda+D S/S, cancel rho_res=(1-S²)/t-U-D L/2+L²/4. At order t^(n-1) the new coefficient enters only as -2P_n. Formal inverse and convolution recurrences define each P_n exactly. The actual rational coefficient ring is preserved under the fixed-comoving derivative, giving finite computable coefficient and slope envelopes at every finite order.",
+  "checked_scalar_entries": 61,
+  "claim": "P8-S6.55.VECTOR_HADAMARD",
+  "controls": {
+    "Hadamard_reference_constants_not_used_as_quantitative_error_coefficients": true,
+    "auxiliary_metric_is_reference_proof_device_not_physical_bounce_replacement": true,
+    "cutoffs_use_time_independent_comoving_frequency": true,
+    "finite_state_change_adds_no_pole_or_counterterm": true,
+    "initial_frequency_and_slope_both_controlled": true,
+    "locally_finite_definition_not_fixed_order_numerical_truncation": true,
+    "rejected_inputs": 113,
+    "three_positive_constrained_Proca_polarizations_not_four_scalars": true
+  },
+  "date": "2026-09-08",
+  "exact_residuals": {
+    "Cauchy_derivative_matches_initial_Bogoliubov_coefficients": "0",
+    "Cauchy_value_matches_initial_Bogoliubov_coefficients": "0",
+    "Lorenz_constraint_for_each_polarization": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        1
+      ]
+    },
+    "Minkowski_Proca_polarization_sum": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "bump_derivative_polynomial_0": "0",
+    "bump_derivative_polynomial_1": "0",
+    "bump_derivative_polynomial_2": "0",
+    "bump_derivative_polynomial_3": "0",
+    "bump_derivative_polynomial_4": "0",
+    "bump_derivative_polynomial_5": "0",
+    "complex_diagonal_amplitude_has_quadratic_root_remainder": "0",
+    "initial_state_change_preserves_CCR": "0",
+    "longitudinal_coefficient_reconstruction": "0",
+    "longitudinal_order_eight_coefficient_reconstruction": "0",
+    "longitudinal_order_eight_slope_reconstruction": "0",
+    "longitudinal_recurrence_replays_frozen_P2": "0",
+    "longitudinal_recurrence_replays_frozen_P4": "0",
+    "longitudinal_sixth_order_cancels_leading_frozen_residual": "0",
+    "longitudinal_slope_reconstruction": "0",
+    "new_WKB_coefficient_first_residual_order_1": "0",
+    "new_WKB_coefficient_first_residual_order_2": "0",
+    "new_WKB_coefficient_first_residual_order_3": "0",
+    "new_WKB_coefficient_first_residual_order_4": "0",
+    "new_WKB_coefficient_first_residual_order_5": "0",
+    "new_WKB_coefficient_first_residual_order_6": "0",
+    "physical_longitudinal_spatial_multiplier": "0",
+    "physical_longitudinal_temporal_multiplier": "0",
+    "positive_mass_shell": "0",
+    "three_positive_polarizations_on_the_constraint_surface": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        3
+      ]
+    },
+    "transverse_coefficient_reconstruction": "0",
+    "transverse_order_eight_coefficient_reconstruction": "0",
+    "transverse_order_eight_slope_reconstruction": "0",
+    "transverse_recurrence_replays_frozen_P2": "0",
+    "transverse_recurrence_replays_frozen_P4": "0",
+    "transverse_sixth_order_cancels_leading_frozen_residual": "0",
+    "transverse_slope_reconstruction": "0"
+  },
+  "explicit_Cauchy_data_examples": {
+    "longitudinal": {
+      "1000": {
+        "active_higher_derivative_orders": [],
+        "all_order_frequency": "7812493749997/7812500000",
+        "all_order_frequency_slope": "-3125007/4882812500",
+        "all_order_half_log_rate": "-12500028/39062468749985",
+        "comoving_momentum_squared": "0",
+        "first_inactive_threshold": "2000",
+        "frozen_frequency": "7812493749997/7812500000",
+        "frozen_frequency_slope": "-3125007/4882812500",
+        "included_correction_terms": {},
+        "initial_frequency": "1000",
+        "initial_u": "-1/2",
+        "initial_z": "0",
+        "m0_tau": "1000"
+      },
+      "3000": {
+        "active_higher_derivative_orders": [
+          6
+        ],
+        "all_order_frequency": "189170097660478187849339541833/63056720214843750000000000",
+        "all_order_frequency_slope": "3026723801719892372459238316121/709388102416992187500000000",
+        "all_order_half_log_rate": "6053447603439784744918476632242/8512654394721518453220279382485",
+        "comoving_momentum_squared": "19531250",
+        "first_inactive_threshold": "912353543881/2",
+        "frozen_frequency": "20759407150669759981/6919804687500000",
+        "frozen_frequency_slope": "166075380066935109737/38923901367187500",
+        "included_correction_terms": {
+          "6": {
+            "cutoff": "2000",
+            "frequency_correction": "22477041833/63056720214843750000000000",
+            "slope_correction": "-2497586683879/709388102416992187500000000",
+            "weight": "1/2"
+          }
+        },
+        "initial_frequency": "3000",
+        "initial_u": "-1/2",
+        "initial_z": "8/9",
+        "m0_tau": "1000"
+      },
+      "4000": {
+        "active_higher_derivative_orders": [
+          6
+        ],
+        "all_order_frequency": "33554425249793065040454007381/8388608000000000000000000",
+        "all_order_frequency_slope": "2516583104184225840720105987793/419430400000000000000000000",
+        "all_order_half_log_rate": "2516583104184225840720105987793/3355442524979306504045400738100",
+        "comoving_momentum_squared": "146484375/4",
+        "first_inactive_threshold": "912353543881/2",
+        "frozen_frequency": "13107197363200416031/3276800000000000",
+        "frozen_frequency_slope": "196608055014392643861/32768000000000000",
+        "included_correction_terms": {
+          "6": {
+            "cutoff": "2000",
+            "frequency_correction": "1094007381/8388608000000000000000000",
+            "slope_correction": "-700694012207/419430400000000000000000000",
+            "weight": "1"
+          }
+        },
+        "initial_frequency": "4000",
+        "initial_u": "-1/2",
+        "initial_z": "15/16",
+        "m0_tau": "1000"
+      }
+    },
+    "transverse": {
+      "1000": {
+        "active_higher_derivative_orders": [],
+        "all_order_frequency": "7812493749997/7812500000",
+        "all_order_frequency_slope": "-3125007/4882812500",
+        "all_order_half_log_rate": "-12500028/39062468749985",
+        "comoving_momentum_squared": "0",
+        "first_inactive_threshold": "2000",
+        "frozen_frequency": "7812493749997/7812500000",
+        "frozen_frequency_slope": "-3125007/4882812500",
+        "included_correction_terms": {},
+        "initial_frequency": "1000",
+        "initial_u": "-1/2",
+        "initial_z": "0",
+        "m0_tau": "1000"
+      },
+      "3000": {
+        "active_higher_derivative_orders": [
+          6
+        ],
+        "all_order_frequency": "37834031090937078365652650197/12611344042968750000000000",
+        "all_order_frequency_slope": "605344575800870364107434228837/141877620483398437500000000",
+        "all_order_half_log_rate": "1210689151601740728214868457674/1702531399092168526454369258865",
+        "comoving_momentum_squared": "19531250",
+        "first_inactive_threshold": "3708172078901/8",
+        "frozen_frequency": "830376539718783613/276792187500000",
+        "frozen_frequency_slope": "33215065887564903373/7784780273437500",
+        "included_correction_terms": {
+          "6": {
+            "cutoff": "2000",
+            "frequency_correction": "-1659849803/12611344042968750000000000",
+            "slope_correction": "134509228837/141877620483398437500000000",
+            "weight": "1/2"
+          }
+        },
+        "initial_frequency": "3000",
+        "initial_u": "-1/2",
+        "initial_z": "8/9",
+        "m0_tau": "1000"
+      },
+      "4000": {
+        "active_higher_derivative_orders": [
+          6
+        ],
+        "all_order_frequency": "838860792463367342720090025409/209715200000000000000000000",
+        "all_order_frequency_slope": "2516582485262210462498641203637/419430400000000000000000000",
+        "all_order_half_log_rate": "2516582485262210462498641203637/3355443169853469370880360101636",
+        "comoving_momentum_squared": "146484375/4",
+        "first_inactive_threshold": "3708172078901/8",
+        "frozen_frequency": "65535999411200573651/16384000000000000",
+        "frozen_frequency_slope": "983040033305550961809/163840000000000000",
+        "included_correction_terms": {
+          "6": {
+            "cutoff": "2000",
+            "frequency_correction": "-12709974591/209715200000000000000000000",
+            "slope_correction": "267601203637/419430400000000000000000000",
+            "weight": "1"
+          }
+        },
+        "initial_frequency": "4000",
+        "initial_u": "-1/2",
+        "initial_z": "15/16",
+        "m0_tau": "1000"
+      }
+    }
+  },
+  "finite_state_change_regulator_limit": "Continue W_4(D) analytically on |D-3|<=1/4 and add the same D-independent Cauchy correction. For each analytic-sign transfer column, abs(A0-1)+abs(B0)<=C_H/nu^6. The continued combined readout difference is <=1000C_H*(25/16)/nu^5. Its dimensionally weighted radial tail is uniformly integrable, proving a holomorphic finite state-change limit and no new pole or finite counterterm. Compact-time distributional passage gives the clock-source limit.",
+  "first_higher_cutoff_controls": {
+    "longitudinal": {
+      "Lambda_3_at_mass_1000": "2000",
+      "Lambda_4_at_mass_1000": "912353543881/2",
+      "order_eight_bounds": {
+        "coefficient_reconstruction": "0",
+        "coefficient_upper": "97319749163/256",
+        "frequency_coefficient_slope_upper": "912353543849/32",
+        "slope_reconstruction": "0"
+      }
+    },
+    "transverse": {
+      "Lambda_3_at_mass_1000": "2000",
+      "Lambda_4_at_mass_1000": "3708172078901/8",
+      "order_eight_bounds": {
+        "coefficient_reconstruction": "0",
+        "coefficient_upper": "50191252943/128",
+        "frequency_coefficient_slope_upper": "3708172078773/128",
+        "slope_reconstruction": "0"
+      }
+    }
+  },
+  "formulation": "FORMULATION.md",
+  "imported_theorem_and_hypotheses": "Moretti, Murro and Volpe, arXiv:2210.09278v3, Proposition 4.7: Proca time-slice extension and Hadamard propagation. Applied to the stated globally hyperbolic geometries, Cauchy neighborhoods and constant m²>0. https://arxiv.org/html/2210.09278v3 . No scalar state-of-low-energy theorem is imported.",
+  "literal_component": "A new cutoff-summed all-order Cauchy state of the unchanged retained free Proca vector on the actual clock. Physical frame, action and S6.53 finite matching prescription are unchanged. The old S6.50 fourth-order Gaussian is not relabelled as Hadamard.",
+  "locally_finite_state_definition": "nu²=m²+k²/(25/16)² is time independent. Lambda_3=2m; Lambda_n=max(2Lambda_(n-1),2^n[1+C_n]), where C_n is the larger exact box bound on P_n and D0 P_n+(1-2n)lambda P_n. Add chi(nu/Lambda_n) P_n omega^(1-2n) for every n>=3 to W_4. Chi is the explicit smooth flat turn-on from zero at one to one at two. Threshold doubling makes each momentum sum finite; the same rule proves all-order value and slope asymptotics.",
+  "named_exact_check_count": 36,
+  "not_established": [
+    "Quantitative higher time/functional variations, other fields and interacting loops or omitted UV matching operators",
+    "Quantum-corrected light equations, constraints, principal cones, nonlinear stability or interacting cutoff",
+    "A common vacuum/UV parent, finite-gravity Regge remainder, V/G/B or original P8 closure"
+  ],
+  "physical_scale_example": {
+    "M_tau": "1000000000000",
+    "clock_source_new_state_over_reference_scalar_equation": "1494962604941383/349920000000000000000000000000",
+    "energy_new_state_derivative_over_reference_density_rate": "1913546464132399/447897600000000000000000000000",
+    "energy_new_state_total_over_reference_density": "51841171393851757/7464960000000000000000000000000",
+    "full_quantum_solution_or_VGB_claim": false,
+    "m0_tau": "1000",
+    "pressure_new_state_derivative_over_reference_density_rate": "6099140501/216000000000000000000000000",
+    "pressure_new_state_total_over_reference_density": "3125106248119/720000000000000000000000000",
+    "state_change_clock_source_over_reference_scalar_equation": "1253/1250000000000000000000",
+    "state_change_density_derivative_over_reference_density_rate": "1/1000000000000000000",
+    "state_change_energy_or_pressure_over_reference_density": "1/5000000000000000000000"
+  },
+  "physical_units_and_scope": "Restore tau^-4 for energy/pressure and tau^-5 for density derivatives and the physical phi=tau*u Euler source. Relative scales are M²/tau² and M²/tau³. At M*tau=10^12,m0*tau=1000 all five new-state totals remain below 10^-14. This is the stated vector-only Gaussian component at fixed background.",
+  "physical_vector_reconstruction": "Transverse multiplier 1/sqrt(a); longitudinal spatial multiplier omega/(sqrt(a)*m) and temporal readout k(v'-d_L v)/(a^(5/2)*m*omega), up to Fourier phase. The constrained Minkowski polarization sum and positive three-mode Gram matrix are checked. The low-momentum new data equal the frozen data.",
+  "positive_normalized_preparation": "The complete frequency and slope changes are bounded by F/omega^5,G/omega^5, F=V_3+1,G=G_3+1. W_B>=omega/4. At u0=-1/2 use v=(2W_B)^(-1/2), v'=(-W_B'/(2W_B)-iW_B)v, then evolve the unchanged exact equation. The Cauchy Bogoliubov identities preserve CCR and give abs(B0)<=C_H/nu^6, C_H=10000000.",
+  "prior_sha256": {
+    "S6_54_fully_rebuilt": "845f1ca80239f75a03d59d5a4cfcb05b3e2fdeefe084e49b71a57480e7087a47",
+    "frozen_fourth_order_state_not_relabelled": true,
+    "original_action_physical_clock_and_finite_counterterms_unchanged": true
+  },
+  "proof_checks": {
+    "clock_source_new_state_over_reference_scalar_equation_below_stated_bound": true,
+    "complex_old_exact_bilinear_readout_constant": true,
+    "complex_state_change_all_polarization_constant": true,
+    "complex_state_change_radial_high_tail_integrable": true,
+    "complex_state_change_radial_low_tail_integrable": true,
+    "energy_new_state_derivative_over_reference_density_rate_below_stated_bound": true,
+    "energy_new_state_total_over_reference_density_below_stated_bound": true,
+    "higher_coefficient_geometric_tail_below_one": true,
+    "initial_mixing_below_one": true,
+    "longitudinal_complex_initial_state_data_envelope": true,
+    "longitudinal_first_higher_threshold_controls_both_slopes": true,
+    "longitudinal_first_higher_threshold_doubles": true,
+    "longitudinal_initial_state_mixing_constant": true,
+    "longitudinal_positive_all_order_Cauchy_frequency": true,
+    "old_exact_absolute_reference_density_constant": true,
+    "old_exact_mode_mixed_product_below_seven": true,
+    "pressure_new_state_derivative_over_reference_density_rate_below_stated_bound": true,
+    "pressure_new_state_total_over_reference_density_below_stated_bound": true,
+    "state_change_derivative_integral_constant": true,
+    "state_change_derivative_readout_constant": true,
+    "state_change_value_integral_constant": true,
+    "transverse_complex_initial_state_data_envelope": true,
+    "transverse_first_higher_threshold_controls_both_slopes": true,
+    "transverse_first_higher_threshold_doubles": true,
+    "transverse_initial_state_mixing_constant": true,
+    "transverse_positive_all_order_Cauchy_frequency": true
+  },
+  "quantitative_observable_transfer": "Uniformly on I and all k, each energy/pressure state-change integral is <=20C_H/m², each density derivative <=100C_H/m, and the clock-source difference <=100C_H/m+240C_H/m². Exact initial-state comparison supplies these constants; the qualitative auxiliary-reference constants are not inserted into the error budget.",
+  "schema": 1,
+  "sixth_order_and_full_correction_envelopes": {
+    "longitudinal": {
+      "full_frequency_correction_over_inverse_frequency_fifth_upper": "12497265/32",
+      "full_frequency_slope_correction_over_inverse_frequency_fifth_upper": "705628175/32",
+      "initial_beta_over_inverse_frequency_sixth_upper": "1400849947/1600",
+      "sixth_order_coefficient_upper": "12497233/32",
+      "sixth_order_frequency_slope_upper": "705628143/32"
+    },
+    "transverse": {
+      "full_frequency_correction_over_inverse_frequency_fifth_upper": "25941347/64",
+      "full_frequency_slope_correction_over_inverse_frequency_fifth_upper": "1424158035/64",
+      "initial_beta_over_inverse_frequency_sixth_upper": "14498596923/16000",
+      "sixth_order_coefficient_upper": "25941283/64",
+      "sixth_order_frequency_slope_upper": "1424157971/64"
+    }
+  },
+  "source_sha256": {
+    "FORMULATION.md": "3915e1123d7d90085c16e10fbd08aa7cda20b8e2b73377c17b2a20ae4e33a871",
+    "README.md": "05a9816b5826fd668e87970fbb000ac0d7e93f5f694b166d3747ba86783f90a2",
+    "notes/construction.md": "06b14ed6d2b64dd5d0cae38dafa02a6707b9a88fa3ae4e5089fd9410c0942057",
+    "notes/hadamard.md": "03315f8e5ceef81671d43c8776ef098b261a69026021172114689babb490a731",
+    "notes/transfer.md": "bd38ecd59e99ff3f389f17ed3151b28632fe04e83082640e4577a97cdfdfd8cd",
+    "src/p8_vector_hadamard/__init__.py": "b93956052c146dc63e5698599cc204798e5d60d0b019e14b2d232357f0b90eb8",
+    "src/p8_vector_hadamard/cutoffs.py": "a395ff9ea5e0fb275c7a7746dcfd0b6c1b5a4d5c46e488e3a02b18413b5128e7",
+    "src/p8_vector_hadamard/preparation.py": "d2da239dc8784063bf7469316cfe3aec659917746581ac2a211b050972b7c305",
+    "src/p8_vector_hadamard/proca.py": "4e582589fbbab0fff8f74f9a82247ec9eb16bf84c71b8ed718fd03e1f6190271",
+    "src/p8_vector_hadamard/series.py": "fc1912f6065257d434cb07f4b6bddd55e8933d350f7cc0da169cf28c9f37ca9d",
+    "src/p8_vector_hadamard/transfer.py": "06b8cf8485fa85ec13e5c9b1cfd986151dda15b4bd918c3695821320fe45d553",
+    "src/p8_vector_hadamard/verify.py": "3d4a4728310601e91d1bfcaf59d9c45127f344e1a83e3e921764a13dd515609c",
+    "tests/conftest.py": "a3109380cdd9282d36fd769df20d5e723334026cafbe2de999a5f0a5d7a41aec",
+    "tests/test_hadamard_certificate.py": "6dec6acd28e1db8415ce7ac4df09ba68b13ed782a3ccf07092bba877a3f62a43",
+    "tests/test_hadamard_science.py": "b9e2027b0216d06fbe3ee1d5715ec635ac3f35540083967cd03a22163d865bd3"
+  },
+  "status": "NEW_CONTROLLED_HADAMARD_VECTOR_STATE_WITH_MATCHED_FIRST_VARIATION_BOUNDS; ORIGINAL_P8_OPEN",
+  "verdict": "The explicit new vector state is Hadamard by constrained Proca comparison and has quantitatively transferred matched first-variation bounds. It does not solve the quantum-corrected light system or close original P8.",
+  "verification_boundary": "Exact symbolic and rational controls plus written all-order recurrence, cutoff, Proca Hadamard comparison and continuous transfer proofs using the explicitly identified propagation theorem; not proof-assistant formalization or a full quantum solution",
+  "written_proofs": [
+    "notes/construction.md",
+    "notes/hadamard.md",
+    "notes/transfer.md"
+  ]
+}

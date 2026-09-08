@@ -1,0 +1,345 @@
+{
+  "background_and_full_volume_variation": "Delta P and its first metric/clock variations vanish identically on x=-1. The exact classical complete bounce and free-matter history remain solutions. Differentiating the full density N*[(h-1+N^-2)/h]^(-3/4)*epsilon*(1-N^-2)²/h² gives the added lapse-square coefficient delta_J=4epsilon/h².",
+  "center_data": {
+    "center_gradient_identity": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ],
+    "finite_q_kinetic": [
+      [
+        "2*q*(8*epsilon_margin + 3)/(-16*epsilon_margin + q - 6)",
+        "q/(20*(-16*epsilon_margin + q - 6))"
+      ],
+      [
+        "q/(20*(-16*epsilon_margin + q - 6))",
+        "(-3200*epsilon_margin + 200*q - 1199)/(400*(-16*epsilon_margin + q - 6))"
+      ]
+    ],
+    "independently_differentiated_principal_gradient": [
+      [
+        "6",
+        "1/20"
+      ],
+      [
+        "1/20",
+        "1/2"
+      ]
+    ],
+    "principal_squared_speeds": [
+      "1",
+      "1199/(800*(4*epsilon_margin + 1199/800))"
+    ],
+    "regular_phase_Hamiltonian_does_not_require_this_velocity_threshold": true,
+    "velocity_chart_threshold": "16*epsilon_margin + 6"
+  },
+  "chart_coverage_and_continuous_margins": "For |u|<=1/4, Lambda<=-1/5; for 1/4<=|u|<=1/2, abs(Theta)>=3/5. These charts cover the bounce interval. Theta is nonzero at every other finite time. Positive even polynomial coefficients prove J*h²>=1199/800 globally and J*h²<=3817516721573/107374182400<36 on |u|<=1/2. Thus c_clock²>=1199/(1199+3200epsilon); the compact margin and fractional kinetic increase have the recorded exact bounds.",
+  "checked_scalar_entries": 62,
+  "claim": "P8-S6.56.CLOCK_MARGIN",
+  "controls": {
+    "both_scalar_charts_keep_actual_moving_boundary": true,
+    "finite_q_velocity_chart_pole_not_phase_or_cutoff_pole": true,
+    "free_matter_luminal_direction_not_claimed_strictly_protected": true,
+    "isolated_P_xx_not_full_quantum_cone_verdict": true,
+    "negative_deformation_superluminal_control_not_allowed_model": true,
+    "new_covariant_lower_scalar_not_reduced_matrix_edit": true,
+    "nonzero_loop_tadpoles_not_silently_cancelled": true,
+    "rejected_inputs": 51
+  },
+  "date": "2026-09-08",
+  "exact_residuals": {
+    "actual_matter_mixing_identity": "0",
+    "actual_moving_gradient_identity": "0",
+    "actual_regular_gamma_cone_margin": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "beta_leading_symmetric": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "clock_phi_first": "0",
+    "clock_value": "0",
+    "clock_x_first": "0",
+    "clock_x_first_total_time_derivative": "0",
+    "density_lapse_first": "0",
+    "density_value": "0",
+    "finite_potential_x_jet": "0",
+    "finite_q_kinetic_identity": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "gamma_characteristic": "0",
+    "gamma_gradient_determinant": "0",
+    "gamma_has_no_q_squared_principal": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "gamma_kinetic_determinant": "0",
+    "gamma_positive_kinetic_squares": "0",
+    "global_J_h_squared_denominator": "0",
+    "independent_center_time_jet_gradient": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "isolated_clock_principal_difference": "0",
+    "joint_auxiliary_change_from_full_Hamiltonian_density": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "literal_physical_volume_quadratic_lapse_change": "0",
+    "lower_scalar_second_x_derivative": "0",
+    "principal_time_boundary_retained": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "regular_Hamiltonian": "0",
+    "regular_lapse_equation": "0",
+    "shift_constraint": "0",
+    "temporal_constraint_unchanged": "0",
+    "unitary_characteristic": "0",
+    "unitary_gradient_determinant": "0",
+    "unitary_kinetic_change": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        3
+      ]
+    },
+    "unitary_kinetic_determinant": "0",
+    "unitary_positive_kinetic_squares": "0"
+  },
+  "finite_potential_interpretation": "At mu=m0 the fixed vector potential has B_xx=(B_NN+3B_N)/4=2392/(6561h²)>0, hence negative Lorentzian P_xx. Its ratio to the added positive 2epsilon/h² is <=R^4*1196/(576L²*6561epsilon). The isolated fixed-metric clock identity is K-G=4P_xx, not the full constrained quantum principal matrix. Nonzero loop background/first variations are not cancelled.",
+  "finite_potential_jet_diagnostic": {
+    "B_x_on_clock": "-11/(27*h)",
+    "B_xx_on_clock": "2392/(6561*h**2)",
+    "finite_Lorentzian_P_xx": "-2392/(6561*h**2)",
+    "finite_weight_x_second_identity": "0",
+    "isolated_clock_K_minus_G_identity": "0",
+    "not_the_full_constrained_quantum_principal_symbol": true
+  },
+  "formulation": "FORMULATION.md",
+  "global_polynomial_bound_data": {
+    "J_times_h_squared": "(3200*u**34 + 48000*u**32 + 332800*u**30 + 1410400*u**28 + 4068800*u**26 + 8413600*u**24 + 12776400*u**22 + 14350800*u**20 + 11890800*u**18 + 7319600*u**16 + 3693600*u**14 + 2108796*u**12 + 1559176*u**10 + 1030340*u**8 + 470732*u**6 + 133176*u**4 + 20412*u**2 + 1199)/(800*(u**2 + 1)**12)",
+    "compact_upper": "3817516721573/107374182400",
+    "compact_upper_below_36": true,
+    "denominator_identity": "0",
+    "global_lower": "1199/800",
+    "global_lower_remainder_coefficients": [
+      [
+        [
+          34
+        ],
+        "3200"
+      ],
+      [
+        [
+          32
+        ],
+        "48000"
+      ],
+      [
+        [
+          30
+        ],
+        "332800"
+      ],
+      [
+        [
+          28
+        ],
+        "1410400"
+      ],
+      [
+        [
+          26
+        ],
+        "4068800"
+      ],
+      [
+        [
+          24
+        ],
+        "8412401"
+      ],
+      [
+        [
+          22
+        ],
+        "12762012"
+      ],
+      [
+        [
+          20
+        ],
+        "14271666"
+      ],
+      [
+        [
+          18
+        ],
+        "11627020"
+      ],
+      [
+        [
+          16
+        ],
+        "6726095"
+      ],
+      [
+        [
+          14
+        ],
+        "2743992"
+      ],
+      [
+        [
+          12
+        ],
+        "1000920"
+      ],
+      [
+        [
+          10
+        ],
+        "609568"
+      ],
+      [
+        [
+          8
+        ],
+        "436835"
+      ],
+      [
+        [
+          6
+        ],
+        "206952"
+      ],
+      [
+        [
+          4
+        ],
+        "54042"
+      ],
+      [
+        [
+          2
+        ],
+        "6024"
+      ]
+    ],
+    "global_positive_even_remainder": true
+  },
+  "literal_constraints_and_regular_Hamiltonian": "The unchanged temporal and shift equations leave only J->J+delta_J in the regular Hamiltonian C0+R²/(J+delta_J), with n=-R/(J+delta_J) and no inverse Theta. The vector quadratic block stays decoupled and unchanged.",
+  "literal_new_action": "Add Delta P=(M²/tau²)*epsilon_margin*(x+1)²/h² in the original physical matter metric, h=(1+u²)³,u=phi/tau. Require 0<epsilon_margin<=1/100. All other terms, vector alignment/mass/source functions, finite prescription and free-vector state remain unchanged. This is a new named candidate, not an overwrite of S6.42--S6.55.",
+  "named_exact_check_count": 33,
+  "nonlinear_constraint_count_scope": "The full added Hamiltonian is -N*U*Delta P and introduces no auxiliary velocity/spatial derivative or momentum dependence. The rolling joint lapse/temporal Hessian becomes diag(-2[J+delta_J],-1). S6.45's smooth local implicit-function/Dirac argument persists with seven physical modes including free matter. No quantitative neighborhood radius, nonlinear energy or interacting cutoff follows.",
+  "not_established": [
+    "Quantum-corrected background and constraints, complete causal second functional variations and physical cones",
+    "Protection of the still-luminal matter/tensor/vector directions against arbitrary unsigned corrections",
+    "Interacting cutoff, other fields/loops, common vacuum/UV parent, finite-gravity Regge remainder or V/G/B",
+    "Nonlinear energy stability, global well-posedness or original P8 closure"
+  ],
+  "physical_characteristics": "Both charts give det(G-c²K)/det(K)=(1-c²)[J/(J+delta_J)-c²]. J>0 and delta_J>0 imply positive K,G and positive semidefinite K-G. The clock mode is strictly subluminal, matter stays luminal; vector and tensor fronts remain one. Massive finite-q phase velocities are not used.",
+  "physical_scale_example": {
+    "M_tau": "1000000000000",
+    "all_time_clock_squared_speed_lower": "749375/749377",
+    "all_time_fractional_light_kinetic_increase_upper": "2/749375",
+    "clock_tube_added_P_over_reference_density_upper": "1/100000000",
+    "clock_tube_added_P_x_over_reference_density_upper": "1/5000000",
+    "clock_tube_added_P_xx_over_reference_density_upper": "1/500000",
+    "compact_clock_cone_margin_lower": "268435456/2385948219418581",
+    "epsilon_margin": "1/1000000",
+    "finite_potential_negative_P_xx_over_added_positive_P_xx_upper": "299/944784000000",
+    "full_quantum_cone_or_cutoff_claim": false,
+    "isolated_potential_jet_is_dominated": true,
+    "m0_tau": "1000"
+  },
+  "prior_sha256": {
+    "S6_55_fully_rebuilt": "8ba1aa16cee4dbe890b233fac864a83de569402e06b26c9c18ae56ef763a9200",
+    "frozen_action_certificates_not_overwritten": true,
+    "vector_clock_operator_state_and_finite_matching_unchanged": true
+  },
+  "proof_checks": {
+    "all_time_positive_even_J_h_squared_remainder": true,
+    "compact_J_h_squared_upper_below_36": true,
+    "compact_auxiliary_J_lower_above_one_over_40": true,
+    "example_clock_margin_above_one_over_ten_million": true,
+    "example_fractional_kinetic_change_below_three_parts_per_million": true,
+    "example_isolated_loop_jet_fraction_below_one_billionth": true,
+    "free_matter_direction_remains_luminal_not_strictly_protected": true,
+    "gamma_chart_h_upper_below_five_fourths": true,
+    "gamma_chart_lambda_magnitude_at_least_one_fifth": true,
+    "no_full_quantum_cone_from_isolated_potential_sign": true,
+    "nonlinear_count_not_energy_stability": true,
+    "old_vector_background_operator_and_state_unchanged": true,
+    "positive_added_J": true,
+    "regular_phase_has_no_Theta_inverse": true,
+    "unitary_chart_Theta_magnitude_at_least_three_fifths": true
+  },
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "01bfb83e35a20996114d59e70271b2f3d66e0fbaabcd5ec05ff201bed102dac9",
+    "README.md": "b6da1dce211b515f7adc5230fd002088ad7c3c52120b18dcf2ccf41d17a73395",
+    "notes/action.md": "fd1c4be7928e205f34c447f11e574298f6748ffad8f00414b502390c71ef9f30",
+    "notes/cones.md": "226b41271f793159f7d32472b5083ffdcd900605d7fba2f9acbf52e772240735",
+    "notes/finite-jet.md": "58df4724ecbd3c7286872a2548e35999edb824b5dad182670da6bf10fde68a41",
+    "src/p8_aligned_margin/__init__.py": "05465184a7746ac491df9887aa13ea97132fa53d4a68418dedebb43c830291a5",
+    "src/p8_aligned_margin/action.py": "c5302585dc52332a20cd95ca7786aad999fadbc22938bc9363915c473b9f4f9d",
+    "src/p8_aligned_margin/bounds.py": "a9dd7548c3cf88fe49e5752e19fe1328bfbbd540360a3eb53958700063d570bc",
+    "src/p8_aligned_margin/dynamics.py": "767d8aac4662b271c90be215290b86823532b34dcd5ed83e47a9a8c789785be1",
+    "src/p8_aligned_margin/verify.py": "a1cd07d934de8081be06e25c268424f49cb19951a8138f6da5633cdcb528e039",
+    "tests/conftest.py": "a3109380cdd9282d36fd769df20d5e723334026cafbe2de999a5f0a5d7a41aec",
+    "tests/test_margin_certificate.py": "9d5bd62261b753a14f24bb0840226527ce700f44bd059679e54d1b4651096e64",
+    "tests/test_margin_science.py": "9bafbd3e86e820d9cfeaea45abbc336b5a64fe40ceac07590d2f79dff6e724a0"
+  },
+  "status": "NEW_BACKGROUND_PRESERVING_CLASSICAL_CLOCK_CONE_MARGIN_CANDIDATE; ORIGINAL_P8_OPEN",
+  "two_chart_principal_derivation": "The unitary chart has K=K_old+diag(delta_J/Theta²,0), G=K_old. A direct canonical Legendre calculation with -H*b*P_b and (a³q)'=H*a³q gives the gamma chart K=K_gamma_old+diag(delta_J/Lambda²,0), G=K_gamma_old. The beta' contribution is retained before the high-q limit, and an independent center time-jet calculation reproduces G(0)=[[6,1/20],[1/20,1/2]].",
+  "unchanged_vector_first_variation_example": {
+    "M_tau": "1000000000000",
+    "clock_source_new_state_over_reference_scalar_equation": "1494962604941383/349920000000000000000000000000",
+    "energy_new_state_derivative_over_reference_density_rate": "1913546464132399/447897600000000000000000000000",
+    "energy_new_state_total_over_reference_density": "51841171393851757/7464960000000000000000000000000",
+    "full_quantum_solution_or_VGB_claim": false,
+    "m0_tau": "1000",
+    "pressure_new_state_derivative_over_reference_density_rate": "6099140501/216000000000000000000000000",
+    "pressure_new_state_total_over_reference_density": "3125106248119/720000000000000000000000000",
+    "state_change_clock_source_over_reference_scalar_equation": "1253/1250000000000000000000",
+    "state_change_density_derivative_over_reference_density_rate": "1/1000000000000000000",
+    "state_change_energy_or_pressure_over_reference_density": "1/5000000000000000000000"
+  },
+  "verdict": "This new named candidate preserves the exact classical history, local nonlinear degree count and vector state controls while giving an explicit positive clock-cone margin. It does not establish the quantum-corrected system or close P8.",
+  "verification_boundary": "Exact symbolic/rational controls and written action, nonlinear-constraint corollary, overlapping principal-chart and continuous-bound proofs; not proof-assistant formalization or a full quantum solution",
+  "written_proofs": [
+    "notes/action.md",
+    "notes/cones.md",
+    "notes/finite-jet.md"
+  ]
+}
