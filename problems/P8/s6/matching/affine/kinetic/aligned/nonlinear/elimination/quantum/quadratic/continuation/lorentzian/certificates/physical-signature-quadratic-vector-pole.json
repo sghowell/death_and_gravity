@@ -1,0 +1,218 @@
+{
+  "checked_scalar_entries": 144,
+  "claim": "P8-S6.63.LORENTZIAN_QUADRATIC_POLE",
+  "controls": {
+    "bare_action_counterterm_opposite_to_loop_pole": true,
+    "finite_evanescent_piece_not_complete_finite_response": true,
+    "full_flat_potential_checked_not_readded": true,
+    "local_covariant_continuation_not_global_state_Wick_rotation": true,
+    "local_higher_derivative_poles_not_exact_new_EFT_modes": true,
+    "nested_index_and_native_jet_validation_before_cache": true,
+    "rejected_inputs": 204
+  },
+  "counterterm_sign_and_measure": "The Lorentzian bare-action counterterm is -Q_L,D/(32*pi^2*epsilon), not the same-sign subtraction functional. With epsilon=(3-D)/2, its normalized lapse variation is -E_L,3/(32*pi^2*epsilon)+2*(partial_D E_L,D)_3/(32*pi^2). All a^D measure derivatives remain included before the dimensional limit.",
+  "date": "2026-09-08",
+  "exact_residuals": {
+    "Lorentzian_Ricci_contraction_00": "0",
+    "Lorentzian_Ricci_contraction_01": "0",
+    "Lorentzian_Ricci_contraction_02": "0",
+    "Lorentzian_Ricci_contraction_03": "0",
+    "Lorentzian_Ricci_contraction_10": "0",
+    "Lorentzian_Ricci_contraction_11": "0",
+    "Lorentzian_Ricci_contraction_12": "0",
+    "Lorentzian_Ricci_contraction_13": "0",
+    "Lorentzian_Ricci_contraction_20": "0",
+    "Lorentzian_Ricci_contraction_21": "0",
+    "Lorentzian_Ricci_contraction_22": "0",
+    "Lorentzian_Ricci_contraction_23": "0",
+    "Lorentzian_Ricci_contraction_30": "0",
+    "Lorentzian_Ricci_contraction_31": "0",
+    "Lorentzian_Ricci_contraction_32": "0",
+    "Lorentzian_Ricci_contraction_33": "0",
+    "Lorentzian_compact_2_0_first_time_derivative_squared": "0",
+    "Lorentzian_compact_2_0_lapse_squared": "0",
+    "Lorentzian_compact_2_0_second_time_derivative_squared": "0",
+    "Lorentzian_compact_2_1_first_time_derivative_squared": "0",
+    "Lorentzian_compact_2_1_lapse_squared": "0",
+    "Lorentzian_compact_2_1_second_time_derivative_squared": "0",
+    "Lorentzian_compact_4_0_first_time_derivative_squared": "0",
+    "Lorentzian_compact_4_0_lapse_squared": "0",
+    "Lorentzian_compact_4_0_second_time_derivative_squared": "0",
+    "Lorentzian_compact_4_1_first_time_derivative_squared": "0",
+    "Lorentzian_compact_4_1_lapse_squared": "0",
+    "Lorentzian_compact_4_1_second_time_derivative_squared": "0",
+    "Lorentzian_flat_Feynman_pole_0": "0",
+    "Lorentzian_flat_Feynman_pole_2": "0",
+    "Lorentzian_flat_Feynman_pole_4": "0",
+    "Lorentzian_mass_commutator_01": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "Lorentzian_mass_commutator_02": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "Lorentzian_mass_commutator_03": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "Lorentzian_mass_commutator_12": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "Lorentzian_mass_commutator_13": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "Lorentzian_mass_commutator_23": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "Lorentzian_operator_2_0": "0",
+    "Lorentzian_operator_2_1": "0",
+    "Lorentzian_operator_4_0": "0",
+    "Lorentzian_operator_4_1": "0",
+    "Lorentzian_raw_2_0": "0",
+    "Lorentzian_raw_2_1": "0",
+    "Lorentzian_raw_4_0": "0",
+    "Lorentzian_raw_4_1": "0",
+    "direct_Lorentzian_fourth_pole_equals_local_continuation_in_all_D": "0",
+    "direct_Lorentzian_second_pole_equals_local_continuation_in_all_D": "0",
+    "physical_clock_ricci_squared_replays_S6_49": "0",
+    "physical_clock_riemann_squared_replays_S6_49": "0",
+    "physical_clock_scalar_replays_S6_49": "0",
+    "real_Lorentzian_pole_2_0": "0",
+    "real_Lorentzian_pole_2_1": "0",
+    "real_Lorentzian_pole_4_0": "0",
+    "real_Lorentzian_pole_4_1": "0"
+  },
+  "formulation": "FORMULATION.md",
+  "grading_identity": "Every actual compact coefficient and normalized Euler operator obeys X_L,n,j(q)=-(-1)^(n/2)X_E,n,j(-q), n=2,4 and j=0,1. This is checked against independent physical-signature projection with full time-dependent mass-profile chain rules.",
+  "local_signature_convention": "Physical eta=(-,+,+,+); Y_00=-Yt,Y_ij=Ys delta_ij for the mixed eigenvalue amplitudes. H_E^(j)=(-i)^(j+1)H_L^(j), Y_E^(j)=(-i)^j Y_L^(j), k_E=k_L, Q_loop,L=-Wick(Q_loop,E). Independent frame and negative-lapse coordinate calculations agree in arbitrary symbolic D.",
+  "named_exact_check_count": 54,
+  "not_established": [
+    "Finite dimensionally regulated bare/contact/retarded response, compatible varied-state covariance or integrated feedback bounds",
+    "Finite matching/Wilson-coefficient data, coupled quantum stability/cones, interactions or cutoff",
+    "Common UV parent, finite-gravity remainder, V/G/B or original P8 closure"
+  ],
+  "physical_bare_counterterm_finite_evanescent_operators": {
+    "2": "8*constant_reference_mass**2*(259*clock_lapse0*physical_spatial_momentum**2*u**4 + 518*clock_lapse0*physical_spatial_momentum**2*u**2 + 259*clock_lapse0*physical_spatial_momentum**2 - 32994*clock_lapse0*u**2 - 2106*clock_lapse0 + 4992*clock_lapse1*u**3 + 4992*clock_lapse1*u + 287*clock_lapse2*u**4 + 574*clock_lapse2*u**2 + 287*clock_lapse2)/(19683*(u**2 + 1)**8)",
+    "4": "16*(1995*clock_lapse0*physical_spatial_momentum**4*u**8 + 7980*clock_lapse0*physical_spatial_momentum**4*u**6 + 11970*clock_lapse0*physical_spatial_momentum**4*u**4 + 7980*clock_lapse0*physical_spatial_momentum**4*u**2 + 1995*clock_lapse0*physical_spatial_momentum**4 - 149764*clock_lapse0*physical_spatial_momentum**2*u**6 - 349512*clock_lapse0*physical_spatial_momentum**2*u**4 - 249732*clock_lapse0*physical_spatial_momentum**2*u**2 - 49984*clock_lapse0*physical_spatial_momentum**2 + 6795480*clock_lapse0*u**4 + 3319008*clock_lapse0*u**2 - 107352*clock_lapse0 - 22776*clock_lapse1*physical_spatial_momentum**2*u**7 - 68328*clock_lapse1*physical_spatial_momentum**2*u**5 - 68328*clock_lapse1*physical_spatial_momentum**2*u**3 - 22776*clock_lapse1*physical_spatial_momentum**2*u - 21300*clock_lapse1*u**5 - 577080*clock_lapse1*u**3 - 555780*clock_lapse1*u + 4167*clock_lapse2*physical_spatial_momentum**2*u**8 + 16668*clock_lapse2*physical_spatial_momentum**2*u**6 + 25002*clock_lapse2*physical_spatial_momentum**2*u**4 + 16668*clock_lapse2*physical_spatial_momentum**2*u**2 + 4167*clock_lapse2*physical_spatial_momentum**2 - 288870*clock_lapse2*u**6 - 596190*clock_lapse2*u**4 - 325770*clock_lapse2*u**2 - 18450*clock_lapse2 + 11520*clock_lapse3*u**7 + 34560*clock_lapse3*u**5 + 34560*clock_lapse3*u**3 + 11520*clock_lapse3*u + 2172*clock_lapse4*u**8 + 8688*clock_lapse4*u**6 + 13032*clock_lapse4*u**4 + 8688*clock_lapse4*u**2 + 2172*clock_lapse4)/(295245*(u**2 + 1)**10)"
+  },
+  "physical_clock_compact_dimensional_jets": {
+    "2": {
+      "0": {
+        "first_time_derivative_squared": "-832*constant_reference_mass**2/(6561*(u**2 + 1)**6)",
+        "lapse_squared": "16*constant_reference_mass**2*(13*physical_spatial_momentum**2*u**4 + 26*physical_spatial_momentum**2*u**2 + 13*physical_spatial_momentum**2 - 258*u**2 - 78)/(2187*(u**2 + 1)**8)",
+        "second_time_derivative_squared": "0"
+      },
+      "1": {
+        "first_time_derivative_squared": "-574*constant_reference_mass**2/(19683*(u**2 + 1)**6)",
+        "lapse_squared": "2*constant_reference_mass**2*(259*physical_spatial_momentum**2*u**4 + 518*physical_spatial_momentum**2*u**2 + 259*physical_spatial_momentum**2 - 32994*u**2 - 2106)/(19683*(u**2 + 1)**8)",
+        "second_time_derivative_squared": "0"
+      }
+    },
+    "4": {
+      "0": {
+        "first_time_derivative_squared": "-64*(11*physical_spatial_momentum**2*u**4 + 22*physical_spatial_momentum**2*u**2 + 11*physical_spatial_momentum**2 - 612*u**2 - 90)/(19683*(u**2 + 1)**8)",
+        "lapse_squared": "16*(101*physical_spatial_momentum**4*u**8 + 404*physical_spatial_momentum**4*u**6 + 606*physical_spatial_momentum**4*u**4 + 404*physical_spatial_momentum**4*u**2 + 101*physical_spatial_momentum**4 - 2650*physical_spatial_momentum**2*u**6 - 8130*physical_spatial_momentum**2*u**4 - 8310*physical_spatial_momentum**2*u**2 - 2830*physical_spatial_momentum**2 + 238230*u**4 + 172980*u**2 - 4770)/(98415*(u**2 + 1)**10)",
+        "second_time_derivative_squared": "128/(6561*(u**2 + 1)**6)"
+      },
+      "1": {
+        "first_time_derivative_squared": "-4*(1389*physical_spatial_momentum**2*u**4 + 2778*physical_spatial_momentum**2*u**2 + 1389*physical_spatial_momentum**2 - 94370*u**2 - 8070)/(98415*(u**2 + 1)**8)",
+        "lapse_squared": "4*(1995*physical_spatial_momentum**4*u**8 + 7980*physical_spatial_momentum**4*u**6 + 11970*physical_spatial_momentum**4*u**4 + 7980*physical_spatial_momentum**4*u**2 + 1995*physical_spatial_momentum**4 - 149764*physical_spatial_momentum**2*u**6 - 349512*physical_spatial_momentum**2*u**4 - 249732*physical_spatial_momentum**2*u**2 - 49984*physical_spatial_momentum**2 + 6795480*u**4 + 3319008*u**2 - 107352)/(295245*(u**2 + 1)**10)",
+        "second_time_derivative_squared": "2896/(98415*(u**2 + 1)**6)"
+      }
+    }
+  },
+  "physical_loop_pole_dimensional_jets": {
+    "2": {
+      "0": "-9*H0**2*minus_Ys0*plus_Ys0/(2*constant_reference_mass**2) + 15*H0**2*minus_Ys0*plus_Yt0/(8*constant_reference_mass**2) + 15*H0**2*minus_Yt0*plus_Ys0/(8*constant_reference_mass**2) + 3*H0**2*minus_Yt0*plus_Yt0/(4*constant_reference_mass**2) - 9*H0*minus_Ys0*plus_Ys1/(32*constant_reference_mass**2) + 39*H0*minus_Ys0*plus_Yt1/(32*constant_reference_mass**2) - 9*H0*minus_Ys1*plus_Ys0/(32*constant_reference_mass**2) - 13*H0*minus_Ys1*plus_Yt0/(32*constant_reference_mass**2) - 13*H0*minus_Yt0*plus_Ys1/(32*constant_reference_mass**2) + 19*H0*minus_Yt0*plus_Yt1/(32*constant_reference_mass**2) + 39*H0*minus_Yt1*plus_Ys0/(32*constant_reference_mass**2) + 19*H0*minus_Yt1*plus_Yt0/(32*constant_reference_mass**2) - 9*H1*minus_Ys0*plus_Ys0/(8*constant_reference_mass**2) + H1*minus_Ys0*plus_Yt0/(4*constant_reference_mass**2) + H1*minus_Yt0*plus_Ys0/(4*constant_reference_mass**2) + 5*H1*minus_Yt0*plus_Yt0/(8*constant_reference_mass**2) + 9*minus_Ys0*physical_spatial_momentum**2*plus_Ys0/(16*constant_reference_mass**2) + 5*minus_Ys0*physical_spatial_momentum**2*plus_Yt0/(48*constant_reference_mass**2) + minus_Ys0*plus_Ys2/(32*constant_reference_mass**2) + 5*minus_Ys0*plus_Yt2/(32*constant_reference_mass**2) + minus_Ys2*plus_Ys0/(32*constant_reference_mass**2) + minus_Ys2*plus_Yt0/(32*constant_reference_mass**2) + 5*minus_Yt0*physical_spatial_momentum**2*plus_Ys0/(48*constant_reference_mass**2) - minus_Yt0*physical_spatial_momentum**2*plus_Yt0/(48*constant_reference_mass**2) + minus_Yt0*plus_Ys2/(32*constant_reference_mass**2) + 5*minus_Yt0*plus_Yt2/(32*constant_reference_mass**2) + 5*minus_Yt2*plus_Ys0/(32*constant_reference_mass**2) + 5*minus_Yt2*plus_Yt0/(32*constant_reference_mass**2)",
+      "1": "-63*H0**2*minus_Ys0*plus_Ys0/(16*constant_reference_mass**2) + 23*H0**2*minus_Ys0*plus_Yt0/(16*constant_reference_mass**2) + 23*H0**2*minus_Yt0*plus_Ys0/(16*constant_reference_mass**2) + 9*H0**2*minus_Yt0*plus_Yt0/(16*constant_reference_mass**2) - 3*H0*minus_Ys0*plus_Ys1/(32*constant_reference_mass**2) + 11*H0*minus_Ys0*plus_Yt1/(16*constant_reference_mass**2) - 3*H0*minus_Ys1*plus_Ys0/(32*constant_reference_mass**2) - 5*H0*minus_Ys1*plus_Yt0/(48*constant_reference_mass**2) - 5*H0*minus_Yt0*plus_Ys1/(48*constant_reference_mass**2) + 19*H0*minus_Yt0*plus_Yt1/(96*constant_reference_mass**2) + 11*H0*minus_Yt1*plus_Ys0/(16*constant_reference_mass**2) + 19*H0*minus_Yt1*plus_Yt0/(96*constant_reference_mass**2) - 7*H1*minus_Ys0*plus_Ys0/(8*constant_reference_mass**2) + 5*H1*minus_Ys0*plus_Yt0/(24*constant_reference_mass**2) + 5*H1*minus_Yt0*plus_Ys0/(24*constant_reference_mass**2) + 5*H1*minus_Yt0*plus_Yt0/(24*constant_reference_mass**2) + minus_Ys0*physical_spatial_momentum**2*plus_Ys0/(6*constant_reference_mass**2) + minus_Ys0*physical_spatial_momentum**2*plus_Yt0/(48*constant_reference_mass**2) + minus_Ys0*plus_Ys2/(24*constant_reference_mass**2) + 5*minus_Ys0*plus_Yt2/(96*constant_reference_mass**2) + minus_Ys2*plus_Ys0/(24*constant_reference_mass**2) + minus_Ys2*plus_Yt0/(96*constant_reference_mass**2) + minus_Yt0*physical_spatial_momentum**2*plus_Ys0/(48*constant_reference_mass**2) + minus_Yt0*plus_Ys2/(96*constant_reference_mass**2) + 5*minus_Yt2*plus_Ys0/(96*constant_reference_mass**2)"
+    },
+    "4": {
+      "0": "29*H0**4*minus_Ys0*plus_Ys0/(8*constant_reference_mass**4) - 87*H0**4*minus_Ys0*plus_Yt0/(40*constant_reference_mass**4) - 87*H0**4*minus_Yt0*plus_Ys0/(40*constant_reference_mass**4) + 29*H0**4*minus_Yt0*plus_Yt0/(40*constant_reference_mass**4) - 29*H0**3*minus_Ys0*plus_Ys1/(48*constant_reference_mass**4) - 29*H0**3*minus_Ys0*plus_Yt1/(16*constant_reference_mass**4) - 29*H0**3*minus_Ys1*plus_Ys0/(48*constant_reference_mass**4) + 29*H0**3*minus_Ys1*plus_Yt0/(80*constant_reference_mass**4) + 29*H0**3*minus_Yt0*plus_Ys1/(80*constant_reference_mass**4) + 29*H0**3*minus_Yt0*plus_Yt1/(48*constant_reference_mass**4) - 29*H0**3*minus_Yt1*plus_Ys0/(16*constant_reference_mass**4) + 29*H0**3*minus_Yt1*plus_Yt0/(48*constant_reference_mass**4) + 29*H0**2*H1*minus_Ys0*plus_Ys0/(8*constant_reference_mass**4) - 87*H0**2*H1*minus_Ys0*plus_Yt0/(40*constant_reference_mass**4) - 87*H0**2*H1*minus_Yt0*plus_Ys0/(40*constant_reference_mass**4) + 29*H0**2*H1*minus_Yt0*plus_Yt0/(40*constant_reference_mass**4) - 137*H0**2*minus_Ys0*physical_spatial_momentum**2*plus_Ys0/(144*constant_reference_mass**4) + 151*H0**2*minus_Ys0*physical_spatial_momentum**2*plus_Yt0/(720*constant_reference_mass**4) - 29*H0**2*minus_Ys0*plus_Ys2/(48*constant_reference_mass**4) - 29*H0**2*minus_Ys0*plus_Yt2/(80*constant_reference_mass**4) - 271*H0**2*minus_Ys1*plus_Ys1/(480*constant_reference_mass**4) + 43*H0**2*minus_Ys1*plus_Yt1/(160*constant_reference_mass**4) - 29*H0**2*minus_Ys2*plus_Ys0/(48*constant_reference_mass**4) + 29*H0**2*minus_Ys2*plus_Yt0/(80*constant_reference_mass**4) + 151*H0**2*minus_Yt0*physical_spatial_momentum**2*plus_Ys0/(720*constant_reference_mass**4) + 3*H0**2*minus_Yt0*physical_spatial_momentum**2*plus_Yt0/(80*constant_reference_mass**4) + 29*H0**2*minus_Yt0*plus_Ys2/(80*constant_reference_mass**4) + 29*H0**2*minus_Yt0*plus_Yt2/(240*constant_reference_mass**4) + 43*H0**2*minus_Yt1*plus_Ys1/(160*constant_reference_mass**4) + 61*H0**2*minus_Yt1*plus_Yt1/(96*constant_reference_mass**4) - 29*H0**2*minus_Yt2*plus_Ys0/(80*constant_reference_mass**4) + 29*H0**2*minus_Yt2*plus_Yt0/(240*constant_reference_mass**4) - 13*H0*H1*minus_Ys0*plus_Ys1/(48*constant_reference_mass**4) - 73*H0*H1*minus_Ys0*plus_Yt1/(80*constant_reference_mass**4) - 13*H0*H1*minus_Ys1*plus_Ys0/(48*constant_reference_mass**4) + 13*H0*H1*minus_Ys1*plus_Yt0/(80*constant_reference_mass**4) + 13*H0*H1*minus_Yt0*plus_Ys1/(80*constant_reference_mass**4) + 73*H0*H1*minus_Yt0*plus_Yt1/(240*constant_reference_mass**4) - 73*H0*H1*minus_Yt1*plus_Ys0/(80*constant_reference_mass**4) + 73*H0*H1*minus_Yt1*plus_Yt0/(240*constant_reference_mass**4) + 83*H0*minus_Ys0*physical_spatial_momentum**2*plus_Ys1/(1440*constant_reference_mass**4) + 25*H0*minus_Ys0*physical_spatial_momentum**2*plus_Yt1/(96*constant_reference_mass**4) + 83*H0*minus_Ys1*physical_spatial_momentum**2*plus_Ys0/(1440*constant_reference_mass**4) + H0*minus_Ys1*physical_spatial_momentum**2*plus_Yt0/(96*constant_reference_mass**4) + 13*H0*minus_Ys1*plus_Ys2/(480*constant_reference_mass**4) + 13*H0*minus_Ys1*plus_Yt2/(480*constant_reference_mass**4) + 13*H0*minus_Ys2*plus_Ys1/(480*constant_reference_mass**4) + 73*H0*minus_Ys2*plus_Yt1/(480*constant_reference_mass**4) + H0*minus_Yt0*physical_spatial_momentum**2*plus_Ys1/(96*constant_reference_mass**4) + 67*H0*minus_Yt0*physical_spatial_momentum**2*plus_Yt1/(1440*constant_reference_mass**4) + 25*H0*minus_Yt1*physical_spatial_momentum**2*plus_Ys0/(96*constant_reference_mass**4) + 67*H0*minus_Yt1*physical_spatial_momentum**2*plus_Yt0/(1440*constant_reference_mass**4) + 73*H0*minus_Yt1*plus_Ys2/(480*constant_reference_mass**4) + 73*H0*minus_Yt1*plus_Yt2/(480*constant_reference_mass**4) + 13*H0*minus_Yt2*plus_Ys1/(480*constant_reference_mass**4) + 73*H0*minus_Yt2*plus_Yt1/(480*constant_reference_mass**4) + 15*H1**2*minus_Ys0*plus_Ys0/(16*constant_reference_mass**4) - 9*H1**2*minus_Ys0*plus_Yt0/(16*constant_reference_mass**4) - 9*H1**2*minus_Yt0*plus_Ys0/(16*constant_reference_mass**4) + 3*H1**2*minus_Yt0*plus_Yt0/(16*constant_reference_mass**4) - 17*H1*minus_Ys0*physical_spatial_momentum**2*plus_Ys0/(36*constant_reference_mass**4) + 19*H1*minus_Ys0*physical_spatial_momentum**2*plus_Yt0/(180*constant_reference_mass**4) - 5*H1*minus_Ys0*plus_Ys2/(16*constant_reference_mass**4) - 3*H1*minus_Ys0*plus_Yt2/(16*constant_reference_mass**4) - 19*H1*minus_Ys1*plus_Ys1/(60*constant_reference_mass**4) + 7*H1*minus_Ys1*plus_Yt1/(120*constant_reference_mass**4) - 5*H1*minus_Ys2*plus_Ys0/(16*constant_reference_mass**4) + 3*H1*minus_Ys2*plus_Yt0/(16*constant_reference_mass**4) + 19*H1*minus_Yt0*physical_spatial_momentum**2*plus_Ys0/(180*constant_reference_mass**4) + H1*minus_Yt0*physical_spatial_momentum**2*plus_Yt0/(60*constant_reference_mass**4) + 3*H1*minus_Yt0*plus_Ys2/(16*constant_reference_mass**4) + H1*minus_Yt0*plus_Yt2/(16*constant_reference_mass**4) + 7*H1*minus_Yt1*plus_Ys1/(120*constant_reference_mass**4) - H1*minus_Yt1*plus_Yt1/(15*constant_reference_mass**4) - 3*H1*minus_Yt2*plus_Ys0/(16*constant_reference_mass**4) + H1*minus_Yt2*plus_Yt0/(16*constant_reference_mass**4) + 43*minus_Ys0*physical_spatial_momentum**4*plus_Ys0/(480*constant_reference_mass**4) + 7*minus_Ys0*physical_spatial_momentum**4*plus_Yt0/(480*constant_reference_mass**4) + 73*minus_Ys0*physical_spatial_momentum**2*plus_Ys2/(1440*constant_reference_mass**4) + 73*minus_Ys0*physical_spatial_momentum**2*plus_Yt2/(1440*constant_reference_mass**4) - minus_Ys1*physical_spatial_momentum**2*plus_Ys1/(360*constant_reference_mass**4) - minus_Ys1*physical_spatial_momentum**2*plus_Yt1/(360*constant_reference_mass**4) + 73*minus_Ys2*physical_spatial_momentum**2*plus_Ys0/(1440*constant_reference_mass**4) + 13*minus_Ys2*physical_spatial_momentum**2*plus_Yt0/(1440*constant_reference_mass**4) + minus_Ys2*plus_Ys2/(32*constant_reference_mass**4) + minus_Ys2*plus_Yt2/(32*constant_reference_mass**4) + 7*minus_Yt0*physical_spatial_momentum**4*plus_Ys0/(480*constant_reference_mass**4) + minus_Yt0*physical_spatial_momentum**4*plus_Yt0/(160*constant_reference_mass**4) + 13*minus_Yt0*physical_spatial_momentum**2*plus_Ys2/(1440*constant_reference_mass**4) + 13*minus_Yt0*physical_spatial_momentum**2*plus_Yt2/(1440*constant_reference_mass**4) - minus_Yt1*physical_spatial_momentum**2*plus_Ys1/(360*constant_reference_mass**4) - minus_Yt1*physical_spatial_momentum**2*plus_Yt1/(360*constant_reference_mass**4) + 73*minus_Yt2*physical_spatial_momentum**2*plus_Ys0/(1440*constant_reference_mass**4) + 13*minus_Yt2*physical_spatial_momentum**2*plus_Yt0/(1440*constant_reference_mass**4) + minus_Yt2*plus_Ys2/(32*constant_reference_mass**4) + minus_Yt2*plus_Yt2/(32*constant_reference_mass**4)",
+      "1": "1541*H0**4*minus_Ys0*plus_Ys0/(480*constant_reference_mass**4) - 401*H0**4*minus_Ys0*plus_Yt0/(160*constant_reference_mass**4) - 401*H0**4*minus_Yt0*plus_Ys0/(160*constant_reference_mass**4) + 211*H0**4*minus_Yt0*plus_Yt0/(160*constant_reference_mass**4) - 2089*H0**3*minus_Ys0*plus_Ys1/(720*constant_reference_mass**4) - 407*H0**3*minus_Ys0*plus_Yt1/(240*constant_reference_mass**4) - 2089*H0**3*minus_Ys1*plus_Ys0/(720*constant_reference_mass**4) + 147*H0**3*minus_Ys1*plus_Yt0/(80*constant_reference_mass**4) + 147*H0**3*minus_Yt0*plus_Ys1/(80*constant_reference_mass**4) + 697*H0**3*minus_Yt0*plus_Yt1/(720*constant_reference_mass**4) - 407*H0**3*minus_Yt1*plus_Ys0/(240*constant_reference_mass**4) + 697*H0**3*minus_Yt1*plus_Yt0/(720*constant_reference_mass**4) + 553*H0**2*H1*minus_Ys0*plus_Ys0/(240*constant_reference_mass**4) - 157*H0**2*H1*minus_Ys0*plus_Yt0/(80*constant_reference_mass**4) - 157*H0**2*H1*minus_Yt0*plus_Ys0/(80*constant_reference_mass**4) + 91*H0**2*H1*minus_Yt0*plus_Yt0/(80*constant_reference_mass**4) - 319*H0**2*minus_Ys0*physical_spatial_momentum**2*plus_Ys0/(240*constant_reference_mass**4) + 31*H0**2*minus_Ys0*physical_spatial_momentum**2*plus_Yt0/(120*constant_reference_mass**4) - 49*H0**2*minus_Ys0*plus_Ys2/(45*constant_reference_mass**4) - 4*H0**2*minus_Ys0*plus_Yt2/(15*constant_reference_mass**4) - 403*H0**2*minus_Ys1*plus_Ys1/(576*constant_reference_mass**4) + 1097*H0**2*minus_Ys1*plus_Yt1/(960*constant_reference_mass**4) - 49*H0**2*minus_Ys2*plus_Ys0/(45*constant_reference_mass**4) + 3*H0**2*minus_Ys2*plus_Yt0/(4*constant_reference_mass**4) + 31*H0**2*minus_Yt0*physical_spatial_momentum**2*plus_Ys0/(120*constant_reference_mass**4) + 89*H0**2*minus_Yt0*physical_spatial_momentum**2*plus_Yt0/(720*constant_reference_mass**4) + 3*H0**2*minus_Yt0*plus_Ys2/(4*constant_reference_mass**4) + 61*H0**2*minus_Yt0*plus_Yt2/(360*constant_reference_mass**4) + 1097*H0**2*minus_Yt1*plus_Ys1/(960*constant_reference_mass**4) + 2149*H0**2*minus_Yt1*plus_Yt1/(2880*constant_reference_mass**4) - 4*H0**2*minus_Yt2*plus_Ys0/(15*constant_reference_mass**4) + 61*H0**2*minus_Yt2*plus_Yt0/(360*constant_reference_mass**4) - 983*H0*H1*minus_Ys0*plus_Ys1/(720*constant_reference_mass**4) - 149*H0*H1*minus_Ys0*plus_Yt1/(240*constant_reference_mass**4) - 983*H0*H1*minus_Ys1*plus_Ys0/(720*constant_reference_mass**4) + 69*H0*H1*minus_Ys1*plus_Yt0/(80*constant_reference_mass**4) + 69*H0*H1*minus_Yt0*plus_Ys1/(80*constant_reference_mass**4) + 59*H0*H1*minus_Yt0*plus_Yt1/(144*constant_reference_mass**4) - 149*H0*H1*minus_Yt1*plus_Ys0/(240*constant_reference_mass**4) + 59*H0*H1*minus_Yt1*plus_Yt0/(144*constant_reference_mass**4) + 259*H0*minus_Ys0*physical_spatial_momentum**2*plus_Ys1/(960*constant_reference_mass**4) + 107*H0*minus_Ys0*physical_spatial_momentum**2*plus_Yt1/(320*constant_reference_mass**4) + 259*H0*minus_Ys1*physical_spatial_momentum**2*plus_Ys0/(960*constant_reference_mass**4) + 49*H0*minus_Ys1*physical_spatial_momentum**2*plus_Yt0/(960*constant_reference_mass**4) + 479*H0*minus_Ys1*plus_Ys2/(2880*constant_reference_mass**4) + 401*H0*minus_Ys1*plus_Yt2/(2880*constant_reference_mass**4) + 479*H0*minus_Ys2*plus_Ys1/(2880*constant_reference_mass**4) + 809*H0*minus_Ys2*plus_Yt1/(2880*constant_reference_mass**4) + 49*H0*minus_Yt0*physical_spatial_momentum**2*plus_Ys1/(960*constant_reference_mass**4) + 221*H0*minus_Yt0*physical_spatial_momentum**2*plus_Yt1/(2880*constant_reference_mass**4) + 107*H0*minus_Yt1*physical_spatial_momentum**2*plus_Ys0/(320*constant_reference_mass**4) + 221*H0*minus_Yt1*physical_spatial_momentum**2*plus_Yt0/(2880*constant_reference_mass**4) + 809*H0*minus_Yt1*plus_Ys2/(2880*constant_reference_mass**4) + 371*H0*minus_Yt1*plus_Yt2/(2880*constant_reference_mass**4) + 401*H0*minus_Yt2*plus_Ys1/(2880*constant_reference_mass**4) + 371*H0*minus_Yt2*plus_Yt1/(2880*constant_reference_mass**4) + 11*H1**2*minus_Ys0*plus_Ys0/(32*constant_reference_mass**4) - 57*H1**2*minus_Ys0*plus_Yt0/(160*constant_reference_mass**4) - 57*H1**2*minus_Yt0*plus_Ys0/(160*constant_reference_mass**4) + 39*H1**2*minus_Yt0*plus_Yt0/(160*constant_reference_mass**4) - 391*H1*minus_Ys0*physical_spatial_momentum**2*plus_Ys0/(720*constant_reference_mass**4) + 73*H1*minus_Ys0*physical_spatial_momentum**2*plus_Yt0/(720*constant_reference_mass**4) - 23*H1*minus_Ys0*plus_Ys2/(48*constant_reference_mass**4) - 7*H1*minus_Ys0*plus_Yt2/(80*constant_reference_mass**4) - 307*H1*minus_Ys1*plus_Ys1/(720*constant_reference_mass**4) + 137*H1*minus_Ys1*plus_Yt1/(720*constant_reference_mass**4) - 23*H1*minus_Ys2*plus_Ys0/(48*constant_reference_mass**4) + 27*H1*minus_Ys2*plus_Yt0/(80*constant_reference_mass**4) + 73*H1*minus_Yt0*physical_spatial_momentum**2*plus_Ys0/(720*constant_reference_mass**4) + 41*H1*minus_Yt0*physical_spatial_momentum**2*plus_Yt0/(720*constant_reference_mass**4) + 27*H1*minus_Yt0*plus_Ys2/(80*constant_reference_mass**4) + 17*H1*minus_Yt0*plus_Yt2/(240*constant_reference_mass**4) + 137*H1*minus_Yt1*plus_Ys1/(720*constant_reference_mass**4) - 7*H1*minus_Yt1*plus_Yt1/(720*constant_reference_mass**4) - 7*H1*minus_Yt2*plus_Ys0/(80*constant_reference_mass**4) + 17*H1*minus_Yt2*plus_Yt0/(240*constant_reference_mass**4) + 131*minus_Ys0*physical_spatial_momentum**4*plus_Ys0/(960*constant_reference_mass**4) + 29*minus_Ys0*physical_spatial_momentum**4*plus_Yt0/(960*constant_reference_mass**4) + 307*minus_Ys0*physical_spatial_momentum**2*plus_Ys2/(2880*constant_reference_mass**4) + 161*minus_Ys0*physical_spatial_momentum**2*plus_Yt2/(2880*constant_reference_mass**4) - minus_Ys1*physical_spatial_momentum**2*plus_Ys1/(180*constant_reference_mass**4) - minus_Ys1*physical_spatial_momentum**2*plus_Yt1/(360*constant_reference_mass**4) + 307*minus_Ys2*physical_spatial_momentum**2*plus_Ys0/(2880*constant_reference_mass**4) + 13*minus_Ys2*physical_spatial_momentum**2*plus_Yt0/(576*constant_reference_mass**4) + 79*minus_Ys2*plus_Ys2/(960*constant_reference_mass**4) + 49*minus_Ys2*plus_Yt2/(960*constant_reference_mass**4) + 29*minus_Yt0*physical_spatial_momentum**4*plus_Ys0/(960*constant_reference_mass**4) + 7*minus_Yt0*physical_spatial_momentum**4*plus_Yt0/(960*constant_reference_mass**4) + 13*minus_Yt0*physical_spatial_momentum**2*plus_Ys2/(576*constant_reference_mass**4) + 13*minus_Yt0*physical_spatial_momentum**2*plus_Yt2/(960*constant_reference_mass**4) - minus_Yt1*physical_spatial_momentum**2*plus_Ys1/(360*constant_reference_mass**4) + 161*minus_Yt2*physical_spatial_momentum**2*plus_Ys0/(2880*constant_reference_mass**4) + 13*minus_Yt2*physical_spatial_momentum**2*plus_Yt0/(960*constant_reference_mass**4) + 49*minus_Yt2*plus_Ys2/(960*constant_reference_mass**4) + 19*minus_Yt2*plus_Yt2/(960*constant_reference_mass**4)"
+    }
+  },
+  "physical_normalized_Euler_dimensional_jets": {
+    "2": {
+      "0": "32*constant_reference_mass**2*(39*clock_lapse0*physical_spatial_momentum**2*u**4 + 78*clock_lapse0*physical_spatial_momentum**2*u**2 + 39*clock_lapse0*physical_spatial_momentum**2 - 774*clock_lapse0*u**2 - 234*clock_lapse0 + 52*clock_lapse2*u**4 + 104*clock_lapse2*u**2 + 52*clock_lapse2)/(6561*(u**2 + 1)**8)",
+      "1": "4*constant_reference_mass**2*(259*clock_lapse0*physical_spatial_momentum**2*u**4 + 518*clock_lapse0*physical_spatial_momentum**2*u**2 + 259*clock_lapse0*physical_spatial_momentum**2 - 32994*clock_lapse0*u**2 - 2106*clock_lapse0 + 4992*clock_lapse1*u**3 + 4992*clock_lapse1*u + 287*clock_lapse2*u**4 + 574*clock_lapse2*u**2 + 287*clock_lapse2)/(19683*(u**2 + 1)**8)"
+    },
+    "4": {
+      "0": "32*(101*clock_lapse0*physical_spatial_momentum**4*u**8 + 404*clock_lapse0*physical_spatial_momentum**4*u**6 + 606*clock_lapse0*physical_spatial_momentum**4*u**4 + 404*clock_lapse0*physical_spatial_momentum**4*u**2 + 101*clock_lapse0*physical_spatial_momentum**4 - 2650*clock_lapse0*physical_spatial_momentum**2*u**6 - 8130*clock_lapse0*physical_spatial_momentum**2*u**4 - 8310*clock_lapse0*physical_spatial_momentum**2*u**2 - 2830*clock_lapse0*physical_spatial_momentum**2 + 238230*clock_lapse0*u**4 + 172980*clock_lapse0*u**2 - 4770*clock_lapse0 - 1760*clock_lapse1*physical_spatial_momentum**2*u**7 - 5280*clock_lapse1*physical_spatial_momentum**2*u**5 - 5280*clock_lapse1*physical_spatial_momentum**2*u**3 - 1760*clock_lapse1*physical_spatial_momentum**2*u + 24480*clock_lapse1*u**5 + 7200*clock_lapse1*u**3 - 17280*clock_lapse1*u + 220*clock_lapse2*physical_spatial_momentum**2*u**8 + 880*clock_lapse2*physical_spatial_momentum**2*u**6 + 1320*clock_lapse2*physical_spatial_momentum**2*u**4 + 880*clock_lapse2*physical_spatial_momentum**2*u**2 + 220*clock_lapse2*physical_spatial_momentum**2 - 12240*clock_lapse2*u**6 - 26280*clock_lapse2*u**4 - 15840*clock_lapse2*u**2 - 1800*clock_lapse2 + 120*clock_lapse4*u**8 + 480*clock_lapse4*u**6 + 720*clock_lapse4*u**4 + 480*clock_lapse4*u**2 + 120*clock_lapse4)/(98415*(u**2 + 1)**10)",
+      "1": "8*(1995*clock_lapse0*physical_spatial_momentum**4*u**8 + 7980*clock_lapse0*physical_spatial_momentum**4*u**6 + 11970*clock_lapse0*physical_spatial_momentum**4*u**4 + 7980*clock_lapse0*physical_spatial_momentum**4*u**2 + 1995*clock_lapse0*physical_spatial_momentum**4 - 149764*clock_lapse0*physical_spatial_momentum**2*u**6 - 349512*clock_lapse0*physical_spatial_momentum**2*u**4 - 249732*clock_lapse0*physical_spatial_momentum**2*u**2 - 49984*clock_lapse0*physical_spatial_momentum**2 + 6795480*clock_lapse0*u**4 + 3319008*clock_lapse0*u**2 - 107352*clock_lapse0 - 22776*clock_lapse1*physical_spatial_momentum**2*u**7 - 68328*clock_lapse1*physical_spatial_momentum**2*u**5 - 68328*clock_lapse1*physical_spatial_momentum**2*u**3 - 22776*clock_lapse1*physical_spatial_momentum**2*u - 21300*clock_lapse1*u**5 - 577080*clock_lapse1*u**3 - 555780*clock_lapse1*u + 4167*clock_lapse2*physical_spatial_momentum**2*u**8 + 16668*clock_lapse2*physical_spatial_momentum**2*u**6 + 25002*clock_lapse2*physical_spatial_momentum**2*u**4 + 16668*clock_lapse2*physical_spatial_momentum**2*u**2 + 4167*clock_lapse2*physical_spatial_momentum**2 - 288870*clock_lapse2*u**6 - 596190*clock_lapse2*u**4 - 325770*clock_lapse2*u**2 - 18450*clock_lapse2 + 11520*clock_lapse3*u**7 + 34560*clock_lapse3*u**5 + 34560*clock_lapse3*u**3 + 11520*clock_lapse3*u + 2172*clock_lapse4*u**8 + 8688*clock_lapse4*u**6 + 13032*clock_lapse4*u**4 + 8688*clock_lapse4*u**2 + 2172*clock_lapse4)/(295245*(u**2 + 1)**10)"
+    }
+  },
+  "preserved_scope": "The original physical clock, S6.55 selected state, S6.60 fixed profiles and all lower-order matching are unchanged. The new Y^2 derivative operators vanish to first order on the clock. No global complex-time history or Euclidean state preparation is invoked.",
+  "prior_sha256": {
+    "S6_62_fully_rebuilt": "c85e3f36ce0d8f2d98fe8169af17d478a30e57aaef5567e261a980117ed8cc6d",
+    "original_Lorentzian_clock_and_selected_state_unchanged": true
+  },
+  "proof_checks": {
+    "naive_time_substitution_changes_the_chosen_history": true,
+    "new_operators_vanish_to_first_order_on_clock_2": true,
+    "new_operators_vanish_to_first_order_on_clock_4": true,
+    "no_float_in_physical_signature_calculation_2": true,
+    "no_float_in_physical_signature_calculation_4": true,
+    "original_and_changed_half_time_values_distinct": true,
+    "physical_fourth_order_bounce_coefficient_positive": true,
+    "polynomial_in_symbolic_dimension_2": true,
+    "polynomial_in_symbolic_dimension_4": true,
+    "quadratic_mass_degree_2": true,
+    "quadratic_mass_degree_4": true
+  },
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "e99026ed006833c03d2eed69e165245864e8753654336a787c7f29045d5c003b",
+    "README.md": "95b6fa6793ad4d75b9e88f313bbacc9cfd919ff7dda0d85cbe2486759100bccb",
+    "notes/clock.md": "aec70205deec74de40250a5a13a968aae07f689a0b9c8ddf3099156535eaac98",
+    "notes/scope.md": "eb25a09ea1b575f588e99c815044760a078209f96fdf32fa6e681754d50a497e",
+    "notes/signature.md": "d1dd081945d69b403b6968233accdbd8e329d7d5294d699a6b36a2326ed86801",
+    "src/p8_vector_lorentzian_pole/__init__.py": "2ae9f30eeb3591f28b40d5a15e6719d77cad20349b63a5c16cd89f87cf1ccf1f",
+    "src/p8_vector_lorentzian_pole/bimetric.py": "6eca365ecf114b992b79a544a3239f55a6002fa7e150222ba15d7f31762a7f76",
+    "src/p8_vector_lorentzian_pole/checks.py": "a9b50ec51ff4b505ce40f65380fd49b01631e834cca839ccfdb33167e77506d6",
+    "src/p8_vector_lorentzian_pole/frame.py": "7d14880f486836e5b45fccb45aa26ae736858458991d7ed1a797e166f9d3ce8a",
+    "src/p8_vector_lorentzian_pole/response.py": "3dce35654503fa8bd8af0a55bff10c1c5f11aef5b859d332ae9f53b210e82326",
+    "src/p8_vector_lorentzian_pole/verify.py": "85ad5a2a0ee862b208fdf0d11b6b1249ac5365ff9bba4ad751dccf96a31de319",
+    "src/p8_vector_lorentzian_pole/wick.py": "59b5165fbc981e6cd61452e3e2e6a9fcbaf4a3cc4857b9fdbbee8c2835ffc1d7",
+    "tests/conftest.py": "a3109380cdd9282d36fd769df20d5e723334026cafbe2de999a5f0a5d7a41aec",
+    "tests/test_lorentzian_certificate.py": "658064c55ce1190c0acc19d8ddaf95f6869ff93384e6d4f10ac23887b1e8187a",
+    "tests/test_lorentzian_science.py": "60969f92bd8adca11386ab34cd2c9ac980abe00c639c3e875f96a34180b75cf5"
+  },
+  "status": "PHYSICAL_SIGNATURE_LOCAL_QUADRATIC_POLE_AND_EVANESCENCE; ORIGINAL_P8_OPEN",
+  "unchanged_history_control": {
+    "changed_half_time_scale_factor": "9/16",
+    "fourth_pole_second_time_square_bounce": "128/6561",
+    "naive_time_rotated_scale_factor": "(u - 1)**2*(u + 1)**2",
+    "nonzero_history_difference": "-4*u**2",
+    "original_half_time_scale_factor": "25/16",
+    "original_physical_scale_factor": "(u**2 + 1)**2"
+  },
+  "verdict": "The physical-signature local quadratic mass-insertion pole and specified evanescent bare-counterterm variation are independently checked. The finite causal kernel and original P8 remain open.",
+  "verification_boundary": "Exact tensor, coordinate-curvature, Feynman, grading and normalized-variation comparisons, with written local signature and history arguments; not proof-assistant formalization",
+  "written_proofs": [
+    "notes/signature.md",
+    "notes/clock.md",
+    "notes/scope.md"
+  ]
+}
