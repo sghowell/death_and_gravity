@@ -1,7 +1,7 @@
 # S6.43 working scope: prepared leading nonlinear vector response
 
-Status: calculation in progress; no certificate yet. Original P8 OPEN.
-This is not full nonlinear heavy elimination.
+Status: prepared leading-response and explicit light-jet bound checkpoint.
+Original P8 OPEN; this is not full nonlinear heavy elimination.
 The literal S6.42 action is unchanged. This checkpoint concerns its
 leading, second-order forced vector response about the actual bounce,
 not a nonlinear solution or an alternative parent.

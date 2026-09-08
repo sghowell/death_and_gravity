@@ -419,8 +419,13 @@ around a pre-registered problems document and a certificate-gated ledger.
   original matter cones and a uniform actual canonical-frequency floor.
   Explicit nonlinear source bounds do not yet establish controlled
   heavy elimination, nonlinear health, an interacting cutoff or UV completion.
+  A subsequent [prepared leading-response bound](problems/P8/s6/matching/affine/kinetic/aligned/response/README.md)
+  derives the actual quadratic source and gives a quantitative retarded
+  approximation with physical vector readouts, specified initial data
+  and light time-jet bounds. It is not a full nonlinear elimination or
+  a demonstration that an on-shell light family realizes those conditions.
 
-The [current P8 continuation audit](docs/assessment-2026-09-07-p8-source-aligned-modes.md) separates
+The [current P8 continuation audit](docs/assessment-2026-09-07-p8-prepared-vector-response.md) separates
 the completed scoped P8(a) objective and certificate gates from the
 outstanding P8(b) UV-matching and positivity questions.
 P8 is not marked finished or closed.

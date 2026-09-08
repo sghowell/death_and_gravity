@@ -1,0 +1,202 @@
+{
+  "actual_source": "-2*delta_K_hat*n/(u**2 + 1)**3 + n**2*(-24*u/(u**2 + 1)**4 - 27*u/(2*(u**2 + 1)**7))",
+  "canonical_force": "J=(g_L²*S2)'/g_L=g_L*S2'+2g_L'*S2; v''+(q+1/zeta-U_L)*v=J",
+  "checked_scalar_entries": 34,
+  "claim": "P8-S6.43.ALIGNED_RESPONSE",
+  "continuous_bounds": {
+    "abs_W_prime": 78,
+    "abs_W_second": 712,
+    "energy_amplification_upper": "21/20",
+    "light_jet_constants": {
+      "A_coefficient_jets": [
+        "2",
+        "6",
+        "33",
+        "228"
+      ],
+      "C_coefficient_jets": [
+        "483/16",
+        "4497/32",
+        "3729/4",
+        "8982"
+      ],
+      "mixed_envelope": "514",
+      "mixed_source_jets": [
+        "2",
+        "10",
+        "65",
+        "514"
+      ],
+      "squared_envelope": "132027/8",
+      "squared_source_jets": [
+        "483/16",
+        "6429/32",
+        "12921/8",
+        "132027/8"
+      ]
+    },
+    "squared_frequency_floor": 19985
+  },
+  "controls": {
+    "conditional_leading_estimate_not_full_on_shell_or_quantum_remainder": true,
+    "forcing_derivatives_not_replaced_by_amplitude_or_Fourier_band": true,
+    "homogeneous_source_is_temporal_algebraic_control": true,
+    "nonzero_heavy_data_and_unprepared_forcing_excluded": true,
+    "physical_readouts_not_just_canonical_amplitude": true,
+    "quadratic_source_uses_output_convolution_momentum": true,
+    "rejected_inputs": 34
+  },
+  "date": "2026-09-07",
+  "domain": "Interval inside [-1/2,1/2], length<=1, output 0<k_com²<=1, 0<zeta<=1/20000; homogeneous separate",
+  "errors": "|v-zeta*J|<=zeta*A/80; |W_spatial-zeta*sqrt(q)*(S2'+2rho*S2)|<=6*zeta*E; |W0-S2|<=500*zeta*E; physical vector factor 1/tau",
+  "exact_residuals": {
+    "actual_constrained_canonical_forcing": {
+      "actual_canonical_equation": "0",
+      "actual_canonical_force": "0",
+      "canonical_force_prime": "0",
+      "canonical_force_second": "0",
+      "full_temporal_Euler": "0",
+      "full_temporal_action": "0",
+      "physical_spatial_readout": "0",
+      "source_preparation_gives_zero_force": "0",
+      "source_preparation_gives_zero_force_prime": "0",
+      "temporal_physical_readout": "0"
+    },
+    "actual_continuous_frequency_derivatives": {
+      "A1_quarter_bound": "0",
+      "B1_absolute_bound": "0",
+      "H_second": "0",
+      "H_third": "0",
+      "H_third_numerator_bound": "0",
+      "actual_longitudinal_first_derivative": "0",
+      "actual_longitudinal_second_derivative": "0",
+      "alpha_r_weight": "0",
+      "alpha_r_weight_derivative": "0",
+      "beta_r_weight": "0",
+      "beta_r_weight_derivative": "0",
+      "comoving_q_second_jet": "0",
+      "longitudinal_curvature_first_jet": "0",
+      "longitudinal_curvature_second_jet": "0",
+      "rB1_derivative_absolute_bound": "0"
+    },
+    "original_ODE_quadratic_source_and_light_preparation": {
+      "actual_quadratic_source_not_arbitrary_Q2": "0",
+      "original_ODE_second_jet": "0",
+      "prepared_source_first_jet": "0",
+      "prepared_source_second_jet": "0",
+      "prepared_source_value": "0"
+    },
+    "prepared_retarded_energy_and_local_error": {
+      "exact_forced_energy_identity": "0",
+      "quasistatic_second_derivative": "0",
+      "zero_prepared_derivative": "0",
+      "zero_prepared_value": "0"
+    }
+  },
+  "example": {
+    "light": {
+      "bound_on_full_nonlinear_source_or_on_shell_evolution": false,
+      "epsilon_K": "1/1000",
+      "epsilon_n": "1/1000",
+      "requires_lapse_and_trace_jets_through_order_three": true,
+      "source_jet_E": "136139/8000000",
+      "sufficient_preparation": "n=n'=n''=0 initially; arbitrary finite trace jets"
+    },
+    "nonunit_conversion": {
+      "isolated_Proca_mass_squared_normalized": "120000",
+      "isolated_Proca_mass_squared_physical": "30000",
+      "isolated_mass_is_not_a_coupled_gap_or_cutoff": true,
+      "mu": "11/9",
+      "normalized_zeta": "1/120000"
+    },
+    "response": {
+      "branch": "prepared_leading_longitudinal_response",
+      "canonical_error_against_zeta_J": "22190657*sqrt(10)/51200000000000000000000",
+      "canonical_force_jet_A": "22190657*sqrt(10)/640000000000",
+      "full_nonlinear_or_quantum_remainder_claim": false,
+      "k_com_squared": "1/4",
+      "left": "-1/2",
+      "requires_three_time_derivative_source_norm_not_just_spatial_bound": true,
+      "requires_zero_heavy_data_and_three_prepared_source_jets": true,
+      "right": "1/2",
+      "source_jet_E": "136139/8000000",
+      "spatial_readout_error_against_zeta_sqrt_q_times_Sprime_plus_2rhoS": "408417/4000000000000000",
+      "squared_frequency_floor": "999999985",
+      "temporal_readout_error_against_S": "136139/16000000000000",
+      "zeta": "1/1000000000"
+    }
+  },
+  "formulation": "FORMULATION.md",
+  "light_jet_bridge": "E=514*epsilon_n*epsilon_K+(132027/8)*epsilon_n² from C³ light jets and actual ODE; summable modewise envelopes control output convolutions; n=n'=n''=0 sufficient preparation",
+  "literal_action": "S6.42 unchanged; second-order vector response with zero heavy data, not a new parent",
+  "named_exact_check_count": 34,
+  "not_established": [
+    "An on-shell light family realizing and maintaining the prepared derivative domain",
+    "Full nonlinear secondary constraints, nonlinear stability or higher-order response/action errors",
+    "Quantum loop remainders, an interacting cutoff, stationary heavy gap or V/G/B UV admissibility",
+    "All momenta, arbitrary heavy initial states, or original P8 closure"
+  ],
+  "prior_sha256": {
+    "S6_42_fully_rebuilt": "7fe78d55c3fb1b4a2ff0adc40260dcc3029e7ba3701f08f90278fd7eab2140c5",
+    "actual_all64_source_and_complete_quadratic_constraints_rechecked": true,
+    "no_frozen_action_or_ancestor_modified": true
+  },
+  "proof_checks": {
+    "actual_source_mixed_envelope": true,
+    "actual_source_squared_envelope": true,
+    "derivatives_H_second_absolute_bound": true,
+    "derivatives_H_third_absolute_bound": true,
+    "derivatives_alpha_first_time_bound": true,
+    "derivatives_alpha_second_time_bound": true,
+    "derivatives_beta_first_time_bound": true,
+    "derivatives_beta_second_time_bound": true,
+    "derivatives_frequency_first_bound_for_q_le_one": true,
+    "derivatives_frequency_second_bound_for_q_le_one": true,
+    "derivatives_longitudinal_U_first_bound": true,
+    "derivatives_longitudinal_U_second_bound": true,
+    "derivatives_normalization_log_rate_bound": true,
+    "derivatives_normalization_third_ratio_bound": true,
+    "retarded_canonical_source_envelope": true,
+    "retarded_compact_scale_factor_upper": true,
+    "retarded_energy_amplification_below_21_over_20": true,
+    "retarded_energy_exponent_below_one": true,
+    "retarded_first_error_below_one_over_100D": true,
+    "retarded_first_force_jet_below_second_envelope": true,
+    "retarded_minimum_positive_squared_frequency": true,
+    "retarded_physical_spatial_error_below_six_zeta_E": true,
+    "retarded_physical_temporal_error_below_500_zeta_E": true,
+    "retarded_quasistatic_residual_W_inverse_cube": true,
+    "retarded_quasistatic_residual_W_inverse_square": true,
+    "retarded_second_force_jet_envelope": true,
+    "retarded_square_root_floor_above_141": true,
+    "retarded_square_root_one_plus_zeta_below_101_over_100": true,
+    "retarded_total_error_below_zeta_A_over_80": true,
+    "retarded_zeroth_force_jet_below_second_envelope": true
+  },
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "f541f0de945102601565880ba7c4139df91d29e72e24523b7bb344b40175fef9",
+    "README.md": "dce26340156e2fe6af25b81977bd5986c7af4b8808bb47d6110900b50213b66e",
+    "notes/light-jets.md": "b60bb641e367c1ebf2808e071a4b2884d0bf9fccfdb98a45ecc9da0102c191e7",
+    "notes/retarded.md": "f560394d8241a1ae024429f02514790b383a76989fb1dc15392569b114f65f06",
+    "src/p8_aligned_response/__init__.py": "6e588be719b3920f5bf86f54f32645f2485a5fe469b95e9ccb139f78a932a9dd",
+    "src/p8_aligned_response/bounds.py": "c9d0db952ddaac1320ef57b02a19735c126b0d8350de15f2b21f5124d8e190e6",
+    "src/p8_aligned_response/derivatives.py": "7bbd7f7e48e214b473a7ac52ed3502024ca64c4c9cf63d639af6c1dff38f70ee",
+    "src/p8_aligned_response/forcing.py": "71270d117ce00ef8e363654eb55bbeae9decddb23992649d2c65679aad00feab",
+    "src/p8_aligned_response/leading.py": "97a4086a5a8a8c7f03a137322011ac7490e85e2db01d0645459ab01137d1ef17",
+    "src/p8_aligned_response/verify.py": "7a13e61fc9e2ed96d19a573f23c85fd725d50e043a9708db0e7cc888f72e96e3",
+    "tests/conftest.py": "83af95010cfc993079245f3e2b4f40a203a24801e29cabd31b5d451f68a6b45c",
+    "tests/test_response_bounds.py": "1abc19a7b032db9eeac4149935faa2fafc14440d7cd665054b27b5c72a130657",
+    "tests/test_response_certificate.py": "7d27f5e0ef26d7163a32a492c5d1f98f69915131988a97d2a24754b3ebe806ea",
+    "tests/test_response_forcing.py": "454d3946bc938409abe2ef58e8c09af34166627cfe44037b383b4fa4332e219c",
+    "tests/test_response_light_jets.py": "e48e3b3ddde9e4186cf4497113ff31b70a61e9132e3905cb38dc648051773c7c"
+  },
+  "state_and_source": "Zero v,v' initially; S2=S2'=S2''=0 initially; |S2^(j)|<=E for j=0..3; A=(815/2)*sqrt(zeta)*|k_com|*E bounds all J jets through order two",
+  "status": "ACTUAL_PREPARED_LEADING_RESPONSE_AND_PHYSICAL_READOUT_ERRORS_CERTIFIED; ORIGINAL_P8_OPEN",
+  "verdict": "The actual leading heavy response has a quantitative prepared retarded local approximation with physical readouts and a sufficient light-jet source bound. The preparation and jet estimates have not been proved for an on-shell light family.",
+  "verification_boundary": "Exact symbolic checks, continuous energy and coefficient proofs, independent manufactured-solution and physical-readout controls; not proof-assistant formalization",
+  "written_proofs": [
+    "notes/retarded.md",
+    "notes/light-jets.md"
+  ]
+}
