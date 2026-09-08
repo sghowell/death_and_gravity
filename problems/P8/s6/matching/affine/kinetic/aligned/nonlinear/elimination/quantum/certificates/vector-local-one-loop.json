@@ -1,0 +1,144 @@
+{
+  "actual_clock_coefficient_jets_at_mu_m0": {
+    "finite_weight": {
+      "N_first": "-22/(27*h)",
+      "N_second": "2*(8019*h + 4784)/(6561*h**2)",
+      "value": "-5/2"
+    },
+    "pole_weight": {
+      "N_first": "20/(9*h)",
+      "N_second": "-4*(3645*h - 236)/(2187*h**2)",
+      "value": "3"
+    }
+  },
+  "checked_scalar_entries": 18,
+  "claim": "P8-S6.47.ALIGNED_QUANTUM",
+  "complete_constant_coefficient_kernel": [
+    [
+      "a*m0_squared + k**2",
+      "-k*omega",
+      "0",
+      "0"
+    ],
+    [
+      "-k*omega",
+      "b*m0_squared + omega**2",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "b*m0_squared + k**2 + omega**2",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "b*m0_squared + k**2 + omega**2"
+    ]
+  ],
+  "complete_determinant": "a*m0_squared*(b*m0_squared + k**2 + omega**2)**2*(b*m0_squared + omega**2 + b*k**2/a)",
+  "continuous_domain_and_bound": "Original closed X tube: 8/9<a<19/18 and 35/36<b<19/18; C<4, and at mu=m0 |B|<=3971/1296<4; this is the zero-curvature/zero-mass-derivative local term, not a global constant-gradient solution",
+  "controls": {
+    "actual_clock_jets_not_a_full_quantum_constraint_Jacobian": true,
+    "dimensionally_continued_transverse_multiplicity_required_for_finite_part": true,
+    "finite_MSbar_potential_not_a_UV_or_full_quantum_verdict": true,
+    "independent_cutoff_log_and_three_dimensional_sign_controls": true,
+    "reference_pole_convention_not_silently_identified": true,
+    "rejected_inputs": 26,
+    "temporal_and_longitudinal_determinant_not_dropped": true
+  },
+  "date": "2026-09-07",
+  "exact_residuals": {
+    "actual_clock_finite_weight_N_first": "0",
+    "actual_clock_finite_weight_N_second": "0",
+    "actual_clock_finite_weight_value": "0",
+    "actual_clock_pole_weight_N_first": "0",
+    "actual_clock_pole_weight_N_second": "0",
+    "actual_clock_pole_weight_value": "0",
+    "actual_scalar_integral_MSbar_finite_identity": "0",
+    "clock_three_polarization_determinant": "0",
+    "dimensional_pole_and_finite_identity": "0",
+    "full_four_component_determinant": "0",
+    "full_temporal_Euler": "0",
+    "independent_cutoff_logarithm_primitive": "0",
+    "independent_three_dimensional_scalar_integral": "0",
+    "physical_clock_MSbar_finite_vector_constant": "0",
+    "physical_clock_pole_three_modes": "0",
+    "physical_longitudinal_reduction": "0",
+    "renormalization_log_coefficient": "0",
+    "scalar_Gamma_pole_residue": "0"
+  },
+  "formulation": "FORMULATION.md",
+  "literal_action": "Unchanged S6.42; vector-only Gaussian at fixed light fields, canonical Wc=sqrt(zeta_physical)*W, m0²=M²/zeta_physical, a=1/gamma_t and b=1/gamma_s",
+  "named_exact_check_count": 18,
+  "not_established": [
+    "Curvature, mass-derivative, nonlocal/in-in or higher-loop remainders, full quantum stress tensor or a renormalized bounce",
+    "Quantum-corrected constrained spectrum/cones, full affine-complement/light/gravity measure and loops, finite matching counterterms or interacting cutoff",
+    "A Lorentz-invariant vacuum, finite-gravity Regge remainder, V/G/B UV admissibility or original P8 closure"
+  ],
+  "physical_scale_example": {
+    "M_tau": "1000000000000",
+    "local_potential_over_reference_M_squared_over_tau_squared": "1/144000000000000",
+    "m0_over_M": "1/1000000000",
+    "m0_tau": "1000",
+    "normalized_zeta": "1/1000000",
+    "physical_zeta": "1000000000000000000",
+    "scale_choice_is_a_cutoff_or_complete_quantum_bound": false
+  },
+  "pole_and_finite_weights": {
+    "B": "a**(3/2)*sqrt(b)*(log_m0_squared_over_mu_squared + log(a) - 3/2) + 2*b**2*(log_m0_squared_over_mu_squared + log(b) - 1/2)",
+    "C": "a**(3/2)*sqrt(b) + 2*b**2"
+  },
+  "potential_normalization": "V_pole=-m0^4*C/(64pi² epsilon_DR), V_MSbar=m0^4*B/(64pi²), Lscale=log(m0²/mu²); mu*dV_MSbar/dmu=-m0^4*C/(32pi²) with background coefficients fixed",
+  "prior_sha256": {
+    "S6_46_fully_rebuilt": "4a7985892a70803382be53e0beb67b140a3ddcba0c81fd32423c29d267cd9980",
+    "actual_mass_tensor_all64_action_and_source_independent_vector_Hessian_rechecked": true,
+    "no_frozen_action_or_finite_counterterm_modified": true
+  },
+  "proof_checks": {
+    "constant_coefficient_term_not_full_curved_or_nonlinear_loop_bound": true,
+    "example_canonical_frequency_domain": true,
+    "example_local_potential_ratio_below_1e_minus_14": true,
+    "finite_MSbar_weight_below_four": true,
+    "finite_MSbar_weight_continuous_bound": true,
+    "finite_clock_first_derivative_nonzero": true,
+    "log_a_absolute_bound": true,
+    "longitudinal_squared_speed_lower": true,
+    "longitudinal_squared_speed_upper": true,
+    "negative_log_b_below_one_sixteenth": true,
+    "pole_clock_first_derivative_nonzero": true,
+    "pole_coefficient_below_four": true,
+    "positive_logs_below_one_sixteenth": true,
+    "positive_mass_coefficients_on_original_tube": true,
+    "scheme_dependent_potential_not_vacuum_or_UV_verdict": true,
+    "strict_pi_lower_bound_uses_inscribed_hexagon": true
+  },
+  "reference_scale_boundary": "The ratio uses M²/tau² as a reference density, not a nonzero observable energy or an interacting cutoff. This local term is below 10^-14 for the example, not the complete loop correction.",
+  "regulator_and_scheme": "Euclidean +1/2 Tr log K; d=4-2epsilon_DR, d-2 transverse plus one longitudinal mode; scaleless contact determinants vanish in dimensional regularization; modified minimal subtraction with explicit mu scale",
+  "schema": 1,
+  "source_and_sign_boundary": "Source alignment does not remove the actual clock-dependent determinant. Pole sign follows the explicit Gamma integral plus independent cutoff-log and d=3 controls; no sign-normalized match to the reference's opposite printed epsilon definition is asserted.",
+  "source_sha256": {
+    "FORMULATION.md": "007810f4cfd83a5d884918114cdd5659bc6383c6e36cbb7023e9e9fb0a52f026",
+    "README.md": "39c1d59227e330a5af04c947bdce082fd4be714092ed8ce6716c0b7e3eda0899",
+    "notes/literature.md": "d861ed5c0efd2b83515224f535257c645abaafdd2ed0cd591e5a292e0b912f11",
+    "notes/proof.md": "adbc92137f3da2ee49486de2b0b0d73bd6d370b1d3f523dbe652e26f24fca243",
+    "src/p8_aligned_quantum/__init__.py": "67eec2bd3045a0a4f7d7cb19b1212ac611b31d1c49e2cf599e306c9fb69410db",
+    "src/p8_aligned_quantum/bounds.py": "e0cda6753a3cd67532c12d0a76e9c5998675eaeebf60ba3b0dbd2453e033413f",
+    "src/p8_aligned_quantum/kernel.py": "7497c4a0b5e920a7e6297aa6e01d13885573ed6be2d51fb9358d28179d8fbcd3",
+    "src/p8_aligned_quantum/potential.py": "6035f4b25155f522cd9b0d7bc2db6dd4eba3d6686346089cd5cd7973abeaa87c",
+    "src/p8_aligned_quantum/verify.py": "de692da18b20eb26d3be8cd1265c2ea3d2dc9494093622a2547e596a4c7028ab",
+    "tests/conftest.py": "b982c2626782f62aad9e68ba89bc1e54e16d373b989cbebb0f91d036392945f6",
+    "tests/test_quantum_certificate.py": "ac34f04c1d41509fd42fbc1337db8ea0e57ec696f1828237ce061b0d9b21be94",
+    "tests/test_quantum_kernel.py": "138630861fe39aa14729729f08a9315929e1fa9fa3f7e470a7ec798f68a68704",
+    "tests/test_quantum_potential.py": "afc179f60ebb5fe9f0fc80750155480aa00883b0d88111db495c29e4f3dc6ac9"
+  },
+  "status": "VECTOR_ONLY_LOCAL_ONE_LOOP_COEFFICIENT_AND_SCALE_BOUND_CERTIFIED; ORIGINAL_P8_OPEN",
+  "verdict": "The retained vector's first local one-loop coefficient, nontrivial clock jets and a scheme-explicit continuous reference-scale bound are established. The full curved-background and causal quantum matching problem remains open.",
+  "verification_boundary": "Exact full determinant, independent physical/dense modes, Gamma and cutoff controls, direct original-mass clock jets, and written continuous logarithm/scale proof in a stated one-loop scheme; not proof-assistant formalization",
+  "written_proofs": [
+    "notes/proof.md"
+  ]
+}
