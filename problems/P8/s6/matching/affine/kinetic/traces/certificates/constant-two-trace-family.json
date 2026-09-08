@@ -1,0 +1,617 @@
+{
+  "checked_scalar_entries": 7741,
+  "claim": "P8-S6.39.AFFINE_TRACES",
+  "controls": {
+    "all_matrix_ranks_including_off_diagonal_forms": true,
+    "both_null_rays_and_both_coupling_signs": true,
+    "no_frequency_cutoff_or_general_affine_no_go": true,
+    "null_Schur_not_a_Proca_or_transverse_limit": true,
+    "rejected_inputs": 32,
+    "rolling_U_source_not_minus_V_source": true,
+    "zero_matrix_is_unchanged_auxiliary": true
+  },
+  "date": "2026-09-07",
+  "exact_residuals": {
+    "full_connection_and_physical_constraint_interfaces": {
+      "complement_annihilation": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          8,
+          60
+        ]
+      },
+      "complement_cross_Euler": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          60,
+          8
+        ]
+      },
+      "complement_dimension": "0",
+      "complement_idempotence": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          60,
+          60
+        ]
+      },
+      "eight_trace_full_64_Euler": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          64,
+          8
+        ]
+      },
+      "eight_trace_mass_action": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          8,
+          8
+        ]
+      },
+      "eight_trace_quotient_Euler": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          60,
+          8
+        ]
+      },
+      "eight_trace_right_inverse": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          8,
+          8
+        ]
+      },
+      "frozen_single_V_action": "0",
+      "independent_all_block_response": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          8,
+          8
+        ]
+      },
+      "independent_full_Ustar": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          4,
+          1
+        ]
+      },
+      "independent_full_Vstar": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          4,
+          1
+        ]
+      },
+      "independent_full_trace_maps": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          8,
+          64
+        ]
+      },
+      "independent_nonunit_curl": "0",
+      "independent_rolling_alpha": "0",
+      "independent_rolling_curl": "0",
+      "independent_rolling_d": "0",
+      "independent_rolling_e": "0",
+      "literal_rank_two_field_space": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          8,
+          8
+        ]
+      },
+      "nonunit_curl_value": "0",
+      "nonunit_mass_conversion": "0",
+      "nonunit_mass_value": "0",
+      "physical_rank_two_full_auxiliary_rank_residual": "0",
+      "physical_rank_two_pure_vector_residual": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          2,
+          2
+        ]
+      },
+      "physical_rank_two_unchanged_shift": "0",
+      "rank_one_Schur_interface": "0"
+    },
+    "independent_complete_rank_one_dynamics": {
+      "D_UU": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          4,
+          4
+        ]
+      },
+      "D_VU": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          4,
+          4
+        ]
+      },
+      "D_VV": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          4,
+          4
+        ]
+      },
+      "Lorentz_four_trace_response": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          4,
+          4
+        ]
+      },
+      "Ostro_Legendre": "0",
+      "Ostro_P1": "0",
+      "Ostro_Ps": "0",
+      "U_trace_velocity_drops": "0",
+      "V_trace_velocity_drops": "0",
+      "affine_momentum_second_derivative": "0",
+      "equal_trace_gamma": "0",
+      "gamma_from_every_quotient_block": "0",
+      "joint_highest_hessian": "0",
+      "missing_free_matter_rank_control": "0",
+      "null_auxiliary_correction": "0",
+      "null_curl_n": "0",
+      "null_full_Euler": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          2,
+          1
+        ]
+      },
+      "null_projected_response": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          1,
+          1
+        ]
+      },
+      "null_ratio_0": "0",
+      "null_ratio_1": "0",
+      "null_trace_constraint": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          1,
+          1
+        ]
+      },
+      "projective_traces": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          8,
+          4
+        ]
+      },
+      "proportional_clock_threshold": "0",
+      "proportional_gamma": "0",
+      "proportional_null_acceleration": "0",
+      "regular_W0_action": "0",
+      "regular_W0_euler": "0",
+      "regular_determinant": "0",
+      "regular_squares": "0",
+      "rolling_alpha": "0",
+      "rolling_d": "0",
+      "rolling_e": "0",
+      "unchanged_shift": "0",
+      "unconstrained_affine_momentum": "0"
+    },
+    "literal_eight_trace_geometry_and_null_equations": {
+      "U_coefficient_a": "0",
+      "U_coefficient_b": "0",
+      "U_coefficient_c": "0",
+      "U_coefficient_d": "0",
+      "U_covariant_reconstruction": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          4,
+          1
+        ]
+      },
+      "U_rolling_first_variation": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          4,
+          1
+        ]
+      },
+      "action_full_Euler_residual": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          64,
+          1
+        ]
+      },
+      "action_multiplier_Euler_residual": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          4,
+          1
+        ]
+      },
+      "action_quotient_Euler_residual": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          60,
+          1
+        ]
+      },
+      "action_stationary_full_Euler_residual": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          64,
+          1
+        ]
+      },
+      "action_substitution_residual": "0",
+      "all_block_inverse": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          60,
+          8
+        ]
+      },
+      "background_all_connection": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          64,
+          1
+        ]
+      },
+      "background_all_sources": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          64,
+          1
+        ]
+      },
+      "combination_Schur": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          4,
+          4
+        ]
+      },
+      "frozen_V_bridge": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          4,
+          64
+        ]
+      },
+      "null_Maxwell_dot_coefficient": "0",
+      "null_N_W_remainder": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          4,
+          4
+        ]
+      },
+      "null_T_minus_Tstar_remainder": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          4,
+          1
+        ]
+      },
+      "null_multiplier_action_remainder": "0",
+      "null_null_Gram_remainder": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          4,
+          4
+        ]
+      },
+      "null_stationary_algebraic_energy_remainder": "0",
+      "on_clock_eight_Schur": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          8,
+          8
+        ]
+      },
+      "projective_invariance": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          8,
+          4
+        ]
+      },
+      "rank_A_minor": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          4,
+          4
+        ]
+      },
+      "rank_B_minor": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          4,
+          4
+        ]
+      },
+      "rolling_curl_value": "0",
+      "rolling_d": "0",
+      "rolling_e": "0"
+    },
+    "rank_two_longitudinal_inertia": {
+      "D_negative_eigenvector": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          2,
+          1
+        ]
+      },
+      "D_nonzero_determinant": "0",
+      "D_positive_eigenvector": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          2,
+          1
+        ]
+      },
+      "full_lapse_shift_temporal_rank": "0",
+      "longitudinal_parallel_sum": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          2,
+          2
+        ]
+      },
+      "negative_ray_threshold": "0",
+      "positive_ray": "0",
+      "temporal_chart_equivalence": "0",
+      "temporal_euler": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          2,
+          1
+        ]
+      }
+    }
+  },
+  "family": "The unchanged unrestricted S6.37 action plus -Z_IJ F(CI).F(CJ)/4, C=(V,U), Z real constant symmetric 2x2",
+  "formulation": "FORMULATION.md",
+  "geometry": {
+    "D_clock": [
+      [
+        "3/8",
+        "0",
+        "0",
+        "0",
+        "-21/8",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "-3/8",
+        "0",
+        "0",
+        "0",
+        "21/8",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "-3/8",
+        "0",
+        "0",
+        "0",
+        "21/8",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "-3/8",
+        "0",
+        "0",
+        "0",
+        "21/8"
+      ],
+      [
+        "-21/8",
+        "0",
+        "0",
+        "0",
+        "3/8",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "21/8",
+        "0",
+        "0",
+        "0",
+        "-3/8",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "21/8",
+        "0",
+        "0",
+        "0",
+        "-3/8",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "21/8",
+        "0",
+        "0",
+        "0",
+        "-3/8"
+      ]
+    ],
+    "d": "3*Hubble*(7*A + 3*B)/(8*h)",
+    "e": "(A - B)/h",
+    "full_connection_dimension": 64,
+    "gamma": "3*A**2/8 - 21*A*B/4 + 3*B**2/8",
+    "nonlinear_null_inverse_or_full_UV_claim": false,
+    "nonzero_combination_rank": 4,
+    "projective_dimension": 4,
+    "quotient_dimension": 60,
+    "source_signature": "-+++",
+    "two_trace_rank": 8,
+    "zero_Schur_is_quadratic_rolling_only": true
+  },
+  "interfaces_and_units": {
+    "M_squared": 3,
+    "all_connection_equations": 64,
+    "nonunit": {
+      "gamma": "3/8",
+      "isolated_mass_squared_normalized": "32/5",
+      "isolated_mass_squared_physical": "8/5",
+      "mass_is_not_the_coupled_health_test": true,
+      "normalized_zeta": "5/12"
+    },
+    "null_single_trace_kernel_radical": 4,
+    "projective_quotient": 60,
+    "regular_complement_claim_is_quadratic_rolling_only": true,
+    "regular_two_trace_complement": 52,
+    "tau": 2,
+    "two_trace_retained": 8,
+    "unchanged_M1_and_physical_metric": true,
+    "zeta_physical": 5
+  },
+  "named_exact_check_count": 98,
+  "not_established": [
+    "An unhealthy low-frequency EFT domain or quantitative frequency cutoff",
+    "A nonlinear open-tube inverse for the new kinetic family, especially its null-Schur rays",
+    "A no-go for field-dependent coefficients, other curvature/distortion contractions, mass tunings or additional fields",
+    "New vacuum, finite-gravity, loop, threshold or controlled matching V/G/B estimates",
+    "UV completion, original P8 closure or a new requirement on the completed scoped photon objective"
+  ],
+  "prior_sha256": {
+    "S6_37_exact_action_and_original_CD_M1_rechecked": true,
+    "S6_38_fully_rebuilt": "32af5490520b8d9a40c4ad76e1f51560474f431f77b7c5c1772b414f6c0b438e",
+    "no_frozen_ancestor_modified": true,
+    "original_target_and_adopted_contract_unchanged": true
+  },
+  "proof_checks": {
+    "full_quotient_and_original_background": {
+      "J_denominator_positive_for_all_real_u": true,
+      "J_only_even_nonnegative_terms": true,
+      "J_positive_constant": true,
+      "eight_trace_D_invertible": true,
+      "no_low_frequency_EFT_conclusion": true,
+      "nonnull_rank_one_and_null_charts_separated": true,
+      "original_quotient_invertible_on_clock": true,
+      "projector_rank_52": true,
+      "rank_two_D_has_both_strict_signs": true
+    },
+    "rank_one_continuous_sign_and_Ostrogradsky": {
+      "both_null_coupling_signs_nondegenerate": true,
+      "linear_momentum_not_a_frozen_mass_inference": true,
+      "negative_coupling_transverse_example": true,
+      "negative_gamma_vector_sign_entire_strict_domain": true,
+      "no_EFT_frequency_or_open_tube_inverse_claim": true,
+      "null_nontrivial_directions_are_distinct": true,
+      "positive_gamma_cannot_have_equal_traces": true,
+      "positive_gamma_clock_sign_entire_strict_domain": true,
+      "rank_one_only_in_this_module": true,
+      "zero_coupling_highest_rank_changes": true,
+      "zero_direction_is_unchanged": true
+    }
+  },
+  "rank_one": {
+    "full_rank_one_family_covered": true,
+    "gamma": "3*(A**2 - 14*A*B + B**2)/8",
+    "identity_count": 34,
+    "low_energy_cutoff_claim": false,
+    "negative_gamma_threshold": "q>−1/(gamma*zeta)",
+    "normalized_coupling": "zeta_physical/(M²*tau²)",
+    "null_highest_determinant": "a**6*e**2*q*zeta/theta**2",
+    "null_ratios": [
+      "4*sqrt(3) + 7",
+      "7 - 4*sqrt(3)"
+    ],
+    "positive_gamma_threshold": "q>2*gamma*J/e²",
+    "proof_check_count": 11,
+    "rank_one_parameters": [
+      "A",
+      "B",
+      "zeta"
+    ],
+    "unchanged_controls": [
+      "A=B=0",
+      "zeta=0"
+    ]
+  },
+  "rank_two": {
+    "Z": [
+      [
+        "2",
+        "1"
+      ],
+      [
+        "1",
+        "3"
+      ]
+    ],
+    "longitudinal_determinant": "-20/563",
+    "longitudinal_kinetic": [
+      [
+        "-23/563",
+        "-109/563"
+      ],
+      [
+        "-109/563",
+        "-27/563"
+      ]
+    ],
+    "nonlinear_open_tube_inverse_claim": false,
+    "q": 2,
+    "rank_two_positive_Z_not_sufficient": true,
+    "threshold": "2/15"
+  },
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "977bb925e94b8e7b5df0e3188ed42368a5186d79e80510d8da641b0db10a8943",
+    "README.md": "ee6de8678f8dd0f8dc82a691ad9f017207d56970d1aba27c30b0903d64a80ff8",
+    "notes/dynamics.md": "4488f5332ed2f7ae815e2b82089c214902a61bbb46ffac7693d26c254e11202c",
+    "notes/geometry.md": "469d8327a04b9bfd6bbc4d92cf5ba72c2427ac299543e79f61d912c5ad9762d2",
+    "notes/interfaces.md": "f8c52cae207137517f79dd6bb9646e9f940237177913024c196b7f11f1689abc",
+    "notes/rank-two.md": "df6af00274758a39c0dd3e4c7b24a2ccc3836b17a4d762dffd38e40ab533d6ca",
+    "src/p8_affine_traces/__init__.py": "c42cf0414cbaa86be6cb536744ae9a0174229f308c9f9104d173f9fa4a1bfce2",
+    "src/p8_affine_traces/bridges.py": "56e13534e3189b3d8d452ccc95f3ae0b81cc5454b5d2d393c40950574d959fad",
+    "src/p8_affine_traces/dynamics.py": "59fcb0b6ea9ad1dc3a3e48ee0317526e1ed11dd57da418343cab18d22f020f89",
+    "src/p8_affine_traces/geometry.py": "9e839a030abc7082325cc2c433717f6cea8ce47c7dc722ec42d784da79985fff",
+    "src/p8_affine_traces/rank_two.py": "5b420705f4c12454162eedd36bab9462a3a1546f4900008c820442da3e492eac",
+    "src/p8_affine_traces/verify.py": "54b3a2dd2a5055e7d38d187f50500a6db4f54647bd20699473e6364af36c7dc1",
+    "tests/conftest.py": "cd03d33fcd67c9c4b90b4a344bd91e94ada4a1a4e718312583ac5a3650a8aa0e",
+    "tests/test_trace_certificate.py": "27e4154ce763100bcffadd66add37b6db02ddd84dc28e90895b108a0863ac790",
+    "tests/test_trace_dynamics.py": "381e904bb6ecf529d2acd0da8b7631464927757081d9d7a53065c2f9644cf454",
+    "tests/test_trace_geometry.py": "d7fc066f53aeea7e2f10738eda47a6ddfb72742faf929848b541340b880fb10a",
+    "tests/test_trace_interfaces.py": "b2d327ef15a9c849f847782048d4c7ee78bfb02e695b5847d7f8b111aa93cc56",
+    "tests/test_trace_rank_two.py": "818c1386b9f5bd5e26962241815bbc2fa6a2bd947eb24a7e2f0f55e20e9b7693"
+  },
+  "status": "ALL_NONZERO_CONSTANT_TWO_TRACE_CURL_FORMS_FAIL_LITERAL_PARENT_HEALTH; ORIGINAL_P8_OPEN",
+  "verdict": "Rank zero is the unchanged auxiliary action. Every nonzero rank-one or rank-two matrix has a physical negative kinetic direction or a nondegenerate unconstrained Ostrogradsky mode on the actual rolling solution.",
+  "verification_boundary": "Exact symbolic identities and written whole-domain rank, constraint and inertia proofs; not proof-assistant formalization",
+  "written_proofs": [
+    "notes/geometry.md",
+    "notes/dynamics.md",
+    "notes/rank-two.md",
+    "notes/interfaces.md"
+  ]
+}

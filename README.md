@@ -394,8 +394,14 @@ around a pre-registered problems document and a certificate-gated ledger.
   at sufficiently large momentum. The proof retains all constraints;
   neither an isolated Proca sign nor a center-chart pole is used as an
   EFT cutoff or general affine-theory verdict.
+  The [rank-complete two-trace audit](problems/P8/s6/matching/affine/kinetic/traces/README.md)
+  now closes every constant symmetric mixing of the specified two
+  invariant trace curls, including both exceptional zero-Schur rays.
+  No nonzero matrix supplies an everywhere-healthy literal parent on
+  the original bounce; this does not classify other affine operators
+  or identify a controlled low-frequency EFT cutoff.
 
-The [current P8 continuation audit](docs/assessment-2026-09-07-p8-affine-kinetic-screens.md) separates
+The [current P8 continuation audit](docs/assessment-2026-09-07-p8-constant-two-trace-family.md) separates
 the completed scoped P8(a) objective and certificate gates from the
 outstanding P8(b) UV-matching and positivity questions.
 P8 is not marked finished or closed.
