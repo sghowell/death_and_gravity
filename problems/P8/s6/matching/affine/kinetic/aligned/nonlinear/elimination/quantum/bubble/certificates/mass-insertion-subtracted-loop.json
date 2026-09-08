@@ -1,0 +1,159 @@
+{
+  "actual_mass_direction_and_pole": {
+    "alpha": "4/(9*h)",
+    "beta": "28/(81*h)",
+    "constant": "904*m0_squared**2/(2187*h**2)",
+    "fourth": "32*(101*k_space_squared**2 + 220*k_space_squared*k_time_squared + 120*k_time_squared**2)/(98415*h**2)",
+    "h": "h",
+    "second": "416*m0_squared*(3*k_space_squared + 4*k_time_squared)/(6561*h**2)",
+    "space2": "k_space_squared",
+    "time2": "k_time_squared"
+  },
+  "checked_scalar_entries": 42,
+  "claim": "P8-S6.48.VECTOR_BUBBLE",
+  "continuous_finite_domain_and_bound": "kappa=sum_mu |k_mu|\u00b2 is the Hermitian norm for complex Euclidean k; rho=kappa/m0\u00b2<=1. |R_loop|<=m0^4/(64pi\u00b2 h\u00b2)*(4852/229635)*rho\u00b3/(1-rho/4)<=kappa\u00b3/(1920pi\u00b2 h\u00b2 m0\u00b2). Final bound strict for nonzero kappa; zero momentum gives zero.",
+  "continuous_pole_bound": "For |u|<=1/2 and nonzero real Euclidean momentum, (k\u00b2)\u00b2/125<F4<(k\u00b2)\u00b2/25. This is a divergent derivative coefficient of this component, not a physical ghost, cutoff or finite error.",
+  "controls": {
+    "complex_Hermitian_momentum_norm_not_bilinear_k_squared": true,
+    "finite_logarithm_derived_from_actual_radial_Laurent_coefficients": true,
+    "full_longitudinal_numerator_required": true,
+    "independent_isotropic_all_order_finite_control": true,
+    "linear_mass_bubble_not_full_second_mass_variation": true,
+    "no_stationary_to_curved_in_in_transfer_asserted": true,
+    "rejected_inputs": 49,
+    "subtracted_loop_not_unknown_higher_local_matching_operators": true,
+    "zero_momentum_subtracted_kernel": true
+  },
+  "date": "2026-09-08",
+  "exact_residuals": {
+    "actual_mass_direction_alpha": "0",
+    "actual_mass_direction_beta": "0",
+    "actual_mass_direction_constant": "0",
+    "actual_mass_direction_fourth": "0",
+    "actual_mass_direction_second": "0",
+    "complete_two_insertion_numerator": "0",
+    "dimensional_radial_finite_0": "0",
+    "dimensional_radial_finite_1": "0",
+    "dimensional_radial_finite_2": "0",
+    "dimensional_radial_pole_0": "0",
+    "dimensional_radial_pole_1": "0",
+    "dimensional_radial_pole_2": "0",
+    "exact_through_four_derivatives_subtraction": "0",
+    "finite_log_coefficient_is_minus_pole_0": "0",
+    "finite_log_coefficient_is_minus_pole_1": "0",
+    "finite_log_coefficient_is_minus_pole_2": "0",
+    "full_Feynman_parameter_pole": "0",
+    "full_longitudinal_Proca_inverse": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "homogeneous_parameter_integrand": "0",
+    "independent_explicit_spherical_pole_integrand": "0",
+    "independent_isotropic_denominator_identity": "0",
+    "independent_isotropic_finite_log_all_Taylor_orders_n_ge_3": "0",
+    "independent_isotropic_tadpole_bubble_pole": "0",
+    "independent_linear_mass_variation_potential_match": "0",
+    "radial_Gamma_residue_0": "0",
+    "radial_Gamma_residue_1": "0",
+    "radial_Gamma_residue_2": "0"
+  },
+  "finite_logarithmic_subtraction": {
+    "F0": "m0_squared**2*(trace_A**2 + 2*trace_A_squared)/8",
+    "F2": "m0_squared*(feynman_x*(1 - feynman_x)*(k_A_k*trace_A + k_squared*(trace_A**2 - 2*trace_A_squared)/4) + k_A_squared_k/2)",
+    "F4": "feynman_x**2*(1 - feynman_x)**2*(k_A_k**2 + k_A_k*k_squared*trace_A + 2*k_A_squared_k*k_squared + k_squared**2*(trace_A**2 + 2*trace_A_squared)/8) - feynman_x*k_A_squared_k*k_squared*(1 - feynman_x)/2",
+    "exact_through_four_derivatives_subtraction": "0",
+    "homogeneous_parameter_integrand": "0",
+    "local_Taylor_polynomial": "m0_squared*momentum_scaling_squared*(trace_A**2 + 2*trace_A_squared)*(-feynman_x**2*k_squared + feynman_x*k_squared)/8 + momentum_scaling_squared**2*(feynman_x*(1 - feynman_x)*(-feynman_x**2*k_squared + feynman_x*k_squared)*(k_A_k*trace_A + k_squared*(trace_A**2 - 2*trace_A_squared)/4) + k_A_squared_k*(-feynman_x**2*k_squared + feynman_x*k_squared)/2 + (trace_A**2 + 2*trace_A_squared)*(-feynman_x**4*k_squared**2 + 2*feynman_x**3*k_squared**2 - feynman_x**2*k_squared**2)/16)",
+    "subtracted": "m0_squared**2*(trace_A**2 + 2*trace_A_squared)*(feynman_x**2*k_squared**2*momentum_scaling_squared**2*(1 - feynman_x)**2/(2*m0_squared**2) - feynman_x*k_squared*momentum_scaling_squared*(1 - feynman_x)/m0_squared + log(feynman_x*k_squared*momentum_scaling_squared*(1 - feynman_x)/m0_squared + 1))/8 + m0_squared*momentum_scaling_squared*(feynman_x*(1 - feynman_x)*(k_A_k*trace_A + k_squared*(trace_A**2 - 2*trace_A_squared)/4) + k_A_squared_k/2)*(-feynman_x*k_squared*momentum_scaling_squared*(1 - feynman_x)/m0_squared + log(feynman_x*k_squared*momentum_scaling_squared*(1 - feynman_x)/m0_squared + 1)) + momentum_scaling_squared**2*(feynman_x**2*(1 - feynman_x)**2*(k_A_k**2 + k_A_k*k_squared*trace_A + 2*k_A_squared_k*k_squared + k_squared**2*(trace_A**2 + 2*trace_A_squared)/8) - feynman_x*k_A_squared_k*k_squared*(1 - feynman_x)/2)*log(feynman_x*k_squared*momentum_scaling_squared*(1 - feynman_x)/m0_squared + 1)"
+  },
+  "finite_remainder_constants": {
+    "f0_envelope": "904/2187",
+    "f2_envelope": "2032*feynman_x*(1 - feynman_x)/2187 + 8/81",
+    "f4_absolute_envelope": "3640*feynman_x**2*(1 - feynman_x)**2/2187 + 8*feynman_x*(1 - feynman_x)/81",
+    "integrated_absolute_remainder_constant": "4852/229635"
+  },
+  "formulation": "FORMULATION.md",
+  "general_pole_polynomial": {
+    "constant": "m0_squared**2*(trace_A**2 + 2*trace_A_squared)/8",
+    "fourth": "k_A_k**2/30 + k_A_k*k_squared*trace_A/30 - k_A_squared_k*k_squared/60 + k_squared**2*(trace_A**2 + 2*trace_A_squared)/240",
+    "second": "m0_squared*(k_A_k*trace_A/6 + k_A_squared_k/2 + k_squared*(trace_A**2 - 2*trace_A_squared)/24)"
+  },
+  "literal_component": "Unchanged S6.42 vector-only Gaussian, fixed physical metric, isotropic on-clock mass m0\u00b2=M\u00b2/zeta_physical, linear mass insertion delta_M=m0\u00b2*A*r with actual A=diag(a_N,b_N,b_N,b_N). r is not a free physical constrained lapse.",
+  "local_subtraction_boundary": "Subtract all Taylor terms through external-momentum degree four from this one-loop component. Scheme/scale-dependent local terms through that degree cancel; unknown higher local matching operators do not. No finite counterterm is changed.",
+  "named_exact_check_count": 27,
+  "not_established": [
+    "Full second-mass-variation tadpole, metric/scalar constraints or the full quantum scalar two-point function",
+    "Curved/in-in quantum transfer, full stress tensor, other field loops, unknown higher matching operators, higher-loop error or interacting cutoff",
+    "Quantum-corrected bounce/spectrum/cones, Lorentz-invariant vacuum, finite-gravity Regge remainder, V/G/B admissibility or original P8 closure"
+  ],
+  "physical_scale_example": {
+    "Hermitian_momentum_squared_tau_squared": "1",
+    "M_tau": "1000000000000",
+    "full_curved_or_quantum_EFT_remainder": false,
+    "m0_tau": "1000",
+    "momentum_ball_ratio": "1/1000000",
+    "subtracted_loop_kernel_over_reference_density": "1/17280000000000000000000000000000000"
+  },
+  "prior_sha256": {
+    "S6_47_fully_rebuilt": "808ed780dc548860f2d4b282bc70463c8802eed7e1cd5c9e2054bab7005be28f",
+    "no_frozen_action_or_counterterm_modified": true,
+    "original_mass_tensor_first_variation_and_full_vector_Hessian_rechecked": true
+  },
+  "proof_checks": {
+    "actual_f2_direction_envelope": true,
+    "actual_f4_direction_envelope": true,
+    "complex_mass_direction_norm": true,
+    "fourth_derivative_pole_compact_lower_above_one_over_125": true,
+    "fourth_derivative_pole_upper_below_one_over_25": true,
+    "integrated_remainder_constant": true,
+    "integrated_remainder_constant_below_one_over_40": true,
+    "loop_prefactor_remainder_denominator": true,
+    "mixed_fourth_coefficient_between_twice_extreme_diagonals": true,
+    "rational_pi_lower_control": true,
+    "subtraction_not_unknown_higher_operator_or_full_quantum_matching": true,
+    "unit_ball_remainder_constant_below_one_over_30": true,
+    "unit_complex_momentum_ball_log_margin": true
+  },
+  "radial_poles_and_finite_parts": {
+    "0": {
+      "finite": "-log_Delta_over_mu_squared",
+      "pole": "1"
+    },
+    "1": {
+      "finite": "2*Delta*log_Delta_over_mu_squared - Delta",
+      "pole": "-2*Delta"
+    },
+    "2": {
+      "finite": "-3*Delta**2*log_Delta_over_mu_squared + 2*Delta**2",
+      "pole": "3*Delta**2"
+    }
+  },
+  "regulator_and_normalization": "Euclidean +1/2 Tr log K, d=4-2epsilon_DR. Gamma_bubble_pole^(2)=-1/(64pi\u00b2 epsilon_DR)*integral r(-k)r(k)[F0+F2+F4], no implicit extra 1/2. All longitudinal numerator terms retained.",
+  "schema": 1,
+  "source_functional_boundary": "The kernel/reference M\u00b2/tau\u00b2 ratio is <=Q\u00b3/(17280 Lp\u00b2 R\u00b2), Q=kappa*tau\u00b2<=R\u00b2. A band-limited real Euclidean source-functional bound includes its squared Fourier/L2 norm. This is not a pointwise physical energy correction.",
+  "source_sha256": {
+    "FORMULATION.md": "5ca8de34f573a0629bc9427ff3e4c1a8a0a8db8ee82872d7187587c91658c9a5",
+    "README.md": "e10a436194ba222a5549145a0d6ed295a2a47fb4261c507d81817a01a73a4c7a",
+    "notes/pole.md": "ecc9a3e32ea9c2a450dfe6ad4366709d9e12cce1eb0e856e638c83fa315660b4",
+    "notes/remainder.md": "eea48a18fc8cbb4f7809686d2b4b08b301db213f4ba34b159d5f9615a26ecbdb",
+    "src/p8_vector_bubble/__init__.py": "0bb46bb5674d05b152041f9e635a222b6f36bc0c0444d2e87d21dd73f31e6cc1",
+    "src/p8_vector_bubble/independent.py": "2d76b93b50ca51a6786bca8bc36a4273baceedf9c975c008b87a32fe3d39697c",
+    "src/p8_vector_bubble/pole.py": "dbdbedd870617e2ccb42a6445e49eb5cfbe5f671731b70b01fe2dcc3430e7859",
+    "src/p8_vector_bubble/remainder.py": "2557a31e82d43856ca1e39a0365d710330206a8fbcf38e529551888471c25a41",
+    "src/p8_vector_bubble/verify.py": "a088ab0411af14abdcfa115fe802348dad1553b24d819205bbf71c36244243a5",
+    "tests/conftest.py": "95764430ef8fd8bafe362a05fc1a0d7507753b6a795d0f7afc2daffeb7a3232f",
+    "tests/test_bubble_certificate.py": "bd82aa8c59f4b3c3609bfd3fbf4658b3ae407a35619959f672ed99a6520a05eb",
+    "tests/test_bubble_pole.py": "9563ad88e6a6fccb2a21e450af5abafc4ca3baeeaa9a904e5b050311237a4d69",
+    "tests/test_bubble_remainder.py": "9cb9cfdcc20c6f265a3a93e789201fc264d3e876aa8053eeb98a4ebed2ef5afb"
+  },
+  "status": "VECTOR_TWO_INSERTION_POLE_AND_FINITE_SUBTRACTED_LOOP_BOUND_CERTIFIED; ORIGINAL_P8_OPEN",
+  "verdict": "The actual vector two-mass-insertion derivative pole and a finite, subtracted stationary loop remainder on an explicit complex momentum ball are established. Original P8 remains open.",
+  "verification_boundary": "Full exact Proca tensor numerator, independent shifted angular and isotropic denominator reductions, explicit radial Laurent coefficients, all-order isotropic finite comparison, and written continuous complex-log norm bound; not proof-assistant formalization",
+  "written_proofs": [
+    "notes/pole.md",
+    "notes/remainder.md"
+  ]
+}
