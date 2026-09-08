@@ -1,0 +1,251 @@
+{
+  "checked_scalar_entries": 36,
+  "claim": "P8-S6.70.ACOUSTIC_VECTOR_REDUCTION",
+  "continuous_prepared_variation_majorants": {
+    "coarse_correction_C2_coefficient": "18000",
+    "correction_C2_coefficient": "11735921060393/679477248",
+    "history_numerator_bounds": [
+      "18203125/16384",
+      "830078125/262144",
+      "91552734375/33554432"
+    ],
+    "initial_zero_time_shift_C0_upper_per_source_C0": "2",
+    "scope": "The first variation of the mode-potential remainder at fixed acoustic time, not the renormalized stress or a coupled inverse.",
+    "varied_numerator_C2_bounds": [
+      "3343645513/5308416",
+      "40047147671/28311552",
+      "61181640625/50331648"
+    ]
+  },
+  "controls": {
+    "both_third_source_derivatives_excluded_from_C2": true,
+    "momentum_zero_is_a_potential_limit_not_an_invertible_mode_map": true,
+    "native_domain_validation_before_cached_implementations": true,
+    "physical_readout_acoustic_rate_retained": true,
+    "prepared_coordinate_shift_and_initial_history_retained": true,
+    "rejected_inputs": 93,
+    "zero_polynomial_residual_accepted_without_accepting_nonzero_constants": true
+  },
+  "date": "2026-09-08",
+  "exact_residuals": {
+    "acoustic_canonical_Wronskian_preserved": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "acoustic_pair_Wronskian_explicit": "0",
+    "acoustic_pump_retains_time_change_Schwarzian": "0",
+    "clock_cosmic_time_rate_conversion": "0",
+    "clock_exact_acoustic_potential": "0",
+    "clock_transverse_exact_scalar_potential": "0",
+    "exact_longitudinal_pump_potential_split": "0",
+    "high_momentum_principal_potential": "0",
+    "highest_derivative_pump_reproduces_rank_one_pole": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "independent_fixed_acoustic_time_history": "0",
+    "independent_longitudinal_pump_second_derivative": "0",
+    "independent_rational_remainder_variation": "0",
+    "isotropic_low_momentum_potential": "0",
+    "moving_acoustic_momentum": "0",
+    "omitted_acoustic_rate_bounce_control": "0",
+    "physical_lapse_jet2_principal_second_derivative": "0",
+    "physical_readout_retains_acoustic_rate": "0",
+    "physical_scale_jet2_principal_second_derivative": "0",
+    "positive_canonical_pump_L": "0",
+    "positive_canonical_pump_T": "0",
+    "positive_remainder_factorization": "0",
+    "regular_acoustic_source_chart_determinant": "0",
+    "remainder_first_numerator_formula": "0",
+    "scalar_principal_positive_curvature_formula": "0",
+    "unit_acoustic_momentum_L": "0",
+    "unit_acoustic_momentum_T": "0",
+    "varied_acoustic_mass_first": "0",
+    "varied_acoustic_mass_second": "0",
+    "varied_acoustic_pump_curvature": "0",
+    "varied_acoustic_pump_rate": "0"
+  },
+  "fixed_scale_examples": {
+    "0": {
+      "background": {
+        "clock_nonnegative_remainder_lower": "0",
+        "clock_remainder_upper": "359375/4096",
+        "clock_scalar_principal_potential_lower": "15999725/16",
+        "coarse_clock_remainder_upper": "88",
+        "mass": "1000",
+        "momentum": "0"
+      },
+      "prepared_variation": {
+        "coarse_prepared_remainder_C2_to_C0_upper": "18000",
+        "mass": "1000",
+        "momentum": "0",
+        "prepared_remainder_C2_to_C0_upper": "11735921060393/679477248"
+      }
+    },
+    "1000": {
+      "background": {
+        "clock_nonnegative_remainder_lower": "0",
+        "clock_remainder_upper": "359375/8192",
+        "clock_scalar_principal_potential_lower": "15999725/16",
+        "coarse_clock_remainder_upper": "44",
+        "mass": "1000",
+        "momentum": "1000"
+      },
+      "prepared_variation": {
+        "coarse_prepared_remainder_C2_to_C0_upper": "9000",
+        "mass": "1000",
+        "momentum": "1000",
+        "prepared_remainder_C2_to_C0_upper": "11735921060393/1358954496"
+      }
+    },
+    "10000": {
+      "background": {
+        "clock_nonnegative_remainder_lower": "0",
+        "clock_remainder_upper": "359375/413696",
+        "clock_scalar_principal_potential_lower": "15999725/16",
+        "coarse_clock_remainder_upper": "88/101",
+        "mass": "1000",
+        "momentum": "10000"
+      },
+      "prepared_variation": {
+        "coarse_prepared_remainder_C2_to_C0_upper": "18000/101",
+        "mass": "1000",
+        "momentum": "10000",
+        "prepared_remainder_C2_to_C0_upper": "11735921060393/68627202048"
+      }
+    }
+  },
+  "formulation": "FORMULATION.md",
+  "longitudinal_scalar_and_momentum_potentials": {
+    "exact": "mass_potential - 3*mass_potential_first**2/(4*(comoving_momentum**2 + mass_potential)**2) - pump_curvature + (mass_potential_first*pump_rate + mass_potential_second/2)/(comoving_momentum**2 + mass_potential)",
+    "momentum_remainder": "-3*mass_potential_first**2/(4*(comoving_momentum**2 + mass_potential)**2) + (mass_potential_first*pump_rate + mass_potential_second/2)/(comoving_momentum**2 + mass_potential)",
+    "scalar_principal": "mass_potential - pump_curvature"
+  },
+  "named_exact_check_count": 30,
+  "not_established": [
+    "An exact replacement scalar theory, off-clock ordinary-Proca state/cone transfer or an invertible canonical k=0 map",
+    "The full renormalized stress decomposition or a no-loss coupled causal inverse",
+    "Spatial response, independent initial states, quantum stability/cones, interactions, other loops, cutoff, finite Wilson matching, V/G/B or original P8 closure"
+  ],
+  "original_clock_coefficients": {
+    "U": "positive_mass_squared*(u**2 + 1)**4",
+    "U1": "8*positive_mass_squared*u*(u**2 + 1)**5",
+    "U2": "8*positive_mass_squared*(u**2 + 1)**6*(11*u**2 + 1)",
+    "b": "4*u*(u**2 + 1)",
+    "pump_curvature": "4*(u**2 + 1)**2*(7*u**2 + 1)",
+    "remainder_first_numerator": "4*positive_mass_squared*(u**2 + 1)**6*(19*u**2 + 1)",
+    "scalar_principal_potential": "(u**2 + 1)**2*(positive_mass_squared*u**4 + 2*positive_mass_squared*u**2 + positive_mass_squared - 28*u**2 - 4)"
+  },
+  "positive_physical_mode_reduction": {
+    "L": {
+      "acoustic_mass_potential": "mass**2*mass_a*scale**2",
+      "acoustic_pump_squared": "comoving_momentum**2*mass**2*sqrt(mass_a)*sqrt(mass_b)*scale**2/(comoving_momentum**2 + mass**2*mass_a*scale**2)",
+      "acoustic_rate": "lapse*sqrt(mass_b)/(sqrt(mass_a)*scale)",
+      "checks": {
+        "positive_canonical_pump_L": "0",
+        "unit_acoustic_momentum_L": "0"
+      },
+      "physical_frequency_squared": "lapse**2*mass_b*(comoving_momentum**2/(mass_a*scale**2) + mass**2)",
+      "physical_g_squared": "comoving_momentum**2*mass**2*mass_a*scale/(lapse*(comoving_momentum**2/scale**2 + mass**2*mass_a))"
+    },
+    "T": {
+      "acoustic_mass_potential": "mass**2*mass_b*scale**2",
+      "acoustic_pump_squared": "1",
+      "acoustic_rate": "lapse/scale",
+      "checks": {
+        "positive_canonical_pump_T": "0",
+        "unit_acoustic_momentum_T": "0"
+      },
+      "physical_frequency_squared": "lapse**2*(comoving_momentum**2/scale**2 + mass**2*mass_b)",
+      "physical_g_squared": "scale/lapse"
+    }
+  },
+  "prepared_potential_variation": {
+    "delta_U": "4*physical_lapse_jet0*positive_mass_squared*(u**2 + 1)/9 + 2*physical_scale_jet0*positive_mass_squared*(u**2 + 1)**4",
+    "delta_U1": "-8*physical_lapse_jet0*positive_mass_squared*u*(u**2 + 1)**2*(81*u**6 + 243*u**4 + 243*u**2 + 68)/81 + 4*physical_lapse_jet1*positive_mass_squared*(u**2 + 1)**3/9 + 24*physical_scale_jet0*positive_mass_squared*u*(u**2 + 1)**5 + 2*physical_scale_jet1*positive_mass_squared*(u**2 + 1)**6",
+    "delta_U2": "-8*physical_lapse_jet0*positive_mass_squared*(u**2 + 1)**3*(1782*u**8 + 5508*u**6 + 5832*u**4 + 2159*u**2 + 145)/81 - 8*physical_lapse_jet1*positive_mass_squared*u*(u**2 + 1)**4*(81*u**6 + 243*u**4 + 243*u**2 + 41)/81 + 4*physical_lapse_jet2*positive_mass_squared*(u**2 + 1)**5/9 + 32*physical_scale_jet0*positive_mass_squared*(u**2 + 1)**6*(11*u**2 + 1) + 48*physical_scale_jet1*positive_mass_squared*u*(u**2 + 1)**7 + 2*physical_scale_jet2*positive_mass_squared*(u**2 + 1)**8",
+    "delta_pump_curvature": "-8*physical_lapse_jet0*(567*u**8 + 1782*u**6 + 1944*u**4 + 854*u**2 + 89)/(81*(u**2 + 1)) - 4*physical_lapse_jet1*u*(81*u**6 + 243*u**4 + 243*u**2 + 77)/81 + 16*physical_lapse_jet2*(u**2 + 1)/81 + 8*physical_scale_jet0*(u**2 + 1)**2*(7*u**2 + 1) + 16*physical_scale_jet1*u*(u**2 + 1)**3 + physical_scale_jet2*(u**2 + 1)**4",
+    "delta_pump_rate": "-4*physical_lapse_jet0*u*(81*u**6 + 243*u**4 + 243*u**2 + 101)/(81*(u**2 + 1)**2) + 16*physical_lapse_jet1/(81*(u**2 + 1)) + 4*physical_scale_jet0*u*(u**2 + 1) + physical_scale_jet1*(u**2 + 1)**2",
+    "delta_remainder_fixed_acoustic_time": "-initial_zero_acoustic_time_shift*(768*positive_mass_squared**3*u**3*(u**2 + 1)**15/(comoving_momentum**2 + positive_mass_squared*(u**2 + 1)**4)**3 + (1064*positive_mass_squared*u**17 + 7648*positive_mass_squared*u**15 + 23744*positive_mass_squared*u**13 + 41440*positive_mass_squared*u**11 + 44240*positive_mass_squared*u**9 + 29344*positive_mass_squared*u**7 + 11648*positive_mass_squared*u**5 + 2464*positive_mass_squared*u**3 + 200*positive_mass_squared*u)/(comoving_momentum**2 + positive_mass_squared*(u**2 + 1)**4) + (-96*positive_mass_squared**2*u*(u**2 + 1)**11*(11*u**2 + 1) + 8*positive_mass_squared*u*(u**2 + 1)**5*(-32*positive_mass_squared*u**2*(u**2 + 1)**6 - 4*positive_mass_squared*(u**2 + 1)**6*(11*u**2 + 1)))/(comoving_momentum**2 + positive_mass_squared*(u**2 + 1)**4)**2) + (-4*physical_lapse_jet0*positive_mass_squared*(u**2 + 1)**3*(3078*u**8 + 9396*u**6 + 9720*u**4 + 3511*u**2 + 145)/81 - 4*physical_lapse_jet1*positive_mass_squared*u*(u**2 + 1)**4*(3*u**6 + 9*u**4 + 9*u**2 - 1)/3 + 2*physical_lapse_jet2*positive_mass_squared*(u**2 + 1)**5/9 + 16*physical_scale_jet0*positive_mass_squared*(u**2 + 1)**6*(19*u**2 + 1) + 40*physical_scale_jet1*positive_mass_squared*u*(u**2 + 1)**7 + physical_scale_jet2*positive_mass_squared*(u**2 + 1)**8)/(comoving_momentum**2 + positive_mass_squared*(u**2 + 1)**4) + (16*physical_lapse_jet0*positive_mass_squared**2*(u**2 + 1)**7*(162*u**8 + 486*u**6 + 486*u**4 + 79*u**2 - 3)/27 - 16*physical_lapse_jet1*positive_mass_squared**2*u*(u**2 + 1)**8/3 - 8*physical_scale_jet0*positive_mass_squared**2*(u**2 + 1)**10*(55*u**2 + 1) - 24*physical_scale_jet1*positive_mass_squared**2*u*(u**2 + 1)**11)/(comoving_momentum**2 + positive_mass_squared*(u**2 + 1)**4)**2 + (128*physical_lapse_jet0*positive_mass_squared**3*u**2*(u**2 + 1)**11/3 + 192*physical_scale_jet0*positive_mass_squared**3*u**2*(u**2 + 1)**14)/(comoving_momentum**2 + positive_mass_squared*(u**2 + 1)**4)**3",
+    "delta_remainder_fixed_physical_time": "(-4*physical_lapse_jet0*positive_mass_squared*(u**2 + 1)**3*(3078*u**8 + 9396*u**6 + 9720*u**4 + 3511*u**2 + 145)/81 - 4*physical_lapse_jet1*positive_mass_squared*u*(u**2 + 1)**4*(3*u**6 + 9*u**4 + 9*u**2 - 1)/3 + 2*physical_lapse_jet2*positive_mass_squared*(u**2 + 1)**5/9 + 16*physical_scale_jet0*positive_mass_squared*(u**2 + 1)**6*(19*u**2 + 1) + 40*physical_scale_jet1*positive_mass_squared*u*(u**2 + 1)**7 + physical_scale_jet2*positive_mass_squared*(u**2 + 1)**8)/(comoving_momentum**2 + positive_mass_squared*(u**2 + 1)**4) + (16*physical_lapse_jet0*positive_mass_squared**2*(u**2 + 1)**7*(162*u**8 + 486*u**6 + 486*u**4 + 79*u**2 - 3)/27 - 16*physical_lapse_jet1*positive_mass_squared**2*u*(u**2 + 1)**8/3 - 8*physical_scale_jet0*positive_mass_squared**2*(u**2 + 1)**10*(55*u**2 + 1) - 24*physical_scale_jet1*positive_mass_squared**2*u*(u**2 + 1)**11)/(comoving_momentum**2 + positive_mass_squared*(u**2 + 1)**4)**2 + (128*physical_lapse_jet0*positive_mass_squared**3*u**2*(u**2 + 1)**11/3 + 192*physical_scale_jet0*positive_mass_squared**3*u**2*(u**2 + 1)**14)/(comoving_momentum**2 + positive_mass_squared*(u**2 + 1)**4)**3",
+    "delta_scalar_principal_fixed_acoustic_time": "-initial_zero_acoustic_time_shift*(8*positive_mass_squared*u**11 + 40*positive_mass_squared*u**9 + 80*positive_mass_squared*u**7 + 80*positive_mass_squared*u**5 + 40*positive_mass_squared*u**3 + 8*positive_mass_squared*u - 168*u**9 - 576*u**7 - 720*u**5 - 384*u**3 - 72*u) + 4*physical_lapse_jet0*(9*positive_mass_squared*u**4 + 18*positive_mass_squared*u**2 + 9*positive_mass_squared + 1134*u**8 + 3564*u**6 + 3888*u**4 + 1708*u**2 + 178)/(81*(u**2 + 1)) + 4*physical_lapse_jet1*u*(81*u**6 + 243*u**4 + 243*u**2 + 77)/81 - 16*physical_lapse_jet2*(u**2 + 1)/81 + 2*physical_scale_jet0*(u**2 + 1)**2*(positive_mass_squared*u**4 + 2*positive_mass_squared*u**2 + positive_mass_squared - 28*u**2 - 4) - 16*physical_scale_jet1*u*(u**2 + 1)**3 - physical_scale_jet2*(u**2 + 1)**4",
+    "delta_scalar_principal_fixed_physical_time": "4*physical_lapse_jet0*(9*positive_mass_squared*u**4 + 18*positive_mass_squared*u**2 + 9*positive_mass_squared + 1134*u**8 + 3564*u**6 + 3888*u**4 + 1708*u**2 + 178)/(81*(u**2 + 1)) + 4*physical_lapse_jet1*u*(81*u**6 + 243*u**4 + 243*u**2 + 77)/81 - 16*physical_lapse_jet2*(u**2 + 1)/81 + 2*physical_scale_jet0*(u**2 + 1)**2*(positive_mass_squared*u**4 + 2*positive_mass_squared*u**2 + positive_mass_squared - 28*u**2 - 4) - 16*physical_scale_jet1*u*(u**2 + 1)**3 - physical_scale_jet2*(u**2 + 1)**4",
+    "history_remainder_numerators": [
+      "8*positive_mass_squared*u*(u**2 + 1)**7*(133*u**2 + 25)",
+      "-128*positive_mass_squared**2*u*(u**2 + 1)**11*(13*u**2 + 1)",
+      "768*positive_mass_squared**3*u**3*(u**2 + 1)**15"
+    ],
+    "varied_remainder_numerators": [
+      "-4*physical_lapse_jet0*positive_mass_squared*(u**2 + 1)**3*(3078*u**8 + 9396*u**6 + 9720*u**4 + 3511*u**2 + 145)/81 - 4*physical_lapse_jet1*positive_mass_squared*u*(u**2 + 1)**4*(3*u**6 + 9*u**4 + 9*u**2 - 1)/3 + 2*physical_lapse_jet2*positive_mass_squared*(u**2 + 1)**5/9 + 16*physical_scale_jet0*positive_mass_squared*(u**2 + 1)**6*(19*u**2 + 1) + 40*physical_scale_jet1*positive_mass_squared*u*(u**2 + 1)**7 + physical_scale_jet2*positive_mass_squared*(u**2 + 1)**8",
+      "16*physical_lapse_jet0*positive_mass_squared**2*(u**2 + 1)**7*(162*u**8 + 486*u**6 + 486*u**4 + 79*u**2 - 3)/27 - 16*physical_lapse_jet1*positive_mass_squared**2*u*(u**2 + 1)**8/3 - 8*physical_scale_jet0*positive_mass_squared**2*(u**2 + 1)**10*(55*u**2 + 1) - 24*physical_scale_jet1*positive_mass_squared**2*u*(u**2 + 1)**11",
+      "128*physical_lapse_jet0*positive_mass_squared**3*u**2*(u**2 + 1)**11/3 + 192*physical_scale_jet0*positive_mass_squared**3*u**2*(u**2 + 1)**14"
+    ]
+  },
+  "prepared_source_chart": {
+    "acoustic_log_rate": "physical_lapse_jet0*(1 - 4/(81*(u**2 + 1)**3)) - physical_scale_jet0",
+    "alpha": "4/(9*(u**2 + 1)**3)",
+    "beta": "28/(81*(u**2 + 1)**3)",
+    "h": "(u**2 + 1)**3",
+    "mass_log_variation": "4*physical_lapse_jet0/(9*(u**2 + 1)**3) + 2*physical_scale_jet0",
+    "physical_to_acoustic_sources": [
+      [
+        "16/(81*(u**2 + 1)**3)",
+        "1"
+      ],
+      [
+        "1 - 4/(81*(u**2 + 1)**3)",
+        "-1"
+      ]
+    ],
+    "pump": "16*physical_lapse_jet0/(81*(u**2 + 1)**3) + physical_scale_jet0"
+  },
+  "prior_sha256": {
+    "S6_69_fully_rebuilt": "decbb30e4afef9c5f045678b664162c9af3f908c21cffd8f1a0812287e3c36f3",
+    "physical_metric_action_state_and_subtraction_unchanged": true
+  },
+  "proof_checks": {
+    "acoustic_time_is_a_mode_coordinate_not_a_new_physical_metric": true,
+    "all_history_numerator_bounds_positive": true,
+    "all_varied_numerator_bounds_positive": true,
+    "background_remainder_coefficient_below_eighty_eight": true,
+    "longitudinal_map_defined_for_k_positive_potential_limit_at_zero_only": true,
+    "no_ordinary_Proca_cone_or_Hadamard_claim_transferred_off_clock": true,
+    "positive_clock_scalar_principal_potential_at_selected_mass": true,
+    "potential_response_bound_not_a_stress_or_no_loss_feedback_norm": true,
+    "prepared_C2_correction_coefficient_below_eighteen_thousand": true,
+    "prepared_initial_mode_data_and_nonzero_mixing_unchanged": true,
+    "prepared_time_shift_coefficient_at_most_two": true,
+    "strict_momentum_decay_in_exact_rational_bound": true
+  },
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "9711910b590bf521a624d2fb899290480a493e61fb555a3377e8a8ac829946ac",
+    "README.md": "d350bbb2d1c5ad18134fd5517455f271846d2a1ed1dc68558e0b9a1a2450e8aa",
+    "notes/boundary.md": "336a1aed4a19702f487cea26e0d90d1705cdcf92a85b5d4adb27480a9f92fb9d",
+    "notes/reduction.md": "3f738f5718ff8b0a60f02cfbbe8802ecc2413e5f841d316ccc026085e5c1d2fe",
+    "notes/variation.md": "d7525489882643fe46e2e919692b9625a8d75d71bcbab27f1a7110376ee9d08c",
+    "src/p8_vector_liouville/__init__.py": "a7efe059eab8ab28814c5cf9c0b989cac5c84ff8b3da7791762160d5f96afd8a",
+    "src/p8_vector_liouville/clock.py": "95855330f9b5cea4bc288c53efdde72c20536a2e2cef57753c96cda082bdf589",
+    "src/p8_vector_liouville/proofs.py": "27b85472864d88c7e400489955873ac8cb39003f8c739d0d79bb294d0eb53f10",
+    "src/p8_vector_liouville/reduction.py": "e4c19019cdd587cf25fc1a0720f0111632e2da9d0ad50c8e81d4f577761bd8e1",
+    "src/p8_vector_liouville/variation.py": "350d23f19e6f76969ef8efbd72b2b310248bc76232480301bf7047f78459d8b4",
+    "src/p8_vector_liouville/verify.py": "50ddeb3b4aba118a7c51c2c97f041e9953a9995e8481d63d666812fd2cd06f77",
+    "tests/conftest.py": "363d274a7554347efcfdcc9b9d713c1650fdd03ccbb0c4cc187ad946a6437552",
+    "tests/test_acoustic_reduction_certificate.py": "b660ed1308392e0e8ec82564552da2bd8789a87c5e846a2fddd8447395de508f",
+    "tests/test_acoustic_reduction_science.py": "303a5756970f1e4e72e97c40f8da90486e41e94d0987a5ed31bf62e69b188a2f"
+  },
+  "status": "EXACT_ACOUSTIC_MODE_REDUCTION_AND_PREPARED_POTENTIAL_BOUND; ORIGINAL_P8_OPEN",
+  "verdict": "Both physical mode sectors admit exact positive Liouville clocks preserving Wronskians and physical currents. The longitudinal pump yields a scalar-shaped principal potential plus an explicit finite-momentum correction. On I the latter lies between zero and 88*m^2/(k^2+m^2); its prepared fixed-acoustic-time first variation has C2-to-C0 norm below 18000*m^2/(k^2+m^2), retaining the retarded coordinate shift. The regular pump/rate source chart reproduces the previous rank-one UV pole direction.",
+  "verification_boundary": "Exact canonical, time-change, potential, variation and source-chart identities with written continuous momentum and source bounds. Potential-level, not stress-level. Not proof-assistant formalization.",
+  "written_proofs": [
+    "notes/reduction.md",
+    "notes/variation.md",
+    "notes/boundary.md"
+  ]
+}
