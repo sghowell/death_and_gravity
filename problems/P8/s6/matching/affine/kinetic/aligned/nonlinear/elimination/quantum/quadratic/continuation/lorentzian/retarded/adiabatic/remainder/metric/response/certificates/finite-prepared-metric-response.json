@@ -1,0 +1,743 @@
+{
+  "checked_scalar_entries": 69,
+  "claim": "P8-S6.68.FINITE_PREPARED_METRIC_RESPONSE",
+  "complete_background_cancelled_response_scale_example": {
+    "background_cancelled_metric_C10_to_C0_component_bounds": {
+      "energy": "3942261128564391166146083925439/237762678620160000000000000000000000000000000000000000000000000000000",
+      "pressure": "37280083544112407588546664719/2935341711360000000000000000000000000000000000000000000000000000000"
+    },
+    "existing_tadpole_physical_C0_to_C0_upper_bound": "84242272974349549/7464960000000000000000000000000000000000000000000000000",
+    "fixed_profile_C0_upper_bounds": {
+      "energy": "51841171393851757/7464960000000000000000000000000000000000000000000000000",
+      "pressure": "3125106248119/720000000000000000000000000000000000000000000000000"
+    },
+    "joint_background_cancelled_metric_C10_to_C0_upper_bound": "3942261128564391166146083925439/237762678620160000000000000000000000000000000000000000000000000000000",
+    "scope": "The Gaussian vector plus the already-fixed S6.60 scalar tadpole, for prepared homogeneous metric sources. No other loops, interacting feedback or quantum health verdict."
+  },
+  "controls": {
+    "C10_to_C0_is_not_a_no_loss_or_spatial_feedback_norm": true,
+    "W8_is_not_a_new_state_or_subtraction": true,
+    "both_source_eleventh_derivatives_are_outside_C10": true,
+    "fixed_tadpole_profiles_are_not_recomputed_under_variation": true,
+    "initial_interference_remains_when_independent_initial_response_is_zero": true,
+    "native_validation_before_cached_implementations": true,
+    "rejected_inputs": 204,
+    "second_mass_vertices_and_physical_output_normalizations_are_retained": true
+  },
+  "date": "2026-09-08",
+  "dimensional_limit": "For fixed mass and smooth prepared sources, use a sufficiently small complex-D neighborhood of 3, analytic plus/minus modes and the original D-independent Borel cutoffs. Metric leading frequencies are D-independent, off-diagonal initial mixing remains O(nu^-6), and the varied subtracted tail is O(nu^-4). Dominated convergence gives the common finite limit; numerical constants refer to D=3, not the full old strip.",
+  "eighth_order_two_source_coefficient_bounds": {
+    "L": {
+      "1": {
+        "absolute_upper": "431989/5184",
+        "highest_source_derivative": 2,
+        "reconstructions": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "2": {
+        "absolute_upper": "162336455/6912",
+        "highest_source_derivative": 4,
+        "reconstructions": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "3": {
+        "absolute_upper": "1325422992671/82944",
+        "highest_source_derivative": 6,
+        "reconstructions": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "4": {
+        "absolute_upper": "3309935159346703/165888",
+        "highest_source_derivative": 8,
+        "reconstructions": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      }
+    },
+    "T": {
+      "1": {
+        "absolute_upper": "476591/5184",
+        "highest_source_derivative": 2,
+        "reconstructions": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "2": {
+        "absolute_upper": "472884167/20736",
+        "highest_source_derivative": 4,
+        "reconstructions": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "3": {
+        "absolute_upper": "320234333507/20736",
+        "highest_source_derivative": 6,
+        "reconstructions": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "4": {
+        "absolute_upper": "12853698761118793/663552",
+        "highest_source_derivative": 8,
+        "reconstructions": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      }
+    }
+  },
+  "exact_mixing_and_reference_constants": {
+    "by_sector": {
+      "L": {
+        "delta_mixing_eighth_inverse_frequency_coefficient": "432407255532885",
+        "delta_mixing_ninth_inverse_frequency_coefficient": "10593275744081548",
+        "physical_readouts": {
+          "energy": {
+            "delta_A_upper": "1865779/110592",
+            "delta_B_upper": "339888745/26873856",
+            "delta_reference_bilinear_over_nu_squared_upper": "50",
+            "varied_reference_tail_over_inverse_frequency_fifth_upper": "2349992276"
+          },
+          "pressure": {
+            "delta_A_upper": "14191/1728",
+            "delta_B_upper": "4/3",
+            "delta_reference_bilinear_over_nu_squared_upper": "50",
+            "varied_reference_tail_over_inverse_frequency_fifth_upper": "737068541"
+          }
+        }
+      },
+      "T": {
+        "delta_mixing_eighth_inverse_frequency_coefficient": "429509341968423",
+        "delta_mixing_ninth_inverse_frequency_coefficient": "10119128982465662",
+        "physical_readouts": {
+          "energy": {
+            "delta_A_upper": "4",
+            "delta_B_upper": "463379305/26873856",
+            "delta_reference_bilinear_over_nu_squared_upper": "49",
+            "varied_reference_tail_over_inverse_frequency_fifth_upper": "1631601633"
+          },
+          "pressure": {
+            "delta_A_upper": "4/3",
+            "delta_B_upper": "125671/15552",
+            "delta_reference_bilinear_over_nu_squared_upper": "49",
+            "varied_reference_tail_over_inverse_frequency_fifth_upper": "591591679"
+          }
+        }
+      }
+    },
+    "common": {
+      "delta_mixing_eighth_inverse_frequency_coefficient": "432407255532885",
+      "delta_mixing_ninth_inverse_frequency_coefficient": "10593275744081548",
+      "physical_readouts": {
+        "energy": {
+          "delta_A_upper": "1865779/110592",
+          "delta_B_upper": "463379305/26873856",
+          "delta_reference_bilinear_over_nu_squared_upper": "50",
+          "varied_reference_tail_over_inverse_frequency_fifth_upper": "2349992276"
+        },
+        "pressure": {
+          "delta_A_upper": "14191/1728",
+          "delta_B_upper": "125671/15552",
+          "delta_reference_bilinear_over_nu_squared_upper": "50",
+          "varied_reference_tail_over_inverse_frequency_fifth_upper": "737068541"
+        }
+      }
+    },
+    "frozen_initial_and_evolved_mixing": {
+      "evolution_mixing_envelope": "5347035781757616",
+      "initial_mixing_envelopes": {
+        "6": "1813229",
+        "8": "906392614",
+        "10": "1536706170025"
+      }
+    }
+  },
+  "exact_residuals": {
+    "Bogoliubov_Wronskian_preserving_transport": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "L_energy_closed_weight_A": "0",
+    "L_energy_closed_weight_B": "0",
+    "L_energy_subtracted_reference_low_0": "0",
+    "L_energy_subtracted_reference_low_1": "0",
+    "L_energy_subtracted_reference_low_2": "0",
+    "L_frozen_dimensional_variation_order_2": "0",
+    "L_frozen_dimensional_variation_order_4": "0",
+    "L_pressure_closed_weight_A": "0",
+    "L_pressure_closed_weight_B": "0",
+    "L_pressure_subtracted_reference_low_0": "0",
+    "L_pressure_subtracted_reference_low_1": "0",
+    "L_pressure_subtracted_reference_low_2": "0",
+    "L_tenth_lapse_derivative_control": "0",
+    "L_tenth_logscale_derivative_control": "0",
+    "L_two_source_linear_coefficient_1": "0",
+    "L_two_source_linear_coefficient_2": "0",
+    "L_two_source_linear_coefficient_3": "0",
+    "L_two_source_linear_coefficient_4": "0",
+    "L_varied_residual_low_0": "0",
+    "L_varied_residual_low_1": "0",
+    "L_varied_residual_low_2": "0",
+    "L_varied_residual_low_3": "0",
+    "T_energy_closed_weight_A": "0",
+    "T_energy_closed_weight_B": "0",
+    "T_energy_subtracted_reference_low_0": "0",
+    "T_energy_subtracted_reference_low_1": "0",
+    "T_energy_subtracted_reference_low_2": "0",
+    "T_frozen_dimensional_variation_order_2": "0",
+    "T_frozen_dimensional_variation_order_4": "0",
+    "T_pressure_closed_weight_A": "0",
+    "T_pressure_closed_weight_B": "0",
+    "T_pressure_subtracted_reference_low_0": "0",
+    "T_pressure_subtracted_reference_low_1": "0",
+    "T_pressure_subtracted_reference_low_2": "0",
+    "T_tenth_lapse_derivative_control": "0",
+    "T_tenth_logscale_derivative_control": "0",
+    "T_two_source_linear_coefficient_1": "0",
+    "T_two_source_linear_coefficient_2": "0",
+    "T_two_source_linear_coefficient_3": "0",
+    "T_two_source_linear_coefficient_4": "0",
+    "T_varied_residual_low_0": "0",
+    "T_varied_residual_low_1": "0",
+    "T_varied_residual_low_2": "0",
+    "T_varied_residual_low_3": "0",
+    "exact_mode_readout_mixing_decomposition": "0",
+    "exact_varied_readout_denominator": "0",
+    "existing_tadpole_physical_gradient": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        1
+      ]
+    },
+    "existing_tadpole_physical_hessian": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "existing_tadpole_physical_output_jacobian": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "isotropic_zero_momentum_full_metric_reference_1": "0",
+    "isotropic_zero_momentum_full_metric_reference_2": "0",
+    "isotropic_zero_momentum_full_metric_reference_3": "0",
+    "isotropic_zero_momentum_full_metric_reference_4": "0",
+    "nonzero_initial_mixing_phase_control": "0",
+    "radial_mixing_integral_4": "0",
+    "radial_mixing_integral_7": "0",
+    "radial_mixing_integral_8": "0",
+    "radial_reference_tail_integral_five": "0"
+  },
+  "existing_tadpole_physical_vertices": {
+    "checks": {
+      "existing_tadpole_physical_gradient": [
+        [
+          "0"
+        ],
+        [
+          "0"
+        ]
+      ],
+      "existing_tadpole_physical_hessian": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0"
+        ]
+      ],
+      "existing_tadpole_physical_output_jacobian": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0"
+        ]
+      ]
+    },
+    "density_gradient": [
+      [
+        "fixed_selected_energy"
+      ],
+      [
+        "-3*fixed_selected_pressure"
+      ]
+    ],
+    "density_hessian": [
+      [
+        "-fixed_selected_energy - fixed_selected_pressure",
+        "3*fixed_selected_energy"
+      ],
+      [
+        "3*fixed_selected_energy",
+        "-9*fixed_selected_pressure"
+      ]
+    ],
+    "physical_stress_jacobian": [
+      [
+        "fixed_selected_energy + fixed_selected_pressure",
+        "0"
+      ],
+      [
+        "fixed_selected_energy + fixed_selected_pressure",
+        "0"
+      ]
+    ],
+    "policy": "The S6.60 selected c-number profiles and its scalar-clock cutoff are held fixed. The cutoff is identically one near the clock; no state or profile is reselected under either metric variation.",
+    "pressure": "fixed_selected_pressure",
+    "rho": "fixed_selected_energy"
+  },
+  "finite_vector_metric_response_scale_example": {
+    "complete_metric_response_C10_to_C0_component_bounds": {
+      "energy": "1259102950163962753119779925439/237762678620160000000000000000000000000000000000000000000000000000000",
+      "pressure": "4154673934230575328962664719/2935341711360000000000000000000000000000000000000000000000000000000"
+    },
+    "finite_local_component_bounds": {
+      "energy": "30738297112762532011/5804752896000000000000000000000000000000000000000000000000",
+      "pressure": "1584589025957261/1119744000000000000000000000000000000000000000000000000"
+    },
+    "joint_complete_metric_C10_to_C0_upper_bound": "1259102950163962753119779925439/237762678620160000000000000000000000000000000000000000000000000000000",
+    "joint_nonlocal_C10_to_C0_upper_bound": "3165189514273329737333/12079595520000000000000000000000000000000000000000000000000000000",
+    "nonlocal_components": {
+      "energy": {
+        "exact_minus_reference_variation": "351512495683646488077/1342177280000000000000000000000000000000000000000000000000000000",
+        "varied_reference_minus_adiabatic": "587498069/4500000000000000000000000000000000000000000000000000000"
+      },
+      "pressure": {
+        "exact_minus_reference_variation": "351512495683646488077/1342177280000000000000000000000000000000000000000000000000000000",
+        "varied_reference_minus_adiabatic": "737068541/18000000000000000000000000000000000000000000000000000000"
+      }
+    },
+    "nonlocal_subtracted_C10_to_C0_component_bounds": {
+      "energy": "3165189514273329737333/12079595520000000000000000000000000000000000000000000000000000000",
+      "pressure": "3164107099477584866933/12079595520000000000000000000000000000000000000000000000000000000"
+    },
+    "scope": "Homogeneous prepared physical-metric Gaussian response; not a coupled feedback contraction or arbitrary spatial response",
+    "source_norm": "Maximum of both physical sources and time derivatives zero through ten on I, zero on an initial neighborhood"
+  },
+  "formulation": "FORMULATION.md",
+  "initial_mixing_and_source_norm_controls": {
+    "squeezed_initial_phase_fixture": "-15/4",
+    "tenth_source_derivative_fixtures": {
+      "L": {
+        "N": "-7/20736",
+        "Z": "-1/512"
+      },
+      "T": {
+        "N": "-7/20736",
+        "Z": "-1/512"
+      }
+    }
+  },
+  "named_exact_check_count": 59,
+  "not_established": [
+    "Arbitrary spatial momentum or independent varied initial covariance",
+    "No-loss coupled inverse, quantum stability/cones, other loops, interactions or cutoff",
+    "Finite Wilson matching, common UV parent, V/G/B or original P8 closure"
+  ],
+  "physical_readout_vertices": {
+    "L": {
+      "energy": {
+        "A": "(-4*physical_momentum_fraction + 9*u**6 + 27*u**4 + 27*u**2 + 9)/(9*(u**2 + 1)**3)",
+        "B": "(81*u**6 + 243*u**4 + 243*u**2 + 109)/(81*(u**2 + 1)**3)",
+        "delta_A": "-prepared_lapse_source0*(16*physical_momentum_fraction**2 - 108*physical_momentum_fraction*u**6 - 324*physical_momentum_fraction*u**4 - 324*physical_momentum_fraction*u**2 - 212*physical_momentum_fraction + 81*u**12 + 486*u**10 + 1215*u**8 + 1620*u**6 + 1215*u**4 + 486*u**2 + 81)/(81*(u**2 + 1)**6) - prepared_logscale_source0*(8*physical_momentum_fraction**2 - 20*physical_momentum_fraction + 27*u**6 + 81*u**4 + 81*u**2 + 27)/(9*(u**2 + 1)**3)",
+        "delta_B": "-prepared_lapse_source0*(6561*u**12 + 39366*u**10 + 98415*u**8 + 138024*u**6 + 118827*u**4 + 59778*u**2 + 12781)/(6561*(u**2 + 1)**6) - prepared_logscale_source0*(81*u**6 + 243*u**4 + 243*u**2 + 109)/(27*(u**2 + 1)**3)"
+      },
+      "pressure": {
+        "A": "2*physical_momentum_fraction/3 + 1/3",
+        "B": "-1/3",
+        "delta_A": "-prepared_lapse_source0*(-8*physical_momentum_fraction**2 + 18*physical_momentum_fraction*u**6 + 54*physical_momentum_fraction*u**4 + 54*physical_momentum_fraction*u**2 + 26*physical_momentum_fraction + 9*u**6 + 27*u**4 + 27*u**2 + 9)/(27*(u**2 + 1)**3) + prepared_logscale_source0*(4*physical_momentum_fraction**2 - 10*physical_momentum_fraction - 3)/3",
+        "delta_B": "prepared_lapse_source0/3 + prepared_logscale_source0"
+      }
+    },
+    "T": {
+      "energy": {
+        "A": "1",
+        "B": "(-28*physical_momentum_fraction + 81*u**6 + 243*u**4 + 243*u**2 + 109)/(81*(u**2 + 1)**3)",
+        "delta_A": "-prepared_lapse_source0 - 3*prepared_logscale_source0",
+        "delta_B": "-prepared_lapse_source0*(784*physical_momentum_fraction**2 - 6804*physical_momentum_fraction*u**6 - 20412*physical_momentum_fraction*u**4 - 20412*physical_momentum_fraction*u**2 - 7004*physical_momentum_fraction + 6561*u**12 + 39366*u**10 + 98415*u**8 + 138024*u**6 + 118827*u**4 + 59778*u**2 + 12781)/(6561*(u**2 + 1)**6) - prepared_logscale_source0*(56*physical_momentum_fraction**2 - 140*physical_momentum_fraction + 243*u**6 + 729*u**4 + 729*u**2 + 327)/(81*(u**2 + 1)**3)"
+      },
+      "pressure": {
+        "A": "1/3",
+        "B": "2*physical_momentum_fraction/3 - 1/3",
+        "delta_A": "-prepared_lapse_source0/3 - prepared_logscale_source0",
+        "delta_B": "-prepared_lapse_source0*(-56*physical_momentum_fraction**2 + 162*physical_momentum_fraction*u**6 + 486*physical_momentum_fraction*u**4 + 486*physical_momentum_fraction*u**2 + 218*physical_momentum_fraction - 81*u**6 - 243*u**4 - 243*u**2 - 81)/(243*(u**2 + 1)**3) + prepared_logscale_source0*(4*physical_momentum_fraction**2 - 10*physical_momentum_fraction + 3)/3"
+      }
+    }
+  },
+  "prepared_source_domain": "Independent physical lapse n and log-scale zeta at spatial K=0, fixed scalar clock, smooth compact time support strictly after u0=-1/2, zero on an initial neighborhood. The norm is the maximum of both source time derivatives 0..10 on I=[-1/2,1/2], with physical energy/pressure C0 outputs. The existing scalar tadpole profiles stay fixed.",
+  "prior_sha256": {
+    "S6_67_fully_rebuilt": "4ab3213760790f7309b69596c347d21c2a20552f7d010a12b500f6552b1cbaa0",
+    "original_clock_all_order_state_and_fixed_tadpole_profiles_unchanged": true
+  },
+  "proof_checks": {
+    "C10_to_C0_is_not_a_no_loss_coupled_inverse": true,
+    "Gronwall_geometric_exponential_bound": true,
+    "L_all_source_box_reconstructions": true,
+    "L_canonical_rate_at_most_three": true,
+    "L_energy_positive_finite_reference_readout_bound": true,
+    "L_energy_tail_majorants_nonnegative": true,
+    "L_log_frequency_variation_bound_below_four": true,
+    "L_positive_base_reference_and_transport_bounds": true,
+    "L_pressure_positive_finite_reference_readout_bound": true,
+    "L_pressure_tail_majorants_nonnegative": true,
+    "L_reference_c_variation_bound_below_sixty_four": true,
+    "L_reference_frequency_variation_bound_below_four": true,
+    "L_reference_p_below_two_frequency_f": true,
+    "L_transport_exponential_below_two": true,
+    "T_all_source_box_reconstructions": true,
+    "T_canonical_rate_at_most_three": true,
+    "T_energy_positive_finite_reference_readout_bound": true,
+    "T_energy_tail_majorants_nonnegative": true,
+    "T_log_frequency_variation_bound_below_four": true,
+    "T_positive_base_reference_and_transport_bounds": true,
+    "T_pressure_positive_finite_reference_readout_bound": true,
+    "T_pressure_tail_majorants_nonnegative": true,
+    "T_reference_c_variation_bound_below_sixty_four": true,
+    "T_reference_frequency_variation_bound_below_four": true,
+    "T_reference_p_below_two_frequency_f": true,
+    "T_transport_exponential_below_two": true,
+    "closed_weights_support_A_at_most_one_and_B_at_most_two": true,
+    "evolved_global_mixing_below_one": true,
+    "existing_tadpole_profiles_and_cutoff_are_held_fixed": true,
+    "high_initial_band_covered_by_global_sixth_power": true,
+    "joint_complete_vector_metric_response_below_1e_minus_38": true,
+    "joint_existing_tadpole_plus_vector_response_below_1e_minus_37": true,
+    "joint_nonlocal_metric_response_below_1e_minus_42": true,
+    "middle_initial_band_covered_by_global_sixth_power": true,
+    "ordinary_Proca_Hadamard_and_cone_claims_not_transferred_to_finite_off_clock_metrics": true,
+    "physical_output_normalizations_and_second_mass_vertices_are_retained": true,
+    "positive_mass_first_profiles_have_upper_bounds_below_one": true,
+    "zero_independent_initial_response_does_not_erase_unvaried_initial_mixing": true
+  },
+  "reference_mode_policy": "The original S6.55 all-order state evolves exactly. W8 is auxiliary; subtraction remains 0,2,4. Both physical metric sources, moving canonical normalization, second mass-source contacts, output normalization and initial interference are varied. No new state or finite Wilson value is selected.",
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "285f53d89f2a8b0b4905c9cc78ac33f21dd922783dddfd85f180e4d14caa3711",
+    "README.md": "499a1880dbaeddc22684a265ce97df0faf75ed05d534893d151b8ee9fe1c73ac",
+    "notes/evolution.md": "68c72dc43c22504718a3932ac9d498f685a112e82d51e2473a0142d42ce7c304",
+    "notes/limit.md": "97b27c835d4d7a1bf7ac3ecdf6c4601154ffd58ecffb8412aace215cba56063c",
+    "notes/reference.md": "e6a1ea42f8375cf23a0a83fe56b71d84c4f5f3ce337e7f1042016a7bf9c5588e",
+    "src/p8_vector_metric_response/__init__.py": "9df0d26bee05b947e68df74569690cd44a35ca8640e18f34fd0724c9610a2cc2",
+    "src/p8_vector_metric_response/envelopes.py": "c0efa0e750450e8bc7a7551b090600eef0433f24dd9e9c5c76e11c080b62de5d",
+    "src/p8_vector_metric_response/evolution.py": "897034910f2bd10e748a5f103eb585d88f1b194ca10b9137183fb5263a1f93fa",
+    "src/p8_vector_metric_response/proofs.py": "f3ccf9913bd9923ef1ab9620dc3ae7b7651523eb9719c06612a128e9a2c7b9ba",
+    "src/p8_vector_metric_response/source.py": "885c0420ed74804036740683f3276f167747b6833d3c4d9dda8c1f5a58948938",
+    "src/p8_vector_metric_response/tadpole.py": "8a8c083bf84cde5f694996f8e75c47dd77c0c012c821495a1d04979cc7a24dd7",
+    "src/p8_vector_metric_response/tail.py": "e1bf7b11e3fd04a594c73f68eda467ffa7889e8b558a015fd7f1679b8c678a80",
+    "src/p8_vector_metric_response/tangent.py": "bd36d699ed0e9fd6804dc78dec37160f088d22a02ea23815b87eb042a841f117",
+    "src/p8_vector_metric_response/verify.py": "d15c16bde0e7660cf2e3a5db138cb052e849f7df99de102b4a7a008234e61bde",
+    "tests/conftest.py": "0b57392bdf0d79841ca20941f87c7da04868475c81ea9ad23b336d9537655fbe",
+    "tests/test_metric_response_certificate.py": "d2cb162df9073ce9c4a46267451e844a9299a097d332856da00e2f93a4299c08",
+    "tests/test_metric_response_science.py": "d9cd06d95e7f4a19a6d119b3a10672d4600d35fc67d1bdbd6c5512d0f19fb478"
+  },
+  "status": "FINITE_HOMOGENEOUS_PREPARED_METRIC_RESPONSE; ORIGINAL_P8_OPEN",
+  "varied_physical_readout_tail_bounds": {
+    "L": {
+      "energy": {
+        "all_majorants_nonnegative": true,
+        "low_tail_numerator_coefficients": {
+          "0": "0",
+          "1": "0",
+          "2": "0"
+        },
+        "tail_numerator_majorants": {
+          "0": "423909545/1679616",
+          "1": "9511152491/559872",
+          "2": "3264810804323/839808",
+          "3": "63079554285842339/26873856",
+          "4": "341650143596400341/124416",
+          "5": "35099779138660529010665/286654464",
+          "6": "9285603569244599558445083/573308928",
+          "7": "11402198255901139351089425527/1719926784",
+          "8": "795250847544056150145151934606761/220150628352",
+          "9": "185184938928021871472584025829753313/440301256704",
+          "10": "30754606898537872278720717167387444567/1761205026816",
+          "11": "19299984277132123285518915380368672675435/3522410053632",
+          "12": "114359292046683445632611959624938304445947361/56358560858112",
+          "13": "15318909741824742679028821903008828381873914563/56358560858112",
+          "14": "117415794483892420514192444400079564216528079077/28179280429056",
+          "15": "3826462977498017681359560247867321189750555563875/3131031158784",
+          "16": "1523062583882228012926974412254801140710815732853485791/4809263859892224",
+          "17": "95802798000636372702855480584445498668886711216818564243/28855583159353344",
+          "18": "64238154909789503474509857558289887889816648093058487111061/115422332637413376",
+          "19": "1209155666281194072463990358827096612099575858327470602322203/8549802417586176",
+          "20": "3935130665248478235625511933718492378874654696457473021015037573/136796838681378816"
+        },
+        "varied_reference_tail_over_inverse_frequency_fifth_upper": "2349992276"
+      },
+      "pressure": {
+        "all_majorants_nonnegative": true,
+        "low_tail_numerator_coefficients": {
+          "0": "0",
+          "1": "0",
+          "2": "0"
+        },
+        "tail_numerator_majorants": {
+          "0": "285211/3888",
+          "1": "3642167/648",
+          "2": "6628776361/5184",
+          "3": "91596790312777/124416",
+          "4": "283528926515913205/331776",
+          "5": "23293395640911025055/497664",
+          "6": "23735126666255017034743/3981312",
+          "7": "38030262433079027945477203/15925248",
+          "8": "331704562487244453091886739395/254803968",
+          "9": "44617129681198066761899073607385/254803968",
+          "10": "7165260828819577133848010127078161/1019215872",
+          "11": "5929455825323787315829869575589532399/2717908992",
+          "12": "52845043120366074423107482402890869671259/65229815808",
+          "13": "3714132573037007345845201093605403268640721/32614907904",
+          "14": "57114806305863472884664401633444098064082739/32614907904",
+          "15": "33323000413368302270222878723282943594102702309/65229815808",
+          "16": "368383139162947226234458240838132587656583601041297/2783138807808",
+          "17": "23319698411637507165202693823206414545383373543602431/16698832846848",
+          "18": "1735125584256293080763588753733368874086917458654101641/7421703487488",
+          "19": "292804090689473446019328288656581187329155895197504721621/4947802324992",
+          "20": "317594138247892613158042792206992909153954249190146473870297/26388279066624"
+        },
+        "varied_reference_tail_over_inverse_frequency_fifth_upper": "737068541"
+      }
+    },
+    "T": {
+      "energy": {
+        "all_majorants_nonnegative": true,
+        "low_tail_numerator_coefficients": {
+          "0": "0",
+          "1": "0",
+          "2": "0"
+        },
+        "tail_numerator_majorants": {
+          "0": "672685897/3359232",
+          "1": "89722373105/6718464",
+          "2": "50095549462681/17915904",
+          "3": "350368930630054309/214990848",
+          "4": "820946252854104070283/429981696",
+          "5": "59627684387086382157415/859963392",
+          "6": "66442464538664632841636101/6879707136",
+          "7": "211918572494038375739456726785/55037657088",
+          "8": "229367639765177764384297559138645/110075314176",
+          "9": "158771739783955300878965427872506769/880602513408",
+          "10": "10329222619349417895702884783137572749/1174136684544",
+          "11": "4705177326002900308597010508237264315799/1761205026816",
+          "12": "13760378847610391728449158728720581341862857/14089640214528",
+          "13": "269838595823610629228773882096699137580767871/2348273369088",
+          "14": "432285735031237826841366656428468085123233126295/225434243432448",
+          "15": "214000435941315974917821871886843930421282393793/391378894848",
+          "16": "785860477262201384799194862310137065032240090188149/5566277615616",
+          "17": "748836002158757917117792116182844294665936570736787015/450868486864896",
+          "18": "104333192747489440023178331541959531711589462331017011647/400771988324352",
+          "19": "479749011391994363576537219361392164061071194803226113621/7421703487488",
+          "20": "97175804709675011406930851770851341146362678170653550919307/7421703487488"
+        },
+        "varied_reference_tail_over_inverse_frequency_fifth_upper": "1631601633"
+      },
+      "pressure": {
+        "all_majorants_nonnegative": true,
+        "low_tail_numerator_coefficients": {
+          "0": "0",
+          "1": "0",
+          "2": "0"
+        },
+        "tail_numerator_majorants": {
+          "0": "280603/3888",
+          "1": "20417395/3888",
+          "2": "71117465161/62208",
+          "3": "147035564540089/248832",
+          "4": "342739417760163281/497664",
+          "5": "12476816916283985837/497664",
+          "6": "14344859889717193336985/3981312",
+          "7": "86509065635626319216119433/63700992",
+          "8": "20746946468755421111111909177/28311552",
+          "9": "20779001574042186555741137865521/339738624",
+          "10": "3177127520954496979691258893221095/1019215872",
+          "11": "14872284434386350031591586209852617517/16307453952",
+          "12": "21696092262238425147646093675131460784431/65229815808",
+          "13": "1674896273270067575161372755413736038787725/43486543872",
+          "14": "233367805051581921344601670566629995919487013/347892350976",
+          "15": "28175839809413415469391751911104459913015272061/154618822656",
+          "16": "65442603509528615045819361175154139806562052710419/1391569403904",
+          "17": "536552233137767705471972011947347518890915233959865/927712935936",
+          "18": "500205258207315057339568817973921252602737242650300437/5566277615616",
+          "19": "479749011391994363576537219361392164061071194803226113621/22265110462464",
+          "20": "97175804709675011406930851770851341146362678170653550919307/22265110462464"
+        },
+        "varied_reference_tail_over_inverse_frequency_fifth_upper": "591591679"
+      }
+    }
+  },
+  "varied_reference_residual_and_normalization_bounds": {
+    "L": {
+      "base_residual_over_inverse_frequency_eighth_upper": "5165763544817",
+      "delta_W_over_frequency_upper": "493720192329211378167593627779/147456000000000000000000000000",
+      "delta_W_prime_over_frequency_upper": "1150966439218572371367228783581/88473600000000000000000000000",
+      "delta_c_upper": "17493618504043398394847267451253/442368000000000000000000000000",
+      "delta_log_W_rate_upper": "11679474504043398394847267451253/221184000000000000000000000000",
+      "delta_residual_over_inverse_frequency_eighth_upper": "627487153562466",
+      "source_log_frequency_variation_upper": "17357/5184",
+      "varied_residual_numerator_majorants": {
+        "0": "0",
+        "1": "168935963/1728",
+        "2": "720312861775/10368",
+        "3": "878437666980481/10368",
+        "4": "104089230855501909167/1327104",
+        "5": "6714110950543081277359/2654208",
+        "6": "8148928420492868915514269/10616832",
+        "7": "73819987821358391579168108687/169869312",
+        "8": "500622152844811300742221038275/2359296",
+        "9": "731733885144968371731760195569641/226492416",
+        "10": "4459208026820881605894887546792409347/5435817984",
+        "11": "14147164248145201053922388081688890462153/43486543872",
+        "12": "8233052961631873613038165005449201738414899/86973087744",
+        "13": "10612978271739158748817659769640518880575921/28991029248",
+        "14": "37464451845896766320376323056839030493002905521/347892350976",
+        "15": "103639629161214095583894858975946923889313110195115/3710851743744",
+        "16": "3264100857133362591001077763238250468097046376136369/11132555231232",
+        "17": "68604758532599501011954252431911357343642030935895185/1391569403904",
+        "18": "4470873082552741038830413014403645407236203901495110656379/356241767399424",
+        "19": "7277340129891807653338409086998390586459066219354076137419943/2849934139195392"
+      }
+    },
+    "T": {
+      "base_residual_over_inverse_frequency_eighth_upper": "5207948696836",
+      "delta_W_over_frequency_upper": "2188975348816157713420701150283/663552000000000000000000000000",
+      "delta_W_prime_over_frequency_upper": "1947391601630277198205904442877/147456000000000000000000000000",
+      "delta_c_upper": "36365431205201756491218749188157/1327104000000000000000000000000",
+      "delta_log_W_rate_upper": "35038327205201756491218749188157/663552000000000000000000000000",
+      "delta_residual_over_inverse_frequency_eighth_upper": "598084814046630",
+      "source_log_frequency_variation_upper": "17101/5184",
+      "varied_residual_numerator_majorants": {
+        "0": "0",
+        "1": "1958685425/20736",
+        "2": "912273918313/13824",
+        "3": "3367811648004841/41472",
+        "4": "49605755889945222577/663552",
+        "5": "3580843162858436593225/1327104",
+        "6": "16143142644194529798080195/21233664",
+        "7": "72603651479918092548565077541/169869312",
+        "8": "35345464616454176680003061019649/169869312",
+        "9": "3204119723682236498983570213435789/905969664",
+        "10": "3044187636888393810606667268249097317/3623878656",
+        "11": "14351225534767574079736095004600015673135/43486543872",
+        "12": "8304176199396915051664752877342710970059823/86973087744",
+        "13": "279883956939620179906461881956992092458831103/695784701952",
+        "14": "322442738799575798202504364720784850977785945231/2783138807808",
+        "15": "83323512402143404250361985062747392836078213530151/2783138807808",
+        "16": "1960841033828280445478910572066780186394472324060105/5566277615616",
+        "17": "68636051099544945778786660103078693917815290337608971/1236950581248",
+        "18": "617548753825126556167246379360874531461846623314759652847/44530220924928",
+        "19": "125081289321794624500768948565556430945339773114970783607311/44530220924928"
+      }
+    }
+  },
+  "verdict": "The full prepared homogeneous Gaussian physical-metric response has a finite integrable exact-minus-adiabatic remainder and the S6.67 local part. At L=10^24,m=1000 its joint nonlocal C10-to-C0 norm is below 10^-42 and complete vector norm below 10^-38. Including the already-fixed S6.60 scalar tadpole keeps the background-cancelled response below 10^-37. Coupled feedback and original P8 remain open.",
+  "verification_boundary": "Exact varied Riccati, physical readout, mixing, radial and fixed-action identities with continuous rational bounds and written common-dimensional parameter arguments; not proof-assistant formalization",
+  "written_proofs": [
+    "notes/reference.md",
+    "notes/evolution.md",
+    "notes/limit.md"
+  ]
+}
