@@ -1,0 +1,512 @@
+{
+  "checked_scalar_entries": 5529,
+  "claim": "P8-S6.38.AFFINE_KINETIC",
+  "controls": {
+    "auxiliary_mass_sign_not_a_ghost_test": true,
+    "both_trace_form_signs_tested": true,
+    "momentum_threshold_not_called_an_EFT_frequency_cutoff": true,
+    "physical_punctured_configuration_test_not_center_inertia_only": true,
+    "rejected_inputs": 24,
+    "three_named_actions_not_a_general_metric_affine_no_go": true,
+    "zero_kinetic_coupling_not_continued_across_rank_change": true
+  },
+  "coupled_scalar": {
+    "DHOST_primary_preserved_at_quadratic_order": true,
+    "EFT_low_frequency_ghost_or_cutoff_claim": false,
+    "beta": "4/3",
+    "center_J": "1199/800",
+    "center_threshold": "3597/3200",
+    "configuration_fields": [
+      "v=zeta_metric-delta*n",
+      "s=delta_chi",
+      "sigma=W_longitudinal"
+    ],
+    "identity_count": 26,
+    "literal_action_everywhere_healthy": false,
+    "normalized_zeta_definition": "zeta_physical/(M_squared*tau_squared)",
+    "physical_momentum_definition": "q=(tau*k_physical)^2",
+    "proof_check_count": 13,
+    "scalar_kinetic_inertia_under_condition": [
+      2,
+      1,
+      0
+    ],
+    "unhealthy_condition": "u!=0, zeta>0, q>3*J(u)*h(u)^2/4"
+  },
+  "date": "2026-09-07",
+  "exact_residuals": {
+    "independent_coupled_scalar_constraints": {
+      "Hamiltonian_before_lapse": "0",
+      "Hamiltonian_lapse": "0",
+      "W0_euler": "0",
+      "W0_reduction": "0",
+      "background_clock_relation": "0",
+      "center_Cauchy": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          3,
+          6
+        ]
+      },
+      "center_kinetic": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "center_momentum_determinant": "0",
+      "free_matter_current": "0",
+      "gradient_shift_d": "0",
+      "jet_H_1": "0",
+      "jet_J_0": "0",
+      "jet_alpha_1": "0",
+      "jet_d_1": "0",
+      "jet_e_1": "0",
+      "jet_theta_1": "0",
+      "kinetic_Schur": "0",
+      "kinetic_determinant": "0",
+      "kinetic_squares": "0",
+      "literal_vector_clock": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          4,
+          1
+        ]
+      },
+      "momentum_primary": "0",
+      "rolling_temporal_n": "0",
+      "trace_velocity_drops": "0",
+      "unchanged_shift": "0",
+      "unitary_shift": "0",
+      "zero_coupling_auxiliary_control": "0"
+    },
+    "independent_premise_and_unit_interfaces": {
+      "actual_background_H": "0",
+      "actual_background_a": "0",
+      "actual_background_h": "0",
+      "independent_rolling_alpha": "0",
+      "independent_rolling_d": "0",
+      "independent_rolling_e": "0",
+      "independent_units_isolated_proca_mass_squared": "0",
+      "independent_units_normalized_isolated_mass_squared": "0",
+      "independent_units_normalized_zeta": "0",
+      "isolated_mass_unit_identity": "0",
+      "kinetic_action_unit_factor": "0",
+      "literal_reconstruction_alpha": "0",
+      "literal_reconstruction_d": "0",
+      "literal_reconstruction_e": "0",
+      "literal_vector_contraction": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          4,
+          1
+        ]
+      },
+      "normalized_nonunit_coupling": "0",
+      "normalized_nonunit_isolated_mass": "0",
+      "old_direct_constraint_lapse_constraint": "0",
+      "old_direct_constraint_regular_Hamiltonian": "0",
+      "old_direct_constraint_uneliminated_Hamiltonian": "0",
+      "physical_momentum_definition": "0",
+      "physical_nonunit_isolated_mass": "0",
+      "physical_to_normalized_mass": "0",
+      "pinned_original_J": "0",
+      "pinned_original_delta": "0",
+      "pinned_original_lam": "0",
+      "pinned_original_theta": "0",
+      "pinned_original_w": "0",
+      "rolling_vector_mass": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          4,
+          4
+        ]
+      },
+      "unchanged_full_CD_matter_Hamiltonian": "0"
+    },
+    "literal_curvature_screens": {
+      "Maxwell_normalization": "0",
+      "axial_full_mass_eigen_equation": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          64,
+          1
+        ]
+      },
+      "axial_kinetic_eigen_equation": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          64,
+          1
+        ]
+      },
+      "axial_no_scalar_Hessian_source": "0",
+      "axial_norm": "0",
+      "axial_projective_trace": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          4,
+          1
+        ]
+      },
+      "axial_temporal_multiplier_components": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          37,
+          1
+        ]
+      },
+      "full_tracefree_kinetic_projective_kernel": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          64,
+          4
+        ]
+      },
+      "homothetic_curl": "0",
+      "orthogonal_sectors": "0",
+      "stf_all_pair_traces": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          3,
+          1
+        ]
+      },
+      "stf_full_mass_eigen_equation": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          64,
+          1
+        ]
+      },
+      "stf_kinetic_eigen_equation": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          64,
+          1
+        ]
+      },
+      "stf_no_scalar_Hessian_source": "0",
+      "stf_norm": "0",
+      "stf_projective_trace": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          4,
+          1
+        ]
+      },
+      "stf_temporal_multiplier_components": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          37,
+          1
+        ]
+      },
+      "trace_commutator": "0"
+    },
+    "literal_vector_Schur_and_actual_background": {
+      "ADM_inverse": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          4,
+          4
+        ]
+      },
+      "CD_coefficient_a": "0",
+      "CD_coefficient_b": "0",
+      "CD_coefficient_c": "0",
+      "CD_coefficient_d": "0",
+      "D_formula": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          4,
+          4
+        ]
+      },
+      "D_inverse": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          4,
+          4
+        ]
+      },
+      "Schur_action": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          4,
+          4
+        ]
+      },
+      "action_cross_term": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          60,
+          4
+        ]
+      },
+      "background_c": "0",
+      "background_connection": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          64,
+          1
+        ]
+      },
+      "background_f_phi": "0",
+      "background_p": "0",
+      "background_p_phi": "0",
+      "background_quartic": "0",
+      "background_qx": "0",
+      "background_source": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          64,
+          1
+        ]
+      },
+      "center_D": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          4,
+          4
+        ]
+      },
+      "complement_idempotent": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          60,
+          60
+        ]
+      },
+      "complement_kernel": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          4,
+          60
+        ]
+      },
+      "complement_rank": "0",
+      "constrained_Euler": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          60,
+          4
+        ]
+      },
+      "covariant_reconstruction": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          4,
+          1
+        ]
+      },
+      "curl_value_shift": "0",
+      "fixed_vector_right_inverse": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          4,
+          4
+        ]
+      },
+      "literal_inverse_N": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          60,
+          4
+        ]
+      },
+      "projective_invariance": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          4,
+          4
+        ]
+      },
+      "rolling_clock_relation": "0",
+      "rolling_first_variation": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          4,
+          1
+        ]
+      },
+      "time_mass_shift": "0"
+    }
+  },
+  "formulation": "FORMULATION.md",
+  "homothetic_verdict": "Exactly CD/M1 plus a gravitationally coupled Maxwell spectator; the 60-dimensional quotient remains auxiliary",
+  "named_exact_check_count": 104,
+  "nonunit_and_parent_interfaces": {
+    "M_squared": 3,
+    "center_constraint_chart_not_used_for_the_punctured_physical_proof": true,
+    "isolated_proca_mass_squared": "8/5",
+    "normalized_isolated_mass_squared": "32/5",
+    "normalized_zeta": "5/12",
+    "physical_q_threshold_at_center": "3597/12800",
+    "tau": 2,
+    "threshold_is_squared_momentum_not_frequency_cutoff": true,
+    "zeta_physical": 5
+  },
+  "not_established": [
+    "A no-go for arbitrary affine kinetic invariants or their tuned combinations",
+    "An unhealthy low-frequency EFT domain or quantitative ghost-frequency cutoff",
+    "A new vacuum extension, loop or threshold bound, Regge/IR estimate or V/G/B closure",
+    "UV completion, original P8 closure or a new prerequisite for the scoped photon objective"
+  ],
+  "prior_sha256": {
+    "S6_37_fully_rebuilt": "aeb1f9c7c58fd1dc2a641159a820f3c3fc30265d25eb527530203c2080cec2f4",
+    "no_frozen_ancestor_modified": true,
+    "original_physical_metric_and_free_chi_unchanged": true,
+    "original_target_and_adopted_contract_rechecked": true
+  },
+  "proof_checks": {
+    "scalar_domains_and_inertia": {
+      "J_denominator_positive_form": true,
+      "J_even_polynomial_all_nonnegative": true,
+      "J_polynomial_constant_strict": true,
+      "baseline_q8_positive": true,
+      "center_momentum_not_used_as_punctured_proof": true,
+      "center_q8_clock_diagonal_negative": true,
+      "center_q8_two_pivot_product_negative": true,
+      "negative_maxwell_sign_fails_transverse": true,
+      "no_EFT_cutoff_inferred": true,
+      "omitted_jets_nonzero": true,
+      "positive_vector_pivot": true,
+      "theta_only_zero_at_center": true,
+      "zero_coupling_loses_vector_kinetic": true
+    },
+    "whole_tube_vector_and_units": {
+      "D00_polynomial_increasing_for_positive_p": true,
+      "D00_polynomial_lower_positive": true,
+      "D00_positive_lower": true,
+      "D_inverse_norm_below_24": true,
+      "closed_tube_has_strict_p_upper": true,
+      "closed_tube_has_stronger_positive_p_lower": true,
+      "exact_gradient_change_not_a_point_redefinition": true,
+      "fixed_vector_complement_dimension": true,
+      "minus_Dii_positive_lower": true,
+      "nonunit_original_frame_and_matter_unchanged": true
+    }
+  },
+  "quotient_vector": {
+    "D": [
+      [
+        "3*(p**3 + 2*p**2 + p - 1)/(2*p)",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "(4*p - 5)*(4*p - 1)/(32*p**2)",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "(4*p - 5)*(4*p - 1)/(32*p**2)",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "(4*p - 5)*(4*p - 1)/(32*p**2)"
+      ]
+    ],
+    "D_inverse": [
+      [
+        "2*p/(3*(p**3 + 2*p**2 + p - 1))",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "32*p**2/((4*p - 5)*(4*p - 1))",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "32*p**2/((4*p - 5)*(4*p - 1))",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "32*p**2/((4*p - 5)*(4*p - 1))"
+      ]
+    ],
+    "bounds": {
+      "D00_lower": "46869/1100000",
+      "D_inverse_norm_margin_below_24": "24856/46869",
+      "D_inverse_norm_upper": "1100000/46869",
+      "lower_p_squared_margin": "41/10000",
+      "minus_Dii_lower": "14/55",
+      "p_lower": "47/100",
+      "p_upper": "11/20",
+      "polynomial": "p**3 + 2*p**2 + p - 1",
+      "polynomial_derivative": "3*p**2 + 4*p + 1",
+      "polynomial_lower": "15623/1000000",
+      "upper_p_squared_margin": "11/400"
+    },
+    "center_mass_squared_times_zeta_over_M_squared": "8/3",
+    "exact_gradient_linear_transformation_available": true,
+    "first_variation": [
+      [
+        "-3*(Hubble*n + 4*n_dot)/(8*h)"
+      ],
+      [
+        "-5*n_1/(2*h)"
+      ],
+      [
+        "-5*n_2/(2*h)"
+      ],
+      [
+        "-5*n_3/(2*h)"
+      ]
+    ],
+    "full_coupled_health_gap_or_UV_claim": false,
+    "physical_metric_and_chi_unchanged": true,
+    "point_transformation_removes_lapse_velocity": false,
+    "quotient_dimension": 60,
+    "remaining_auxiliary_dimension": 56,
+    "rolling_background_preserved": true,
+    "vector_dimension": 4
+  },
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "4b023cebdea3c1fd243c6c82c1cefa7b6ef62b6641743a81253503e40a417ee4",
+    "README.md": "2765922b9be02c9e7b640a49b52be532d1237cf57f0b88281fdd6d3f8702c7b5",
+    "notes/curvature.md": "aa49b42bbbdb38d2f85867cfbb035ac5b922330c8de8d26d4c898dd31b5b3247",
+    "notes/interfaces.md": "568abb53825d61aae2e7d233a961f91ab8b8a1fa23a6a5611a298f9c24841e1f",
+    "notes/scalar.md": "2ad1f03e58b4b02a07df75da070c5731997ea59a7b24f887c0e13e61045a3b3a",
+    "notes/vector.md": "440386c75e2eceb09dc1c8b0850821975aa5d4699fccc36dffa2ce3888a5d3c7",
+    "src/p8_affine_kinetic/__init__.py": "bc75c5c59198d24dab7a92f4176d0b9e6919658d05ec3d18236b41672a80161e",
+    "src/p8_affine_kinetic/bridges.py": "379cff6b186944afba159d89dc0f6cced212439b8a70efc241dfe92e8073749b",
+    "src/p8_affine_kinetic/curvature.py": "11ce848c7766c37930d14073b31f4ecd728f08a72d5024c28c218e3068e9b88d",
+    "src/p8_affine_kinetic/scalar.py": "5a3e0a6f1d371cbfdca7972ba78a10ee1e6daad31cfc6a814a7d62cfcffe1cf1",
+    "src/p8_affine_kinetic/vector.py": "64f5bdb654a79d3b1f23208720d7940ba030cb6a08c0206246ad4aee531bd940",
+    "src/p8_affine_kinetic/verify.py": "0a2b0f34212509f2f4cc67e37254042867e8ef353007d9e87da47f8ee800ffb9",
+    "tests/conftest.py": "9fd51234910cdc7ce89c151f582785a9493a8052d0c1337629bd8ea7fa2a59bc",
+    "tests/test_kinetic_certificate.py": "1155ca6ce113ed1bf850e959470ed76b13d1cf5affab3935e55ac46c1d7cef1b",
+    "tests/test_kinetic_curvature.py": "064fedc5b27c1039ac3d207346278b875f3d05b760a5144c151636b9e28f4aee",
+    "tests/test_kinetic_interfaces.py": "8dc5314e5de7c8042b1b9d7b67bb709b2a8e9ed59cc1649265464ad8613160ef",
+    "tests/test_kinetic_scalar.py": "e0cc758bcf8f3c47cb5da2d0d46bfaaf5a0ce6c0aa39d3b3bc0df8c0b4150b55",
+    "tests/test_kinetic_vector.py": "be8748cd72614d3fedcbe5359eabb3d567584b45c222e6727ba907242571feb1"
+  },
+  "status": "THREE_SPECIFIED_KINETIC_PROMOTIONS_SCREENED; GENERAL_AFFINE_UV_AND_ORIGINAL_P8_OPEN",
+  "trace_form_verdict": "Opposite signs of unconstrained homogeneous STF-spin3 and axial kinetic terms reject this one literal matrix-trace curvature-square action for either nonzero overall sign",
+  "verification_boundary": "Exact symbolic action/constraint algebra with written whole-domain, representation and physical configuration-velocity proofs; not proof-assistant formalization",
+  "written_proofs": [
+    "notes/curvature.md",
+    "notes/vector.md",
+    "notes/scalar.md",
+    "notes/interfaces.md"
+  ]
+}

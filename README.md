@@ -387,8 +387,15 @@ around a pre-registered problems document and a certificate-gated ledger.
   a uniform inverse bound on the target tube. This removes the retained
   two-metric coefficient mismatch but is not a propagating UV parent;
   a kinetic extension still needs its own full constraint analysis.
+  The [first three kinetic screens](problems/P8/s6/matching/affine/kinetic/README.md)
+  now distinguish a Maxwell spectator from two unhealthy literal
+  promotions. In particular a selective quotient vector preserves the
+  exact bounce but has one negative coupled scalar kinetic direction
+  at sufficiently large momentum. The proof retains all constraints;
+  neither an isolated Proca sign nor a center-chart pole is used as an
+  EFT cutoff or general affine-theory verdict.
 
-The [current P8 continuation audit](docs/assessment-2026-09-07-p8-affine-cd-lift.md) separates
+The [current P8 continuation audit](docs/assessment-2026-09-07-p8-affine-kinetic-screens.md) separates
 the completed scoped P8(a) objective and certificate gates from the
 outstanding P8(b) UV-matching and positivity questions.
 P8 is not marked finished or closed.
