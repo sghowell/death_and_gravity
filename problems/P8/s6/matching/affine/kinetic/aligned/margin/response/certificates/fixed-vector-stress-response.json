@@ -1,0 +1,209 @@
+{
+  "actual_vector_scale_example": {
+    "actual_vector_envelopes": {
+      "M_tau": "1000000000000",
+      "clock_source_new_state_over_reference_scalar_equation": "1494962604941383/349920000000000000000000000000",
+      "energy_new_state_derivative_over_reference_density_rate": "1913546464132399/447897600000000000000000000000",
+      "energy_new_state_total_over_reference_density": "51841171393851757/7464960000000000000000000000000",
+      "full_quantum_solution_or_VGB_claim": false,
+      "m0_tau": "1000",
+      "pressure_new_state_derivative_over_reference_density_rate": "6099140501/216000000000000000000000000",
+      "pressure_new_state_total_over_reference_density": "3125106248119/720000000000000000000000000",
+      "state_change_clock_source_over_reference_scalar_equation": "1253/1250000000000000000000",
+      "state_change_density_derivative_over_reference_density_rate": "1/1000000000000000000",
+      "state_change_energy_or_pressure_over_reference_density": "1/5000000000000000000000"
+    },
+    "response": {
+      "eta_time_derivative": "1913546464132399/447897600000000000000000000000",
+      "eta_value": "51841171393851757/7464960000000000000000000000000",
+      "exact_chart_lift_Hubble_difference_over_inverse_tau_upper": "19052587260472586897/27993600000000000000000000000",
+      "full_self_consistent_quantum_solution_or_nonlinear_residual_claim": false,
+      "hat_curvature_time_derivative_upper": "10005346079013389101/7464960000000000000000000000000",
+      "lapse_response_upper": "2436535055511032579/3732480000000000000000000000000",
+      "lapse_time_derivative_upper": "37327556950037397439/111974400000000000000000000000",
+      "matter_displacement_upper": "570252885332369327/1866240000000000000000000000000",
+      "physical_fractional_scale_correction_upper": "51841171393851757/16588800000000000000000000000",
+      "physical_log_scale_correction_upper": "51841171393851757/33177600000000000000000000000",
+      "scaled_phase_response_upper": "6791193452594580167/7464960000000000000000000000000",
+      "scaled_phase_time_derivative_upper": "2125488027147922037/1244160000000000000000000000000"
+    }
+  },
+  "approximate_metric_turning_minimum": "The lifted metric retains negative Hubble rate at u=-1/4 and positive Hubble rate at u=1/4 because the old magnitudes are 16/17 and the permitted correction is below 1/10. It therefore has an interior local scale-factor minimum. This concerns the specified approximate metric, not an exact quantum solution or a proved nondegenerate/unique bounce.",
+  "checked_scalar_entries": 23,
+  "claim": "P8-S6.57.FIXED_STRESS_RESPONSE",
+  "continuous_inverse_bound": "J_e>3/8,1<=a³<4,abs(Theta)<=2,abs(ell)<=1/10,abs(w)<=1/20. The two matrix row bounds are 283/200 and 928/625, both below 3/2. For value budget eta0, forcing is below 49eta0. Exact exp-series control gives exp(3/2)<5, hence the zero-data phase response is <=131eta0 and its derivative <=246eta0 over the full interval.",
+  "controls": {
+    "auxiliary_lapse_not_an_independent_zero_initial_datum": true,
+    "fixed_source_not_a_self_consistent_quantum_feedback_map": true,
+    "homogeneous_action_restricted_before_nonzero_q_shift_elimination": true,
+    "joint_free_matter_momentum_preserved": true,
+    "no_new_counterterm_or_discarded_causal_branch": true,
+    "physical_metric_lapse_variation_included": true,
+    "positive_chart_lift_not_a_nonlinear_solution": true,
+    "rejected_inputs": 34
+  },
+  "date": "2026-09-08",
+  "exact_derivative_majorants": {
+    "J": {
+      "numerator_reconstruction": "0",
+      "positive_denominator_reconstruction": "0",
+      "upper": "19786575243117/107374182400"
+    },
+    "delta": {
+      "numerator_reconstruction": "0",
+      "positive_denominator_reconstruction": "0",
+      "upper": "3/2"
+    },
+    "ell": {
+      "numerator_reconstruction": "0",
+      "positive_denominator_reconstruction": "0",
+      "upper": "3/5"
+    },
+    "theta": {
+      "numerator_reconstruction": "0",
+      "positive_denominator_reconstruction": "0",
+      "upper": "441/64"
+    },
+    "w": {
+      "numerator_reconstruction": "0",
+      "positive_denominator_reconstruction": "0",
+      "upper": "423/320"
+    }
+  },
+  "exact_operator_and_reconstruction_constants": {
+    "exp_three_halves_rational_upper": "2088119/465920",
+    "force_row_one_over_eta0_upper": "20/3",
+    "force_row_two_over_eta0_upper": "244/5",
+    "lapse_coefficient_derivative_sum_upper": "77792/225",
+    "lapse_coefficient_sum_upper": "103/150",
+    "lapse_time_derivative_eta0_upper": "10607707/225",
+    "lapse_time_derivative_eta1_upper": "10/3",
+    "row_one_norm_upper": "283/200",
+    "row_two_norm_upper": "928/625"
+  },
+  "exact_positive_physical_chart_lift": "Set N_app=1+n,a_hat,app=a exp(v),a_phys,app=a exp[v+omega(u,N_app)] with the original omega=-log[(h-1+N^-2)/h]/4. For 0<=eta0,eta1<=10^-6 the lapse stays inside the original X tube. The physical fractional scale change is <=450eta0 and tau times the actual Hubble difference is <=98000eta0+8eta1.",
+  "exact_residuals": {
+    "J_derivative_numerator_reconstruction": "0",
+    "J_derivative_positive_denominator": "0",
+    "delta_derivative_numerator_reconstruction": "0",
+    "delta_derivative_positive_denominator": "0",
+    "ell_derivative_numerator_reconstruction": "0",
+    "ell_derivative_positive_denominator": "0",
+    "exact_chart_omega_N": "0",
+    "exact_chart_omega_u": "0",
+    "lapse_equation": "0",
+    "lapse_force_includes_physical_spatial_metric_variation": "0",
+    "lapse_reconstruction": "0",
+    "matter_scalar_momentum": "0",
+    "metric_scalar_momentum": "0",
+    "physical_stress_variation": "0",
+    "preserved_physical_matter_momentum": "0",
+    "reduced_Hamiltonian": "0",
+    "scaled_regular_system": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        1
+      ]
+    },
+    "theta_derivative_numerator_reconstruction": "0",
+    "theta_derivative_positive_denominator": "0",
+    "trace_free_scaled_matrix": "0",
+    "w_derivative_numerator_reconstruction": "0",
+    "w_derivative_positive_denominator": "0"
+  },
+  "formulation": "FORMULATION.md",
+  "literal_model_state_and_source": "Keep S6.56 with 0<epsilon_margin<=1/100 and the unchanged S6.55 Hadamard vector state and finite prescription. On I=[-1/2,1/2], use its actual fixed-background vector energy and pressure as first-order homogeneous forces. Normalize values by M²/tau² and first physical time derivatives by M²/tau³.",
+  "literature_scope": "Anderson, Molina-Paris and Mottola, arXiv:gr-qc/0209075, section III, distinguishes local contact and retarded response terms. Meda and Pinamonti, arXiv:2201.10288v2, treats a scalar toy system, not this Proca bounce. Neither is imported as a numerical response or stability theorem here; exact links and boundaries are in notes/literature.md.",
+  "named_exact_check_count": 22,
+  "normalized_two_component_system": "For S=p_v+3ell*s,Y=4a³S, the system for (v,Y) has matrix [[B,A/(4a³)],[-4a³C,-B]] and forcing [-Theta*F_n/(2J_e),4a³(F_v+3ell*w*F_n/(2J_e))], with A=Theta²/(2J_e)-1/6,B=3Theta*w*ell/(2J_e),C=9ell²[1+w²/(2J_e)]. All entries are derived from the changed literal action.",
+  "not_established": [
+    "A self-consistent semiclassical solution or quantitative nonlinear/quantum residual on the lifted metric",
+    "The complete causal second functional variation and corrected perturbation cones or interacting cutoff",
+    "A global quantum-complete history, unique/nondegenerate corrected bounce, V/G/B or original P8 closure"
+  ],
+  "physical_source_variation": "The literal homogeneous action is restricted before any nonzero spatial-mode shift division. Physical curvature is v+delta*n, delta=1/(2h). The stress variation is F_v*v+F_n*n with F_v=3p,F_n=3delta*p-rho. The compatible clock source is the inherited J_clock=-[rho'+3H(rho+p)], not an independent adjustment.",
+  "prior_sha256": {
+    "S6_56_fully_rebuilt": "b6952b45787005033a7ae19176c4668525044b37a2afb8753651ca99915d47dd",
+    "action_state_and_finite_matching_unchanged": true,
+    "frozen_vector_first_variation_bounds_not_quantum_feedback_norm": true
+  },
+  "proof_checks": {
+    "Hubble_and_Theta_envelope_at_most_two": true,
+    "Hubble_numerator_constant_below_49000": true,
+    "a_cubed_below_four": true,
+    "both_forcing_rows_below_49_eta0": true,
+    "both_matrix_rows_below_three_halves": true,
+    "chart_inverse_lapse_square_slope_below_three": true,
+    "chart_omega_N_below_one": true,
+    "chart_omega_u_over_lapse_shift_below_three": true,
+    "clock_source_compatibility_is_inherited_Ward_identity": true,
+    "compact_h_upper_below_three_for_abs_Lambda_at_most_one_half": true,
+    "curvature_derivative_constant_below_193": true,
+    "delta_derivative_at_most_three_halves": true,
+    "ell_derivative_at_most_three_fifths": true,
+    "exponential_bound_below_five": true,
+    "fixed_source_response_not_quantum_feedback_contraction": true,
+    "h_logarithmic_derivative_envelope_at_most_three": true,
+    "inherited_J_global_bound_gives_compact_three_eighths": true,
+    "integrated_response_constant_below_131": true,
+    "lapse_coefficient_derivative_below_346": true,
+    "lapse_time_derivative_eta0_constant_below_48000": true,
+    "lapse_time_derivative_eta1_constant_below_four": true,
+    "lapse_value_constant_below_94": true,
+    "log_scale_correction_below_one_half": true,
+    "matter_displacement_constant_at_most_44": true,
+    "new_J_derivative_below_185": true,
+    "new_margin_range_is_inherited_not_silently_changed": true,
+    "old_Hubble_endpoint_magnitude_above_nine_tenths": true,
+    "one_percent_lapse_strip_stays_inside_original_X_tube": true,
+    "permitted_response_Hubble_error_below_one_tenth": true,
+    "phase_derivative_constant_below_246": true,
+    "regular_homogeneous_action_uses_no_Theta_or_spatial_inverse": true,
+    "rounded_example_physical_Hubble_difference_below_one_billionth": true,
+    "small_response_lapse_stays_in_one_percent_strip": true,
+    "theta_derivative_below_seven": true,
+    "vector_example_satisfies_rounded_value_and_rate_envelopes": true,
+    "w_derivative_below_four_thirds": true
+  },
+  "quantum_feedback_boundary": "Small fixed-background sources do not bound the causal second functional variation on perturbed histories. The local contact and retarded commutator contributions, compatible Hadamard preparation, constraints and nonlinear residual still require control. No quantum feedback contraction or full semiclassical residual is claimed.",
+  "reconstruction_and_time_derivative_bounds": "The actual algebraic lapse and preserved matter momentum give abs(n)<=94eta0,abs(s)<=44eta0. Exact background derivative envelopes give abs(J_e')<185 and a lapse-coefficient derivative sum below 346. With first source derivative budget eta1, abs(n')<=48000eta0+4eta1 and abs(v')<=193eta0.",
+  "regular_canonical_reduction": "Direct Legendre transformation gives H=-(p_v+3ell*s)²/12+p_m²/2+[Theta(p_v+3ell*s)-w*p_m-F_n]²/[4(J+delta_J)]-F_v*v. There is no Theta or spatial inverse. Zero independent canonical initial perturbations leave n(u0)=-F_n(u0)/[2(J+delta_J)]. The exact invariant a³(p_m+3ell*v) remains zero.",
+  "rounded_physical_scale_example": {
+    "eta_time_derivative": "1/100000000000000",
+    "eta_value": "1/100000000000000",
+    "exact_chart_lift_Hubble_difference_over_inverse_tau_upper": "12251/12500000000000",
+    "full_self_consistent_quantum_solution_or_nonlinear_residual_claim": false,
+    "hat_curvature_time_derivative_upper": "193/100000000000000",
+    "lapse_response_upper": "47/50000000000000",
+    "lapse_time_derivative_upper": "12001/25000000000000",
+    "matter_displacement_upper": "11/25000000000000",
+    "physical_fractional_scale_correction_upper": "9/2000000000000",
+    "physical_log_scale_correction_upper": "9/4000000000000",
+    "scaled_phase_response_upper": "131/100000000000000",
+    "scaled_phase_time_derivative_upper": "123/50000000000000"
+  },
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "36401218f19b881d18456e17d7b4ebc37d93cc55a02997be4ec16c9bd6cc70b6",
+    "README.md": "b33c9db2bdb4495df68b72326885e7ddb65bd6e97c9b5c7df4ae4294e28eb02b",
+    "notes/geometry.md": "44b32faa1b0c76a889344161b064ae4ee0aa7d97af4c1320b0fafe0d23e88ee8",
+    "notes/literature.md": "0572ab92f25345238213360e2337434a9d87bad3864ac680d4fbf202ed83996e",
+    "notes/response.md": "23542e4424c779462c8c15b594755a74b5773b916b44db7c7d150fd20ca4af7d",
+    "src/p8_margin_response/__init__.py": "a4be64f87a9efb857c4ade8235a44a9b7cbf3dce7c4c81555bed0034a06dbebd",
+    "src/p8_margin_response/bounds.py": "ef45218cf113ec13928638f0f7f88990c33c617b9602fdf412cc7945e90e45c9",
+    "src/p8_margin_response/system.py": "ab70c194431fbfa56548ec492586c178e4cfe3d8a0d2963b6eb9fab4462aed49",
+    "src/p8_margin_response/verify.py": "61b4613de7bf1bd06ac2bf8d02f90bd5a747f33a2ab26aef211a8844c2bbeac1",
+    "tests/conftest.py": "a3109380cdd9282d36fd769df20d5e723334026cafbe2de999a5f0a5d7a41aec",
+    "tests/test_response_certificate.py": "da0ab66ba8606de9ab4c1a1dcdd3e425dfa2c0a40de9e1bef3b5363510931280",
+    "tests/test_response_science.py": "d3e8029f9cba73b16233a8620f24d46715f6fb75b970dbadf01b5d70cf925300"
+  },
+  "status": "CONTROLLED_FIXED_VECTOR_STRESS_FIRST_ORDER_HOMOGENEOUS_RESPONSE; ORIGINAL_P8_OPEN",
+  "verdict": "The actual bounded vector source has a unique controlled first-order homogeneous response through the bounce, and its specified physical chart lift remains close and has a turning minimum. Full quantum feedback and original P8 remain open.",
+  "verification_boundary": "Exact symbolic/rational controls and written continuous linear-ODE, algebraic reconstruction and physical point-chart estimates; not proof-assistant formalization or a full quantum solution",
+  "written_proofs": [
+    "notes/response.md",
+    "notes/geometry.md",
+    "notes/literature.md"
+  ]
+}
