@@ -400,8 +400,15 @@ around a pre-registered problems document and a certificate-gated ledger.
   No nonzero matrix supplies an everywhere-healthy literal parent on
   the original bounce; this does not classify other affine operators
   or identify a controlled low-frequency EFT cutoff.
+  A different [antisymmetric Ricci-difference square](problems/P8/s6/matching/affine/kinetic/ricci/README.md)
+  now has an exact curved quadratic reduction on the original bounce.
+  Its positive-coupling scalar kinetic and principal gradient matrices
+  pass the full constraint test, while every negative coupling has a
+  regular-tail kinetic obstruction. The deformation is still auxiliary
+  on that trajectory and changes its physical quadratic action; it is
+  not a new heavy sector, exact CD/M1 matching or a UV completion.
 
-The [current P8 continuation audit](docs/assessment-2026-09-07-p8-constant-two-trace-family.md) separates
+The [current P8 continuation audit](docs/assessment-2026-09-07-p8-ricci-difference.md) separates
 the completed scoped P8(a) objective and certificate gates from the
 outstanding P8(b) UV-matching and positivity questions.
 P8 is not marked finished or closed.

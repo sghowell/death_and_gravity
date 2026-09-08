@@ -1,0 +1,248 @@
+{
+  "checked_scalar_entries": 1463,
+  "claim": "P8-S6.40.AFFINE_RICCI",
+  "controls": {
+    "curved_commutator_and_coefficient_jets_not_discarded": true,
+    "no_center_Theta_division": true,
+    "nonzero_negative_coupling_tail_witness": true,
+    "positive_principal_deformation_not_exact_CD_or_UV_completion": true,
+    "rejected_inputs": 28,
+    "time_dependent_gradient_boundary_and_gyroscopic_term_retained": true,
+    "zero_coupling_not_substituted_into_lambda_inverse": true
+  },
+  "coupled_scalar_calibration": {
+    "A": "50*lambda*u**2/((u**2 + 1)**6*(56*lambda*u**2 + 8*lambda + u**4 + 2*u**2 + 1))",
+    "Cstar_coefficient": "-10*u/(u**2 + 1)**4",
+    "curvature_endomorphism": "8*(7*u**2 + 1)/(u**2 + 1)**2",
+    "gradient_det_polynomial": {
+      "all_even_u_nonnegative": true,
+      "degrees": [
+        74,
+        4
+      ],
+      "monomials": 180,
+      "positive_constant": "97119",
+      "strictly_positive": true
+    },
+    "gradient_ss_polynomial": {
+      "all_even_u_nonnegative": true,
+      "degrees": [
+        36,
+        1
+      ],
+      "monomials": 37,
+      "positive_constant": "36",
+      "strictly_positive": true
+    },
+    "nonlinear_spectrum_UV_completion_or_heavy_gap_claim": false,
+    "physical_CD_quadratic_action_changed_for_nonzero_coupling": true,
+    "positive_coupling_principal_matrices_positive": true,
+    "quadratic_kinetic_remainder_bound": "10*lambda*q",
+    "quadratic_kinetic_remainder_polynomial": {
+      "all_even_u_nonnegative": true,
+      "degrees": [
+        34,
+        0
+      ],
+      "monomials": 18,
+      "positive_constant": "11990",
+      "strictly_positive": true
+    },
+    "regular_center_kinetic": [
+      [
+        "6*q/(q - 6)",
+        "q/(20*(q - 6))"
+      ],
+      [
+        "q/(20*(q - 6))",
+        "(200*q - 1199)/(400*(q - 6))"
+      ]
+    ],
+    "scalar_degrees_of_freedom_on_regular_branch": 2
+  },
+  "curved_reduction": "At quadratic rolling order C[nabla Z]=(R_background/3)Z; Z is algebraic on 1+lambda*R_background/3 !=0",
+  "date": "2026-09-07",
+  "exact_residuals": {
+    "actual_all_component_rolling_source": {
+      "Cstar_coefficient": "0",
+      "actual_h_derivative": "0",
+      "all_64_background_components": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          64,
+          1
+        ]
+      },
+      "all_64_full_first_variations": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          64,
+          1
+        ]
+      },
+      "full_coefficient_c_XX": "0",
+      "full_curved_Cstar": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          6,
+          1
+        ]
+      }
+    },
+    "full_constraints_principal_matrices_and_units": {
+      "actual_Cstar_coefficient": "0",
+      "actual_curved_commutator": "0",
+      "curvature_tail_upper": "0",
+      "gradient_time_boundary": "0",
+      "kinetic_bound_physical_units": "0",
+      "literal_correction_coefficient": "0",
+      "nonunit_coupling": "0",
+      "original_background_H": "0",
+      "original_background_a": "0",
+      "original_background_h": "0",
+      "physical_quadratic_mismatch_not_boundary": "0",
+      "regular_center_kinetic_matrix": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          2,
+          2
+        ]
+      },
+      "regular_center_momentum_determinant": "0",
+      "scalar_first_order_lapse_residual": "0",
+      "scalar_first_order_residual": "0",
+      "scalar_kinetic_determinant_residual": "0",
+      "scalar_kinetic_squares_residual": "0",
+      "scalar_shift_residual": "0",
+      "two_form_Euler": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          6,
+          1
+        ]
+      },
+      "two_form_action": "0",
+      "zero_coupling_returns_original_action": "0"
+    },
+    "literal_full_connection_and_curved_commutator": {
+      "FLRW_R_over_three": "0",
+      "FLRW_commutator_endomorphism": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          6,
+          6
+        ]
+      },
+      "all_64_Euler": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          64,
+          6
+        ]
+      },
+      "all_block_Euler": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          60,
+          6
+        ]
+      },
+      "all_covector_components_null_Schur": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          6,
+          6
+        ]
+      },
+      "literal_covariant_gradient_lift": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          64,
+          6
+        ]
+      },
+      "off_clock_conditional_Schur_formula": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          6,
+          6
+        ]
+      },
+      "off_clock_no_frequency_in_response": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          6,
+          6
+        ]
+      },
+      "projective_kernel": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          6,
+          4
+        ]
+      }
+    }
+  },
+  "formulation": "FORMULATION.md",
+  "named_exact_check_count": 36,
+  "not_established": [
+    "A nonlinear open-tube inverse or spectrum on other backgrounds",
+    "An all-frequency or nonlinear stability theorem, or a conserved time-independent principal energy",
+    "Exact original CD/M1 action matching for nonzero coupling",
+    "A full action/gradient/loop remainder or justified low-frequency EFT cutoff",
+    "Additional heavy spectrum, vacuum/finite-gravity V/G/B estimates, UV completion or original P8 closure"
+  ],
+  "operator": "-(lambda/4)*(F13_[mu,nu]-F14_[mu,nu])^2 added to the unchanged unrestricted S6.37 parent",
+  "prior_sha256": {
+    "S6_37_original_unrestricted_action_and_complete_CD_M1_rechecked": true,
+    "S6_39_fully_rebuilt": "1ad97343c4a7999c29122c8dc4d73d9e08e3be5d73c1d7f2b0aa9f0548e3ba3a",
+    "no_frozen_ancestor_modified": true,
+    "original_P8_and_adopted_contract_unchanged": true
+  },
+  "proof_checks": {
+    "J_denominator": true,
+    "J_numerator": true,
+    "center_positive_momentum_matter_pivot": true,
+    "center_uses_regular_first_order_not_Theta_inverse": true,
+    "curvature_positive_all_real_time": true,
+    "gradient_det_denominator_after_punctured_u_squared": true,
+    "gradient_det_numerator": true,
+    "gradient_ss_denominator": true,
+    "gradient_ss_numerator": true,
+    "no_heavy_gap_exact_matching_or_UV_conclusion": true,
+    "uniform_quadratic_kinetic_remainder_below_10_lambda_q": true,
+    "zero_correction_at_center": true,
+    "zero_first_correction_jet_at_center": true
+  },
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "0505544eec7d2bed3e72f3451e3b096dd0c93f6d44b55cfdc0edf541a56303a8",
+    "README.md": "562e31ae679e06fbfa52c4fef91d516e1fec8a5d92e423eae835149e97ff3280",
+    "notes/dynamics.md": "cee85001d1b13a8444f0382fafb0d33588d2f4364d61b576ba4e7db308a5f0a5",
+    "notes/geometry.md": "8a485c78bfaf19c0f5c0d4ba0eaf7e3787de784a0a3c5fd9d7c4dae910204b1a",
+    "src/p8_affine_ricci/__init__.py": "ab5e275fa453f4bdb26d8554c9e80aa88c96c54eb06ac219f3da0588e2f2b57b",
+    "src/p8_affine_ricci/dynamics.py": "9c687ab0133ea545912798853a8e3d6c95c5fbab397a6255e7c5e7d3d0602923",
+    "src/p8_affine_ricci/geometry.py": "6c6dce7da388a01da1e063606df16e8d1f18bd078e6045bc55693439e773c4b5",
+    "src/p8_affine_ricci/source.py": "8e514235d2639d0aba7d88bb25ee2f9960bafd2f450201663ebe55d99e3f9138",
+    "src/p8_affine_ricci/verify.py": "fdae404bf400f7e4bbd35b330266ca066c0ddd15072c6e4bb96aa5ebe87bf495",
+    "tests/conftest.py": "18141b78016796b016ebdfdddfbc43dc6429b660f5e4f75cb3968fc81fa28951",
+    "tests/test_ricci_certificate.py": "84a5320308a29a9fd26ff08c4d983bf00c26b2515f6ed79533559bc97a576838",
+    "tests/test_ricci_dynamics.py": "b29911981897385f34d8b81533cef241e6715b01dfce821ed69ebb18cb67f787",
+    "tests/test_ricci_geometry.py": "261e67eedc6fca96bd8df83718e8124f53367282f97c10536883cba098ab5c0a",
+    "tests/test_ricci_source.py": "1a913f487a0f38c44b0705c27baddcb66dd3b64eecf6711785d9a68884007104"
+  },
+  "status": "CURVED_QUADRATIC_DEFORMATION_AND_PRINCIPAL_SIGN_CASES_CERTIFIED; EXACT_MATCHING_AND_ORIGINAL_P8_OPEN",
+  "units": {
+    "additional_mass_or_gap_assigned": false,
+    "normalized_C_factor": "4",
+    "normalized_lambda": "5/12",
+    "physical_curvature_factor": "1/4"
+  },
+  "verdict": "Nonnegative coupling has positive physical scalar kinetic and principal gradient matrices on the stated regular charts; negative coupling always has a regular-tail high-momentum kinetic obstruction; zero coupling is unchanged. Every nonzero regular deformation changes the original physical CD/M1 quadratic action away from the center.",
+  "verification_boundary": "Exact symbolic identities, coefficient-positive continuous proofs and independent coordinate/constraint tests; not proof-assistant formalization",
+  "written_proofs": [
+    "notes/geometry.md",
+    "notes/dynamics.md"
+  ]
+}
