@@ -413,8 +413,14 @@ around a pre-registered problems document and a certificate-gated ledger.
   nevertheless finds a scalar cone wider than the matter cone. It is
   not an accepted witness under the original contract; a positive
   isolated mass and positive principal energy are insufficient.
+  The separately [source-aligned curl](problems/P8/s6/matching/affine/kinetic/aligned/README.md)
+  removes the complete first-order source mixing. Its full quadratic
+  rolling action is old CD/M1 plus positive Proca, with exactly the
+  original matter cones and a uniform actual canonical-frequency floor.
+  Explicit nonlinear source bounds do not yet establish controlled
+  heavy elimination, nonlinear health, an interacting cutoff or UV completion.
 
-The [current P8 continuation audit](docs/assessment-2026-09-07-p8-retuned-trace-cone.md) separates
+The [current P8 continuation audit](docs/assessment-2026-09-07-p8-source-aligned-modes.md) separates
 the completed scoped P8(a) objective and certificate gates from the
 outstanding P8(b) UV-matching and positivity questions.
 P8 is not marked finished or closed.

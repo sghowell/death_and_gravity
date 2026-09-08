@@ -1,0 +1,186 @@
+{
+  "canonical_modes": {
+    "alpha": "(3*r + 1)/(2*r + 2)",
+    "beta": "(9*r**2 - 2*r + 1)/(4*(r + 1)**2)",
+    "uniform_squared_floor": "q+1/zeta-15>=q+1985",
+    "zeta_max": "1/2000"
+  },
+  "checked_scalar_entries": 60,
+  "claim": "P8-S6.42.AFFINE_ALIGNED",
+  "controls": {
+    "frequency_floor_not_stationary_gap_or_cutoff": true,
+    "rejected_inputs": 34,
+    "second_order_source_and_cubic_coupling_nonzero": true,
+    "source_norm_not_retarded_or_action_remainder": true,
+    "wrong_sign_and_fixed_physical_momentum_controls": true,
+    "zero_curl_separate_auxiliary_rank_control": true,
+    "zero_momentum_not_inverted_in_longitudinal_chart": true
+  },
+  "date": "2026-09-07",
+  "exact_residuals": {
+    "actual_canonical_vector_equations": {
+      "Hubble_dot_lower": "0",
+      "Hubble_dot_upper": "0",
+      "Hubble_square_upper": "0",
+      "beta_strict_positive_numerator": "0",
+      "beta_strict_upper": "0",
+      "fixed_comoving_q_derivative": "0",
+      "longitudinal_actual_normalization": "0",
+      "longitudinal_beta_chain_rule": "0",
+      "longitudinal_log_rate": "0",
+      "transverse_actual_normalization": "0"
+    },
+    "complete_local_source_alignment": {
+      "background_original_trace_zero": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          4,
+          1
+        ]
+      },
+      "background_shift_zero": "0",
+      "exact_nonlinear_shifted_source": "0",
+      "full_all_component_first_variation": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          4,
+          1
+        ]
+      },
+      "generic_quadratic_mass_has_no_light_source": "0",
+      "source_expansion_first_order": "0",
+      "source_expansion_zero_order": "0"
+    },
+    "full_quadratic_constraints_and_physical_cones": {
+      "all_component_alignment_input": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          4,
+          1
+        ]
+      },
+      "first_order_full_Hamiltonian": "0",
+      "first_order_lapse_Euler": "0",
+      "first_order_vector_temporal_Euler": "0",
+      "joint_auxiliary_determinant": "0",
+      "nonlinear_mass_expansion_input": "0",
+      "physical_kinetic_split": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "physical_matter_cone": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          3,
+          3
+        ]
+      },
+      "temporal_Euler": "0",
+      "temporal_action": "0",
+      "three_scalar_luminal_characteristics": "0",
+      "triangular_temporal_shift": "0",
+      "zero_curl_auxiliary_limit": "0"
+    },
+    "nonlinear_ODE_source_and_curl_bounds": {
+      "ODE_zero_forcing_at_clock": "0",
+      "exact_spatial_electric_source": "0",
+      "frozen_ODE_coefficient": "0",
+      "frozen_ODE_forcing": "0",
+      "h_derivative_bridge": "0"
+    }
+  },
+  "formulation": "FORMULATION.md",
+  "literal_new_operator": "S6.41 centered mass unchanged; replace F(T) by F(W), W=T-B(phi,x)dphi, B=-15H(1+x)/(8h); zeta=zeta_physical/(M² tau²)",
+  "matter_cones": "All three scalar and two transverse-vector principal characteristics exactly c²=1 in the original matter metric; original tensor block unchanged",
+  "named_exact_check_count": 35,
+  "nonlinear_source": "Sstar_normal=(4p²-1)*(K_hat-3H*s)+(3/2)*s*Q_lower; full background and first variation zero, second variation nonzero; no lapse velocity",
+  "nonunit_example": {
+    "conversion": {
+      "isolated_Proca_mass_squared_normalized": "12000",
+      "isolated_Proca_mass_squared_physical": "3000",
+      "isolated_mass_is_not_a_coupled_gap_or_cutoff": true,
+      "mu": "11/9",
+      "normalized_zeta": "1/12000"
+    },
+    "frequency": {
+      "canonical_frequency_squared": "43269878721991/3604201225",
+      "chart": "longitudinal_canonical",
+      "q": "7",
+      "stationary_gap_or_nonlinear_cutoff_claim": false,
+      "u": "1/2",
+      "uniform_frequency_squared_lower": "11992",
+      "zeta": "1/12000"
+    },
+    "physical_frequency_squared_lower": 2998
+  },
+  "not_established": [
+    "Full nonlinear secondary constraints, degree count or nonlinear stability",
+    "A controlled retarded heavy inverse, omitted-action or loop remainder, interacting cutoff or stationary mass gap",
+    "The adopted vacuum, finite-gravity and common-parent V/G/B UV conditions",
+    "Original P8 closure or a general metric-affine classification"
+  ],
+  "prior_sha256": {
+    "S6_41_fully_rebuilt": "37c8c3035fd3e8789889e2532a8817680cf4992ffa0c1152a761da554b1f7982",
+    "all64_source_mass_and_original_CD_M1_matter_frame_rechecked": true,
+    "no_frozen_ancestor_modified": true
+  },
+  "proof_checks": {
+    "modes_alpha_lower_identity": true,
+    "modes_alpha_upper_identity": true,
+    "modes_beta_positive_square_identity": true,
+    "modes_chosen_curl_uniform_frequency_floor": true,
+    "modes_frequency_floor_not_stationary_spectrum_or_cutoff": true,
+    "modes_longitudinal_curvature_absolute_upper_fifteen": true,
+    "modes_positive_longitudinal_weight_for_nonzero_comoving_momentum": true,
+    "modes_positive_transverse_weight": true,
+    "modes_transverse_curvature_absolute_upper_three": true,
+    "modes_zero_momentum_longitudinal_correction_matches_homogeneous_chart": true,
+    "regular_first_order_center_without_Theta_inverse": true,
+    "source_ODE_absolute_coefficient_upper": true,
+    "source_Q_bound_below_three_halves": true,
+    "source_Q_second_order_bound": true,
+    "source_Qx_bound_below_three": true,
+    "source_Qx_first_order_bound": true,
+    "source_Volterra_exponent_less_than_one": true,
+    "source_Volterra_exponential_majorant": true,
+    "source_electric_Qx_constant_below_ten": true,
+    "source_forcing_linear_in_distance_slope": true,
+    "source_normal_clock_upper": true,
+    "source_normal_plus_inverse_below_three": true,
+    "source_normal_source_quadratic_constant": true,
+    "source_source_bound_is_not_a_remainder_or_inverse": true
+  },
+  "quadratic_action": "Exactly the unchanged physical CD/M1 action plus minimally coupled positive three-polarization Proca; full lapse/shift/temporal constraints retained",
+  "schema": 1,
+  "source_bounds": "Original closed x tube: |Q|<(3/2)*(1+x)²/h², |Q_x|<3*|1+x|/h² away from zero distance, with non-strict equality at the clock; normal<=eta*|Delta_K|+(5/2)eta², electric<=eta*epsilon_K+(3|Delta_K|+10eta)*epsilon_s",
+  "source_sha256": {
+    "FORMULATION.md": "f89a898d002eca4141d4df675b8c07d8d36173574677284167094163b5c97c73",
+    "README.md": "ccc4e00ca607d7cc9e254e86e8165fe6584c7a4d40c4fefc347edcea645e39e7",
+    "notes/dynamics.md": "db465ad4f14e1cfb77e829e9fcbc57d5cac0a16bf24ef08c076472ace1880e7b",
+    "notes/modes.md": "c612aac9b84bb2ae6ab0e416b7d1935668d297bfbae4154f4c9097deae49296d",
+    "notes/source.md": "6565a9d85a128ccb7b165632e60727e7c54ebcd9645166768066a63c88dbb0e1",
+    "src/p8_affine_aligned/__init__.py": "635bfa68dafa9d60e28d922e445e5354479b522482af384bc3d9caa8d03e6d87",
+    "src/p8_affine_aligned/alignment.py": "df222a92e353d900645ee6f8e8a49b5511b7afe20af3751c4cc7603892c8eb1a",
+    "src/p8_affine_aligned/dynamics.py": "cac9cb4704ef334912f6957e74bc5b19e0d112387a6bda974850b672b8bdad9b",
+    "src/p8_affine_aligned/modes.py": "51f4a85e2e41e2eccdddadb0a12abfc7cc82e428b97c194db567db97d9e6266b",
+    "src/p8_affine_aligned/source_bounds.py": "b8cdb23a15e1028917ba6004f0f2c17fb70344a2dce088fc24e283f10d5f384c",
+    "src/p8_affine_aligned/verify.py": "ded8252a67666f0665d97ad01f8a6bd4d72558fc6946b1709c6df5a3ae7be27f",
+    "tests/conftest.py": "9ec9b77a8cdbe90bc269192e6f5a95045c2a4b807c13e6c7195ffd602f7a0e5b",
+    "tests/test_aligned_certificate.py": "935da090c8adccd02f85cedf1e2d9fa8b792e57c81f7db6e865e1cea3ddbf9da",
+    "tests/test_aligned_dynamics.py": "e032c7d81e16e681a9c49ba95430bf85d862aa26aba1d5ef11fbc6487a7fc735",
+    "tests/test_aligned_modes.py": "b7f913f86dea580a8d6183237f24368e09e826703cc2f3de14ccdb65860cca45",
+    "tests/test_aligned_source.py": "917cf09fcc014ab0abd9491b93bf42d0d3b310648eba9d6db1b5b80bd4cdfecb",
+    "tests/test_aligned_source_bounds.py": "b458b3bf57c4ed04c2fce7a39f02559b26f6797903f2d57a577f701262a7f3b3"
+  },
+  "status": "SOURCE_ALIGNMENT_QUADRATIC_MATTER_CONES_AND_CANONICAL_FLOOR_CERTIFIED; NONLINEAR_SOURCE_BOUNDED; ORIGINAL_P8_OPEN",
+  "verdict": "This named source-aligned candidate passes the original quadratic rolling matter-cone gate and has an actual canonical vector frequency floor. Nonlinear source bounds alone do not establish heavy elimination or UV admissibility.",
+  "verification_boundary": "Exact symbolic identities, continuous bounds and independent internal constrained/Euler calculations with written proofs; not proof-assistant formalization",
+  "written_proofs": [
+    "notes/source.md",
+    "notes/dynamics.md",
+    "notes/modes.md"
+  ]
+}
