@@ -1,0 +1,421 @@
+{
+  "checked_scalar_entries": 43,
+  "claim": "P8-S6.66.FINITE_PREPARED_MASS_RESPONSE",
+  "controls": {
+    "C10_norm_does_not_accept_uncontrolled_eleventh_derivatives": true,
+    "common_dimensional_limit_before_separate_finite_assignments": true,
+    "eighth_order_reference_not_new_subtraction_or_state": true,
+    "homogeneous_C10_to_C0_bound_not_no_loss_feedback": true,
+    "native_reference_order_validation_before_cache": true,
+    "nonzero_initial_mixing_retained_despite_zero_initial_response": true,
+    "rejected_inputs": 129
+  },
+  "date": "2026-09-08",
+  "dimensional_limit": "The written proof uses a sufficiently small complex-D neighborhood of 3 inside the frozen preparation domain, analytic plus/minus modes and D-independent fixed Borel cutoffs. Initial mixing remains uniformly O(nu^-6), the varied finite tail is O(nu^-4), and the radial measure is integrable for |Re D-3|<1/4 after shrinking the neighborhood as needed. Numerical bounds are on D=3, not uniform numerical claims throughout the old strip.",
+  "eighth_order_source_coefficient_bounds": {
+    "L": {
+      "1": {
+        "absolute_upper": "1376/81",
+        "highest_source_derivative": 2,
+        "reconstructions": [
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "2": {
+        "absolute_upper": "3295703/648",
+        "highest_source_derivative": 4,
+        "reconstructions": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "3": {
+        "absolute_upper": "293587135/81",
+        "highest_source_derivative": 6,
+        "reconstructions": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "4": {
+        "absolute_upper": "48492098808931/10368",
+        "highest_source_derivative": 8,
+        "reconstructions": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      }
+    },
+    "T": {
+      "1": {
+        "absolute_upper": "847/54",
+        "highest_source_derivative": 2,
+        "reconstructions": [
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "2": {
+        "absolute_upper": "1390655/324",
+        "highest_source_derivative": 4,
+        "reconstructions": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "3": {
+        "absolute_upper": "976648505/324",
+        "highest_source_derivative": 6,
+        "reconstructions": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "4": {
+        "absolute_upper": "2519165880595/648",
+        "highest_source_derivative": 8,
+        "reconstructions": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      }
+    }
+  },
+  "exact_mixing_and_reference_constants": {
+    "by_sector": {
+      "L": {
+        "delta_mixing_eighth_inverse_frequency_coefficient": "51021843772450",
+        "delta_mixing_ninth_inverse_frequency_coefficient": "2503997646582128",
+        "delta_reference_bilinear_over_nu_squared_upper": "10",
+        "varied_reference_tail_over_inverse_frequency_fifth_upper": "85166609"
+      },
+      "T": {
+        "delta_mixing_eighth_inverse_frequency_coefficient": "45008714212731",
+        "delta_mixing_ninth_inverse_frequency_coefficient": "2037824824750152",
+        "delta_reference_bilinear_over_nu_squared_upper": "9",
+        "varied_reference_tail_over_inverse_frequency_fifth_upper": "48728198"
+      }
+    },
+    "common": {
+      "delta_mixing_eighth_inverse_frequency_coefficient": "51021843772450",
+      "delta_mixing_ninth_inverse_frequency_coefficient": "2503997646582128",
+      "delta_reference_bilinear_over_nu_squared_upper": "10",
+      "varied_reference_tail_over_inverse_frequency_fifth_upper": "85166609"
+    },
+    "frozen_initial_and_evolved_mixing": {
+      "evolution_mixing_envelope": "5347035781757616",
+      "initial_mixing_envelopes": {
+        "10": "1536706170025",
+        "6": "1813229",
+        "8": "906392614"
+      }
+    }
+  },
+  "exact_residuals": {
+    "Bogoliubov_Wronskian_preserving_transport": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "L_frozen_dimensional_variation_order_2": "0",
+    "L_frozen_dimensional_variation_order_4": "0",
+    "L_source_linear_coefficient_1": "0",
+    "L_source_linear_coefficient_2": "0",
+    "L_source_linear_coefficient_3": "0",
+    "L_source_linear_coefficient_4": "0",
+    "L_subtracted_reference_low_0": "0",
+    "L_subtracted_reference_low_1": "0",
+    "L_subtracted_reference_low_2": "0",
+    "L_tenth_derivative_nonzero_control": "0",
+    "L_varied_residual_low_0": "0",
+    "L_varied_residual_low_1": "0",
+    "L_varied_residual_low_2": "0",
+    "L_varied_residual_low_3": "0",
+    "T_frozen_dimensional_variation_order_2": "0",
+    "T_frozen_dimensional_variation_order_4": "0",
+    "T_source_linear_coefficient_1": "0",
+    "T_source_linear_coefficient_2": "0",
+    "T_source_linear_coefficient_3": "0",
+    "T_source_linear_coefficient_4": "0",
+    "T_subtracted_reference_low_0": "0",
+    "T_subtracted_reference_low_1": "0",
+    "T_subtracted_reference_low_2": "0",
+    "T_tenth_derivative_nonzero_control": "0",
+    "T_varied_residual_low_0": "0",
+    "T_varied_residual_low_1": "0",
+    "T_varied_residual_low_2": "0",
+    "T_varied_residual_low_3": "0",
+    "exact_mode_readout_mixing_decomposition": "0",
+    "exact_varied_readout_denominator": "0",
+    "isotropic_zero_momentum_varied_reference_1": "0",
+    "isotropic_zero_momentum_varied_reference_2": "0",
+    "isotropic_zero_momentum_varied_reference_3": "0",
+    "isotropic_zero_momentum_varied_reference_4": "0",
+    "nonzero_initial_mixing_phase_control": "0",
+    "radial_mixing_integral_4": "0",
+    "radial_mixing_integral_7": "0",
+    "radial_mixing_integral_8": "0",
+    "radial_reference_tail_integral_five": "0"
+  },
+  "finite_response_scale_example": {
+    "complete_mass_response_C10_to_C0_upper_bound": "86620234338819639515425991557/99067782758400000000000000000000000000000000000000000000000000000000",
+    "components": {
+      "exact_minus_reference_variation": "262930598494927157879/5033164800000000000000000000000000000000000000000000000000000000",
+      "varied_reference_minus_adiabatic": "85166609/18000000000000000000000000000000000000000000000000000000"
+    },
+    "finite_local_component_upper_bound": "206506392019063/236196000000000000000000000000000000000000000000000000",
+    "nonlocal_subtracted_C10_to_C0_upper_bound": "788863238414540500837/15099494400000000000000000000000000000000000000000000000000000000",
+    "scope": "Homogeneous prepared mass-source response; not a coupled feedback contraction or a spatial response bound",
+    "source_norm": "Maximum of time derivatives zero through ten on [-1/2,1/2], with source zero on an initial neighborhood"
+  },
+  "formulation": "FORMULATION.md",
+  "initial_mixing_and_source_norm_controls": {
+    "squeezed_initial_phase_fixture": "-15/4",
+    "tenth_source_derivative_fixtures": {
+      "L": "-7/20736",
+      "T": "-7/20736"
+    }
+  },
+  "named_exact_check_count": 40,
+  "not_established": [
+    "Arbitrary spatial-momentum finite response, full metric or second mass-source blocks, or arbitrary varied initial states",
+    "A no-loss coupled feedback norm, quantum stability/cones, interactions or cutoff",
+    "Finite Wilson matching, a common UV parent, V/G/B or original P8 closure"
+  ],
+  "prepared_source_domain": "Spatial K=0, smooth compact time support strictly after u0=-1/2, zero on an initial neighborhood. The source norm is the maximum over time derivatives 0..10 on I=[-1/2,1/2]. Outputs are normalized physical C0 readouts. No independent varied initial covariance is added.",
+  "prior_sha256": {
+    "S6_65_fully_rebuilt": "1a6a16fcfd54827aefdfbe6e5a42f5a90fd001e611ae926c22bca01e29a66c70",
+    "selected_clock_state_and_fixed_profiles_unchanged": true
+  },
+  "proof_checks": {
+    "Gronwall_geometric_exponential_bound": true,
+    "L_all_source_box_reconstructions": true,
+    "L_canonical_rate_at_most_three": true,
+    "L_frequency_variation_upper_below_one_half": true,
+    "L_positive_base_reference_and_transport_bounds": true,
+    "L_reference_c_variation_upper_below_seven": true,
+    "L_reference_p_below_two_frequency_f": true,
+    "L_reference_tail_majorants_nonnegative": true,
+    "L_source_A_variation_at_most_two": true,
+    "L_source_B_variation_at_most_two": true,
+    "L_source_log_frequency_variation_at_most_one": true,
+    "L_transport_exponential_below_two": true,
+    "L_unvaried_weight_A_at_most_one": true,
+    "L_unvaried_weight_B_at_most_one": true,
+    "T_all_source_box_reconstructions": true,
+    "T_canonical_rate_at_most_three": true,
+    "T_frequency_variation_upper_below_one_half": true,
+    "T_positive_base_reference_and_transport_bounds": true,
+    "T_reference_c_variation_upper_below_seven": true,
+    "T_reference_p_below_two_frequency_f": true,
+    "T_reference_tail_majorants_nonnegative": true,
+    "T_source_A_variation_at_most_two": true,
+    "T_source_B_variation_at_most_two": true,
+    "T_source_log_frequency_variation_at_most_one": true,
+    "T_transport_exponential_below_two": true,
+    "T_unvaried_weight_A_at_most_one": true,
+    "T_unvaried_weight_B_at_most_one": true,
+    "complete_prepared_mass_response_below_1e_minus_39": true,
+    "evolved_global_mixing_below_one": true,
+    "high_initial_band_covered_by_global_sixth_power": true,
+    "middle_initial_band_covered_by_global_sixth_power": true,
+    "nonlocal_prepared_response_below_1e_minus_43": true
+  },
+  "reference_mode_policy": "The original S6.55 all-order prepared Gaussian state is evolved exactly. W8 is only a comparison reference. Subtraction remains orders 0,2,4. Its source variation includes moving canonical normalization, physical readout weights, temporal contact and nonzero initial interference.",
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "bb13eee500bd4595471554ba96e46c3a80f4de21b63e0cab88c7cc9a47b9a371",
+    "README.md": "c5ecdaa37d1f29419d28858ec94c2c4b4e8e48e63a1ad027a3cbbbd2d2bd9aa5",
+    "notes/evolution.md": "6bfadead0ea4cabce7ee9fd966e35f575b3c3cb60122b2cc18305ab630f4de56",
+    "notes/limit.md": "70851be248824a7b5fe136545a01135e48666bae3df3b5a0d425acfbd1b1d900",
+    "notes/reference.md": "83556a0b5bc0e13eaebb01297e0369851f20b9a8985c3e1d993b3eadfaf62e65",
+    "src/p8_vector_mass_remainder/__init__.py": "f14a76722047a9cfd1e2cba79e6a4c98ec0430eec8dbefcb0562e08bd8b2bea2",
+    "src/p8_vector_mass_remainder/envelopes.py": "8a3cf50435f3e6985e7e9399599145933f24e8e83452f4897622d42bb53fc049",
+    "src/p8_vector_mass_remainder/evolution.py": "a09bc35daffe792ecc8f8f75b0e91d4bc91872663ae9be2ff2d0e246d3ff9dda",
+    "src/p8_vector_mass_remainder/proofs.py": "7dee1b6d0d65fb67425b73bdb71274bbfe5db24a604d90343ed6a5bb8235a2c0",
+    "src/p8_vector_mass_remainder/source.py": "9e0aa95337bf95025df0dd90738df494fe5be4ba51d53fce72715a4d307795d7",
+    "src/p8_vector_mass_remainder/tail.py": "5dd58e80cfc608c251b04459981e6da51cc8fa0e7c68cf4fd78033f5d99f5003",
+    "src/p8_vector_mass_remainder/tangent.py": "22bfed763bd80445e03d8f94a05e8c1d42b7c5d7c502d8b1dddcb90dbddc6beb",
+    "src/p8_vector_mass_remainder/verify.py": "8dc50ee7570fb36f839ad2adfbb1032a62d30966e425f482a0c1b82b91ab2530",
+    "tests/conftest.py": "d77205c4e9ac9ef8f109fbf1f7b40ccff285a06d950c9d204ae78fbd4e76abf1",
+    "tests/test_mass_remainder_certificate.py": "21cba590fe955cdf087ae8cf8acdd978364d32047446497a0f53dc7a52090b3d",
+    "tests/test_mass_remainder_science.py": "a2af08656e267f760b0b5de3749091f7567df3c60b85f4e4f92c418ff9cbfa30"
+  },
+  "status": "FINITE_HOMOGENEOUS_PREPARED_MASS_RESPONSE; ORIGINAL_P8_OPEN",
+  "varied_readout_tail_bounds": {
+    "L": {
+      "all_majorants_nonnegative": true,
+      "low_tail_numerator_coefficients": {
+        "0": "0",
+        "1": "0",
+        "2": "0"
+      },
+      "tail_numerator_majorants": {
+        "0": "37376/6561",
+        "1": "3566168/6561",
+        "10": "17301933767277620208887932972555/23887872",
+        "11": "32634390726007155071025062994088753/143327232",
+        "12": "293192974638106772511804751626430734527/3439853568",
+        "13": "40040403025002329595396579947229028834129/3439853568",
+        "14": "2443177388285280007270606093120624137606173/13759414272",
+        "15": "119428891061979360987408958111259776374843107/2293235712",
+        "16": "1994568588440647186376706155556970868515341763915/146767085568",
+        "17": "500655268784625624383178357615623279391817259685139/3522410053632",
+        "18": "335996968696913541184287712897929692870172808928747711/14089640214528",
+        "19": "9491129766337894450111128288602276417648181683083759669/1565515579392",
+        "2": "33645560/243",
+        "20": "10353360201477389836451776590366192160090146284716686903149/8349416423424",
+        "3": "62010816556/729",
+        "4": "2722955761153631/26244",
+        "5": "63652464638823851/13122",
+        "6": "89830156951257165545/139968",
+        "7": "441836812070703541234789/1679616",
+        "8": "979030052167901926186381007/6718464",
+        "9": "474824434800350789436107032043/26873856"
+      },
+      "varied_reference_tail_over_inverse_frequency_fifth_upper": "85166609"
+    },
+    "T": {
+      "all_majorants_nonnegative": true,
+      "low_tail_numerator_coefficients": {
+        "0": "0",
+        "1": "0",
+        "2": "0"
+      },
+      "tail_numerator_majorants": {
+        "0": "25088/6561",
+        "1": "773024/2187",
+        "10": "286322301403433721398676865763/3359232",
+        "11": "1799224994243641288335904779374159/71663616",
+        "12": "2506906647066386988920226517103181817/286654464",
+        "13": "170685386964050383942135698823663358719/6879707136",
+        "14": "718760183869007671845739905204487898317/191102976",
+        "15": "1978042270031837673921659066676525619871857/13759414272",
+        "16": "221793365777085817517585595627556630101593107/6879707136",
+        "17": "272168012184240459817131708677890967173553391455/110075314176",
+        "18": "17306626303931210499979450641159531880893460527095/55037657088",
+        "19": "0",
+        "2": "64537312/729",
+        "20": "0",
+        "3": "106437953468/2187",
+        "4": "391836320516767/6561",
+        "5": "43340556199705583/34992",
+        "6": "22467269074498006549/104976",
+        "7": "15523320376283120506147/186624",
+        "8": "50731710566260631809453601/1119744",
+        "9": "14016072128796204943466848417/26873856"
+      },
+      "varied_reference_tail_over_inverse_frequency_fifth_upper": "48728198"
+    }
+  },
+  "varied_reference_residual_and_normalization_bounds": {
+    "L": {
+      "base_residual_over_inverse_frequency_eighth_upper": "5165763544817",
+      "delta_W_over_frequency_upper": "4096157105475850481199368269/10368000000000000000000000000",
+      "delta_W_prime_over_frequency_upper": "26628023352113263826657265403/10368000000000000000000000000",
+      "delta_c_upper": "70660651774016665751454738479/10368000000000000000000000000",
+      "delta_log_W_rate_upper": "43012651774016665751454738479/5184000000000000000000000000",
+      "delta_residual_over_inverse_frequency_eighth_upper": "152418105409587",
+      "source_A_variation_upper": "16/27",
+      "source_B_variation_upper": "784/6561",
+      "source_log_frequency_variation_upper": "32/81",
+      "varied_residual_numerator_majorants": {
+        "0": "0",
+        "1": "2233163/108",
+        "10": "32237283548984135691851556070950985/169869312",
+        "11": "12908210086529021241373324660544911519/169869312",
+        "12": "60934664067659127964509810794328108729049/2717908992",
+        "13": "12604469784565788080009240396026093782011/150994944",
+        "14": "67206039079175531167901014492621976662656311/2717908992",
+        "15": "46813759883767681189799082173417028960922611967/7247757312",
+        "16": "2919880068204643272225819557072488030940865675643/43486543872",
+        "17": "15739397779281483503591327483584735238108128487109725/1391569403904",
+        "18": "2014195471263271855443047686340415961444079110832515523/695784701952",
+        "19": "13189245744432744340102872650431205702956041290559224721161/22265110462464",
+        "2": "13276631243/864",
+        "3": "100671479923621/5184",
+        "4": "87790143436418047/4608",
+        "5": "16106787086084346461/27648",
+        "6": "58645559424307767448525/331776",
+        "7": "67338489884648230827599945/663552",
+        "8": "33574523688092269419112097191/663552",
+        "9": "15852343070350268363490141320791/21233664"
+      }
+    },
+    "T": {
+      "base_residual_over_inverse_frequency_eighth_upper": "5207948696836",
+      "delta_W_over_frequency_upper": "56002177647350233593922901/162000000000000000000000000",
+      "delta_W_prime_over_frequency_upper": "3584545883964829601990575207/1728000000000000000000000000",
+      "delta_c_upper": "17921916390755318705993856949/5184000000000000000000000000",
+      "delta_log_W_rate_upper": "17921916390755318705993856949/2592000000000000000000000000",
+      "delta_residual_over_inverse_frequency_eighth_upper": "123763354409866",
+      "source_A_variation_upper": "0",
+      "source_B_variation_upper": "3136/6561",
+      "source_log_frequency_variation_upper": "28/81",
+      "varied_residual_numerator_majorants": {
+        "0": "0",
+        "1": "2794099/162",
+        "10": "14151913862569592452073673119451799/84934656",
+        "11": "2801934999894088306936724685200366885/42467328",
+        "12": "8756984649668657253926439274226450462245/452984832",
+        "13": "106947616612181037045320099202192782406691/1358954496",
+        "14": "247833269446617909195048304392559626441887725/10871635968",
+        "15": "128878063789545714671275864938394393845985466369/21743271936",
+        "16": "375609682626832304807260950642956622457646505217/5435817984",
+        "17": "52755784021322126121344778934450891790636866485575/4831838208",
+        "18": "476756831296417109860548043270107284493014295549448325/173946175488",
+        "19": "194074514721977641477160509175558689716146004195836177741/347892350976",
+        "2": "5403266365/432",
+        "3": "10301994920105/648",
+        "4": "641567208125210311/41472",
+        "5": "44029809258885832151/82944",
+        "6": "49818872076970383386209/331776",
+        "7": "226637104679073924015873091/2654208",
+        "8": "449880535749278620118184436405/10616832",
+        "9": "29694562766986102512173010315049/42467328"
+      }
+    }
+  },
+  "verdict": "The finite selected-state prepared homogeneous mass-response block has an integrable exact-minus-adiabatic remainder and the frozen finite local component. At L=10^24,m=1000 the nonlocal C10-to-C0 bound is below 10^-43 and the complete mass-block bound is below 10^-39. Full spatial/metric response, coupled feedback and original P8 remain open.",
+  "verification_boundary": "Exact varied Riccati, tail, Wronskian, mixing and radial identities with continuous rational majorants, plus written parameter-dependence and common-dimensional dominated-convergence arguments; not proof-assistant formalization",
+  "written_proofs": [
+    "notes/reference.md",
+    "notes/evolution.md",
+    "notes/limit.md"
+  ]
+}
