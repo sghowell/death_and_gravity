@@ -1,0 +1,234 @@
+{
+  "actual_clock_mass_covariant_pole_reconstruction": {
+    "R": "12*H**2 + 6*H_dot",
+    "actual_fourth_order_mass_pole_compact_form": "0",
+    "actual_fourth_order_mass_pole_matches_scalar_gradient_reconstruction": "0",
+    "actual_second_order_mass_pole_matches_covariant_coincidence": "0",
+    "boxR": "-6*(12*H**2*H_dot + 7*H*H_ddot + 4*H_dot**2 + H_third)",
+    "covariant_fourth_order_mass_pole": "-(6*H**2*H_dot*a_N + 18*H**2*H_dot*b_N + 5*H*H_ddot*a_N + 9*H*H_ddot*b_N + 5*H_dot**2*a_N + 3*H_dot**2*b_N + H_third*a_N + H_third*b_N)/2",
+    "covariant_second_order_mass_pole": "-3*H**2*a_N - 9*H**2*b_N - 4*H_dot*a_N - 2*H_dot*b_N",
+    "minimal_scalar_pole_energy": "-6*H**2*H_dot - 2*H*H_ddot + H_dot**2",
+    "minimal_scalar_pole_pressure": "(18*H**2*H_dot + 12*H*H_ddot + 9*H_dot**2 + 2*H_third)/3",
+    "scalar_gradient_normal_pole": "6*H**2*H_dot + 5*H*H_ddot + 5*H_dot**2 + H_third",
+    "scalar_gradient_trace_pole": "-2*(12*H**2*H_dot + 7*H*H_ddot + 4*H_dot**2 + H_third)",
+    "scalar_pole_EOM_trace_identity": "0"
+  },
+  "actual_clock_mass_pole_boundary": "For alpha=a_N,beta=b_N, extra_P2=-(3H\u00b2+4H')alpha-(9H\u00b2+2H')beta; extra_P4=(beta-alpha)E/2+(alpha+beta)boxR/12, E=H'^2-6H\u00b2H'-2HH''. The covariant one-form/scalar-gradient coincidence reconstruction agrees with the independent radial result. Only local dimensional poles are used in the scalar EOM/trace argument; finite anomalies are not set to zero.",
+  "actual_lapse_radial_poles_and_finite_parts": {
+    "0": {
+      "evanescent_finite_contribution": "a_N + 6*b_N + 2",
+      "pole": "-3*(a_N + 3*b_N + 2)/2",
+      "radial_finite_part": "(6*a_N*log_mass_over_scale_squared - 5*a_N + 18*b_N*log_mass_over_scale_squared - 3*b_N + 12*log_mass_over_scale_squared - 10)/4"
+    },
+    "1": {
+      "evanescent_finite_contribution": "(9*H**2*a_N + 45*H**2*b_N + 18*H**2 + 20*H_dot*a_N - 2*H_dot*b_N)/3",
+      "pole": "-3*H**2*a_N - 9*H**2*b_N - 6*H**2 - 4*H_dot*a_N - 2*H_dot*b_N",
+      "radial_finite_part": "(9*H**2*a_N*log_mass_over_scale_squared + 27*H**2*b_N*log_mass_over_scale_squared + 18*H**2*b_N + 18*H**2*log_mass_over_scale_squared + 12*H_dot*a_N*log_mass_over_scale_squared + 8*H_dot*a_N + 6*H_dot*b_N*log_mass_over_scale_squared - 8*H_dot*b_N)/3"
+    },
+    "2": {
+      "evanescent_finite_contribution": "-(33*H**4*a_N + 99*H**4*b_N + 66*H**4 - 128*H**2*H_dot*a_N - 688*H**2*H_dot*b_N - 564*H**2*H_dot - 158*H*H_ddot*a_N - 270*H*H_ddot*b_N - 148*H*H_ddot - 191*H_dot**2*a_N - 75*H_dot**2*b_N + 74*H_dot**2 - 28*H_third*a_N - 16*H_third*b_N)/30",
+      "pole": "-(6*H**2*H_dot*a_N + 18*H**2*H_dot*b_N + 12*H**2*H_dot + 5*H*H_ddot*a_N + 9*H*H_ddot*b_N + 4*H*H_ddot + 5*H_dot**2*a_N + 3*H_dot**2*b_N - 2*H_dot**2 + H_third*a_N + H_third*b_N)/2",
+      "radial_finite_part": "-(33*H**4*a_N + 99*H**4*b_N + 66*H**4 - 90*H**2*H_dot*a_N*log_mass_over_scale_squared - 128*H**2*H_dot*a_N - 270*H**2*H_dot*b_N*log_mass_over_scale_squared - 688*H**2*H_dot*b_N - 180*H**2*H_dot*log_mass_over_scale_squared - 564*H**2*H_dot - 75*H*H_ddot*a_N*log_mass_over_scale_squared - 158*H*H_ddot*a_N - 135*H*H_ddot*b_N*log_mass_over_scale_squared - 270*H*H_ddot*b_N - 60*H*H_ddot*log_mass_over_scale_squared - 148*H*H_ddot - 75*H_dot**2*a_N*log_mass_over_scale_squared - 191*H_dot**2*a_N - 45*H_dot**2*b_N*log_mass_over_scale_squared - 75*H_dot**2*b_N + 30*H_dot**2*log_mass_over_scale_squared + 74*H_dot**2 - 15*H_third*a_N*log_mass_over_scale_squared - 28*H_third*a_N - 15*H_third*b_N*log_mass_over_scale_squared - 16*H_third*b_N)/30"
+    }
+  },
+  "checked_scalar_entries": 71,
+  "claim": "P8-S6.52.VECTOR_DIMENSIONAL",
+  "controls": {
+    "counterterm_variation_precedes_dimension_limit": true,
+    "early_polarization_count_limit_loses_finite_term": "2+4b_N",
+    "ordinary_finite_diagnostic_not_actual_clock_finite_matching": true,
+    "ordinary_fourth_order_radial_Ward_defect": "4*H*(3*H*H_ddot + 6*H_dot**2 + H_third)/3",
+    "ordinary_second_order_radial_Ward_defect": "8*H*H_dot",
+    "rejected_inputs": 33,
+    "scalar_gradient_of_constrained_vector_not_dropped": true
+  },
+  "date": "2026-09-08",
+  "dimension_dependent_local_heat_coefficients_and_finite_action": {
+    "dimension_dependent_coefficients": {
+      "0": "spatial_dimension",
+      "1": "R*(spatial_dimension/6 - 1)",
+      "2": "R**2*(spatial_dimension - 12)/72 + Ricci_squared*(90 - spatial_dimension)/180 + Riemann_squared*(spatial_dimension - 15)/180 + box_R*(spatial_dimension - 5)/30"
+    },
+    "finite_Euclidean_action_over_64pi_squared": {
+      "0": "(6*log_mass_over_scale_squared - 5)/2",
+      "1": "R*(3*log_mass_over_scale_squared - 5)/3",
+      "2": "-(45*R**2*log_mass_over_scale_squared - 10*R**2 - 174*Ricci_squared*log_mass_over_scale_squared + 4*Ricci_squared + 24*Riemann_squared*log_mass_over_scale_squared - 4*Riemann_squared + 24*box_R*log_mass_over_scale_squared - 24*box_R)/180"
+    }
+  },
+  "dimensional_canonical_normalization": "gT\u00b2=a_s^(D-2), gL\u00b2=a_s^D*m\u00b2*q/(q+m\u00b2), rates H(D-2)/2 and H[(D-2)/2+z]. D-1 transverse polarizations and one longitudinal mode. The action variation, WKB coefficients and physical subtraction coefficients are independently replayed at D=3.",
+  "exact_residuals": {
+    "0_actual_lapse_variation_pole": "0",
+    "0_counterterm_varied_before_limit_restores_Ward_identity": "0",
+    "0_covariant_pressure_pole": "0",
+    "0_independent_finite_heat_action_energy": "0",
+    "0_radial_finite_Ward_defect_identity": "0",
+    "1_actual_lapse_variation_pole": "0",
+    "1_counterterm_varied_before_limit_restores_Ward_identity": "0",
+    "1_covariant_pressure_pole": "0",
+    "1_independent_finite_heat_action_energy": "0",
+    "1_radial_finite_Ward_defect_identity": "0",
+    "2_actual_lapse_variation_pole": "0",
+    "2_counterterm_varied_before_limit_restores_Ward_identity": "0",
+    "2_covariant_pressure_pole": "0",
+    "2_independent_finite_heat_action_energy": "0",
+    "2_radial_finite_Ward_defect_identity": "0",
+    "D_dimensional_longitudinal_canonical_rate": "0",
+    "D_dimensional_longitudinal_lapse_energy": "0",
+    "D_dimensional_longitudinal_pressure": "0",
+    "D_dimensional_temporal_constraint": "0",
+    "D_dimensional_transverse_canonical_rate": "0",
+    "D_dimensional_transverse_lapse_energy": "0",
+    "D_dimensional_transverse_pressure": "0",
+    "Gamma_angular_ratio_0": "0",
+    "Gamma_angular_ratio_1": "0",
+    "Gamma_angular_ratio_2": "0",
+    "Gamma_angular_ratio_3": "0",
+    "Gamma_angular_ratio_4": "0",
+    "Gamma_angular_ratio_5": "0",
+    "Gamma_finite_0": "0",
+    "Gamma_finite_1": "0",
+    "Gamma_finite_2": "0",
+    "Gamma_pole_0": "0",
+    "Gamma_pole_1": "0",
+    "Gamma_pole_2": "0",
+    "actual_finite_flat_lapse_term_preserves_frozen_MSbar_jets": "0",
+    "actual_fourth_order_mass_pole_compact_form": "0",
+    "actual_fourth_order_mass_pole_matches_scalar_gradient_reconstruction": "0",
+    "actual_second_order_mass_pole_matches_covariant_coincidence": "0",
+    "bundle_rank_derivative_is_minimal_scalar_heat_coefficient": "0",
+    "early_polarization_count_limit_loses_finite_term": "0",
+    "flat_actual_mass_direction_finite_MSbar": "0",
+    "flat_actual_mass_direction_pole": "0",
+    "independent_finite_heat_action_Gamma_expansion_0": "0",
+    "independent_finite_heat_action_Gamma_expansion_1": "0",
+    "independent_finite_heat_action_Gamma_expansion_2": "0",
+    "longitudinal_actual_clock_B2": "0",
+    "longitudinal_actual_clock_P2": "0",
+    "longitudinal_actual_clock_P4": "0",
+    "longitudinal_actual_clock_U": "0",
+    "longitudinal_actual_energy_fourth": "0",
+    "longitudinal_actual_energy_second": "0",
+    "longitudinal_actual_energy_zero": "0",
+    "longitudinal_actual_pressure_fourth": "0",
+    "longitudinal_actual_pressure_second": "0",
+    "longitudinal_actual_pressure_zero": "0",
+    "ordinary_Proca_R_pole_lapse_variation": "0",
+    "ordinary_Proca_curvature_squared_pole_lapse_variation": "0",
+    "rank_retained_heat_coefficient_reduces_to_frozen_0": "0",
+    "rank_retained_heat_coefficient_reduces_to_frozen_1": "0",
+    "rank_retained_heat_coefficient_reduces_to_frozen_2": "0",
+    "scalar_pole_EOM_trace_identity": "0",
+    "transverse_actual_clock_B2": "0",
+    "transverse_actual_clock_P2": "0",
+    "transverse_actual_clock_P4": "0",
+    "transverse_actual_clock_U": "0",
+    "transverse_actual_energy_fourth": "0",
+    "transverse_actual_energy_second": "0",
+    "transverse_actual_energy_zero": "0",
+    "transverse_actual_pressure_fourth": "0",
+    "transverse_actual_pressure_second": "0",
+    "transverse_actual_pressure_zero": "0"
+  },
+  "finite_extension_boundary": "An evanescent continuation of mass counterterms can shift finite terms even when its four-dimensional pole is unchanged. Any actual clock-dependent finite extension must preserve S6.47's already frozen potential and lapse jets. That derivative matching remains open, not a user-choice blocker.",
+  "formulation": "FORMULATION.md",
+  "literal_component": "Unchanged retained vector and physical clock of S6.42/50/51. First local lapse/pressure variations and their formal D=3-2epsilon_DR continuation, not a state on a noninteger-dimensional Hilbert space or a full affine determinant.",
+  "local_boundary_terms": "Metric variations are compactly supported. boxR is a total divergence in this local Euler variation, not a noncompact infinite-time flux assumed to vanish; S6.49's boundary statement is unchanged.",
+  "named_exact_check_count": 71,
+  "not_established": [
+    "Full finite clock-mass curvature counterterm matching or a matched finite actual-clock quantum energy/pressure bound",
+    "All-order Hadamard admissibility, all-time state control, other field/higher loops, corrected bounce/constraints/cones or interacting cutoff",
+    "Lorentz-invariant vacuum, finite-gravity Regge remainder, V/G/B admissibility or original P8 closure"
+  ],
+  "ordinary_counterterm_variation": {
+    "energy_evanescent_counterterm": {
+      "0": "0",
+      "1": "10*H**2",
+      "2": "-(33*H**4 - 102*H**2*H_dot - 14*H*H_ddot + 7*H_dot**2)/15"
+    },
+    "independent_finite_heat_action_lapse_energy": {
+      "0": "(6*log_mass_over_scale_squared - 5)/2",
+      "1": "2*H**2*(3*log_mass_over_scale_squared - 5)",
+      "2": "(log_mass_over_scale_squared + 2)*(6*H**2*H_dot + 2*H*H_ddot - H_dot**2)"
+    },
+    "pressure_evanescent_counterterm": {
+      "0": "0",
+      "1": "-2*(5*H**2 + 2*H_dot)",
+      "2": "(33*H**4 - 58*H**2*H_dot - 28*H*H_ddot - 21*H_dot**2 + 2*H_third)/15"
+    },
+    "pressure_pole_counterterm_in_D": {
+      "0": "3",
+      "1": "(spatial_dimension - 1)*(H**2*spatial_dimension + 2*H_dot)",
+      "2": "-(15*H**4*spatial_dimension**4 - 88*H**4*spatial_dimension**3 + 145*H**4*spatial_dimension**2 - 48*H**4*spatial_dimension + 64*H**2*H_dot*spatial_dimension**3 - 404*H**2*H_dot*spatial_dimension**2 + 580*H**2*H_dot*spatial_dimension - 192*H**2*H_dot + 8*H*H_ddot*spatial_dimension**2 - 104*H*H_ddot*spatial_dimension + 6*H_dot**2*spatial_dimension**2 - 78*H_dot**2*spatial_dimension + 4*H_third*spatial_dimension - 52*H_third)/60"
+    },
+    "rho_pole_counterterm_in_D": {
+      "0": "-3",
+      "1": "-H**2*spatial_dimension*(spatial_dimension - 1)",
+      "2": "spatial_dimension*(15*H**4*spatial_dimension**3 - 88*H**4*spatial_dimension**2 + 145*H**4*spatial_dimension - 48*H**4 + 4*H**2*H_dot*spatial_dimension**2 - 52*H**2*H_dot*spatial_dimension + 4*H*H_ddot*spatial_dimension - 52*H*H_ddot - 2*H_dot**2*spatial_dimension + 26*H_dot**2)/60"
+    }
+  },
+  "ordinary_covariantly_matched_finite_local_diagnostic": {
+    "0": {
+      "energy": "(6*log_mass_over_scale_squared - 5)/2",
+      "pressure": "-(6*log_mass_over_scale_squared - 5)/2",
+      "radial_Ward_defect": "0"
+    },
+    "1": {
+      "energy": "2*H**2*(3*log_mass_over_scale_squared - 5)",
+      "pressure": "-2*(3*H**2 + 2*H_dot)*(3*log_mass_over_scale_squared - 5)/3",
+      "radial_Ward_defect": "8*H*H_dot"
+    },
+    "2": {
+      "energy": "(log_mass_over_scale_squared + 2)*(6*H**2*H_dot + 2*H*H_ddot - H_dot**2)",
+      "pressure": "-(log_mass_over_scale_squared + 2)*(18*H**2*H_dot + 12*H*H_ddot + 9*H_dot**2 + 2*H_third)/3",
+      "radial_Ward_defect": "4*H*(3*H*H_ddot + 6*H_dot**2 + H_third)/3"
+    }
+  },
+  "ordinary_finite_matching_boundary": "The control sets a_N=b_N=0. Vary the four-dimensional covariant pole coefficients as invariants in D+1 dimensions before the limit. Subtract their epsilon coefficient from the radial finite components. The Ward identity is restored and an independent finite heat-action variation agrees. This is not the actual clock-dependent finite derivative matching.",
+  "physical_pressure_radial_poles_and_finite_parts": {
+    "0": {
+      "evanescent_finite_contribution": "-2",
+      "pole": "3",
+      "radial_finite_part": "-(6*log_mass_over_scale_squared - 5)/2"
+    },
+    "1": {
+      "evanescent_finite_contribution": "-2*(9*H**2 + 2*H_dot)/3",
+      "pole": "2*(3*H**2 + 2*H_dot)",
+      "radial_finite_part": "-2*(9*H**2*log_mass_over_scale_squared + 6*H_dot*log_mass_over_scale_squared - 4*H_dot)/3"
+    },
+    "2": {
+      "evanescent_finite_contribution": "(33*H**4 - 238*H**2*H_dot - 148*H*H_ddot - 111*H_dot**2 - 18*H_third)/15",
+      "pole": "(18*H**2*H_dot + 12*H*H_ddot + 9*H_dot**2 + 2*H_third)/3",
+      "radial_finite_part": "(33*H**4 - 90*H**2*H_dot*log_mass_over_scale_squared - 238*H**2*H_dot - 60*H*H_ddot*log_mass_over_scale_squared - 148*H*H_ddot - 45*H_dot**2*log_mass_over_scale_squared - 111*H_dot**2 - 10*H_third*log_mass_over_scale_squared - 18*H_third)/15"
+    }
+  },
+  "prior_sha256": {
+    "S6_51_fully_rebuilt": "49cb4fc8230f472211f643f6b7ce15ce54804b6223eb404c79f38b07ed3282f4",
+    "no_frozen_finite_potential_or_lapse_jet_changed": true,
+    "original_action_physical_frame_and_state_preparation_retained": true
+  },
+  "radial_Gamma_prescription": "For an order-2n bracket sum c_j(D)z^j, G_n(D)=2sqrt(pi)*sum c_j(D)*(D/2)_j/Gamma(n+j-1/2). Relative to m^(4-2n)/(64pi\u00b2), P_n=(-1)^(2-n)G_n(3)/(2-n)!, E_n=-2*(-1)^(2-n)G_n'(3)/(2-n)!, radial finite=P_n[Harmonic(2-n)-ell]+E_n, ell=log(m\u00b2/mu\u00b2). This is the stated dimensional Gamma continuation, not an ordinary convergent integral assigned a finite value.",
+  "radial_finite_part_boundary": "A component-wise radial finite part need not equal the covariantly matched stress component. Counterterm metric variation in D+1 dimensions can contribute an additional finite term. The zero-order actual lapse term agrees with the frozen S6.47 finite potential and N jet.",
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "34f10150b152f736ebfe8555b38ff7a7876809c5ea0e775280e679fafb807932",
+    "README.md": "ed97cf60308e4acd0bf2c16dedff1574efd2fc62bec914da6d487c5c60cfe044",
+    "notes/proof.md": "1e6b3f004987adb86565dc756ca7ab5e4109e545dd6ab105eeca855ba3cbaf5c",
+    "src/p8_vector_dimensional/__init__.py": "543c8723aad724c387e2ee45ce9d1870b02e059de6b448d502d8c35738584bf7",
+    "src/p8_vector_dimensional/adm.py": "a74c998dae9d7c74902355c7b656cdf48ea26623ea91af6090f84b10368697c6",
+    "src/p8_vector_dimensional/heat.py": "7f7345b724886c4d12dab4ff7dcc3f81a7631ab076c9c0dc4ea48fbdf5036895",
+    "src/p8_vector_dimensional/local.py": "7835b8e266cf54cd1db61550d7b46fa8ed7c0a9265dfe61a3c0b1482a3f6e4c3",
+    "src/p8_vector_dimensional/mass.py": "3544edaa592c645acbb3ade02780f814fed5872a046aa1b767779a917da8352e",
+    "src/p8_vector_dimensional/metric.py": "2130d5adea29b86ff78634dc76c07a5281155a860006a344f5893730e3347a71",
+    "src/p8_vector_dimensional/replay.py": "d3daba5cd6e4b0917dc4b0d65b8b5dacc785db02ff231b4cef7685b0e2a756c6",
+    "src/p8_vector_dimensional/verify.py": "e0f855d9a6d9bdea87e506e8423a48836d413f03b9c61646d86d029013f74ece",
+    "tests/conftest.py": "a3109380cdd9282d36fd769df20d5e723334026cafbe2de999a5f0a5d7a41aec",
+    "tests/test_dimensional_certificate.py": "330825d647e438bd5597a35f5b5dad7fb69a678f1bf9035aada291e707a54980",
+    "tests/test_dimensional_science.py": "975fa1ecf54b3f15c7fa55c4bbc30a2d263a1ace9dad28066308bd4ac5f45ca6"
+  },
+  "status": "ACTUAL_VECTOR_LOCAL_POLES_AND_ORDINARY_FINITE_MATCHING_DIAGNOSTIC_CERTIFIED; ORIGINAL_P8_OPEN",
+  "verdict": "Actual clock-sensitive local lapse poles, dimensionally normalized radial coefficients, preservation of the frozen flat finite lapse term, and the ordinary-Proca covariant finite matching diagnostic are established. Actual finite clock-curvature matching and original P8 remain open.",
+  "verification_boundary": "Exact D-dimensional action variations, physical WKB replay, Gamma continuation, finite counterterm variations, independent local heat action and scalar-gradient pole reconstruction; written proof, not proof-assistant formalization",
+  "written_proofs": [
+    "notes/proof.md"
+  ]
+}
