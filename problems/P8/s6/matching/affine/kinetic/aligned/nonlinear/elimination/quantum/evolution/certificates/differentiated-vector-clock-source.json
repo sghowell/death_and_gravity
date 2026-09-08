@@ -1,0 +1,309 @@
+{
+  "actual_local_derivative_and_clock_source_coefficients": {
+    "0": {
+      "energy_derivative": "44*u/(9*(u**2 + 1)**4)",
+      "negative_clock_source": "-44*u/(9*(u**2 + 1)**4)",
+      "pressure_derivative": "0"
+    },
+    "1": {
+      "energy_derivative": "64*u*(1215*u**8 + 2430*u**6 - 2746*u**2 - 1101)/(243*(u**2 + 1)**6)",
+      "negative_clock_source": "128*u*(79*u**2 + 36)/(243*(u**2 + 1)**6)",
+      "pressure_derivative": "-160*u*(5*u**2 - 3)/(3*(u**2 + 1)**3)"
+    },
+    "2": {
+      "energy_derivative": "64*u*(3402*u**10 + 3402*u**8 - 8748*u**6 - 10391*u**4 - 3196*u**2 + 1023)/(81*(u**2 + 1)**8)",
+      "negative_clock_source": "-64*u*(449*u**4 + 898*u**2 + 81)/(81*(u**2 + 1)**8)",
+      "pressure_derivative": "-256*u*(7*u**4 - 7*u**2 - 2)/(u**2 + 1)**5"
+    }
+  },
+  "actual_residual_and_tail_derivative_envelopes": {
+    "longitudinal": {
+      "coefficient_value_derivative_envelopes": {
+        "B2": [
+          "104",
+          "2637"
+        ],
+        "B4": [
+          "129761/4",
+          "10233917/8"
+        ],
+        "P2": [
+          "6",
+          "88"
+        ],
+        "P4": [
+          "3219/4",
+          "104073/4"
+        ],
+        "c1": [
+          "2",
+          "5"
+        ],
+        "inverse_S": [
+          "2",
+          "416129761/1000000000000"
+        ],
+        "inverse_frequency_squared": [
+          "1/1000000",
+          "1/250000"
+        ],
+        "residual_A": [
+          "3249/2",
+          "105441/2"
+        ],
+        "residual_B": [
+          "12828497/16",
+          "598243797/16"
+        ],
+        "weight_A": [
+          "1",
+          "2"
+        ],
+        "weight_B": [
+          "3/2",
+          "2"
+        ]
+      },
+      "reference_tail_bracket_upper": "81874983680365575736743/250000000000000000",
+      "reference_tail_density_derivative_bracket_upper": "311267207170782335232643143913032753/15625000000000000000000000000",
+      "reference_tail_density_derivative_integer_upper": "19921102",
+      "residual_bracket_upper": "26642954130054751363/16000000000000",
+      "residual_time_derivative_integer_upper": "91121821",
+      "residual_time_derivative_over_inverse_frequency_fourth_upper": "1457949135602601556279298096614243/16000000000000000000000000"
+    },
+    "transverse": {
+      "coefficient_value_derivative_envelopes": {
+        "B2": [
+          "119",
+          "5331/2"
+        ],
+        "B4": [
+          "262453/8",
+          "19644421/16"
+        ],
+        "P2": [
+          "7",
+          "93"
+        ],
+        "P4": [
+          "13843/16",
+          "207089/8"
+        ],
+        "c1": [
+          "2",
+          "5"
+        ],
+        "inverse_S": [
+          "2",
+          "952262453/2000000000000"
+        ],
+        "inverse_frequency_squared": [
+          "1/1000000",
+          "1/250000"
+        ],
+        "residual_A": [
+          "6753/4",
+          "50568"
+        ],
+        "residual_B": [
+          "24893281/32",
+          "1118186079/32"
+        ],
+        "weight_A": [
+          "1",
+          "2"
+        ],
+        "weight_B": [
+          "3/2",
+          "2"
+        ]
+      },
+      "reference_tail_bracket_upper": "11161699467643974020809231/32000000000000000000",
+      "reference_tail_density_derivative_bracket_upper": "1304069221863894949782817069250695603643/64000000000000000000000000000000",
+      "reference_tail_density_derivative_integer_upper": "20376082",
+      "residual_bracket_upper": "104581650208900981627/64000000000000",
+      "residual_time_derivative_integer_upper": "86409927",
+      "residual_time_derivative_over_inverse_frequency_fourth_upper": "11060470559293219222313400348701031/128000000000000000000000000"
+    }
+  },
+  "checked_scalar_entries": 57,
+  "claim": "P8-S6.54.VECTOR_EVOLUTION",
+  "clock_source_regulator_limit": "Variations have compact support inside I with initial Gaussian data fixed. S6.53's uniform dimension-limit convergence permits integration by parts against test functions, hence the distributional clock-source limit. The present physical C1 bound identifies that limit with the stated continuous source; no separate complex-D derivative envelope is assumed.",
+  "continuous_local_derivative_and_clock_source_envelopes": {
+    "0": {
+      "energy_derivative": "22/9",
+      "negative_clock_source": "22/9",
+      "pressure_derivative": "0"
+    },
+    "1": {
+      "energy_derivative": "468535/1944",
+      "negative_clock_source": "3568/243",
+      "pressure_derivative": "340/3"
+    },
+    "2": {
+      "energy_derivative": "447955/432",
+      "negative_clock_source": "1186/9",
+      "pressure_derivative": "536"
+    }
+  },
+  "controls": {
+    "C1_first_variations_not_all_order_Hadamard_or_principal_symbol_control": true,
+    "both_oscillatory_endpoints_and_feedback_retained": true,
+    "clock_mass_source_derived_before_background_restriction": true,
+    "diagonal_phase_removed_by_exact_transformation_not_dropped": true,
+    "differentiated_momentum_integral_has_uniform_absolute_envelope": true,
+    "full_ordinary_adiabatic_orders_conserved_not_only_UV_divergent_parts": true,
+    "rejected_inputs": 70
+  },
+  "date": "2026-09-08",
+  "differentiated_finite_integral_bound": "Both energy and pressure satisfy integral abs(exact/reference derivative difference)<=40K/m and reference-tail derivative integral<=D1/(72m\u00b2), D1=100000000. The resulting continuous all-momentum derivative envelope justifies a C1 finite subtracted integral on I, including one-sided endpoint derivatives.",
+  "direct_homogeneous_clock_variation": "Physical phi=tau*u, source-signature x=-u'^2/N\u00b2. On the clock a_m=b_m=1, a_x=alpha/2,b_x=beta/2 and their explicit clock-coordinate derivatives vanish. Thus delta a_m=-alpha delta u', delta b_m=-beta delta u'; the homogeneous unit normal is unchanged. Varying the action before restriction gives clock momentum rho_mass and J_clock=-[rho_mass'+3H rho_mass]=-[rho'+3H(rho+p)].",
+  "exact_residuals": {
+    "clock_canonical_momentum_equals_mass_lapse_energy": "0",
+    "clock_source_equals_negative_mass_energy_balance": "0",
+    "diagonal_phase_removed_exactly": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "energy_derivative_box_reconstruction_0": "0",
+    "energy_derivative_box_reconstruction_1": "0",
+    "energy_derivative_box_reconstruction_2": "0",
+    "homogeneous_clock_mass_explicit_partial_vanishes": "0",
+    "homogeneous_clock_mass_jet_a": "0",
+    "homogeneous_clock_mass_jet_b": "0",
+    "local_clock_source_is_mass_energy_balance_0": "0",
+    "local_clock_source_is_mass_energy_balance_1": "0",
+    "local_clock_source_is_mass_energy_balance_2": "0",
+    "longitudinal_coefficient_derivative_reconstruction_A": "0",
+    "longitudinal_coefficient_derivative_reconstruction_B": "0",
+    "longitudinal_coefficient_derivative_reconstruction_B2": "0",
+    "longitudinal_coefficient_derivative_reconstruction_B4": "0",
+    "longitudinal_coefficient_derivative_reconstruction_P2": "0",
+    "longitudinal_coefficient_derivative_reconstruction_P4": "0",
+    "longitudinal_exact_ordinary_dimensional_kinetic_balance": "0",
+    "longitudinal_exact_ordinary_dimensional_potential_balance": "0",
+    "longitudinal_inverse_S_derivative_numerator": "0",
+    "longitudinal_ordinary_full_adiabatic_conservation_0": "0",
+    "longitudinal_ordinary_full_adiabatic_conservation_2": "0",
+    "longitudinal_ordinary_full_adiabatic_conservation_4": "0",
+    "longitudinal_residual_polynomial_replays_frozen_exact_reference": "0",
+    "negative_clock_source_box_reconstruction_0": "0",
+    "negative_clock_source_box_reconstruction_1": "0",
+    "negative_clock_source_box_reconstruction_2": "0",
+    "ordinary_local_conservation_0": "0",
+    "ordinary_local_conservation_1": "0",
+    "ordinary_local_conservation_2": "0",
+    "oscillatory_integration_by_parts_endpoint_and_bulk_identity": "0",
+    "phase_independent_mixed_readout_difference": "0",
+    "phase_independent_squared_derivative_difference": "0",
+    "phase_independent_squared_mode_difference": "0",
+    "physical_readout_time_derivative_before_momentum_integration": "0",
+    "pressure_derivative_box_reconstruction_0": "0",
+    "pressure_derivative_box_reconstruction_1": "0",
+    "pressure_derivative_box_reconstruction_2": "0",
+    "reference_residual_extra_time_derivative": "0",
+    "tail_polynomial_replays_frozen_exact_subtraction": "0",
+    "transverse_coefficient_derivative_reconstruction_A": "0",
+    "transverse_coefficient_derivative_reconstruction_B": "0",
+    "transverse_coefficient_derivative_reconstruction_B2": "0",
+    "transverse_coefficient_derivative_reconstruction_B4": "0",
+    "transverse_coefficient_derivative_reconstruction_P2": "0",
+    "transverse_coefficient_derivative_reconstruction_P4": "0",
+    "transverse_exact_ordinary_dimensional_kinetic_balance": "0",
+    "transverse_exact_ordinary_dimensional_potential_balance": "0",
+    "transverse_inverse_S_derivative_numerator": "0",
+    "transverse_ordinary_full_adiabatic_conservation_0": "0",
+    "transverse_ordinary_full_adiabatic_conservation_2": "0",
+    "transverse_ordinary_full_adiabatic_conservation_4": "0",
+    "transverse_residual_polynomial_replays_frozen_exact_reference": "0"
+  },
+  "formulation": "FORMULATION.md",
+  "literal_component": "Unchanged S6.50 exact prepared Gaussian modes, S6.51 full subtraction and S6.53 scalar-coefficient matching prescription, on I=[-1/2,1/2], all real comoving momenta and m0*tau>=1000. First time derivatives and a homogeneous clock Euler source, not higher functional variations.",
+  "named_exact_check_count": 54,
+  "not_established": [
+    "Second time derivatives, all-order Hadamard admissibility, all-time state control or quadratic/higher quantum functional variations",
+    "Other fields/higher loops, omitted UV operators, quantum-corrected constrained bounce, principal cones, nonlinear stability or interacting cutoff",
+    "A common healthy vacuum, finite-gravity Regge remainder, V/G/B or original P8 closure"
+  ],
+  "ordinary_conservation_controls": "The kinetic and potential mode balance identities hold for formal spatial dimension D. In physical dimension each full adiabatic order 0,2,4 separately obeys D_u F_n+(1-2n)lambda F_n+3H P_n=0. The matched ordinary local coefficients are separately conserved.",
+  "oscillatory_mixing_bound": "C=2000000,C1=100000000. Psi=Phi'>=omega/4 and abs(Psi')<=7omega. Integrating b once by parts retains both endpoints and (r a/(2Psi))'. The endpoint, bulk and feedback bound gives abs(Bcal)<=K/nu^6, K=4C1+138C=676000000, nu\u00b2=m\u00b2+k\u00b2/(25/16)\u00b2. No changed initial state is used.",
+  "phase_separated_evolution": "With r=rho_res/(2W), theta'=W, eta'=r, Acal=e^(-i eta)a and Bcal=e^(i eta)b, the exact equations are a'=-i r e^(2i Phi)b, b'=i r e^(-2i Phi)a, Phi=theta+eta. The transformation retains the diagonal phase and CCR.",
+  "physical_readout_derivative": "For p=v'-d v and Q=[A|p|\u00b2+B omega\u00b2|v|\u00b2]/(2a\u00b3), differentiate with v'=p+d v,p'=-d p-omega\u00b2v. The reference has the additional residual term. Exact CCR-based product identities remove the diagonal phase from squared and mixed readout differences.",
+  "physical_scale_example": {
+    "M_tau": "1000000000000",
+    "all_order_Hadamard_or_quantum_corrected_solution_claim": false,
+    "clock_source_local_over_reference_scalar_equation": "297001784016011/69984000000000000000000000000",
+    "clock_source_matched_over_reference_scalar_equation": "1494611845133383/349920000000000000000000000000",
+    "clock_source_state_over_reference_scalar_equation": "2469888131/90000000000000000000000000",
+    "energy_local_derivative_over_reference_density_rate": "1900987414806319/447897600000000000000000000000",
+    "energy_matched_derivative_over_reference_density_rate": "1913098566532399/447897600000000000000000000000",
+    "exact_reference_derivative_over_reference_density_rate": "169/6250000000000000000",
+    "full_subtracted_state_derivative_over_reference_density_rate": "19468801/720000000000000000000000",
+    "m0_tau": "1000",
+    "pressure_local_derivative_over_reference_density_rate": "42500201/216000000000000000000000000",
+    "pressure_matched_derivative_over_reference_density_rate": "5883140501/216000000000000000000000000",
+    "reference_tail_derivative_over_reference_density_rate": "1/720000000000000000000000"
+  },
+  "physical_units_and_scope": "Density derivatives and the physical phi Euler source scale as tau^-5. Their reference scale is M\u00b2/tau\u00b3, since phi=tau*u is unchanged. Explicit local and nonlocal bounds are each combined with their proper powers of R=m0*tau and L=M*tau. At L=10^12,R=1000 all three total bounds are below 10^-14. This is a vector-only one-loop contribution at a fixed background.",
+  "polynomial_majorant_method": "Differentiate actual rational coefficients using the full fixed-comoving chain rule. For the exact residual and subtraction-tail polynomials in independent coefficients, t and S^-1, the absolute-coefficient polynomial and its differentiated positive majorant bound values and slopes. Exact replay against both frozen identities is required.",
+  "prior_sha256": {
+    "S6_53_fully_rebuilt": "17c6394918dd6bc1ca0238cab20f534db3950fb02a56eaac853e2d5377c9c1a4",
+    "original_action_physical_clock_Gaussian_data_and_finite_prescription_unchanged": true
+  },
+  "proof_checks": {
+    "c1_derivative_envelope": true,
+    "clock_source_example_below_stated_bound": true,
+    "coefficient_norm_exponential_below_two": true,
+    "derivative_integral_integer_constant": true,
+    "differentiated_kinetic_weight_envelope": true,
+    "differentiated_potential_weight_envelope": true,
+    "differentiated_quadratic_form_constant": true,
+    "differentiated_radial_tail_integrable": true,
+    "energy_derivative_example_below_stated_bound": true,
+    "integration_by_parts_small_product_absorbed": true,
+    "kinetic_weight_derivative_below_two": true,
+    "longitudinal_reference_tail_derivative_bound": true,
+    "longitudinal_residual_derivative_bound": true,
+    "longitudinal_residual_value_bound": true,
+    "mixing_below_one_for_every_momentum": true,
+    "mixing_constant_dominates_residual": true,
+    "mixing_constant_from_endpoint_bulk_and_feedback": true,
+    "momentum_fraction_derivative_envelope": true,
+    "phase_corrected_frequency_derivative_upper_seven": true,
+    "phase_corrected_frequency_lower_quarter": true,
+    "potential_weight_derivative_below_two": true,
+    "pressure_derivative_example_below_stated_bound": true,
+    "pressure_weight_derivatives_below_two": true,
+    "reference_mixed_product_below_two": true,
+    "reference_squared_physical_derivative_below_three_omega": true,
+    "transverse_reference_tail_derivative_bound": true,
+    "transverse_residual_derivative_bound": true,
+    "transverse_residual_value_bound": true
+  },
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "0a44f402ff0da75dc8f1eec029e3d27acb19e0094b3d807741d8feb08a340f92",
+    "README.md": "897abe535a42eb153cf880cf54c36147f89f2b623e0627dea396cfadc1e7f39a",
+    "notes/clock-source.md": "cfc9fa8b0c9e198e3633604237df69720199598952ea2d7f04f2ffbcb8a313bf",
+    "notes/derivative.md": "6176dc1656caa93bbb30db1109c65d4f81981050fa3df10408046610a78908c6",
+    "src/p8_vector_evolution/__init__.py": "d69ee031f080a41a16dae64183d8a48cbdf2c02abb3b1cef771a3890e8f0f395",
+    "src/p8_vector_evolution/estimates.py": "701840665da2e9db3576e0bb61c417a7ceeda7a8f0b53001ac659592ca9d586d",
+    "src/p8_vector_evolution/majorants.py": "9cfc5b8cc13948c066305c31003344bf56144f6208d7e0f92d2d24c19f142000",
+    "src/p8_vector_evolution/mixing.py": "e08b687058633f962b552b4e22f379680d78a1fec3fe959a88810b067de25d5d",
+    "src/p8_vector_evolution/verify.py": "d0548dcce1c2da7722071cf8eb6d2159d6546949cb005c0e7f737fff0c4f7604",
+    "src/p8_vector_evolution/ward.py": "f5c1f83c2279edc997c60ce30c05973b73eb3e5f8f1b06f5bc51909b620ddd77",
+    "tests/conftest.py": "a3109380cdd9282d36fd769df20d5e723334026cafbe2de999a5f0a5d7a41aec",
+    "tests/test_evolution_certificate.py": "633463d22f8716484c45ef221c1ab8a0d9078c6f2da2a0cd956fb23c5bedc525",
+    "tests/test_evolution_science.py": "a05f69d2ce1da1c0ab470952e36ac51a60e9ca66019d80a99aaedd0cc93a3442"
+  },
+  "status": "C1_VECTOR_METRIC_FIRST_VARIATIONS_AND_HOMOGENEOUS_CLOCK_SOURCE_BOUNDED; ORIGINAL_P8_OPEN",
+  "verdict": "The retained Gaussian vector has C1 matched energy/pressure and a quantitatively bounded homogeneous clock source in the unchanged prescription. It does not supply a quantum-corrected solution or close original P8.",
+  "verification_boundary": "Exact rational and symbolic controls plus written continuous oscillatory, differentiated-integral and clock-variation proofs; not proof-assistant formalization or a full quantum solution",
+  "written_proofs": [
+    "notes/derivative.md",
+    "notes/clock-source.md"
+  ]
+}
