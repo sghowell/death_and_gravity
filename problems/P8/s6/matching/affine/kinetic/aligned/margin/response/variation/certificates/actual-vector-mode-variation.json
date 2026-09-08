@@ -1,0 +1,289 @@
+{
+  "actual_first_metric_variations": {
+    "longitudinal": {
+      "delta_bare_frequency_squared": "-alpha*lapse_variation*q + beta*lapse_variation*mass_squared + beta*lapse_variation*q + 2*lapse_variation*mass_squared + 2*lapse_variation*q - 2*physical_log_scale_variation*q",
+      "delta_log_g": "(alpha*lapse_variation*q - lapse_variation*mass_squared - lapse_variation*q + mass_squared*physical_log_scale_variation + 3*physical_log_scale_variation*q)/(2*(mass_squared + q))",
+      "frequency_identity": "0",
+      "normalization_identity": "0"
+    },
+    "transverse": {
+      "delta_bare_frequency_squared": "beta*lapse_variation*mass_squared + 2*lapse_variation*mass_squared + 2*lapse_variation*q - 2*physical_log_scale_variation*q",
+      "delta_log_g": "-(lapse_variation - physical_log_scale_variation)/2",
+      "frequency_identity": "0",
+      "normalization_identity": "0"
+    }
+  },
+  "actual_initial_force_bound": {
+    "h0": "125/64",
+    "initial_J_e_upper": "62080267545168/95367431640625",
+    "initial_lapse_force_lower": "449993570399/72000000000000000000000000",
+    "local_force_coefficients": {
+      "0": "32651/6750",
+      "1": "13805696/253125",
+      "2": "-183496192/6328125"
+    },
+    "local_force_polynomial_exceeds_four_R_fourth": "5298157642216503808/6328125",
+    "state_error_upper": "6429601/72000000000000000000000000",
+    "u0": "-1/2"
+  },
+  "actual_mass_lapse_jets": {
+    "a": {
+      "N_first": "4/(9*h)",
+      "N_second": "-4*(3*h + 2)/(9*h**2)",
+      "first_jet_identity": "0",
+      "second_jet_identity": "0"
+    },
+    "b": {
+      "N_first": "28/(81*h)",
+      "N_second": "-4*(189*h - 38)/(729*h**2)",
+      "first_jet_identity": "0",
+      "second_jet_identity": "0"
+    }
+  },
+  "actual_readout_and_contact_definition": "At fixed physical canonical data and k_com, K_rho=(partial_N K_H)/a³ and K_p=-(a partial_a-2q partial_q)K_H/(3Na³). They reproduce the actual S6.50 clock readouts. Delta K=n partial_N K+zeta(a partial_a-2q partial_q)K includes changing volume and both second lapse mass jets.",
+  "checked_scalar_entries": 58,
+  "claim": "P8-S6.58.VECTOR_VARIATION",
+  "complete_mode_coefficients": {
+    "longitudinal": {
+      "bare_frequency_squared": "N**2*(b_mass*mass_squared + b_mass*q/a_mass)",
+      "g_squared": "a_mass*mass_squared*q*scale**3/(N*(a_mass*mass_squared + q))"
+    },
+    "transverse": {
+      "bare_frequency_squared": "N**2*(b_mass*mass_squared + q)",
+      "g_squared": "scale/N"
+    }
+  },
+  "controls": {
+    "actual_temporal_mass_constraint_not_four_unconstrained_scalars": true,
+    "energy_pressure_contact_terms_and_second_mass_jets_retained": true,
+    "fixed_Cauchy_prescription_failure_not_nonexistence_of_compatible_state": true,
+    "initial_covariance_term_not_set_to_zero_without_a_state_prescription": true,
+    "off_clock_operator_not_silently_treated_as_ordinary_Proca": true,
+    "original_canonical_variation_and_moving_oscillator_map_both_retained": true,
+    "rejected_inputs": 22,
+    "transverse_leading_conformal_control_not_full_Hadamard_claim": true
+  },
+  "covariance_and_observable_variation": "Delta Sigma'=M Delta Sigma+Delta Sigma M^T+delta M Sigma+Sigma delta M^T. Delta O=Tr(delta K Sigma+K Delta Sigma)/2. The initial covariance and the local contact terms are explicit. Their UV-divergent momentum integrals are not separately declared finite.",
+  "date": "2026-09-08",
+  "derivative_free_causal_phase_form": "For physical y=(w,p_w), M=[[0,g^-2],[-g² Omega_bare²,0]] and delta M=[[0,-2r/g²],[-g²(delta Omega_bare²+2r Omega_bare²),0]], r=delta log(g). Delta M depends algebraically on n and physical log-scale zeta. Delta y=Phi delta y_initial+integral Phi delta M y retains the initial-state term.",
+  "distinct_oscillator_data_control": "Freezing normalized oscillator data is a different prescription. For transverse modes r_T=N exp(-omega), and r_T^4-1=(N²-1)[(h-1)N²+h]/h, so its leading frequency changes at every positive N!=1. The physical transverse conformal control does not establish all subleading state data.",
+  "equivalent_moving_oscillator_form": "The exact symplectic map C=[[g,0],[d*g,1/g]], d=g'/g, has delta C*C^-1=[[r,0],[r'+2d*r,-r]]. Its full variation gives delta Omega²=delta Omega_bare²-r''-2d*r'. The retarded kernel has the positive flat sine limit and the correct diagonal normalization. No artificial omission of the map or initial term is used.",
+  "exact_impedance_examples": {
+    "1/2": {
+      "frozen_physical_Cauchy_data_initial_beta_squared_limit": "0",
+      "full_quantum_feedback_or_coupled_cone_claim": false,
+      "leading_mismatch_vanishes": true,
+      "longitudinal_impedance_ratio_squared": "1",
+      "p_affine": "1/2"
+    },
+    "501/1000": {
+      "frozen_physical_Cauchy_data_initial_beta_squared_limit": "sqrt(35903277229502745846089971315)*(-950054889360933 + 5*sqrt(35903277229502745846089971315))**2/682201681519402725805566666963046013032737900",
+      "full_quantum_feedback_or_coupled_cone_claim": false,
+      "leading_mismatch_vanishes": false,
+      "longitudinal_impedance_ratio_squared": "4259961157000199875/4283797496128446897",
+      "p_affine": "501/1000"
+    }
+  },
+  "exact_residuals": {
+    "a_first_jet_identity": "0",
+    "a_second_jet_identity": "0",
+    "actual_initial_impedance_slope": "0",
+    "b_first_jet_identity": "0",
+    "b_second_jet_identity": "0",
+    "covariance_retarded_variation_equation": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "fixed_physical_momentum_Bogoliubov_identity": "0",
+    "fixed_physical_value_Bogoliubov_identity": "0",
+    "flat_retarded_G_sign": "0",
+    "initial_CCR_preserved_but_not_positive_frequency": "0",
+    "longitudinal_energy_replays_actual_frozen_readout": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "longitudinal_frequency_identity": "0",
+    "longitudinal_normalization_identity": "0",
+    "longitudinal_physical_impedance_factorization": "0",
+    "longitudinal_pressure_replays_actual_frozen_readout": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "longitudinal_reduced_action": "0",
+    "map_is_symplectic": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "map_variation_retained": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "nonzero_mixing_energy_excess": "0",
+    "observable_contact_and_state_variation": "0",
+    "retarded_G_diagonal_normalization": "0",
+    "retarded_G_diagonal_slope_is_Wronskian_over_i": "0",
+    "retarded_G_diagonal_zero": "0",
+    "temporal_Euler": "0",
+    "time_dependent_map_gives_oscillator": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "transverse_energy_replays_actual_frozen_readout": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "transverse_fixed_oscillator_frequency_factorization": "0",
+    "transverse_frequency_identity": "0",
+    "transverse_normalization_identity": "0",
+    "transverse_pressure_replays_actual_frozen_readout": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "two_causal_variation_forms_agree": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    }
+  },
+  "formulation": "FORMULATION.md",
+  "frozen_covariance_failure_scope": "Copying the old longitudinal physical coordinate/momentum covariance yields A_infinity=(r+1)/(2sqrt(r)), B_infinity=(r-1)/(2sqrt(r)), preserving CCR but with nonzero negative-frequency principal weight. Its vacuum-subtracted oscillator excitation energy has a quartically divergent radial tail. This fails the necessary leading adiabatic preparation condition; it does not exclude a compatible state family.",
+  "initial_impedance_factorization_data": {
+    "longitudinal_impedance_logarithmic_N_slope_at_clock": "113/(81*h)",
+    "longitudinal_impedance_ratio_squared": "-(72*p**2 - 88*p - 55)*(22*p**3 + 3*p - 11)/(324*p**2*(8*p + 5)*(2*p**3 - 1))",
+    "longitudinal_ratio_difference_factorization": "0",
+    "ordinary_transverse_physical_impedance": "sqrt(q)*scale",
+    "sign_polynomial": "2592*p**5 + 3708*p**4 + 886*p**3 - 1350*p**2 - 2013*p - 605",
+    "transverse_frequency_difference_factorization": "0",
+    "transverse_oscillator_frequency_ratio_fourth_power": "(N**4*(h - 1) + N**2)/h"
+  },
+  "literal_component": "The unchanged retained vector on homogeneous physical histories with N>0,a>0 and the actual temporal/spatial mass functions. The temporal component is eliminated before canonical normalization. This derives per-mode response before UV integration, not a renormalized feedback norm.",
+  "named_exact_check_count": 31,
+  "nonzero_initial_geometry_change": "At L=10^12,R=1000 the exact local force polynomial exceeds 4R^4, pi²<10 and the full state error give F_n(-1/2)>5*10^-15. For the whole allowed margin range 0<J_e(-1/2)<1, so n_initial<-1/(4*10^14). The upper bound abs(n)<94*10^-14 keeps the original clock tube, with N<1 and p_affine>1/2.",
+  "not_established": [
+    "A compatible all-order covariance family on the perturbed histories with quantitative error bounds",
+    "The complete renormalized retarded/contact second functional variation, feedback contraction or nonlinear quantum residual",
+    "A full coupled physical-cone, interacting-cutoff, common vacuum/UV parent, finite-gravity Regge, V/G/B or original P8 verdict"
+  ],
+  "per_mode_local_contact_matrices": {
+    "longitudinal": {
+      "energy_contact_matrix": [
+        [
+          "mass_squared*q*(2*beta*lapse_variation - 2*beta*physical_log_scale_variation + beta_lapse_second*lapse_variation - 2*physical_log_scale_variation)",
+          "0"
+        ],
+        [
+          "0",
+          "(2*alpha**2*lapse_variation*q - 2*alpha*lapse_variation*q + 6*alpha*physical_log_scale_variation*q - alpha_lapse_second*lapse_variation*q - 4*mass_squared*physical_log_scale_variation - 6*physical_log_scale_variation*q)/(mass_squared*q*scale**6)"
+        ]
+      ],
+      "pressure_contact_matrix": [
+        [
+          "-mass_squared*q*(beta*lapse_variation - 2*physical_log_scale_variation)/3",
+          "0"
+        ],
+        [
+          "0",
+          "-(3*alpha*lapse_variation*q + 4*mass_squared*physical_log_scale_variation + 18*physical_log_scale_variation*q)/(3*mass_squared*q*scale**6)"
+        ]
+      ]
+    },
+    "transverse": {
+      "energy_contact_matrix": [
+        [
+          "-(-2*beta*lapse_variation*mass_squared + 2*beta*mass_squared*physical_log_scale_variation - beta_lapse_second*lapse_variation*mass_squared + 2*mass_squared*physical_log_scale_variation + 4*physical_log_scale_variation*q)/scale**2",
+          "0"
+        ],
+        [
+          "0",
+          "-4*physical_log_scale_variation/scale**4"
+        ]
+      ],
+      "pressure_contact_matrix": [
+        [
+          "-(beta*lapse_variation*mass_squared - 2*mass_squared*physical_log_scale_variation + 4*physical_log_scale_variation*q)/(3*scale**2)",
+          "0"
+        ],
+        [
+          "0",
+          "-4*physical_log_scale_variation/(3*scale**4)"
+        ]
+      ]
+    }
+  },
+  "physical_Cauchy_impedance_test": "The transverse leading physical canonical impedance is k_com. The longitudinal impedance ratio on the exact initial chart lift has r_L²=a_m*b_m/(4p_affine²). Its exact rational factorization and a continuous polynomial sign bound prove 0<r_L²<1 for the actual p_affine in (1/2,21/40).",
+  "prior_sha256": {
+    "S6_57_fully_rebuilt": "a200c10d71ce6771c8ce921e120e0a00da13e53658ba75860d6e31d5737ae3b7",
+    "action_and_fixed_background_state_not_overwritten": true,
+    "new_calculation_is_before_integrated_quantum_feedback_renormalization": true
+  },
+  "proof_checks": {
+    "actual_initial_force_above_five_e_minus_fifteen": true,
+    "derivative_free_original_canonical_variation": true,
+    "frozen_source_result_not_invalidated_by_uncomputed_feedback": true,
+    "initial_J_e_below_one_for_entire_margin_range": true,
+    "initial_local_force_exceeds_four_R_fourth": true,
+    "initial_longitudinal_impedance_clock_slope_positive": true,
+    "longitudinal_impedance_sign_polynomial_strictly_negative": true,
+    "mass_denominator_two_p_cubed_minus_one_negative": true,
+    "no_full_coupled_cone_or_quantum_feedback_bound": true,
+    "no_ordinary_Proca_Hadamard_propagation_imported_off_clock": true,
+    "pi_squared_upper_control_22_over_seven_squared_below_ten": true,
+    "response_lapse_absolute_upper_below_one_percent": true,
+    "spatial_mass_numerator_negative": true,
+    "state_homogeneous_variation_term_is_required": true,
+    "temporal_mass_numerator_negative": true,
+    "transverse_conformal_leading_control_not_all_order_state_proof": true,
+    "tube_p_upper_below_21_over_40": true
+  },
+  "renormalization_and_operator_boundary": "The contact and retarded state pieces must be combined with the corresponding full second-variation counterterms and a compatible initial covariance before a finite quantum feedback map is assigned. Off clock the anisotropic mass tensor changes the longitudinal principal operator; the ordinary-Proca propagation theorem is not silently transferred.",
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "a362562ef3d4a2df3076ac7f25b037ca67656fd96c46db55283e58c04db752c0",
+    "README.md": "dc0d8a47476c9afa0b23f483cb3a9c36154765cb0643a94c937137351de25fde",
+    "notes/modes.md": "6cf805e5134d60781dbbc08ece2f8ac9c8aa66321b99e2cebcba9deabbfc6304",
+    "notes/preparation.md": "e2d45443564219280d6e481d6866442945c2b506c899a644fb460b85def487b2",
+    "notes/readouts.md": "1466cbe6f704293ac081c11ff426b7c0de134dcbc7f674500231b9df372973f8",
+    "src/p8_vector_variation/__init__.py": "d3dc7b62582956f5b3fbc2169e3f89e603cb54b779306c34eb7f79cbfd00967e",
+    "src/p8_vector_variation/modes.py": "a41d9058b2eb8b7887946fa42baa830d7d388fdfc536496b71c23e0b6ce38bdf",
+    "src/p8_vector_variation/preparation.py": "fd2cd5b2b6128e16997baf38e5ac9f0d646b252c30b1ebfb01a137db08ee12dc",
+    "src/p8_vector_variation/readouts.py": "193d8b087429be7af651ccc58bef5c1c6aac72e58fc5242a723512824f558ced",
+    "src/p8_vector_variation/verify.py": "179d6ef6539b0315a6d19d2a5dcbdd8e0aa7f9ffd9c7056020bd3656596a450a",
+    "tests/conftest.py": "a3109380cdd9282d36fd769df20d5e723334026cafbe2de999a5f0a5d7a41aec",
+    "tests/test_variation_certificate.py": "8e54352667f2bfd3c0de58e919935b864e04a86144e8b395b49c904d2b5ae67a",
+    "tests/test_variation_science.py": "21d94634c626f7f2108a8c90b74aceccf36e31b32b458f88342123296e4d0441"
+  },
+  "status": "ACTUAL_PER_MODE_CAUSAL_VARIATION_AND_MANDATORY_INITIAL_COVARIANCE_RESPONSE; ORIGINAL_P8_OPEN",
+  "verdict": "The actual per-mode vector and readout response is derived, and the actual fixed-source initial geometry is shown to require a nontrivial compatible covariance prescription. A renormalized integrated quantum response and original P8 remain open.",
+  "verification_boundary": "Exact symbolic/rational mode, contact, covariance and initial-force controls with written causal-ODE and continuous high-frequency preparation proofs; not proof-assistant formalization or a full quantum solution",
+  "written_proofs": [
+    "notes/modes.md",
+    "notes/readouts.md",
+    "notes/preparation.md"
+  ]
+}
