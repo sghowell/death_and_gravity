@@ -424,8 +424,14 @@ around a pre-registered problems document and a certificate-gated ledger.
   approximation with physical vector readouts, specified initial data
   and light time-jet bounds. It is not a full nonlinear elimination or
   a demonstration that an on-shell light family realizes those conditions.
+  The [prepared on-shell linear family](problems/P8/s6/matching/affine/kinetic/aligned/response/on_shell/README.md)
+  now supplies that missing realization for an explicit nonzero family
+  through the declared bounce window, including exact initial Cauchy jets,
+  conservative continuous bounds and the actual quadratic output momentum.
+  This is still linear light evolution and its leading heavy response,
+  not a full nonlinear solution or UV-admissible completion.
 
-The [current P8 continuation audit](docs/assessment-2026-09-07-p8-prepared-vector-response.md) separates
+The [current P8 continuation audit](docs/assessment-2026-09-07-p8-onshell-light-family.md) separates
 the completed scoped P8(a) objective and certificate gates from the
 outstanding P8(b) UV-matching and positivity questions.
 P8 is not marked finished or closed.

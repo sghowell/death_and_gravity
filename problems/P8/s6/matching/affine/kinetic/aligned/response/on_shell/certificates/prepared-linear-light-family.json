@@ -1,0 +1,205 @@
+{
+  "checked_scalar_entries": 39,
+  "claim": "P8-S6.44.ALIGNED_ONSHELL",
+  "continuous_bounds": {
+    "A_time_jet_bounds": [
+      "4771877971625/20115881984",
+      "12785617538645142899140373/1177159877801354985472",
+      "1476150055304380434387743379847357651241/4167611215354737617815882430414848"
+    ],
+    "B_K": "25690744861468458992497700366885417842724641037369785659/53654512232493254793772535559068271698750996480",
+    "B_N": "16985285099314989464334145735556870603458095830726385/83835175363270710615269586811044174529298432",
+    "growth_bound": "358805113110950445279469426279262434966930339114122428335494730197493691743717859849693621015768243278975535908089",
+    "growth_exponent": "4771877971625/20115881984",
+    "growth_integer_ceiling": "238",
+    "lapse_observer_time_jet_bounds": [
+      "103151637965/20115881984",
+      "540979766197323366717895/1618594831976863105024",
+      "437026762513420954985308588635900885/16279731309979443819593290743808",
+      "8225438000027639571506353477059038070100385903025/1309924615051104853363587293922565227020288"
+    ],
+    "lapse_time_jet_multipliers": [
+      "103151637965/20115881984",
+      "2509887881966205537690395/1618594831976863105024",
+      "137966804503692110943440053585974254555/260475700959671101113492651900928",
+      "16985285099314989464334145735556870603458095830726385/83835175363270710615269586811044174529298432"
+    ],
+    "normalization_C": "36561327378684564482164808431414350588006094067785668539/53654512232493254793772535559068271698750996480",
+    "state_time_jet_multipliers": [
+      "1",
+      "4771877971625/20115881984",
+      "869308012959654149655044103/12948758655814904840192",
+      "89323873330464378301235858886344121365241/4167611215354737617815882430414848"
+    ],
+    "trace_observer_time_jet_bounds": [
+      "168044578863541/12874164469760",
+      "391751588668243246959603343/517950346232596193607680",
+      "7814718591171064570880232442742521751007/166704448614189504712635297216593920",
+      "358561347175624547920838257753981164250565300422034691/26827256116246627396886267779534135849375498240"
+    ],
+    "trace_time_jet_multipliers": [
+      "168044578863541/12874164469760",
+      "1995528036928105996449651593/517950346232596193607680",
+      "21371772237376060144612193870873358805573/16670444861418950471263529721659392",
+      "25690744861468458992497700366885417842724641037369785659/53654512232493254793772535559068271698750996480"
+    ]
+  },
+  "controls": {
+    "conservative_initial_scale_not_observational_or_optimal": true,
+    "independent_initial_Cauchy_recurrence": true,
+    "moving_boundary_omission_detected_away_from_center": true,
+    "nonzero_family_distinguished_from_trivial_zero_control": true,
+    "on_shell_means_linear_light_not_full_nonlinear_parent": true,
+    "output_zero_and_double_momentum_retained": true,
+    "rejected_inputs": 27
+  },
+  "date": "2026-09-07",
+  "domain_and_scaling": "u in [-1/2,1/2], incoming k²=1/16; initial state epsilon*Y_star/(3^238*C), C=1+B_N+B_K; actual lapse and trace jets through order three <epsilon",
+  "exact_residuals": {
+    "ADM_trace_readout": "0",
+    "actual_matter_momentum_readout": "0",
+    "actual_shift_constraint_after_moving_boundary": "0",
+    "canonical_phase_symplectic_identity": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "independent_original_canonical_swap": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "prepared_initial_lapse_jets": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        1
+      ]
+    },
+    "spatial_chart_metric_map": "0"
+  },
+  "example": {
+    "family": {
+      "epsilon": "1/1000",
+      "incoming_comoving_squared": "1/16",
+      "initial_scale": "1341362805812331369844313388976706792468774912/327959780139885112576310992607840601291036283244657298764347686931132322546884704263583461455146918550454834810803136605835653609048077904789587484327651973040333072799275",
+      "initial_state": [
+        [
+          "1341362805812331369844313388976706792468774912/327959780139885112576310992607840601291036283244657298764347686931132322546884704263583461455146918550454834810803136605835653609048077904789587484327651973040333072799275"
+        ],
+        [
+          "439985134911526079497924475706045650449472209159372980474861322240/166003168309028223410366734175873821777004778041296967296567725377733334018982655264896160251203430597008689435744784106048857283010309437295420782171241502621685787762761130577418974190044653"
+        ],
+        [
+          "4100823662986440241269522551017127933732173580274237440000000000/166003168309028223410366734175873821777004778041296967296567725377733334018982655264896160251203430597008689435744784106048857283010309437295420782171241502621685787762761130577418974190044653"
+        ],
+        [
+          "15765289817235230537805575120373780913489287577600000000000000000/166003168309028223410366734175873821777004778041296967296567725377733334018982655264896160251203430597008689435744784106048857283010309437295420782171241502621685787762761130577418974190044653"
+        ]
+      ],
+      "lapse_jet_upper": "54352912317807966285869266353781985931065906658324432/182806636893422822410824042157071752940030470338928342695",
+      "linear_light_and_leading_heavy_only": true,
+      "nonlinear_solution_or_higher_order_remainder_claim": false,
+      "nonzero_source_third_cosine_squared_coefficient": "-30820565383304100073314398773873340281796422549198627169795525751779209893104528027797208439255091866649319045969008754607888793600000000/1783042481052899006781944308511182426943040038535171011155671144568087836393353279005946599082671171502864394494849530575148855532387098200541824060296628557329158851142859183009272059114821171524351805690774198148821613552536820973220869806333126552226373676663374322250359342860912344311583310995752155597330998022497516775709562895394894521705202168816090811106196837718686918849732843188023",
+      "quadratic_output_comoving_squared": "1/4",
+      "source_jet_E": "136139/8000000",
+      "trace_jet_upper": "25690744861468458992497700366885417842724641037369785659/36561327378684564482164808431414350588006094067785668539000"
+    },
+    "higher_order_nonlinear_or_quantum_error_claim": false,
+    "response": {
+      "branch": "prepared_leading_longitudinal_response",
+      "canonical_error_against_zeta_J": "22190657*sqrt(10)/51200000000000000000000",
+      "canonical_force_jet_A": "22190657*sqrt(10)/640000000000",
+      "full_nonlinear_or_quantum_remainder_claim": false,
+      "k_com_squared": "1/4",
+      "left": "-1/2",
+      "requires_three_time_derivative_source_norm_not_just_spatial_bound": true,
+      "requires_zero_heavy_data_and_three_prepared_source_jets": true,
+      "right": "1/2",
+      "source_jet_E": "136139/8000000",
+      "spatial_readout_error_against_zeta_sqrt_q_times_Sprime_plus_2rhoS": "408417/4000000000000000",
+      "squared_frequency_floor": "999999985",
+      "temporal_readout_error_against_S": "136139/16000000000000",
+      "zeta": "1/1000000000"
+    },
+    "source_class_realized_by_nonzero_linear_light_solution": true
+  },
+  "formulation": "FORMULATION.md",
+  "geometric_readout": "delta_K_hat=3(Theta-H)*n-3ell*s/2+q*b; zeta_metric=v+n/(2h) and omega_N=1/(2h)",
+  "initial_preparation": {
+    "lapse_third": "2639191413265697037767612162361490432/309599412196305597613621759416045128125",
+    "observability_determinant": "-5803643293624416939958257195701475090051538878464/1406150531023080637441720850754537246355582633476171875",
+    "source_third": "-156746856416676278467094021546973639737344000000000000/151695003098798474876206237968304917272888462599649736217423",
+    "time": "-1/2",
+    "trace_initial": "181250000000000000000/1531162095305173072570103",
+    "unit_direction": [
+      [
+        "1"
+      ],
+      [
+        "63503417382507211357087625/97994374099531076644486592"
+      ],
+      [
+        "9248050957415283203125/1531162095305173072570103"
+      ],
+      [
+        "72813352996311187744140625/3135819971184994452623570944"
+      ]
+    ]
+  },
+  "literal_action": "Original regular CD/M1 linear light equations from unchanged S6.42; actual quadratic source and zero-data leading vector response from S6.43",
+  "named_exact_check_count": 7,
+  "not_established": [
+    "The complete nonlinear light/heavy solution, nonlinear secondary constraints or nonlinear stability",
+    "Higher perturbative-order or induced-action errors, quantum loops, an interacting cutoff or stationary gap",
+    "Vacuum/finite-gravity V/G/B admissibility or original P8 closure"
+  ],
+  "physical_phase": "Y=(b,s,P_b,P_s), P_b=2a³q*v, P_s=a³P; moving canonical Hamiltonian includes -H*b*P_b; n=-R0/J with no Theta divisor",
+  "prior_sha256": {
+    "S6_43_fully_rebuilt": "6b6ca45b6028c2f11b1e14cf6aa47ccffa65dc1e53e458d3f7e527fb3018d4b4",
+    "actual_physical_light_system_source_and_retarded_theorem_rechecked": true,
+    "no_frozen_action_or_ancestor_modified": true
+  },
+  "proof_checks": {
+    "actual_nonzero_third_source_derivative": true,
+    "exact_growth_integer_ceiling": true,
+    "nonzero_initial_trace": true,
+    "nonzero_third_lapse_derivative": true,
+    "output_quadratic_momentum_inside_response_window": true,
+    "prepared_lapse_jet_bound_strict": true,
+    "prepared_trace_jet_bound_strict": true,
+    "rank_four_lapse_observability": true,
+    "rank_three_preparation": true,
+    "rational_growth_majorant": true,
+    "strict_positive_continuous_matrix_bounds": true,
+    "strict_positive_readout_bounds": true,
+    "time_window_covers_the_crossing": true,
+    "unit_initial_direction_norm": true
+  },
+  "schema": 1,
+  "source_and_response_transfer": "Real cosine gives zero and double momentum, k_out²=1/4; actual S2 is nonzero and prepared, E=(136139/8)epsilon²; S6.43 physical retarded error bounds apply",
+  "source_sha256": {
+    "FORMULATION.md": "e3603900e4e1649bba04f4515b75d2ebbb27f6b75b46d4a5c8c3c33288390fa3",
+    "README.md": "c89ce26b092116171952d83e1b62b9ea289277abf4d7a9566a558f5923183475",
+    "notes/proof.md": "5e7e6d98a9b579d0aa1ab36b57adb03325fb0be59f67fa13ff38a2c4ed5716bc",
+    "src/p8_aligned_onshell/__init__.py": "38d7205033a8176c5fe5f357deaff1fddd96c408e22e8dd4a89c89a594a23b17",
+    "src/p8_aligned_onshell/bounds.py": "2ad30f3b57ce6c82e9501d692892b250818dcbb6d91673065ff7f189d224fe49",
+    "src/p8_aligned_onshell/checks.py": "9283a10349b86212346b0e031fa80cd21fee26c79570bb36f24b6e365f1f8b9a",
+    "src/p8_aligned_onshell/phase.py": "9e22b861f6807da7d28162659388a30db8f5885f02c799a3121da03ee4e5b41d",
+    "src/p8_aligned_onshell/verify.py": "923236af29e5e12ab030234e1de49a0ae949ef904697c071c702d4d06f069ba3",
+    "tests/conftest.py": "ac8363b3dc3ccaf0014bfe889d87e33d95a6ee6059b58d0a75f5f7eb3be921f2",
+    "tests/test_onshell_bounds.py": "1ebb8d9cc99d52b3aa926f49da38fbab84a366e1220b05e6420d18b0433da9f4",
+    "tests/test_onshell_certificate.py": "247ee4e76ed25dbfd54f68ebc6126ae02562216076c9ca37c2f89c223af8fdbb",
+    "tests/test_onshell_phase.py": "4437d7a14c11a5edd5d71e77617ac7bd6e0c92f055cda48edfd83b0604b21de6"
+  },
+  "status": "NONTRIVIAL_PREPARED_LINEAR_LIGHT_FAMILY_AND_LEADING_RESPONSE_TRANSFER_CERTIFIED; ORIGINAL_P8_OPEN",
+  "verdict": "A nonzero actual linear light solution realizes and maintains the prepared source class through the full declared bounce window, enabling the certified leading heavy-response estimate. This is not a full nonlinear parent solution.",
+  "verification_boundary": "Exact symbolic constraints, independent canonical and Cauchy checks, continuous rational matrix bounds and explicit integral-series proof; not proof-assistant formalization",
+  "written_proofs": [
+    "notes/proof.md"
+  ]
+}
