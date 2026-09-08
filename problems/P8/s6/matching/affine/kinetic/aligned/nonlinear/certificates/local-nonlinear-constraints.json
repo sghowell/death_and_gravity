@@ -1,0 +1,142 @@
+{
+  "Maxwell_and_spatial_constraints": "Full three-electric-velocity Legendre map before W0=N*T+N^i*Wi; independent Pi gives -W0*D_i Pi^i, H_i=Pi^j*F_ij-Wi*D_j Pi^j; no auxiliary spatial derivative in the complete Hamiltonian",
+  "actual_background_auxiliary_Jacobian": [
+    [
+      "-(3200*u**34 + 48000*u**32 + 332800*u**30 + 1410400*u**28 + 4068800*u**26 + 8413600*u**24 + 12776400*u**22 + 14350800*u**20 + 11890800*u**18 + 7319600*u**16 + 3693600*u**14 + 2108796*u**12 + 1559176*u**10 + 1030340*u**8 + 470732*u**6 + 133176*u**4 + 20412*u**2 + 1199)/(400*(u**2 + 1)**18)",
+      "0"
+    ],
+    [
+      "0",
+      "-1"
+    ]
+  ],
+  "checked_scalar_entries": 47,
+  "claim": "P8-S6.45.ALIGNED_NONLINEAR",
+  "clock_bounds": {
+    "I_N": "0",
+    "I_NN": "-18*u/(u**2 + 1)**7",
+    "J_lower": "2574832893952/95367431640625",
+    "sufficient_Jacobian_perturbation_norm": "1/40"
+  },
+  "complete_ADM_chart": "h_physical=e^(2omega)*h_hat, omega=-log((h-1+X)/h)/4; retain spatial-curvature IBP and I_s=e^(3omega)*L_V, I(u,1)=0; no lapse time or spatial derivatives remain",
+  "complete_physical_count": {
+    "configuration_variables": 15,
+    "first_class_constraints": 6,
+    "nonauxiliary_velocities": 10,
+    "physical_modes_with_chi": 7,
+    "physical_modes_without_chi": 6,
+    "second_class_constraints": 4
+  },
+  "controls": {
+    "block_operator_inverse_does_not_invert_secondary_secondary_bracket": true,
+    "either_missing_auxiliary_pivot_invalidates_the_constraint_inverse": true,
+    "independent_dense_spatial_and_joint_temporal_Legendre_solves": true,
+    "local_count_distinguished_from_nonlinear_health_and_X_zero_vacuum": true,
+    "omitted_time_and_spatial_boundaries_have_nonzero_controls": true,
+    "rejected_inputs": 7,
+    "spatial_Gauss_term_and_all_five_shear_velocities_retained": true
+  },
+  "date": "2026-09-07",
+  "exact_residuals": {
+    "actual_background_lapse_equation": "0",
+    "actual_joint_auxiliary_Jacobian": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "actual_secondary_lapse_Jacobian": "0",
+    "five_shear_Hamiltonian": "0",
+    "five_shear_momentum_equations": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        5,
+        1
+      ]
+    },
+    "four_auxiliary_constraint_block_inverse": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "free_matter_Hamiltonian": "0",
+    "free_matter_momentum_equation": "0",
+    "full_linear_lapse_velocity_boundary": "0",
+    "full_spatial_lapse_gradient_residual": "0",
+    "full_temporal_elimination": "0",
+    "full_time_action_residual": "0",
+    "full_vector_Hamiltonian": "0",
+    "full_vector_momentum_equations": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        1
+      ]
+    },
+    "joint_trace_equation": "0",
+    "lapse_velocity_squared_residual": "0",
+    "metric_trace_momentum_Euler": "0",
+    "remaining_linear_V": "0",
+    "temporal_Gauss_spatial_boundary": "0",
+    "temporal_secondary_Jacobian": "0",
+    "temporal_secondary_equation": "0",
+    "trace_velocity_residual": "0",
+    "vector_spatial_diffeomorphism_generator": "0"
+  },
+  "formulation": "FORMULATION.md",
+  "joint_trace_Legendre_map": "a=(2/3)U*B, gamma_eff=gamma_t-3delta²/(8p_affine²)>1061/1140>9/10 on the original closed tube",
+  "literal_action": "Unchanged S6.42, complete original scalar F and ODE source, source-centered retained mass, source-aligned Maxwell curl, physical free chi; all64 complement from S6.41",
+  "local_constraint_theorem": "On [-1/2,1/2], J>1/40 and D=diag(-2J,-1); smoothness and compactness imply a nonempty open canonical/spatial-jet neighborhood with two locally solvable auxiliaries and four second-class constraints; no Theta divisor",
+  "named_exact_check_count": 23,
+  "not_established": [
+    "An explicit field/jet neighborhood radius, global nonlinear evolution, energy/stability or causal cones on other backgrounds",
+    "A full nonlinear light/heavy solution, higher-order induced-action or quantum remainder, interacting cutoff or stationary gap",
+    "A scalar-clock chart or degree count at X=0, V/G/B UV admissibility or original P8 closure"
+  ],
+  "prior_sha256": {
+    "S6_44_fully_rebuilt": "d2ec17690cce8549da5464d99ed0d3104734bd8f8984ed9617bcf1989e0af0fe",
+    "no_frozen_action_or_ancestor_modified": true,
+    "unchanged_all64_affine_action_and_actual_source_rechecked": true
+  },
+  "proof_checks": {
+    "actual_J_denominator": true,
+    "auxiliary_constraint_block_has_local_inverse": true,
+    "compact_J_lower_above_one_over_40": true,
+    "complete_timelike_phase_count_with_free_matter": true,
+    "count_not_nonlinear_energy_or_global_wellposedness": true,
+    "effective_temporal_gamma_above_nine_tenths": true,
+    "effective_temporal_gamma_lower": true,
+    "joint_clock_auxiliary_Jacobian_exact": true,
+    "positive_even_J_numerator": true,
+    "temporal_mass_correction_upper": true,
+    "uniform_clock_secondary_pivot_above_one_over_20": true
+  },
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "c4b243c15efb40c85437a57b2867ec190542fe2d4ed509024ea802d2732bd42e",
+    "README.md": "82a2e7b157c5f98d83788cac0e8e8f8f8cbd54a7ce49e1fd37d2ab5d22378204",
+    "notes/literature.md": "995cafa30e03fc1f386e9239fe18f84196889044318d9e12b03c057677f0f268",
+    "notes/proof.md": "0058a30c84442a0804ace05e8c3b72e057f64ba1b3f790f4fd974da29eb1d567",
+    "src/p8_affine_nonlinear/__init__.py": "be469929821e641311d28ee103537d45820954bee69b8723112be55c39d3feee",
+    "src/p8_affine_nonlinear/adm.py": "af6851ce0744885a04334483fb947385e8f23f15e7e76a33787d04b30d3c9749",
+    "src/p8_affine_nonlinear/constraints.py": "14960ee7f5bb62adbc543dd8d4ab47dadd1ce58a09c92aa13e5354a96e147c3b",
+    "src/p8_affine_nonlinear/maxwell.py": "40d5dd60cbb1455d7e95563033209c1b4eb6686b42e7f047faddbd946cca92b4",
+    "src/p8_affine_nonlinear/remaining.py": "be65159e1ca2f067c953069cce675f7a461aeeced95c9082c820fe732a4a8f69",
+    "src/p8_affine_nonlinear/trace.py": "c63c27526e9f5fa160b1b54cd82ee27656420be90abd2066a92b0d6d7df61dd1",
+    "src/p8_affine_nonlinear/verify.py": "1a45320a881c141a98b6875170b9be071136b381a10b6e41afb5376b3754f268",
+    "tests/conftest.py": "2a969c6673c43b94ffa07850b7d4eaf979044bcfc7ca2129a7a4e493946a1f9b",
+    "tests/test_nonlinear_adm.py": "b4a01aa651f599e8dc4d8713a032f37ed7be6dc23907679ba48570c79933482b",
+    "tests/test_nonlinear_certificate.py": "b7914d703c3f7384a2953bdf64ea71f3f33569b122cb4944584f2ebc0fb67dd9",
+    "tests/test_nonlinear_constraints.py": "cc41850ff4c7e22a99f4c131cbf4c97e1e2908619105f21df8da4f76e71b5d58",
+    "tests/test_nonlinear_maxwell.py": "872e0faad232a0a71d711d6f42b87eae71373b823bfde740c97213da8c365a48"
+  },
+  "status": "LOCAL_NONLINEAR_AUXILIARY_CONSTRAINT_COUNT_CERTIFIED; ORIGINAL_P8_OPEN",
+  "verdict": "The full nonlinear timelike branch near the compact rolling solution has the expected seven physical modes including free chi. This closes the local secondary-constraint gap for this unchanged action, not a nonlinear health or UV theorem.",
+  "verification_boundary": "Exact general-X ADM and Hamiltonian identities, independent dense solves and boundary/pivot controls, plus written implicit-function and spatial-Dirac closure proof; not proof-assistant formalization",
+  "written_proofs": [
+    "notes/proof.md"
+  ]
+}
