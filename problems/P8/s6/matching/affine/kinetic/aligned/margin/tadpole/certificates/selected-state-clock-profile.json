@@ -1,0 +1,411 @@
+{
+  "actual_mode_profile_integrands": {
+    "a": "(u**2 + 1)**2",
+    "observables": {
+      "energy": {
+        "combined_finite_integrand": "-positive_mode_frequency*(2*(-18*physical_momentum_fraction + 81*u**6 + 243*u**4 + 243*u**2 + 95)/(81*(u**2 + 1)**3) + 4*(90*physical_momentum_fraction**3*u**2 + 81*physical_momentum_fraction**2*u**8 + 243*physical_momentum_fraction**2*u**6 + 243*physical_momentum_fraction**2*u**4 + 98*physical_momentum_fraction**2*u**2 + 9*physical_momentum_fraction**2 + 162*physical_momentum_fraction*u**8 + 486*physical_momentum_fraction*u**6 + 486*physical_momentum_fraction*u**4 + 128*physical_momentum_fraction*u**2 + 16*physical_momentum_fraction + 81*u**8 + 243*u**6 + 243*u**4 + 88*u**2 + 7)/(81*positive_mode_frequency**2*(u**2 + 1)**5) - (83160*physical_momentum_fraction**5*u**4 + 34020*physical_momentum_fraction**4*u**10 + 102060*physical_momentum_fraction**4*u**8 + 102060*physical_momentum_fraction**4*u**6 - 39228*physical_momentum_fraction**4*u**4 + 16632*physical_momentum_fraction**4*u**2 + 4536*physical_momentum_fraction**3*u**10 + 18144*physical_momentum_fraction**3*u**8 + 27216*physical_momentum_fraction**3*u**6 - 28294*physical_momentum_fraction**3*u**4 - 364*physical_momentum_fraction**3*u**2 + 378*physical_momentum_fraction**3 - 47061*physical_momentum_fraction**2*u**10 - 138105*physical_momentum_fraction**2*u**8 - 132030*physical_momentum_fraction**2*u**6 - 4094*physical_momentum_fraction**2*u**4 - 9213*physical_momentum_fraction**2*u**2 + 95*physical_momentum_fraction**2 + 2430*physical_momentum_fraction*u**10 + 5022*physical_momentum_fraction*u**8 + 324*physical_momentum_fraction*u**6 - 6006*physical_momentum_fraction*u**4 - 1710*physical_momentum_fraction*u**2 - 324*physical_momentum_fraction - 729*u**10 - 2997*u**8 - 4698*u**6 - 3402*u**4 - 1109*u**2 - 137)/(81*positive_mode_frequency**4*(u**2 + 1)**7))/(4*(u**2 + 1)**6) - positive_mode_frequency*(2*(-14*physical_momentum_fraction + 81*u**6 + 243*u**4 + 243*u**2 + 95)/(81*(u**2 + 1)**3) + 4*(physical_momentum_fraction - 1)**2*(70*physical_momentum_fraction*u**2 + 81*u**8 + 243*u**6 + 243*u**4 + 88*u**2 + 7)/(81*positive_mode_frequency**2*(u**2 + 1)**5) - (physical_momentum_fraction - 1)**2*(64680*physical_momentum_fraction**3*u**4 + 34020*physical_momentum_fraction**2*u**10 + 102060*physical_momentum_fraction**2*u**8 + 102060*physical_momentum_fraction**2*u**6 - 17724*physical_momentum_fraction**2*u**4 + 12936*physical_momentum_fraction**2*u**2 - 18144*physical_momentum_fraction*u**10 - 49896*physical_momentum_fraction*u**8 - 40824*physical_momentum_fraction*u**6 + 854*physical_momentum_fraction*u**4 - 1540*physical_momentum_fraction*u**2 + 294*physical_momentum_fraction - 729*u**10 - 2997*u**8 - 4698*u**6 - 3402*u**4 - 1109*u**2 - 137)/(81*positive_mode_frequency**4*(u**2 + 1)**7))/(2*(u**2 + 1)**6) + (longitudinal_exact_mode_squared*positive_mode_frequency**2*(1 + 28/(81*(u**2 + 1)**3)) + longitudinal_exact_physical_momentum_squared*(-4*physical_momentum_fraction/(9*(u**2 + 1)**3) + 1))/(2*(u**2 + 1)**6) + (positive_mode_frequency**2*transverse_exact_mode_squared*(28*(1 - physical_momentum_fraction)/(81*(u**2 + 1)**3) + 1) + transverse_exact_physical_momentum_squared)/(u**2 + 1)**6",
+        "modes": {
+          "longitudinal": {
+            "physical_momentum_rate": "2*u*(2*physical_momentum_fraction + 1)/(u**2 + 1)",
+            "physical_quadratic_form": "(longitudinal_exact_mode_squared*positive_mode_frequency**2*(1 + 28/(81*(u**2 + 1)**3)) + longitudinal_exact_physical_momentum_squared*(-4*physical_momentum_fraction/(9*(u**2 + 1)**3) + 1))/(2*(u**2 + 1)**6)",
+            "subtraction": "positive_mode_frequency*(2*(-18*physical_momentum_fraction + 81*u**6 + 243*u**4 + 243*u**2 + 95)/(81*(u**2 + 1)**3) + 4*(90*physical_momentum_fraction**3*u**2 + 81*physical_momentum_fraction**2*u**8 + 243*physical_momentum_fraction**2*u**6 + 243*physical_momentum_fraction**2*u**4 + 98*physical_momentum_fraction**2*u**2 + 9*physical_momentum_fraction**2 + 162*physical_momentum_fraction*u**8 + 486*physical_momentum_fraction*u**6 + 486*physical_momentum_fraction*u**4 + 128*physical_momentum_fraction*u**2 + 16*physical_momentum_fraction + 81*u**8 + 243*u**6 + 243*u**4 + 88*u**2 + 7)/(81*positive_mode_frequency**2*(u**2 + 1)**5) - (83160*physical_momentum_fraction**5*u**4 + 34020*physical_momentum_fraction**4*u**10 + 102060*physical_momentum_fraction**4*u**8 + 102060*physical_momentum_fraction**4*u**6 - 39228*physical_momentum_fraction**4*u**4 + 16632*physical_momentum_fraction**4*u**2 + 4536*physical_momentum_fraction**3*u**10 + 18144*physical_momentum_fraction**3*u**8 + 27216*physical_momentum_fraction**3*u**6 - 28294*physical_momentum_fraction**3*u**4 - 364*physical_momentum_fraction**3*u**2 + 378*physical_momentum_fraction**3 - 47061*physical_momentum_fraction**2*u**10 - 138105*physical_momentum_fraction**2*u**8 - 132030*physical_momentum_fraction**2*u**6 - 4094*physical_momentum_fraction**2*u**4 - 9213*physical_momentum_fraction**2*u**2 + 95*physical_momentum_fraction**2 + 2430*physical_momentum_fraction*u**10 + 5022*physical_momentum_fraction*u**8 + 324*physical_momentum_fraction*u**6 - 6006*physical_momentum_fraction*u**4 - 1710*physical_momentum_fraction*u**2 - 324*physical_momentum_fraction - 729*u**10 - 2997*u**8 - 4698*u**6 - 3402*u**4 - 1109*u**2 - 137)/(81*positive_mode_frequency**4*(u**2 + 1)**7))/(4*(u**2 + 1)**6)"
+          },
+          "transverse": {
+            "physical_momentum_rate": "2*u/(u**2 + 1)",
+            "physical_quadratic_form": "(positive_mode_frequency**2*transverse_exact_mode_squared*(28*(1 - physical_momentum_fraction)/(81*(u**2 + 1)**3) + 1) + transverse_exact_physical_momentum_squared)/(2*(u**2 + 1)**6)",
+            "subtraction": "positive_mode_frequency*(2*(-14*physical_momentum_fraction + 81*u**6 + 243*u**4 + 243*u**2 + 95)/(81*(u**2 + 1)**3) + 4*(physical_momentum_fraction - 1)**2*(70*physical_momentum_fraction*u**2 + 81*u**8 + 243*u**6 + 243*u**4 + 88*u**2 + 7)/(81*positive_mode_frequency**2*(u**2 + 1)**5) - (physical_momentum_fraction - 1)**2*(64680*physical_momentum_fraction**3*u**4 + 34020*physical_momentum_fraction**2*u**10 + 102060*physical_momentum_fraction**2*u**8 + 102060*physical_momentum_fraction**2*u**6 - 17724*physical_momentum_fraction**2*u**4 + 12936*physical_momentum_fraction**2*u**2 - 18144*physical_momentum_fraction*u**10 - 49896*physical_momentum_fraction*u**8 - 40824*physical_momentum_fraction*u**6 + 854*physical_momentum_fraction*u**4 - 1540*physical_momentum_fraction*u**2 + 294*physical_momentum_fraction - 729*u**10 - 2997*u**8 - 4698*u**6 - 3402*u**4 - 1109*u**2 - 137)/(81*positive_mode_frequency**4*(u**2 + 1)**7))/(4*(u**2 + 1)**6)"
+          }
+        }
+      },
+      "pressure": {
+        "combined_finite_integrand": "-positive_mode_frequency*(2*physical_momentum_fraction/3 - 2*(physical_momentum_fraction - 1)**2*(10*physical_momentum_fraction*u**2 - u**2 + 1)/(3*positive_mode_frequency**2*(u**2 + 1)**2) + (physical_momentum_fraction - 1)**2*(4620*physical_momentum_fraction**3*u**4 - 4116*physical_momentum_fraction**2*u**4 + 924*physical_momentum_fraction**2*u**2 + 609*physical_momentum_fraction*u**4 - 490*physical_momentum_fraction*u**2 + 21*physical_momentum_fraction + 9*u**4 + 6*u**2 - 3)/(3*positive_mode_frequency**4*(u**2 + 1)**4))/(2*(u**2 + 1)**6) - positive_mode_frequency*(2*physical_momentum_fraction/3 - 2*(physical_momentum_fraction + 1)*(10*physical_momentum_fraction**2*u**2 - 7*physical_momentum_fraction*u**2 + physical_momentum_fraction - u**2 + 1)/(3*positive_mode_frequency**2*(u**2 + 1)**2) + (4620*physical_momentum_fraction**5*u**4 - 3276*physical_momentum_fraction**4*u**4 + 924*physical_momentum_fraction**4*u**2 - 4459*physical_momentum_fraction**3*u**4 - 98*physical_momentum_fraction**3*u**2 + 21*physical_momentum_fraction**3 + 3055*physical_momentum_fraction**2*u**4 - 930*physical_momentum_fraction**2*u**2 + 15*physical_momentum_fraction**2 - 117*physical_momentum_fraction*u**4 + 98*physical_momentum_fraction*u**2 - 9*physical_momentum_fraction + 9*u**4 + 6*u**2 - 3)/(3*positive_mode_frequency**4*(u**2 + 1)**4))/(4*(u**2 + 1)**6) + (-longitudinal_exact_mode_squared*positive_mode_frequency**2/3 + longitudinal_exact_physical_momentum_squared*(2*physical_momentum_fraction/3 + 1/3))/(2*(u**2 + 1)**6) + (positive_mode_frequency**2*transverse_exact_mode_squared*(2*physical_momentum_fraction/3 - 1/3) + transverse_exact_physical_momentum_squared/3)/(u**2 + 1)**6",
+        "modes": {
+          "longitudinal": {
+            "physical_momentum_rate": "2*u*(2*physical_momentum_fraction + 1)/(u**2 + 1)",
+            "physical_quadratic_form": "(-longitudinal_exact_mode_squared*positive_mode_frequency**2/3 + longitudinal_exact_physical_momentum_squared*(2*physical_momentum_fraction/3 + 1/3))/(2*(u**2 + 1)**6)",
+            "subtraction": "positive_mode_frequency*(2*physical_momentum_fraction/3 - 2*(physical_momentum_fraction + 1)*(10*physical_momentum_fraction**2*u**2 - 7*physical_momentum_fraction*u**2 + physical_momentum_fraction - u**2 + 1)/(3*positive_mode_frequency**2*(u**2 + 1)**2) + (4620*physical_momentum_fraction**5*u**4 - 3276*physical_momentum_fraction**4*u**4 + 924*physical_momentum_fraction**4*u**2 - 4459*physical_momentum_fraction**3*u**4 - 98*physical_momentum_fraction**3*u**2 + 21*physical_momentum_fraction**3 + 3055*physical_momentum_fraction**2*u**4 - 930*physical_momentum_fraction**2*u**2 + 15*physical_momentum_fraction**2 - 117*physical_momentum_fraction*u**4 + 98*physical_momentum_fraction*u**2 - 9*physical_momentum_fraction + 9*u**4 + 6*u**2 - 3)/(3*positive_mode_frequency**4*(u**2 + 1)**4))/(4*(u**2 + 1)**6)"
+          },
+          "transverse": {
+            "physical_momentum_rate": "2*u/(u**2 + 1)",
+            "physical_quadratic_form": "(positive_mode_frequency**2*transverse_exact_mode_squared*(2*physical_momentum_fraction/3 - 1/3) + transverse_exact_physical_momentum_squared/3)/(2*(u**2 + 1)**6)",
+            "subtraction": "positive_mode_frequency*(2*physical_momentum_fraction/3 - 2*(physical_momentum_fraction - 1)**2*(10*physical_momentum_fraction*u**2 - u**2 + 1)/(3*positive_mode_frequency**2*(u**2 + 1)**2) + (physical_momentum_fraction - 1)**2*(4620*physical_momentum_fraction**3*u**4 - 4116*physical_momentum_fraction**2*u**4 + 924*physical_momentum_fraction**2*u**2 + 609*physical_momentum_fraction*u**4 - 490*physical_momentum_fraction*u**2 + 21*physical_momentum_fraction + 9*u**4 + 6*u**2 - 3)/(3*positive_mode_frequency**4*(u**2 + 1)**4))/(4*(u**2 + 1)**6)"
+          }
+        }
+      }
+    },
+    "omega": "positive_mode_frequency",
+    "u": "u",
+    "z": "physical_momentum_fraction"
+  },
+  "actual_point_chart_quadratic_terms": {
+    "checks": {
+      "pressure_coefficient_endpoint_envelope": "0",
+      "pressure_coefficient_strict_sign_square": "0",
+      "profile_point_chart_lapse_force": "0",
+      "profile_point_chart_lapse_square": "0",
+      "profile_point_chart_mixed_square": "0",
+      "profile_point_chart_scale_force": "0",
+      "profile_point_chart_scale_square": "0",
+      "profile_point_chart_value": "0"
+    },
+    "coefficients": {
+      "N_first": "fixed_energy_profile - 3*fixed_pressure_profile/(2*h)",
+      "N_square_coefficient": "fixed_energy_profile*(-1/2 + 3/(2*h)) + fixed_pressure_profile*(-1/2 + 9/(4*h) - 21/(8*h**2))",
+      "Nv_coefficient": "3*fixed_energy_profile - 9*fixed_pressure_profile/(2*h)",
+      "v_first": "-3*fixed_pressure_profile",
+      "v_square_coefficient": "-9*fixed_pressure_profile/2",
+      "value": "-fixed_pressure_profile"
+    },
+    "h": "h",
+    "lapse_square_energy_coefficient": "-1/2 + 3/(2*h)",
+    "lapse_square_pressure_coefficient": "-1/2 + 9/(4*h) - 21/(8*h**2)",
+    "pressure": "fixed_pressure_profile",
+    "rho": "fixed_energy_profile"
+  },
+  "background_stationarity_and_completeness_scope": "The added clock stress is exactly (-rho_sigma,-p_sigma); its scalar Euler source is the negative of the same vector Ward source. Thus the original complete clock geometry and free-matter history solve the reduced retained-vector Gaussian semiclassical background equations in this new action and selected state. The aligned mean source and its source-squared first variation still vanish there. This is not the quantum background equation of omitted sectors.",
+  "checked_scalar_entries": 30,
+  "claim": "P8-S6.60.CLOCK_PROFILE",
+  "controls": {
+    "cache_warmup_does_not_bypass_native_order_validation": true,
+    "coefficient_jet_bounds_not_canonical_cutoff_estimates": true,
+    "fixed_profiles_not_recomputed_under_metric_or_state_variations": true,
+    "global_smooth_definition_not_uniform_all_time_smallness": true,
+    "off_clock_vector_block_not_full_coupled_quantum_cone": true,
+    "one_selected_state_cancellation_not_universal_state_cancellation": true,
+    "physical_lower_scalar_action_change_not_renormalization_scheme_change": true,
+    "rejected_inputs": 110,
+    "vacuum_zero_region_not_UV_matching_certificate": true
+  },
+  "date": "2026-09-08",
+  "exact_residuals": {
+    "actual_clock_front_is_luminal": "0",
+    "actual_clock_slope": "0",
+    "actual_longitudinal_clock_lapse_slope": "0",
+    "actual_longitudinal_speed_sign_factorization": "0",
+    "clock_norm_lapse_and_affine_sign_relation": "0",
+    "energy_longitudinal_physical_canonical_rate": "0",
+    "energy_transverse_physical_canonical_rate": "0",
+    "longitudinal_bounded_rate_correction_does_not_change_principal_speed": "0",
+    "longitudinal_physical_metric_principal_normalization": "0",
+    "no_added_second_clock_norm_derivative_on_flat_tube": "0",
+    "pressure_coefficient_endpoint_envelope": "0",
+    "pressure_coefficient_strict_sign_square": "0",
+    "pressure_longitudinal_physical_canonical_rate": "0",
+    "pressure_transverse_physical_canonical_rate": "0",
+    "profile_point_chart_lapse_force": "0",
+    "profile_point_chart_lapse_square": "0",
+    "profile_point_chart_mixed_square": "0",
+    "profile_point_chart_scale_force": "0",
+    "profile_point_chart_scale_square": "0",
+    "profile_point_chart_value": "0",
+    "quadratic_window_chain_rule_1": "0",
+    "quadratic_window_chain_rule_2": "0",
+    "quadratic_window_chain_rule_3": "0",
+    "quadratic_window_chain_rule_4": "0",
+    "quadratic_window_chain_rule_5": "0",
+    "selected_Ward_clock_source_cancelled": "0",
+    "selected_energy_cancelled": "0",
+    "selected_pressure_cancelled": "0",
+    "transverse_bounded_rate_correction_does_not_change_principal_speed": "0",
+    "transverse_physical_metric_principal_normalization": "0"
+  },
+  "exact_vector_block_examples": {
+    "1/2": {
+      "full_coupled_quantum_or_UV_front_claim": false,
+      "longitudinal_squared_principal_speed": "1",
+      "p_affine": "1/2",
+      "retained_longitudinal_block_subluminal_or_luminal": true
+    },
+    "49/100": {
+      "full_coupled_quantum_or_UV_front_claim": false,
+      "longitudinal_squared_principal_speed": "38633127391/38700100150",
+      "p_affine": "49/100",
+      "retained_longitudinal_block_subluminal_or_luminal": true
+    },
+    "51/100": {
+      "full_coupled_quantum_or_UV_front_claim": false,
+      "longitudinal_squared_principal_speed": "37264249909/37180772650",
+      "p_affine": "51/100",
+      "retained_longitudinal_block_subluminal_or_luminal": false
+    }
+  },
+  "finite_profile_error_budget": {
+    "M_tau": "1000000000000000000000000",
+    "all_clock_norm_mixed_derivative_bounds_total_order_at_most_five": {
+      "0,0": "776299016437450413270507034934295091909/62620623175680000000000000000000000000000000000000000000000000000000000000000",
+      "0,1": "312848503624292516548014335078520922039327/2899102924800000000000000000000000000000000000000000000000000000000000000000",
+      "0,2": "43378812739508291643142662605093475440783011/152882380800000000000000000000000000000000000000000000000000000000000000000",
+      "0,3": "14680659790461087698445339612768563635354278901/12740198400000000000000000000000000000000000000000000000000000000000000000",
+      "0,4": "139876110029164878237489204252099188556720908701/22118400000000000000000000000000000000000000000000000000000000000000000",
+      "0,5": "435514163267154230298422449849532701880438971970429/9953280000000000000000000000000000000000000000000000000000000000000000",
+      "1,0": "25599718687381262987929309002445670923/60115798248652800000000000000000000000000000000000000000000000000000000000",
+      "1,1": "10316686631014648984135511527985605381969/2783138807808000000000000000000000000000000000000000000000000000000000000",
+      "1,2": "1430486680532177594502501857747661645506317/146767085568000000000000000000000000000000000000000000000000000000000000",
+      "1,3": "484118558472030241297137088253751300489565147/12230590464000000000000000000000000000000000000000000000000000000000000",
+      "1,4": "4612641510567118762139070195557970030717805747/21233664000000000000000000000000000000000000000000000000000000000000",
+      "2,0": "61254683176431526438539828389803197359/8549802417586176000000000000000000000000000000000000000000000000000000",
+      "2,1": "24685637320101905154731550841090688535677/395824185999360000000000000000000000000000000000000000000000000000000",
+      "2,2": "3422850441215817265859167070593812865223561/20873541058560000000000000000000000000000000000000000000000000000000",
+      "2,3": "1158392765216299298885079724724294957740613951/1739461754880000000000000000000000000000000000000000000000000000000",
+      "3,0": "1589753024437902666001489180714894312777613/10259762901103411200000000000000000000000000000000000000000000000000000",
+      "3,1": "640670468848474774398600139828102408049378039/474989023199232000000000000000000000000000000000000000000000000000000",
+      "3,2": "88833809252565563073497213929167579303700236827/25048249270272000000000000000000000000000000000000000000000000000000",
+      "4,0": "17063038114719883822048574335915162310109157/3958241859993600000000000000000000000000000000000000000000000000000",
+      "4,1": "20629213080696339540856726372121431232921970813/549755813888000000000000000000000000000000000000000000000000000000",
+      "5,0": "1990787315435491022439611198228162350509587214627973/13679683868137881600000000000000000000000000000000000000000000000000000"
+    },
+    "fixed_profile_derivative_bounds_on_clock_tube": {
+      "0": {
+        "P": "8539289180811954545975577384277246010999/782757789696000000000000000000000000000000000000000000000000000000000000000000",
+        "P_x": "776299016437450413270507034934295091909/78275778969600000000000000000000000000000000000000000000000000000000000000000",
+        "P_xx": "0"
+      },
+      "1": {
+        "P": "281596905561193892867222399026902380153/751447478108160000000000000000000000000000000000000000000000000000000000000",
+        "P_x": "25599718687381262987929309002445670923/75144747810816000000000000000000000000000000000000000000000000000000000000",
+        "P_xx": "0"
+      },
+      "2": {
+        "P": "673801514940746790823938112287835170949/106872530219827200000000000000000000000000000000000000000000000000000000",
+        "P_x": "61254683176431526438539828389803197359/10687253021982720000000000000000000000000000000000000000000000000000000",
+        "P_xx": "0"
+      },
+      "3": {
+        "P": "17487283268816929326016380987863837440553743/128247036263792640000000000000000000000000000000000000000000000000000000",
+        "P_x": "1589753024437902666001489180714894312777613/12824703626379264000000000000000000000000000000000000000000000000000000",
+        "P_xx": "0"
+      },
+      "4": {
+        "P": "187693419261918722042534317695066785411200727/49478023249920000000000000000000000000000000000000000000000000000000",
+        "P_x": "17063038114719883822048574335915162310109157/4947802324992000000000000000000000000000000000000000000000000000000",
+        "P_xx": "0"
+      },
+      "5": {
+        "P": "21898660469790401246835723180509785855605459360907703/170996048351723520000000000000000000000000000000000000000000000000000000",
+        "P_x": "1990787315435491022439611198228162350509587214627973/17099604835172352000000000000000000000000000000000000000000000000000000",
+        "P_xx": "0"
+      }
+    },
+    "full_quantum_or_UV_completion_claim": false,
+    "lapse_square_coefficient_absolute_upper": "776299016437450413270507034934295091909/41747082117120000000000000000000000000000000000000000000000000000000000000000",
+    "m0_tau": "1000",
+    "mixed_lapse_scale_coefficient_absolute_upper": "776299016437450413270507034934295091909/10436770529280000000000000000000000000000000000000000000000000000000000000000",
+    "profile_held_fixed_under_subsequent_state_and_metric_variations": true,
+    "scale_square_coefficient_absolute_upper": "776299016437450413270507034934295091909/17394617548800000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "fixed_profile_definition": {
+    "M_tau": "1000000000000000000000000",
+    "finite_integral_prefactor": "1/1000000000000000000000000000000000000000000000000",
+    "global_definition_boundary": "The exact oscillator solution and every finite-order high-frequency expansion extend over every compact real-time interval. Their arbitrary-order remainder gives a C-infinity finite subtracted stress on the full original history. Quantitative bounds are supplied only on |u|<=1/2; no uniform all-time smallness claim is made.",
+    "initial_u": "-1/2",
+    "local_finite_profile_terms": {
+      "energy": "(-500000000000*(135*u**6 + 405*u**4 + 405*u**2 + 179)/(27*(u**2 + 1)**3) - 32000000*(1215*u**8 + 3645*u**6 + 3645*u**4 + 1136*u**2 + 7)/(243*(u**2 + 1)**5) - 32*(1701*u**10 + 3969*u**8 + 1782*u**6 - 1009*u**4 - 869*u**2 + 22)/(81*(u**2 + 1)**7))/(64000000000000000000000000000000000000000000000000*pi**2)",
+      "pressure": "(2500000000000 + 80000000*(5*u**2 + 1)/(3*(u**2 + 1)**2) + 64*(7*u**4 - 1)/(u**2 + 1)**4)/(64000000000000000000000000000000000000000000000000*pi**2)"
+    },
+    "m0_tau": "1000",
+    "mode_definition": "For each polarization and k_com>=0, nu=sqrt(m\u00b2+k_com\u00b2/(25/16)\u00b2); use the unchanged S6.55 initial_data(kind,m,nu). Set v0=(2W_B)^-1/2 and v0'=(-W_B'/(2W_B)-iW_B)v0. Propagate v''+[omega\u00b2-U_kind]v=0 on the original complete clock history, with omega\u00b2=m\u00b2+k_com\u00b2/a\u00b2 and z=k_com\u00b2/(a\u00b2 omega\u00b2).",
+    "non_circularity": "Compute these c-number functions once from the predecessor action, state and history. The added scalar action has no vector field, changes neither the clock vector operator nor its Cauchy data, and is not reevaluated under metric or state variations.",
+    "profile_definition": "Each normalized selected profile is L^-2 times the radial integral of the combined finite integrand in integrands(), plus the displayed matched local term. The two transverse polarizations and the actual lapse-dependent mass readouts are retained.",
+    "radial_measure": "k_com^2 dk_com/(2pi^2)"
+  },
+  "formulation": "FORMULATION.md",
+  "global_smoothness_and_local_budget_boundary": "Every compact real-time interval admits arbitrary-order high-frequency estimates for the same smooth exact oscillator and all-order initial data. Finite subtracted stress and the fixed dimensional prescription extend smoothly over the full clock history. Quantitative smallness is proved only for |u|<=1/2. There all 21 mixed (u,x) derivatives of total order <=5 are below 10^-18 for every real x in the scale example.",
+  "literal_clock_tube_and_global_profile": {
+    "H": "original_Hubble(u)",
+    "P_on_flat_clock_tube": "(physical_clock_norm + 1)*(selected_energy(u) + selected_pressure(u))/2 - selected_pressure(u)",
+    "checks": {
+      "no_added_second_clock_norm_derivative_on_flat_tube": "0",
+      "selected_Ward_clock_source_cancelled": "0",
+      "selected_energy_cancelled": "0",
+      "selected_pressure_cancelled": "0"
+    },
+    "clock_source": "3*(selected_energy(u) + selected_pressure(u))*original_Hubble(u) + Derivative(selected_energy(u), u)",
+    "energy": "-selected_energy(u)",
+    "global_P": "(1 - Piecewise((0, (physical_clock_norm + 1)**2 <= 1/64), (1, (physical_clock_norm + 1)**2 >= 1/32), (exp(-1/(64*(physical_clock_norm + 1)**2 - 1))/(exp(-1/(64*(physical_clock_norm + 1)**2 - 1)) + exp(-1/(2 - 64*(physical_clock_norm + 1)**2))), True)))*((physical_clock_norm + 1)*(selected_energy(u) + selected_pressure(u))/2 - selected_pressure(u))",
+    "pressure": "selected_pressure(u)",
+    "rho": "selected_energy(u)",
+    "spatial_pressure": "-selected_pressure(u)"
+  },
+  "literal_new_action": "To S6.56 add Delta P=(M\u00b2/tau\u00b2) w(x)[-p_sigma(u)+(rho_sigma(u)+p_sigma(u))(x+1)/2], u=phi/tau, w=1-chi(64(x+1)\u00b2), using exactly the S6.55 smooth step. The selected normalized stress profiles are computed once from the predecessor state, original history and unchanged finite prescription. The addition has the same formal loop order as that Gaussian stress.",
+  "named_exact_check_count": 30,
+  "not_established": [
+    "A stable or causal full quantum solution, a renormalized second-variation bound or compatibility for arbitrary perturbed histories",
+    "Light/other-sector loops, all omitted-operator effects, canonical interacting cutoff or uniform all-time smallness",
+    "Common UV parent, finite-gravity Regge remainder, V/G/B or original P8 closure"
+  ],
+  "prior_approximate_response_cone_boundary": "For the retained vector block c_T\u00b2=1 and c_L\u00b2=b_mass/a_mass. The actual factorization has sign(c_L\u00b2-1)=sign(2p_affine-1)=sign(N^-2-1) throughout the original tube. S6.58 proves N_initial<1 for the particular zero-independent-data fixed-source response, so that block is superluminal on its approximate initial metric. Larger L reduces the excess but not its sign. This neither excludes other initial data nor computes the full coupled quantum cone.",
+  "prior_sha256": {
+    "S6_59_fully_rebuilt": "ee3da10ed767ca94be285bf262b745d12f8a3b0c5dfa3b2a7797da433c2c58a2",
+    "new_named_lower_scalar_action_not_parent_overwrite": true,
+    "vector_state_operator_and_finite_prescription_unchanged": true
+  },
+  "proof_checks": {
+    "bump_denominator_above_one_eighth": true,
+    "clock_tube_Px_derivative_0_below_1e_minus_18": true,
+    "clock_tube_Px_derivative_1_below_1e_minus_18": true,
+    "clock_tube_Px_derivative_2_below_1e_minus_18": true,
+    "clock_tube_Px_derivative_3_below_1e_minus_18": true,
+    "clock_tube_Px_derivative_4_below_1e_minus_18": true,
+    "clock_tube_Px_derivative_5_below_1e_minus_18": true,
+    "clock_tube_profile_derivative_0_below_1e_minus_18": true,
+    "clock_tube_profile_derivative_1_below_1e_minus_18": true,
+    "clock_tube_profile_derivative_2_below_1e_minus_18": true,
+    "clock_tube_profile_derivative_3_below_1e_minus_18": true,
+    "clock_tube_profile_derivative_4_below_1e_minus_18": true,
+    "clock_tube_profile_derivative_5_below_1e_minus_18": true,
+    "literal_lapse_square_coefficient_stays_above_one_third": true,
+    "mixed_profile_derivative_0_0_below_1e_minus_18": true,
+    "mixed_profile_derivative_0_1_below_1e_minus_18": true,
+    "mixed_profile_derivative_0_2_below_1e_minus_18": true,
+    "mixed_profile_derivative_0_3_below_1e_minus_18": true,
+    "mixed_profile_derivative_0_4_below_1e_minus_18": true,
+    "mixed_profile_derivative_0_5_below_1e_minus_18": true,
+    "mixed_profile_derivative_1_0_below_1e_minus_18": true,
+    "mixed_profile_derivative_1_1_below_1e_minus_18": true,
+    "mixed_profile_derivative_1_2_below_1e_minus_18": true,
+    "mixed_profile_derivative_1_3_below_1e_minus_18": true,
+    "mixed_profile_derivative_1_4_below_1e_minus_18": true,
+    "mixed_profile_derivative_2_0_below_1e_minus_18": true,
+    "mixed_profile_derivative_2_1_below_1e_minus_18": true,
+    "mixed_profile_derivative_2_2_below_1e_minus_18": true,
+    "mixed_profile_derivative_2_3_below_1e_minus_18": true,
+    "mixed_profile_derivative_3_0_below_1e_minus_18": true,
+    "mixed_profile_derivative_3_1_below_1e_minus_18": true,
+    "mixed_profile_derivative_3_2_below_1e_minus_18": true,
+    "mixed_profile_derivative_4_0_below_1e_minus_18": true,
+    "mixed_profile_derivative_4_1_below_1e_minus_18": true,
+    "mixed_profile_derivative_5_0_below_1e_minus_18": true,
+    "negative_lapse_front_fixture_is_superluminal": true,
+    "original_clock_tube_contained_in_probe_interval": true,
+    "original_clock_tube_inside_flat_window": true,
+    "positive_lapse_front_fixture_is_subluminal": true,
+    "positive_sign_polynomial_on_full_probe_interval": true,
+    "prior_actual_initial_force_remains_positive": true,
+    "profile_window_exactly_one_at_clock": true,
+    "profile_window_exactly_zero_at_vacuum": true,
+    "spatial_mass_numerator_negative": true,
+    "step_derivative_bounds_are_finite_positive_integers": true,
+    "strictly_positive_actual_off_clock_front_slope": true,
+    "support_inside_one_quarter_clock_norm_displacement": true,
+    "temporal_mass_denominator_negative": true,
+    "temporal_mass_numerator_negative": true,
+    "vacuum_clock_norm_in_open_zero_region": true
+  },
+  "remaining_variation_boundary": "Profiles are fixed scalar-action coefficients, not reevaluated functions of a varied state or metric. Only the selected first variations cancel. The full contact/retarded second variation, compatible initial covariance response, corrected coupled cones and interactions remain to be controlled. The literal lapse-square addition has abs(Delta J)<=15eta0/8; this is not a quantum Dirac-count or stability theorem.",
+  "retained_vector_principal_data": {
+    "actual": {
+      "checks": {
+        "actual_clock_front_is_luminal": "0",
+        "actual_clock_slope": "0",
+        "actual_longitudinal_speed_sign_factorization": "0"
+      },
+      "longitudinal_squared_principal_speed": "-(2*p**3 - 1)*(72*p**2 - 88*p - 55)/((8*p + 5)*(22*p**3 + 3*p - 11))",
+      "p": "p",
+      "p_derivative_at_clock": "16/81",
+      "positive_sign_factor": "-3*p*(24*p**3 + 12*p**2 + 6*p - 5)/((8*p + 5)*(22*p**3 + 3*p - 11))",
+      "sign_polynomial": "24*p**3 + 12*p**2 + 6*p - 5"
+    },
+    "general": {
+      "checks": {
+        "longitudinal_bounded_rate_correction_does_not_change_principal_speed": "0",
+        "longitudinal_physical_metric_principal_normalization": "0",
+        "transverse_bounded_rate_correction_does_not_change_principal_speed": "0",
+        "transverse_physical_metric_principal_normalization": "0"
+      },
+      "modes": {
+        "longitudinal": {
+          "canonical_logarithmic_rate": "H/2 + (2*H*q - am_dot*mass_squared)/(2*(a_mass*mass_squared + q)) + am_dot/(2*a_mass) - N_dot/(2*N)",
+          "squared_principal_speed": "b_mass/a_mass"
+        },
+        "transverse": {
+          "canonical_logarithmic_rate": "H/2 - N_dot/(2*N)",
+          "squared_principal_speed": "1"
+        }
+      }
+    }
+  },
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "56cf0182466fc855244aa0315f0a244e8561a2f11a5717ff1126e11857a54ca6",
+    "README.md": "70f7b337951eff3f2b9f1f63cbfe9b8648c5cdd8de344caf501162824d92927f",
+    "notes/bounds.md": "c37e4f1849412578df2fb4232065b0697006a528334c93999469977b2d65d834",
+    "notes/fronts.md": "a98657afde672ab482521b5fcb4dab1db264d4540e4b2978366620cd89576924",
+    "notes/profiles.md": "036b8f9d245cd812179009fd996f16b611e6672cb9a4ce63cfc47ddae6651c67",
+    "src/p8_clock_tadpole/__init__.py": "12b07059ab058c90669ed34be88452751f43ee800bbe5743b3ae7ab9eb227a9a",
+    "src/p8_clock_tadpole/fronts.py": "95d9f56b9e99ca84a4c541cd202b144285de39d2d607d90e13aabd1e0a44df65",
+    "src/p8_clock_tadpole/profiles.py": "18527ef242bf951aab2dad236e02cd2b863ae6dcdf1f2a1446213940126e0f7c",
+    "src/p8_clock_tadpole/state.py": "c439806b41a97d6bae9e4dda4c15b25f89e11fdd85b0ceeb9a56cea417df0c19",
+    "src/p8_clock_tadpole/verify.py": "696dd502a66b660290f5d873019a068a6d7f98a8e3d7458b2386539b8534b9e5",
+    "src/p8_clock_tadpole/window.py": "0e778c16086a90e2120505365c58a216ae1cee3d6152a1df8d007d7efd63b17e",
+    "tests/conftest.py": "a3109380cdd9282d36fd769df20d5e723334026cafbe2de999a5f0a5d7a41aec",
+    "tests/test_profile_certificate.py": "e90e4e24f635045cf0d551b9c20756706cafdd071970fe4b37808b02579f98b9",
+    "tests/test_profile_science.py": "6fa9bf11193b8479e224ed1bd8a184afe5ae4847eb4c505eea2998bf1a340eb8"
+  },
+  "status": "NEW_SELECTED_STATE_CLOCK_PRESERVING_SCALAR_ACTION; ORIGINAL_P8_OPEN",
+  "unchanged_initial_data_examples": {
+    "longitudinal": {
+      "active_higher_derivative_orders": [
+        6
+      ],
+      "all_order_frequency": "189170097660478187849339541833/63056720214843750000000000",
+      "all_order_frequency_slope": "3026723801719892372459238316121/709388102416992187500000000",
+      "all_order_half_log_rate": "6053447603439784744918476632242/8512654394721518453220279382485",
+      "comoving_momentum_squared": "19531250",
+      "first_inactive_threshold": "912353543881/2",
+      "frozen_frequency": "20759407150669759981/6919804687500000",
+      "frozen_frequency_slope": "166075380066935109737/38923901367187500",
+      "included_correction_terms": {
+        "6": {
+          "cutoff": "2000",
+          "frequency_correction": "22477041833/63056720214843750000000000",
+          "slope_correction": "-2497586683879/709388102416992187500000000",
+          "weight": "1/2"
+        }
+      },
+      "initial_frequency": "3000",
+      "initial_u": "-1/2",
+      "initial_z": "8/9",
+      "m0_tau": "1000"
+    },
+    "transverse": {
+      "active_higher_derivative_orders": [
+        6
+      ],
+      "all_order_frequency": "37834031090937078365652650197/12611344042968750000000000",
+      "all_order_frequency_slope": "605344575800870364107434228837/141877620483398437500000000",
+      "all_order_half_log_rate": "1210689151601740728214868457674/1702531399092168526454369258865",
+      "comoving_momentum_squared": "19531250",
+      "first_inactive_threshold": "3708172078901/8",
+      "frozen_frequency": "830376539718783613/276792187500000",
+      "frozen_frequency_slope": "33215065887564903373/7784780273437500",
+      "included_correction_terms": {
+        "6": {
+          "cutoff": "2000",
+          "frequency_correction": "-1659849803/12611344042968750000000000",
+          "slope_correction": "134509228837/141877620483398437500000000",
+          "weight": "1/2"
+        }
+      },
+      "initial_frequency": "3000",
+      "initial_u": "-1/2",
+      "initial_z": "8/9",
+      "m0_tau": "1000"
+    }
+  },
+  "vacuum_preservation_boundary": "The smooth window equals one on an open neighborhood of |x+1|<=1/10 and vanishes in an open neighborhood of x=0, so this addition changes no local field jet there. If a predecessor vacuum lies there its jets are unchanged. This does not establish vacuum existence or health, a common UV parent, nonperturbative vacuum equivalence or matching across the intervening domain.",
+  "verdict": "A new, finely tuned selected-state action preserves the complete original clock history in the retained-vector Gaussian semiclassical background equations, with a quantified compact-window scalar-profile budget. Original P8 remains open.",
+  "verification_boundary": "Exact symbolic/rational first variations, canonical front limits, continuous sign and smooth-window estimates with written global smoothness and selected-state background proofs; not proof-assistant formalization",
+  "window_derivative_envelopes": {
+    "0": "1",
+    "1": "8704",
+    "2": "22874112",
+    "3": "92896886784",
+    "4": "509829585567744",
+    "5": "3527551905599324160"
+  },
+  "written_proofs": [
+    "notes/fronts.md",
+    "notes/profiles.md",
+    "notes/bounds.md"
+  ]
+}
