@@ -1,0 +1,921 @@
+{
+  "actual_leading_mean_response": {
+    "H": "4*u/(u**2 + 1)",
+    "J": "1/(50*(u**2 + 1)**6) + (3200*u**34 + 48000*u**32 + 332800*u**30 + 1410400*u**28 + 4068800*u**26 + 8413600*u**24 + 12776400*u**22 + 14350800*u**20 + 11890800*u**18 + 7319600*u**16 + 3693600*u**14 + 2108796*u**12 + 1559176*u**10 + 1030340*u**8 + 470732*u**6 + 133176*u**4 + 20412*u**2 + 1199)/(800*(u**2 + 1)**18)",
+    "alpha": "3*u*(4*u**6 + 12*u**4 + 12*u**2 + 3)/(u**2 + 1)**4",
+    "beta": "(2*u**6 + 6*u**4 + 6*u**2 - 1)/(20*(u**2 + 1)**9)",
+    "center_control": {
+      "initial_combined_density_lower_per_positive_vector_density": "134/135",
+      "initial_combined_scalar_plus_vector_density": "vector_density - (2*vector_density - 3*vector_pressure)/405",
+      "initial_induced_lapse": "40*(2*vector_density - 3*vector_pressure)/243",
+      "initial_induced_scalar_density": "-(2*vector_density - 3*vector_pressure)/405",
+      "positive_vector_state_pressure_bounds": "-rho/3 <= pressure <= rho"
+    },
+    "conserved_free_matter_charge": "1/10",
+    "ell": "1/(10*(u**2 + 1)**6)",
+    "h": "(u**2 + 1)**3",
+    "lapse_force": "vector_density - 3*vector_pressure/(2*(u**2 + 1)**3)",
+    "linearized_hat_scale_trace_flow": [
+      [
+        "-delta_trace_momentum/2 + 2*u*(4*u**6 + 12*u**4 + 12*u**2 + 3)*(-6*delta_log_hat_scale*u**6 - 18*delta_log_hat_scale*u**4 - 18*delta_log_hat_scale*u**2 + 3*delta_log_hat_scale + 2400*delta_trace_momentum*u**29 + 33600*delta_trace_momentum*u**27 + 218400*delta_trace_momentum*u**25 + 873000*delta_trace_momentum*u**23 + 2395800*delta_trace_momentum*u**21 + 4771800*delta_trace_momentum*u**19 + 7108200*delta_trace_momentum*u**17 + 8038800*delta_trace_momentum*u**15 + 6930000*delta_trace_momentum*u**13 + 4527600*delta_trace_momentum*u**11 + 2204400*delta_trace_momentum*u**9 + 774600*delta_trace_momentum*u**7 + 185400*delta_trace_momentum*u**5 + 27000*delta_trace_momentum*u**3 + 1800*delta_trace_momentum*u + 200*u**30*vector_density + 3000*u**28*vector_density + 21000*u**26*vector_density + 91000*u**24*vector_density - 300*u**24*vector_pressure + 273000*u**22*vector_density - 3600*u**22*vector_pressure + 600600*u**20*vector_density - 19800*u**20*vector_pressure + 1001000*u**18*vector_density - 66000*u**18*vector_pressure + 1287000*u**16*vector_density - 148500*u**16*vector_pressure + 1287000*u**14*vector_density - 237600*u**14*vector_pressure + 1001000*u**12*vector_density - 277200*u**12*vector_pressure + 600600*u**10*vector_density - 237600*u**10*vector_pressure + 273000*u**8*vector_density - 148500*u**8*vector_pressure + 91000*u**6*vector_density - 66000*u**6*vector_pressure + 21000*u**4*vector_density - 19800*u**4*vector_pressure + 3000*u**2*vector_density - 3600*u**2*vector_pressure + 200*vector_density - 300*vector_pressure)/((u**2 + 1)*(3200*u**34 + 48000*u**32 + 332800*u**30 + 1410400*u**28 + 4068800*u**26 + 8413616*u**24 + 12776592*u**22 + 14351856*u**20 + 11894320*u**18 + 7327520*u**16 + 3706272*u**14 + 2123580*u**12 + 1571848*u**10 + 1038260*u**8 + 474252*u**6 + 134232*u**4 + 20604*u**2 + 1215))"
+      ],
+      [
+        "-3*delta_log_hat_scale/(100*(u**2 + 1)**12) - 12*delta_trace_momentum*u/(u**2 + 1) + vector_pressure + (2*u**6 + 6*u**4 + 6*u**2 - 1)*(-6*delta_log_hat_scale*u**6 - 18*delta_log_hat_scale*u**4 - 18*delta_log_hat_scale*u**2 + 3*delta_log_hat_scale + 2400*delta_trace_momentum*u**29 + 33600*delta_trace_momentum*u**27 + 218400*delta_trace_momentum*u**25 + 873000*delta_trace_momentum*u**23 + 2395800*delta_trace_momentum*u**21 + 4771800*delta_trace_momentum*u**19 + 7108200*delta_trace_momentum*u**17 + 8038800*delta_trace_momentum*u**15 + 6930000*delta_trace_momentum*u**13 + 4527600*delta_trace_momentum*u**11 + 2204400*delta_trace_momentum*u**9 + 774600*delta_trace_momentum*u**7 + 185400*delta_trace_momentum*u**5 + 27000*delta_trace_momentum*u**3 + 1800*delta_trace_momentum*u + 200*u**30*vector_density + 3000*u**28*vector_density + 21000*u**26*vector_density + 91000*u**24*vector_density - 300*u**24*vector_pressure + 273000*u**22*vector_density - 3600*u**22*vector_pressure + 600600*u**20*vector_density - 19800*u**20*vector_pressure + 1001000*u**18*vector_density - 66000*u**18*vector_pressure + 1287000*u**16*vector_density - 148500*u**16*vector_pressure + 1287000*u**14*vector_density - 237600*u**14*vector_pressure + 1001000*u**12*vector_density - 277200*u**12*vector_pressure + 600600*u**10*vector_density - 237600*u**10*vector_pressure + 273000*u**8*vector_density - 148500*u**8*vector_pressure + 91000*u**6*vector_density - 66000*u**6*vector_pressure + 21000*u**4*vector_density - 19800*u**4*vector_pressure + 3000*u**2*vector_density - 3600*u**2*vector_pressure + 200*vector_density - 300*vector_pressure)/(100*(u**2 + 1)**12*(3200*u**34 + 48000*u**32 + 332800*u**30 + 1410400*u**28 + 4068800*u**26 + 8413616*u**24 + 12776592*u**22 + 14351856*u**20 + 11894320*u**18 + 7327520*u**16 + 3706272*u**14 + 2123580*u**12 + 1571848*u**10 + 1038260*u**8 + 474252*u**6 + 134232*u**4 + 20604*u**2 + 1215))"
+      ]
+    ],
+    "linearized_lapse": "2*(u**2 + 1)**3*(-6*delta_log_hat_scale*u**6 - 18*delta_log_hat_scale*u**4 - 18*delta_log_hat_scale*u**2 + 3*delta_log_hat_scale + 2400*delta_trace_momentum*u**29 + 33600*delta_trace_momentum*u**27 + 218400*delta_trace_momentum*u**25 + 873000*delta_trace_momentum*u**23 + 2395800*delta_trace_momentum*u**21 + 4771800*delta_trace_momentum*u**19 + 7108200*delta_trace_momentum*u**17 + 8038800*delta_trace_momentum*u**15 + 6930000*delta_trace_momentum*u**13 + 4527600*delta_trace_momentum*u**11 + 2204400*delta_trace_momentum*u**9 + 774600*delta_trace_momentum*u**7 + 185400*delta_trace_momentum*u**5 + 27000*delta_trace_momentum*u**3 + 1800*delta_trace_momentum*u + 200*u**30*vector_density + 3000*u**28*vector_density + 21000*u**26*vector_density + 91000*u**24*vector_density - 300*u**24*vector_pressure + 273000*u**22*vector_density - 3600*u**22*vector_pressure + 600600*u**20*vector_density - 19800*u**20*vector_pressure + 1001000*u**18*vector_density - 66000*u**18*vector_pressure + 1287000*u**16*vector_density - 148500*u**16*vector_pressure + 1287000*u**14*vector_density - 237600*u**14*vector_pressure + 1001000*u**12*vector_density - 277200*u**12*vector_pressure + 600600*u**10*vector_density - 237600*u**10*vector_pressure + 273000*u**8*vector_density - 148500*u**8*vector_pressure + 91000*u**6*vector_density - 66000*u**6*vector_pressure + 21000*u**4*vector_density - 19800*u**4*vector_pressure + 3000*u**2*vector_density - 3600*u**2*vector_pressure + 200*vector_density - 300*vector_pressure)/(3200*u**34 + 48000*u**32 + 332800*u**30 + 1410400*u**28 + 4068800*u**26 + 8413616*u**24 + 12776592*u**22 + 14351856*u**20 + 11894320*u**18 + 7327520*u**16 + 3706272*u**14 + 2123580*u**12 + 1571848*u**10 + 1038260*u**8 + 474252*u**6 + 134232*u**4 + 20604*u**2 + 1215)",
+    "matter_clock_field_response_derivative": "-3*delta_log_hat_scale/(10*(u**2 + 1)**6) + (2*u**6 + 6*u**4 + 6*u**2 - 1)*(-6*delta_log_hat_scale*u**6 - 18*delta_log_hat_scale*u**4 - 18*delta_log_hat_scale*u**2 + 3*delta_log_hat_scale + 2400*delta_trace_momentum*u**29 + 33600*delta_trace_momentum*u**27 + 218400*delta_trace_momentum*u**25 + 873000*delta_trace_momentum*u**23 + 2395800*delta_trace_momentum*u**21 + 4771800*delta_trace_momentum*u**19 + 7108200*delta_trace_momentum*u**17 + 8038800*delta_trace_momentum*u**15 + 6930000*delta_trace_momentum*u**13 + 4527600*delta_trace_momentum*u**11 + 2204400*delta_trace_momentum*u**9 + 774600*delta_trace_momentum*u**7 + 185400*delta_trace_momentum*u**5 + 27000*delta_trace_momentum*u**3 + 1800*delta_trace_momentum*u + 200*u**30*vector_density + 3000*u**28*vector_density + 21000*u**26*vector_density + 91000*u**24*vector_density - 300*u**24*vector_pressure + 273000*u**22*vector_density - 3600*u**22*vector_pressure + 600600*u**20*vector_density - 19800*u**20*vector_pressure + 1001000*u**18*vector_density - 66000*u**18*vector_pressure + 1287000*u**16*vector_density - 148500*u**16*vector_pressure + 1287000*u**14*vector_density - 237600*u**14*vector_pressure + 1001000*u**12*vector_density - 277200*u**12*vector_pressure + 600600*u**10*vector_density - 237600*u**10*vector_pressure + 273000*u**8*vector_density - 148500*u**8*vector_pressure + 91000*u**6*vector_density - 66000*u**6*vector_pressure + 21000*u**4*vector_density - 19800*u**4*vector_pressure + 3000*u**2*vector_density - 3600*u**2*vector_pressure + 200*vector_density - 300*vector_pressure)/(10*(u**2 + 1)**6*(3200*u**34 + 48000*u**32 + 332800*u**30 + 1410400*u**28 + 4068800*u**26 + 8413616*u**24 + 12776592*u**22 + 14351856*u**20 + 11894320*u**18 + 7327520*u**16 + 3706272*u**14 + 2123580*u**12 + 1571848*u**10 + 1038260*u**8 + 474252*u**6 + 134232*u**4 + 20604*u**2 + 1215))",
+    "physical_log_scale_response": "delta_log_hat_scale + (-6*delta_log_hat_scale*u**6 - 18*delta_log_hat_scale*u**4 - 18*delta_log_hat_scale*u**2 + 3*delta_log_hat_scale + 2400*delta_trace_momentum*u**29 + 33600*delta_trace_momentum*u**27 + 218400*delta_trace_momentum*u**25 + 873000*delta_trace_momentum*u**23 + 2395800*delta_trace_momentum*u**21 + 4771800*delta_trace_momentum*u**19 + 7108200*delta_trace_momentum*u**17 + 8038800*delta_trace_momentum*u**15 + 6930000*delta_trace_momentum*u**13 + 4527600*delta_trace_momentum*u**11 + 2204400*delta_trace_momentum*u**9 + 774600*delta_trace_momentum*u**7 + 185400*delta_trace_momentum*u**5 + 27000*delta_trace_momentum*u**3 + 1800*delta_trace_momentum*u + 200*u**30*vector_density + 3000*u**28*vector_density + 21000*u**26*vector_density + 91000*u**24*vector_density - 300*u**24*vector_pressure + 273000*u**22*vector_density - 3600*u**22*vector_pressure + 600600*u**20*vector_density - 19800*u**20*vector_pressure + 1001000*u**18*vector_density - 66000*u**18*vector_pressure + 1287000*u**16*vector_density - 148500*u**16*vector_pressure + 1287000*u**14*vector_density - 237600*u**14*vector_pressure + 1001000*u**12*vector_density - 277200*u**12*vector_pressure + 600600*u**10*vector_density - 237600*u**10*vector_pressure + 273000*u**8*vector_density - 148500*u**8*vector_pressure + 91000*u**6*vector_density - 66000*u**6*vector_pressure + 21000*u**4*vector_density - 19800*u**4*vector_pressure + 3000*u**2*vector_density - 3600*u**2*vector_pressure + 200*vector_density - 300*vector_pressure)/(3200*u**34 + 48000*u**32 + 332800*u**30 + 1410400*u**28 + 4068800*u**26 + 8413616*u**24 + 12776592*u**22 + 14351856*u**20 + 11894320*u**18 + 7327520*u**16 + 3706272*u**14 + 2123580*u**12 + 1571848*u**10 + 1038260*u**8 + 474252*u**6 + 134232*u**4 + 20604*u**2 + 1215)",
+    "physical_scalar_density_and_pressure_response": "-3*(delta_log_hat_scale + (-6*delta_log_hat_scale*u**6 - 18*delta_log_hat_scale*u**4 - 18*delta_log_hat_scale*u**2 + 3*delta_log_hat_scale + 2400*delta_trace_momentum*u**29 + 33600*delta_trace_momentum*u**27 + 218400*delta_trace_momentum*u**25 + 873000*delta_trace_momentum*u**23 + 2395800*delta_trace_momentum*u**21 + 4771800*delta_trace_momentum*u**19 + 7108200*delta_trace_momentum*u**17 + 8038800*delta_trace_momentum*u**15 + 6930000*delta_trace_momentum*u**13 + 4527600*delta_trace_momentum*u**11 + 2204400*delta_trace_momentum*u**9 + 774600*delta_trace_momentum*u**7 + 185400*delta_trace_momentum*u**5 + 27000*delta_trace_momentum*u**3 + 1800*delta_trace_momentum*u + 200*u**30*vector_density + 3000*u**28*vector_density + 21000*u**26*vector_density + 91000*u**24*vector_density - 300*u**24*vector_pressure + 273000*u**22*vector_density - 3600*u**22*vector_pressure + 600600*u**20*vector_density - 19800*u**20*vector_pressure + 1001000*u**18*vector_density - 66000*u**18*vector_pressure + 1287000*u**16*vector_density - 148500*u**16*vector_pressure + 1287000*u**14*vector_density - 237600*u**14*vector_pressure + 1001000*u**12*vector_density - 277200*u**12*vector_pressure + 600600*u**10*vector_density - 237600*u**10*vector_pressure + 273000*u**8*vector_density - 148500*u**8*vector_pressure + 91000*u**6*vector_density - 66000*u**6*vector_pressure + 21000*u**4*vector_density - 19800*u**4*vector_pressure + 3000*u**2*vector_density - 3600*u**2*vector_pressure + 200*vector_density - 300*vector_pressure)/(3200*u**34 + 48000*u**32 + 332800*u**30 + 1410400*u**28 + 4068800*u**26 + 8413616*u**24 + 12776592*u**22 + 14351856*u**20 + 11894320*u**18 + 7327520*u**16 + 3706272*u**14 + 2123580*u**12 + 1571848*u**10 + 1038260*u**8 + 474252*u**6 + 134232*u**4 + 20604*u**2 + 1215))/(100*(u**2 + 1)**12)",
+    "two_component_mean_forcing": [
+      [
+        "200*u*(u**2 + 1)**11*(4*u**6 + 12*u**4 + 12*u**2 + 3)*(2*u**6*vector_density + 6*u**4*vector_density + 6*u**2*vector_density + 2*vector_density - 3*vector_pressure)/(3200*u**34 + 48000*u**32 + 332800*u**30 + 1410400*u**28 + 4068800*u**26 + 8413616*u**24 + 12776592*u**22 + 14351856*u**20 + 11894320*u**18 + 7327520*u**16 + 3706272*u**14 + 2123580*u**12 + 1571848*u**10 + 1038260*u**8 + 474252*u**6 + 134232*u**4 + 20604*u**2 + 1215)"
+      ],
+      [
+        "2*(u**2 + 1)**3*(1600*u**28*vector_pressure + 19200*u**26*vector_pressure + 104000*u**24*vector_pressure + 334000*u**22*vector_pressure + 701200*u**20*vector_pressure + 997208*u**18*vector_pressure + 959072*u**16*vector_pressure + 605888*u**14*vector_pressure + 255072*u**12*vector_pressure + 121808*u**10*vector_pressure + 116608*u**8*vector_pressure + 2*u**6*vector_density + 91470*u**6*vector_pressure + 6*u**4*vector_density + 39882*u**4*vector_pressure + 6*u**2*vector_density + 8466*u**2*vector_pressure - vector_density + 609*vector_pressure)/(3200*u**34 + 48000*u**32 + 332800*u**30 + 1410400*u**28 + 4068800*u**26 + 8413616*u**24 + 12776592*u**22 + 14351856*u**20 + 11894320*u**18 + 7327520*u**16 + 3706272*u**14 + 2123580*u**12 + 1571848*u**10 + 1038260*u**8 + 474252*u**6 + 134232*u**4 + 20604*u**2 + 1215)"
+      ]
+    ],
+    "two_component_mean_generator": [
+      [
+        "-6*u*(2*u**6 + 6*u**4 + 6*u**2 - 1)*(4*u**6 + 12*u**4 + 12*u**2 + 3)/((u**2 + 1)*(3200*u**34 + 48000*u**32 + 332800*u**30 + 1410400*u**28 + 4068800*u**26 + 8413616*u**24 + 12776592*u**22 + 14351856*u**20 + 11894320*u**18 + 7327520*u**16 + 3706272*u**14 + 2123580*u**12 + 1571848*u**10 + 1038260*u**8 + 474252*u**6 + 134232*u**4 + 20604*u**2 + 1215))",
+        "(35200*u**34 + 566400*u**32 + 4275200*u**30 + 20074400*u**28 + 65569600*u**26 + 157819984*u**24 + 289241808*u**22 + 411240144*u**20 + 457711280*u**18 + 399309280*u**16 + 271357728*u**14 + 141502020*u**12 + 55092152*u**10 + 15262540*u**8 + 2744148*u**6 + 254568*u**4 + 996*u**2 - 1215)/(2*(3200*u**34 + 48000*u**32 + 332800*u**30 + 1410400*u**28 + 4068800*u**26 + 8413616*u**24 + 12776592*u**22 + 14351856*u**20 + 11894320*u**18 + 7327520*u**16 + 3706272*u**14 + 2123580*u**12 + 1571848*u**10 + 1038260*u**8 + 474252*u**6 + 134232*u**4 + 20604*u**2 + 1215))"
+      ],
+      [
+        "-12*(200*u**14 + 1000*u**12 + 1800*u**10 + 1150*u**8 - 200*u**6 - 299*u**4 + 527*u**2 + 76)/(25*(u**2 + 1)**2*(3200*u**34 + 48000*u**32 + 332800*u**30 + 1410400*u**28 + 4068800*u**26 + 8413616*u**24 + 12776592*u**22 + 14351856*u**20 + 11894320*u**18 + 7327520*u**16 + 3706272*u**14 + 2123580*u**12 + 1571848*u**10 + 1038260*u**8 + 474252*u**6 + 134232*u**4 + 20604*u**2 + 1215))",
+        "-6*u*(6400*u**34 + 96000*u**32 + 665600*u**30 + 2820800*u**28 + 8137600*u**26 + 16827232*u**24 + 25553184*u**22 + 28703712*u**20 + 23788640*u**18 + 14655040*u**16 + 7412544*u**14 + 4247152*u**12 + 3143648*u**10 + 2076400*u**8 + 948358*u**6 + 268386*u**4 + 41202*u**2 + 2433)/((u**2 + 1)*(3200*u**34 + 48000*u**32 + 332800*u**30 + 1410400*u**28 + 4068800*u**26 + 8413616*u**24 + 12776592*u**22 + 14351856*u**20 + 11894320*u**18 + 7327520*u**16 + 3706272*u**14 + 2123580*u**12 + 1571848*u**10 + 1038260*u**8 + 474252*u**6 + 134232*u**4 + 20604*u**2 + 1215))"
+      ]
+    ],
+    "zero_anchor_hat_scale_and_trace_response": true
+  },
+  "checked_scalar_entries": 451,
+  "claim": "P8-S6.104.GLOBAL_RELATIVE_PROCA_MEAN_RESPONSE",
+  "controls": {
+    "no_absolute_vacuum_source_claimed_zero": true,
+    "no_finite_cutoff_or_V_G_B_verdict_from_band_or_metric": true,
+    "no_nonlinear_or_higher_loop_remainder_bound_inferred": true,
+    "no_quantum_state_transported_on_representative_metric_claimed": true,
+    "omitting_connection_variation_changes_Ward_identity": true,
+    "omitting_physical_pressure_changes_lapse_source": true,
+    "reference_scalar_tensor_state_and_tadpole_not_reassigned": true,
+    "rejected_inputs": 16,
+    "wrong_four_dimensional_lapse_rescaling_extra_source_nonzero": true,
+    "zero_added_covariance_has_zero_calibrated_response": true
+  },
+  "date": "2026-09-09",
+  "exact_residuals": {
+    "actual_background_charge_conservation": "0",
+    "actual_background_trace_evolution": "0",
+    "actual_center_combined_density_lower": "0",
+    "actual_center_induced_lapse": "0",
+    "actual_center_induced_scalar_density": "0",
+    "actual_free_matter_field_response_retains_physical_lapse": "0",
+    "actual_free_matter_normal_velocity_gives_scalar_density_response": "0",
+    "actual_matter_Hamiltonian_first_derivative": "0",
+    "actual_matter_Hamiltonian_second_derivative": "0",
+    "actual_matter_lapse_cross_coefficient": "0",
+    "actual_mixed_trace_matter_derivative_zero": "0",
+    "actual_spatial_only_lapse_force_keeps_pressure": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        6,
+        6
+      ]
+    },
+    "actual_trace_Hamiltonian_first_derivative": "0",
+    "actual_trace_Hamiltonian_second_derivative": "0",
+    "all_six_center_induced_matter_channels_match_actual_stress_reconstruction": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        6,
+        6
+      ]
+    },
+    "background_scalar_lapse_cross_derivative_at_center": "0",
+    "band_anchor_density_retains_all_mass_and_gradient_terms": "0",
+    "complete_Proca_stress_conservation_on_actual_time_dependent_generator": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        6,
+        6
+      ]
+    },
+    "derived_mean_flow_is_generator_plus_physical_source": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        1
+      ]
+    },
+    "elementary_global_diagonal_integral": "0",
+    "elementary_global_source_integral": "0",
+    "elementary_half_line_integral_recurrence_10": "0",
+    "elementary_half_line_integral_recurrence_11": "0",
+    "elementary_half_line_integral_recurrence_12": "0",
+    "elementary_half_line_integral_recurrence_13": "0",
+    "elementary_half_line_integral_recurrence_14": "0",
+    "elementary_half_line_integral_recurrence_15": "0",
+    "elementary_half_line_integral_recurrence_16": "0",
+    "elementary_half_line_integral_recurrence_17": "0",
+    "elementary_half_line_integral_recurrence_18": "0",
+    "elementary_half_line_integral_recurrence_19": "0",
+    "elementary_half_line_integral_recurrence_2": "0",
+    "elementary_half_line_integral_recurrence_20": "0",
+    "elementary_half_line_integral_recurrence_3": "0",
+    "elementary_half_line_integral_recurrence_4": "0",
+    "elementary_half_line_integral_recurrence_5": "0",
+    "elementary_half_line_integral_recurrence_6": "0",
+    "elementary_half_line_integral_recurrence_7": "0",
+    "elementary_half_line_integral_recurrence_8": "0",
+    "elementary_half_line_integral_recurrence_9": "0",
+    "elementary_positive_integral_certifies_pi_below_22_over_7": "0",
+    "exact_density_energy_exponent": "0",
+    "exact_linear_variation_of_constants_majorant": "0",
+    "false_four_dimensional_rescaling_has_nonzero_extra_density_source": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        6,
+        6
+      ]
+    },
+    "full_lapse_constraint_includes_pressure_and_mean_fields": "0",
+    "global_J_bound_remainder_is_actual_polynomial": "0",
+    "global_Proca_reversal_is_anti_Hamiltonian": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        6,
+        6
+      ]
+    },
+    "global_actual_Proca_generator_even_in_clock": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        6,
+        6
+      ]
+    },
+    "global_alpha_has_explicit_decaying_form": "0",
+    "mean_phase_trace_keeps_expanding_density_volume": "0",
+    "physical_Proca_density_is_Hamiltonian_per_physical_volume": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        6,
+        6
+      ]
+    },
+    "physical_density_and_pressure_have_symmetric_real_Hessians": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        6,
+        6
+      ]
+    },
+    "physical_density_is_sum_of_four_positive_pieces": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        6,
+        6
+      ]
+    },
+    "physical_pressure_has_actual_four_piece_weights": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        6,
+        6
+      ]
+    },
+    "physical_pressure_is_full_spatial_scale_variation": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        6,
+        6
+      ]
+    },
+    "positive_band_density_first_derivative_zero_at_bounce": "0",
+    "positive_band_density_second_derivative_obeys_exact_conservation": "0",
+    "positive_band_pressure_first_derivative_zero_at_bounce": "0",
+    "proper_time_acceleration_keeps_both_lapse_factors": "0",
+    "relative_lapse_has_even_solution_parity": "0",
+    "relative_mean_scale_flow_has_even_solution_parity": "0",
+    "relative_mean_trace_flow_has_odd_solution_parity": "0",
+    "scalar_mean_and_vector_source_satisfy_full_linearized_homogeneous_Ward_identity": "0",
+    "scalar_mean_requires_connection_variation": "0",
+    "weighted_trace_damping_keeps_six_over_time": "0"
+  },
+  "fixed_band_and_interval_bounds": {
+    "actual_added_covariance": "U_P,a(t,0,k) eta*b(k)*I6 U_P,a(s,0,k)^T",
+    "anchor_added_covariance": "eta*b(k)*I6, eta=hbar*lambda/kappa; the scalar and tensor factors are unchanged",
+    "band_maximum_squared_momentum": "4",
+    "band_measure": "d^3k/(2*pi)^3",
+    "band_minimum_squared_momentum": "1",
+    "band_normalization": "b(k)=shape(|k|^2)/integral shape(|k|^2) d^3k/(2*pi)^3",
+    "bounds": {
+      "both_mean_forcing_rows_below_2100000": true,
+      "both_mean_generator_row_sums_below_one": true,
+      "complete_band_anchor_density": true,
+      "complete_density_propagation": true,
+      "full_lapse_response_below_1700000": true,
+      "full_physical_scale_response_below_900000": true,
+      "full_retarded_mean_response_below_22000": true,
+      "matter_field_response_below_1000": true,
+      "matter_field_response_derivative_below_100000": true,
+      "scalar_density_response_upper_is_27000": true,
+      "whole_interval_J_at_least_three_halves": true,
+      "whole_interval_alpha_below_one_tenth": true,
+      "whole_interval_clock_h_below_1001_over_1000": true
+    },
+    "closed_time_half_width": "1/100",
+    "derived_lapse_bound_before_rounding": "1667510",
+    "explicit_calibration": {
+      "density": "1/50000000000000",
+      "eta": "1/100000000000000000000",
+      "hat_scale_trace_response": "11/50000000000000000",
+      "lapse_force": "1/20000000000000",
+      "lapse_response": "17/1000000000000000",
+      "physical_log_scale_response": "9/1000000000000000",
+      "pressure_absolute": "1/50000000000000",
+      "scalar_density_response": "27/100000000000000000"
+    },
+    "fixed_band_shape": "exp(-1/((q-1)*(4-q))) for 1<q<4, zero elsewhere",
+    "flat_anchor_density_per_unit_band_covariance": "500001*squared_comoving_band_momentum/1000000 + 3000003/2",
+    "flat_anchor_pressure_per_unit_band_covariance": "1500001*squared_comoving_band_momentum/3000000 + 999999/2",
+    "whole_interval_J_lower": "1518750000000000000000000000000000000000000000000000000000000000000000000/1001801530816306085698567182837628624376118258564856830600816015300180001",
+    "whole_interval_alpha_upper": "2250900090003/25000000000000",
+    "whole_interval_clock_h_upper": "1000300030001/1000000000000",
+    "whole_interval_density_upper_per_eta": "2000000",
+    "whole_interval_hat_scale_trace_response_upper_per_eta": "22000",
+    "whole_interval_lapse_force_upper_per_eta": "5000000",
+    "whole_interval_lapse_response_upper_per_eta": "1700000",
+    "whole_interval_matter_field_derivative_response_upper_per_eta": "100000",
+    "whole_interval_matter_field_response_upper_per_eta": "1000",
+    "whole_interval_mean_forcing_entrywise_upper_per_eta": [
+      [
+        "500000/9"
+      ],
+      [
+        "6025000/3"
+      ]
+    ],
+    "whole_interval_mean_forcing_infinity_norm_upper_per_eta": "2100000",
+    "whole_interval_mean_generator_entrywise_absolute_upper": [
+      [
+        "1/6000",
+        "451/900"
+      ],
+      [
+        "1201/40000",
+        "721/6000"
+      ]
+    ],
+    "whole_interval_mean_generator_infinity_norm_upper": "1",
+    "whole_interval_physical_log_scale_response_upper_per_eta": "900000",
+    "whole_interval_pressure_absolute_upper_per_eta": "2000000",
+    "whole_interval_scalar_density_response_upper_per_eta": "27000"
+  },
+  "formulation": "FORMULATION.md",
+  "global_weighted_response_and_frame": {
+    "bounds": {
+      "calibrated_actual_frame_scale_is_globally_below_one_e_minus_ten": true,
+      "calibrated_lapse_is_globally_below_one_e_minus_ten": true,
+      "global_actual_frame_physical_scale_bound": true,
+      "global_lapse_bound": true,
+      "global_linear_physical_scale_bound": true,
+      "global_matter_field_bound": true,
+      "global_scalar_relative_density_bound": true,
+      "global_weighted_phase_bound": true,
+      "strict_positive_polynomial_remainder_all_global_times": true,
+      "weighted_generator_integral_below_two": true,
+      "weighted_source_integral_below_170": true
+    },
+    "complete_first_order_frame_representative": "N_eta=1+n_eta; hat_a_eta=a*exp(xi_eta); a_eta=hat_a_eta*((h-1+N_eta^-2)/h)^(-1/4)",
+    "derived_global_lapse_bound_before_rounding": "549375025",
+    "global_J_lower": "1/(5*u**2 + 5)",
+    "global_actual_frame_log_scale_upper_per_eta": "3000000000",
+    "global_lapse_decay_bound_per_eta": "720000000*Abs(u)/(u**2 + 1)**3 + 9375025/(u**2 + 1)**3 + 180000000/(u**2 + 1)**11",
+    "global_lapse_upper_per_eta": "550000000",
+    "global_linear_physical_log_scale_upper_per_eta": "2700000000",
+    "global_matter_field_upper_per_eta": "400000000",
+    "global_positive_relative_vector_density_bound": "rho_P(u)<=1500004*eta/(1+u^2)^4",
+    "global_relative_scalar_density_upper_per_eta": "16200000000",
+    "global_scalar_density_upper_per_eta": "81000000",
+    "global_weighted_phase_upper_per_eta": "2400000000",
+    "positive_J_remainder_polynomial_coefficients": [
+      "3040",
+      "0",
+      "45280",
+      "0",
+      "311040",
+      "0",
+      "1301600",
+      "0",
+      "3688000",
+      "0",
+      "7423536",
+      "0",
+      "10796432",
+      "0",
+      "11240176",
+      "0",
+      "8004720",
+      "0",
+      "3437920",
+      "0",
+      "594592",
+      "0",
+      "143420",
+      "0",
+      "581768",
+      "0",
+      "657460",
+      "0",
+      "365452",
+      "0",
+      "112472",
+      "0",
+      "17884",
+      "0",
+      "1055"
+    ],
+    "positive_tail_scale_limit_error_bound_per_eta_for_u_ge_one": "18750050/(3*(u**2 + 1)**3) + 360000000/(11*(u**2 + 1)**11) + 578400000/u**5",
+    "representative_is_not_an_exact_semiclassical_solution": true,
+    "weighted_forcing_L1_upper_per_initial_density": "7176850075/44040192",
+    "weighted_generator_integrable_entry_sum_upper": "888061455051153/529139970867200",
+    "weighted_global_Gronwall_factor_upper": "9",
+    "weighted_phase": "Y=(xi,100*(1+u^2)^3*delta_p)"
+  },
+  "independent_center_stress_jets": {
+    "absolute_anchor_proper_Hubble_derivative_response_upper_per_eta": "5062497524693386202899/10251562500",
+    "all_anchor_acceleration_response_polynomial_coefficients_positive": true,
+    "anchor_density_per_unit_band_covariance": "500001*squared_comoving_band_momentum/1000000 + 3000003/2",
+    "anchor_density_second_derivative_per_unit_band_covariance": "-750001*squared_comoving_band_momentum/62500 - 24000012",
+    "anchor_hat_scale_response_second_derivative_per_unit_band_covariance": "-(301999801*squared_comoving_band_momentum - 298501503000000)/607500000",
+    "anchor_lapse_response_per_unit_band_covariance": "-(499999*squared_comoving_band_momentum - 1500004500000)/6075000",
+    "anchor_lapse_response_second_derivative_per_unit_band_covariance": "(27000000000*squared_comoving_band_momentum**2 + 40500202216027433*squared_comoving_band_momentum + 40500000649137651000000)/41006250000",
+    "anchor_pressure_per_unit_band_covariance": "1500001*squared_comoving_band_momentum/3000000 + 999999/2",
+    "anchor_pressure_second_derivative_per_unit_band_covariance": "-4*squared_comoving_band_momentum**2/3 - 375001750001*squared_comoving_band_momentum/187500 - 2000005999996",
+    "anchor_proper_Hubble_derivative_response_per_unit_band_covariance": "(13500000000*squared_comoving_band_momentum**2 + 20250117847952899*squared_comoving_band_momentum + 20249909098086153000000)/41006250000",
+    "anchor_trace_response_derivative_per_unit_band_covariance": "(152000101*squared_comoving_band_momentum + 151499847000000)/303750000",
+    "initial_hat_scale_second_derivative_positive_on_entire_band": true,
+    "initial_lapse_response_positive_on_entire_band": true,
+    "initial_lapse_second_derivative_all_polynomial_coefficients_positive": true,
+    "rounded_absolute_anchor_proper_Hubble_derivative_response_upper_per_eta": "500000000000",
+    "rounded_acceleration_bound_valid": true
+  },
+  "named_exact_check_count": 65,
+  "not_established": [
+    "The common absolute vacuum tadpole, full seven-mode covariant stress renormalization or interacting quantum Ward identities",
+    "An actual finite-amplitude state-difference or absolute semiclassical solution, a quantum state co-evolved on the representative, or a nonlinear/higher-loop residual bound",
+    "Finite total energy of the homogeneous state on infinite R3, an arbitrary-amplitude perturbative regime, or a physical-matter QEI",
+    "A heavy-spectrum or finite-frequency EFT cutoff, omitted-operator/loop error control, actual vacuum/finite-gravity/common-parent V/G/B matching, or UV completion",
+    "Original P8(b) classification or original P8 closure"
+  ],
+  "physical_Ward_identity": {
+    "background_matter_density": "1/(200*(u**2 + 1)**12)",
+    "matter_density_response": "-3*physical_log_scale_response/(100*(u**2 + 1)**12)",
+    "retained_connection_variation_term": "3*physical_log_scale_response_dot/(100*(u**2 + 1)**12)"
+  },
+  "physical_relative_Proca_stress": {
+    "N_is_unchanged_by_the_spatial_hat_chart": true,
+    "actual_center_force_Hessian": [
+      [
+        "3/2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "positive_wave_scale**2/2000000 + 3/2",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "positive_wave_scale**2/2000000 + 3/2",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "-(positive_wave_scale - 1000)*(positive_wave_scale + 1000)/2",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "500000",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "500000"
+      ]
+    ],
+    "actual_lapse_force_Hessian": [
+      [
+        "(positive_FLRW_scale + positive_FLRW_scale/(2*positive_clock_h) + (comoving_ky**2 + comoving_kz**2)/(positive_FLRW_scale*positive_canonical_Proca_mass**2) - (comoving_ky**2 + comoving_kz**2)/(2*positive_FLRW_scale*positive_canonical_Proca_mass**2*positive_clock_h))/positive_FLRW_scale**3",
+        "(-comoving_kx*comoving_ky/(positive_FLRW_scale*positive_canonical_Proca_mass**2) + comoving_kx*comoving_ky/(2*positive_FLRW_scale*positive_canonical_Proca_mass**2*positive_clock_h))/positive_FLRW_scale**3",
+        "(-comoving_kx*comoving_kz/(positive_FLRW_scale*positive_canonical_Proca_mass**2) + comoving_kx*comoving_kz/(2*positive_FLRW_scale*positive_canonical_Proca_mass**2*positive_clock_h))/positive_FLRW_scale**3",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "(-comoving_kx*comoving_ky/(positive_FLRW_scale*positive_canonical_Proca_mass**2) + comoving_kx*comoving_ky/(2*positive_FLRW_scale*positive_canonical_Proca_mass**2*positive_clock_h))/positive_FLRW_scale**3",
+        "(positive_FLRW_scale + positive_FLRW_scale/(2*positive_clock_h) + (comoving_kx**2 + comoving_kz**2)/(positive_FLRW_scale*positive_canonical_Proca_mass**2) - (comoving_kx**2 + comoving_kz**2)/(2*positive_FLRW_scale*positive_canonical_Proca_mass**2*positive_clock_h))/positive_FLRW_scale**3",
+        "(-comoving_ky*comoving_kz/(positive_FLRW_scale*positive_canonical_Proca_mass**2) + comoving_ky*comoving_kz/(2*positive_FLRW_scale*positive_canonical_Proca_mass**2*positive_clock_h))/positive_FLRW_scale**3",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "(-comoving_kx*comoving_kz/(positive_FLRW_scale*positive_canonical_Proca_mass**2) + comoving_kx*comoving_kz/(2*positive_FLRW_scale*positive_canonical_Proca_mass**2*positive_clock_h))/positive_FLRW_scale**3",
+        "(-comoving_ky*comoving_kz/(positive_FLRW_scale*positive_canonical_Proca_mass**2) + comoving_ky*comoving_kz/(2*positive_FLRW_scale*positive_canonical_Proca_mass**2*positive_clock_h))/positive_FLRW_scale**3",
+        "(positive_FLRW_scale + positive_FLRW_scale/(2*positive_clock_h) + (comoving_kx**2 + comoving_ky**2)/(positive_FLRW_scale*positive_canonical_Proca_mass**2) - (comoving_kx**2 + comoving_ky**2)/(2*positive_FLRW_scale*positive_canonical_Proca_mass**2*positive_clock_h))/positive_FLRW_scale**3",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "(comoving_kx**2/positive_FLRW_scale**3 - 3*comoving_kx**2/(2*positive_FLRW_scale**3*positive_clock_h) + positive_canonical_Proca_mass**2/positive_FLRW_scale - positive_canonical_Proca_mass**2/(2*positive_FLRW_scale*positive_clock_h))/positive_FLRW_scale**3",
+        "(comoving_kx*comoving_ky/positive_FLRW_scale**3 - 3*comoving_kx*comoving_ky/(2*positive_FLRW_scale**3*positive_clock_h))/positive_FLRW_scale**3",
+        "(comoving_kx*comoving_kz/positive_FLRW_scale**3 - 3*comoving_kx*comoving_kz/(2*positive_FLRW_scale**3*positive_clock_h))/positive_FLRW_scale**3"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "(comoving_kx*comoving_ky/positive_FLRW_scale**3 - 3*comoving_kx*comoving_ky/(2*positive_FLRW_scale**3*positive_clock_h))/positive_FLRW_scale**3",
+        "(comoving_ky**2/positive_FLRW_scale**3 - 3*comoving_ky**2/(2*positive_FLRW_scale**3*positive_clock_h) + positive_canonical_Proca_mass**2/positive_FLRW_scale - positive_canonical_Proca_mass**2/(2*positive_FLRW_scale*positive_clock_h))/positive_FLRW_scale**3",
+        "(comoving_ky*comoving_kz/positive_FLRW_scale**3 - 3*comoving_ky*comoving_kz/(2*positive_FLRW_scale**3*positive_clock_h))/positive_FLRW_scale**3"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "(comoving_kx*comoving_kz/positive_FLRW_scale**3 - 3*comoving_kx*comoving_kz/(2*positive_FLRW_scale**3*positive_clock_h))/positive_FLRW_scale**3",
+        "(comoving_ky*comoving_kz/positive_FLRW_scale**3 - 3*comoving_ky*comoving_kz/(2*positive_FLRW_scale**3*positive_clock_h))/positive_FLRW_scale**3",
+        "(comoving_kz**2/positive_FLRW_scale**3 - 3*comoving_kz**2/(2*positive_FLRW_scale**3*positive_clock_h) + positive_canonical_Proca_mass**2/positive_FLRW_scale - positive_canonical_Proca_mass**2/(2*positive_FLRW_scale*positive_clock_h))/positive_FLRW_scale**3"
+      ]
+    ],
+    "false_four_dimensional_conformal_extra_source": [
+      [
+        "(positive_FLRW_scale + (comoving_ky**2 + comoving_kz**2)/(positive_FLRW_scale*positive_canonical_Proca_mass**2))/(2*positive_FLRW_scale**3*positive_clock_h)",
+        "-comoving_kx*comoving_ky/(2*positive_FLRW_scale**4*positive_canonical_Proca_mass**2*positive_clock_h)",
+        "-comoving_kx*comoving_kz/(2*positive_FLRW_scale**4*positive_canonical_Proca_mass**2*positive_clock_h)",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "-comoving_kx*comoving_ky/(2*positive_FLRW_scale**4*positive_canonical_Proca_mass**2*positive_clock_h)",
+        "(positive_FLRW_scale + (comoving_kx**2 + comoving_kz**2)/(positive_FLRW_scale*positive_canonical_Proca_mass**2))/(2*positive_FLRW_scale**3*positive_clock_h)",
+        "-comoving_ky*comoving_kz/(2*positive_FLRW_scale**4*positive_canonical_Proca_mass**2*positive_clock_h)",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "-comoving_kx*comoving_kz/(2*positive_FLRW_scale**4*positive_canonical_Proca_mass**2*positive_clock_h)",
+        "-comoving_ky*comoving_kz/(2*positive_FLRW_scale**4*positive_canonical_Proca_mass**2*positive_clock_h)",
+        "(positive_FLRW_scale + (comoving_kx**2 + comoving_ky**2)/(positive_FLRW_scale*positive_canonical_Proca_mass**2))/(2*positive_FLRW_scale**3*positive_clock_h)",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "(comoving_kx**2/positive_FLRW_scale**3 + positive_canonical_Proca_mass**2/positive_FLRW_scale)/(2*positive_FLRW_scale**3*positive_clock_h)",
+        "comoving_kx*comoving_ky/(2*positive_FLRW_scale**6*positive_clock_h)",
+        "comoving_kx*comoving_kz/(2*positive_FLRW_scale**6*positive_clock_h)"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "comoving_kx*comoving_ky/(2*positive_FLRW_scale**6*positive_clock_h)",
+        "(comoving_ky**2/positive_FLRW_scale**3 + positive_canonical_Proca_mass**2/positive_FLRW_scale)/(2*positive_FLRW_scale**3*positive_clock_h)",
+        "comoving_ky*comoving_kz/(2*positive_FLRW_scale**6*positive_clock_h)"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "comoving_kx*comoving_kz/(2*positive_FLRW_scale**6*positive_clock_h)",
+        "comoving_ky*comoving_kz/(2*positive_FLRW_scale**6*positive_clock_h)",
+        "(comoving_kz**2/positive_FLRW_scale**3 + positive_canonical_Proca_mass**2/positive_FLRW_scale)/(2*positive_FLRW_scale**3*positive_clock_h)"
+      ]
+    ],
+    "four_positive_density_pieces": {
+      "electric": [
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "positive_canonical_Proca_mass**2/positive_FLRW_scale**4",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "positive_canonical_Proca_mass**2/positive_FLRW_scale**4",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "positive_canonical_Proca_mass**2/positive_FLRW_scale**4"
+        ]
+      ],
+      "longitudinal_temporal": [
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "comoving_kx**2/positive_FLRW_scale**6",
+          "comoving_kx*comoving_ky/positive_FLRW_scale**6",
+          "comoving_kx*comoving_kz/positive_FLRW_scale**6"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "comoving_kx*comoving_ky/positive_FLRW_scale**6",
+          "comoving_ky**2/positive_FLRW_scale**6",
+          "comoving_ky*comoving_kz/positive_FLRW_scale**6"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "comoving_kx*comoving_kz/positive_FLRW_scale**6",
+          "comoving_ky*comoving_kz/positive_FLRW_scale**6",
+          "comoving_kz**2/positive_FLRW_scale**6"
+        ]
+      ],
+      "magnetic": [
+        [
+          "(comoving_ky**2 + comoving_kz**2)/(positive_FLRW_scale**4*positive_canonical_Proca_mass**2)",
+          "-comoving_kx*comoving_ky/(positive_FLRW_scale**4*positive_canonical_Proca_mass**2)",
+          "-comoving_kx*comoving_kz/(positive_FLRW_scale**4*positive_canonical_Proca_mass**2)",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "-comoving_kx*comoving_ky/(positive_FLRW_scale**4*positive_canonical_Proca_mass**2)",
+          "(comoving_kx**2 + comoving_kz**2)/(positive_FLRW_scale**4*positive_canonical_Proca_mass**2)",
+          "-comoving_ky*comoving_kz/(positive_FLRW_scale**4*positive_canonical_Proca_mass**2)",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "-comoving_kx*comoving_kz/(positive_FLRW_scale**4*positive_canonical_Proca_mass**2)",
+          "-comoving_ky*comoving_kz/(positive_FLRW_scale**4*positive_canonical_Proca_mass**2)",
+          "(comoving_kx**2 + comoving_ky**2)/(positive_FLRW_scale**4*positive_canonical_Proca_mass**2)",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "spatial_mass": [
+        [
+          "positive_FLRW_scale**(-2)",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "positive_FLRW_scale**(-2)",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "positive_FLRW_scale**(-2)",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      ]
+    },
+    "physical_density_Hessian": [
+      [
+        "(positive_FLRW_scale + (comoving_ky**2 + comoving_kz**2)/(positive_FLRW_scale*positive_canonical_Proca_mass**2))/positive_FLRW_scale**3",
+        "-comoving_kx*comoving_ky/(positive_FLRW_scale**4*positive_canonical_Proca_mass**2)",
+        "-comoving_kx*comoving_kz/(positive_FLRW_scale**4*positive_canonical_Proca_mass**2)",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "-comoving_kx*comoving_ky/(positive_FLRW_scale**4*positive_canonical_Proca_mass**2)",
+        "(positive_FLRW_scale + (comoving_kx**2 + comoving_kz**2)/(positive_FLRW_scale*positive_canonical_Proca_mass**2))/positive_FLRW_scale**3",
+        "-comoving_ky*comoving_kz/(positive_FLRW_scale**4*positive_canonical_Proca_mass**2)",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "-comoving_kx*comoving_kz/(positive_FLRW_scale**4*positive_canonical_Proca_mass**2)",
+        "-comoving_ky*comoving_kz/(positive_FLRW_scale**4*positive_canonical_Proca_mass**2)",
+        "(positive_FLRW_scale + (comoving_kx**2 + comoving_ky**2)/(positive_FLRW_scale*positive_canonical_Proca_mass**2))/positive_FLRW_scale**3",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "(comoving_kx**2/positive_FLRW_scale**3 + positive_canonical_Proca_mass**2/positive_FLRW_scale)/positive_FLRW_scale**3",
+        "comoving_kx*comoving_ky/positive_FLRW_scale**6",
+        "comoving_kx*comoving_kz/positive_FLRW_scale**6"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "comoving_kx*comoving_ky/positive_FLRW_scale**6",
+        "(comoving_ky**2/positive_FLRW_scale**3 + positive_canonical_Proca_mass**2/positive_FLRW_scale)/positive_FLRW_scale**3",
+        "comoving_ky*comoving_kz/positive_FLRW_scale**6"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "comoving_kx*comoving_kz/positive_FLRW_scale**6",
+        "comoving_ky*comoving_kz/positive_FLRW_scale**6",
+        "(comoving_kz**2/positive_FLRW_scale**3 + positive_canonical_Proca_mass**2/positive_FLRW_scale)/positive_FLRW_scale**3"
+      ]
+    ],
+    "physical_isotropic_pressure_Hessian": [
+      [
+        "(-1 + (comoving_ky**2 + comoving_kz**2)/(positive_FLRW_scale**2*positive_canonical_Proca_mass**2))/(3*positive_FLRW_scale**2)",
+        "-comoving_kx*comoving_ky/(3*positive_FLRW_scale**4*positive_canonical_Proca_mass**2)",
+        "-comoving_kx*comoving_kz/(3*positive_FLRW_scale**4*positive_canonical_Proca_mass**2)",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "-comoving_kx*comoving_ky/(3*positive_FLRW_scale**4*positive_canonical_Proca_mass**2)",
+        "(-1 + (comoving_kx**2 + comoving_kz**2)/(positive_FLRW_scale**2*positive_canonical_Proca_mass**2))/(3*positive_FLRW_scale**2)",
+        "-comoving_ky*comoving_kz/(3*positive_FLRW_scale**4*positive_canonical_Proca_mass**2)",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "-comoving_kx*comoving_kz/(3*positive_FLRW_scale**4*positive_canonical_Proca_mass**2)",
+        "-comoving_ky*comoving_kz/(3*positive_FLRW_scale**4*positive_canonical_Proca_mass**2)",
+        "(-1 + (comoving_kx**2 + comoving_ky**2)/(positive_FLRW_scale**2*positive_canonical_Proca_mass**2))/(3*positive_FLRW_scale**2)",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "(3*comoving_kx**2/positive_FLRW_scale**4 + positive_canonical_Proca_mass**2/positive_FLRW_scale**2)/(3*positive_FLRW_scale**2)",
+        "comoving_kx*comoving_ky/positive_FLRW_scale**6",
+        "comoving_kx*comoving_kz/positive_FLRW_scale**6"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "comoving_kx*comoving_ky/positive_FLRW_scale**6",
+        "(3*comoving_ky**2/positive_FLRW_scale**4 + positive_canonical_Proca_mass**2/positive_FLRW_scale**2)/(3*positive_FLRW_scale**2)",
+        "comoving_ky*comoving_kz/positive_FLRW_scale**6"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "comoving_kx*comoving_kz/positive_FLRW_scale**6",
+        "comoving_ky*comoving_kz/positive_FLRW_scale**6",
+        "(3*comoving_kz**2/positive_FLRW_scale**4 + positive_canonical_Proca_mass**2/positive_FLRW_scale**2)/(3*positive_FLRW_scale**2)"
+      ]
+    ]
+  },
+  "prior_sha256": {
+    "S6_103_fully_rebuilt": "498312d2df8964c169851c242eb9fb898edd3ea763d0efb52846fac02a9f69ca",
+    "finite_Proca_state_difference_not_a_reassigned_reference_tadpole": true,
+    "same_original_global_retuned_action_and_physical_metric": true,
+    "same_scalar_tensor_factors_and_counterterms_in_both_states": true
+  },
+  "proof_checks": {
+    "absolute_source_higher_order_errors_and_V_G_B_remain_open": true,
+    "actual_lapse_source_keeps_pressure_and_second_order_mean_data": true,
+    "actual_matter_field_charge_density_and_connection_variation_retained": true,
+    "actual_trace_density_not_mistaken_for_canonical_momentum": true,
+    "all_anchor_acceleration_response_polynomial_coefficients_positive": true,
+    "all_real_times_covered_by_positive_pivot_and_integrable_weighted_bounds": true,
+    "band_both_mean_forcing_rows_below_2100000": true,
+    "band_both_mean_generator_row_sums_below_one": true,
+    "band_complete_band_anchor_density": true,
+    "band_complete_density_propagation": true,
+    "band_full_lapse_response_below_1700000": true,
+    "band_full_physical_scale_response_below_900000": true,
+    "band_full_retarded_mean_response_below_22000": true,
+    "band_is_positive_normalized_and_has_no_zero_momentum_or_high_frequency_tail": true,
+    "band_matter_field_response_below_1000": true,
+    "band_matter_field_response_derivative_below_100000": true,
+    "band_scalar_density_response_upper_is_27000": true,
+    "band_whole_interval_J_at_least_three_halves": true,
+    "band_whole_interval_alpha_below_one_tenth": true,
+    "band_whole_interval_clock_h_below_1001_over_1000": true,
+    "center_induced_scalar_density_bridge_covers_all_six_vector_channels": true,
+    "exact_frame_representative_complete_bounce_not_claimed_to_solve_SEE": true,
+    "exact_free_Proca_evolution_on_both_legs": true,
+    "finite_energy_density_not_claimed_to_be_finite_total_energy_on_R_cubed": true,
+    "full_physical_pressure_and_source_conservation_not_assigned_by_hand": true,
+    "global_calibrated_actual_frame_scale_is_globally_below_one_e_minus_ten": true,
+    "global_calibrated_lapse_is_globally_below_one_e_minus_ten": true,
+    "global_global_actual_frame_physical_scale_bound": true,
+    "global_global_lapse_bound": true,
+    "global_global_linear_physical_scale_bound": true,
+    "global_global_matter_field_bound": true,
+    "global_global_scalar_relative_density_bound": true,
+    "global_global_weighted_phase_bound": true,
+    "global_strict_positive_polynomial_remainder_all_global_times": true,
+    "global_weighted_generator_integral_below_two": true,
+    "global_weighted_source_integral_below_170": true,
+    "initial_hat_scale_second_derivative_positive_on_entire_band": true,
+    "initial_lapse_response_positive_on_entire_band": true,
+    "initial_lapse_second_derivative_all_polynomial_coefficients_positive": true,
+    "lapse_is_unchanged_in_actual_spatial_frame_map": true,
+    "leading_equation_difference_does_not_set_common_vacuum_tadpole_to_zero": true,
+    "only_Proca_covariance_changed_by_real_positive_smooth_band": true,
+    "positive_combined_center_response_does_not_imply_positive_isolated_scalar_variation": true,
+    "relative_state_reflection_not_assumed_for_prepared_reference_state": true,
+    "rounded_acceleration_bound_valid": true,
+    "same_original_global_retuned_action_and_physical_matter_frame": true,
+    "same_scalar_tensor_factors_and_all_counterterms_retained": true
+  },
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "4beac538173b097bce5fd883aa9a7d41f8053dea7a567ca9603084246edb014b",
+    "README.md": "d9f0f45fa3e0e76518759b022b13885a8b0abe1cac46d7e22fbdbafa904074a2",
+    "notes/calibration.md": "b69ea20767cbd6767bb97ba95b8fea1a19744a0c3ded25797c6ccd2fb92e8def",
+    "notes/mean.md": "5088cc546b725e843706d54ae48731412c1f22ec21a16cd843e5accabe983608",
+    "notes/representative.md": "fde0c128ff75b22b5cb1f3b4ffcd19df617874582121c9d7fdf1398a29eb8fdc",
+    "notes/scope.md": "bcd16fb120dd41130406936992583174b86efb957da169e8c030b901265b5991",
+    "notes/state.md": "514da8c88ea0baae580f27f93dfe7f8ccff43201e84171adf24cbec6b7a4662d",
+    "notes/stress.md": "54ee05e97ad8f4bc25f43ba947c129fa7e9bd8bd5c06fa9c22ed73ddfed12af4",
+    "notes/tails.md": "c131844c89e1325dd5f35bc54435c8f0b04fc7b61a665257fa938f38a437ae04",
+    "src/p8_proca_mean_response/__init__.py": "285ed7b373789597925f4e9d5dcae068b025680888c33da08f9f88a3c0b994ef",
+    "src/p8_proca_mean_response/anchor.py": "38e0d50da9873c521fb12064a455001e3da99e132a3931c8c3138cef2b4dca55",
+    "src/p8_proca_mean_response/audit.py": "a522dde7f930270ca193b19fb8954d72efdca1967c70b12ed3669f6addd3f30e",
+    "src/p8_proca_mean_response/band.py": "92571a23618bd2a7d846eba75b60dfa75714a3562db4c8a0b0ef8b14b3c73e88",
+    "src/p8_proca_mean_response/mean.py": "94047694968e7e5ff3eaa1e4c62a353fc0ad4b3f6d583cf2ba728c24c7f2817d",
+    "src/p8_proca_mean_response/stress.py": "e9deb76d01b5dd853074cabcf976b50f5229d3d77ca32e7fa500ef7d6cb2f96d",
+    "src/p8_proca_mean_response/tails.py": "d940904c61d619e234160c19d44bbbe9ebba8a3c9df26a242fa209ae2b0b9b86",
+    "src/p8_proca_mean_response/verify.py": "4322070d0ce0aae53d1e9722e6bcb34353381a19087d39e73b13d92ac8ed24b8",
+    "tests/conftest.py": "e524909b5cde3e1265c75a7eb3ee780fe0e377098ad7b65d349b95453cb388e7",
+    "tests/test_proca_mean_response_certificate.py": "055f017f556334a0f01845242e2e1f7c5f7263198aebf66a883e79f0b5245db9",
+    "tests/test_proca_mean_response_science.py": "67a418c0bff383d2666031ff659390fcb076802a12e8a907516f51e953ced1c6"
+  },
+  "status": "COMPLETE_FINITE_HADAMARD_PROCA_STATE_DIFFERENCE_CONSERVED_PHYSICAL_STRESS_AND_ACTUAL_GLOBAL_BOUNDED_LEADING_HOMOGENEOUS_MEAN_RESPONSE_WITH_MATTER_FIELD_CONNECTION_VARIATION_AND_EXACT_FRAME_COMPLETE_BOUNCE_REPRESENTATIVE; NOT_AN_ABSOLUTE_OR_EXACT_SEMICLASSICAL_SOLUTION_HIGHER_ORDER_CONTROL_V_G_B_OR_ORIGINAL_P8_CLOSURE",
+  "verdict": "A fixed positive compact-band addition to the actual Proca covariance gives a smooth Hadamard state difference, finite conserved physical stress and a uniquely determined leading homogeneous metric/matter response of the original retuned action. The actual spatial-only lapse chain retains pressure, the full six-channel induced matter Hessian is independently recovered, and the matter-field response includes the connection variation required by the homogeneous Ward identity. Independent compact-band and exact center-jet bounds are supplemented by global weighted estimates and both time tails. The exact-frame first-order profile has a complete bouncing metric representative, but neither that metric nor a newly co-evolved quantum state is claimed to solve an absolute semiclassical equation. The common vacuum source, nonlinear/higher-loop errors and V/G/B matching remain open.",
+  "verification_boundary": "Native exact constrained Proca stress and conservation, correct spatial-only lapse variation with a nonzero four-dimensional-rescaling control, full six-channel physical-density bridge, literal retuned-action mean/charge coefficients, complete homogeneous relative Ward identity, independent center stress jets and proper-time lapse factors, exact rational whole-interval/global integral bounds and negative-input controls. Written state, differential-equation, tail and geometric representative proofs are source-pinned but not proof-assistant formalized. They certify leading state-difference equations, not uncomputed common or higher-order sources. Every ancestor, own source/proof/test byte and report field is independently replayed using native scientific SymPy.",
+  "written_proofs": [
+    "notes/state.md",
+    "notes/stress.md",
+    "notes/mean.md",
+    "notes/calibration.md",
+    "notes/tails.md",
+    "notes/representative.md",
+    "notes/scope.md"
+  ]
+}
