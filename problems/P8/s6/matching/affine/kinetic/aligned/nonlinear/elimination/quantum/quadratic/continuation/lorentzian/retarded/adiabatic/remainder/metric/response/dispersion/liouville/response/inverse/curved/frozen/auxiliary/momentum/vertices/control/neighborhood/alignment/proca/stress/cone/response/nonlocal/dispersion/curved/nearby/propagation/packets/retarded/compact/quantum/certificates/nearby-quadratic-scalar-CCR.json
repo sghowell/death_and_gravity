@@ -1,0 +1,556 @@
+{
+  "actual_all_momentum_transfer_growth_and_Schwartz_test_space": {
+    "Schwartz_test_space_invariant_by_written_Duhamel_induction": true,
+    "all_orders_Fourier_derivative_degree_sufficient": "3+7*multi_index_order",
+    "declared_density_from_packet_norm_coefficient": "21",
+    "declared_high_frequency_density_transfer_coefficient": "10000000000",
+    "declared_packet_from_density_norm_coefficient": "24",
+    "exact_packet_transfer_norm_upper": "6000000",
+    "exact_scaled_canonical_map_majorants": {
+      "density_from_packet_scaled": {
+        "entry_upper": [
+          [
+            "10*sqrt(2)",
+            "0",
+            "sqrt(2)/2",
+            "0"
+          ],
+          [
+            "0",
+            "2*sqrt(2)",
+            "0",
+            "0"
+          ],
+          [
+            "2*sqrt(2)",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "2*sqrt(2)"
+          ]
+        ],
+        "infinity_norm_upper": "21*sqrt(2)/2"
+      },
+      "packet_from_density_scaled": {
+        "entry_upper": [
+          [
+            "0",
+            "0",
+            "sqrt(2)/2",
+            "0"
+          ],
+          [
+            "0",
+            "2*sqrt(2)",
+            "0",
+            "0"
+          ],
+          [
+            "2*sqrt(2)",
+            "0",
+            "10*sqrt(2)",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "2*sqrt(2)"
+          ]
+        ],
+        "infinity_norm_upper": "12*sqrt(2)"
+      }
+    },
+    "high_frequency_density_transfer_polynomial_degree": 3,
+    "high_frequency_density_transfer_triangle_coefficient": "3024000000",
+    "low_frequency_density_transfer_norm_upper": "64*exp(41943040000000000000000000000000000000000000000000000000000000017612800000000000000000000000000000000000000000000000000000000000777/640000000)",
+    "minimum_high_frequency_domain": "40000000000000000000000000000000",
+    "no_global_Fock_unitary_implementation_or_Hadamard_property_assumed": true
+  },
+  "checked_scalar_entries": 175,
+  "claim": "P8-S6.93.NEARBY_QUADRATIC_SCALAR_CCR",
+  "controls": {
+    "initial_Gaussian_weight": {
+      "exact_positive_Gaussian_weight_not_a_physical_dispersion_relation": true,
+      "rejected_inputs": 17,
+      "zero_momentum_is_included": true
+    },
+    "no_parent_source_or_scientific_library_changed": true,
+    "rejected_inputs": 17
+  },
+  "date": "2026-09-09",
+  "exact_residuals": {
+    "actual_density_generator_is_the_literal_canonical_Hamiltonian_generator": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "actual_density_generator_preserves_the_equal_time_CCR_form": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "both_density_and_packet_maps_are_mutual_inverses": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "canonical_density_probe_force_matches_actual_packet_force": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        1
+      ]
+    },
+    "canonical_transfer_growth_retains_both_endpoints_and_packet_transfer": "0",
+    "compact_commutator_lower_retains_hbar_and_action_scale": "0",
+    "density_phase_observable_is_exact_original_relational_scalar": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        1,
+        1
+      ]
+    },
+    "exact_packet_transfer_bound_retains_all_five_factors": "0",
+    "explicit_all_momentum_initial_frequency_has_no_zero_mode_pole": "0",
+    "full_canonical_map_polynomial_growth_degree_is_three": "0",
+    "initial_covariance_has_exact_canonical_antisymmetric_part": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "initial_frequency_is_exactly_one_at_zero_momentum": "0",
+    "initial_ordered_covariance_is_Hermitian": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "initial_ordered_covariance_is_a_positive_Gram_matrix": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "low_frequency_density_bound_retains_both_volume_maps": "0",
+    "normalized_probe_Kubo_response_equals_exact_classical_response": "0",
+    "packet_map_has_exact_k_scaled_symplectic_form": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "relational_matter_commutator_has_the_retarded_momentum_source_sign": "0",
+    "symmetric_covariance_keeps_both_inverse_frequency_weights": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "two_time_commutator_depends_only_on_CCR_not_symmetric_state_covariance": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "two_time_symplectic_composition_reduces_CCR_to_retarded_transfer": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "unscaled_probe_Kubo_response_keeps_overall_action_normalization": "0"
+  },
+  "explicit_positive_Gaussian_Cauchy_covariance_and_field_state": {
+    "Hadamard_stress_tensor_and_interacting_quantum_matching_not_asserted": true,
+    "commutator_normalization": "Planck_constant/overall_action_normalization",
+    "initial_positive_frequency": "mu(k)=sqrt(1+|k|^2)",
+    "initial_reference_time": "-1/20000000",
+    "new_scalar_Gaussian_choice_not_a_transfer_of_old_Proca_state": true,
+    "ordered_Cauchy_covariance": [
+      [
+        "Planck_constant/(2*overall_action_normalization*positive_initial_frequency)",
+        "0",
+        "I*Planck_constant/(2*overall_action_normalization)",
+        "0"
+      ],
+      [
+        "0",
+        "Planck_constant/(2*overall_action_normalization*positive_initial_frequency)",
+        "0",
+        "I*Planck_constant/(2*overall_action_normalization)"
+      ],
+      [
+        "-I*Planck_constant/(2*overall_action_normalization)",
+        "0",
+        "Planck_constant*positive_initial_frequency/(2*overall_action_normalization)",
+        "0"
+      ],
+      [
+        "0",
+        "-I*Planck_constant/(2*overall_action_normalization)",
+        "0",
+        "Planck_constant*positive_initial_frequency/(2*overall_action_normalization)"
+      ]
+    ],
+    "positive_Cauchy_covariance_Gram_factor": [
+      [
+        "sqrt(2)*sqrt(Planck_constant)/(2*sqrt(overall_action_normalization)*sqrt(positive_initial_frequency))",
+        "0"
+      ],
+      [
+        "0",
+        "sqrt(2)*sqrt(Planck_constant)/(2*sqrt(overall_action_normalization)*sqrt(positive_initial_frequency))"
+      ],
+      [
+        "-sqrt(2)*I*sqrt(Planck_constant)*sqrt(positive_initial_frequency)/(2*sqrt(overall_action_normalization))",
+        "0"
+      ],
+      [
+        "0",
+        "-sqrt(2)*I*sqrt(Planck_constant)*sqrt(positive_initial_frequency)/(2*sqrt(overall_action_normalization))"
+      ]
+    ],
+    "symmetric_Cauchy_covariance": [
+      [
+        "Planck_constant/(2*overall_action_normalization*positive_initial_frequency)",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "Planck_constant/(2*overall_action_normalization*positive_initial_frequency)",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "Planck_constant*positive_initial_frequency/(2*overall_action_normalization)",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "Planck_constant*positive_initial_frequency/(2*overall_action_normalization)"
+      ]
+    ],
+    "tempered_linear_fields_and_Wick_n_point_state_only": true
+  },
+  "formulation": "FORMULATION.md",
+  "literal_density_Hamiltonian_symplectic_map_and_source_normalization": {
+    "canonical_density_Hamiltonian": "hat_scale**3*(2*curvature*hat_momentum_squared*metric_scalar**2 + matter_coordinate**2*(hat_momentum_squared*matter_gradient - matter_density**2*trace_square) + matter_square*(-3*matter_density*metric_scalar + matter_canonical_density/hat_scale**3)**2 - (4*curvature_N*hat_momentum_squared*metric_scalar + force_matter*(-3*matter_density*metric_scalar + matter_canonical_density/hat_scale**3) + force_trace*metric_scalar_canonical_density/hat_scale**3)**2/(2*lapse_Hessian) + 2*matter_coordinate*matter_density*metric_scalar_canonical_density*trace_square/(3*hat_scale**3))",
+    "canonical_density_generator": [
+      [
+        "-force_trace*(8*curvature_N*hat_momentum_squared - 6*force_matter*matter_density)/(2*lapse_Hessian)",
+        "2*matter_density*trace_square/3",
+        "-force_trace**2/(hat_scale**3*lapse_Hessian)",
+        "-force_matter*force_trace/(hat_scale**3*lapse_Hessian)"
+      ],
+      [
+        "-force_matter*(8*curvature_N*hat_momentum_squared - 6*force_matter*matter_density)/(2*lapse_Hessian) - 6*matter_density*matter_square",
+        "0",
+        "-force_matter*force_trace/(hat_scale**3*lapse_Hessian)",
+        "(-force_matter**2/lapse_Hessian + 2*matter_square)/hat_scale**3"
+      ],
+      [
+        "hat_scale**3*(-4*curvature*hat_momentum_squared - 18*matter_density**2*matter_square + (4*curvature_N*hat_momentum_squared - 3*force_matter*matter_density)*(8*curvature_N*hat_momentum_squared - 6*force_matter*matter_density)/(2*lapse_Hessian))",
+        "0",
+        "(3*hat_Hubble*hat_scale**3 + hat_scale**3*(force_trace*(8*curvature_N*hat_momentum_squared - 6*force_matter*matter_density)/(2*lapse_Hessian) - 3*hat_Hubble))/hat_scale**3",
+        "force_matter*(8*curvature_N*hat_momentum_squared - 6*force_matter*matter_density)/(2*lapse_Hessian) + 6*matter_density*matter_square"
+      ],
+      [
+        "0",
+        "hat_scale**3*(-2*hat_momentum_squared*matter_gradient + 2*matter_density**2*trace_square)",
+        "-2*matter_density*trace_square/3",
+        "0"
+      ]
+    ],
+    "canonical_density_phase": [
+      [
+        "metric_scalar"
+      ],
+      [
+        "matter_coordinate"
+      ],
+      [
+        "metric_scalar_canonical_density"
+      ],
+      [
+        "matter_canonical_density"
+      ]
+    ],
+    "canonical_density_to_packet_map": [
+      [
+        "0",
+        "0",
+        "-sqrt(hat_scale)/(2*comoving_frequency)",
+        "0"
+      ],
+      [
+        "0",
+        "comoving_frequency*hat_scale**(3/2)",
+        "0",
+        "0"
+      ],
+      [
+        "2*comoving_frequency**2/sqrt(hat_scale)",
+        "0",
+        "force_trace/(2*curvature_N*hat_scale**(3/2))",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "hat_scale**(-3/2)"
+      ]
+    ],
+    "constant_symplectic_form": [
+      [
+        "0",
+        "0",
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "1"
+      ],
+      [
+        "-1",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "-1",
+        "0",
+        "0"
+      ]
+    ],
+    "normalized_probe_source_vector": [
+      [
+        "0"
+      ],
+      [
+        "0"
+      ],
+      [
+        "0"
+      ],
+      [
+        "conformal_scale**3*hat_scale**3*physical_lapse"
+      ]
+    ],
+    "normalized_to_density_phase": [
+      [
+        "1",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "hat_scale**3",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "hat_scale**3"
+      ]
+    ],
+    "overall_positive_action_normalization": "kappa; normalized J multiplies kappa in the probe action",
+    "packet_to_canonical_density_map": [
+      [
+        "force_trace/(2*comoving_frequency*curvature_N*hat_scale**(3/2))",
+        "0",
+        "sqrt(hat_scale)/(2*comoving_frequency**2)",
+        "0"
+      ],
+      [
+        "0",
+        "1/(comoving_frequency*hat_scale**(3/2))",
+        "0",
+        "0"
+      ],
+      [
+        "-2*comoving_frequency/sqrt(hat_scale)",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "hat_scale**(3/2)"
+      ]
+    ],
+    "relational_observable_row": [
+      [
+        "0",
+        "1",
+        "0",
+        "0"
+      ]
+    ],
+    "unscaled_physical_probe": "j=kappa*J; its response is normalized classical response divided by kappa"
+  },
+  "named_exact_check_count": 22,
+  "not_established": [
+    "Hadamard singularities, finite state energy, local renormalized Wick polynomials, stress tensor or nearby semiclassical backreaction",
+    "A global infinite-volume Fock-unitary implementation of time evolution",
+    "A transfer of the old Proca state, background quantum profile, stress or physical scale dictionary",
+    "Canonical interactions, omitted operators, loop or heavy-threshold errors, joint temporal/spatial EFT validity or actual parent high-band tail",
+    "Finite Wilson matching, healthy full-candidate vacuum, nonperturbative local quantum-gravity observables or common-parent V/G/B",
+    "A globally complete nearby bounce, universal UV completion/exclusion, realistic-field P8(a) or original P8 closure"
+  ],
+  "prior_sha256": {
+    "S6_92_fully_rebuilt": "b0980384d783fdb9b3cdbb4d8ee292a37011344ed01b313b0b1faaad1633e3a3",
+    "new_scalar_Gaussian_state_not_a_transfer_of_old_Proca_quantum_profile": true,
+    "overall_positive_action_scale_and_hbar_retained": true,
+    "same_actual_nearby_background_quadratic_action_observable_and_compact_probes": true
+  },
+  "proof_checks": {
+    "Gaussian_linear_field_state_does_not_establish_Hadamard_stress_or_semiclassical_backreaction": true,
+    "actual_canonical_transfer_below_declared_polynomial_coefficient": true,
+    "all_states_of_the_same_CCR_algebra_share_the_commutator": true,
+    "compact_frequency_transfer_bound_is_finite": true,
+    "compact_quantum_commutator_lower_is_positive_for_positive_action_and_hbar": true,
+    "every_Fourier_derivative_is_controlled_by_written_polynomial_ODE_induction": true,
+    "finite_EFT_quantum_UV_matching_and_original_P8_remain_open": true,
+    "forward_canonical_map_below_declared_coefficient": true,
+    "growth_bound_is_not_a_finite_energy_or_stress_tensor_state_bound": true,
+    "inverse_canonical_map_below_declared_coefficient": true,
+    "normalized_Kubo_response_not_confused_with_unscaled_physical_source": true,
+    "scaled_map_majorants_only_use_nonpositive_frequency_powers": true
+  },
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "e4117fe7e6659bd39aa190d8b1bc28b552f8d9ab32a6bd8c1c4903ad015aaf96",
+    "README.md": "ca5bd36815061becb8607887edde7a938276327ecb8b35374c1d718ec7b4f191",
+    "notes/canonical.md": "1b5bc4d91c1069ef07909f33d874592bdb0c4cbc386c802f833b301c1b4d572f",
+    "notes/growth.md": "4554bd640e562fc3e8f9c606c0cc1903b5893a1ed1f28499a326d09c857430eb",
+    "notes/response.md": "13212508f708a7e4bc3f0b2a7a5c07e4be2ec8881676d492e87aa001ff243072",
+    "notes/scope.md": "1c38fa9ec5826855bbf80dca0ec38df241cbada1474227f60ce16699ac5aaeb1",
+    "notes/state.md": "8b421fa884b341372eba57f1d8000b4abc3c087a098a6375fd33ad6d8930aee4",
+    "src/p8_proca_scalar_ccr/__init__.py": "def16629019bff1bc85372461048b5727e832dff8d8f9142c3894cc6d3239e75",
+    "src/p8_proca_scalar_ccr/audit.py": "ac577c71aae36682e285789bae5bcda22c6ae63f159abab44949dbdaa64488c0",
+    "src/p8_proca_scalar_ccr/canonical.py": "6d4c492044a6196f5d0cdb8a40186d005c0043239fcd017365005a997094cedf",
+    "src/p8_proca_scalar_ccr/growth.py": "b91bc674812e113eaa5ad90884a1a99379955fc2deafd7a43980bf70626d3b47",
+    "src/p8_proca_scalar_ccr/response.py": "3778bc457a7e643bb36abcfebb71ed471c648e30e5b4878f4d94ec44180865c6",
+    "src/p8_proca_scalar_ccr/state.py": "66bf09cb6c21b441be1b6278ce8104cfc1d149b98da8596c406c8ffa09daee73",
+    "src/p8_proca_scalar_ccr/verify.py": "5a7d379ef66f941a8827e2e5cd1ebfc49c6a5df234d40ba726a95ee3794cb9f7",
+    "tests/conftest.py": "f1d999093cd6bd73af6633816ffd432e1e376b548d2102d972c433e9c909261d",
+    "tests/test_proca_scalar_ccr_certificate.py": "d2758ac72c5105053237dd1e436a3ee85fa27e60d958bd4dd47cc305d5b78abd",
+    "tests/test_proca_scalar_ccr_science.py": "9f4c55d5e9e38a6287753dc6464b39a6fc28568f138d97e75745418981bb29b3"
+  },
+  "state_independent_Kubo_response_and_compact_commutator_lower": {
+    "compact_detector_operator_test": "f(t,x)",
+    "compact_source_operator_test": "physical_volume_density(s)*J(s,y)",
+    "no_interacting_parent_or_nonperturbative_quantum_gravity_locality_transfer": true,
+    "normalized_probe_Kubo_prefactor": "I*overall_action_normalization*source_physical_volume_density/Planck_constant",
+    "normalized_probe_classical_response_multiplier": "source_physical_volume_density*two_time_density_transfer_1_3",
+    "positive_compact_classical_response_lower": "323433/335544320000000000000000000000000000000000000000000000000000",
+    "positive_compact_smeared_commutator_magnitude_lower": "323433*Planck_constant/(335544320000000000000000000000000000000000000000000000000000*overall_action_normalization)",
+    "relational_matter_commutator_multiplier": "-I*Planck_constant*two_time_density_transfer_1_3/overall_action_normalization",
+    "state_independent_nonzero_commutator_in_exact_reduced_quadratic_scalar_algebra": true,
+    "two_time_CCR_kernel": [
+      [
+        "-I*Planck_constant*two_time_density_transfer_0_2/overall_action_normalization",
+        "-I*Planck_constant*two_time_density_transfer_0_3/overall_action_normalization",
+        "I*Planck_constant*two_time_density_transfer_0_0/overall_action_normalization",
+        "I*Planck_constant*two_time_density_transfer_0_1/overall_action_normalization"
+      ],
+      [
+        "-I*Planck_constant*two_time_density_transfer_1_2/overall_action_normalization",
+        "-I*Planck_constant*two_time_density_transfer_1_3/overall_action_normalization",
+        "I*Planck_constant*two_time_density_transfer_1_0/overall_action_normalization",
+        "I*Planck_constant*two_time_density_transfer_1_1/overall_action_normalization"
+      ],
+      [
+        "-I*Planck_constant*two_time_density_transfer_2_2/overall_action_normalization",
+        "-I*Planck_constant*two_time_density_transfer_2_3/overall_action_normalization",
+        "I*Planck_constant*two_time_density_transfer_2_0/overall_action_normalization",
+        "I*Planck_constant*two_time_density_transfer_2_1/overall_action_normalization"
+      ],
+      [
+        "-I*Planck_constant*two_time_density_transfer_3_2/overall_action_normalization",
+        "-I*Planck_constant*two_time_density_transfer_3_3/overall_action_normalization",
+        "I*Planck_constant*two_time_density_transfer_3_0/overall_action_normalization",
+        "I*Planck_constant*two_time_density_transfer_3_1/overall_action_normalization"
+      ]
+    ],
+    "two_time_canonical_transfer": [
+      [
+        "two_time_density_transfer_0_0",
+        "two_time_density_transfer_0_1",
+        "two_time_density_transfer_0_2",
+        "two_time_density_transfer_0_3"
+      ],
+      [
+        "two_time_density_transfer_1_0",
+        "two_time_density_transfer_1_1",
+        "two_time_density_transfer_1_2",
+        "two_time_density_transfer_1_3"
+      ],
+      [
+        "two_time_density_transfer_2_0",
+        "two_time_density_transfer_2_1",
+        "two_time_density_transfer_2_2",
+        "two_time_density_transfer_2_3"
+      ],
+      [
+        "two_time_density_transfer_3_0",
+        "two_time_density_transfer_3_1",
+        "two_time_density_transfer_3_2",
+        "two_time_density_transfer_3_3"
+      ]
+    ],
+    "unscaled_probe_Kubo_prefactor": "I*source_physical_volume_density/Planck_constant"
+  },
+  "status": "ACTUAL_NEARBY_REDUCED_QUADRATIC_SCALAR_CCR_HAS_POSITIVE_TEMPERED_GAUSSIAN_LINEAR_FIELDS_AND_STATE_INDEPENDENT_COMPACT_MATTER_SPACELIKE_COMMUTATOR; HADAMARD_STRESS_INTERACTING_MATCHING_UV_AND_ORIGINAL_P8_OPEN",
+  "verdict": "The specified reduced quadratic scalar Hamiltonian on the actual nearby local classical bounce has canonical density evolution preserving the exact CCR. Complete high- and low-frequency transfer bounds and a written all-orders parameter-ODE induction make evolved Schwartz and compact spacetime smearings well-defined. An explicit initial positive Gram covariance constructs a tempered Gaussian linear-field state. The normalized linear Kubo response equals the classical retarded response in every state of the same CCR algebra. The unchanged S6.92 compact probes yield a central matter-spacelike commutator with magnitude at least 3*hbar*D/(4*kappa)>0, keeping the action scale and source volume. This is not a Hadamard or semiclassical state, an interacting response, a cutoff-valid UV exclusion or a nonperturbative quantum-gravity locality theorem.",
+  "verification_boundary": "Native exact canonical density Hamiltonian and CCR identities, complete endpoint map and transfer majorants, explicit positive covariance Gram factor and antisymmetric part, Kubo sign/source/action normalization and inherited compact response lower, with written all-orders Schwartz, Fock-state and linear-source proofs. Every parent is rebuilt natively. No scientific-library patch, finite-jet substitute for test-space continuity, transplanted Klein-Gordon theorem, Hadamard/stress assertion or interacting UV transfer. Not proof-assistant formalization.",
+  "written_proofs": [
+    "notes/canonical.md",
+    "notes/growth.md",
+    "notes/state.md",
+    "notes/response.md",
+    "notes/scope.md"
+  ]
+}
