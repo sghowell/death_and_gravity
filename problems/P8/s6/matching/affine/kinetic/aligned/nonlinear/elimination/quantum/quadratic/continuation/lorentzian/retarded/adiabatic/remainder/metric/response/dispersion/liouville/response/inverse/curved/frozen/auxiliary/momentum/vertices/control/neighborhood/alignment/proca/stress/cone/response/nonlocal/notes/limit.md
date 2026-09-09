@@ -1,0 +1,16 @@
+# Common finite limit, causality and the remaining derivative loss
+
+For each fixed smooth prepared source pair, choose a sufficiently small real amplitude neighborhood keeping N and a positive on I. The new physical Proca mass is constant, so no old off-clock mass-positivity interval is borrowed. The original Cauchy data and reference jets agree on an initial neighborhood, and the exact oscillator variation has zero independent initial data.
+
+Smooth parameter dependence of this explicit mode ODE gives the retarded variation. The finite WKB coefficients and their variations are smooth in the background/source jets and compactified momentum. On a smaller amplitude neighborhood the reference ratio stays nonzero and the same inverse-frequency powers have finite uniform majorants. The slowest varied exact-minus-reference tail is nu^-4. This supplies dominated convergence for differentiating the subtracted momentum integral; no numerical amplitude-uniform constants away from the stated background are claimed.
+
+The dimensional continuation is the unchanged selected W4(D) initial prescription plus the same fixed D-independent Borel correction. In the new action every mass-source jet is zero in the whole small dimensional neighborhood. For fixed mass and fixed sources, take a sufficiently small complex-D neighborhood of three. The leading frequency is D-independent, while D-dependent reference corrections begin at inverse frequency. Their complex phases are uniformly bounded in momentum over I, and the reference ratio remains nonzero.
+
+Use analytic plus/minus modes and their analytic Wronskian, imposing conjugation only on the physical real slice. The unchanged initial off-diagonal mixing is O(nu^-6), its independent variation is zero, and the new varied transport retains the same ultraviolet powers. For |Re D-3|<1/4 the slowest nu^-4 tail is radially integrable. The low-momentum isotropic canonical limit is regular. Volume normalization and 1/D are analytic near D=3. These facts justify the common finite limit without an additional state-dependent pole or an uncomputed evanescent assignment. Displayed numerical bounds apply only at D=3.
+
+Assemble the new renormalized response as the integral of actual varied modes minus the new 0,2,4 adiabatic variations, plus S6.84's independently matched finite local physical operator. Add the already-fixed S6.82 scalar profile, with no state or coefficient reselection. Exact mode response is retarded in time; subtraction, matching and the profile add local operators only. The assembled prepared response is therefore retarded.
+
+The C10-to-C0 bound has genuine derivative loss. Smallness at L=10^400 does not provide a bounded inverse in a no-loss norm, a feedback contraction, an exact quantum spectrum, a characteristic-cone theorem or a nonlinear quantum bounce. The old invertible fourth block and frozen pole do not transfer to this constant-mass candidate.
+
+Arbitrary spatial or independently varied initial-state response, canonical profile interaction bounds, mixed loops, heavy thresholds, omitted operators, finite Wilson matching and the common-parent V/G/B obligations remain open. No UV completion, general exclusion or original P8 closure is asserted.
+

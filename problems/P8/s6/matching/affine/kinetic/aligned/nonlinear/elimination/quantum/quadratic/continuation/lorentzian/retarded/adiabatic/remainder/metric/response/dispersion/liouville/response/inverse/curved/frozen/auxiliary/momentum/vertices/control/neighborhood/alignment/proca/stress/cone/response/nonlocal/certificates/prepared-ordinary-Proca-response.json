@@ -1,0 +1,1307 @@
+{
+  "actual_already_fixed_profile_vertices_and_total_chart_contact": {
+    "background_cancelled_clock_output_matrix": [
+      [
+        "-1",
+        "3/(2*(u**2 + 1)**3)"
+      ],
+      [
+        "0",
+        "3"
+      ]
+    ],
+    "checks": {
+      "actual_background_cancelled_clock_current_map": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0"
+        ]
+      ],
+      "new_fixed_profile_Hessian": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0"
+        ]
+      ],
+      "new_fixed_profile_gradient": [
+        [
+          "0"
+        ],
+        [
+          "0"
+        ]
+      ],
+      "new_fixed_profile_physical_normalization": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0"
+        ]
+      ],
+      "total_second_metric_map_contact_cancels_only_after_fixed_profile": "0"
+    },
+    "fixed_profile_density_gradient": [
+      [
+        "fixed_new_ordinary_energy"
+      ],
+      [
+        "-3*fixed_new_ordinary_pressure"
+      ]
+    ],
+    "fixed_profile_density_hessian": [
+      [
+        "-fixed_new_ordinary_energy - fixed_new_ordinary_pressure",
+        "3*fixed_new_ordinary_energy"
+      ],
+      [
+        "3*fixed_new_ordinary_energy",
+        "-9*fixed_new_ordinary_pressure"
+      ]
+    ],
+    "fixed_profile_physical_stress_jacobian": [
+      [
+        "fixed_new_ordinary_energy + fixed_new_ordinary_pressure",
+        "0"
+      ],
+      [
+        "fixed_new_ordinary_energy + fixed_new_ordinary_pressure",
+        "0"
+      ]
+    ],
+    "linear_metric_chart_Jacobian": [
+      [
+        "1",
+        "0"
+      ],
+      [
+        "1/(2*(u**2 + 1)**3)",
+        "1"
+      ]
+    ],
+    "policy": "S6.82's new ordinary-Proca c-number profile is fixed, including its cutoff plateau. No state or profile is reevaluated. The nonlinear chart's extra Hessian contact cancels for the total background-cancelled Gaussian-plus-profile action, not for its metric piece alone.",
+    "pressure": "fixed_new_ordinary_pressure",
+    "rho": "fixed_new_ordinary_energy"
+  },
+  "actual_new_mode_source_vertices": {
+    "L": {
+      "c1": "-2*physical_momentum_fraction*u/(u**2 + 1) + 4*u*(physical_momentum_fraction + 1/2)/(u**2 + 1)",
+      "delta_U": "-ordinary_prepared_lapse_source2/2 + 8*ordinary_prepared_logscale_source0*physical_momentum_fraction*(physical_momentum_fraction - 1)*(16*physical_momentum_fraction*u**2 - 9*u**2 + 1)/(u**2 + 1)**2 + 16*ordinary_prepared_logscale_source1*physical_momentum_fraction*u*(physical_momentum_fraction - 1)/(u**2 + 1) + ordinary_prepared_logscale_source2*(2*physical_momentum_fraction + 1)/2 + 8*u*(physical_momentum_fraction + 1/2)*(-ordinary_prepared_lapse_source1/2 + 8*ordinary_prepared_logscale_source0*physical_momentum_fraction*u*(physical_momentum_fraction - 1)/(u**2 + 1) + ordinary_prepared_logscale_source1*(2*physical_momentum_fraction + 1)/2)/(u**2 + 1)",
+      "delta_c1": "4*ordinary_prepared_logscale_source0*physical_momentum_fraction*u*(physical_momentum_fraction - 1)/(u**2 + 1) - ordinary_prepared_logscale_source1*physical_momentum_fraction/2 + ordinary_prepared_logscale_source1*(2*physical_momentum_fraction + 1)/2",
+      "delta_d": "-ordinary_prepared_lapse_source1/2 + 8*ordinary_prepared_logscale_source0*physical_momentum_fraction*u*(physical_momentum_fraction - 1)/(u**2 + 1) + ordinary_prepared_logscale_source1*(2*physical_momentum_fraction + 1)/2",
+      "delta_lambda": "ordinary_prepared_lapse_source1 - 8*ordinary_prepared_logscale_source0*physical_momentum_fraction*u*(physical_momentum_fraction - 1)/(u**2 + 1) - ordinary_prepared_logscale_source1*physical_momentum_fraction",
+      "r": "ordinary_prepared_lapse_source0 - ordinary_prepared_logscale_source0*physical_momentum_fraction",
+      "rate": "4*u*(physical_momentum_fraction + 1/2)/(u**2 + 1)",
+      "rg": "-ordinary_prepared_lapse_source0/2 + ordinary_prepared_logscale_source0*(2*physical_momentum_fraction + 1)/2"
+    },
+    "T": {
+      "c1": "-2*physical_momentum_fraction*u/(u**2 + 1) + 2*u/(u**2 + 1)",
+      "delta_U": "-ordinary_prepared_lapse_source2/2 + ordinary_prepared_logscale_source2/2 + 4*u*(-ordinary_prepared_lapse_source1/2 + ordinary_prepared_logscale_source1/2)/(u**2 + 1)",
+      "delta_c1": "-4*ordinary_prepared_logscale_source0*physical_momentum_fraction*u*(physical_momentum_fraction - 1)/(u**2 + 1) - ordinary_prepared_logscale_source1*physical_momentum_fraction/2 + ordinary_prepared_logscale_source1/2",
+      "delta_d": "-ordinary_prepared_lapse_source1/2 + ordinary_prepared_logscale_source1/2",
+      "delta_lambda": "ordinary_prepared_lapse_source1 - 8*ordinary_prepared_logscale_source0*physical_momentum_fraction*u*(physical_momentum_fraction - 1)/(u**2 + 1) - ordinary_prepared_logscale_source1*physical_momentum_fraction",
+      "r": "ordinary_prepared_lapse_source0 - ordinary_prepared_logscale_source0*physical_momentum_fraction",
+      "rate": "2*u/(u**2 + 1)",
+      "rg": "-ordinary_prepared_lapse_source0/2 + ordinary_prepared_logscale_source0/2"
+    }
+  },
+  "actual_new_normalized_physical_readout_vertices": {
+    "L": {
+      "energy": {
+        "A": "1",
+        "B": "1",
+        "delta_A": "-ordinary_prepared_lapse_source0 - 3*ordinary_prepared_logscale_source0",
+        "delta_B": "-ordinary_prepared_lapse_source0 - 3*ordinary_prepared_logscale_source0"
+      },
+      "pressure": {
+        "A": "2*physical_momentum_fraction/3 + 1/3",
+        "B": "-1/3",
+        "delta_A": "-ordinary_prepared_lapse_source0*(2*physical_momentum_fraction + 1)/3 + ordinary_prepared_logscale_source0*(4*physical_momentum_fraction**2 - 10*physical_momentum_fraction - 3)/3",
+        "delta_B": "ordinary_prepared_lapse_source0/3 + ordinary_prepared_logscale_source0"
+      }
+    },
+    "T": {
+      "energy": {
+        "A": "1",
+        "B": "1",
+        "delta_A": "-ordinary_prepared_lapse_source0 - 3*ordinary_prepared_logscale_source0",
+        "delta_B": "-ordinary_prepared_lapse_source0 - 3*ordinary_prepared_logscale_source0"
+      },
+      "pressure": {
+        "A": "1/3",
+        "B": "2*physical_momentum_fraction/3 - 1/3",
+        "delta_A": "-ordinary_prepared_lapse_source0/3 - ordinary_prepared_logscale_source0",
+        "delta_B": "-ordinary_prepared_lapse_source0*(2*physical_momentum_fraction - 1)/3 + ordinary_prepared_logscale_source0*(4*physical_momentum_fraction**2 - 10*physical_momentum_fraction + 3)/3"
+      }
+    }
+  },
+  "actual_new_varied_adiabatic_readouts": {
+    "L": {
+      "energy": {
+        "0": "-2*ordinary_prepared_logscale_source0*(physical_momentum_fraction + 3)",
+        "1": "-8*ordinary_prepared_lapse_source0*u**2*(physical_momentum_fraction + 1)**2/(u**2 + 1)**2 + 4*ordinary_prepared_logscale_source0*u**2*(physical_momentum_fraction + 1)*(5*physical_momentum_fraction**2 - 6*physical_momentum_fraction - 3)/(u**2 + 1)**2 + 2*ordinary_prepared_logscale_source1*u*(physical_momentum_fraction + 1)**2/(u**2 + 1)",
+        "2": "4*ordinary_prepared_lapse_source0*(420*physical_momentum_fraction**4*u**4 + 56*physical_momentum_fraction**3*u**4 + 56*physical_momentum_fraction**3*u**2 - 581*physical_momentum_fraction**2*u**4 + 38*physical_momentum_fraction**2*u**2 - physical_momentum_fraction**2 + 30*physical_momentum_fraction*u**4 - 28*physical_momentum_fraction*u**2 - 2*physical_momentum_fraction - 9*u**4 - 10*u**2 - 1)/(u**2 + 1)**4 + 4*ordinary_prepared_lapse_source1*u*(physical_momentum_fraction + 1)*(14*physical_momentum_fraction**2*u**2 - 3*physical_momentum_fraction*u**2 + physical_momentum_fraction - u**2 + 1)/(u**2 + 1)**3 + 2*ordinary_prepared_lapse_source2*u**2*(physical_momentum_fraction + 1)**2/(u**2 + 1)**2 - ordinary_prepared_logscale_source0*(physical_momentum_fraction - 1)*(4620*physical_momentum_fraction**4*u**4 + 504*physical_momentum_fraction**3*u**4 + 504*physical_momentum_fraction**3*u**2 - 4067*physical_momentum_fraction**2*u**4 + 266*physical_momentum_fraction**2*u**2 - 7*physical_momentum_fraction**2 + 150*physical_momentum_fraction*u**4 - 140*physical_momentum_fraction*u**2 - 10*physical_momentum_fraction - 27*u**4 - 30*u**2 - 3)/(u**2 + 1)**4 - ordinary_prepared_logscale_source1*u*(420*physical_momentum_fraction**4*u**2 + 84*physical_momentum_fraction**3*u**2 + 28*physical_momentum_fraction**3 - 559*physical_momentum_fraction**2*u**2 + 21*physical_momentum_fraction**2 + 22*physical_momentum_fraction*u**2 - 10*physical_momentum_fraction - 11*u**2 - 3)/(u**2 + 1)**3 - ordinary_prepared_logscale_source2*(physical_momentum_fraction + 1)*(28*physical_momentum_fraction**2*u**2 - 3*physical_momentum_fraction*u**2 - physical_momentum_fraction + u**2 - 1)/(2*(u**2 + 1)**2) - ordinary_prepared_logscale_source3*u*(physical_momentum_fraction + 1)**2/(2*(u**2 + 1))"
+      },
+      "pressure": {
+        "0": "2*ordinary_prepared_logscale_source0*physical_momentum_fraction*(physical_momentum_fraction - 5)/3",
+        "1": "4*ordinary_prepared_lapse_source0*(physical_momentum_fraction + 1)*(10*physical_momentum_fraction**2*u**2 - 7*physical_momentum_fraction*u**2 + physical_momentum_fraction - u**2 + 1)/(3*(u**2 + 1)**2) + 2*ordinary_prepared_lapse_source1*u*(physical_momentum_fraction + 1)**2/(3*(u**2 + 1)) - 2*ordinary_prepared_logscale_source0*(70*physical_momentum_fraction**4*u**2 - 75*physical_momentum_fraction**3*u**2 + 5*physical_momentum_fraction**3 - 45*physical_momentum_fraction**2*u**2 - physical_momentum_fraction**2 + 39*physical_momentum_fraction*u**2 - 9*physical_momentum_fraction + 3*u**2 - 3)/(3*(u**2 + 1)**2) - 2*ordinary_prepared_logscale_source1*physical_momentum_fraction*u*(physical_momentum_fraction + 1)*(5*physical_momentum_fraction - 3)/(3*(u**2 + 1)) - ordinary_prepared_logscale_source2*(physical_momentum_fraction + 1)**2/6",
+        "2": "-4*ordinary_prepared_lapse_source0*(4620*physical_momentum_fraction**5*u**4 - 3276*physical_momentum_fraction**4*u**4 + 924*physical_momentum_fraction**4*u**2 - 4459*physical_momentum_fraction**3*u**4 - 98*physical_momentum_fraction**3*u**2 + 21*physical_momentum_fraction**3 + 3055*physical_momentum_fraction**2*u**4 - 930*physical_momentum_fraction**2*u**2 + 15*physical_momentum_fraction**2 - 117*physical_momentum_fraction*u**4 + 98*physical_momentum_fraction*u**2 - 9*physical_momentum_fraction + 9*u**4 + 6*u**2 - 3)/(3*(u**2 + 1)**4) - 2*ordinary_prepared_lapse_source1*u*(physical_momentum_fraction + 1)*(462*physical_momentum_fraction**3*u**2 - 469*physical_momentum_fraction**2*u**2 + 63*physical_momentum_fraction**2 + 34*physical_momentum_fraction*u**2 - 18*physical_momentum_fraction - 3*u**2 - 9)/(3*(u**2 + 1)**3) - 2*ordinary_prepared_lapse_source2*(physical_momentum_fraction + 1)*(14*physical_momentum_fraction**2*u**2 - 3*physical_momentum_fraction*u**2 + physical_momentum_fraction - u**2 + 1)/(3*(u**2 + 1)**2) - ordinary_prepared_lapse_source3*u*(physical_momentum_fraction + 1)**2/(6*(u**2 + 1)) + ordinary_prepared_logscale_source0*(physical_momentum_fraction - 1)*(60060*physical_momentum_fraction**5*u**4 - 36036*physical_momentum_fraction**4*u**4 + 10164*physical_momentum_fraction**4*u**2 - 40131*physical_momentum_fraction**3*u**4 - 882*physical_momentum_fraction**3*u**2 + 189*physical_momentum_fraction**3 + 21385*physical_momentum_fraction**2*u**4 - 6510*physical_momentum_fraction**2*u**2 + 105*physical_momentum_fraction**2 - 585*physical_momentum_fraction*u**4 + 490*physical_momentum_fraction*u**2 - 45*physical_momentum_fraction + 27*u**4 + 18*u**2 - 9)/(3*(u**2 + 1)**4) + 2*ordinary_prepared_logscale_source1*u*(2310*physical_momentum_fraction**5*u**2 - 1407*physical_momentum_fraction**4*u**2 + 231*physical_momentum_fraction**4 - 2233*physical_momentum_fraction**3*u**2 + 7*physical_momentum_fraction**3 + 1310*physical_momentum_fraction**2*u**2 - 210*physical_momentum_fraction**2 - 43*physical_momentum_fraction*u**2 + 11*physical_momentum_fraction + 3*u**2 - 3)/(3*(u**2 + 1)**3) + ordinary_prepared_logscale_source2*(physical_momentum_fraction + 1)*(462*physical_momentum_fraction**3*u**2 - 427*physical_momentum_fraction**2*u**2 + 21*physical_momentum_fraction**2 + 25*physical_momentum_fraction*u**2 - 3*physical_momentum_fraction - 6*u**2)/(6*(u**2 + 1)**2) + ordinary_prepared_logscale_source3*physical_momentum_fraction*u*(physical_momentum_fraction + 1)*(7*physical_momentum_fraction - 1)/(3*(u**2 + 1)) + ordinary_prepared_logscale_source4*(physical_momentum_fraction + 1)**2/24"
+      }
+    },
+    "T": {
+      "energy": {
+        "0": "-2*ordinary_prepared_logscale_source0*(physical_momentum_fraction + 3)",
+        "1": "-8*ordinary_prepared_lapse_source0*u**2*(physical_momentum_fraction - 1)**2/(u**2 + 1)**2 + 4*ordinary_prepared_logscale_source0*u**2*(physical_momentum_fraction - 1)**2*(5*physical_momentum_fraction - 3)/(u**2 + 1)**2 + 2*ordinary_prepared_logscale_source1*u*(physical_momentum_fraction - 1)**2/(u**2 + 1)",
+        "2": "4*ordinary_prepared_lapse_source0*(physical_momentum_fraction - 1)**2*(420*physical_momentum_fraction**2*u**4 - 224*physical_momentum_fraction*u**4 + 56*physical_momentum_fraction*u**2 - 9*u**4 - 10*u**2 - 1)/(u**2 + 1)**4 + 4*ordinary_prepared_lapse_source1*u*(physical_momentum_fraction - 1)**2*(14*physical_momentum_fraction*u**2 - u**2 + 1)/(u**2 + 1)**3 + 2*ordinary_prepared_lapse_source2*u**2*(physical_momentum_fraction - 1)**2/(u**2 + 1)**2 - ordinary_prepared_logscale_source0*(physical_momentum_fraction - 1)**2*(4620*physical_momentum_fraction**3*u**4 - 4956*physical_momentum_fraction**2*u**4 + 504*physical_momentum_fraction**2*u**2 + 1057*physical_momentum_fraction*u**4 - 350*physical_momentum_fraction*u**2 - 7*physical_momentum_fraction + 27*u**4 + 30*u**2 + 3)/(u**2 + 1)**4 - ordinary_prepared_logscale_source1*u*(physical_momentum_fraction - 1)**2*(420*physical_momentum_fraction**2*u**2 - 196*physical_momentum_fraction*u**2 + 28*physical_momentum_fraction - 11*u**2 - 3)/(u**2 + 1)**3 - ordinary_prepared_logscale_source2*(physical_momentum_fraction - 1)**2*(28*physical_momentum_fraction*u**2 + u**2 - 1)/(2*(u**2 + 1)**2) - ordinary_prepared_logscale_source3*u*(physical_momentum_fraction - 1)**2/(2*(u**2 + 1))"
+      },
+      "pressure": {
+        "0": "2*ordinary_prepared_logscale_source0*physical_momentum_fraction*(physical_momentum_fraction - 5)/3",
+        "1": "4*ordinary_prepared_lapse_source0*(physical_momentum_fraction - 1)**2*(10*physical_momentum_fraction*u**2 - u**2 + 1)/(3*(u**2 + 1)**2) + 2*ordinary_prepared_lapse_source1*u*(physical_momentum_fraction - 1)**2/(3*(u**2 + 1)) - 2*ordinary_prepared_logscale_source0*(physical_momentum_fraction - 1)**2*(70*physical_momentum_fraction**2*u**2 - 55*physical_momentum_fraction*u**2 + 5*physical_momentum_fraction + 3*u**2 - 3)/(3*(u**2 + 1)**2) - 10*ordinary_prepared_logscale_source1*physical_momentum_fraction*u*(physical_momentum_fraction - 1)**2/(3*(u**2 + 1)) - ordinary_prepared_logscale_source2*(physical_momentum_fraction - 1)**2/6",
+        "2": "-4*ordinary_prepared_lapse_source0*(physical_momentum_fraction - 1)**2*(4620*physical_momentum_fraction**3*u**4 - 4116*physical_momentum_fraction**2*u**4 + 924*physical_momentum_fraction**2*u**2 + 609*physical_momentum_fraction*u**4 - 490*physical_momentum_fraction*u**2 + 21*physical_momentum_fraction + 9*u**4 + 6*u**2 - 3)/(3*(u**2 + 1)**4) - 2*ordinary_prepared_lapse_source1*u*(physical_momentum_fraction - 1)**2*(462*physical_momentum_fraction**2*u**2 - 203*physical_momentum_fraction*u**2 + 63*physical_momentum_fraction - 3*u**2 - 9)/(3*(u**2 + 1)**3) - 2*ordinary_prepared_lapse_source2*(physical_momentum_fraction - 1)**2*(14*physical_momentum_fraction*u**2 - u**2 + 1)/(3*(u**2 + 1)**2) - ordinary_prepared_lapse_source3*u*(physical_momentum_fraction - 1)**2/(6*(u**2 + 1)) + ordinary_prepared_logscale_source0*(physical_momentum_fraction - 1)**2*(60060*physical_momentum_fraction**4*u**4 - 86856*physical_momentum_fraction**3*u**4 + 10164*physical_momentum_fraction**3*u**2 + 34293*physical_momentum_fraction**2*u**4 - 10878*physical_momentum_fraction**2*u**2 + 189*physical_momentum_fraction**2 - 2982*physical_momentum_fraction*u**4 + 2492*physical_momentum_fraction*u**2 - 126*physical_momentum_fraction - 27*u**4 - 18*u**2 + 9)/(3*(u**2 + 1)**4) + 2*ordinary_prepared_logscale_source1*u*(physical_momentum_fraction - 1)**2*(2310*physical_momentum_fraction**3*u**2 - 1827*physical_momentum_fraction**2*u**2 + 231*physical_momentum_fraction**2 + 203*physical_momentum_fraction*u**2 - 91*physical_momentum_fraction + 3*u**2 - 3)/(3*(u**2 + 1)**3) + ordinary_prepared_logscale_source2*(physical_momentum_fraction - 1)**2*(462*physical_momentum_fraction**2*u**2 - 161*physical_momentum_fraction*u**2 + 21*physical_momentum_fraction - 6*u**2)/(6*(u**2 + 1)**2) + 7*ordinary_prepared_logscale_source3*physical_momentum_fraction*u*(physical_momentum_fraction - 1)**2/(3*(u**2 + 1)) + ordinary_prepared_logscale_source4*(physical_momentum_fraction - 1)**2/24"
+      }
+    }
+  },
+  "checked_scalar_entries": 133,
+  "claim": "P8-S6.85.PREPARED_ORDINARY_PROCA_RESPONSE",
+  "continuous_actual_clock_chart_C10_lift": {
+    "Leibniz_C10_row_bounds": {
+      "0": "3/2",
+      "1": "3",
+      "10": "46090764897/8",
+      "2": "51/4",
+      "3": "351/4",
+      "4": "1551/2",
+      "5": "16173/2",
+      "6": "193281/2",
+      "7": "1300689",
+      "8": "77858751/4",
+      "9": "320565543"
+    },
+    "coefficient_derivative_envelopes": {
+      "0": {
+        "absolute_upper": "1/2",
+        "denominator_power": 3,
+        "reconstruction": "0"
+      },
+      "1": {
+        "absolute_upper": "3/2",
+        "denominator_power": 4,
+        "reconstruction": "0"
+      },
+      "10": {
+        "absolute_upper": "26351424225/8",
+        "denominator_power": 13,
+        "reconstruction": "0"
+      },
+      "2": {
+        "absolute_upper": "33/4",
+        "denominator_power": 5,
+        "reconstruction": "0"
+      },
+      "3": {
+        "absolute_upper": "57",
+        "denominator_power": 6,
+        "reconstruction": "0"
+      },
+      "4": {
+        "absolute_upper": "981/2",
+        "denominator_power": 7,
+        "reconstruction": "0"
+      },
+      "5": {
+        "absolute_upper": "9945/2",
+        "denominator_power": 8,
+        "reconstruction": "0"
+      },
+      "6": {
+        "absolute_upper": "232695/4",
+        "denominator_power": 9,
+        "reconstruction": "0"
+      },
+      "7": {
+        "absolute_upper": "1539405/2",
+        "denominator_power": 10,
+        "reconstruction": "0"
+      },
+      "8": {
+        "absolute_upper": "45447885/4",
+        "denominator_power": 11,
+        "reconstruction": "0"
+      },
+      "9": {
+        "absolute_upper": "740073915/4",
+        "denominator_power": 12,
+        "reconstruction": "0"
+      }
+    },
+    "joint_input_C10_upper": "46090764897/8",
+    "joint_output_C0_upper": "3",
+    "output_bound_uses_omega_N_at_most_one_half": true
+  },
+  "controls": {
+    "native_source_and_order_guards_reject_cached_aliases": true,
+    "new_reference_constants_recomputed_not_old_response_bounds_copied": true,
+    "no_parent_scientific_model_or_function_monkeypatched": true,
+    "rejected_inputs": 146
+  },
+  "date": "2026-09-08",
+  "exact_residuals": {
+    "Bogoliubov_Wronskian_preserving_transport": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "L_actual_new_energy_adiabatic_baseline_0": "0",
+    "L_actual_new_energy_adiabatic_baseline_1": "0",
+    "L_actual_new_energy_adiabatic_baseline_2": "0",
+    "L_actual_varied_adiabatic_Ward_0": "0",
+    "L_actual_varied_adiabatic_Ward_1": "0",
+    "L_actual_varied_adiabatic_Ward_2": "0",
+    "L_actual_varied_mode_covariance_Ward": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        1,
+        3
+      ]
+    },
+    "L_energy_closed_weight_A": "0",
+    "L_energy_closed_weight_B": "0",
+    "L_energy_literal_contact_A": "0",
+    "L_energy_literal_contact_B": "0",
+    "L_energy_literal_weight_A": "0",
+    "L_energy_literal_weight_B": "0",
+    "L_energy_new_subtracted_reference_low_0": "0",
+    "L_energy_new_subtracted_reference_low_1": "0",
+    "L_energy_new_subtracted_reference_low_2": "0",
+    "L_frozen_dimensional_variation_order_2": "0",
+    "L_frozen_dimensional_variation_order_4": "0",
+    "L_literal_minimal_canonical_map_variation": "0",
+    "L_literal_minimal_frequency_variation": "0",
+    "L_new_reference_source_linearity_1": "0",
+    "L_new_reference_source_linearity_2": "0",
+    "L_new_reference_source_linearity_3": "0",
+    "L_new_reference_source_linearity_4": "0",
+    "L_new_tenth_lapse_coefficient_zero_on_full_box": "0",
+    "L_new_tenth_lapse_derivative_vanishes": "0",
+    "L_new_tenth_scale_coefficient_on_full_box": "0",
+    "L_new_tenth_scale_derivative_is_nonzero": "0",
+    "L_new_varied_reference_low_0": "0",
+    "L_new_varied_reference_low_1": "0",
+    "L_new_varied_reference_low_2": "0",
+    "L_new_varied_reference_low_3": "0",
+    "L_ordinary_mode_covariance_Ward": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        1,
+        3
+      ]
+    },
+    "L_pressure_closed_weight_A": "0",
+    "L_pressure_closed_weight_B": "0",
+    "L_pressure_literal_contact_A": "0",
+    "L_pressure_literal_contact_B": "0",
+    "L_pressure_literal_weight_A": "0",
+    "L_pressure_literal_weight_B": "0",
+    "L_pressure_new_subtracted_reference_low_0": "0",
+    "L_pressure_new_subtracted_reference_low_1": "0",
+    "L_pressure_new_subtracted_reference_low_2": "0",
+    "T_actual_new_energy_adiabatic_baseline_0": "0",
+    "T_actual_new_energy_adiabatic_baseline_1": "0",
+    "T_actual_new_energy_adiabatic_baseline_2": "0",
+    "T_actual_varied_adiabatic_Ward_0": "0",
+    "T_actual_varied_adiabatic_Ward_1": "0",
+    "T_actual_varied_adiabatic_Ward_2": "0",
+    "T_actual_varied_mode_covariance_Ward": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        1,
+        3
+      ]
+    },
+    "T_energy_closed_weight_A": "0",
+    "T_energy_closed_weight_B": "0",
+    "T_energy_literal_contact_A": "0",
+    "T_energy_literal_contact_B": "0",
+    "T_energy_literal_weight_A": "0",
+    "T_energy_literal_weight_B": "0",
+    "T_energy_new_subtracted_reference_low_0": "0",
+    "T_energy_new_subtracted_reference_low_1": "0",
+    "T_energy_new_subtracted_reference_low_2": "0",
+    "T_frozen_dimensional_variation_order_2": "0",
+    "T_frozen_dimensional_variation_order_4": "0",
+    "T_literal_minimal_canonical_map_variation": "0",
+    "T_literal_minimal_frequency_variation": "0",
+    "T_new_reference_source_linearity_1": "0",
+    "T_new_reference_source_linearity_2": "0",
+    "T_new_reference_source_linearity_3": "0",
+    "T_new_reference_source_linearity_4": "0",
+    "T_new_tenth_lapse_coefficient_zero_on_full_box": "0",
+    "T_new_tenth_lapse_derivative_vanishes": "0",
+    "T_new_tenth_scale_coefficient_on_full_box": "0",
+    "T_new_tenth_scale_derivative_is_nonzero": "0",
+    "T_new_varied_reference_low_0": "0",
+    "T_new_varied_reference_low_1": "0",
+    "T_new_varied_reference_low_2": "0",
+    "T_new_varied_reference_low_3": "0",
+    "T_ordinary_mode_covariance_Ward": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        1,
+        3
+      ]
+    },
+    "T_pressure_closed_weight_A": "0",
+    "T_pressure_closed_weight_B": "0",
+    "T_pressure_literal_contact_A": "0",
+    "T_pressure_literal_contact_B": "0",
+    "T_pressure_literal_weight_A": "0",
+    "T_pressure_literal_weight_B": "0",
+    "T_pressure_new_subtracted_reference_low_0": "0",
+    "T_pressure_new_subtracted_reference_low_1": "0",
+    "T_pressure_new_subtracted_reference_low_2": "0",
+    "actual_background_cancelled_clock_current_map": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "actual_clock_chart_input_continuous_derivative_0": "0",
+    "actual_clock_chart_input_continuous_derivative_1": "0",
+    "actual_clock_chart_input_continuous_derivative_10": "0",
+    "actual_clock_chart_input_continuous_derivative_2": "0",
+    "actual_clock_chart_input_continuous_derivative_3": "0",
+    "actual_clock_chart_input_continuous_derivative_4": "0",
+    "actual_clock_chart_input_continuous_derivative_5": "0",
+    "actual_clock_chart_input_continuous_derivative_6": "0",
+    "actual_clock_chart_input_continuous_derivative_7": "0",
+    "actual_clock_chart_input_continuous_derivative_8": "0",
+    "actual_clock_chart_input_continuous_derivative_9": "0",
+    "exact_mode_readout_mixing_decomposition": "0",
+    "exact_varied_readout_denominator": "0",
+    "new_fixed_profile_Hessian": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "new_fixed_profile_gradient": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        1
+      ]
+    },
+    "new_fixed_profile_physical_normalization": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "new_isotropic_reference_variation_1": "0",
+    "new_isotropic_reference_variation_2": "0",
+    "new_isotropic_reference_variation_3": "0",
+    "new_isotropic_reference_variation_4": "0",
+    "nonzero_initial_mixing_phase_control": "0",
+    "radial_mixing_integral_4": "0",
+    "radial_mixing_integral_7": "0",
+    "radial_mixing_integral_8": "0",
+    "radial_reference_tail_integral_five": "0",
+    "total_second_metric_map_contact_cancels_only_after_fixed_profile": "0"
+  },
+  "formulation": "FORMULATION.md",
+  "named_exact_check_count": 112,
+  "new_complete_background_cancelled_response_bounds_in_both_charts": {
+    "M_tau": "10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "background_cancelled_physical_C10_to_C0_component_bounds": {
+      "energy": "262758526093025254686708848497144433/3019898880000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "pressure": "262761671457025900580033648497144433/3019898880000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "clock_chart_input_C10_upper": "46090764897/8",
+    "fixed_mass_time_product": "1000",
+    "joint_background_cancelled_clock_C10_to_C0_upper": "4036962141022845407491342275077007145751789467/2684354560000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "joint_background_cancelled_physical_C10_to_C0_upper": "262761671457025900580033648497144433/3019898880000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "new_fixed_profile_C0_upper_bounds": {
+      "energy": "7300022913723393048841625708246801/167772160000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "pressure": "26269415026449622565660877124740403/603979776000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "new_fixed_profile_physical_response_C0_to_C0_upper": "262747487579269187707453648372144433/3019898880000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "no_no_loss_or_coupled_inverse_inference": true
+  },
+  "new_complete_physical_vector_response_bounds": {
+    "complete_metric_response_C10_to_C0_component_bounds": {
+      "energy": "9812012227615092671289/2684354560000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "pressure": "37823674017900993546667/8053063680000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "finite_local_component_bounds": {
+      "energy": "7500073/3600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "pressure": "2250011/720000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "joint_complete_metric_C10_to_C0_upper_bound": "37823674017900993546667/8053063680000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "joint_nonlocal_C10_to_C0_upper_bound": "37975972153828634041601/24159191040000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "nonlocal_components": {
+      "energy": {
+        "exact_minus_reference_variation": "12655193750883605514667/8053063680000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "varied_reference_minus_adiabatic": "774182467/1800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+      },
+      "pressure": {
+        "exact_minus_reference_variation": "12655193750883605514667/8053063680000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "varied_reference_minus_adiabatic": "113244389/360000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+      }
+    },
+    "nonlocal_subtracted_C10_to_C0_component_bounds": {
+      "energy": "37975972153828634041601/24159191040000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "pressure": "37973180954950980640001/24159191040000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "scope": "Homogeneous prepared physical-metric Gaussian response; not a coupled feedback contraction or arbitrary spatial response",
+    "source_norm": "Maximum of both physical sources and time derivatives zero through ten on I, zero on an initial neighborhood"
+  },
+  "new_continuous_varied_reference_envelopes": {
+    "L": {
+      "base_reference_checks": {
+        "all_low_residual_coefficients_vanish": true,
+        "evolution_norm_integral_below_one_quarter": true,
+        "feedback_term_below_claimed_allowance": true,
+        "frequency_ratio_between_one_half_and_three_halves": true,
+        "logarithmic_rate_below_four": true,
+        "majorant_pairs_are_nonnegative": true,
+        "phase_derivative_below_seven_omega": true,
+        "phase_frequency_above_one_quarter_omega": true
+      },
+      "base_residual_over_inverse_frequency_eighth_upper": "5165763544817",
+      "box_reconstructions": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "delta_W_over_frequency_upper": "128003105006950103463862293/64000000000000000000000000",
+      "delta_W_prime_over_frequency_upper": "1024122080212955267068505881/102400000000000000000000000",
+      "delta_c_upper": "14336709761287179646186122781/512000000000000000000000000",
+      "delta_log_W_rate_upper": "9216709761287179646186122781/256000000000000000000000000",
+      "delta_residual_over_inverse_frequency_eighth_upper": "497330224524285",
+      "polynomial_majorants": {
+        "R": {
+          "0": "0",
+          "1": "104",
+          "2": "129761/4",
+          "3": "730621649/32",
+          "4": "3746733867151/128"
+        },
+        "S": {
+          "0": "1",
+          "1": "6",
+          "2": "3219/4",
+          "3": "12497233/32",
+          "4": "97319749163/256"
+        },
+        "T": {
+          "0": "0",
+          "1": "3249/2",
+          "2": "12828497/16",
+          "3": "99003076515/128",
+          "4": "647255105275119/512"
+        },
+        "dR": {
+          "1": "3059/2",
+          "2": "12690983/16",
+          "3": "50174519279/64",
+          "4": "664937080869989/512"
+        },
+        "dS": {
+          "1": "117/2",
+          "2": "138637/8",
+          "3": "391567377/32",
+          "4": "2010683445045/128"
+        },
+        "dT": {
+          "0": "0",
+          "1": "28585",
+          "2": "175832175/8",
+          "3": "924815198265/32",
+          "4": "30696165268249437/512"
+        }
+      },
+      "source_log_frequency_variation_upper": "2",
+      "varied_residual_numerator_majorants": {
+        "0": "0",
+        "1": "282113/4",
+        "10": "333918016752246798424284466637613/524288",
+        "11": "2135178915462251100803826135515485195/8388608",
+        "12": "313271248067680956688283058435958117013/4194304",
+        "13": "4749824690312889629953952686808145374253/16777216",
+        "14": "5619117171288416430776430914163560239267819/67108864",
+        "15": "23451225183777042716070798907607321016837633417/1073741824",
+        "16": "976509398521017500420595052933304649890697515351/4294967296",
+        "17": "657594838250399720914420633898221873255216545884939/17179869184",
+        "18": "672451983423350470067935389952354191723915022094862901/68719476736",
+        "19": "274909515372890315606466944381687189021056376954361602389/137438953472",
+        "2": "830780443/16",
+        "3": "4176064278445/64",
+        "4": "31828140635172169/512",
+        "5": "1986862683157393401/1024",
+        "6": "2422934602621179212915/4096",
+        "7": "11106949970114986019471307/32768",
+        "8": "21969988325044454128287676049/131072",
+        "9": "655535158045889121182929060931/262144"
+      }
+    },
+    "T": {
+      "base_reference_checks": {
+        "all_low_residual_coefficients_vanish": true,
+        "evolution_norm_integral_below_one_quarter": true,
+        "feedback_term_below_claimed_allowance": true,
+        "frequency_ratio_between_one_half_and_three_halves": true,
+        "logarithmic_rate_below_four": true,
+        "majorant_pairs_are_nonnegative": true,
+        "phase_derivative_below_seven_omega": true,
+        "phase_frequency_above_one_quarter_omega": true
+      },
+      "base_residual_over_inverse_frequency_eighth_upper": "5207948696836",
+      "box_reconstructions": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "delta_W_over_frequency_upper": "102402714415800603630261459/51200000000000000000000000",
+      "delta_W_prime_over_frequency_upper": "64007549859930812277865463/6400000000000000000000000",
+      "delta_c_upper": "48643562827132445637198477/2560000000000000000000000",
+      "delta_log_W_rate_upper": "46083562827132445637198477/1280000000000000000000000",
+      "delta_residual_over_inverse_frequency_eighth_upper": "497724202065796",
+      "polynomial_majorants": {
+        "R": {
+          "0": "0",
+          "1": "119",
+          "2": "262453/8",
+          "3": "1476040237/64",
+          "4": "3808554580477/128"
+        },
+        "S": {
+          "0": "1",
+          "1": "7",
+          "2": "13843/16",
+          "3": "25941283/64",
+          "4": "50191252943/128"
+        },
+        "T": {
+          "0": "0",
+          "1": "6753/4",
+          "2": "24893281/32",
+          "3": "196010180523/256",
+          "4": "650309853108993/512"
+        },
+        "dR": {
+          "1": "1585",
+          "2": "12336103/16",
+          "3": "49737587511/64",
+          "4": "83588698027211/64"
+        },
+        "dS": {
+          "1": "133/2",
+          "2": "70609/4",
+          "3": "396831697/32",
+          "4": "4095004314885/256"
+        },
+        "dT": {
+          "0": "0",
+          "1": "110851/4",
+          "2": "662191455/32",
+          "3": "1803167025525/64",
+          "4": "30561864184065503/512"
+        }
+      },
+      "source_log_frequency_variation_upper": "2",
+      "varied_residual_numerator_majorants": {
+        "0": "0",
+        "1": "284263/4",
+        "10": "2868770891305464455891292101541665/4194304",
+        "11": "2271356085446790128259340556831993197/8388608",
+        "12": "165747630033031619410501881126134065847/2097152",
+        "13": "10937797562030037619214158977231474193981/33554432",
+        "14": "3166912937270833750664318122565715010006205/33554432",
+        "15": "52681109748920503293412750419118167910539562235/2147483648",
+        "16": "307251040952287425498904862325288120120562782737/1073741824",
+        "17": "193941257350135060540180355684645818144226153843289/4294967296",
+        "18": "48673233834276667621800429348046870909034477829205061/4294967296",
+        "19": "79236951116753906128249213962795932984187902198823436427/34359738368",
+        "2": "1649286719/32",
+        "3": "8378879529697/128",
+        "4": "15926619458028169/256",
+        "5": "4438805660521519745/2048",
+        "6": "5032966095713975942785/8192",
+        "7": "22908370178402594630182553/65536",
+        "8": "22605340474095947275305810329/131072",
+        "9": "3007995743155660217091799955353/1048576"
+      }
+    }
+  },
+  "new_integrable_reference_readout_tails": {
+    "L": {
+      "energy": {
+        "all_majorants_nonnegative": true,
+        "low_tail_numerator_coefficients": {
+          "0": "0",
+          "1": "0",
+          "2": "0"
+        },
+        "tail_numerator_majorants": {
+          "0": "80",
+          "1": "5088",
+          "10": "732309418769514570332118846117/131072",
+          "11": "927881549272227445511505228165801/524288",
+          "12": "1384654804101833890116082846511931357/2097152",
+          "13": "738229221386689391588580193182274804427/8388608",
+          "14": "11254499474947094474434772736329389450149/8388608",
+          "15": "13283930923372697090267380403638505907706755/33554432",
+          "16": "55394290596541611932583570959442357923668991527/536870912",
+          "17": "2297551095943576739565276820182460928960176066679/2147483648",
+          "18": "1543565875726952722256112530579377667646766563849791/8589934592",
+          "19": "1576528170881093338298127263821915040355187772577702189/34359738368",
+          "2": "1203654",
+          "20": "322182736646377643968337082663460376171026704284400796461/34359738368",
+          "3": "753772981",
+          "4": "1812066378101/2",
+          "5": "1238297153003433/32",
+          "6": "41276776521027357/8",
+          "7": "1097090768145468967107/512",
+          "8": "2419628022282945671077267/2048",
+          "9": "2201291259509234025557839475/16384"
+        },
+        "varied_reference_tail_over_inverse_frequency_fifth_upper": "754679053"
+      },
+      "pressure": {
+        "all_majorants_nonnegative": true,
+        "low_tail_numerator_coefficients": {
+          "0": "0",
+          "1": "0",
+          "2": "0"
+        },
+        "tail_numerator_majorants": {
+          "0": "176/3",
+          "1": "12460/3",
+          "10": "2133746958818635244321655161381/393216",
+          "11": "889357981000430048102662285114247/524288",
+          "12": "1330312966299428087941062316633702929/2097152",
+          "13": "2242241980177887938411978088019869808849/25165824",
+          "14": "34276776596688051229815798543361797415951/25165824",
+          "15": "13399257637874510308629055887661748760535759/33554432",
+          "16": "167538297767596861175858935315974367882338453379/1610612736",
+          "17": "7006121211524658844165951015267398980797780912781/6442450944",
+          "18": "4696253506091400294035717770985702072182388558090137/25769803776",
+          "19": "4774425770002933463732049915064276679061879643871239087/103079215104",
+          "2": "2872387/3",
+          "20": "487639011103583293234882566649666531195922849939537975713/51539607552",
+          "3": "2262199331/4",
+          "4": "16129825577821/24",
+          "5": "575033101757911/16",
+          "6": "1754987354402147969/384",
+          "7": "710507505429363847691/384",
+          "8": "12529174274440641026059349/12288",
+          "9": "8709556626656986340496557/64"
+        },
+        "varied_reference_tail_over_inverse_frequency_fifth_upper": "566221945"
+      }
+    },
+    "T": {
+      "energy": {
+        "all_majorants_nonnegative": true,
+        "low_tail_numerator_coefficients": {
+          "0": "0",
+          "1": "0",
+          "2": "0"
+        },
+        "tail_numerator_majorants": {
+          "0": "80",
+          "1": "5848",
+          "10": "1660677278144683476735886455753/262144",
+          "11": "2015149973480997914838744693859031/1048576",
+          "12": "2989243806613249988716518696235280553/4194304",
+          "13": "790561229403524561722886707263673310189/8388608",
+          "14": "51940726283150141458524829334934388415655/33554432",
+          "15": "29955366247313281088763544005953039651938105/67108864",
+          "16": "124464149125405742196670337488331246024063936023/1073741824",
+          "17": "724059487109978348051616035872346634864319682937/536870912",
+          "18": "455835063053266791265111004577113767227898589000737/2147483648",
+          "19": "114119638818383950401146308598594435788315827004349419/2147483648",
+          "2": "2558355/2",
+          "20": "185735612743901803210808289882403289551970444720786879511/17179869184",
+          "3": "3093020039/4",
+          "4": "29677228025817/32",
+          "5": "5512696095959949/128",
+          "6": "727210884579579625/128",
+          "7": "1159879743616888063701/512",
+          "8": "20376401172613953940548127/16384",
+          "9": "4656210250568709143902485593/32768"
+        },
+        "varied_reference_tail_over_inverse_frequency_fifth_upper": "774182467"
+      },
+      "pressure": {
+        "all_majorants_nonnegative": true,
+        "low_tail_numerator_coefficients": {
+          "0": "0",
+          "1": "0",
+          "2": "0"
+        },
+        "tail_numerator_majorants": {
+          "0": "176/3",
+          "1": "4028",
+          "10": "1989257484070985183950219050835/786432",
+          "11": "2346797349010860503011054435989055/3145728",
+          "12": "3447013731778024681962500708828266933/12582912",
+          "13": "265389900274200856220233263429736868475/8388608",
+          "14": "18397002220946644365887794645931978908285/33554432",
+          "15": "30153191625295233594746478320474260645410953/201326592",
+          "16": "41719660042332992033027423230871939969851530525/1073741824",
+          "17": "760984939641200389280335798824529962411208141001/1610612736",
+          "18": "473777379514760714257531107850937107721611631188001/6442450944",
+          "19": "114119638818383950401146308598594435788315827004349419/6442450944",
+          "2": "5391881/6",
+          "20": "61911870914633934403602763294134429850656814906928959837/17179869184",
+          "3": "5706342635/12",
+          "4": "13622479868953/24",
+          "5": "7758134878227703/384",
+          "6": "744002895048672593/256",
+          "7": "425104938227669570879/384",
+          "8": "29682342930133959113181865/49152",
+          "9": "1636080356304811236651509941/32768"
+        },
+        "varied_reference_tail_over_inverse_frequency_fifth_upper": "476096177"
+      }
+    }
+  },
+  "new_reference_low_residuals_and_full_tenth_source_coefficients": {
+    "L": {
+      "tenth_source_derivative_coefficients": {
+        "N": "0",
+        "Z": "-(physical_momentum_fraction + 1)/512"
+      },
+      "tenth_source_derivative_fixtures": {
+        "N": "0",
+        "Z": "-1/512"
+      },
+      "varied_residual_low_coefficients": {
+        "0": "0",
+        "1": "0",
+        "2": "0",
+        "3": "0"
+      }
+    },
+    "T": {
+      "tenth_source_derivative_coefficients": {
+        "N": "0",
+        "Z": "(physical_momentum_fraction - 1)/512"
+      },
+      "tenth_source_derivative_fixtures": {
+        "N": "0",
+        "Z": "-1/512"
+      },
+      "varied_residual_low_coefficients": {
+        "0": "0",
+        "1": "0",
+        "2": "0",
+        "3": "0"
+      }
+    }
+  },
+  "new_transport_constants_with_original_nonzero_initial_mixing": {
+    "by_sector": {
+      "L": {
+        "delta_mixing_eighth_inverse_frequency_coefficient": "258294442761049",
+        "delta_mixing_ninth_inverse_frequency_coefficient": "8287900479122703",
+        "physical_readouts": {
+          "energy": {
+            "delta_A_upper": "4",
+            "delta_B_upper": "4",
+            "delta_reference_bilinear_over_nu_squared_upper": "30",
+            "varied_reference_tail_over_inverse_frequency_fifth_upper": "754679053"
+          },
+          "pressure": {
+            "delta_A_upper": "20/3",
+            "delta_B_upper": "4/3",
+            "delta_reference_bilinear_over_nu_squared_upper": "30",
+            "varied_reference_tail_over_inverse_frequency_fifth_upper": "566221945"
+          }
+        }
+      },
+      "T": {
+        "delta_mixing_eighth_inverse_frequency_coefficient": "260404337448359",
+        "delta_mixing_ninth_inverse_frequency_coefficient": "8296904784986635",
+        "physical_readouts": {
+          "energy": {
+            "delta_A_upper": "4",
+            "delta_B_upper": "4",
+            "delta_reference_bilinear_over_nu_squared_upper": "30",
+            "varied_reference_tail_over_inverse_frequency_fifth_upper": "774182467"
+          },
+          "pressure": {
+            "delta_A_upper": "4/3",
+            "delta_B_upper": "20/3",
+            "delta_reference_bilinear_over_nu_squared_upper": "30",
+            "varied_reference_tail_over_inverse_frequency_fifth_upper": "476096177"
+          }
+        }
+      }
+    },
+    "common": {
+      "delta_mixing_eighth_inverse_frequency_coefficient": "260404337448359",
+      "delta_mixing_ninth_inverse_frequency_coefficient": "8296904784986635",
+      "physical_readouts": {
+        "energy": {
+          "delta_A_upper": "4",
+          "delta_B_upper": "4",
+          "delta_reference_bilinear_over_nu_squared_upper": "30",
+          "varied_reference_tail_over_inverse_frequency_fifth_upper": "774182467"
+        },
+        "pressure": {
+          "delta_A_upper": "20/3",
+          "delta_B_upper": "20/3",
+          "delta_reference_bilinear_over_nu_squared_upper": "30",
+          "varied_reference_tail_over_inverse_frequency_fifth_upper": "566221945"
+        }
+      }
+    },
+    "frozen_initial_and_evolved_mixing": {
+      "evolution_mixing_envelope": "5347035781757616",
+      "initial_mixing_envelopes": {
+        "10": "1536706170025",
+        "6": "1813229",
+        "8": "906392614"
+      }
+    }
+  },
+  "not_established": [
+    "A no-loss coupled causal inverse, feedback contraction or all-frequency quantum stability/cone",
+    "Arbitrary spatial or independently varied initial-state response",
+    "A nonlinear quantum bounce or canonical interaction bounds for the fixed profile",
+    "Mixed loops, omitted operators, heavy thresholds or an interacting Wilsonian cutoff",
+    "Finite Wilson matching, common-parent V/G/B, UV completion/exclusion or original P8 closure"
+  ],
+  "prior_sha256": {
+    "S6_84_fully_rebuilt": "240b1a0550969a51bd1c0ea4043360566a1b1cd10408ea30b2f89d560dc1aea2",
+    "new_nonlocal_response_recomputed_not_old_metric_mass_response_transferred": true
+  },
+  "proof_checks": {
+    "C10_to_C0_bound_not_a_no_loss_coupled_inverse_or_quantum_cone": true,
+    "L_all_varied_reference_box_reconstructions": true,
+    "L_baseline_transport_exponent_below_one_quarter": true,
+    "L_canonical_rate_at_most_three": true,
+    "L_energy_new_readout_transport_bound_positive": true,
+    "L_energy_new_tail_majorants_nonnegative": true,
+    "L_new_log_frequency_variation_bound_below_four": true,
+    "L_new_reference_c_variation_bound_below_sixty_four": true,
+    "L_new_reference_frequency_variation_bound_below_four": true,
+    "L_pressure_new_readout_transport_bound_positive": true,
+    "L_pressure_new_tail_majorants_nonnegative": true,
+    "L_reference_momentum_below_two_frequency_f": true,
+    "L_same_baseline_reference_and_transport_bounds": true,
+    "T_all_varied_reference_box_reconstructions": true,
+    "T_baseline_transport_exponent_below_one_quarter": true,
+    "T_canonical_rate_at_most_three": true,
+    "T_energy_new_readout_transport_bound_positive": true,
+    "T_energy_new_tail_majorants_nonnegative": true,
+    "T_new_log_frequency_variation_bound_below_four": true,
+    "T_new_reference_c_variation_bound_below_sixty_four": true,
+    "T_new_reference_frequency_variation_bound_below_four": true,
+    "T_pressure_new_readout_transport_bound_positive": true,
+    "T_pressure_new_tail_majorants_nonnegative": true,
+    "T_reference_momentum_below_two_frequency_f": true,
+    "T_same_baseline_reference_and_transport_bounds": true,
+    "actual_clock_output_map_bound": true,
+    "actual_physical_output_contacts_and_covariance_Ward_retained": true,
+    "new_background_cancelled_clock_response_below_one_e_minus_779": true,
+    "new_background_cancelled_physical_response_below_one_e_minus_790": true,
+    "new_dimensional_mass_jets_zero_before_matching": true,
+    "new_full_vector_physical_response_below_one_e_minus_790": true,
+    "new_weights_not_old_nonminimal_energy": true,
+    "no_independent_initial_response_does_not_erase_squeezed_initial_mixing": true,
+    "old_full_rank_inverse_or_frozen_pole_not_transferred": true,
+    "omitted_operators_mixed_loops_V_G_B_matching_and_original_P8_open": true,
+    "same_Gronwall_slack": true,
+    "same_actual_state_and_new_explicit_fixed_profile_not_reselected": true,
+    "same_evolved_mixing_strictly_below_one": true,
+    "same_high_initial_band_covered_by_sixth_power": true,
+    "same_middle_initial_band_covered_by_sixth_power": true,
+    "tenth_scale_source_jet_not_mislabeled_as_C4_norm": true
+  },
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "fa6634e1652276175c8ce82cfb5c20d0847de550e2dd46d728699ea60acfb17b",
+    "README.md": "2790c4fb5f8b9daccc5079629ce32c06e0f69cac45b989627f8243058789d508",
+    "notes/limit.md": "063ded25bec1c89bbfe8424df6c922883a221bec54c02d5d210a80e50b722461",
+    "notes/profile-chart.md": "d8b661a1cc0a00e183ef48e13349722aec2260b8990156830d2e50ee239718d9",
+    "notes/reference.md": "2235acfbc7884caf3713ee3602761a2c28734816d8c7c03b98005c4188e110a7",
+    "notes/transport.md": "422444743c9e5ff51a7249462e87ee6b5d10f1ad955d34aa5edf723ab94d3bdf",
+    "notes/vertices.md": "dd7f888f67e567af82c460ef1b4c15c8bcd7b01bfe3289a4647e6bb1c70d20a8",
+    "src/p8_proca_nonlocal_response/__init__.py": "ea6bd072392a0cb4eec43bcd1a07cc9a95fb797dfce3c8ed3dded756394ab74b",
+    "src/p8_proca_nonlocal_response/audit.py": "fa557a29b84bee9b3d518113c3d94a6c97dbea8afb1bd636542cf6d188351268",
+    "src/p8_proca_nonlocal_response/envelopes.py": "81bb0d5b631a1f09cbf9efbf6b62822ca8e0dee82ff9077951f51c85e2c9033d",
+    "src/p8_proca_nonlocal_response/evolution.py": "7c11dc630722934e4148b266d2900e2d889593ded1d7b0093a69c780228d0153",
+    "src/p8_proca_nonlocal_response/source.py": "321eb5cf4c20350632e19dc3e51b066f4d96d792bb3d74c52737de3f6dfcaa7d",
+    "src/p8_proca_nonlocal_response/tadpole.py": "1a79b3fd66937dc8e6dbfc5f5d5e4350278f3f878c19f90c3dcafbcd193b3fb2",
+    "src/p8_proca_nonlocal_response/tail.py": "6dac6b790ac0c184653edf2aae7966e6a29b752e4b295c22bba63b565ed904ff",
+    "src/p8_proca_nonlocal_response/tangent.py": "a376aee2d26fb0012291ea009ad9757a80c30b209e0eb3073677e0f758d11141",
+    "src/p8_proca_nonlocal_response/verify.py": "82458155e865b7d56963eecc6f6fc65a71d7df05f2bf17e7ef330be2ea4d2c81",
+    "tests/conftest.py": "58bc79f87a7a994a2730959fc1724134f4dd063f0286dc38a7450aa3e876df9e",
+    "tests/test_proca_nonlocal_response_certificate.py": "96a0d22bdeb92a4ebad40bab7cc7d3634f2886491611399786691f286e938b35",
+    "tests/test_proca_nonlocal_response_science.py": "a42e7a3b627648e6f44196702106520fe19265722172857a9e7047401c214147"
+  },
+  "status": "NEW_COMPLETE_PREPARED_HOMOGENEOUS_GAUSSIAN_PLUS_FIXED_PROFILE_RESPONSE_CONTROLLED_IN_BOTH_CHARTS; COUPLED_INVERSE_MATCHING_AND_ORIGINAL_P8_OPEN",
+  "verdict": "The new constant-mass prepared homogeneous response is rebuilt from literal physical vertices, exact covariance transport, newly varied eighth-order reference and integrable fourth-order subtraction. Both the exact-mode and all six varied-subtraction Ward identities pass. Original nonzero initial mixing is retained. Adding the independently matched new local operator and the full already-fixed S6.82 profile gives a physical C10-to-C0 bound below 10^-790 at fixed m=1000,L=10^400; the actual clock-chart bound is below 10^-779. The second nonlinear metric-map contact cancels only for the total background-cancelled action. The common-dimensional limit and retardedness hold on the declared prepared homogeneous source domain.",
+  "verification_boundary": "Exact new physical-mode/contact/Ward/subtraction identities, continuous source coefficient and full radial transport bounds, and written common-limit, causal and chart arguments. Every parent is natively rebuilt. Prepared homogeneous retained Gaussian response with C10-to-C0 derivative loss, not proof-assistant formalization or a full quantum solution.",
+  "written_proofs": [
+    "notes/vertices.md",
+    "notes/reference.md",
+    "notes/transport.md",
+    "notes/profile-chart.md",
+    "notes/limit.md"
+  ]
+}
