@@ -1,0 +1,452 @@
+{
+  "actual_clock_and_joint_source_Ward_identity": {
+    "actual_induced_matter_density_and_pressure": "-3*linear_physical_log_scale(u)/(100*(u**2 + 1)**12)",
+    "actual_tensor_clock_source": "6*u*(-3*tensor_pressure(u) + tensor_proxy_density(u))/(u**2 + 1)**4 + (-3*Derivative(tensor_pressure(u), u) + Derivative(tensor_proxy_density(u), u))/(u**2 + 1)**3",
+    "actual_tensor_fixed_metric_density": "tensor_proxy_density(u) - (-3*tensor_pressure(u) + tensor_proxy_density(u))/(u**2 + 1)**3",
+    "retained_background_matter_connection_variation": "3*Derivative(linear_physical_log_scale(u), u)/(100*(u**2 + 1)**12)",
+    "volume_weighted_clock_boundary_function": "(u**2 + 1)**3*(-3*tensor_pressure(u) + tensor_proxy_density(u))"
+  },
+  "actual_leading_tensor_mean_response": {
+    "actual_tensor_induced_lapse": "2*(u**2 + 1)**3*(-6*delta_log_hat_scale*u**6 - 18*delta_log_hat_scale*u**4 - 18*delta_log_hat_scale*u**2 + 3*delta_log_hat_scale + 2400*delta_trace_momentum*u**29 + 33600*delta_trace_momentum*u**27 + 218400*delta_trace_momentum*u**25 + 873000*delta_trace_momentum*u**23 + 2395800*delta_trace_momentum*u**21 + 4771800*delta_trace_momentum*u**19 + 7108200*delta_trace_momentum*u**17 + 8038800*delta_trace_momentum*u**15 + 6930000*delta_trace_momentum*u**13 + 4527600*delta_trace_momentum*u**11 + 2204400*delta_trace_momentum*u**9 + 774600*delta_trace_momentum*u**7 + 185400*delta_trace_momentum*u**5 + 27000*delta_trace_momentum*u**3 + 1800*delta_trace_momentum*u + 200*u**30*vector_density + 3000*u**28*vector_density + 21000*u**26*vector_density + 90800*u**24*vector_density + 300*u**24*vector_pressure + 270600*u**22*vector_density + 3600*u**22*vector_pressure + 587400*u**20*vector_density + 19800*u**20*vector_pressure + 957000*u**18*vector_density + 66000*u**18*vector_pressure + 1188000*u**16*vector_density + 148500*u**16*vector_pressure + 1128600*u**14*vector_density + 237600*u**14*vector_pressure + 816200*u**12*vector_density + 277200*u**12*vector_pressure + 442200*u**10*vector_density + 237600*u**10*vector_pressure + 174000*u**8*vector_density + 148500*u**8*vector_pressure + 47000*u**6*vector_density + 66000*u**6*vector_pressure + 7800*u**4*vector_density + 19800*u**4*vector_pressure + 600*u**2*vector_density + 3600*u**2*vector_pressure + 300*vector_pressure)/(3200*u**34 + 48000*u**32 + 332800*u**30 + 1410400*u**28 + 4068800*u**26 + 8413616*u**24 + 12776592*u**22 + 14351856*u**20 + 11894320*u**18 + 7327520*u**16 + 3706272*u**14 + 2123580*u**12 + 1571848*u**10 + 1038260*u**8 + 474252*u**6 + 134232*u**4 + 20604*u**2 + 1215)",
+    "actual_tensor_lapse_forcing": "vector_density*(1 - 1/(u**2 + 1)**3) + 3*vector_pressure/(2*(u**2 + 1)**3)",
+    "actual_tensor_mean_flow": [
+      [
+        "-delta_trace_momentum/2 + 2*u*(4*u**6 + 12*u**4 + 12*u**2 + 3)*(-6*delta_log_hat_scale*u**6 - 18*delta_log_hat_scale*u**4 - 18*delta_log_hat_scale*u**2 + 3*delta_log_hat_scale + 2400*delta_trace_momentum*u**29 + 33600*delta_trace_momentum*u**27 + 218400*delta_trace_momentum*u**25 + 873000*delta_trace_momentum*u**23 + 2395800*delta_trace_momentum*u**21 + 4771800*delta_trace_momentum*u**19 + 7108200*delta_trace_momentum*u**17 + 8038800*delta_trace_momentum*u**15 + 6930000*delta_trace_momentum*u**13 + 4527600*delta_trace_momentum*u**11 + 2204400*delta_trace_momentum*u**9 + 774600*delta_trace_momentum*u**7 + 185400*delta_trace_momentum*u**5 + 27000*delta_trace_momentum*u**3 + 1800*delta_trace_momentum*u + 200*u**30*vector_density + 3000*u**28*vector_density + 21000*u**26*vector_density + 90800*u**24*vector_density + 300*u**24*vector_pressure + 270600*u**22*vector_density + 3600*u**22*vector_pressure + 587400*u**20*vector_density + 19800*u**20*vector_pressure + 957000*u**18*vector_density + 66000*u**18*vector_pressure + 1188000*u**16*vector_density + 148500*u**16*vector_pressure + 1128600*u**14*vector_density + 237600*u**14*vector_pressure + 816200*u**12*vector_density + 277200*u**12*vector_pressure + 442200*u**10*vector_density + 237600*u**10*vector_pressure + 174000*u**8*vector_density + 148500*u**8*vector_pressure + 47000*u**6*vector_density + 66000*u**6*vector_pressure + 7800*u**4*vector_density + 19800*u**4*vector_pressure + 600*u**2*vector_density + 3600*u**2*vector_pressure + 300*vector_pressure)/((u**2 + 1)*(3200*u**34 + 48000*u**32 + 332800*u**30 + 1410400*u**28 + 4068800*u**26 + 8413616*u**24 + 12776592*u**22 + 14351856*u**20 + 11894320*u**18 + 7327520*u**16 + 3706272*u**14 + 2123580*u**12 + 1571848*u**10 + 1038260*u**8 + 474252*u**6 + 134232*u**4 + 20604*u**2 + 1215))"
+      ],
+      [
+        "-3*delta_log_hat_scale/(100*(u**2 + 1)**12) - 12*delta_trace_momentum*u/(u**2 + 1) + vector_pressure + (2*u**6 + 6*u**4 + 6*u**2 - 1)*(-6*delta_log_hat_scale*u**6 - 18*delta_log_hat_scale*u**4 - 18*delta_log_hat_scale*u**2 + 3*delta_log_hat_scale + 2400*delta_trace_momentum*u**29 + 33600*delta_trace_momentum*u**27 + 218400*delta_trace_momentum*u**25 + 873000*delta_trace_momentum*u**23 + 2395800*delta_trace_momentum*u**21 + 4771800*delta_trace_momentum*u**19 + 7108200*delta_trace_momentum*u**17 + 8038800*delta_trace_momentum*u**15 + 6930000*delta_trace_momentum*u**13 + 4527600*delta_trace_momentum*u**11 + 2204400*delta_trace_momentum*u**9 + 774600*delta_trace_momentum*u**7 + 185400*delta_trace_momentum*u**5 + 27000*delta_trace_momentum*u**3 + 1800*delta_trace_momentum*u + 200*u**30*vector_density + 3000*u**28*vector_density + 21000*u**26*vector_density + 90800*u**24*vector_density + 300*u**24*vector_pressure + 270600*u**22*vector_density + 3600*u**22*vector_pressure + 587400*u**20*vector_density + 19800*u**20*vector_pressure + 957000*u**18*vector_density + 66000*u**18*vector_pressure + 1188000*u**16*vector_density + 148500*u**16*vector_pressure + 1128600*u**14*vector_density + 237600*u**14*vector_pressure + 816200*u**12*vector_density + 277200*u**12*vector_pressure + 442200*u**10*vector_density + 237600*u**10*vector_pressure + 174000*u**8*vector_density + 148500*u**8*vector_pressure + 47000*u**6*vector_density + 66000*u**6*vector_pressure + 7800*u**4*vector_density + 19800*u**4*vector_pressure + 600*u**2*vector_density + 3600*u**2*vector_pressure + 300*vector_pressure)/(100*(u**2 + 1)**12*(3200*u**34 + 48000*u**32 + 332800*u**30 + 1410400*u**28 + 4068800*u**26 + 8413616*u**24 + 12776592*u**22 + 14351856*u**20 + 11894320*u**18 + 7327520*u**16 + 3706272*u**14 + 2123580*u**12 + 1571848*u**10 + 1038260*u**8 + 474252*u**6 + 134232*u**4 + 20604*u**2 + 1215))"
+      ]
+    ],
+    "independent_center_jets": {
+      "anchor_clock_source_first_derivative": "-2*(2*positive_comoving_momentum_squared**2 - 7*positive_comoving_momentum_squared - 36)",
+      "anchor_hat_scale_second_derivative": "-199*(positive_comoving_momentum_squared - 12)/1215",
+      "anchor_lapse_forcing": "-(positive_comoving_momentum_squared - 12)/4",
+      "anchor_lapse_forcing_second_derivative": "3*(positive_comoving_momentum_squared - 12)/2 + 3*(positive_comoving_momentum_squared + 4) + 2*(positive_comoving_momentum_squared**2 - 3*positive_comoving_momentum_squared - 36)",
+      "anchor_lapse_response": "-20*(positive_comoving_momentum_squared - 12)/243",
+      "anchor_lapse_response_second_derivative": "2*(54000*positive_comoving_momentum_squared**2 - 135433*positive_comoving_momentum_squared - 966804)/164025",
+      "anchor_pressure": "-(positive_comoving_momentum_squared - 12)/6",
+      "anchor_pressure_second_derivative": "4*(positive_comoving_momentum_squared**2 - 3*positive_comoving_momentum_squared - 36)/3",
+      "anchor_proper_Hubble_derivative_response": "2*(27000*positive_comoving_momentum_squared**2 - 6899*positive_comoving_momentum_squared - 1213212)/164025",
+      "anchor_proxy_density": "(positive_comoving_momentum_squared + 4)/2",
+      "anchor_proxy_density_second_derivative": "-4*(positive_comoving_momentum_squared + 12)"
+    },
+    "induced_matter_field_derivative": "-3*delta_log_hat_scale/(10*(u**2 + 1)**6) + (2*u**6 + 6*u**4 + 6*u**2 - 1)*(-6*delta_log_hat_scale*u**6 - 18*delta_log_hat_scale*u**4 - 18*delta_log_hat_scale*u**2 + 3*delta_log_hat_scale + 2400*delta_trace_momentum*u**29 + 33600*delta_trace_momentum*u**27 + 218400*delta_trace_momentum*u**25 + 873000*delta_trace_momentum*u**23 + 2395800*delta_trace_momentum*u**21 + 4771800*delta_trace_momentum*u**19 + 7108200*delta_trace_momentum*u**17 + 8038800*delta_trace_momentum*u**15 + 6930000*delta_trace_momentum*u**13 + 4527600*delta_trace_momentum*u**11 + 2204400*delta_trace_momentum*u**9 + 774600*delta_trace_momentum*u**7 + 185400*delta_trace_momentum*u**5 + 27000*delta_trace_momentum*u**3 + 1800*delta_trace_momentum*u + 200*u**30*vector_density + 3000*u**28*vector_density + 21000*u**26*vector_density + 90800*u**24*vector_density + 300*u**24*vector_pressure + 270600*u**22*vector_density + 3600*u**22*vector_pressure + 587400*u**20*vector_density + 19800*u**20*vector_pressure + 957000*u**18*vector_density + 66000*u**18*vector_pressure + 1188000*u**16*vector_density + 148500*u**16*vector_pressure + 1128600*u**14*vector_density + 237600*u**14*vector_pressure + 816200*u**12*vector_density + 277200*u**12*vector_pressure + 442200*u**10*vector_density + 237600*u**10*vector_pressure + 174000*u**8*vector_density + 148500*u**8*vector_pressure + 47000*u**6*vector_density + 66000*u**6*vector_pressure + 7800*u**4*vector_density + 19800*u**4*vector_pressure + 600*u**2*vector_density + 3600*u**2*vector_pressure + 300*vector_pressure)/(10*(u**2 + 1)**6*(3200*u**34 + 48000*u**32 + 332800*u**30 + 1410400*u**28 + 4068800*u**26 + 8413616*u**24 + 12776592*u**22 + 14351856*u**20 + 11894320*u**18 + 7327520*u**16 + 3706272*u**14 + 2123580*u**12 + 1571848*u**10 + 1038260*u**8 + 474252*u**6 + 134232*u**4 + 20604*u**2 + 1215))",
+    "new_tensor_mean_forcing": [
+      [
+        "200*u*(u**2 + 1)**11*(4*u**6 + 12*u**4 + 12*u**2 + 3)*(2*u**6*vector_density + 6*u**4*vector_density + 6*u**2*vector_density + 3*vector_pressure)/(3200*u**34 + 48000*u**32 + 332800*u**30 + 1410400*u**28 + 4068800*u**26 + 8413616*u**24 + 12776592*u**22 + 14351856*u**20 + 11894320*u**18 + 7327520*u**16 + 3706272*u**14 + 2123580*u**12 + 1571848*u**10 + 1038260*u**8 + 474252*u**6 + 134232*u**4 + 20604*u**2 + 1215)"
+      ],
+      [
+        "2*(1600*u**34*vector_pressure + 24000*u**32*vector_pressure + 166400*u**30*vector_pressure + 705200*u**28*vector_pressure + 2034400*u**26*vector_pressure + 4206808*u**24*vector_pressure + 6388296*u**22*vector_pressure + 7175928*u**20*vector_pressure + 5947160*u**18*vector_pressure + 3663760*u**16*vector_pressure + 1853136*u**14*vector_pressure + 2*u**12*vector_density + 1061790*u**12*vector_pressure + 12*u**10*vector_density + 785924*u**10*vector_pressure + 30*u**8*vector_density + 519130*u**8*vector_pressure + 35*u**6*vector_density + 237129*u**6*vector_pressure + 15*u**4*vector_density + 67125*u**4*vector_pressure - 3*u**2*vector_density + 10311*u**2*vector_pressure + 606*vector_pressure)/(3200*u**34 + 48000*u**32 + 332800*u**30 + 1410400*u**28 + 4068800*u**26 + 8413616*u**24 + 12776592*u**22 + 14351856*u**20 + 11894320*u**18 + 7327520*u**16 + 3706272*u**14 + 2123580*u**12 + 1571848*u**10 + 1038260*u**8 + 474252*u**6 + 134232*u**4 + 20604*u**2 + 1215)"
+      ]
+    ],
+    "physical_linear_log_scale_response": "delta_log_hat_scale + (-6*delta_log_hat_scale*u**6 - 18*delta_log_hat_scale*u**4 - 18*delta_log_hat_scale*u**2 + 3*delta_log_hat_scale + 2400*delta_trace_momentum*u**29 + 33600*delta_trace_momentum*u**27 + 218400*delta_trace_momentum*u**25 + 873000*delta_trace_momentum*u**23 + 2395800*delta_trace_momentum*u**21 + 4771800*delta_trace_momentum*u**19 + 7108200*delta_trace_momentum*u**17 + 8038800*delta_trace_momentum*u**15 + 6930000*delta_trace_momentum*u**13 + 4527600*delta_trace_momentum*u**11 + 2204400*delta_trace_momentum*u**9 + 774600*delta_trace_momentum*u**7 + 185400*delta_trace_momentum*u**5 + 27000*delta_trace_momentum*u**3 + 1800*delta_trace_momentum*u + 200*u**30*vector_density + 3000*u**28*vector_density + 21000*u**26*vector_density + 90800*u**24*vector_density + 300*u**24*vector_pressure + 270600*u**22*vector_density + 3600*u**22*vector_pressure + 587400*u**20*vector_density + 19800*u**20*vector_pressure + 957000*u**18*vector_density + 66000*u**18*vector_pressure + 1188000*u**16*vector_density + 148500*u**16*vector_pressure + 1128600*u**14*vector_density + 237600*u**14*vector_pressure + 816200*u**12*vector_density + 277200*u**12*vector_pressure + 442200*u**10*vector_density + 237600*u**10*vector_pressure + 174000*u**8*vector_density + 148500*u**8*vector_pressure + 47000*u**6*vector_density + 66000*u**6*vector_pressure + 7800*u**4*vector_density + 19800*u**4*vector_pressure + 600*u**2*vector_density + 3600*u**2*vector_pressure + 300*vector_pressure)/(3200*u**34 + 48000*u**32 + 332800*u**30 + 1410400*u**28 + 4068800*u**26 + 8413616*u**24 + 12776592*u**22 + 14351856*u**20 + 11894320*u**18 + 7327520*u**16 + 3706272*u**14 + 2123580*u**12 + 1571848*u**10 + 1038260*u**8 + 474252*u**6 + 134232*u**4 + 20604*u**2 + 1215)",
+    "physical_matter_density_and_pressure_response": "-3*(delta_log_hat_scale + (-6*delta_log_hat_scale*u**6 - 18*delta_log_hat_scale*u**4 - 18*delta_log_hat_scale*u**2 + 3*delta_log_hat_scale + 2400*delta_trace_momentum*u**29 + 33600*delta_trace_momentum*u**27 + 218400*delta_trace_momentum*u**25 + 873000*delta_trace_momentum*u**23 + 2395800*delta_trace_momentum*u**21 + 4771800*delta_trace_momentum*u**19 + 7108200*delta_trace_momentum*u**17 + 8038800*delta_trace_momentum*u**15 + 6930000*delta_trace_momentum*u**13 + 4527600*delta_trace_momentum*u**11 + 2204400*delta_trace_momentum*u**9 + 774600*delta_trace_momentum*u**7 + 185400*delta_trace_momentum*u**5 + 27000*delta_trace_momentum*u**3 + 1800*delta_trace_momentum*u + 200*u**30*vector_density + 3000*u**28*vector_density + 21000*u**26*vector_density + 90800*u**24*vector_density + 300*u**24*vector_pressure + 270600*u**22*vector_density + 3600*u**22*vector_pressure + 587400*u**20*vector_density + 19800*u**20*vector_pressure + 957000*u**18*vector_density + 66000*u**18*vector_pressure + 1188000*u**16*vector_density + 148500*u**16*vector_pressure + 1128600*u**14*vector_density + 237600*u**14*vector_pressure + 816200*u**12*vector_density + 277200*u**12*vector_pressure + 442200*u**10*vector_density + 237600*u**10*vector_pressure + 174000*u**8*vector_density + 148500*u**8*vector_pressure + 47000*u**6*vector_density + 66000*u**6*vector_pressure + 7800*u**4*vector_density + 19800*u**4*vector_pressure + 600*u**2*vector_density + 3600*u**2*vector_pressure + 300*vector_pressure)/(3200*u**34 + 48000*u**32 + 332800*u**30 + 1410400*u**28 + 4068800*u**26 + 8413616*u**24 + 12776592*u**22 + 14351856*u**20 + 11894320*u**18 + 7327520*u**16 + 3706272*u**14 + 2123580*u**12 + 1571848*u**10 + 1038260*u**8 + 474252*u**6 + 134232*u**4 + 20604*u**2 + 1215))/(100*(u**2 + 1)**12)",
+    "same_mean_generator": [
+      [
+        "-6*u*(2*u**6 + 6*u**4 + 6*u**2 - 1)*(4*u**6 + 12*u**4 + 12*u**2 + 3)/((u**2 + 1)*(3200*u**34 + 48000*u**32 + 332800*u**30 + 1410400*u**28 + 4068800*u**26 + 8413616*u**24 + 12776592*u**22 + 14351856*u**20 + 11894320*u**18 + 7327520*u**16 + 3706272*u**14 + 2123580*u**12 + 1571848*u**10 + 1038260*u**8 + 474252*u**6 + 134232*u**4 + 20604*u**2 + 1215))",
+        "(35200*u**34 + 566400*u**32 + 4275200*u**30 + 20074400*u**28 + 65569600*u**26 + 157819984*u**24 + 289241808*u**22 + 411240144*u**20 + 457711280*u**18 + 399309280*u**16 + 271357728*u**14 + 141502020*u**12 + 55092152*u**10 + 15262540*u**8 + 2744148*u**6 + 254568*u**4 + 996*u**2 - 1215)/(2*(3200*u**34 + 48000*u**32 + 332800*u**30 + 1410400*u**28 + 4068800*u**26 + 8413616*u**24 + 12776592*u**22 + 14351856*u**20 + 11894320*u**18 + 7327520*u**16 + 3706272*u**14 + 2123580*u**12 + 1571848*u**10 + 1038260*u**8 + 474252*u**6 + 134232*u**4 + 20604*u**2 + 1215))"
+      ],
+      [
+        "-12*(200*u**14 + 1000*u**12 + 1800*u**10 + 1150*u**8 - 200*u**6 - 299*u**4 + 527*u**2 + 76)/(25*(u**2 + 1)**2*(3200*u**34 + 48000*u**32 + 332800*u**30 + 1410400*u**28 + 4068800*u**26 + 8413616*u**24 + 12776592*u**22 + 14351856*u**20 + 11894320*u**18 + 7327520*u**16 + 3706272*u**14 + 2123580*u**12 + 1571848*u**10 + 1038260*u**8 + 474252*u**6 + 134232*u**4 + 20604*u**2 + 1215))",
+        "-6*u*(6400*u**34 + 96000*u**32 + 665600*u**30 + 2820800*u**28 + 8137600*u**26 + 16827232*u**24 + 25553184*u**22 + 28703712*u**20 + 23788640*u**18 + 14655040*u**16 + 7412544*u**14 + 4247152*u**12 + 3143648*u**10 + 2076400*u**8 + 948358*u**6 + 268386*u**4 + 41202*u**2 + 2433)/((u**2 + 1)*(3200*u**34 + 48000*u**32 + 332800*u**30 + 1410400*u**28 + 4068800*u**26 + 8413616*u**24 + 12776592*u**22 + 14351856*u**20 + 11894320*u**18 + 7327520*u**16 + 3706272*u**14 + 2123580*u**12 + 1571848*u**10 + 1038260*u**8 + 474252*u**6 + 134232*u**4 + 20604*u**2 + 1215))"
+      ]
+    ]
+  },
+  "actual_tensor_action_and_lapse_source": {
+    "actual_hat_lapse_source": "(2*positive_clock_h*positive_comoving_momentum_squared*positive_physical_scale**4*tensor_coordinate**2 + 8*positive_clock_h*tensor_density_momentum**2 - 3*positive_comoving_momentum_squared*positive_physical_scale**4*tensor_coordinate**2 + 4*tensor_density_momentum**2)/(8*positive_clock_h*positive_physical_scale**6)",
+    "actual_physical_tensor_Hamiltonian": "positive_clock_h*positive_unchanged_physical_lapse*tensor_density_momentum**2/(positive_physical_scale**3*(positive_clock_h - 1 + positive_unchanged_physical_lapse**(-2))) + positive_comoving_momentum_squared*positive_physical_scale*positive_unchanged_physical_lapse*tensor_coordinate**2*(positive_clock_h - 1 + positive_unchanged_physical_lapse**(-2))/(4*positive_clock_h)",
+    "actual_physical_tensor_Lagrangian": "-positive_comoving_momentum_squared*positive_physical_scale*positive_unchanged_physical_lapse*tensor_coordinate**2*(positive_clock_h - 1 + positive_unchanged_physical_lapse**(-2))/(4*positive_clock_h) + positive_physical_scale**3*tensor_velocity**2*(positive_clock_h - 1 + positive_unchanged_physical_lapse**(-2))/(4*positive_clock_h*positive_unchanged_physical_lapse)",
+    "actual_spatial_hat_tensor_Hamiltonian": "positive_clock_h**(1/4)*positive_unchanged_physical_lapse*tensor_density_momentum**2/(positive_hat_scale**3*(positive_clock_h - 1 + positive_unchanged_physical_lapse**(-2))**(1/4)) + positive_comoving_momentum_squared*positive_hat_scale*positive_unchanged_physical_lapse*tensor_coordinate**2*(positive_clock_h - 1 + positive_unchanged_physical_lapse**(-2))**(3/4)/(4*positive_clock_h**(3/4))",
+    "clock_coupled_kinetic_scalar": "positive_comoving_momentum_squared*tensor_coordinate**2/(2*positive_physical_scale**2) - 2*tensor_density_momentum**2/positive_physical_scale**6",
+    "fixed_physical_metric_lapse_source": "(positive_clock_h*positive_comoving_momentum_squared*positive_physical_scale**4*tensor_coordinate**2 + 4*positive_clock_h*tensor_density_momentum**2 - 2*positive_comoving_momentum_squared*positive_physical_scale**4*tensor_coordinate**2 + 8*tensor_density_momentum**2)/(4*positive_clock_h*positive_physical_scale**6)",
+    "homogeneous_clock_identity": {
+      "clock_source": "(proxy_density - 3*proxy_pressure)*(3*H/positive_clock_h - h_derivative/positive_clock_h**2) + (proxy_density_derivative - 3*proxy_pressure_derivative)/positive_clock_h",
+      "clock_source_is_not_generically_zero": true,
+      "physical_fixed_metric_lapse_source": "proxy_density*(1 - 1/positive_clock_h) + 3*proxy_pressure/positive_clock_h",
+      "proxy_density": "proxy_density",
+      "proxy_pressure": "proxy_pressure"
+    },
+    "on_clock_spatial_pressure": "-positive_comoving_momentum_squared*tensor_coordinate**2/(12*positive_physical_scale**2) + tensor_density_momentum**2/positive_physical_scale**6",
+    "positive_on_clock_tensor_energy": "positive_comoving_momentum_squared*tensor_coordinate**2/(4*positive_physical_scale**2) + tensor_density_momentum**2/positive_physical_scale**6"
+  },
+  "checked_scalar_entries": 89,
+  "claim": "P8-S6.105.ACTUAL_TENSOR_CLOCK_MEAN_RESPONSE",
+  "controls": {
+    "actual_selected_tensor_band_clock_source_is_nonzero": true,
+    "new_center_lapse_second_derivative_is_negative_at_lower_band_endpoint": true,
+    "no_cutoff_higher_loop_control_or_V_G_B_matching_inferred": true,
+    "no_finite_amplitude_SEE_or_coevolved_quantum_state_claimed": true,
+    "no_full_covariant_graviton_or_BRST_renormalized_stress_claimed": true,
+    "omitting_induced_matter_connection_changes_Ward_identity": true,
+    "omitting_second_order_scalar_chart_shift_changes_center_matter_density": true,
+    "physical_tensor_density_is_not_positive_proxy_energy": true,
+    "pure_tensor_coordinate_physical_lapse_source_can_be_negative": true,
+    "reference_state_and_common_absolute_tadpole_not_reassigned": true,
+    "rejected_inputs": 16,
+    "setting_actual_tensor_coefficient_to_one_before_lapse_variation_changes_source": true,
+    "zero_added_tensor_covariance_has_zero_all_calibrated_bounds": true
+  },
+  "date": "2026-09-09",
+  "exact_residuals": {
+    "actual_clock_source_derivative_lower_bound_factorization": "0",
+    "actual_clock_source_derivative_upper_bound_square": "0",
+    "actual_clock_volume_coefficient_is_three_H_over_two": "0",
+    "actual_homogeneous_tensor_source_Ward_identity_keeps_clock_equation": "0",
+    "actual_retuned_mean_pivot_second_derivative": "0",
+    "actual_selected_tensor_band_has_nonzero_clock_source_derivative": "0",
+    "actual_tensor_Legendre_transform_before_clock_restriction": "0",
+    "actual_tensor_frame_lapse_chain_retains_pressure": "0",
+    "actual_tensor_hat_lapse_source_keeps_clock_coupling": "0",
+    "actual_tensor_lapse_constraint_retains_clock_source": "0",
+    "actual_tensor_lapse_force_lower_uses_h_at_least_one": "0",
+    "actual_tensor_lapse_force_upper_uses_h_at_least_one": "0",
+    "actual_tensor_lapse_source_is_not_minimal_matter_density": "0",
+    "actual_tensor_mean_flow_retains_complete_new_forcing": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        1
+      ]
+    },
+    "actual_tensor_source_does_not_change_classical_mean_operator": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "actual_tensor_spatial_frame_Hamiltonian": "0",
+    "actual_tensor_spatial_pressure": "0",
+    "actual_volume_weighted_clock_exchange_is_exact_boundary_derivative": "0",
+    "center_mean_density_does_not_depend_on_trace_momentum_chart_shift": "0",
+    "clock_kinetic_scalar_is_density_minus_three_pressure": "0",
+    "clock_kinetic_time_derivative_keeps_transfer_cross_term": "0",
+    "clock_transfer_radial_time_integral": "0",
+    "complete_nonlinear_spatial_chart_correction_recovers_tensor_mean_source": "0",
+    "explicit_clock_coefficient_derivative_vanishes_only_after_variation": "0",
+    "first_order_determinant_is_homogeneous_log_scale_only": "0",
+    "global_mean_scalar_density_bound": "0",
+    "global_relative_matter_density_bound": "0",
+    "induced_matter_Ward_identity_retains_connection_variation": "0",
+    "joint_tensor_and_induced_matter_Ward_identity_retains_actual_clock_source": "0",
+    "literal_actual_DHOST_tensor_coefficient_before_clock_restriction": "0",
+    "literal_clock_velocity_variation_is_actual_kinetic_scalar": "0",
+    "literal_second_order_exponential_spatial_metric_chart": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        3
+      ]
+    },
+    "new_tensor_proxy_stress_center_conservation": "0",
+    "new_tensor_source_center_keeps_both_clock_coefficients": "0",
+    "omitted_scalar_mean_shift_is_the_exact_nonzero_constant_mismatch": "0",
+    "on_clock_tensor_generator_has_actual_CCR": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "on_clock_tensor_generator_is_literal_S6_103_generator": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "on_clock_tensor_generator_matches_existing_state_normalization": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "positive_tensor_pressure_lower_keeps_kinetic_piece": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "positive_tensor_pressure_upper_keeps_gradient_piece": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "second_order_chart_tensor_remainder_is_traceless": "0",
+    "second_order_determinant_has_no_pure_tensor_volume_term": "0",
+    "tensor_actual_generator_is_even_in_clock": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "tensor_cross_term_bound_is_exact_square": "0",
+    "tensor_forcing_difference_is_actual_clock_kinetic_coupling": "0",
+    "tensor_mean_lapse_has_reflection_parity": "0",
+    "tensor_mean_scale_equation_has_reflection_parity": "0",
+    "tensor_mean_trace_equation_has_reflection_parity": "0",
+    "tensor_opposite_cross_term_bound_is_exact_square": "0",
+    "tensor_proxy_density_equals_actual_on_clock_positive_Hamiltonian": "0",
+    "tensor_relative_covariance_reversal_is_anti_Hamiltonian": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "tensor_source_difference_from_minimal_Proca_is_nonzero_clock_kinetic_term": "0",
+    "two_polarization_proxy_stress_obeys_exact_evolution_conservation": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    }
+  },
+  "formulation": "FORMULATION.md",
+  "global_response_and_clock_transfer_bounds": {
+    "absolute_volume_weighted_clock_source_integral_upper_per_eta": "1944/7",
+    "actual_hat_lapse_forcing_absolute_upper_per_proxy_density": "3/2",
+    "band_mean_squared_momentum_domain": "1<mu<4 for the fixed normalized open-shell bump",
+    "bounds": {
+      "actual_center_acceleration_is_strictly_increasing_on_band": true,
+      "actual_center_acceleration_lower": true,
+      "actual_center_acceleration_upper": true,
+      "actual_center_hat_scale_second_derivative_positive_and_below_two": true,
+      "actual_center_lapse_below_one_and_positive": true,
+      "actual_center_lapse_second_derivative_absolute_below_thirty": true,
+      "calibrated_actual_frame_positive_everywhere": true,
+      "calibrated_exact_frame_center_acceleration_numerator_above_three": true,
+      "global_clock_source_is_absolutely_integrable": true,
+      "inherited_weighted_generator_integral_still_below_two": true,
+      "new_tensor_actual_frame_scale_bound": true,
+      "new_tensor_global_lapse_bound": true,
+      "new_tensor_global_weighted_phase_bound": true,
+      "new_tensor_linear_physical_scale_bound": true,
+      "new_tensor_matter_field_bound": true
+    },
+    "center_lapse_second_derivative_absolute_coefficient_bound": "4745072/164025",
+    "center_proper_acceleration_lower_per_eta": "-15",
+    "center_proper_acceleration_upper_per_eta": "-9",
+    "complete_first_order_frame_representative_not_a_SEE_solution": true,
+    "explicit_calibration": {
+      "absolute_weighted_clock_integral_upper": "7/2500000000000000000",
+      "center_proper_acceleration_absolute_upper": "3/20000000000000000000",
+      "eta": "1/100000000000000000000",
+      "global_exact_frame_log_scale_upper": "1/12500000000000000",
+      "global_lapse_upper": "3/200000000000000000",
+      "global_linear_physical_log_scale_upper": "9/125000000000000000",
+      "global_matter_density_absolute_upper": "27/12500000000000000000",
+      "global_matter_field_upper": "1/100000000000000000",
+      "global_physical_tensor_density_absolute_upper": "3/25000000000000000000",
+      "global_proxy_density_upper": "1/25000000000000000000",
+      "global_relative_matter_density_upper": "27/62500000000000000",
+      "global_tensor_pressure_absolute_upper": "1/25000000000000000000",
+      "global_weighted_mean_phase_upper": "1/15625000000000000"
+    },
+    "future_volume_weighted_clock_source_integral_per_eta": "4 - fixed_normalized_band_mean_squared_momentum",
+    "global_actual_frame_log_scale_upper_per_eta": "8000",
+    "global_hat_scale_limit_error_per_eta_for_u_ge_one": "50/(3*(u**2 + 1)**3) + 960/(11*(u**2 + 1)**11) + 7712/(5*u**5)",
+    "global_lapse_tail_bound_per_eta": "1920*Abs(u)/(u**2 + 1)**3 + 25/(u**2 + 1)**3 + 480/(u**2 + 1)**11",
+    "global_lapse_upper_per_eta": "1500",
+    "global_linear_physical_log_scale_upper_per_eta": "7200",
+    "global_matter_field_upper_per_eta": "1000",
+    "global_relative_scalar_density_upper_per_eta": "43200",
+    "global_scalar_density_upper_per_eta": "216",
+    "global_weighted_mean_phase_upper_per_eta": "6400",
+    "inherited_actual_mean_generator_integrable_upper": "888061455051153/529139970867200",
+    "rounded_absolute_volume_weighted_clock_source_integral_upper_per_eta": "280",
+    "source_specific_global_proxy_density_upper_per_eta": "4/(u**2 + 1)**4",
+    "source_specific_proxy_density_anchor_upper": "4",
+    "whole_line_volume_weighted_clock_source_integral": "0"
+  },
+  "named_exact_check_count": 53,
+  "nonlinear_center_physical_density_chart": {
+    "actual_exponential_chart_density_response": "-PS**2/135 - PT**2/135 + positive_wave_scale**2*(S**2 + T**2)/1620",
+    "additive_tensor_density_second_variation": "-(300*PS**2 + 300*PT**2 - 25*S**2*positive_wave_scale**2 - 203*S**2 - 25*T**2*positive_wave_scale**2 - 203*T**2)/40500",
+    "induced_linear_homogeneous_scalar_density": "-203*S**2/40500 - 203*T**2/40500",
+    "literal_metric_map": {
+      "chart_bridge_scope": "The second-order spatial metric and center mean-density bridge only; no all-time canonical momentum bridge is inferred",
+      "exponential_metric_through_second_order": [
+        [
+          "perturbation_order**2*(2*homogeneous_log_scale**2 + 2*homogeneous_log_scale*tensor_plus + tensor_cross**2/2 + tensor_plus**2/2) + perturbation_order*(2*homogeneous_log_scale + tensor_plus) + 1",
+          "2*homogeneous_log_scale*perturbation_order**2*tensor_cross + perturbation_order*tensor_cross",
+          "0"
+        ],
+        [
+          "2*homogeneous_log_scale*perturbation_order**2*tensor_cross + perturbation_order*tensor_cross",
+          "perturbation_order**2*(2*homogeneous_log_scale**2 - 2*homogeneous_log_scale*tensor_plus + tensor_cross**2/2 + tensor_plus**2/2) + perturbation_order*(2*homogeneous_log_scale - tensor_plus) + 1",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "2*homogeneous_log_scale**2*perturbation_order**2 + 2*homogeneous_log_scale*perturbation_order + 1"
+        ]
+      ],
+      "nonlinear_additive_TT_chart": [
+        [
+          "perturbation_order**2*(2*homogeneous_log_scale*tensor_plus + tensor_cross**2/6 + tensor_plus**2/6) + perturbation_order*tensor_plus",
+          "2*homogeneous_log_scale*perturbation_order**2*tensor_cross + perturbation_order*tensor_cross",
+          "0"
+        ],
+        [
+          "2*homogeneous_log_scale*perturbation_order**2*tensor_cross + perturbation_order*tensor_cross",
+          "perturbation_order**2*(-2*homogeneous_log_scale*tensor_plus + tensor_cross**2/6 + tensor_plus**2/6) - perturbation_order*tensor_plus",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "perturbation_order**2*(-tensor_cross**2/3 - tensor_plus**2/3)"
+        ]
+      ],
+      "nonlinear_additive_scalar_chart": "homogeneous_log_scale*perturbation_order + perturbation_order**2*(homogeneous_log_scale**2 + tensor_cross**2/6 + tensor_plus**2/6)"
+    },
+    "required_exponential_to_additive_scalar_mean_shift": "S**2/6 + T**2/6"
+  },
+  "not_established": [
+    "A full covariant graviton or ghost/BRST stress renormalization, interacting Ward identity, coupled-scalar absolute source, or vanishing common vacuum tadpole",
+    "An exact finite-amplitude or absolute semiclassical solution, a quantum state co-evolved on the representative, or nonlinear/higher-loop residual control",
+    "An all-time additive canonical momentum chart bridge, finite total energy on infinite R3, a physical-matter QEI, or a UV no-go from a negative quadratic source",
+    "A heavy-spectrum or finite-frequency cutoff, omitted-operator or loop bounds, actual vacuum/finite-gravity/common-parent V/G/B matching, or UV completion",
+    "Original P8(b) classification or original P8 closure"
+  ],
+  "positive_actual_tensor_state_difference": {
+    "Cartesian_TT_anchor_blocks": "diag(2*eta*b*Pi_TT,eta*b*Pi_TT/2), with vanishing mixed block",
+    "clock_kinetic_Hessian": [
+      [
+        "positive_comoving_momentum_squared/positive_physical_scale**2",
+        "0"
+      ],
+      [
+        "0",
+        "-4/positive_physical_scale**6"
+      ]
+    ],
+    "clock_kinetic_absolute_upper_per_proxy_density": "2",
+    "clock_kinetic_derivative_bound": "abs(K_dot)<=(4*omega+12*abs(H))*r",
+    "direct_clock_variation": {
+      "homogeneous_tensor_clock_momentum_on_background": "-positive_physical_scale**3*(positive_comoving_momentum_squared*tensor_coordinate**2/(2*positive_physical_scale**2) - tensor_velocity**2/2)/positive_clock_h"
+    },
+    "positive_band_state": "Add eta*b(k)*I2 to each of the two existing TT polarization covariances, and evolve on actual a on both legs",
+    "pressure_Hessian": [
+      [
+        "-positive_comoving_momentum_squared/(6*positive_physical_scale**2)",
+        "0"
+      ],
+      [
+        "0",
+        "2/positive_physical_scale**6"
+      ]
+    ],
+    "proxy_density_Hessian": [
+      [
+        "positive_comoving_momentum_squared/(2*positive_physical_scale**2)",
+        "0"
+      ],
+      [
+        "0",
+        "2/positive_physical_scale**6"
+      ]
+    ],
+    "tensor_generator": [
+      [
+        "0",
+        "2/positive_physical_scale**3"
+      ],
+      [
+        "-positive_comoving_momentum_squared*positive_physical_scale/2",
+        "0"
+      ]
+    ],
+    "two_polarization_anchor_density": "positive_comoving_momentum_squared/2 + 2",
+    "two_polarization_anchor_pressure": "2 - positive_comoving_momentum_squared/6",
+    "two_polarization_initial_density_upper_per_eta": "4"
+  },
+  "prior_sha256": {
+    "S6_104_fully_rebuilt": "b27aec2f3eed846ac1201bbb6d5470b6d7d3c98d439e3da48f708af66466e68c",
+    "new_named_smooth_tensor_covariance_addition_only": true,
+    "same_original_global_retuned_action_and_physical_metric": true,
+    "same_reference_scalar_and_vector_factors_and_counterterms": true
+  },
+  "proof_checks": {
+    "actual_DHOST_tensor_coefficient_varied_before_clock_restriction": true,
+    "actual_lapse_source_not_inferred_from_on_shell_frequency": true,
+    "bound_actual_center_acceleration_is_strictly_increasing_on_band": true,
+    "bound_actual_center_acceleration_lower": true,
+    "bound_actual_center_acceleration_upper": true,
+    "bound_actual_center_hat_scale_second_derivative_positive_and_below_two": true,
+    "bound_actual_center_lapse_below_one_and_positive": true,
+    "bound_actual_center_lapse_second_derivative_absolute_below_thirty": true,
+    "bound_calibrated_actual_frame_positive_everywhere": true,
+    "bound_calibrated_exact_frame_center_acceleration_numerator_above_three": true,
+    "bound_global_clock_source_is_absolutely_integrable": true,
+    "bound_inherited_weighted_generator_integral_still_below_two": true,
+    "bound_new_tensor_actual_frame_scale_bound": true,
+    "bound_new_tensor_global_lapse_bound": true,
+    "bound_new_tensor_global_weighted_phase_bound": true,
+    "bound_new_tensor_linear_physical_scale_bound": true,
+    "bound_new_tensor_matter_field_bound": true,
+    "clock_source_derived_from_actual_clock_velocity_variation": true,
+    "complete_exact_frame_representative_not_a_semiclassical_solution": true,
+    "exact_actual_tensor_evolution_preserves_CCR_and_smooth_Hadamard_difference": true,
+    "fixed_normalized_open_shell_bump_has_no_IR_or_UV_tail": true,
+    "full_covariant_graviton_stress_absolute_source_higher_orders_V_G_B_open": true,
+    "global_bounds_cover_both_time_tails": true,
+    "isotropic_homogeneous_mean_is_finite_density_not_finite_total_R3_energy": true,
+    "joint_metric_source_Ward_identity_retains_clock_and_connection": true,
+    "negative_tensor_acceleration_uses_new_absolute_bound_not_Proca_positivity": true,
+    "new_positive_covariance_addition_is_frame_free_in_two_TT_modes": true,
+    "no_all_time_additive_canonical_momentum_bridge_claimed": true,
+    "nonzero_constraint_lapse_and_induced_matter_field_retained": true,
+    "only_added_covariance_has_assumed_time_reflection": true,
+    "positive_proxy_energy_not_mistaken_for_physical_lapse_source": true,
+    "same_actual_global_retuned_action_and_physical_lapse": true,
+    "same_actual_mean_operator_with_new_tensor_forcing": true,
+    "same_reference_scalar_and_vector_factors_and_counterterms": true,
+    "second_order_spatial_chart_correction_retained_at_center": true,
+    "signed_clock_transfer_has_vanishing_boundary_on_both_tails": true,
+    "tensor_spatial_action_uses_volume_preserving_exponential_chart": true
+  },
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "efe37c57f7446a489168eaf72aa3069c4754e703ba7707f9f243b80143cb3895",
+    "README.md": "0c4ac1d930e57ac0ceb58c6952d016d0ddb9a9757d161e5ee91baac63d34a8b4",
+    "notes/action.md": "3f48e3b3d08978e666ee0be54bfb552213d9b53c57f23c79302dfddff65ac689",
+    "notes/bounds.md": "b6cde220003c642d0aa6546511abc5815f4349ce89aa1c74451ef6b2d9b7e9a0",
+    "notes/chart.md": "593afc65bad006ab579612fa7d760f9b5e4623bf4a43079bda33f5d74f0d7e8d",
+    "notes/clock.md": "47df0f5691142855d59e855e6b8f6a4534fab4297bc62f8cc3556266769c9e64",
+    "notes/mean.md": "e1e2c783831bcfebd5d34ed6c6638ecfc12f14e91aae68e846efabf2a4a60278",
+    "notes/scope.md": "b0119d594a57f2e738be5f0a02798be72d2191471f703a885fd33a5980918160",
+    "notes/state.md": "900991e13634cc95f365b38cc27b8cc4009c7d5cb433bbaef3390872d3197c60",
+    "src/p8_tensor_mean_source/__init__.py": "8308c67b1c0c074aa24ab214838c671736521f125678f87adbd187a8eba2a9ec",
+    "src/p8_tensor_mean_source/audit.py": "35ee3f8437d2fd4609dff453a2414a43bf39351206054fa0476d7f015bff56ff",
+    "src/p8_tensor_mean_source/bounds.py": "3e5575a4bd7c46558867caff9e117d8138a4b372b8fafcdc6386dd12ddb88ecb",
+    "src/p8_tensor_mean_source/calibration.py": "608781f73a46dc7338270ffd1ef9d65b68048c65888a79cd6963382ff59005bb",
+    "src/p8_tensor_mean_source/chart.py": "1b3ac8695b1c487543f54fd50db2f3bc37bd65d926a434770614cfc90a8cf1ba",
+    "src/p8_tensor_mean_source/operator.py": "9ced8fa8c3ec9fce106adf422130530979736908ac2f9f5582ae179a0f25931f",
+    "src/p8_tensor_mean_source/response.py": "8014086f148df66feeee620e234d7faf9ee7e3746dc86bf3bb71bc6c34a1f103",
+    "src/p8_tensor_mean_source/state.py": "e11edae313632e00962e463d9f154738ff05205bc8e46c5b81ee0536e827ebfd",
+    "src/p8_tensor_mean_source/verify.py": "34b204e021d6715b9822de8e92ad14e6c5d078e4a1cc6cd76519aec0f9a136ed",
+    "tests/test_tensor_mean_source_certificate.py": "a948f1eabf4e012f0d4ad3028dc01b1f250fe626465dda1eb6328d7595f9efbf",
+    "tests/test_tensor_mean_source_science.py": "21d36bd8aa7d09fdbe9c6eb2fb5d6c9f79ac50081b15fa92994fc26edab69bd6"
+  },
+  "status": "COMPLETE_ACTUAL_HOMOGENEOUS_TENSOR_STATE_DIFFERENCE_LAPSE_PRESSURE_AND_CLOCK_SOURCE_WITH_NONLINEAR_CENTER_CHART_BRIDGE_AND_GLOBAL_BOUNDED_LEADING_METRIC_MATTER_RESPONSE; NOT_FULL_COVARIANT_GRAVITON_STRESS_AN_ABSOLUTE_OR_EXACT_SEMICLASSICAL_SOLUTION_HIGHER_ORDER_CONTROL_V_G_B_OR_ORIGINAL_P8_CLOSURE",
+  "verdict": "A fixed positive compact-band addition to both actual tensor covariances gives a smooth Hadamard state difference. Varying the original tensor coefficient before clock restriction yields the correct physical lapse, spatial pressure and nonzero clock source, not the minimally coupled Proca source. The complete nonlinear spatial chart reconciles the center matter-density observable with the earlier additive calculation. The same classical mean operator with new forcing has global weighted bounds, absolutely integrable clock exchange and a complete bouncing exact-frame representative. This is a leading homogeneous state-difference result; the common absolute source, covariant graviton renormalization, nonlinear and higher-loop errors and V/G/B matching remain open.",
+  "verification_boundary": "Native exact variation of the actual tensor coefficient and spatial-only frame, both TT polarizations, independent source/Hessian transport, induced matter connection and clock Ward identities, explicit nonlinear center metric/observable bridge, rational global and whole-line integral bounds, parity and negative-input controls. Written smooth-state, differential-equation and geometric arguments are source-pinned, not proof-assistant formalized. Every ancestor, own source/proof/test byte and report field is independently replayed with unmodified scientific SymPy.",
+  "written_proofs": [
+    "notes/action.md",
+    "notes/state.md",
+    "notes/chart.md",
+    "notes/mean.md",
+    "notes/clock.md",
+    "notes/bounds.md",
+    "notes/scope.md"
+  ]
+}
