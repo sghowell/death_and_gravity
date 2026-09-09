@@ -1,0 +1,423 @@
+{
+  "actual_new_physical_flat_pair_and_fixed_canonical_contacts": {
+    "L": {
+      "contact": {
+        "actual_fixed_canonical_contact": [
+          [
+            "0",
+            "-(fixed_mass - frequency)*(fixed_mass + frequency)/(2*frequency)"
+          ],
+          [
+            "-(fixed_mass - frequency)*(fixed_mass + frequency)/(2*frequency)",
+            "(4*fixed_mass**2 - 5*frequency**2)/(2*frequency)"
+          ]
+        ],
+        "static_contact_identity": [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        "static_vacuum_Hessian": [
+          [
+            "0",
+            "-(fixed_mass - frequency)*(fixed_mass + frequency)/(2*frequency)"
+          ],
+          [
+            "-(fixed_mass - frequency)*(fixed_mass + frequency)/(2*frequency)",
+            "(fixed_mass - frequency)*(fixed_mass + frequency)*(fixed_mass**2 + frequency**2)/(2*frequency**3)"
+          ]
+        ],
+        "zero_frequency_bubble": [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "frequency*(-2*fixed_mass**2/frequency**2 + 4)**2/8"
+          ]
+        ]
+      },
+      "pair": [
+        [
+          "0"
+        ],
+        [
+          "2*ordinary_momentum_fraction + 2"
+        ]
+      ]
+    },
+    "T": {
+      "contact": {
+        "actual_fixed_canonical_contact": [
+          [
+            "0",
+            "-(fixed_mass - frequency)*(fixed_mass + frequency)/(2*frequency)"
+          ],
+          [
+            "-(fixed_mass - frequency)*(fixed_mass + frequency)/(2*frequency)",
+            "-frequency/2"
+          ]
+        ],
+        "static_contact_identity": [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        "static_vacuum_Hessian": [
+          [
+            "0",
+            "-(fixed_mass - frequency)*(fixed_mass + frequency)/(2*frequency)"
+          ],
+          [
+            "-(fixed_mass - frequency)*(fixed_mass + frequency)/(2*frequency)",
+            "(fixed_mass - frequency)*(fixed_mass + frequency)*(fixed_mass**2 + frequency**2)/(2*frequency**3)"
+          ]
+        ],
+        "zero_frequency_bubble": [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "fixed_mass**4/(2*frequency**3)"
+          ]
+        ]
+      },
+      "pair": [
+        [
+          "0"
+        ],
+        [
+          "2 - 2*ordinary_momentum_fraction"
+        ]
+      ]
+    }
+  },
+  "checked_scalar_entries": 67,
+  "claim": "P8-S6.86.RANK_ONE_MASSIVE_INVERSE",
+  "controls": {
+    "no_parent_action_or_function_monkeypatched": true,
+    "rejected_inputs": 78,
+    "validation_precedes_cached_sector_contact": true,
+    "zero_axis_value_uses_the_proved_removable_limit": true
+  },
+  "date": "2026-09-08",
+  "exact_open_cut_controls": {
+    "1/10": {
+      "positive_imaginary_H_over_pi": "283*sqrt(10)/2000",
+      "positive_range_inverse_cut_density": "509400*sqrt(10)/(2883204*atanh(sqrt(10)/10)**2 + 2316072*sqrt(10)*atanh(sqrt(10)/10) + 4651240 + 720801*pi**2)",
+      "real_cut_H_continuous_lower": "4259/3000",
+      "real_positive_H_on_upper_cut": "(849*sqrt(10)*atanh(sqrt(10)/10) + 3410)/3000"
+    },
+    "1/2": {
+      "positive_imaginary_H_over_pi": "11*sqrt(2)/16",
+      "positive_range_inverse_cut_density": "19800*sqrt(2)/(19208 + 64680*sqrt(2)*atanh(sqrt(2)/2) + 108900*atanh(sqrt(2)/2)**2 + 27225*pi**2)",
+      "real_cut_H_continuous_lower": "263/120",
+      "real_positive_H_on_upper_cut": "(98 + 165*sqrt(2)*atanh(sqrt(2)/2))/120"
+    },
+    "9/10": {
+      "positive_imaginary_H_over_pi": "1089*sqrt(10)/2000",
+      "positive_range_inverse_cut_density": "1960200*sqrt(10)/(-3632904*sqrt(10)*atanh(3*sqrt(10)/10) + 772840 + 10673289*pi**2 + 42693156*atanh(3*sqrt(10)/10)**2)",
+      "real_cut_H_continuous_lower": "8411/3000",
+      "real_positive_H_on_upper_cut": "(-1390 + 3267*sqrt(10)*atanh(3*sqrt(10)/10))/3000"
+    }
+  },
+  "exact_residuals": {
+    "L_new_adiabatic_frequency_Taylor_N_0_2": "0",
+    "L_new_adiabatic_frequency_Taylor_N_0_4": "0",
+    "L_new_adiabatic_frequency_Taylor_N_1_2": "0",
+    "L_new_adiabatic_frequency_Taylor_N_1_4": "0",
+    "L_new_adiabatic_frequency_Taylor_Z_0_2": "0",
+    "L_new_adiabatic_frequency_Taylor_Z_0_4": "0",
+    "L_new_adiabatic_frequency_Taylor_Z_1_2": "0",
+    "L_new_adiabatic_frequency_Taylor_Z_1_4": "0",
+    "L_new_pair_from_actual_minimal_Hamiltonian": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        1
+      ]
+    },
+    "L_new_static_contact_not_dropped": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "T_new_adiabatic_frequency_Taylor_N_0_2": "0",
+    "T_new_adiabatic_frequency_Taylor_N_0_4": "0",
+    "T_new_adiabatic_frequency_Taylor_N_1_2": "0",
+    "T_new_adiabatic_frequency_Taylor_N_1_4": "0",
+    "T_new_adiabatic_frequency_Taylor_Z_0_2": "0",
+    "T_new_adiabatic_frequency_Taylor_Z_0_4": "0",
+    "T_new_adiabatic_frequency_Taylor_Z_1_2": "0",
+    "T_new_adiabatic_frequency_Taylor_Z_1_4": "0",
+    "T_new_pair_from_actual_minimal_Hamiltonian": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        1
+      ]
+    },
+    "T_new_static_contact_not_dropped": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "actual_new_curved_local_fourth_coefficient": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "cut_lower_remainder_exact": "0",
+    "new_causal_sine_Laplace_normalization": "0",
+    "new_finite_primitive_moment_bound": "0",
+    "new_fixed_mass_rescaling_of_next_moment": "0",
+    "new_high_density_log_coefficient": "0",
+    "new_inverse_high_frequency_limit": "0",
+    "new_kernel_primitive_normalization": "0",
+    "new_next_spectral_moment": "0",
+    "new_no_hidden_high_frequency_instantaneous_term": "0",
+    "new_rank_one_pair_Gram": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "new_scalar_inverse_cut_jump": "0",
+    "new_static_spectral_moment": "0",
+    "new_three_moment_closed_scalar_block": "0",
+    "new_threshold_density_constant": "0",
+    "new_threshold_density_to_frequency_coordinate": "0",
+    "new_threshold_gap_matches_radial_endpoint": "0",
+    "new_zero_instantaneous_inverse": "0",
+    "pair_weight_strict_positive_square": "0",
+    "positive_atanh_remainder_derivative": "0",
+    "range_inverse_only_not_full_two_source_inverse": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "same_exact_three_subtraction_identity": "0",
+    "same_three_subtracted_denominator_and_radial_measure": "0",
+    "spurious_large_frequency_truncation_root": "0",
+    "static_slope_by_independent_radial_integral": "0",
+    "strict_half_plane_imaginary_sign_integrand": "0",
+    "strict_real_cut_lower_square": "0",
+    "strict_real_gap_monotonicity_integrand": "0",
+    "threshold_value_by_independent_radial_integral": "0",
+    "uniform_large_circle_leading_constant": "0"
+  },
+  "formulation": "FORMULATION.md",
+  "full_massive_positive_axis_and_removable_zero_controls": {
+    "0": {
+      "H": "4",
+      "H_continuous_lower": "4",
+      "p_over_mass_squared": "0",
+      "range_inverse": "-1/4",
+      "range_inverse_absolute_upper": "1/4",
+      "scalar_block": "-4"
+    },
+    "1": {
+      "H": "-1034/15 + 68*sqrt(5)*atanh(sqrt(5)/5)",
+      "H_continuous_lower": "4",
+      "p_over_mass_squared": "1",
+      "range_inverse": "-1/(-1034/15 + 68*sqrt(5)*atanh(sqrt(5)/5))",
+      "range_inverse_absolute_upper": "1/4",
+      "scalar_block": "-68*sqrt(5)*atanh(sqrt(5)/5) + 1034/15"
+    },
+    "100": {
+      "H": "-2134/1875 + 2603*sqrt(26)*atanh(5*sqrt(26)/26)/3125",
+      "H_continuous_lower": "4",
+      "p_over_mass_squared": "100",
+      "range_inverse": "-1/(-2134/1875 + 2603*sqrt(26)*atanh(5*sqrt(26)/26)/3125)",
+      "range_inverse_absolute_upper": "1/4",
+      "scalar_block": "-2603*sqrt(26)*atanh(5*sqrt(26)/26)/3125 + 2134/1875"
+    }
+  },
+  "named_exact_check_count": 50,
+  "new_causal_scalar_L1_kernel_and_primitive": {
+    "L1_half_line_kernel": true,
+    "absolutely_convergent_kernel_primitive": "J(t)=-integral_(4m^2)^infinity rho(tau)/tau*(1-cos(sqrt(tau)*t)) dtau",
+    "high_density_log_constant": "1/2",
+    "instantaneous_inverse": "0",
+    "inverse_spectral_representation": "R(p)=-integral_(4m^2)^infinity rho(tau)/(p+tau) dtau",
+    "large_time_bound": "O(t^-3/2) at fixed m>0",
+    "no_numerical_L1_norm_claim": true,
+    "positive_density": "sqrt(ordinary_momentum_fraction)*(3*ordinary_momentum_fraction**2 - 2*ordinary_momentum_fraction + 3)/(2*(pi**2*ordinary_momentum_fraction*(3*ordinary_momentum_fraction**2 - 2*ordinary_momentum_fraction + 3)**2/4 + (cut_atanh_sqrt_fraction*sqrt(ordinary_momentum_fraction)*(3*ordinary_momentum_fraction**2 - 2*ordinary_momentum_fraction + 3) - 3*ordinary_momentum_fraction**2 + ordinary_momentum_fraction + 16/15)**2))",
+    "primitive_lower": "-1/2",
+    "primitive_upper": "0",
+    "range_inverse_kernel": "K(t)=-2 theta(t) integral_(2m)^infinity rho(Omega^2) sin(Omega*t) dOmega",
+    "same_mass_scaling": "K_m(t)=m K_1(m t); the full half-line L1 norm is mass independent for m>0",
+    "scope": "Scalar inverse of the isolated normalized rank-one massive block only. The inactive lapse channel still has no inverse here.",
+    "short_window_C0_inverse_norm_tends_to_zero": true,
+    "small_time_bound": "O(1/[t*log(1/t)^2]) at fixed m>0",
+    "spectral_static_moment": "1/4",
+    "threshold_density_constant": "675/512"
+  },
+  "new_exact_rank_one_massive_scalar_block_and_radial_representation": {
+    "H_at_threshold": "16/15",
+    "H_at_zero": "4",
+    "H_slope_at_zero": "9/(35*positive_fixed_mass**2)",
+    "actual_physical_pair_Gram_matrix": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "(2 - 2*ordinary_momentum_fraction)*(4 - 4*ordinary_momentum_fraction) + (2*ordinary_momentum_fraction + 2)**2"
+      ]
+    ],
+    "analytic_scalar_H_integrand": "ordinary_radial_fraction**2*squared_Laplace_frequency*(3*ordinary_radial_fraction**4 - 2*ordinary_radial_fraction**2 + 3)/(4*positive_fixed_mass**2 + squared_Laplace_frequency*(1 - ordinary_radial_fraction**2))",
+    "closed_scalar_H_in_d": "sqrt(radial_denominator)*(3*radial_denominator**2 - 2*radial_denominator + 3)*atanh(1/sqrt(radial_denominator)) - 3*radial_denominator**2 + radial_denominator + 16/15",
+    "d_of_squared_Laplace_frequency": "4*positive_fixed_mass**2/squared_Laplace_frequency + 1",
+    "first_sheet_cut": "p not in (-infinity,-4m^2]; p=0 is a removable point of the closed formula",
+    "high_frequency_H": "2 log(p/m^2)-14/15+O((m^2/p) log(p/m^2)) on the first sheet",
+    "low_frequency_H_coefficients_in_p_over_mass_squared": {
+      "1": "9/35",
+      "2": "-1/42",
+      "3": "23/6930",
+      "4": "-1/1820"
+    },
+    "normalized_local_plus_thrice_subtracted_scalar_block": "-4*positive_fixed_mass**2/squared_Laplace_frequency - sqrt(4*positive_fixed_mass**2/squared_Laplace_frequency + 1)*(-8*positive_fixed_mass**2/squared_Laplace_frequency + 3*(4*positive_fixed_mass**2/squared_Laplace_frequency + 1)**2 + 1)*atanh(1/sqrt(4*positive_fixed_mass**2/squared_Laplace_frequency + 1)) + 3*(4*positive_fixed_mass**2/squared_Laplace_frequency + 1)**2 - 31/15",
+    "physical_two_source_block": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "-4*positive_fixed_mass**2/squared_Laplace_frequency - sqrt(4*positive_fixed_mass**2/squared_Laplace_frequency + 1)*(-8*positive_fixed_mass**2/squared_Laplace_frequency + 3*(4*positive_fixed_mass**2/squared_Laplace_frequency + 1)**2 + 1)*atanh(1/sqrt(4*positive_fixed_mass**2/squared_Laplace_frequency + 1)) + 3*(4*positive_fixed_mass**2/squared_Laplace_frequency + 1)**2 - 31/15"
+      ]
+    ],
+    "positive_pair_polynomial": "3*ordinary_momentum_fraction**2 - 2*ordinary_momentum_fraction + 3",
+    "positive_radial_weight": "ordinary_radial_fraction**2*(3*ordinary_radial_fraction**4 - 2*ordinary_radial_fraction**2 + 3)",
+    "positive_sign_scalar_H_in_d": "3*radial_denominator**(5/2)*atanh(1/sqrt(radial_denominator)) - 2*radial_denominator**(3/2)*atanh(1/sqrt(radial_denominator)) + 3*sqrt(radial_denominator)*atanh(1/sqrt(radial_denominator)) - 3*radial_denominator**2 + radial_denominator + 16/15",
+    "scope": "Isolated flat-vacuum reference bubble plus the new finite fourth-order local coefficient. Not the full actual curved selected-state or tree-plus-loop inverse."
+  },
+  "new_positive_scalar_inverse_cut_density_and_exact_moments": {
+    "cut_substitution": "ell=atanh(sqrt(z)), z=1-4m^2/tau, 0<z<1",
+    "density_over_sqrt_z_at_threshold": "675/512",
+    "density_times_log_tau_over_mass_squared_squared_at_infinity": "1/2",
+    "full_two_source_inverse": false,
+    "no_instantaneous_range_inverse": true,
+    "positive_imaginary_H_over_pi": "sqrt(ordinary_momentum_fraction)*(3*ordinary_momentum_fraction**2 - 2*ordinary_momentum_fraction + 3)/2",
+    "positive_range_inverse_cut_density": "sqrt(ordinary_momentum_fraction)*(3*ordinary_momentum_fraction**2 - 2*ordinary_momentum_fraction + 3)/(2*(pi**2*ordinary_momentum_fraction*(3*ordinary_momentum_fraction**2 - 2*ordinary_momentum_fraction + 3)**2/4 + (cut_atanh_sqrt_fraction*sqrt(ordinary_momentum_fraction)*(3*ordinary_momentum_fraction**2 - 2*ordinary_momentum_fraction + 3) - 3*ordinary_momentum_fraction**2 + ordinary_momentum_fraction + 16/15)**2))",
+    "range_inverse_absolute_upper_on_first_sheet": "15/16",
+    "real_cut_H_continuous_lower": "ordinary_momentum_fraction*(3*(ordinary_momentum_fraction - 5/6)**2 + 23/12) + 16/15",
+    "real_positive_H_on_upper_cut": "cut_atanh_sqrt_fraction*sqrt(ordinary_momentum_fraction)*(3*ordinary_momentum_fraction**2 - 2*ordinary_momentum_fraction + 3) - 3*ordinary_momentum_fraction**2 + ordinary_momentum_fraction + 16/15",
+    "spectral_inverse_squared_frequency_moment": "9/(560*positive_fixed_mass**2)",
+    "spectral_static_moment": "1/4",
+    "uniform_first_sheet_H_real_part_lower": "16/15"
+  },
+  "not_established": [
+    "A full two-source inverse, actual curved selected-state or coupled tree-plus-loop inverse",
+    "A stationary healthy Minkowski vacuum of the full candidate or physical propagator spectral positivity",
+    "Quantum stability/cones, a nonlinear neighborhood or independently varied initial-state response",
+    "Canonical profile interactions, mixed loops, omitted operators, heavy thresholds or Wilsonian cutoff",
+    "Finite Wilson matching, common-parent V/G/B, UV completion/exclusion or original P8 closure"
+  ],
+  "positive_fixed_mass_moment_and_primitive_bounds": {
+    "1": {
+      "C1_zero_initial_bound": "For f(0)=0 on [0,T], ||Rop f||_C0 <= (T/2)||fprime||_C0; this is additional to the separate L1-based C0 endomorphism proof.",
+      "instantaneous_C0_coefficient": "0",
+      "inverse_squared_frequency_spectral_moment": "9/560",
+      "mass": "1",
+      "primitive_C0_upper": "1/2",
+      "static_positive_spectral_moment": "1/4"
+    },
+    "1000": {
+      "C1_zero_initial_bound": "For f(0)=0 on [0,T], ||Rop f||_C0 <= (T/2)||fprime||_C0; this is additional to the separate L1-based C0 endomorphism proof.",
+      "instantaneous_C0_coefficient": "0",
+      "inverse_squared_frequency_spectral_moment": "9/560000000",
+      "mass": "1000",
+      "primitive_C0_upper": "1/2",
+      "static_positive_spectral_moment": "1/4"
+    },
+    "2": {
+      "C1_zero_initial_bound": "For f(0)=0 on [0,T], ||Rop f||_C0 <= (T/2)||fprime||_C0; this is additional to the separate L1-based C0 endomorphism proof.",
+      "instantaneous_C0_coefficient": "0",
+      "inverse_squared_frequency_spectral_moment": "9/2240",
+      "mass": "2",
+      "primitive_C0_upper": "1/2",
+      "static_positive_spectral_moment": "1/4"
+    }
+  },
+  "prior_sha256": {
+    "S6_85_fully_rebuilt": "fea66d1775ce50b7ef941af5b0987269f86ab6f1e6a5a3a23fc53ca63ba3bb01",
+    "new_rank_one_reference_not_old_full_matrix_inverse_transferred": true
+  },
+  "proof_checks": {
+    "Cauchy_representation_includes_no_pole_or_instantaneous_remainder": true,
+    "actual_curved_tree_plus_loop_inverse_still_requires_new_work": true,
+    "direct_massive_threshold_gap_positive": true,
+    "flat_Proca_reference_not_a_proved_full_candidate_Minkowski_vacuum": true,
+    "fourth_derivative_prefactor_not_already_inverted_by_normalized_block": true,
+    "minimum_principle_uniform_first_sheet_gap_positive": true,
+    "new_high_density_log_constant_positive": true,
+    "new_local_active_coefficient_is_fixed_not_retuned": true,
+    "new_physical_reference_matrix_has_rank_one_not_two": true,
+    "new_scalar_time_kernel_has_integrable_small_and_large_time_bounds": true,
+    "new_threshold_density_constant_positive": true,
+    "no_numeric_L1_norm_inferred_from_complex_frequency_bound": true,
+    "no_quantum_spectrum_cutoff_V_G_B_or_original_P8_closure": true,
+    "positive_axis_gap_from_full_massive_integral": true,
+    "positive_pair_weight_has_strict_square_remainder": true,
+    "primitive_absolute_bound_is_one_half": true,
+    "range_inverse_not_promoted_to_inactive_lapse_inverse": true,
+    "short_window_range_inverse_norm_tends_to_zero": true,
+    "static_positive_spectral_moment_is_one_quarter": true,
+    "strict_half_plane_sign_and_cut_bank_gap_have_written_proof": true,
+    "uniform_range_inverse_complex_bound_is_fifteen_sixteenths": true
+  },
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "8f299175ef9f0ebd791a7c2dc1e44757d93ac4ad31b2ea1f6d24ef9ad8a6738a",
+    "README.md": "83fdc0ebec1ad9dfee5d220a1081885cdba8a5863c1eac6dff2115618d0f38cc",
+    "notes/block.md": "e779f5c190c901656f5eb3b34888671f84c2a5a69dca8c169638c2550d61594c",
+    "notes/cut.md": "55b3c5596b649f7fd82c98b8e4a3c7b0673598a07a8da87df62576f36340c3eb",
+    "notes/first-sheet.md": "0e4f5b2b0c0ab3260bf09c84333797829fd41c4ed9630cf0eb72c809a0744c87",
+    "notes/kernel.md": "481edba303d4e7972ef5bcdf0632facc148d7a65242d50d336654aee320f3489",
+    "notes/scope.md": "5d241b6a84ece77aaabe4246296afed50c3b5d6f4fadda2d612358abc7137062",
+    "src/p8_proca_rank_one_inverse/__init__.py": "0eba3bf6d66fcf7c4ad3b2564328a2b3e8bf49dbbf30390412d1fea2ff9bd037",
+    "src/p8_proca_rank_one_inverse/audit.py": "643fc3210d813f2f5b6632968c41d7f647d6765fc6008d230df7f01c16bb81e9",
+    "src/p8_proca_rank_one_inverse/cut.py": "a7b7a9399fb36a3e1aca7dc10bcc550af43c07579b3664a6c5490d9f1993c4c0",
+    "src/p8_proca_rank_one_inverse/kernel.py": "c34b459af6d2e2729bcb781a48f30315359683e4e5f24c2c4c6e574010be22ce",
+    "src/p8_proca_rank_one_inverse/spectral.py": "b0d3350b7c449056ddfc5b45e26ecc4559f8fecc83e6d04086fee43f74782c9f",
+    "src/p8_proca_rank_one_inverse/verify.py": "c6309552f76cf9c9b93da0b9e343b44c05861b1fc5aa439ae30c92ff1f85d30a",
+    "tests/conftest.py": "f1d999093cd6bd73af6633816ffd432e1e376b548d2102d972c433e9c909261d",
+    "tests/test_proca_rank_one_inverse_certificate.py": "8d5e11f1afe947bc05550d06bb540ca053938254fc27eaddf1518e5861bdb491",
+    "tests/test_proca_rank_one_inverse_science.py": "71ee3aab176850cc7d5fba53c685c6e7c58a9b2257e3419a6d548b6d1bc3b803"
+  },
+  "status": "NEW_ISOLATED_RANK_ONE_MASSIVE_RANGE_FACTOR_ZERO_FREE_WITH_POSITIVE_CUT_AND_L1_CAUSAL_SCALAR_INVERSE; ACTUAL_COUPLED_INVERSE_MATCHING_AND_ORIGINAL_P8_OPEN",
+  "verdict": "The new physical reference is rank one, not invertible as a two-source matrix. Its exact scalar factor F=-H has Re(H)>=16/15 on the entire first sheet, with no threshold, cut-bank or finite first-sheet zero. Its inverse has a positive cut density with exact moments 1/4 and 9/(560 m^2), no instantaneous or pole remainder, and an ordinary L1 retarded time kernel. The complete massive formula excludes the spurious pole suggested by a high-frequency logarithmic truncation. Only the normalized scalar range factor is inverted.",
+  "verification_boundary": "Exact new canonical contact, adiabatic Taylor, spectral moment, threshold, imaginary-sign, cut and normalization identities with written harmonic minimum-principle, Cauchy-contour and oscillatory-kernel proofs. The L1 existence proof does not invent a numerical L1 norm. Every parent is natively rebuilt. Not proof-assistant formalization.",
+  "written_proofs": [
+    "notes/block.md",
+    "notes/first-sheet.md",
+    "notes/cut.md",
+    "notes/kernel.md",
+    "notes/scope.md"
+  ]
+}
