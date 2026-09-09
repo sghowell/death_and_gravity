@@ -1,0 +1,1448 @@
+{
+  "actual_retuned_global_clock_background_and_coefficient_substitution": {
+    "actual_coefficient_substitution": {
+      "H": "4*u/(u**2 + 1)",
+      "H_actual_time_derivative": "-8*u**2/(u**2 + 1)**2 + 4/(u**2 + 1)",
+      "J": "(3200*u**34 + 48000*u**32 + 332800*u**30 + 1410400*u**28 + 4068800*u**26 + 8413600*u**24 + 12776400*u**22 + 14350800*u**20 + 11890800*u**18 + 7319600*u**16 + 3693600*u**14 + 2108796*u**12 + 1559176*u**10 + 1030340*u**8 + 470732*u**6 + 133176*u**4 + 20412*u**2 + 1199)/(800*(u**2 + 1)**18)",
+      "J_actual_time_derivative": "-9*u*(3200*u**34 + 48000*u**32 + 332800*u**30 + 1410400*u**28 + 4068800*u**26 + 8413600*u**24 + 12776400*u**22 + 14350800*u**20 + 11890800*u**18 + 7319600*u**16 + 3693600*u**14 + 2108796*u**12 + 1559176*u**10 + 1030340*u**8 + 470732*u**6 + 133176*u**4 + 20412*u**2 + 1199)/(200*(u**2 + 1)**19) + (108800*u**33 + 1536000*u**31 + 9984000*u**29 + 39491200*u**27 + 105788800*u**25 + 201926400*u**23 + 281080800*u**21 + 287016000*u**19 + 214034400*u**17 + 117113600*u**15 + 51710400*u**13 + 25305552*u**11 + 15591760*u**9 + 8242720*u**7 + 2824392*u**5 + 532704*u**3 + 40824*u)/(800*(u**2 + 1)**18)",
+      "a": "(u**2 + 1)**2",
+      "delta_J": "1/(50*(u**2 + 1)**6)",
+      "delta_J_actual_time_derivative": "-6*u/(25*(u**2 + 1)**7)",
+      "ell": "1/(10*(u**2 + 1)**6)",
+      "ell_actual_time_derivative": "-6*u/(5*(u**2 + 1)**7)",
+      "lam": "(2*u**6 + 6*u**4 + 6*u**2 - 1)/(2*(u**2 + 1)**3)",
+      "lam_actual_time_derivative": "-3*u*(2*u**6 + 6*u**4 + 6*u**2 - 1)/(u**2 + 1)**4 + (12*u**5 + 24*u**3 + 12*u)/(2*(u**2 + 1)**3)",
+      "theta": "u*(4*u**6 + 12*u**4 + 12*u**2 + 3)/(u**2 + 1)**4",
+      "theta_actual_time_derivative": "-8*u**2*(4*u**6 + 12*u**4 + 12*u**2 + 3)/(u**2 + 1)**5 + u*(24*u**5 + 48*u**3 + 24*u)/(u**2 + 1)**4 + (4*u**6 + 12*u**4 + 12*u**2 + 3)/(u**2 + 1)**4",
+      "w": "(-1 + 3/(2*(u**2 + 1)**3))/(10*(u**2 + 1)**6)",
+      "w_actual_time_derivative": "-6*u*(-1 + 3/(2*(u**2 + 1)**3))/(5*(u**2 + 1)**7) - 9*u/(10*(u**2 + 1)**10)"
+    },
+    "background": {
+      "H": "4*u/(u**2 + 1)",
+      "J": "(3200*u**34 + 48000*u**32 + 332800*u**30 + 1410400*u**28 + 4068800*u**26 + 8413600*u**24 + 12776400*u**22 + 14350800*u**20 + 11890800*u**18 + 7319600*u**16 + 3693600*u**14 + 2108796*u**12 + 1559176*u**10 + 1030340*u**8 + 470732*u**6 + 133176*u**4 + 20412*u**2 + 1199)/(800*(u**2 + 1)**18)",
+      "J_new": "1/(50*(u**2 + 1)**6) + (3200*u**34 + 48000*u**32 + 332800*u**30 + 1410400*u**28 + 4068800*u**26 + 8413600*u**24 + 12776400*u**22 + 14350800*u**20 + 11890800*u**18 + 7319600*u**16 + 3693600*u**14 + 2108796*u**12 + 1559176*u**10 + 1030340*u**8 + 470732*u**6 + 133176*u**4 + 20412*u**2 + 1199)/(800*(u**2 + 1)**18)",
+      "a": "(u**2 + 1)**2",
+      "alpha": "3/(2*(u**2 + 1)**3)",
+      "clock_physical_squared_speed": "(3200*u**34 + 48000*u**32 + 332800*u**30 + 1410400*u**28 + 4068800*u**26 + 8413600*u**24 + 12776400*u**22 + 14350800*u**20 + 11890800*u**18 + 7319600*u**16 + 3693600*u**14 + 2108796*u**12 + 1559176*u**10 + 1030340*u**8 + 470732*u**6 + 133176*u**4 + 20412*u**2 + 1199)/(800*(u**2 + 1)**18*(1/(50*(u**2 + 1)**6) + (3200*u**34 + 48000*u**32 + 332800*u**30 + 1410400*u**28 + 4068800*u**26 + 8413600*u**24 + 12776400*u**22 + 14350800*u**20 + 11890800*u**18 + 7319600*u**16 + 3693600*u**14 + 2108796*u**12 + 1559176*u**10 + 1030340*u**8 + 470732*u**6 + 133176*u**4 + 20412*u**2 + 1199)/(800*(u**2 + 1)**18)))",
+      "d": "21*u/(2*(u**2 + 1)**4)",
+      "delta": "1/(2*(u**2 + 1)**3)",
+      "delta_J": "1/(50*(u**2 + 1)**6)",
+      "e": "(u**2 + 1)**(-3)",
+      "ell": "1/(10*(u**2 + 1)**6)",
+      "h": "(u**2 + 1)**3",
+      "l": "1/(10*(u**2 + 1)**6)",
+      "lam": "(2*u**6 + 6*u**4 + 6*u**2 - 1)/(2*(u**2 + 1)**3)",
+      "new_total_margin": "1/200",
+      "physical_matter_null_primitive": "u/(2*u**2 + 2) + atan(u)/2",
+      "theta": "u*(4*u**6 + 12*u**4 + 12*u**2 + 3)/(u**2 + 1)**4",
+      "u": "u",
+      "w": "(-1 + 3/(2*(u**2 + 1)**3))/(10*(u**2 + 1)**6)"
+    }
+  },
+  "checked_scalar_entries": 349,
+  "claim": "P8-S6.98.GLOBAL_RETUNED_SCALAR_SUPPORT",
+  "complete_regular_density_phase_and_original_local_source": {
+    "chart_velocity_maps_before_q_to_comoving_substitution": {
+      "gamma": [
+        [
+          "0",
+          "0",
+          "-nonzero_comoving_scalar_root/(2*a**3*q)",
+          "0"
+        ],
+        [
+          "0",
+          "nonzero_comoving_scalar_root",
+          "0",
+          "0"
+        ],
+        [
+          "(-J - delta_J + lam**2*q)/(J + delta_J)",
+          "-3*ell*lam*theta/(2*(J + delta_J))",
+          "H/(2*a**3*q) - lam*theta/(2*a**3*(J + delta_J))",
+          "lam*w/(2*a**3*(J + delta_J))"
+        ],
+        [
+          "lam*q*w/(J + delta_J)",
+          "-3*ell*theta*w/(2*(J + delta_J))",
+          "-theta*w/(2*a**3*(J + delta_J))",
+          "(2*J + 2*delta_J + w**2)/(2*a**3*(J + delta_J))"
+        ]
+      ],
+      "unitary": [
+        [
+          "nonzero_comoving_scalar_root",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "nonzero_comoving_scalar_root",
+          "0",
+          "0"
+        ],
+        [
+          "-lam*q*theta/(J + delta_J)",
+          "-ell*(J + delta_J - 3*theta**2)/(2*(J + delta_J))",
+          "theta**2/(2*a**3*(J + delta_J))",
+          "-theta*w/(2*a**3*(J + delta_J))"
+        ],
+        [
+          "lam*q*w/(J + delta_J)",
+          "-3*ell*theta*w/(2*(J + delta_J))",
+          "-theta*w/(2*a**3*(J + delta_J))",
+          "(2*J + 2*delta_J + w**2)/(2*a**3*(J + delta_J))"
+        ]
+      ]
+    },
+    "complete_polynomial_q_coefficients": [
+      [
+        [
+          "0",
+          "(-J*ell - delta_J*ell + 3*ell*theta**2)/(2*J + 2*delta_J)",
+          "theta**2/(2*J*a**3 + 2*a**3*delta_J)",
+          "-theta*w/(2*J*a**3 + 2*a**3*delta_J)"
+        ],
+        [
+          "0",
+          "-3*ell*theta*w/(2*J + 2*delta_J)",
+          "-theta*w/(2*J*a**3 + 2*a**3*delta_J)",
+          "(2*J + 2*delta_J + w**2)/(2*J*a**3 + 2*a**3*delta_J)"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "(3*J*a**3*ell**2 + 3*a**3*delta_J*ell**2 - 9*a**3*ell**2*theta**2)/(2*J + 2*delta_J)",
+          "(J*ell + delta_J*ell - 3*ell*theta**2)/(2*J + 2*delta_J)",
+          "3*ell*theta*w/(2*J + 2*delta_J)"
+        ]
+      ],
+      [
+        [
+          "-lam*theta/(J + delta_J)",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "lam*w/(J + delta_J)",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "2*a**3",
+          "3*a**3*ell*lam*theta/(J + delta_J)",
+          "lam*theta/(J + delta_J)",
+          "-lam*w/(J + delta_J)"
+        ],
+        [
+          "3*a**3*ell*lam*theta/(J + delta_J)",
+          "-a**3",
+          "0",
+          "0"
+        ]
+      ],
+      [
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "-2*a**3*lam**2/(J + delta_J)",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      ]
+    ],
+    "constant_symplectic_form": [
+      [
+        "0",
+        "0",
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "1"
+      ],
+      [
+        "-1",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "-1",
+        "0",
+        "0"
+      ]
+    ],
+    "normalized_physical_probe_force": [
+      [
+        "0"
+      ],
+      [
+        "0"
+      ],
+      [
+        "0"
+      ],
+      [
+        "a**3"
+      ]
+    ],
+    "original_global_action_source_density": "kappa*a(u)^3*J*chi",
+    "original_relational_observable_row": [
+      [
+        "0",
+        "1",
+        "0",
+        "0"
+      ]
+    ],
+    "original_retarded_multiplier": "G_hat(t,s,k)=a(s)^3*U_density(t,s,k)[1,3]",
+    "q_is_bilinear_complex_spatial_square_over_actual_scale_squared": true,
+    "regular_density_Hamiltonian": "(-3*J*a**6*ell**2*matter**2 + 2*J*a**6*matter**2*q - 4*J*a**6*q*v**2 - 2*J*a**3*ell*global_metric_density_momentum*matter + 2*J*global_matter_density_momentum**2 - 3*a**6*delta_J*ell**2*matter**2 + 2*a**6*delta_J*matter**2*q - 4*a**6*delta_J*q*v**2 + 9*a**6*ell**2*matter**2*theta**2 - 12*a**6*ell*lam*matter*q*theta*v + 4*a**6*lam**2*q**2*v**2 - 2*a**3*delta_J*ell*global_metric_density_momentum*matter - 6*a**3*ell*global_matter_density_momentum*matter*theta*w + 6*a**3*ell*global_metric_density_momentum*matter*theta**2 + 4*a**3*global_matter_density_momentum*lam*q*v*w - 4*a**3*global_metric_density_momentum*lam*q*theta*v + 2*delta_J*global_matter_density_momentum**2 + global_matter_density_momentum**2*w**2 - 2*global_matter_density_momentum*global_metric_density_momentum*theta*w + global_metric_density_momentum**2*theta**2)/(4*a**3*(J + delta_J))",
+    "regular_density_generator": [
+      [
+        "-lam*q*theta/(J + delta_J)",
+        "-ell*(J + delta_J - 3*theta**2)/(2*(J + delta_J))",
+        "theta**2/(2*a**3*(J + delta_J))",
+        "-theta*w/(2*a**3*(J + delta_J))"
+      ],
+      [
+        "lam*q*w/(J + delta_J)",
+        "-3*ell*theta*w/(2*(J + delta_J))",
+        "-theta*w/(2*a**3*(J + delta_J))",
+        "(2*J + 2*delta_J + w**2)/(2*a**3*(J + delta_J))"
+      ],
+      [
+        "-2*a**3*q*(-J - delta_J + lam**2*q)/(J + delta_J)",
+        "3*a**3*ell*lam*q*theta/(J + delta_J)",
+        "lam*q*theta/(J + delta_J)",
+        "-lam*q*w/(J + delta_J)"
+      ],
+      [
+        "3*a**3*ell*lam*q*theta/(J + delta_J)",
+        "-a**3*(-3*J*ell**2 + 2*J*q - 3*delta_J*ell**2 + 2*delta_J*q + 9*ell**2*theta**2)/(2*(J + delta_J))",
+        "ell*(J + delta_J - 3*theta**2)/(2*(J + delta_J))",
+        "3*ell*theta*w/(2*(J + delta_J))"
+      ]
+    ],
+    "regular_density_phase": [
+      [
+        "v"
+      ],
+      [
+        "matter"
+      ],
+      [
+        "global_metric_density_momentum"
+      ],
+      [
+        "global_matter_density_momentum"
+      ]
+    ]
+  },
+  "complete_unitary_and_gamma_Euler_systems": {
+    "gamma": {
+      "G_principal": [
+        [
+          "(H*lam*theta - lam*theta_actual_time_derivative + lam_actual_time_derivative*theta - theta**2)/lam**2",
+          "ell/2"
+        ],
+        [
+          "ell/2",
+          "1/2"
+        ]
+      ],
+      "K_principal": [
+        [
+          "(2*J + 2*delta_J + w**2)/(2*lam**2)",
+          "-w/(2*lam)"
+        ],
+        [
+          "-w/(2*lam)",
+          "1/2"
+        ]
+      ],
+      "alpha_over_a_cubed": [
+        [
+          "2*q*(2*J + 2*delta_J + w**2)/(-2*J - 2*delta_J + 2*lam**2*q - w**2)",
+          "-2*lam*q*w/(-2*J - 2*delta_J + 2*lam**2*q - w**2)"
+        ],
+        [
+          "-2*lam*q*w/(-2*J - 2*delta_J + 2*lam**2*q - w**2)",
+          "2*(-J - delta_J + lam**2*q)/(-2*J - 2*delta_J + 2*lam**2*q - w**2)"
+        ]
+      ],
+      "beta_over_a_cubed": [
+        [
+          "-2*q*(-2*H*J - 2*H*delta_J - H*w**2 + 2*lam*q*theta)/(-2*J - 2*delta_J + 2*lam**2*q - w**2)",
+          "6*ell*lam*q*theta/(-2*J - 2*delta_J + 2*lam**2*q - w**2)"
+        ],
+        [
+          "-2*q*w*(H*lam - theta)/(-2*J - 2*delta_J + 2*lam**2*q - w**2)",
+          "-3*ell*theta*w/(-2*J - 2*delta_J + 2*lam**2*q - w**2)"
+        ]
+      ],
+      "beta_q_principal": [
+        [
+          "-2*theta/lam",
+          "0"
+        ],
+        [
+          "0",
+          "0"
+        ]
+      ],
+      "complete_bounded_force_remainder": [
+        [
+          "-(-4*H**2*J*lam**2*q - 4*H**2*delta_J*lam**2*q + H**2*lam**2*q*w**2 + 4*H*J*lam*lam_actual_time_derivative*q + 4*H*J*lam*q*theta - 2*H*J_actual_time_derivative*lam**2*q + 4*H*delta_J*lam*lam_actual_time_derivative*q + 4*H*delta_J*lam*q*theta - 2*H*delta_J_actual_time_derivative*lam**2*q + 3*H*ell*lam**2*q*theta*w - H*lam**2*q*w*w_actual_time_derivative + H*lam*lam_actual_time_derivative*q*w**2 - 2*H*lam*q*theta*w**2 + 2*H_actual_time_derivative*J**2 + 4*H_actual_time_derivative*J*delta_J - 2*H_actual_time_derivative*J*lam**2*q + H_actual_time_derivative*J*w**2 + 2*H_actual_time_derivative*delta_J**2 - 2*H_actual_time_derivative*delta_J*lam**2*q + H_actual_time_derivative*delta_J*w**2 - 4*J*lam_actual_time_derivative*q*theta + 2*J_actual_time_derivative*lam*q*theta - 4*delta_J*lam_actual_time_derivative*q*theta + 2*delta_J_actual_time_derivative*lam*q*theta - 3*ell*lam*q*theta**2*w + lam*q*theta*w*w_actual_time_derivative - lam_actual_time_derivative*q*theta*w**2 + q*theta**2*w**2)/((J + delta_J)*(-2*J - 2*delta_J + 2*lam**2*q - w**2))",
+          "-(-24*H*ell*lam**3*q*theta + 18*H*ell*lam*theta*w**2 - 4*J**2*ell - 8*J*delta_J*ell - 6*J*ell**2*lam*w + 4*J*ell*lam**2*q + 12*J*ell*lam*theta_actual_time_derivative + 12*J*ell*lam_actual_time_derivative*theta + 12*J*ell*theta**2 - 2*J*ell*w**2 + 12*J*ell_actual_time_derivative*lam*theta - 12*J_actual_time_derivative*ell*lam*theta - 4*delta_J**2*ell - 6*delta_J*ell**2*lam*w + 4*delta_J*ell*lam**2*q + 12*delta_J*ell*lam*theta_actual_time_derivative + 12*delta_J*ell*lam_actual_time_derivative*theta + 12*delta_J*ell*theta**2 - 2*delta_J*ell*w**2 + 12*delta_J*ell_actual_time_derivative*lam*theta - 12*delta_J_actual_time_derivative*ell*lam*theta + 6*ell**2*lam**3*q*w + 18*ell**2*lam*theta**2*w - 3*ell**2*lam*w**3 - 12*ell*lam**3*q*theta_actual_time_derivative + 12*ell*lam**2*lam_actual_time_derivative*q*theta - 12*ell*lam**2*q*theta**2 - 6*ell*lam*theta*w*w_actual_time_derivative + 6*ell*lam*theta_actual_time_derivative*w**2 - 12*ell_actual_time_derivative*lam**3*q*theta + 6*ell_actual_time_derivative*lam*theta*w**2)/(4*(J + delta_J)*(-2*J - 2*delta_J + 2*lam**2*q - w**2))"
+        ],
+        [
+          "-q*(H*lam - theta)*(2*H*J*lam*w + 2*H*delta_J*lam*w + H*lam*w**3 + 6*J*ell*lam*theta + 2*J*lam*w_actual_time_derivative + 2*J*lam_actual_time_derivative*w - 2*J*theta*w - 2*J_actual_time_derivative*lam*w + 6*delta_J*ell*lam*theta + 2*delta_J*lam*w_actual_time_derivative + 2*delta_J*lam_actual_time_derivative*w - 2*delta_J*theta*w - 2*delta_J_actual_time_derivative*lam*w + 3*ell*lam*theta*w**2 - lam*w**2*w_actual_time_derivative + lam_actual_time_derivative*w**3 - theta*w**3)/(lam*(J + delta_J)*(-2*J - 2*delta_J + 2*lam**2*q - w**2))",
+          "-3*(12*H*J*ell*theta*w + 12*H*delta_J*ell*theta*w - 8*H*ell*lam**2*q*theta*w + 6*H*ell*theta*w**3 - 4*J**2*ell**2 - 8*J*delta_J*ell**2 + 4*J*ell**2*lam**2*q + 12*J*ell**2*theta**2 - 4*J*ell**2*w**2 + 4*J*ell*theta*w_actual_time_derivative + 4*J*ell*theta_actual_time_derivative*w + 4*J*ell_actual_time_derivative*theta*w - 4*J_actual_time_derivative*ell*theta*w - 4*delta_J**2*ell**2 + 4*delta_J*ell**2*lam**2*q + 12*delta_J*ell**2*theta**2 - 4*delta_J*ell**2*w**2 + 4*delta_J*ell*theta*w_actual_time_derivative + 4*delta_J*ell*theta_actual_time_derivative*w + 4*delta_J*ell_actual_time_derivative*theta*w - 4*delta_J_actual_time_derivative*ell*theta*w + 2*ell**2*lam**2*q*w**2 + 6*ell**2*theta**2*w**2 - ell**2*w**4 - 4*ell*lam**2*q*theta_actual_time_derivative*w + 4*ell*lam*lam_actual_time_derivative*q*theta*w - 4*ell*lam*q*theta**2*w - 2*ell*theta*w**2*w_actual_time_derivative + 2*ell*theta_actual_time_derivative*w**3 - 4*ell_actual_time_derivative*lam**2*q*theta*w + 2*ell_actual_time_derivative*theta*w**3)/(4*(J + delta_J)*(-2*J - 2*delta_J + 2*lam**2*q - w**2))"
+        ]
+      ],
+      "complete_leading_spatial_force": [
+        [
+          "(2*H*lam*theta + ell*lam*w - 2*lam*theta_actual_time_derivative + 2*lam_actual_time_derivative*theta - 2*theta**2)/(2*(J + delta_J))",
+          "lam*(ell*lam + w)/(2*(J + delta_J))"
+        ],
+        [
+          "(2*H*lam*theta*w + 2*J*ell*lam + 2*delta_J*ell*lam + ell*lam*w**2 - 2*lam*theta_actual_time_derivative*w + 2*lam_actual_time_derivative*theta*w - 2*theta**2*w)/(2*lam*(J + delta_J))",
+          "(2*J + 2*delta_J + ell*lam*w + w**2)/(2*(J + delta_J))"
+        ]
+      ],
+      "complete_velocity_force": [
+        [
+          "(8*H**2*J*lam**2*q + 8*H**2*delta_J*lam**2*q - 2*H**2*lam**2*q*w**2 - 8*H*J*lam*lam_actual_time_derivative*q - 12*H*J*lam*q*theta + 4*H*J_actual_time_derivative*lam**2*q - 8*H*delta_J*lam*lam_actual_time_derivative*q - 12*H*delta_J*lam*q*theta + 4*H*delta_J_actual_time_derivative*lam**2*q - 6*H*ell*lam**2*q*theta*w + 4*H*lam**3*q**2*theta + 2*H*lam**2*q*w*w_actual_time_derivative - 2*H*lam*lam_actual_time_derivative*q*w**2 + 2*H*lam*q*theta*w**2 - 4*H_actual_time_derivative*J**2 - 8*H_actual_time_derivative*J*delta_J + 4*H_actual_time_derivative*J*lam**2*q - 2*H_actual_time_derivative*J*w**2 - 4*H_actual_time_derivative*delta_J**2 + 4*H_actual_time_derivative*delta_J*lam**2*q - 2*H_actual_time_derivative*delta_J*w**2 - 2*J*ell*lam*q*w + 4*J*lam*q*theta_actual_time_derivative + 4*J*lam_actual_time_derivative*q*theta + 4*J*q*theta**2 - 4*J_actual_time_derivative*lam*q*theta - 2*delta_J*ell*lam*q*w + 4*delta_J*lam*q*theta_actual_time_derivative + 4*delta_J*lam_actual_time_derivative*q*theta + 4*delta_J*q*theta**2 - 4*delta_J_actual_time_derivative*lam*q*theta + 2*ell*lam**3*q**2*w + 6*ell*lam*q*theta**2*w - ell*lam*q*w**3 - 4*lam**3*q**2*theta_actual_time_derivative + 4*lam**2*lam_actual_time_derivative*q**2*theta - 4*lam**2*q**2*theta**2 - 2*lam*q*theta*w*w_actual_time_derivative + 2*lam*q*theta_actual_time_derivative*w**2)/(2*(J + delta_J)*(-2*J - 2*delta_J + 2*lam**2*q - w**2))",
+          "(24*H*ell*lam**3*q*theta - 18*H*ell*lam*theta*w**2 + 4*J**2*ell + 8*J*delta_J*ell + 6*J*ell**2*lam*w - 8*J*ell*lam**2*q - 12*J*ell*lam*theta_actual_time_derivative - 12*J*ell*lam_actual_time_derivative*theta - 12*J*ell*theta**2 + 2*J*ell*w**2 - 12*J*ell_actual_time_derivative*lam*theta - 4*J*lam*q*w + 12*J_actual_time_derivative*ell*lam*theta + 4*delta_J**2*ell + 6*delta_J*ell**2*lam*w - 8*delta_J*ell*lam**2*q - 12*delta_J*ell*lam*theta_actual_time_derivative - 12*delta_J*ell*lam_actual_time_derivative*theta - 12*delta_J*ell*theta**2 + 2*delta_J*ell*w**2 - 12*delta_J*ell_actual_time_derivative*lam*theta - 4*delta_J*lam*q*w + 12*delta_J_actual_time_derivative*ell*lam*theta - 6*ell**2*lam**3*q*w - 18*ell**2*lam*theta**2*w + 3*ell**2*lam*w**3 + 4*ell*lam**4*q**2 + 12*ell*lam**3*q*theta_actual_time_derivative - 12*ell*lam**2*lam_actual_time_derivative*q*theta + 12*ell*lam**2*q*theta**2 - 2*ell*lam**2*q*w**2 + 6*ell*lam*theta*w*w_actual_time_derivative - 6*ell*lam*theta_actual_time_derivative*w**2 + 12*ell_actual_time_derivative*lam**3*q*theta - 6*ell_actual_time_derivative*lam*theta*w**2 + 4*lam**3*q**2*w - 2*lam*q*w**3)/(4*(J + delta_J)*(-2*J - 2*delta_J + 2*lam**2*q - w**2))"
+        ],
+        [
+          "q*(-4*H**2*J*lam*w - 4*H**2*delta_J*lam*w - 2*H**2*lam*w**3 - 12*H*J*ell*lam*theta - 4*H*J*lam*w_actual_time_derivative - 4*H*J*lam_actual_time_derivative*w + 4*H*J*theta*w + 4*H*J_actual_time_derivative*lam*w - 12*H*delta_J*ell*lam*theta - 4*H*delta_J*lam*w_actual_time_derivative - 4*H*delta_J*lam_actual_time_derivative*w + 4*H*delta_J*theta*w + 4*H*delta_J_actual_time_derivative*lam*w - 6*H*ell*lam*theta*w**2 + 4*H*lam**2*q*theta*w + 2*H*lam*w**2*w_actual_time_derivative - 2*H*lam_actual_time_derivative*w**3 + 2*H*theta*w**3 - 4*J**2*ell - 8*J*delta_J*ell + 4*J*ell*lam**2*q + 12*J*ell*theta**2 - 4*J*ell*w**2 + 4*J*theta*w_actual_time_derivative + 4*J*theta_actual_time_derivative*w - 4*J_actual_time_derivative*theta*w - 4*delta_J**2*ell + 4*delta_J*ell*lam**2*q + 12*delta_J*ell*theta**2 - 4*delta_J*ell*w**2 + 4*delta_J*theta*w_actual_time_derivative + 4*delta_J*theta_actual_time_derivative*w - 4*delta_J_actual_time_derivative*theta*w + 2*ell*lam**2*q*w**2 + 6*ell*theta**2*w**2 - ell*w**4 - 4*lam**2*q*theta_actual_time_derivative*w + 4*lam*lam_actual_time_derivative*q*theta*w - 4*lam*q*theta**2*w - 2*theta*w**2*w_actual_time_derivative + 2*theta_actual_time_derivative*w**3)/(2*(J + delta_J)*(-2*J - 2*delta_J + 2*lam**2*q - w**2))",
+          "(-36*H*J*ell*theta*w - 36*H*delta_J*ell*theta*w + 24*H*ell*lam**2*q*theta*w - 18*H*ell*theta*w**3 + 12*J**2*ell**2 - 8*J**2*q + 24*J*delta_J*ell**2 - 16*J*delta_J*q - 12*J*ell**2*lam**2*q - 36*J*ell**2*theta**2 + 12*J*ell**2*w**2 - 4*J*ell*lam*q*w - 12*J*ell*theta*w_actual_time_derivative - 12*J*ell*theta_actual_time_derivative*w - 12*J*ell_actual_time_derivative*theta*w + 8*J*lam**2*q**2 - 8*J*q*w**2 + 12*J_actual_time_derivative*ell*theta*w + 12*delta_J**2*ell**2 - 8*delta_J**2*q - 12*delta_J*ell**2*lam**2*q - 36*delta_J*ell**2*theta**2 + 12*delta_J*ell**2*w**2 - 4*delta_J*ell*lam*q*w - 12*delta_J*ell*theta*w_actual_time_derivative - 12*delta_J*ell*theta_actual_time_derivative*w - 12*delta_J*ell_actual_time_derivative*theta*w + 8*delta_J*lam**2*q**2 - 8*delta_J*q*w**2 + 12*delta_J_actual_time_derivative*ell*theta*w - 6*ell**2*lam**2*q*w**2 - 18*ell**2*theta**2*w**2 + 3*ell**2*w**4 + 4*ell*lam**3*q**2*w + 12*ell*lam**2*q*theta_actual_time_derivative*w - 12*ell*lam*lam_actual_time_derivative*q*theta*w + 12*ell*lam*q*theta**2*w - 2*ell*lam*q*w**3 + 6*ell*theta*w**2*w_actual_time_derivative - 6*ell*theta_actual_time_derivative*w**3 + 12*ell_actual_time_derivative*lam**2*q*theta*w - 6*ell_actual_time_derivative*theta*w**3 + 4*lam**2*q**2*w**2 - 2*q*w**4)/(4*(J + delta_J)*(-2*J - 2*delta_J + 2*lam**2*q - w**2))"
+        ]
+      ],
+      "complete_velocity_friction": [
+        [
+          "-(2*H*J**2 + 4*H*J*delta_J - 6*H*J*lam**2*q + H*J*w**2 + 2*H*delta_J**2 - 6*H*delta_J*lam**2*q + H*delta_J*w**2 + H*lam**2*q*w**2 + 4*J*lam*lam_actual_time_derivative*q - 2*J_actual_time_derivative*lam**2*q + 4*delta_J*lam*lam_actual_time_derivative*q - 2*delta_J_actual_time_derivative*lam**2*q + 3*ell*lam**2*q*theta*w - lam**2*q*w*w_actual_time_derivative + lam*lam_actual_time_derivative*q*w**2 - lam*q*theta*w**2)/((J + delta_J)*(-2*J - 2*delta_J + 2*lam**2*q - w**2))",
+          "(-3*H*J*lam*w - 3*H*delta_J*lam*w + H*lam**3*q*w - 3*J*ell*lam*theta + J*lam*w_actual_time_derivative + J*lam_actual_time_derivative*w + J*theta*w - J_actual_time_derivative*lam*w - 3*delta_J*ell*lam*theta + delta_J*lam*w_actual_time_derivative + delta_J*lam_actual_time_derivative*w + delta_J*theta*w - delta_J_actual_time_derivative*lam*w + 3*ell*lam**3*q*theta - lam**3*q*w_actual_time_derivative + lam**2*lam_actual_time_derivative*q*w - lam**2*q*theta*w)/((J + delta_J)*(-2*J - 2*delta_J + 2*lam**2*q - w**2))"
+        ],
+        [
+          "-q*(2*H*J*lam*w + 2*H*delta_J*lam*w + H*lam*w**3 + 6*J*ell*lam*theta + 2*J*lam*w_actual_time_derivative + 2*J*lam_actual_time_derivative*w - 2*J*theta*w - 2*J_actual_time_derivative*lam*w + 6*delta_J*ell*lam*theta + 2*delta_J*lam*w_actual_time_derivative + 2*delta_J*lam_actual_time_derivative*w - 2*delta_J*theta*w - 2*delta_J_actual_time_derivative*lam*w + 3*ell*lam*theta*w**2 - lam*w**2*w_actual_time_derivative + lam_actual_time_derivative*w**3 - theta*w**3)/((J + delta_J)*(-2*J - 2*delta_J + 2*lam**2*q - w**2))",
+          "(-6*H*J**2 - 12*H*J*delta_J + 6*H*J*lam**2*q - 3*H*J*w**2 - 6*H*delta_J**2 + 6*H*delta_J*lam**2*q - 3*H*delta_J*w**2 + H*lam**2*q*w**2 + 2*J*w*w_actual_time_derivative - J_actual_time_derivative*w**2 + 2*delta_J*w*w_actual_time_derivative - delta_J_actual_time_derivative*w**2 + 3*ell*lam**2*q*theta*w - lam**2*q*w*w_actual_time_derivative + lam*lam_actual_time_derivative*q*w**2 - lam*q*theta*w**2)/((J + delta_J)*(-2*J - 2*delta_J + 2*lam**2*q - w**2))"
+        ]
+      ],
+      "finite_q_chart_denominators": [
+        "(J + delta_J)*(-2*J - 2*delta_J + 2*lam**2*q - w**2)",
+        "-2*J - 2*delta_J + 2*lam**2*q - w**2",
+        "2*(-2*J - 2*delta_J + 2*lam**2*q - w**2)",
+        "2*(J + delta_J)*(-2*J - 2*delta_J + 2*lam**2*q - w**2)",
+        "4*(J + delta_J)*(-2*J - 2*delta_J + 2*lam**2*q - w**2)"
+      ],
+      "gamma_over_a_cubed": [
+        [
+          "-2*q*(-2*H**2*J - 2*H**2*delta_J - H**2*w**2 + 4*H*lam*q*theta - 2*q*theta**2)/(-2*J - 2*delta_J + 2*lam**2*q - w**2)",
+          "-ell*q*(-6*H*lam*theta - 2*J - 2*delta_J + 2*lam**2*q + 6*theta**2 - w**2)/(-2*J - 2*delta_J + 2*lam**2*q - w**2)"
+        ],
+        [
+          "-ell*q*(-6*H*lam*theta - 2*J - 2*delta_J + 2*lam**2*q + 6*theta**2 - w**2)/(-2*J - 2*delta_J + 2*lam**2*q - w**2)",
+          "-(6*J*ell**2 - 4*J*q + 6*delta_J*ell**2 - 4*delta_J*q - 6*ell**2*lam**2*q - 18*ell**2*theta**2 + 3*ell**2*w**2 + 4*lam**2*q**2 - 2*q*w**2)/(2*(-2*J - 2*delta_J + 2*lam**2*q - w**2))"
+        ]
+      ]
+    },
+    "unitary": {
+      "G_principal": [
+        [
+          "(H*lam*theta - lam*theta_actual_time_derivative + lam_actual_time_derivative*theta - theta**2)/theta**2",
+          "-ell*lam/(2*theta)"
+        ],
+        [
+          "-ell*lam/(2*theta)",
+          "1/2"
+        ]
+      ],
+      "K_principal": [
+        [
+          "(2*J + 2*delta_J + w**2)/(2*theta**2)",
+          "w/(2*theta)"
+        ],
+        [
+          "w/(2*theta)",
+          "1/2"
+        ]
+      ],
+      "alpha_over_a_cubed": [
+        [
+          "(2*J + 2*delta_J + w**2)/theta**2",
+          "w/theta"
+        ],
+        [
+          "w/theta",
+          "1"
+        ]
+      ],
+      "beta_over_a_cubed": [
+        [
+          "2*lam*q/theta",
+          "ell*(2*J + 2*delta_J - 6*theta**2 + w**2)/(2*theta**2)"
+        ],
+        [
+          "0",
+          "ell*w/(2*theta)"
+        ]
+      ],
+      "beta_q_principal": [
+        [
+          "2*lam/theta",
+          "0"
+        ],
+        [
+          "0",
+          "0"
+        ]
+      ],
+      "complete_bounded_force_remainder": [
+        [
+          "0",
+          "(12*H*J*ell*theta + 12*H*delta_J*ell*theta - 36*H*ell*theta**3 + 2*J*ell**2*w - 8*J*ell*theta_actual_time_derivative + 4*J*ell_actual_time_derivative*theta + 4*J_actual_time_derivative*ell*theta + 2*delta_J*ell**2*w - 8*delta_J*ell*theta_actual_time_derivative + 4*delta_J*ell_actual_time_derivative*theta + 4*delta_J_actual_time_derivative*ell*theta - 6*ell**2*theta**2*w + ell**2*w**3 + 2*ell*theta*w*w_actual_time_derivative - 2*ell*theta_actual_time_derivative*w**2 - 12*ell_actual_time_derivative*theta**3)/(8*theta*(J + delta_J))"
+        ],
+        [
+          "0",
+          "-(-36*H*ell*theta**3*w + 4*J**2*ell**2 + 8*J*delta_J*ell**2 - 12*J*ell**2*theta**2 + 4*J*ell**2*w**2 - 4*J*ell*theta*w_actual_time_derivative - 4*J*ell*theta_actual_time_derivative*w + 4*J_actual_time_derivative*ell*theta*w + 4*delta_J**2*ell**2 - 12*delta_J*ell**2*theta**2 + 4*delta_J*ell**2*w**2 - 4*delta_J*ell*theta*w_actual_time_derivative - 4*delta_J*ell*theta_actual_time_derivative*w + 4*delta_J_actual_time_derivative*ell*theta*w - 6*ell**2*theta**2*w**2 + ell**2*w**4 + 2*ell*theta*w**2*w_actual_time_derivative - 2*ell*theta_actual_time_derivative*w**3 - 12*ell_actual_time_derivative*theta**3*w)/(8*theta**2*(J + delta_J))"
+        ]
+      ],
+      "complete_leading_spatial_force": [
+        [
+          "(2*H*lam*theta + ell*lam*w - 2*lam*theta_actual_time_derivative + 2*lam_actual_time_derivative*theta - 2*theta**2)/(2*(J + delta_J))",
+          "-theta*(ell*lam + w)/(2*(J + delta_J))"
+        ],
+        [
+          "-(2*H*lam*theta*w + 2*J*ell*lam + 2*delta_J*ell*lam + ell*lam*w**2 - 2*lam*theta_actual_time_derivative*w + 2*lam_actual_time_derivative*theta*w - 2*theta**2*w)/(2*theta*(J + delta_J))",
+          "(2*J + 2*delta_J + ell*lam*w + w**2)/(2*(J + delta_J))"
+        ]
+      ],
+      "complete_velocity_force": [
+        [
+          "q*(2*H*lam*theta + ell*lam*w - 2*lam*theta_actual_time_derivative + 2*lam_actual_time_derivative*theta - 2*theta**2)/(2*(J + delta_J))",
+          "-(-12*H*J*ell*theta - 12*H*delta_J*ell*theta + 36*H*ell*theta**3 - 2*J*ell**2*w + 8*J*ell*theta_actual_time_derivative - 4*J*ell_actual_time_derivative*theta - 4*J_actual_time_derivative*ell*theta - 2*delta_J*ell**2*w + 8*delta_J*ell*theta_actual_time_derivative - 4*delta_J*ell_actual_time_derivative*theta - 4*delta_J_actual_time_derivative*ell*theta + 6*ell**2*theta**2*w - ell**2*w**3 + 4*ell*lam*q*theta**2 - 2*ell*theta*w*w_actual_time_derivative + 2*ell*theta_actual_time_derivative*w**2 + 12*ell_actual_time_derivative*theta**3 + 4*q*theta**2*w)/(8*theta*(J + delta_J))"
+        ],
+        [
+          "-q*(2*H*lam*theta*w + 2*J*ell*lam + 2*delta_J*ell*lam + ell*lam*w**2 - 2*lam*theta_actual_time_derivative*w + 2*lam_actual_time_derivative*theta*w - 2*theta**2*w)/(2*theta*(J + delta_J))",
+          "(36*H*ell*theta**3*w - 4*J**2*ell**2 - 8*J*delta_J*ell**2 + 12*J*ell**2*theta**2 - 4*J*ell**2*w**2 + 4*J*ell*theta*w_actual_time_derivative + 4*J*ell*theta_actual_time_derivative*w + 8*J*q*theta**2 - 4*J_actual_time_derivative*ell*theta*w - 4*delta_J**2*ell**2 + 12*delta_J*ell**2*theta**2 - 4*delta_J*ell**2*w**2 + 4*delta_J*ell*theta*w_actual_time_derivative + 4*delta_J*ell*theta_actual_time_derivative*w + 8*delta_J*q*theta**2 - 4*delta_J_actual_time_derivative*ell*theta*w + 6*ell**2*theta**2*w**2 - ell**2*w**4 + 4*ell*lam*q*theta**2*w - 2*ell*theta*w**2*w_actual_time_derivative + 2*ell*theta_actual_time_derivative*w**3 + 12*ell_actual_time_derivative*theta**3*w + 4*q*theta**2*w**2)/(8*theta**2*(J + delta_J))"
+        ]
+      ],
+      "complete_velocity_friction": [
+        [
+          "(12*H*J*theta + 12*H*delta_J*theta + 2*J*ell*w - 8*J*theta_actual_time_derivative + 4*J_actual_time_derivative*theta + 2*delta_J*ell*w - 8*delta_J*theta_actual_time_derivative + 4*delta_J_actual_time_derivative*theta - 6*ell*theta**2*w + ell*w**3 + 2*theta*w*w_actual_time_derivative - 2*theta_actual_time_derivative*w**2)/(4*theta*(J + delta_J))",
+          "(2*J*ell + 2*delta_J*ell - 6*ell*theta**2 + ell*w**2 + 2*theta*w_actual_time_derivative - 2*theta_actual_time_derivative*w)/(4*(J + delta_J))"
+        ],
+        [
+          "-(4*J**2*ell + 8*J*delta_J*ell - 12*J*ell*theta**2 + 4*J*ell*w**2 - 4*J*theta*w_actual_time_derivative - 4*J*theta_actual_time_derivative*w + 4*J_actual_time_derivative*theta*w + 4*delta_J**2*ell - 12*delta_J*ell*theta**2 + 4*delta_J*ell*w**2 - 4*delta_J*theta*w_actual_time_derivative - 4*delta_J*theta_actual_time_derivative*w + 4*delta_J_actual_time_derivative*theta*w - 6*ell*theta**2*w**2 + ell*w**4 + 2*theta*w**2*w_actual_time_derivative - 2*theta_actual_time_derivative*w**3)/(4*theta**2*(J + delta_J))",
+          "-(-12*H*J*theta - 12*H*delta_J*theta + 2*J*ell*w + 2*delta_J*ell*w - 6*ell*theta**2*w + ell*w**3 + 2*theta*w*w_actual_time_derivative - 2*theta_actual_time_derivative*w**2)/(4*theta*(J + delta_J))"
+        ]
+      ],
+      "finite_q_chart_denominators": [
+        "1",
+        "2*(J + delta_J)",
+        "2*theta",
+        "2*theta*(J + delta_J)",
+        "2*theta**2",
+        "4*(J + delta_J)",
+        "4*theta*(J + delta_J)",
+        "4*theta**2",
+        "4*theta**2*(J + delta_J)",
+        "8*theta*(J + delta_J)",
+        "8*theta**2*(J + delta_J)",
+        "theta",
+        "theta**2"
+      ],
+      "gamma_over_a_cubed": [
+        [
+          "2*q",
+          "ell*lam*q/theta"
+        ],
+        [
+          "ell*lam*q/theta",
+          "-(-2*J*ell**2 - 2*delta_J*ell**2 + 6*ell**2*theta**2 - ell**2*w**2 + 4*q*theta**2)/(4*theta**2)"
+        ]
+      ]
+    }
+  },
+  "controls": {
+    "all_finite_rational_times_allowed_not_limited_to_old_nearby_interval": true,
+    "gamma_finite_q_velocity_pole_not_a_pole_of_original_phase": true,
+    "global_and_nearby_backgrounds_and_states_remain_distinct": true,
+    "global_endpoint_rejected_inputs": 37,
+    "new_global_Gaussian_inputs": {
+      "exact_positive_Gaussian_weight_not_a_physical_dispersion_relation": true,
+      "rejected_inputs": 17,
+      "zero_momentum_is_included": true
+    },
+    "rejected_inputs": 54
+  },
+  "date": "2026-09-09",
+  "exact_principal_modes_and_real_frequency_growth_cancellation": {
+    "charts": {
+      "gamma": {
+        "basis_determinant": "-4*sqrt(positive_J)/(positive_global_scale**2*sqrt(positive_J + positive_margin))",
+        "exact_velocity_mode_basis": [
+          [
+            "1",
+            "0",
+            "1",
+            "0"
+          ],
+          [
+            "actual_matter_mixing/nonzero_chart_pivot",
+            "1",
+            "actual_matter_mixing/nonzero_chart_pivot",
+            "1"
+          ],
+          [
+            "I*sqrt(positive_J)/(positive_global_scale*sqrt(positive_J + positive_margin))",
+            "0",
+            "-I*sqrt(positive_J)/(positive_global_scale*sqrt(positive_J + positive_margin))",
+            "0"
+          ],
+          [
+            "I*actual_matter_mixing*sqrt(positive_J)/(nonzero_chart_pivot*positive_global_scale*sqrt(positive_J + positive_margin))",
+            "I/positive_global_scale",
+            "-I*actual_matter_mixing*sqrt(positive_J)/(nonzero_chart_pivot*positive_global_scale*sqrt(positive_J + positive_margin))",
+            "-I/positive_global_scale"
+          ]
+        ],
+        "exact_velocity_mode_inverse": [
+          [
+            "1/2",
+            "0",
+            "-I*positive_global_scale*sqrt(positive_J + positive_margin)/(2*sqrt(positive_J))",
+            "0"
+          ],
+          [
+            "-actual_matter_mixing/(2*nonzero_chart_pivot)",
+            "1/2",
+            "I*actual_matter_mixing*positive_global_scale/(2*nonzero_chart_pivot)",
+            "-I*positive_global_scale/2"
+          ],
+          [
+            "1/2",
+            "0",
+            "positive_global_scale*sqrt(-positive_J - positive_margin)/(2*sqrt(positive_J))",
+            "0"
+          ],
+          [
+            "-actual_matter_mixing/(2*nonzero_chart_pivot)",
+            "1/2",
+            "-I*actual_matter_mixing*positive_global_scale/(2*nonzero_chart_pivot)",
+            "I*positive_global_scale/2"
+          ]
+        ],
+        "no_inverse_clock_matter_frequency_gap": true,
+        "positive_principal_G": [
+          [
+            "(actual_matter_mixing**2/2 + positive_J)/nonzero_chart_pivot**2",
+            "-actual_matter_mixing/(2*nonzero_chart_pivot)"
+          ],
+          [
+            "-actual_matter_mixing/(2*nonzero_chart_pivot)",
+            "1/2"
+          ]
+        ],
+        "positive_principal_K": [
+          [
+            "positive_margin/nonzero_chart_pivot**2 + (actual_matter_mixing**2/2 + positive_J)/nonzero_chart_pivot**2",
+            "-actual_matter_mixing/(2*nonzero_chart_pivot)"
+          ],
+          [
+            "-actual_matter_mixing/(2*nonzero_chart_pivot)",
+            "1/2"
+          ]
+        ],
+        "principal_generator": [
+          [
+            "0",
+            "0",
+            "1",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "1"
+          ],
+          [
+            "(actual_matter_mixing**2/(2*(positive_J + positive_margin)) - (actual_matter_mixing**2/2 + positive_J)/(positive_J + positive_margin))/positive_global_scale**2",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "(-actual_matter_mixing*(actual_matter_mixing**2/2 + positive_J)/(nonzero_chart_pivot*(positive_J + positive_margin)) + actual_matter_mixing*(actual_matter_mixing**2 + 2*positive_J + 2*positive_margin)/(2*nonzero_chart_pivot*(positive_J + positive_margin)))/positive_global_scale**2",
+            "(actual_matter_mixing**2/(2*(positive_J + positive_margin)) - (actual_matter_mixing**2 + 2*positive_J + 2*positive_margin)/(2*(positive_J + positive_margin)))/positive_global_scale**2",
+            "0",
+            "0"
+          ]
+        ],
+        "real_principal_frequencies": [
+          [
+            "sqrt(positive_J)/(positive_global_scale*sqrt(positive_J + positive_margin))",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "1/positive_global_scale",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "-sqrt(positive_J)/(positive_global_scale*sqrt(positive_J + positive_margin))",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "-1/positive_global_scale"
+          ]
+        ]
+      },
+      "unitary": {
+        "basis_determinant": "-4*sqrt(positive_J)/(positive_global_scale**2*sqrt(positive_J + positive_margin))",
+        "exact_velocity_mode_basis": [
+          [
+            "1",
+            "0",
+            "1",
+            "0"
+          ],
+          [
+            "-actual_matter_mixing/nonzero_chart_pivot",
+            "1",
+            "-actual_matter_mixing/nonzero_chart_pivot",
+            "1"
+          ],
+          [
+            "I*sqrt(positive_J)/(positive_global_scale*sqrt(positive_J + positive_margin))",
+            "0",
+            "-I*sqrt(positive_J)/(positive_global_scale*sqrt(positive_J + positive_margin))",
+            "0"
+          ],
+          [
+            "-I*actual_matter_mixing*sqrt(positive_J)/(nonzero_chart_pivot*positive_global_scale*sqrt(positive_J + positive_margin))",
+            "I/positive_global_scale",
+            "I*actual_matter_mixing*sqrt(positive_J)/(nonzero_chart_pivot*positive_global_scale*sqrt(positive_J + positive_margin))",
+            "-I/positive_global_scale"
+          ]
+        ],
+        "exact_velocity_mode_inverse": [
+          [
+            "1/2",
+            "0",
+            "-I*positive_global_scale*sqrt(positive_J + positive_margin)/(2*sqrt(positive_J))",
+            "0"
+          ],
+          [
+            "actual_matter_mixing/(2*nonzero_chart_pivot)",
+            "1/2",
+            "-I*actual_matter_mixing*positive_global_scale/(2*nonzero_chart_pivot)",
+            "-I*positive_global_scale/2"
+          ],
+          [
+            "1/2",
+            "0",
+            "positive_global_scale*sqrt(-positive_J - positive_margin)/(2*sqrt(positive_J))",
+            "0"
+          ],
+          [
+            "actual_matter_mixing/(2*nonzero_chart_pivot)",
+            "1/2",
+            "I*actual_matter_mixing*positive_global_scale/(2*nonzero_chart_pivot)",
+            "I*positive_global_scale/2"
+          ]
+        ],
+        "no_inverse_clock_matter_frequency_gap": true,
+        "positive_principal_G": [
+          [
+            "(actual_matter_mixing**2/2 + positive_J)/nonzero_chart_pivot**2",
+            "actual_matter_mixing/(2*nonzero_chart_pivot)"
+          ],
+          [
+            "actual_matter_mixing/(2*nonzero_chart_pivot)",
+            "1/2"
+          ]
+        ],
+        "positive_principal_K": [
+          [
+            "positive_margin/nonzero_chart_pivot**2 + (actual_matter_mixing**2/2 + positive_J)/nonzero_chart_pivot**2",
+            "actual_matter_mixing/(2*nonzero_chart_pivot)"
+          ],
+          [
+            "actual_matter_mixing/(2*nonzero_chart_pivot)",
+            "1/2"
+          ]
+        ],
+        "principal_generator": [
+          [
+            "0",
+            "0",
+            "1",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "1"
+          ],
+          [
+            "(actual_matter_mixing**2/(2*(positive_J + positive_margin)) - (actual_matter_mixing**2/2 + positive_J)/(positive_J + positive_margin))/positive_global_scale**2",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "(actual_matter_mixing*(actual_matter_mixing**2/2 + positive_J)/(nonzero_chart_pivot*(positive_J + positive_margin)) - actual_matter_mixing*(actual_matter_mixing**2 + 2*positive_J + 2*positive_margin)/(2*nonzero_chart_pivot*(positive_J + positive_margin)))/positive_global_scale**2",
+            "(actual_matter_mixing**2/(2*(positive_J + positive_margin)) - (actual_matter_mixing**2 + 2*positive_J + 2*positive_margin)/(2*(positive_J + positive_margin)))/positive_global_scale**2",
+            "0",
+            "0"
+          ]
+        ],
+        "real_principal_frequencies": [
+          [
+            "sqrt(positive_J)/(positive_global_scale*sqrt(positive_J + positive_margin))",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "1/positive_global_scale",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "-sqrt(positive_J)/(positive_global_scale*sqrt(positive_J + positive_margin))",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "-1/positive_global_scale"
+          ]
+        ]
+      }
+    },
+    "clock_squared_speed": "positive_J/(positive_J + positive_margin)",
+    "physical_scale": "positive_global_scale",
+    "positive_J": "positive_J",
+    "positive_margin": "positive_margin"
+  },
+  "exact_residuals": {
+    "actual_global_physical_matter_null_primitive_derivative": "0",
+    "at_most_three_canonical_segment_bounds_give_frequency_degree_nine": "0",
+    "explicit_global_high_complex_threshold_square_is_4096": "0",
+    "gamma_actual_center_velocity_chart_pole_is_152_over_25": "0",
+    "gamma_actual_complete_Euler_gradient_is_old_positive_form": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "gamma_actual_principal_velocity_modes_diagonalize_exactly": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "gamma_basis_determinant_has_no_frequency_gap_factor": "0",
+    "gamma_center_pole_matches_retuned_total_margin_formula": "0",
+    "gamma_complete_force_remainder_has_no_positive_q_growth": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "gamma_complete_friction_has_no_positive_q_growth": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "gamma_exact_scaled_velocity_map_has_literal_inverse": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "gamma_full_Euler_and_original_phase_generators_exactly_intertwine": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "gamma_leading_velocity_mixing_is_symmetric": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "gamma_mode_inverse_is_exactly_the_literal_inverse": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "gamma_real_frequency_growth_cancels_in_Hermitian_part": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "gamma_retuned_principal_kinetic_adds_only_actual_margin": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "global_Duhamel_derivative_degree_increment_retains_transfer_and_generator": "0",
+    "global_clock_Lambda_has_the_explicit_regular_gamma_strip_form": "0",
+    "global_clock_Theta_has_only_the_zero_at_the_bounce": "0",
+    "global_clock_full_moving_gradient_identity": "0",
+    "global_clock_matter_density_has_the_all_time_upper_one_tenth": "0",
+    "global_clock_matter_mixing_identity": "0",
+    "global_clock_scale_is_the_original_complete_bounce": "0",
+    "global_coincident_time_radius_zero": "0",
+    "global_density_generator_exact_polynomial_degree_two_in_q": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "global_density_generator_preserves_equal_time_CCR": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "global_matter_source_is_original_local_density_momentum_force": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        1
+      ]
+    },
+    "global_new_Gaussian_explicit_all_momentum_initial_frequency_has_no_zero_mode_pole": "0",
+    "global_new_Gaussian_initial_covariance_has_exact_canonical_antisymmetric_part": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "global_new_Gaussian_initial_frequency_is_exactly_one_at_zero_momentum": "0",
+    "global_new_Gaussian_initial_ordered_covariance_is_Hermitian": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "global_new_Gaussian_initial_ordered_covariance_is_a_positive_Gram_matrix": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "global_new_Gaussian_symmetric_covariance_keeps_both_inverse_frequency_weights": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "global_new_Gaussian_two_time_commutator_depends_only_on_CCR_not_symmetric_state_covariance": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "global_normalized_Kubo_identity_matches_complete_scalar_response": "0",
+    "global_null_primitive_limits_have_total_pi_over_two": "0",
+    "global_regular_Hamiltonian_replayed_before_charts": "0",
+    "global_regular_lapse_elimination_replayed_before_charts": "0",
+    "global_relational_commutator_keeps_density_source_sign": "0",
+    "global_scalar_shift_constraint_replayed": "0",
+    "global_unscaled_source_keeps_action_normalization": "0",
+    "retuned_global_margin_is_the_new_literal_total_not_old_margin": "0",
+    "unitary_actual_complete_Euler_gradient_is_old_positive_form": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "unitary_actual_principal_velocity_modes_diagonalize_exactly": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "unitary_basis_determinant_has_no_frequency_gap_factor": "0",
+    "unitary_complete_force_remainder_has_no_positive_q_growth": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "unitary_complete_force_remainder_is_exactly_q_independent": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "unitary_complete_friction_has_no_positive_q_growth": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "unitary_complete_friction_is_exactly_q_independent": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "unitary_exact_scaled_velocity_map_has_literal_inverse": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "unitary_full_Euler_and_original_phase_generators_exactly_intertwine": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "unitary_leading_velocity_mixing_is_symmetric": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "unitary_mode_inverse_is_exactly_the_literal_inverse": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "unitary_real_frequency_growth_cancels_in_Hermitian_part": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "unitary_retuned_principal_kinetic_adds_only_actual_margin": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    }
+  },
+  "explicit_global_chart_cover_and_complex_pole_separation": {
+    "actual_fixed_chart_switch_times": [
+      "-3/16",
+      "3/16"
+    ],
+    "all_time_scale_lower": "1",
+    "complete_global_scalar_multiplier_type": "C_R*(1+norm(zeta))^9*exp(S_m(t,s)*norm(Im(zeta)))",
+    "complete_global_transfer_frequency_degree": 9,
+    "declared_gamma_complex_q_threshold": "2000",
+    "declared_global_complex_scalar_root_threshold": "64",
+    "gamma_J_plus_margin_plus_half_w_squared_upper": "28817/800",
+    "gamma_absolute_Lambda_lower": "1/5",
+    "gamma_absolute_Lambda_upper": "1/2",
+    "gamma_complex_q_threshold_strict_upper": "28817/16",
+    "gamma_finite_q_pole_definition": "D=q*Lambda^2-J-delta_J-w^2/2",
+    "gamma_half_matter_mixing_squared_upper": "1/800",
+    "gamma_high_complex_pole_separation": "abs(D)>=abs(q)*Lambda^2/2 when abs(q)>=2000",
+    "gamma_regular_time_domain": [
+      "-1/4",
+      "1/4"
+    ],
+    "gamma_scale_squared_upper": "83521/65536",
+    "global_J_lower_on_finite_strip": "1199/(800*(finite_compact_time_radius**2 + 1)**6)",
+    "global_absolute_matter_density_upper": "1/10",
+    "global_result_is_not_global_continuation_of_off_clock_nearby_solution": true,
+    "new_global_clock_squared_speed_lower": "1199/1215",
+    "unitary_absolute_Theta_lower_on_finite_strip": "3/(8*finite_compact_time_radius**2 + 8)",
+    "unitary_regular_time_domain": "abs(u)>=1/8 on each finite strip abs(u)<=R, R>=1/4",
+    "whole_global_clock_conformal_time_length": "pi/2"
+  },
+  "formulation": "FORMULATION.md",
+  "full_chart_intertwining_and_polynomial_endpoint_weights": {
+    "gamma": {
+      "all_endpoint_and_remainder_denominator_factors": [
+        "2*J*a**2 + 2*a**2*delta_J + a**2*w**2 - 2*lam**2*nonzero_comoving_scalar_root**2",
+        "J + delta_J",
+        "a",
+        "lam",
+        "nonzero_comoving_scalar_root"
+      ],
+      "complete_force_remainder_maximum_q_degree": "0",
+      "complete_friction_maximum_q_degree": "0",
+      "complete_intertwining_residual": [
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "declared_regular_chart_pivot_factors": [
+        "a",
+        "nonzero_comoving_scalar_root",
+        "J + delta_J",
+        "lam",
+        "-a**2*(J + delta_J + w**2/2) + lam**2*nonzero_comoving_scalar_root**2"
+      ],
+      "exact_scaled_velocity_generator": [
+        [
+          "0",
+          "0",
+          "nonzero_comoving_scalar_root",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "nonzero_comoving_scalar_root"
+        ],
+        [
+          "-(8*H**2*J*lam**2*q + 8*H**2*delta_J*lam**2*q - 2*H**2*lam**2*q*w**2 - 8*H*J*lam*lam_actual_time_derivative*q - 12*H*J*lam*q*theta + 4*H*J_actual_time_derivative*lam**2*q - 8*H*delta_J*lam*lam_actual_time_derivative*q - 12*H*delta_J*lam*q*theta + 4*H*delta_J_actual_time_derivative*lam**2*q - 6*H*ell*lam**2*q*theta*w + 4*H*lam**3*q**2*theta + 2*H*lam**2*q*w*w_actual_time_derivative - 2*H*lam*lam_actual_time_derivative*q*w**2 + 2*H*lam*q*theta*w**2 - 4*H_actual_time_derivative*J**2 - 8*H_actual_time_derivative*J*delta_J + 4*H_actual_time_derivative*J*lam**2*q - 2*H_actual_time_derivative*J*w**2 - 4*H_actual_time_derivative*delta_J**2 + 4*H_actual_time_derivative*delta_J*lam**2*q - 2*H_actual_time_derivative*delta_J*w**2 - 2*J*ell*lam*q*w + 4*J*lam*q*theta_actual_time_derivative + 4*J*lam_actual_time_derivative*q*theta + 4*J*q*theta**2 - 4*J_actual_time_derivative*lam*q*theta - 2*delta_J*ell*lam*q*w + 4*delta_J*lam*q*theta_actual_time_derivative + 4*delta_J*lam_actual_time_derivative*q*theta + 4*delta_J*q*theta**2 - 4*delta_J_actual_time_derivative*lam*q*theta + 2*ell*lam**3*q**2*w + 6*ell*lam*q*theta**2*w - ell*lam*q*w**3 - 4*lam**3*q**2*theta_actual_time_derivative + 4*lam**2*lam_actual_time_derivative*q**2*theta - 4*lam**2*q**2*theta**2 - 2*lam*q*theta*w*w_actual_time_derivative + 2*lam*q*theta_actual_time_derivative*w**2)/(2*nonzero_comoving_scalar_root*(J + delta_J)*(-2*J - 2*delta_J + 2*lam**2*q - w**2))",
+          "-(24*H*ell*lam**3*q*theta - 18*H*ell*lam*theta*w**2 + 4*J**2*ell + 8*J*delta_J*ell + 6*J*ell**2*lam*w - 8*J*ell*lam**2*q - 12*J*ell*lam*theta_actual_time_derivative - 12*J*ell*lam_actual_time_derivative*theta - 12*J*ell*theta**2 + 2*J*ell*w**2 - 12*J*ell_actual_time_derivative*lam*theta - 4*J*lam*q*w + 12*J_actual_time_derivative*ell*lam*theta + 4*delta_J**2*ell + 6*delta_J*ell**2*lam*w - 8*delta_J*ell*lam**2*q - 12*delta_J*ell*lam*theta_actual_time_derivative - 12*delta_J*ell*lam_actual_time_derivative*theta - 12*delta_J*ell*theta**2 + 2*delta_J*ell*w**2 - 12*delta_J*ell_actual_time_derivative*lam*theta - 4*delta_J*lam*q*w + 12*delta_J_actual_time_derivative*ell*lam*theta - 6*ell**2*lam**3*q*w - 18*ell**2*lam*theta**2*w + 3*ell**2*lam*w**3 + 4*ell*lam**4*q**2 + 12*ell*lam**3*q*theta_actual_time_derivative - 12*ell*lam**2*lam_actual_time_derivative*q*theta + 12*ell*lam**2*q*theta**2 - 2*ell*lam**2*q*w**2 + 6*ell*lam*theta*w*w_actual_time_derivative - 6*ell*lam*theta_actual_time_derivative*w**2 + 12*ell_actual_time_derivative*lam**3*q*theta - 6*ell_actual_time_derivative*lam*theta*w**2 + 4*lam**3*q**2*w - 2*lam*q*w**3)/(4*nonzero_comoving_scalar_root*(J + delta_J)*(-2*J - 2*delta_J + 2*lam**2*q - w**2))",
+          "(2*H*J**2 + 4*H*J*delta_J - 6*H*J*lam**2*q + H*J*w**2 + 2*H*delta_J**2 - 6*H*delta_J*lam**2*q + H*delta_J*w**2 + H*lam**2*q*w**2 + 4*J*lam*lam_actual_time_derivative*q - 2*J_actual_time_derivative*lam**2*q + 4*delta_J*lam*lam_actual_time_derivative*q - 2*delta_J_actual_time_derivative*lam**2*q + 3*ell*lam**2*q*theta*w - lam**2*q*w*w_actual_time_derivative + lam*lam_actual_time_derivative*q*w**2 - lam*q*theta*w**2)/((J + delta_J)*(-2*J - 2*delta_J + 2*lam**2*q - w**2))",
+          "-(-3*H*J*lam*w - 3*H*delta_J*lam*w + H*lam**3*q*w - 3*J*ell*lam*theta + J*lam*w_actual_time_derivative + J*lam_actual_time_derivative*w + J*theta*w - J_actual_time_derivative*lam*w - 3*delta_J*ell*lam*theta + delta_J*lam*w_actual_time_derivative + delta_J*lam_actual_time_derivative*w + delta_J*theta*w - delta_J_actual_time_derivative*lam*w + 3*ell*lam**3*q*theta - lam**3*q*w_actual_time_derivative + lam**2*lam_actual_time_derivative*q*w - lam**2*q*theta*w)/((J + delta_J)*(-2*J - 2*delta_J + 2*lam**2*q - w**2))"
+        ],
+        [
+          "-q*(-4*H**2*J*lam*w - 4*H**2*delta_J*lam*w - 2*H**2*lam*w**3 - 12*H*J*ell*lam*theta - 4*H*J*lam*w_actual_time_derivative - 4*H*J*lam_actual_time_derivative*w + 4*H*J*theta*w + 4*H*J_actual_time_derivative*lam*w - 12*H*delta_J*ell*lam*theta - 4*H*delta_J*lam*w_actual_time_derivative - 4*H*delta_J*lam_actual_time_derivative*w + 4*H*delta_J*theta*w + 4*H*delta_J_actual_time_derivative*lam*w - 6*H*ell*lam*theta*w**2 + 4*H*lam**2*q*theta*w + 2*H*lam*w**2*w_actual_time_derivative - 2*H*lam_actual_time_derivative*w**3 + 2*H*theta*w**3 - 4*J**2*ell - 8*J*delta_J*ell + 4*J*ell*lam**2*q + 12*J*ell*theta**2 - 4*J*ell*w**2 + 4*J*theta*w_actual_time_derivative + 4*J*theta_actual_time_derivative*w - 4*J_actual_time_derivative*theta*w - 4*delta_J**2*ell + 4*delta_J*ell*lam**2*q + 12*delta_J*ell*theta**2 - 4*delta_J*ell*w**2 + 4*delta_J*theta*w_actual_time_derivative + 4*delta_J*theta_actual_time_derivative*w - 4*delta_J_actual_time_derivative*theta*w + 2*ell*lam**2*q*w**2 + 6*ell*theta**2*w**2 - ell*w**4 - 4*lam**2*q*theta_actual_time_derivative*w + 4*lam*lam_actual_time_derivative*q*theta*w - 4*lam*q*theta**2*w - 2*theta*w**2*w_actual_time_derivative + 2*theta_actual_time_derivative*w**3)/(2*nonzero_comoving_scalar_root*(J + delta_J)*(-2*J - 2*delta_J + 2*lam**2*q - w**2))",
+          "-(-36*H*J*ell*theta*w - 36*H*delta_J*ell*theta*w + 24*H*ell*lam**2*q*theta*w - 18*H*ell*theta*w**3 + 12*J**2*ell**2 - 8*J**2*q + 24*J*delta_J*ell**2 - 16*J*delta_J*q - 12*J*ell**2*lam**2*q - 36*J*ell**2*theta**2 + 12*J*ell**2*w**2 - 4*J*ell*lam*q*w - 12*J*ell*theta*w_actual_time_derivative - 12*J*ell*theta_actual_time_derivative*w - 12*J*ell_actual_time_derivative*theta*w + 8*J*lam**2*q**2 - 8*J*q*w**2 + 12*J_actual_time_derivative*ell*theta*w + 12*delta_J**2*ell**2 - 8*delta_J**2*q - 12*delta_J*ell**2*lam**2*q - 36*delta_J*ell**2*theta**2 + 12*delta_J*ell**2*w**2 - 4*delta_J*ell*lam*q*w - 12*delta_J*ell*theta*w_actual_time_derivative - 12*delta_J*ell*theta_actual_time_derivative*w - 12*delta_J*ell_actual_time_derivative*theta*w + 8*delta_J*lam**2*q**2 - 8*delta_J*q*w**2 + 12*delta_J_actual_time_derivative*ell*theta*w - 6*ell**2*lam**2*q*w**2 - 18*ell**2*theta**2*w**2 + 3*ell**2*w**4 + 4*ell*lam**3*q**2*w + 12*ell*lam**2*q*theta_actual_time_derivative*w - 12*ell*lam*lam_actual_time_derivative*q*theta*w + 12*ell*lam*q*theta**2*w - 2*ell*lam*q*w**3 + 6*ell*theta*w**2*w_actual_time_derivative - 6*ell*theta_actual_time_derivative*w**3 + 12*ell_actual_time_derivative*lam**2*q*theta*w - 6*ell_actual_time_derivative*theta*w**3 + 4*lam**2*q**2*w**2 - 2*q*w**4)/(4*nonzero_comoving_scalar_root*(J + delta_J)*(-2*J - 2*delta_J + 2*lam**2*q - w**2))",
+          "q*(2*H*J*lam*w + 2*H*delta_J*lam*w + H*lam*w**3 + 6*J*ell*lam*theta + 2*J*lam*w_actual_time_derivative + 2*J*lam_actual_time_derivative*w - 2*J*theta*w - 2*J_actual_time_derivative*lam*w + 6*delta_J*ell*lam*theta + 2*delta_J*lam*w_actual_time_derivative + 2*delta_J*lam_actual_time_derivative*w - 2*delta_J*theta*w - 2*delta_J_actual_time_derivative*lam*w + 3*ell*lam*theta*w**2 - lam*w**2*w_actual_time_derivative + lam_actual_time_derivative*w**3 - theta*w**3)/((J + delta_J)*(-2*J - 2*delta_J + 2*lam**2*q - w**2))",
+          "-(-6*H*J**2 - 12*H*J*delta_J + 6*H*J*lam**2*q - 3*H*J*w**2 - 6*H*delta_J**2 + 6*H*delta_J*lam**2*q - 3*H*delta_J*w**2 + H*lam**2*q*w**2 + 2*J*w*w_actual_time_derivative - J_actual_time_derivative*w**2 + 2*delta_J*w*w_actual_time_derivative - delta_J_actual_time_derivative*w**2 + 3*ell*lam**2*q*theta*w - lam**2*q*w*w_actual_time_derivative + lam*lam_actual_time_derivative*q*w**2 - lam*q*theta*w**2)/((J + delta_J)*(-2*J - 2*delta_J + 2*lam**2*q - w**2))"
+        ]
+      ],
+      "forward_map_maximum_frequency_degree": "2",
+      "inverse_map_maximum_frequency_degree": "1",
+      "original_phase_to_scaled_velocity": [
+        [
+          "0",
+          "0",
+          "-1/(2*a*nonzero_comoving_scalar_root)",
+          "0"
+        ],
+        [
+          "0",
+          "nonzero_comoving_scalar_root",
+          "0",
+          "0"
+        ],
+        [
+          "-(J*a**2 + a**2*delta_J - lam**2*nonzero_comoving_scalar_root**2)/(a**2*(J + delta_J))",
+          "-3*ell*lam*theta/(2*(J + delta_J))",
+          "(H*J*a**2 + H*a**2*delta_J - lam*nonzero_comoving_scalar_root**2*theta)/(2*a**3*nonzero_comoving_scalar_root**2*(J + delta_J))",
+          "lam*w/(2*a**3*(J + delta_J))"
+        ],
+        [
+          "lam*nonzero_comoving_scalar_root**2*w/(a**2*(J + delta_J))",
+          "-3*ell*theta*w/(2*(J + delta_J))",
+          "-theta*w/(2*a**3*(J + delta_J))",
+          "(2*J + 2*delta_J + w**2)/(2*a**3*(J + delta_J))"
+        ]
+      ],
+      "scaled_velocity_to_original_phase": [
+        [
+          "-(2*H*J*a**2 + 2*H*a**2*delta_J + H*a**2*w**2 - 2*lam*nonzero_comoving_scalar_root**2*theta)/(nonzero_comoving_scalar_root*(2*J*a**2 + 2*a**2*delta_J + a**2*w**2 - 2*lam**2*nonzero_comoving_scalar_root**2))",
+          "-3*a**2*ell*lam*theta/(nonzero_comoving_scalar_root*(2*J*a**2 + 2*a**2*delta_J + a**2*w**2 - 2*lam**2*nonzero_comoving_scalar_root**2))",
+          "-a**2*(2*J + 2*delta_J + w**2)/(2*J*a**2 + 2*a**2*delta_J + a**2*w**2 - 2*lam**2*nonzero_comoving_scalar_root**2)",
+          "a**2*lam*w/(2*J*a**2 + 2*a**2*delta_J + a**2*w**2 - 2*lam**2*nonzero_comoving_scalar_root**2)"
+        ],
+        [
+          "0",
+          "1/nonzero_comoving_scalar_root",
+          "0",
+          "0"
+        ],
+        [
+          "-2*a*nonzero_comoving_scalar_root",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "2*a**3*nonzero_comoving_scalar_root*w*(H*lam - theta)/(2*J*a**2 + 2*a**2*delta_J + a**2*w**2 - 2*lam**2*nonzero_comoving_scalar_root**2)",
+          "3*a**5*ell*theta*w/(nonzero_comoving_scalar_root*(2*J*a**2 + 2*a**2*delta_J + a**2*w**2 - 2*lam**2*nonzero_comoving_scalar_root**2))",
+          "2*a**3*lam*nonzero_comoving_scalar_root**2*w/(2*J*a**2 + 2*a**2*delta_J + a**2*w**2 - 2*lam**2*nonzero_comoving_scalar_root**2)",
+          "2*a**3*(J*a**2 + a**2*delta_J - lam**2*nonzero_comoving_scalar_root**2)/(2*J*a**2 + 2*a**2*delta_J + a**2*w**2 - 2*lam**2*nonzero_comoving_scalar_root**2)"
+        ]
+      ],
+      "unexpected_denominator_factors": []
+    },
+    "unitary": {
+      "all_endpoint_and_remainder_denominator_factors": [
+        "J + delta_J",
+        "a",
+        "nonzero_comoving_scalar_root",
+        "theta"
+      ],
+      "complete_force_remainder_maximum_q_degree": "0",
+      "complete_friction_maximum_q_degree": "0",
+      "complete_intertwining_residual": [
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "declared_regular_chart_pivot_factors": [
+        "a",
+        "nonzero_comoving_scalar_root",
+        "J + delta_J",
+        "theta"
+      ],
+      "exact_scaled_velocity_generator": [
+        [
+          "0",
+          "0",
+          "nonzero_comoving_scalar_root",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "nonzero_comoving_scalar_root"
+        ],
+        [
+          "-q*(2*H*lam*theta + ell*lam*w - 2*lam*theta_actual_time_derivative + 2*lam_actual_time_derivative*theta - 2*theta**2)/(2*nonzero_comoving_scalar_root*(J + delta_J))",
+          "(-12*H*J*ell*theta - 12*H*delta_J*ell*theta + 36*H*ell*theta**3 - 2*J*ell**2*w + 8*J*ell*theta_actual_time_derivative - 4*J*ell_actual_time_derivative*theta - 4*J_actual_time_derivative*ell*theta - 2*delta_J*ell**2*w + 8*delta_J*ell*theta_actual_time_derivative - 4*delta_J*ell_actual_time_derivative*theta - 4*delta_J_actual_time_derivative*ell*theta + 6*ell**2*theta**2*w - ell**2*w**3 + 4*ell*lam*q*theta**2 - 2*ell*theta*w*w_actual_time_derivative + 2*ell*theta_actual_time_derivative*w**2 + 12*ell_actual_time_derivative*theta**3 + 4*q*theta**2*w)/(8*nonzero_comoving_scalar_root*theta*(J + delta_J))",
+          "-(12*H*J*theta + 12*H*delta_J*theta + 2*J*ell*w - 8*J*theta_actual_time_derivative + 4*J_actual_time_derivative*theta + 2*delta_J*ell*w - 8*delta_J*theta_actual_time_derivative + 4*delta_J_actual_time_derivative*theta - 6*ell*theta**2*w + ell*w**3 + 2*theta*w*w_actual_time_derivative - 2*theta_actual_time_derivative*w**2)/(4*theta*(J + delta_J))",
+          "-(2*J*ell + 2*delta_J*ell - 6*ell*theta**2 + ell*w**2 + 2*theta*w_actual_time_derivative - 2*theta_actual_time_derivative*w)/(4*(J + delta_J))"
+        ],
+        [
+          "q*(2*H*lam*theta*w + 2*J*ell*lam + 2*delta_J*ell*lam + ell*lam*w**2 - 2*lam*theta_actual_time_derivative*w + 2*lam_actual_time_derivative*theta*w - 2*theta**2*w)/(2*nonzero_comoving_scalar_root*theta*(J + delta_J))",
+          "-(36*H*ell*theta**3*w - 4*J**2*ell**2 - 8*J*delta_J*ell**2 + 12*J*ell**2*theta**2 - 4*J*ell**2*w**2 + 4*J*ell*theta*w_actual_time_derivative + 4*J*ell*theta_actual_time_derivative*w + 8*J*q*theta**2 - 4*J_actual_time_derivative*ell*theta*w - 4*delta_J**2*ell**2 + 12*delta_J*ell**2*theta**2 - 4*delta_J*ell**2*w**2 + 4*delta_J*ell*theta*w_actual_time_derivative + 4*delta_J*ell*theta_actual_time_derivative*w + 8*delta_J*q*theta**2 - 4*delta_J_actual_time_derivative*ell*theta*w + 6*ell**2*theta**2*w**2 - ell**2*w**4 + 4*ell*lam*q*theta**2*w - 2*ell*theta*w**2*w_actual_time_derivative + 2*ell*theta_actual_time_derivative*w**3 + 12*ell_actual_time_derivative*theta**3*w + 4*q*theta**2*w**2)/(8*nonzero_comoving_scalar_root*theta**2*(J + delta_J))",
+          "(4*J**2*ell + 8*J*delta_J*ell - 12*J*ell*theta**2 + 4*J*ell*w**2 - 4*J*theta*w_actual_time_derivative - 4*J*theta_actual_time_derivative*w + 4*J_actual_time_derivative*theta*w + 4*delta_J**2*ell - 12*delta_J*ell*theta**2 + 4*delta_J*ell*w**2 - 4*delta_J*theta*w_actual_time_derivative - 4*delta_J*theta_actual_time_derivative*w + 4*delta_J_actual_time_derivative*theta*w - 6*ell*theta**2*w**2 + ell*w**4 + 2*theta*w**2*w_actual_time_derivative - 2*theta_actual_time_derivative*w**3)/(4*theta**2*(J + delta_J))",
+          "(-12*H*J*theta - 12*H*delta_J*theta + 2*J*ell*w + 2*delta_J*ell*w - 6*ell*theta**2*w + ell*w**3 + 2*theta*w*w_actual_time_derivative - 2*theta_actual_time_derivative*w**2)/(4*theta*(J + delta_J))"
+        ]
+      ],
+      "forward_map_maximum_frequency_degree": "2",
+      "inverse_map_maximum_frequency_degree": "1",
+      "original_phase_to_scaled_velocity": [
+        [
+          "nonzero_comoving_scalar_root",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "nonzero_comoving_scalar_root",
+          "0",
+          "0"
+        ],
+        [
+          "-lam*nonzero_comoving_scalar_root**2*theta/(a**2*(J + delta_J))",
+          "-ell*(J + delta_J - 3*theta**2)/(2*(J + delta_J))",
+          "theta**2/(2*a**3*(J + delta_J))",
+          "-theta*w/(2*a**3*(J + delta_J))"
+        ],
+        [
+          "lam*nonzero_comoving_scalar_root**2*w/(a**2*(J + delta_J))",
+          "-3*ell*theta*w/(2*(J + delta_J))",
+          "-theta*w/(2*a**3*(J + delta_J))",
+          "(2*J + 2*delta_J + w**2)/(2*a**3*(J + delta_J))"
+        ]
+      ],
+      "scaled_velocity_to_original_phase": [
+        [
+          "1/nonzero_comoving_scalar_root",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1/nonzero_comoving_scalar_root",
+          "0",
+          "0"
+        ],
+        [
+          "2*a*lam*nonzero_comoving_scalar_root/theta",
+          "a**3*ell*(2*J + 2*delta_J - 6*theta**2 + w**2)/(2*nonzero_comoving_scalar_root*theta**2)",
+          "a**3*(2*J + 2*delta_J + w**2)/theta**2",
+          "a**3*w/theta"
+        ],
+        [
+          "0",
+          "a**3*ell*w/(2*nonzero_comoving_scalar_root*theta)",
+          "a**3*w/theta",
+          "a**3"
+        ]
+      ],
+      "unexpected_denominator_factors": []
+    }
+  },
+  "named_exact_check_count": 55,
+  "new_global_quadratic_scalar_state_and_causal_Kubo_response": {
+    "all_orders_Fourier_derivative_degree": "9+13*multi_index_order",
+    "compact_strip_transfer_polynomial_degree": 9,
+    "microcausality_domain": "all finite source and output times on the preserved retuned global clock bounce",
+    "new_global_covariance_transport": "U_global(t,0,k)*C0(k)*U_global(s,0,k)^T",
+    "new_global_initial_frequency": "mu(k)=sqrt(1+|k|^2)",
+    "new_global_initial_positive_Gram_factor": [
+      [
+        "sqrt(2)*sqrt(Planck_constant)/(2*sqrt(overall_action_normalization)*sqrt(positive_initial_frequency))",
+        "0"
+      ],
+      [
+        "0",
+        "sqrt(2)*sqrt(Planck_constant)/(2*sqrt(overall_action_normalization)*sqrt(positive_initial_frequency))"
+      ],
+      [
+        "-sqrt(2)*I*sqrt(Planck_constant)*sqrt(positive_initial_frequency)/(2*sqrt(overall_action_normalization))",
+        "0"
+      ],
+      [
+        "0",
+        "-sqrt(2)*I*sqrt(Planck_constant)*sqrt(positive_initial_frequency)/(2*sqrt(overall_action_normalization))"
+      ]
+    ],
+    "new_global_normalized_Kubo_prefactor": "I*actual_source_global_scale**3*overall_action_normalization/Planck_constant",
+    "new_global_normalized_classical_response_multiplier": "actual_source_global_scale**3*global_retuned_transfer_1_3",
+    "new_global_ordered_initial_covariance": [
+      [
+        "Planck_constant/(2*overall_action_normalization*positive_initial_frequency)",
+        "0",
+        "I*Planck_constant/(2*overall_action_normalization)",
+        "0"
+      ],
+      [
+        "0",
+        "Planck_constant/(2*overall_action_normalization*positive_initial_frequency)",
+        "0",
+        "I*Planck_constant/(2*overall_action_normalization)"
+      ],
+      [
+        "-I*Planck_constant/(2*overall_action_normalization)",
+        "0",
+        "Planck_constant*positive_initial_frequency/(2*overall_action_normalization)",
+        "0"
+      ],
+      [
+        "0",
+        "-I*Planck_constant/(2*overall_action_normalization)",
+        "0",
+        "Planck_constant*positive_initial_frequency/(2*overall_action_normalization)"
+      ]
+    ],
+    "new_global_reference_time": "0",
+    "new_global_relational_commutator_multiplier": "-I*Planck_constant*global_retuned_transfer_1_3/overall_action_normalization",
+    "new_global_source_physical_volume": "actual_source_global_scale**3",
+    "new_global_transfer": [
+      [
+        "global_retuned_transfer_0_0",
+        "global_retuned_transfer_0_1",
+        "global_retuned_transfer_0_2",
+        "global_retuned_transfer_0_3"
+      ],
+      [
+        "global_retuned_transfer_1_0",
+        "global_retuned_transfer_1_1",
+        "global_retuned_transfer_1_2",
+        "global_retuned_transfer_1_3"
+      ],
+      [
+        "global_retuned_transfer_2_0",
+        "global_retuned_transfer_2_1",
+        "global_retuned_transfer_2_2",
+        "global_retuned_transfer_2_3"
+      ],
+      [
+        "global_retuned_transfer_3_0",
+        "global_retuned_transfer_3_1",
+        "global_retuned_transfer_3_2",
+        "global_retuned_transfer_3_3"
+      ]
+    ],
+    "new_global_unscaled_Kubo_prefactor": "I*actual_source_global_scale**3/Planck_constant",
+    "new_state_uses_global_evolution_not_either_frozen_nearby_state": true,
+    "no_Hadamard_stress_interacting_microcausality_or_global_Fock_unitary_implementation": true
+  },
+  "not_established": [
+    "Global continuation of the separately certified off-clock nearby solution or nonlinear stability of either background",
+    "Canonical interaction, omitted-operator, loop, threshold or quantitative interacting validity-band bounds",
+    "Hadamard state, renormalized stress, semiclassical backreaction, interacting microcausality or global Fock unitary implementation",
+    "Physical vacuum, amplitudes, finite-gravity dispersion and actual common-parent V/G/B matching",
+    "Original realistic-field P8(a), original UV classification P8(b) or original P8 closure"
+  ],
+  "prior_sha256": {
+    "S6_97_fully_rebuilt": "128686063857028a8e8d1b1f00818e311811c43440d4bcbfde0b033fabaf2b35",
+    "global_state_not_transferred_from_either_nearby_solution": true,
+    "same_named_retuned_action_but_separate_global_clock_solution": true
+  },
+  "proof_checks": {
+    "both_fixed_switches_lie_in_nonempty_chart_overlaps": true,
+    "gamma_J_bound_follows_from_existing_larger_compact_interval": true,
+    "gamma_all_endpoint_and_remainder_poles_are_exactly_declared_regular_pivots": true,
+    "gamma_complete_force_remainder_is_uniformly_rationally_bounded_at_large_complex_q": true,
+    "gamma_complete_friction_is_uniformly_rationally_bounded_at_large_complex_q": true,
+    "gamma_forward_scaled_velocity_map_grows_at_most_quadratically": true,
+    "gamma_inverse_scaled_velocity_map_grows_at_most_linearly": true,
+    "gamma_pole_threshold_strictly_below_two_thousand": true,
+    "gamma_strip_h_is_below_five_quarters": true,
+    "gamma_strip_scale_squared_below_two": true,
+    "global_clock_squared_speed_has_positive_uniform_lower": true,
+    "global_reference_time_is_covered_by_gamma_chart": true,
+    "global_scalar_root_cutoff_covers_gamma_complex_q_threshold": true,
+    "large_global_interval_uses_no_more_than_three_regular_segments": true,
+    "unitary_all_endpoint_and_remainder_poles_are_exactly_declared_regular_pivots": true,
+    "unitary_complete_force_remainder_is_uniformly_rationally_bounded_at_large_complex_q": true,
+    "unitary_complete_friction_is_uniformly_rationally_bounded_at_large_complex_q": true,
+    "unitary_forward_scaled_velocity_map_grows_at_most_quadratically": true,
+    "unitary_inverse_scaled_velocity_map_grows_at_most_linearly": true,
+    "whole_global_clock_kinetic_pivot_positive_even_polynomial_proof_replayed": true
+  },
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "1deb2c5d17ff7f2264bcaa5a56f21d829e2206a3cef8c4be1356745bbd64134b",
+    "README.md": "b02288c53d8bb6e91ab8a09d6005dc6481cd6eccfcf685bba08449d9d4e879d7",
+    "notes/canonical.md": "e8af564c832dacf84837d733c7d28c1fc712e4e87743057c1d71f73d7e0ff9df",
+    "notes/charts.md": "d8ca691c89c36c26177b7f42c0c9a3a2978038399bdde7df0926608155d5227d",
+    "notes/growth.md": "e21b2201ba9ff71b00c403e8b2e8803f6eb6a43661305e8f9a0ba62f5ebc0bbc",
+    "notes/quantum.md": "687ad9cb9587794d5b66016a51d9a0309b9ac0733fd35b64c3d4870cd9dce063",
+    "notes/scope.md": "0f22f7bca6ab33786137b0f0f2798dbb550d3b972a8c459dd9c91fcd19431c0d",
+    "src/p8_proca_global_support/__init__.py": "014bb0eb524b42126d99209e4a713674e64559514216991d2903eca09309ee51",
+    "src/p8_proca_global_support/audit.py": "45c4d3e09c13955c4c7475853d23708fcd3ca17b2a658c248000aae001543e3e",
+    "src/p8_proca_global_support/charts.py": "39b00ed0fc8324f3e256d6308789c59a5c896b22fb2a80918fe7a8ebc7978014",
+    "src/p8_proca_global_support/coverage.py": "7ecdc0878bbb53febfdf481bd0ec9e198f45538fa1dcaead1e431e9e0b18eedb",
+    "src/p8_proca_global_support/model.py": "df3073a8fc6fef301c86bcbc5cce25308bad556026c2c07b9c421d35f4ebe7f4",
+    "src/p8_proca_global_support/modes.py": "c19e286dc0f94335e4a34168ffe8665ff2117d28cc3acfe897c10b8592ce9965",
+    "src/p8_proca_global_support/phase.py": "b2525651f0c147319c6800cef2ca49afb2366e7566296e122af40e6e1746b408",
+    "src/p8_proca_global_support/quantum.py": "7283ed45adaa8e70b675076ef7be2fb1e8b9356fd002c5a0be06a04f74d15cf7",
+    "src/p8_proca_global_support/transfer.py": "06cf89da6682d5c3f79db5e455bb30d3005eb27a15aac1158f710ed2068ed87d",
+    "src/p8_proca_global_support/verify.py": "922227b96e4b0081ee3d76ebd1c71d91ca7c2d951359fd986191124215819749",
+    "tests/conftest.py": "f1d999093cd6bd73af6633816ffd432e1e376b548d2102d972c433e9c909261d",
+    "tests/test_proca_global_support_certificate.py": "1d46562864534c3e671a38040178a19230d1132e14027d2101fc48b136078504",
+    "tests/test_proca_global_support_science.py": "bb7ff7c4f46a2289c15d8bca80163d540964c2ab5043aa5802f5670673b2c00b"
+  },
+  "status": "COMPLETE_SCALAR_RESPONSE_ON_PRESERVED_GLOBAL_RETUNED_CLOCK_HAS_ACTUAL_MATTER_CAUSAL_SUPPORT_AT_ALL_FINITE_TIMES_AND_NEW_GLOBAL_REDUCED_QUADRATIC_CCR_STATE_IS_RELATIONALLY_MICROCAUSAL; INTERACTING_QUANTUM_V_G_B_AND_ORIGINAL_P8_OPEN",
+  "verdict": "For the separately named total-margin epsilon=1/200 action, the preserved original global classical clock a=(1+u^2)^2 has complete reduced local scalar retarded support in its actual physical-matter cone for every finite source/output time. Both complete Euler charts are exactly intertwined with the regular density phase; all finite-q velocity poles and complex spatial null directions are covered. Explicit chart overlaps and complex pole separation give a finite compact-strip entire-multiplier bound of polynomial degree nine and exponential type F(t)-F(s), F=atan(u)/2+u/(2*(1+u^2)). A fresh global positive tempered Gaussian scalar state has the exact state-independent causal Kubo commutator. No global continuation of the off-clock nearby solution, Hadamard stress, interacting control or UV completion is asserted.",
+  "verification_boundary": "Native literal constrained Hamiltonian and source, exact degree-two polynomial-q density generator, complete two-chart Euler and 4x4 phase intertwining identities, actual global gradient/kinetic bridge, rational large-complex-frequency degree and denominator-factor checks, explicit chart overlap and pole separation, exact real-frequency Hermitian cancellation, Gaussian Gram/CCR and Kubo identities. Written compact-strip logarithmic-norm composition, original entire continuation, distributional support and global Schwartz/Duhamel state arguments are pinned. Prefactors are proved finite on each compact time strip, not numerically bounded uniformly for all time. Every ancestor, source/proof/test byte and report field is independently replayed without scientific-library patches. Not proof-assistant formalization.",
+  "written_proofs": [
+    "notes/canonical.md",
+    "notes/charts.md",
+    "notes/growth.md",
+    "notes/quantum.md",
+    "notes/scope.md"
+  ]
+}
