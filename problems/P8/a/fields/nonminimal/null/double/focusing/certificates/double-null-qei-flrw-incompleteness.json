@@ -1,0 +1,280 @@
+{
+  "actual_null_index": {
+    "contradiction": "I<-theta0 contradicts positive outgoing screen scale if affine extension exceeds 2tau",
+    "exact_Jacobi_equation": "b''/b=a''/a",
+    "index": "I=integral_0^(2tau)[2h'^2+2(a''/a)h^2]dlambda",
+    "initial_expansion": "theta0=2*(H0+1/tau)<=-2/tau",
+    "maximal_inextendibility_curvature_blowup_or_fundamental_EFT_endpoint_claimed": false,
+    "outgoing_sphere": "initial radius tau; coordinate radius tau+eta, eta'=a^-2; positive screen scale b=a*(tau+eta)",
+    "positive_screen_identity": "I+theta0=2*integral b^2*((h/b)')^2>=0 for h(0)=1,h(2tau)=0",
+    "sourced_dimensionless_upper": "tau*I<=6/5+104/7875+delta*(C0+abs(beta_S)*Cbeta)+zeta*Cstate+sigma*Csource",
+    "strict_worst_case_margin": "2-tau*I>=2724477176468412151/4784062500000000000>1/2"
+  },
+  "actual_thermal_past": {
+    "actual_future_affine_endpoint_strict_upper_in_tau_units": "1/4",
+    "actual_parent_scalar_history": {
+      "C3_errors": [
+        "1/56250000000000000",
+        "3/1562500000000000",
+        "101/585937500000000",
+        "601/36621093750000"
+      ],
+      "a_past_lower": "1",
+      "actual_scalar_state_and_SEE_past": true,
+      "anchor_H0_times_tau": "2",
+      "backward_y_bounds": [
+        "50/27",
+        "2"
+      ],
+      "beta_S": "0",
+      "delta": "1/100000000000000",
+      "future_state_cap_proved_on_every_shorter_segment": false,
+      "initial_and_past_zeta_squared_upper": "8999999999999999/405000000000000000000000000000",
+      "lambda": "1/36000000000000000",
+      "past_x": [
+        "-1/100",
+        "0"
+      ],
+      "sigma": "0",
+      "strict_C3_margins": [
+        "562499999999999/56250000000000000",
+        "781249999999997/1562500000000000",
+        "1757812499999899/585937500000000",
+        "585937499999399/36621093750000"
+      ],
+      "strict_squared_field_gate_margin": "16199991000000000000001/405000000000000000000000000000"
+    },
+    "affine_derivative_upper_bounds": [
+      "21/10",
+      "9",
+      "889/10",
+      "70069/50"
+    ],
+    "affine_past_A_upper": "10000/9979",
+    "strict_affine_derivative_margins": [
+      "9/10",
+      "7",
+      "9111/10",
+      "99929931/50"
+    ],
+    "strict_null_field_budget_squared_margin": "396000000000000001/405000000000000000000000000000",
+    "strict_null_quantum_budget_margin": "99/100000000000000"
+  },
+  "checked_scalar_entries": 35,
+  "claim": "P8-A.23.DOUBLE_NULL_QEI_FLRW_INCOMPLETENESS",
+  "complete_geometry_control": {
+    "actual_scale": "A(x)=1-exp(-100x)*Q(x), Q=2x+204x^2+(31240/3)x^3+(1064160/3)x^4",
+    "all_past_and_future_caps_verified_by_explicit_polynomial_bounds": true,
+    "allowed_small_source_SEE_witness": false,
+    "anchor_jets": "matches (1-6x)^(1/3) through fourth order, A0=1,A'_0=-2",
+    "domain": "x>=-1/1000 with a smooth extension slightly further to the past; positive and future complete",
+    "future_uniform_lower": "247371/312500>1/2, A<=1, A tends to 1",
+    "quantum_state_control": "actual conformal vacuum has relative Wick square zero"
+  },
+  "controls": {
+    "actual_thermal_past_not_claimed_to_prove_future_caps": true,
+    "complete_geometry_and_conformal_vacuum_not_claimed_small_source_SEE": true,
+    "rejected_inputs": 24
+  },
+  "date": "2026-09-09",
+  "derived_constants": {
+    "complete_geometry_control": {
+      "future_A_lower": "247371/312500",
+      "future_S": "65129/3125",
+      "future_derivative_bounds": {
+        "1": "130258/3125",
+        "2": "1042064/125",
+        "3": "8336512/5",
+        "4": "333460480"
+      },
+      "future_derivative_margins": {
+        "1": "25992/3125",
+        "2": "207936/125",
+        "3": "1663488/5",
+        "4": "66539520"
+      },
+      "past_absolute_A_minus_one_bound": "41526901/16875000000",
+      "past_derivative_bounds": {
+        "1": "416109941/168750000",
+        "2": "17084681/1687500",
+        "3": "12479621/16875",
+        "4": "933975044/675"
+      },
+      "past_derivative_margins": {
+        "1": "90140059/168750000",
+        "2": "9915319/1687500",
+        "3": "4395379/16875",
+        "4": "416024956/675"
+      }
+    },
+    "costs": {
+      "C0": "110874110523310814/1366875",
+      "Cbeta": "3737503266601/65625",
+      "Csource": "26013/35000",
+      "Cstate": "23677459436/382725",
+      "future": {
+        "P_norm_majorant": "14040126126/7",
+        "mixed_norm_majorant": "8322688/35",
+        "quantum_cost": "39008673038/35",
+        "reference_beta_cost": "1196000000/21",
+        "reference_zero_cost": "26000000/63",
+        "sampler_mass": "26/35",
+        "state_cost": "416258/7"
+      },
+      "future_index_kinetic_cost": "6/5",
+      "past": {
+        "P_norm_majorant": "630000567013182/4375",
+        "mixed_norm_majorant": "224000624/15309",
+        "quantum_cost": "153090165784281226/1913625",
+        "reference_beta_cost": "1088867/21875",
+        "reference_zero_cost": "26/39375",
+        "sampler_mass": "13/35000",
+        "state_cost": "131221898/54675"
+      },
+      "past_Ricci_upper_cost": "104/7875",
+      "quantum_cost": "155222964982633876/1913625",
+      "strict_index_margin": "2724477176468412151/4784062500000000000",
+      "worst_gate_index_upper": "6843647823531587849/4784062500000000000"
+    },
+    "independent_Fraction_reconstruction_agrees": true
+  },
+  "exact_residuals": {
+    "actual_affine_mixed_sampler_operator": "0",
+    "actual_affine_scalar_reference_all_four_jets": "0",
+    "actual_affine_second_sampler_operator": "0",
+    "actual_affine_state_sampler_operator": "0",
+    "actual_future_sampler_derivative_norm_0": "0",
+    "actual_future_sampler_derivative_norm_1": "0",
+    "actual_future_sampler_derivative_norm_2": "0",
+    "actual_outgoing_Jacobi_equation": "0",
+    "actual_past_sampler_derivative_norm_0": "0",
+    "actual_past_sampler_derivative_norm_1": "0",
+    "actual_past_sampler_derivative_norm_2": "0",
+    "actual_sampler_first_derivative_joins_at_zero": "0",
+    "actual_sampler_future_outer_value_and_first_traces": "0",
+    "actual_sampler_past_outer_value_and_first_traces": "0",
+    "actual_sampler_value_joins_at_one": "0",
+    "actual_scalar_initial_Hubble_is_negative_two": "0",
+    "actual_scalar_initial_scale_and_Hubble_anchor": "0",
+    "actual_thermal_proper_to_affine_first_jet": "0",
+    "actual_thermal_proper_to_affine_fourth_jet": "0",
+    "actual_thermal_proper_to_affine_second_jet": "0",
+    "actual_thermal_proper_to_affine_third_jet": "0",
+    "complete_control_matches_radiation_affine_jet_0": "0",
+    "complete_control_matches_radiation_affine_jet_1": "0",
+    "complete_control_matches_radiation_affine_jet_2": "0",
+    "complete_control_matches_radiation_affine_jet_3": "0",
+    "complete_control_matches_radiation_affine_jet_4": "0",
+    "exact_null_index_square_identity": "0",
+    "future_index_kinetic_cost": "0",
+    "null_Ricci_affine_change": "0",
+    "outgoing_screen_first_derivative": "0",
+    "outgoing_screen_second_derivative_cancels_coordinate_radius_terms": "0",
+    "physical_plane_and_null_affine_measures_match": "0",
+    "proper_to_affine_second_Hubble_derivative": "0",
+    "proper_to_affine_third_Hubble_derivative": "0",
+    "same_scalar_state_supplies_past_field_amplitude": "0"
+  },
+  "formulation": "FORMULATION.md",
+  "named_exact_check_count": 35,
+  "not_established": [
+    "General non-FLRW Penrose theorem, arbitrary nonminimal coupling, mass, interactions or optimal constants",
+    "A single-null QEI, state-independent nonminimal bound, momentum cutoff or state homogeneity requirement",
+    "Future geometry or state caps from past data, or a new QEI-only thermal endpoint mechanism",
+    "Curvature blowup, maximal inextendibility, fundamental EFT control or original P8(b) V/G/B UV classification",
+    "Original P8(a) or P8 as a whole closure"
+  ],
+  "null_theorem": {
+    "actual_SEE": "G_FK+Lambda*g_FK=-kappa*(Tscalar+Tother), kappa>0; Lambda arbitrary fixed and drops from null contraction",
+    "actual_field": "one real massless conformal scalar xi=1/6 in any Hadamard target state; fixed A20 scalar scheme beta_S",
+    "actual_past": "x in [-1/1000,0],9/10<=A<=2, absolute first-through-fourth affine x derivatives <=(3,16,1000,2000000)",
+    "affine_clock": "lambda(t)=integral_0^t a(s)ds, K=a^-1 partial_t+a^-2 partial_z; x=lambda/tau and A(x)=a(t(lambda))",
+    "budgets": "delta=kappa*hbar/(8*pi^2*tau^2),zeta=kappa*Phi_*^2/3,sigma=tau^2*kappa*max(-ell,0); delta*(1+abs(beta_S))<=1e-12,zeta<=1e-6,sigma<=1/10",
+    "conclusion": "future null affine endpoint <=2tau with the stated normalization; null geodesic incompleteness of the stipulated global FLRW spacetime",
+    "conditional_future": "IF affine endpoint exceeds 2tau, x in [0,2] has 1/2<=A<=2 and absolute first-through-fourth derivatives <=(50,10000,2000000,400000000)",
+    "finite_plane_state_cap": "relative w_physical<=Phi_*^2>=0 on the fixed coordinate plane sample |z|<=tau, lambda in [-tau/1000,2tau]; future part conditional on extension",
+    "future_caps_inferred_from_actual_past_or_effective_Newton_constant": false,
+    "global_geometry": "M=I_t times R^3, smooth positive flat FLRW; a(0)=1, H(0)<=-2/tau, tau>0",
+    "other_source": "Tother_KK>=ell on the same finite plane sample; no other-source premise is needed for pure scalar",
+    "pointwise_NEC_SEC_or_homogeneous_quantum_state_is_a_premise": false
+  },
+  "physical_plane_to_geometry": {
+    "actual_affine_operators": "P=a*v''-2a'*v'+2(a'^2/a-a'')*v; U=a*v'-2a'*v; V=v'-2a'/a*v, primes here d/dlambda",
+    "actual_measure": "dvol_plane=a*dt*dz=dlambda*dz; integral j_tau^2 dz=1",
+    "actual_reference": "hbar/(2880*pi^2)*[-4a'^2*a''/a+beta_S*(48a'^2*a''/a+84a''^2+72a'*a'''+12a*a'''')]",
+    "actual_sampler": "f(t,z)=v(lambda(t))*j_tau(z); j is the A22 normalized clamped profile, spatial first norm squared 3/tau^2",
+    "affine_sampler": "past cubic step on [-tau/1000,0], joined C1 to h=1-3(lambda/(2tau))^2+2(lambda/(2tau))^3 on [0,2tau]",
+    "full_quantum_cost": "hbar/(8*pi^2)*[(5/9)integral P^2+(1/3)*(3/tau^2)integral a^-4*U^2]",
+    "full_state_cost": "Phi_*^2/3*[integral V^2+(3/tau^2)integral a^-4*v^2]",
+    "source_reduction": "actual SEE makes TOTAL null stress geometric and spatially homogeneous; lower bound on Tother gives the needed scalar comparison even for an inhomogeneous target",
+    "spatial_width_removed_or_null_line_distribution_pulled_back": false
+  },
+  "prior_sha256": {
+    "A22_and_all_scalar_ancestry_fully_rebuilt": "7f37845da53396f5bbc171c43572a07eb10c493c135247b58fe255784c50b15b",
+    "actual_physical_conformal_QEI_and_reference_used": true,
+    "null_line_QEI_or_state_homogeneity_assumed": false
+  },
+  "proof_checks": {
+    "actual_SEE_reduces_plane_total_stress_using_geometry_not_state_homogeneity": true,
+    "actual_complete_geometry_future_derivatives_strictly_inside_all_caps": true,
+    "actual_complete_geometry_future_scale_exceeds_lower_half": true,
+    "actual_complete_geometry_past_derivatives_strictly_inside_all_caps": true,
+    "actual_complete_geometry_past_scale_strictly_inside_caps": true,
+    "actual_thermal_past_affine_derivatives_strictly_inside_all_caps": true,
+    "actual_thermal_past_affine_scale_below_two": true,
+    "actual_thermal_past_passes_new_quantum_gate": true,
+    "actual_thermal_past_passes_new_stronger_state_cap": true,
+    "compact_affine_sampler_and_spatial_shape_are_valid_H0_squared_limits": true,
+    "complete_geometry_control_has_infinite_future_affine_and_proper_duration": true,
+    "complete_geometry_control_has_radiation_jets_through_fourth_at_anchor": true,
+    "conformal_vacuum_control_passes_field_cap_but_is_not_an_allowed_small_source_SEE": true,
+    "finite_nonzero_spatial_width_has_actual_first_norm_three": true,
+    "finite_scalar_reference_scheme_and_null_other_source_are_retained": true,
+    "full_null_index_square_identity_retains_initial_expansion_boundary": true,
+    "full_state_cost_is_positive_and_retained": true,
+    "future_affine_geometry_and_state_caps_not_inferred_from_past": true,
+    "global_FLRW_null_endpoint_not_maximal_inextendibility_or_curvature_blowup": true,
+    "initial_outgoing_expansion_at_radius_tau_at_most_minus_two_over_tau": true,
+    "mixed_quantum_cross_term_integrates_to_zero_by_actual_spatial_profile": true,
+    "no_pointwise_NEC_or_SEC_is_an_extra_energy_premise": true,
+    "not_optimal_general_spacetime_or_original_P8_closure": true,
+    "one_sided_state_cap_controls_full_finite_plane_not_just_one_null_ray": true,
+    "outgoing_screen_scale_remains_positive_on_every_existing_finite_future_segment": true,
+    "thermal_example_has_earlier_affine_endpoint_but_is_not_a_new_QEI_only_mechanism": true,
+    "worst_case_null_index_margin_exceeds_one_half": true,
+    "zero_scheme_quantum_cost_dominates_positive_finite_scheme_cost": true
+  },
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "e840166a5a540d787768410f648a74acf08a9f1716198c38bf30b758022e9b35",
+    "README.md": "82461fde3c3ce7e17802bc359ad2441d56c8cf0cea9b1aba6d97b750d3982859",
+    "notes/constants.md": "7ca7129a265883bee57c91ea87d77008e7d71365da639629c7ee8cd066bdb638",
+    "notes/control.md": "a8236eb8506dd1bbccdb1defd0060c2a4ae8f60052984f533f2a13c22ee39ad1",
+    "notes/index.md": "12da988f7c5be6c0939089be67b1684286b579313aa6a1f6235399812fa4a876",
+    "notes/plane.md": "dc6d83106ea076eb28134b28c9dde02713aeb6a3a0c2365150e1155a6eb92479",
+    "notes/scope.md": "4d75b3ce6612150988bb666f2bc588723ccd66e07c85f4ad715e6c64da55847e",
+    "notes/thermal.md": "3f84619a03b2968cf0f39dfc35d1484b28a10b08896ed49303ddd55684526010",
+    "src/p8a_null_focusing/__init__.py": "9192aeed2a176338964a61b0dc25e6ae59380f15349616fec5c22d1bf83a3132",
+    "src/p8a_null_focusing/affine.py": "2a0d8f9877899f1229f4faaf5874823092be77fea93b57b2a2ab0c59d8f9e569",
+    "src/p8a_null_focusing/audit.py": "fcc3f50c38400960d72a99cc3c58908148df34d73df4d9823ff8122dd24a7a14",
+    "src/p8a_null_focusing/control.py": "cb24cbd43d7f4e8075d28e582f61554d863a557624653b363a273803fb05e248",
+    "src/p8a_null_focusing/costs.py": "1954868b59495845656510b9863f3eb0fa88ec98f0b0b1b0134c897febe320e8",
+    "src/p8a_null_focusing/independent.py": "2bebed2d740a3328554bfb11f5b8a833a65d764c8045944bfe7c5ec964279bdb",
+    "src/p8a_null_focusing/thermal.py": "d9b3465e6090ba1443529a2b27715f2fc0d391ccadd96994df207f6687464e32",
+    "src/p8a_null_focusing/verify.py": "d93e04d451d8148b8fbc83cda9192fb5a3542fc60500470105ba4630fae4b56c",
+    "tests/conftest.py": "48aa320ff1427aac62f5350fa8b6ce1b8e2d7c61bfed22ec9f621fd70c37e8a9",
+    "tests/test_null_focusing_certificate.py": "8e3fb35b92def096b7bd3c73752cebc35854eee560a3569e67891aad7ea62eef",
+    "tests/test_null_focusing_science.py": "aaf49da4e03607eb01bcebdf58656a0d7826a9ee6158cd4f66441cff92098125"
+  },
+  "status": "COMPLETE_CONDITIONAL_GLOBAL_FLRW_NULL_AFFINE_INCOMPLETENESS_FROM_ACTUAL_NONMINIMAL_SCALAR_DOUBLE_NULL_QEI_WITH_MACROSCOPIC_BUDGETS; GENERAL_SPACETIME_AND_ORIGINAL_P8_OPEN",
+  "verdict": "The actual nonminimal conformal scalar double-null QEI implies null affine incompleteness in the stated global FLRW class, with explicit macroscopic quantum, field and other-source budgets and a strictly positive index margin. Finite spatial smearing and the physical reference are retained; actual SEE supplies the geometry reduction without homogeneous-state assumptions. A complete geometry satisfies all geometric caps, while an actual thermal SEE state realizes the short past but not the conditional future premises. Original P8 remains open.",
+  "verification_boundary": "Native actual affine transport and scalar reference, exact outgoing Jacobi/index identity and boundary, full finite spatial-width sampler integrals, exact cost and gate arithmetic, independent Fraction reconstruction, continuous complete-geometry bounds and actual scalar SEE past/affine conversion. The QEI-to-source argument, Sobolev limits and global geometric endpoint proof are written and pinned, not proof-assistant formalized or independently peer reviewed.",
+  "written_proofs": [
+    "notes/plane.md",
+    "notes/index.md",
+    "notes/constants.md",
+    "notes/control.md",
+    "notes/thermal.md",
+    "notes/scope.md"
+  ]
+}

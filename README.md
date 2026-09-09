@@ -122,6 +122,13 @@ around a pre-registered problems document and a certificate-gated ledger.
   branch has a finite mathematical endpoint; fundamental EFT control at
   that endpoint is not claimed. This is optional strengthening, not a
   replacement of the all-Hadamard theorem or a new completion prerequisite.
+  The [nonminimal conformal scalar extension](problems/P8/a/fields/nonminimal/README.md)
+  adds a state-qualified timelike theorem with macroscopic budgets.
+  Its [physical double-null QEI and null endpoint theorem](problems/P8/a/fields/nonminimal/null/double/focusing/README.md)
+  now imply null affine incompleteness in the stated global FLRW class,
+  with finite plane width and an exact index margin greater than one half.
+  The quantum state need not be homogeneous; separate future geometry and
+  Wick-square bounds remain explicit. This is not a general-spacetime theorem.
 - P8(b): [completed scoped classification and verification commands](problems/P8/README.md).
   All 32 M0/M1 sector-row verdicts are decided: minimal optional groups are
   C or D without extra matter, and CD with rolling canonical matter.
@@ -431,7 +438,7 @@ around a pre-registered problems document and a certificate-gated ledger.
   This is still linear light evolution and its leading heavy response,
   not a full nonlinear solution or UV-admissible completion.
 
-The [current P8 continuation audit](docs/assessment-2026-09-09-p8-physical-double-null-qei.md) separates
+The [current P8 continuation audit](docs/assessment-2026-09-09-p8-double-null-flrw-incompleteness.md) separates
 the completed scoped P8(a) objective and certificate gates from the
 outstanding P8(b) UV-matching and positivity questions.
 P8 is not marked finished or closed.
