@@ -1,0 +1,233 @@
+{
+  "checked_scalar_entries": 29,
+  "claim": "P8-S6.92.QUANTITATIVE_COMPACT_RESPONSE",
+  "conditional_common_parent_matching_and_tail_requirements": {
+    "algebraic_cancellation_control_is_not_a_constructed_UV_theory": true,
+    "classical_comparison_source": "C_low=<f,G P_abs(k)<=Lambda J>; C_high=<f,G P_abs(k)>Lambda J>",
+    "default_conditional_budget": {
+      "actual_matching_and_parent_tail_bounds_are_not_established": true,
+      "assumed_low_spatial_band_matching_error_fraction": "1/8",
+      "assumed_parent_high_spatial_frequency_tail_fraction": "1/8",
+      "classical_low_spatial_band_signal_fraction": "1/2",
+      "conditional_parent_full_response_lower": "107811/335544320000000000000000000000000000000000000000000000000000",
+      "conditional_parent_full_response_lower_fraction": "1/4"
+    },
+    "low_frequency_agreement_alone_allows_high_frequency_cancellation": true,
+    "no_nearby_quantum_matching_or_original_P8_closure": true,
+    "other_conditional_budgets": [
+      {
+        "actual_matching_and_parent_tail_bounds_are_not_established": true,
+        "assumed_low_spatial_band_matching_error_fraction": "0",
+        "assumed_parent_high_spatial_frequency_tail_fraction": "1/4",
+        "classical_low_spatial_band_signal_fraction": "1/2",
+        "conditional_parent_full_response_lower": "107811/335544320000000000000000000000000000000000000000000000000000",
+        "conditional_parent_full_response_lower_fraction": "1/4"
+      },
+      {
+        "actual_matching_and_parent_tail_bounds_are_not_established": true,
+        "assumed_low_spatial_band_matching_error_fraction": "1/10",
+        "assumed_parent_high_spatial_frequency_tail_fraction": "1/5",
+        "classical_low_spatial_band_signal_fraction": "1/2",
+        "conditional_parent_full_response_lower": "107811/419430400000000000000000000000000000000000000000000000000000",
+        "conditional_parent_full_response_lower_fraction": "1/5"
+      }
+    ],
+    "required_common_parent": [
+      "same actual nearby background and physical matter metric",
+      "same linear local relational observable and physical source/detector normalization",
+      "defined parent state/response and canonical maps",
+      "parent response vanishes for the original compact matter-spacelike supports",
+      "low-spatial-band matching error including temporal validity, omitted terms, loops and thresholds",
+      "parent high-spatial-frequency paired tail small enough to prevent cancellation"
+    ]
+  },
+  "controls": {
+    "groups": {
+      "compact_bump": {
+        "rejected_inputs": 16
+      },
+      "conditional_matching": {
+        "rejected_inputs": 35
+      }
+    },
+    "no_parent_source_or_scientific_library_changed": true,
+    "rejected_inputs": 51
+  },
+  "date": "2026-09-09",
+  "exact_residuals": {
+    "bump_boundary_derivative_recurrence_anchor_0": "0",
+    "bump_boundary_derivative_recurrence_anchor_1": "0",
+    "bump_boundary_derivative_recurrence_anchor_2": "0",
+    "bump_boundary_derivative_recurrence_anchor_3": "0",
+    "bump_boundary_derivative_recurrence_anchor_4": "0",
+    "cancellation_control_has_zero_low_band_mismatch": "0",
+    "chosen_normal_width_makes_full_remainder_pairing_one_quarter": "0",
+    "classical_full_minus_spatial_tail_gives_positive_low_band_pairing": "0",
+    "clock_cap_signal_lower_keeps_amplitude_radius_time_and_all_four_bumps": "0",
+    "conditional_comparison_triangle_keeps_both_parent_errors": "0",
+    "default_two_error_budget_retains_quarter_signal": "0",
+    "detector_support_volume_uses_both_radial_band_edges_and_Jacobian": "0",
+    "half_radius_bump_exponent_is_minus_one_third": "0",
+    "high_frequency_green_bound_keeps_both_fronts_and_the_full_remainder": "0",
+    "low_band_agreement_only_has_an_exact_cancellation_control": "0",
+    "normal_width_includes_square_of_complete_remainder_norm": "0",
+    "normalized_source_L2_squared_upper_keeps_the_normalizer": "0",
+    "parent_compact_neighborhood_is_used_without_changing_the_background": "0",
+    "physical_spatial_momentum_conversion_requires_lapse_independent_conformal_scale": "0",
+    "polynomial_times_boundary_exponential_has_zero_limit": "0",
+    "radial_source_normalizer_lower_keeps_the_three_dimensional_ball_volume": "0",
+    "smooth_bump_center_is_one": "0",
+    "source_change_of_variables_keeps_all_four_normalization_powers": "0",
+    "source_detector_norm_product_retains_all_source_width_powers": "0",
+    "source_norm_width_is_not_detector_cap_width": "0",
+    "source_projection_low_and_high_parts_reconstruct_parent_response": "0",
+    "spatial_cutoff_keeps_normal_width_and_response_lower": "0",
+    "spatial_projection_split_is_exact_for_the_original_compact_probe": "0",
+    "two_time_source_width_is_one_twentieth_detector_normal_width": "0"
+  },
+  "explicit_compact_probe_geometry_norms_and_actual_widths": {
+    "actual_remainder_and_widths": {
+      "complete_remainder_norm_lower": "100000000000000000000000000000000000000000000",
+      "complete_spatial_remainder_L2_upper": "1280000000000000000100000000000000000000000000000000000000000000 + 25600000000000000000000000000000000000000000000000000000000000000*exp(41943040000000000000000000000000000000000000000000000000000000017612800000000000000000000000000000000000000000000000000000000000777/640000000)",
+      "exact_normal_width": "121/(17592186044416000000000000000000000000000000000000*(1280000000000000000100000000000000000000000000000000000000000000 + 25600000000000000000000000000000000000000000000000000000000000000*exp(41943040000000000000000000000000000000000000000000000000000000017612800000000000000000000000000000000000000000000000000000000000777/640000000))**2)",
+      "exact_source_time_and_spatial_width": "121/(351843720888320000000000000000000000000000000000000*(1280000000000000000100000000000000000000000000000000000000000000 + 25600000000000000000000000000000000000000000000000000000000000000*exp(41943040000000000000000000000000000000000000000000000000000000017612800000000000000000000000000000000000000000000000000000000000777/640000000))**2)",
+      "finite_symbolic_exponential_not_numerically_evaluated": true
+    },
+    "formal_constants": {
+      "beta": "exp(1-1/(1-z^2)) for |z|<1; zero otherwise",
+      "clock_cap_detector_pointwise_lower": "1/16",
+      "clock_cap_solid_angle_lower": "1089*pi/102400000000000000000000",
+      "clock_ray_radius_lower": "1/160000000",
+      "clock_ray_radius_upper": "3/10000000",
+      "clock_shell_amplitude_lower": "1/100000000",
+      "compact_detector": "beta((t-t0)/a) beta(|x_perp|/a) beta((x1-S_clock(t,s0))/a) beta((|x|-S_clock(t,s0))/epsilon)",
+      "compact_positive_source": "normalized beta((s-s0)/rho) times normalized radial beta(|y|/rho)",
+      "detector_L1_time_L2_space_norm_upper": "107811/(335544320000000000000000000000000000000000000000000000000000*complete_remainder_L2_upper)",
+      "detector_cap_and_time_width": "99/800000000000000000",
+      "detector_spatial_support_volume_upper": "1185921/(703687441776640000000000000000000000000000000000000000000000000000000000000000000000*complete_remainder_L2_upper**2)",
+      "detector_time": "1/40000000",
+      "normal_width": "121/(17592186044416000000000000000000000000000000000000*complete_remainder_L2_upper**2)",
+      "normal_width_numerator": "121/17592186044416000000000000000000000000000000000000",
+      "normal_width_rational_upper": "121/175921860444160000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "parent_support_neighborhood_radius": "99/80000000000000000",
+      "positive_clock_shell_pairing_lower": "107811/83886080000000000000000000000000000000000000000000000000000",
+      "source_L1_time_L2_space_norm_upper": "23611832414348226068480000000000000000000000000000000000000000000000000000000*sqrt(5)*complete_remainder_L2_upper**3/1331",
+      "source_normalization_not_assumed_equal_to_uncomputed_bump_integral": true,
+      "source_spacetime_L1_norm": "1",
+      "source_time": "-1/40000000",
+      "source_time_and_spatial_width": "121/(351843720888320000000000000000000000000000000000000*complete_remainder_L2_upper**2)",
+      "whole_interval_half_window": "1/20000000"
+    }
+  },
+  "finite_spatial_frequency_contribution_and_complete_tail_budget": {
+    "absolute_high_spatial_frequency_pairing_upper": "142496706959769600000000000000000*complete_remainder_L2_upper**2/(590295810358705651712000000000000000000000000000000000000000000000000000000000000000000000*complete_remainder_L2_upper**2/1331 + 40000000000000000000000000000000)",
+    "compact_probe_L1_L2_norm_product_upper": "14249670695976960000*complete_remainder_L2_upper**2",
+    "declared_high_spatial_frequency_pairing_upper": "107811/335544320000000000000000000000000000000000000000000000000000",
+    "finite_comoving_spatial_cutoff": "590295810358705651712000000000000000000000000000000000000000000000000000000000000000000000*complete_remainder_L2_upper**2/1331 + 40000000000000000000000000000000",
+    "minimum_classical_high_frequency_domain": "40000000000000000000000000000000",
+    "normal_width": "121/(17592186044416000000000000000000000000000000000000*complete_remainder_L2_upper**2)",
+    "positive_full_classical_pairing_lower": "323433/335544320000000000000000000000000000000000000000000000000000",
+    "positive_low_spatial_frequency_pairing_lower": "107811/167772160000000000000000000000000000000000000000000000000000",
+    "projected_source_not_claimed_compact": true,
+    "source_projection_definition": "C_low=<f,G P_abs(k)<=Lambda J>; C_high=<f,G P_abs(k)>Lambda J>",
+    "spatial_cutoff_not_a_temporal_frequency_or_interacting_EFT_cutoff": true,
+    "uniform_classical_high_frequency_multiplier_coefficient": "10000000000000"
+  },
+  "formulation": "FORMULATION.md",
+  "literal_compact_bumps_normalizers_and_boundary_recurrence": {
+    "actual_compact_detector_formula": "Piecewise((exp(1 - 1/(1 - (-actual_clock_radius_from_source_center + x1)**2/cap_width**2)), (-actual_clock_radius_from_source_center + x1)**2/cap_width**2 < 1), (0, True))*Piecewise((exp(1 - 1/(1 - (-detector_center_time + detector_time)**2/cap_width**2)), (-detector_center_time + detector_time)**2/cap_width**2 < 1), (0, True))*Piecewise((exp(1 - 1/(1 - (x2**2 + x3**2)/cap_width**2)), (x2**2 + x3**2)/cap_width**2 < 1), (0, True))*Piecewise((exp(1 - 1/(1 - (-actual_clock_radius_from_source_center + sqrt(x1**2 + x2**2 + x3**2))**2/normal_width**2)), (-actual_clock_radius_from_source_center + sqrt(x1**2 + x2**2 + x3**2))**2/normal_width**2 < 1), (0, True))",
+    "actual_compact_source_formula": "Piecewise((exp(1 - 1/(1 - (-source_center_time + source_time)**2/positive_source_width**2)), (-source_center_time + source_time)**2/positive_source_width**2 < 1), (0, True))*Piecewise((exp(1 - 1/(1 - (y1**2 + y2**2 + y3**2)/positive_source_width**2)), (y1**2 + y2**2 + y3**2)/positive_source_width**2 < 1), (0, True))/(one_dimensional_bump_integral*positive_source_width**4*radial_three_dimensional_bump_integral)",
+    "boundary_derivative_induction": "beta^(n)=beta*P_n/(1-r^2)^(2n); polynomial recurrence holds for every n",
+    "detector_is_extended_by_zero_outside_its_compact_interior_time_window": true,
+    "first_boundary_recurrence_polynomials": [
+      "1",
+      "-2*signed_bump_coordinate",
+      "6*signed_bump_coordinate**4 - 2",
+      "-24*signed_bump_coordinate**7 - 12*signed_bump_coordinate**5 + 40*signed_bump_coordinate**3 - 12*signed_bump_coordinate",
+      "120*signed_bump_coordinate**10 + 180*signed_bump_coordinate**8 - 528*signed_bump_coordinate**6 + 232*signed_bump_coordinate**4 + 24*signed_bump_coordinate**2 - 12"
+    ],
+    "global_one_dimensional_bump": "Piecewise((exp(1 - 1/(1 - signed_bump_coordinate**2)), signed_bump_coordinate**2 < 1), (0, True))",
+    "interior_one_dimensional_bump": "exp(1 - 1/(1 - signed_bump_coordinate**2))",
+    "one_dimensional_normalizer": "Integral(exp(1 - 1/(1 - signed_bump_coordinate**2)), (signed_bump_coordinate, -1, 1))",
+    "source_normalization_symbols": [
+      "one_dimensional_bump_integral",
+      "radial_three_dimensional_bump_integral"
+    ],
+    "spatial_radial_bumps_are_functions_of_squared_radius": true,
+    "three_dimensional_normalizer": "4*pi*Integral(signed_bump_coordinate**2*exp(1 - 1/(1 - signed_bump_coordinate**2)), (signed_bump_coordinate, 0, 1))"
+  },
+  "named_exact_check_count": 29,
+  "not_established": [
+    "Numerically synthesized or physically resolved probes, a controlled nonlinear source apparatus or detector noise bound",
+    "Joint temporal/spatial EFT validity, optimized carrier/width, interacting cutoff, omitted operators, loops or heavy-threshold errors",
+    "Actual parent low-band matching or actual parent high-band tail bounds",
+    "A quantum state, fixed profile, response or inverse on the nearby background",
+    "Finite Wilson matching, healthy full-candidate vacuum, common-parent V/G/B, global bounce, UV completion/exclusion or original P8 closure"
+  ],
+  "prior_sha256": {
+    "S6_91_fully_rebuilt": "1167ad429103423b492f1a53cfd6ee8b8573bb6d2351e2ef8e6e65d6e1ab2f65",
+    "no_temporal_EFT_cutoff_or_quantum_parent_tail_assumed": true,
+    "same_actual_classical_background_source_and_full_retarded_response": true
+  },
+  "proof_checks": {
+    "actual_clock_radius_bounds_cover_both_source_and_detector_time_variations": true,
+    "actual_uniform_high_frequency_multiplier_bound_below_declared_coefficient": true,
+    "all_conditional_error_budgets_leave_strictly_positive_response": true,
+    "all_reported_error_budgets_are_explicitly_conditional": true,
+    "bump_half_radius_lower_follows_from_exp_minus_x_greater_equal_one_minus_x": true,
+    "cap_radius_and_normal_band_stay_far_from_spatial_origin": true,
+    "chosen_cutoff_tail_fraction_is_less_than_one_quarter": true,
+    "clock_cap_solid_angle_rationalization_has_positive_branch": true,
+    "clock_shell_pairing_lower_is_exact_and_strictly_positive": true,
+    "common_parent_requirements_are_not_replaced_by_classical_normalform_constants": true,
+    "compact_probes_have_no_claimed_finite_temporal_frequency_support": true,
+    "complete_norm_product_below_rounded_coefficient": true,
+    "declared_cutoff_is_finite_and_above_parent_domain": true,
+    "default_conditional_budget_requires_two_distinct_one_eighth_bounds": true,
+    "detector_six_width_displacement_stays_inside_parent_spacelike_neighborhood": true,
+    "detector_volume_upper_uses_pi_less_than_four": true,
+    "finite_positive_actual_widths_are_symbolic_not_floating": true,
+    "full_and_low_spatial_frequency_pairing_lower_bounds_are_positive": true,
+    "longitudinal_bump_is_in_its_positive_plateau_on_source_clock_front": true,
+    "matching_alone_is_not_a_matter_causal_UV_exclusion": true,
+    "no_joint_spacetime_frequency_or_EFT_admissibility_asserted": true,
+    "normal_bump_is_in_its_positive_plateau_on_source_clock_front": true,
+    "normal_width_rational_upper_is_less_than_one_hundredth_cap_width": true,
+    "radial_band_Jacobian_below_two": true,
+    "smoothness_at_bump_boundary_is_a_written_all_orders_induction": true,
+    "source_L2_norm_upper_uses_pi_greater_than_three": true,
+    "source_support_stays_inside_parent_spacelike_neighborhood": true,
+    "source_time_width_less_than_cap_width": true,
+    "transverse_bump_is_in_its_positive_plateau_on_source_clock_front": true
+  },
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "afb5555eb357123f761c774d58be261576b2c60bf09e3de1cd16fa2f080765ff",
+    "README.md": "8ad3342db8e99e03cee27f67cfbc85472233b94d253443b0c525982ed3c817fe",
+    "notes/band.md": "496ef5bb5b0b34ec42852f31daa0ab296a5f99b0b6940487754e2a648f4da2da",
+    "notes/matching.md": "a0faad7348e74a15a229cd96113eb32a8e14e99954beb6ddbeab0e646441e7e1",
+    "notes/probes.md": "c862e369d27832bfb4f313afbc3a350160b354c151cab910d812db3ff535eba4",
+    "notes/scope.md": "5e2acbfdede09bacca56201ceb0dbea83634c3f64b9d2824a7836b9e0cbdef37",
+    "notes/signal.md": "20f480131f6e616d9dafb3f1eda543f633ca314dcaf47ed6d9176bc5f9d14b12",
+    "src/p8_proca_compact_response/__init__.py": "1020a318b5af2ee68b1e9d56b168a760b8b0fe1b4781f5e8f7aefa687ebd0558",
+    "src/p8_proca_compact_response/audit.py": "ff446d3df79cb5679809ab0d32ddeecdbd4a028ac453e8c0249814ea9ead152d",
+    "src/p8_proca_compact_response/band.py": "8724471a73bac0cf69a10330a8b357230502181e9f96499bedb47ea62bc5edb6",
+    "src/p8_proca_compact_response/bumps.py": "64b189b53cd63cc749a374398974c01d2758292a57e88e048f44e2e20450a5d6",
+    "src/p8_proca_compact_response/matching.py": "cbf5e7b9e9f820cae97552ffd47f5b4ce5e2d040b83155ce651d11eefc10c619",
+    "src/p8_proca_compact_response/probes.py": "ae8b324f8ad269a775b91305b388d44cbaf9ed94df27a57156ca70312871df69",
+    "src/p8_proca_compact_response/verify.py": "c9cb0d26d0391ff41c29d4b633eb9371195e5135f2bd6540f705a12722738833",
+    "tests/conftest.py": "f1d999093cd6bd73af6633816ffd432e1e376b548d2102d972c433e9c909261d",
+    "tests/test_proca_compact_response_certificate.py": "766fed9df55528964efd9ad89912d0d2271e3815b8554c76c31ec41ac170eea3",
+    "tests/test_proca_compact_response_science.py": "d13aca8a92f820a7138ee1fea0ef78fac5697f347b2a001db0b9281f34c795fc"
+  },
+  "status": "EXPLICIT_COMPACT_CLASSICAL_PROBES_HAVE_POSITIVE_FULL_AND_FINITE_SPATIAL_BAND_RETARDED_PAIRINGS_WITH_COMPLETE_REMAINDER_CONTROL; ACTUAL_PARENT_MATCHING_TAIL_TEMPORAL_EFT_QUANTUM_AND_ORIGINAL_P8_OPEN",
+  "verdict": "On the same actual nearby classical bounce, explicit nonnegative smooth compact source and detector probes have every support pair matter-spacelike and an exact real retarded pairing at least 3D/4, with D a declared positive rational. Both source normalizers, all four detector bumps, the actual moving clock-front cap and the complete spatial L2 remainder are retained. A finite symbolic comoving spatial cutoff leaves a contribution at least D/2. The widths retain an extremely conservative full low-frequency exponential. A matter-causal common-parent comparison would require separate low-band matching and parent high-band tail errors with total below D/2; neither is established. There is no temporal-frequency, interacting EFT, quantum or UV-completion transfer.",
+  "verification_boundary": "Exact native bump recurrence/normalization anchors, whole-support geometry and positive front-cap lower, full actual symbolic remainder and width, Plancherel operator tail factors, source/detector norm powers, strict rational conditional error budgets and negative cancellation control, with written all-orders smoothness and paired-response proofs. Every parent is natively rebuilt. No floating estimate, library patch, unspecified localization limit, discarded low frequency or assumed EFT/UV validity. Not proof-assistant formalization.",
+  "written_proofs": [
+    "notes/probes.md",
+    "notes/signal.md",
+    "notes/band.md",
+    "notes/matching.md",
+    "notes/scope.md"
+  ]
+}
