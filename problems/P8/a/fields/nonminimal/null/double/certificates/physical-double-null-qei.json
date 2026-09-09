@@ -1,0 +1,198 @@
+{
+  "checked_scalar_entries": 51,
+  "claim": "P8-A.22.PHYSICAL_DOUBLE_NULL_QEI",
+  "controls": {
+    "no_transversely_smeared_field_square_substitution": true,
+    "quantum_stress_not_effective_gravitational_stress": true,
+    "rejected_inputs": 39
+  },
+  "curved_conformal_transport": {
+    "FK_null_Ricci": "R_KK=2Hdot/a^2; cosmological constant drops from null SEE",
+    "actual_reference": "Tconf_KK=hbar/(2880*pi^2*a^2)*[-4H^2*Hdot+beta_S*(12Hthird+72Hdot^2+36H*Hddot)]",
+    "domain": "smooth positive spatially flat FLRW a(t), conformal massless scalar xi=1/6 only, compact timelike-plane sample",
+    "operators": "L=f_tt-3H*f_t+(2H^2-2Hdot)*f; M=f_tz-2H*f_z; G=f_t+a^-1*f_z-2H*f",
+    "quantum_cost": "hbar/(8*pi^2)*integral dvol_plane*[(5/9)a^-2*L^2+(2/9)a^-3*L*M+(1/3)a^-4*M^2]",
+    "reference_added_to_full_stress_lower_bound": "integral dvol_plane*f^2*Tconf_KK",
+    "relative_physical_stress": "Delta T_KK=a^-6*Delta Tflat_DD, flat sampler F=a^-2*f",
+    "single_ray_focusing_or_SEE_incompleteness_deduced": false,
+    "state_cost": "(1/3)*integral dvol_plane*a^-2*w_physical*G^2, bounded above by replacing w_physical with Phi_*^2",
+    "volume_and_null_vector": "dvol_plane=a*dt*dz=a^2*deta*dz; K=a^-2*(partial_eta+partial_z), affine with this normalization"
+  },
+  "date": "2026-09-09",
+  "derived_constants": {
+    "actual_product_derivative_Gram": [
+      [
+        "63/2",
+        "0",
+        "9"
+      ],
+      [
+        "0",
+        "9",
+        "0"
+      ],
+      [
+        "9",
+        "0",
+        "63/2"
+      ]
+    ],
+    "actual_shape_derivative_pairings": [
+      [
+        "1",
+        "0",
+        "-3"
+      ],
+      [
+        "0",
+        "3",
+        "0"
+      ],
+      [
+        "-3",
+        "0",
+        "63/2"
+      ]
+    ],
+    "boost_stationary_polynomial_at_1": "-52",
+    "boost_stationary_polynomial_at_4_over_3": "401/81",
+    "independent_Fraction_reconstruction_agrees": true,
+    "selected_boost_ratio": "4/3",
+    "selected_quantum_coefficient_without_hbar_over_pi_squared": "14117/1536",
+    "selected_quantum_cost": "14117/192",
+    "selected_state_coefficient": "4",
+    "shape_first_norm_squared": "3",
+    "shape_norm_squared": "1",
+    "shape_second_norm_squared": "63/2",
+    "strict_margin_below_74": "91/192"
+  },
+  "exact_residuals": {
+    "actual_FK_affine_null_Ricci_contraction": "0",
+    "actual_affine_null_vector_geodesic_acceleration": "0",
+    "actual_affine_null_vector_has_zero_norm": "0",
+    "actual_compact_shape_first_norm": "0",
+    "actual_compact_shape_normalization": "0",
+    "actual_compact_shape_second_norm": "0",
+    "actual_conformal_shape_state_cost": "0",
+    "actual_flat_null_sampler_derivative": "0",
+    "actual_mixed_conformal_derivative": "0",
+    "actual_physical_Wick_measure_keeps_extra_scale_squared": "0",
+    "actual_physical_null_energy_sampler_measure": "0",
+    "actual_polynomial_product_Gram_matches_IBP": "0",
+    "actual_quantum_cross_measure": "0",
+    "actual_quantum_mixed_measure": "0",
+    "actual_quantum_time_measure": "0",
+    "actual_scalar_reference_null_contraction_retains_finite_beta": "0",
+    "actual_second_conformal_time_derivative": "0",
+    "both_null_widths_retained": "0",
+    "compact_shape_outer_first_derivative_traces": "0",
+    "compact_shape_outer_value_traces": "0",
+    "complete_nonminimal_boost_family": "0",
+    "complete_product_UE_norm": "0",
+    "complete_product_UU_norm": "0",
+    "complete_product_cross": "0",
+    "complete_timelike_plane_mass_shell_integral": "0",
+    "conformal_boost_optimizer_equation": "0",
+    "conformal_derivative_matrix": "0",
+    "conformal_product_exact_cost": "0",
+    "conformal_rational_boost_cost": "0",
+    "cosmological_constant_drops_from_null_SEE_contraction": "0",
+    "full_derivative_form_positive_square_decomposition": "0",
+    "full_physical_nonminimal_null_sampler_identity": "0",
+    "minimal_null_contraction_known_answer": "0",
+    "nonminimal_derivative_form_determinant": "0",
+    "plane_vacuum_spectral_normalization": "0",
+    "reference_integrand_retains_full_null_derivative_of_sampler": "0",
+    "state_cost_is_boost_independent": "0",
+    "strict_boost_convexity_formula": "0",
+    "two_dimensional_half_Fourier_and_Parseval_normalization": "0"
+  },
+  "formulation": "FORMULATION.md",
+  "named_exact_check_count": 39,
+  "normalized_product_bound": {
+    "actual_profile": "h(s)=sqrt(315/256)*(1-s^2)^2 on [-1,1], zero elsewhere; norm one, first norm squared 3, second 63/2",
+    "boost": "U=b*partial_plus+b^-1*partial_minus,E=b*partial_plus-b^-1*partial_minus,Dprime=b*D; b^2=r*delta_plus/delta_minus",
+    "conformal_boost_family": "Gamma(r)=35r+24/r+21/r^3, multiplying hbar/(8*pi^2*delta_plus^3*delta_minus)",
+    "coordinates": "x_plus=t+z,x_minus=t-z; dt*dz=dx_plus*dx_minus/2",
+    "explicit_conformal_bound": "integral f^2*:T_DD: >= -14117*hbar/(1536*pi^2*delta_plus^3*delta_minus)-4*Phi_*^2/delta_plus^2",
+    "optimal_sampler_or_optimal_physical_QEI_claimed": false,
+    "sampler": "f=sqrt(2)*h_delta_plus(x_plus)*h_delta_minus(x_minus), h_delta=delta^-1/2*h(x/delta)",
+    "selected_rational_ratio": "r=4/3, Gamma=14117/192<74",
+    "single_null_limit": "fixed delta_plus and delta_minus->0 diverges; no finite null-line bound follows",
+    "unique_family_minimizer_squared": "(12+9sqrt(29))/35; not the optimal physical QEI"
+  },
+  "not_established": [
+    "An optimal QEI, optimal sampler, finite single-null bound or state-independent nonminimal bound",
+    "General curved nonconformal fields, interacting fields or a UV momentum cutoff",
+    "A null singularity theorem or self-consistent SEE solution from this two-dimensional average",
+    "Original P8(a) or full V/G/B UV classification P8(b) closure"
+  ],
+  "physical_flat_inequality": {
+    "absolute_Wick_cap_or_momentum_cutoff_inferred": false,
+    "derivative_positive_decomposition": "2xi*(f_tz+f_tt/3)^2+(2/9)(3-4xi)*f_tt^2",
+    "field": "one real massless scalar in four-dimensional Minkowski space; 0<=xi<=1/2",
+    "inequality": "integral f^2*:T_DD: >= -hbar/(8*pi^2)*[(2/3)(1-xi)||f_tt||^2+(4xi/3)<f_tt,f_tz>+2xi||f_tz||^2]-2xi*integral w*(Df)^2",
+    "integrated_square_identity": "(1-2xi)*integral f^2*(D Phi)^2+2xi*integral [D(f Phi)]^2-2xi*integral (Df)^2*Phi^2",
+    "one_sided_state_cap": "w<=Phi_*^2>=0 on the entire two-dimensional sampling region gives -2xi*Phi_*^2*||Df||^2",
+    "physical_operator": "T_DD=(D Phi)^2-xi*D^2(Phi^2)",
+    "plane": "(t,0,0,z), physical null D=partial_t+partial_z, plane volume dt*dz",
+    "samplers": "real C_c^infinity(R^2), or the stated compact H0^2 product limit",
+    "states": "every Hadamard target, relative to the Minkowski vacuum",
+    "vacuum_plane_spectrum": "hbar/(8*pi^2)*integral_{omega>=|kz|}domega*dkz*exp(-iomega*Delta_t+ikz*Delta_z)"
+  },
+  "prior_sha256": {
+    "A21_and_A20_ancestry_fully_rebuilt": "ada5315159f41bf96c455987f4779dffae2fa6bfef3fca0921e60761fccc4e88",
+    "physical_nonminimal_stress_and_scalar_reference_reused": true,
+    "single_null_cap_bound_inferred_from_parent": false
+  },
+  "proof_checks": {
+    "Hadamard_pullback_to_timelike_plane_has_spacelike_conormal": true,
+    "boost_cost_strictly_convex_and_diverges_at_both_positive_domain_ends": true,
+    "chosen_quantum_coefficient_is_strictly_below_74": true,
+    "compact_H0_squared_shape_approached_from_inside_by_smooth_samplers": true,
+    "curved_transport_only_claimed_for_massless_conformal_scalar": true,
+    "curved_vector_is_affinely_parametrized_not_unit_timelike": true,
+    "derivative_form_remainder_positive_for_whole_xi_zero_to_half_interval": true,
+    "finite_scalar_reference_beta_and_physical_volume_retained": true,
+    "half_Fourier_domain_keeps_all_spatial_frequencies": true,
+    "no_focusing_theorem_or_SEE_solution_inferred_from_plane_average_alone": true,
+    "no_optimal_QEI_or_original_P8_closure_claimed": true,
+    "physical_stress_not_square_of_a_transversely_smeared_field": true,
+    "positive_squares_coefficients_nonnegative_for_whole_xi_zero_to_half_interval": true,
+    "real_sampler_inversion_keeps_cross_term_in_half_Parseval": true,
+    "single_null_shrinking_limit_diverges_and_does_not_contradict_A21": true,
+    "unique_positive_boost_stationary_point_lies_between_1_and_4_over_3": true,
+    "upper_Wick_cap_only_needed_on_full_two_dimensional_sample_region": true,
+    "upper_cap_is_not_an_absolute_cap_or_a_momentum_cutoff": true
+  },
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "59bdc2f1459cd555d843042238c28689a864fde4b83f6bfb055759a837697386",
+    "README.md": "a8079fb03e16ebf98e1880a8145efeebf08f788646fb58dc1f027d5a5e328c6b",
+    "notes/boost.md": "81d145530436ed5636c06664171921ebc996edb990e972f1c7e303f19bb95d93",
+    "notes/curved.md": "0a4645d872e0f014284efd9eba8b6ae83478e19019f67147f084bf8d0795eafa",
+    "notes/plane.md": "b8c11467bb3614cf19a33676df44158efa4a844d10d75988ca6b716af82ad8b4",
+    "notes/scope.md": "d9e29f0146b6b233ce6f9e499e1ef1d0ff6b8c40c190cb36080bb27e426e569f",
+    "notes/sources.md": "641cbe0064ccda015a327c3bf9b4668faea060898f07a136cd9f8605dc151b64",
+    "src/p8a_double_null/__init__.py": "f436d9322ee3b202ea03a3658a2f42c36bb90fe336cda9f45f28f083a7df3a79",
+    "src/p8a_double_null/audit.py": "5d3674bd65cea9e4655af40909493183d5d747cc00c3ce7e2866b537ec2c9fd1",
+    "src/p8a_double_null/boost.py": "ba0531b060250f4916a75559e4e84ded16444b6484456b08a8601dfbe408652d",
+    "src/p8a_double_null/curved.py": "0adad4d59545d5eb8f9a9c2345af16cf38bcea3dcb34673355ca30c09c1c78ee",
+    "src/p8a_double_null/flat.py": "ad469185fefaec5db0d4f73e3e9e20ca4a4c3bb0a9e4e26ece0412c343aea627",
+    "src/p8a_double_null/independent.py": "91415c589b30b5c45027e81b9a70df4b6c4d2c120fda468c3e74108a7c34d14c",
+    "src/p8a_double_null/verify.py": "098f1cd95a9345c9c774f1101a60eaea5c16897fd0a0d49b03a4c33870e6bcb6",
+    "tests/conftest.py": "48aa320ff1427aac62f5350fa8b6ce1b8e2d7c61bfed22ec9f621fd70c37e8a9",
+    "tests/test_physical_double_null_certificate.py": "6656e4f1c582081e38daee64aa87c8a4c8ca8ae523950cd0d86515b4e44615c9",
+    "tests/test_physical_double_null_science.py": "66bb1aa26cc2088a036ba8ce9b049f65e7ac5fd61a68084f6a9b7f794cf198fc"
+  },
+  "status": "COMPLETE_EXPLICIT_NONOPTIMAL_PHYSICAL_DOUBLE_NULL_DIFFERENCE_QEI_WITH_ONE_SIDED_WICK_CAP_AND_CONFORMAL_FLRW_TRANSPORT; NULL_FOCUSING_AND_ORIGINAL_P8_OPEN",
+  "verdict": "Smearing the actual physical null stress over both null directions gives an explicit finite nonoptimal lower bound with a one-sided Wick upper cap in the stated coupling range. A normalized compact conformal example retains both widths and has coefficient 14117/(1536*pi^2), and the physical affine-null FLRW transport retains the full scalar reference. The single-null limit diverges and a two-dimensional average alone is not a null focusing theorem; original P8 remains open.",
+  "verification_boundary": "Native physical sampler identities, the full mass-shell and half-Fourier normalization, exact derivative matrix and product Gram, independent Fraction profile/cost reconstruction, affine conformal weights and actual scalar-reference contraction. Positive-type restriction, compact Sobolev density and curved transport are written source-pinned arguments, not proof-assistant formalized or independently peer reviewed.",
+  "written_proofs": [
+    "notes/plane.md",
+    "notes/boost.md",
+    "notes/curved.md",
+    "notes/scope.md",
+    "notes/sources.md"
+  ]
+}
