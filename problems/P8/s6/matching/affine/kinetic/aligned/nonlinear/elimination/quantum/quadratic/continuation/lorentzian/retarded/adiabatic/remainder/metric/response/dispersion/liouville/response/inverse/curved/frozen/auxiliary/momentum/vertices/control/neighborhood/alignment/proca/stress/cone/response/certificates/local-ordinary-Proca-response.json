@@ -1,0 +1,865 @@
+{
+  "actual_clock_chart_local_Euler_currents": {
+    "N": {
+      "0": "0",
+      "1": "40*hat_logscale_source1*u*(2*u**6 + 6*u**4 + 6*u**2 + 5)/(u**2 + 1)**4 + 10*hat_logscale_source2/(u**2 + 1)**3 - 10*source0*(88*u**14 + 536*u**12 + 1368*u**10 + 2084*u**8 + 2104*u**6 + 1296*u**4 + 421*u**2 + 29)/(3*(u**2 + 1)**8) + 5*source2/(u**2 + 1)**6",
+      "2": "32*hat_logscale_source1*u*(11*u**8 + 24*u**6 + 6*u**4 - u**2 - 18)/(u**2 + 1)**6 - 8*hat_logscale_source2*(26*u**8 + 76*u**6 + 72*u**4 + 47*u**2 + 7)/(u**2 + 1)**5 - 16*hat_logscale_source3*u*(u**6 + 3*u**4 + 3*u**2 + 4)/(u**2 + 1)**4 - 2*hat_logscale_source4/(u**2 + 1)**3 - 8*source0*(308*u**14 + 1372*u**12 + 2244*u**10 + 2140*u**8 + 1172*u**6 - 132*u**4 - 247*u**2 - 29)/(u**2 + 1)**9 + 16*source1*u*(40*u**14 + 248*u**12 + 648*u**10 + 970*u**8 + 940*u**6 + 600*u**4 + 219*u**2 + 47)/(u**2 + 1)**9 + 8*source2*(8*u**14 + 48*u**12 + 120*u**10 + 185*u**8 + 200*u**6 + 138*u**4 + 57*u**2 + 5)/(u**2 + 1)**8 - source4/(u**2 + 1)**6"
+    },
+    "V": {
+      "0": "0",
+      "1": "240*hat_logscale_source1*u/(u**2 + 1) + 20*hat_logscale_source2 - 20*source0*(44*u**8 + 136*u**6 + 144*u**4 + 71*u**2 + 7)/(u**2 + 1)**5 - 80*source1*u/(u**2 + 1) + 10*source2/(u**2 + 1)**3",
+      "2": "192*hat_logscale_source1*u*(5*u**2 - 3)/(u**2 + 1)**3 - 144*hat_logscale_source2*(3*u**2 + 1)/(u**2 + 1)**2 - 96*hat_logscale_source3*u/(u**2 + 1) - 4*hat_logscale_source4 - 48*source0*(126*u**8 + 224*u**6 + 60*u**4 - 9*u**2 - 13)/(u**2 + 1)**6 + 96*source1*u*(8*u**8 + 36*u**6 + 60*u**4 + 41*u**2 + 15)/(u**2 + 1)**6 + 16*source2*(20*u**8 + 64*u**6 + 72*u**4 + 41*u**2 + 4)/(u**2 + 1)**5 + 16*source3*u/(u**2 + 1) - 2*source4/(u**2 + 1)**3"
+    }
+  },
+  "actual_metric_pullback_and_fixed_local_profile_densities": {
+    "0": {
+      "actual_fixed_local_profile_quadratic_density": "-45*hat_logscale_source0**2/4 - 15*hat_logscale_source0*source0*(2*u**6 + 6*u**4 + 6*u**2 + 5)/(4*(u**2 + 1)**3) + 15*source0**2*(2*u**6 + 6*u**4 + 6*u**2 - 5)/(16*(u**2 + 1)**6)",
+      "combined_local_quadratic_density": "0",
+      "metric_linear_pullback_and_second_map_contact": "45*hat_logscale_source0**2/4 + 15*hat_logscale_source0*source0*(2*u**6 + 6*u**4 + 6*u**2 + 5)/(4*(u**2 + 1)**3) - 15*source0**2*(2*u**6 + 6*u**4 + 6*u**2 - 5)/(16*(u**2 + 1)**6)"
+    },
+    "1": {
+      "actual_fixed_local_profile_quadratic_density": "-120*hat_logscale_source0**2*(5*u**2 + 1)/(u**2 + 1)**2 - 120*hat_logscale_source0*source0*(4*u**8 + 12*u**6 + 12*u**4 + 9*u**2 + 1)/(u**2 + 1)**5 + 10*source0**2*(4*u**14 + 20*u**12 + 36*u**10 + 38*u**8 + 52*u**6 + 72*u**4 - 53*u**2 - 7)/(3*(u**2 + 1)**8)",
+      "combined_local_quadratic_density": "60*hat_logscale_source0**2*(11*u**2 + 1)/(u**2 + 1)**2 + 480*hat_logscale_source0*hat_logscale_source1*u/(u**2 + 1) + 30*hat_logscale_source0*hat_logscale_source2 - 30*hat_logscale_source0*source0*(44*u**8 + 136*u**6 + 144*u**4 + 61*u**2 + 5)/(u**2 + 1)**5 - 60*hat_logscale_source0*source1*u*(2*u**6 + 6*u**4 + 6*u**2 + 1)/(u**2 + 1)**4 + 15*hat_logscale_source0*source2/(u**2 + 1)**3 + 20*hat_logscale_source1**2 - 40*hat_logscale_source1*source0*u*(4*u**6 + 12*u**4 + 12*u**2 + 1)/(u**2 + 1)**4 - 10*hat_logscale_source1*source1*(u**6 + 3*u**4 + 3*u**2 - 1)/(u**2 + 1)**3 - 5*hat_logscale_source2*source0*(2*u**6 + 6*u**4 + 6*u**2 - 1)/(u**2 + 1)**3 + 10*source0**2*(88*u**14 + 536*u**12 + 1368*u**10 + 1763*u**8 + 1120*u**6 + 270*u**4 - 26*u**2 - 10)/(3*(u**2 + 1)**8) + 10*source0*source1*u**3*(u**4 + 3*u**2 + 3)*(8*u**6 + 24*u**4 + 24*u**2 + 11)/(u**2 + 1)**7 - 5*source0*source2*(2*u**6 + 6*u**4 + 6*u**2 - 1)/(2*(u**2 + 1)**6) - 5*source1**2*u**2*(u**4 + 3*u**2 + 3)/(u**2 + 1)**6",
+      "metric_linear_pullback_and_second_map_contact": "180*hat_logscale_source0**2*(7*u**2 + 1)/(u**2 + 1)**2 + 480*hat_logscale_source0*hat_logscale_source1*u/(u**2 + 1) + 30*hat_logscale_source0*hat_logscale_source2 - 30*hat_logscale_source0*source0*(28*u**8 + 88*u**6 + 96*u**4 + 25*u**2 + 1)/(u**2 + 1)**5 - 60*hat_logscale_source0*source1*u*(2*u**6 + 6*u**4 + 6*u**2 + 1)/(u**2 + 1)**4 + 15*hat_logscale_source0*source2/(u**2 + 1)**3 + 20*hat_logscale_source1**2 - 40*hat_logscale_source1*source0*u*(4*u**6 + 12*u**4 + 12*u**2 + 1)/(u**2 + 1)**4 - 10*hat_logscale_source1*source1*(u**6 + 3*u**4 + 3*u**2 - 1)/(u**2 + 1)**3 - 5*hat_logscale_source2*source0*(2*u**6 + 6*u**4 + 6*u**2 - 1)/(u**2 + 1)**3 + 10*source0**2*(28*u**14 + 172*u**12 + 444*u**10 + 575*u**8 + 356*u**6 + 66*u**4 + 9*u**2 - 1)/(u**2 + 1)**8 + 10*source0*source1*u**3*(u**4 + 3*u**2 + 3)*(8*u**6 + 24*u**4 + 24*u**2 + 11)/(u**2 + 1)**7 - 5*source0*source2*(2*u**6 + 6*u**4 + 6*u**2 - 1)/(2*(u**2 + 1)**6) - 5*source1**2*u**2*(u**4 + 3*u**2 + 3)/(u**2 + 1)**6"
+    },
+    "2": {
+      "actual_fixed_local_profile_quadratic_density": "-288*hat_logscale_source0**2*(7*u**4 - 1)/(u**2 + 1)**4 - 96*hat_logscale_source0*source0*(21*u**10 + 49*u**8 + 22*u**6 + 3*u**4 - 11*u**2 - 2)/(u**2 + 1)**7 + 8*source0**2*(14*u**16 + 56*u**14 + 48*u**12 - 104*u**10 - 176*u**8 + 12*u**6 - 31*u**4 + 20*u**2 + 3)/(u**2 + 1)**10",
+      "combined_local_quadratic_density": "-48*hat_logscale_source0**2*(921*u**4 + 202*u**2 - 15)/(5*(u**2 + 1)**4) - 3712*hat_logscale_source0*hat_logscale_source1*u*(7*u**2 + 1)/(5*(u**2 + 1)**3) - 16*hat_logscale_source0*hat_logscale_source2*(101*u**2 + 15)/(5*(u**2 + 1)**2) + 96*hat_logscale_source0*source0*(606*u**8 + 1484*u**6 + 1160*u**4 + 290*u**2 + 25)/(5*(u**2 + 1)**6) + 32*hat_logscale_source0*source1*u*(202*u**8 + 636*u**6 + 696*u**4 + 189*u**2 + 17)/(5*(u**2 + 1)**6) - 8*hat_logscale_source0*source2*(101*u**2 + 15)/(5*(u**2 + 1)**5) - 464*hat_logscale_source1**2*(23*u**2 + 1)/(15*(u**2 + 1)**2) - 928*hat_logscale_source1*hat_logscale_source2*u/(15*(u**2 + 1)) + 1856*hat_logscale_source1*source0*u*(14*u**8 + 44*u**6 + 48*u**4 + 21*u**2 + 2)/(5*(u**2 + 1)**6) + 16*hat_logscale_source1*source1*(333*u**8 + 1014*u**6 + 1044*u**4 + 59*u**2 - 14)/(15*(u**2 + 1)**5) - 464*hat_logscale_source1*source2*u/(15*(u**2 + 1)**4) - 2*hat_logscale_source2**2 + 4*hat_logscale_source2*source0*(404*u**8 + 1272*u**6 + 1392*u**4 + 509*u**2 + 45)/(5*(u**2 + 1)**5) + 8*hat_logscale_source2*source1*u*(30*u**6 + 90*u**4 + 90*u**2 + 17)/(15*(u**2 + 1)**4) - 2*hat_logscale_source2*source2/(u**2 + 1)**3 - 2*source0**2*(22472*u**16 + 141856*u**14 + 379584*u**12 + 564424*u**10 + 504296*u**8 + 266736*u**6 + 77663*u**4 + 8422*u**2 + 255)/(5*(u**2 + 1)**10) - 8*source0*source1*u*(3232*u**14 + 19872*u**12 + 51360*u**10 + 70760*u**8 + 54684*u**6 + 22884*u**4 + 3541*u**2 + 189)/(15*(u**2 + 1)**9) + 2*source0*source2*(404*u**8 + 1272*u**6 + 1392*u**4 + 509*u**2 + 45)/(5*(u**2 + 1)**8) - 4*source1**2*(120*u**14 + 720*u**12 + 1800*u**10 + 2094*u**8 + 852*u**6 - 288*u**4 - 35*u**2 - 1)/(15*(u**2 + 1)**8) + 4*source1*source2*u*(30*u**6 + 90*u**4 + 90*u**2 + 17)/(15*(u**2 + 1)**7) - source2**2/(2*(u**2 + 1)**6)",
+      "metric_linear_pullback_and_second_map_contact": "-48*hat_logscale_source0**2*(711*u**4 + 202*u**2 + 15)/(5*(u**2 + 1)**4) - 3712*hat_logscale_source0*hat_logscale_source1*u*(7*u**2 + 1)/(5*(u**2 + 1)**3) - 16*hat_logscale_source0*hat_logscale_source2*(101*u**2 + 15)/(5*(u**2 + 1)**2) + 96*hat_logscale_source0*source0*(711*u**10 + 2335*u**8 + 2754*u**6 + 1465*u**4 + 260*u**2 + 15)/(5*(u**2 + 1)**7) + 32*hat_logscale_source0*source1*u*(202*u**8 + 636*u**6 + 696*u**4 + 189*u**2 + 17)/(5*(u**2 + 1)**6) - 8*hat_logscale_source0*source2*(101*u**2 + 15)/(5*(u**2 + 1)**5) - 464*hat_logscale_source1**2*(23*u**2 + 1)/(15*(u**2 + 1)**2) - 928*hat_logscale_source1*hat_logscale_source2*u/(15*(u**2 + 1)) + 1856*hat_logscale_source1*source0*u*(14*u**8 + 44*u**6 + 48*u**4 + 21*u**2 + 2)/(5*(u**2 + 1)**6) + 16*hat_logscale_source1*source1*(333*u**8 + 1014*u**6 + 1044*u**4 + 59*u**2 - 14)/(15*(u**2 + 1)**5) - 464*hat_logscale_source1*source2*u/(15*(u**2 + 1)**4) - 2*hat_logscale_source2**2 + 4*hat_logscale_source2*source0*(404*u**8 + 1272*u**6 + 1392*u**4 + 509*u**2 + 45)/(5*(u**2 + 1)**5) + 8*hat_logscale_source2*source1*u*(30*u**6 + 90*u**4 + 90*u**2 + 17)/(15*(u**2 + 1)**4) - 2*hat_logscale_source2*source2/(u**2 + 1)**3 - 2*source0**2*(22752*u**16 + 142976*u**14 + 380544*u**12 + 562344*u**10 + 500776*u**8 + 266976*u**6 + 77043*u**4 + 8822*u**2 + 315)/(5*(u**2 + 1)**10) - 8*source0*source1*u*(3232*u**14 + 19872*u**12 + 51360*u**10 + 70760*u**8 + 54684*u**6 + 22884*u**4 + 3541*u**2 + 189)/(15*(u**2 + 1)**9) + 2*source0*source2*(404*u**8 + 1272*u**6 + 1392*u**4 + 509*u**2 + 45)/(5*(u**2 + 1)**8) - 4*source1**2*(120*u**14 + 720*u**12 + 1800*u**10 + 2094*u**8 + 852*u**6 - 288*u**4 - 35*u**2 - 1)/(15*(u**2 + 1)**8) + 4*source1*source2*u*(30*u**6 + 90*u**4 + 90*u**2 + 17)/(15*(u**2 + 1)**7) - source2**2/(2*(u**2 + 1)**6)"
+    }
+  },
+  "actual_nonlinear_clock_chart_derivatives_and_time_jets": {
+    "linear_physical_logscale_jet": [
+      "hat_logscale_source0 + source0/(2*(u**2 + 1)**3)",
+      "hat_logscale_source1 - 3*source0*u/(u**2 + 1)**4 + source1/(2*(u**2 + 1)**3)",
+      "hat_logscale_source2 + 3*source0*(7*u**2 - 1)/(u**2 + 1)**5 - 6*source1*u/(u**2 + 1)**4 + source2/(2*(u**2 + 1)**3)",
+      "hat_logscale_source3 - 24*source0*u*(7*u**2 - 3)/(u**2 + 1)**6 + 9*source1*(7*u**2 - 1)/(u**2 + 1)**5 - 9*source2*u/(u**2 + 1)**4 + source3/(2*(u**2 + 1)**3)",
+      "hat_logscale_source4 + 72*source0*(21*u**4 - 18*u**2 + 1)/(u**2 + 1)**7 - 96*source1*u*(7*u**2 - 3)/(u**2 + 1)**6 + 18*source2*(7*u**2 - 1)/(u**2 + 1)**5 - 12*source3*u/(u**2 + 1)**4 + source4/(2*(u**2 + 1)**3)",
+      "hat_logscale_source5 - 720*source0*u*(21*u**4 - 30*u**2 + 5)/(u**2 + 1)**8 + 360*source1*(21*u**4 - 18*u**2 + 1)/(u**2 + 1)**7 - 240*source2*u*(7*u**2 - 3)/(u**2 + 1)**6 + 30*source3*(7*u**2 - 1)/(u**2 + 1)**5 - 15*source4*u/(u**2 + 1)**4 + source5/(2*(u**2 + 1)**3)",
+      "hat_logscale_source6 + 720*source0*(231*u**6 - 495*u**4 + 165*u**2 - 5)/(u**2 + 1)**9 - 4320*source1*u*(21*u**4 - 30*u**2 + 5)/(u**2 + 1)**8 + 1080*source2*(21*u**4 - 18*u**2 + 1)/(u**2 + 1)**7 - 480*source3*u*(7*u**2 - 3)/(u**2 + 1)**6 + 45*source4*(7*u**2 - 1)/(u**2 + 1)**5 - 18*source5*u/(u**2 + 1)**4 + source6/(2*(u**2 + 1)**3)",
+      "hat_logscale_source7 - 60480*source0*u*(33*u**6 - 99*u**4 + 55*u**2 - 5)/(u**2 + 1)**10 + 5040*source1*(231*u**6 - 495*u**4 + 165*u**2 - 5)/(u**2 + 1)**9 - 15120*source2*u*(21*u**4 - 30*u**2 + 5)/(u**2 + 1)**8 + 2520*source3*(21*u**4 - 18*u**2 + 1)/(u**2 + 1)**7 - 840*source4*u*(7*u**2 - 3)/(u**2 + 1)**6 + 63*source5*(7*u**2 - 1)/(u**2 + 1)**5 - 21*source6*u/(u**2 + 1)**4 + source7/(2*(u**2 + 1)**3)",
+      "hat_logscale_source8 + 60480*source0*(429*u**8 - 1716*u**6 + 1430*u**4 - 260*u**2 + 5)/(u**2 + 1)**11 - 483840*source1*u*(33*u**6 - 99*u**4 + 55*u**2 - 5)/(u**2 + 1)**10 + 20160*source2*(231*u**6 - 495*u**4 + 165*u**2 - 5)/(u**2 + 1)**9 - 40320*source3*u*(21*u**4 - 30*u**2 + 5)/(u**2 + 1)**8 + 5040*source4*(21*u**4 - 18*u**2 + 1)/(u**2 + 1)**7 - 1344*source5*u*(7*u**2 - 3)/(u**2 + 1)**6 + 84*source6*(7*u**2 - 1)/(u**2 + 1)**5 - 24*source7*u/(u**2 + 1)**4 + source8/(2*(u**2 + 1)**3)",
+      "hat_logscale_source9 - 362880*source0*u*(1001*u**8 - 5148*u**6 + 6006*u**4 - 1820*u**2 + 105)/(u**2 + 1)**12 + 544320*source1*(429*u**8 - 1716*u**6 + 1430*u**4 - 260*u**2 + 5)/(u**2 + 1)**11 - 2177280*source2*u*(33*u**6 - 99*u**4 + 55*u**2 - 5)/(u**2 + 1)**10 + 60480*source3*(231*u**6 - 495*u**4 + 165*u**2 - 5)/(u**2 + 1)**9 - 90720*source4*u*(21*u**4 - 30*u**2 + 5)/(u**2 + 1)**8 + 9072*source5*(21*u**4 - 18*u**2 + 1)/(u**2 + 1)**7 - 2016*source6*u*(7*u**2 - 3)/(u**2 + 1)**6 + 108*source7*(7*u**2 - 1)/(u**2 + 1)**5 - 27*source8*u/(u**2 + 1)**4 + source9/(2*(u**2 + 1)**3)"
+    ],
+    "omega_N": "1/(2*(u**2 + 1)**3)",
+    "omega_NN": "-3/(2*(u**2 + 1)**3) + (u**2 + 1)**(-6)"
+  },
+  "actual_normalized_local_physical_stress_response": {
+    "energy": {
+      "0": "0",
+      "1": "-80*logscale_source1*u/(u**2 + 1) + 320*source0*u**2/(u**2 + 1)**2",
+      "2": "-32*logscale_source1*u*(11*u**2 - 9)/(u**2 + 1)**3 + 16*logscale_source2*(13*u**2 - 1)/(u**2 + 1)**2 + 16*logscale_source3*u/(u**2 + 1) + 128*source0*(21*u**4 - 14*u**2 + 1)/(u**2 + 1)**4 - 128*source1*u*(5*u**2 + 1)/(u**2 + 1)**3 - 64*source2*u**2/(u**2 + 1)**2"
+    },
+    "pressure": {
+      "0": "0",
+      "1": "80*logscale_source1*u/(u**2 + 1) + 20*logscale_source2/3 - 160*source0*(5*u**2 + 1)/(3*(u**2 + 1)**2) - 80*source1*u/(3*(u**2 + 1))",
+      "2": "64*logscale_source1*u*(5*u**2 - 3)/(u**2 + 1)**3 - 48*logscale_source2*(3*u**2 + 1)/(u**2 + 1)**2 - 32*logscale_source3*u/(u**2 + 1) - 4*logscale_source4/3 - 256*source0*(7*u**4 - 1)/(u**2 + 1)**4 + 128*source1*u*(2*u**2 + 3)/(u**2 + 1)**3 + 64*source2*(5*u**2 + 1)/(3*(u**2 + 1)**2) + 16*source3*u/(3*(u**2 + 1))"
+    }
+  },
+  "actual_physical_coordinate_Euler_currents": {
+    "N": {
+      "0": "15*logscale_source0/2",
+      "1": "480*logscale_source0*u**2/(u**2 + 1)**2 + 80*logscale_source1*u/(u**2 + 1) - 320*source0*u**2/(u**2 + 1)**2",
+      "2": "96*logscale_source0*(21*u**4 - 14*u**2 + 1)/(u**2 + 1)**4 + 32*logscale_source1*u*(11*u**2 - 9)/(u**2 + 1)**3 - 16*logscale_source2*(13*u**2 - 1)/(u**2 + 1)**2 - 16*logscale_source3*u/(u**2 + 1) - 128*source0*(21*u**4 - 14*u**2 + 1)/(u**2 + 1)**4 + 128*source1*u*(5*u**2 + 1)/(u**2 + 1)**3 + 64*source2*u**2/(u**2 + 1)**2"
+    },
+    "Z": {
+      "0": "45*logscale_source0/2 + 15*source0/2",
+      "1": "240*logscale_source0*(5*u**2 + 1)/(u**2 + 1)**2 + 240*logscale_source1*u/(u**2 + 1) + 20*logscale_source2 - 80*source0*(5*u**2 + 1)/(u**2 + 1)**2 - 80*source1*u/(u**2 + 1)",
+      "2": "576*logscale_source0*(7*u**4 - 1)/(u**2 + 1)**4 + 192*logscale_source1*u*(5*u**2 - 3)/(u**2 + 1)**3 - 144*logscale_source2*(3*u**2 + 1)/(u**2 + 1)**2 - 96*logscale_source3*u/(u**2 + 1) - 4*logscale_source4 - 576*source0*(7*u**4 - 1)/(u**2 + 1)**4 + 384*source1*u*(2*u**2 + 3)/(u**2 + 1)**3 + 64*source2*(5*u**2 + 1)/(u**2 + 1)**2 + 16*source3*u/(u**2 + 1)"
+    }
+  },
+  "checked_scalar_entries": 250,
+  "claim": "P8-S6.84.LOCAL_ORDINARY_PROCA_RESPONSE",
+  "continuous_local_response_coefficient_envelopes": {
+    "clock_chart_finite_local_plus_its_fixed_profile": {
+      "N": {
+        "0": {
+          "box_reconstructions": {
+            "N0": "0",
+            "N1": "0",
+            "N2": "0",
+            "N3": "0",
+            "N4": "0",
+            "V0": "0",
+            "V1": "0",
+            "V2": "0",
+            "V3": "0",
+            "V4": "0"
+          },
+          "coefficient_absolute_envelopes": {
+            "N": {
+              "0": "0",
+              "1": "0",
+              "2": "0",
+              "3": "0",
+              "4": "0"
+            },
+            "V": {
+              "0": "0",
+              "1": "0",
+              "2": "0",
+              "3": "0",
+              "4": "0"
+            }
+          },
+          "joint_source_norm_coefficient_upper": "0"
+        },
+        "1": {
+          "box_reconstructions": {
+            "N0": "0",
+            "N1": "0",
+            "N2": "0",
+            "N3": "0",
+            "N4": "0",
+            "V0": "0",
+            "V1": "0",
+            "V2": "0",
+            "V3": "0",
+            "V4": "0"
+          },
+          "coefficient_absolute_envelopes": {
+            "N": {
+              "0": "879745/1024",
+              "1": "0",
+              "2": "5",
+              "3": "0",
+              "4": "0"
+            },
+            "V": {
+              "0": "0",
+              "1": "1105/8",
+              "2": "10",
+              "3": "0",
+              "4": "0"
+            }
+          },
+          "joint_source_norm_coefficient_upper": "1036545/1024"
+        },
+        "2": {
+          "box_reconstructions": {
+            "N0": "0",
+            "N1": "0",
+            "N2": "0",
+            "N3": "0",
+            "N4": "0",
+            "V0": "0",
+            "V1": "0",
+            "V2": "0",
+            "V3": "0",
+            "V4": "0"
+          },
+          "coefficient_absolute_envelopes": {
+            "N": {
+              "0": "525177/512",
+              "1": "324449/256",
+              "2": "65233/256",
+              "3": "0",
+              "4": "1"
+            },
+            "V": {
+              "0": "0",
+              "1": "4875/16",
+              "2": "3141/16",
+              "3": "317/8",
+              "4": "2"
+            }
+          },
+          "joint_source_norm_coefficient_upper": "1582877/512"
+        }
+      },
+      "V": {
+        "0": {
+          "box_reconstructions": {
+            "N0": "0",
+            "N1": "0",
+            "N2": "0",
+            "N3": "0",
+            "N4": "0",
+            "V0": "0",
+            "V1": "0",
+            "V2": "0",
+            "V3": "0",
+            "V4": "0"
+          },
+          "coefficient_absolute_envelopes": {
+            "N": {
+              "0": "0",
+              "1": "0",
+              "2": "0",
+              "3": "0",
+              "4": "0"
+            },
+            "V": {
+              "0": "0",
+              "1": "0",
+              "2": "0",
+              "3": "0",
+              "4": "0"
+            }
+          },
+          "joint_source_norm_coefficient_upper": "0"
+        },
+        "1": {
+          "box_reconstructions": {
+            "N0": "0",
+            "N1": "0",
+            "N2": "0",
+            "N3": "0",
+            "N4": "0",
+            "V0": "0",
+            "V1": "0",
+            "V2": "0",
+            "V3": "0",
+            "V4": "0"
+          },
+          "coefficient_absolute_envelopes": {
+            "N": {
+              "0": "11535/16",
+              "1": "40",
+              "2": "10",
+              "3": "0",
+              "4": "0"
+            },
+            "V": {
+              "0": "0",
+              "1": "120",
+              "2": "20",
+              "3": "0",
+              "4": "0"
+            }
+          },
+          "joint_source_norm_coefficient_upper": "14575/16"
+        },
+        "2": {
+          "box_reconstructions": {
+            "N0": "0",
+            "N1": "0",
+            "N2": "0",
+            "N3": "0",
+            "N4": "0",
+            "V0": "0",
+            "V1": "0",
+            "V2": "0",
+            "V3": "0",
+            "V4": "0"
+          },
+          "coefficient_absolute_envelopes": {
+            "N": {
+              "0": "8829/8",
+              "1": "2841/2",
+              "2": "1269/4",
+              "3": "8",
+              "4": "2"
+            },
+            "V": {
+              "0": "0",
+              "1": "408",
+              "2": "252",
+              "3": "48",
+              "4": "4"
+            }
+          },
+          "joint_source_norm_coefficient_upper": "28507/8"
+        }
+      }
+    },
+    "physical_finite_local_response": {
+      "energy": {
+        "0": {
+          "box_reconstructions": {
+            "N0": "0",
+            "N1": "0",
+            "N2": "0",
+            "N3": "0",
+            "N4": "0",
+            "Z0": "0",
+            "Z1": "0",
+            "Z2": "0",
+            "Z3": "0",
+            "Z4": "0"
+          },
+          "coefficient_absolute_envelopes": {
+            "N": {
+              "0": "0",
+              "1": "0",
+              "2": "0",
+              "3": "0",
+              "4": "0"
+            },
+            "Z": {
+              "0": "0",
+              "1": "0",
+              "2": "0",
+              "3": "0",
+              "4": "0"
+            }
+          },
+          "joint_source_norm_coefficient_upper": "0"
+        },
+        "1": {
+          "box_reconstructions": {
+            "N0": "0",
+            "N1": "0",
+            "N2": "0",
+            "N3": "0",
+            "N4": "0",
+            "Z0": "0",
+            "Z1": "0",
+            "Z2": "0",
+            "Z3": "0",
+            "Z4": "0"
+          },
+          "coefficient_absolute_envelopes": {
+            "N": {
+              "0": "80",
+              "1": "0",
+              "2": "0",
+              "3": "0",
+              "4": "0"
+            },
+            "Z": {
+              "0": "0",
+              "1": "40",
+              "2": "0",
+              "3": "0",
+              "4": "0"
+            }
+          },
+          "joint_source_norm_coefficient_upper": "120"
+        },
+        "2": {
+          "box_reconstructions": {
+            "N0": "0",
+            "N1": "0",
+            "N2": "0",
+            "N3": "0",
+            "N4": "0",
+            "Z0": "0",
+            "Z1": "0",
+            "Z2": "0",
+            "Z3": "0",
+            "Z4": "0"
+          },
+          "coefficient_absolute_envelopes": {
+            "N": {
+              "0": "744",
+              "1": "144",
+              "2": "16",
+              "3": "0",
+              "4": "0"
+            },
+            "Z": {
+              "0": "0",
+              "1": "188",
+              "2": "68",
+              "3": "8",
+              "4": "0"
+            }
+          },
+          "joint_source_norm_coefficient_upper": "1168"
+        }
+      },
+      "pressure": {
+        "0": {
+          "box_reconstructions": {
+            "N0": "0",
+            "N1": "0",
+            "N2": "0",
+            "N3": "0",
+            "N4": "0",
+            "Z0": "0",
+            "Z1": "0",
+            "Z2": "0",
+            "Z3": "0",
+            "Z4": "0"
+          },
+          "coefficient_absolute_envelopes": {
+            "N": {
+              "0": "0",
+              "1": "0",
+              "2": "0",
+              "3": "0",
+              "4": "0"
+            },
+            "Z": {
+              "0": "0",
+              "1": "0",
+              "2": "0",
+              "3": "0",
+              "4": "0"
+            }
+          },
+          "joint_source_norm_coefficient_upper": "0"
+        },
+        "1": {
+          "box_reconstructions": {
+            "N0": "0",
+            "N1": "0",
+            "N2": "0",
+            "N3": "0",
+            "N4": "0",
+            "Z0": "0",
+            "Z1": "0",
+            "Z2": "0",
+            "Z3": "0",
+            "Z4": "0"
+          },
+          "coefficient_absolute_envelopes": {
+            "N": {
+              "0": "120",
+              "1": "40/3",
+              "2": "0",
+              "3": "0",
+              "4": "0"
+            },
+            "Z": {
+              "0": "0",
+              "1": "40",
+              "2": "20/3",
+              "3": "0",
+              "4": "0"
+            }
+          },
+          "joint_source_norm_coefficient_upper": "180"
+        },
+        "2": {
+          "box_reconstructions": {
+            "N0": "0",
+            "N1": "0",
+            "N2": "0",
+            "N3": "0",
+            "N4": "0",
+            "Z0": "0",
+            "Z1": "0",
+            "Z2": "0",
+            "Z3": "0",
+            "Z4": "0"
+          },
+          "coefficient_absolute_envelopes": {
+            "N": {
+              "0": "368",
+              "1": "224",
+              "2": "48",
+              "3": "8/3",
+              "4": "0"
+            },
+            "Z": {
+              "0": "0",
+              "1": "136",
+              "2": "84",
+              "3": "16",
+              "4": "4/3"
+            }
+          },
+          "joint_source_norm_coefficient_upper": "880"
+        }
+      }
+    }
+  },
+  "controls": {
+    "coefficientwise_exact_normalization_not_numeric_zero_tolerance": true,
+    "no_parent_scientific_function_or_model_monkeypatched": true,
+    "rejected_inputs": 100,
+    "validation_precedes_all_scientific_caches": true
+  },
+  "date": "2026-09-08",
+  "exact_residuals": {
+    "N_actual_constant_mass_pole_0": "0",
+    "N_actual_constant_mass_pole_1": "0",
+    "N_actual_constant_mass_pole_2": "0",
+    "N_independent_nonlinear_metric_map_Euler_0": "0",
+    "N_independent_nonlinear_metric_map_Euler_1": "0",
+    "N_independent_nonlinear_metric_map_Euler_2": "0",
+    "N_independent_ordinary_finite_heat_action_0": "0",
+    "N_independent_ordinary_finite_heat_action_1": "0",
+    "N_independent_ordinary_finite_heat_action_2": "0",
+    "N_no_source_derivative_above_four_0": "0",
+    "N_no_source_derivative_above_four_1": "0",
+    "N_no_source_derivative_above_four_2": "0",
+    "V_independent_nonlinear_metric_map_Euler_0": "0",
+    "V_independent_nonlinear_metric_map_Euler_1": "0",
+    "V_independent_nonlinear_metric_map_Euler_2": "0",
+    "Z_actual_constant_mass_pole_0": "0",
+    "Z_actual_constant_mass_pole_1": "0",
+    "Z_actual_constant_mass_pole_2": "0",
+    "Z_independent_ordinary_finite_heat_action_0": "0",
+    "Z_independent_ordinary_finite_heat_action_1": "0",
+    "Z_independent_ordinary_finite_heat_action_2": "0",
+    "Z_no_source_derivative_above_four_0": "0",
+    "Z_no_source_derivative_above_four_1": "0",
+    "Z_no_source_derivative_above_four_2": "0",
+    "actual_clock_chart_first_logscale_derivative": "0",
+    "actual_clock_chart_second_logscale_derivative": "0",
+    "actual_finite_local_fourth_coefficient_is_rank_one": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "actual_rank_one_fourth_order_null_direction": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        1
+      ]
+    },
+    "clock_chart_finite_local_plus_its_fixed_profile_N_order0_continuous_coefficient_N0": "0",
+    "clock_chart_finite_local_plus_its_fixed_profile_N_order0_continuous_coefficient_N1": "0",
+    "clock_chart_finite_local_plus_its_fixed_profile_N_order0_continuous_coefficient_N2": "0",
+    "clock_chart_finite_local_plus_its_fixed_profile_N_order0_continuous_coefficient_N3": "0",
+    "clock_chart_finite_local_plus_its_fixed_profile_N_order0_continuous_coefficient_N4": "0",
+    "clock_chart_finite_local_plus_its_fixed_profile_N_order0_continuous_coefficient_V0": "0",
+    "clock_chart_finite_local_plus_its_fixed_profile_N_order0_continuous_coefficient_V1": "0",
+    "clock_chart_finite_local_plus_its_fixed_profile_N_order0_continuous_coefficient_V2": "0",
+    "clock_chart_finite_local_plus_its_fixed_profile_N_order0_continuous_coefficient_V3": "0",
+    "clock_chart_finite_local_plus_its_fixed_profile_N_order0_continuous_coefficient_V4": "0",
+    "clock_chart_finite_local_plus_its_fixed_profile_N_order1_continuous_coefficient_N0": "0",
+    "clock_chart_finite_local_plus_its_fixed_profile_N_order1_continuous_coefficient_N1": "0",
+    "clock_chart_finite_local_plus_its_fixed_profile_N_order1_continuous_coefficient_N2": "0",
+    "clock_chart_finite_local_plus_its_fixed_profile_N_order1_continuous_coefficient_N3": "0",
+    "clock_chart_finite_local_plus_its_fixed_profile_N_order1_continuous_coefficient_N4": "0",
+    "clock_chart_finite_local_plus_its_fixed_profile_N_order1_continuous_coefficient_V0": "0",
+    "clock_chart_finite_local_plus_its_fixed_profile_N_order1_continuous_coefficient_V1": "0",
+    "clock_chart_finite_local_plus_its_fixed_profile_N_order1_continuous_coefficient_V2": "0",
+    "clock_chart_finite_local_plus_its_fixed_profile_N_order1_continuous_coefficient_V3": "0",
+    "clock_chart_finite_local_plus_its_fixed_profile_N_order1_continuous_coefficient_V4": "0",
+    "clock_chart_finite_local_plus_its_fixed_profile_N_order2_continuous_coefficient_N0": "0",
+    "clock_chart_finite_local_plus_its_fixed_profile_N_order2_continuous_coefficient_N1": "0",
+    "clock_chart_finite_local_plus_its_fixed_profile_N_order2_continuous_coefficient_N2": "0",
+    "clock_chart_finite_local_plus_its_fixed_profile_N_order2_continuous_coefficient_N3": "0",
+    "clock_chart_finite_local_plus_its_fixed_profile_N_order2_continuous_coefficient_N4": "0",
+    "clock_chart_finite_local_plus_its_fixed_profile_N_order2_continuous_coefficient_V0": "0",
+    "clock_chart_finite_local_plus_its_fixed_profile_N_order2_continuous_coefficient_V1": "0",
+    "clock_chart_finite_local_plus_its_fixed_profile_N_order2_continuous_coefficient_V2": "0",
+    "clock_chart_finite_local_plus_its_fixed_profile_N_order2_continuous_coefficient_V3": "0",
+    "clock_chart_finite_local_plus_its_fixed_profile_N_order2_continuous_coefficient_V4": "0",
+    "clock_chart_finite_local_plus_its_fixed_profile_V_order0_continuous_coefficient_N0": "0",
+    "clock_chart_finite_local_plus_its_fixed_profile_V_order0_continuous_coefficient_N1": "0",
+    "clock_chart_finite_local_plus_its_fixed_profile_V_order0_continuous_coefficient_N2": "0",
+    "clock_chart_finite_local_plus_its_fixed_profile_V_order0_continuous_coefficient_N3": "0",
+    "clock_chart_finite_local_plus_its_fixed_profile_V_order0_continuous_coefficient_N4": "0",
+    "clock_chart_finite_local_plus_its_fixed_profile_V_order0_continuous_coefficient_V0": "0",
+    "clock_chart_finite_local_plus_its_fixed_profile_V_order0_continuous_coefficient_V1": "0",
+    "clock_chart_finite_local_plus_its_fixed_profile_V_order0_continuous_coefficient_V2": "0",
+    "clock_chart_finite_local_plus_its_fixed_profile_V_order0_continuous_coefficient_V3": "0",
+    "clock_chart_finite_local_plus_its_fixed_profile_V_order0_continuous_coefficient_V4": "0",
+    "clock_chart_finite_local_plus_its_fixed_profile_V_order1_continuous_coefficient_N0": "0",
+    "clock_chart_finite_local_plus_its_fixed_profile_V_order1_continuous_coefficient_N1": "0",
+    "clock_chart_finite_local_plus_its_fixed_profile_V_order1_continuous_coefficient_N2": "0",
+    "clock_chart_finite_local_plus_its_fixed_profile_V_order1_continuous_coefficient_N3": "0",
+    "clock_chart_finite_local_plus_its_fixed_profile_V_order1_continuous_coefficient_N4": "0",
+    "clock_chart_finite_local_plus_its_fixed_profile_V_order1_continuous_coefficient_V0": "0",
+    "clock_chart_finite_local_plus_its_fixed_profile_V_order1_continuous_coefficient_V1": "0",
+    "clock_chart_finite_local_plus_its_fixed_profile_V_order1_continuous_coefficient_V2": "0",
+    "clock_chart_finite_local_plus_its_fixed_profile_V_order1_continuous_coefficient_V3": "0",
+    "clock_chart_finite_local_plus_its_fixed_profile_V_order1_continuous_coefficient_V4": "0",
+    "clock_chart_finite_local_plus_its_fixed_profile_V_order2_continuous_coefficient_N0": "0",
+    "clock_chart_finite_local_plus_its_fixed_profile_V_order2_continuous_coefficient_N1": "0",
+    "clock_chart_finite_local_plus_its_fixed_profile_V_order2_continuous_coefficient_N2": "0",
+    "clock_chart_finite_local_plus_its_fixed_profile_V_order2_continuous_coefficient_N3": "0",
+    "clock_chart_finite_local_plus_its_fixed_profile_V_order2_continuous_coefficient_N4": "0",
+    "clock_chart_finite_local_plus_its_fixed_profile_V_order2_continuous_coefficient_V0": "0",
+    "clock_chart_finite_local_plus_its_fixed_profile_V_order2_continuous_coefficient_V1": "0",
+    "clock_chart_finite_local_plus_its_fixed_profile_V_order2_continuous_coefficient_V2": "0",
+    "clock_chart_finite_local_plus_its_fixed_profile_V_order2_continuous_coefficient_V3": "0",
+    "clock_chart_finite_local_plus_its_fixed_profile_V_order2_continuous_coefficient_V4": "0",
+    "clock_with_fixed_local_profile_NN_weighted_adjoint_0_0": "0",
+    "clock_with_fixed_local_profile_NN_weighted_adjoint_0_1": "0",
+    "clock_with_fixed_local_profile_NN_weighted_adjoint_0_2": "0",
+    "clock_with_fixed_local_profile_NN_weighted_adjoint_0_3": "0",
+    "clock_with_fixed_local_profile_NN_weighted_adjoint_0_4": "0",
+    "clock_with_fixed_local_profile_NN_weighted_adjoint_1_0": "0",
+    "clock_with_fixed_local_profile_NN_weighted_adjoint_1_1": "0",
+    "clock_with_fixed_local_profile_NN_weighted_adjoint_1_2": "0",
+    "clock_with_fixed_local_profile_NN_weighted_adjoint_1_3": "0",
+    "clock_with_fixed_local_profile_NN_weighted_adjoint_1_4": "0",
+    "clock_with_fixed_local_profile_NN_weighted_adjoint_2_0": "0",
+    "clock_with_fixed_local_profile_NN_weighted_adjoint_2_1": "0",
+    "clock_with_fixed_local_profile_NN_weighted_adjoint_2_2": "0",
+    "clock_with_fixed_local_profile_NN_weighted_adjoint_2_3": "0",
+    "clock_with_fixed_local_profile_NN_weighted_adjoint_2_4": "0",
+    "clock_with_fixed_local_profile_NV_weighted_adjoint_0_0": "0",
+    "clock_with_fixed_local_profile_NV_weighted_adjoint_0_1": "0",
+    "clock_with_fixed_local_profile_NV_weighted_adjoint_0_2": "0",
+    "clock_with_fixed_local_profile_NV_weighted_adjoint_0_3": "0",
+    "clock_with_fixed_local_profile_NV_weighted_adjoint_0_4": "0",
+    "clock_with_fixed_local_profile_NV_weighted_adjoint_1_0": "0",
+    "clock_with_fixed_local_profile_NV_weighted_adjoint_1_1": "0",
+    "clock_with_fixed_local_profile_NV_weighted_adjoint_1_2": "0",
+    "clock_with_fixed_local_profile_NV_weighted_adjoint_1_3": "0",
+    "clock_with_fixed_local_profile_NV_weighted_adjoint_1_4": "0",
+    "clock_with_fixed_local_profile_NV_weighted_adjoint_2_0": "0",
+    "clock_with_fixed_local_profile_NV_weighted_adjoint_2_1": "0",
+    "clock_with_fixed_local_profile_NV_weighted_adjoint_2_2": "0",
+    "clock_with_fixed_local_profile_NV_weighted_adjoint_2_3": "0",
+    "clock_with_fixed_local_profile_NV_weighted_adjoint_2_4": "0",
+    "clock_with_fixed_local_profile_VV_weighted_adjoint_0_0": "0",
+    "clock_with_fixed_local_profile_VV_weighted_adjoint_0_1": "0",
+    "clock_with_fixed_local_profile_VV_weighted_adjoint_0_2": "0",
+    "clock_with_fixed_local_profile_VV_weighted_adjoint_0_3": "0",
+    "clock_with_fixed_local_profile_VV_weighted_adjoint_0_4": "0",
+    "clock_with_fixed_local_profile_VV_weighted_adjoint_1_0": "0",
+    "clock_with_fixed_local_profile_VV_weighted_adjoint_1_1": "0",
+    "clock_with_fixed_local_profile_VV_weighted_adjoint_1_2": "0",
+    "clock_with_fixed_local_profile_VV_weighted_adjoint_1_3": "0",
+    "clock_with_fixed_local_profile_VV_weighted_adjoint_1_4": "0",
+    "clock_with_fixed_local_profile_VV_weighted_adjoint_2_0": "0",
+    "clock_with_fixed_local_profile_VV_weighted_adjoint_2_1": "0",
+    "clock_with_fixed_local_profile_VV_weighted_adjoint_2_2": "0",
+    "clock_with_fixed_local_profile_VV_weighted_adjoint_2_3": "0",
+    "clock_with_fixed_local_profile_VV_weighted_adjoint_2_4": "0",
+    "constant_local_potential_cancels_its_fixed_profile_exactly": "0",
+    "energy_physical_normalization_constant_spatial_rescaling_0": "0",
+    "energy_physical_normalization_constant_spatial_rescaling_1": "0",
+    "energy_physical_normalization_constant_spatial_rescaling_2": "0",
+    "no_invertible_two_source_fourth_local_block": "0",
+    "physical_NN_weighted_adjoint_0_0": "0",
+    "physical_NN_weighted_adjoint_0_1": "0",
+    "physical_NN_weighted_adjoint_0_2": "0",
+    "physical_NN_weighted_adjoint_0_3": "0",
+    "physical_NN_weighted_adjoint_0_4": "0",
+    "physical_NN_weighted_adjoint_1_0": "0",
+    "physical_NN_weighted_adjoint_1_1": "0",
+    "physical_NN_weighted_adjoint_1_2": "0",
+    "physical_NN_weighted_adjoint_1_3": "0",
+    "physical_NN_weighted_adjoint_1_4": "0",
+    "physical_NN_weighted_adjoint_2_0": "0",
+    "physical_NN_weighted_adjoint_2_1": "0",
+    "physical_NN_weighted_adjoint_2_2": "0",
+    "physical_NN_weighted_adjoint_2_3": "0",
+    "physical_NN_weighted_adjoint_2_4": "0",
+    "physical_NZ_weighted_adjoint_0_0": "0",
+    "physical_NZ_weighted_adjoint_0_1": "0",
+    "physical_NZ_weighted_adjoint_0_2": "0",
+    "physical_NZ_weighted_adjoint_0_3": "0",
+    "physical_NZ_weighted_adjoint_0_4": "0",
+    "physical_NZ_weighted_adjoint_1_0": "0",
+    "physical_NZ_weighted_adjoint_1_1": "0",
+    "physical_NZ_weighted_adjoint_1_2": "0",
+    "physical_NZ_weighted_adjoint_1_3": "0",
+    "physical_NZ_weighted_adjoint_1_4": "0",
+    "physical_NZ_weighted_adjoint_2_0": "0",
+    "physical_NZ_weighted_adjoint_2_1": "0",
+    "physical_NZ_weighted_adjoint_2_2": "0",
+    "physical_NZ_weighted_adjoint_2_3": "0",
+    "physical_NZ_weighted_adjoint_2_4": "0",
+    "physical_ZZ_weighted_adjoint_0_0": "0",
+    "physical_ZZ_weighted_adjoint_0_1": "0",
+    "physical_ZZ_weighted_adjoint_0_2": "0",
+    "physical_ZZ_weighted_adjoint_0_3": "0",
+    "physical_ZZ_weighted_adjoint_0_4": "0",
+    "physical_ZZ_weighted_adjoint_1_0": "0",
+    "physical_ZZ_weighted_adjoint_1_1": "0",
+    "physical_ZZ_weighted_adjoint_1_2": "0",
+    "physical_ZZ_weighted_adjoint_1_3": "0",
+    "physical_ZZ_weighted_adjoint_1_4": "0",
+    "physical_ZZ_weighted_adjoint_2_0": "0",
+    "physical_ZZ_weighted_adjoint_2_1": "0",
+    "physical_ZZ_weighted_adjoint_2_2": "0",
+    "physical_ZZ_weighted_adjoint_2_3": "0",
+    "physical_ZZ_weighted_adjoint_2_4": "0",
+    "physical_finite_local_response_energy_order0_continuous_coefficient_N0": "0",
+    "physical_finite_local_response_energy_order0_continuous_coefficient_N1": "0",
+    "physical_finite_local_response_energy_order0_continuous_coefficient_N2": "0",
+    "physical_finite_local_response_energy_order0_continuous_coefficient_N3": "0",
+    "physical_finite_local_response_energy_order0_continuous_coefficient_N4": "0",
+    "physical_finite_local_response_energy_order0_continuous_coefficient_Z0": "0",
+    "physical_finite_local_response_energy_order0_continuous_coefficient_Z1": "0",
+    "physical_finite_local_response_energy_order0_continuous_coefficient_Z2": "0",
+    "physical_finite_local_response_energy_order0_continuous_coefficient_Z3": "0",
+    "physical_finite_local_response_energy_order0_continuous_coefficient_Z4": "0",
+    "physical_finite_local_response_energy_order1_continuous_coefficient_N0": "0",
+    "physical_finite_local_response_energy_order1_continuous_coefficient_N1": "0",
+    "physical_finite_local_response_energy_order1_continuous_coefficient_N2": "0",
+    "physical_finite_local_response_energy_order1_continuous_coefficient_N3": "0",
+    "physical_finite_local_response_energy_order1_continuous_coefficient_N4": "0",
+    "physical_finite_local_response_energy_order1_continuous_coefficient_Z0": "0",
+    "physical_finite_local_response_energy_order1_continuous_coefficient_Z1": "0",
+    "physical_finite_local_response_energy_order1_continuous_coefficient_Z2": "0",
+    "physical_finite_local_response_energy_order1_continuous_coefficient_Z3": "0",
+    "physical_finite_local_response_energy_order1_continuous_coefficient_Z4": "0",
+    "physical_finite_local_response_energy_order2_continuous_coefficient_N0": "0",
+    "physical_finite_local_response_energy_order2_continuous_coefficient_N1": "0",
+    "physical_finite_local_response_energy_order2_continuous_coefficient_N2": "0",
+    "physical_finite_local_response_energy_order2_continuous_coefficient_N3": "0",
+    "physical_finite_local_response_energy_order2_continuous_coefficient_N4": "0",
+    "physical_finite_local_response_energy_order2_continuous_coefficient_Z0": "0",
+    "physical_finite_local_response_energy_order2_continuous_coefficient_Z1": "0",
+    "physical_finite_local_response_energy_order2_continuous_coefficient_Z2": "0",
+    "physical_finite_local_response_energy_order2_continuous_coefficient_Z3": "0",
+    "physical_finite_local_response_energy_order2_continuous_coefficient_Z4": "0",
+    "physical_finite_local_response_pressure_order0_continuous_coefficient_N0": "0",
+    "physical_finite_local_response_pressure_order0_continuous_coefficient_N1": "0",
+    "physical_finite_local_response_pressure_order0_continuous_coefficient_N2": "0",
+    "physical_finite_local_response_pressure_order0_continuous_coefficient_N3": "0",
+    "physical_finite_local_response_pressure_order0_continuous_coefficient_N4": "0",
+    "physical_finite_local_response_pressure_order0_continuous_coefficient_Z0": "0",
+    "physical_finite_local_response_pressure_order0_continuous_coefficient_Z1": "0",
+    "physical_finite_local_response_pressure_order0_continuous_coefficient_Z2": "0",
+    "physical_finite_local_response_pressure_order0_continuous_coefficient_Z3": "0",
+    "physical_finite_local_response_pressure_order0_continuous_coefficient_Z4": "0",
+    "physical_finite_local_response_pressure_order1_continuous_coefficient_N0": "0",
+    "physical_finite_local_response_pressure_order1_continuous_coefficient_N1": "0",
+    "physical_finite_local_response_pressure_order1_continuous_coefficient_N2": "0",
+    "physical_finite_local_response_pressure_order1_continuous_coefficient_N3": "0",
+    "physical_finite_local_response_pressure_order1_continuous_coefficient_N4": "0",
+    "physical_finite_local_response_pressure_order1_continuous_coefficient_Z0": "0",
+    "physical_finite_local_response_pressure_order1_continuous_coefficient_Z1": "0",
+    "physical_finite_local_response_pressure_order1_continuous_coefficient_Z2": "0",
+    "physical_finite_local_response_pressure_order1_continuous_coefficient_Z3": "0",
+    "physical_finite_local_response_pressure_order1_continuous_coefficient_Z4": "0",
+    "physical_finite_local_response_pressure_order2_continuous_coefficient_N0": "0",
+    "physical_finite_local_response_pressure_order2_continuous_coefficient_N1": "0",
+    "physical_finite_local_response_pressure_order2_continuous_coefficient_N2": "0",
+    "physical_finite_local_response_pressure_order2_continuous_coefficient_N3": "0",
+    "physical_finite_local_response_pressure_order2_continuous_coefficient_N4": "0",
+    "physical_finite_local_response_pressure_order2_continuous_coefficient_Z0": "0",
+    "physical_finite_local_response_pressure_order2_continuous_coefficient_Z1": "0",
+    "physical_finite_local_response_pressure_order2_continuous_coefficient_Z2": "0",
+    "physical_finite_local_response_pressure_order2_continuous_coefficient_Z3": "0",
+    "physical_finite_local_response_pressure_order2_continuous_coefficient_Z4": "0",
+    "pressure_physical_normalization_constant_spatial_rescaling_0": "0",
+    "pressure_physical_normalization_constant_spatial_rescaling_1": "0",
+    "pressure_physical_normalization_constant_spatial_rescaling_2": "0"
+  },
+  "formulation": "FORMULATION.md",
+  "named_exact_check_count": 246,
+  "new_finite_covariant_heat_quadratic_densities": {
+    "0": "45*logscale_source0**2/4 + 15*logscale_source0*source0/2",
+    "1": "180*logscale_source0**2*(7*u**2 + 1)/(u**2 + 1)**2 + 480*logscale_source0*logscale_source1*u/(u**2 + 1) + 30*logscale_source0*logscale_source2 - 120*logscale_source0*source0*(7*u**2 + 1)/(u**2 + 1)**2 - 120*logscale_source0*source1*u/(u**2 + 1) + 20*logscale_source1**2 - 160*logscale_source1*source0*u/(u**2 + 1) - 10*logscale_source1*source1 - 10*logscale_source2*source0 + 40*source0**2*(7*u**2 + 1)/(u**2 + 1)**2 + 80*source0*source1*u/(u**2 + 1)",
+    "2": "-48*logscale_source0**2*(711*u**4 + 202*u**2 + 15)/(5*(u**2 + 1)**4) - 3712*logscale_source0*logscale_source1*u*(7*u**2 + 1)/(5*(u**2 + 1)**3) - 16*logscale_source0*logscale_source2*(101*u**2 + 15)/(5*(u**2 + 1)**2) + 96*logscale_source0*source0*(711*u**4 + 202*u**2 + 15)/(5*(u**2 + 1)**4) + 64*logscale_source0*source1*u*(101*u**2 + 15)/(5*(u**2 + 1)**3) - 464*logscale_source1**2*(23*u**2 + 1)/(15*(u**2 + 1)**2) - 928*logscale_source1*logscale_source2*u/(15*(u**2 + 1)) + 3712*logscale_source1*source0*u*(7*u**2 + 1)/(5*(u**2 + 1)**3) + 16*logscale_source1*source1*(111*u**2 + 5)/(5*(u**2 + 1)**2) - 2*logscale_source2**2 + 16*logscale_source2*source0*(101*u**2 + 15)/(5*(u**2 + 1)**2) + 16*logscale_source2*source1*u/(u**2 + 1) - 64*source0**2*(711*u**4 + 202*u**2 + 15)/(5*(u**2 + 1)**4) - 256*source0*source1*u*(101*u**2 + 15)/(15*(u**2 + 1)**3) - 32*source1**2*u**2/(u**2 + 1)**2"
+  },
+  "new_rank_one_fourth_derivative_coefficient_and_null_direction": {
+    "actual_fourth_derivative_coefficient": [
+      [
+        "-1/(u**2 + 1)**6",
+        "-2/(u**2 + 1)**3"
+      ],
+      [
+        "-2/(u**2 + 1)**3",
+        "-4"
+      ]
+    ],
+    "expected_rank_one_coefficient": [
+      [
+        "-1/(u**2 + 1)**6",
+        "-2/(u**2 + 1)**3"
+      ],
+      [
+        "-2/(u**2 + 1)**3",
+        "-4"
+      ]
+    ],
+    "kernel_vector": [
+      [
+        "1"
+      ],
+      [
+        "-1/(2*(u**2 + 1)**3)"
+      ]
+    ]
+  },
+  "not_established": [
+    "The full state-dependent nonlocal Gaussian response and the rest of the fixed profile",
+    "A no-loss coupled causal inverse, all-frequency spectrum or quantum stability/cone",
+    "Higher-derivative truncation resummation as an exact particle spectrum",
+    "Canonical profile interactions, mixed loops, omitted operators or heavy-threshold error",
+    "Finite Wilson matching, common-parent V/G/B, UV completion/exclusion or original P8 closure"
+  ],
+  "prior_sha256": {
+    "S6_83_fully_rebuilt": "4b6ca08197fa6084c0e541ad4aa1dc4f786ce4673a212dca4f4238d1617ef407",
+    "classical_central_cone_not_promoted_to_a_quantum_cone": true
+  },
+  "proof_checks": {
+    "all_new_local_response_component_bounds_below_one_e_minus_790": true,
+    "coordinate_C4_bound_does_not_establish_a_coupled_causal_inverse": true,
+    "dimensional_poles_and_evanescent_counterterms_recomputed_with_all_mass_jets_zero": true,
+    "finite_local_response_not_the_new_nonlocal_gaussian_kernel": true,
+    "fixed_local_profile_part_is_a_decomposition_not_a_new_state_choice": true,
+    "full_nonlocal_response_mixed_loops_matching_and_original_P8_open": true,
+    "local_fourth_derivative_matrix_is_not_the_old_invertible_indefinite_matrix": true,
+    "no_higher_derivative_local_truncation_resummed_as_extra_particles": true,
+    "old_prepared_fourth_block_inverse_and_frozen_pole_not_transferred": true,
+    "physical_readout_normalization_is_varied_after_Euler_currents": true,
+    "pure_four_dimensional_divergences_omitted_only_as_compact_support_Euler_null": true,
+    "rank_one_local_fourth_derivative_coefficient_nonzero_on_I": true,
+    "same_fixed_mass_and_named_scale": true,
+    "second_nonlinear_metric_map_contact_retained": true,
+    "zero_order_constant_heat_term_cancels_its_fixed_profile": true
+  },
+  "same_scale_new_local_response_C4_to_C0_bounds": {
+    "M_tau": "10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "fixed_mass_time_product": "1000",
+    "full_nonlocal_or_mixed_loop_bound": false,
+    "normalization": "Dimensionless local Euler/stress response divided by M^2/tau^2; pi^2>9 supplies denominator 576.",
+    "response_bounds": {
+      "clock_chart_finite_local_plus_its_fixed_profile": {
+        "N": {
+          "C4_to_C0_upper": "518274082877/29491200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "adiabatic_half_order_bounds": {
+            "0": "0",
+            "1": "69103/3932160000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "2": "1582877/29491200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+          }
+        },
+        "V": {
+          "C4_to_C0_upper": "2429176169/153600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "adiabatic_half_order_bounds": {
+            "0": "0",
+            "1": "583/36864000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "2": "28507/460800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+          }
+        }
+      },
+      "physical_finite_local_response": {
+        "energy": {
+          "C4_to_C0_upper": "7500073/3600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "adiabatic_half_order_bounds": {
+            "0": "0",
+            "1": "1/480000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "2": "73/3600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+          }
+        },
+        "pressure": {
+          "C4_to_C0_upper": "2250011/720000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "adiabatic_half_order_bounds": {
+            "0": "0",
+            "1": "1/320000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "2": "11/720000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+          }
+        }
+      }
+    },
+    "source_norm": "Maximum of both source functions and their coordinate-time derivatives 0 through 4 on |u|<=1/2, in the declared physical or clock chart."
+  },
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "39447bf4b6948a612fe821c6032a28674101cc4c52124b1545b5784a86fb49a8",
+    "README.md": "14bf1bb501e23a400d27a3903a35f256f8352f898aa4c4216323171ed48f5ad1",
+    "notes/bounds.md": "f18e34d7e225b4d405e7ece2431328818956a80998303b6a303133e5fe3d52d7",
+    "notes/chart.md": "eeb07afe04ed71909e9f3b91fba3730f23dfb24c8a84d18b8e96c38a24890b2b",
+    "notes/matching.md": "222b3529c060c7089cf760df13eda3e0e8ce7d80039dd73e41cb62e70967cca1",
+    "notes/readouts.md": "eb87581daa01f202433a27ef5cacb16bbc54c5483aa1e114a93c05e474a2581e",
+    "notes/scope.md": "d241e3b0fd17d21184e3357a7a9e1b696dc9b0c75db7fd893fa98739731c01cc",
+    "src/p8_proca_local_response/__init__.py": "3ba65ac64a096feff7042c9e0b0d44aa4c681bfdd0967031c4f0feaf3e6c9217",
+    "src/p8_proca_local_response/audit.py": "0b20e98002ec62e4856f9c08b7ca0bb8be8790e14bfeada8659fa64d2a245f19",
+    "src/p8_proca_local_response/bounds.py": "568e23d5ea1a59bd42762275c2e210454165e5ca48eaf8de6fc25b6ab2a026c9",
+    "src/p8_proca_local_response/chart.py": "d8200f2e4bf9e4c57e865a9c4d856a8e9d5d16ff12056574bbe39f8c6ce28438",
+    "src/p8_proca_local_response/local.py": "e24be8aab8c58dbe31cf2759b41ecedd5915586b8ad286fd16741901097ecd79",
+    "src/p8_proca_local_response/verify.py": "d2b7ba9cb93e8692b5de4c19d175bcff2408ac551a247a1596fa84075685be61",
+    "tests/conftest.py": "58bc79f87a7a994a2730959fc1724134f4dd063f0286dc38a7450aa3e876df9e",
+    "tests/test_proca_local_response_certificate.py": "2e28c6667e0e210ac5b8d99af426226b80add00ba06a537d6ee327853f7bbb15",
+    "tests/test_proca_local_response_science.py": "af5d2bab1a579f81ce7ebaabef5606366a5510e88981b952337ce32e1e3e68cc"
+  },
+  "status": "NEW_CONSTANT_MASS_FINITE_LOCAL_METRIC_RESPONSE_AND_FIXED_LOCAL_PROFILE_PART_CONTROLLED; FULL_NONLOCAL_INVERSE_MATCHING_AND_ORIGINAL_P8_OPEN",
+  "verdict": "The actual constant-mass ordinary Proca pole and finite local matching are independently recomputed with all mass-source jets zero. Physical readout normalization, the second nonlinear metric-map contact and the already fixed local-profile part are retained. The constant vacuum-density term cancels its fixed-profile counterpart. Both physical and clock-chart coordinate Hessians satisfy the appropriate weighted adjoint identities. The new local fourth-derivative clock matrix is nonzero rank one, not the old invertible indefinite matrix. All four continuous C4-to-C0 component bounds are below 10^-790 at fixed m=1000,L=10^400.",
+  "verification_boundary": "Exact new dimensional/heat-action comparison, physical and nonlinear-chart variations, weighted Hessian adjoints and continuous rational coefficient bounds with explicit controls. The full parent chain is natively rebuilt. Finite local homogeneous response only; not proof-assistant formalization or a full quantum solution.",
+  "written_proofs": [
+    "notes/matching.md",
+    "notes/readouts.md",
+    "notes/chart.md",
+    "notes/bounds.md",
+    "notes/scope.md"
+  ]
+}
