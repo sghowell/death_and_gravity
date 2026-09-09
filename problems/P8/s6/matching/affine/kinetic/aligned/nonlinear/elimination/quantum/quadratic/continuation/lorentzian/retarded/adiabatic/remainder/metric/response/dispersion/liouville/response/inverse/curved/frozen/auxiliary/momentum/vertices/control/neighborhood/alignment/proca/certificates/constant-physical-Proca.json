@@ -1,0 +1,2060 @@
+{
+  "actual_nearby_vector_canonical_blocks": {
+    "constant_mass_coordinate_Hessian": [
+      [
+        "0",
+        "positive_hat_squared_momentum*positive_homogeneous_matter_momentum*positive_lapse_square_root**3",
+        "0"
+      ],
+      [
+        "positive_hat_squared_momentum*positive_homogeneous_matter_momentum*positive_lapse_square_root**3",
+        "positive_lapse_square_root*(1000000*positive_hat_squared_momentum*positive_lapse_square_root**2 + 16874985*positive_lapse_square_root**8 - 42734994*positive_lapse_square_root**4 + 25875009)/1000000",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "positive_hat_squared_momentum*positive_lapse_square_root**3"
+      ]
+    ],
+    "constant_mass_momentum_Hessian": [
+      [
+        "-(125000000000*positive_hat_squared_momentum**2*positive_lapse_square_root**4 + 6328119375000*positive_hat_squared_momentum*positive_lapse_square_root**10 - 12464373250000*positive_hat_squared_momentum*positive_lapse_square_root**6 + 5390626875000*positive_hat_squared_momentum*positive_lapse_square_root**2 - 56953023750045*positive_lapse_square_root**16 + 168268889302521*positive_lapse_square_root**12 - 75937432500000*positive_lapse_square_root**11 + 29109359249991*positive_lapse_square_root**8 + 64102491000000*positive_lapse_square_root**7 - 307157876212485*positive_lapse_square_root**4 + 38812513500000*positive_lapse_square_root**3 + 148781353500018)/(250000*positive_hat_squared_momentum**2*positive_lapse_square_root**3*(16874985*positive_lapse_square_root**8 - 14244998*positive_lapse_square_root**4 - 8625003))",
+        "positive_homogeneous_matter_momentum*(500000*positive_hat_squared_momentum*positive_lapse_square_root**2 - 16874985*positive_lapse_square_root**8 + 25875009)/(positive_hat_squared_momentum*positive_lapse_square_root*(16874985*positive_lapse_square_root**8 - 14244998*positive_lapse_square_root**4 - 8625003))",
+        "0"
+      ],
+      [
+        "positive_homogeneous_matter_momentum*(500000*positive_hat_squared_momentum*positive_lapse_square_root**2 - 16874985*positive_lapse_square_root**8 + 25875009)/(positive_hat_squared_momentum*positive_lapse_square_root*(16874985*positive_lapse_square_root**8 - 14244998*positive_lapse_square_root**4 - 8625003))",
+        "2*(5624995*positive_lapse_square_root**8 - 8625003)/(positive_lapse_square_root*(16874985*positive_lapse_square_root**8 - 14244998*positive_lapse_square_root**4 - 8625003))",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "(positive_hat_squared_momentum + 1000000*positive_lapse_square_root**2)/(positive_hat_squared_momentum*positive_lapse_square_root)"
+      ]
+    ],
+    "new_temporal_auxiliary_pivot": "-N**(5/2)",
+    "physical_lapse": "positive_lapse_square_root**2",
+    "physical_squared_spatial_momentum": "positive_hat_squared_momentum/positive_lapse_square_root**2",
+    "scope": "The exact same light constraint family is retained. The raw central vector Hamiltonian has positive kinetic and mass/gradient coefficients. Background time jets are not removed from the vector Euler equation; the covariant constrained-wave argument fixes its characteristic cone.",
+    "unchanged_zero_scalar_vector_cross_block": [
+      [
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0"
+      ]
+    ]
+  },
+  "actual_new_Hamiltonian": {
+    "canonical_Proca_mass_squared": "1000000",
+    "new_Hamiltonian": "N*(-B4*e_omega*spatial_curvature + e_omega*squared_matter_gradient/2 + e_omega*squared_vector_potential/2 - scalar_f - 2*squared_shear_momentum/(3*trace_a) + (background_trace_momentum - trace_b + trace_momentum_deviation)**2/(4*trace_a) + vector_momentum_divergence**2/(2*hat_volume) + (background_matter_momentum + matter_momentum_deviation)**2/(2*hat_volume) + normalized_squared_electric_momentum/(2*e_omega) + normalized_squared_magnetic_field/(4*e_omega))",
+    "new_minus_previous_Hamiltonian": "N*(e_omega*squared_vector_potential*(1 - 1/gamma_s)/2 + vector_momentum_divergence**2*(1 - gamma_t)/(2*hat_volume))",
+    "new_source_free_mass_matrix": [
+      [
+        "1",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "-1",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "-1",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "-1"
+      ]
+    ],
+    "new_temporal_Hessian": "-N*hat_volume",
+    "new_temporal_constraint_solution": "-vector_momentum_divergence/hat_volume",
+    "previous_source_free_Hamiltonian": "N*(-B4*e_omega*spatial_curvature + e_omega*squared_matter_gradient/2 + e_omega*squared_vector_potential/(2*gamma_s) + gamma_t*vector_momentum_divergence**2/(2*hat_volume) - scalar_f - 2*squared_shear_momentum/(3*trace_a) + (background_trace_momentum - trace_b + trace_momentum_deviation)**2/(4*trace_a) + (background_matter_momentum + matter_momentum_deviation)**2/(2*hat_volume) + normalized_squared_electric_momentum/(2*e_omega) + normalized_squared_magnetic_field/(4*e_omega))"
+  },
+  "actual_new_lapse_jet_inventory": {
+    "(0, 0, 0, 0, 0, 0, 0, 0, 0)": [
+      "-(800*u**22 + 7200*u**20 + 28000*u**18 + 60000*u**16 + 72000*u**14 + 33600*u**12 - 33600*u**10 - 72000*u**8 - 60000*u**6 - 28000*u**4 - 7200*u**2 - 801)/(100*(u**2 + 1)**12)",
+      "0",
+      "-(2000000*u**34 + 30000000*u**32 + 208000000*u**30 + 881500000*u**28 + 2543000000*u**26 + 5258500002*u**24 + 7985250024*u**22 + 8969250132*u**20 + 7431750440*u**18 + 4574750990*u**16 + 2308501584*u**14 + 1317999348*u**12 + 974486584*u**10 + 643963490*u**8 + 294207940*u**6 + 83235132*u**4 + 12757524*u**2 + 749377)/(250000*(u**2 + 1)**18)",
+      "3*(2000000*u**40 + 36000000*u**38 + 304000000*u**36 + 1581000000*u**34 + 5581000000*u**32 + 13816000004*u**30 + 23482250060*u**28 + 23576500420*u**26 + 269751817*u**24 - 46214369576*u**22 - 91264863186*u**20 - 103004108140*u**18 - 74077123245*u**16 - 29099816636*u**14 + 2189322248*u**12 + 11080034636*u**10 + 7571413975*u**8 + 2844191785*u**6 + 627187097*u**4 + 72369399*u**2 + 2874376)/(250000*(u**2 + 1)**21)",
+      "-3*(32000000*u**46 + 672000000*u**44 + 6688000000*u**42 + 41246000000*u**40 + 172784000000*u**38 + 502284000104*u**36 + 956113001872*u**34 + 792331015912*u**32 - 1725239915304*u**30 - 8408195684280*u**28 - 18709191126568*u**26 - 28067414185700*u**24 - 30252809898616*u**22 - 22872694088128*u**20 - 10205885675880*u**18 + 449476721332*u**16 + 4979691655144*u**14 + 4506364939932*u**12 + 2396004748096*u**10 + 843775058000*u**8 + 195237951904*u**6 + 27525536316*u**4 + 1999410360*u**2 + 52490645)/(1000000*(u**2 + 1)**24)"
+    ],
+    "(0, 0, 0, 0, 0, 0, 0, 0, 1)": [
+      "-1/2",
+      "-(2*u**6 + 6*u**4 + 6*u**2 - 1)/(4*(u**2 + 1)**3)",
+      "-3*(2*u**6 + 6*u**4 + 6*u**2 + 1)/(8*(u**2 + 1)**6)",
+      "3*(12*u**12 + 72*u**10 + 180*u**8 + 228*u**6 + 144*u**4 + 36*u**2 + 5)/(16*(u**2 + 1)**9)",
+      "-3*(96*u**18 + 864*u**16 + 3456*u**14 + 7908*u**12 + 11160*u**10 + 9756*u**8 + 5084*u**6 + 1536*u**4 + 348*u**2 + 35)/(32*(u**2 + 1)**12)"
+    ],
+    "(0, 0, 0, 0, 0, 0, 0, 1, 0)": [
+      "1/2",
+      "(2*u**6 + 6*u**4 + 6*u**2 + 3)/(4*(u**2 + 1)**3)",
+      "-(2*u**6 + 6*u**4 + 6*u**2 - 3)/(8*(u**2 + 1)**6)",
+      "3*(4*u**12 + 24*u**10 + 60*u**8 + 60*u**6 - 36*u**2 - 1)/(16*(u**2 + 1)**9)",
+      "-3*(32*u**18 + 288*u**16 + 1152*u**14 + 2428*u**12 + 2472*u**10 + 132*u**8 - 2092*u**6 - 1488*u**4 - 12*u**2 - 3)/(32*(u**2 + 1)**12)"
+    ],
+    "(0, 0, 0, 0, 0, 0, 1, 0, 0)": [
+      "1/2",
+      "(2*u**6 + 6*u**4 + 6*u**2 + 3)/(4*(u**2 + 1)**3)",
+      "-(2*u**6 + 6*u**4 + 6*u**2 - 3)/(8*(u**2 + 1)**6)",
+      "3*(4*u**12 + 24*u**10 + 60*u**8 + 60*u**6 - 36*u**2 - 1)/(16*(u**2 + 1)**9)",
+      "-3*(32*u**18 + 288*u**16 + 1152*u**14 + 2428*u**12 + 2472*u**10 + 132*u**8 - 2092*u**6 - 1488*u**4 - 12*u**2 - 3)/(32*(u**2 + 1)**12)"
+    ],
+    "(0, 0, 0, 0, 0, 1, 0, 0, 0)": [
+      "1/4",
+      "(2*u**6 + 6*u**4 + 6*u**2 + 1)/(8*(u**2 + 1)**3)",
+      "(2*u**6 + 6*u**4 + 6*u**2 - 1)/(16*(u**2 + 1)**6)",
+      "-3*(4*u**12 + 24*u**10 + 60*u**8 + 68*u**6 + 24*u**4 - 12*u**2 - 1)/(32*(u**2 + 1)**9)",
+      "3*(32*u**18 + 288*u**16 + 1152*u**14 + 2532*u**12 + 3096*u**10 + 1692*u**8 - 236*u**6 - 600*u**4 - 60*u**2 - 5)/(64*(u**2 + 1)**12)"
+    ],
+    "(0, 0, 0, 0, 1, 0, 0, 0, 0)": [
+      "1/2",
+      "(2*u**6 + 6*u**4 + 6*u**2 + 1)/(4*(u**2 + 1)**3)",
+      "(2*u**6 + 6*u**4 + 6*u**2 - 1)/(8*(u**2 + 1)**6)",
+      "-3*(4*u**12 + 24*u**10 + 60*u**8 + 68*u**6 + 24*u**4 - 12*u**2 - 1)/(16*(u**2 + 1)**9)",
+      "3*(32*u**18 + 288*u**16 + 1152*u**14 + 2532*u**12 + 3096*u**10 + 1692*u**8 - 236*u**6 - 600*u**4 - 60*u**2 - 5)/(32*(u**2 + 1)**12)"
+    ],
+    "(0, 0, 0, 1, 0, 0, 0, 0, 0)": [
+      "2",
+      "(2*u**6 + 6*u**4 + 6*u**2 + 3)/(u**2 + 1)**3",
+      "-(2*u**6 + 6*u**4 + 6*u**2 - 3)/(2*(u**2 + 1)**6)",
+      "3*(4*u**12 + 24*u**10 + 60*u**8 + 60*u**6 - 36*u**2 - 1)/(4*(u**2 + 1)**9)",
+      "-3*(32*u**18 + 288*u**16 + 1152*u**14 + 2428*u**12 + 2472*u**10 + 132*u**8 - 2092*u**6 - 1488*u**4 - 12*u**2 - 3)/(8*(u**2 + 1)**12)"
+    ],
+    "(0, 0, 1, 0, 0, 0, 0, 0, 0)": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "(0, 0, 2, 0, 0, 0, 0, 0, 0)": [
+      "1/2",
+      "(2*u**6 + 6*u**4 + 6*u**2 - 1)/(4*(u**2 + 1)**3)",
+      "3*(2*u**6 + 6*u**4 + 6*u**2 + 1)/(8*(u**2 + 1)**6)",
+      "-3*(12*u**12 + 72*u**10 + 180*u**8 + 228*u**6 + 144*u**4 + 36*u**2 + 5)/(16*(u**2 + 1)**9)",
+      "3*(96*u**18 + 864*u**16 + 3456*u**14 + 7908*u**12 + 11160*u**10 + 9756*u**8 + 5084*u**6 + 1536*u**4 + 348*u**2 + 35)/(32*(u**2 + 1)**12)"
+    ],
+    "(0, 1, 0, 0, 0, 0, 0, 0, 0)": [
+      "1/(10*(u**2 + 1)**6)",
+      "(2*u**6 + 6*u**4 + 6*u**2 - 1)/(20*(u**2 + 1)**9)",
+      "3*(2*u**6 + 6*u**4 + 6*u**2 + 1)/(40*(u**2 + 1)**12)",
+      "-3*(12*u**12 + 72*u**10 + 180*u**8 + 228*u**6 + 144*u**4 + 36*u**2 + 5)/(80*(u**2 + 1)**15)",
+      "3*(96*u**18 + 864*u**16 + 3456*u**14 + 7908*u**12 + 11160*u**10 + 9756*u**8 + 5084*u**6 + 1536*u**4 + 348*u**2 + 35)/(160*(u**2 + 1)**18)"
+    ],
+    "(0, 2, 0, 0, 0, 0, 0, 0, 0)": [
+      "1/2",
+      "(2*u**6 + 6*u**4 + 6*u**2 - 1)/(4*(u**2 + 1)**3)",
+      "3*(2*u**6 + 6*u**4 + 6*u**2 + 1)/(8*(u**2 + 1)**6)",
+      "-3*(12*u**12 + 72*u**10 + 180*u**8 + 228*u**6 + 144*u**4 + 36*u**2 + 5)/(16*(u**2 + 1)**9)",
+      "3*(96*u**18 + 864*u**16 + 3456*u**14 + 7908*u**12 + 11160*u**10 + 9756*u**8 + 5084*u**6 + 1536*u**4 + 348*u**2 + 35)/(32*(u**2 + 1)**12)"
+    ],
+    "(1, 0, 0, 0, 0, 0, 0, 0, 0)": [
+      "12*u/(u**2 + 1)",
+      "3*u*(4*u**6 + 12*u**4 + 12*u**2 + 3)/(u**2 + 1)**4",
+      "3*u*(7*u**6 + 21*u**4 + 21*u**2 + 9)/(u**2 + 1)**7",
+      "-9*u*(10*u**12 + 60*u**10 + 150*u**8 + 198*u**6 + 144*u**4 + 54*u**2 - 1)/(u**2 + 1)**10",
+      "9*u*(104*u**18 + 936*u**16 + 3744*u**14 + 8650*u**12 + 12588*u**10 + 11814*u**8 + 6806*u**6 + 1824*u**4 - 210*u**2 - 3)/(2*(u**2 + 1)**13)"
+    ],
+    "(1, 0, 1, 0, 0, 0, 0, 0, 0)": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "(2, 0, 0, 0, 0, 0, 0, 0, 0)": [
+      "-3/4",
+      "-3*(2*u**6 + 6*u**4 + 6*u**2 + 3)/(8*(u**2 + 1)**3)",
+      "3*(2*u**6 + 6*u**4 + 6*u**2 - 3)/(16*(u**2 + 1)**6)",
+      "-9*(4*u**12 + 24*u**10 + 60*u**8 + 60*u**6 - 36*u**2 - 1)/(32*(u**2 + 1)**9)",
+      "9*(32*u**18 + 288*u**16 + 1152*u**14 + 2428*u**12 + 2472*u**10 + 132*u**8 - 2092*u**6 - 1488*u**4 - 12*u**2 - 3)/(64*(u**2 + 1)**12)"
+    ]
+  },
+  "changed_quantum_readouts_and_operator_jets": {
+    "longitudinal": {
+      "canonical_energy_change": [
+        [
+          "-beta*(mass_squared + q)/scale**3",
+          "0"
+        ],
+        [
+          "0",
+          "alpha*q/(scale**3*(mass_squared + q))"
+        ]
+      ],
+      "canonical_pressure_change": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0"
+        ]
+      ],
+      "new_Hamiltonian_matrix": [
+        [
+          "N*mass_squared*q*scale**3",
+          "0"
+        ],
+        [
+          "0",
+          "N*(2*mass_squared + 2*q)/(2*mass_squared*q*scale**3)"
+        ]
+      ],
+      "new_canonical_energy": [
+        [
+          "(mass_squared + q)/scale**3",
+          "0"
+        ],
+        [
+          "0",
+          "scale**(-3)"
+        ]
+      ],
+      "new_canonical_pressure": [
+        [
+          "-(mass_squared + q)/(3*scale**3)",
+          "0"
+        ],
+        [
+          "0",
+          "(mass_squared + 3*q)/(3*scale**3*(mass_squared + q))"
+        ]
+      ],
+      "new_energy_contact": [
+        [
+          "-2*mass_squared*physical_log_scale_variation*q",
+          "0"
+        ],
+        [
+          "0",
+          "-2*physical_log_scale_variation*(2*mass_squared + 3*q)/(mass_squared*q*scale**6)"
+        ]
+      ],
+      "new_pressure_contact": [
+        [
+          "2*mass_squared*physical_log_scale_variation*q/3",
+          "0"
+        ],
+        [
+          "0",
+          "-2*physical_log_scale_variation*(2*mass_squared + 9*q)/(3*mass_squared*q*scale**6)"
+        ]
+      ],
+      "old_Hamiltonian_matrix": [
+        [
+          "N*mass_squared*q*scale**3*(N**2*beta_lapse_second + 2*N*beta - 2*N*beta_lapse_second - 2*beta + beta_lapse_second + 2)/2",
+          "0"
+        ],
+        [
+          "0",
+          "N*(N**2*alpha_lapse_second*mass_squared + 2*N*alpha*mass_squared - 2*N*alpha_lapse_second*mass_squared - 2*alpha*mass_squared + alpha_lapse_second*mass_squared + 2*mass_squared + 2*q)/(mass_squared*q*scale**3*(N**2*alpha_lapse_second + 2*N*alpha - 2*N*alpha_lapse_second - 2*alpha + alpha_lapse_second + 2))"
+        ]
+      ],
+      "old_canonical_energy": [
+        [
+          "(beta + 1)*(mass_squared + q)/scale**3",
+          "0"
+        ],
+        [
+          "0",
+          "-(alpha*q - mass_squared - q)/(scale**3*(mass_squared + q))"
+        ]
+      ],
+      "old_canonical_pressure": [
+        [
+          "-(mass_squared + q)/(3*scale**3)",
+          "0"
+        ],
+        [
+          "0",
+          "(mass_squared + 3*q)/(3*scale**3*(mass_squared + q))"
+        ]
+      ],
+      "old_minus_new_first_lapse_operator_jet": [
+        [
+          "beta*mass_squared*q*scale**3",
+          "0"
+        ],
+        [
+          "0",
+          "-alpha/(mass_squared*scale**3)"
+        ]
+      ],
+      "old_minus_new_second_lapse_operator_jet": [
+        [
+          "mass_squared*q*scale**3*(2*beta + beta_lapse_second)",
+          "0"
+        ],
+        [
+          "0",
+          "(2*alpha**2 - 2*alpha - alpha_lapse_second)/(mass_squared*scale**3)"
+        ]
+      ],
+      "on_clock_Hamiltonian_difference": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0"
+        ]
+      ]
+    },
+    "transverse": {
+      "canonical_energy_change": [
+        [
+          "-beta*mass_squared/scale**3",
+          "0"
+        ],
+        [
+          "0",
+          "0"
+        ]
+      ],
+      "canonical_pressure_change": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0"
+        ]
+      ],
+      "new_Hamiltonian_matrix": [
+        [
+          "N*scale*(2*mass_squared + 2*q)/2",
+          "0"
+        ],
+        [
+          "0",
+          "N/scale"
+        ]
+      ],
+      "new_canonical_energy": [
+        [
+          "(mass_squared + q)/scale**3",
+          "0"
+        ],
+        [
+          "0",
+          "scale**(-3)"
+        ]
+      ],
+      "new_canonical_pressure": [
+        [
+          "(-mass_squared + q)/(3*scale**3)",
+          "0"
+        ],
+        [
+          "0",
+          "1/(3*scale**3)"
+        ]
+      ],
+      "new_energy_contact": [
+        [
+          "-2*physical_log_scale_variation*(mass_squared + 2*q)/scale**2",
+          "0"
+        ],
+        [
+          "0",
+          "-4*physical_log_scale_variation/scale**4"
+        ]
+      ],
+      "new_pressure_contact": [
+        [
+          "-2*physical_log_scale_variation*(-mass_squared + 2*q)/(3*scale**2)",
+          "0"
+        ],
+        [
+          "0",
+          "-4*physical_log_scale_variation/(3*scale**4)"
+        ]
+      ],
+      "old_Hamiltonian_matrix": [
+        [
+          "N*scale*(N**2*beta_lapse_second*mass_squared + 2*N*beta*mass_squared - 2*N*beta_lapse_second*mass_squared - 2*beta*mass_squared + beta_lapse_second*mass_squared + 2*mass_squared + 2*q)/2",
+          "0"
+        ],
+        [
+          "0",
+          "N/scale"
+        ]
+      ],
+      "old_canonical_energy": [
+        [
+          "(beta*mass_squared + mass_squared + q)/scale**3",
+          "0"
+        ],
+        [
+          "0",
+          "scale**(-3)"
+        ]
+      ],
+      "old_canonical_pressure": [
+        [
+          "(-mass_squared + q)/(3*scale**3)",
+          "0"
+        ],
+        [
+          "0",
+          "1/(3*scale**3)"
+        ]
+      ],
+      "old_minus_new_first_lapse_operator_jet": [
+        [
+          "beta*mass_squared*scale",
+          "0"
+        ],
+        [
+          "0",
+          "0"
+        ]
+      ],
+      "old_minus_new_second_lapse_operator_jet": [
+        [
+          "mass_squared*scale*(2*beta + beta_lapse_second)",
+          "0"
+        ],
+        [
+          "0",
+          "0"
+        ]
+      ],
+      "on_clock_Hamiltonian_difference": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0"
+        ]
+      ]
+    }
+  },
+  "checked_scalar_entries": 1330,
+  "claim": "P8-S6.81.CONSTANT_PHYSICAL_PROCA",
+  "constrained_physical_Proca_symbol": {
+    "constrained_wave_operator": [
+      [
+        "-physical_frequency**2 + physical_k1**2 + physical_k2**2 + physical_k3**2 + positive_Proca_mass_squared",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "-physical_frequency**2 + physical_k1**2 + physical_k2**2 + physical_k3**2 + positive_Proca_mass_squared",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "-physical_frequency**2 + physical_k1**2 + physical_k2**2 + physical_k3**2 + positive_Proca_mass_squared",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "-physical_frequency**2 + physical_k1**2 + physical_k2**2 + physical_k3**2 + positive_Proca_mass_squared"
+      ]
+    ],
+    "constraint": "delta_g W=0 follows from delta_g(delta_g*d+m^2)W=m^2*delta_g W=0. The equivalent wave equation is (delta_g*d+d*delta_g+m^2)W=0 with this constraint.",
+    "covector": [
+      [
+        "physical_frequency"
+      ],
+      [
+        "physical_k1"
+      ],
+      [
+        "physical_k2"
+      ],
+      [
+        "physical_k3"
+      ]
+    ],
+    "full_massive_plane_wave_inverse": [
+      [
+        "(-physical_frequency**2/positive_Proca_mass_squared + 1)/(-physical_frequency**2 + physical_k1**2 + physical_k2**2 + physical_k3**2 + positive_Proca_mass_squared)",
+        "physical_frequency*physical_k1/(positive_Proca_mass_squared*(-physical_frequency**2 + physical_k1**2 + physical_k2**2 + physical_k3**2 + positive_Proca_mass_squared))",
+        "physical_frequency*physical_k2/(positive_Proca_mass_squared*(-physical_frequency**2 + physical_k1**2 + physical_k2**2 + physical_k3**2 + positive_Proca_mass_squared))",
+        "physical_frequency*physical_k3/(positive_Proca_mass_squared*(-physical_frequency**2 + physical_k1**2 + physical_k2**2 + physical_k3**2 + positive_Proca_mass_squared))"
+      ],
+      [
+        "-physical_frequency*physical_k1/(positive_Proca_mass_squared*(-physical_frequency**2 + physical_k1**2 + physical_k2**2 + physical_k3**2 + positive_Proca_mass_squared))",
+        "(physical_k1**2/positive_Proca_mass_squared + 1)/(-physical_frequency**2 + physical_k1**2 + physical_k2**2 + physical_k3**2 + positive_Proca_mass_squared)",
+        "physical_k1*physical_k2/(positive_Proca_mass_squared*(-physical_frequency**2 + physical_k1**2 + physical_k2**2 + physical_k3**2 + positive_Proca_mass_squared))",
+        "physical_k1*physical_k3/(positive_Proca_mass_squared*(-physical_frequency**2 + physical_k1**2 + physical_k2**2 + physical_k3**2 + positive_Proca_mass_squared))"
+      ],
+      [
+        "-physical_frequency*physical_k2/(positive_Proca_mass_squared*(-physical_frequency**2 + physical_k1**2 + physical_k2**2 + physical_k3**2 + positive_Proca_mass_squared))",
+        "physical_k1*physical_k2/(positive_Proca_mass_squared*(-physical_frequency**2 + physical_k1**2 + physical_k2**2 + physical_k3**2 + positive_Proca_mass_squared))",
+        "(physical_k2**2/positive_Proca_mass_squared + 1)/(-physical_frequency**2 + physical_k1**2 + physical_k2**2 + physical_k3**2 + positive_Proca_mass_squared)",
+        "physical_k2*physical_k3/(positive_Proca_mass_squared*(-physical_frequency**2 + physical_k1**2 + physical_k2**2 + physical_k3**2 + positive_Proca_mass_squared))"
+      ],
+      [
+        "-physical_frequency*physical_k3/(positive_Proca_mass_squared*(-physical_frequency**2 + physical_k1**2 + physical_k2**2 + physical_k3**2 + positive_Proca_mass_squared))",
+        "physical_k1*physical_k3/(positive_Proca_mass_squared*(-physical_frequency**2 + physical_k1**2 + physical_k2**2 + physical_k3**2 + positive_Proca_mass_squared))",
+        "physical_k2*physical_k3/(positive_Proca_mass_squared*(-physical_frequency**2 + physical_k1**2 + physical_k2**2 + physical_k3**2 + positive_Proca_mass_squared))",
+        "(physical_k3**2/positive_Proca_mass_squared + 1)/(-physical_frequency**2 + physical_k1**2 + physical_k2**2 + physical_k3**2 + positive_Proca_mass_squared)"
+      ]
+    ],
+    "full_massive_plane_wave_operator": [
+      [
+        "physical_k1**2 + physical_k2**2 + physical_k3**2 + positive_Proca_mass_squared",
+        "-physical_frequency*physical_k1",
+        "-physical_frequency*physical_k2",
+        "-physical_frequency*physical_k3"
+      ],
+      [
+        "physical_frequency*physical_k1",
+        "-physical_frequency**2 + physical_k2**2 + physical_k3**2 + positive_Proca_mass_squared",
+        "-physical_k1*physical_k2",
+        "-physical_k1*physical_k3"
+      ],
+      [
+        "physical_frequency*physical_k2",
+        "-physical_k1*physical_k2",
+        "-physical_frequency**2 + physical_k1**2 + physical_k3**2 + positive_Proca_mass_squared",
+        "-physical_k2*physical_k3"
+      ],
+      [
+        "physical_frequency*physical_k3",
+        "-physical_k1*physical_k3",
+        "-physical_k2*physical_k3",
+        "-physical_frequency**2 + physical_k1**2 + physical_k2**2 + positive_Proca_mass_squared"
+      ]
+    ],
+    "mass_squared": "positive_Proca_mass_squared",
+    "physical_cotangent_norm": "-physical_frequency**2 + physical_k1**2 + physical_k2**2 + physical_k3**2",
+    "principal_boundary": "The Proca operator itself is not normally hyperbolic. Its constrained wave system has principal cone g^{mu nu} xi_mu xi_nu=0. This is a vector finite-propagation result on admitted smooth globally hyperbolic physical metrics, not full coupled scalar or nonlinear semiclassical stability.",
+    "raised_row": [
+      [
+        "-physical_frequency",
+        "physical_k1",
+        "physical_k2",
+        "physical_k3"
+      ]
+    ]
+  },
+  "continuous_new_auxiliary_and_coefficient_bounds": {
+    "constant_mass_auxiliary_bounds": {
+      "H_NNN_absolute_upper": "480000000000",
+      "H_NNY_absolute_upper": "1600000000",
+      "H_NY_absolute_upper": "4000000",
+      "Newton_center_step_upper": "9/12500000000000000",
+      "Newton_closed_disc_image_radius_upper": "5250000000009/3125000000000000000000000000",
+      "Newton_contraction_upper": "3000000000009/31250000000000",
+      "actual_implicit_root_disc_radius": "1/100000000000000",
+      "actual_nine_invariant_polydisc_radius": "1/1000000000000000000000000",
+      "degree_four_total_coefficient_majorant": "4950000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "degree_three_total_coefficient_majorant": "1650000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "inner_lapse_Cauchy_radius": "1/200",
+      "invariant_Hamiltonian_Taylor_coefficient_policy": "For multi-index alpha in nine invariant variables, absolute coefficient <=10000*(10^24)^|alpha|; these are not momentum-reduced physical vertices.",
+      "inverse_background_lapse_pivot_upper": "20",
+      "lapse_displacement_over_input_radius_upper": "800000000",
+      "lapse_displacement_upper": "1/1250000000000000",
+      "lapse_force_at_center_upper": "9/250000000000000000",
+      "lapse_pivot_change_upper": "3000000000009/625000000000000",
+      "nine_invariant_outer_polydisc_radius": "1",
+      "outer_lapse_radius": "1/100",
+      "quartic_invariant_Taylor_remainder_input_radius": "1/1000000000000000000000000000",
+      "quartic_invariant_Taylor_remainder_upper": "3861/299300000000",
+      "temporal_vector_absolute_upper": "1/500000000000000000000000",
+      "temporal_vector_over_input_radius_upper": "2"
+    },
+    "mass_bound_reason": "Constant gamma_t=gamma_s=1 and their inverses lie within the old absolute bounds below 2. All scalar, boundary, geometric and matter pieces are literally unchanged. The new and previous background lapse functions are identical.",
+    "new_temporal_solution": "T=-j/U, with |1/U|<2 on the unchanged outer coefficient polydisc.",
+    "same_complex_Hamiltonian_upper": "10000",
+    "same_continuous_coefficient_bounds": {
+      "coefficient_domain": "The same complex time tube of radius 1/50 around [-1/2,1/2], lapse radius 1/100 and nine-invariant unit polydisc. Differentiate the actual new coefficient, not the old isolated Gauss coefficient.",
+      "common_bound_ratio_upper": "1000000000",
+      "new_over_old_bound_ratios": [
+        "131072000000/736125197",
+        "32000000/327",
+        "10737418240000000000/3817522971573",
+        "42949672960000000000000000/1279341853650434001",
+        "54975581388800000000000000000/85487384021824856793"
+      ],
+      "new_universal_Cauchy_lapse_derivative_bounds": [
+        "10000",
+        "1000000",
+        "200000000",
+        "60000000000",
+        "24000000000000"
+      ],
+      "old_sharper_common_lapse_derivative_bounds": [
+        "736125197/13107200",
+        "327/32",
+        "3817522971573/53687091200",
+        "3838025560951302003/2147483648000000",
+        "256462152065474570379/6871947673600000"
+      ]
+    },
+    "same_new_Hamiltonian_piece_triangle_upper": {
+      "Gauss": 2,
+      "electric": 1,
+      "magnetic": "1/2",
+      "matter_gradient": 1,
+      "matter_momentum": 4,
+      "potential": 3000,
+      "shear": 4,
+      "source_Gauss": "0",
+      "spatial_curvature": 2,
+      "trace_square": 162,
+      "vector_mass": 2
+    }
+  },
+  "controls": {
+    "Proca_constraint_not_replaced_by_four_unconstrained_positive_oscillators": true,
+    "connection_Hessian_update_and_quantum_contact_change_explicit": true,
+    "exact_validation_before_cached_calls": true,
+    "rejected_inputs": 34,
+    "unchanged_clock_operator_not_used_to_claim_unchanged_functional_response": true
+  },
+  "date": "2026-09-08",
+  "exact_residuals": {
+    "actual_constant_mass_finite_local_energy_0": "0",
+    "actual_constant_mass_finite_local_energy_1": "0",
+    "actual_constant_mass_finite_local_energy_2": "0",
+    "actual_old_spatial_mass_at_every_clock_point": "0",
+    "actual_old_temporal_mass_at_every_clock_point": "0",
+    "clock_linear_lapse_force_bridge_0_0_0_0_0_0_0_0_1": "0",
+    "clock_linear_lapse_force_bridge_0_0_0_0_0_0_0_1_0": "0",
+    "clock_linear_lapse_force_bridge_0_0_0_0_0_1_0_0_0": "0",
+    "clock_linear_lapse_force_bridge_0_0_0_0_1_0_0_0_0": "0",
+    "clock_linear_lapse_force_bridge_0_0_0_1_0_0_0_0_0": "0",
+    "clock_linear_lapse_force_bridge_0_0_1_0_0_0_0_0_0": "0",
+    "clock_linear_lapse_force_bridge_0_1_0_0_0_0_0_0_0": "0",
+    "clock_linear_lapse_force_bridge_1_0_0_0_0_0_0_0_0": "0",
+    "common_scale_comparison_constant_mass_connected_quartic_tree_upper": "0",
+    "common_scale_comparison_constant_mass_cubic_block_upper": "0",
+    "common_scale_comparison_constant_mass_minus_source_free_connected_quartic_upper": "0",
+    "common_scale_comparison_constant_mass_minus_source_free_cubic_upper": "0",
+    "constraint_completion_is_physical_Klein_Gordon_symbol": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "exact_quotient_determinant_lemma_ratio": "0",
+    "full_Proca_operator_implies_divergence_constraint": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        1,
+        4
+      ]
+    },
+    "full_clock_invariant_coefficient_bridge_0_0_0_0_0_0_0_0_0": "0",
+    "full_clock_invariant_coefficient_bridge_0_0_0_0_0_0_0_0_1": "0",
+    "full_clock_invariant_coefficient_bridge_0_0_0_0_0_0_0_1_0": "0",
+    "full_clock_invariant_coefficient_bridge_0_0_0_0_0_0_1_0_0": "0",
+    "full_clock_invariant_coefficient_bridge_0_0_0_0_0_1_0_0_0": "0",
+    "full_clock_invariant_coefficient_bridge_0_0_0_0_1_0_0_0_0": "0",
+    "full_clock_invariant_coefficient_bridge_0_0_0_1_0_0_0_0_0": "0",
+    "full_clock_invariant_coefficient_bridge_0_0_1_0_0_0_0_0_0": "0",
+    "full_clock_invariant_coefficient_bridge_0_0_2_0_0_0_0_0_0": "0",
+    "full_clock_invariant_coefficient_bridge_0_1_0_0_0_0_0_0_0": "0",
+    "full_clock_invariant_coefficient_bridge_0_2_0_0_0_0_0_0_0": "0",
+    "full_clock_invariant_coefficient_bridge_1_0_0_0_0_0_0_0_0": "0",
+    "full_clock_invariant_coefficient_bridge_1_0_1_0_0_0_0_0_0": "0",
+    "full_clock_invariant_coefficient_bridge_2_0_0_0_0_0_0_0_0": "0",
+    "full_massive_Proca_inverse_left": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "full_massive_Proca_inverse_right": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "literal_constant_mass_Hamiltonian_difference": "0",
+    "literal_mass_counterterm_Hessian": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "literal_mass_counterterm_source": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        64,
+        1
+      ]
+    },
+    "literal_new_Gauss_coefficient_derivative_0": "0",
+    "literal_new_Gauss_coefficient_derivative_1": "0",
+    "literal_new_Gauss_coefficient_derivative_2": "0",
+    "literal_new_Gauss_coefficient_derivative_3": "0",
+    "literal_new_Gauss_coefficient_derivative_4": "0",
+    "literal_new_spatial_vector_coefficient_derivative_0": "0",
+    "literal_new_spatial_vector_coefficient_derivative_1": "0",
+    "literal_new_spatial_vector_coefficient_derivative_2": "0",
+    "literal_new_spatial_vector_coefficient_derivative_3": "0",
+    "literal_new_spatial_vector_coefficient_derivative_4": "0",
+    "longitudinal_actual_changed_quantum_energy_readout": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "longitudinal_new_quantum_energy_is_ordinary_Proca": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "longitudinal_same_on_clock_vector_operator": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "longitudinal_unchanged_on_clock_pressure_readout": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "new_Hessian_preserves_all_projective_columns": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        64,
+        4
+      ]
+    },
+    "new_all64_stationary_Euler_equations": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        64,
+        1
+      ]
+    },
+    "new_all_nearby_scalar_vector_cross_block_zero": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        3
+      ]
+    },
+    "new_complete_Hamiltonian_vector_parity": "0",
+    "new_full_inverse_trace_lift_Euler_equations": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        64,
+        4
+      ]
+    },
+    "new_mass_has_no_complement_retained_cross_block": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        60,
+        4
+      ]
+    },
+    "new_nearby_vector_gradient_is_physical_Proca": "0",
+    "new_nearby_vector_kinetic_is_positive_physical_Proca": "0",
+    "new_retained_mass_from_full_connection_Hessian": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "new_retained_response_exact_constant_Lorentz_matrix": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "new_source_preserves_projective_annihilation": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        1
+      ]
+    },
+    "new_stationary_trace_is_same_original_B_dphi": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        1
+      ]
+    },
+    "ordinary_local_quantum_Ward_conservation_0": "0",
+    "ordinary_local_quantum_Ward_conservation_1": "0",
+    "ordinary_local_quantum_Ward_conservation_2": "0",
+    "physical_lapse_and_metric_give_the_correct_central_dispersion": "0",
+    "retained_map_still_annihilates_all_56_complement_directions": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        60
+      ]
+    },
+    "three_massive_polarizations_in_full_determinant": "0",
+    "transverse_actual_changed_quantum_energy_readout": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "transverse_new_quantum_energy_is_ordinary_Proca": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "transverse_same_on_clock_vector_operator": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "transverse_unchanged_on_clock_pressure_readout": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "unchanged_all_homogeneous_light_Hamiltonians": "0",
+    "unchanged_covariantly_matched_local_pressure_0": "0",
+    "unchanged_covariantly_matched_local_pressure_1": "0",
+    "unchanged_covariantly_matched_local_pressure_2": "0",
+    "unchanged_full_background_lapse_jet_0": "0",
+    "unchanged_full_background_lapse_jet_1": "0",
+    "unchanged_full_background_lapse_jet_2": "0",
+    "unchanged_full_background_lapse_jet_3": "0",
+    "unchanged_full_background_lapse_jet_4": "0",
+    "unconstrained_principal_Proca_symbol_is_singular": "0"
+  },
+  "formulation": "FORMULATION.md",
+  "literal_affine_mass_source_and_contact_update": {
+    "added_full_connection_source": [
+      [
+        "fixed_original_B_phi_x*s*(2*p - 1)*(2*p**2 + p + 2)/(6*(2*p**3 - 1))"
+      ],
+      [
+        "0"
+      ],
+      [
+        "0"
+      ],
+      [
+        "0"
+      ],
+      [
+        "0"
+      ],
+      [
+        "-fixed_original_B_phi_x*s*(2*p - 1)*(2*p**2 + p + 2)/(9*(2*p**3 - 1))"
+      ],
+      [
+        "0"
+      ],
+      [
+        "0"
+      ],
+      [
+        "0"
+      ],
+      [
+        "0"
+      ],
+      [
+        "-fixed_original_B_phi_x*s*(2*p - 1)*(2*p**2 + p + 2)/(9*(2*p**3 - 1))"
+      ],
+      [
+        "0"
+      ],
+      [
+        "0"
+      ],
+      [
+        "0"
+      ],
+      [
+        "0"
+      ],
+      [
+        "-fixed_original_B_phi_x*s*(2*p - 1)*(2*p**2 + p + 2)/(9*(2*p**3 - 1))"
+      ],
+      [
+        "0"
+      ],
+      [
+        "fixed_original_B_phi_x*s*(2*p - 1)*(2*p**2 + p + 2)/(9*(2*p**3 - 1))"
+      ],
+      [
+        "0"
+      ],
+      [
+        "0"
+      ],
+      [
+        "-fixed_original_B_phi_x*s*(2*p - 1)*(2*p**2 + p + 2)/(18*(2*p**3 - 1))"
+      ],
+      [
+        "0"
+      ],
+      [
+        "0"
+      ],
+      [
+        "0"
+      ],
+      [
+        "0"
+      ],
+      [
+        "0"
+      ],
+      [
+        "0"
+      ],
+      [
+        "0"
+      ],
+      [
+        "0"
+      ],
+      [
+        "0"
+      ],
+      [
+        "0"
+      ],
+      [
+        "0"
+      ],
+      [
+        "0"
+      ],
+      [
+        "0"
+      ],
+      [
+        "fixed_original_B_phi_x*s*(2*p - 1)*(2*p**2 + p + 2)/(9*(2*p**3 - 1))"
+      ],
+      [
+        "0"
+      ],
+      [
+        "0"
+      ],
+      [
+        "0"
+      ],
+      [
+        "0"
+      ],
+      [
+        "0"
+      ],
+      [
+        "-fixed_original_B_phi_x*s*(2*p - 1)*(2*p**2 + p + 2)/(18*(2*p**3 - 1))"
+      ],
+      [
+        "0"
+      ],
+      [
+        "0"
+      ],
+      [
+        "0"
+      ],
+      [
+        "0"
+      ],
+      [
+        "0"
+      ],
+      [
+        "0"
+      ],
+      [
+        "0"
+      ],
+      [
+        "0"
+      ],
+      [
+        "0"
+      ],
+      [
+        "0"
+      ],
+      [
+        "fixed_original_B_phi_x*s*(2*p - 1)*(2*p**2 + p + 2)/(9*(2*p**3 - 1))"
+      ],
+      [
+        "0"
+      ],
+      [
+        "0"
+      ],
+      [
+        "0"
+      ],
+      [
+        "0"
+      ],
+      [
+        "0"
+      ],
+      [
+        "0"
+      ],
+      [
+        "0"
+      ],
+      [
+        "0"
+      ],
+      [
+        "-fixed_original_B_phi_x*s*(2*p - 1)*(2*p**2 + p + 2)/(18*(2*p**3 - 1))"
+      ],
+      [
+        "0"
+      ],
+      [
+        "0"
+      ],
+      [
+        "0"
+      ]
+    ],
+    "connection_Hessian_changes": true,
+    "full64_Euler_inverse_lift_projective_and_complement_checks_in_residuals": true,
+    "literal_added_affine_density": "-(2*p - 1)*(16*fixed_original_B_phi_x**2*p**3*s**2 + 18*fixed_original_B_phi_x**2*p**2*s**2 + 21*fixed_original_B_phi_x**2*p*s**2 + 10*fixed_original_B_phi_x**2*s**2 - 32*fixed_original_B_phi_x*p**3*s*unshifted_retained_trace0 - 36*fixed_original_B_phi_x*p**2*s*unshifted_retained_trace0 - 42*fixed_original_B_phi_x*p*s*unshifted_retained_trace0 - 20*fixed_original_B_phi_x*s*unshifted_retained_trace0 + 72*p**4*unshifted_retained_trace1**2 + 72*p**4*unshifted_retained_trace2**2 + 72*p**4*unshifted_retained_trace3**2 + 16*p**3*unshifted_retained_trace0**2 + 20*p**3*unshifted_retained_trace1**2 + 20*p**3*unshifted_retained_trace2**2 + 20*p**3*unshifted_retained_trace3**2 + 18*p**2*unshifted_retained_trace0**2 + 21*p*unshifted_retained_trace0**2 - 36*p*unshifted_retained_trace1**2 - 36*p*unshifted_retained_trace2**2 - 36*p*unshifted_retained_trace3**2 + 10*unshifted_retained_trace0**2 - 10*unshifted_retained_trace1**2 - 10*unshifted_retained_trace2**2 - 10*unshifted_retained_trace3**2)/(18*(8*p + 5)*(2*p**3 - 1))",
+    "new_retained_mass": [
+      [
+        "1",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "-1",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "-1",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "-1"
+      ]
+    ],
+    "old_retained_mass": [
+      [
+        "(22*p**3 + 3*p - 11)/(18*p**3 - 9)",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "(72*p**2 - 88*p - 55)/(72*p + 45)",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "(72*p**2 - 88*p - 55)/(72*p + 45)",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "(72*p**2 - 88*p - 55)/(72*p + 45)"
+      ]
+    ],
+    "original_one_form_shift": [
+      [
+        "fixed_original_B_phi_x*s"
+      ],
+      [
+        "0"
+      ],
+      [
+        "0"
+      ],
+      [
+        "0"
+      ]
+    ],
+    "quotient_determinant_ratio": "-6561*(8*p + 5)**3*(2*p**3 - 1)/((72*p**2 - 88*p - 55)**3*(22*p**3 + 3*p - 11))",
+    "retained_mass_change": [
+      [
+        "-(2*p - 1)*(2*p**2 + p + 2)/(9*(2*p**3 - 1))",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "-2*(2*p - 1)*(18*p + 5)/(9*(8*p + 5))",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "-2*(2*p - 1)*(18*p + 5)/(9*(8*p + 5))",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "-2*(2*p - 1)*(18*p + 5)/(9*(8*p + 5))"
+      ]
+    ]
+  },
+  "named_exact_check_count": 85,
+  "new_constant_mass_local_quantum_coefficients_and_boundary": {
+    "actual_new_first_and_higher_mass_lapse_jets": "0",
+    "actual_old_first_mass_lapse_jets": {
+      "spatial": "28/(81*(u**2 + 1)**3)",
+      "temporal": "4/(9*(u**2 + 1)**3)"
+    },
+    "new_constant_mass_local_finite_coefficients": {
+      "0": {
+        "energy": "-5/2",
+        "pressure": "5/2"
+      },
+      "1": {
+        "energy": "-160*u**2/(u**2 + 1)**2",
+        "pressure": "80*(5*u**2 + 1)/(3*(u**2 + 1)**2)"
+      },
+      "2": {
+        "energy": "-32*(21*u**4 - 14*u**2 + 1)/(u**2 + 1)**4",
+        "pressure": "64*(7*u**4 - 1)/(u**2 + 1)**4"
+      }
+    },
+    "old_fixed_scalar_profiles_in_this_comparison": "Retained as fixed old coefficients, not silently changed. Their previous cancellation is not asserted for the new energy readout. A replacement must be computed once from the new finite Proca stress and separately budgeted.",
+    "quantum_response_boundary": "Agreement of the vector operator along the original clock does not imply agreement of its functional metric derivatives. The first and second lapse operator jets and energy contacts change. Old Gaussian light response, frozen pole brackets and exact background tadpole cancellation are not transferred. No newly quantum-corrected bounce is asserted.",
+    "required_profile_change_if_new_finite_stress_is_constructed": "The on-clock pressure mode readout and matched local pressure are unchanged. With Delta rho = rho_new-rho_old, the required new fixed scalar profile difference would be Delta rho(phi)*(x+1)/2 on the flat clock tube, with the same fixed cutoff. Its quantitative norm is not supplied here.",
+    "same_original_clock_modes_and_initial_covariance": true,
+    "state_not_reselected": true
+  },
+  "not_established": [
+    "New finite stress/tadpole derivative bounds and exact quantum-corrected clock cancellation",
+    "The new Gaussian light response, its spectrum or all-frequency quantum stability",
+    "Full coupled scalar neighborhood cone, nonlinear spatial well-posedness or actual global stability",
+    "Interacting Wilsonian cutoff, omitted operators, mixed loops or heavy-threshold errors",
+    "Finite Wilson matching, common-parent V/G/B, UV completion/exclusion or original P8 closure"
+  ],
+  "prior_sha256": {
+    "S6_80_fully_rebuilt": "f33dce0fcfc685ebf174d475d458948dfdc81ac2c52179ad494cd05b3ebf1d65",
+    "previous_action_and_quantum_nontransfer_boundary_preserved": true
+  },
+  "proof_checks": {
+    "V_G_B_matching_and_original_P8_remain_open": true,
+    "both_actual_energy_readouts_change": true,
+    "both_first_lapse_operator_jets_change": true,
+    "both_second_lapse_operator_jets_change": true,
+    "constant_canonical_Proca_mass_strictly_positive": true,
+    "constant_mass_cubic_model_change_below_one_e_minus_fourteen": true,
+    "constant_mass_quartic_tree_model_change_below_one_e_minus_one_hundred_fifty": true,
+    "new_Newton_map_remains_strict_contraction": true,
+    "new_affine_Hessian_change_is_not_hidden": true,
+    "new_constant_masses_fit_the_same_complex_bound": true,
+    "new_fixed_background_operator_not_declared_equal_off_clock": true,
+    "new_retained_mass_invertible_with_original_Lorentz_signature": true,
+    "new_temporal_pivot_nonzero_at_both_actual_offclock_anchors": true,
+    "new_temporal_root_below_three_times_invariant_radius": true,
+    "no_full_coupled_neighborhood_or_UV_verdict_from_vector_cone": true,
+    "no_new_quantum_stress_or_counterterm_bound_in_this_classical_estimate": true,
+    "no_new_quantum_stress_profile_norm_claim": true,
+    "old_tadpole_and_frozen_quantum_diagnostic_not_transferred": true,
+    "old_to_new_quotient_determinant_ratio_positive_on_certified_box": true,
+    "physical_Proca_constraint_not_dropped": true,
+    "same_free_modes_and_vector_covariance_only_on_the_original_clock": true,
+    "same_full_classical_clock_not_a_new_quantum_corrected_bounce": true,
+    "unchanged_Hamiltonian_piece_sum_below_ten_thousand": true
+  },
+  "same_scale_finite_hard_tree_change": {
+    "common_domain_and_free_modes": {
+      "Hamiltonian_derivative_bound": 80000000000000,
+      "York_inverse_transfer_bound": "1/500000000000",
+      "all_time_proper_mode_frequency_bounds": [
+        "500000000000",
+        40000000000000
+      ],
+      "charts": {
+        "gamma": {
+          "coefficient_bounds": {
+            "antisymmetric_mixing": {
+              "entry_proofs": [
+                {
+                  "absolute_upper": "0",
+                  "denominator_absolute_lower": "1",
+                  "denominator_factor_proofs": [],
+                  "numerator_box_bound": "0"
+                },
+                {
+                  "absolute_upper": "52/5",
+                  "denominator_absolute_lower": "1/16",
+                  "denominator_factor_proofs": [
+                    {
+                      "absolute_lower": "1/16",
+                      "factor": "2*J*inverse_squared_physical_momentum + inverse_squared_physical_momentum*l**2*lam**2 - 2*lam**2",
+                      "power": 1
+                    }
+                  ],
+                  "numerator_box_bound": "13/20"
+                },
+                {
+                  "absolute_upper": "52/5",
+                  "denominator_absolute_lower": "1/16",
+                  "denominator_factor_proofs": [
+                    {
+                      "absolute_lower": "1/16",
+                      "factor": "2*J*inverse_squared_physical_momentum + inverse_squared_physical_momentum*l**2*lam**2 - 2*lam**2",
+                      "power": 1
+                    }
+                  ],
+                  "numerator_box_bound": "13/20"
+                },
+                {
+                  "absolute_upper": "0",
+                  "denominator_absolute_lower": "1",
+                  "denominator_factor_proofs": [],
+                  "numerator_box_bound": "0"
+                }
+              ],
+              "operator_upper": "104/5"
+            },
+            "beta_leading": {
+              "entry_proofs": [
+                {
+                  "absolute_upper": "24",
+                  "denominator_absolute_lower": "1/4",
+                  "denominator_factor_proofs": [
+                    {
+                      "absolute_lower": "1/4",
+                      "factor": "lam",
+                      "power": 1
+                    }
+                  ],
+                  "numerator_box_bound": "6"
+                },
+                {
+                  "absolute_upper": "0",
+                  "denominator_absolute_lower": "1",
+                  "denominator_factor_proofs": [],
+                  "numerator_box_bound": "0"
+                },
+                {
+                  "absolute_upper": "0",
+                  "denominator_absolute_lower": "1",
+                  "denominator_factor_proofs": [],
+                  "numerator_box_bound": "0"
+                },
+                {
+                  "absolute_upper": "0",
+                  "denominator_absolute_lower": "1",
+                  "denominator_factor_proofs": [],
+                  "numerator_box_bound": "0"
+                }
+              ],
+              "operator_upper": "24"
+            },
+            "beta_remainder": {
+              "entry_proofs": [
+                {
+                  "absolute_upper": "3817657189301/104857600",
+                  "denominator_absolute_lower": "1/64",
+                  "denominator_factor_proofs": [
+                    {
+                      "absolute_lower": "1/4",
+                      "factor": "lam",
+                      "power": 1
+                    },
+                    {
+                      "absolute_lower": "1/16",
+                      "factor": "2*J*inverse_squared_physical_momentum + inverse_squared_physical_momentum*l**2*lam**2 - 2*lam**2",
+                      "power": 1
+                    }
+                  ],
+                  "numerator_box_bound": "3817657189301/6710886400"
+                },
+                {
+                  "absolute_upper": "72/5",
+                  "denominator_absolute_lower": "1/16",
+                  "denominator_factor_proofs": [
+                    {
+                      "absolute_lower": "1/16",
+                      "factor": "2*J*inverse_squared_physical_momentum + inverse_squared_physical_momentum*l**2*lam**2 - 2*lam**2",
+                      "power": 1
+                    }
+                  ],
+                  "numerator_box_bound": "9/10"
+                },
+                {
+                  "absolute_upper": "32/5",
+                  "denominator_absolute_lower": "1/16",
+                  "denominator_factor_proofs": [
+                    {
+                      "absolute_lower": "1/16",
+                      "factor": "2*J*inverse_squared_physical_momentum + inverse_squared_physical_momentum*l**2*lam**2 - 2*lam**2",
+                      "power": 1
+                    }
+                  ],
+                  "numerator_box_bound": "2/5"
+                },
+                {
+                  "absolute_upper": "9/125000",
+                  "denominator_absolute_lower": "1/16",
+                  "denominator_factor_proofs": [
+                    {
+                      "absolute_lower": "1/16",
+                      "factor": "2*J*inverse_squared_physical_momentum + inverse_squared_physical_momentum*l**2*lam**2 - 2*lam**2",
+                      "power": 1
+                    }
+                  ],
+                  "numerator_box_bound": "9/2000000"
+                }
+              ],
+              "operator_upper": "2387398896831717/65536000000"
+            },
+            "energy_mixing_coefficient": {
+              "entry_proofs": [
+                {
+                  "absolute_upper": "0",
+                  "denominator_absolute_lower": "1",
+                  "denominator_factor_proofs": [],
+                  "numerator_box_bound": "0"
+                },
+                {
+                  "absolute_upper": "801868542836138610613/419430400000000000",
+                  "denominator_absolute_lower": "1/256",
+                  "denominator_factor_proofs": [
+                    {
+                      "absolute_lower": "1/16",
+                      "factor": "2*J*inverse_squared_physical_momentum + inverse_squared_physical_momentum*l**2*lam**2 - 2*lam**2",
+                      "power": 2
+                    }
+                  ],
+                  "numerator_box_bound": "801868542836138610613/107374182400000000000"
+                },
+                {
+                  "absolute_upper": "801868542836138610613/419430400000000000",
+                  "denominator_absolute_lower": "1/256",
+                  "denominator_factor_proofs": [
+                    {
+                      "absolute_lower": "1/16",
+                      "factor": "2*J*inverse_squared_physical_momentum + inverse_squared_physical_momentum*l**2*lam**2 - 2*lam**2",
+                      "power": 2
+                    }
+                  ],
+                  "numerator_box_bound": "801868542836138610613/107374182400000000000"
+                },
+                {
+                  "absolute_upper": "0",
+                  "denominator_absolute_lower": "1",
+                  "denominator_factor_proofs": [],
+                  "numerator_box_bound": "0"
+                }
+              ],
+              "operator_upper": "801868542836138610613/209715200000000000"
+            },
+            "energy_principal_coefficient": {
+              "entry_proofs": [
+                {
+                  "absolute_upper": "79663/2",
+                  "denominator_absolute_lower": "1/64",
+                  "denominator_factor_proofs": [
+                    {
+                      "absolute_lower": "1/4",
+                      "factor": "lam",
+                      "power": "3"
+                    }
+                  ],
+                  "numerator_box_bound": "79663/128"
+                },
+                {
+                  "absolute_upper": "4/5",
+                  "denominator_absolute_lower": "1",
+                  "denominator_factor_proofs": [],
+                  "numerator_box_bound": "4/5"
+                },
+                {
+                  "absolute_upper": "4/5",
+                  "denominator_absolute_lower": "1",
+                  "denominator_factor_proofs": [],
+                  "numerator_box_bound": "4/5"
+                },
+                {
+                  "absolute_upper": "2",
+                  "denominator_absolute_lower": "1",
+                  "denominator_factor_proofs": [],
+                  "numerator_box_bound": "2"
+                }
+              ],
+              "operator_upper": "398351/10"
+            },
+            "energy_remainder_coefficient": {
+              "entry_proofs": [
+                {
+                  "absolute_upper": "3462198773653628719870782305144501870485790284043/188894659314785808547840000000000000000",
+                  "denominator_absolute_lower": "1/262144",
+                  "denominator_factor_proofs": [
+                    {
+                      "absolute_lower": "1/4",
+                      "factor": "lam",
+                      "power": "3"
+                    },
+                    {
+                      "absolute_lower": "1/16",
+                      "factor": "2*J*inverse_squared_physical_momentum + inverse_squared_physical_momentum*l**2*lam**2 - 2*lam**2",
+                      "power": 3
+                    }
+                  ],
+                  "numerator_box_bound": "3462198773653628719870782305144501870485790284043/49517601571415210995964968960000000000000000"
+                },
+                {
+                  "absolute_upper": "6755819436392684540747770273574759219983/17592186044416000000000000000000000",
+                  "denominator_absolute_lower": "1/4096",
+                  "denominator_factor_proofs": [
+                    {
+                      "absolute_lower": "1/16",
+                      "factor": "2*J*inverse_squared_physical_momentum + inverse_squared_physical_momentum*l**2*lam**2 - 2*lam**2",
+                      "power": 3
+                    }
+                  ],
+                  "numerator_box_bound": "6755819436392684540747770273574759219983/72057594037927936000000000000000000000"
+                },
+                {
+                  "absolute_upper": "6755819436392684540747770273574759219983/17592186044416000000000000000000000",
+                  "denominator_absolute_lower": "1/4096",
+                  "denominator_factor_proofs": [
+                    {
+                      "absolute_lower": "1/16",
+                      "factor": "2*J*inverse_squared_physical_momentum + inverse_squared_physical_momentum*l**2*lam**2 - 2*lam**2",
+                      "power": 3
+                    }
+                  ],
+                  "numerator_box_bound": "6755819436392684540747770273574759219983/72057594037927936000000000000000000000"
+                },
+                {
+                  "absolute_upper": "9098148004601372459010644505202194368110780834647/59029581035870565171200000000000000000000000000",
+                  "denominator_absolute_lower": "1/2048",
+                  "denominator_factor_proofs": [
+                    {
+                      "absolute_lower": "1/16",
+                      "factor": "2*J*inverse_squared_physical_momentum + inverse_squared_physical_momentum*l**2*lam**2 - 2*lam**2",
+                      "power": 3
+                    }
+                  ],
+                  "numerator_box_bound": "9098148004601372459010644505202194368110780834647/120892581961462917470617600000000000000000000000000"
+                }
+              ],
+              "operator_upper": "1081982463401683522892735923825660596860036490397149534647/59029581035870565171200000000000000000000000000"
+            },
+            "energy_velocity_coefficient": {
+              "entry_proofs": [
+                {
+                  "absolute_upper": "14967715013421346443346001401/28147497671065600000000",
+                  "denominator_absolute_lower": "1/256",
+                  "denominator_factor_proofs": [
+                    {
+                      "absolute_lower": "1/16",
+                      "factor": "2*J*inverse_squared_physical_momentum + inverse_squared_physical_momentum*l**2*lam**2 - 2*lam**2",
+                      "power": 2
+                    }
+                  ],
+                  "numerator_box_bound": "14967715013421346443346001401/7205759403792793600000000"
+                },
+                {
+                  "absolute_upper": "2087667971431526911/26214400000000000",
+                  "denominator_absolute_lower": "1/256",
+                  "denominator_factor_proofs": [
+                    {
+                      "absolute_lower": "1/16",
+                      "factor": "2*J*inverse_squared_physical_momentum + inverse_squared_physical_momentum*l**2*lam**2 - 2*lam**2",
+                      "power": 2
+                    }
+                  ],
+                  "numerator_box_bound": "2087667971431526911/6710886400000000000"
+                },
+                {
+                  "absolute_upper": "2087667971431526911/26214400000000000",
+                  "denominator_absolute_lower": "1/256",
+                  "denominator_factor_proofs": [
+                    {
+                      "absolute_lower": "1/16",
+                      "factor": "2*J*inverse_squared_physical_momentum + inverse_squared_physical_momentum*l**2*lam**2 - 2*lam**2",
+                      "power": 2
+                    }
+                  ],
+                  "numerator_box_bound": "2087667971431526911/6710886400000000000"
+                },
+                {
+                  "absolute_upper": "138978322768093828785374523745979/351843720888320000000000000000",
+                  "denominator_absolute_lower": "1/256",
+                  "denominator_factor_proofs": [
+                    {
+                      "absolute_lower": "1/16",
+                      "factor": "2*J*inverse_squared_physical_momentum + inverse_squared_physical_momentum*l**2*lam**2 - 2*lam**2",
+                      "power": 2
+                    }
+                  ],
+                  "numerator_box_bound": "138978322768093828785374523745979/90071992547409920000000000000000"
+                }
+              ],
+              "operator_upper": "187291456400923706060523447677845979/351843720888320000000000000000"
+            },
+            "potential_remainder": {
+              "entry_proofs": [
+                {
+                  "absolute_upper": "2072286462930954264853533827293/90071992547409920000000",
+                  "denominator_absolute_lower": "1/4096",
+                  "denominator_factor_proofs": [
+                    {
+                      "absolute_lower": "1/4",
+                      "factor": "lam",
+                      "power": "2"
+                    },
+                    {
+                      "absolute_lower": "1/16",
+                      "factor": "2*J*inverse_squared_physical_momentum + inverse_squared_physical_momentum*l**2*lam**2 - 2*lam**2",
+                      "power": 2
+                    }
+                  ],
+                  "numerator_box_bound": "2072286462930954264853533827293/368934881474191032320000000"
+                },
+                {
+                  "absolute_upper": "1237786992103097966189/838860800000000000",
+                  "denominator_absolute_lower": "1/256",
+                  "denominator_factor_proofs": [
+                    {
+                      "absolute_lower": "1/16",
+                      "factor": "2*J*inverse_squared_physical_momentum + inverse_squared_physical_momentum*l**2*lam**2 - 2*lam**2",
+                      "power": 2
+                    }
+                  ],
+                  "numerator_box_bound": "1237786992103097966189/214748364800000000000"
+                },
+                {
+                  "absolute_upper": "1237786992103097966189/838860800000000000",
+                  "denominator_absolute_lower": "1/256",
+                  "denominator_factor_proofs": [
+                    {
+                      "absolute_lower": "1/16",
+                      "factor": "2*J*inverse_squared_physical_momentum + inverse_squared_physical_momentum*l**2*lam**2 - 2*lam**2",
+                      "power": 2
+                    }
+                  ],
+                  "numerator_box_bound": "1237786992103097966189/214748364800000000000"
+                },
+                {
+                  "absolute_upper": "5727886771722554796949384407027/5629499534213120000000000000000",
+                  "denominator_absolute_lower": "1/128",
+                  "denominator_factor_proofs": [
+                    {
+                      "absolute_lower": "1/16",
+                      "factor": "2*J*inverse_squared_physical_momentum + inverse_squared_physical_momentum*l**2*lam**2 - 2*lam**2",
+                      "power": 2
+                    }
+                  ],
+                  "numerator_box_bound": "5727886771722554796949384407027/720575940379279360000000000000000"
+                }
+              ],
+              "operator_upper": "129534522956854216450978991995056107027/5629499534213120000000000000000"
+            }
+          },
+          "energy_logarithmic_growth_upper": "27891822365583207510245239875427844754712313017661716697568958776768658753/45575908540633094446830383743124420474146061434224640000000000000",
+          "full_potential_lower_over_q": "1/2000",
+          "kinetic_lower": "1/1000",
+          "kinetic_upper": "10000",
+          "principal_gradient_lower": "1/1000",
+          "principal_gradient_upper": "10000",
+          "sufficient_q_lower": "129534522956854216450978991995056107027/2814749767106560000000000000"
+        },
+        "unitary": {
+          "coefficient_bounds": {
+            "antisymmetric_mixing": {
+              "entry_proofs": [
+                {
+                  "absolute_upper": "0",
+                  "denominator_absolute_lower": "1",
+                  "denominator_factor_proofs": [],
+                  "numerator_box_bound": "0"
+                },
+                {
+                  "absolute_upper": "6716760114101/134217728000",
+                  "denominator_absolute_lower": "1/4",
+                  "denominator_factor_proofs": [
+                    {
+                      "absolute_lower": "1/4",
+                      "factor": "theta",
+                      "power": "2"
+                    }
+                  ],
+                  "numerator_box_bound": "6716760114101/536870912000"
+                },
+                {
+                  "absolute_upper": "6716760114101/134217728000",
+                  "denominator_absolute_lower": "1/4",
+                  "denominator_factor_proofs": [
+                    {
+                      "absolute_lower": "1/4",
+                      "factor": "theta",
+                      "power": "2"
+                    }
+                  ],
+                  "numerator_box_bound": "6716760114101/536870912000"
+                },
+                {
+                  "absolute_upper": "0",
+                  "denominator_absolute_lower": "1",
+                  "denominator_factor_proofs": [],
+                  "numerator_box_bound": "0"
+                }
+              ],
+              "operator_upper": "6716760114101/67108864000"
+            },
+            "beta_leading": {
+              "entry_proofs": [
+                {
+                  "absolute_upper": "4",
+                  "denominator_absolute_lower": "1/4",
+                  "denominator_factor_proofs": [
+                    {
+                      "absolute_lower": "1/4",
+                      "factor": "theta",
+                      "power": 1
+                    }
+                  ],
+                  "numerator_box_bound": "1"
+                },
+                {
+                  "absolute_upper": "0",
+                  "denominator_absolute_lower": "1",
+                  "denominator_factor_proofs": [],
+                  "numerator_box_bound": "0"
+                },
+                {
+                  "absolute_upper": "0",
+                  "denominator_absolute_lower": "1",
+                  "denominator_factor_proofs": [],
+                  "numerator_box_bound": "0"
+                },
+                {
+                  "absolute_upper": "0",
+                  "denominator_absolute_lower": "1",
+                  "denominator_factor_proofs": [],
+                  "numerator_box_bound": "0"
+                }
+              ],
+              "operator_upper": "4"
+            },
+            "beta_remainder": {
+              "entry_proofs": [
+                {
+                  "absolute_upper": "0",
+                  "denominator_absolute_lower": "1",
+                  "denominator_factor_proofs": [],
+                  "numerator_box_bound": "0"
+                },
+                {
+                  "absolute_upper": "6716760114101/67108864000",
+                  "denominator_absolute_lower": "1/8",
+                  "denominator_factor_proofs": [
+                    {
+                      "absolute_lower": "1/4",
+                      "factor": "theta",
+                      "power": "2"
+                    }
+                  ],
+                  "numerator_box_bound": "6716760114101/536870912000"
+                },
+                {
+                  "absolute_upper": "0",
+                  "denominator_absolute_lower": "1",
+                  "denominator_factor_proofs": [],
+                  "numerator_box_bound": "0"
+                },
+                {
+                  "absolute_upper": "1/100",
+                  "denominator_absolute_lower": "1/2",
+                  "denominator_factor_proofs": [
+                    {
+                      "absolute_lower": "1/4",
+                      "factor": "theta",
+                      "power": 1
+                    }
+                  ],
+                  "numerator_box_bound": "1/200"
+                }
+              ],
+              "operator_upper": "6717431202741/67108864000"
+            },
+            "energy_mixing_coefficient": {
+              "entry_proofs": [
+                {
+                  "absolute_upper": "0",
+                  "denominator_absolute_lower": "1",
+                  "denominator_factor_proofs": [],
+                  "numerator_box_bound": "0"
+                },
+                {
+                  "absolute_upper": "7075747314127471581/671088640000000",
+                  "denominator_absolute_lower": "1/16",
+                  "denominator_factor_proofs": [
+                    {
+                      "absolute_lower": "1/4",
+                      "factor": "theta",
+                      "power": "3"
+                    }
+                  ],
+                  "numerator_box_bound": "7075747314127471581/10737418240000000"
+                },
+                {
+                  "absolute_upper": "7075747314127471581/671088640000000",
+                  "denominator_absolute_lower": "1/16",
+                  "denominator_factor_proofs": [
+                    {
+                      "absolute_lower": "1/4",
+                      "factor": "theta",
+                      "power": "3"
+                    }
+                  ],
+                  "numerator_box_bound": "7075747314127471581/10737418240000000"
+                },
+                {
+                  "absolute_upper": "0",
+                  "denominator_absolute_lower": "1",
+                  "denominator_factor_proofs": [],
+                  "numerator_box_bound": "0"
+                }
+              ],
+              "operator_upper": "7075747314127471581/335544320000000"
+            },
+            "energy_principal_coefficient": {
+              "entry_proofs": [
+                {
+                  "absolute_upper": "3190353/32",
+                  "denominator_absolute_lower": "1/64",
+                  "denominator_factor_proofs": [
+                    {
+                      "absolute_lower": "1/4",
+                      "factor": "theta",
+                      "power": "3"
+                    }
+                  ],
+                  "numerator_box_bound": "3190353/2048"
+                },
+                {
+                  "absolute_upper": "741/16",
+                  "denominator_absolute_lower": "1/16",
+                  "denominator_factor_proofs": [
+                    {
+                      "absolute_lower": "1/4",
+                      "factor": "theta",
+                      "power": "2"
+                    }
+                  ],
+                  "numerator_box_bound": "741/256"
+                },
+                {
+                  "absolute_upper": "741/16",
+                  "denominator_absolute_lower": "1/16",
+                  "denominator_factor_proofs": [
+                    {
+                      "absolute_lower": "1/4",
+                      "factor": "theta",
+                      "power": "2"
+                    }
+                  ],
+                  "numerator_box_bound": "741/256"
+                },
+                {
+                  "absolute_upper": "2",
+                  "denominator_absolute_lower": "1",
+                  "denominator_factor_proofs": [],
+                  "numerator_box_bound": "2"
+                }
+              ],
+              "operator_upper": "3193381/32"
+            },
+            "energy_remainder_coefficient": {
+              "entry_proofs": [
+                {
+                  "absolute_upper": "0",
+                  "denominator_absolute_lower": "1",
+                  "denominator_factor_proofs": [],
+                  "numerator_box_bound": "0"
+                },
+                {
+                  "absolute_upper": "29138986345493983822143/10737418240000000",
+                  "denominator_absolute_lower": "1/64",
+                  "denominator_factor_proofs": [
+                    {
+                      "absolute_lower": "1/4",
+                      "factor": "theta",
+                      "power": "4"
+                    }
+                  ],
+                  "numerator_box_bound": "29138986345493983822143/687194767360000000"
+                },
+                {
+                  "absolute_upper": "29138986345493983822143/10737418240000000",
+                  "denominator_absolute_lower": "1/64",
+                  "denominator_factor_proofs": [
+                    {
+                      "absolute_lower": "1/4",
+                      "factor": "theta",
+                      "power": "4"
+                    }
+                  ],
+                  "numerator_box_bound": "29138986345493983822143/687194767360000000"
+                },
+                {
+                  "absolute_upper": "18022823166019831581/6710886400000000",
+                  "denominator_absolute_lower": "1/16",
+                  "denominator_factor_proofs": [
+                    {
+                      "absolute_lower": "1/4",
+                      "factor": "theta",
+                      "power": "3"
+                    }
+                  ],
+                  "numerator_box_bound": "18022823166019831581/107374182400000000"
+                }
+              ],
+              "operator_upper": "145767023020133998437039/26843545600000000"
+            },
+            "energy_velocity_coefficient": {
+              "entry_proofs": [
+                {
+                  "absolute_upper": "3614036620123111581/16777216000000",
+                  "denominator_absolute_lower": "1/64",
+                  "denominator_factor_proofs": [
+                    {
+                      "absolute_lower": "1/4",
+                      "factor": "theta",
+                      "power": "3"
+                    }
+                  ],
+                  "numerator_box_bound": "3614036620123111581/1073741824000000"
+                },
+                {
+                  "absolute_upper": "4473/80",
+                  "denominator_absolute_lower": "1/16",
+                  "denominator_factor_proofs": [
+                    {
+                      "absolute_lower": "1/4",
+                      "factor": "theta",
+                      "power": "2"
+                    }
+                  ],
+                  "numerator_box_bound": "4473/1280"
+                },
+                {
+                  "absolute_upper": "4473/80",
+                  "denominator_absolute_lower": "1/16",
+                  "denominator_factor_proofs": [
+                    {
+                      "absolute_lower": "1/4",
+                      "factor": "theta",
+                      "power": "2"
+                    }
+                  ],
+                  "numerator_box_bound": "4473/1280"
+                },
+                {
+                  "absolute_upper": "6",
+                  "denominator_absolute_lower": "1",
+                  "denominator_factor_proofs": [],
+                  "numerator_box_bound": "6"
+                }
+              ],
+              "operator_upper": "3616013395598311581/16777216000000"
+            },
+            "potential_remainder": {
+              "entry_proofs": [
+                {
+                  "absolute_upper": "0",
+                  "denominator_absolute_lower": "1",
+                  "denominator_factor_proofs": [],
+                  "numerator_box_bound": "0"
+                },
+                {
+                  "absolute_upper": "7075747314127471581/671088640000000",
+                  "denominator_absolute_lower": "1/16",
+                  "denominator_factor_proofs": [
+                    {
+                      "absolute_lower": "1/4",
+                      "factor": "theta",
+                      "power": "3"
+                    }
+                  ],
+                  "numerator_box_bound": "7075747314127471581/10737418240000000"
+                },
+                {
+                  "absolute_upper": "7075747314127471581/671088640000000",
+                  "denominator_absolute_lower": "1/16",
+                  "denominator_factor_proofs": [
+                    {
+                      "absolute_lower": "1/4",
+                      "factor": "theta",
+                      "power": "3"
+                    }
+                  ],
+                  "numerator_box_bound": "7075747314127471581/10737418240000000"
+                },
+                {
+                  "absolute_upper": "11435352114101/1342177280000",
+                  "denominator_absolute_lower": "1/4",
+                  "denominator_factor_proofs": [
+                    {
+                      "absolute_lower": "1/4",
+                      "factor": "theta",
+                      "power": "2"
+                    }
+                  ],
+                  "numerator_box_bound": "11435352114101/5368709120000"
+                }
+              ],
+              "operator_upper": "7078606152155996831/335544320000000"
+            }
+          },
+          "energy_logarithmic_growth_upper": "557167092049219248591263237039/1342177280000000000000",
+          "full_potential_lower_over_q": "1/2000",
+          "kinetic_lower": "1/1000",
+          "kinetic_upper": "10000",
+          "principal_gradient_lower": "1/1000",
+          "principal_gradient_upper": "10000",
+          "sufficient_q_lower": "100000000"
+        }
+      },
+      "common_raw_phase_seed_after_center_Fourier_conversion": 1000000000000000000000000000000000000000000,
+      "evolved_coordinate_norm_upper": 8,
+      "evolved_velocity_norm_upper": 100000000000000000000,
+      "external_fixed_center_momentum_band": [
+        1000000000000,
+        10000000000000
+      ],
+      "full_window": "1/2000000000",
+      "half_window": "1/4000000000",
+      "initial_energy_upper_over_kappa": 1000000000,
+      "largest_internal_tree_fixed_center_momentum": 20000000000000,
+      "margins": {
+        "all_beta_parts_below_common_bound": "4166201103168283/65536000000",
+        "both_chart_energy_growth_below_named_constant": "17684086175049886936585143867696575719433748416562923302431041223231341247/45575908540633094446830383743124420474146061434224640000000000000",
+        "constant_center_Fourier_and_TT_factors_fit_raw_seed": 999200000000000000000000000000000000000000,
+        "coordinate_norm_squared_below_64": "32",
+        "energy_growth_exponent_at_most_half": "0",
+        "gamma_swap_nonzero_q_lower": "249999999999999999999999",
+        "initial_antisymmetric_velocity_bound": "32765612601103168283/65536000",
+        "many_oscillatory_radians_in_half_window": "150",
+        "new_matter_boundary_phase_bounds_fit_before_Fourier_conversion": "84999999999999999999999999999999999997",
+        "phase_momentum_density_below_declared_upper": 99998719999998999999999999999999200000,
+        "positive_width_inside_both_chart_overlap_margins": "24999999/4000000000",
+        "scale_drift_exponent_below_half": "249999999/500000000",
+        "velocity_squared_below_declared_linear_upper": 9999999999999840000000000000000000000000,
+        "whole_window_kinetic_and_potential_high_q": "703687441776510465477043145783549021008004943892973/2814749767106560000000000000"
+      },
+      "mode_choice": "Scalar canonical initial columns use an arbitrary real Cholesky root of the actual positive kinetic matrix and the symmetric momentum boundary. The antisymmetric initial-velocity contribution is retained. This does not reselect the vector Gaussian state.",
+      "new_matter_boundary_phase_upper": 200000000000000000000000000000000000000,
+      "nonempty_proper_subset_fixed_center_transfer_lower": 1000000000000,
+      "original_chart_momentum_density_norm_upper": 100000000000000000000000000000000000000,
+      "scalar_energy_growth_upper": 1000000000,
+      "scalar_energy_inflation_upper": 2,
+      "window_domain": "Any interval of this full length contained in I. Choose gamma if its center has |u|<=19/80, unitary otherwise. The half-width is below 1/160, keeping the whole interval in the corresponding certified chart."
+    },
+    "common_named_M_tau": "10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "comparison": "Both new coefficient families obey the same universal Cauchy bounds. Reuse the positive S6.80 scaling proof and the same free phase coordinates at L=10^400. Triangle inequalities give twice the common finite-order block bound. This does not include a new tadpole, quantum loop or higher-operator change.",
+    "constant_mass_connected_quartic_tree_upper": "25283675815672382711713982201841445063146086326569555268898588361061307094213412706785982322923722991570035925285073872473129961254606449087826099299591315091658230175531104509204927060338118735678612295760783278945083505407199961730079643419801821429205473642148641433641076212863207314424096707425463104127634490402943699816064431023911952364578864129965121491955607238382493423451346901978203014002104797326205056277776386138019395866348878263/18446744073709551616000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "constant_mass_cubic_block_upper": "3678599324347915141798649013192746541322831592519566654905501114886527120698106004386186389797149291897458794572648311570823738674088103333950865210992094810333233185439087370744682952871993975990845941664902795906677341215185991037351684897635373/1073741824000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "constant_mass_minus_source_free_connected_quartic_upper": "25283675815672382711713982201841445063146086326569555268898588361061307094213412706785982322923722991570035925285073872473129961254606449087826099299591315091658230175531104509204927060338118735678612295760783278945083505407199961730079643419801821429205473642148641433641076212863207314424096707425463104127634490402943699816064431023911952364578864129965121491955607238382493423451346901978203014002104797326205056277776386138019395866348878263/9223372036854775808000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "constant_mass_minus_source_free_cubic_upper": "3678599324347915141798649013192746541322831592519566654905501114886527120698106004386186389797149291897458794572648311570823738674088103333950865210992094810333233185439087370744682952871993975990845941664902795906677341215185991037351684897635373/536870912000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "36f6e3c2f6991a972c32ddcda6b69352aa907937182296ae1e4f92e6bc4ff404",
+    "README.md": "088af836126c3ec314f2076c5bf0694cd8765c99303dd9466f4c227727def40f",
+    "notes/affine.md": "f909165e35f8a8052de50462b7521b0c462c159d84fa2f28fa3ab579dec0fbd8",
+    "notes/classical.md": "9a7a1c8c28f61e5c016bca9358e081780f322b7d561827a7d3ca3619df0ff8e3",
+    "notes/propagation.md": "dedd6b58aa8f4a3552c2da3cab6430fec680c6b6b42b081f039da0d6222a8dd7",
+    "notes/quantum.md": "d237c2c3978393c21c9647f1fbb228e96491d5e856552ff824aa959077833288",
+    "notes/scope.md": "bc51d5fcfb1d6f987e45e436ea1e10f09a8c27e8b2ac7de54ee77e582608d335",
+    "src/p8_constant_proca/__init__.py": "807697e6d025d6c2813a5e1a9a6900eeaaca7917535590f4b022fa35b4f357d0",
+    "src/p8_constant_proca/affine.py": "1df3b45b6743498848280c9b5766f902e6fa4e2d105c46904226fb05342f1673",
+    "src/p8_constant_proca/audit.py": "e30e0936d8207520499fbf2bd0a461ecb7e8c2ee94b86300dabf4e5d7828fa64",
+    "src/p8_constant_proca/bounds.py": "8ad923ca9fa6e0428fa3af420dd2f40ac50b92f3e6fac799537f6fdff542f975",
+    "src/p8_constant_proca/model.py": "55c83a29cb8edf25195511f2a4154f00acd69fa1462e8a9af3c3d1146cae46e9",
+    "src/p8_constant_proca/propagation.py": "36ddc7e0c7791960351a50f3ff3eef4d9789cb1b0767e230d53f9d2d41fa8586",
+    "src/p8_constant_proca/quantum.py": "e940b03766a003a8d0511b88585cd081a6cf4d715c7422dda2dcf41b5a70c46d",
+    "src/p8_constant_proca/verify.py": "8ecda702c5055dbeb26ec1628a4a1ce6cdaf0de7315023a4db5fc4d218b8a8b1",
+    "tests/conftest.py": "f1d999093cd6bd73af6633816ffd432e1e376b548d2102d972c433e9c909261d",
+    "tests/test_constant_proca_certificate.py": "74d4cf86923b47be5bbadb7523e80b6a86cefd9083e85e894bea7e63602524d9",
+    "tests/test_constant_proca_science.py": "c79b43e38bfbe7ed8a0f14cbc33771cee4f4e5e78ebef60fe51a27d515001359"
+  },
+  "status": "NEW_CLASSICAL_AFFINE_CONSTANT_MASS_PROCA_CANDIDATE_WITH_PHYSICAL_VECTOR_CONE_AND_FINITE_TREE_CHANGE; QUANTUM_TADPOLE_RESPONSE_MATCHING_AND_ORIGINAL_P8_OPEN",
+  "verdict": "The literal new affine mass/source/contact update gives an invertible local quotient and a source-free constant positive physical Proca mass. The original classical clock and full quadratic seven-mode theory agree, with continuous auxiliary and finite hard-tree change bounds on the same L=10^400 domain. The constrained vector characteristic cone is the physical metric cone on admitted smooth globally hyperbolic backgrounds; no full scalar-neighborhood or nonlinear result is inferred. Actual quantum energy readouts and first/second lapse operator jets change, although original clock modes and covariance agree. The old fixed tadpole cancellation and quantum response are not transferred.",
+  "verification_boundary": "Exact affine/ADM/coefficient/symbol/contact identities, rational enclosures and written proofs. Vector finite propagation uses the stated constrained-Proca Green-hyperbolic theorem with its hypotheses, not an unconstrained four-mode claim. The prior full chain is natively rebuilt. Not proof-assistant formalization.",
+  "written_proofs": [
+    "notes/affine.md",
+    "notes/classical.md",
+    "notes/propagation.md",
+    "notes/quantum.md",
+    "notes/scope.md"
+  ]
+}

@@ -1,0 +1,613 @@
+{
+  "Euler_first_frozen_diagnostic": {
+    "Euler_constant_determinant_leading_coefficient": "2*N**(7/2)*(N - 1)**2*(N + 1)**2*(55*N**2 + 44*N - 18)*(44*N**3 - 6*N**2 - 11)/(27*(5*N + 4)*(44*N**7 - 6*N**6 - 112*N**5 + N**4 + 44*N**3 + 22*N**2 - 11))",
+    "actual_clock_Euler_leading_determinant": "1199/100",
+    "clock_negative_control_without_Euler_time_jets": "-1/100",
+    "frequency_variable": "q=|k_hat|^2 at the central hat-metric slice; physical squared momentum is q/N. The rescaling is positive and finite.",
+    "same_action_lapse_domain": {
+      "continuous_rational_proofs": {
+        "gamma_s": {
+          "denominator_center": "81",
+          "denominator_tail_upper": "308000000000000000000000000011/20000000000000000000000000000000000000000000000000000000",
+          "lower": "1619999999999999999999999999747999999999999999999999999991/1620000000000000000000000000308000000000000000000000000011",
+          "numerator_center": "81",
+          "numerator_tail_upper": "252000000000000000000000000009/20000000000000000000000000000000000000000000000000000000",
+          "radius": "1/10000000000000000000000000000",
+          "upper": "1620000000000000000000000000252000000000000000000000000009/1619999999999999999999999999691999999999999999999999999989"
+        },
+        "gamma_t": {
+          "denominator_center": "27",
+          "denominator_tail_upper": "3000000000000000000000000000315000000000000000000000000011/250000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "lower": "6749999999999999999999999997299999999999999999999999999729999999999999999999999999991/6750000000000000000000000003000000000000000000000000000315000000000000000000000000011",
+          "numerator_center": "27",
+          "numerator_tail_upper": "2700000000000000000000000000270000000000000000000000000009/250000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "radius": "1/10000000000000000000000000000",
+          "upper": "6750000000000000000000000002700000000000000000000000000270000000000000000000000000009/6749999999999999999999999996999999999999999999999999999684999999999999999999999999989"
+        },
+        "matter_squared": {
+          "denominator_center": "500000",
+          "denominator_tail_upper": "1/20000000000000000000000",
+          "lower": "9999999999999999999999998801996799999999999999999999609900559999999999999999999955000039999999999999999999998875001/1000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "numerator_center": "5000",
+          "numerator_tail_upper": "1198003200000000000000000000390099440000000000000000000044999960000000000000000000001124999/2000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "radius": "1/10000000000000000000000000000",
+          "upper": "10000000000000000000000001198003200000000000000000000390099440000000000000000000044999960000000000000000000001124999/999999999999999999999999999900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "matter_squared_secant": {
+          "denominator_center": "500000",
+          "denominator_tail_upper": "1/20000000000000000000000",
+          "lower": "-1199003200000000000000000000390099440000000000000000000044999960000000000000000000001124999/99999999999999999999999999990000000000000000000000000000000000000000000000000000000000000",
+          "numerator_center": "-5995016",
+          "numerator_tail_upper": "390099440000000000000000000044999960000000000000000000001124999/200000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "radius": "1/10000000000000000000000000000",
+          "upper": "-1199003199999999999999999999609900559999999999999999999955000039999999999999999999998875001/100000000000000000000000000010000000000000000000000000000000000000000000000000000000000000"
+        },
+        "normalized_lapse_Hessian": {
+          "denominator_center": "1",
+          "denominator_tail_upper": 0,
+          "lower": "-11990032000000000000000000007801988800000000000000000001740098240000000000000000000134999880000000000000000000003374997/4000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "numerator_center": "-749377/250000",
+          "numerator_tail_upper": "7801988800000000000000000001740098240000000000000000000134999880000000000000000000003374997/4000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "radius": "1/10000000000000000000000000000",
+          "upper": "-11990031999999999999999999992198011199999999999999999998259901759999999999999999999865000119999999999999999999996625003/4000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "normalized_longitudinal_kinetic": {
+          "denominator_center": "54",
+          "denominator_tail_upper": "435000000000000000000000000098250000000000000000000000010400000000000000000000000000535000000000000000000000000011/12500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "lower": "134999999999999999999999999918999999999999999999999999990549999999999999999999999997389999999999999999999999999331749999999999999999999999941799999999999999999999999997734999999999999999999999999967/135000000000000000000000000087000000000000000000000000019650000000000000000000000002080000000000000000000000000107000000000000000000000000002200000000000000000000000000000000000000000000000000000000",
+          "numerator_center": "54",
+          "numerator_tail_upper": "81000000000000000000000000009450000000000000000000000002610000000000000000000000000668250000000000000000000000058200000000000000000000000002265000000000000000000000000033/2500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "radius": "1/10000000000000000000000000000",
+          "upper": "135000000000000000000000000081000000000000000000000000009450000000000000000000000002610000000000000000000000000668250000000000000000000000058200000000000000000000000002265000000000000000000000000033/134999999999999999999999999912999999999999999999999999980349999999999999999999999997919999999999999999999999999892999999999999999999999999997800000000000000000000000000000000000000000000000000000000"
+        }
+      },
+      "gates": {
+        "finite_spatial_mass_pivot": true,
+        "finite_temporal_mass_pivot": true,
+        "fixed_phase_lapse_Hessian_negative": true,
+        "inside_original_auxiliary_lapse_disc": true,
+        "inside_original_nine_invariant_polydisc": true,
+        "positive_longitudinal_kinetic_limit": true,
+        "positive_matter_root": true
+      },
+      "lapse_half_width": "1/10000000000000000000000000000",
+      "positive_matter_momentum_deviation_upper": "1199003200000000000000000000390099440000000000000000000044999960000000000000000000001124999/99999999999999999999999999990000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "scope": "For every fixed real N in the punctured certified interval, the Euler-first frozen three-scalar constant determinant is negative for sufficiently large q, while its positive-real-frequency leading coefficient is positive. Continuity gives at least one real growing root of this frozen local symbol. This is not an actual time-dependent instability or a UV exclusion; no numerical interacting cutoff has been inferred."
+  },
+  "actual_Lagrangian_high_frequency_orders": {
+    "Hamiltonian_mixing_block": [
+      [
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "-positive_hat_squared_momentum*(positive_lapse_square_root - 1)*(positive_lapse_square_root + 1)*(positive_lapse_square_root**2 + 1)/positive_lapse_square_root",
+        "0",
+        "0"
+      ]
+    ],
+    "Lagrangian_coordinate_matrix": [
+      [
+        "2*positive_hat_squared_momentum**3*positive_lapse_square_root**3*(positive_lapse_square_root - 1)**2*(positive_lapse_square_root + 1)**2*(positive_lapse_square_root**2 + 1)**2*(44*positive_lapse_square_root**6 - 6*positive_lapse_square_root**4 - 11)/(132*positive_hat_squared_momentum*positive_lapse_square_root**14 - 18*positive_hat_squared_momentum*positive_lapse_square_root**12 - 336*positive_hat_squared_momentum*positive_lapse_square_root**10 + 3*positive_hat_squared_momentum*positive_lapse_square_root**8 + 132*positive_hat_squared_momentum*positive_lapse_square_root**6 + 66*positive_hat_squared_momentum*positive_lapse_square_root**4 - 33*positive_hat_squared_momentum - 88000000*positive_lapse_square_root**12 + 12000000*positive_lapse_square_root**10 + 22000000*positive_lapse_square_root**6)",
+        "positive_hat_squared_momentum*positive_homogeneous_matter_momentum*positive_lapse_square_root**3",
+        "0"
+      ],
+      [
+        "positive_hat_squared_momentum*positive_homogeneous_matter_momentum*positive_lapse_square_root**3",
+        "positive_lapse_square_root*(1000000*positive_hat_squared_momentum*positive_lapse_square_root**2 + 16874985*positive_lapse_square_root**8 - 42734994*positive_lapse_square_root**4 + 25875009)/1000000",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "positive_hat_squared_momentum*positive_lapse_square_root*(55*positive_lapse_square_root**4 + 44*positive_lapse_square_root**2 - 18)/(9*(5*positive_lapse_square_root**2 + 4))"
+      ]
+    ],
+    "longitudinal_gradient_coefficient": "positive_lapse_square_root*(55*positive_lapse_square_root**4 + 44*positive_lapse_square_root**2 - 18)/(9*(5*positive_lapse_square_root**2 + 4))",
+    "matter_gradient_coefficient": "positive_lapse_square_root**3",
+    "minus_q_squared_coefficient": "-2*positive_lapse_square_root**3*(positive_lapse_square_root - 1)**2*(positive_lapse_square_root + 1)**2*(positive_lapse_square_root**2 + 1)**2*(44*positive_lapse_square_root**6 - 6*positive_lapse_square_root**4 - 11)/(3*(44*positive_lapse_square_root**14 - 6*positive_lapse_square_root**12 - 112*positive_lapse_square_root**10 + positive_lapse_square_root**8 + 44*positive_lapse_square_root**6 + 22*positive_lapse_square_root**4 - 11))",
+    "time_jet_order_statement": "A and A_dot are O(1), with positive invertible A_infinity. B and B_dot have first column O(q) and the other columns O(1). Therefore beta_dot and 3*H_hat*beta have only O(q) in their first column and O(1) elsewhere. All actual homogeneous time jets are finite; they are not set to zero."
+  },
+  "actual_canonical_gamma_blocks": {
+    "canonical_gamma_map": [
+      [
+        "0",
+        "0",
+        "0",
+        "1/(2*positive_hat_squared_momentum)",
+        "0",
+        "0"
+      ],
+      [
+        "-2*positive_hat_squared_momentum",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "1",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "1",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "1"
+      ]
+    ],
+    "coordinate_Hessian": [
+      [
+        "0",
+        "positive_hat_squared_momentum*positive_homogeneous_matter_momentum*positive_lapse_square_root**3",
+        "0"
+      ],
+      [
+        "positive_hat_squared_momentum*positive_homogeneous_matter_momentum*positive_lapse_square_root**3",
+        "positive_lapse_square_root*(1000000*positive_hat_squared_momentum*positive_lapse_square_root**2 + 16874985*positive_lapse_square_root**8 - 42734994*positive_lapse_square_root**4 + 25875009)/1000000",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "positive_hat_squared_momentum*positive_lapse_square_root*(55*positive_lapse_square_root**4 + 44*positive_lapse_square_root**2 - 18)/(9*(5*positive_lapse_square_root**2 + 4))"
+      ]
+    ],
+    "mixing_over_q_limit": [
+      [
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "-(positive_lapse_square_root - 1)*(positive_lapse_square_root + 1)*(positive_lapse_square_root**2 + 1)/positive_lapse_square_root",
+        "0",
+        "0"
+      ]
+    ],
+    "momentum_Hessian": [
+      [
+        "-(125000000000*positive_hat_squared_momentum**2*positive_lapse_square_root**4 + 6328119375000*positive_hat_squared_momentum*positive_lapse_square_root**10 - 12464373250000*positive_hat_squared_momentum*positive_lapse_square_root**6 + 5390626875000*positive_hat_squared_momentum*positive_lapse_square_root**2 - 56953023750045*positive_lapse_square_root**16 + 168268889302521*positive_lapse_square_root**12 - 75937432500000*positive_lapse_square_root**11 + 29109359249991*positive_lapse_square_root**8 + 64102491000000*positive_lapse_square_root**7 - 307157876212485*positive_lapse_square_root**4 + 38812513500000*positive_lapse_square_root**3 + 148781353500018)/(250000*positive_hat_squared_momentum**2*positive_lapse_square_root**3*(16874985*positive_lapse_square_root**8 - 14244998*positive_lapse_square_root**4 - 8625003))",
+        "positive_homogeneous_matter_momentum*(500000*positive_hat_squared_momentum*positive_lapse_square_root**2 - 16874985*positive_lapse_square_root**8 + 25875009)/(positive_hat_squared_momentum*positive_lapse_square_root*(16874985*positive_lapse_square_root**8 - 14244998*positive_lapse_square_root**4 - 8625003))",
+        "0"
+      ],
+      [
+        "positive_homogeneous_matter_momentum*(500000*positive_hat_squared_momentum*positive_lapse_square_root**2 - 16874985*positive_lapse_square_root**8 + 25875009)/(positive_hat_squared_momentum*positive_lapse_square_root*(16874985*positive_lapse_square_root**8 - 14244998*positive_lapse_square_root**4 - 8625003))",
+        "2*(5624995*positive_lapse_square_root**8 - 8625003)/(positive_lapse_square_root*(16874985*positive_lapse_square_root**8 - 14244998*positive_lapse_square_root**4 - 8625003))",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "-(132*positive_hat_squared_momentum*positive_lapse_square_root**14 - 18*positive_hat_squared_momentum*positive_lapse_square_root**12 - 336*positive_hat_squared_momentum*positive_lapse_square_root**10 + 3*positive_hat_squared_momentum*positive_lapse_square_root**8 + 132*positive_hat_squared_momentum*positive_lapse_square_root**6 + 66*positive_hat_squared_momentum*positive_lapse_square_root**4 - 33*positive_hat_squared_momentum - 88000000*positive_lapse_square_root**12 + 12000000*positive_lapse_square_root**10 + 22000000*positive_lapse_square_root**6)/(2*positive_hat_squared_momentum*positive_lapse_square_root**5*(44*positive_lapse_square_root**6 - 6*positive_lapse_square_root**4 - 11))"
+      ]
+    ],
+    "momentum_Hessian_limit": [
+      [
+        "-500000*positive_lapse_square_root/(16874985*positive_lapse_square_root**8 - 14244998*positive_lapse_square_root**4 - 8625003)",
+        "500000*positive_homogeneous_matter_momentum*positive_lapse_square_root/(16874985*positive_lapse_square_root**8 - 14244998*positive_lapse_square_root**4 - 8625003)",
+        "0"
+      ],
+      [
+        "500000*positive_homogeneous_matter_momentum*positive_lapse_square_root/(16874985*positive_lapse_square_root**8 - 14244998*positive_lapse_square_root**4 - 8625003)",
+        "2*(5624995*positive_lapse_square_root**8 - 8625003)/(positive_lapse_square_root*(16874985*positive_lapse_square_root**8 - 14244998*positive_lapse_square_root**4 - 8625003))",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "-3*(44*positive_lapse_square_root**14 - 6*positive_lapse_square_root**12 - 112*positive_lapse_square_root**10 + positive_lapse_square_root**8 + 44*positive_lapse_square_root**6 + 22*positive_lapse_square_root**4 - 11)/(2*positive_lapse_square_root**5*(44*positive_lapse_square_root**6 - 6*positive_lapse_square_root**4 - 11))"
+      ]
+    ],
+    "momentum_coordinate_block": [
+      [
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "-positive_hat_squared_momentum*(positive_lapse_square_root - 1)*(positive_lapse_square_root + 1)*(positive_lapse_square_root**2 + 1)/positive_lapse_square_root",
+        "0",
+        "0"
+      ]
+    ],
+    "old_phase_matrix": [
+      [
+        "(56953023750045*positive_lapse_square_root**16 - 168268889302521*positive_lapse_square_root**12 + 75937432500000*positive_lapse_square_root**11 - 6328119375000*positive_lapse_square_root**10*positive_wave_scale**2 - 29109359249991*positive_lapse_square_root**8 - 64102491000000*positive_lapse_square_root**7 + 12464373250000*positive_lapse_square_root**6*positive_wave_scale**2 - 125000000000*positive_lapse_square_root**4*positive_wave_scale**4 + 307157876212485*positive_lapse_square_root**4 - 38812513500000*positive_lapse_square_root**3 - 5390626875000*positive_lapse_square_root**2*positive_wave_scale**2 - 148781353500018)/(62500*positive_lapse_square_root**3*(16874985*positive_lapse_square_root**8 - 14244998*positive_lapse_square_root**4 - 8625003))",
+        "0",
+        "0",
+        "-2*positive_homogeneous_matter_momentum*(16874985*positive_lapse_square_root**8 - 500000*positive_lapse_square_root**2*positive_wave_scale**2 - 25875009)/(positive_lapse_square_root*(16874985*positive_lapse_square_root**8 - 14244998*positive_lapse_square_root**4 - 8625003))",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "-positive_homogeneous_matter_momentum*positive_lapse_square_root**3/2",
+        "0",
+        "0",
+        "(positive_lapse_square_root - 1)*(positive_lapse_square_root + 1)*(positive_lapse_square_root**2 + 1)/(2*positive_lapse_square_root)"
+      ],
+      [
+        "0",
+        "-positive_homogeneous_matter_momentum*positive_lapse_square_root**3/2",
+        "positive_lapse_square_root*(16874985*positive_lapse_square_root**8 - 42734994*positive_lapse_square_root**4 + 1000000*positive_lapse_square_root**2*positive_wave_scale**2 + 25875009)/1000000",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "-2*positive_homogeneous_matter_momentum*(16874985*positive_lapse_square_root**8 - 500000*positive_lapse_square_root**2*positive_wave_scale**2 - 25875009)/(positive_lapse_square_root*(16874985*positive_lapse_square_root**8 - 14244998*positive_lapse_square_root**4 - 8625003))",
+        "0",
+        "0",
+        "2*(5624995*positive_lapse_square_root**8 - 8625003)/(positive_lapse_square_root*(16874985*positive_lapse_square_root**8 - 14244998*positive_lapse_square_root**4 - 8625003))",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "positive_lapse_square_root*positive_wave_scale**2*(55*positive_lapse_square_root**4 + 44*positive_lapse_square_root**2 - 18)/(9*(5*positive_lapse_square_root**2 + 4))",
+        "0"
+      ],
+      [
+        "0",
+        "(positive_lapse_square_root - 1)*(positive_lapse_square_root + 1)*(positive_lapse_square_root**2 + 1)/(2*positive_lapse_square_root)",
+        "0",
+        "0",
+        "0",
+        "-(132*positive_lapse_square_root**14*positive_wave_scale**2 - 18*positive_lapse_square_root**12*positive_wave_scale**2 - 88000000*positive_lapse_square_root**12 - 336*positive_lapse_square_root**10*positive_wave_scale**2 + 12000000*positive_lapse_square_root**10 + 3*positive_lapse_square_root**8*positive_wave_scale**2 + 132*positive_lapse_square_root**6*positive_wave_scale**2 + 22000000*positive_lapse_square_root**6 + 66*positive_lapse_square_root**4*positive_wave_scale**2 - 33*positive_wave_scale**2)/(2*positive_lapse_square_root**5*positive_wave_scale**2*(44*positive_lapse_square_root**6 - 6*positive_lapse_square_root**4 - 11))"
+      ]
+    ]
+  },
+  "actual_constraint_compatible_homogeneous_family": {
+    "canonical_gamma_vector_mixing": "-(N - 1)*(N + 1)/sqrt(N)",
+    "datum_description": "phi=0, flat hat spatial metric I, zero homogeneous gravitational momentum and spatial vector data, positive matter momentum P(N). The lapse constraint is imposed at fixed canonical phase data, not differentiated along the constraint family.",
+    "fixed_phase_lapse_Hessian": "(16874985*N**4 - 14244998*N**2 - 8625003)/(2000000*N**(7/2))",
+    "gamma_s": "9*N*(5*N + 4)/(55*N**2 + 44*N - 18)",
+    "gamma_t": "(9 - 36*N**3)/(-44*N**3 + 6*N**2 + 11)",
+    "homogeneous_Hamiltonian": "1124999*N**(5/2)/1000000 - 7122499*sqrt(N)/500000 + 24 + (positive_homogeneous_matter_momentum**2 - 1/100)/(2*sqrt(N)) + 1/(200*sqrt(N)) - 2875001/(1000000*N**(3/2))",
+    "joint_temporal_auxiliary_pivot": "2*N**(9/2)*(44*N**3 - 6*N**2 - 11)/(3*(44*N**7 - 6*N**6 - 112*N**5 + N**4 + 44*N**3 + 22*N**2 - 11))",
+    "lapse_Hessian_times_N_seven_halves": "(16874985*N**4 - 14244998*N**2 - 8625003)/2000000",
+    "longitudinal_kinetic_times_sqrt_N": "-3*(44*N**7 - 6*N**6 - 112*N**5 + N**4 + 44*N**3 + 22*N**2 - 11)/(2*N**2*(44*N**3 - 6*N**2 - 11))",
+    "matter_momentum_squared": "(5624995*N**4 - 14244998*N**2 + 8625003)/(500000*N)",
+    "physical_lapse": "N",
+    "physical_spatial_metric_over_hat_metric": "N",
+    "source_delta": "-1 + N**(-2)"
+  },
+  "arbitrary_finite_time_jet_determinant_check": {
+    "expected_leading_coefficient": "-nonzero_mixing**2*positive_matter_gradient*positive_vector_gradient/positive_vector_pivot",
+    "leading_determinant_over_q_fourth": "-nonzero_mixing**2*positive_matter_gradient*positive_vector_gradient/positive_vector_pivot",
+    "matrix_with_all_allowed_time_jet_orders": [
+      [
+        "bounded_remainder0 + first_order00*positive_hat_squared_momentum - nonzero_mixing**2*positive_hat_squared_momentum**2/(electric_remainder/positive_hat_squared_momentum + positive_vector_pivot)",
+        "bounded_remainder1 + first_order01*positive_hat_squared_momentum",
+        "bounded_remainder2"
+      ],
+      [
+        "bounded_remainder3 + first_order10*positive_hat_squared_momentum",
+        "bounded_remainder4 + positive_hat_squared_momentum*positive_matter_gradient",
+        "bounded_remainder5"
+      ],
+      [
+        "bounded_remainder6 + first_order20*positive_hat_squared_momentum",
+        "bounded_remainder7",
+        "bounded_remainder8 + positive_hat_squared_momentum*positive_vector_gradient"
+      ]
+    ],
+    "residual": "0"
+  },
+  "canonical_and_frame_conventions": "On the central flat hat slice, physical h=N*hat_h and physical squared momentum is q/N. W_i=partial_i sigma, P_sigma=-div(Pi), v=P_b/(2q), p=-2q*b. Keep the gamma time generator and actual finite homogeneous time jets before freezing. The physical matter coupling is not changed.",
+  "checked_scalar_entries": 97,
+  "claim": "P8-S6.79.OFFCLOCK_COUPLED_SYMBOL",
+  "complete_six_channel_phase_Hessian": [
+    [
+      "(56953023750045*positive_lapse_square_root**16 - 168268889302521*positive_lapse_square_root**12 + 75937432500000*positive_lapse_square_root**11 - 6328119375000*positive_lapse_square_root**10*positive_wave_scale**2 - 29109359249991*positive_lapse_square_root**8 - 64102491000000*positive_lapse_square_root**7 + 12464373250000*positive_lapse_square_root**6*positive_wave_scale**2 - 125000000000*positive_lapse_square_root**4*positive_wave_scale**4 + 307157876212485*positive_lapse_square_root**4 - 38812513500000*positive_lapse_square_root**3 - 5390626875000*positive_lapse_square_root**2*positive_wave_scale**2 - 148781353500018)/(62500*positive_lapse_square_root**3*(16874985*positive_lapse_square_root**8 - 14244998*positive_lapse_square_root**4 - 8625003))",
+      "0",
+      "0",
+      "-2*positive_homogeneous_matter_momentum*(16874985*positive_lapse_square_root**8 - 500000*positive_lapse_square_root**2*positive_wave_scale**2 - 25875009)/(positive_lapse_square_root*(16874985*positive_lapse_square_root**8 - 14244998*positive_lapse_square_root**4 - 8625003))",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "-positive_homogeneous_matter_momentum*positive_lapse_square_root**3/2",
+      "0",
+      "0",
+      "(positive_lapse_square_root - 1)*(positive_lapse_square_root + 1)*(positive_lapse_square_root**2 + 1)/(2*positive_lapse_square_root)"
+    ],
+    [
+      "0",
+      "-positive_homogeneous_matter_momentum*positive_lapse_square_root**3/2",
+      "positive_lapse_square_root*(16874985*positive_lapse_square_root**8 - 42734994*positive_lapse_square_root**4 + 1000000*positive_lapse_square_root**2*positive_wave_scale**2 + 25875009)/1000000",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "-2*positive_homogeneous_matter_momentum*(16874985*positive_lapse_square_root**8 - 500000*positive_lapse_square_root**2*positive_wave_scale**2 - 25875009)/(positive_lapse_square_root*(16874985*positive_lapse_square_root**8 - 14244998*positive_lapse_square_root**4 - 8625003))",
+      "0",
+      "0",
+      "2*(5624995*positive_lapse_square_root**8 - 8625003)/(positive_lapse_square_root*(16874985*positive_lapse_square_root**8 - 14244998*positive_lapse_square_root**4 - 8625003))",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0",
+      "positive_lapse_square_root*positive_wave_scale**2*(55*positive_lapse_square_root**4 + 44*positive_lapse_square_root**2 - 18)/(9*(5*positive_lapse_square_root**2 + 4))",
+      "0"
+    ],
+    [
+      "0",
+      "(positive_lapse_square_root - 1)*(positive_lapse_square_root + 1)*(positive_lapse_square_root**2 + 1)/(2*positive_lapse_square_root)",
+      "0",
+      "0",
+      "0",
+      "-(132*positive_lapse_square_root**14*positive_wave_scale**2 - 18*positive_lapse_square_root**12*positive_wave_scale**2 - 88000000*positive_lapse_square_root**12 - 336*positive_lapse_square_root**10*positive_wave_scale**2 + 12000000*positive_lapse_square_root**10 + 3*positive_lapse_square_root**8*positive_wave_scale**2 + 132*positive_lapse_square_root**6*positive_wave_scale**2 + 22000000*positive_lapse_square_root**6 + 66*positive_lapse_square_root**4*positive_wave_scale**2 - 33*positive_wave_scale**2)/(2*positive_lapse_square_root**5*positive_wave_scale**2*(44*positive_lapse_square_root**6 - 6*positive_lapse_square_root**4 - 11))"
+    ]
+  ],
+  "continuous_offclock_auxiliary_domain": {
+    "continuous_rational_proofs": {
+      "gamma_s": {
+        "denominator_center": "81",
+        "denominator_tail_upper": "308000000000000000000000000011/20000000000000000000000000000000000000000000000000000000",
+        "lower": "1619999999999999999999999999747999999999999999999999999991/1620000000000000000000000000308000000000000000000000000011",
+        "numerator_center": "81",
+        "numerator_tail_upper": "252000000000000000000000000009/20000000000000000000000000000000000000000000000000000000",
+        "radius": "1/10000000000000000000000000000",
+        "upper": "1620000000000000000000000000252000000000000000000000000009/1619999999999999999999999999691999999999999999999999999989"
+      },
+      "gamma_t": {
+        "denominator_center": "27",
+        "denominator_tail_upper": "3000000000000000000000000000315000000000000000000000000011/250000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "lower": "6749999999999999999999999997299999999999999999999999999729999999999999999999999999991/6750000000000000000000000003000000000000000000000000000315000000000000000000000000011",
+        "numerator_center": "27",
+        "numerator_tail_upper": "2700000000000000000000000000270000000000000000000000000009/250000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "radius": "1/10000000000000000000000000000",
+        "upper": "6750000000000000000000000002700000000000000000000000000270000000000000000000000000009/6749999999999999999999999996999999999999999999999999999684999999999999999999999999989"
+      },
+      "matter_squared": {
+        "denominator_center": "500000",
+        "denominator_tail_upper": "1/20000000000000000000000",
+        "lower": "9999999999999999999999998801996799999999999999999999609900559999999999999999999955000039999999999999999999998875001/1000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "numerator_center": "5000",
+        "numerator_tail_upper": "1198003200000000000000000000390099440000000000000000000044999960000000000000000000001124999/2000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "radius": "1/10000000000000000000000000000",
+        "upper": "10000000000000000000000001198003200000000000000000000390099440000000000000000000044999960000000000000000000001124999/999999999999999999999999999900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+      },
+      "matter_squared_secant": {
+        "denominator_center": "500000",
+        "denominator_tail_upper": "1/20000000000000000000000",
+        "lower": "-1199003200000000000000000000390099440000000000000000000044999960000000000000000000001124999/99999999999999999999999999990000000000000000000000000000000000000000000000000000000000000",
+        "numerator_center": "-5995016",
+        "numerator_tail_upper": "390099440000000000000000000044999960000000000000000000001124999/200000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "radius": "1/10000000000000000000000000000",
+        "upper": "-1199003199999999999999999999609900559999999999999999999955000039999999999999999999998875001/100000000000000000000000000010000000000000000000000000000000000000000000000000000000000000"
+      },
+      "normalized_lapse_Hessian": {
+        "denominator_center": "1",
+        "denominator_tail_upper": 0,
+        "lower": "-11990032000000000000000000007801988800000000000000000001740098240000000000000000000134999880000000000000000000003374997/4000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "numerator_center": "-749377/250000",
+        "numerator_tail_upper": "7801988800000000000000000001740098240000000000000000000134999880000000000000000000003374997/4000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "radius": "1/10000000000000000000000000000",
+        "upper": "-11990031999999999999999999992198011199999999999999999998259901759999999999999999999865000119999999999999999999996625003/4000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+      },
+      "normalized_longitudinal_kinetic": {
+        "denominator_center": "54",
+        "denominator_tail_upper": "435000000000000000000000000098250000000000000000000000010400000000000000000000000000535000000000000000000000000011/12500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "lower": "134999999999999999999999999918999999999999999999999999990549999999999999999999999997389999999999999999999999999331749999999999999999999999941799999999999999999999999997734999999999999999999999999967/135000000000000000000000000087000000000000000000000000019650000000000000000000000002080000000000000000000000000107000000000000000000000000002200000000000000000000000000000000000000000000000000000000",
+        "numerator_center": "54",
+        "numerator_tail_upper": "81000000000000000000000000009450000000000000000000000002610000000000000000000000000668250000000000000000000000058200000000000000000000000002265000000000000000000000000033/2500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "radius": "1/10000000000000000000000000000",
+        "upper": "135000000000000000000000000081000000000000000000000000009450000000000000000000000002610000000000000000000000000668250000000000000000000000058200000000000000000000000002265000000000000000000000000033/134999999999999999999999999912999999999999999999999999980349999999999999999999999997919999999999999999999999999892999999999999999999999999997800000000000000000000000000000000000000000000000000000000"
+      }
+    },
+    "gates": {
+      "finite_spatial_mass_pivot": true,
+      "finite_temporal_mass_pivot": true,
+      "fixed_phase_lapse_Hessian_negative": true,
+      "inside_original_auxiliary_lapse_disc": true,
+      "inside_original_nine_invariant_polydisc": true,
+      "positive_longitudinal_kinetic_limit": true,
+      "positive_matter_root": true
+    },
+    "lapse_half_width": "1/10000000000000000000000000000",
+    "positive_matter_momentum_deviation_upper": "1199003200000000000000000000390099440000000000000000000044999960000000000000000000001124999/99999999999999999999999999990000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "controls": {
+    "actual_clock_Euler_negative_control_keeps_all_time_jets": true,
+    "continuous_denominator_enclosures_reject_poles_and_inexact_coefficients": true,
+    "fixed_phase_lapse_derivative_not_replaced_by_constraint_tangent": true,
+    "joint_trace_temporal_pivot_not_replaced_by_isolated_mass": true,
+    "native_pair_validation_before_cache": true,
+    "rejected_inputs": 36
+  },
+  "date": "2026-09-08",
+  "exact_residuals": {
+    "actual_Euler_first_clock_sign_is_positive_not_false_frozen_H_sign": "0",
+    "actual_Lagrangian_q_squared_negative_entry": "0",
+    "actual_b_matter_coordinate_coupling_is_at_most_q": "0",
+    "actual_homogeneous_lapse_constraint_family": "0",
+    "actual_longitudinal_finite_q_kinetic_correction": "0",
+    "actual_longitudinal_gradient_coefficient": "0",
+    "actual_matter_gradient_has_no_higher_order_remainder": "0",
+    "actual_matter_gradient_leading_coefficient": "0",
+    "actual_nonzero_offclock_negative_determinant_coefficient": "0",
+    "actual_positive_matter_momentum_squared_formula": "0",
+    "actual_scalar_longitudinal_q_mixing": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        3
+      ]
+    },
+    "actual_three_scalar_high_q_kinetic_Hessian": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        3
+      ]
+    },
+    "actual_vector_kinetic_block_decouples_at_slice": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        1
+      ]
+    },
+    "arbitrary_finite_Euler_time_jets_do_not_remove_q_fourth_determinant": "0",
+    "fixed_phase_not_constraint_tangent_lapse_Hessian": "0",
+    "freezing_Hamiltonian_before_Euler_would_give_false_clock_sign": "0",
+    "full_joint_temporal_pivot_not_isolated_mass": "0",
+    "full_spatial_gamma_canonical_map": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        6,
+        6
+      ]
+    },
+    "independent_Fourier_pair_reversal_curvature_longitudinal": "0",
+    "independent_Fourier_pair_reversal_curvature_longitudinal_p": "0",
+    "independent_Fourier_pair_reversal_curvature_matter": "0",
+    "independent_Fourier_pair_reversal_curvature_matter_p": "0",
+    "independent_Fourier_pair_reversal_curvature_scalar_p": "0",
+    "independent_Fourier_pair_reversal_longitudinal_longitudinal_p": "0",
+    "independent_Fourier_pair_reversal_matter_longitudinal": "0",
+    "independent_Fourier_pair_reversal_matter_longitudinal_p": "0",
+    "independent_Fourier_pair_reversal_matter_matter_p": "0",
+    "independent_Fourier_pair_reversal_matter_p_longitudinal": "0",
+    "independent_Fourier_pair_reversal_matter_p_longitudinal_p": "0",
+    "independent_Fourier_pair_reversal_scalar_p_longitudinal": "0",
+    "independent_Fourier_pair_reversal_scalar_p_longitudinal_p": "0",
+    "independent_Fourier_pair_reversal_scalar_p_matter": "0",
+    "independent_Fourier_pair_reversal_scalar_p_matter_p": "0",
+    "joint_mixed_lapse_temporal_pivot_zero_at_actual_datum": "0",
+    "leading_light_kinetic_determinant": "0",
+    "no_bare_gamma_b_longitudinal_coordinate_term": "0",
+    "no_bare_gamma_b_squared_term": "0",
+    "no_bare_matter_longitudinal_coordinate_term": "0",
+    "no_linear_lapse_vector_force_at_actual_datum": "0",
+    "nonzero_first_normal_derivative_of_coupling": "0",
+    "offclock_gamma_vector_coupling": "0",
+    "original_clock_lapse_Hessian": "0",
+    "original_clock_matter_datum": "0",
+    "original_clock_vector_kinetic_pivot": "0",
+    "spatial_constraint_cancels_bare_scalar_momentum_square": "0"
+  },
+  "formulation": "FORMULATION.md",
+  "named_exact_check_count": 45,
+  "not_established": [
+    "Numerical frequency threshold in a controlled EFT band or an interacting Wilsonian cutoff",
+    "Actual time-dependent or nonlinear spatial instability from the frozen positive-real root",
+    "Omitted higher-operator/loop/threshold matching errors or a quantum state theorem off the clock",
+    "Transfer or contradiction of the exact on-clock finite-tree and separate quantum-response examples",
+    "Finite Wilson matching, common-parent V/G/B, UV exclusion/completion or original P8 closure"
+  ],
+  "old_clock_negative_controls": {
+    "actual_Euler_first_clock": "1199/100",
+    "incorrect_freeze_before_Euler": "-1/100"
+  },
+  "prior_sha256": {
+    "S6_78_fully_rebuilt": "d00ab1e71e1a5a2e747d9efb00924c2b00fbbda9cb60b2566cdb1ba0fcdc51b6",
+    "same_classical_action_actual_constraints_and_on_clock_Euler_control_replayed": true
+  },
+  "proof_checks": {
+    "actual_Euler_first_clock_leading_sign_stays_positive": true,
+    "all_sixty_three_spatial_constraint_checks": true,
+    "all_twenty_one_spatial_phase_pairs_reconstructed": true,
+    "dropping_trace_temporal_correction_changes_longitudinal_pivot": true,
+    "finite_spatial_mass_pivot": true,
+    "finite_temporal_mass_pivot": true,
+    "fixed_phase_lapse_Hessian_negative": true,
+    "frozen_local_growth_not_actual_time_dependent_instability": true,
+    "inside_original_auxiliary_lapse_disc": true,
+    "inside_original_nine_invariant_polydisc": true,
+    "matter_family_substitution_only_after_fixed_phase_N_derivatives": true,
+    "negative_Euler_leading_coefficient_at_actual_punctured_datum": true,
+    "no_numerical_cutoff_or_UV_exclusion_from_q_infinity": true,
+    "nonzero_coupling_at_an_actual_punctured_domain_datum": true,
+    "original_P8_and_common_parent_matching_open": true,
+    "original_clock_freeze_before_Euler_negative_control": true,
+    "physical_and_hat_frequency_rescaling_positive": true,
+    "positive_longitudinal_kinetic_limit": true,
+    "positive_matter_root": true,
+    "same_action_no_vector_state_reselection_or_tube_deformation": true,
+    "wrong_constraint_tangent_is_not_the_nonzero_lapse_Hessian": true
+  },
+  "quantifiers_and_boundary": "For every fixed real 0<|N-1|<=10^-28, there is a sufficiently large q beyond which the Euler-first frozen three-scalar constant determinant is negative and the kinetic matrix positive. Continuity in positive real growth frequency gives a frozen growing root. No quantitative q threshold, actual time-dependent instability, controlled interacting cutoff or UV exclusion is established.",
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "6d884a9b94b80dcf4e69d93162fda8ed502781ff6c98c967cd5a35abd62c29c9",
+    "README.md": "bf1a1c68115a9c1d56c57c1450b728035607f047316a4e49fc5ddd547089ea66",
+    "notes/datum.md": "d421a6801ae2a08bc6b014077bc05f5ebc397d5286844c43291cf875c6956496",
+    "notes/high-frequency.md": "626c11c58fe748a7820880c19f8a34c9cc8781c66b77ed8f7afa104a2a75273b",
+    "notes/scope.md": "c97a55beeb03e86b9a1885f02c32551813f3e135cb1e1209f1533f2f8af2b142",
+    "notes/spatial.md": "025aa1f64ef453bbbd9d6052326714a9c56a43a34e6656770a15d8060cb4ffeb",
+    "src/p8_offclock_scalar/__init__.py": "38064adc3d6e3337f565ea3a52d05386861f94c03aa15f41e483a08d9f36871b",
+    "src/p8_offclock_scalar/audit.py": "e068cc93955b486ebb4cc1488d3b15cc0310540fadb436d29f65a5f8d5d67528",
+    "src/p8_offclock_scalar/datum.py": "a67e5aa48e9df5703725f8c82dc000855777cfba3a1ee3cee7d5ae9139369412",
+    "src/p8_offclock_scalar/euler.py": "108f83cd4b23a414de69f3c62c215e1f0b38b04e84a56a4adcd91e18e212f3ed",
+    "src/p8_offclock_scalar/principal.py": "b4a4dc007353b6ab4a1eca93ce7aafcb10e90d4905f7c21cc2cc6ed1f47272e3",
+    "src/p8_offclock_scalar/spatial.py": "da336781ad6216b92a1ddf458ec0e4bead0a068a056ad07d69e7a08d2de74d1a",
+    "src/p8_offclock_scalar/verify.py": "8cc08e4d43e7ba2a29df2fd957503bfd5194a843d42ee524e1ebfc861c5ef735",
+    "tests/conftest.py": "f1d999093cd6bd73af6633816ffd432e1e376b548d2102d972c433e9c909261d",
+    "tests/test_offclock_scalar_certificate.py": "c24427aca1ac08e07d57c1cc01b62e509c4389cbeb8b5bbcbc0c86b4cb934f0a",
+    "tests/test_offclock_scalar_science.py": "ab740b3f67b68d6ad1b11356b80f854e5a74f97748b37ea8c838ea50184877d1"
+  },
+  "status": "CONSTRAINT_COMPATIBLE_NEARBY_DATA_AND_EULER_FIRST_HIGH_FREQUENCY_FROZEN_OBSTRUCTION; ACTUAL_INSTABILITY_CUTOFF_AND_ORIGINAL_P8_OPEN",
+  "verdict": "The original action admits an explicit constraint-compatible nearby homogeneous family inside its quantified auxiliary domain. Complete spatial reduction retains a scalar-momentum/longitudinal-vector coupling absent exactly on the clock. Its Legendre square supplies a negative q^4 Euler determinant coefficient that arbitrary finite background time jets cannot cancel. The original clock Euler sign remains positive and a false freeze-before-variation control is detected. This is an off-clock high-frequency frozen-neighborhood obstruction, not instability of the actual bounce or a UV verdict.",
+  "verification_boundary": "Exact same-action lapse, spatial constraint and phase identities; continuous rational enclosures; written homogeneous smoothness, momentum-order and Euler-first determinant/continuity proofs. Not proof-assistant formalization.",
+  "written_proofs": [
+    "notes/datum.md",
+    "notes/spatial.md",
+    "notes/high-frequency.md",
+    "notes/scope.md"
+  ]
+}
