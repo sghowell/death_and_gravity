@@ -1,0 +1,1231 @@
+{
+  "action_normalized_modes_and_complete_transport": {
+    "B0": [
+      [
+        "0",
+        "-(E00*K_matter*ell*omega_matter - E01*K_clock*omega_clock - E01*K_matter*ell**2*omega_matter + E10*K_matter*omega_matter - E11*K_matter*ell*omega_matter + K_matter*ell_dot*omega_matter)/(2*sqrt(K_clock)*sqrt(K_matter)*sqrt(omega_clock)*sqrt(omega_matter))",
+        "(2*E00*K_clock*omega_clock - 2*E01*K_clock*ell*omega_clock + K_clock*omega_clock_dot + K_clock_dot*omega_clock)/(2*K_clock*omega_clock)",
+        "(E00*K_matter*ell*omega_matter + E01*K_clock*omega_clock - E01*K_matter*ell**2*omega_matter + E10*K_matter*omega_matter - E11*K_matter*ell*omega_matter + K_matter*ell_dot*omega_matter)/(2*sqrt(K_clock)*sqrt(K_matter)*sqrt(omega_clock)*sqrt(omega_matter))"
+      ],
+      [
+        "(E00*K_matter*ell*omega_matter - E01*K_clock*omega_clock - E01*K_matter*ell**2*omega_matter + E10*K_matter*omega_matter - E11*K_matter*ell*omega_matter + K_matter*ell_dot*omega_matter)/(2*sqrt(K_clock)*sqrt(K_matter)*sqrt(omega_clock)*sqrt(omega_matter))",
+        "0",
+        "(E00*K_matter*ell*omega_matter + E01*K_clock*omega_clock - E01*K_matter*ell**2*omega_matter + E10*K_matter*omega_matter - E11*K_matter*ell*omega_matter + K_matter*ell_dot*omega_matter)/(2*sqrt(K_clock)*sqrt(K_matter)*sqrt(omega_clock)*sqrt(omega_matter))",
+        "(2*E01*K_matter*ell*omega_matter + 2*E11*K_matter*omega_matter + K_matter*omega_matter_dot + K_matter_dot*omega_matter)/(2*K_matter*omega_matter)"
+      ],
+      [
+        "(2*E00*K_clock*omega_clock - 2*E01*K_clock*ell*omega_clock + K_clock*omega_clock_dot + K_clock_dot*omega_clock)/(2*K_clock*omega_clock)",
+        "(E00*K_matter*ell*omega_matter + E01*K_clock*omega_clock - E01*K_matter*ell**2*omega_matter + E10*K_matter*omega_matter - E11*K_matter*ell*omega_matter + K_matter*ell_dot*omega_matter)/(2*sqrt(K_clock)*sqrt(K_matter)*sqrt(omega_clock)*sqrt(omega_matter))",
+        "0",
+        "-(E00*K_matter*ell*omega_matter - E01*K_clock*omega_clock - E01*K_matter*ell**2*omega_matter + E10*K_matter*omega_matter - E11*K_matter*ell*omega_matter + K_matter*ell_dot*omega_matter)/(2*sqrt(K_clock)*sqrt(K_matter)*sqrt(omega_clock)*sqrt(omega_matter))"
+      ],
+      [
+        "(E00*K_matter*ell*omega_matter + E01*K_clock*omega_clock - E01*K_matter*ell**2*omega_matter + E10*K_matter*omega_matter - E11*K_matter*ell*omega_matter + K_matter*ell_dot*omega_matter)/(2*sqrt(K_clock)*sqrt(K_matter)*sqrt(omega_clock)*sqrt(omega_matter))",
+        "(2*E01*K_matter*ell*omega_matter + 2*E11*K_matter*omega_matter + K_matter*omega_matter_dot + K_matter_dot*omega_matter)/(2*K_matter*omega_matter)",
+        "(E00*K_matter*ell*omega_matter - E01*K_clock*omega_clock - E01*K_matter*ell**2*omega_matter + E10*K_matter*omega_matter - E11*K_matter*ell*omega_matter + K_matter*ell_dot*omega_matter)/(2*sqrt(K_clock)*sqrt(K_matter)*sqrt(omega_clock)*sqrt(omega_matter))",
+        "0"
+      ]
+    ],
+    "J": [
+      [
+        "0",
+        "0",
+        "1/K_clock",
+        "-ell/K_clock"
+      ],
+      [
+        "0",
+        "0",
+        "-ell/K_clock",
+        "(K_clock + K_matter*ell**2)/(K_clock*K_matter)"
+      ],
+      [
+        "-K_clock*omega_clock**2 - K_matter*ell**2*omega_matter**2",
+        "-K_matter*ell*omega_matter**2",
+        "0",
+        "0"
+      ],
+      [
+        "-K_matter*ell*omega_matter**2",
+        "-K_matter*omega_matter**2",
+        "0",
+        "0"
+      ]
+    ],
+    "Krein_signature": [
+      [
+        "-1",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "-1",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "1"
+      ]
+    ],
+    "L0": [
+      [
+        "E00",
+        "E01",
+        "0",
+        "0"
+      ],
+      [
+        "E10",
+        "E11",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "-E00",
+        "-E10"
+      ],
+      [
+        "0",
+        "0",
+        "-E01",
+        "-E11"
+      ]
+    ],
+    "Lambda": [
+      [
+        "omega_clock",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "omega_matter",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "-omega_clock",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "-omega_matter"
+      ]
+    ],
+    "S": [
+      [
+        "sqrt(2)/(2*sqrt(K_clock)*sqrt(omega_clock))",
+        "0",
+        "sqrt(2)/(2*sqrt(K_clock)*sqrt(omega_clock))",
+        "0"
+      ],
+      [
+        "-sqrt(2)*ell/(2*sqrt(K_clock)*sqrt(omega_clock))",
+        "sqrt(2)/(2*sqrt(K_matter)*sqrt(omega_matter))",
+        "-sqrt(2)*ell/(2*sqrt(K_clock)*sqrt(omega_clock))",
+        "sqrt(2)/(2*sqrt(K_matter)*sqrt(omega_matter))"
+      ],
+      [
+        "sqrt(2)*(-I*K_matter*ell**2*omega_clock + I*omega_clock*(K_clock + K_matter*ell**2))/(2*sqrt(K_clock)*sqrt(omega_clock))",
+        "sqrt(2)*I*sqrt(K_matter)*ell*sqrt(omega_matter)/2",
+        "sqrt(2)*(I*K_matter*ell**2*omega_clock - I*omega_clock*(K_clock + K_matter*ell**2))/(2*sqrt(K_clock)*sqrt(omega_clock))",
+        "-sqrt(2)*I*sqrt(K_matter)*ell*sqrt(omega_matter)/2"
+      ],
+      [
+        "0",
+        "sqrt(2)*I*sqrt(K_matter)*sqrt(omega_matter)/2",
+        "0",
+        "-sqrt(2)*I*sqrt(K_matter)*sqrt(omega_matter)/2"
+      ]
+    ],
+    "S_dot": [
+      [
+        "-sqrt(2)*omega_clock_dot/(4*sqrt(K_clock)*omega_clock**(3/2)) - sqrt(2)*K_clock_dot/(4*K_clock**(3/2)*sqrt(omega_clock))",
+        "0",
+        "-sqrt(2)*omega_clock_dot/(4*sqrt(K_clock)*omega_clock**(3/2)) - sqrt(2)*K_clock_dot/(4*K_clock**(3/2)*sqrt(omega_clock))",
+        "0"
+      ],
+      [
+        "sqrt(2)*ell*omega_clock_dot/(4*sqrt(K_clock)*omega_clock**(3/2)) - sqrt(2)*ell_dot/(2*sqrt(K_clock)*sqrt(omega_clock)) + sqrt(2)*K_clock_dot*ell/(4*K_clock**(3/2)*sqrt(omega_clock))",
+        "-sqrt(2)*omega_matter_dot/(4*sqrt(K_matter)*omega_matter**(3/2)) - sqrt(2)*K_matter_dot/(4*K_matter**(3/2)*sqrt(omega_matter))",
+        "sqrt(2)*ell*omega_clock_dot/(4*sqrt(K_clock)*omega_clock**(3/2)) - sqrt(2)*ell_dot/(2*sqrt(K_clock)*sqrt(omega_clock)) + sqrt(2)*K_clock_dot*ell/(4*K_clock**(3/2)*sqrt(omega_clock))",
+        "-sqrt(2)*omega_matter_dot/(4*sqrt(K_matter)*omega_matter**(3/2)) - sqrt(2)*K_matter_dot/(4*K_matter**(3/2)*sqrt(omega_matter))"
+      ],
+      [
+        "K_clock_dot*(sqrt(2)*I*sqrt(omega_clock)/(2*sqrt(K_clock)) - sqrt(2)*(-I*K_matter*ell**2*omega_clock + I*omega_clock*(K_clock + K_matter*ell**2))/(4*K_clock**(3/2)*sqrt(omega_clock))) + omega_clock_dot*(sqrt(2)*(-I*K_matter*ell**2 + I*(K_clock + K_matter*ell**2))/(2*sqrt(K_clock)*sqrt(omega_clock)) - sqrt(2)*(-I*K_matter*ell**2*omega_clock + I*omega_clock*(K_clock + K_matter*ell**2))/(4*sqrt(K_clock)*omega_clock**(3/2)))",
+        "sqrt(2)*I*sqrt(K_matter)*ell*omega_matter_dot/(4*sqrt(omega_matter)) + sqrt(2)*I*sqrt(K_matter)*ell_dot*sqrt(omega_matter)/2 + sqrt(2)*I*K_matter_dot*ell*sqrt(omega_matter)/(4*sqrt(K_matter))",
+        "K_clock_dot*(-sqrt(2)*I*sqrt(omega_clock)/(2*sqrt(K_clock)) - sqrt(2)*(I*K_matter*ell**2*omega_clock - I*omega_clock*(K_clock + K_matter*ell**2))/(4*K_clock**(3/2)*sqrt(omega_clock))) + omega_clock_dot*(sqrt(2)*(I*K_matter*ell**2 - I*(K_clock + K_matter*ell**2))/(2*sqrt(K_clock)*sqrt(omega_clock)) - sqrt(2)*(I*K_matter*ell**2*omega_clock - I*omega_clock*(K_clock + K_matter*ell**2))/(4*sqrt(K_clock)*omega_clock**(3/2)))",
+        "-sqrt(2)*I*sqrt(K_matter)*ell*omega_matter_dot/(4*sqrt(omega_matter)) - sqrt(2)*I*sqrt(K_matter)*ell_dot*sqrt(omega_matter)/2 - sqrt(2)*I*K_matter_dot*ell*sqrt(omega_matter)/(4*sqrt(K_matter))"
+      ],
+      [
+        "0",
+        "sqrt(2)*I*sqrt(K_matter)*omega_matter_dot/(4*sqrt(omega_matter)) + sqrt(2)*I*K_matter_dot*sqrt(omega_matter)/(4*sqrt(K_matter))",
+        "0",
+        "-sqrt(2)*I*sqrt(K_matter)*omega_matter_dot/(4*sqrt(omega_matter)) - sqrt(2)*I*K_matter_dot*sqrt(omega_matter)/(4*sqrt(K_matter))"
+      ]
+    ],
+    "S_inverse": [
+      [
+        "sqrt(2)*sqrt(K_clock)*sqrt(omega_clock)/2",
+        "0",
+        "-sqrt(2)*I/(2*sqrt(K_clock)*sqrt(omega_clock))",
+        "sqrt(2)*I*ell/(2*sqrt(K_clock)*sqrt(omega_clock))"
+      ],
+      [
+        "sqrt(2)*sqrt(K_matter)*ell*sqrt(omega_matter)/2",
+        "sqrt(2)*sqrt(K_matter)*sqrt(omega_matter)/2",
+        "0",
+        "-sqrt(2)*I/(2*sqrt(K_matter)*sqrt(omega_matter))"
+      ],
+      [
+        "sqrt(2)*sqrt(K_clock)*sqrt(omega_clock)/2",
+        "0",
+        "sqrt(2)*I/(2*sqrt(K_clock)*sqrt(omega_clock))",
+        "-sqrt(2)*I*ell/(2*sqrt(K_clock)*sqrt(omega_clock))"
+      ],
+      [
+        "sqrt(2)*sqrt(K_matter)*ell*sqrt(omega_matter)/2",
+        "sqrt(2)*sqrt(K_matter)*sqrt(omega_matter)/2",
+        "0",
+        "sqrt(2)*I/(2*sqrt(K_matter)*sqrt(omega_matter))"
+      ]
+    ],
+    "coordinate_gradient": [
+      [
+        "K_clock*omega_clock**2 + K_matter*ell**2*omega_matter**2",
+        "K_matter*ell*omega_matter**2"
+      ],
+      [
+        "K_matter*ell*omega_matter**2",
+        "K_matter*omega_matter**2"
+      ]
+    ],
+    "kinetic": [
+      [
+        "K_clock + K_matter*ell**2",
+        "K_matter*ell"
+      ],
+      [
+        "K_matter*ell",
+        "K_matter"
+      ]
+    ],
+    "symplectic_form": [
+      [
+        "0",
+        "0",
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "1"
+      ],
+      [
+        "-1",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "-1",
+        "0",
+        "0"
+      ]
+    ]
+  },
+  "actual_complex_solution_domain_and_annuli": {
+    "D_minus_one_upper": "750002100001477500021000014725000070000049/25000000000000000000000000000000000000000000000000000000",
+    "N_minus_one_upper": "7/5000000",
+    "R_minus_one_upper": "12814994062974871971268972422491/29987999987185005937025128028731027577509",
+    "actual_complex_log_scale_upper": "12814994062974871971268972422491/29988000000000000000000000000000000000000",
+    "actual_complex_solution_phase_image_upper": "1/1000000",
+    "actual_complex_solution_time_radius": "1/10000000",
+    "actual_solution_rescaled_trace_upper": "109999999999/4999999999500000",
+    "clock_kinetic_modulus_lower": "625/676",
+    "clock_kinetic_modulus_upper": "625/6",
+    "clock_speed_minus_one_complex_upper": "5204207622121765058303621986163164957444378519711786705601357167113542813493410665477663908523166645027078509070604907151860733327465846477393969448898077831706301528573570792933536601319898460564826180768027526954624946732098295243119363280530032999250174464122731500395092467847644767651813180263434657239903397289739539466706304627697357683265905305906881122049760022986746603499135026909272247031944456067614366693796230215594558994858776679898954283778468327872777175704848758818237564144130950317335374107837609836411608798963099187535530888855012853135411148508727381341409977394075325622739591097386127788721320461892827066824035590094848132299782974550438021493236780441860601480162428890700471042544886160684653710068739555272426795809473117505625000000000000000/334708049631849617901847377199069846427824058804494440326382908348005178478672218649937126414316001235003622850353103013754802914984973422102605131854994757200278858704556277824743944789059053937260310126135725747698097028689412894635332131876638687562476892555502671286849568974212383044204665512832296268650923164642295839822608971586998344242584379745507862177152647574303962834155225421181054116546666042352016100306966789647558742085430252323796847576615724211774799054506351377443065101253402028920690017002358404151555093459934688711265235494731534967937305532434366593403568098777837371997003896276153757068749513520515879295310419088136363322020550095878502716975012611655975208210482066547064230812403772982439736191537049188357078988691225503704556364720419402387999",
+    "declared_four_mode_complex_gap_lower": "1/10000000",
+    "e_fourth_minus_one_upper": "70000049000000000000000000000000000000000000000000/24999999999999249997899998522499978999985274999929999951",
+    "e_minus_one_upper": "70000049000000000000000000000000000000000000000000/24999929999950249997899998522499978999985274999929999951",
+    "full_complex_rational_annuli": {
+      "M": {
+        "lower": "12499999999999249997899998522499978999985274999929999951/50000140000099500004200002955000042000029450000140000098",
+        "upper": "12500000000000750002100001477500021000014725000070000049/50000060000000499995799997044999957999970549999859999902"
+      },
+      "actual_force_trace": {
+        "lower": "0",
+        "upper": "1425001940625084000315787914309577894899445095959225504471447892454893440954049731070780461475444395143550751236285551950180075050421/62500037499995624983374977818739001248454310736786383512774647342174759103920851261947969234970373657096616584247629869987994996638600000"
+      },
+      "clock_physical_speed_squared_excess": {
+        "lower": "1719036138421147537954087742726444221913048318532617937055088336121320467756589334522336091476833354972921490929395092848139266672534153522606030551101922168293698471426429207066463398680101539435173819231972473045375053267901704756880636719469967000749825535877268499604907532152355232348186819736565342760096602710260460533293695372302642316734094694093118877950239977013253396500864973090727752968055543932385633306203769784405441005141223320101045716221531672127222824295151241181762435855869049682664625892162390163588391201036900812464469111144987146864588851491272618658590022605924674377260408902613872211278679538107172933175964409905151867700217025449561978506763219558139398519837571109299528957455113839315346289931260444727573204190526882494375000000000000000/334716739608519568579752222777547402092327411368772310081201968077315577241209600439397395921775475598351350071137826381338045224281699112050917474175556344721889434993915148604463121674339626164279125047683506224774948346363855007069424748760080782404523857270033205981650035933319769311027682673987440296691836931960414420637924322108373958399732354349186230941725302665673050419241275443792036611206302013191916285326339414122225663355574888899523253469100497319897328168317943773798116661182453840128992647623533758238608494931266348189547228974379610019209559056417124679215090491244768552677373364132748856803461765159022227877622756876273541829847150121146946845003494151563582931188037771024045068716553682131399579154752882072087648584512965023177938010279580597612001",
+        "upper": "5204207622121765058303621986163164957444378519711786705601357167113542813493410665477663908523166645027078509070604907151860733327465846477393969448898077831706301528573570792933536601319898460564826180768027526954624946732098295243119363280530032999250174464122731500395092467847644767651813180263434657239903397289739539466706304627697357683265905305906881122049760022986746603499135026909272247031944456067614366693796230215594558994858776679898954283778468327872777175704848758818237564144130950317335374107837609836411608798963099187535530888855012853135411148508727381341409977394075325622739591097386127788721320461892827066824035590094848132299782974550438021493236780441860601480162428890700471042544886160684653710068739555272426795809473117505625000000000000000/334713253839471739666905680821056009592781503183014152113088509705172292021485712060602604078224524401648649928862173618661954775718300887949082525824443655278110565006084851395536878325660373835720874952316493775225051653636144992930575251239919217595476142729966794018349964066680230688972317326012559703308163068039585579362075677891626041600267645650813769058274697334326949580758724556207963388793697986808083714673660585877774336644425111100476746530899502680102671831682056226201883338817546159871007352376466241761391505068733651810452771025620389980790440943582875320784909508755231447322626635867251143196538234840977772122377243123726458170152849878853053154996505848436417068811962228975954931283446317868600420845247117927912351415487034976822061989720419402387999"
+      },
+      "constraint_matter_square": {
+        "lower": "38996968207675172900789611657539004472200381140263502627697865074434589809001780467085916898020084177448510186605855391339202948558258554614907556692876670003456847479069031467215960307831310569714747121399699255268663061677341121010149622020895210184696051239009926905911330044832079319629602607104410573404350373/3906250000000351562828125233203109531248839883592231938671640879471898687314091765856613331265897734951202213238859619458242949429833981475894227541667256105118867347543975497721463427235604097612699194066165101587501232916449082873993008755374602542333661831692836003375869767463255109179922658834515296020000000000",
+        "upper": "39034438097090366161485778889335995527799618859736497372302134925565410190998219532914083101979915822551489813394144608660797051441741445385092443307123329996543152520930968532784039692168689430285252878600300744731336938322658878989850377979104789815303948760990073094088669955167920680370397392895589426595649627/3906249999999648437171874766796890468751160116407768061328359120528101312685908234143386668734102265048797786761140380541757050570166018524105772458332743894881132652456024502278536572764395902387300805933834898412498767083550917126006991244625397457666338168307163996624130232536744890820077341165484703980000000000"
+      },
+      "on_constraint_rescaled_lapse_Hessian": {
+        "lower": "609839007754323198171380804504903054429585593631427138230064515846962827543056414449889055075980169523328064393032306632955794802488865018887621171924767269120463796834735216044319135694881344841961363415311381595726836526797280994841240396761330476975605896325941307403169198889827238517653770869410194236414455878573474269243016990901062650988499185144099817440007277796215243978917491700000000000000000000000000000000000/203451375326747640694580426636135425052331202544330345700953798647037076638698520820950648030868613048092076135061561791146815766740732039954871136273488037796704361473894093796183166936844837077219984775707889744031013547263795900166000470950809291343547020629641217052548452297203710122740907797253721417380376686426478368872635843220701458711155503020089855664390464866949979066649906071647675884965721008444588318003469",
+        "upper": "1829526549716153342802778439155578922648743219105718585309806452459111517370830756650332834772059491430015806820903080101132615592533404943337136484225698192638608609495794351867042592915355965474115909754065855212819490419608157015476278809716008569073182311022176077790492403330518284447038687391769417290756632364279577192270949027296812047034502444567700547679978166611354268063247524900000000000000000000000000000000000/610352661132794188511961845091593724843006392367008962897138604058888770083904437537148055907394160855723771594815314626559552699777803880135386591179535886609886915578317718611450499189465488768340045672876330767906959358208612299501998587147572125969358938111076348842354643108388869631777276608238835747858869940720564893382092470337895623866533490939730433006828605399150062800050281785056972345102836974666235045989593"
+      }
+    },
+    "hbg_minus_one_upper": "30000000000000300000000000001/1000000000000000000000000000000000000000000",
+    "inner_real_time_half_width": "1/20000000",
+    "matter_coordinate_frequency_modulus_lower": "3748484254705367085125379663040763339208740253456084621238777280823723723315587297432627636232164085587/3748499999999887544685125778463646851257792133489504192652940000000000000000000000000000000000000000000",
+    "matter_coordinate_frequency_modulus_upper": "1249498250158658113001124481098370736478169451334711688515446259995402952407066682978304183596141971471/1249493001727154283315250252457822090977358004719245361377392020269977526845595782122513395673530000000",
+    "matter_density_modulus_lower": "9/200",
+    "matter_density_modulus_upper": "110001/1000000",
+    "matter_kinetic_modulus_lower": "1/16",
+    "matter_kinetic_modulus_upper": "16",
+    "opposite_sign_frequency_gap_lower": "418212700007655320130077936881241648906028497371209206594413069236837191941758533826780812820458554037079518294455838194977641800147462785183509532777359002848975998406271920910356908269626366186030669861909598816027625657931414028912193582911497286180996861312996029540754270382835442966692398689018858630925118750769518364728529175588125108885425716992422138435715837827397283082030175631979577987108595426353779053351823901548015980453325118946381708992923111485218305906183859359513071775536201023049206798602517584383007329435551961309828060681625672250423818060875380785699050689575879490832314010764054074614616487444977274528730752825015118074276144181368403926922857925566056052937958710051819359845454014008963268393426182953362351931833984125632494567603529810421874125978863852161258251936742725520974336411826594698886280293133641312288793412648612055135597339223471/209108854007491775500993767868692077588749664104536641075980294314725583550930882285767955106377308449469550518917422651165063273523858683956591536809011717415164647438014126268775584063513903830392172372363188478245450328549173268881879024868756632170439148754553335806023569926481660358722428089600017450583215598601064395460469115200073460054749625442377247807793535163903854417984935092005272463839159916324570097191526628560108824220970059097820911985326156985256650029094706268435849230918803754600566629228226337775670520933706326214358698959454219117929919068057605449094092907765955271079667065063804433834203351864116879784344549557650862351529792170163259775170846833454171018381561109961068741832738005282460321555492090396732136015428521840332386289598797897500505439620083849909300407281910522226185965676579660931171344510000000000000000000000000000000000000000000",
+    "same_sign_frequency_gap_lower": "383428444793556525047488369001580267279373472676488881188884598113611692225276774746255893782330883111865836126926049489779205385584732351384412536278632446237853239003737552607532167222026156092369730640630639932689556022496793128337175032998608280481975949581601778619841436761465657543258802355177859568179428624203251417107762050127151199513487736481266399744006419389466618510229077961896488192074509403293372590386806964386916664387662489031161995091976046854763333192239879918210201252408091745793040314033653827760521560501931582652997712031368357798836047033507454916816150954326279816160842446281871780982669257079160865146631795097863423926504970349472149665256635214086442570568444230849810818342261477707308730854055237701562044078296813326781060839989997936620296186541709980896581980390393096198227903515461417686343190475938087364110284755994929325728606356232452375662678590780037586538151437774698557960982425722156743400365210146120752260666886475052207092622462035460968800953157094782803816053650539555479104571969061559812110558831289099984912920637443870541942713075530882415361400546228624753651995777464273940872175970849128650251831932299482091551987919884859885907386375254536682842261234040036639953947724870782808944636228560172459688163918541514028448133851124957705973265630525990222951278165079206090960035453712241064135805344979850569243196381901615199925046943562687415649346433405462460915144380384888300917463290229530167715880265076429336304215115552088571801242394129161918584115880950420898360287245444369908208385439392120986130108504157405494820193675548701070932585143293484360888227213587/149317926343966897250923420550747993603136755165200093494437942013622387588144290408888531102626403172675606166852962497646543805906031406719936773752597547751103413761845384078137273683014199939225243483640667483945000254401600717069009940575321941621036091637342963827592702301574578227812151610084926513046706838009101056756749040829015638814287193753553034522019771655151362991960485561216215063439396335656257100131641586608000575489843079536902440150567687749460367526992951274757376889571993403114408792252685793895240999938274260219592798529994805088212902531387523699008826760796153851207155258580110555517033135073525035859489302158249435402423820941119706194890103014896881812027403145165469644917537181980081851387320044673151458605397695359051874503661034188361938706149001834193039807675614003209509086454035259169465900090331187703347754747694438439965751523914809839803182487562589126990133650018406686137267477091146586620749898610193979262033963498178292978559218601981479809769678488790908749399660958644265804399042618938062749405223747992932487512242107101896279974491790418935835279396623158605565566058417949762436773804788952569438578766739808665344904040300088871787116783836275710642555921984278421903676462138319270242738727941185795065242485970660913031698741760330304243039095351889282403997275043793588118732674455327958647259409275398219920348343069440135462870686042459451818114612060552235827027808600058437378734349984859981808766055876599864246281086432970675262391485300612539343896679603142473772618326704618204396904292332593980370820543150062246784891715797764130701827124288000000000000000000000000"
+  },
+  "actual_near_identity_normalform_and_uniform_constants": {
+    "constants": {
+      "L0_first_derivative_upper": "200000000000",
+      "actual_inner_time_half_width": "1/20000000",
+      "all_four_L_matrix_norm_upper": "10000",
+      "all_leading_diagonal_transport_entries_identically_zero": true,
+      "basis_and_inverse_first_derivative_upper": "20000000000",
+      "basis_and_inverse_norm_upper": "1000",
+      "basis_second_derivative_upper": "800000000000000000",
+      "declared_B0_dot_upper": "2000000000000000000000",
+      "declared_B0_upper": "30000000000000",
+      "declared_R_upper": "100000000000000000000000000000000000000",
+      "declared_W_upper": "30000000000",
+      "declared_Z_dot_upper": "1000000000000000000000000000000000000",
+      "declared_Z_upper": "1000000000000000000000",
+      "exact_transformed_remainder_triangle_upper": "2060000000000000000000000090000000000",
+      "inverse_frequency_remainder_triangle_upper": "30000000000",
+      "leading_transport_first_derivative_triangle_upper": "1200600000000000000000",
+      "leading_transport_triangle_upper": "20010000000000",
+      "minimum_classical_momentum": "40000000000000000000000000000000",
+      "off_diagonal_change_derivative_triangle_upper": "480000020000000000000000000000000000",
+      "off_diagonal_change_triangle_upper": "300000000000000000000",
+      "signed_frequency_first_derivative_upper": "80000000",
+      "time_Cauchy_radius": "1/20000000"
+    },
+    "matrices": {
+      "B0": [
+        [
+          "0",
+          "-(E00*K_matter*ell*omega_matter - E01*K_clock*omega_clock - E01*K_matter*ell**2*omega_matter + E10*K_matter*omega_matter - E11*K_matter*ell*omega_matter + K_matter*ell_dot*omega_matter)/(2*sqrt(K_clock)*sqrt(K_matter)*sqrt(omega_clock)*sqrt(omega_matter))",
+          "(2*E00*K_clock*omega_clock - 2*E01*K_clock*ell*omega_clock + K_clock*omega_clock_dot + K_clock_dot*omega_clock)/(2*K_clock*omega_clock)",
+          "(E00*K_matter*ell*omega_matter + E01*K_clock*omega_clock - E01*K_matter*ell**2*omega_matter + E10*K_matter*omega_matter - E11*K_matter*ell*omega_matter + K_matter*ell_dot*omega_matter)/(2*sqrt(K_clock)*sqrt(K_matter)*sqrt(omega_clock)*sqrt(omega_matter))"
+        ],
+        [
+          "(E00*K_matter*ell*omega_matter - E01*K_clock*omega_clock - E01*K_matter*ell**2*omega_matter + E10*K_matter*omega_matter - E11*K_matter*ell*omega_matter + K_matter*ell_dot*omega_matter)/(2*sqrt(K_clock)*sqrt(K_matter)*sqrt(omega_clock)*sqrt(omega_matter))",
+          "0",
+          "(E00*K_matter*ell*omega_matter + E01*K_clock*omega_clock - E01*K_matter*ell**2*omega_matter + E10*K_matter*omega_matter - E11*K_matter*ell*omega_matter + K_matter*ell_dot*omega_matter)/(2*sqrt(K_clock)*sqrt(K_matter)*sqrt(omega_clock)*sqrt(omega_matter))",
+          "(2*E01*K_matter*ell*omega_matter + 2*E11*K_matter*omega_matter + K_matter*omega_matter_dot + K_matter_dot*omega_matter)/(2*K_matter*omega_matter)"
+        ],
+        [
+          "(2*E00*K_clock*omega_clock - 2*E01*K_clock*ell*omega_clock + K_clock*omega_clock_dot + K_clock_dot*omega_clock)/(2*K_clock*omega_clock)",
+          "(E00*K_matter*ell*omega_matter + E01*K_clock*omega_clock - E01*K_matter*ell**2*omega_matter + E10*K_matter*omega_matter - E11*K_matter*ell*omega_matter + K_matter*ell_dot*omega_matter)/(2*sqrt(K_clock)*sqrt(K_matter)*sqrt(omega_clock)*sqrt(omega_matter))",
+          "0",
+          "-(E00*K_matter*ell*omega_matter - E01*K_clock*omega_clock - E01*K_matter*ell**2*omega_matter + E10*K_matter*omega_matter - E11*K_matter*ell*omega_matter + K_matter*ell_dot*omega_matter)/(2*sqrt(K_clock)*sqrt(K_matter)*sqrt(omega_clock)*sqrt(omega_matter))"
+        ],
+        [
+          "(E00*K_matter*ell*omega_matter + E01*K_clock*omega_clock - E01*K_matter*ell**2*omega_matter + E10*K_matter*omega_matter - E11*K_matter*ell*omega_matter + K_matter*ell_dot*omega_matter)/(2*sqrt(K_clock)*sqrt(K_matter)*sqrt(omega_clock)*sqrt(omega_matter))",
+          "(2*E01*K_matter*ell*omega_matter + 2*E11*K_matter*omega_matter + K_matter*omega_matter_dot + K_matter_dot*omega_matter)/(2*K_matter*omega_matter)",
+          "(E00*K_matter*ell*omega_matter - E01*K_clock*omega_clock - E01*K_matter*ell**2*omega_matter + E10*K_matter*omega_matter - E11*K_matter*ell*omega_matter + K_matter*ell_dot*omega_matter)/(2*sqrt(K_clock)*sqrt(K_matter)*sqrt(omega_clock)*sqrt(omega_matter))",
+          "0"
+        ]
+      ],
+      "Lambda": [
+        [
+          "omega_clock",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "omega_matter",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "-omega_clock",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "-omega_matter"
+        ]
+      ],
+      "Z": [
+        [
+          "0",
+          "-I*(E00*K_matter*ell*omega_matter - E01*K_clock*omega_clock - E01*K_matter*ell**2*omega_matter + E10*K_matter*omega_matter - E11*K_matter*ell*omega_matter + K_matter*ell_dot*omega_matter)/(2*sqrt(K_clock)*sqrt(K_matter)*sqrt(omega_clock)*sqrt(omega_matter)*(omega_clock - omega_matter))",
+          "I*(2*E00*K_clock*omega_clock - 2*E01*K_clock*ell*omega_clock + K_clock*omega_clock_dot + K_clock_dot*omega_clock)/(4*K_clock*omega_clock**2)",
+          "I*(E00*K_matter*ell*omega_matter + E01*K_clock*omega_clock - E01*K_matter*ell**2*omega_matter + E10*K_matter*omega_matter - E11*K_matter*ell*omega_matter + K_matter*ell_dot*omega_matter)/(2*sqrt(K_clock)*sqrt(K_matter)*sqrt(omega_clock)*sqrt(omega_matter)*(omega_clock + omega_matter))"
+        ],
+        [
+          "-I*(E00*K_matter*ell*omega_matter - E01*K_clock*omega_clock - E01*K_matter*ell**2*omega_matter + E10*K_matter*omega_matter - E11*K_matter*ell*omega_matter + K_matter*ell_dot*omega_matter)/(2*sqrt(K_clock)*sqrt(K_matter)*sqrt(omega_clock)*sqrt(omega_matter)*(omega_clock - omega_matter))",
+          "0",
+          "I*(E00*K_matter*ell*omega_matter + E01*K_clock*omega_clock - E01*K_matter*ell**2*omega_matter + E10*K_matter*omega_matter - E11*K_matter*ell*omega_matter + K_matter*ell_dot*omega_matter)/(2*sqrt(K_clock)*sqrt(K_matter)*sqrt(omega_clock)*sqrt(omega_matter)*(omega_clock + omega_matter))",
+          "I*(2*E01*K_matter*ell*omega_matter + 2*E11*K_matter*omega_matter + K_matter*omega_matter_dot + K_matter_dot*omega_matter)/(4*K_matter*omega_matter**2)"
+        ],
+        [
+          "-I*(2*E00*K_clock*omega_clock - 2*E01*K_clock*ell*omega_clock + K_clock*omega_clock_dot + K_clock_dot*omega_clock)/(4*K_clock*omega_clock**2)",
+          "-I*(E00*K_matter*ell*omega_matter + E01*K_clock*omega_clock - E01*K_matter*ell**2*omega_matter + E10*K_matter*omega_matter - E11*K_matter*ell*omega_matter + K_matter*ell_dot*omega_matter)/(2*sqrt(K_clock)*sqrt(K_matter)*sqrt(omega_clock)*sqrt(omega_matter)*(omega_clock + omega_matter))",
+          "0",
+          "I*(E00*K_matter*ell*omega_matter - E01*K_clock*omega_clock - E01*K_matter*ell**2*omega_matter + E10*K_matter*omega_matter - E11*K_matter*ell*omega_matter + K_matter*ell_dot*omega_matter)/(2*sqrt(K_clock)*sqrt(K_matter)*sqrt(omega_clock)*sqrt(omega_matter)*(omega_clock - omega_matter))"
+        ],
+        [
+          "-I*(E00*K_matter*ell*omega_matter + E01*K_clock*omega_clock - E01*K_matter*ell**2*omega_matter + E10*K_matter*omega_matter - E11*K_matter*ell*omega_matter + K_matter*ell_dot*omega_matter)/(2*sqrt(K_clock)*sqrt(K_matter)*sqrt(omega_clock)*sqrt(omega_matter)*(omega_clock + omega_matter))",
+          "-I*(2*E01*K_matter*ell*omega_matter + 2*E11*K_matter*omega_matter + K_matter*omega_matter_dot + K_matter_dot*omega_matter)/(4*K_matter*omega_matter**2)",
+          "I*(E00*K_matter*ell*omega_matter - E01*K_clock*omega_clock - E01*K_matter*ell**2*omega_matter + E10*K_matter*omega_matter - E11*K_matter*ell*omega_matter + K_matter*ell_dot*omega_matter)/(2*sqrt(K_clock)*sqrt(K_matter)*sqrt(omega_clock)*sqrt(omega_matter)*(omega_clock - omega_matter))",
+          "0"
+        ]
+      ]
+    }
+  },
+  "checked_scalar_entries": 273,
+  "claim": "P8-S6.90.CLASSICAL_NEARBY_PACKETS",
+  "controls": {
+    "groups": {
+      "complex_domain": {
+        "rejected_inputs": 63
+      },
+      "normal_form": {
+        "rejected_inputs": 34
+      },
+      "packets": {
+        "rejected_inputs": 40
+      }
+    },
+    "no_parent_action_state_profile_or_scientific_library_changed": true,
+    "rejected_inputs": 137
+  },
+  "date": "2026-09-09",
+  "exact_finite_frequency_canonical_system": {
+    "A0": [
+      [
+        "-4*curvature_N**2/lapse_Hessian",
+        "-2*curvature_N*force_matter/lapse_Hessian"
+      ],
+      [
+        "-2*curvature_N*force_matter/lapse_Hessian",
+        "-(force_matter**2 - 2*lapse_Hessian*matter_square)/lapse_Hessian"
+      ]
+    ],
+    "A1": [
+      [
+        "(curvature*lapse_Hessian + 6*curvature_N*force_matter*matter_density)/lapse_Hessian",
+        "3*matter_density*(force_matter**2 - 2*lapse_Hessian*matter_square)/(2*lapse_Hessian)"
+      ],
+      [
+        "3*matter_density*(force_matter**2 - 2*lapse_Hessian*matter_square)/(2*lapse_Hessian)",
+        "0"
+      ]
+    ],
+    "A2": [
+      [
+        "-9*matter_density**2*(force_matter**2 - 2*lapse_Hessian*matter_square)/(4*lapse_Hessian)",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ],
+    "C0": [
+      [
+        "-9*force_trace**2*matter_density**2*(force_matter**2 - 2*lapse_Hessian*matter_square)/(4*curvature_N**2*lapse_Hessian)",
+        "0"
+      ],
+      [
+        "0",
+        "-2*matter_density**2*trace_square"
+      ]
+    ],
+    "E0": [
+      [
+        "(curvature*force_trace*lapse_Hessian + 3*curvature_N*force_matter*force_trace*matter_density - curvature_N*hat_Hubble*lapse_Hessian)/(curvature_N*lapse_Hessian)",
+        "0"
+      ],
+      [
+        "3*force_trace*matter_density*(force_matter**2 - 2*lapse_Hessian*matter_square)/(2*curvature_N*lapse_Hessian)",
+        "0"
+      ]
+    ],
+    "E1": [
+      [
+        "-9*force_trace*matter_density**2*(force_matter**2 - 2*lapse_Hessian*matter_square)/(4*curvature_N*lapse_Hessian)",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ],
+    "G": [
+      [
+        "(curvature*force_trace**2 + curvature_N**2*time_derivative_of_alpha_over_curvature_N - curvature_N*force_trace*hat_Hubble)/curvature_N**2",
+        "-4*matter_density*trace_square/3"
+      ],
+      [
+        "-4*matter_density*trace_square/3",
+        "2*matter_gradient"
+      ]
+    ],
+    "J": [
+      [
+        "0",
+        "0",
+        "-4*curvature_N**2/lapse_Hessian",
+        "-2*curvature_N*force_matter/lapse_Hessian"
+      ],
+      [
+        "0",
+        "0",
+        "-2*curvature_N*force_matter/lapse_Hessian",
+        "-(force_matter**2 - 2*lapse_Hessian*matter_square)/lapse_Hessian"
+      ],
+      [
+        "-(curvature*force_trace**2 + curvature_N**2*time_derivative_of_alpha_over_curvature_N - curvature_N*force_trace*hat_Hubble)/(curvature_N**2*hat_scale**2)",
+        "4*matter_density*trace_square/(3*hat_scale**2)",
+        "0",
+        "0"
+      ],
+      [
+        "4*matter_density*trace_square/(3*hat_scale**2)",
+        "-2*matter_gradient/hat_scale**2",
+        "0",
+        "0"
+      ]
+    ],
+    "L0": [
+      [
+        "3*hat_Hubble/2 + (curvature*force_trace*lapse_Hessian + 3*curvature_N*force_matter*force_trace*matter_density - curvature_N*hat_Hubble*lapse_Hessian)/(curvature_N*lapse_Hessian)",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "3*force_trace*matter_density*(force_matter**2 - 2*lapse_Hessian*matter_square)/(2*curvature_N*lapse_Hessian)",
+        "3*hat_Hubble/2",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "-3*hat_Hubble/2 - (curvature*force_trace*lapse_Hessian + 3*curvature_N*force_matter*force_trace*matter_density - curvature_N*hat_Hubble*lapse_Hessian)/(curvature_N*lapse_Hessian)",
+        "-3*force_trace*matter_density*(force_matter**2 - 2*lapse_Hessian*matter_square)/(2*curvature_N*lapse_Hessian)"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "-3*hat_Hubble/2"
+      ]
+    ],
+    "L1": [
+      [
+        "0",
+        "0",
+        "hat_scale**2*(curvature*lapse_Hessian + 6*curvature_N*force_matter*matter_density)/lapse_Hessian",
+        "3*hat_scale**2*matter_density*(force_matter**2 - 2*lapse_Hessian*matter_square)/(2*lapse_Hessian)"
+      ],
+      [
+        "0",
+        "0",
+        "3*hat_scale**2*matter_density*(force_matter**2 - 2*lapse_Hessian*matter_square)/(2*lapse_Hessian)",
+        "0"
+      ],
+      [
+        "9*force_trace**2*matter_density**2*(force_matter**2 - 2*lapse_Hessian*matter_square)/(4*curvature_N**2*lapse_Hessian)",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "2*matter_density**2*trace_square",
+        "0",
+        "0"
+      ]
+    ],
+    "L2": [
+      [
+        "-9*force_trace*hat_scale**2*matter_density**2*(force_matter**2 - 2*lapse_Hessian*matter_square)/(4*curvature_N*lapse_Hessian)",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "9*force_trace*hat_scale**2*matter_density**2*(force_matter**2 - 2*lapse_Hessian*matter_square)/(4*curvature_N*lapse_Hessian)",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    ],
+    "L3": [
+      [
+        "0",
+        "0",
+        "-9*hat_scale**4*matter_density**2*(force_matter**2 - 2*lapse_Hessian*matter_square)/(4*lapse_Hessian)",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    ],
+    "energy_symmetrizer": [
+      [
+        "(curvature*force_trace**2 + curvature_N**2*time_derivative_of_alpha_over_curvature_N - curvature_N*force_trace*hat_Hubble)/(curvature_N**2*hat_scale**2)",
+        "-4*matter_density*trace_square/(3*hat_scale**2)",
+        "0",
+        "0"
+      ],
+      [
+        "-4*matter_density*trace_square/(3*hat_scale**2)",
+        "2*matter_gradient/hat_scale**2",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "-4*curvature_N**2/lapse_Hessian",
+        "-2*curvature_N*force_matter/lapse_Hessian"
+      ],
+      [
+        "0",
+        "0",
+        "-2*curvature_N*force_matter/lapse_Hessian",
+        "-(force_matter**2 - 2*lapse_Hessian*matter_square)/lapse_Hessian"
+      ]
+    ],
+    "momentum_shift": [
+      [
+        "force_trace*hat_momentum_squared/curvature_N",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ],
+    "original_A": [
+      [
+        "curvature/hat_momentum_squared - (2*curvature_N - 3*force_matter*matter_density/(2*hat_momentum_squared))*(4*curvature_N - 3*force_matter*matter_density/hat_momentum_squared)/(2*lapse_Hessian) + 9*matter_density**2*matter_square/(2*hat_momentum_squared**2)",
+        "-force_matter*(4*curvature_N - 3*force_matter*matter_density/hat_momentum_squared)/(2*lapse_Hessian) - 3*matter_density*matter_square/hat_momentum_squared"
+      ],
+      [
+        "-force_matter*(4*curvature_N - 3*force_matter*matter_density/hat_momentum_squared)/(2*lapse_Hessian) - 3*matter_density*matter_square/hat_momentum_squared",
+        "-force_matter**2/lapse_Hessian + 2*matter_square"
+      ]
+    ],
+    "shifted_C": [
+      [
+        "(4*curvature*force_trace**2*hat_momentum_squared*lapse_Hessian + 4*curvature_N**2*hat_momentum_squared*lapse_Hessian*time_derivative_of_alpha_over_curvature_N - 4*curvature_N*force_trace*hat_Hubble*hat_momentum_squared*lapse_Hessian - 9*force_matter**2*force_trace**2*matter_density**2 + 18*force_trace**2*lapse_Hessian*matter_density**2*matter_square)/(4*curvature_N**2*lapse_Hessian)",
+        "-4*hat_momentum_squared*matter_density*trace_square/3"
+      ],
+      [
+        "-4*hat_momentum_squared*matter_density*trace_square/3",
+        "2*(hat_momentum_squared*matter_gradient - matter_density**2*trace_square)"
+      ]
+    ],
+    "shifted_E": [
+      [
+        "(4*curvature*force_trace*hat_momentum_squared*lapse_Hessian + 12*curvature_N*force_matter*force_trace*hat_momentum_squared*matter_density - 4*curvature_N*hat_Hubble*hat_momentum_squared*lapse_Hessian - 9*force_matter**2*force_trace*matter_density**2 + 18*force_trace*lapse_Hessian*matter_density**2*matter_square)/(4*curvature_N*hat_momentum_squared*lapse_Hessian)",
+        "0"
+      ],
+      [
+        "3*force_trace*matter_density*(force_matter**2 - 2*lapse_Hessian*matter_square)/(2*curvature_N*lapse_Hessian)",
+        "0"
+      ]
+    ],
+    "symplectic_form": [
+      [
+        "0",
+        "0",
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "1"
+      ],
+      [
+        "-1",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "-1",
+        "0",
+        "0"
+      ]
+    ]
+  },
+  "exact_residuals": {
+    "Cauchy_second_derivative_factorial_retained": "0",
+    "actual_complex_phase_image_is_one_e_minus_six": "0",
+    "all_inverse_frequency_orders_after_volume_rescaling": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "bandwidth_is_exact_integer_cube_root_carrier": "0",
+    "clock_mode_is_present_in_actual_scalar_basis": "0",
+    "complete_mode_eigenbasis": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "complex_annulus_handles_negative_centers_lower": "0",
+    "complex_annulus_handles_negative_centers_upper": "0",
+    "complex_conformal_deviation_keeps_entire_binomial_tail": "0",
+    "constant_symplectic_structure_J": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "constant_symplectic_structure_L0": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "constant_symplectic_structure_L1": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "constant_symplectic_structure_L2": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "constant_symplectic_structure_L3": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "cube_radius_uses_only_certified_lower_separation": "0",
+    "exact_basis_inverse": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "exact_finite_q_coordinate_block": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "exact_finite_q_momentum_Hessian": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "exact_finite_q_momentum_coordinate_block": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "exact_time_dependent_near_identity_remainder": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "exponential_series_bound_is_applied_to_integrated_small_remainder": "0",
+    "flat_spectral_envelope_inverse_Fourier_integral": "0",
+    "formal_clock_and_matter_probe_Noether_forces_cancel": "0",
+    "full_principal_matter_response_has_both_distinct_positive_poles": "0",
+    "full_two_sided_sinc_tail_integral": "0",
+    "gap_derivative_is_retained_in_change_derivative": "0",
+    "inner_interval_keeps_half_parent_separation": "0",
+    "inner_time_interval_uses_one_half_original_radius": "0",
+    "leading_diagonal_transport_identically_zero": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "leading_kinetic_inverse_is_actual_parent": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "leading_transport_Krein_symmetry": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "linear_relational_matter_observable_is_gauge_invariant": "0",
+    "matter_mode_is_present_in_actual_scalar_basis": "0",
+    "normalized_exact_packet_tail_keeps_field_error_and_normalization": "0",
+    "off_diagonal_transport_removed_by_actual_gap_matrix": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "one_dimensional_spectral_envelope_unit_norm": "0",
+    "positive_and_negative_action_normalization": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "relative_reconstruction_bound_uses_nonzero_projection": "0",
+    "shift_keeps_actual_Euler_gradient": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "spatial_dispersion_difference_exact_rationalization": "0",
+    "three_dimensional_product_envelope_unit_norm": "0",
+    "uniform_energy_principal_cancellation": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "unitary_gauge_is_the_reconstructed_matter_coordinate": "0",
+    "vanishing_background_observable_has_no_linear_metric_probe_force": "0",
+    "volume_rescaling_removes_both_weighted_damping_halves": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    }
+  },
+  "exact_three_dimensional_classical_packets_and_normalized_errors": {
+    "120": {
+      "Fourier_support": "Two cubes centered at +/-carrier*e1 with each coordinate half-width sigma",
+      "UV_exclusion_or_original_P8_closure": false,
+      "actual_relative_observable_error_upper": "500000000025000000000000000000000000000000000000000000000000000000000000000000000000000000000000001/312500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "both_exact_solutions_have_finite_band_and_all_finite_Sobolev_norms": true,
+      "carrier_decimal_exponent": 120,
+      "classical_carrier": "1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "classical_ray_separation_lower": "99/400000000000000",
+      "clock_cube_margin_beyond_matter_future_of_initial_cube": "297/1600000000000000",
+      "comoving_frequency_band": [
+        "500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "2000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+      ],
+      "compact_spatial_support_or_compact_local_preparation": false,
+      "comparison_cube_half_width": "99/3200000000000000",
+      "declared_relative_observable_error_upper": "1/10000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "diffraction_relative_error_upper": "1/25000000000000000000000000000000000000000000000",
+      "envelope_bandwidth": "10000000000000000000000000000000000000000",
+      "exact_packet_normalized_outside_cube_L2_mass_upper": "64000000000000000000000000000000000000000000000000000000000000000005280000000000000000000000000026400000000000000000000000000033/412500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "initial_and_final_clock_times": [
+        "-1/20000000",
+        "1/20000000"
+      ],
+      "interacting_EFT_band_or_quantum_resolution": false,
+      "leading_real_packet_outside_cube_L2_mass_upper": "1/51562500000000000000000000",
+      "negative_carrier_conjugate_clock_mode_index": 0,
+      "negative_carrier_conjugate_matter_mode_index": 1,
+      "one_dimensional_normalized_envelope": "sqrt(sigma/pi) sin(sigma x)/(sigma x)",
+      "positive_carrier_outgoing_clock_mode_index": 2,
+      "positive_carrier_outgoing_matter_mode_index": 3,
+      "real_three_dimensional_packet": "sqrt(2) cos(carrier*x1) product_i f_sigma(x_i)",
+      "same_leading_relational_field_initial_envelope_with_included_near_identity_correction": true,
+      "total_relative_field_error_upper": "400000000000000000000000000001/10000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "72": {
+      "Fourier_support": "Two cubes centered at +/-carrier*e1 with each coordinate half-width sigma",
+      "UV_exclusion_or_original_P8_closure": false,
+      "actual_relative_observable_error_upper": "500000000025000000000000000000000000000000000000001/312500000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "both_exact_solutions_have_finite_band_and_all_finite_Sobolev_norms": true,
+      "carrier_decimal_exponent": 72,
+      "classical_carrier": "1000000000000000000000000000000000000000000000000000000000000000000000000",
+      "classical_ray_separation_lower": "99/400000000000000",
+      "clock_cube_margin_beyond_matter_future_of_initial_cube": "297/1600000000000000",
+      "comoving_frequency_band": [
+        "500000000000000000000000000000000000000000000000000000000000000000000000",
+        "2000000000000000000000000000000000000000000000000000000000000000000000000"
+      ],
+      "compact_spatial_support_or_compact_local_preparation": false,
+      "comparison_cube_half_width": "99/3200000000000000",
+      "declared_relative_observable_error_upper": "1/10000000000000000000000000000",
+      "diffraction_relative_error_upper": "1/2500000000000000000000000000000",
+      "envelope_bandwidth": "1000000000000000000000000",
+      "exact_packet_normalized_outside_cube_L2_mass_upper": "40000000000000000000000000000000000000000000002079033/25781250000000000000000000000000000000000000000000000000000000",
+      "initial_and_final_clock_times": [
+        "-1/20000000",
+        "1/20000000"
+      ],
+      "interacting_EFT_band_or_quantum_resolution": false,
+      "leading_real_packet_outside_cube_L2_mass_upper": "1/5156250000",
+      "negative_carrier_conjugate_clock_mode_index": 0,
+      "negative_carrier_conjugate_matter_mode_index": 1,
+      "one_dimensional_normalized_envelope": "sqrt(sigma/pi) sin(sigma x)/(sigma x)",
+      "positive_carrier_outgoing_clock_mode_index": 2,
+      "positive_carrier_outgoing_matter_mode_index": 3,
+      "real_three_dimensional_packet": "sqrt(2) cos(carrier*x1) product_i f_sigma(x_i)",
+      "same_leading_relational_field_initial_envelope_with_included_near_identity_correction": true,
+      "total_relative_field_error_upper": "251/2500000000000000000000000000000"
+    },
+    "75": {
+      "Fourier_support": "Two cubes centered at +/-carrier*e1 with each coordinate half-width sigma",
+      "UV_exclusion_or_original_P8_closure": false,
+      "actual_relative_observable_error_upper": "500000000025000000000000000000000000000000000000000001/312500000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "both_exact_solutions_have_finite_band_and_all_finite_Sobolev_norms": true,
+      "carrier_decimal_exponent": 75,
+      "classical_carrier": "1000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "classical_ray_separation_lower": "99/400000000000000",
+      "clock_cube_margin_beyond_matter_future_of_initial_cube": "297/1600000000000000",
+      "comoving_frequency_band": [
+        "500000000000000000000000000000000000000000000000000000000000000000000000000",
+        "2000000000000000000000000000000000000000000000000000000000000000000000000000"
+      ],
+      "compact_spatial_support_or_compact_local_preparation": false,
+      "comparison_cube_half_width": "99/3200000000000000",
+      "declared_relative_observable_error_upper": "1/10000000000000000000000000000000",
+      "diffraction_relative_error_upper": "1/25000000000000000000000000000000",
+      "envelope_bandwidth": "10000000000000000000000000",
+      "exact_packet_normalized_outside_cube_L2_mass_upper": "1600000000000000000000000000000000000000000000000001617/10312500000000000000000000000000000000000000000000000000000000000",
+      "initial_and_final_clock_times": [
+        "-1/20000000",
+        "1/20000000"
+      ],
+      "interacting_EFT_band_or_quantum_resolution": false,
+      "leading_real_packet_outside_cube_L2_mass_upper": "1/51562500000",
+      "negative_carrier_conjugate_clock_mode_index": 0,
+      "negative_carrier_conjugate_matter_mode_index": 1,
+      "one_dimensional_normalized_envelope": "sqrt(sigma/pi) sin(sigma x)/(sigma x)",
+      "positive_carrier_outgoing_clock_mode_index": 2,
+      "positive_carrier_outgoing_matter_mode_index": 3,
+      "real_three_dimensional_packet": "sqrt(2) cos(carrier*x1) product_i f_sigma(x_i)",
+      "same_leading_relational_field_initial_envelope_with_included_near_identity_correction": true,
+      "total_relative_field_error_upper": "7/50000000000000000000000000000000"
+    }
+  },
+  "explicit_analytic_basis_and_inverse_majorants": {
+    "S": {
+      "entry_upper": [
+        [
+          "2*sqrt(2)",
+          "0",
+          "2*sqrt(2)",
+          "0"
+        ],
+        [
+          "sqrt(2)/4",
+          "10*sqrt(2)",
+          "sqrt(2)/4",
+          "10*sqrt(2)"
+        ],
+        [
+          "20*sqrt(2)",
+          "5*sqrt(2)/4",
+          "20*sqrt(2)",
+          "5*sqrt(2)/4"
+        ],
+        [
+          "0",
+          "10*sqrt(2)",
+          "0",
+          "10*sqrt(2)"
+        ]
+      ],
+      "infinity_norm_upper": "85*sqrt(2)/2"
+    },
+    "S_inverse": {
+      "entry_upper": [
+        [
+          "20*sqrt(2)",
+          "0",
+          "2*sqrt(2)",
+          "sqrt(2)/4"
+        ],
+        [
+          "5*sqrt(2)/4",
+          "10*sqrt(2)",
+          "0",
+          "10*sqrt(2)"
+        ],
+        [
+          "20*sqrt(2)",
+          "0",
+          "2*sqrt(2)",
+          "sqrt(2)/4"
+        ],
+        [
+          "5*sqrt(2)/4",
+          "10*sqrt(2)",
+          "0",
+          "10*sqrt(2)"
+        ]
+      ],
+      "infinity_norm_upper": "89*sqrt(2)/4"
+    }
+  },
+  "formulation": "FORMULATION.md",
+  "literal_finite_frequency_Laurent_coefficient_majorants": {
+    "A0": [
+      [
+        "4",
+        "2"
+      ],
+      [
+        "2",
+        "17"
+      ]
+    ],
+    "A1": [
+      [
+        "35/4",
+        "51/16"
+      ],
+      [
+        "51/16",
+        "0"
+      ]
+    ],
+    "A2": [
+      [
+        "153/256",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ],
+    "C0": [
+      [
+        "3825/64",
+        "0"
+      ],
+      [
+        "0",
+        "3/32"
+      ]
+    ],
+    "E0": [
+      [
+        "651/8",
+        "0"
+      ],
+      [
+        "255/8",
+        "0"
+      ]
+    ],
+    "E1": [
+      [
+        "765/128",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ]
+  },
+  "local_relational_observable_pole_and_reconstruction": {
+    "both_mode_observable_projection_lower": "1/10000",
+    "both_mode_observable_projection_upper": "1000",
+    "clock_coordinate_projection_lower_before_volume_rescaling": "1/1000",
+    "clock_principal_pole_weight_lower": "691200000/1000002000001",
+    "declared_inverse_carrier_relative_observable_error_coefficient": "100000000000000000000000000000000000000000000",
+    "formal_covariant_probe": "sqrt(-g) J [chi-chi_background(phi)]",
+    "inverse_volume_rescaling_lower": "1/4",
+    "inverse_volume_rescaling_upper": "4",
+    "linear_relational_observable": "delta chi-(chi_background'/phi_background') delta phi",
+    "local_background_dependent_scalar": "O=chi-chi_background(phi)",
+    "matter_coordinate_projection_lower_before_volume_rescaling": "1/40",
+    "modal_to_relative_observable_error_factor": "40000000",
+    "no_compact_source_retarded_preparation_or_quantum_detector_theorem": true,
+    "unitary_gauge_observable": "chi"
+  },
+  "named_exact_check_count": 45,
+  "not_established": [
+    "Compact spatial support, compact local retarded preparation or a quantum detector/commutator theorem",
+    "A classical-to-interacting-EFT frequency transfer, optimized carrier, canonical interaction control, omitted operators, loops or cutoff",
+    "A quantum state, fixed profile, cancellation, response or inverse on these nearby backgrounds",
+    "Exact nonlinear packet solutions, all-wavelength stability or globally complete nearby bounces",
+    "Heavy thresholds, finite Wilson matching, healthy full-candidate vacuum, common-parent V/G/B, UV completion/exclusion or original P8 closure"
+  ],
+  "prior_sha256": {
+    "S6_89_fully_rebuilt": "f176876ff1cbc122fc9cc37c4b63cf8b1494f81ec73ddad53f2771f56e7af530",
+    "no_quantum_state_profile_or_interacting_band_transfer": true,
+    "same_actual_nearby_classical_solution_and_literal_linearized_action": true
+  },
+  "proof_checks": {
+    "actual_R_upper_keeps_time_derivative_and_all_contacts": true,
+    "actual_W_upper_has_all_three_inverse_frequency_pieces": true,
+    "actual_analytic_basis_and_inverse_norms_below_one_thousand": true,
+    "actual_change_below_declared_upper": true,
+    "actual_change_derivative_below_declared_upper": true,
+    "actual_complex_conformal_root_near_one": true,
+    "actual_complex_phase_fits_parent_trace_box": true,
+    "actual_complex_scale_near_one": true,
+    "actual_complex_solution_disc_is_parent_certified_disc": true,
+    "actual_complex_trace_force_below_one": true,
+    "actual_leading_transport_below_declared_upper": true,
+    "actual_modal_reconstruction_below_declared_field_error": true,
+    "actual_norm_conversion_below_declared_error_coefficient": true,
+    "actual_relational_clock_pole_weight_above_one_over_two_thousand": true,
+    "actual_transport_derivative_below_declared_upper": true,
+    "all_four_complex_frequency_gaps_nonzero": true,
+    "bandlimited_packet_not_compact_retarded_preparation": true,
+    "bandlimited_tails_are_not_claimed_zero": true,
+    "both_spectral_cubes_inside_declared_radial_band": true,
+    "change_invertible_on_entire_classical_domain": true,
+    "clock_detector_cube_outside_matter_future_of_initial_cube": true,
+    "complete_frequency_band_inside_classical_normalform_domain": true,
+    "complex_M_modulus_between_twenty_four_and_twenty_six_hundredths": true,
+    "complex_clock_excess_nonzero": true,
+    "complex_clock_kinetic_in_declared_annulus": true,
+    "complex_clock_speed_root_near_one": true,
+    "complex_matter_density_nonzero_and_small": true,
+    "complex_matter_frequency_between_one_half_and_two": true,
+    "complex_matter_kinetic_in_declared_annulus": true,
+    "complex_matter_square_in_positive_modulus_annulus": true,
+    "complex_pivot_in_two_to_three_annulus": true,
+    "declared_projection_upper_exceeds_basis_times_scale_bound": true,
+    "every_exact_Laurent_entry_below_one_hundred": true,
+    "field_norm_denominator_separated_from_zero": true,
+    "finite_field_error_below_one_e_minus_twenty_seven": true,
+    "inner_real_interval_has_positive_time_Cauchy_radius": true,
+    "integrated_remainder_in_exponential_series_domain": true,
+    "larger_declared_carriers_improve_both_errors_and_tails": true,
+    "leading_packet_tail_below_one_e_minus_nine": true,
+    "local_relational_observable_not_a_quantum_gravity_locality_assertion": true,
+    "no_complex_ordering_inferred_from_real_interval_order": true,
+    "no_interacting_EFT_frequency_or_quantum_resolution_claim": true,
+    "nonzero_clock_projection_survives_volume_rescaling": true,
+    "nonzero_matter_projection_survives_volume_rescaling": true,
+    "normalized_exact_packet_concentration_above_one_minus_one_e_minus_eight": true,
+    "not_a_classical_to_interacting_EFT_cutoff_transfer": true,
+    "opposite_real_carrier_spectral_cubes_disjoint": true,
+    "original_P8_not_closed_by_classical_packet": true,
+    "same_actual_nearby_classical_cones_used": true,
+    "sinc_tail_rational_weakening_uses_pi_above_two": true,
+    "time_Cauchy_first_and_second_derivative_bounds_finite": true
+  },
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "e72b872ad521c2e2cb0b9a39a077f84db17a6c6f135f425f76319905bffa7500",
+    "README.md": "83df668e67bc595819490cb24bcb3265bc185a7de97b7629cdc9a7e4a1d5dd6e",
+    "notes/analytic.md": "65d0e4b68ee4b15825df6e629536a8e5bb8b1f1cccb6a54cdacd7997f5846cac",
+    "notes/canonical.md": "dd582af716f533679cec6fd3fea21be1819ff2eebcc21e3af25f5d45bffdf2a3",
+    "notes/observable.md": "b4eab46b63663e0075153caa42b5eb4ae8b770abafd57f0e588fa7fcbb4e4f19",
+    "notes/packets.md": "8fe830b913ffd3672142309c8c8a6a976daceeec66aba35fb3cf63ffb7f33edd",
+    "notes/scope.md": "a4c13af0a1a58f38bf75424e947c3b2a8d0e6d2263a3424e485dc7726e328709",
+    "src/p8_proca_nearby_packets/__init__.py": "a978cd3c5a82944d9636abf4c5e2a0125d022493fd875c71fbdec27581b57173",
+    "src/p8_proca_nearby_packets/audit.py": "0fc872b70cc63042d0a62a8cd0593b47ed42f6c78a776cc5bba1ac5113ecc67b",
+    "src/p8_proca_nearby_packets/domains.py": "a224b54b5a4dd55686f62a3cff9ab0ed04cbe91db2e174117711f4a44d47e4c0",
+    "src/p8_proca_nearby_packets/finite.py": "5bb439997a156a433b9f8757d86536604d0feb8ccf6a090d18156a69081e23eb",
+    "src/p8_proca_nearby_packets/modes.py": "26872aefc6a4af802a7478f627ae8baa7ec03bf0b948c802e2ab2cb9bbc18a0d",
+    "src/p8_proca_nearby_packets/normal_form.py": "f36dfda850f184719b322f797d01f1d3f1568b7455ec2d7646f35ba8f0a03a95",
+    "src/p8_proca_nearby_packets/observable.py": "47198cfb45bfafa72cb97b42a4453aaf40bed01a74442551d6a7fe9da4b70554",
+    "src/p8_proca_nearby_packets/packets.py": "8f63a1072152b9cac6e65b22b59d1ed0f0c12601703310f1a99a4180a7e9aaf4",
+    "src/p8_proca_nearby_packets/verify.py": "c6e2fc5d0ec26f7b016086ed9ffcd287a01a67c9979261958b39ff9033b072e8",
+    "tests/conftest.py": "f1d999093cd6bd73af6633816ffd432e1e376b548d2102d972c433e9c909261d",
+    "tests/test_proca_nearby_packets_certificate.py": "e19bfc29a7aa91445fd1f2eb464c843f45be40c861d1a46928f018bfe66dad3b",
+    "tests/test_proca_nearby_packets_science.py": "52047e6d0de541d09237211921b372bc082ee9fbf112f6b27ee9633455f8876a"
+  },
+  "status": "EXACT_FINITE_FREQUENCY_CLASSICAL_NEARBY_RELATIONAL_MATTER_PACKETS_HAVE_CONTROLLED_MODE_DIFFRACTION_AND_TAIL_ERRORS_AND_ADVANCE_RELATIVE_TO_MATTER_CONE; COMPACT_PREPARATION_INTERACTING_CUTOFF_QUANTUM_MATCHING_AND_ORIGINAL_P8_OPEN",
+  "verdict": "On the inner real half of the actual S6.88/S6.89 nearby classical bounce interval, exact scalar linearized solutions form outgoing three-dimensional real packets in O=chi-chi_background(phi). The full finite-frequency Hamiltonian, volume rescaling and symplectic mode basis retain every contact and inverse-frequency remainder. Leading diagonal transport vanishes exactly. Actual complex-time bounds give a quantitative normal form. At comoving carrier 10^72 and bandwidth 10^24, modal reconstruction plus diffraction error is below 10^-27 and normalized exact outside-cube L2 mass is below 10^-8. The clock comparison cube lies outside the matter causal future of the initial comparison cube, with nonzero packet tails retained. The result is finite-frequency classical transport, not compact local preparation, a quantum signal or a frequency band admitted below an interacting EFT cutoff.",
+  "verification_boundary": "Exact full finite-frequency Hamiltonian identities, symplectic/action normalization and zero diagonal transport, actual complex solution annuli and complete Laurent bounds, time Cauchy derivatives, exact near-identity remainder and rational error constants, relational gauge/pole checks, explicit Fourier normalization, diffraction and normalized nonzero-tail estimates, with written ODE and localization proofs. Every parent is natively rebuilt. No floating inequality, library patch, quantum transfer, compact-support assumption or cutoff assertion. Not proof-assistant formalization.",
+  "written_proofs": [
+    "notes/canonical.md",
+    "notes/analytic.md",
+    "notes/observable.md",
+    "notes/packets.md",
+    "notes/scope.md"
+  ]
+}
