@@ -1,0 +1,525 @@
+{
+  "actual_fixed_physical_matter_frame_light_canonical_forms": {
+    "actual_clock_squared_speed_excess_lower": "1/200000",
+    "actual_clock_squared_speed_excess_upper": "1/62500",
+    "canonical_light_clock_direction": [
+      [
+        "1"
+      ],
+      [
+        "0"
+      ]
+    ],
+    "canonical_light_gradient": [
+      [
+        "positive_physical_clock_speed**2",
+        "0"
+      ],
+      [
+        "0",
+        "1"
+      ]
+    ],
+    "canonical_light_kinetic": [
+      [
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "1"
+      ]
+    ],
+    "literal_light_kinetic": [
+      [
+        "K_clock + K_matter*ell**2",
+        "K_matter*ell"
+      ],
+      [
+        "K_matter*ell",
+        "K_matter"
+      ]
+    ],
+    "old_kinetic_canonical_congruence": [
+      [
+        "1/sqrt(K_clock)",
+        "0"
+      ],
+      [
+        "-ell/sqrt(K_clock)",
+        "1/sqrt(K_matter)"
+      ]
+    ],
+    "physical_gradient_uses_one_matter_frame_not_mode_dependent_frame": true,
+    "physical_matter_frame_light_gradient": [
+      [
+        "K_clock*positive_physical_clock_speed**2 + K_matter*ell**2",
+        "K_matter*ell"
+      ],
+      [
+        "K_matter*ell",
+        "K_matter"
+      ]
+    ]
+  },
+  "actual_ordinary_Proca_constraint_decoupling_and_finite_species": {
+    "actual_action_after_constant_canonical_vector_rescaling": "(electric_1**2 + electric_2**2 + electric_3**2 - magnetic_1**2 - magnetic_2**2 - magnetic_3**2 + 1000000*vector_component_0**2 - 1000000*vector_component_1**2 - 1000000*vector_component_2**2 - 1000000*vector_component_3**2)/2",
+    "actual_existing_canonical_Proca_mass_squared": "1000000",
+    "actual_literal_unscaled_Maxwell_coefficient": "1/1000000",
+    "actual_unscaled_vector_quadratic_action": "electric_1**2/2000000 + electric_2**2/2000000 + electric_3**2/2000000 - magnetic_1**2/2000000 - magnetic_2**2/2000000 - magnetic_3**2/2000000 + vector_component_0**2/2 - vector_component_1**2/2 - vector_component_2**2/2 - vector_component_3**2/2",
+    "classical_principal_result_does_not_include_Proca_loop_corrections_or_quantum_backreaction": true,
+    "electric_components": [
+      "electric_1",
+      "electric_2",
+      "electric_3"
+    ],
+    "full_relevant_metric_vector_order_action": "vector_perturbation**2*(metric_perturbation*(-inverse_metric_jet_0 + inverse_metric_jet_4 + inverse_metric_jet_7 + inverse_metric_jet_9)/2 - 1)*(inverse_metric_jet_1*metric_perturbation*(electric_1*(-electric_1*inverse_metric_jet_1*metric_perturbation - electric_2*inverse_metric_jet_2*metric_perturbation - electric_3*inverse_metric_jet_3*metric_perturbation) + magnetic_2*(-electric_1*inverse_metric_jet_6*metric_perturbation - electric_2*inverse_metric_jet_8*metric_perturbation - electric_3*(inverse_metric_jet_9*metric_perturbation + 1)) - magnetic_3*(-electric_1*inverse_metric_jet_5*metric_perturbation - electric_2*(inverse_metric_jet_7*metric_perturbation + 1) - electric_3*inverse_metric_jet_8*metric_perturbation))/4 + inverse_metric_jet_1*metric_perturbation*(-electric_1*(electric_1*inverse_metric_jet_1*metric_perturbation - inverse_metric_jet_5*magnetic_3*metric_perturbation + inverse_metric_jet_6*magnetic_2*metric_perturbation) - electric_2*(electric_1*inverse_metric_jet_2*metric_perturbation + inverse_metric_jet_8*magnetic_2*metric_perturbation - magnetic_3*(inverse_metric_jet_7*metric_perturbation + 1)) - electric_3*(electric_1*inverse_metric_jet_3*metric_perturbation - inverse_metric_jet_8*magnetic_3*metric_perturbation + magnetic_2*(inverse_metric_jet_9*metric_perturbation + 1)))/4 + inverse_metric_jet_2*metric_perturbation*(-electric_1*(electric_2*inverse_metric_jet_1*metric_perturbation - inverse_metric_jet_6*magnetic_1*metric_perturbation + magnetic_3*(inverse_metric_jet_4*metric_perturbation + 1)) - electric_2*(electric_2*inverse_metric_jet_2*metric_perturbation + inverse_metric_jet_5*magnetic_3*metric_perturbation - inverse_metric_jet_8*magnetic_1*metric_perturbation) - electric_3*(electric_2*inverse_metric_jet_3*metric_perturbation + inverse_metric_jet_6*magnetic_3*metric_perturbation - magnetic_1*(inverse_metric_jet_9*metric_perturbation + 1)))/4 + inverse_metric_jet_2*metric_perturbation*(electric_2*(-electric_1*inverse_metric_jet_1*metric_perturbation - electric_2*inverse_metric_jet_2*metric_perturbation - electric_3*inverse_metric_jet_3*metric_perturbation) - magnetic_1*(-electric_1*inverse_metric_jet_6*metric_perturbation - electric_2*inverse_metric_jet_8*metric_perturbation - electric_3*(inverse_metric_jet_9*metric_perturbation + 1)) + magnetic_3*(-electric_1*(inverse_metric_jet_4*metric_perturbation + 1) - electric_2*inverse_metric_jet_5*metric_perturbation - electric_3*inverse_metric_jet_6*metric_perturbation))/4 + inverse_metric_jet_3*metric_perturbation*(-electric_1*(electric_3*inverse_metric_jet_1*metric_perturbation + inverse_metric_jet_5*magnetic_1*metric_perturbation - magnetic_2*(inverse_metric_jet_4*metric_perturbation + 1)) - electric_2*(electric_3*inverse_metric_jet_2*metric_perturbation - inverse_metric_jet_5*magnetic_2*metric_perturbation + magnetic_1*(inverse_metric_jet_7*metric_perturbation + 1)) - electric_3*(electric_3*inverse_metric_jet_3*metric_perturbation - inverse_metric_jet_6*magnetic_2*metric_perturbation + inverse_metric_jet_8*magnetic_1*metric_perturbation))/4 + inverse_metric_jet_3*metric_perturbation*(electric_3*(-electric_1*inverse_metric_jet_1*metric_perturbation - electric_2*inverse_metric_jet_2*metric_perturbation - electric_3*inverse_metric_jet_3*metric_perturbation) + magnetic_1*(-electric_1*inverse_metric_jet_5*metric_perturbation - electric_2*(inverse_metric_jet_7*metric_perturbation + 1) - electric_3*inverse_metric_jet_8*metric_perturbation) - magnetic_2*(-electric_1*(inverse_metric_jet_4*metric_perturbation + 1) - electric_2*inverse_metric_jet_5*metric_perturbation - electric_3*inverse_metric_jet_6*metric_perturbation))/4 + inverse_metric_jet_5*metric_perturbation*(electric_1*(electric_2*(inverse_metric_jet_0*metric_perturbation - 1) + inverse_metric_jet_1*magnetic_3*metric_perturbation - inverse_metric_jet_3*magnetic_1*metric_perturbation) + magnetic_2*(electric_2*inverse_metric_jet_3*metric_perturbation + inverse_metric_jet_6*magnetic_3*metric_perturbation - magnetic_1*(inverse_metric_jet_9*metric_perturbation + 1)) - magnetic_3*(electric_2*inverse_metric_jet_2*metric_perturbation + inverse_metric_jet_5*magnetic_3*metric_perturbation - inverse_metric_jet_8*magnetic_1*metric_perturbation))/4 + inverse_metric_jet_5*metric_perturbation*(electric_2*(electric_1*(inverse_metric_jet_0*metric_perturbation - 1) - inverse_metric_jet_2*magnetic_3*metric_perturbation + inverse_metric_jet_3*magnetic_2*metric_perturbation) - magnetic_1*(electric_1*inverse_metric_jet_3*metric_perturbation - inverse_metric_jet_8*magnetic_3*metric_perturbation + magnetic_2*(inverse_metric_jet_9*metric_perturbation + 1)) + magnetic_3*(electric_1*inverse_metric_jet_1*metric_perturbation - inverse_metric_jet_5*magnetic_3*metric_perturbation + inverse_metric_jet_6*magnetic_2*metric_perturbation))/4 + inverse_metric_jet_6*metric_perturbation*(electric_1*(electric_3*(inverse_metric_jet_0*metric_perturbation - 1) - inverse_metric_jet_1*magnetic_2*metric_perturbation + inverse_metric_jet_2*magnetic_1*metric_perturbation) + magnetic_2*(electric_3*inverse_metric_jet_3*metric_perturbation - inverse_metric_jet_6*magnetic_2*metric_perturbation + inverse_metric_jet_8*magnetic_1*metric_perturbation) - magnetic_3*(electric_3*inverse_metric_jet_2*metric_perturbation - inverse_metric_jet_5*magnetic_2*metric_perturbation + magnetic_1*(inverse_metric_jet_7*metric_perturbation + 1)))/4 + inverse_metric_jet_6*metric_perturbation*(electric_3*(electric_1*(inverse_metric_jet_0*metric_perturbation - 1) - inverse_metric_jet_2*magnetic_3*metric_perturbation + inverse_metric_jet_3*magnetic_2*metric_perturbation) + magnetic_1*(electric_1*inverse_metric_jet_2*metric_perturbation + inverse_metric_jet_8*magnetic_2*metric_perturbation - magnetic_3*(inverse_metric_jet_7*metric_perturbation + 1)) - magnetic_2*(electric_1*inverse_metric_jet_1*metric_perturbation - inverse_metric_jet_5*magnetic_3*metric_perturbation + inverse_metric_jet_6*magnetic_2*metric_perturbation))/4 + inverse_metric_jet_8*metric_perturbation*(electric_2*(electric_3*(inverse_metric_jet_0*metric_perturbation - 1) - inverse_metric_jet_1*magnetic_2*metric_perturbation + inverse_metric_jet_2*magnetic_1*metric_perturbation) - magnetic_1*(electric_3*inverse_metric_jet_3*metric_perturbation - inverse_metric_jet_6*magnetic_2*metric_perturbation + inverse_metric_jet_8*magnetic_1*metric_perturbation) + magnetic_3*(electric_3*inverse_metric_jet_1*metric_perturbation + inverse_metric_jet_5*magnetic_1*metric_perturbation - magnetic_2*(inverse_metric_jet_4*metric_perturbation + 1)))/4 + inverse_metric_jet_8*metric_perturbation*(electric_3*(electric_2*(inverse_metric_jet_0*metric_perturbation - 1) + inverse_metric_jet_1*magnetic_3*metric_perturbation - inverse_metric_jet_3*magnetic_1*metric_perturbation) + magnetic_1*(electric_2*inverse_metric_jet_2*metric_perturbation + inverse_metric_jet_5*magnetic_3*metric_perturbation - inverse_metric_jet_8*magnetic_1*metric_perturbation) - magnetic_2*(electric_2*inverse_metric_jet_1*metric_perturbation - inverse_metric_jet_6*magnetic_1*metric_perturbation + magnetic_3*(inverse_metric_jet_4*metric_perturbation + 1)))/4 + positive_Proca_mass**2*(vector_component_0*(inverse_metric_jet_1*metric_perturbation*vector_component_1 + inverse_metric_jet_2*metric_perturbation*vector_component_2 + inverse_metric_jet_3*metric_perturbation*vector_component_3 + vector_component_0*(inverse_metric_jet_0*metric_perturbation - 1)) + vector_component_1*(inverse_metric_jet_1*metric_perturbation*vector_component_0 + inverse_metric_jet_5*metric_perturbation*vector_component_2 + inverse_metric_jet_6*metric_perturbation*vector_component_3 + vector_component_1*(inverse_metric_jet_4*metric_perturbation + 1)) + vector_component_2*(inverse_metric_jet_2*metric_perturbation*vector_component_0 + inverse_metric_jet_5*metric_perturbation*vector_component_1 + inverse_metric_jet_8*metric_perturbation*vector_component_3 + vector_component_2*(inverse_metric_jet_7*metric_perturbation + 1)) + vector_component_3*(inverse_metric_jet_3*metric_perturbation*vector_component_0 + inverse_metric_jet_6*metric_perturbation*vector_component_1 + inverse_metric_jet_8*metric_perturbation*vector_component_2 + vector_component_3*(inverse_metric_jet_9*metric_perturbation + 1)))/2 + (inverse_metric_jet_0*metric_perturbation - 1)*(-electric_1*(-electric_1*(inverse_metric_jet_4*metric_perturbation + 1) - electric_2*inverse_metric_jet_5*metric_perturbation - electric_3*inverse_metric_jet_6*metric_perturbation) - electric_2*(-electric_1*inverse_metric_jet_5*metric_perturbation - electric_2*(inverse_metric_jet_7*metric_perturbation + 1) - electric_3*inverse_metric_jet_8*metric_perturbation) - electric_3*(-electric_1*inverse_metric_jet_6*metric_perturbation - electric_2*inverse_metric_jet_8*metric_perturbation - electric_3*(inverse_metric_jet_9*metric_perturbation + 1)))/4 + (inverse_metric_jet_4*metric_perturbation + 1)*(electric_1*(electric_1*(inverse_metric_jet_0*metric_perturbation - 1) - inverse_metric_jet_2*magnetic_3*metric_perturbation + inverse_metric_jet_3*magnetic_2*metric_perturbation) + magnetic_2*(electric_1*inverse_metric_jet_3*metric_perturbation - inverse_metric_jet_8*magnetic_3*metric_perturbation + magnetic_2*(inverse_metric_jet_9*metric_perturbation + 1)) - magnetic_3*(electric_1*inverse_metric_jet_2*metric_perturbation + inverse_metric_jet_8*magnetic_2*metric_perturbation - magnetic_3*(inverse_metric_jet_7*metric_perturbation + 1)))/4 + (inverse_metric_jet_7*metric_perturbation + 1)*(electric_2*(electric_2*(inverse_metric_jet_0*metric_perturbation - 1) + inverse_metric_jet_1*magnetic_3*metric_perturbation - inverse_metric_jet_3*magnetic_1*metric_perturbation) - magnetic_1*(electric_2*inverse_metric_jet_3*metric_perturbation + inverse_metric_jet_6*magnetic_3*metric_perturbation - magnetic_1*(inverse_metric_jet_9*metric_perturbation + 1)) + magnetic_3*(electric_2*inverse_metric_jet_1*metric_perturbation - inverse_metric_jet_6*magnetic_1*metric_perturbation + magnetic_3*(inverse_metric_jet_4*metric_perturbation + 1)))/4 + (inverse_metric_jet_9*metric_perturbation + 1)*(electric_3*(electric_3*(inverse_metric_jet_0*metric_perturbation - 1) - inverse_metric_jet_1*magnetic_2*metric_perturbation + inverse_metric_jet_2*magnetic_1*metric_perturbation) + magnetic_1*(electric_3*inverse_metric_jet_2*metric_perturbation - inverse_metric_jet_5*magnetic_2*metric_perturbation + magnetic_1*(inverse_metric_jet_7*metric_perturbation + 1)) - magnetic_2*(electric_3*inverse_metric_jet_1*metric_perturbation + inverse_metric_jet_5*magnetic_1*metric_perturbation - magnetic_2*(inverse_metric_jet_4*metric_perturbation + 1)))/4)",
+    "inverse_metric_first_jet": [
+      [
+        "inverse_metric_jet_0",
+        "inverse_metric_jet_1",
+        "inverse_metric_jet_2",
+        "inverse_metric_jet_3"
+      ],
+      [
+        "inverse_metric_jet_1",
+        "inverse_metric_jet_4",
+        "inverse_metric_jet_5",
+        "inverse_metric_jet_6"
+      ],
+      [
+        "inverse_metric_jet_2",
+        "inverse_metric_jet_5",
+        "inverse_metric_jet_7",
+        "inverse_metric_jet_8"
+      ],
+      [
+        "inverse_metric_jet_3",
+        "inverse_metric_jet_6",
+        "inverse_metric_jet_8",
+        "inverse_metric_jet_9"
+      ]
+    ],
+    "literal_background_metric_quadratic_Proca_action": "electric_1**2/2 + electric_2**2/2 + electric_3**2/2 - magnetic_1**2/2 - magnetic_2**2/2 - magnetic_3**2/2 - positive_Proca_mass**2*(-vector_component_0**2 + vector_component_1**2 + vector_component_2**2 + vector_component_3**2)/2",
+    "local_physical_inertial_metric": [
+      [
+        "-1",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "1"
+      ]
+    ],
+    "longitudinal_coordinate": "longitudinal_mode",
+    "longitudinal_kinetic_coefficient": "positive_Proca_mass**2/(positive_Proca_mass**2 + positive_physical_momentum**2)",
+    "longitudinal_velocity": "longitudinal_velocity",
+    "magnetic_components": [
+      "magnetic_1",
+      "magnetic_2",
+      "magnetic_3"
+    ],
+    "metric_amplitude_parameter": "metric_perturbation",
+    "metric_volume_first_jet": "-metric_perturbation*(-inverse_metric_jet_0 + inverse_metric_jet_4 + inverse_metric_jet_7 + inverse_metric_jet_9)/2 + 1",
+    "n_example_principal_counts": {
+      "0": {
+        "fixed_finite_positive_masses_do_not_enter_principal_polynomial": true,
+        "n_is_total_species_in_new_classical_family_not_old_quantum_state_count": true,
+        "normalized_principal_characteristic": "(1 - characteristic_speed**2)**3*(-characteristic_speed**2 + positive_physical_clock_speed**2)",
+        "number_of_luminal_physical_modes": 3,
+        "number_of_ordinary_Proca_species": 0,
+        "number_of_physical_Proca_polarizations": 0,
+        "total_number_of_physical_modes": 4
+      },
+      "1": {
+        "fixed_finite_positive_masses_do_not_enter_principal_polynomial": true,
+        "n_is_total_species_in_new_classical_family_not_old_quantum_state_count": true,
+        "normalized_principal_characteristic": "(1 - characteristic_speed**2)**6*(-characteristic_speed**2 + positive_physical_clock_speed**2)",
+        "number_of_luminal_physical_modes": 6,
+        "number_of_ordinary_Proca_species": 1,
+        "number_of_physical_Proca_polarizations": 3,
+        "total_number_of_physical_modes": 7
+      },
+      "3": {
+        "fixed_finite_positive_masses_do_not_enter_principal_polynomial": true,
+        "n_is_total_species_in_new_classical_family_not_old_quantum_state_count": true,
+        "normalized_principal_characteristic": "(1 - characteristic_speed**2)**12*(-characteristic_speed**2 + positive_physical_clock_speed**2)",
+        "number_of_luminal_physical_modes": 12,
+        "number_of_ordinary_Proca_species": 3,
+        "number_of_physical_Proca_polarizations": 9,
+        "total_number_of_physical_modes": 13
+      }
+    },
+    "no_scalar_vector_quadratic_cross_term_at_zero_Proca_background": true,
+    "nondynamical_temporal_component": "nondynamical_temporal_mode",
+    "reduced_tangent_frame_longitudinal_action": "-positive_Proca_mass**2*(longitudinal_mode**2*positive_Proca_mass**2 + longitudinal_mode**2*positive_physical_momentum**2 - longitudinal_velocity**2)/(2*(positive_Proca_mass**2 + positive_physical_momentum**2))",
+    "tangent_frame_frozen_massive_dispersion_squared": "positive_Proca_mass**2 + positive_physical_momentum**2",
+    "tangent_frame_longitudinal_action_with_constraint": "-longitudinal_mode**2*positive_Proca_mass**2/2 + nondynamical_temporal_mode**2*positive_Proca_mass**2/2 + (longitudinal_velocity - nondynamical_temporal_mode*positive_physical_momentum)**2/2",
+    "tangent_frame_massive_dispersion_not_a_time_independent_FLRW_evolution_claim": true,
+    "temporal_constraint_solution": "longitudinal_velocity*positive_physical_momentum/(positive_Proca_mass**2 + positive_physical_momentum**2)",
+    "vector_amplitude_parameter": "vector_perturbation",
+    "vector_components": [
+      [
+        "vector_component_0"
+      ],
+      [
+        "vector_component_1"
+      ],
+      [
+        "vector_component_2"
+      ],
+      [
+        "vector_component_3"
+      ]
+    ]
+  },
+  "checked_scalar_entries": 40,
+  "claim": "P8-S6.95.FINITE_PRINCIPAL_SPECTATOR_REPAIR",
+  "controls": {
+    "groups": {
+      "finite_species": {
+        "rejected_inputs": 30
+      },
+      "relative_norm_budget": {
+        "rejected_inputs": 34
+      }
+    },
+    "no_old_action_background_state_or_scientific_library_changed": true,
+    "rejected_inputs": 64
+  },
+  "date": "2026-09-09",
+  "exact_residuals": {
+    "actual_existing_Proca_mass_is_retained": "0",
+    "actual_gradient_is_canonicalized_in_fixed_physical_matter_frame": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "actual_light_kinetic_canonical_congruence": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "actual_one_Proca_case_has_three_extra_physical_modes": "0",
+    "all_heavy_offdiagonal_blocks_drop_out_of_embedded_clock_pencil": "0",
+    "allowing_a_real_light_gradient_change_can_remove_the_rank_one_excess": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "at_least_one_clock_speed_orientation_remains_nonpositive_with_unchanged_K_H": "0",
+    "both_orientations_require_extra_absolute_mixed_term_allowance": "0",
+    "canonical_light_principal_determinant_has_clock_and_matter_factors": "0",
+    "canonical_mass_keeps_reciprocal_literal_Maxwell_coefficient": "0",
+    "finite_mass_mixing_does_not_change_second_order_characteristic_leading_term": "0",
+    "literal_constant_vector_rescaling_gives_canonical_action_and_mass": "0",
+    "literal_mixed_metric_vector_quadratic_variation_vanishes": "0",
+    "literal_tangent_Proca_action_has_correct_electric_magnetic_and_mass_signs": "0",
+    "literal_vector_quadratic_action_uses_only_background_metric": "0",
+    "longitudinal_front_is_luminal_at_fixed_finite_mass": "0",
+    "longitudinal_massive_dispersion_matches_transverse_one": "0",
+    "matter_lightcone_test_keeps_all_three_light_block_changes": "0",
+    "mixed_only_control_is_luminal_in_one_orientation": "0",
+    "mixed_only_control_is_negative_at_other_matter_lightcone": "0",
+    "mixed_only_positive_direction_repair_leaves_a_faster_negative_root": "0",
+    "physical_clock_direction_has_exact_positive_excess": "0",
+    "reduced_longitudinal_action_keeps_positive_finite_momentum_kinetic_factor": "0",
+    "strict_budget_retains_the_sum_of_both_relative_norm_errors": "0",
+    "temporal_Proca_constraint_is_solved_without_dropping_mass": "0",
+    "two_orientation_average_removes_arbitrary_light_mixed_block": "0",
+    "two_orientation_average_requires_K_H_repair_even_with_arbitrary_mixed_term": "0",
+    "two_orientation_difference_retains_mixed_block_with_factor_four": "0",
+    "unchanged_embedded_light_pencil_is_exactly_original_clock_pencil": "0",
+    "unchanged_full_pencil_has_nonpositive_minimum_eigenvalue_at_clock_speed": "0",
+    "zero_spectator_case_retains_matter_and_two_tensor_modes": "0"
+  },
+  "finite_Hermitian_principal_extension_and_explicit_embedding": {
+    "arbitrary_light_mixed_terms_do_not_repair_both_propagation_directions": true,
+    "clock_direction_pencil": "characteristic_speed**2*(light_kinetic_change_11 + 1) + 2*characteristic_speed*light_mixed_change_11 - light_gradient_change_11 - positive_physical_clock_speed**2",
+    "embedded_light_clock_direction": [
+      [
+        "1"
+      ],
+      [
+        "0"
+      ],
+      [
+        "0"
+      ],
+      [
+        "0"
+      ]
+    ],
+    "four_mode_algebra_anchor_not_a_bound_on_number_of_heavy_fields": true,
+    "full_characteristic_pencil_anchor": [
+      [
+        "characteristic_speed**2*(light_kinetic_change_11 + 1) + 2*characteristic_speed*light_mixed_change_11 - light_gradient_change_11 - positive_physical_clock_speed**2",
+        "characteristic_speed**2*light_kinetic_change_12 + 2*characteristic_speed*light_mixed_change_12 - light_gradient_change_12",
+        "characteristic_speed**2*heavy_kinetic_mix_0 + 2*characteristic_speed*heavy_time_space_mix_0 - heavy_gradient_mix_0",
+        "characteristic_speed**2*heavy_kinetic_mix_1 + 2*characteristic_speed*heavy_time_space_mix_1 - heavy_gradient_mix_1"
+      ],
+      [
+        "characteristic_speed**2*light_kinetic_change_12 + 2*characteristic_speed*light_mixed_change_12 - light_gradient_change_12",
+        "characteristic_speed**2*(light_kinetic_change_22 + 1) + 2*characteristic_speed*light_mixed_change_22 - light_gradient_change_22 - 1",
+        "characteristic_speed**2*heavy_kinetic_mix_2 + 2*characteristic_speed*heavy_time_space_mix_2 - heavy_gradient_mix_2",
+        "characteristic_speed**2*heavy_kinetic_mix_3 + 2*characteristic_speed*heavy_time_space_mix_3 - heavy_gradient_mix_3"
+      ],
+      [
+        "characteristic_speed**2*heavy_kinetic_mix_0 + 2*characteristic_speed*heavy_time_space_mix_0 - heavy_gradient_mix_0",
+        "characteristic_speed**2*heavy_kinetic_mix_2 + 2*characteristic_speed*heavy_time_space_mix_2 - heavy_gradient_mix_2",
+        "characteristic_speed**2*heavy_kinetic_11 + 2*characteristic_speed*heavy_time_space_11 - heavy_gradient_11",
+        "characteristic_speed**2*heavy_kinetic_12 + 2*characteristic_speed*heavy_time_space_12 - heavy_gradient_12"
+      ],
+      [
+        "characteristic_speed**2*heavy_kinetic_mix_1 + 2*characteristic_speed*heavy_time_space_mix_1 - heavy_gradient_mix_1",
+        "characteristic_speed**2*heavy_kinetic_mix_3 + 2*characteristic_speed*heavy_time_space_mix_3 - heavy_gradient_mix_3",
+        "characteristic_speed**2*heavy_kinetic_12 + 2*characteristic_speed*heavy_time_space_12 - heavy_gradient_12",
+        "characteristic_speed**2*heavy_kinetic_22 + 2*characteristic_speed*heavy_time_space_22 - heavy_gradient_22"
+      ]
+    ],
+    "full_gradient_anchor": [
+      [
+        "light_gradient_change_11 + positive_physical_clock_speed**2",
+        "light_gradient_change_12",
+        "heavy_gradient_mix_0",
+        "heavy_gradient_mix_1"
+      ],
+      [
+        "light_gradient_change_12",
+        "light_gradient_change_22 + 1",
+        "heavy_gradient_mix_2",
+        "heavy_gradient_mix_3"
+      ],
+      [
+        "heavy_gradient_mix_0",
+        "heavy_gradient_mix_2",
+        "heavy_gradient_11",
+        "heavy_gradient_12"
+      ],
+      [
+        "heavy_gradient_mix_1",
+        "heavy_gradient_mix_3",
+        "heavy_gradient_12",
+        "heavy_gradient_22"
+      ]
+    ],
+    "full_kinetic_anchor": [
+      [
+        "light_kinetic_change_11 + 1",
+        "light_kinetic_change_12",
+        "heavy_kinetic_mix_0",
+        "heavy_kinetic_mix_1"
+      ],
+      [
+        "light_kinetic_change_12",
+        "light_kinetic_change_22 + 1",
+        "heavy_kinetic_mix_2",
+        "heavy_kinetic_mix_3"
+      ],
+      [
+        "heavy_kinetic_mix_0",
+        "heavy_kinetic_mix_2",
+        "heavy_kinetic_11",
+        "heavy_kinetic_12"
+      ],
+      [
+        "heavy_kinetic_mix_1",
+        "heavy_kinetic_mix_3",
+        "heavy_kinetic_12",
+        "heavy_kinetic_22"
+      ]
+    ],
+    "full_mixed_time_space_anchor": [
+      [
+        "light_mixed_change_11",
+        "light_mixed_change_12",
+        "heavy_time_space_mix_0",
+        "heavy_time_space_mix_1"
+      ],
+      [
+        "light_mixed_change_12",
+        "light_mixed_change_22",
+        "heavy_time_space_mix_2",
+        "heavy_time_space_mix_3"
+      ],
+      [
+        "heavy_time_space_mix_0",
+        "heavy_time_space_mix_2",
+        "heavy_time_space_11",
+        "heavy_time_space_12"
+      ],
+      [
+        "heavy_time_space_mix_1",
+        "heavy_time_space_mix_3",
+        "heavy_time_space_12",
+        "heavy_time_space_22"
+      ]
+    ],
+    "general_theorem_allows_any_finite_number_of_added_physical_modes": true,
+    "light_gradient_change": [
+      [
+        "light_gradient_change_11",
+        "light_gradient_change_12"
+      ],
+      [
+        "light_gradient_change_12",
+        "light_gradient_change_22"
+      ]
+    ],
+    "light_kinetic_change": [
+      [
+        "light_kinetic_change_11",
+        "light_kinetic_change_12"
+      ],
+      [
+        "light_kinetic_change_12",
+        "light_kinetic_change_22"
+      ]
+    ],
+    "light_mixed_change": [
+      [
+        "light_mixed_change_11",
+        "light_mixed_change_12"
+      ],
+      [
+        "light_mixed_change_12",
+        "light_mixed_change_22"
+      ]
+    ],
+    "no_frequency_dependent_constraint_schur_complement_assumed_polynomial": true,
+    "positive_full_kinetic_form_and_Hermitian_pencil_are_explicit_hypotheses": true,
+    "unchanged_light_block_has_a_real_characteristic_at_least_clock_speed": true
+  },
+  "formulation": "FORMULATION.md",
+  "named_exact_check_count": 31,
+  "necessary_two_orientation_light_repair_and_negative_controls": {
+    "actual_whole_interval_necessary_relative_K_H_repair_norm_sum_lower": "1/200000",
+    "algebraic_gradient_change_that_can_repair_principal_pair": [
+      [
+        "1 - positive_physical_clock_speed**2",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ],
+    "algebraic_repair_not_a_covariant_action_or_UV_construction": true,
+    "both_orientation_necessary_directional_condition": "DeltaK_11-DeltaH_11 >= (c_clock^2-1)+2*abs(DeltaC_11)",
+    "example_strict_nonrepair_budget": {
+      "a_matter_causal_parent_requires_change_norm_sum_strictly_above": "1/200000",
+      "bounds_are_conditional_inputs_not_claimed_actual_UV_matching_errors": true,
+      "no_smallness_assumption_on_finite_mixed_time_space_or_heavy_blocks": true,
+      "old_kinetic_relative_gradient_change_norm_upper": "1/800000",
+      "old_kinetic_relative_kinetic_change_norm_upper": "1/800000",
+      "positive_full_kinetic_form_remains_required": true,
+      "strict_nonrepair_margin": "1/400000"
+    },
+    "old_kinetic_relative_norm_is_a_specified_canonical_comparison_not_unqualified_coefficient_size": true,
+    "positive_direction_only_mixed_repair_pencil": "characteristic_speed**2 + characteristic_speed*(positive_physical_clock_speed**2 - 1) - positive_physical_clock_speed**2",
+    "positive_direction_only_mixed_repair_roots": [
+      "1",
+      "-positive_physical_clock_speed**2"
+    ],
+    "repaired_canonical_gradient": [
+      [
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "1"
+      ]
+    ],
+    "repaired_canonical_kinetic": [
+      [
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "1"
+      ]
+    ]
+  },
+  "not_established": [
+    "A covariant light-action repair, new on-shell solution or healthy interacting completion",
+    "An explicit bare-parent light embedding or positive physical kinetic form for an arbitrary UV theory",
+    "Higher-derivative, nonlocal, loop-induced, infinite-tower or unreduced constrained extension classification",
+    "Joint temporal/spatial interacting EFT validity, actual parent matching errors or that parent's own response tail",
+    "Hadamard stress, semiclassical backreaction, V/G/B, realistic-field P8(a) or original P8 closure"
+  ],
+  "prior_sha256": {
+    "S6_94_fully_rebuilt": "95f706f2efd91d4bdb418d32ab29451c63f73b1cbcf4969b0b339ff7e7892380",
+    "no_effective_light_block_assumed_to_be_a_bare_parent_restriction": true,
+    "ordinary_Proca_classical_application_retains_its_own_constraints": true,
+    "same_actual_nearby_light_action_background_and_physical_matter_frame": true
+  },
+  "proof_checks": {
+    "actual_gap_floor_positive": true,
+    "actual_whole_interval_clock_gap_below_sixteen_e_minus_six": true,
+    "actual_whole_interval_clock_gap_exceeds_five_e_minus_six": true,
+    "algebraic_repair_control_does_not_change_the_frozen_action": true,
+    "arbitrary_finite_dimension_follows_from_written_Hermitian_continuity_proof": true,
+    "canonical_Proca_mass_strictly_positive": true,
+    "default_conditional_nonrepair_margin_positive": true,
+    "finite_mass_high_frequency_limit_not_exchanged_with_infinite_mass_limit": true,
+    "longitudinal_kinetic_strictly_positive_for_finite_positive_mass": true,
+    "metric_vector_mixing_starts_above_quadratic_order": true,
+    "mixed_terms_not_assumed_small_or_absent": true,
+    "mixed_time_space_couplings_are_included_not_silently_zeroed": true,
+    "necessary_repair_lower_is_not_a_sufficient_UV_matching_condition": true,
+    "no_Proca_quantum_state_or_tadpole_cancellation_is_transferred": true,
+    "no_added_Proca_species_can_remove_the_unchanged_clock_factor": true,
+    "positive_full_kinetic_form_is_a_hypothesis_not_an_inferred_parent_property": true
+  },
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "b29087b9c522adfc3151e7080047ba5805e4828ca5de2cd5c563fe018a2a4fab",
+    "README.md": "5ac69e6c28f2f54d21f0cdf53471ad55e4be7523b9bc61e0ef3519a5cafa6e21",
+    "notes/principal.md": "6be018b00b4cd3b7496e2a5cc49bb053ae1047447c4b46df2499c1aec499654d",
+    "notes/proca.md": "4097824583de4b5623a700d1e6a50f659ccd0d460bf1db1134cbb16f4d3d50b4",
+    "notes/repair.md": "8407e411f991e2394c1b118d4ae75f7be7624ea715b187d7b5dc949cf1d4ed5a",
+    "notes/scope.md": "8bf6c96e3364086ce7a423309995e7fff3a882813e878ea5f0d8e352caa0c48a",
+    "src/p8_proca_spectator_repair/__init__.py": "4f008773454380180e5cdc6bd77d2425947ac092bf1765766da6fc9b9c1e03d3",
+    "src/p8_proca_spectator_repair/audit.py": "87855e35287e0f24d3a75afa486d4b956531f49a9e1720eaf309d86351e16527",
+    "src/p8_proca_spectator_repair/pencil.py": "fcc5f3ca152bd987ee322bff18c3c307384ba450a444694b17cf798f4013bbc6",
+    "src/p8_proca_spectator_repair/proca.py": "b14803d43fd95b6ed5297bc0a49986426e2e9785da58e5ec40140e6f74f86883",
+    "src/p8_proca_spectator_repair/repair.py": "092b64f8d447a7b101134cf5ac5f2de656addc17a6a914911ff28a8c9d6e2afc",
+    "src/p8_proca_spectator_repair/verify.py": "dba14dc8bc8a20ce1b84cbc9d404f3f9de001f3b5ad7600415735493a16af3d7",
+    "tests/conftest.py": "f1d999093cd6bd73af6633816ffd432e1e376b548d2102d972c433e9c909261d",
+    "tests/test_proca_spectator_repair_certificate.py": "38d0a908e056348ba29117e8935939a1b1f917a1be7fe55ae21a93d685d2641e",
+    "tests/test_proca_spectator_repair_science.py": "64f58567f8941340ebb7c2294e6558a158acd5ff847380c690733daf9cd23a12"
+  },
+  "status": "FINITE_POSITIVE_KINETIC_HERMITIAN_PRINCIPAL_EXTENSIONS_NEED_ACTUAL_LIGHT_K_H_REPAIR_IN_BOTH_ORIENTATIONS; ORDINARY_PROCA_SPECTATORS_RETAIN_FAST_SCALAR_FACTOR; GENERAL_UV_AND_ORIGINAL_P8_OPEN",
+  "verdict": "The actual nearby light principal pair is I and diag(c_clock^2,1) in its old-kinetic canonical comparison, with c_clock^2-1>5*10^-6 throughout the interval. For any finite Hermitian second-order physical principal pencil with positive full kinetic form and this explicit light embedding, unchanged light kinetic and gradient blocks leave a real characteristic of absolute speed at least c_clock, including arbitrary finite mixed time-space and heavy/cross blocks. Matter-causal propagation in both orientations requires the sum of relative light kinetic and gradient change norms to exceed 5*10^-6. This is only necessary. The literal ordinary-Proca addition at zero vector background decouples quadratically, and its temporal constraint gives three healthy physical modes with luminal principal cone. Any finite number of such classical spectators leaves the faster scalar factor. Genuine light-action changes and frequency-dependent parent response remain separate research routes; no general UV no-go is proved.",
+  "verification_boundary": "Native exact fixed-frame canonical congruence, complete mixed principal pencil restriction, both orientations, literal vector/metric quadratic variation, constant canonical mass normalization, temporal Proca constraint and finite lower-order mass anchor. Written Hermitian continuity and operator-norm proofs cover arbitrary finite dimension; written decoupling proves the all-species product. Exact domain controls reject invalid budgets and species. Every parent is natively rebuilt and every source/proof/test byte pinned. No scientific-library patch, inferred bare-parent embedding, assigned UV error or frozen action mutation. Not proof-assistant formalization.",
+  "written_proofs": [
+    "notes/principal.md",
+    "notes/repair.md",
+    "notes/proca.md",
+    "notes/scope.md"
+  ]
+}
