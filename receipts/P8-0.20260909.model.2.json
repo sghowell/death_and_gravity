@@ -1,0 +1,112 @@
+{
+  "claim_id": "P8-0",
+  "closes": [],
+  "created": "2026-09-09T02:41:12+00:00",
+  "evidence_sha256": [
+    "0bf8f98068b6ddf3669548150e8c0369b1869231de6f6a663a8b2f6805e06d3b",
+    "1548a342ffd8bfd4d1717e7e3481cfe0040aa28d6cd210671968eb3dd2296804",
+    "2711a7c000b0149832c129f3b81f600e2d57f9aa8bf35a9253d1ac0b1e296fab",
+    "2d48772a28c7ca9625c0b1282332af7d3f8ee24c83064041578bb112c4f726e3",
+    "2fb9806b7e9e303409cbc7f5987fd3789a820c7d5711dc462682130be6f299e6",
+    "31ed35642816d4c1b24a6010452722a70e63779d4e4bb83ebb2d0c8f27f3e913",
+    "4014ba75b80221ba1d1a676bf0842dc8c7bd8e0af96bb40dc54bc377e89a785a",
+    "453ae6e27b3a604b913f2661d4db8bf6b55d8b43a3c0379de9586f2e4253c0ff",
+    "6da7ba085177f5af11f404e603c31e44f699befac418b932619f022521b2813f",
+    "72f75800215badbcd53a79d3830ff27ca55078b3d0012f9e7f353b129ca3255a",
+    "7c1d6a20cfebb3097ef7365f712f9788414f00284db5a6cdd1677efa74e59e49",
+    "8224029389c1b92c9a368e61859d786b9240cd6851be937489350e0a08c33296",
+    "8cffd7b9d0d53dbac6be0a31b5aa89e33cf57c207ca62b21467c18ce764be735",
+    "910c883ce921344d3f88b7fb6d7bf1898d7a98ab189d90ab9f1b390d0c8d8412",
+    "9d6980e9724acb4f3085587b90d93a860ac9f90a2b2002b3b513ed67bb4e59b0",
+    "a5f21daf5a774fa15221dd6d01c304528fd3172d27b4972511a7ffb122edc0d2",
+    "b43e6232063146911849d350b2c67d9f7377e1dd6815912c88bf851a0ddfebeb",
+    "c702b1c712686d917b48547afc819b3bee822e54daeb7c5a4e67af6676ca3f9e",
+    "de948d96dc9e2ae3f1cc8ec77f52910c2eb3a3234e757d19376b8bb59cefe02d",
+    "eea3917844475b2f866c4418a7c169e208750a479da596eac1f6c64f3df6c7c3",
+    "ef74b74348f6a92d314da9019558a32f538f04e8a7d5f6e4b40e8ca1591ce36a",
+    "f5e689c8b5210cbcc67df1e10cc5a33d4132cae64804990c0878984a725ea5ae",
+    "ff7b3fc4eda66a7835d99eef3958f710fdb295dbccbcd9f91fefeac65b03c035"
+  ],
+  "findings": [
+    {
+      "dimension": "ledger_consistency",
+      "severity": "warning",
+      "text": "Every evidence entry on the claim is IMPORTED, and the README rule is that IMPORTED entries 'never count as verification'. No evidence entry records a PASS by cosmo_p8_s0 or any other verifier over certificates/s0-identities.json; the only account of a successful replay ('report() recomputed and compared exactly') is the free-text note dated 2026-09-08. At review time the replay half of the CERTIFIED definition exists nowhere on the countable evidence record. [Evidence entries (all 23: 'table-import v1 -> IMPORTED at 2026-09-04') and the 2026-09-08 Notes entry]"
+    },
+    {
+      "dimension": "ledger_consistency",
+      "severity": "warning",
+      "text": "The sole verifier this promotion relies on, cosmo_p8_s0, has no committed declaration under claims/verifiers/ (by the note's own admission), and it replays a vendored tree pinned to commit e04bb6c. Nothing in the record ties that vendored copy to the evidence hashes listed here (s0-identities.json sha256 f5e689c8..., verify.py sha256 ff7b3fc4...); the 'Verifiers named above' section covers only table-import ('no registry stamp'). The README's promote mechanism names 'the <package>.verify checkers through tools/empiricist_check.py'; whether a pack verifier outside the declaration registry satisfies that clause is attested only in prose. [Notes: 'it is a pack verifier, not a command verifier, so it has no declaration under claims/verifiers/' and 'vendors problems/P8 verbatim (this branch at commit e04bb6c)'; section 'Verifiers named above']"
+    },
+    {
+      "dimension": "evidence_support",
+      "severity": "warning",
+      "text": "The certificate certifies this clause only as the residual 'luminal_mismatch': '0'. Unlike GS, FS, exceptional_A3, printed_A25_D_A3_mismatch, and the benchmark jets, no expression for det(K\u2212G) is recorded anywhere in s0-identities.json, so the statement's equation is connected to the replayed residual only through matter.py (pinned as source_sha256 'bd4328...' but not exhibited and not an evidence entry) and the prose of notes/s0-opening.md \u00a73. For this clause the certificate text alone does not exhibit what was certified. [Statement clause 'det(K\u2212G) = \u2212Y Q\u00b2(f\u2212g)\u00b2' vs certificate field exact_residuals.luminal_mismatch]"
+    },
+    {
+      "dimension": "evidence_support",
+      "severity": "note",
+      "text": "The three modules defining every certified expression appear only as sha256 values inside the certificate; they are not evidence entries on the claim, while conftest.py and 19 test files are. A change to those modules surfaces only as a replay mismatch, never as an evidence-record event. For the recorded fields I could check directly, the evidence does establish the statement: the FS string '(-FT*Theta**2 + GT**2*H*Theta - GT**2*Thetadot + 2*GT*GTdot*Theta)/Theta**2' expands exactly to a\u207b\u00b9 d(a G_T\u00b2/Theta)/dt \u2212 F_T under H=adot/a, GS matches Sigma G_T\u00b2/Theta\u00b2+3G_T, and both denominators are Theta\u00b2 (no H), supporting 'no generic 1/H pole'. [Certificate source_sha256 (benchmark.py, horndeski.py, matter.py) vs the Evidence entries list]"
+    },
+    {
+      "dimension": "evidence_support",
+      "severity": "note",
+      "text": "This 'independent' FLINT check contains the identically-zero factor (q\u2212q), so it hard-codes the matrix structure (equal (2,2) entries, off-diagonal difference vq(g\u2212f)) rather than deriving it; as evidence for the det(K\u2212G) clause it is circular and can only fail if its own text is edited. It is not cited by the statement or certificate (independent_flint covers only the IBP identity and boundary-sign control), so it is inert, but it sits on the evidence record under a name suggesting independence it does not have. [problems/P8/tests/test_matter.py::test_independent_luminal_determinant, expression '(k11-g11)*(q-q) - (v*q*g-v*q*f)**2']"
+    },
+    {
+      "dimension": "assumption_explicitness",
+      "severity": "warning",
+      "text": "The statement's first sentence carries its chart hypotheses ('nonzero-mode, a>0, Theta\u22600'), but the exceptional-relation clause carries none of the certificate's own side conditions. The recorded exceptional_A3 has X*(3*A1*X - 4*F2) in its denominator, so the clause as worded asserts an identity on a locus where its right-hand side is undefined; the hypotheses live only in the certificate's domain field (plus the word 'rolling' for chi_dot\u22600). The explicitness is asymmetric within the same statement text. [Statement clause 'using MRV20 (8a) for D recovers the exceptional relation' vs certificate domain entries 'exceptional dictionary additionally X > 0, GT != 0, 3*X*A1-4*F2 != 0' and 'matter implication additionally Q > 0 and chi_dot != 0']"
+    },
+    {
+      "dimension": "assumption_explicitness",
+      "severity": "note",
+      "text": "Y and Q are undefined in the statement text; they resolve only through the transcribed A25 conventions (Y = chi_dot\u00b2 per test_coupled.py's 'Y = sp.diff(c.chi, j.t)**2'; Q = P_Y per notes/s0-opening.md \u00a73 'Q=P_Y>0'). The binding text is self-contained about sources but not about these symbols. [Statement symbols 'Y' and 'Q' in 'det(K\u2212G) = \u2212Y Q\u00b2(f\u2212g)\u00b2']"
+    },
+    {
+      "dimension": "internal_consistency",
+      "severity": "note",
+      "text": "Checked by direct expansion: GS and FS strings match the statement's formulas; exceptional_A3's numerator 2*(A1**2*X - 2*A1*F2 - 2*A1*F2X*X + 4*F2*F2X) equals the notes' 2(XA1\u22122F2)(A1\u22122F2_X) and reduces to \u22122F2X/X at A1=0 as both notes and tests state; printed_A25_D_A3_mismatch equals the digest's 4F2_X(F2\u2212A1X)/[X(3A1X\u22124F2)]; benchmark_Hdot0_pinned '1/375' is consistent with (epsilon+3)/(6*epsilon*tau**2) at the pinned epsilon=5, tau=10, and a1_0/theta0 match notes \u00a74 at w=2, u=1/10 (test_benchmark.py's 13/12/cosh\u00b2(1/10) values). The digest's 'Closure update' about S1/S2 does not contradict the statement's final sentence, since the digest itself scopes S0 descriptions as historical. No contradictions found. [Statement vs s0-identities.json fields; notes/s0-opening.md \u00a7\u00a71,3,4 and literature-digest.md D3.1 vs certificate]"
+    },
+    {
+      "dimension": "internal_consistency",
+      "severity": "note",
+      "text": "The ledger's CERTIFIED definition names build_report()/validate_report as the replay pair; this claim's checker implements report() with a direct dict comparison in check_certificate(). validate_report exists only in p8.verify_all (exercised by test_complete_chain.py) and governs six S1/S2 reports that are not this claim's certificate. The mechanism is functionally the same read-only compare, but the named functions do not literally match this checker. [README CERTIFIED clause 'build_report() compared with validate_report' vs problems/P8/src/p8/verify.py (report()/check_certificate())]"
+    },
+    {
+      "dimension": "ledger_consistency",
+      "severity": "note",
+      "text": "The imported evidence includes files exclusively about material the statement disclaims \u2014 e.g., test_a25_certificate.py's test_all_time_A25_regression (tiles \u2212500..500), test_candidate_cert.py's 'all_time' certificates, and test_complete_chain.py's six S1/S2 reports ('s1-derived-action.json', 'witness-*.json', 'classification.json') \u2014 against the statement's 'No covariant reduction, global no-go, complete stable bounce, or ladder verdict is established'. As IMPORTED they count for nothing, but they sit on this claim's record as if the legacy table cited them for this statement. [Evidence entries test_complete_chain.py, test_candidate_cert.py, test_a25_certificate.py, test_covariant.py, test_gamma.py, test_strong_gravity.py, test_exclusions.py, test_rational_candidates.py, test_quadratic.py, test_tilted_hessian.py, test_regressions.py]"
+    },
+    {
+      "dimension": "ledger_consistency",
+      "severity": "note",
+      "text": "Of the fallback disclosure fields the CERTIFIED clause enumerates ('status', 'not_established' and 'written_proof' together with the named notes file), this certificate has only not_established; it has no status or written_proof field and names no notes file. The boundary is disclosed in substance by scope + domain + not_established \u2014 adequate here because the statement claims nothing analytic beyond machine replay \u2014 but not in the shape the README's clause describes. [s0-identities.json fields (schema 1: scope, domain, not_established) vs README boundary-disclosure clause]"
+    },
+    {
+      "dimension": "confidence_calibration",
+      "severity": "note",
+      "text": "Checked the requested level against the evidence type: every certified item is exact symbolic algebra with enforced negative controls (verify.report() raises if the printed-D residual is zero; wrong_boundary_sign_detected). The statement's negative final sentence matches the certificate's not_established list, and 'generic 1/H pole' is calibrated by the recorded caveat that the GR/k-essence specialization does pole at H=0 (Theta \u221d H). The statement text does not overclaim relative to the certificate; CERTIFIED is the appropriate target for exact replayed algebra under this ledger's definitions, contingent on the replay-record findings above. [Statement hedges ('S0 source-level identities only', 'generic', final sentence) vs certificate scope/not_established and test_horndeski.py::test_GR_kessence_known_answer_away_from_H_zero]"
+    },
+    {
+      "dimension": "decision_soundness",
+      "severity": "warning",
+      "text": "Re-earning the legacy level is the designed flow, but at decision time this promotion has zero countable verification behind it: the asserted matching replay lives in a note, by a verifier with no evidence entry and no declaration, over a vendored tree (commit e04bb6c) that the record does not reconcile with the listed file hashes. The promotion decision is therefore resting on an off-record assertion rather than on anything the ledger itself can replay or audit today. [Promotion request HEURISTIC -> CERTIFIED, together with the 2026-09-08 Notes entry]"
+    }
+  ],
+  "id": "P8-0.20260909.model.2",
+  "provenance": {
+    "cost_usd": "2.3092",
+    "model": "claude-fable-5",
+    "request_digest": "3b1cfb4fea9e52076f49ae4324ee91aa1eb8605fbe81bb213c5efb6e984021d4",
+    "response_digest": "a557e1affbe7b774174a5f465a2071323df5737557752acff43a540224a53652",
+    "run_id": "review-P8-0-b0bde1-s2",
+    "transport": "ClaudeCodeClient"
+  },
+  "reviewer": "model",
+  "statement_sha256": "67c07b5775c2a1df14ed9e7da9bd8f3708f81dc3956c889fbfa6b8800055719c",
+  "target_level": "CERTIFIED",
+  "usable": true,
+  "verdict": "REVISE",
+  "waivers": []
+}

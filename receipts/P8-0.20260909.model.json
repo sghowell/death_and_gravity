@@ -1,0 +1,87 @@
+{
+  "claim_id": "P8-0",
+  "closes": [],
+  "created": "2026-09-09T02:33:43+00:00",
+  "evidence_sha256": [
+    "0bf8f98068b6ddf3669548150e8c0369b1869231de6f6a663a8b2f6805e06d3b",
+    "1548a342ffd8bfd4d1717e7e3481cfe0040aa28d6cd210671968eb3dd2296804",
+    "2711a7c000b0149832c129f3b81f600e2d57f9aa8bf35a9253d1ac0b1e296fab",
+    "2d48772a28c7ca9625c0b1282332af7d3f8ee24c83064041578bb112c4f726e3",
+    "2fb9806b7e9e303409cbc7f5987fd3789a820c7d5711dc462682130be6f299e6",
+    "31ed35642816d4c1b24a6010452722a70e63779d4e4bb83ebb2d0c8f27f3e913",
+    "4014ba75b80221ba1d1a676bf0842dc8c7bd8e0af96bb40dc54bc377e89a785a",
+    "453ae6e27b3a604b913f2661d4db8bf6b55d8b43a3c0379de9586f2e4253c0ff",
+    "6da7ba085177f5af11f404e603c31e44f699befac418b932619f022521b2813f",
+    "72f75800215badbcd53a79d3830ff27ca55078b3d0012f9e7f353b129ca3255a",
+    "7c1d6a20cfebb3097ef7365f712f9788414f00284db5a6cdd1677efa74e59e49",
+    "8224029389c1b92c9a368e61859d786b9240cd6851be937489350e0a08c33296",
+    "8cffd7b9d0d53dbac6be0a31b5aa89e33cf57c207ca62b21467c18ce764be735",
+    "910c883ce921344d3f88b7fb6d7bf1898d7a98ab189d90ab9f1b390d0c8d8412",
+    "9d6980e9724acb4f3085587b90d93a860ac9f90a2b2002b3b513ed67bb4e59b0",
+    "a5f21daf5a774fa15221dd6d01c304528fd3172d27b4972511a7ffb122edc0d2",
+    "b43e6232063146911849d350b2c67d9f7377e1dd6815912c88bf851a0ddfebeb",
+    "c702b1c712686d917b48547afc819b3bee822e54daeb7c5a4e67af6676ca3f9e",
+    "de948d96dc9e2ae3f1cc8ec77f52910c2eb3a3234e757d19376b8bb59cefe02d",
+    "eea3917844475b2f866c4418a7c169e208750a479da596eac1f6c64f3df6c7c3",
+    "ef74b74348f6a92d314da9019558a32f538f04e8a7d5f6e4b40e8ca1591ce36a",
+    "f5e689c8b5210cbcc67df1e10cc5a33d4132cae64804990c0878984a725ea5ae",
+    "ff7b3fc4eda66a7835d99eef3958f710fdb295dbccbcd9f91fefeac65b03c035"
+  ],
+  "findings": [
+    {
+      "dimension": "ledger_consistency",
+      "severity": "warning",
+      "text": "Every evidence entry carries the table-import/IMPORTED identity, which the ledger says 'never count[s] as verification'. The sole verification event supporting CERTIFIED exists as free text in the claim's Notes: no evidence entry records a cosmo_p8_s0 PASS, the verifier has no declaration under claims/verifiers/, the asserted claims/verifiers.json identity stamp is not exhibited, and the vendored commit id (e04bb6c) cannot be reconciled with the formulation pin (FORMULATION.md@73dd18f7) from the record shown. The promotion's stated verification basis is therefore unauditable from the committed record and rests on the promote step itself producing the required PASS. [Evidence entries (all 23 stamped 'table-import v1 -> IMPORTED at 2026-09-04') vs claim Notes line '2026-09-08: verifier cosmo_p8_s0 ... no declaration under claims/verifiers/' and the 'Verifiers named above' section listing only 'table-import: ... no registry stamp']"
+    },
+    {
+      "dimension": "evidence_support",
+      "severity": "warning",
+      "text": "The three p8 modules that the replay recomputes and the certificate pins by hash are not evidence entries of the claim; only verify.py (which imports them) is. Consequently the semantic content of the opaque residual names (luminal_mismatch, kinetic_identity, gradient_identity, canonical_action, lapse_constraint, shift_constraint, exceptional_factorization) cannot be audited from the record. Unlike the Horndeski clause, whose 'raw', 'boundary', 'GS', 'FS' formulas are recorded verbatim in the certificate and match the statement, the matter determinant clause is bound to the certificate only through the name 'luminal_mismatch'; its defining polynomial appears nowhere in the certificate, only in the un-entered matter.py and in prose (notes/s0-opening.md \u00a73). [s0-identities.json field 'source_sha256' (benchmark.py, horndeski.py, matter.py) vs the evidence-entry list; statement phrase 'det(K\u2212G) = \u2212Y Q\u00b2(f\u2212g)\u00b2' vs certificate field 'exact_residuals.luminal_mismatch: 0']"
+    },
+    {
+      "dimension": "internal_consistency",
+      "severity": "warning",
+      "text": "The evidence set attached to this S0-only claim includes the S1/S2, all-time, and ladder-classification test suite and a digest whose closure update reports the covariant bridge as supplied \u2014 exactly the material the statement's final sentence disclaims. None of these files is exercised by the cosmo_p8_s0 replay (report() vs s0-identities.json only), several depend on p8 modules outside the certificate's source_sha256, and their wholesale presence contradicts the claim's 'only' scoping and inflates what this promotion appears to bind. [Statement phrases 'S0 source-level identities only' and 'No covariant reduction, global no-go, complete stable bounce, or ladder verdict is established' vs evidence entries test_complete_chain.py (replays s1-derived-action.json and classification.json, asserts minimal_supports {\"M0\": [\"C\",\"D\"], \"M1\": [\"CD\"]}), test_candidate_cert.py ('all_time_sign_domain_and_tail_certificates'), test_a25_certificate.py ('test_all_time_A25_regression', tiles \u2212500..500, gamma chart), test_exclusions.py (16 ladder rows); notes/literature-digest.md 'Closure update: S1/S2 have now supplied that independent covariant bridge']"
+    },
+    {
+      "dimension": "assumption_explicitness",
+      "severity": "warning",
+      "text": "The statement text carries the chart hypotheses for the Horndeski clause (nonzero-mode, a>0, Theta\u22600) but omits the nondegeneracy hypotheses the certificate itself declares for the exceptional-relation clause \u2014 X>0, G_T\u22600, and 3XA1\u22124F2\u22600, the denominator of the recorded exceptional_A3 \u2014 so the exact text overclaims on the 3XA1=4F2 locus where the relation is undefined. The symbol Y is defined nowhere in the statement or certificate (test_coupled.py uses Y = chi_dot\u00b2 while notes \u00a74 writes Y=Cchi\u00b2/a\u2076); the certificate's domain conditions 'Q > 0 and chi_dot != 0' are attached only to the matter implication, leaving the statement's determinant clause to import Y's meaning implicitly. Since the level binds to the exact statement text, these scope words currently live only in the certificate's domain field and the notes. [Statement clause 'using MRV20 (8a) for D recovers the exceptional relation' vs certificate 'domain' item 'exceptional dictionary additionally X > 0, GT != 0, 3*X*A1-4*F2 != 0' and notes/s0-opening.md \u00a73 'The derivation requires X>0, Theta\u22600, G_T\u22600 and 3X A1\u22124F2\u22600'; symbol 'Y' in 'det(K\u2212G) = \u2212Y Q\u00b2(f\u2212g)\u00b2']"
+    },
+    {
+      "dimension": "ledger_consistency",
+      "severity": "note",
+      "text": "The certificate conforms to neither disclosure channel the level semantics enumerate: it has no verification_boundary field, no status field, no written_proof field, and names no notes file. Its boundary is in fact fully disclosed \u2014 via the unenumerated 'scope' and 'domain' fields plus 'not_established' \u2014 so the receipt can locate it, but the promotion attaches CERTIFIED through a disclosure mechanism the ledger text does not recognize for any schema. [s0-identities.json fields ('schema': 1, 'scope', 'domain', 'not_established') vs the ledger's CERTIFIED definition: 'a verification_boundary field where present (later P8(a) certificates), otherwise the status, not_established and written_proof fields together with the named notes file']"
+    },
+    {
+      "dimension": "confidence_calibration",
+      "severity": "note",
+      "text": "The factor (q\u2212q) is identically zero, so this 'independent' FLINT check verifies only that \u2212(vqg\u2212vqf)\u00b2 = \u2212v\u00b2q\u00b2(f\u2212g)\u00b2 \u2014 ring distributivity \u2014 and never recomputes the transcribed K\u2212G entries or the (2,2) cancellation it hard-codes. Genuine second-engine independence exists only for the Horndeski IBP ('independent_flint' in the certificate). The claim's Notes scope the FLINT independence to the IBP correctly, but the statement's matter-determinant clause rests on a single SymPy derivation while an evidence file's name suggests otherwise. [test_matter.py::test_independent_luminal_determinant, expression '(k11-g11)*(q-q) - (v*q*g-v*q*f)**2']"
+    },
+    {
+      "dimension": "internal_consistency",
+      "severity": "note",
+      "text": "The opening note's 29-test count cannot describe the imported test set, and the digest \u2014 stamped as checked 2026-09-04 and imported that same day \u2014 cites s1-derived-action.md and s2-benchmarks.md, neither of which is an evidence entry. The IMPORTED stamps at 2026-09-04 therefore misdate a later-suite snapshot, and the evidence contains dangling references to files outside the claim's record. [notes/s0-opening.md 'S0 complete: 29 tests pass' vs the 21 imported test files (the parametrized suite alone far exceeds 29); notes/literature-digest.md 'Checked 2026-09-04' vs its 'Closure update ... see s1-derived-action.md and s2-benchmarks.md']"
+    },
+    {
+      "dimension": "decision_soundness",
+      "severity": "warning",
+      "text": "The replay design itself (exact recomputation with hard failure on any nonzero residual, negative control on printed (10g), tamper rejection) is fit for CERTIFIED, and the statement's disclaimer sentence matches the certificate's not_established list. But promoting now would have CERTIFIED name, as 'the strongest evidence on record', a record in which the verification basis exists only as prose, the derivation modules are absent, and most entries attest to out-of-scope S1/S2/ladder results the statement disclaims. The promotion is premature until the record reflects the verification it rides on. [Promotion requested: CERTIFIED, on a record whose only verification event is the unstamped 2026-09-08 Notes line and whose evidence entries are the unrevised 2026-09-04 wholesale import]"
+    }
+  ],
+  "id": "P8-0.20260909.model",
+  "provenance": {
+    "cost_usd": "3.1894",
+    "model": "claude-fable-5",
+    "request_digest": "3b1cfb4fea9e52076f49ae4324ee91aa1eb8605fbe81bb213c5efb6e984021d4",
+    "response_digest": "0b29f11cba22f0df467f56b74de3d66fda3d9dc3b892e17d97388b998e73fe04",
+    "run_id": "review-P8-0-b0bde1-s1",
+    "transport": "ClaudeCodeClient"
+  },
+  "reviewer": "model",
+  "statement_sha256": "67c07b5775c2a1df14ed9e7da9bd8f3708f81dc3956c889fbfa6b8800055719c",
+  "target_level": "CERTIFIED",
+  "usable": true,
+  "verdict": "REVISE",
+  "waivers": []
+}

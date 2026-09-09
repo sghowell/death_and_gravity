@@ -185,17 +185,36 @@ evidence:
   verdict: IMPORTED
   verifier: table-import
   version: '1'
-formulation_version: legacy-table
+- binary_hash: 7ad7bd7882e489ce46c6ab6e5f8a741a9580d0ac719db787c2a54a7d093e6edd
+  golden_suite_hash: 41869da5cd28e5206bfa68acb9db1e8e0522b32a62c1fc9cba9c2442cc1116cf
+  note: argv=None cwd=None exit=None env_sha256=None
+  path: problems/P8/certificates/s0-identities.json
+  stamped: '2026-09-09T02:41:53+00:00'
+  verdict: PASS
+  verifier: cosmo_p8_s0
+  version: '1'
+formulation_version: problems/P8/FORMULATION.md@73dd18f7
 id: P8-0
 kind: statement
-legacy_level: CERTIFIED
-level: HEURISTIC
+legacy_level: null
+level: CERTIFIED
 n: null
 notes: 'imported from CLAIMS.md; level note: exact source-action/local algebra only;
   SymPy replay, independent FLINT IBP polynomial identity, explicit denominator hypotheses
-  and negative controls'
+  and negative controls
+
+  2026-09-08: verifier cosmo_p8_s0 is the Empiricist cosmology pack''s replay of this
+  repository''s own checker problems/P8/src/p8/verify.py: report() recomputed and
+  compared exactly with certificates/s0-identities.json, the same check as `python
+  -m p8.verify --check`. The pack vendors problems/P8 verbatim (this branch at commit
+  e04bb6c) and hashes every p8 module into the verifier identity stamped in claims/verifiers.json;
+  it is a pack verifier, not a command verifier, so it has no declaration under claims/verifiers/
+
+  promoted to CERTIFIED on receipt P8-0.20260909.model.2 (REVISE: 5 open warning(s)
+  for the author, no blocking finding)'
 problem: P8(b)
-receipts: []
+receipts:
+- P8-0.20260909.model.2
 source:
   kind: table
   ref: P8-0
@@ -211,4 +230,4 @@ statement: 'S0 source-level identities only: on the nonzero-mode, a>0, Theta≠0
   or ladder verdict is established'
 substatus: null
 supersedes: []
-updated: '2026-09-04'
+updated: '2026-09-09'
