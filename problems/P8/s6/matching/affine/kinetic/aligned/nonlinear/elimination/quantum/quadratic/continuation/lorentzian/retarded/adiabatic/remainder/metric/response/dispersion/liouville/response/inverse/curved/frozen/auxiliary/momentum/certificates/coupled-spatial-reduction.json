@@ -1,0 +1,1014 @@
+{
+  "actual_linear_lapse_invariant_coefficients": {
+    "matter_momentum_deviation": "(2*u**6 + 6*u**4 + 6*u**2 - 1)/(20*(u**2 + 1)**9)",
+    "spatial_curvature": "-(2*u**6 + 6*u**4 + 6*u**2 - 1)/(4*(u**2 + 1)**3)",
+    "trace_momentum_deviation": "3*u*(4*u**6 + 12*u**4 + 12*u**2 + 3)/(u**2 + 1)**4",
+    "vector_momentum_divergence": "0"
+  },
+  "canonical_matter_boundary": {
+    "boundary": "3*constant_comoving_matter_momentum*hat_curvature*matter",
+    "old_curvature_momentum": "-3*constant_comoving_matter_momentum*matter + scalar_momentum",
+    "old_matter_momentum": "-3*constant_comoving_matter_momentum*hat_curvature + matter_momentum",
+    "one_form_difference": "curvature_rate*scalar_momentum - curvature_rate*(-3*constant_comoving_matter_momentum*matter + scalar_momentum) + matter_momentum*matter_rate - matter_rate*(-3*constant_comoving_matter_momentum*hat_curvature + matter_momentum)",
+    "spatial_York_scalar_source": "-3*constant_comoving_matter_momentum*matter + scalar_momentum"
+  },
+  "checked_scalar_entries": 273,
+  "claim": "P8-S6.76.COUPLED_PHYSICAL_SPATIAL_REDUCTION",
+  "compact_scalar_Hamiltonian": {
+    "Hamiltonian": "chi**2*(positive_wave_scale**2/2 + 3/(400*(u**2 + 1)**12)) - chi*p/(20*(u**2 + 1)**6) - positive_wave_scale**2*v**2 + (pm - 3*v/(10*(u**2 + 1)**6))**2/2 + (-p*u*(4*u**6 + 12*u**4 + 12*u**2 + 3)/(2*(u**2 + 1)**4) + pm*(-1 + 3/(2*(u**2 + 1)**3))/(20*(u**2 + 1)**6) + v*(positive_wave_scale**2*(2*u**6 + 6*u**4 + 6*u**2 - 1)/(2*(u**2 + 1)**3) - 3*(-1 + 3/(2*(u**2 + 1)**3))/(200*(u**2 + 1)**12)))**2/(1/(250000*(u**2 + 1)**6) + (3200*u**34 + 48000*u**32 + 332800*u**30 + 1410400*u**28 + 4068800*u**26 + 8413600*u**24 + 12776400*u**22 + 14350800*u**20 + 11890800*u**18 + 7319600*u**16 + 3693600*u**14 + 2108796*u**12 + 1559176*u**10 + 1030340*u**8 + 470732*u**6 + 133176*u**4 + 20412*u**2 + 1199)/(800*(u**2 + 1)**18))",
+    "J_e": "1/(250000*(u**2 + 1)**6) + (3200*u**34 + 48000*u**32 + 332800*u**30 + 1410400*u**28 + 4068800*u**26 + 8413600*u**24 + 12776400*u**22 + 14350800*u**20 + 11890800*u**18 + 7319600*u**16 + 3693600*u**14 + 2108796*u**12 + 1559176*u**10 + 1030340*u**8 + 470732*u**6 + 133176*u**4 + 20412*u**2 + 1199)/(800*(u**2 + 1)**18)",
+    "R": "-p*u*(4*u**6 + 12*u**4 + 12*u**2 + 3)/(2*(u**2 + 1)**4) + pm*(-1 + 3/(2*(u**2 + 1)**3))/(20*(u**2 + 1)**6) + v*(positive_wave_scale**2*(2*u**6 + 6*u**4 + 6*u**2 - 1)/(2*(u**2 + 1)**3) - 3*(-1 + 3/(2*(u**2 + 1)**3))/(200*(u**2 + 1)**12))",
+    "prior_regular_scalar_replay": "0"
+  },
+  "controls": {
+    "D_only_cutoff_not_transferred_to_coupled_parent": true,
+    "actual_nonzero_homogeneous_constraint_source_rejected": true,
+    "both_matter_momenta_shifted_by_same_canonical_boundary": true,
+    "full_nonlinear_inverse_metric_raises_the_matter_vector_generator": true,
+    "full_volume_geometry_and_moving_boundaries_kept": true,
+    "native_validation_before_cache_and_rational_conversion": true,
+    "nonvanishing_rational_TT_frame_and_dual_momentum_used": true,
+    "nonzero_proper_subset_domain_checked_before_recursion": true,
+    "quadratic_phase_matrix_not_a_resummed_quantum_spectrum": true,
+    "rejected_inputs": 65,
+    "temporal_vector_momentum_divergence_term_not_dropped": true
+  },
+  "date": "2026-09-08",
+  "exact_York_operator_inverse_and_norms": {
+    "domain": "Real nonzero wavevector. Zero proper-subset transfer is excluded only from this finite vertex domain, not from the action.",
+    "full_York_lift_inverse_norm_upper": "sqrt(2)/|k| <= 2/|k|",
+    "full_lift_inverse_norm_squared": [
+      [
+        "-wave_x**2/(2*(wave_x**2 + wave_y**2 + wave_z**2)**2) + 2/(wave_x**2 + wave_y**2 + wave_z**2)",
+        "-wave_x*wave_y/(2*(wave_x**2 + wave_y**2 + wave_z**2)**2)",
+        "-wave_x*wave_z/(2*(wave_x**2 + wave_y**2 + wave_z**2)**2)"
+      ],
+      [
+        "-wave_x*wave_y/(2*(wave_x**2 + wave_y**2 + wave_z**2)**2)",
+        "-wave_y**2/(2*(wave_x**2 + wave_y**2 + wave_z**2)**2) + 2/(wave_x**2 + wave_y**2 + wave_z**2)",
+        "-wave_y*wave_z/(2*(wave_x**2 + wave_y**2 + wave_z**2)**2)"
+      ],
+      [
+        "-wave_x*wave_z/(2*(wave_x**2 + wave_y**2 + wave_z**2)**2)",
+        "-wave_y*wave_z/(2*(wave_x**2 + wave_y**2 + wave_z**2)**2)",
+        "-wave_z**2/(2*(wave_x**2 + wave_y**2 + wave_z**2)**2) + 2/(wave_x**2 + wave_y**2 + wave_z**2)"
+      ]
+    ],
+    "inverse": [
+      [
+        "(wave_x**2/(4*wave_x**2 + 4*wave_y**2 + 4*wave_z**2) - 1)/(wave_x**2 + wave_y**2 + wave_z**2)",
+        "wave_x*wave_y/((wave_x**2 + wave_y**2 + wave_z**2)*(4*wave_x**2 + 4*wave_y**2 + 4*wave_z**2))",
+        "wave_x*wave_z/((wave_x**2 + wave_y**2 + wave_z**2)*(4*wave_x**2 + 4*wave_y**2 + 4*wave_z**2))"
+      ],
+      [
+        "wave_x*wave_y/((wave_x**2 + wave_y**2 + wave_z**2)*(4*wave_x**2 + 4*wave_y**2 + 4*wave_z**2))",
+        "(wave_y**2/(4*wave_x**2 + 4*wave_y**2 + 4*wave_z**2) - 1)/(wave_x**2 + wave_y**2 + wave_z**2)",
+        "wave_y*wave_z/((wave_x**2 + wave_y**2 + wave_z**2)*(4*wave_x**2 + 4*wave_y**2 + 4*wave_z**2))"
+      ],
+      [
+        "wave_x*wave_z/((wave_x**2 + wave_y**2 + wave_z**2)*(4*wave_x**2 + 4*wave_y**2 + 4*wave_z**2))",
+        "wave_y*wave_z/((wave_x**2 + wave_y**2 + wave_z**2)*(4*wave_x**2 + 4*wave_y**2 + 4*wave_z**2))",
+        "(wave_z**2/(4*wave_x**2 + 4*wave_y**2 + 4*wave_z**2) - 1)/(wave_x**2 + wave_y**2 + wave_z**2)"
+      ]
+    ],
+    "inverse_norm_upper": "1/|k|^2",
+    "k_squared": "wave_x**2 + wave_y**2 + wave_z**2",
+    "operator": [
+      [
+        "-4*wave_x**2/3 - wave_y**2 - wave_z**2",
+        "-wave_x*wave_y/3",
+        "-wave_x*wave_z/3"
+      ],
+      [
+        "-wave_x*wave_y/3",
+        "-wave_x**2 - 4*wave_y**2/3 - wave_z**2",
+        "-wave_y*wave_z/3"
+      ],
+      [
+        "-wave_x*wave_z/3",
+        "-wave_y*wave_z/3",
+        "-wave_x**2 - wave_y**2 - 4*wave_z**2/3"
+      ]
+    ],
+    "real_York_lift_without_common_i": [
+      [
+        "4*wave_x/3",
+        "-2*wave_y/3",
+        "-2*wave_z/3"
+      ],
+      [
+        "wave_y",
+        "wave_x",
+        "0"
+      ],
+      [
+        "wave_z",
+        "0",
+        "wave_x"
+      ],
+      [
+        "wave_y",
+        "wave_x",
+        "0"
+      ],
+      [
+        "-2*wave_x/3",
+        "4*wave_y/3",
+        "-2*wave_z/3"
+      ],
+      [
+        "0",
+        "wave_z",
+        "wave_y"
+      ],
+      [
+        "wave_z",
+        "0",
+        "wave_x"
+      ],
+      [
+        "0",
+        "wave_z",
+        "wave_y"
+      ],
+      [
+        "-2*wave_x/3",
+        "-2*wave_y/3",
+        "4*wave_z/3"
+      ]
+    ],
+    "wavevector": [
+      [
+        "wave_x"
+      ],
+      [
+        "wave_y"
+      ],
+      [
+        "wave_z"
+      ]
+    ]
+  },
+  "exact_residuals": {
+    "actual_comoving_matter_momentum_constant": "0",
+    "actual_comoving_matter_momentum_value": "0",
+    "actual_linear_lapse_matter_invariant": "0",
+    "actual_linear_lapse_spatial_curvature_invariant": "0",
+    "actual_linear_lapse_trace_invariant": "0",
+    "actual_linear_lapse_vector_divergence_vanishes": "0",
+    "compact_actual_canonical_scalar_Hamiltonian": "0",
+    "cross_momentum_bracket_zero": "0",
+    "exact_York_determinant": "0",
+    "exact_full_tensor_lift_inverse_norm_matrix": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        3
+      ]
+    },
+    "exact_three_component_York_inverse": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        3
+      ]
+    },
+    "full_quadratic_phase_pair_Px_Px": "0",
+    "full_quadratic_phase_pair_Px_Py": "0",
+    "full_quadratic_phase_pair_Px_Pz": "0",
+    "full_quadratic_phase_pair_Py_Py": "0",
+    "full_quadratic_phase_pair_Py_Pz": "0",
+    "full_quadratic_phase_pair_Pz_Pz": "0",
+    "full_quadratic_phase_pair_Wx_Px": "0",
+    "full_quadratic_phase_pair_Wx_Py": "0",
+    "full_quadratic_phase_pair_Wx_Pz": "0",
+    "full_quadratic_phase_pair_Wx_Wx": "0",
+    "full_quadratic_phase_pair_Wx_Wy": "0",
+    "full_quadratic_phase_pair_Wx_Wz": "0",
+    "full_quadratic_phase_pair_Wy_Px": "0",
+    "full_quadratic_phase_pair_Wy_Py": "0",
+    "full_quadratic_phase_pair_Wy_Pz": "0",
+    "full_quadratic_phase_pair_Wy_Wy": "0",
+    "full_quadratic_phase_pair_Wy_Wz": "0",
+    "full_quadratic_phase_pair_Wz_Px": "0",
+    "full_quadratic_phase_pair_Wz_Py": "0",
+    "full_quadratic_phase_pair_Wz_Pz": "0",
+    "full_quadratic_phase_pair_Wz_Wz": "0",
+    "full_quadratic_phase_pair_curvature_Px": "0",
+    "full_quadratic_phase_pair_curvature_Py": "0",
+    "full_quadratic_phase_pair_curvature_Pz": "0",
+    "full_quadratic_phase_pair_curvature_Wx": "0",
+    "full_quadratic_phase_pair_curvature_Wy": "0",
+    "full_quadratic_phase_pair_curvature_Wz": "0",
+    "full_quadratic_phase_pair_curvature_curvature": "0",
+    "full_quadratic_phase_pair_curvature_matter": "0",
+    "full_quadratic_phase_pair_curvature_matter_p": "0",
+    "full_quadratic_phase_pair_curvature_scalar_p": "0",
+    "full_quadratic_phase_pair_curvature_tensor": "0",
+    "full_quadratic_phase_pair_curvature_tensor2": "0",
+    "full_quadratic_phase_pair_curvature_tensor2_p": "0",
+    "full_quadratic_phase_pair_curvature_tensor_p": "0",
+    "full_quadratic_phase_pair_matter_Px": "0",
+    "full_quadratic_phase_pair_matter_Py": "0",
+    "full_quadratic_phase_pair_matter_Pz": "0",
+    "full_quadratic_phase_pair_matter_Wx": "0",
+    "full_quadratic_phase_pair_matter_Wy": "0",
+    "full_quadratic_phase_pair_matter_Wz": "0",
+    "full_quadratic_phase_pair_matter_matter": "0",
+    "full_quadratic_phase_pair_matter_matter_p": "0",
+    "full_quadratic_phase_pair_matter_p_Px": "0",
+    "full_quadratic_phase_pair_matter_p_Py": "0",
+    "full_quadratic_phase_pair_matter_p_Pz": "0",
+    "full_quadratic_phase_pair_matter_p_Wx": "0",
+    "full_quadratic_phase_pair_matter_p_Wy": "0",
+    "full_quadratic_phase_pair_matter_p_Wz": "0",
+    "full_quadratic_phase_pair_matter_p_matter_p": "0",
+    "full_quadratic_phase_pair_matter_p_tensor": "0",
+    "full_quadratic_phase_pair_matter_p_tensor2": "0",
+    "full_quadratic_phase_pair_matter_p_tensor2_p": "0",
+    "full_quadratic_phase_pair_matter_p_tensor_p": "0",
+    "full_quadratic_phase_pair_matter_tensor": "0",
+    "full_quadratic_phase_pair_matter_tensor2": "0",
+    "full_quadratic_phase_pair_matter_tensor2_p": "0",
+    "full_quadratic_phase_pair_matter_tensor_p": "0",
+    "full_quadratic_phase_pair_scalar_p_Px": "0",
+    "full_quadratic_phase_pair_scalar_p_Py": "0",
+    "full_quadratic_phase_pair_scalar_p_Pz": "0",
+    "full_quadratic_phase_pair_scalar_p_Wx": "0",
+    "full_quadratic_phase_pair_scalar_p_Wy": "0",
+    "full_quadratic_phase_pair_scalar_p_Wz": "0",
+    "full_quadratic_phase_pair_scalar_p_matter": "0",
+    "full_quadratic_phase_pair_scalar_p_matter_p": "0",
+    "full_quadratic_phase_pair_scalar_p_scalar_p": "0",
+    "full_quadratic_phase_pair_scalar_p_tensor": "0",
+    "full_quadratic_phase_pair_scalar_p_tensor2": "0",
+    "full_quadratic_phase_pair_scalar_p_tensor2_p": "0",
+    "full_quadratic_phase_pair_scalar_p_tensor_p": "0",
+    "full_quadratic_phase_pair_tensor2_Px": "0",
+    "full_quadratic_phase_pair_tensor2_Py": "0",
+    "full_quadratic_phase_pair_tensor2_Pz": "0",
+    "full_quadratic_phase_pair_tensor2_Wx": "0",
+    "full_quadratic_phase_pair_tensor2_Wy": "0",
+    "full_quadratic_phase_pair_tensor2_Wz": "0",
+    "full_quadratic_phase_pair_tensor2_p_Px": "0",
+    "full_quadratic_phase_pair_tensor2_p_Py": "0",
+    "full_quadratic_phase_pair_tensor2_p_Pz": "0",
+    "full_quadratic_phase_pair_tensor2_p_Wx": "0",
+    "full_quadratic_phase_pair_tensor2_p_Wy": "0",
+    "full_quadratic_phase_pair_tensor2_p_Wz": "0",
+    "full_quadratic_phase_pair_tensor2_p_tensor2_p": "0",
+    "full_quadratic_phase_pair_tensor2_tensor2": "0",
+    "full_quadratic_phase_pair_tensor2_tensor2_p": "0",
+    "full_quadratic_phase_pair_tensor_Px": "0",
+    "full_quadratic_phase_pair_tensor_Py": "0",
+    "full_quadratic_phase_pair_tensor_Pz": "0",
+    "full_quadratic_phase_pair_tensor_Wx": "0",
+    "full_quadratic_phase_pair_tensor_Wy": "0",
+    "full_quadratic_phase_pair_tensor_Wz": "0",
+    "full_quadratic_phase_pair_tensor_p_Px": "0",
+    "full_quadratic_phase_pair_tensor_p_Py": "0",
+    "full_quadratic_phase_pair_tensor_p_Pz": "0",
+    "full_quadratic_phase_pair_tensor_p_Wx": "0",
+    "full_quadratic_phase_pair_tensor_p_Wy": "0",
+    "full_quadratic_phase_pair_tensor_p_Wz": "0",
+    "full_quadratic_phase_pair_tensor_p_tensor2": "0",
+    "full_quadratic_phase_pair_tensor_p_tensor2_p": "0",
+    "full_quadratic_phase_pair_tensor_p_tensor_p": "0",
+    "full_quadratic_phase_pair_tensor_tensor": "0",
+    "full_quadratic_phase_pair_tensor_tensor2": "0",
+    "full_quadratic_phase_pair_tensor_tensor2_p": "0",
+    "full_quadratic_phase_pair_tensor_tensor_p": "0",
+    "matter_boundary_one_form_identity": "0",
+    "mixed_2_leg_TT_divergence_0": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        1
+      ]
+    },
+    "mixed_2_leg_TT_divergence_1": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        1
+      ]
+    },
+    "mixed_2_leg_TT_trace_0": "0",
+    "mixed_2_leg_TT_trace_1": "0",
+    "mixed_2_leg_all_three_constraints_degree_1": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        2
+      ]
+    },
+    "mixed_2_leg_exact_linear_matter_shift": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        2
+      ]
+    },
+    "mixed_3_leg_TT_divergence_0": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        1
+      ]
+    },
+    "mixed_3_leg_TT_divergence_1": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        1
+      ]
+    },
+    "mixed_3_leg_TT_divergence_2": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        1
+      ]
+    },
+    "mixed_3_leg_TT_trace_0": "0",
+    "mixed_3_leg_TT_trace_1": "0",
+    "mixed_3_leg_TT_trace_2": "0",
+    "mixed_3_leg_all_three_constraints_degree_1": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        3
+      ]
+    },
+    "mixed_3_leg_all_three_constraints_degree_2": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        3
+      ]
+    },
+    "mixed_3_leg_exact_linear_matter_shift": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        3
+      ]
+    },
+    "mixed_4_leg_TT_divergence_0": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        1
+      ]
+    },
+    "mixed_4_leg_TT_divergence_1": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        1
+      ]
+    },
+    "mixed_4_leg_TT_divergence_2": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        1
+      ]
+    },
+    "mixed_4_leg_TT_divergence_3": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        1
+      ]
+    },
+    "mixed_4_leg_TT_trace_0": "0",
+    "mixed_4_leg_TT_trace_1": "0",
+    "mixed_4_leg_TT_trace_2": "0",
+    "mixed_4_leg_TT_trace_3": "0",
+    "mixed_4_leg_all_three_constraints_degree_1": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        4
+      ]
+    },
+    "mixed_4_leg_all_three_constraints_degree_2": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        6
+      ]
+    },
+    "mixed_4_leg_all_three_constraints_degree_3": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        4
+      ]
+    },
+    "mixed_4_leg_exact_linear_matter_shift": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        4
+      ]
+    },
+    "old_matter_canonical_pair": "0",
+    "old_scalar_canonical_pair": "0",
+    "sharp_lift_norm_deficit_is_positive_rank_one": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        3
+      ]
+    }
+  },
+  "formulation": "FORMULATION.md",
+  "full_quadratic_phase_channels": [
+    "curvature",
+    "scalar_p",
+    "matter",
+    "matter_p",
+    "tensor",
+    "tensor_p",
+    "tensor2",
+    "tensor2_p",
+    "Wx",
+    "Wy",
+    "Wz",
+    "Px",
+    "Py",
+    "Pz"
+  ],
+  "full_quadratic_phase_matrix": [
+    [
+      "(50000000*positive_wave_scale**4*u**40 + 1000000000*positive_wave_scale**4*u**38 + 9500000000*positive_wave_scale**4*u**36 + 56850000000*positive_wave_scale**4*u**34 + 239700000000*positive_wave_scale**4*u**32 + 754800000000*positive_wave_scale**4*u**30 + 1836112500000*positive_wave_scale**4*u**28 + 3520575000000*positive_wave_scale**4*u**26 + 5380537500000*positive_wave_scale**4*u**24 + 6582550000000*positive_wave_scale**4*u**22 + 6433212500000*positive_wave_scale**4*u**20 + 4976725000000*positive_wave_scale**4*u**18 + 2989837500000*positive_wave_scale**4*u**16 + 1344900000000*positive_wave_scale**4*u**14 + 419437500000*positive_wave_scale**4*u**12 + 72225000000*positive_wave_scale**4*u**10 - 2137500000*positive_wave_scale**4*u**8 - 4050000000*positive_wave_scale**4*u**6 - 662500000*positive_wave_scale**4*u**4 + 25000000*positive_wave_scale**4*u**2 + 12500000*positive_wave_scale**4 - 200000000*positive_wave_scale**2*u**38 - 3400000000*positive_wave_scale**2*u**36 - 27000000000*positive_wave_scale**2*u**34 - 132750000000*positive_wave_scale**2*u**32 - 451400000000*positive_wave_scale**2*u**30 - 1122600000200*positive_wave_scale**2*u**28 - 2104525002800*positive_wave_scale**2*u**26 - 3019825018200*positive_wave_scale**2*u**24 - 3335550072800*positive_wave_scale**2*u**22 - 2840750200200*positive_wave_scale**2*u**20 - 1888975400400*positive_wave_scale**2*u**18 - 1050973850600*positive_wave_scale**2*u**16 - 591886686400*positive_wave_scale**2*u**14 - 391051600600*positive_wave_scale**2*u**12 - 255582650400*positive_wave_scale**2*u**10 - 131478950200*positive_wave_scale**2*u**8 - 47304572800*positive_wave_scale**2*u**6 - 10949580700*positive_wave_scale**2*u**4 - 1429377800*positive_wave_scale**2*u**2 - 74562700*positive_wave_scale**2 + 9000000*u**14 + 45000000*u**12 + 81000000*u**10 + 51750000*u**8 - 9000000*u**6 - 13499991*u**4 + 23625018*u**2 + 3375009)/(50*(u**2 + 1)**2*(2000000*u**34 + 30000000*u**32 + 208000000*u**30 + 881500000*u**28 + 2543000000*u**26 + 5258500002*u**24 + 7985250024*u**22 + 8969250132*u**20 + 7431750440*u**18 + 4574750990*u**16 + 2308501584*u**14 + 1317999348*u**12 + 974486584*u**10 + 643963490*u**8 + 294207940*u**6 + 83235132*u**4 + 12757524*u**2 + 749377))",
+      "-1250*u*(2*u**6 + 6*u**4 + 6*u**2 - 1)*(4*u**6 + 12*u**4 + 12*u**2 + 3)*(200*positive_wave_scale**2*u**24 + 2400*positive_wave_scale**2*u**22 + 13200*positive_wave_scale**2*u**20 + 44000*positive_wave_scale**2*u**18 + 99000*positive_wave_scale**2*u**16 + 158400*positive_wave_scale**2*u**14 + 184800*positive_wave_scale**2*u**12 + 158400*positive_wave_scale**2*u**10 + 99000*positive_wave_scale**2*u**8 + 44000*positive_wave_scale**2*u**6 + 13200*positive_wave_scale**2*u**4 + 2400*positive_wave_scale**2*u**2 + 200*positive_wave_scale**2 + 3)/((u**2 + 1)*(2000000*u**34 + 30000000*u**32 + 208000000*u**30 + 881500000*u**28 + 2543000000*u**26 + 5258500002*u**24 + 7985250024*u**22 + 8969250132*u**20 + 7431750440*u**18 + 4574750990*u**16 + 2308501584*u**14 + 1317999348*u**12 + 974486584*u**10 + 643963490*u**8 + 294207940*u**6 + 83235132*u**4 + 12757524*u**2 + 749377))",
+      "0",
+      "-(u**2 + 1)**4*(250000*positive_wave_scale**2*u**16 + 2000000*positive_wave_scale**2*u**14 + 7000000*positive_wave_scale**2*u**12 + 13250000*positive_wave_scale**2*u**10 + 13750000*positive_wave_scale**2*u**8 + 6500000*positive_wave_scale**2*u**6 + 62500*positive_wave_scale**2*u**4 - 625000*positive_wave_scale**2*u**2 + 62500*positive_wave_scale**2 + 3000000*u**14 + 15000000*u**12 + 27000000*u**10 + 17250000*u**8 - 3000000*u**6 - 4499997*u**4 + 7875006*u**2 + 1125003)/(5*(2000000*u**34 + 30000000*u**32 + 208000000*u**30 + 881500000*u**28 + 2543000000*u**26 + 5258500002*u**24 + 7985250024*u**22 + 8969250132*u**20 + 7431750440*u**18 + 4574750990*u**16 + 2308501584*u**14 + 1317999348*u**12 + 974486584*u**10 + 643963490*u**8 + 294207940*u**6 + 83235132*u**4 + 12757524*u**2 + 749377))",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "-1250*u*(2*u**6 + 6*u**4 + 6*u**2 - 1)*(4*u**6 + 12*u**4 + 12*u**2 + 3)*(200*positive_wave_scale**2*u**24 + 2400*positive_wave_scale**2*u**22 + 13200*positive_wave_scale**2*u**20 + 44000*positive_wave_scale**2*u**18 + 99000*positive_wave_scale**2*u**16 + 158400*positive_wave_scale**2*u**14 + 184800*positive_wave_scale**2*u**12 + 158400*positive_wave_scale**2*u**10 + 99000*positive_wave_scale**2*u**8 + 44000*positive_wave_scale**2*u**6 + 13200*positive_wave_scale**2*u**4 + 2400*positive_wave_scale**2*u**2 + 200*positive_wave_scale**2 + 3)/((u**2 + 1)*(2000000*u**34 + 30000000*u**32 + 208000000*u**30 + 881500000*u**28 + 2543000000*u**26 + 5258500002*u**24 + 7985250024*u**22 + 8969250132*u**20 + 7431750440*u**18 + 4574750990*u**16 + 2308501584*u**14 + 1317999348*u**12 + 974486584*u**10 + 643963490*u**8 + 294207940*u**6 + 83235132*u**4 + 12757524*u**2 + 749377))",
+      "250000*u**2*(u**2 + 1)**10*(4*u**6 + 12*u**4 + 12*u**2 + 3)**2/(2000000*u**34 + 30000000*u**32 + 208000000*u**30 + 881500000*u**28 + 2543000000*u**26 + 5258500002*u**24 + 7985250024*u**22 + 8969250132*u**20 + 7431750440*u**18 + 4574750990*u**16 + 2308501584*u**14 + 1317999348*u**12 + 974486584*u**10 + 643963490*u**8 + 294207940*u**6 + 83235132*u**4 + 12757524*u**2 + 749377)",
+      "-1/(20*(u**2 + 1)**6)",
+      "12500*u*(u**2 + 1)**5*(2*u**6 + 6*u**4 + 6*u**2 - 1)*(4*u**6 + 12*u**4 + 12*u**2 + 3)/(2000000*u**34 + 30000000*u**32 + 208000000*u**30 + 881500000*u**28 + 2543000000*u**26 + 5258500002*u**24 + 7985250024*u**22 + 8969250132*u**20 + 7431750440*u**18 + 4574750990*u**16 + 2308501584*u**14 + 1317999348*u**12 + 974486584*u**10 + 643963490*u**8 + 294207940*u**6 + 83235132*u**4 + 12757524*u**2 + 749377)",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "-1/(20*(u**2 + 1)**6)",
+      "(200*positive_wave_scale**2*u**24 + 2400*positive_wave_scale**2*u**22 + 13200*positive_wave_scale**2*u**20 + 44000*positive_wave_scale**2*u**18 + 99000*positive_wave_scale**2*u**16 + 158400*positive_wave_scale**2*u**14 + 184800*positive_wave_scale**2*u**12 + 158400*positive_wave_scale**2*u**10 + 99000*positive_wave_scale**2*u**8 + 44000*positive_wave_scale**2*u**6 + 13200*positive_wave_scale**2*u**4 + 2400*positive_wave_scale**2*u**2 + 200*positive_wave_scale**2 + 3)/(200*(u**2 + 1)**12)",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "-(u**2 + 1)**4*(250000*positive_wave_scale**2*u**16 + 2000000*positive_wave_scale**2*u**14 + 7000000*positive_wave_scale**2*u**12 + 13250000*positive_wave_scale**2*u**10 + 13750000*positive_wave_scale**2*u**8 + 6500000*positive_wave_scale**2*u**6 + 62500*positive_wave_scale**2*u**4 - 625000*positive_wave_scale**2*u**2 + 62500*positive_wave_scale**2 + 3000000*u**14 + 15000000*u**12 + 27000000*u**10 + 17250000*u**8 - 3000000*u**6 - 4499997*u**4 + 7875006*u**2 + 1125003)/(5*(2000000*u**34 + 30000000*u**32 + 208000000*u**30 + 881500000*u**28 + 2543000000*u**26 + 5258500002*u**24 + 7985250024*u**22 + 8969250132*u**20 + 7431750440*u**18 + 4574750990*u**16 + 2308501584*u**14 + 1317999348*u**12 + 974486584*u**10 + 643963490*u**8 + 294207940*u**6 + 83235132*u**4 + 12757524*u**2 + 749377))",
+      "12500*u*(u**2 + 1)**5*(2*u**6 + 6*u**4 + 6*u**2 - 1)*(4*u**6 + 12*u**4 + 12*u**2 + 3)/(2000000*u**34 + 30000000*u**32 + 208000000*u**30 + 881500000*u**28 + 2543000000*u**26 + 5258500002*u**24 + 7985250024*u**22 + 8969250132*u**20 + 7431750440*u**18 + 4574750990*u**16 + 2308501584*u**14 + 1317999348*u**12 + 974486584*u**10 + 643963490*u**8 + 294207940*u**6 + 83235132*u**4 + 12757524*u**2 + 749377)",
+      "0",
+      "2*(u**2 + 1)**10*(1000000*u**14 + 5000000*u**12 + 9000000*u**10 + 5750000*u**8 - 1000000*u**6 - 1499999*u**4 + 2625002*u**2 + 375001)/(2000000*u**34 + 30000000*u**32 + 208000000*u**30 + 881500000*u**28 + 2543000000*u**26 + 5258500002*u**24 + 7985250024*u**22 + 8969250132*u**20 + 7431750440*u**18 + 4574750990*u**16 + 2308501584*u**14 + 1317999348*u**12 + 974486584*u**10 + 643963490*u**8 + 294207940*u**6 + 83235132*u**4 + 12757524*u**2 + 749377)",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0",
+      "positive_wave_scale**2/2",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "2",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "positive_wave_scale**2/2",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "2",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "1",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "(positive_wave_scale**2 + 1000000)/1000000",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "(positive_wave_scale**2 + 1000000)/1000000",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "positive_wave_scale**2 + 1000000",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "1000000",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "1000000"
+    ]
+  ],
+  "mixed_fixture_metadata": {
+    "2": {
+      "constraint_gate_count": 3,
+      "polarizations": [
+        [
+          [
+            "-5/6",
+            "1/3",
+            "1/6"
+          ],
+          [
+            "1/3",
+            "1/15",
+            "-7/15"
+          ],
+          [
+            "1/6",
+            "-7/15",
+            "23/30"
+          ]
+        ],
+        [
+          [
+            "-5/6",
+            "1/3",
+            "1/6"
+          ],
+          [
+            "1/3",
+            "1/15",
+            "-7/15"
+          ],
+          [
+            "1/6",
+            "-7/15",
+            "23/30"
+          ]
+        ]
+      ],
+      "positive_wave_scale": "positive_wave_scale",
+      "rational_directions": [
+        [
+          "1",
+          "2",
+          "1"
+        ],
+        [
+          "-1",
+          "-2",
+          "-1"
+        ]
+      ],
+      "solved_momentum_orders": [
+        1
+      ],
+      "symbolic_time": "u"
+    },
+    "3": {
+      "constraint_gate_count": 6,
+      "polarizations": [
+        [
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "-1",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "1"
+          ]
+        ],
+        [
+          [
+            "-1",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "1"
+          ]
+        ],
+        [
+          [
+            "-1/2",
+            "1/2",
+            "0"
+          ],
+          [
+            "1/2",
+            "-1/2",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "1"
+          ]
+        ]
+      ],
+      "positive_wave_scale": "positive_wave_scale",
+      "rational_directions": [
+        [
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "-1",
+          "-1",
+          "0"
+        ]
+      ],
+      "solved_momentum_orders": [
+        1,
+        2
+      ],
+      "symbolic_time": "u"
+    },
+    "4": {
+      "constraint_gate_count": 9,
+      "polarizations": [
+        [
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "-1",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "1"
+          ]
+        ],
+        [
+          [
+            "-1",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "1"
+          ]
+        ],
+        [
+          [
+            "-1",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "1",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        [
+          [
+            "-2/3",
+            "1/3",
+            "1/3"
+          ],
+          [
+            "1/3",
+            "1/3",
+            "-2/3"
+          ],
+          [
+            "1/3",
+            "-2/3",
+            "1/3"
+          ]
+        ]
+      ],
+      "positive_wave_scale": "positive_wave_scale",
+      "rational_directions": [
+        [
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1"
+        ],
+        [
+          "-1",
+          "-1",
+          "-1"
+        ]
+      ],
+      "solved_momentum_orders": [
+        1,
+        2,
+        3
+      ],
+      "symbolic_time": "u"
+    }
+  },
+  "named_exact_check_count": 147,
+  "nonzero_transfer_and_quadratic_scope": "Finite labelled Fourier vertices, two through four external legs, zero total and no zero nonempty proper-subset wavevector. The recursion solves degrees one through n-1. The actual quadratic Hamiltonian is checked for all 105 independent pairs of 14 phase channels at symbolic u and positive wave scale; remaining entries follow from the real integrated functional Hessian. Physical momentum is in fixed local units, not held constant during a subsequent cosmological evolution.",
+  "not_established": [
+    "Complete cubic/quartic physical vertices, normalized finite-time hard-channel transition bounds or a controlled interacting cutoff",
+    "Global spatial gauge/Sobolev construction, zero/forward channels, nonlinear evolution or semiclassical spatial response",
+    "Finite Wilson matching, common-parent V/G/B or original P8 closure"
+  ],
+  "omission_negative_controls": {
+    "omitted_background_matter_linear_constraint_solution_defect": [
+      [
+        "-3*I/(760*positive_wave_scale*u**12 + 4560*positive_wave_scale*u**10 + 11400*positive_wave_scale*u**8 + 15200*positive_wave_scale*u**6 + 11400*positive_wave_scale*u**4 + 4560*positive_wave_scale*u**2 + 760*positive_wave_scale)",
+        "0",
+        "0",
+        "I/(304*positive_wave_scale*u**12 + 1824*positive_wave_scale*u**10 + 4560*positive_wave_scale*u**8 + 6080*positive_wave_scale*u**6 + 4560*positive_wave_scale*u**4 + 1824*positive_wave_scale*u**2 + 304*positive_wave_scale)"
+      ],
+      [
+        "0",
+        "-9*I/(1520*positive_wave_scale*u**12 + 9120*positive_wave_scale*u**10 + 22800*positive_wave_scale*u**8 + 30400*positive_wave_scale*u**6 + 22800*positive_wave_scale*u**4 + 9120*positive_wave_scale*u**2 + 1520*positive_wave_scale)",
+        "0",
+        "I/(304*positive_wave_scale*u**12 + 1824*positive_wave_scale*u**10 + 4560*positive_wave_scale*u**8 + 6080*positive_wave_scale*u**6 + 4560*positive_wave_scale*u**4 + 1824*positive_wave_scale*u**2 + 304*positive_wave_scale)"
+      ],
+      [
+        "0",
+        "0",
+        "-3*I/(380*positive_wave_scale*u**12 + 2280*positive_wave_scale*u**10 + 5700*positive_wave_scale*u**8 + 7600*positive_wave_scale*u**6 + 5700*positive_wave_scale*u**4 + 2280*positive_wave_scale*u**2 + 380*positive_wave_scale)",
+        "I/(304*positive_wave_scale*u**12 + 1824*positive_wave_scale*u**10 + 4560*positive_wave_scale*u**8 + 6080*positive_wave_scale*u**6 + 4560*positive_wave_scale*u**4 + 1824*positive_wave_scale*u**2 + 304*positive_wave_scale)"
+      ]
+    ],
+    "omitted_vector_divergence_constraint_defect": [
+      [
+        "8*I*positive_wave_scale/1073",
+        "14*I*positive_wave_scale/1073",
+        "25*I*positive_wave_scale/1073",
+        "-22*I*positive_wave_scale/1073",
+        "-28*I*positive_wave_scale/1073",
+        "-I*positive_wave_scale/37"
+      ],
+      [
+        "23*I*positive_wave_scale/2146",
+        "20*I*positive_wave_scale/1073",
+        "65*I*positive_wave_scale/2146",
+        "-69*I*positive_wave_scale/2146",
+        "-39*I*positive_wave_scale/1073",
+        "-75*I*positive_wave_scale/2146"
+      ],
+      [
+        "15*I*positive_wave_scale/1073",
+        "26*I*positive_wave_scale/1073",
+        "40*I*positive_wave_scale/1073",
+        "-47*I*positive_wave_scale/1073",
+        "-50*I*positive_wave_scale/1073",
+        "-46*I*positive_wave_scale/1073"
+      ]
+    ]
+  },
+  "physical_momentum_definition": "Div(pi)^i-(1/2)*g^ij*(P_chi*partial_j chi+Pi^k F_jk-W_j*partial_k Pi^k)=0. Canonical momenta are densities and the complete inverse metric is kept.",
+  "prior_sha256": {
+    "S6_75_fully_rebuilt": "fbf3c9d949cbe63304497c577091c3401b40cd9ed49f78af14fa3a4d8b754e31",
+    "original_full_Hamiltonian_matter_vector_generators_and_margin_replayed": true
+  },
+  "proof_checks": {
+    "actual_comoving_matter_momentum_is_fixed_one_tenth": true,
+    "actual_lapse_force_has_no_linear_vector_divergence": true,
+    "actual_quadratic_phase_matrix_is_fourteen_by_fourteen": true,
+    "actual_quadratic_phase_matrix_obeys_real_functional_Hessian_adjoint": true,
+    "actual_time_derivatives_not_frozen_out_of_quadratic_comparison": true,
+    "all_105_independent_quadratic_phase_pairs_checked": true,
+    "all_rational_TT_polarizations_are_nonzero_and_dualizable": true,
+    "compact_scalar_Hamiltonian_matches_prior_margin_after_both_momentum_shifts": true,
+    "exact_York_norm_bound_requires_nonzero_transfer": true,
+    "finite_Fourier_recursion_not_a_global_spatial_gauge_existence_theorem": true,
+    "highest_fourth_order_longitudinal_correction_drops_only_by_background_trace": true,
+    "no_quantum_response_finite_matching_or_original_P8_closure": true,
+    "omitted_rolling_matter_has_nonzero_linear_defect": true,
+    "omitted_vector_divergence_has_nonzero_nonlinear_defect": true,
+    "physical_higher_vertices_and_controlled_interacting_band_still_open": true,
+    "seven_physical_modes_have_fourteen_canonical_phase_channels": true,
+    "two_three_four_labelled_fixtures_keep_every_constructed_constraint": true
+  },
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "abf4744d8d573be73597fcbced5d8c8d60b70c4138e094efd4e70117f12b6bc6",
+    "README.md": "1eadca87f57fdaf35dff812d4c5c038b73a0dd33b5d127b336c8df404fd9cee3",
+    "notes/canonical.md": "b87819c58e9b3655be50590912733a1c43801df51c247665a7ffe4cdc3b4f829",
+    "notes/constraints.md": "d40c90d571fcd308537f85b23bb96cc6dae5dc8c22f9f4f6fdb335f2896e9ad9",
+    "notes/scope.md": "99f0b4fe37e2360ff15d28f6c89a99e9de01cdafc1a2dc08a97dc9d7e3d2446a",
+    "src/p8_coupled_momentum/__init__.py": "7f5774210e3624857930a6bb1f84bcb2eb5a548a2adf89ead2f7995026ab75eb",
+    "src/p8_coupled_momentum/canonical.py": "3673618be520a9f18dab07ea4693a484df7b288574776186709e457ef512aaab",
+    "src/p8_coupled_momentum/constraints.py": "30dddfa55a605abe49a172c00710fb75a5f36efac2e1ed402fdd0e2c05d4d3c5",
+    "src/p8_coupled_momentum/fixtures.py": "f0dcdf83e91af356efa900195c51e56d365ab0bb83284e485ffdec8af8c58d32",
+    "src/p8_coupled_momentum/projector.py": "5c2d6c03a219295ea235276e402a1156ac05fefacba066632dbf5285793f5fd4",
+    "src/p8_coupled_momentum/quadratic.py": "69acfdfde4548a5d40f56f720bee7975170ac4d12c438068391cd407162881a7",
+    "src/p8_coupled_momentum/verify.py": "d2ae92d9102f8497521812fb3b3023bcab91d5b32d0c278a977a41c43cb89434",
+    "tests/conftest.py": "f1d999093cd6bd73af6633816ffd432e1e376b548d2102d972c433e9c909261d",
+    "tests/test_coupled_momentum_certificate.py": "791d35f70bb6605d3feb8c573391f40ea3513124312d88f15740b1fb839001e2",
+    "tests/test_coupled_momentum_science.py": "ee54158ef7686c30a31c55c1b2abe7a0f4ceee5ed93962652046d359eee1d0ab"
+  },
+  "status": "FULL_MATTER_VECTOR_MOMENTUM_RECURSION_AND_SEVEN_MODE_QUADRATIC_HAMILTONIAN_REPLAY; INTERACTING_CUTOFF_AND_ORIGINAL_P8_OPEN",
+  "verdict": "All three physical momentum constraints, including rolling matter and the vector momentum-divergence term, have the finite nonzero-transfer York recursion through cubic order. The scalar-matter canonical boundary shifts both momenta. Full spatial geometry, lapse elimination and moving canonical terms reproduce the prior scalar/matter margin block, both tensor polarizations and all three vector polarizations. This validates the physical reduction for subsequent higher vertices, not an interacting cutoff or a quantum stability theorem.",
+  "verification_boundary": "Exact symbolic-time and wave-scale Fourier identities and 105 independent quadratic phase-pair comparisons, with written canonical, recursive, adjoint and norm arguments. Not proof-assistant formalization.",
+  "written_proofs": [
+    "notes/constraints.md",
+    "notes/canonical.md",
+    "notes/scope.md"
+  ]
+}
