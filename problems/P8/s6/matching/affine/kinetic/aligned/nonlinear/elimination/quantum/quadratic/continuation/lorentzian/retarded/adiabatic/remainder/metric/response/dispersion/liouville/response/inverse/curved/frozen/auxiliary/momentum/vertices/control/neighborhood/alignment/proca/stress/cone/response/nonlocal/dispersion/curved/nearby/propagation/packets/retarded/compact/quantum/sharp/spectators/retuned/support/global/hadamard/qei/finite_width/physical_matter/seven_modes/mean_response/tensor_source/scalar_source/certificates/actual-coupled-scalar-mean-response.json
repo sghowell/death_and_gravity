@@ -1,0 +1,1916 @@
+{
+  "actual_leading_scalar_mean_response": {
+    "induced_matter_field_derivative": "-3*delta_log_hat_scale/(10*(u**2 + 1)**6) + scalar_matter_field_source + (-3*delta_log_hat_scale*(2*u**6 + 6*u**4 + 6*u**2 - 1)/(200*(u**2 + 1)**15) + 3*delta_trace_momentum*u*(4*u**6 + 12*u**4 + 12*u**2 + 3)/(u**2 + 1)**4 + scalar_lapse_source)*(2*u**6 + 6*u**4 + 6*u**2 - 1)/(20*(u**2 + 1)**9*(1/(25*(u**2 + 1)**6) + (3200*u**34 + 48000*u**32 + 332800*u**30 + 1410400*u**28 + 4068800*u**26 + 8413600*u**24 + 12776400*u**22 + 14350800*u**20 + 11890800*u**18 + 7319600*u**16 + 3693600*u**14 + 2108796*u**12 + 1559176*u**10 + 1030340*u**8 + 470732*u**6 + 133176*u**4 + 20412*u**2 + 1199)/(400*(u**2 + 1)**18)))",
+    "linear_physical_log_scale_response": "delta_log_hat_scale + (-3*delta_log_hat_scale*(2*u**6 + 6*u**4 + 6*u**2 - 1)/(200*(u**2 + 1)**15) + 3*delta_trace_momentum*u*(4*u**6 + 12*u**4 + 12*u**2 + 3)/(u**2 + 1)**4 + scalar_lapse_source)/(2*(u**2 + 1)**3*(1/(25*(u**2 + 1)**6) + (3200*u**34 + 48000*u**32 + 332800*u**30 + 1410400*u**28 + 4068800*u**26 + 8413600*u**24 + 12776400*u**22 + 14350800*u**20 + 11890800*u**18 + 7319600*u**16 + 3693600*u**14 + 2108796*u**12 + 1559176*u**10 + 1030340*u**8 + 470732*u**6 + 133176*u**4 + 20412*u**2 + 1199)/(400*(u**2 + 1)**18)))",
+    "mean_flow": [
+      [
+        "-delta_trace_momentum/2 + scalar_scale_source + u*(-3*delta_log_hat_scale*(2*u**6 + 6*u**4 + 6*u**2 - 1)/(200*(u**2 + 1)**15) + 3*delta_trace_momentum*u*(4*u**6 + 12*u**4 + 12*u**2 + 3)/(u**2 + 1)**4 + scalar_lapse_source)*(4*u**6 + 12*u**4 + 12*u**2 + 3)/((u**2 + 1)**4*(1/(25*(u**2 + 1)**6) + (3200*u**34 + 48000*u**32 + 332800*u**30 + 1410400*u**28 + 4068800*u**26 + 8413600*u**24 + 12776400*u**22 + 14350800*u**20 + 11890800*u**18 + 7319600*u**16 + 3693600*u**14 + 2108796*u**12 + 1559176*u**10 + 1030340*u**8 + 470732*u**6 + 133176*u**4 + 20412*u**2 + 1199)/(400*(u**2 + 1)**18)))"
+      ],
+      [
+        "-3*delta_log_hat_scale/(100*(u**2 + 1)**12) - 12*delta_trace_momentum*u/(u**2 + 1) + scalar_trace_source + (-3*delta_log_hat_scale*(2*u**6 + 6*u**4 + 6*u**2 - 1)/(200*(u**2 + 1)**15) + 3*delta_trace_momentum*u*(4*u**6 + 12*u**4 + 12*u**2 + 3)/(u**2 + 1)**4 + scalar_lapse_source)*(2*u**6 + 6*u**4 + 6*u**2 - 1)/(200*(u**2 + 1)**15*(1/(25*(u**2 + 1)**6) + (3200*u**34 + 48000*u**32 + 332800*u**30 + 1410400*u**28 + 4068800*u**26 + 8413600*u**24 + 12776400*u**22 + 14350800*u**20 + 11890800*u**18 + 7319600*u**16 + 3693600*u**14 + 2108796*u**12 + 1559176*u**10 + 1030340*u**8 + 470732*u**6 + 133176*u**4 + 20412*u**2 + 1199)/(400*(u**2 + 1)**18)))"
+      ]
+    ],
+    "mean_lapse": "(-3*delta_log_hat_scale*(2*u**6 + 6*u**4 + 6*u**2 - 1)/(200*(u**2 + 1)**15) + 3*delta_trace_momentum*u*(4*u**6 + 12*u**4 + 12*u**2 + 3)/(u**2 + 1)**4 + scalar_lapse_source)/(1/(25*(u**2 + 1)**6) + (3200*u**34 + 48000*u**32 + 332800*u**30 + 1410400*u**28 + 4068800*u**26 + 8413600*u**24 + 12776400*u**22 + 14350800*u**20 + 11890800*u**18 + 7319600*u**16 + 3693600*u**14 + 2108796*u**12 + 1559176*u**10 + 1030340*u**8 + 470732*u**6 + 133176*u**4 + 20412*u**2 + 1199)/(400*(u**2 + 1)**18))"
+  },
+  "actual_leading_scalar_sources": {
+    "complete_source_Hessian_fingerprints": {
+      "actual_mean_lapse_source": {
+        "columns": 4,
+        "row_major_entries": [
+          {
+            "denominator": {
+              "monomials": 50,
+              "sorted_exact_rational_monomial_sha256": "a52bfa67fbd24a379de266a6fb16431e2d9579f0ed888c9aba8e9ef9a67b6ecc",
+              "total_degree": 98
+            },
+            "numerator": {
+              "monomials": 138,
+              "sorted_exact_rational_monomial_sha256": "04c19c3079d2c30b875f3211fc0ce7c286af740aabce7a3b87a692a740925a69",
+              "total_degree": 96
+            }
+          },
+          {
+            "denominator": {
+              "monomials": 11,
+              "sorted_exact_rational_monomial_sha256": "2d33dc6cead0a814459bb25463f8cb274b39f6dc66c463dca60c4327d391f8f9",
+              "total_degree": 20
+            },
+            "numerator": {
+              "monomials": 4,
+              "sorted_exact_rational_monomial_sha256": "b4779864fd923b78b2102c0e0d8aafa27d349606e24c9115952d6cd1b33165cd",
+              "total_degree": 7
+            }
+          },
+          {
+            "denominator": {
+              "monomials": 45,
+              "sorted_exact_rational_monomial_sha256": "521ce98202afe283482e4174b566f8f1fcbeaa5bb65b0bebaeea92b9e348eeb9",
+              "total_degree": 88
+            },
+            "numerator": {
+              "monomials": 73,
+              "sorted_exact_rational_monomial_sha256": "619a2e6d23bb832a066ddf56d021a052a05f585ec5103a9d31d7734eb3ec9442",
+              "total_degree": 75
+            }
+          },
+          {
+            "denominator": {
+              "monomials": 50,
+              "sorted_exact_rational_monomial_sha256": "7ff566f60fb379a8e2dd91054308a2c82c3bfce707b8b1137d8405ca16eb8451",
+              "total_degree": 98
+            },
+            "numerator": {
+              "monomials": 73,
+              "sorted_exact_rational_monomial_sha256": "e894dd457d81dc06c11286ce8d8489deab23d6ee9926e4c7f316acfa3f9bf66c",
+              "total_degree": 74
+            }
+          },
+          {
+            "denominator": {
+              "monomials": 11,
+              "sorted_exact_rational_monomial_sha256": "2d33dc6cead0a814459bb25463f8cb274b39f6dc66c463dca60c4327d391f8f9",
+              "total_degree": 20
+            },
+            "numerator": {
+              "monomials": 4,
+              "sorted_exact_rational_monomial_sha256": "b4779864fd923b78b2102c0e0d8aafa27d349606e24c9115952d6cd1b33165cd",
+              "total_degree": 7
+            }
+          },
+          {
+            "denominator": {
+              "monomials": 16,
+              "sorted_exact_rational_monomial_sha256": "dd9eb03790ab0005be90d56b75cd62b0aac03f0bd869c4751f350b7c013e0784",
+              "total_degree": 30
+            },
+            "numerator": {
+              "monomials": 16,
+              "sorted_exact_rational_monomial_sha256": "71f810c4ab66f1ab9dee0a8f7ffa942a3e97ee8cf2e80e541693b18fad02a552",
+              "total_degree": 24
+            }
+          },
+          {
+            "denominator": {
+              "monomials": 16,
+              "sorted_exact_rational_monomial_sha256": "cbcc723a0d0af56ca84fd701f31dde42e8160007b080943a715d1a9ab4f4264c",
+              "total_degree": 30
+            },
+            "numerator": {
+              "monomials": 4,
+              "sorted_exact_rational_monomial_sha256": "2e87f9eead073c07d4d382b2b386fb4c6f53816f57479286f75f8f46ed8c30ae",
+              "total_degree": 6
+            }
+          },
+          {
+            "denominator": {
+              "monomials": 1,
+              "sorted_exact_rational_monomial_sha256": "b460b98eff6da5b91dddb2fee59ed557a422638f0dafacc0ad4cb3dfa655fe16",
+              "total_degree": 0
+            },
+            "numerator": {
+              "monomials": 1,
+              "sorted_exact_rational_monomial_sha256": "67c5b9b6b752f6f0a2fe77342c7a590fde77fc6ee45bdd9798e0968794dffb02",
+              "total_degree": 0
+            }
+          },
+          {
+            "denominator": {
+              "monomials": 45,
+              "sorted_exact_rational_monomial_sha256": "521ce98202afe283482e4174b566f8f1fcbeaa5bb65b0bebaeea92b9e348eeb9",
+              "total_degree": 88
+            },
+            "numerator": {
+              "monomials": 73,
+              "sorted_exact_rational_monomial_sha256": "619a2e6d23bb832a066ddf56d021a052a05f585ec5103a9d31d7734eb3ec9442",
+              "total_degree": 75
+            }
+          },
+          {
+            "denominator": {
+              "monomials": 16,
+              "sorted_exact_rational_monomial_sha256": "cbcc723a0d0af56ca84fd701f31dde42e8160007b080943a715d1a9ab4f4264c",
+              "total_degree": 30
+            },
+            "numerator": {
+              "monomials": 4,
+              "sorted_exact_rational_monomial_sha256": "2e87f9eead073c07d4d382b2b386fb4c6f53816f57479286f75f8f46ed8c30ae",
+              "total_degree": 6
+            }
+          },
+          {
+            "denominator": {
+              "monomials": 40,
+              "sorted_exact_rational_monomial_sha256": "d6f574a7473cccb4c85322de7f42297d7a0c6fec47ca6e07906964b960c4de10",
+              "total_degree": 78
+            },
+            "numerator": {
+              "monomials": 27,
+              "sorted_exact_rational_monomial_sha256": "7e6fb3e366bd0e963299eedad962efd6d3e0f414a05b42a4624b9fd3356a372e",
+              "total_degree": 54
+            }
+          },
+          {
+            "denominator": {
+              "monomials": 45,
+              "sorted_exact_rational_monomial_sha256": "521ce98202afe283482e4174b566f8f1fcbeaa5bb65b0bebaeea92b9e348eeb9",
+              "total_degree": 88
+            },
+            "numerator": {
+              "monomials": 27,
+              "sorted_exact_rational_monomial_sha256": "fd5e60e9258720614da525caa9a905a3e6150b11defe6684c36c1e85d356ce90",
+              "total_degree": 53
+            }
+          },
+          {
+            "denominator": {
+              "monomials": 50,
+              "sorted_exact_rational_monomial_sha256": "7ff566f60fb379a8e2dd91054308a2c82c3bfce707b8b1137d8405ca16eb8451",
+              "total_degree": 98
+            },
+            "numerator": {
+              "monomials": 73,
+              "sorted_exact_rational_monomial_sha256": "e894dd457d81dc06c11286ce8d8489deab23d6ee9926e4c7f316acfa3f9bf66c",
+              "total_degree": 74
+            }
+          },
+          {
+            "denominator": {
+              "monomials": 1,
+              "sorted_exact_rational_monomial_sha256": "b460b98eff6da5b91dddb2fee59ed557a422638f0dafacc0ad4cb3dfa655fe16",
+              "total_degree": 0
+            },
+            "numerator": {
+              "monomials": 1,
+              "sorted_exact_rational_monomial_sha256": "67c5b9b6b752f6f0a2fe77342c7a590fde77fc6ee45bdd9798e0968794dffb02",
+              "total_degree": 0
+            }
+          },
+          {
+            "denominator": {
+              "monomials": 45,
+              "sorted_exact_rational_monomial_sha256": "521ce98202afe283482e4174b566f8f1fcbeaa5bb65b0bebaeea92b9e348eeb9",
+              "total_degree": 88
+            },
+            "numerator": {
+              "monomials": 27,
+              "sorted_exact_rational_monomial_sha256": "fd5e60e9258720614da525caa9a905a3e6150b11defe6684c36c1e85d356ce90",
+              "total_degree": 53
+            }
+          },
+          {
+            "denominator": {
+              "monomials": 50,
+              "sorted_exact_rational_monomial_sha256": "142f1212212ce1cef94f3ff2bcbc82f46dda1cb72215e906c2d6ba24ba86c78f",
+              "total_degree": 98
+            },
+            "numerator": {
+              "monomials": 38,
+              "sorted_exact_rational_monomial_sha256": "18d4826a033012b3a92461f3d30b98cb985818633854b0bb4e16ffe0890d84cc",
+              "total_degree": 74
+            }
+          }
+        ],
+        "rows": 4
+      },
+      "mean_hat_scale_direct_source": {
+        "columns": 4,
+        "row_major_entries": [
+          {
+            "denominator": {
+              "monomials": 36,
+              "sorted_exact_rational_monomial_sha256": "55eb0cbf7afc2855e2c92968090a00e15416dd2d18fefa0948ad146dd86ad3fb",
+              "total_degree": 70
+            },
+            "numerator": {
+              "monomials": 93,
+              "sorted_exact_rational_monomial_sha256": "abe209475aea6196e440df58b92987d059a688dc4fa1b51f23099c7c3349cde2",
+              "total_degree": 69
+            }
+          },
+          {
+            "denominator": {
+              "monomials": 7,
+              "sorted_exact_rational_monomial_sha256": "90a26a76002ef4a26ddbf1dd0b9ba56eca54d3f0511a59c9be77b29bb967a145",
+              "total_degree": 12
+            },
+            "numerator": {
+              "monomials": 1,
+              "sorted_exact_rational_monomial_sha256": "7639faff472c7a2fb601775c788382db7376804e96b0333d9e1b6493ed62fcaf",
+              "total_degree": 0
+            }
+          },
+          {
+            "denominator": {
+              "monomials": 41,
+              "sorted_exact_rational_monomial_sha256": "591584e8efe973fab678812cb881ddbe6e5578b031ef1b5e2fbb4dc3b5c80d60",
+              "total_degree": 80
+            },
+            "numerator": {
+              "monomials": 67,
+              "sorted_exact_rational_monomial_sha256": "d5cb430c4e961306fd53a4b10d9c4107eb7e9bdefd3df7cff8ad3e44e7d8638e",
+              "total_degree": 68
+            }
+          },
+          {
+            "denominator": {
+              "monomials": 36,
+              "sorted_exact_rational_monomial_sha256": "55eb0cbf7afc2855e2c92968090a00e15416dd2d18fefa0948ad146dd86ad3fb",
+              "total_degree": 70
+            },
+            "numerator": {
+              "monomials": 42,
+              "sorted_exact_rational_monomial_sha256": "2f645be9def0789a1c607b78db1b71bb83ce91aaf26ed4599f94de7d281f0223",
+              "total_degree": 47
+            }
+          },
+          {
+            "denominator": {
+              "monomials": 7,
+              "sorted_exact_rational_monomial_sha256": "90a26a76002ef4a26ddbf1dd0b9ba56eca54d3f0511a59c9be77b29bb967a145",
+              "total_degree": 12
+            },
+            "numerator": {
+              "monomials": 1,
+              "sorted_exact_rational_monomial_sha256": "7639faff472c7a2fb601775c788382db7376804e96b0333d9e1b6493ed62fcaf",
+              "total_degree": 0
+            }
+          },
+          {
+            "denominator": {
+              "monomials": 1,
+              "sorted_exact_rational_monomial_sha256": "b460b98eff6da5b91dddb2fee59ed557a422638f0dafacc0ad4cb3dfa655fe16",
+              "total_degree": 0
+            },
+            "numerator": {
+              "monomials": 1,
+              "sorted_exact_rational_monomial_sha256": "67c5b9b6b752f6f0a2fe77342c7a590fde77fc6ee45bdd9798e0968794dffb02",
+              "total_degree": 0
+            }
+          },
+          {
+            "denominator": {
+              "monomials": 1,
+              "sorted_exact_rational_monomial_sha256": "b460b98eff6da5b91dddb2fee59ed557a422638f0dafacc0ad4cb3dfa655fe16",
+              "total_degree": 0
+            },
+            "numerator": {
+              "monomials": 1,
+              "sorted_exact_rational_monomial_sha256": "67c5b9b6b752f6f0a2fe77342c7a590fde77fc6ee45bdd9798e0968794dffb02",
+              "total_degree": 0
+            }
+          },
+          {
+            "denominator": {
+              "monomials": 1,
+              "sorted_exact_rational_monomial_sha256": "b460b98eff6da5b91dddb2fee59ed557a422638f0dafacc0ad4cb3dfa655fe16",
+              "total_degree": 0
+            },
+            "numerator": {
+              "monomials": 1,
+              "sorted_exact_rational_monomial_sha256": "67c5b9b6b752f6f0a2fe77342c7a590fde77fc6ee45bdd9798e0968794dffb02",
+              "total_degree": 0
+            }
+          },
+          {
+            "denominator": {
+              "monomials": 41,
+              "sorted_exact_rational_monomial_sha256": "591584e8efe973fab678812cb881ddbe6e5578b031ef1b5e2fbb4dc3b5c80d60",
+              "total_degree": 80
+            },
+            "numerator": {
+              "monomials": 67,
+              "sorted_exact_rational_monomial_sha256": "d5cb430c4e961306fd53a4b10d9c4107eb7e9bdefd3df7cff8ad3e44e7d8638e",
+              "total_degree": 68
+            }
+          },
+          {
+            "denominator": {
+              "monomials": 1,
+              "sorted_exact_rational_monomial_sha256": "b460b98eff6da5b91dddb2fee59ed557a422638f0dafacc0ad4cb3dfa655fe16",
+              "total_degree": 0
+            },
+            "numerator": {
+              "monomials": 1,
+              "sorted_exact_rational_monomial_sha256": "67c5b9b6b752f6f0a2fe77342c7a590fde77fc6ee45bdd9798e0968794dffb02",
+              "total_degree": 0
+            }
+          },
+          {
+            "denominator": {
+              "monomials": 36,
+              "sorted_exact_rational_monomial_sha256": "735fe72160dc00b39fd32aef9b335dbf82ef4fd03821e748b222887a49bb2c89",
+              "total_degree": 70
+            },
+            "numerator": {
+              "monomials": 24,
+              "sorted_exact_rational_monomial_sha256": "f1f2d4b6a358e5c49bceedc0fd18d00e82b349051c9072fe8e3f17eeedd66804",
+              "total_degree": 47
+            }
+          },
+          {
+            "denominator": {
+              "monomials": 41,
+              "sorted_exact_rational_monomial_sha256": "decf7ae1c0c32588fdd1ff9b3d377f887a10b1d07c6323e578ddb066c94a290d",
+              "total_degree": 80
+            },
+            "numerator": {
+              "monomials": 24,
+              "sorted_exact_rational_monomial_sha256": "bfdf259804cce03d014e74058e72b05c31cff01047e26be25a9669a6ee9bfa68",
+              "total_degree": 46
+            }
+          },
+          {
+            "denominator": {
+              "monomials": 36,
+              "sorted_exact_rational_monomial_sha256": "55eb0cbf7afc2855e2c92968090a00e15416dd2d18fefa0948ad146dd86ad3fb",
+              "total_degree": 70
+            },
+            "numerator": {
+              "monomials": 42,
+              "sorted_exact_rational_monomial_sha256": "2f645be9def0789a1c607b78db1b71bb83ce91aaf26ed4599f94de7d281f0223",
+              "total_degree": 47
+            }
+          },
+          {
+            "denominator": {
+              "monomials": 1,
+              "sorted_exact_rational_monomial_sha256": "b460b98eff6da5b91dddb2fee59ed557a422638f0dafacc0ad4cb3dfa655fe16",
+              "total_degree": 0
+            },
+            "numerator": {
+              "monomials": 1,
+              "sorted_exact_rational_monomial_sha256": "67c5b9b6b752f6f0a2fe77342c7a590fde77fc6ee45bdd9798e0968794dffb02",
+              "total_degree": 0
+            }
+          },
+          {
+            "denominator": {
+              "monomials": 41,
+              "sorted_exact_rational_monomial_sha256": "decf7ae1c0c32588fdd1ff9b3d377f887a10b1d07c6323e578ddb066c94a290d",
+              "total_degree": 80
+            },
+            "numerator": {
+              "monomials": 24,
+              "sorted_exact_rational_monomial_sha256": "bfdf259804cce03d014e74058e72b05c31cff01047e26be25a9669a6ee9bfa68",
+              "total_degree": 46
+            }
+          },
+          {
+            "denominator": {
+              "monomials": 36,
+              "sorted_exact_rational_monomial_sha256": "55eb0cbf7afc2855e2c92968090a00e15416dd2d18fefa0948ad146dd86ad3fb",
+              "total_degree": 70
+            },
+            "numerator": {
+              "monomials": 10,
+              "sorted_exact_rational_monomial_sha256": "eb55a73153e2417f0b80326229c81808c8e997889f38c2138a84cba63c2c931a",
+              "total_degree": 19
+            }
+          }
+        ],
+        "rows": 4
+      },
+      "mean_matter_field_direct_source": {
+        "columns": 4,
+        "row_major_entries": [
+          {
+            "denominator": {
+              "monomials": 41,
+              "sorted_exact_rational_monomial_sha256": "b8bba3997e9ca413501787b6ff01fe58f70fdb91693c1905fb7876f3c2f385d9",
+              "total_degree": 80
+            },
+            "numerator": {
+              "monomials": 93,
+              "sorted_exact_rational_monomial_sha256": "944f7ce8a1f23ef2c2a922eae0d1e2c0e6448f62e343767183e7374540e6dbe0",
+              "total_degree": 68
+            }
+          },
+          {
+            "denominator": {
+              "monomials": 2,
+              "sorted_exact_rational_monomial_sha256": "3c04e679485c8a3841f58ad4a0aad230bd53e28b771c2b6071267d612352da3a",
+              "total_degree": 2
+            },
+            "numerator": {
+              "monomials": 1,
+              "sorted_exact_rational_monomial_sha256": "d5a950cb02e6f320cb487bd0f7a6a36cd0799c0694825ac10f366d10fed82648",
+              "total_degree": 1
+            }
+          },
+          {
+            "denominator": {
+              "monomials": 36,
+              "sorted_exact_rational_monomial_sha256": "55eb0cbf7afc2855e2c92968090a00e15416dd2d18fefa0948ad146dd86ad3fb",
+              "total_degree": 70
+            },
+            "numerator": {
+              "monomials": 42,
+              "sorted_exact_rational_monomial_sha256": "4d4785bfafd364570473959d56dfd607c7383364cc4ae7d33bf6af60c92355a6",
+              "total_degree": 47
+            }
+          },
+          {
+            "denominator": {
+              "monomials": 41,
+              "sorted_exact_rational_monomial_sha256": "8637343e329cbfbbb54a61af7d7b8004f6bdcb9e97737474033b424baade7ab8",
+              "total_degree": 80
+            },
+            "numerator": {
+              "monomials": 67,
+              "sorted_exact_rational_monomial_sha256": "81d34ee264ff4e927cc74364b6c9dc68cd58ccf7fc08bbeedcc38df8b4f3bf32",
+              "total_degree": 68
+            }
+          },
+          {
+            "denominator": {
+              "monomials": 2,
+              "sorted_exact_rational_monomial_sha256": "3c04e679485c8a3841f58ad4a0aad230bd53e28b771c2b6071267d612352da3a",
+              "total_degree": 2
+            },
+            "numerator": {
+              "monomials": 1,
+              "sorted_exact_rational_monomial_sha256": "d5a950cb02e6f320cb487bd0f7a6a36cd0799c0694825ac10f366d10fed82648",
+              "total_degree": 1
+            }
+          },
+          {
+            "denominator": {
+              "monomials": 7,
+              "sorted_exact_rational_monomial_sha256": "27a31d60269c6c5d08dfd22e8e77268f7ac4de1c9246522050401dcb98e24c28",
+              "total_degree": 12
+            },
+            "numerator": {
+              "monomials": 1,
+              "sorted_exact_rational_monomial_sha256": "7639faff472c7a2fb601775c788382db7376804e96b0333d9e1b6493ed62fcaf",
+              "total_degree": 0
+            }
+          },
+          {
+            "denominator": {
+              "monomials": 7,
+              "sorted_exact_rational_monomial_sha256": "102bf8ce823788b207107625bb2b89b415387d59af0d92b641a1005a4438a48e",
+              "total_degree": 12
+            },
+            "numerator": {
+              "monomials": 1,
+              "sorted_exact_rational_monomial_sha256": "ac46749e1e6d3417a4a795b57112f298fcccda55c3ebd6fd9cd91a75e9196649",
+              "total_degree": 0
+            }
+          },
+          {
+            "denominator": {
+              "monomials": 1,
+              "sorted_exact_rational_monomial_sha256": "b460b98eff6da5b91dddb2fee59ed557a422638f0dafacc0ad4cb3dfa655fe16",
+              "total_degree": 0
+            },
+            "numerator": {
+              "monomials": 1,
+              "sorted_exact_rational_monomial_sha256": "67c5b9b6b752f6f0a2fe77342c7a590fde77fc6ee45bdd9798e0968794dffb02",
+              "total_degree": 0
+            }
+          },
+          {
+            "denominator": {
+              "monomials": 36,
+              "sorted_exact_rational_monomial_sha256": "55eb0cbf7afc2855e2c92968090a00e15416dd2d18fefa0948ad146dd86ad3fb",
+              "total_degree": 70
+            },
+            "numerator": {
+              "monomials": 42,
+              "sorted_exact_rational_monomial_sha256": "4d4785bfafd364570473959d56dfd607c7383364cc4ae7d33bf6af60c92355a6",
+              "total_degree": 47
+            }
+          },
+          {
+            "denominator": {
+              "monomials": 7,
+              "sorted_exact_rational_monomial_sha256": "102bf8ce823788b207107625bb2b89b415387d59af0d92b641a1005a4438a48e",
+              "total_degree": 12
+            },
+            "numerator": {
+              "monomials": 1,
+              "sorted_exact_rational_monomial_sha256": "ac46749e1e6d3417a4a795b57112f298fcccda55c3ebd6fd9cd91a75e9196649",
+              "total_degree": 0
+            }
+          },
+          {
+            "denominator": {
+              "monomials": 35,
+              "sorted_exact_rational_monomial_sha256": "508edd7aa17eb08b50a284eea2e6becfa824a968ab07a102d03c96603d3bbc5e",
+              "total_degree": 68
+            },
+            "numerator": {
+              "monomials": 14,
+              "sorted_exact_rational_monomial_sha256": "1432b437f009715c7e648b2e4e60eba849106397660c566d58d5472317d4c5a8",
+              "total_degree": 28
+            }
+          },
+          {
+            "denominator": {
+              "monomials": 36,
+              "sorted_exact_rational_monomial_sha256": "55eb0cbf7afc2855e2c92968090a00e15416dd2d18fefa0948ad146dd86ad3fb",
+              "total_degree": 70
+            },
+            "numerator": {
+              "monomials": 24,
+              "sorted_exact_rational_monomial_sha256": "0836821b032250c749c4d807a7a66c72bc5d2f965abae6c6146f01af27011b37",
+              "total_degree": 47
+            }
+          },
+          {
+            "denominator": {
+              "monomials": 41,
+              "sorted_exact_rational_monomial_sha256": "8637343e329cbfbbb54a61af7d7b8004f6bdcb9e97737474033b424baade7ab8",
+              "total_degree": 80
+            },
+            "numerator": {
+              "monomials": 67,
+              "sorted_exact_rational_monomial_sha256": "81d34ee264ff4e927cc74364b6c9dc68cd58ccf7fc08bbeedcc38df8b4f3bf32",
+              "total_degree": 68
+            }
+          },
+          {
+            "denominator": {
+              "monomials": 1,
+              "sorted_exact_rational_monomial_sha256": "b460b98eff6da5b91dddb2fee59ed557a422638f0dafacc0ad4cb3dfa655fe16",
+              "total_degree": 0
+            },
+            "numerator": {
+              "monomials": 1,
+              "sorted_exact_rational_monomial_sha256": "67c5b9b6b752f6f0a2fe77342c7a590fde77fc6ee45bdd9798e0968794dffb02",
+              "total_degree": 0
+            }
+          },
+          {
+            "denominator": {
+              "monomials": 36,
+              "sorted_exact_rational_monomial_sha256": "55eb0cbf7afc2855e2c92968090a00e15416dd2d18fefa0948ad146dd86ad3fb",
+              "total_degree": 70
+            },
+            "numerator": {
+              "monomials": 24,
+              "sorted_exact_rational_monomial_sha256": "0836821b032250c749c4d807a7a66c72bc5d2f965abae6c6146f01af27011b37",
+              "total_degree": 47
+            }
+          },
+          {
+            "denominator": {
+              "monomials": 41,
+              "sorted_exact_rational_monomial_sha256": "8637343e329cbfbbb54a61af7d7b8004f6bdcb9e97737474033b424baade7ab8",
+              "total_degree": 80
+            },
+            "numerator": {
+              "monomials": 24,
+              "sorted_exact_rational_monomial_sha256": "6ac33542955409a68254194f141e7bcbdaffdc61ca2a7befa2fff5fa42ae7a88",
+              "total_degree": 46
+            }
+          }
+        ],
+        "rows": 4
+      },
+      "mean_trace_direct_source": {
+        "columns": 4,
+        "row_major_entries": [
+          {
+            "denominator": {
+              "monomials": 47,
+              "sorted_exact_rational_monomial_sha256": "52c43ed29c601cb1ce85d536467565efd08c48dbae6bf6de02940a7bddc0c6b4",
+              "total_degree": 92
+            },
+            "numerator": {
+              "monomials": 129,
+              "sorted_exact_rational_monomial_sha256": "04e8bc75a0f17afb7015738f74d2b6e2cd4feae7eb403db5cd582bf93afc2704",
+              "total_degree": 90
+            }
+          },
+          {
+            "denominator": {
+              "monomials": 1,
+              "sorted_exact_rational_monomial_sha256": "b460b98eff6da5b91dddb2fee59ed557a422638f0dafacc0ad4cb3dfa655fe16",
+              "total_degree": 0
+            },
+            "numerator": {
+              "monomials": 1,
+              "sorted_exact_rational_monomial_sha256": "67c5b9b6b752f6f0a2fe77342c7a590fde77fc6ee45bdd9798e0968794dffb02",
+              "total_degree": 0
+            }
+          },
+          {
+            "denominator": {
+              "monomials": 42,
+              "sorted_exact_rational_monomial_sha256": "30da1a775fce7f40e514ba5b4453cb20284e39d09ec1b0c894fb80ab68991538",
+              "total_degree": 82
+            },
+            "numerator": {
+              "monomials": 56,
+              "sorted_exact_rational_monomial_sha256": "5734b709b879bd2be56fd38ade167d6eef5619321848d631388c66b24ab13594",
+              "total_degree": 65
+            }
+          },
+          {
+            "denominator": {
+              "monomials": 47,
+              "sorted_exact_rational_monomial_sha256": "26cba4d6b88ed8b67233db2babce61de47330bcfa9c5e36cd48aa57d30a4a92f",
+              "total_degree": 92
+            },
+            "numerator": {
+              "monomials": 67,
+              "sorted_exact_rational_monomial_sha256": "41d7efd200ebae69b5a2d3e46596ee07b5f57765702892b97308f9ff5a2a0f39",
+              "total_degree": 68
+            }
+          },
+          {
+            "denominator": {
+              "monomials": 1,
+              "sorted_exact_rational_monomial_sha256": "b460b98eff6da5b91dddb2fee59ed557a422638f0dafacc0ad4cb3dfa655fe16",
+              "total_degree": 0
+            },
+            "numerator": {
+              "monomials": 1,
+              "sorted_exact_rational_monomial_sha256": "67c5b9b6b752f6f0a2fe77342c7a590fde77fc6ee45bdd9798e0968794dffb02",
+              "total_degree": 0
+            }
+          },
+          {
+            "denominator": {
+              "monomials": 13,
+              "sorted_exact_rational_monomial_sha256": "52038efb8006c83864126aab6624faf049775ecf6fce8bca47bdbe2a20c58a3e",
+              "total_degree": 24
+            },
+            "numerator": {
+              "monomials": 10,
+              "sorted_exact_rational_monomial_sha256": "b1e7d5d1e68fa6f5ccb01bc8b93cf9d48f4bcef7eb4a4268ef13e9fac8e0de95",
+              "total_degree": 18
+            }
+          },
+          {
+            "denominator": {
+              "monomials": 13,
+              "sorted_exact_rational_monomial_sha256": "9c203a2383e7f767633d1504b28b7f356663c2b3522922ba6ca9ae7385ae2b73",
+              "total_degree": 24
+            },
+            "numerator": {
+              "monomials": 1,
+              "sorted_exact_rational_monomial_sha256": "ac46749e1e6d3417a4a795b57112f298fcccda55c3ebd6fd9cd91a75e9196649",
+              "total_degree": 0
+            }
+          },
+          {
+            "denominator": {
+              "monomials": 1,
+              "sorted_exact_rational_monomial_sha256": "b460b98eff6da5b91dddb2fee59ed557a422638f0dafacc0ad4cb3dfa655fe16",
+              "total_degree": 0
+            },
+            "numerator": {
+              "monomials": 1,
+              "sorted_exact_rational_monomial_sha256": "67c5b9b6b752f6f0a2fe77342c7a590fde77fc6ee45bdd9798e0968794dffb02",
+              "total_degree": 0
+            }
+          },
+          {
+            "denominator": {
+              "monomials": 42,
+              "sorted_exact_rational_monomial_sha256": "30da1a775fce7f40e514ba5b4453cb20284e39d09ec1b0c894fb80ab68991538",
+              "total_degree": 82
+            },
+            "numerator": {
+              "monomials": 56,
+              "sorted_exact_rational_monomial_sha256": "5734b709b879bd2be56fd38ade167d6eef5619321848d631388c66b24ab13594",
+              "total_degree": 65
+            }
+          },
+          {
+            "denominator": {
+              "monomials": 13,
+              "sorted_exact_rational_monomial_sha256": "9c203a2383e7f767633d1504b28b7f356663c2b3522922ba6ca9ae7385ae2b73",
+              "total_degree": 24
+            },
+            "numerator": {
+              "monomials": 1,
+              "sorted_exact_rational_monomial_sha256": "ac46749e1e6d3417a4a795b57112f298fcccda55c3ebd6fd9cd91a75e9196649",
+              "total_degree": 0
+            }
+          },
+          {
+            "denominator": {
+              "monomials": 37,
+              "sorted_exact_rational_monomial_sha256": "2bdce3bc5f0e73b2e320dd1dbb055074420a5ba607dca45d0d66e31b8386318b",
+              "total_degree": 72
+            },
+            "numerator": {
+              "monomials": 24,
+              "sorted_exact_rational_monomial_sha256": "d29dcd078063e07d0261f4f51224c118bbd2b66022002a4e243d45935651eec0",
+              "total_degree": 48
+            }
+          },
+          {
+            "denominator": {
+              "monomials": 42,
+              "sorted_exact_rational_monomial_sha256": "09ee02c0c0b0062c0d13ac96c14ca75825bc91a26f781386690109289ab9b152",
+              "total_degree": 82
+            },
+            "numerator": {
+              "monomials": 24,
+              "sorted_exact_rational_monomial_sha256": "928ae66de4f125325a3f5508836a7623c6966e8347e06dcbc98e371d3f12b4f6",
+              "total_degree": 47
+            }
+          },
+          {
+            "denominator": {
+              "monomials": 47,
+              "sorted_exact_rational_monomial_sha256": "26cba4d6b88ed8b67233db2babce61de47330bcfa9c5e36cd48aa57d30a4a92f",
+              "total_degree": 92
+            },
+            "numerator": {
+              "monomials": 67,
+              "sorted_exact_rational_monomial_sha256": "41d7efd200ebae69b5a2d3e46596ee07b5f57765702892b97308f9ff5a2a0f39",
+              "total_degree": 68
+            }
+          },
+          {
+            "denominator": {
+              "monomials": 1,
+              "sorted_exact_rational_monomial_sha256": "b460b98eff6da5b91dddb2fee59ed557a422638f0dafacc0ad4cb3dfa655fe16",
+              "total_degree": 0
+            },
+            "numerator": {
+              "monomials": 1,
+              "sorted_exact_rational_monomial_sha256": "67c5b9b6b752f6f0a2fe77342c7a590fde77fc6ee45bdd9798e0968794dffb02",
+              "total_degree": 0
+            }
+          },
+          {
+            "denominator": {
+              "monomials": 42,
+              "sorted_exact_rational_monomial_sha256": "09ee02c0c0b0062c0d13ac96c14ca75825bc91a26f781386690109289ab9b152",
+              "total_degree": 82
+            },
+            "numerator": {
+              "monomials": 24,
+              "sorted_exact_rational_monomial_sha256": "928ae66de4f125325a3f5508836a7623c6966e8347e06dcbc98e371d3f12b4f6",
+              "total_degree": 47
+            }
+          },
+          {
+            "denominator": {
+              "monomials": 47,
+              "sorted_exact_rational_monomial_sha256": "c9a575701e2e43bc847bddc7497031b1921088d1abf4f8c83f6c9754123c824b",
+              "total_degree": 92
+            },
+            "numerator": {
+              "monomials": 35,
+              "sorted_exact_rational_monomial_sha256": "5212521dfc2d46b3e1d78992b87359e56dc66ac23f637498106042bd3876bf7b",
+              "total_degree": 68
+            }
+          }
+        ],
+        "rows": 4
+      }
+    },
+    "definitions": {
+      "lapse": "A^-3 partial_N H2",
+      "matter_field": "A^-3 partial_l H2",
+      "scale": "(3A^3)^-1 partial_p H2",
+      "trace": "A^-3[-A partial_A H2/3+l partial_l H2]"
+    },
+    "fingerprint_scope": "Exact numerator/denominator monomial hashes identify every complete rational kernel; source code reconstructs all coefficients before hashing"
+  },
+  "actual_natural_scalar_phase": {
+    "actual_covariance": "U_natural(u,0,k) eta*b(k)*I4 U_natural(s,0,k)^T",
+    "added_anchor_covariance": "eta*b(k)*I4 in natural phase, other five modes unchanged",
+    "band": "Same normalized smooth open shell 1<|k|^2<4; eta=hbar*lambda/kappa",
+    "canonical_map": {
+      "old_to_natural_phase": [
+        [
+          "1",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "-72*u*(u**2 + 1)**5",
+          "3/10",
+          "1",
+          "0"
+        ],
+        [
+          "3/10",
+          "0",
+          "0",
+          "1"
+        ]
+      ]
+    },
+    "generator": {
+      "columns": 4,
+      "row_major_entries": [
+        {
+          "denominator": {
+            "monomials": 19,
+            "sorted_exact_rational_monomial_sha256": "58831f2be1655baf2beb5d0e386396386c59bdc3d150bd04be368df1398fd7e1",
+            "total_degree": 36
+          },
+          "numerator": {
+            "monomials": 33,
+            "sorted_exact_rational_monomial_sha256": "55451c83b39057394525123a47d97ed1c3da4017fe04686c169ce4eddf28c3c1",
+            "total_degree": 35
+          }
+        },
+        {
+          "denominator": {
+            "monomials": 7,
+            "sorted_exact_rational_monomial_sha256": "90a26a76002ef4a26ddbf1dd0b9ba56eca54d3f0511a59c9be77b29bb967a145",
+            "total_degree": 12
+          },
+          "numerator": {
+            "monomials": 1,
+            "sorted_exact_rational_monomial_sha256": "ac46749e1e6d3417a4a795b57112f298fcccda55c3ebd6fd9cd91a75e9196649",
+            "total_degree": 0
+          }
+        },
+        {
+          "denominator": {
+            "monomials": 18,
+            "sorted_exact_rational_monomial_sha256": "9d0ed09d02fbf256fabbe5bf388484406eafd6453b4ad688e2c3d01f57f18464",
+            "total_degree": 34
+          },
+          "numerator": {
+            "monomials": 11,
+            "sorted_exact_rational_monomial_sha256": "0d81e4633d5648560b1684253ed2354a315a058422d8f835c53fdc1790e5b24c",
+            "total_degree": 22
+          }
+        },
+        {
+          "denominator": {
+            "monomials": 19,
+            "sorted_exact_rational_monomial_sha256": "58831f2be1655baf2beb5d0e386396386c59bdc3d150bd04be368df1398fd7e1",
+            "total_degree": 36
+          },
+          "numerator": {
+            "monomials": 7,
+            "sorted_exact_rational_monomial_sha256": "89f0b1988b2ffdaf795a5527c52522f861f382f695a2afc37ff0b65e69664615",
+            "total_degree": 13
+          }
+        },
+        {
+          "denominator": {
+            "monomials": 18,
+            "sorted_exact_rational_monomial_sha256": "fb9667b1fbfc18c035f2a9c548f106ed96b8dfcdab1017d7f03e2963414811f4",
+            "total_degree": 34
+          },
+          "numerator": {
+            "monomials": 21,
+            "sorted_exact_rational_monomial_sha256": "fed3f509242d1905c618f3d24450cf3d776f1bdc601037db87d9b18328e31dfa",
+            "total_degree": 22
+          }
+        },
+        {
+          "denominator": {
+            "monomials": 1,
+            "sorted_exact_rational_monomial_sha256": "b460b98eff6da5b91dddb2fee59ed557a422638f0dafacc0ad4cb3dfa655fe16",
+            "total_degree": 0
+          },
+          "numerator": {
+            "monomials": 1,
+            "sorted_exact_rational_monomial_sha256": "67c5b9b6b752f6f0a2fe77342c7a590fde77fc6ee45bdd9798e0968794dffb02",
+            "total_degree": 0
+          }
+        },
+        {
+          "denominator": {
+            "monomials": 19,
+            "sorted_exact_rational_monomial_sha256": "58831f2be1655baf2beb5d0e386396386c59bdc3d150bd04be368df1398fd7e1",
+            "total_degree": 36
+          },
+          "numerator": {
+            "monomials": 7,
+            "sorted_exact_rational_monomial_sha256": "89f0b1988b2ffdaf795a5527c52522f861f382f695a2afc37ff0b65e69664615",
+            "total_degree": 13
+          }
+        },
+        {
+          "denominator": {
+            "monomials": 18,
+            "sorted_exact_rational_monomial_sha256": "9d0ed09d02fbf256fabbe5bf388484406eafd6453b4ad688e2c3d01f57f18464",
+            "total_degree": 34
+          },
+          "numerator": {
+            "monomials": 12,
+            "sorted_exact_rational_monomial_sha256": "3a958a7ce37e1814281c288d87886d74bd49709193bb2fb8f89976df05f0254c",
+            "total_degree": 22
+          }
+        },
+        {
+          "denominator": {
+            "monomials": 18,
+            "sorted_exact_rational_monomial_sha256": "5fe14aa4ffa8c32a512b148594456f69dbc588ed8466e39206b12f4ffd39ac1d",
+            "total_degree": 34
+          },
+          "numerator": {
+            "monomials": 60,
+            "sorted_exact_rational_monomial_sha256": "e392e152eb01501d99605a45d5155d1c970624ce68de9c47391bf25e087953d0",
+            "total_degree": 44
+          }
+        },
+        {
+          "denominator": {
+            "monomials": 2,
+            "sorted_exact_rational_monomial_sha256": "2345a395c44482077b82dab2ea99ced66225338ec477d299ff238885abbae2b2",
+            "total_degree": 2
+          },
+          "numerator": {
+            "monomials": 1,
+            "sorted_exact_rational_monomial_sha256": "43dbf69db649d1434791a3475c50793410f9cdc22af5867c743fb165bb779e16",
+            "total_degree": 1
+          }
+        },
+        {
+          "denominator": {
+            "monomials": 19,
+            "sorted_exact_rational_monomial_sha256": "58831f2be1655baf2beb5d0e386396386c59bdc3d150bd04be368df1398fd7e1",
+            "total_degree": 36
+          },
+          "numerator": {
+            "monomials": 33,
+            "sorted_exact_rational_monomial_sha256": "c06b6efab5f55f516208654785a7102e305e33f7cc16266310f1fa7a8b8e2c91",
+            "total_degree": 35
+          }
+        },
+        {
+          "denominator": {
+            "monomials": 18,
+            "sorted_exact_rational_monomial_sha256": "fb9667b1fbfc18c035f2a9c548f106ed96b8dfcdab1017d7f03e2963414811f4",
+            "total_degree": 34
+          },
+          "numerator": {
+            "monomials": 21,
+            "sorted_exact_rational_monomial_sha256": "3cdcf94f199fa51f192258375ceb5f7a5e640aede83187fca25dbb06a0698eb1",
+            "total_degree": 22
+          }
+        },
+        {
+          "denominator": {
+            "monomials": 2,
+            "sorted_exact_rational_monomial_sha256": "2345a395c44482077b82dab2ea99ced66225338ec477d299ff238885abbae2b2",
+            "total_degree": 2
+          },
+          "numerator": {
+            "monomials": 1,
+            "sorted_exact_rational_monomial_sha256": "43dbf69db649d1434791a3475c50793410f9cdc22af5867c743fb165bb779e16",
+            "total_degree": 1
+          }
+        },
+        {
+          "denominator": {
+            "monomials": 7,
+            "sorted_exact_rational_monomial_sha256": "5341468ae9359fb17762059e88912d6edc98bcf0f36053853c05d14f2f1d3cbd",
+            "total_degree": 12
+          },
+          "numerator": {
+            "monomials": 10,
+            "sorted_exact_rational_monomial_sha256": "22de93dcf3c20c0ded547d1062d9367679f05eb5a407c5114e27f42a69291dbe",
+            "total_degree": 18
+          }
+        },
+        {
+          "denominator": {
+            "monomials": 7,
+            "sorted_exact_rational_monomial_sha256": "90a26a76002ef4a26ddbf1dd0b9ba56eca54d3f0511a59c9be77b29bb967a145",
+            "total_degree": 12
+          },
+          "numerator": {
+            "monomials": 1,
+            "sorted_exact_rational_monomial_sha256": "b460b98eff6da5b91dddb2fee59ed557a422638f0dafacc0ad4cb3dfa655fe16",
+            "total_degree": 0
+          }
+        },
+        {
+          "denominator": {
+            "monomials": 1,
+            "sorted_exact_rational_monomial_sha256": "b460b98eff6da5b91dddb2fee59ed557a422638f0dafacc0ad4cb3dfa655fe16",
+            "total_degree": 0
+          },
+          "numerator": {
+            "monomials": 1,
+            "sorted_exact_rational_monomial_sha256": "67c5b9b6b752f6f0a2fe77342c7a590fde77fc6ee45bdd9798e0968794dffb02",
+            "total_degree": 0
+          }
+        }
+      ],
+      "rows": 4
+    },
+    "state_and_mean_all_finite_times_not_uniform_tail_bound": true
+  },
+  "actual_physical_matter_observable": {
+    "additional_mean_density_and_pressure": "-3*(induced_homogeneous_lapse/(2*(u**2 + 1)**3) + induced_homogeneous_log_hat_scale)/(100*(u**2 + 1)**12)",
+    "independent_center_chart": {
+      "additive_physical_matter_density_second_variation": "(39562830000*chi**2*positive_wave_scale**2 - 4428675*chi**2 + 29524500*chi*p + 40349441200*pc**2 - 7844848000*pc*positive_wave_scale**2*v - 48183558720*pc*v - 283520000*positive_wave_scale**4*v**2 + 3337604400*positive_wave_scale**2*v**2 + 9624923208*v**2)/79716150000",
+      "independent_natural_second_order_lapse": "-(-295245000*chi**2*positive_wave_scale**2 - 4428675*chi**2 + 29524500*chi*p + 97058200*pc**2 + 54272000*pc*positive_wave_scale**2*v - 117283920*pc*v - 542720000*positive_wave_scale**4*v**2 + 967868400*positive_wave_scale**2*v**2 + 17592588*v**2)/1195742250",
+      "natural_density_trace_for_positive_I4_addition": "-(283520000*positive_wave_scale**4 - 42900434400*positive_wave_scale**2 - 47572546333)/79716150000",
+      "natural_exponential_physical_density_jet": "(39562830000*chi**2*positive_wave_scale**2 - 4428675*chi**2 + 29524500*chi*p + 40349441200*pc**2 - 7844848000*pc*positive_wave_scale**2*v - 48183558720*pc*v - 283520000*positive_wave_scale**4*v**2 + 3337604400*positive_wave_scale**2*v**2 + 7227533808*v**2)/79716150000",
+      "required_scalar_chart_correction": "-203*v**2/6750"
+    },
+    "independent_full_center_observable": {
+      "anchor_full_physical_density_jet": "(29524500*natural_curvature_density_momentum*natural_matter - 283520000*natural_log_curvature**2*nonzero_comoving_scalar_momentum**4 + 3337604400*natural_log_curvature**2*nonzero_comoving_scalar_momentum**2 + 7227533808*natural_log_curvature**2 - 7844848000*natural_log_curvature*natural_matter_density_momentum*nonzero_comoving_scalar_momentum**2 - 48183558720*natural_log_curvature*natural_matter_density_momentum + 39562830000*natural_matter**2*nonzero_comoving_scalar_momentum**2 - 4428675*natural_matter**2 + 40349441200*natural_matter_density_momentum**2)/79716150000",
+      "anchor_positive_I4_physical_density_trace": "-(283520000*nonzero_comoving_scalar_momentum**4 - 42900434400*nonzero_comoving_scalar_momentum**2 - 47572546333)/79716150000"
+    },
+    "intrinsic_density_Hessian": {
+      "columns": 4,
+      "row_major_entries": [
+        {
+          "denominator": {
+            "monomials": 47,
+            "sorted_exact_rational_monomial_sha256": "39db022f490e7b45ebbf1d564d6783d403f4c5a77bab4b2f7fab67f9e6d9373c",
+            "total_degree": 92
+          },
+          "numerator": {
+            "monomials": 90,
+            "sorted_exact_rational_monomial_sha256": "1552285714a19b3c6cdc840a6032ea4ddcb4b256e0368b3ffb8f3adbd3ee89ed",
+            "total_degree": 68
+          }
+        },
+        {
+          "denominator": {
+            "monomials": 1,
+            "sorted_exact_rational_monomial_sha256": "b460b98eff6da5b91dddb2fee59ed557a422638f0dafacc0ad4cb3dfa655fe16",
+            "total_degree": 0
+          },
+          "numerator": {
+            "monomials": 1,
+            "sorted_exact_rational_monomial_sha256": "67c5b9b6b752f6f0a2fe77342c7a590fde77fc6ee45bdd9798e0968794dffb02",
+            "total_degree": 0
+          }
+        },
+        {
+          "denominator": {
+            "monomials": 42,
+            "sorted_exact_rational_monomial_sha256": "09ee02c0c0b0062c0d13ac96c14ca75825bc91a26f781386690109289ab9b152",
+            "total_degree": 82
+          },
+          "numerator": {
+            "monomials": 39,
+            "sorted_exact_rational_monomial_sha256": "b7cd61ee029fae9a1a1bc4faf5e03ea95e0e6ce50e25345252d0ca0fbb2483eb",
+            "total_degree": 41
+          }
+        },
+        {
+          "denominator": {
+            "monomials": 47,
+            "sorted_exact_rational_monomial_sha256": "f3e11fd836e043fbef0fedff065d5bc8cbce3ed66ddc5a41ddd3a188161c68f9",
+            "total_degree": 92
+          },
+          "numerator": {
+            "monomials": 64,
+            "sorted_exact_rational_monomial_sha256": "998946db32e29ad9d1106ab0d7e7ce472963a338cd4e989d5a875770d5f2c0f8",
+            "total_degree": 68
+          }
+        },
+        {
+          "denominator": {
+            "monomials": 1,
+            "sorted_exact_rational_monomial_sha256": "b460b98eff6da5b91dddb2fee59ed557a422638f0dafacc0ad4cb3dfa655fe16",
+            "total_degree": 0
+          },
+          "numerator": {
+            "monomials": 1,
+            "sorted_exact_rational_monomial_sha256": "67c5b9b6b752f6f0a2fe77342c7a590fde77fc6ee45bdd9798e0968794dffb02",
+            "total_degree": 0
+          }
+        },
+        {
+          "denominator": {
+            "monomials": 5,
+            "sorted_exact_rational_monomial_sha256": "284546a8e93b8bf144929e3316ce9247d0a741574c78c62c26ea8e387a874320",
+            "total_degree": 8
+          },
+          "numerator": {
+            "monomials": 1,
+            "sorted_exact_rational_monomial_sha256": "0d52f20ae98a0985198b505ad89b25e2c294571f0eede6088e7a253ef00cbb17",
+            "total_degree": 2
+          }
+        },
+        {
+          "denominator": {
+            "monomials": 1,
+            "sorted_exact_rational_monomial_sha256": "b460b98eff6da5b91dddb2fee59ed557a422638f0dafacc0ad4cb3dfa655fe16",
+            "total_degree": 0
+          },
+          "numerator": {
+            "monomials": 1,
+            "sorted_exact_rational_monomial_sha256": "67c5b9b6b752f6f0a2fe77342c7a590fde77fc6ee45bdd9798e0968794dffb02",
+            "total_degree": 0
+          }
+        },
+        {
+          "denominator": {
+            "monomials": 1,
+            "sorted_exact_rational_monomial_sha256": "b460b98eff6da5b91dddb2fee59ed557a422638f0dafacc0ad4cb3dfa655fe16",
+            "total_degree": 0
+          },
+          "numerator": {
+            "monomials": 1,
+            "sorted_exact_rational_monomial_sha256": "67c5b9b6b752f6f0a2fe77342c7a590fde77fc6ee45bdd9798e0968794dffb02",
+            "total_degree": 0
+          }
+        },
+        {
+          "denominator": {
+            "monomials": 42,
+            "sorted_exact_rational_monomial_sha256": "09ee02c0c0b0062c0d13ac96c14ca75825bc91a26f781386690109289ab9b152",
+            "total_degree": 82
+          },
+          "numerator": {
+            "monomials": 39,
+            "sorted_exact_rational_monomial_sha256": "b7cd61ee029fae9a1a1bc4faf5e03ea95e0e6ce50e25345252d0ca0fbb2483eb",
+            "total_degree": 41
+          }
+        },
+        {
+          "denominator": {
+            "monomials": 1,
+            "sorted_exact_rational_monomial_sha256": "b460b98eff6da5b91dddb2fee59ed557a422638f0dafacc0ad4cb3dfa655fe16",
+            "total_degree": 0
+          },
+          "numerator": {
+            "monomials": 1,
+            "sorted_exact_rational_monomial_sha256": "67c5b9b6b752f6f0a2fe77342c7a590fde77fc6ee45bdd9798e0968794dffb02",
+            "total_degree": 0
+          }
+        },
+        {
+          "denominator": {
+            "monomials": 37,
+            "sorted_exact_rational_monomial_sha256": "2bdce3bc5f0e73b2e320dd1dbb055074420a5ba607dca45d0d66e31b8386318b",
+            "total_degree": 72
+          },
+          "numerator": {
+            "monomials": 10,
+            "sorted_exact_rational_monomial_sha256": "4c06ff337a6254c26549265037f03b0a5cb557fba607cc8716712babc29ff925",
+            "total_degree": 20
+          }
+        },
+        {
+          "denominator": {
+            "monomials": 42,
+            "sorted_exact_rational_monomial_sha256": "09ee02c0c0b0062c0d13ac96c14ca75825bc91a26f781386690109289ab9b152",
+            "total_degree": 82
+          },
+          "numerator": {
+            "monomials": 21,
+            "sorted_exact_rational_monomial_sha256": "971175a30d905ae7ba002fd4c89c8dcd1e01b541ef12005a5f638f9c455da336",
+            "total_degree": 41
+          }
+        },
+        {
+          "denominator": {
+            "monomials": 47,
+            "sorted_exact_rational_monomial_sha256": "f3e11fd836e043fbef0fedff065d5bc8cbce3ed66ddc5a41ddd3a188161c68f9",
+            "total_degree": 92
+          },
+          "numerator": {
+            "monomials": 64,
+            "sorted_exact_rational_monomial_sha256": "998946db32e29ad9d1106ab0d7e7ce472963a338cd4e989d5a875770d5f2c0f8",
+            "total_degree": 68
+          }
+        },
+        {
+          "denominator": {
+            "monomials": 1,
+            "sorted_exact_rational_monomial_sha256": "b460b98eff6da5b91dddb2fee59ed557a422638f0dafacc0ad4cb3dfa655fe16",
+            "total_degree": 0
+          },
+          "numerator": {
+            "monomials": 1,
+            "sorted_exact_rational_monomial_sha256": "67c5b9b6b752f6f0a2fe77342c7a590fde77fc6ee45bdd9798e0968794dffb02",
+            "total_degree": 0
+          }
+        },
+        {
+          "denominator": {
+            "monomials": 42,
+            "sorted_exact_rational_monomial_sha256": "09ee02c0c0b0062c0d13ac96c14ca75825bc91a26f781386690109289ab9b152",
+            "total_degree": 82
+          },
+          "numerator": {
+            "monomials": 21,
+            "sorted_exact_rational_monomial_sha256": "971175a30d905ae7ba002fd4c89c8dcd1e01b541ef12005a5f638f9c455da336",
+            "total_degree": 41
+          }
+        },
+        {
+          "denominator": {
+            "monomials": 47,
+            "sorted_exact_rational_monomial_sha256": "c9a575701e2e43bc847bddc7497031b1921088d1abf4f8c83f6c9754123c824b",
+            "total_degree": 92
+          },
+          "numerator": {
+            "monomials": 35,
+            "sorted_exact_rational_monomial_sha256": "8d77a189855a13cf461a2266b507564e49b25bfe1997b74f086a1af009c3b200",
+            "total_degree": 68
+          }
+        }
+      ],
+      "rows": 4
+    },
+    "intrinsic_pressure_Hessian": {
+      "columns": 4,
+      "row_major_entries": [
+        {
+          "denominator": {
+            "monomials": 47,
+            "sorted_exact_rational_monomial_sha256": "39db022f490e7b45ebbf1d564d6783d403f4c5a77bab4b2f7fab67f9e6d9373c",
+            "total_degree": 92
+          },
+          "numerator": {
+            "monomials": 90,
+            "sorted_exact_rational_monomial_sha256": "1552285714a19b3c6cdc840a6032ea4ddcb4b256e0368b3ffb8f3adbd3ee89ed",
+            "total_degree": 68
+          }
+        },
+        {
+          "denominator": {
+            "monomials": 1,
+            "sorted_exact_rational_monomial_sha256": "b460b98eff6da5b91dddb2fee59ed557a422638f0dafacc0ad4cb3dfa655fe16",
+            "total_degree": 0
+          },
+          "numerator": {
+            "monomials": 1,
+            "sorted_exact_rational_monomial_sha256": "67c5b9b6b752f6f0a2fe77342c7a590fde77fc6ee45bdd9798e0968794dffb02",
+            "total_degree": 0
+          }
+        },
+        {
+          "denominator": {
+            "monomials": 42,
+            "sorted_exact_rational_monomial_sha256": "09ee02c0c0b0062c0d13ac96c14ca75825bc91a26f781386690109289ab9b152",
+            "total_degree": 82
+          },
+          "numerator": {
+            "monomials": 39,
+            "sorted_exact_rational_monomial_sha256": "b7cd61ee029fae9a1a1bc4faf5e03ea95e0e6ce50e25345252d0ca0fbb2483eb",
+            "total_degree": 41
+          }
+        },
+        {
+          "denominator": {
+            "monomials": 47,
+            "sorted_exact_rational_monomial_sha256": "f3e11fd836e043fbef0fedff065d5bc8cbce3ed66ddc5a41ddd3a188161c68f9",
+            "total_degree": 92
+          },
+          "numerator": {
+            "monomials": 64,
+            "sorted_exact_rational_monomial_sha256": "998946db32e29ad9d1106ab0d7e7ce472963a338cd4e989d5a875770d5f2c0f8",
+            "total_degree": 68
+          }
+        },
+        {
+          "denominator": {
+            "monomials": 1,
+            "sorted_exact_rational_monomial_sha256": "b460b98eff6da5b91dddb2fee59ed557a422638f0dafacc0ad4cb3dfa655fe16",
+            "total_degree": 0
+          },
+          "numerator": {
+            "monomials": 1,
+            "sorted_exact_rational_monomial_sha256": "67c5b9b6b752f6f0a2fe77342c7a590fde77fc6ee45bdd9798e0968794dffb02",
+            "total_degree": 0
+          }
+        },
+        {
+          "denominator": {
+            "monomials": 5,
+            "sorted_exact_rational_monomial_sha256": "7e88c0d3ace9c7491aa228e8c2db7a32113dab08384d2d72579c5db6efa58c51",
+            "total_degree": 8
+          },
+          "numerator": {
+            "monomials": 1,
+            "sorted_exact_rational_monomial_sha256": "6778f4aec7c8a10dc5728e20eaba3ccbec83f68cee0604d92d1aa87342d0e2b2",
+            "total_degree": 2
+          }
+        },
+        {
+          "denominator": {
+            "monomials": 1,
+            "sorted_exact_rational_monomial_sha256": "b460b98eff6da5b91dddb2fee59ed557a422638f0dafacc0ad4cb3dfa655fe16",
+            "total_degree": 0
+          },
+          "numerator": {
+            "monomials": 1,
+            "sorted_exact_rational_monomial_sha256": "67c5b9b6b752f6f0a2fe77342c7a590fde77fc6ee45bdd9798e0968794dffb02",
+            "total_degree": 0
+          }
+        },
+        {
+          "denominator": {
+            "monomials": 1,
+            "sorted_exact_rational_monomial_sha256": "b460b98eff6da5b91dddb2fee59ed557a422638f0dafacc0ad4cb3dfa655fe16",
+            "total_degree": 0
+          },
+          "numerator": {
+            "monomials": 1,
+            "sorted_exact_rational_monomial_sha256": "67c5b9b6b752f6f0a2fe77342c7a590fde77fc6ee45bdd9798e0968794dffb02",
+            "total_degree": 0
+          }
+        },
+        {
+          "denominator": {
+            "monomials": 42,
+            "sorted_exact_rational_monomial_sha256": "09ee02c0c0b0062c0d13ac96c14ca75825bc91a26f781386690109289ab9b152",
+            "total_degree": 82
+          },
+          "numerator": {
+            "monomials": 39,
+            "sorted_exact_rational_monomial_sha256": "b7cd61ee029fae9a1a1bc4faf5e03ea95e0e6ce50e25345252d0ca0fbb2483eb",
+            "total_degree": 41
+          }
+        },
+        {
+          "denominator": {
+            "monomials": 1,
+            "sorted_exact_rational_monomial_sha256": "b460b98eff6da5b91dddb2fee59ed557a422638f0dafacc0ad4cb3dfa655fe16",
+            "total_degree": 0
+          },
+          "numerator": {
+            "monomials": 1,
+            "sorted_exact_rational_monomial_sha256": "67c5b9b6b752f6f0a2fe77342c7a590fde77fc6ee45bdd9798e0968794dffb02",
+            "total_degree": 0
+          }
+        },
+        {
+          "denominator": {
+            "monomials": 37,
+            "sorted_exact_rational_monomial_sha256": "2bdce3bc5f0e73b2e320dd1dbb055074420a5ba607dca45d0d66e31b8386318b",
+            "total_degree": 72
+          },
+          "numerator": {
+            "monomials": 10,
+            "sorted_exact_rational_monomial_sha256": "4c06ff337a6254c26549265037f03b0a5cb557fba607cc8716712babc29ff925",
+            "total_degree": 20
+          }
+        },
+        {
+          "denominator": {
+            "monomials": 42,
+            "sorted_exact_rational_monomial_sha256": "09ee02c0c0b0062c0d13ac96c14ca75825bc91a26f781386690109289ab9b152",
+            "total_degree": 82
+          },
+          "numerator": {
+            "monomials": 21,
+            "sorted_exact_rational_monomial_sha256": "971175a30d905ae7ba002fd4c89c8dcd1e01b541ef12005a5f638f9c455da336",
+            "total_degree": 41
+          }
+        },
+        {
+          "denominator": {
+            "monomials": 47,
+            "sorted_exact_rational_monomial_sha256": "f3e11fd836e043fbef0fedff065d5bc8cbce3ed66ddc5a41ddd3a188161c68f9",
+            "total_degree": 92
+          },
+          "numerator": {
+            "monomials": 64,
+            "sorted_exact_rational_monomial_sha256": "998946db32e29ad9d1106ab0d7e7ce472963a338cd4e989d5a875770d5f2c0f8",
+            "total_degree": 68
+          }
+        },
+        {
+          "denominator": {
+            "monomials": 1,
+            "sorted_exact_rational_monomial_sha256": "b460b98eff6da5b91dddb2fee59ed557a422638f0dafacc0ad4cb3dfa655fe16",
+            "total_degree": 0
+          },
+          "numerator": {
+            "monomials": 1,
+            "sorted_exact_rational_monomial_sha256": "67c5b9b6b752f6f0a2fe77342c7a590fde77fc6ee45bdd9798e0968794dffb02",
+            "total_degree": 0
+          }
+        },
+        {
+          "denominator": {
+            "monomials": 42,
+            "sorted_exact_rational_monomial_sha256": "09ee02c0c0b0062c0d13ac96c14ca75825bc91a26f781386690109289ab9b152",
+            "total_degree": 82
+          },
+          "numerator": {
+            "monomials": 21,
+            "sorted_exact_rational_monomial_sha256": "971175a30d905ae7ba002fd4c89c8dcd1e01b541ef12005a5f638f9c455da336",
+            "total_degree": 41
+          }
+        },
+        {
+          "denominator": {
+            "monomials": 47,
+            "sorted_exact_rational_monomial_sha256": "c9a575701e2e43bc847bddc7497031b1921088d1abf4f8c83f6c9754123c824b",
+            "total_degree": 92
+          },
+          "numerator": {
+            "monomials": 35,
+            "sorted_exact_rational_monomial_sha256": "8d77a189855a13cf461a2266b507564e49b25bfe1997b74f086a1af009c3b200",
+            "total_degree": 68
+          }
+        }
+      ],
+      "rows": 4
+    },
+    "linear_inhomogeneous_lapse": "2*(u**2 + 1)**3*(800*natural_curvature_density_momentum*u**17 + 6400*natural_curvature_density_momentum*u**15 + 22400*natural_curvature_density_momentum*u**13 + 44600*natural_curvature_density_momentum*u**11 + 55000*natural_curvature_density_momentum*u**9 + 42800*natural_curvature_density_momentum*u**7 + 20400*natural_curvature_density_momentum*u**5 + 5400*natural_curvature_density_momentum*u**3 + 600*natural_curvature_density_momentum*u - 400*natural_log_curvature*nonzero_comoving_scalar_momentum**2*u**22 - 4400*natural_log_curvature*nonzero_comoving_scalar_momentum**2*u**20 - 22000*natural_log_curvature*nonzero_comoving_scalar_momentum**2*u**18 - 65400*natural_log_curvature*nonzero_comoving_scalar_momentum**2*u**16 - 127200*natural_log_curvature*nonzero_comoving_scalar_momentum**2*u**14 - 168000*natural_log_curvature*nonzero_comoving_scalar_momentum**2*u**12 - 151200*natural_log_curvature*nonzero_comoving_scalar_momentum**2*u**10 - 90000*natural_log_curvature*nonzero_comoving_scalar_momentum**2*u**8 - 32400*natural_log_curvature*nonzero_comoving_scalar_momentum**2*u**6 - 5200*natural_log_curvature*nonzero_comoving_scalar_momentum**2*u**4 + 400*natural_log_curvature*nonzero_comoving_scalar_momentum**2*u**2 + 200*natural_log_curvature*nonzero_comoving_scalar_momentum**2 + 57600*natural_log_curvature*u**28 + 748800*natural_log_curvature*u**26 + 4492800*natural_log_curvature*u**24 + 16459200*natural_log_curvature*u**22 + 41040000*natural_log_curvature*u**20 + 73483200*natural_log_curvature*u**18 + 97113600*natural_log_curvature*u**16 + 95817600*natural_log_curvature*u**14 + 70502400*natural_log_curvature*u**12 + 38160000*natural_log_curvature*u**10 + 14745600*natural_log_curvature*u**8 + 3844794*natural_log_curvature*u**6 + 604782*natural_log_curvature*u**4 + 43182*natural_log_curvature*u**2 + 3*natural_log_curvature + 20*natural_matter_density_momentum*u**6 + 60*natural_matter_density_momentum*u**4 + 60*natural_matter_density_momentum*u**2 - 10*natural_matter_density_momentum)/(3200*u**34 + 48000*u**32 + 332800*u**30 + 1410400*u**28 + 4068800*u**26 + 8413616*u**24 + 12776592*u**22 + 14351856*u**20 + 11894320*u**18 + 7327520*u**16 + 3706272*u**14 + 2123580*u**12 + 1571848*u**10 + 1038260*u**8 + 474252*u**6 + 134232*u**4 + 20604*u**2 + 1215)",
+    "mean_lapse_counted_once": true
+  },
+  "actual_scalar_quadratic_background_action": {
+    "generic_independent_mean_action": {
+      "actual_mean_lapse_source": "independent_positive_hat_scale**3*(9*natural_log_curvature**2*scalar_c1/2 + scalar_a1*(9*independent_mean_trace**2*natural_log_curvature**2/2 - 2*independent_mean_trace*natural_curvature_density_momentum*natural_log_curvature/independent_positive_hat_scale**3 + natural_curvature_density_momentum**2/(9*independent_positive_hat_scale**6)) + scalar_d1*(9*independent_mean_matter_charge_density**2*natural_log_curvature**2/2 - 6*independent_mean_matter_charge_density*natural_log_curvature*natural_matter_density_momentum/independent_positive_hat_scale**3 + natural_matter_density_momentum**2/independent_positive_hat_scale**6) + scalar_e1*(-3*independent_mean_matter_charge_density*natural_matter - 9*independent_mean_trace*natural_log_curvature + natural_curvature_density_momentum/independent_positive_hat_scale**3)**2/24 + (2*independent_mean_matter_charge_density*natural_matter_density_momentum*scalar_d1/independent_positive_hat_scale**3 + natural_log_curvature*(-3*independent_mean_matter_charge_density**2*scalar_d1 - 3*independent_mean_trace**2*scalar_a1 + 3*scalar_c1 + 4*nonzero_comoving_scalar_momentum**2*scalar_f1/independent_positive_hat_scale**2) + natural_curvature_density_momentum*(2*independent_mean_trace*scalar_a1 + scalar_b1)/(3*independent_positive_hat_scale**3))**2*(independent_mean_matter_charge_density**2*scalar_d3 + independent_mean_trace**2*scalar_a3 + independent_mean_trace*scalar_b3 + scalar_c3)/((independent_mean_matter_charge_density**2*scalar_d2 + independent_mean_trace**2*scalar_a2 + independent_mean_trace*scalar_b2 + scalar_c2)*(2*independent_mean_matter_charge_density**2*scalar_d2 + 2*independent_mean_trace**2*scalar_a2 + 2*independent_mean_trace*scalar_b2 + 2*scalar_c2)) - (2*independent_mean_matter_charge_density*natural_matter_density_momentum*scalar_d1/independent_positive_hat_scale**3 + natural_log_curvature*(-3*independent_mean_matter_charge_density**2*scalar_d1 - 3*independent_mean_trace**2*scalar_a1 + 3*scalar_c1 + 4*nonzero_comoving_scalar_momentum**2*scalar_f1/independent_positive_hat_scale**2) + natural_curvature_density_momentum*(2*independent_mean_trace*scalar_a1 + scalar_b1)/(3*independent_positive_hat_scale**3))*(3*natural_log_curvature*scalar_c2 + scalar_a2*(-3*independent_mean_trace**2*natural_log_curvature + 2*independent_mean_trace*natural_curvature_density_momentum/(3*independent_positive_hat_scale**3)) + scalar_d2*(-3*independent_mean_matter_charge_density**2*natural_log_curvature + 2*independent_mean_matter_charge_density*natural_matter_density_momentum/independent_positive_hat_scale**3) + 4*natural_log_curvature*nonzero_comoving_scalar_momentum**2*scalar_f2/independent_positive_hat_scale**2 + natural_curvature_density_momentum*scalar_b2/(3*independent_positive_hat_scale**3))/(independent_mean_matter_charge_density**2*scalar_d2 + independent_mean_trace**2*scalar_a2 + independent_mean_trace*scalar_b2 + scalar_c2) + 2*natural_log_curvature**2*nonzero_comoving_scalar_momentum**2*scalar_f1/independent_positive_hat_scale**2 + natural_matter**2*nonzero_comoving_scalar_momentum**2*scalar_g1/independent_positive_hat_scale**2)",
+      "independent_mean_lapse_pivot": "independent_mean_matter_charge_density**2*scalar_d2 + independent_mean_trace**2*scalar_a2 + independent_mean_trace*scalar_b2 + scalar_c2",
+      "linear_inhomogeneous_lapse_force": "2*independent_mean_matter_charge_density*natural_matter_density_momentum*scalar_d1/independent_positive_hat_scale**3 + natural_log_curvature*(-3*independent_mean_matter_charge_density**2*scalar_d1 - 3*independent_mean_trace**2*scalar_a1 + 3*scalar_c1 + 4*nonzero_comoving_scalar_momentum**2*scalar_f1/independent_positive_hat_scale**2) + natural_curvature_density_momentum*(2*independent_mean_trace*scalar_a1 + scalar_b1)/(3*independent_positive_hat_scale**3)",
+      "mean_hat_scale_direct_source": "independent_positive_hat_scale**3*(-3*natural_log_curvature*scalar_e0*(-3*independent_mean_matter_charge_density*natural_matter - 9*independent_mean_trace*natural_log_curvature + natural_curvature_density_momentum/independent_positive_hat_scale**3)/4 + scalar_a0*(9*independent_mean_trace*natural_log_curvature**2 - 2*natural_curvature_density_momentum*natural_log_curvature/independent_positive_hat_scale**3) - (-4*independent_mean_trace*scalar_a2 - 2*scalar_b2)*(2*independent_mean_matter_charge_density*natural_matter_density_momentum*scalar_d1/independent_positive_hat_scale**3 + natural_log_curvature*(-3*independent_mean_matter_charge_density**2*scalar_d1 - 3*independent_mean_trace**2*scalar_a1 + 3*scalar_c1 + 4*nonzero_comoving_scalar_momentum**2*scalar_f1/independent_positive_hat_scale**2) + natural_curvature_density_momentum*(2*independent_mean_trace*scalar_a1 + scalar_b1)/(3*independent_positive_hat_scale**3))**2/(2*independent_mean_matter_charge_density**2*scalar_d2 + 2*independent_mean_trace**2*scalar_a2 + 2*independent_mean_trace*scalar_b2 + 2*scalar_c2)**2 - (-12*independent_mean_trace*natural_log_curvature*scalar_a1 + 4*natural_curvature_density_momentum*scalar_a1/(3*independent_positive_hat_scale**3))*(2*independent_mean_matter_charge_density*natural_matter_density_momentum*scalar_d1/independent_positive_hat_scale**3 + natural_log_curvature*(-3*independent_mean_matter_charge_density**2*scalar_d1 - 3*independent_mean_trace**2*scalar_a1 + 3*scalar_c1 + 4*nonzero_comoving_scalar_momentum**2*scalar_f1/independent_positive_hat_scale**2) + natural_curvature_density_momentum*(2*independent_mean_trace*scalar_a1 + scalar_b1)/(3*independent_positive_hat_scale**3))/(2*independent_mean_matter_charge_density**2*scalar_d2 + 2*independent_mean_trace**2*scalar_a2 + 2*independent_mean_trace*scalar_b2 + 2*scalar_c2))/3",
+      "mean_matter_field_direct_source": "independent_positive_hat_scale**3*(4*independent_mean_matter_charge_density*scalar_d2*(2*independent_mean_matter_charge_density*natural_matter_density_momentum*scalar_d1/independent_positive_hat_scale**3 + natural_log_curvature*(-3*independent_mean_matter_charge_density**2*scalar_d1 - 3*independent_mean_trace**2*scalar_a1 + 3*scalar_c1 + 4*nonzero_comoving_scalar_momentum**2*scalar_f1/independent_positive_hat_scale**2) + natural_curvature_density_momentum*(2*independent_mean_trace*scalar_a1 + scalar_b1)/(3*independent_positive_hat_scale**3))**2/(2*independent_mean_matter_charge_density**2*scalar_d2 + 2*independent_mean_trace**2*scalar_a2 + 2*independent_mean_trace*scalar_b2 + 2*scalar_c2)**2 - natural_matter*scalar_e0*(-3*independent_mean_matter_charge_density*natural_matter - 9*independent_mean_trace*natural_log_curvature + natural_curvature_density_momentum/independent_positive_hat_scale**3)/4 + scalar_d0*(9*independent_mean_matter_charge_density*natural_log_curvature**2 - 6*natural_log_curvature*natural_matter_density_momentum/independent_positive_hat_scale**3) - (-12*independent_mean_matter_charge_density*natural_log_curvature*scalar_d1 + 4*natural_matter_density_momentum*scalar_d1/independent_positive_hat_scale**3)*(2*independent_mean_matter_charge_density*natural_matter_density_momentum*scalar_d1/independent_positive_hat_scale**3 + natural_log_curvature*(-3*independent_mean_matter_charge_density**2*scalar_d1 - 3*independent_mean_trace**2*scalar_a1 + 3*scalar_c1 + 4*nonzero_comoving_scalar_momentum**2*scalar_f1/independent_positive_hat_scale**2) + natural_curvature_density_momentum*(2*independent_mean_trace*scalar_a1 + scalar_b1)/(3*independent_positive_hat_scale**3))/(2*independent_mean_matter_charge_density**2*scalar_d2 + 2*independent_mean_trace**2*scalar_a2 + 2*independent_mean_trace*scalar_b2 + 2*scalar_c2))",
+      "mean_trace_direct_source": "independent_mean_matter_charge_density*independent_positive_hat_scale**3*(4*independent_mean_matter_charge_density*scalar_d2*(2*independent_mean_matter_charge_density*natural_matter_density_momentum*scalar_d1/independent_positive_hat_scale**3 + natural_log_curvature*(-3*independent_mean_matter_charge_density**2*scalar_d1 - 3*independent_mean_trace**2*scalar_a1 + 3*scalar_c1 + 4*nonzero_comoving_scalar_momentum**2*scalar_f1/independent_positive_hat_scale**2) + natural_curvature_density_momentum*(2*independent_mean_trace*scalar_a1 + scalar_b1)/(3*independent_positive_hat_scale**3))**2/(2*independent_mean_matter_charge_density**2*scalar_d2 + 2*independent_mean_trace**2*scalar_a2 + 2*independent_mean_trace*scalar_b2 + 2*scalar_c2)**2 - natural_matter*scalar_e0*(-3*independent_mean_matter_charge_density*natural_matter - 9*independent_mean_trace*natural_log_curvature + natural_curvature_density_momentum/independent_positive_hat_scale**3)/4 + scalar_d0*(9*independent_mean_matter_charge_density*natural_log_curvature**2 - 6*natural_log_curvature*natural_matter_density_momentum/independent_positive_hat_scale**3) - (-12*independent_mean_matter_charge_density*natural_log_curvature*scalar_d1 + 4*natural_matter_density_momentum*scalar_d1/independent_positive_hat_scale**3)*(2*independent_mean_matter_charge_density*natural_matter_density_momentum*scalar_d1/independent_positive_hat_scale**3 + natural_log_curvature*(-3*independent_mean_matter_charge_density**2*scalar_d1 - 3*independent_mean_trace**2*scalar_a1 + 3*scalar_c1 + 4*nonzero_comoving_scalar_momentum**2*scalar_f1/independent_positive_hat_scale**2) + natural_curvature_density_momentum*(2*independent_mean_trace*scalar_a1 + scalar_b1)/(3*independent_positive_hat_scale**3))/(2*independent_mean_matter_charge_density**2*scalar_d2 + 2*independent_mean_trace**2*scalar_a2 + 2*independent_mean_trace*scalar_b2 + 2*scalar_c2)) - independent_positive_hat_scale*(independent_positive_hat_scale**3*(scalar_a0*(6*independent_mean_trace*natural_curvature_density_momentum*natural_log_curvature/independent_positive_hat_scale**4 - 2*natural_curvature_density_momentum**2/(3*independent_positive_hat_scale**7)) + scalar_d0*(18*independent_mean_matter_charge_density*natural_log_curvature*natural_matter_density_momentum/independent_positive_hat_scale**4 - 6*natural_matter_density_momentum**2/independent_positive_hat_scale**7) - (-12*independent_mean_matter_charge_density*natural_matter_density_momentum*scalar_d1/independent_positive_hat_scale**4 - 16*natural_log_curvature*nonzero_comoving_scalar_momentum**2*scalar_f1/independent_positive_hat_scale**3 - 2*natural_curvature_density_momentum*(2*independent_mean_trace*scalar_a1 + scalar_b1)/independent_positive_hat_scale**4)*(2*independent_mean_matter_charge_density*natural_matter_density_momentum*scalar_d1/independent_positive_hat_scale**3 + natural_log_curvature*(-3*independent_mean_matter_charge_density**2*scalar_d1 - 3*independent_mean_trace**2*scalar_a1 + 3*scalar_c1 + 4*nonzero_comoving_scalar_momentum**2*scalar_f1/independent_positive_hat_scale**2) + natural_curvature_density_momentum*(2*independent_mean_trace*scalar_a1 + scalar_b1)/(3*independent_positive_hat_scale**3))/(2*independent_mean_matter_charge_density**2*scalar_d2 + 2*independent_mean_trace**2*scalar_a2 + 2*independent_mean_trace*scalar_b2 + 2*scalar_c2) - 4*natural_log_curvature**2*nonzero_comoving_scalar_momentum**2*scalar_f0/independent_positive_hat_scale**3 - 2*natural_matter**2*nonzero_comoving_scalar_momentum**2*scalar_g0/independent_positive_hat_scale**3 - natural_curvature_density_momentum*scalar_e0*(-3*independent_mean_matter_charge_density*natural_matter - 9*independent_mean_trace*natural_log_curvature + natural_curvature_density_momentum/independent_positive_hat_scale**3)/(4*independent_positive_hat_scale**4)) + 3*independent_positive_hat_scale**2*(9*natural_log_curvature**2*scalar_c0/2 + scalar_a0*(9*independent_mean_trace**2*natural_log_curvature**2/2 - 2*independent_mean_trace*natural_curvature_density_momentum*natural_log_curvature/independent_positive_hat_scale**3 + natural_curvature_density_momentum**2/(9*independent_positive_hat_scale**6)) + scalar_d0*(9*independent_mean_matter_charge_density**2*natural_log_curvature**2/2 - 6*independent_mean_matter_charge_density*natural_log_curvature*natural_matter_density_momentum/independent_positive_hat_scale**3 + natural_matter_density_momentum**2/independent_positive_hat_scale**6) + scalar_e0*(-3*independent_mean_matter_charge_density*natural_matter - 9*independent_mean_trace*natural_log_curvature + natural_curvature_density_momentum/independent_positive_hat_scale**3)**2/24 - (2*independent_mean_matter_charge_density*natural_matter_density_momentum*scalar_d1/independent_positive_hat_scale**3 + natural_log_curvature*(-3*independent_mean_matter_charge_density**2*scalar_d1 - 3*independent_mean_trace**2*scalar_a1 + 3*scalar_c1 + 4*nonzero_comoving_scalar_momentum**2*scalar_f1/independent_positive_hat_scale**2) + natural_curvature_density_momentum*(2*independent_mean_trace*scalar_a1 + scalar_b1)/(3*independent_positive_hat_scale**3))**2/(2*independent_mean_matter_charge_density**2*scalar_d2 + 2*independent_mean_trace**2*scalar_a2 + 2*independent_mean_trace*scalar_b2 + 2*scalar_c2) + 2*natural_log_curvature**2*nonzero_comoving_scalar_momentum**2*scalar_f0/independent_positive_hat_scale**2 + natural_matter**2*nonzero_comoving_scalar_momentum**2*scalar_g0/independent_positive_hat_scale**2))/3",
+      "raw_density_quadratic_Hamiltonian": "independent_positive_hat_scale**3*(9*natural_log_curvature**2*scalar_c0/2 + scalar_a0*(9*independent_mean_trace**2*natural_log_curvature**2/2 - 2*independent_mean_trace*natural_curvature_density_momentum*natural_log_curvature/independent_positive_hat_scale**3 + natural_curvature_density_momentum**2/(9*independent_positive_hat_scale**6)) + scalar_d0*(9*independent_mean_matter_charge_density**2*natural_log_curvature**2/2 - 6*independent_mean_matter_charge_density*natural_log_curvature*natural_matter_density_momentum/independent_positive_hat_scale**3 + natural_matter_density_momentum**2/independent_positive_hat_scale**6) + scalar_e0*(-3*independent_mean_matter_charge_density*natural_matter - 9*independent_mean_trace*natural_log_curvature + natural_curvature_density_momentum/independent_positive_hat_scale**3)**2/24 - (2*independent_mean_matter_charge_density*natural_matter_density_momentum*scalar_d1/independent_positive_hat_scale**3 + natural_log_curvature*(-3*independent_mean_matter_charge_density**2*scalar_d1 - 3*independent_mean_trace**2*scalar_a1 + 3*scalar_c1 + 4*nonzero_comoving_scalar_momentum**2*scalar_f1/independent_positive_hat_scale**2) + natural_curvature_density_momentum*(2*independent_mean_trace*scalar_a1 + scalar_b1)/(3*independent_positive_hat_scale**3))**2/(2*independent_mean_matter_charge_density**2*scalar_d2 + 2*independent_mean_trace**2*scalar_a2 + 2*independent_mean_trace*scalar_b2 + 2*scalar_c2) + 2*natural_log_curvature**2*nonzero_comoving_scalar_momentum**2*scalar_f0/independent_positive_hat_scale**2 + natural_matter**2*nonzero_comoving_scalar_momentum**2*scalar_g0/independent_positive_hat_scale**2)",
+      "symbols": {
+        "a": [
+          "scalar_a0",
+          "scalar_a1",
+          "scalar_a2",
+          "scalar_a3"
+        ],
+        "b": [
+          "scalar_b0",
+          "scalar_b1",
+          "scalar_b2",
+          "scalar_b3"
+        ],
+        "c": [
+          "scalar_c0",
+          "scalar_c1",
+          "scalar_c2",
+          "scalar_c3"
+        ],
+        "d": [
+          "scalar_d0",
+          "scalar_d1",
+          "scalar_d2",
+          "scalar_d3"
+        ],
+        "e": [
+          "scalar_e0",
+          "scalar_e1",
+          "scalar_e2",
+          "scalar_e3"
+        ],
+        "f": [
+          "scalar_f0",
+          "scalar_f1",
+          "scalar_f2",
+          "scalar_f3"
+        ],
+        "g": [
+          "scalar_g0",
+          "scalar_g1",
+          "scalar_g2",
+          "scalar_g3"
+        ]
+      },
+      "uneliminated_quadratic_density": "9*natural_log_curvature**2*scalar_c0/2 + scalar_a0*(9*independent_mean_trace**2*natural_log_curvature**2/2 - 2*independent_mean_trace*natural_curvature_density_momentum*natural_log_curvature/independent_positive_hat_scale**3 + natural_curvature_density_momentum**2/(9*independent_positive_hat_scale**6)) + scalar_d0*(9*independent_mean_matter_charge_density**2*natural_log_curvature**2/2 - 6*independent_mean_matter_charge_density*natural_log_curvature*natural_matter_density_momentum/independent_positive_hat_scale**3 + natural_matter_density_momentum**2/independent_positive_hat_scale**6) + scalar_e0*(-3*independent_mean_matter_charge_density*natural_matter - 9*independent_mean_trace*natural_log_curvature + natural_curvature_density_momentum/independent_positive_hat_scale**3)**2/24 + 2*natural_log_curvature**2*nonzero_comoving_scalar_momentum**2*scalar_f0/independent_positive_hat_scale**2 + natural_matter**2*nonzero_comoving_scalar_momentum**2*scalar_g0/independent_positive_hat_scale**2"
+    },
+    "literal_lapse_coefficient_jets": {
+      "a": [
+        "-3/4",
+        "-3*(2*u**6 + 6*u**4 + 6*u**2 + 3)/(8*(u**2 + 1)**3)",
+        "3*(2*u**6 + 6*u**4 + 6*u**2 - 3)/(16*(u**2 + 1)**6)",
+        "-9*(4*u**12 + 24*u**10 + 60*u**8 + 60*u**6 - 36*u**2 - 1)/(32*(u**2 + 1)**9)",
+        "9*(32*u**18 + 288*u**16 + 1152*u**14 + 2428*u**12 + 2472*u**10 + 132*u**8 - 2092*u**6 - 1488*u**4 - 12*u**2 - 3)/(64*(u**2 + 1)**12)"
+      ],
+      "b": [
+        "0",
+        "-9*u/(u**2 + 1)**4",
+        "9*u*(3*u**6 + 9*u**4 + 9*u**2 + 2)/(u**2 + 1)**7",
+        "-27*u*(8*u**12 + 48*u**10 + 120*u**8 + 152*u**6 + 96*u**4 + 24*u**2 - 1)/(2*(u**2 + 1)**10)",
+        "27*u*(80*u**18 + 720*u**16 + 2880*u**14 + 6576*u**12 + 9216*u**10 + 7920*u**8 + 3840*u**6 + 720*u**4 - 144*u**2 - 3)/(4*(u**2 + 1)**13)"
+      ],
+      "c": [
+        "(8000*u**22 + 81600*u**20 + 376000*u**18 + 1032000*u**16 + 1872000*u**14 + 2352000*u**12 + 2083200*u**10 + 1296000*u**8 + 552000*u**6 + 152000*u**4 + 24000*u**2 + 1601)/(200*(u**2 + 1)**12)",
+        "(19200*u**28 + 249600*u**26 + 1497600*u**24 + 5472000*u**22 + 13536000*u**20 + 23846400*u**18 + 30643200*u**16 + 28915200*u**14 + 19872000*u**12 + 9696000*u**10 + 3187200*u**8 + 633598*u**6 + 57594*u**4 - 6*u**2 + 1)/(400*(u**2 + 1)**15)",
+        "-(6400*u**34 + 96000*u**32 + 665600*u**30 + 2667200*u**28 + 6140800*u**26 + 4846432*u**24 - 18366816*u**22 - 81024288*u**20 - 173462560*u**18 - 247770560*u**16 - 254149056*u**14 - 191016840*u**12 - 104664304*u**10 - 40701080*u**8 - 10600290*u**6 - 1632318*u**4 - 102774*u**2 + 2433)/(800*(u**2 + 1)**18)",
+        "3*(12800*u**40 + 230400*u**38 + 1945600*u**36 + 9696000*u**34 + 28960000*u**32 + 37734528*u**30 - 85986880*u**28 - 614370560*u**26 - 1822292256*u**24 - 3601099232*u**22 - 5221765152*u**20 - 5739877296*u**18 - 4820120784*u**16 - 3064473728*u**14 - 1433730900*u**12 - 463019416*u**10 - 86890796*u**8 - 2409432*u**6 + 2773244*u**4 + 511968*u**2 + 18433)/(1600*(u**2 + 1)**21)",
+        "-3*(102400*u**46 + 2150400*u**44 + 21401600*u**42 + 127686400*u**40 + 471193600*u**38 + 871873664*u**36 - 1102085248*u**34 - 14041412608*u**32 - 54833307264*u**30 - 140339345280*u**28 - 265958645888*u**26 - 389207220928*u**24 - 446477648192*u**22 - 401264386496*u**20 - 278081927296*u**18 - 142607877952*u**16 - 48496050688*u**14 - 6411227508*u**12 + 3309565640*u**10 + 2288686324*u**8 + 657712108*u**6 + 97763496*u**4 + 6548220*u**2 + 168325)/(3200*(u**2 + 1)**24)"
+      ],
+      "d": [
+        "1/2",
+        "(2*u**6 + 6*u**4 + 6*u**2 - 1)/(4*(u**2 + 1)**3)",
+        "3*(2*u**6 + 6*u**4 + 6*u**2 + 1)/(8*(u**2 + 1)**6)",
+        "-3*(12*u**12 + 72*u**10 + 180*u**8 + 228*u**6 + 144*u**4 + 36*u**2 + 5)/(16*(u**2 + 1)**9)",
+        "3*(96*u**18 + 864*u**16 + 3456*u**14 + 7908*u**12 + 11160*u**10 + 9756*u**8 + 5084*u**6 + 1536*u**4 + 348*u**2 + 35)/(32*(u**2 + 1)**12)"
+      ],
+      "e": [
+        "2",
+        "(2*u**6 + 6*u**4 + 6*u**2 + 3)/(u**2 + 1)**3",
+        "-(2*u**6 + 6*u**4 + 6*u**2 - 3)/(2*(u**2 + 1)**6)",
+        "3*(4*u**12 + 24*u**10 + 60*u**8 + 60*u**6 - 36*u**2 - 1)/(4*(u**2 + 1)**9)",
+        "-3*(32*u**18 + 288*u**16 + 1152*u**14 + 2428*u**12 + 2472*u**10 + 132*u**8 - 2092*u**6 - 1488*u**4 - 12*u**2 - 3)/(8*(u**2 + 1)**12)"
+      ],
+      "f": [
+        "-1/2",
+        "-(2*u**6 + 6*u**4 + 6*u**2 - 1)/(4*(u**2 + 1)**3)",
+        "-3*(2*u**6 + 6*u**4 + 6*u**2 + 1)/(8*(u**2 + 1)**6)",
+        "3*(12*u**12 + 72*u**10 + 180*u**8 + 228*u**6 + 144*u**4 + 36*u**2 + 5)/(16*(u**2 + 1)**9)",
+        "-3*(96*u**18 + 864*u**16 + 3456*u**14 + 7908*u**12 + 11160*u**10 + 9756*u**8 + 5084*u**6 + 1536*u**4 + 348*u**2 + 35)/(32*(u**2 + 1)**12)"
+      ],
+      "g": [
+        "1/2",
+        "(2*u**6 + 6*u**4 + 6*u**2 + 3)/(4*(u**2 + 1)**3)",
+        "-(2*u**6 + 6*u**4 + 6*u**2 - 3)/(8*(u**2 + 1)**6)",
+        "3*(4*u**12 + 24*u**10 + 60*u**8 + 60*u**6 - 36*u**2 - 1)/(16*(u**2 + 1)**9)",
+        "-3*(32*u**18 + 288*u**16 + 1152*u**14 + 2428*u**12 + 2472*u**10 + 132*u**8 - 2092*u**6 - 1488*u**4 - 12*u**2 - 3)/(32*(u**2 + 1)**12)"
+      ]
+    },
+    "natural_geometry_and_York": {
+      "full_uneliminated_scalar_quadratic_density": "9*independent_mean_matter_charge_density**2*natural_log_curvature**2*scalar_d0/2 - 3*independent_mean_matter_charge_density**2*natural_log_curvature*nonzero_mode_lapse*scalar_d1 + 3*independent_mean_matter_charge_density**2*natural_matter**2*scalar_e0/8 + independent_mean_matter_charge_density**2*nonzero_mode_lapse**2*scalar_d2/2 + 9*independent_mean_matter_charge_density*independent_mean_trace*natural_log_curvature*natural_matter*scalar_e0/4 - independent_mean_matter_charge_density*natural_curvature_density_momentum*natural_matter*scalar_e0/(4*independent_positive_hat_scale**3) - 6*independent_mean_matter_charge_density*natural_log_curvature*natural_matter_density_momentum*scalar_d0/independent_positive_hat_scale**3 + 2*independent_mean_matter_charge_density*natural_matter_density_momentum*nonzero_mode_lapse*scalar_d1/independent_positive_hat_scale**3 + 9*independent_mean_trace**2*natural_log_curvature**2*scalar_a0/2 + 27*independent_mean_trace**2*natural_log_curvature**2*scalar_e0/8 - 3*independent_mean_trace**2*natural_log_curvature*nonzero_mode_lapse*scalar_a1 + independent_mean_trace**2*nonzero_mode_lapse**2*scalar_a2/2 + independent_mean_trace*nonzero_mode_lapse**2*scalar_b2/2 - 2*independent_mean_trace*natural_curvature_density_momentum*natural_log_curvature*scalar_a0/independent_positive_hat_scale**3 - 3*independent_mean_trace*natural_curvature_density_momentum*natural_log_curvature*scalar_e0/(4*independent_positive_hat_scale**3) + 2*independent_mean_trace*natural_curvature_density_momentum*nonzero_mode_lapse*scalar_a1/(3*independent_positive_hat_scale**3) + 9*natural_log_curvature**2*scalar_c0/2 + 3*natural_log_curvature*nonzero_mode_lapse*scalar_c1 + nonzero_mode_lapse**2*scalar_c2/2 + 2*natural_log_curvature**2*nonzero_comoving_scalar_momentum**2*scalar_f0/independent_positive_hat_scale**2 + 4*natural_log_curvature*nonzero_comoving_scalar_momentum**2*nonzero_mode_lapse*scalar_f1/independent_positive_hat_scale**2 + natural_matter**2*nonzero_comoving_scalar_momentum**2*scalar_g0/independent_positive_hat_scale**2 + natural_curvature_density_momentum*nonzero_mode_lapse*scalar_b1/(3*independent_positive_hat_scale**3) + natural_curvature_density_momentum**2*scalar_a0/(9*independent_positive_hat_scale**6) + natural_curvature_density_momentum**2*scalar_e0/(24*independent_positive_hat_scale**6) + natural_matter_density_momentum**2*scalar_d0/independent_positive_hat_scale**6",
+      "linear_York_tracefree_density": [
+        [
+          "(nonzero_wave_x**2/(nonzero_wave_x**2 + nonzero_wave_y**2 + nonzero_wave_z**2) - 1/3)*(3*independent_mean_matter_charge_density*natural_matter + 9*independent_mean_trace*natural_log_curvature - natural_curvature_density_momentum/independent_positive_hat_scale**3)/4",
+          "nonzero_wave_x*nonzero_wave_y*(3*independent_mean_matter_charge_density*natural_matter + 9*independent_mean_trace*natural_log_curvature - natural_curvature_density_momentum/independent_positive_hat_scale**3)/(4*(nonzero_wave_x**2 + nonzero_wave_y**2 + nonzero_wave_z**2))",
+          "nonzero_wave_x*nonzero_wave_z*(3*independent_mean_matter_charge_density*natural_matter + 9*independent_mean_trace*natural_log_curvature - natural_curvature_density_momentum/independent_positive_hat_scale**3)/(4*(nonzero_wave_x**2 + nonzero_wave_y**2 + nonzero_wave_z**2))"
+        ],
+        [
+          "nonzero_wave_x*nonzero_wave_y*(3*independent_mean_matter_charge_density*natural_matter + 9*independent_mean_trace*natural_log_curvature - natural_curvature_density_momentum/independent_positive_hat_scale**3)/(4*(nonzero_wave_x**2 + nonzero_wave_y**2 + nonzero_wave_z**2))",
+          "(nonzero_wave_y**2/(nonzero_wave_x**2 + nonzero_wave_y**2 + nonzero_wave_z**2) - 1/3)*(3*independent_mean_matter_charge_density*natural_matter + 9*independent_mean_trace*natural_log_curvature - natural_curvature_density_momentum/independent_positive_hat_scale**3)/4",
+          "nonzero_wave_y*nonzero_wave_z*(3*independent_mean_matter_charge_density*natural_matter + 9*independent_mean_trace*natural_log_curvature - natural_curvature_density_momentum/independent_positive_hat_scale**3)/(4*(nonzero_wave_x**2 + nonzero_wave_y**2 + nonzero_wave_z**2))"
+        ],
+        [
+          "nonzero_wave_x*nonzero_wave_z*(3*independent_mean_matter_charge_density*natural_matter + 9*independent_mean_trace*natural_log_curvature - natural_curvature_density_momentum/independent_positive_hat_scale**3)/(4*(nonzero_wave_x**2 + nonzero_wave_y**2 + nonzero_wave_z**2))",
+          "nonzero_wave_y*nonzero_wave_z*(3*independent_mean_matter_charge_density*natural_matter + 9*independent_mean_trace*natural_log_curvature - natural_curvature_density_momentum/independent_positive_hat_scale**3)/(4*(nonzero_wave_x**2 + nonzero_wave_y**2 + nonzero_wave_z**2))",
+          "(nonzero_wave_z**2/(nonzero_wave_x**2 + nonzero_wave_y**2 + nonzero_wave_z**2) - 1/3)*(3*independent_mean_matter_charge_density*natural_matter + 9*independent_mean_trace*natural_log_curvature - natural_curvature_density_momentum/independent_positive_hat_scale**3)/4"
+        ]
+      ],
+      "natural_canonical_matter_charge_density": "(independent_mean_matter_charge_density + natural_matter_density_momentum*quadratic_order/independent_positive_hat_scale**3)*exp(-3*natural_log_curvature*quadratic_order)",
+      "natural_canonical_trace_density": "(independent_mean_trace + natural_curvature_density_momentum*quadratic_order/(3*independent_positive_hat_scale**3))*exp(-3*natural_log_curvature*quadratic_order)",
+      "nonzero_mode_lapse_solution": "(-2*independent_mean_matter_charge_density*natural_matter_density_momentum*scalar_d1/independent_positive_hat_scale**3 - natural_log_curvature*(-3*independent_mean_matter_charge_density**2*scalar_d1 - 3*independent_mean_trace**2*scalar_a1 + 3*scalar_c1 + 4*nonzero_comoving_scalar_momentum**2*scalar_f1/independent_positive_hat_scale**2) - natural_curvature_density_momentum*(2*independent_mean_trace*scalar_a1 + scalar_b1)/(3*independent_positive_hat_scale**3))/(independent_mean_matter_charge_density**2*scalar_d2 + independent_mean_trace**2*scalar_a2 + independent_mean_trace*scalar_b2 + scalar_c2)"
+    }
+  },
+  "checked_scalar_entries": 166,
+  "claim": "P8-S6.106.ACTUAL_COUPLED_SCALAR_MEAN_RESPONSE",
+  "controls": {
+    "acceleration_kernel_has_opposite_signs_within_band_closure": true,
+    "discarding_direct_scalar_matter_field_source_changes_mean_equation": true,
+    "discarding_direct_scalar_scale_source_changes_mean_equation": true,
+    "discarding_intrinsic_matter_fluctuations_changes_physical_density": true,
+    "discarding_nonlinear_scalar_chart_changes_center_density": true,
+    "no_finite_amplitude_SEE_or_full_quantum_Ward_identity_claimed": true,
+    "no_heavy_cutoff_higher_loop_bound_or_V_G_B_verdict_inferred": true,
+    "no_independent_minimal_scalar_or_Proca_source_transfer": true,
+    "no_positive_lapse_for_every_unbounded_Gaussian_field_configuration_claimed": true,
+    "no_reassigned_common_absolute_tadpole_or_counterterm": true,
+    "no_uniform_infinite_tail_bound_inferred_from_local_interval": true,
+    "omitting_time_dependent_boundary_changes_scalar_Hamiltonian": true,
+    "rejected_inputs": 32,
+    "zero_added_scalar_covariance_gives_zero_calibrated_response": true
+  },
+  "date": "2026-09-09",
+  "exact_residuals": {
+    "actual_matter_charge_coefficient_jets_reconstruct_literal_rows": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        5,
+        1
+      ]
+    },
+    "actual_mean_lapse_pivot_matches_original_retuned_positive_J": "0",
+    "actual_natural_phase_generator_retains_time_dependent_boundary": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "actual_natural_scalar_Hamiltonian_is_existing_global_scalar_Hamiltonian": "0",
+    "actual_natural_scalar_generator_preserves_CCR": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "actual_nonzero_mode_lapse_Schur_reconstruction": "0",
+    "actual_nonzero_mode_lapse_stationarity": "0",
+    "actual_scalar_background_potential_jets_reconstruct_literal_retuned_rows": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        5,
+        1
+      ]
+    },
+    "actual_scalar_mean_lapse_constraint": "0",
+    "actual_scalar_mean_matter_field_source_from_fixed_canonical_charge": "0",
+    "actual_scalar_mean_scale_source_from_canonical_homogeneous_momentum": "0",
+    "actual_scalar_mean_trace_source_keeps_volume_and_charge_chain": "0",
+    "actual_scalar_source_reflection_actual_mean_lapse_source": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "actual_scalar_source_reflection_mean_hat_scale_direct_source": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "actual_scalar_source_reflection_mean_matter_field_direct_source": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "actual_scalar_source_reflection_mean_trace_direct_source": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "actual_scalar_state_reversal_keeps_background_matter_sign": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "all_center_phase_pairs_of_scalar_mean_lapse_match_independent_constraint": "0",
+    "all_center_physical_density_pairs_match_independent_nonlinear_observable": "0",
+    "both_natural_canonical_momentum_shifts_are_symplectic": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "linear_York_constraint_in_all_cartesian_directions": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        1
+      ]
+    },
+    "linear_York_momentum_is_tracefree": "0",
+    "literal_background_lapse_differentiation_retains_third_pivot_jet": "0",
+    "literal_canonical_volume_and_curvature_quadratic_expansion": "0",
+    "literal_linear_York_shear_square": "0",
+    "nonzero_scalar_matter_field_source_not_discarded": "0",
+    "nonzero_scalar_scale_source_not_discarded": "0",
+    "physical_density_pressure_difference_is_actual_spatial_gradient": "0",
+    "same_classical_mean_matrix_with_four_actual_scalar_sources": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "whole_strip_additional_mean_physical_density": "0",
+    "whole_strip_induced_matter_field_integration": "0",
+    "zero_anchor_direct_scale_source_for_chosen_I4_addition": "0",
+    "zero_anchor_lapse_source_first_derivative": "0"
+  },
+  "formulation": "FORMULATION.md",
+  "independent_scalar_center_jets": {
+    "anchor_hat_scale_second_derivative": "(6480000000*nonzero_comoving_scalar_momentum**6 + 396859360000*nonzero_comoving_scalar_momentum**4 - 420124243200*nonzero_comoving_scalar_momentum**2 - 197948499209)/239148450000",
+    "anchor_induced_lapse": "(542720000*nonzero_comoving_scalar_momentum**4 - 672623400*nonzero_comoving_scalar_momentum**2 - 110222113)/1195742250",
+    "anchor_lapse_second_derivative": "-(135056128000000*nonzero_comoving_scalar_momentum**6 + 113091503520000*nonzero_comoving_scalar_momentum**4 - 463166476704800*nonzero_comoving_scalar_momentum**2 - 1744708277274507)/72641341687500",
+    "anchor_proper_Hubble_derivative_response": "-(262239056000000*nonzero_comoving_scalar_momentum**6 + 1194689444640000*nonzero_comoving_scalar_momentum**4 - 2213804346121600*nonzero_comoving_scalar_momentum**2 - 3543532836059079)/290565366750000",
+    "anchor_trace_first_derivative": "(3169120000*nonzero_comoving_scalar_momentum**4 + 10330233600*nonzero_comoving_scalar_momentum**2 - 2121890443073)/59787112500",
+    "initial_source_traces": {
+      "actual_mean_lapse_source": "(542720000*nonzero_comoving_scalar_momentum**4 - 672623400*nonzero_comoving_scalar_momentum**2 - 110222113)/393660000",
+      "mean_hat_scale_direct_source": "0",
+      "mean_matter_field_direct_source": "(40000*nonzero_comoving_scalar_momentum**4 + 487200*nonzero_comoving_scalar_momentum**2 + 5993299)/9841500",
+      "mean_trace_direct_source": "(10880000*nonzero_comoving_scalar_momentum**4 + 33455400*nonzero_comoving_scalar_momentum**2 - 6985738267)/196830000"
+    },
+    "lapse_source_second_derivative": "-(270131696000000*nonzero_comoving_scalar_momentum**6 + 410425617120000*nonzero_comoving_scalar_momentum**4 - 949146207179200*nonzero_comoving_scalar_momentum**2 - 34073141019309441)/47829690000000",
+    "scale_source_first_derivative": "(16000000*nonzero_comoving_scalar_momentum**6 + 191520000*nonzero_comoving_scalar_momentum**4 + 10148800*nonzero_comoving_scalar_momentum**2 - 10803941031)/590490000"
+  },
+  "named_exact_check_count": 33,
+  "not_established": [
+    "Uniform infinite-tail response bounds, a globally complete scalar-perturbed representative, or a quantum state co-evolved on a new mean metric",
+    "A common absolute coupled source, full covariant/BRST quantum Ward identity, exact finite-amplitude semiclassical solution, or nonlinear/higher-loop remainder control",
+    "A conserved homogeneous fluid identification for the coordinate-averaged matter jet, finite total R3 energy, or positive lapse for every unbounded Gaussian field configuration",
+    "A heavy spectrum/cutoff, omitted-operator bounds, actual vacuum/finite-gravity/common-parent V/G/B matching, UV completion, or a universal exclusion from one quadratic sign",
+    "Original P8(b) classification or original P8 closure"
+  ],
+  "prior_sha256": {
+    "S6_105_fully_rebuilt": "376eb054220d5c3aa9147de2a55f88043452aca53cb54591e992110a50942b68",
+    "only_a_named_natural_scalar_band_covariance_added": true,
+    "same_original_retuned_action_and_physical_metric": true,
+    "same_reference_other_five_modes_and_counterterms": true
+  },
+  "proof_checks": {
+    "absolute_source_higher_orders_global_quantum_bounce_and_V_G_B_open": true,
+    "all_four_actual_mean_sources_retained": true,
+    "both_momentum_shifts_and_time_boundary_match_existing_scalar_generator": true,
+    "bound_actual_generator_whole_strip_bound": true,
+    "bound_additional_mean_density_bound": true,
+    "bound_calibrated_frame_remains_positive_on_strip": true,
+    "bound_center_acceleration_absolute_bound": true,
+    "bound_center_hat_scale_second_derivative_bound": true,
+    "bound_center_lapse_absolute_bound": true,
+    "bound_center_lapse_second_derivative_bound": true,
+    "bound_complete_physical_density_pressure_bound": true,
+    "bound_exact_frame_center_bounce_numerator_above_three": true,
+    "bound_fundamental_matrix_exponent_below_one": true,
+    "bound_intrinsic_physical_density_bound": true,
+    "bound_intrinsic_physical_pressure_bound": true,
+    "bound_lapse_covariance_source_bound": true,
+    "bound_matter_field_covariance_source_bound": true,
+    "bound_mean_constraint_lapse_bound": true,
+    "bound_mean_exact_frame_scale_bound": true,
+    "bound_mean_field_bound": true,
+    "bound_mean_field_derivative_bound": true,
+    "bound_mean_forcing_bound": true,
+    "bound_mean_physical_linear_scale_bound": true,
+    "bound_mean_retarded_phase_bound": true,
+    "bound_scale_covariance_source_bound": true,
+    "bound_trace_covariance_source_bound": true,
+    "exact_global_scalar_evolution_preserves_positive_CCR_and_smooth_difference": true,
+    "finite_homogeneous_density_not_finite_total_R3_energy": true,
+    "homogeneous_background_kept_independent_before_variation": true,
+    "independent_center_constraint_and_density_comparisons_are_full_polynomial": true,
+    "literal_canonical_exponential_volume_and_York_shear_derived": true,
+    "local_exact_frame_representative_is_not_a_quantum_solution": true,
+    "matter_charge_not_reset_when_field_velocity_source_is_nonzero": true,
+    "mean_solution_exists_at_all_finite_times_but_uniform_tails_not_claimed": true,
+    "no_simple_homogeneous_fluid_Ward_identity_assumed_for_scalar_observable": true,
+    "only_nonzero_momentum_lapse_eliminated_in_quadratic_field_action": true,
+    "other_five_mode_factors_reference_state_and_counterterms_unchanged": true,
+    "positive_I4_band_addition_named_in_natural_anchor_phase": true,
+    "same_original_retuned_action_and_physical_matter_frame": true,
+    "scalar_matter_observable_keeps_intrinsic_fluctuations_and_mean_once": true,
+    "scalar_state_reflection_keeps_odd_matter_coordinate": true,
+    "third_background_lapse_jet_retained_in_actual_source": true,
+    "whole_strip_and_band_bounds_are_exact_coefficient_not_grid_estimates": true
+  },
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "74592c777233bc97c0f248816099388b617290e8ddac5bbe6e848fd45f64cdd8",
+    "README.md": "20bf0a017a8d7a21893e1e7a1052e6886701e5c02f51312e496f7ad0e04303f5",
+    "notes/action.md": "93f679cb9d6c99bf6426ad15ba310a785e210080e8f3caf85d0e8cc908f0ea85",
+    "notes/bounds.md": "01ddb4db644fd6f8ef109c65db3a3c39efd9232841d97a576c4f99121d122b92",
+    "notes/center.md": "186ec382923c5655bef3f0d04300097459d2d895e8093c3d19e1f0d4c8303ce7",
+    "notes/mean.md": "c0b6b49e41716932f74b568580ef7af73f228c911067d78a2aa1485f528f0530",
+    "notes/observable.md": "d7ced7ce9370b3573daa645b031cd67603e7c8018c92c43b145c63cf20d4eace",
+    "notes/phase.md": "6dafa10e2ab9b21a20765a4bd0914665e2033be3fab9fa212b302c17c2ee1e8f",
+    "notes/scope.md": "4f2e1dd6db9bd7a0f1a04ed11106a241b2bab11f4c67b58c5cf05ac55d0a1392",
+    "src/p8_scalar_mean_source/__init__.py": "3cccb400cf004e2316f167bd43d110184da750f0d676a143aab9d6e941986c7a",
+    "src/p8_scalar_mean_source/audit.py": "b458e90c74ba2c0ec695156c2bcf646bfe1c54395b9f9822a577b7d77bfb1099",
+    "src/p8_scalar_mean_source/bounds.py": "eb0cbc209b0eea573678717221ad0daab0a5931b884c31c7d271463f5051886e",
+    "src/p8_scalar_mean_source/calibration.py": "e1dfb0ed539c83e79299ced33baa4ed530da87293dcbf6f85e11392cc7c2fcdd",
+    "src/p8_scalar_mean_source/geometry.py": "ffac2dd0ca2c4a3406b12b0c1b6bf032790169cdf0619f58873a1ea14f9c3406",
+    "src/p8_scalar_mean_source/model.py": "537da291acb3aaceda53b58b1904cd6341c6abc0625271ef1d99a52611ab45c3",
+    "src/p8_scalar_mean_source/observable.py": "bcee358d2d41527fe8b28e4b27c04ce6570c2a36778b3deb046fd4f8ed8edbf9",
+    "src/p8_scalar_mean_source/response.py": "d3e65f39f0bbc140827946b99429a671cd31470d23d243337e3786de9dbc0679",
+    "src/p8_scalar_mean_source/source.py": "ed7519a9a4472377d06e54195e60391d5adf101d32f218c4adac73abab16d4fa",
+    "src/p8_scalar_mean_source/verify.py": "9095185f20156daf907fa3810e1ff85b8a733c16ccbba455cda20ce9867f722c",
+    "tests/test_scalar_mean_source_certificate.py": "f2a8512df4b096c265c1d3f6dc16e73dba21ad3fbb8ea6a2e13ae62274205eea",
+    "tests/test_scalar_mean_source_science.py": "62b1a402d7e8c58381e341be10ae719a0a521e3020dbad46f0996d1d4c9ab417"
+  },
+  "status": "COMPLETE_ACTUAL_COUPLED_SCALAR_QUADRATIC_BACKGROUND_VARIATION_FOUR_MEAN_SOURCES_POSITIVE_FINITE_STATE_DIFFERENCE_AND_PHYSICAL_MATTER_OBSERVABLE_WITH_EXACT_COMPACT_BOUNCE_INTERVAL_CONTROL; NOT_UNIFORM_INFINITE_TAIL_CONTROL_AN_ABSOLUTE_OR_EXACT_SEMICLASSICAL_SOLUTION_HIGHER_ORDER_CONTROL_V_G_B_OR_ORIGINAL_P8_CLOSURE",
+  "verdict": "Independent homogeneous-background variation of the original scalar quadratic action yields the actual lapse, scale, trace and matter-field sources. Both canonical shifts and the time boundary reproduce the existing coupled scalar dynamics exactly. A named positive smooth scalar covariance addition preserves the reference's generalized Hadamard condition and its other five modes. Full center constraint/physical-density polynomials and exact whole-strip bounds control the leading mean response and actual matter observable. A positive local bouncing metric representative is obtained, but uniform scalar tails, an absolute or self-consistent quantum solution, higher-order errors and V/G/B matching remain open.",
+  "verification_boundary": "Native actual retuned coefficient reconstruction, independent canonical-volume/York/lapse elimination, mean variation before background restriction, complete time-dependent scalar phase bridge, source transport and full center observable/constraint comparisons. Whole-strip rational bounds reject unsupported coefficient structures. State/ODE and local geometric proofs are source-pinned but not proof-assistant formalized. Complete kernel fingerprints are recomputed from exact rational coefficients, not substitutes for kernel derivation. Every ancestor, own source/proof/test byte and report field is independently replayed with unmodified scientific SymPy.",
+  "whole_interval_state_and_response_bounds": {
+    "actual_fundamental_matrix_infinity_norm_upper": "3",
+    "actual_generator_row_sums": [
+      "21519333986565556635643277953739017526256517523538255035858001440009/237304687500000000000000000000000000000000000000000000000000000000000",
+      "519887862071426630330941782064788436504230043/379687500000000000000000000000000000000000000",
+      "2722183346994851925725890173313653238334717273482309556864374812538880407669704958540093/31640625000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "102605028005600700056002800080001/25000000000000000000000000000000"
+    ],
+    "actual_source_half_entry_sums": {
+      "actual_mean_lapse_source": "7452150812738380861320207060632200415414835606627288232275793622838202330050290370548845239793292704257070260047980779193890811949763681395851001504000604317954664957242394976899587149246021/200225830078125000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "mean_hat_scale_direct_source": "8595073049304372723009678944571545683244029827644961299070707005189954891021320339391580925688170121782940955545088250958712570282679299/8649755859375000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "mean_matter_field_direct_source": "52116891958640170247006347976323532299764411922580453735887112015214579156985081146459803121848541804954717149121211125588128980989820289/9610839843750000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "mean_trace_direct_source": "289061935193019963811662823098873584592892341223478026002188058246584309195409886274458651746426189642210101468513257956073199926477586544940147181099769315188676693340676234210279/7208129882812500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "added_covariance_each_entry_absolute_upper_per_eta": "9",
+    "additional_mean_density_and_pressure_absolute_upper_per_eta": "2",
+    "bounds": {
+      "actual_generator_whole_strip_bound": true,
+      "additional_mean_density_bound": true,
+      "calibrated_frame_remains_positive_on_strip": true,
+      "center_acceleration_absolute_bound": true,
+      "center_hat_scale_second_derivative_bound": true,
+      "center_lapse_absolute_bound": true,
+      "center_lapse_second_derivative_bound": true,
+      "complete_physical_density_pressure_bound": true,
+      "exact_frame_center_bounce_numerator_above_three": true,
+      "fundamental_matrix_exponent_below_one": true,
+      "intrinsic_physical_density_bound": true,
+      "intrinsic_physical_pressure_bound": true,
+      "lapse_covariance_source_bound": true,
+      "matter_field_covariance_source_bound": true,
+      "mean_constraint_lapse_bound": true,
+      "mean_exact_frame_scale_bound": true,
+      "mean_field_bound": true,
+      "mean_field_derivative_bound": true,
+      "mean_forcing_bound": true,
+      "mean_physical_linear_scale_bound": true,
+      "mean_retarded_phase_bound": true,
+      "scale_covariance_source_bound": true,
+      "trace_covariance_source_bound": true
+    },
+    "center_hat_scale_second_derivative_absolute_upper_per_eta": "40",
+    "center_lapse_absolute_upper_per_eta": "10",
+    "center_lapse_second_derivative_absolute_upper_per_eta": "200",
+    "center_proper_Hubble_derivative_absolute_upper_per_eta": "200",
+    "closed_momentum_root_interval": [
+      "1",
+      "2"
+    ],
+    "closed_time_half_width": "1/100",
+    "complete_physical_density_and_pressure_absolute_upper_per_eta": "40",
+    "complete_two_component_mean_forcing_upper_per_eta": "410",
+    "exact_center_coefficient_bounds": {
+      "anchor_hat_scale_second_derivative": "2880971744003/79716150000",
+      "anchor_induced_lapse": "3828078571/398580750",
+      "anchor_lapse_second_derivative": "4683476810804569/24213780562500",
+      "anchor_proper_Hubble_derivative_response": "16099026972928493/96855122250000"
+    },
+    "exact_generator_infinity_norm_upper": "90",
+    "explicit_calibration": {
+      "center_proper_Hubble_derivative_absolute_upper": "1/500000000000000000",
+      "complete_physical_density_and_pressure_absolute_upper": "1/2500000000000000000",
+      "eta": "1/100000000000000000000",
+      "mean_exact_frame_log_scale_upper": "13/10000000000000000000",
+      "mean_lapse_upper": "3/2500000000000000000",
+      "mean_linear_physical_log_scale_upper": "33/50000000000000000000",
+      "mean_matter_field_upper": "1/100000000000000000000",
+      "mean_scale_and_trace_upper": "1/20000000000000000000"
+    },
+    "four_scalar_source_absolute_uppers_per_eta": {
+      "lapse": "350",
+      "matter_field": "60",
+      "scale": "10",
+      "trace": "400"
+    },
+    "intrinsic_observable_half_entry_sum_bounds": {
+      "intrinsic_density_Hessian": "544751389287610043639071330942824881264890693190606617834125138614870132998251503765787237523922584856824340725826116940225503652735700119/144162597656250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "intrinsic_pressure_Hessian": "352534592412610043639071330942824881264890693190606617834125138614870132998251503765787237523922584856824340725826116940225503652735700119/144162597656250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "intrinsic_physical_density_and_pressure_absolute_upper_per_eta": "36",
+    "mean_exact_frame_log_scale_upper_per_eta": "130",
+    "mean_lapse_upper_per_eta": "120",
+    "mean_linear_physical_log_scale_upper_per_eta": "66",
+    "mean_matter_field_derivative_upper_per_eta": "70",
+    "mean_matter_field_upper_per_eta": "1",
+    "mean_scale_and_trace_upper_per_eta": "5"
+  },
+  "written_proofs": [
+    "notes/action.md",
+    "notes/phase.md",
+    "notes/mean.md",
+    "notes/observable.md",
+    "notes/bounds.md",
+    "notes/center.md",
+    "notes/scope.md"
+  ]
+}
