@@ -1,0 +1,305 @@
+{
+  "actual_thermal_history": {
+    "actual_initial_zeta_squared": "(20/9)*delta*(1-4*lambda)<1/5000^2",
+    "anchor": "a0=1,y0=2,Q=12*(1-4*lambda)/(kappa*tau^2)",
+    "endpoint_x_strict_interval": [
+      "1/16",
+      "1/4"
+    ],
+    "endpoint_zeta_squared": "50; the future small field cap fails near the endpoint",
+    "energy": "Q=hbar*pi^2/(30*beta_T^4)",
+    "exact_clock": "x=Phi(2)-Phi(y), Phi=1/(2*y)+sqrt(lambda)*atanh(sqrt(lambda)*y)/2",
+    "exact_scale": "a^4=4*(1-4*lambda)/(y^2*(1-lambda*y^2))",
+    "future_state_cap_verified_on_every_shorter_segment": false,
+    "named_prescription": "beta_S=Lambda=T_other=0, no independent nonzero gravitational R^2 term",
+    "new_QEI_only_endpoint_argument": false,
+    "new_occupation_state": "one scalar oscillator with n(k)=(exp(beta_T*k)-1)^-1",
+    "own_SEE_coupling": "lambda=delta/360, not 31*delta/180",
+    "past_actual_C3_and_state_gates_verified": true,
+    "physical_relative_Wick_square": "hbar/(12*a^2*beta_T^2)"
+  },
+  "checked_scalar_entries": 72,
+  "claim": "P8-A.20.NONMINIMAL_CONFORMAL_QSEI_COSMOLOGY",
+  "coherent_obstruction": {
+    "actual_global_field": "compact smooth Cauchy cutoff equals polynomial data on radius 2*tau, vanishes outside radius 3*tau; exact wave evolution",
+    "actual_self_consistent_SEE_counterexample": false,
+    "conclusion": "every fixed nonzero real compact average in (-tau,tau) is unbounded below over this Hadamard family",
+    "each_state_has_finite_energy": true,
+    "family_has_uniform_energy_or_field_strength_bound": false,
+    "local_exact_field": "A*(3+(t/tau)^2+|X|^2/(3*tau^2))",
+    "sampled_EED": "A^2/tau^2*((4/3)*(t/tau)^2-2)<=-2*A^2/(3*tau^2) for |t|<=tau",
+    "state": "actual positive finite-norm coherent displacement; vacuum plus smooth field outer product"
+  },
+  "conformal_source": {
+    "actual_reference": "hbar/(2880*pi^2)*(H3+beta_S*I), tensors defined in notes/anomaly.md",
+    "additional_gravitational_R_squared_source_silently_discarded": false,
+    "convention": "g_FK=(+---), R=6*(H'+2*H^2), G_00=-3*H^2",
+    "full_trace_conservation_and_EED_checked": true,
+    "new_finite_beta_S_not_identified_with_photon_or_older_scalar_parameters": true,
+    "physical_zero_type_D_scalar_density": "hbar*H^4/(960*pi^2)",
+    "reference_trace_anomaly_omitted": false
+  },
+  "controls": {
+    "future_complete_geometry_plus_scalar_conformal_vacuum_is_not_a_small_budget_SEE_witness": true,
+    "future_state_amplitude_not_inferred_from_past": true,
+    "rejected_inputs": 55
+  },
+  "cosmological_theorem": {
+    "SEE": "G_FK+Lambda*g_FK=-kappa*(T_scalar+T_other), E_other>=ell",
+    "actual_C3_tube": "tau*H(tau*x)+p/(p/2-x), p in [1/2,2/3], derivative suprema <=(1/100,1/2,3,16)",
+    "actual_past": "x=s/tau in [-1/100,0], with smooth endpoint neighborhoods",
+    "conclusion": "stipulated global proper-clock endpoint <=tau; timelike geodesic incompleteness and all timelike curve lengths from zero <=tau",
+    "delta": "kappa*hbar/(8*pi^2*tau^2)",
+    "derived_past_contraction": "H<=-19/(10*tau)",
+    "distinct_past_and_future_caps": "d=(21/10,9,70,800), c=(4,128,16384,1048576)",
+    "future_caps_derived_from_past_or_effective_Newton_positivity": false,
+    "future_geometry_hypothesis": "IF a normal reaches tau, |H^(j)(s)|<=c_j/(tau-s)^(j+1) on its whole segment",
+    "gates": "delta*(1+abs(beta_S))<=1e-8, zeta=kappa*Phi_*^2/3<=1/5000, sigma<=5",
+    "inextendibility_or_endpoint_EFT_control_in_every_larger_spacetime": false,
+    "initial_pointwise_SEC_is_an_independent_premise": false,
+    "sigma": "tau^2*(max(Lambda,0)+kappa*max(-ell,0))",
+    "state_hypothesis": "one-sided physical Wick cap on actual past, and IF reaching tau on its whole future segment",
+    "strict_worst_margin": "63325013/350000000 >9/50",
+    "this_specific_radiation_tube_exhibits_initial_SEC_violation": false
+  },
+  "date": "2026-09-09",
+  "derived_constants": {
+    "costs": {
+      "Wick_square_cost": "1679141/10000",
+      "actual_past_ratio": "1/100",
+      "future_Wick_square_cost": "169/4",
+      "future_caps": [
+        "4",
+        "128",
+        "16384",
+        "1048576"
+      ],
+      "past_Wick_square_cost": "1256641/10000",
+      "past_caps": [
+        "21/10",
+        "9",
+        "70",
+        "800"
+      ],
+      "positive_C0_margin": "1891859528737/75000000",
+      "positive_Cbeta_margin": "49154690152627/10500000",
+      "scalar_C0": "373108140471263/75000000",
+      "scalar_Cbeta": "3345309847373/10500000"
+    },
+    "gate": {
+      "future_geometry_and_state_amplitude_are_conditional_hypotheses_not_verified_from_past": true,
+      "margin_above_nine_fiftieths": "325013/350000000",
+      "sigma": "5",
+      "strict_focusing_margin": "63325013/350000000",
+      "weighted_delta": "1/100000000",
+      "zeta_upper_kappa_Phi_square_over_three": "1/5000"
+    },
+    "independent_Fraction_reconstruction_agrees": true,
+    "thermal": {
+      "actual_thermal_past_at_delta_max": {
+        "C3_errors": [
+          "1/56250000000",
+          "3/1562500000",
+          "101/585937500",
+          "2404/146484375"
+        ],
+        "a_past_lower": "1",
+        "actual_scalar_state_and_SEE_past": true,
+        "anchor_H0_times_tau": "2",
+        "backward_y_bounds": [
+          "50/27",
+          "2"
+        ],
+        "beta_S": "0",
+        "delta": "1/100000000",
+        "future_state_cap_proved_on_every_shorter_segment": false,
+        "initial_and_past_zeta_squared_upper": "8999999999/405000000000000000",
+        "lambda": "1/36000000000",
+        "past_x": [
+          "-1/100",
+          "0"
+        ],
+        "sigma": "0",
+        "strict_C3_margins": [
+          "562499999/56250000000",
+          "781249997/1562500000",
+          "1757812399/585937500",
+          "2343747596/146484375"
+        ],
+        "strict_squared_field_gate_margin": "7200000001/405000000000000000"
+      },
+      "endpoint_x_strict_bounds": [
+        "1/16",
+        "1/4"
+      ],
+      "endpoint_zeta_squared": "50",
+      "future_Wick_bound_is_a_conditional_theorem_hypothesis": true,
+      "generic_ODE_comparison_coupling_margin": "2249999999/36000000000",
+      "lambda_to_delta": "1/360",
+      "state_Wick_to_energy_coefficient_without_hbar_over_pi_squared": "5/24",
+      "thermal_branch_is_not_a_new_QEI_only_endpoint_argument": true
+    }
+  },
+  "exact_residuals": {
+    "actual_scalar_state_and_SEE_history": {
+      "actual_low_branch_positive_EED": "0",
+      "actual_relative_Wick_square_Bose_moment": "0",
+      "actual_scalar_SEE_density": "0",
+      "actual_scalar_delta_dictionary_not_photon": "0",
+      "anchored_scale_factor": "0",
+      "continuous_scalar_C3_response_identity_1": "0",
+      "continuous_scalar_C3_response_identity_2": "0",
+      "continuous_scalar_C3_response_identity_3": "0",
+      "endpoint_field_budget_not_uniformly_small": "0",
+      "exact_low_branch_pressure_solution": "0",
+      "exact_scalar_density_first_integral": "0",
+      "exact_scalar_proper_clock": "0",
+      "exact_scalar_scale_factor_clock": "0",
+      "full_scalar_stress_conservation": "0",
+      "independent_scalar_SEE_pressure": "0",
+      "initial_actual_field_amplitude_from_same_thermal_state": "0",
+      "one_real_scalar_thermal_Bose_energy": "0",
+      "own_scalar_reference_density_coefficient": "0",
+      "positive_oscillator_CCR_difference": "0",
+      "reciprocal_clock_history_identity": "0",
+      "same_state_energy_Wick_square_relation": "0"
+    },
+    "fresh_physical_scalar_reference_and_anomaly": {
+      "conformal_reference_EED_keeps_anomaly_trace": "0",
+      "finite_beta_scalar_reference_trace": "0",
+      "fresh_scalar_anomaly_density_contraction": "0",
+      "fresh_scalar_anomaly_trace_contraction": "0",
+      "full_physical_scalar_reference_conservation": "0",
+      "new_beta_is_coefficient_of_same_covariant_I_variation": "0",
+      "one_real_scalar_HH_to_FK_physical_density": "0",
+      "radiation_actual_scalar_reference_EED": "0",
+      "radiation_scalar_finite_beta_vanishes": "0",
+      "scalar_Euler_coefficient_is_one_half_not_photon_thirty_one": "0"
+    },
+    "nonminimal_cosmological_history_and_cost": {
+      "actual_nonminimal_focusing_margin": "0",
+      "actual_nonminimal_strict_margin_above_point_eighteen": "0",
+      "cubic_cross_relative_endpoint_moment": "0",
+      "cubic_state_weight_relative_endpoint_moment": "0",
+      "fresh_Wick_square_cost_constant": "0",
+      "fresh_scalar_C0_constant": "0",
+      "fresh_scalar_Cbeta_constant": "0",
+      "future_state_cost_dominates_exact_polynomial_upper": "0",
+      "geometric_square_identity_without_pointwise_SEC": "0",
+      "past_state_cost_dominates_exact_polynomial_upper": "0"
+    },
+    "nonminimal_stress_conformal_and_coherent": {
+      "all_component_conformal_stress_weight": {
+        "all_entries_exactly_zero": true,
+        "shape": [
+          4,
+          4
+        ]
+      },
+      "coherent_conformal_energy_is_EED": "0",
+      "coherent_line_exact_negative_formula": "0",
+      "coherent_local_example_solves_massless_equation": "0",
+      "conformal_field_equation": "0",
+      "conformal_offshell_trace_is_equation_term": "0",
+      "conformal_spectral_coefficient": "0",
+      "flat_offshell_trace": "0",
+      "flat_on_shell_energy_before_sampler": "0",
+      "positive_sampler_squares_exact_boundary": "0",
+      "spectral_coefficient_exact": "0"
+    },
+    "two_measure_correct_proper_clock_terms": {
+      "actual_conformal_scalar_Wick_square_coefficient": "0",
+      "actual_conformal_scalar_quantum_to_delta_ratio": "0",
+      "physical_Wick_square_weight_keeps_extra_scale_squared": "0",
+      "proper_conformal_energy_measure": "0",
+      "proper_conformal_second_derivative_norm": "0"
+    }
+  },
+  "field_qsei": {
+    "actual_physical_bound": "integral E_omega*f^2 >= -7*hbar/(144*pi^2)*||L_H f||^2 -(1/3)*integral w_omega*|G_H f|^2 +integral E_conf*f^2",
+    "compact_H2_zero_value_and_derivative_trace_extension": true,
+    "extra_a_squared_in_flat_Wick_penalty_measure_retained": true,
+    "field": "one real free massless scalar with xi=1/6 on smooth positive global flat FLRW",
+    "flat_positive_square_range": "0<=xi<=1/4; cosmological conformal transport only at xi=1/6",
+    "flat_quantum_coefficient": "hbar*(3-4*xi)/(48*pi^2)",
+    "one_sided_state_cap": "w_omega<=Phi_*^2, Phi_*^2>=0; not an absolute positive Wick square",
+    "optimal_or_null_bound_claimed": false,
+    "proper_clock_G": "f'-3*H*f/2",
+    "proper_clock_L": "f''-2*H*f'+(3*H^2/4-3*H'/2)*f",
+    "targets": "all Hadamard states; no homogeneity, quasifree or global Minkowski extension requirement",
+    "w_omega": "physical relative Wick square against the conformal vacuum on the actual strip"
+  },
+  "formulation": "FORMULATION.md",
+  "named_exact_check_count": 57,
+  "not_established": [
+    "State-independent all-Hadamard averaged lower bound without a state qualification; the explicit coherent family rules it out here",
+    "Optimal or null bound, generic nonconformal coupling, mass, interactions, arbitrary spacetime or observed-universe theorem",
+    "Future geometric or field-strength bounds from the actual short thermal past or effective Newton positivity",
+    "New QEI-only thermal endpoint argument, fundamental endpoint EFT control, or inextendibility in every larger spacetime",
+    "Original P8(a), P8(b) UV classification, V/G/B matching, full interacting coupled-system stress, or original P8 closure"
+  ],
+  "prior_sha256": {
+    "A19_fully_rebuilt_with_A18_A17_A16_ancestry": "d77f1a4ef293c53c70bb7fd540b473c557c36018dfbea558ea1af9afc147375c",
+    "only_geometric_sampler_tube_and_generic_ODE_lemmas_reused": true,
+    "photon_field_QSEI_anomaly_state_or_coupling_substituted": false
+  },
+  "proof_checks": {
+    "actual_endpoint_state_amplitude_violates_small_field_gate": true,
+    "actual_scalar_thermal_past_strictly_inside_all_C3_caps": true,
+    "actual_scalar_thermal_past_strictly_inside_squared_state_gate": true,
+    "actual_worst_gate_margin_exceeds_nine_fiftieths": true,
+    "all_flat_positive_square_coefficients_nonnegative_at_conformal_xi": true,
+    "coherent_line_energy_uniformly_negative_on_closed_sample_interval": true,
+    "endpoint_integral_lower_bound_has_valid_scalar_coupling": true,
+    "flat_counterexample_polynomial_is_not_claimed_finite_energy_before_cutoff": true,
+    "fresh_scalar_C0_below_five_million": true,
+    "fresh_scalar_Cbeta_below_five_million": true,
+    "future_Wick_square_cap_not_inferred_from_past_or_effective_Newton_constant": true,
+    "future_geometric_caps_not_inferred_from_past": true,
+    "generic_ODE_comparison_lemma_has_valid_scalar_coupling": true,
+    "nonminimal_obstruction_is_not_a_self_consistent_SEE_counterexample": true,
+    "one_scalar_thermal_energy_coefficient_is_not_photon_coefficient": true,
+    "own_thermal_low_branch_has_strict_initial_denominator": true,
+    "past_square_root_cubic_norm_upper": true,
+    "proper_clock_both_operators_retain_correct_scale_factors": true,
+    "quantitative_bound_is_not_claimed_optimal_or_null_averaged": true,
+    "relative_state_weight_square_root_upper": true,
+    "scalar_SEE_coupling_is_not_photon_coupling": true,
+    "scalar_spectral_coefficient_independently_reconstructed": true,
+    "state_cost_is_positive_and_not_deleted": true
+  },
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "92e422075590f17a7fff4726e67aed8d9efc0426fa9a3547864a133641f2148d",
+    "README.md": "b06a1d425c4cc667fad2e94c639029c4de9010ac84b63acd0a850738304cc2ff",
+    "notes/anomaly.md": "fac7a8cb157019332f8a5af719e1f258fa5b747ac9c02d2400cf4482e04ac539",
+    "notes/cosmology.md": "a6efb458765db01fdb47c8442d2141f301e5de9a8e675e96e81024ce8ad9acf8",
+    "notes/field.md": "3dcc9af4a06073929e520777288b7f07b48fe62c7dd534c7f84809e07a3a5ca1",
+    "notes/scope.md": "c55c3d2a78e9e122e166244587175b9383e571586f79d323461f54d2a8730f6d",
+    "notes/sources.md": "8b2db5968be1907e2280b8942bc82d56568f7c3cfc31ebf93ead5b235bd43b95",
+    "notes/thermal.md": "847c21da04ec23e5b7af2f521d8e833a260c40a1c9b4872142367a4a48275d48",
+    "src/p8a_nonminimal/__init__.py": "7ddcb07dbdba51ce5a71016f07253dda33ee2a63b059d59c982ec588e55cdd1f",
+    "src/p8a_nonminimal/audit.py": "73ff78079daed269b76a9ff52db07148657d18f949f6e07e1c44ca21d0248df9",
+    "src/p8a_nonminimal/clock.py": "58ec59ba96bdbe504e99f42ba812ff0db3e937814810318ff45742ce5b77c678",
+    "src/p8a_nonminimal/cosmology.py": "6d0be9c381787275f50972f302ac736aa0b39b819b7d23ff858b852e4bb2e3af",
+    "src/p8a_nonminimal/field.py": "6ee940bfb1ff6474256c3095bc58fcf6bd15cd843c4be9192f2a87c133a92d72",
+    "src/p8a_nonminimal/independent.py": "5f6490e212cc4b37e381a23bf5c6b8f3c3d664ebb92072bed7a9fc9c197971ef",
+    "src/p8a_nonminimal/stress.py": "c459e216fae3b5ecd0c64ad5973a3f28f389d3e22108722101b876aca8165205",
+    "src/p8a_nonminimal/thermal.py": "02f6a88c8d570850fa2921c31f52aa2220ae86968ef87aa54f7cab4f3313f44a",
+    "src/p8a_nonminimal/verify.py": "f4cdaed6c3514cacc3e55673f87c39d7ae07edd4a33901ede61946c239dc6f5b",
+    "tests/conftest.py": "3c451821dd34aab381184d0bf4764a3c4bf386ca847cee5697ba09d9e832615b",
+    "tests/test_nonminimal_certificate.py": "7cf75b45131b23e8c54d3dc02c8d6962d572f0186847ff2da3085c71b764deff",
+    "tests/test_nonminimal_science.py": "019293820d44ae05c9198dec2d1ad21de2725c1d258cd651a5e5ca273c6909e8"
+  },
+  "status": "COMPLETE_NAMED_NONMINIMAL_CONFORMAL_SCALAR_STATE_DEPENDENT_QSEI_COSMOLOGICAL_GATES_COHERENT_ABSOLUTE_BOUND_OBSTRUCTION_AND_ACTUAL_THERMAL_SEE_PAST; GENERAL_NONMINIMAL_NULL_SHARPNESS_AND_ORIGINAL_P8_OPEN",
+  "verdict": "A separately normalized conformally coupled scalar has an exact state-dependent QSEI and a cosmological-scale global-FLRW incompleteness calibration with positive margin above 9/50 under explicit quantum, physical field-strength and source gates. A finite-energy coherent family excludes deleting all state qualifications. A new one-scalar thermal SEE branch realizes the required short past and small field gate, not the conditional future cap. General nonminimal/null/sharp and original P8 obligations remain open.",
+  "verification_boundary": "Native full-component stress, exact flat spectral moments, both proper-clock measures, scalar reference conservation/trace, generic continuous-ODE identities and independent Fraction costs. Source-pinned analytic Hadamard, positivity, finite-propagation, Sobolev and global square proofs are written, not proof-assistant formalized or independently peer reviewed. Parent field coefficients are not reused.",
+  "written_proofs": [
+    "notes/field.md",
+    "notes/anomaly.md",
+    "notes/cosmology.md",
+    "notes/thermal.md",
+    "notes/scope.md",
+    "notes/sources.md"
+  ]
+}
