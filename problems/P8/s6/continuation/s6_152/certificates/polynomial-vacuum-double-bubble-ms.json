@@ -1,0 +1,974 @@
+{
+  "actual_MS_forests_and_full_scale_factors": {
+    "conversion": {
+      "MS_selected_channel": "C**3*(finite_I_R + ell/Q)**2/4 + C**2*(finite_I_R + ell/Q)*(full_T_A + full_T_B)/4",
+      "complete_linear_scale_term": "C**3*ell*finite_I_R/(2*Q) + C**2*ell*(full_T_A + full_T_B)/(4*Q)",
+      "complete_quadratic_scale_term": "C**3*ell**2/(4*Q**2)",
+      "old_selected_channel": "C**3*finite_I_R**2/4 + C**2*finite_I_R*(full_T_A + full_T_B)/4",
+      "same_parent_raw_selected_channel": "regulated_light_bubble**2*(external_heavy_inverse*positive_cubic_squared - positive_quartic)**3/4 + regulated_light_bubble*(external_heavy_inverse*positive_cubic_squared - positive_quartic)**2*(left_triangle2 + left_triangle3 + right_triangle2 + right_triangle3)/4",
+      "scope": "The exact old family with I_R replaced by I_R+ell/Q after the complete MS forest cancellation. Both heavy triangles and full external heavy poles are retained. The separately owned finite triangle-triangle terms are not counted again. No local reference or first-order product is added a second time."
+    },
+    "forests": {
+      "MS_inner_pole": "1/(Q*epsilon)",
+      "actual_MS_forest_rows": [
+        {
+          "choices": [
+            0,
+            0,
+            0
+          ],
+          "mode": "overlap",
+          "renormalized_form": "(epsilon**2*evanescent_second + epsilon*evanescent_first + finite_bubble)**2",
+          "terms": [
+            {
+              "forest": [],
+              "term": "(epsilon**2*evanescent_second + epsilon*evanescent_first + finite_bubble + 1/(Q*epsilon))**2"
+            },
+            {
+              "forest": [
+                0
+              ],
+              "term": "-(epsilon**2*evanescent_second + epsilon*evanescent_first + finite_bubble + 1/(Q*epsilon))/(Q*epsilon)"
+            },
+            {
+              "forest": [
+                1
+              ],
+              "term": "-(epsilon**2*evanescent_second + epsilon*evanescent_first + finite_bubble + 1/(Q*epsilon))/(Q*epsilon)"
+            },
+            {
+              "forest": [
+                2
+              ],
+              "term": "-2*finite_bubble/(Q*epsilon) - 1/(Q**2*epsilon**2)"
+            },
+            {
+              "forest": [
+                0,
+                2
+              ],
+              "term": "finite_bubble/(Q*epsilon) + 1/(Q**2*epsilon**2)"
+            },
+            {
+              "forest": [
+                1,
+                2
+              ],
+              "term": "finite_bubble/(Q*epsilon) + 1/(Q**2*epsilon**2)"
+            }
+          ]
+        },
+        {
+          "choices": [
+            0,
+            0,
+            1
+          ],
+          "mode": "disjoint",
+          "renormalized_form": "(epsilon**2*evanescent_second + epsilon*evanescent_first + finite_bubble)**2",
+          "terms": [
+            {
+              "forest": [],
+              "term": "(epsilon**2*evanescent_second + epsilon*evanescent_first + finite_bubble + 1/(Q*epsilon))**2"
+            },
+            {
+              "forest": [
+                0
+              ],
+              "term": "-(epsilon**2*evanescent_second + epsilon*evanescent_first + finite_bubble + 1/(Q*epsilon))/(Q*epsilon)"
+            },
+            {
+              "forest": [
+                1
+              ],
+              "term": "-(epsilon**2*evanescent_second + epsilon*evanescent_first + finite_bubble + 1/(Q*epsilon))/(Q*epsilon)"
+            },
+            {
+              "forest": [
+                0,
+                1
+              ],
+              "term": "1/(Q**2*epsilon**2)"
+            }
+          ]
+        },
+        {
+          "choices": [
+            0,
+            1,
+            0
+          ],
+          "mode": "overlap",
+          "renormalized_form": "(epsilon**2*evanescent_second + epsilon*evanescent_first + finite_bubble)**2",
+          "terms": [
+            {
+              "forest": [],
+              "term": "(epsilon**2*evanescent_second + epsilon*evanescent_first + finite_bubble + 1/(Q*epsilon))**2"
+            },
+            {
+              "forest": [
+                0
+              ],
+              "term": "-(epsilon**2*evanescent_second + epsilon*evanescent_first + finite_bubble + 1/(Q*epsilon))/(Q*epsilon)"
+            },
+            {
+              "forest": [
+                1
+              ],
+              "term": "-(epsilon**2*evanescent_second + epsilon*evanescent_first + finite_bubble + 1/(Q*epsilon))/(Q*epsilon)"
+            },
+            {
+              "forest": [
+                2
+              ],
+              "term": "-2*finite_bubble/(Q*epsilon) - 1/(Q**2*epsilon**2)"
+            },
+            {
+              "forest": [
+                0,
+                2
+              ],
+              "term": "finite_bubble/(Q*epsilon) + 1/(Q**2*epsilon**2)"
+            },
+            {
+              "forest": [
+                1,
+                2
+              ],
+              "term": "finite_bubble/(Q*epsilon) + 1/(Q**2*epsilon**2)"
+            }
+          ]
+        },
+        {
+          "choices": [
+            0,
+            1,
+            1
+          ],
+          "mode": "disjoint",
+          "renormalized_form": "(epsilon**2*evanescent_second + epsilon*evanescent_first + finite_bubble)**2",
+          "terms": [
+            {
+              "forest": [],
+              "term": "(epsilon**2*evanescent_second + epsilon*evanescent_first + finite_bubble + 1/(Q*epsilon))**2"
+            },
+            {
+              "forest": [
+                0
+              ],
+              "term": "-(epsilon**2*evanescent_second + epsilon*evanescent_first + finite_bubble + 1/(Q*epsilon))/(Q*epsilon)"
+            },
+            {
+              "forest": [
+                1
+              ],
+              "term": "-(epsilon**2*evanescent_second + epsilon*evanescent_first + finite_bubble + 1/(Q*epsilon))/(Q*epsilon)"
+            },
+            {
+              "forest": [
+                0,
+                1
+              ],
+              "term": "1/(Q**2*epsilon**2)"
+            }
+          ]
+        },
+        {
+          "choices": [
+            0,
+            2,
+            0
+          ],
+          "mode": "single",
+          "renormalized_form": "full_finite_triangle*(epsilon**2*evanescent_second + epsilon*evanescent_first + finite_bubble)",
+          "terms": [
+            {
+              "forest": [],
+              "term": "full_finite_triangle*(epsilon**2*evanescent_second + epsilon*evanescent_first + finite_bubble + 1/(Q*epsilon))"
+            },
+            {
+              "forest": [
+                0
+              ],
+              "term": "-full_finite_triangle/(Q*epsilon)"
+            }
+          ]
+        },
+        {
+          "choices": [
+            0,
+            2,
+            1
+          ],
+          "mode": "single",
+          "renormalized_form": "full_finite_triangle*(epsilon**2*evanescent_second + epsilon*evanescent_first + finite_bubble)",
+          "terms": [
+            {
+              "forest": [],
+              "term": "full_finite_triangle*(epsilon**2*evanescent_second + epsilon*evanescent_first + finite_bubble + 1/(Q*epsilon))"
+            },
+            {
+              "forest": [
+                0
+              ],
+              "term": "-full_finite_triangle/(Q*epsilon)"
+            }
+          ]
+        },
+        {
+          "choices": [
+            0,
+            3,
+            0
+          ],
+          "mode": "single",
+          "renormalized_form": "full_finite_triangle*(epsilon**2*evanescent_second + epsilon*evanescent_first + finite_bubble)",
+          "terms": [
+            {
+              "forest": [],
+              "term": "full_finite_triangle*(epsilon**2*evanescent_second + epsilon*evanescent_first + finite_bubble + 1/(Q*epsilon))"
+            },
+            {
+              "forest": [
+                0
+              ],
+              "term": "-full_finite_triangle/(Q*epsilon)"
+            }
+          ]
+        },
+        {
+          "choices": [
+            0,
+            3,
+            1
+          ],
+          "mode": "single",
+          "renormalized_form": "full_finite_triangle*(epsilon**2*evanescent_second + epsilon*evanescent_first + finite_bubble)",
+          "terms": [
+            {
+              "forest": [],
+              "term": "full_finite_triangle*(epsilon**2*evanescent_second + epsilon*evanescent_first + finite_bubble + 1/(Q*epsilon))"
+            },
+            {
+              "forest": [
+                0
+              ],
+              "term": "-full_finite_triangle/(Q*epsilon)"
+            }
+          ]
+        },
+        {
+          "choices": [
+            1,
+            0,
+            0
+          ],
+          "mode": "overlap",
+          "renormalized_form": "(epsilon**2*evanescent_second + epsilon*evanescent_first + finite_bubble)**2",
+          "terms": [
+            {
+              "forest": [],
+              "term": "(epsilon**2*evanescent_second + epsilon*evanescent_first + finite_bubble + 1/(Q*epsilon))**2"
+            },
+            {
+              "forest": [
+                0
+              ],
+              "term": "-(epsilon**2*evanescent_second + epsilon*evanescent_first + finite_bubble + 1/(Q*epsilon))/(Q*epsilon)"
+            },
+            {
+              "forest": [
+                1
+              ],
+              "term": "-(epsilon**2*evanescent_second + epsilon*evanescent_first + finite_bubble + 1/(Q*epsilon))/(Q*epsilon)"
+            },
+            {
+              "forest": [
+                2
+              ],
+              "term": "-2*finite_bubble/(Q*epsilon) - 1/(Q**2*epsilon**2)"
+            },
+            {
+              "forest": [
+                0,
+                2
+              ],
+              "term": "finite_bubble/(Q*epsilon) + 1/(Q**2*epsilon**2)"
+            },
+            {
+              "forest": [
+                1,
+                2
+              ],
+              "term": "finite_bubble/(Q*epsilon) + 1/(Q**2*epsilon**2)"
+            }
+          ]
+        },
+        {
+          "choices": [
+            1,
+            0,
+            1
+          ],
+          "mode": "disjoint",
+          "renormalized_form": "(epsilon**2*evanescent_second + epsilon*evanescent_first + finite_bubble)**2",
+          "terms": [
+            {
+              "forest": [],
+              "term": "(epsilon**2*evanescent_second + epsilon*evanescent_first + finite_bubble + 1/(Q*epsilon))**2"
+            },
+            {
+              "forest": [
+                0
+              ],
+              "term": "-(epsilon**2*evanescent_second + epsilon*evanescent_first + finite_bubble + 1/(Q*epsilon))/(Q*epsilon)"
+            },
+            {
+              "forest": [
+                1
+              ],
+              "term": "-(epsilon**2*evanescent_second + epsilon*evanescent_first + finite_bubble + 1/(Q*epsilon))/(Q*epsilon)"
+            },
+            {
+              "forest": [
+                0,
+                1
+              ],
+              "term": "1/(Q**2*epsilon**2)"
+            }
+          ]
+        },
+        {
+          "choices": [
+            1,
+            1,
+            0
+          ],
+          "mode": "overlap",
+          "renormalized_form": "(epsilon**2*evanescent_second + epsilon*evanescent_first + finite_bubble)**2",
+          "terms": [
+            {
+              "forest": [],
+              "term": "(epsilon**2*evanescent_second + epsilon*evanescent_first + finite_bubble + 1/(Q*epsilon))**2"
+            },
+            {
+              "forest": [
+                0
+              ],
+              "term": "-(epsilon**2*evanescent_second + epsilon*evanescent_first + finite_bubble + 1/(Q*epsilon))/(Q*epsilon)"
+            },
+            {
+              "forest": [
+                1
+              ],
+              "term": "-(epsilon**2*evanescent_second + epsilon*evanescent_first + finite_bubble + 1/(Q*epsilon))/(Q*epsilon)"
+            },
+            {
+              "forest": [
+                2
+              ],
+              "term": "-2*finite_bubble/(Q*epsilon) - 1/(Q**2*epsilon**2)"
+            },
+            {
+              "forest": [
+                0,
+                2
+              ],
+              "term": "finite_bubble/(Q*epsilon) + 1/(Q**2*epsilon**2)"
+            },
+            {
+              "forest": [
+                1,
+                2
+              ],
+              "term": "finite_bubble/(Q*epsilon) + 1/(Q**2*epsilon**2)"
+            }
+          ]
+        },
+        {
+          "choices": [
+            1,
+            1,
+            1
+          ],
+          "mode": "disjoint",
+          "renormalized_form": "(epsilon**2*evanescent_second + epsilon*evanescent_first + finite_bubble)**2",
+          "terms": [
+            {
+              "forest": [],
+              "term": "(epsilon**2*evanescent_second + epsilon*evanescent_first + finite_bubble + 1/(Q*epsilon))**2"
+            },
+            {
+              "forest": [
+                0
+              ],
+              "term": "-(epsilon**2*evanescent_second + epsilon*evanescent_first + finite_bubble + 1/(Q*epsilon))/(Q*epsilon)"
+            },
+            {
+              "forest": [
+                1
+              ],
+              "term": "-(epsilon**2*evanescent_second + epsilon*evanescent_first + finite_bubble + 1/(Q*epsilon))/(Q*epsilon)"
+            },
+            {
+              "forest": [
+                0,
+                1
+              ],
+              "term": "1/(Q**2*epsilon**2)"
+            }
+          ]
+        },
+        {
+          "choices": [
+            1,
+            2,
+            0
+          ],
+          "mode": "single",
+          "renormalized_form": "full_finite_triangle*(epsilon**2*evanescent_second + epsilon*evanescent_first + finite_bubble)",
+          "terms": [
+            {
+              "forest": [],
+              "term": "full_finite_triangle*(epsilon**2*evanescent_second + epsilon*evanescent_first + finite_bubble + 1/(Q*epsilon))"
+            },
+            {
+              "forest": [
+                0
+              ],
+              "term": "-full_finite_triangle/(Q*epsilon)"
+            }
+          ]
+        },
+        {
+          "choices": [
+            1,
+            2,
+            1
+          ],
+          "mode": "single",
+          "renormalized_form": "full_finite_triangle*(epsilon**2*evanescent_second + epsilon*evanescent_first + finite_bubble)",
+          "terms": [
+            {
+              "forest": [],
+              "term": "full_finite_triangle*(epsilon**2*evanescent_second + epsilon*evanescent_first + finite_bubble + 1/(Q*epsilon))"
+            },
+            {
+              "forest": [
+                0
+              ],
+              "term": "-full_finite_triangle/(Q*epsilon)"
+            }
+          ]
+        },
+        {
+          "choices": [
+            1,
+            3,
+            0
+          ],
+          "mode": "single",
+          "renormalized_form": "full_finite_triangle*(epsilon**2*evanescent_second + epsilon*evanescent_first + finite_bubble)",
+          "terms": [
+            {
+              "forest": [],
+              "term": "full_finite_triangle*(epsilon**2*evanescent_second + epsilon*evanescent_first + finite_bubble + 1/(Q*epsilon))"
+            },
+            {
+              "forest": [
+                0
+              ],
+              "term": "-full_finite_triangle/(Q*epsilon)"
+            }
+          ]
+        },
+        {
+          "choices": [
+            1,
+            3,
+            1
+          ],
+          "mode": "single",
+          "renormalized_form": "full_finite_triangle*(epsilon**2*evanescent_second + epsilon*evanescent_first + finite_bubble)",
+          "terms": [
+            {
+              "forest": [],
+              "term": "full_finite_triangle*(epsilon**2*evanescent_second + epsilon*evanescent_first + finite_bubble + 1/(Q*epsilon))"
+            },
+            {
+              "forest": [
+                0
+              ],
+              "term": "-full_finite_triangle/(Q*epsilon)"
+            }
+          ]
+        },
+        {
+          "choices": [
+            2,
+            0,
+            0
+          ],
+          "mode": "single",
+          "renormalized_form": "full_finite_triangle*(epsilon**2*evanescent_second + epsilon*evanescent_first + finite_bubble)",
+          "terms": [
+            {
+              "forest": [],
+              "term": "full_finite_triangle*(epsilon**2*evanescent_second + epsilon*evanescent_first + finite_bubble + 1/(Q*epsilon))"
+            },
+            {
+              "forest": [
+                0
+              ],
+              "term": "-full_finite_triangle/(Q*epsilon)"
+            }
+          ]
+        },
+        {
+          "choices": [
+            2,
+            0,
+            1
+          ],
+          "mode": "single",
+          "renormalized_form": "full_finite_triangle*(epsilon**2*evanescent_second + epsilon*evanescent_first + finite_bubble)",
+          "terms": [
+            {
+              "forest": [],
+              "term": "full_finite_triangle*(epsilon**2*evanescent_second + epsilon*evanescent_first + finite_bubble + 1/(Q*epsilon))"
+            },
+            {
+              "forest": [
+                0
+              ],
+              "term": "-full_finite_triangle/(Q*epsilon)"
+            }
+          ]
+        },
+        {
+          "choices": [
+            2,
+            1,
+            0
+          ],
+          "mode": "single",
+          "renormalized_form": "full_finite_triangle*(epsilon**2*evanescent_second + epsilon*evanescent_first + finite_bubble)",
+          "terms": [
+            {
+              "forest": [],
+              "term": "full_finite_triangle*(epsilon**2*evanescent_second + epsilon*evanescent_first + finite_bubble + 1/(Q*epsilon))"
+            },
+            {
+              "forest": [
+                0
+              ],
+              "term": "-full_finite_triangle/(Q*epsilon)"
+            }
+          ]
+        },
+        {
+          "choices": [
+            2,
+            1,
+            1
+          ],
+          "mode": "single",
+          "renormalized_form": "full_finite_triangle*(epsilon**2*evanescent_second + epsilon*evanescent_first + finite_bubble)",
+          "terms": [
+            {
+              "forest": [],
+              "term": "full_finite_triangle*(epsilon**2*evanescent_second + epsilon*evanescent_first + finite_bubble + 1/(Q*epsilon))"
+            },
+            {
+              "forest": [
+                0
+              ],
+              "term": "-full_finite_triangle/(Q*epsilon)"
+            }
+          ]
+        },
+        {
+          "choices": [
+            3,
+            0,
+            0
+          ],
+          "mode": "single",
+          "renormalized_form": "full_finite_triangle*(epsilon**2*evanescent_second + epsilon*evanescent_first + finite_bubble)",
+          "terms": [
+            {
+              "forest": [],
+              "term": "full_finite_triangle*(epsilon**2*evanescent_second + epsilon*evanescent_first + finite_bubble + 1/(Q*epsilon))"
+            },
+            {
+              "forest": [
+                0
+              ],
+              "term": "-full_finite_triangle/(Q*epsilon)"
+            }
+          ]
+        },
+        {
+          "choices": [
+            3,
+            0,
+            1
+          ],
+          "mode": "single",
+          "renormalized_form": "full_finite_triangle*(epsilon**2*evanescent_second + epsilon*evanescent_first + finite_bubble)",
+          "terms": [
+            {
+              "forest": [],
+              "term": "full_finite_triangle*(epsilon**2*evanescent_second + epsilon*evanescent_first + finite_bubble + 1/(Q*epsilon))"
+            },
+            {
+              "forest": [
+                0
+              ],
+              "term": "-full_finite_triangle/(Q*epsilon)"
+            }
+          ]
+        },
+        {
+          "choices": [
+            3,
+            1,
+            0
+          ],
+          "mode": "single",
+          "renormalized_form": "full_finite_triangle*(epsilon**2*evanescent_second + epsilon*evanescent_first + finite_bubble)",
+          "terms": [
+            {
+              "forest": [],
+              "term": "full_finite_triangle*(epsilon**2*evanescent_second + epsilon*evanescent_first + finite_bubble + 1/(Q*epsilon))"
+            },
+            {
+              "forest": [
+                0
+              ],
+              "term": "-full_finite_triangle/(Q*epsilon)"
+            }
+          ]
+        },
+        {
+          "choices": [
+            3,
+            1,
+            1
+          ],
+          "mode": "single",
+          "renormalized_form": "full_finite_triangle*(epsilon**2*evanescent_second + epsilon*evanescent_first + finite_bubble)",
+          "terms": [
+            {
+              "forest": [],
+              "term": "full_finite_triangle*(epsilon**2*evanescent_second + epsilon*evanescent_first + finite_bubble + 1/(Q*epsilon))"
+            },
+            {
+              "forest": [
+                0
+              ],
+              "term": "-full_finite_triangle/(Q*epsilon)"
+            }
+          ]
+        }
+      ],
+      "entire_regulated_bubble": "epsilon**2*evanescent_second + epsilon*evanescent_first + finite_bubble + 1/(Q*epsilon)",
+      "nested_overall_pole_part": "finite_bubble/(Q*epsilon) + 1/(Q**2*epsilon**2)",
+      "raw_overall_pole_part": "2*finite_bubble/(Q*epsilon) + 1/(Q**2*epsilon**2)",
+      "same_forest_class_counts": {
+        "disjoint": 4,
+        "overlap": 4,
+        "single": 16
+      },
+      "scope": "All actual parent restricted forests are evaluated with MS pole projections. The shared pair is absent; raw and nested overall projections carry different finite-bubble simple poles before their cancellation. The finite triangle remains whole in a single-core subtraction.",
+      "symbols": {
+        "Q": "Q",
+        "epsilon": "epsilon"
+      }
+    }
+  },
+  "actual_double_bubble_MS_enclosure": {
+    "actual_double_bubble_MS_enclosure": {
+      "complete_MS_double_bubble_relative_upper": "157815848069731146097183227539062499999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999998383965715765953063964843750000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000005773555755615234374999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999991966132812500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003/94371840000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "complete_MS_double_bubble_upper": "157815848069731146097183227539062499999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999998383965715765953063964843750000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000005773555755615234374999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999991966132812500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003/23592960000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "full_linear_scale_term_upper": "10083429515361785888671874999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999896745681762695312500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000352441406249999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999599/1509949440000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "old_complete_double_bubble_upper": "2237968146800994873046874999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999977083206176757812500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000078222656249999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999911/201326592000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "quadratic_scale_b2_absolute_upper": "85830688476562499999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999414062500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001/7864320000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "quadratic_scale_b2_relative_upper": "85830688476562499999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999414062500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001/31457280000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "actual_parameters": {
+      "D": "195312500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "bare_polynomial_quartic": "292968749999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999/1280000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "cubic_coupling_squared": "1/67108864",
+      "gamma": "1/97656250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "heavy_mass_squared": "195312500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002",
+      "lambda": "1/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "positive_completed_square_quartic_margin": "195312499999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999/125000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001280000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "relative_heavy_tree_width_upper": "1/1258291200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000012884901888"
+    },
+    "actual_scale_logarithm": "400*log(10)",
+    "bounds": {
+      "actual_cubic_over_mass_below_quartic_third": true,
+      "actual_external_heavy_gap": true,
+      "actual_forward_cubic_over_D_below_quartic_half": true,
+      "actual_heavy_mass_above_thirty_two": true,
+      "actual_logarithm_argument_below_ten_to_two_hundred": true,
+      "complete_MS_double_bubble_below_seven_e_minus_612": true,
+      "complete_MS_relative_below_two_e_minus_12": true,
+      "linear_scale_below_seven_e_minus_612": true,
+      "quadratic_scale_relative_below_one_e_minus_405": true
+    },
+    "scope": "The complete 24-refinement assigned double-bubble interaction forest in MS at mu=mF, not the complete scalar/GY14 amplitude or its finite field/parameter-map assembly."
+  },
+  "checked_scalar_entries": 65,
+  "claim": "P8-S6.152.COMPLETE_DOUBLE_BUBBLE_MS_INTERACTION_FOREST",
+  "controls": {
+    "both_heavy_triangles_and_all_three_channels_required": true,
+    "finite_order_bound_not_physical_higher_loop_truncation": true,
+    "forbidden_shared_pair_not_inserted_to_fake_product": true,
+    "heavy_counterterm_products_not_recounted_as_new_contacts": true,
+    "linear_and_quadratic_scale_terms_both_required": true,
+    "original_P8_not_closed": true,
+    "other_scalar_families_and_full_field_map_open": true,
+    "raw_and_nested_finite_bubble_poles_retained": true,
+    "rejected_inputs": 94
+  },
+  "date": "2026-09-10",
+  "exact_quadratic_forward_term_and_bounds": {
+    "bounds": {
+      "both_full_heavy_triangle_upper": "16*ellH*g/(M*Q)",
+      "external_C_upper": "2*L",
+      "finite_outer_IR_upper": "2/Q",
+      "linear_scale_full_disc_upper": "L**3*ell*(16*ellH + 24)/Q**2",
+      "scope": "The inherited full complex-disc propagator and triangle bounds, not a heavy-mass expansion. Cauchy applies to the complete linear scale function. The quadratic scale piece uses its separately exact forward coefficient and retains the iterated heavy inverses."
+    },
+    "forward": {
+      "C_cubed_forward_coefficient": "3*g*(-g*(L - g/(M - 2))/(M - 2)**4 - g*(L + g/(2 - M))/(2 - M)**4 + (L - g/(M - 2))**2/(M - 2)**3 - (L + g/(2 - M))**2/(2 - M)**3)",
+      "C_cubed_relative_to_tree": "(-3*L + 3*g/(M - 2))*(-L + 2*g/(M - 2))",
+      "full_three_channel_C_cubed": "(-L + g/M)**3 + (-L + g/(M - nu - 2))**3 + (-L + g/(M + nu - 2))**3",
+      "quadratic_scale_b2": "3*ell**2*g*(-g*(L - g/(M - 2))/(M - 2)**4 - g*(L + g/(2 - M))/(2 - M)**4 + (L - g/(M - 2))**2/(M - 2)**3 - (L + g/(2 - M))**2/(2 - M)**3)/(4*Q**2)",
+      "quadratic_scale_relative_upper": "3*L**2*ell**2/(4*Q**2)",
+      "scope": "For the actual 0<g/(M-2)<L/2, the dimensionless product (1-r)(1-2r) lies in (0,1), so |b2[C^3 sum]/b2tree|<=3L^2. The h^3 heavy inverse belongs to ordinary repeated heavy counterterm insertions. This fixed contribution is not a new tunable nonlocal interaction."
+    }
+  },
+  "exact_residuals": {
+    "all_nine_primitive_rows_unchanged": "0",
+    "all_prior_matching_obligations_unchanged": "0",
+    "bounds_actual_logarithm_prefactor": "0",
+    "bounds_all_channel_core_linear_prefactor": "0",
+    "bounds_both_triangle_linear_prefactor": "0",
+    "bounds_complete_linear_sum": "0",
+    "bounds_same_loop_measure_lower": "0",
+    "bounds_same_old_prefactor": "0",
+    "calibration_full_MS_family_three_term_sum": "0",
+    "calibration_same_actual_tree": "0",
+    "calibration_same_old_assigned_family_bound": "0",
+    "conversion_complete_left_right_factorization": "0",
+    "conversion_excluded_finite_triangle_product_unchanged_by_scale": "0",
+    "conversion_full_MS_minus_old_two_distinct_scale_terms": "0",
+    "conversion_left_full_triangle_coefficient": "0",
+    "conversion_linear_scale_derivative": "0",
+    "conversion_quadratic_scale_derivative": "0",
+    "conversion_right_full_triangle_coefficient": "0",
+    "conversion_zero_scale_change_recovers_old": "0",
+    "forests_actual_MS_forest_000": "0",
+    "forests_actual_MS_forest_001": "0",
+    "forests_actual_MS_forest_010": "0",
+    "forests_actual_MS_forest_011": "0",
+    "forests_actual_MS_forest_020": "0",
+    "forests_actual_MS_forest_021": "0",
+    "forests_actual_MS_forest_030": "0",
+    "forests_actual_MS_forest_031": "0",
+    "forests_actual_MS_forest_100": "0",
+    "forests_actual_MS_forest_101": "0",
+    "forests_actual_MS_forest_110": "0",
+    "forests_actual_MS_forest_111": "0",
+    "forests_actual_MS_forest_120": "0",
+    "forests_actual_MS_forest_121": "0",
+    "forests_actual_MS_forest_130": "0",
+    "forests_actual_MS_forest_131": "0",
+    "forests_actual_MS_forest_200": "0",
+    "forests_actual_MS_forest_201": "0",
+    "forests_actual_MS_forest_210": "0",
+    "forests_actual_MS_forest_211": "0",
+    "forests_actual_MS_forest_300": "0",
+    "forests_actual_MS_forest_301": "0",
+    "forests_actual_MS_forest_310": "0",
+    "forests_actual_MS_forest_311": "0",
+    "forests_all_twenty_four_refinements": "0",
+    "forests_eight_finite_separable_refinements_excluded": "0",
+    "forests_finite_complete_square_keeps_no_unpaired_pole": "0",
+    "forests_forbidden_shared_pair_absent_000": "0",
+    "forests_forbidden_shared_pair_absent_010": "0",
+    "forests_forbidden_shared_pair_absent_100": "0",
+    "forests_forbidden_shared_pair_absent_110": "0",
+    "forests_nested_poles_retain_finite_bubble": "0",
+    "forests_overlap_overall_CT_positive_pole_square": "0",
+    "forests_proper_subtracted_overlap_poles": "0",
+    "forests_six_actual_overlap_terms_not_forbidden_pair": "0",
+    "forests_whole_raw_poles_retain_finite_bubble": "0",
+    "forward_C_cubed_keeps_heavy_cubic_inverse": "0",
+    "forward_exact_quadratic_scale_relative": "0",
+    "forward_exact_three_channel_second_coefficient": "0",
+    "forward_ordinary_disjoint_heavy_mass_product": "0",
+    "forward_relative_factorization": "0",
+    "forward_t_channel_constant_no_b2": "0",
+    "forward_unit_ratio_positive_product": "0",
+    "forward_upper_product_margin": "0",
+    "nine_primitive_rows_retained": "0",
+    "one_double_bubble_conversion_obligation_added": "0"
+  },
+  "formulation": "FORMULATION.md",
+  "named_exact_check_count": 65,
+  "not_established": [
+    "Other scalar interaction-family MS conversions and complete finite field/coupling map",
+    "Complete GY14 vacuum/source references, matched amplitude or canonical pole/error",
+    "Physical higher-loop truncation, V contour/cut control or finite-gravity G",
+    "Common-parent B or original P8 closure"
+  ],
+  "primitive_and_matching_frontier": {
+    "matching": [
+      {
+        "id": "fixed_sigma_isolated_MS_conversion",
+        "status": "CANCELLED_NONLOCAL_ORDER_TWO_WITH_SAME_REGULATED_REFERENCE"
+      },
+      {
+        "id": "remaining_scale_parameter_field_map_and_cross_terms",
+        "status": "OPEN"
+      },
+      {
+        "id": "remaining_counterterm_and_vacuum_source_assembly",
+        "status": "OPEN"
+      },
+      {
+        "id": "full_matched_two_loop_pole_and_amplitude_error",
+        "status": "OPEN"
+      },
+      {
+        "id": "finite_EFT_higher_order_truncation",
+        "status": "OPEN"
+      },
+      {
+        "id": "V_contour_and_cut_control",
+        "status": "OPEN"
+      },
+      {
+        "id": "finite_gravity_G",
+        "status": "OPEN"
+      },
+      {
+        "id": "common_parent_B",
+        "status": "OPEN"
+      },
+      {
+        "id": "complete_wineglass_interaction_forest_MS",
+        "status": "BOUNDED_WITH_REGULATED_FINITE_LOCAL_ANCHOR_AND_FULL_SCALE_TERM"
+      },
+      {
+        "id": "complete_double_bubble_interaction_forest_MS",
+        "status": "BOUNDED_WITH_ACTUAL_NESTED_MS_FORESTS_AND_BOTH_SCALE_TERMS"
+      }
+    ],
+    "primitive": [
+      {
+        "id": "scalar_Phi0_W0_F0",
+        "status": "BOUNDED_PAIRED_VACUUM_PRIMITIVE_WITH_ASSIGNED_LOCAL_FOREST"
+      },
+      {
+        "id": "scalar_Phi2_W0_F2",
+        "status": "BOUNDED_NONLOCAL_AND_FINITE_MS_MASS_AND_SLOPE_REFERENCES"
+      },
+      {
+        "id": "scalar_Phi2_W1_F0",
+        "status": "BOUNDED_PAIRED_NONLOCAL_AND_FINITE_MS_LOCAL_REFERENCES"
+      },
+      {
+        "id": "scalar_Phi4_W0_F4",
+        "status": "BOUNDED_PAIRED_PRIMITIVE_ROW"
+      },
+      {
+        "id": "scalar_Phi4_W1_F2",
+        "status": "BOUNDED_PAIRED_IN_COMMON_MS_INTERACTION_SCHEME"
+      },
+      {
+        "id": "scalar_Phi4_W2_F0",
+        "status": "BOUNDED_PAIRED_IN_COMMON_MS_INTERACTION_SCHEME"
+      },
+      {
+        "id": "gauge_Phi0",
+        "status": "BOUNDED_PAIRED_VACUUM_PRIMITIVE_WITH_ASSIGNED_LOCAL_FOREST"
+      },
+      {
+        "id": "gauge_Phi2",
+        "status": "BOUNDED_NONLOCAL_AND_FINITE_MS_MASS_AND_SLOPE_REFERENCES"
+      },
+      {
+        "id": "gauge_Phi4",
+        "status": "BOUNDED_PAIRED_PRIMITIVE_ROW"
+      }
+    ]
+  },
+  "prior_sha256": {
+    "S6_151_fully_rebuilt": "347356124e5cda2c5d2c68510c5c2f7325414f0559b49219c068b5d8e81295ad",
+    "all_prior_scientific_sources_and_reports_unchanged": true,
+    "only_double_bubble_interaction_forest_conversion_advances": true,
+    "same_GY14_nongravitational_reference_model": true
+  },
+  "proof_checks": {
+    "actual_cubic_over_mass_below_quartic_third": true,
+    "actual_external_heavy_gap": true,
+    "actual_forward_cubic_over_D_below_quartic_half": true,
+    "actual_heavy_mass_above_thirty_two": true,
+    "actual_logarithm_argument_below_ten_to_two_hundred": true,
+    "all_eight_finite_triangle_products_excluded": true,
+    "all_radius_heavy_propagators_no_expansion_or_cutoff": true,
+    "all_twenty_four_actual_restricted_MS_forests": true,
+    "both_full_heavy_triangles_and_all_three_channels": true,
+    "both_linear_and_quadratic_scale_terms_retained": true,
+    "complete_MS_double_bubble_below_seven_e_minus_612": true,
+    "complete_MS_relative_below_two_e_minus_12": true,
+    "finite_triangle_keeps_its_complete_dimensional_factor": true,
+    "forbidden_shared_pair_absent": true,
+    "heavy_cubic_inverse_owned_by_disjoint_counterterms": true,
+    "linear_scale_below_seven_e_minus_612": true,
+    "no_extra_LSZ_or_double_counted_parameter_shift": true,
+    "original_V_G_B_and_P8_remain_open": true,
+    "other_scalar_families_and_full_coordinate_cross_terms_open": true,
+    "quadratic_scale_b2_exact_not_discarded_as_contact": true,
+    "quadratic_scale_relative_below_one_e_minus_405": true,
+    "raw_and_nested_overall_poles_keep_finite_bubble_terms": true,
+    "shared_projection_cancellation_before_finite_part": true
+  },
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "2135282a1a2ec04582fdad96463587182c9223d751fdea05e8c35e5845d992f3",
+    "README.md": "58e7fe357b467ffb5f77bf590c1666661dbbaec40338bb2c433640b9e1c98c44",
+    "notes/bounds.md": "3eb15d0c6a22434a3dc8fefcde89f22883ea58f48c0e1193849a8653f1891ee7",
+    "notes/conversion.md": "2268e6bb73714f56ed173600e607f54b5563018a83174c35fd67772b932be3b6",
+    "notes/factors.md": "197714d5a1602514195447bb0b6f2ae5dc16ca6ba317ca4906d1c4b1eac96dba",
+    "notes/forests.md": "fb3829eb2b4caf6aad7e69b5d5404a3cf7aeb1d47f82cfb0296e10a20db2e9a4",
+    "notes/reference.md": "f8b255b3f3dd5fc0591c4164e9fd9304514ce36c0fa5d3dad3715efc5bf085b8",
+    "notes/scope.md": "3f5794a8e82901a19a42dc1529e2031f7f651d650b3164d8e42fb93d26d4aa58",
+    "src/p8_vacuum_double_bubble_ms/__init__.py": "2b544de9e43793f4ab3b17aa2dabddc3fea0d3af26def4bceae4276cf123547a",
+    "src/p8_vacuum_double_bubble_ms/audit.py": "486ce3c28b0c32c5b50f21fd9236cb848cf3ecc1849d3dd8cd43a66d8967b496",
+    "src/p8_vacuum_double_bubble_ms/bounds.py": "3fb4792c55bc5521475cf49f5e45e45761d6485bb11ec6b3e7abcb49d1dad5fa",
+    "src/p8_vacuum_double_bubble_ms/calibration.py": "82b78c2300d1a4e0822a77644c62a3022a7b74cca7c26befdeea0f3df73eb1d8",
+    "src/p8_vacuum_double_bubble_ms/conversion.py": "747b6dafed50386c640a41b706724b96604485e7250d305fc56d569013eef3ab",
+    "src/p8_vacuum_double_bubble_ms/forests.py": "a741fd27425c3886c08a1b5d167135cd82bfc5e3769c8f01695ea9e05f031b7b",
+    "src/p8_vacuum_double_bubble_ms/forward.py": "010aab78de9e07362a32f397f5df10ed47dc669efa3520b10b446a33ead1807d",
+    "src/p8_vacuum_double_bubble_ms/verify.py": "3c310904d3d799259dd2c3a68795fa861491fbf0f8b6eada52fb2e6f90d38b0a",
+    "tests/test_double_bubble_ms_certificate.py": "ec5460f644512bd9931889f946e194d130e248b4c47d3a7b27b438649098528c",
+    "tests/test_double_bubble_ms_science.py": "fedad403fe45821ada4b94a1c5253ba1b7292cfb9d8472ec731f5d4cf803db81"
+  },
+  "status": "COMPLETE_DOUBLE_BUBBLE_INTERACTION_FOREST_MS_WITH_ACTUAL_NESTED_FORESTS_AND_BOTH_SCALE_TERMS; NOT_FULL_SCALAR_GY14_MATCHING_CANONICAL_POLE_TRUNCATION_V_G_B_OR_ORIGINAL_P8",
+  "verdict": "The complete 24-refinement double-bubble interaction forest is converted to MS at mu=mF at fixed canonical reference coordinates. Every actual single, disjoint and overlapping forest is evaluated before regulator removal. Raw and nested overall projections retain their distinct finite-bubble pole terms, and the forbidden shared pair remains absent. The resulting full scale shift includes both heavy triangles and both linear and quadratic terms. The latter retains its exact heavy-tree forward coefficient, including repeated ordinary heavy insertions. The complete assigned family is below 7e-612 and below 2e-12 relative to tree. Other scalar families, full field/coupling re-expansion and cross terms, vacuum/canonical assembly, physical truncation and V/G/B remain open.",
+  "verification_boundary": "Exact actual graph-forest projections, regulator-first cancellation, complete full-propagator factorization, exact heavy-tree forward coefficients and all-radius bounds. Independent tests use explicit Laurent projections, all actual forest classes, dimensional bubbles, complex-disc integrals, contour coefficients and mutation controls. Written analytic arguments and exact replay are not formalization or independent peer review. Native, ordinary, CLI and direct science retain unmodified SymPy with interpreter-only allowances.",
+  "written_proofs": [
+    "notes/forests.md",
+    "notes/factors.md",
+    "notes/conversion.md",
+    "notes/bounds.md",
+    "notes/reference.md",
+    "notes/scope.md"
+  ]
+}
