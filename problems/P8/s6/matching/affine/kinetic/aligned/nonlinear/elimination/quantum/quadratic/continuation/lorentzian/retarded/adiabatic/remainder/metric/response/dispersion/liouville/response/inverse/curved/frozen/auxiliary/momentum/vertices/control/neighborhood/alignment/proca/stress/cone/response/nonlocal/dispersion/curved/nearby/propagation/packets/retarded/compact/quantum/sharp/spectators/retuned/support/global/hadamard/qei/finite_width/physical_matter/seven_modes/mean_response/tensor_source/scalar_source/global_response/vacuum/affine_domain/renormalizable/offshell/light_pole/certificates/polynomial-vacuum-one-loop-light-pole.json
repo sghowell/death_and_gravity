@@ -1,0 +1,217 @@
+{
+  "actual_one_loop_light_kernel": {
+    "Delta": "-Minkowski_light_momentum_squared*unit_Feynman_parameter*(1 - unit_Feynman_parameter) + unit_Feynman_parameter*(2 + 2*positive_fixed_lambda/positive_fixed_gamma) - unit_Feynman_parameter + 1",
+    "Feynman_parameter": "unit_Feynman_parameter",
+    "Minkowski_invariant": "Minkowski_light_momentum_squared",
+    "actual_cubic_squared": "1/67108864",
+    "actual_heavy_mass_squared": "195312500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002",
+    "actual_rational_curvature_shift_upper": "1/2211840000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000045298483200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000231928233984",
+    "actual_rational_finite_kinetic_counterterm_upper": "1/3774873600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000038654705664",
+    "actual_unit_disc_quadratic_self_energy_upper": "1/2211840000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000033973862400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000115964116992",
+    "bounds": {
+      "actual_heavy_mass_positive_and_above_two_light_threshold": true,
+      "actual_unit_disc_below_parameter_analyticity_radius": true,
+      "converted_constant_field_curvature_positive": true,
+      "finite_light_kinetic_counterterm_below_three_e_minus_208": true,
+      "finite_local_light_kinetic_coefficient_positive": true,
+      "positive_curvature_shift_below_one_e_minus_405": true,
+      "same_positive_mass_weighted_Phi6_bound_retained": true,
+      "unit_disc_factorization_excludes_extra_one_loop_poles": true,
+      "unit_disc_quadratic_remainder_below_one_e_minus_405": true
+    },
+    "complex_log_remainder": "-complex_Taylor_increment - log(1 - complex_Taylor_increment)",
+    "cubic_squared": "16*positive_fixed_lambda**4/positive_fixed_gamma**3",
+    "first_two_particle_bubble_threshold": "(sqrt(2 + 2*positive_fixed_lambda/positive_fixed_gamma) + 1)**2",
+    "heavy_mass_squared": "2 + 2*positive_fixed_lambda/positive_fixed_gamma",
+    "inverse_propagator_convention": "D(s)=s-1+Pi(s); Pi(s)=G^2/(16pi^2)[local UV constant - integral_0^1 log Delta(s,x) dx]. Imaginary Pi is positive above its cut in the Feynman prescription.",
+    "local_analytic_on_shell_kernel": "-unit_Feynman_parameter*(1 - unit_Feynman_parameter)*(Minkowski_light_momentum_squared - 1)/(unit_Feynman_parameter*(2 + 2*positive_fixed_lambda/positive_fixed_gamma) + (1 - unit_Feynman_parameter)**2) - log(-unit_Feynman_parameter*(1 - unit_Feynman_parameter)*(Minkowski_light_momentum_squared - 1)/(unit_Feynman_parameter*(2 + 2*positive_fixed_lambda/positive_fixed_gamma) + (1 - unit_Feynman_parameter)**2) + 1)",
+    "normalized_parameter_weight": "unit_Feynman_parameter*(1 - unit_Feynman_parameter)/(unit_Feynman_parameter*(2 + 2*positive_fixed_lambda/positive_fixed_gamma) + (1 - unit_Feynman_parameter)**2)",
+    "on_shell_Delta": "unit_Feynman_parameter*(2 + 2*positive_fixed_lambda/positive_fixed_gamma) + (1 - unit_Feynman_parameter)**2",
+    "on_shell_kernel_before_log_combination": "-unit_Feynman_parameter*(1 - unit_Feynman_parameter)*(Minkowski_light_momentum_squared - 1)/(-unit_Feynman_parameter*(1 - unit_Feynman_parameter) + unit_Feynman_parameter*(2 + 2*positive_fixed_lambda/positive_fixed_gamma) - unit_Feynman_parameter + 1) + log(-unit_Feynman_parameter*(1 - unit_Feynman_parameter) + unit_Feynman_parameter*(2 + 2*positive_fixed_lambda/positive_fixed_gamma) - unit_Feynman_parameter + 1) - log(-Minkowski_light_momentum_squared*unit_Feynman_parameter*(1 - unit_Feynman_parameter) + unit_Feynman_parameter*(2 + 2*positive_fixed_lambda/positive_fixed_gamma) - unit_Feynman_parameter + 1)",
+    "on_shell_potential_quadratic": "constant_canonical_light_field**2*(1 - positive_once_subtracted_curvature_shift)/2",
+    "positive_curvature_conversion_integrand": "positive_real_Taylor_increment - log(positive_real_Taylor_increment + 1)",
+    "scheme": "For this new polynomial vacuum choose Pi_R(s)=Pi(s)-Pi(1)-(s-1)Pi'(1) once; the one-loop inverse has pole mass one and residue one. Potential curvature becomes 1-Pi_R(0), not one. S6.110 fixed potential quartic subtraction is retained to the same order.",
+    "scope": "Actual one-loop two-point function, local analytic disc and explicit finite subtraction conversion only. No higher-loop pole/cut control, full four-point matching, old cosmological state/counterterm transfer or V/G/B closure.",
+    "self_energy_momentum_kernel": "-log(-Minkowski_light_momentum_squared*unit_Feynman_parameter*(1 - unit_Feynman_parameter) + unit_Feynman_parameter*(2 + 2*positive_fixed_lambda/positive_fixed_gamma) - unit_Feynman_parameter + 1)",
+    "self_energy_prefactor": "positive_fixed_lambda**4/(pi**2*positive_fixed_gamma**3)",
+    "unchanged_positive_one_loop_Phi6_upper": "385494105772623798758205440309312608506944444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444525288417935371398925781249999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999586078855726453993055555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555549197726779513888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888943142361111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111/73242187500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000046080000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000314572800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000805306368000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "actual_reduced_Hessian_normalization": {
+    "actual_light_quadratic_Hessian_insertion": [
+      [
+        "-cubic_G**2*(4*K12*phi2**2/(K12**2 - positive_K11*positive_K22) - 12*phi1**2*positive_K22/(K12**2 - positive_K11*positive_K22))/8 + phi1**2*quartic_L/2",
+        "-K12*cubic_G**2*phi1*phi2/(K12**2 - positive_K11*positive_K22)"
+      ],
+      [
+        "-K12*cubic_G**2*phi1*phi2/(K12**2 - positive_K11*positive_K22)",
+        "-cubic_G**2*(4*K12*phi1**2/(K12**2 - positive_K11*positive_K22) - 12*phi2**2*positive_K11/(K12**2 - positive_K11*positive_K22))/8 + phi2**2*quartic_L/2"
+      ]
+    ],
+    "continuum_boundary": "For translation-invariant kinetic kernels, the first two trace terms are momentum-independent local light mass terms. Only the mixed trace supplies the displayed nonlocal two-point bubble. All local terms cancel in the same on-shell affine subtraction.",
+    "half_trace": "-K12*cubic_G**2*free_light_covariance12*phi1*phi2/(K12**2 - positive_K11*positive_K22) + free_light_covariance11*(-cubic_G**2*(4*K12*phi2**2/(K12**2 - positive_K11*positive_K22) - 12*phi1**2*positive_K22/(K12**2 - positive_K11*positive_K22))/8 + phi1**2*quartic_L/2)/2 + free_light_covariance22*(-cubic_G**2*(4*K12*phi1**2/(K12**2 - positive_K11*positive_K22) - 12*phi2**2*positive_K11/(K12**2 - positive_K11*positive_K22))/8 + phi2**2*quartic_L/2)/2",
+    "local_insertion": [
+      [
+        "-cubic_G**2*(K12*phi2**2/(K12**2 - positive_K11*positive_K22) - phi1**2*positive_K22/(K12**2 - positive_K11*positive_K22))/2 + phi1**2*quartic_L/2",
+        "0"
+      ],
+      [
+        "0",
+        "-cubic_G**2*(K12*phi1**2/(K12**2 - positive_K11*positive_K22) - phi2**2*positive_K11/(K12**2 - positive_K11*positive_K22))/2 + phi2**2*quartic_L/2"
+      ]
+    ],
+    "mixed_insertion": [
+      [
+        "cubic_G**2*phi1**2*positive_K22/(K12**2 - positive_K11*positive_K22)",
+        "-K12*cubic_G**2*phi1*phi2/(K12**2 - positive_K11*positive_K22)"
+      ],
+      [
+        "-K12*cubic_G**2*phi1*phi2/(K12**2 - positive_K11*positive_K22)",
+        "cubic_G**2*phi2**2*positive_K11/(K12**2 - positive_K11*positive_K22)"
+      ]
+    ],
+    "mixed_trace": "-cubic_G**2*(phi1*(K12*free_light_covariance12*phi2/(K12**2 - positive_K11*positive_K22) - free_light_covariance11*phi1*positive_K22/(K12**2 - positive_K11*positive_K22)) + phi2*(K12*free_light_covariance12*phi1/(K12**2 - positive_K11*positive_K22) - free_light_covariance22*phi2*positive_K11/(K12**2 - positive_K11*positive_K22)))/2"
+  },
+  "checked_scalar_entries": 24,
+  "claim": "P8-S6.112.POLYNOMIAL_VACUUM_ONE_LOOP_LIGHT_POLE",
+  "controls": {
+    "light_four_point_matching_not_inferred_from_two_point_result": true,
+    "nonzero_bubble_momentum_dependence": true,
+    "nonzero_nonlocal_mixed_two_point_function": true,
+    "on_shell_mass_one_does_not_fix_zero_momentum_curvature_to_one": true,
+    "one_e_minus_208_does_not_bound_the_certified_rational_majorant": true,
+    "one_loop_analytic_disc_not_an_all_orders_cut_free_region": true,
+    "original_P8_not_closed": true,
+    "positive_nonzero_curvature_conversion": true,
+    "rejected_inputs": 16,
+    "same_mass_subtraction_cannot_simultaneously_enforce_both_conditions": true
+  },
+  "date": "2026-09-09",
+  "exact_disc_calibrations": {
+    "half": {
+      "complex_disc_radius_about_mass_one": "1/2",
+      "factored_inverse_propagator_error_upper": "1/4423680000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000079272345600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000347892350976",
+      "finite_kinetic_counterterm_upper": "1/3774873600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000038654705664",
+      "no_extra_one_loop_pole_proved_in_disc": true,
+      "positive_curvature_conversion_upper": "1/2211840000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000045298483200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000231928233984",
+      "quadratic_self_energy_upper_coefficient": "1/2211840000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000039636172800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000173946175488",
+      "scope": "A radius below M proves parameter analyticity, not automatically absence of additional zeros. That conclusion additionally requires the displayed factored error to be below one. No full higher-loop cut or pole statement."
+    },
+    "radius_two": {
+      "complex_disc_radius_about_mass_one": "2",
+      "factored_inverse_propagator_error_upper": "1/1105920000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011324620800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "finite_kinetic_counterterm_upper": "1/3774873600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000038654705664",
+      "no_extra_one_loop_pole_proved_in_disc": true,
+      "positive_curvature_conversion_upper": "1/2211840000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000045298483200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000231928233984",
+      "quadratic_self_energy_upper_coefficient": "1/2211840000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000022649241600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "scope": "A radius below M proves parameter analyticity, not automatically absence of additional zeros. That conclusion additionally requires the displayed factored error to be below one. No full higher-loop cut or pole statement."
+    },
+    "unit": {
+      "complex_disc_radius_about_mass_one": "1",
+      "factored_inverse_propagator_error_upper": "1/2211840000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000033973862400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000115964116992",
+      "finite_kinetic_counterterm_upper": "1/3774873600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000038654705664",
+      "no_extra_one_loop_pole_proved_in_disc": true,
+      "positive_curvature_conversion_upper": "1/2211840000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000045298483200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000231928233984",
+      "quadratic_self_energy_upper_coefficient": "1/2211840000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000033973862400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000115964116992",
+      "scope": "A radius below M proves parameter analyticity, not automatically absence of additional zeros. That conclusion additionally requires the displayed factored error to be below one. No full higher-loop cut or pole statement."
+    }
+  },
+  "exact_residuals": {
+    "kernel_actual_on_shell_parameter_denominator": "0",
+    "kernel_actual_two_particle_threshold_square": "0",
+    "kernel_arbitrary_local_affine_counterterm_cancels": "0",
+    "kernel_finite_radial_bubble_derivative_integral": "0",
+    "kernel_first_momentum_derivative_of_bubble_kernel": "0",
+    "kernel_literal_four_dimensional_Feynman_parameter_shift": "0",
+    "kernel_local_analytic_log_remainder_anchor": "0",
+    "kernel_local_analytic_log_remainder_derivative": "0",
+    "kernel_normalized_log_remainder_derivative": "0",
+    "kernel_normalized_log_remainder_linear_zero": "0",
+    "kernel_normalized_log_remainder_zero": "0",
+    "kernel_on_shell_potential_curvature_is_not_pole_mass": "0",
+    "kernel_parameter_weight_linear_integral": "0",
+    "kernel_parameter_weight_square_integral": "0",
+    "kernel_parameter_weight_upper_gap": "0",
+    "kernel_positive_curvature_kernel_anchor": "0",
+    "kernel_positive_curvature_kernel_derivative": "0",
+    "kernel_second_momentum_derivative_of_bubble_kernel": "0",
+    "normalization_actual_full_reduced_Hessian_insertion": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "normalization_mixed_term_not_replaced_by_field_independent_heavy_logdet": "0",
+    "normalization_one_loop_half_trace_includes_every_local_and_mixed_term": "0"
+  },
+  "formulation": "FORMULATION.md",
+  "named_exact_check_count": 21,
+  "not_established": [
+    "All-order propagator poles, residues or a cut-free extension of the one-loop analytic disc",
+    "Complete renormalized four-point amplitude, absorptive cuts, contour boundedness or higher-loop error control",
+    "Exact stable heavy asymptotic particle or equality with the earlier exponential kinetic parent",
+    "Quantum field-map, source, state or counterterm transfer to the affine rolling bounce",
+    "Finite-gravity IR/Regge remainder or a controlled common propagating bounce parent",
+    "Original P8(b) classification or original P8 closure"
+  ],
+  "prior_sha256": {
+    "S6_111_fully_rebuilt": "c471f24ce86d7c8ef9eed0453ecf145fc89efc3b42466c5851a8087cafa66941",
+    "classical_off_shell_field_map_not_used_to_transfer_quantum_measure": true,
+    "no_old_cosmological_state_or_counterterm_transfer": true,
+    "same_S6_110_actual_polynomial_model_and_full_Hessian_rebuilt": true
+  },
+  "proof_checks": {
+    "actual_heavy_mass_positive_and_above_two_light_threshold": true,
+    "actual_unit_disc_below_parameter_analyticity_radius": true,
+    "complete_four_point_and_higher_loop_errors_still_open": true,
+    "constant_field_curvature_and_pole_mass_not_conflated": true,
+    "converted_constant_field_curvature_positive": true,
+    "extra_one_loop_zeros_excluded_by_a_strict_factored_error_bound": true,
+    "finite_gravity_and_common_bounce_matching_still_open": true,
+    "finite_kinetic_and_potential_counterterms_chosen_once": true,
+    "finite_light_kinetic_counterterm_below_three_e_minus_208": true,
+    "finite_local_light_kinetic_coefficient_positive": true,
+    "fixed_one_loop_potential_quartic_subtraction_retained": true,
+    "full_V_G_B_and_original_P8_remain_open": true,
+    "full_reduced_Hessian_expanded_before_continuum_limit": true,
+    "local_affine_terms_cancel_in_the_same_on_shell_subtraction": true,
+    "log_branch_fixed_by_derivative_and_anchor_not_global_log_combination": true,
+    "old_state_tadpole_and_counterterm_choices_unchanged": true,
+    "one_loop_counterterms_not_reinserted_into_one_loop_Hessian": true,
+    "one_loop_half_trace_contains_local_tadpoles_and_mixed_bubble": true,
+    "physical_threshold_distinct_from_conservative_parameter_radius": true,
+    "pole_and_unit_residue_are_properties_of_the_one_loop_truncated_inverse": true,
+    "positive_Feynman_parameter_denominator_controls_the_entire_complex_disc": true,
+    "positive_curvature_shift_below_one_e_minus_405": true,
+    "same_positive_mass_weighted_Phi6_bound_retained": true,
+    "unit_disc_factorization_excludes_extra_one_loop_poles": true,
+    "unit_disc_quadratic_remainder_below_one_e_minus_405": true,
+    "unstable_heavy_particle_not_promoted_to_exact_stable_asymptotic_state": true
+  },
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "efdd490bc9905c7580cea8018135b200264d2a6f66ae32dc5bfd21d087025dd1",
+    "README.md": "40dca883d8f5ea5a7aedaa2f054686051547b16e720d74cf661fc0d84f717930",
+    "notes/analytic.md": "410d1c92721522f3bfb4f1940d64f91618bfee3473631562fdea4bc9f6a74ff8",
+    "notes/normalization.md": "3f00f592545afef45e984c153686f6362bd4ed5da2969590cff20d597028ac16",
+    "notes/scope.md": "da9b28ca63fcbb70af9969bed54b0bee586a07c697feeb1e3b25900826492f95",
+    "notes/subtraction.md": "33b93aa36063d62d5cd5e6d8fb56046a6a4747b50fbb008d80c649bc69678e46",
+    "src/p8_vacuum_light_pole/__init__.py": "e443aa92dd941ad85b22dde5a8a0e74093545ef98914313aea76c2404b1ed3cf",
+    "src/p8_vacuum_light_pole/audit.py": "31856f12122931dcfd3eea4ae88dc50cbe00648ebff982a04781baf5ab260545",
+    "src/p8_vacuum_light_pole/calibration.py": "d9542b26dc795fbb923cf800d8faba22e488cd1d365cc4ba77997f467b4112d0",
+    "src/p8_vacuum_light_pole/kernel.py": "b2efdaa3d5500284fb508149bdee25f545b8a26b93184be688d3bb5c0d046811",
+    "src/p8_vacuum_light_pole/normalization.py": "98be80fa9648e9029fc5d0049df023906615488de1b5d126e326fcdde9cfb430",
+    "src/p8_vacuum_light_pole/verify.py": "d1003766e7a1889caede615269fc2d507b398f5a251e1a34438a855ddd368757",
+    "tests/test_vacuum_light_pole_certificate.py": "d7de135f92089cf8de10583dfb4be7487fd68efeb60ac2a904f370b12550c55f",
+    "tests/test_vacuum_light_pole_science.py": "f4566641e32035f71216b051470cee0fd67717141fbace257a81feb50d8226d5"
+  },
+  "status": "COMPLETE_ACTUAL_ONE_LOOP_LIGHT_TWO_POINT_HESSIAN_NORMALIZATION_FIXED_ON_SHELL_POLE_RESIDUE_ANALYTIC_DISC_AND_POSITIVE_CURVATURE_SCHEME_CONVERSION; NOT_FULL_FOUR_POINT_HIGHER_LOOP_FINITE_GRAVITY_COMMON_BOUNCE_V_G_B_OR_ORIGINAL_P8_CLOSURE",
+  "verdict": "The actual full reduced Hessian yields the mixed light-heavy one-loop self-energy with the correct half-trace factor. One fixed on-shell subtraction gives mass one and residue one for the truncated inverse, and a strict complex unit-disc bound excludes additional zeros. The finite local kinetic subtraction is below 3 times 10^-208. Its consistent potential-scheme conversion leaves curvature 1-p with 0<p<10^-405 and preserves the fixed positive quartic and one-loop Phi6 remainder. Complete four-point, higher-loop, finite-gravity and common-bounce matching remain open.",
+  "verification_boundary": "Native full reduced-Hessian normalization, literal four-dimensional Feynman shift, anchored analytic kernel identities, convergent radial/parameter integrals and exact rational remainder bounds. Continuum continuation, logarithm-disc and constant-field perturbative subtraction arguments are written/source-pinned, not proof-assistant formalized or peer reviewed. Every ancestor, own source and report field is read-only rebuilt with unmodified scientific SymPy.",
+  "written_proofs": [
+    "notes/normalization.md",
+    "notes/analytic.md",
+    "notes/subtraction.md",
+    "notes/scope.md"
+  ]
+}
