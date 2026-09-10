@@ -1,0 +1,684 @@
+{
+  "checked_scalar_entries": 248,
+  "claim": "P8-S6.128.GAUGE_YUKAWA_LEADING_MATCHING_SCREEN",
+  "controls": {
+    "asymptotic_freedom_not_a_confinement_mass_bound": true,
+    "full_V_G_B_and_original_P8_not_closed": true,
+    "leading_Wilson_coefficient_not_full_momentum_form_factor": true,
+    "new_model_not_assigned_old_complete_two_loop_error": true,
+    "odd_flavor_threshold_cancels_but_even_threshold_nonzero": true,
+    "rejected_inputs": 16,
+    "second_derivative_jump_zero_does_not_restore_mass_gap": true,
+    "tiny_nonzero_cut_not_discarded_by_absolute_size": true,
+    "zero_boundary_jump_at_center_is_not_a_disc_test": true
+  },
+  "date": "2026-09-10",
+  "exact_residuals": {
+    "calibration_rational_log_transmutation_dictionary": "0",
+    "calibration_rational_running_window_dictionary": "0",
+    "calibration_rational_threshold_majorant_dictionary": "0",
+    "calibration_same_prospective_Yukawa_ray": "0",
+    "calibration_same_prospective_quartic_boundary": "0",
+    "cuts_accidental_center_jump_zero": "0",
+    "cuts_center_derivative_jump_nonzero_value": "0",
+    "cuts_crossing_reverses_jump": "0",
+    "cuts_explicit_transverse_polarization_sum": "0",
+    "cuts_first_Ward_identity": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        1,
+        4
+      ]
+    },
+    "cuts_first_external_gauge_null": "0",
+    "cuts_forward_two_cut_jump": "0",
+    "cuts_independent_Lorentz_polarization_sum": "0",
+    "cuts_massless_phase_space": "0",
+    "cuts_optical_and_identical_particle_factors": "0",
+    "cuts_second_Ward_identity": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        1
+      ]
+    },
+    "cuts_second_derivative_jump_zero": "0",
+    "cuts_second_external_gauge_null": "0",
+    "cuts_small_transfer_t_squared_log_limit": "0",
+    "flow_Yukawa_fixed_ratio": "0",
+    "flow_Yukawa_initial_value": "0",
+    "flow_direct_quartic_beta": "0",
+    "flow_gauge_flavor_coefficient": "0",
+    "flow_gauge_initial_value": "0",
+    "flow_integer_quartic_polynomial": "0",
+    "flow_matrix_Yukawa_beta": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        6,
+        6
+      ]
+    },
+    "flow_positive_quartic_root": "0",
+    "flow_quartic_dictionary_to_L_over_24": "0",
+    "flow_quartic_initial_value": "0",
+    "flow_running_Yukawa_squared_ODE": "0",
+    "flow_running_gauge_ODE": "0",
+    "flow_running_quartic_ODE": "0",
+    "model_active_Dirac_Yukawa_square_trace": "0",
+    "model_fundamental_Casimir": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        3
+      ]
+    },
+    "model_fundamental_trace_0_0": "0",
+    "model_fundamental_trace_0_1": "0",
+    "model_fundamental_trace_0_2": "0",
+    "model_fundamental_trace_0_3": "0",
+    "model_fundamental_trace_0_4": "0",
+    "model_fundamental_trace_0_5": "0",
+    "model_fundamental_trace_0_6": "0",
+    "model_fundamental_trace_0_7": "0",
+    "model_fundamental_trace_1_0": "0",
+    "model_fundamental_trace_1_1": "0",
+    "model_fundamental_trace_1_2": "0",
+    "model_fundamental_trace_1_3": "0",
+    "model_fundamental_trace_1_4": "0",
+    "model_fundamental_trace_1_5": "0",
+    "model_fundamental_trace_1_6": "0",
+    "model_fundamental_trace_1_7": "0",
+    "model_fundamental_trace_2_0": "0",
+    "model_fundamental_trace_2_1": "0",
+    "model_fundamental_trace_2_2": "0",
+    "model_fundamental_trace_2_3": "0",
+    "model_fundamental_trace_2_4": "0",
+    "model_fundamental_trace_2_5": "0",
+    "model_fundamental_trace_2_6": "0",
+    "model_fundamental_trace_2_7": "0",
+    "model_fundamental_trace_3_0": "0",
+    "model_fundamental_trace_3_1": "0",
+    "model_fundamental_trace_3_2": "0",
+    "model_fundamental_trace_3_3": "0",
+    "model_fundamental_trace_3_4": "0",
+    "model_fundamental_trace_3_5": "0",
+    "model_fundamental_trace_3_6": "0",
+    "model_fundamental_trace_3_7": "0",
+    "model_fundamental_trace_4_0": "0",
+    "model_fundamental_trace_4_1": "0",
+    "model_fundamental_trace_4_2": "0",
+    "model_fundamental_trace_4_3": "0",
+    "model_fundamental_trace_4_4": "0",
+    "model_fundamental_trace_4_5": "0",
+    "model_fundamental_trace_4_6": "0",
+    "model_fundamental_trace_4_7": "0",
+    "model_fundamental_trace_5_0": "0",
+    "model_fundamental_trace_5_1": "0",
+    "model_fundamental_trace_5_2": "0",
+    "model_fundamental_trace_5_3": "0",
+    "model_fundamental_trace_5_4": "0",
+    "model_fundamental_trace_5_5": "0",
+    "model_fundamental_trace_5_6": "0",
+    "model_fundamental_trace_5_7": "0",
+    "model_fundamental_trace_6_0": "0",
+    "model_fundamental_trace_6_1": "0",
+    "model_fundamental_trace_6_2": "0",
+    "model_fundamental_trace_6_3": "0",
+    "model_fundamental_trace_6_4": "0",
+    "model_fundamental_trace_6_5": "0",
+    "model_fundamental_trace_6_6": "0",
+    "model_fundamental_trace_6_7": "0",
+    "model_fundamental_trace_7_0": "0",
+    "model_fundamental_trace_7_1": "0",
+    "model_fundamental_trace_7_2": "0",
+    "model_fundamental_trace_7_3": "0",
+    "model_fundamental_trace_7_4": "0",
+    "model_fundamental_trace_7_5": "0",
+    "model_fundamental_trace_7_6": "0",
+    "model_fundamental_trace_7_7": "0",
+    "model_generator_Hermitian_0": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        3
+      ]
+    },
+    "model_generator_Hermitian_1": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        3
+      ]
+    },
+    "model_generator_Hermitian_2": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        3
+      ]
+    },
+    "model_generator_Hermitian_3": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        3
+      ]
+    },
+    "model_generator_Hermitian_4": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        3
+      ]
+    },
+    "model_generator_Hermitian_5": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        3
+      ]
+    },
+    "model_generator_Hermitian_6": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        3
+      ]
+    },
+    "model_generator_Hermitian_7": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        3
+      ]
+    },
+    "model_generator_traceless_0": "0",
+    "model_generator_traceless_1": "0",
+    "model_generator_traceless_2": "0",
+    "model_generator_traceless_3": "0",
+    "model_generator_traceless_4": "0",
+    "model_generator_traceless_5": "0",
+    "model_generator_traceless_6": "0",
+    "model_generator_traceless_7": "0",
+    "model_mass_flavor_exchange_parity": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "model_opposite_Yukawa_trace": "0",
+    "threshold_differentiated_log_determinant": "0",
+    "threshold_direct_determinant": "0",
+    "threshold_direct_log_field_coefficient_1": "0",
+    "threshold_direct_log_field_coefficient_2": "0",
+    "threshold_direct_log_field_coefficient_3": "0",
+    "threshold_direct_log_field_coefficient_4": "0",
+    "threshold_direct_log_field_coefficient_5": "0",
+    "threshold_direct_log_field_coefficient_6": "0",
+    "threshold_direct_log_field_coefficient_7": "0",
+    "threshold_direct_log_field_coefficient_8": "0",
+    "threshold_field_remainder_anchor": "0",
+    "threshold_field_remainder_monotone_bound": "0",
+    "threshold_independent_running_threshold_dictionary": "0",
+    "threshold_leading_even_threshold_coefficient": "0",
+    "threshold_opposite_pair_odd_coupling_cancels": "0",
+    "threshold_reference_log_derivative_without_branch_identity": "0"
+  },
+  "formulation": "FORMULATION.md",
+  "leading_heavy_fermion_threshold": {
+    "field_domain": "z=y^2 Phi^2/m_F^2 in [0,1); for z<=1/4 the logarithm remainder after -2z is at most 4z^2/3",
+    "field_series_absolute_remainder_upper": "nonnegative_field_ratio**2/(1 - nonnegative_field_ratio)",
+    "flavor_mass_matrix": [
+      [
+        "positive_Yukawa*scalar_Phi + positive_fermion_mass",
+        "0"
+      ],
+      [
+        "0",
+        "-positive_Yukawa*scalar_Phi + positive_fermion_mass"
+      ]
+    ],
+    "leading_Phi_squared_F_squared_coefficient": "-positive_Yukawa**2*positive_gauge_squared/(48*pi**2*positive_fermion_mass**2)",
+    "log_field_coefficients": {
+      "1": "-2",
+      "2": "-1",
+      "3": "-2/3",
+      "4": "-1/2",
+      "5": "-2/5",
+      "6": "-1/3",
+      "7": "-2/7",
+      "8": "-1/4"
+    },
+    "mass_squared_determinant": "(positive_Yukawa*scalar_Phi - positive_fermion_mass)**2*(positive_Yukawa*scalar_Phi + positive_fermion_mass)**2",
+    "momentum_scope": "Leading one-fermion-loop Wilson coefficient at zero external momenta. The field-series bound is NOT a momentum/derivative remainder estimate and does not bound the full finite-mass on-shell amplitude.",
+    "vacuum_subtracted_log_determinant": "2*log(-positive_Yukawa**2*scalar_Phi**2/positive_fermion_mass**2 + 1)"
+  },
+  "leading_matched_operator_gauge_cut": {
+    "center": {
+      "normalized_forward_boundary_jump": "0",
+      "s": "2",
+      "s_channel_phase_space_nonzero": true,
+      "scope": "Leading local-operator gauge bubble only. Initial massive scalar momenta are analytically continued for 0<s<4; this is not a physical scalar scattering cross section there.",
+      "u": "2"
+    },
+    "data": {
+      "coefficient": "real_matched_operator_coefficient",
+      "crossed_cut_intervals": {
+        "s_channel": "[0,+infinity)",
+        "u_channel": "(-infinity,4] at t=0"
+      },
+      "first_full_parent_loop_order_for_this_cut": 3,
+      "forward_log_coefficient": "8*real_matched_operator_coefficient**2/pi**2",
+      "gauge_group_dimension": 8,
+      "integrated_massless_two_body_phase_space": "1/(8*pi)",
+      "lower_physical_boundary": "-8*real_matched_operator_coefficient**2*(real_channel_invariant**2*(log(real_channel_invariant/positive_subtraction_scale**2) + I*pi) + (4 - real_channel_invariant)**2*(log((4 - real_channel_invariant)/positive_subtraction_scale**2) - I*pi))/pi**2",
+      "normalized_forward_boundary_jump": "16*I*pi*(real_channel_invariant - 2)",
+      "original_scalar_first_sheet_disc": "|s-2|<=1",
+      "quartic_vertex_normalization": "8*real_matched_operator_coefficient",
+      "s": "real_channel_invariant",
+      "s_channel_Im_amplitude": "8*real_channel_invariant**2*real_matched_operator_coefficient**2/pi",
+      "scope": "Exact leading local Phi^2 F^2 operator calculation: two one-loop matched vertices sewn through one massless gauge loop. Opposite i0 signs are retained. The second derivative of the jump vanishes at this operator order; this does NOT restore the original gapped dispersion hypotheses. No impossibility of choosing a local logarithm branch, finite-mass momentum remainder, confinement spectrum or original-model three-loop result is claimed.",
+      "summed_color_and_polarization_amplitude_squared": "256*real_channel_invariant**2*real_matched_operator_coefficient**2",
+      "transverse_polarization_amplitudes": [
+        "-16*positive_gauge_energy**2*real_matched_operator_coefficient",
+        "0",
+        "0",
+        "-16*positive_gauge_energy**2*real_matched_operator_coefficient"
+      ],
+      "upper_physical_boundary": "-8*real_matched_operator_coefficient**2*(real_channel_invariant**2*(log(real_channel_invariant/positive_subtraction_scale**2) - I*pi) + (4 - real_channel_invariant)**2*(log((4 - real_channel_invariant)/positive_subtraction_scale**2) + I*pi))/pi**2"
+    },
+    "interior": {
+      "normalized_forward_boundary_jump": "-8*I*pi",
+      "s": "3/2",
+      "s_channel_phase_space_nonzero": true,
+      "scope": "Leading local-operator gauge bubble only. Initial massive scalar momenta are analytically continued for 0<s<4; this is not a physical scalar scattering cross section there.",
+      "u": "5/2"
+    }
+  },
+  "named_exact_check_count": 132,
+  "new_candidate_and_one_loop_marginal_flow": {
+    "flow": {
+      "Yukawa_squared_to_gauge_squared": "19/45",
+      "beta_Yukawa_times_loop_denominator": "positive_Yukawa*(15*positive_Yukawa**2 - 8*positive_gauge_squared)",
+      "beta_gauge_squared_times_loop_denominator": "-10*positive_gauge_squared**2/3",
+      "beta_quartic_times_loop_denominator": "-3*(96*positive_Yukawa**4 - 16*positive_Yukawa**2*quartic_L - quartic_L**2)",
+      "loop_denominator": "16*pi**2",
+      "matrix_Yukawa_derivation": [
+        [
+          "15*positive_Yukawa**3 - 8*positive_Yukawa*positive_gauge_squared",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "15*positive_Yukawa**3 - 8*positive_Yukawa*positive_gauge_squared",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "15*positive_Yukawa**3 - 8*positive_Yukawa*positive_gauge_squared",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "-15*positive_Yukawa**3 + 8*positive_Yukawa*positive_gauge_squared",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "-15*positive_Yukawa**3 + 8*positive_Yukawa*positive_gauge_squared",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "-15*positive_Yukawa**3 + 8*positive_Yukawa*positive_gauge_squared"
+        ]
+      ],
+      "one_loop_running": {
+        "Yukawa_squared": "19*positive_initial_gauge_squared/(45*(5*nonnegative_log_scale*positive_initial_gauge_squared/(24*pi**2) + 1))",
+        "gauge_squared": "positive_initial_gauge_squared/(5*nonnegative_log_scale*positive_initial_gauge_squared/(24*pi**2) + 1)",
+        "quartic": "positive_initial_gauge_squared*(-59/15 + sqrt(65985)/45)/(5*nonnegative_log_scale*positive_initial_gauge_squared/(24*pi**2) + 1)"
+      },
+      "potential_tensor_derivation": "-12*positive_Yukawa**4*scalar_Phi**4 + 2*positive_Yukawa**2*quartic_L*scalar_Phi**4 + quartic_L**2*scalar_Phi**4/8",
+      "quartic_polynomial_derivative": "6*quartic_to_gauge_ratio + 118/5",
+      "quartic_ratio_polynomial": "3*quartic_to_gauge_ratio**2 + 118*quartic_to_gauge_ratio/5 - 11552/225",
+      "quartic_root_lower_test": "-5567/225",
+      "quartic_root_upper_test": "1768/225",
+      "quartic_to_gauge_squared": "-59/15 + sqrt(65985)/45",
+      "scope": "Exact solution of the displayed one-loop marginal equations for nonnegative log scale. The positive ray and its decay do not establish relevant-coupling stability, a nonperturbative UV theory, a mass gap or P8 positivity applicability. The superrenormalizable H Phi^2 coupling does not enter these one-loop marginal logarithms."
+    },
+    "model": {
+      "active_Dirac_flavors": 2,
+      "active_color_flavor_multiplicity": 6,
+      "all_Dirac_flavors": 14,
+      "below_fermion_threshold_one_loop_b0": 11,
+      "flavor_Yukawa_matrix": [
+        [
+          "positive_Yukawa",
+          "0"
+        ],
+        [
+          "0",
+          "-positive_Yukawa"
+        ]
+      ],
+      "flavor_mass_matrix": [
+        [
+          "positive_Yukawa*scalar_Phi + positive_fermion_mass",
+          "0"
+        ],
+        [
+          "0",
+          "-positive_Yukawa*scalar_Phi + positive_fermion_mass"
+        ]
+      ],
+      "fundamental_Casimir": "4/3",
+      "gauge_dimension": 8,
+      "gauge_generators": [
+        [
+          [
+            "0",
+            "1/2",
+            "0"
+          ],
+          [
+            "1/2",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        [
+          [
+            "0",
+            "-I/2",
+            "0"
+          ],
+          [
+            "I/2",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        [
+          [
+            "1/2",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "-1/2",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        [
+          [
+            "0",
+            "0",
+            "1/2"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "1/2",
+            "0",
+            "0"
+          ]
+        ],
+        [
+          [
+            "0",
+            "0",
+            "-I/2"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "I/2",
+            "0",
+            "0"
+          ]
+        ],
+        [
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "1/2"
+          ],
+          [
+            "0",
+            "1/2",
+            "0"
+          ]
+        ],
+        [
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "-I/2"
+          ],
+          [
+            "0",
+            "I/2",
+            "0"
+          ]
+        ],
+        [
+          [
+            "sqrt(3)/6",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "sqrt(3)/6",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "-sqrt(3)/3"
+          ]
+        ]
+      ],
+      "light_scalar_mass_squared": 1,
+      "new_candidate": "GY14-unbroken: SU(3), fourteen vectorlike fundamental Dirac fermions, two with opposite Phi Yukawas and twelve inert spectators",
+      "one_loop_gauge_b0": "5/3",
+      "parity_exchange": [
+        [
+          "0",
+          "1"
+        ],
+        [
+          "1",
+          "0"
+        ]
+      ],
+      "perturbative_gauge_boson_mass_squared": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "scope": "New prospective boundary data, not a replacement of the frozen scalar action. Vectorlike fermions cancel the perturbative gauge anomaly. Scalar parity is a flavor exchange, not a massive chiral transformation. No full threshold matching, confinement gap, rolling action or common bounce parent is asserted.",
+      "spectator_Dirac_flavors": 12,
+      "unchanged_scalar_tree_part": "canonical Phi,H potential m_Phi^2 Phi^2/2 + M H^2/2 + G H Phi^2/2 + L Phi^4/24; no gauge Higgs or direct H Yukawa"
+    }
+  },
+  "not_established": [
+    "A full finite-mass momentum or higher-loop threshold remainder for the new candidate",
+    "Relevant-coupling running global quantum potential stability or nonperturbative ultraviolet completion",
+    "A Yang-Mills confinement gap or its precise light spectrum",
+    "A new-model complete forward-amplitude error budget or gapped dispersion theorem",
+    "Finite-gravity IR/Regge Delta controlled common bounce parent or original P8 closure"
+  ],
+  "prior_sha256": {
+    "S6_127_fully_rebuilt": "362ca51c5f1b51733b0c12b5fce5e003834a3f2c0a748ec4926e4966b0d662cb",
+    "new_gauge_candidate_separately_named_not_an_old_amplitude_bound": true,
+    "old_scalar_model_and_scientific_reports_unchanged": true,
+    "original_finite_EFT_positivity_contract_not_replaced_by_full_UV_construction": true
+  },
+  "proof_checks": {
+    "all_new_gauge_masses_zero_in_unbroken_perturbation_theory": true,
+    "both_heavy_flavor_thresholds_retained": true,
+    "crossing_center_cancellation_not_missing_cut": true,
+    "eight_independently_normalized_SU3_generators": true,
+    "finite_gravity_and_common_parent_obligations_unchanged": true,
+    "finite_mass_on_shell_threshold_remainder_not_computed": true,
+    "formal_transmutation_log_below_minus_one_e_204": true,
+    "fourteen_vectorlike_fundamental_Dirac_flavors": true,
+    "identical_gauge_particle_and_optical_factors_retained": true,
+    "leading_cut_rational_coefficient_below_one_e_minus_1620": true,
+    "leading_operator_rational_upper_below_one_e_minus_810": true,
+    "local_logarithm_germ_not_ruled_out": true,
+    "marginal_fixed_flow_only_not_relevant_parameter_stability": true,
+    "matrix_Yukawa_and_potential_tensor_derivations_retained": true,
+    "new_cut_enters_at_three_parent_loops": true,
+    "new_fermions_above_old_heavy_scalar": true,
+    "new_fermions_below_named_Planck_scale": true,
+    "no_full_candidate_or_whole_row_exclusion": true,
+    "no_new_all_orders_UV_requirement_added_to_P8": true,
+    "nonzero_boundary_mismatch_inside_old_disc": true,
+    "old_scalar_two_loop_budget_positive": true,
+    "old_two_loop_amplitude_not_transferred_to_new_fields": true,
+    "one_loop_gauge_running_stays_weak_to_light_scale": true,
+    "one_loop_transmutation_scale_not_confinement_mass": true,
+    "opposite_channel_boundary_prescriptions_retained": true,
+    "opposite_massive_flavors_preserve_Phi_parity": true,
+    "original_V_G_B_and_P8_remain_open": true,
+    "physical_transverse_and_Lorentz_contractions_agree": true,
+    "positive_Yukawa_ray_below_one": true,
+    "positive_gauge_one_loop_AF_coefficient": true,
+    "positive_quartic_ray_between_one_and_two": true,
+    "prospective_scalar_quartic_below_three_e_minus_205": true,
+    "prospective_scalar_quartic_positive": true,
+    "quartic_positive_root_bracket": true,
+    "second_derivative_jump_cancellation_not_gapped_dispersion": true,
+    "threshold_field_domain_not_momentum_remainder": true,
+    "twelve_Yukawa_inert_spectators": true,
+    "two_opposite_active_flavor_Yukawas": true
+  },
+  "prospective_boundary_calibration_not_full_matching": {
+    "bounds": {
+      "formal_transmutation_log_below_minus_one_e_204": true,
+      "leading_cut_rational_coefficient_below_one_e_minus_1620": true,
+      "leading_operator_rational_upper_below_one_e_minus_810": true,
+      "new_fermions_above_old_heavy_scalar": true,
+      "new_fermions_below_named_Planck_scale": true,
+      "old_scalar_two_loop_budget_positive": true,
+      "one_loop_gauge_running_stays_weak_to_light_scale": true,
+      "positive_Yukawa_ray_below_one": true,
+      "positive_quartic_ray_between_one_and_two": true,
+      "prospective_scalar_quartic_below_three_e_minus_205": true,
+      "prospective_scalar_quartic_positive": true
+    },
+    "leading_gauge_bubble_log_coefficient_rational_upper": "7366907084360718727111816406249999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999899417161941528320312500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000514984130859374999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999998828125000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001/56358560858112000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "leading_threshold_absolute_rational_upper": "85830688476562499999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999414062500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001/7077888000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "leading_threshold_coefficient_at_prospective_boundary": "-1630783081054687499999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999988867187500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000019/(35389440000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000*pi**2*(-59/15 + sqrt(65985)/45)**2)",
+    "new_common_Dirac_mass": "100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "old_canonical_amplitude_budget_NOT_new_model_amplitude": {
+      "canonical_b2_absolute_error_upper": "698452908319611526047148438608416949613388879924968932755291461944580078125000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000747615029583777366052754939607875167562056617498456034809350967407226562500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000014183186264856035701002398563552731047820998355746269226074218750000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000067724030678555675645998353691841960729410250981648763020833333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333332905117368677411586001350466782848040262858072916666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666639308507762968595973992099364598592122395833333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333268909159137324740489323933919270833333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333773135696771723429361979166666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666667690206706014973958333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333329664965832309/339467078447341918945312500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000020422339439392089843750000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000511688232421875000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000006834375000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000051321600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000205435699200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000342456532992000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "canonical_b2_lower": "1357867615336459356169723952851561391583050386611120075031067244708538055419921875000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000081688610142538775597633947245060392124832437943382501543965190649032592773437500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002046738746501235143964298997601436447268952179001644253730773925781250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000027337432275969321444324354001646308158039270589749018351236979166666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666871953067094882631322588413998649533217151959737141927083333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333334155076157491492237031404026007900635401407877604166666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666668036492863058840862675259510676066080729166666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666226864303228276570638020833333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333332309793293985026041666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666670335034167691/339467078447341918945312500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000020422339439392089843750000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000511688232421875000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000006834375000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000051321600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000205435699200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000342456532992000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "canonical_b2_relative_error_upper": "698452908319611526047148438608416949613388879924968932755291461944580078125000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000747615029583777366052754939607875167562056617498456034809350967407226562500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000014183186264856035701002398563552731047820998355746269226074218750000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000067724030678555675645998353691841960729410250981648763020833333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333332905117368677411586001350466782848040262858072916666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666639308507762968595973992099364598592122395833333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333268909159137324740489323933919270833333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333773135696771723429361979166666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666667690206706014973958333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333329664965832309/1357868313789367675781250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000081689357757568359375000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002046752929687500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000027337500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000205286400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000821742796800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001369826131968000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "canonical_b2_upper": "1357869012242275995392776047148438608416949613388879924968932755291461944580078125000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000081690105372597943152366052754939607875167562056617498456034809350967407226562500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002046767112873764856035701002398563552731047820998355746269226074218750000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000027337567724030678555675645998353691841960729410250981648763020833333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333538619732905117368677411586001350466782848040262858072916666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666667488409436108507762968595973992099364598592122395833333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333334703159400877159137324740489323933919270833333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333773135696771723429361979166666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666667690206706014973958333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333329664965832309/339467078447341918945312500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000020422339439392089843750000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000511688232421875000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000006834375000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000051321600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000205435699200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000342456532992000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "highest_loop_order": 2,
+      "scope": "The gravitationally decoupled scalar canonical Phi elastic forward coefficient in the fixed scheme through the stated loop order. This is not the full all-orders observable, a two-loop derivative-coordinate/source result or a UV-admissibility verdict.",
+      "strictly_positive_canonical_b2_at_this_order": true
+    },
+    "old_cubic_squared": "1/67108864",
+    "old_heavy_mass_squared": "195312500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002",
+    "old_scalar_quartic_used_only_as_prospective_boundary": "292968749999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999/1280000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "one_loop_log_transmutation_scale_upper": "-92159999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999998066406250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000006600/3222656249999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999989",
+    "one_loop_running_relative_denominator_change_upper_to_light_mass": "3222656249999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999989/153600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "prospective_Yukawa_squared": "5566406249999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999981/(57600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000*(-59/15 + sqrt(65985)/45))",
+    "prospective_gauge_squared": "292968749999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999/(1280000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000*(-59/15 + sqrt(65985)/45))",
+    "scope": "L at the new fermion threshold is assigned the old scalar numerical quartic only to screen a possible boundary condition. Finite threshold counterterms and changes to the old amplitude are NOT computed. The transmutation scale is a one-loop running parameter, not a proven Yang-Mills confinement or glueball mass."
+  },
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "42b6b9f0d8caf61e4b6de8bf9754d083c14820d64f535dd4eb4805d6db39e51b",
+    "README.md": "fd761ca17658eb31cdf151a640cfbacd0e80f2ecd4d302231b77a725fce434d3",
+    "notes/bounds.md": "dd745d31631538da9f0816845688ba462b72bc8ef2c32e2ddfe7ebce7b008343",
+    "notes/cuts.md": "956212e26a8dc843f3bc8b1b6a0cb04ae338b60433c1b35310ef5c2fa25caa66",
+    "notes/flow.md": "0397d3e85008d248bd2e3e0a17e7aa18f5f55c9c3399ed61b15fafa4b60a6160",
+    "notes/literature.md": "d548f68c8392661d54b13f0150bf14c247291ca8bd3999a498c248c30c1b3aaa",
+    "notes/scope.md": "b31cc35f04e1df0940436f16eaf9de111a10c48d2629229b99eb9efafa5b0a29",
+    "notes/threshold.md": "7d4ac18b1f00f8a9bf74e6669777a292543baef5f5de89410949994ade61038a",
+    "src/p8_vacuum_gauge_yukawa_screen/__init__.py": "81df90b3caf35c668c4d805d0a76cb02a4bb6c1ce96c163f49a2196eda5a1983",
+    "src/p8_vacuum_gauge_yukawa_screen/audit.py": "e8775124ed0cb84bf0b8d102b7ebefcc060c3e418c903374896e8e268169404d",
+    "src/p8_vacuum_gauge_yukawa_screen/calibration.py": "1979688762eacf64b5add79e62da57ce9439ea97fe34924a31069e9a28595a40",
+    "src/p8_vacuum_gauge_yukawa_screen/cuts.py": "2dcf26e1868bd59c71574eac1871b4cb51a9e782d4e1c405974885adde0ac68d",
+    "src/p8_vacuum_gauge_yukawa_screen/flow.py": "20f0c6b3c1a6e49bbc2e884dc4abe554e54438945af5ade48b3a26d357d2a46b",
+    "src/p8_vacuum_gauge_yukawa_screen/model.py": "0a3f1d8294a14eee4c568b9e0f4caec240b112d8c3367ba959aaad66be5947f9",
+    "src/p8_vacuum_gauge_yukawa_screen/threshold.py": "beb3ee5641535c493fcc61ae201780975d1851691e89602bbc8dcb0eca5893d9",
+    "src/p8_vacuum_gauge_yukawa_screen/verify.py": "0255a86090091e0b32dc7a2fdee432072b5046f3605407319c47ef98d6b0fb64",
+    "tests/test_gauge_yukawa_screen_certificate.py": "0b915ae882df61d8aad2ffc82fa4856cd7150aac1b110e2348c305bf2dd33e0a",
+    "tests/test_gauge_yukawa_screen_science.py": "41fa7b246831682acc31ac4b1b4c52fa3f44cdd4aced9e32cbf0224d6e8d0d92"
+  },
+  "status": "POSITIVE_ONE_LOOP_MARGINAL_FIXED_FLOW_WITH_NONZERO_LEADING_HEAVY_FERMION_GAUGE_THRESHOLD_AND_OVERLAPPING_MASSLESS_CUT_SCREEN; NOT_FULL_FINITE_MASS_MATCHING_UV_NO_GO_V_G_B_OR_ORIGINAL_P8_CLOSURE",
+  "verdict": "A separately named unbroken SU(3) extension with fourteen vectorlike Dirac fundamentals has a positive explicit one-loop marginal fixed-flow ray. The two opposite scalar Yukawas cancel the odd gauge threshold but generate a nonzero leading Phi^2 F^2 coefficient. Independent physical-polarization and Lorentz contractions give the leading matched-operator massless gauge cut, first present at three parent loops. Its s and u cuts overlap the old massive scalar disc; the boundary mismatch vanishes at the center but not in its neighborhood. The tiny prospective coefficient cannot justify inheriting the original massive-gap dispersion hypotheses. This is a leading matching screen, not a full finite-mass on-shell amplitude, confinement statement, exclusion of the candidate or row, proof of UV consistency or P8 closure.",
+  "verification_boundary": "Exact SU(3) generator algebra, matrix/tensor one-loop beta-function reduction and explicit ODE ray, heavy flavor determinant and leading threshold dictionary, independent cut contractions and rational prospective scales. Renormalization formulae are sourced inputs; threshold/phase-space/cut arguments and scope limits are written proofs, not proof-assistant formalized or nonperturbative. All ancestor, own source and report fields are rebuilt read-only using unmodified scientific SymPy.",
+  "written_proofs": [
+    "notes/flow.md",
+    "notes/threshold.md",
+    "notes/cuts.md",
+    "notes/bounds.md",
+    "notes/literature.md",
+    "notes/scope.md"
+  ]
+}
