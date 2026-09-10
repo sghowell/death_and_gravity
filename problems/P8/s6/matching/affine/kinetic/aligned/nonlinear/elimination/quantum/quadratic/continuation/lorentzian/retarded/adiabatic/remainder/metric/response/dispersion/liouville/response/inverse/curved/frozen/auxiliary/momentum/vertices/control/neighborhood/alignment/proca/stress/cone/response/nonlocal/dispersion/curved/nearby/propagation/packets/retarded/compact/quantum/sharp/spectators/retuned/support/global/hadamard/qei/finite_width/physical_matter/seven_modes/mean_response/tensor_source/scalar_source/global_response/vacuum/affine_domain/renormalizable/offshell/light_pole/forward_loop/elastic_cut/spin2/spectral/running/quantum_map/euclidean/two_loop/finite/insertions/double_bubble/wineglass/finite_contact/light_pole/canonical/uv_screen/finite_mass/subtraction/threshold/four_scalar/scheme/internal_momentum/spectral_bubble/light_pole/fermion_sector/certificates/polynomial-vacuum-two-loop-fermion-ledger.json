@@ -1,0 +1,629 @@
+{
+  "checked_scalar_entries": 141,
+  "claim": "P8-S6.137.COMPLETE_TWO_LOOP_FERMION_SECTOR_OWNERSHIP",
+  "controls": {
+    "dimensional_finite_products_not_dropped": true,
+    "gauge_sunset_not_omitted_from_scalar_amplitude": true,
+    "inherited_subsets_not_promoted_to_complete_two_loop": true,
+    "nonlocal_heavy_vertices_not_collapsed_to_local_L": true,
+    "original_P8_not_closed": true,
+    "primitive_catalog_not_evaluated_error_bound": true,
+    "raw_and_paired_counterterm_ledgers_disjoint": true,
+    "reducible_connected_terms_not_kept_as_1PI": true,
+    "rejected_inputs": 39
+  },
+  "counterterm_and_finite_conversion_ledger": {
+    "bosonic_one_loop_counterterm_insertion": "1/2 Tr[D_B (S_B^(1))'']",
+    "fermionic_one_loop_counterterm_insertion": "-Tr[D_F^-1 D_F^(1)]",
+    "finite_regulator_product": "outer_finite*subgraph_0 + outer_pole*subgraph_epsilon",
+    "finite_two_loop_double_pole_product": "full_two_loop_double_pole*subgraph_epsilon_squared + outer_finite*subgraph_0 + outer_pole*subgraph_epsilon",
+    "four_dimensional_projection_boundary": "S6.135 removes its overall local quartic constant before the finite b2 projection; S6.136 removes the whole outer local affine polynomial. Other sectors, especially heavy-exchange prefactors and finite MS conversions, cannot assume all regulator-sensitive finite terms project to zero.",
+    "partition_rule": "A proper-subgraph counterterm assigned inside a renormalized F0/F2/F4 or gauge block is removed from the separate insertion ledger for that same occurrence. Renormalized blocks plus a second copy of their counterterms are not the raw master expansion.",
+    "primitive_mixed_functional": "1/2 Tr[D_B F_raw''], F_raw=-Tr log D_F, with the common regulator retained.",
+    "scope": "Required ownership and order rules. The numerical or exact two-loop counterterm coefficients, complete finite MS conversion and full error budget are not supplied by this ledger.",
+    "second_order_canonical_external_field_coefficient": "-2*first_amplitude*first_field_increment + second_amplitude - tree_amplitude*(-3*first_field_increment**2 + 2*second_field_increment)",
+    "second_order_squared_cubic_increment": "first_G_reference**2 + 2*fundamental_G*second_G_reference",
+    "two_loop_tree_references": "S_B^(2), including allowed local mass, field, interaction, H one-point and vacuum-energy references in their declared scheme."
+  },
+  "date": "2026-09-10",
+  "exact_remaining_frontier": {
+    "exact_primitive_frontier": [
+      {
+        "id": "scalar_Phi0_W0_F0",
+        "status": "UNEVALUATED"
+      },
+      {
+        "id": "scalar_Phi2_W0_F2",
+        "status": "UNEVALUATED"
+      },
+      {
+        "id": "scalar_Phi2_W1_F0",
+        "status": "BOUNDED_PAIRED_SECTOR"
+      },
+      {
+        "id": "scalar_Phi4_W0_F4",
+        "status": "UNEVALUATED"
+      },
+      {
+        "id": "scalar_Phi4_W1_F2",
+        "status": "UNEVALUATED"
+      },
+      {
+        "id": "scalar_Phi4_W2_F0",
+        "status": "LOCAL_QUARTIC_SUBSET_ONLY"
+      },
+      {
+        "id": "gauge_Phi0",
+        "status": "UNEVALUATED"
+      },
+      {
+        "id": "gauge_Phi2",
+        "status": "UNEVALUATED"
+      },
+      {
+        "id": "gauge_Phi4",
+        "status": "UNEVALUATED"
+      }
+    ],
+    "inherited_complete_paired_quadratic_family": {
+      "M": "195312500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002",
+      "Q_lower": "144",
+      "Y_upper": "5566406249999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999981/86400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "fermion_mass": "100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "finite_positive_outer_slope_upper": "5566406249999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999981/100192997081088000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "g": "1/67108864",
+      "scope": "Only this first covariance-insertion quadratic family. The remainder bound is uniform on Re(s)<=4; it is not a complete two-loop pole error or exact heavy spectrum.",
+      "spectral_threshold": "40000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "strict_family_slope_and_spacelike_remainder_positive": true,
+      "uniform_outer_OS_remainder_coefficient_upper": "5566406249999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999981/12023159649730560000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "inherited_local_quartic_subset_upper": "477768480777740478515624999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999995107650756835937500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000016699218749999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999981/146767085568000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "nonclosure": "A complete list of primitive families is not their evaluation. One paired quadratic row is bounded and one quartic row has only its local-vertex subset bounded; seven primitive rows and the separate counterterm/conversion tasks remain.",
+    "same_actual_full_reduced_quartic_action_Hessian": [
+      [
+        "-cubic_G**2*(4*K12*phi2**2/(K12**2 - positive_K11*positive_K22) - 12*phi1**2*positive_K22/(K12**2 - positive_K11*positive_K22))/8 + phi1**2*quartic_L/2",
+        "-K12*cubic_G**2*phi1*phi2/(K12**2 - positive_K11*positive_K22)"
+      ],
+      [
+        "-K12*cubic_G**2*phi1*phi2/(K12**2 - positive_K11*positive_K22)",
+        "-cubic_G**2*(4*K12*phi1**2/(K12**2 - positive_K11*positive_K22) - 12*phi2**2*positive_K11/(K12**2 - positive_K11*positive_K22))/8 + phi2**2*quartic_L/2"
+      ]
+    ],
+    "scope": "Do not sum the inherited subset estimates as if this were the full enlarged-model two-loop error. Higher-loop, V-contour, G, B and original P8 closure remain separate.",
+    "separate_uncomputed_counterterm_tasks": [
+      "All remaining proper-subgraph counterterm insertions with epsilon dependence",
+      "All required second-order local references in the declared interaction scheme",
+      "Complete finite interaction and canonical-field conversion through order two"
+    ]
+  },
+  "exact_residuals": {
+    "boundary_all_nine_rows_have_exact_status": "0",
+    "boundary_one_completed_paired_quadratic_row": "0",
+    "boundary_one_partially_bounded_quartic_row": "0",
+    "boundary_same_actual_complete_nonlocal_quadratic_Hessian": "0",
+    "boundary_same_four_point_subset_bound": "0",
+    "boundary_same_local_quartic_three_channels_two_positions": "0",
+    "boundary_same_mixed_quadratic_single_covariance_position": "0",
+    "boundary_seven_primitive_rows_still_unevaluated": "0",
+    "counterterms_double_counted_inner_counterterm_diagnostic": "0",
+    "counterterms_fermion_counterterm_determinant_variation_sign": "0",
+    "counterterms_finite_epsilon_squared_times_double_pole_retained": "0",
+    "counterterms_finite_epsilon_times_pole_retained": "0",
+    "counterterms_fundamental_cubic_second_order_square_retained": "0",
+    "counterterms_missing_epsilon_term_changes_finite_answer": "0",
+    "counterterms_regrouped_inner_counterterm_counted_once": "0",
+    "counterterms_second_order_canonical_external_field_formula": "0",
+    "families_four_four_point_rows": "0",
+    "families_inverse_left_identity_0_0_0": "0",
+    "families_inverse_left_identity_0_0_2": "0",
+    "families_inverse_left_identity_0_0_4": "0",
+    "families_inverse_left_identity_0_1_0": "0",
+    "families_inverse_left_identity_0_1_2": "0",
+    "families_inverse_left_identity_0_1_4": "0",
+    "families_inverse_left_identity_1_0_0": "0",
+    "families_inverse_left_identity_1_0_2": "0",
+    "families_inverse_left_identity_1_0_4": "0",
+    "families_inverse_left_identity_1_1_0": "0",
+    "families_inverse_left_identity_1_1_2": "0",
+    "families_inverse_left_identity_1_1_4": "0",
+    "families_nine_total_rows": "0",
+    "families_noncommuting_scalar_background_degree_0": "0",
+    "families_noncommuting_scalar_background_degree_2": "0",
+    "families_noncommuting_scalar_background_degree_4": "0",
+    "families_quadratic_covariance_sector_matches_master_trace": "0",
+    "families_quartic_covariance_sector_matches_master_trace": "0",
+    "families_six_scalar_rows": "0",
+    "families_three_gauge_rows": "0",
+    "families_three_two_point_rows": "0",
+    "families_two_vacuum_constant_rows": "0",
+    "gauge_active_even_flavor_degree_2": "0",
+    "gauge_active_even_flavor_degree_4": "0",
+    "gauge_active_even_flavor_degree_6": "0",
+    "gauge_active_gauge_Phi_dependent_color_factor": "0",
+    "gauge_active_gauge_factor_not_scalar_six": "0",
+    "gauge_all_fourteen_gauge_vacuum_color_factor": "0",
+    "gauge_fundamental_Casimir_0_0": "0",
+    "gauge_fundamental_Casimir_0_1": "0",
+    "gauge_fundamental_Casimir_0_2": "0",
+    "gauge_fundamental_Casimir_1_0": "0",
+    "gauge_fundamental_Casimir_1_1": "0",
+    "gauge_fundamental_Casimir_1_2": "0",
+    "gauge_fundamental_Casimir_2_0": "0",
+    "gauge_fundamental_Casimir_2_1": "0",
+    "gauge_fundamental_Casimir_2_2": "0",
+    "gauge_one_current_color_trace_0": "0",
+    "gauge_one_current_color_trace_1": "0",
+    "gauge_one_current_color_trace_2": "0",
+    "gauge_one_current_color_trace_3": "0",
+    "gauge_one_current_color_trace_4": "0",
+    "gauge_one_current_color_trace_5": "0",
+    "gauge_one_current_color_trace_6": "0",
+    "gauge_one_current_color_trace_7": "0",
+    "gauge_one_flavor_gauge_color_contraction": "0",
+    "gauge_opposite_flavor_odd_degree_1": "0",
+    "gauge_opposite_flavor_odd_degree_3": "0",
+    "gauge_opposite_flavor_odd_degree_5": "0",
+    "gauge_scalar_active_color_flavor_factor": "0",
+    "gauge_two_current_color_trace_0_0": "0",
+    "gauge_two_current_color_trace_0_1": "0",
+    "gauge_two_current_color_trace_0_2": "0",
+    "gauge_two_current_color_trace_0_3": "0",
+    "gauge_two_current_color_trace_0_4": "0",
+    "gauge_two_current_color_trace_0_5": "0",
+    "gauge_two_current_color_trace_0_6": "0",
+    "gauge_two_current_color_trace_0_7": "0",
+    "gauge_two_current_color_trace_1_0": "0",
+    "gauge_two_current_color_trace_1_1": "0",
+    "gauge_two_current_color_trace_1_2": "0",
+    "gauge_two_current_color_trace_1_3": "0",
+    "gauge_two_current_color_trace_1_4": "0",
+    "gauge_two_current_color_trace_1_5": "0",
+    "gauge_two_current_color_trace_1_6": "0",
+    "gauge_two_current_color_trace_1_7": "0",
+    "gauge_two_current_color_trace_2_0": "0",
+    "gauge_two_current_color_trace_2_1": "0",
+    "gauge_two_current_color_trace_2_2": "0",
+    "gauge_two_current_color_trace_2_3": "0",
+    "gauge_two_current_color_trace_2_4": "0",
+    "gauge_two_current_color_trace_2_5": "0",
+    "gauge_two_current_color_trace_2_6": "0",
+    "gauge_two_current_color_trace_2_7": "0",
+    "gauge_two_current_color_trace_3_0": "0",
+    "gauge_two_current_color_trace_3_1": "0",
+    "gauge_two_current_color_trace_3_2": "0",
+    "gauge_two_current_color_trace_3_3": "0",
+    "gauge_two_current_color_trace_3_4": "0",
+    "gauge_two_current_color_trace_3_5": "0",
+    "gauge_two_current_color_trace_3_6": "0",
+    "gauge_two_current_color_trace_3_7": "0",
+    "gauge_two_current_color_trace_4_0": "0",
+    "gauge_two_current_color_trace_4_1": "0",
+    "gauge_two_current_color_trace_4_2": "0",
+    "gauge_two_current_color_trace_4_3": "0",
+    "gauge_two_current_color_trace_4_4": "0",
+    "gauge_two_current_color_trace_4_5": "0",
+    "gauge_two_current_color_trace_4_6": "0",
+    "gauge_two_current_color_trace_4_7": "0",
+    "gauge_two_current_color_trace_5_0": "0",
+    "gauge_two_current_color_trace_5_1": "0",
+    "gauge_two_current_color_trace_5_2": "0",
+    "gauge_two_current_color_trace_5_3": "0",
+    "gauge_two_current_color_trace_5_4": "0",
+    "gauge_two_current_color_trace_5_5": "0",
+    "gauge_two_current_color_trace_5_6": "0",
+    "gauge_two_current_color_trace_5_7": "0",
+    "gauge_two_current_color_trace_6_0": "0",
+    "gauge_two_current_color_trace_6_1": "0",
+    "gauge_two_current_color_trace_6_2": "0",
+    "gauge_two_current_color_trace_6_3": "0",
+    "gauge_two_current_color_trace_6_4": "0",
+    "gauge_two_current_color_trace_6_5": "0",
+    "gauge_two_current_color_trace_6_6": "0",
+    "gauge_two_current_color_trace_6_7": "0",
+    "gauge_two_current_color_trace_7_0": "0",
+    "gauge_two_current_color_trace_7_1": "0",
+    "gauge_two_current_color_trace_7_2": "0",
+    "gauge_two_current_color_trace_7_3": "0",
+    "gauge_two_current_color_trace_7_4": "0",
+    "gauge_two_current_color_trace_7_5": "0",
+    "gauge_two_current_color_trace_7_6": "0",
+    "gauge_two_current_color_trace_7_7": "0",
+    "legendre_Gaussian_fourth_moment": "0",
+    "legendre_Gaussian_second_moment": "0",
+    "legendre_Gaussian_sixth_moment": "0",
+    "legendre_Legendre_transform_removes_reducible_terms": "0",
+    "legendre_connected_saddle_coefficient": "0",
+    "legendre_mixed_effective_action_coefficient": "0",
+    "legendre_no_fermion_bosonic_tadpole_dumbbell_survives": "0",
+    "legendre_no_two_fermion_dumbbell_survives": "0",
+    "legendre_tree_background_shift_formula": "0",
+    "legendre_two_component_source_bilinear_cancellation": "0"
+  },
+  "formulation": "FORMULATION.md",
+  "gauge_color_flavor_ownership": {
+    "Dirac_flavor_Yukawas": [
+      "reference_Yukawa",
+      "-reference_Yukawa",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "bosonic_block_dictionary": "At A=0 and color-singlet Phi background, the tree scalar and gauge Hessians are block diagonal. The gauge propagator is Phi-independent. The exact H Gaussian is already eliminated; H has no direct Yukawa vertex.",
+    "fundamental_Casimir_matrix": [
+      [
+        "4/3",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "4/3",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "4/3"
+      ]
+    ],
+    "fundamental_generators": [
+      [
+        [
+          "0",
+          "1/2",
+          "0"
+        ],
+        [
+          "1/2",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      [
+        [
+          "0",
+          "-I/2",
+          "0"
+        ],
+        [
+          "I/2",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      [
+        [
+          "1/2",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "-1/2",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      [
+        [
+          "0",
+          "0",
+          "1/2"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "1/2",
+          "0",
+          "0"
+        ]
+      ],
+      [
+        [
+          "0",
+          "0",
+          "-I/2"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "I/2",
+          "0",
+          "0"
+        ]
+      ],
+      [
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1/2"
+        ],
+        [
+          "0",
+          "1/2",
+          "0"
+        ]
+      ],
+      [
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "-I/2"
+        ],
+        [
+          "0",
+          "I/2",
+          "0"
+        ]
+      ],
+      [
+        [
+          "sqrt(3)/6",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "sqrt(3)/6",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "-sqrt(3)/3"
+        ]
+      ]
+    ],
+    "gauge_active_color_flavor_factor": "8",
+    "gauge_all_flavor_vacuum_color_factor": "56",
+    "gauge_primitive": "One half Tr[D_A F_AA] includes the fermion-fermion-vector sunset and all its Phi background placements. Gauge vertices carry their original Dirac matrices, factors of i and gauge coupling; the overall trace coefficient is not the complete scalar sign or color coefficient.",
+    "ghost_boundary": "There is no direct ghost-fermion vertex and no Phi dependence in the tree ghost block. Pure gauge/ghost vacuum graphs belong to the separate bosonic sector.",
+    "mixed_fermion_block_zero": "The Phi-A Hessian of the fermion determinant has a single color generator and vanishes by Tr T^a=0 for arbitrary color-singlet Phi insertions.",
+    "regulator_boundary": "Retain the vectorlike gauge-preserving dimensional regulator and the whole closed-loop Hessian, including every ordering. No four-dimensional Lorentz contraction, independent-diagram gauge invariance, or completed gauge/IR estimate is inferred from these finite color identities.",
+    "scalar_active_color_flavor_factor": "6",
+    "scope": "Nongravitational vacuum matter-sector ownership. Finite-gravity fermion graphs, exact gauge spectrum and the G Regge/IR problem are not covered."
+  },
+  "loop_and_background_expansion": {
+    "families": {
+      "F_dictionary": "F0,F2,F4 are the Phi-background degree 0,2,4 coefficients of the scalar Hessian of the entire one-loop fermion determinant; no extra factorials are absorbed after this definition.",
+      "W_dictionary": "W2 is the complete quadratic-in-Phi Hessian of the frozen exactly H-eliminated quartic action, including all nonlocal heavy contractions, not just L Phi^2/2.",
+      "complete_degree_zero_two_four_catalog": [
+        {
+          "contracted_boson": "Phi",
+          "estimate_status": "Not evaluated or bounded by this ledger",
+          "external_background_degree": 0,
+          "fermion_Hessian_background_degree": 0,
+          "gauge_a_power": 0,
+          "id": "scalar_Phi0_W0_F0",
+          "scalar_Y_power": 1,
+          "trace_coefficient": "1/2",
+          "tree_W_insertions": 0
+        },
+        {
+          "contracted_boson": "Phi",
+          "estimate_status": "Not evaluated or bounded by this ledger",
+          "external_background_degree": 2,
+          "fermion_Hessian_background_degree": 2,
+          "gauge_a_power": 0,
+          "id": "scalar_Phi2_W0_F2",
+          "scalar_Y_power": 2,
+          "trace_coefficient": "1/2",
+          "tree_W_insertions": 0
+        },
+        {
+          "contracted_boson": "Phi",
+          "estimate_status": "Complete paired covariance-insertion quadratic sector bounded by S6.136",
+          "external_background_degree": 2,
+          "fermion_Hessian_background_degree": 0,
+          "gauge_a_power": 0,
+          "id": "scalar_Phi2_W1_F0",
+          "scalar_Y_power": 1,
+          "trace_coefficient": "-1/2",
+          "tree_W_insertions": 1
+        },
+        {
+          "contracted_boson": "Phi",
+          "estimate_status": "Not evaluated or bounded by this ledger",
+          "external_background_degree": 4,
+          "fermion_Hessian_background_degree": 4,
+          "gauge_a_power": 0,
+          "id": "scalar_Phi4_W0_F4",
+          "scalar_Y_power": 3,
+          "trace_coefficient": "1/2",
+          "tree_W_insertions": 0
+        },
+        {
+          "contracted_boson": "Phi",
+          "estimate_status": "Not evaluated or bounded by this ledger",
+          "external_background_degree": 4,
+          "fermion_Hessian_background_degree": 2,
+          "gauge_a_power": 0,
+          "id": "scalar_Phi4_W1_F2",
+          "scalar_Y_power": 2,
+          "trace_coefficient": "-1/2",
+          "tree_W_insertions": 1
+        },
+        {
+          "contracted_boson": "Phi",
+          "estimate_status": "Local-quartic W W subset with inner/outer reference pairing bounded by S6.135; full nonlocal W sector remains",
+          "external_background_degree": 4,
+          "fermion_Hessian_background_degree": 0,
+          "gauge_a_power": 0,
+          "id": "scalar_Phi4_W2_F0",
+          "scalar_Y_power": 1,
+          "trace_coefficient": "1/2",
+          "tree_W_insertions": 2
+        },
+        {
+          "contracted_boson": "gauge",
+          "estimate_status": "Not evaluated or bounded by this ledger",
+          "external_background_degree": 0,
+          "fermion_Hessian_background_degree": 0,
+          "gauge_a_power": 1,
+          "id": "gauge_Phi0",
+          "scalar_Y_power": 0,
+          "trace_coefficient": "1/2",
+          "tree_W_insertions": 0
+        },
+        {
+          "contracted_boson": "gauge",
+          "estimate_status": "Not evaluated or bounded by this ledger",
+          "external_background_degree": 2,
+          "fermion_Hessian_background_degree": 2,
+          "gauge_a_power": 1,
+          "id": "gauge_Phi2",
+          "scalar_Y_power": 1,
+          "trace_coefficient": "1/2",
+          "tree_W_insertions": 0
+        },
+        {
+          "contracted_boson": "gauge",
+          "estimate_status": "Not evaluated or bounded by this ledger",
+          "external_background_degree": 4,
+          "fermion_Hessian_background_degree": 4,
+          "gauge_a_power": 1,
+          "id": "gauge_Phi4",
+          "scalar_Y_power": 2,
+          "trace_coefficient": "1/2",
+          "tree_W_insertions": 0
+        }
+      ],
+      "fermion_scalar_Hessian_background_expansion": "background_degree_marker**4*F4 + background_degree_marker**2*F2 + F0",
+      "quartic_master_identity": "Gamma_2,F[Phi^4]=1/2 Tr[D F4-D W2 D F2+D W2 D W2 D F0]+1/2 Tr[D_A F_AA,4], before counterterm insertion and canonical conversion.",
+      "scalar_covariance_formal_background_expansion": "background_degree_marker**4*D*W*D*W*D - background_degree_marker**2*D*W*D + D",
+      "scalar_trace_background_degree_coefficients": {
+        "0": "D*F0/2",
+        "2": "(D*F2 - D*W*D*F0)/2",
+        "4": "(D*F4 - D*W*D*F2 + D*W*D*W*D*F0)/2"
+      },
+      "scope": "Complete primitive two-loop fermion-sector ownership through four external Phi derivatives, not completed integrals, counterterm coefficients, scheme conversion or an error budget."
+    },
+    "legendre": {
+      "Legendre_effective_action_two_loop_coefficient": "(12*fermion_second_derivative*positive_tree_Hessian**2 + 3*positive_tree_Hessian*tree_quartic - 2*tree_cubic**2)/(24*positive_tree_Hessian**3)",
+      "arbitrary_index_identity": "After integrating the quadratic fermions, F=-Tr log D_F enters the bosonic action at order h. At order h^2 its genuinely mixed contribution to the bosonic 1PI action is one half Tr[(S_B^(0)'')^-1 F'']. Reducible F' and bosonic-tadpole bilinears cancel under the Legendre transform.",
+      "classical_to_mean_background_shift": "(fermion_first_derivative + tree_cubic/(2*positive_tree_Hessian))/positive_tree_Hessian",
+      "connected_saddle_two_loop_coefficient": "(fermion_first_derivative**2/2 - fermion_second_derivative/2)/positive_tree_Hessian + 3*(fermion_first_derivative*tree_cubic/6 - tree_quartic/24)/positive_tree_Hessian**2 + 5*tree_cubic**2/(24*positive_tree_Hessian**3)",
+      "finite_index_Legendre_cancellation": "(bosonic_tadpole1 + first_derivative1)*(2*bosonic_tadpole1 + bosonic_tadpole2/3 + 2*first_derivative1 + first_derivative2/3)/2 + (bosonic_tadpole2 + first_derivative2)*(bosonic_tadpole1/3 + 3*bosonic_tadpole2 + first_derivative1/3 + 3*first_derivative2)/2",
+      "finite_index_source_bilinear": "bosonic_tadpole1*(2*bosonic_tadpole1 + bosonic_tadpole2/3)/2 + bosonic_tadpole1*(2*first_derivative1 + first_derivative2/3) + bosonic_tadpole2*(bosonic_tadpole1/3 + 3*bosonic_tadpole2)/2 + bosonic_tadpole2*(first_derivative1/3 + 3*first_derivative2) + first_derivative1*(2*first_derivative1 + first_derivative2/3)/2 + first_derivative2*(first_derivative1/3 + 3*first_derivative2)/2",
+      "mixed_fermion_part": "fermion_second_derivative/(2*positive_tree_Hessian)",
+      "scope": "A formal loop expansion with regulator retained. This is an ownership identity, not evaluation or an error bound for its continuum diagrams."
+    }
+  },
+  "named_exact_check_count": 141,
+  "not_established": [
+    "Seven primitive rows and the remaining nonlocal heavy-vertex quartic subset",
+    "All remaining proper-subgraph and second-order reference coefficients",
+    "Complete finite MS interaction and canonical-field conversion",
+    "Complete enlarged-model two-loop amplitude, pole or error budget",
+    "Higher-loop/truncation errors, V contours, gauge spectrum and cutoff",
+    "Finite-gravity Regge/IR Delta for G and controlled common-parent B",
+    "Original P8 closure or exclusion of a complete old ladder row"
+  ],
+  "prior_sha256": {
+    "S6_136_fully_rebuilt": "315d9f330c2c92a432cab678646d8b22e847493e2366e1fe343f903a5415902b",
+    "all_prior_scientific_sources_and_reports_unchanged": true,
+    "complete_ownership_not_complete_estimates_or_original_P8": true,
+    "same_GY14_nongravitational_reference_model": true
+  },
+  "proof_checks": {
+    "Legendre_transform_cancels_reducible_dumbbells": true,
+    "active_scalar_and_gauge_color_factors_distinguished": true,
+    "actual_nonlocal_H_eliminated_quartic_Hessian_retained": true,
+    "all_degrees_are_zero_two_or_four": true,
+    "all_exact_residuals_zero": true,
+    "all_fourteen_gauge_vacuum_flavors_retained": true,
+    "bosonic_and_fermionic_one_loop_counterterm_insertions_explicit": true,
+    "both_inherited_covariance_sectors_match_master_formula": true,
+    "complete_catalog_not_a_complete_error_budget": true,
+    "exact_frontier_validation": true,
+    "fermions_integrated_before_bosonic_loop_expansion": true,
+    "finite_epsilon_and_epsilon_squared_products_retained": true,
+    "full_finite_reference_conversion_not_declared_done": true,
+    "gauge_Hessian_has_all_current_orderings_and_original_vertex_signs": true,
+    "gauge_scalar_mixed_fermion_Hessian_vanishes_by_single_color_trace": true,
+    "nine_complete_primitive_rows_through_Phi4": true,
+    "no_direct_H_Yukawa_or_ghost_fermion_vertex": true,
+    "noncommuting_operator_order_not_replaced_by_scalar_products": true,
+    "nongravitational_vacuum_matter_sector_only": true,
+    "one_bounded_paired_quadratic_sector": true,
+    "one_partially_bounded_quartic_sector": true,
+    "original_V_G_B_and_P8_remain_open": true,
+    "paired_inner_counterterms_not_counted_twice": true,
+    "pure_bosonic_two_loop_graphs_kept_separate": true,
+    "second_order_external_field_and_fundamental_cubic_products_retained": true,
+    "seven_primitive_rows_still_unevaluated": true,
+    "six_scalar_exchange_rows": true,
+    "three_gauge_exchange_rows": true
+  },
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "4e8d4fea85cb60a57ae9a7cbb85df442874f985c57e03fe65ac5af423a4b3b36",
+    "README.md": "f05f42cb858007ebb6a1b171c3ae4b4296ee80752717b8aef9f8eb8795b897aa",
+    "notes/counterterms.md": "ccffcf5ca1d517dbb78a6fe943aeac337558bcce916631ec40fdc76f5ae12899",
+    "notes/families.md": "1feda8be9419df2b23418581d8a4376734635da42e9cc67f99ffcf0ab8c16885",
+    "notes/gauge.md": "33fa836f400b213c09a3140549d6361f4d0a14c7bc6352b34aa6aca0d00041ca",
+    "notes/legendre.md": "9cc54c933f82b01203a1c3bd43efcd1ac003c8a3d762999aa4a33f9cd16e538e",
+    "notes/literature.md": "0abcb81dfa7972dfee140b92cce56270f09c9be9261d8e52203de079853f4a42",
+    "notes/scope.md": "b4fab3e43a032208153249d17f478ea3d7abe6eeb733d1d005953d83164c1898",
+    "src/p8_vacuum_two_loop_fermion_ledger/__init__.py": "cb4e16083e5ec7cd58f3df07c07ef063618a8fd6f953c3d9977733175eaa43ad",
+    "src/p8_vacuum_two_loop_fermion_ledger/audit.py": "f8918b825f3b7ed02ea361317eaf5b3aae8d16ac8a303778487dafcc76e9b26f",
+    "src/p8_vacuum_two_loop_fermion_ledger/boundary.py": "ff24283c062b21ccda8cf12dbba04e43421e20eb65408f76b1d8495c67222a77",
+    "src/p8_vacuum_two_loop_fermion_ledger/counterterms.py": "2b9d52256b8e762fadc2df51275e418949849916daf53c1a8f1a0e67773c0580",
+    "src/p8_vacuum_two_loop_fermion_ledger/families.py": "5c32e8f3d59c076d63bc49171deb37462116257b4675076908b86b0af5bd0e84",
+    "src/p8_vacuum_two_loop_fermion_ledger/gauge.py": "dad357e8777311cd6bc5dde0cec45bcb33068bc9327eecbb13601ed5bf3067ca",
+    "src/p8_vacuum_two_loop_fermion_ledger/legendre.py": "f381a7dc53ef796bccfe53960f4c70f629b4d025f4aa6f8d9efb58bf06aa84ed",
+    "src/p8_vacuum_two_loop_fermion_ledger/verify.py": "4d81b0bec5037db0fd0485f90fb16818c155d26a571544ac68bc00873cf59b01",
+    "tests/test_two_loop_fermion_ledger_certificate.py": "287fb98c2a263c9f86e5d62d74d54070e62d4c79b2e698b9c23efac6e3c2102a",
+    "tests/test_two_loop_fermion_ledger_science.py": "6f0ad0a2fd6788c571e78af5aa45102624aa0e5cd4c0a41b4c2ba15100b07792"
+  },
+  "status": "COMPLETE_PRIMITIVE_FERMION_SECTOR_OWNERSHIP_THROUGH_PHI4; NOT_EVALUATED_TWO_LOOP_ERROR_FINITE_MATCHING_HIGHER_LOOP_V_G_B_OR_ORIGINAL_P8_CLOSURE",
+  "verdict": "The complete nongravitational primitive two-loop fermion-sector ownership through four external Phi derivatives is derived by integrating the quadratic fermions, performing the bosonic loop expansion and cancelling reducible source terms with the Legendre transform. The noncommuting scalar expansion has six rows and the gauge contraction has three, with all fourteen vacuum flavors and distinct active scalar/gauge color factors retained. Separate bosonic/fermionic one-loop counterterm insertions, second-order references, regulator-sensitive finite products and canonical/fundamental-cubic conversion terms are explicit tasks; assigned proper counterterms may not be counted twice. The quantitative frontier remains incomplete: one paired quadratic row is bounded, one quartic row has only a local-vertex subset bounded, and seven primitive rows plus the other counterterm/conversion tasks are unevaluated. A complete catalog is not a complete two-loop amplitude or pole/error budget, later-loop bound, V contour, finite-gravity G, common-parent B or original P8 closure.",
+  "verification_boundary": "Exact Gaussian moments and Legendre algebra, noncommuting matrix/background expansion, literal SU(3) color/flavor identities, proper-counterterm partition rules, finite regulator products and a mutation-checked quantitative frontier. The arbitrary-index/regulated functional argument is a written proof cross-checked against primary literature, not proof-assistant formalization, evaluated continuum errors or an all-orders QFT theorem. Native and ordinary replay uses unmodified SymPy with interpreter-only runtime allowances.",
+  "written_proofs": [
+    "notes/legendre.md",
+    "notes/families.md",
+    "notes/gauge.md",
+    "notes/counterterms.md",
+    "notes/literature.md",
+    "notes/scope.md"
+  ]
+}
