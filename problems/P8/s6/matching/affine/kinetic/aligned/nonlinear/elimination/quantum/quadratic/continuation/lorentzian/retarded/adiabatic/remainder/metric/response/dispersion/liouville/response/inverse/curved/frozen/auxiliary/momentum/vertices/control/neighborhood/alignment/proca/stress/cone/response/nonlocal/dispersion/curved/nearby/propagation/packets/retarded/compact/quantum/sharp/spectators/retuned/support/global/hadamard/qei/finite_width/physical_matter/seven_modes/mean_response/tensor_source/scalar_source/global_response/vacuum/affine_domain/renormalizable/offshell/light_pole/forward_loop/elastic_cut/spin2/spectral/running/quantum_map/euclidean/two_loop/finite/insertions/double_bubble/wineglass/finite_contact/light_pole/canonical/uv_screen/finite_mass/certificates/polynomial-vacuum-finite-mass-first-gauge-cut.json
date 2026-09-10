@@ -1,0 +1,2069 @@
+{
+  "Dirac_Ward_and_complex_kinematics": {
+    "Dirac": {
+      "Ward_identity": "S(q) i gamma.k S(q+k) = S(q)-S(q+k); the polynomial numerator identity extends to complex k",
+      "complex_shift_bound": "||i gamma.P|| <= sum_mu |P_mu|; ||S0 i gamma.P|| <= 12/mF on the written routing domain",
+      "gamma_matrices": [
+        [
+          [
+            "0",
+            "0",
+            "1",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "1"
+          ],
+          [
+            "1",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "1",
+            "0",
+            "0"
+          ]
+        ],
+        [
+          [
+            "0",
+            "0",
+            "0",
+            "-I"
+          ],
+          [
+            "0",
+            "0",
+            "-I",
+            "0"
+          ],
+          [
+            "0",
+            "I",
+            "0",
+            "0"
+          ],
+          [
+            "I",
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        [
+          [
+            "0",
+            "0",
+            "0",
+            "-1"
+          ],
+          [
+            "0",
+            "0",
+            "1",
+            "0"
+          ],
+          [
+            "0",
+            "1",
+            "0",
+            "0"
+          ],
+          [
+            "-1",
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        [
+          [
+            "0",
+            "0",
+            "-I",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "I"
+          ],
+          [
+            "I",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "-I",
+            "0",
+            "0"
+          ]
+        ]
+      ],
+      "loop_components": [
+        "real_loop_q0",
+        "real_loop_q1",
+        "real_loop_q2",
+        "real_loop_q3"
+      ],
+      "mass": "positive_fermion_mass",
+      "norm_squared_identity": "S0(q).dagger S0(q) = I/(q^2+mF^2), for real Euclidean q",
+      "scope": "Four-dimensional norm estimates apply to the absolutely convergent Taylor tail, not to the unsubtracted degree-zero UV term. The full gauge-invariant regulated diagram sum is treated before that term is removed.",
+      "shift_components": [
+        "external_shift_k0",
+        "external_shift_k1",
+        "external_shift_k2",
+        "external_shift_k3"
+      ],
+      "unshifted_positive_denominator": "positive_fermion_mass**2 + real_loop_q0**2 + real_loop_q1**2 + real_loop_q2**2 + real_loop_q3**2",
+      "unshifted_propagator_numerator": [
+        [
+          "positive_fermion_mass",
+          "0",
+          "-I*(real_loop_q0 - I*real_loop_q3)",
+          "-I*(-I*real_loop_q1 - real_loop_q2)"
+        ],
+        [
+          "0",
+          "positive_fermion_mass",
+          "-I*(-I*real_loop_q1 + real_loop_q2)",
+          "-I*(real_loop_q0 + I*real_loop_q3)"
+        ],
+        [
+          "-I*(real_loop_q0 + I*real_loop_q3)",
+          "-I*(I*real_loop_q1 + real_loop_q2)",
+          "positive_fermion_mass",
+          "0"
+        ],
+        [
+          "-I*(I*real_loop_q1 - real_loop_q2)",
+          "-I*(real_loop_q0 - I*real_loop_q3)",
+          "0",
+          "positive_fermion_mass"
+        ]
+      ]
+    },
+    "kinematics": {
+      "Euclidean_all_outgoing_external_momenta": {
+        "Phi1": [
+          [
+            "-I*positive_energy"
+          ],
+          [
+            "0"
+          ],
+          [
+            "0"
+          ],
+          [
+            "-scalar_spatial_component"
+          ]
+        ],
+        "Phi2": [
+          [
+            "-I*positive_energy"
+          ],
+          [
+            "0"
+          ],
+          [
+            "0"
+          ],
+          [
+            "scalar_spatial_component"
+          ]
+        ],
+        "gauge1": [
+          [
+            "I*positive_energy"
+          ],
+          [
+            "2*positive_energy*real_stereographic_angle/(real_stereographic_angle**2 + 1)"
+          ],
+          [
+            "0"
+          ],
+          [
+            "positive_energy*(1 - real_stereographic_angle**2)/(real_stereographic_angle**2 + 1)"
+          ]
+        ],
+        "gauge2": [
+          [
+            "I*positive_energy"
+          ],
+          [
+            "-2*positive_energy*real_stereographic_angle/(real_stereographic_angle**2 + 1)"
+          ],
+          [
+            "0"
+          ],
+          [
+            "-positive_energy*(1 - real_stereographic_angle**2)/(real_stereographic_angle**2 + 1)"
+          ]
+        ]
+      },
+      "continuation": "The absolutely convergent Taylor tail defines analytic continuation from real Euclidean external momenta inside the strict Neumann domain. Bose symmetry makes the cut angular integral even in p, so its continuation through p=0 is analytic in p^2. No arbitrary complex loop-contour translation is used.",
+      "degree_two_complete_parity_even_Ward_system": {
+        "Gram_product_basis": [
+          "kk",
+          "ll",
+          "pp",
+          "kl",
+          "kp",
+          "lp"
+        ],
+        "linear_constraint_matrix": [
+          [
+            "1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1"
+          ]
+        ],
+        "normalization": "(k dot l) eta_mu_nu - l_mu k_nu",
+        "one_dimensional_solution": [
+          [
+            "0"
+          ],
+          [
+            "0"
+          ],
+          [
+            "0"
+          ],
+          [
+            "1"
+          ],
+          [
+            "0"
+          ],
+          [
+            "0"
+          ],
+          [
+            "0"
+          ],
+          [
+            "0"
+          ],
+          [
+            "0"
+          ],
+          [
+            "-1"
+          ],
+          [
+            "0"
+          ],
+          [
+            "0"
+          ],
+          [
+            "0"
+          ],
+          [
+            "0"
+          ],
+          [
+            "0"
+          ]
+        ],
+        "tensor_coefficient_basis": [
+          "degree_two_tensor_c0",
+          "degree_two_tensor_c1",
+          "degree_two_tensor_c2",
+          "degree_two_tensor_c3",
+          "degree_two_tensor_c4",
+          "degree_two_tensor_c5",
+          "degree_two_tensor_c6",
+          "degree_two_tensor_c7",
+          "degree_two_tensor_c8",
+          "degree_two_tensor_c9",
+          "degree_two_tensor_c10",
+          "degree_two_tensor_c11",
+          "degree_two_tensor_c12",
+          "degree_two_tensor_c13",
+          "degree_two_tensor_c14"
+        ]
+      },
+      "fermion_mass_domain": "mF>=24",
+      "low_degree_operator_classification": {
+        "n0": "The full regulated Ward-invariant sum vanishes; individual logarithmic box terms are not discarded before regulation",
+        "n1": "No Lorentz-invariant rank-three parity-even tensor of two gauge polarizations and one external momentum",
+        "n2": "Unique CP-even neutral-scalar operator Phi^2 F^a_mu_nu F^a_mu_nu; CP-odd term absent for the real scalar Yukawas"
+      },
+      "mass_shell_dictionary": "4 E^2=s, p^2=s/4-1; no complex conjugation of continued p",
+      "physical_anchor_and_continued_interval": "[1,5], with physical open anchor 4<s<5",
+      "regulated_Ward_telescoping_rows": [
+        {
+          "contracted_terms": [
+            "Ward_triangle_0_0 - Ward_triangle_0_1",
+            "Ward_triangle_0_1 - Ward_triangle_0_2",
+            "-Ward_triangle_0_0 + Ward_triangle_0_2"
+          ],
+          "remaining_cyclic_order": [
+            "Phi1",
+            "Phi2",
+            "gauge2"
+          ]
+        },
+        {
+          "contracted_terms": [
+            "Ward_triangle_1_0 - Ward_triangle_1_1",
+            "Ward_triangle_1_1 - Ward_triangle_1_2",
+            "-Ward_triangle_1_0 + Ward_triangle_1_2"
+          ],
+          "remaining_cyclic_order": [
+            "Phi1",
+            "gauge2",
+            "Phi2"
+          ]
+        }
+      ],
+      "six_cyclic_box_routes": [
+        {
+          "partial_momenta": [
+            [
+              [
+                "0"
+              ],
+              [
+                "0"
+              ],
+              [
+                "0"
+              ],
+              [
+                "0"
+              ]
+            ],
+            [
+              [
+                "-I*positive_energy"
+              ],
+              [
+                "0"
+              ],
+              [
+                "0"
+              ],
+              [
+                "-scalar_spatial_component"
+              ]
+            ],
+            [
+              [
+                "-2*I*positive_energy"
+              ],
+              [
+                "0"
+              ],
+              [
+                "0"
+              ],
+              [
+                "0"
+              ]
+            ],
+            [
+              [
+                "-I*positive_energy"
+              ],
+              [
+                "2*positive_energy*real_stereographic_angle/(real_stereographic_angle**2 + 1)"
+              ],
+              [
+                "0"
+              ],
+              [
+                "positive_energy*(1 - real_stereographic_angle**2)/(real_stereographic_angle**2 + 1)"
+              ]
+            ]
+          ],
+          "vertices": [
+            "Phi1",
+            "Phi2",
+            "gauge1",
+            "gauge2"
+          ]
+        },
+        {
+          "partial_momenta": [
+            [
+              [
+                "0"
+              ],
+              [
+                "0"
+              ],
+              [
+                "0"
+              ],
+              [
+                "0"
+              ]
+            ],
+            [
+              [
+                "-I*positive_energy"
+              ],
+              [
+                "0"
+              ],
+              [
+                "0"
+              ],
+              [
+                "-scalar_spatial_component"
+              ]
+            ],
+            [
+              [
+                "-2*I*positive_energy"
+              ],
+              [
+                "0"
+              ],
+              [
+                "0"
+              ],
+              [
+                "0"
+              ]
+            ],
+            [
+              [
+                "-I*positive_energy"
+              ],
+              [
+                "-2*positive_energy*real_stereographic_angle/(real_stereographic_angle**2 + 1)"
+              ],
+              [
+                "0"
+              ],
+              [
+                "-positive_energy*(1 - real_stereographic_angle**2)/(real_stereographic_angle**2 + 1)"
+              ]
+            ]
+          ],
+          "vertices": [
+            "Phi1",
+            "Phi2",
+            "gauge2",
+            "gauge1"
+          ]
+        },
+        {
+          "partial_momenta": [
+            [
+              [
+                "0"
+              ],
+              [
+                "0"
+              ],
+              [
+                "0"
+              ],
+              [
+                "0"
+              ]
+            ],
+            [
+              [
+                "-I*positive_energy"
+              ],
+              [
+                "0"
+              ],
+              [
+                "0"
+              ],
+              [
+                "-scalar_spatial_component"
+              ]
+            ],
+            [
+              [
+                "0"
+              ],
+              [
+                "2*positive_energy*real_stereographic_angle/(real_stereographic_angle**2 + 1)"
+              ],
+              [
+                "0"
+              ],
+              [
+                "positive_energy*(1 - real_stereographic_angle**2)/(real_stereographic_angle**2 + 1) - scalar_spatial_component"
+              ]
+            ],
+            [
+              [
+                "-I*positive_energy"
+              ],
+              [
+                "2*positive_energy*real_stereographic_angle/(real_stereographic_angle**2 + 1)"
+              ],
+              [
+                "0"
+              ],
+              [
+                "positive_energy*(1 - real_stereographic_angle**2)/(real_stereographic_angle**2 + 1)"
+              ]
+            ]
+          ],
+          "vertices": [
+            "Phi1",
+            "gauge1",
+            "Phi2",
+            "gauge2"
+          ]
+        },
+        {
+          "partial_momenta": [
+            [
+              [
+                "0"
+              ],
+              [
+                "0"
+              ],
+              [
+                "0"
+              ],
+              [
+                "0"
+              ]
+            ],
+            [
+              [
+                "-I*positive_energy"
+              ],
+              [
+                "0"
+              ],
+              [
+                "0"
+              ],
+              [
+                "-scalar_spatial_component"
+              ]
+            ],
+            [
+              [
+                "0"
+              ],
+              [
+                "2*positive_energy*real_stereographic_angle/(real_stereographic_angle**2 + 1)"
+              ],
+              [
+                "0"
+              ],
+              [
+                "positive_energy*(1 - real_stereographic_angle**2)/(real_stereographic_angle**2 + 1) - scalar_spatial_component"
+              ]
+            ],
+            [
+              [
+                "I*positive_energy"
+              ],
+              [
+                "0"
+              ],
+              [
+                "0"
+              ],
+              [
+                "-scalar_spatial_component"
+              ]
+            ]
+          ],
+          "vertices": [
+            "Phi1",
+            "gauge1",
+            "gauge2",
+            "Phi2"
+          ]
+        },
+        {
+          "partial_momenta": [
+            [
+              [
+                "0"
+              ],
+              [
+                "0"
+              ],
+              [
+                "0"
+              ],
+              [
+                "0"
+              ]
+            ],
+            [
+              [
+                "-I*positive_energy"
+              ],
+              [
+                "0"
+              ],
+              [
+                "0"
+              ],
+              [
+                "-scalar_spatial_component"
+              ]
+            ],
+            [
+              [
+                "0"
+              ],
+              [
+                "-2*positive_energy*real_stereographic_angle/(real_stereographic_angle**2 + 1)"
+              ],
+              [
+                "0"
+              ],
+              [
+                "-positive_energy*(1 - real_stereographic_angle**2)/(real_stereographic_angle**2 + 1) - scalar_spatial_component"
+              ]
+            ],
+            [
+              [
+                "-I*positive_energy"
+              ],
+              [
+                "-2*positive_energy*real_stereographic_angle/(real_stereographic_angle**2 + 1)"
+              ],
+              [
+                "0"
+              ],
+              [
+                "-positive_energy*(1 - real_stereographic_angle**2)/(real_stereographic_angle**2 + 1)"
+              ]
+            ]
+          ],
+          "vertices": [
+            "Phi1",
+            "gauge2",
+            "Phi2",
+            "gauge1"
+          ]
+        },
+        {
+          "partial_momenta": [
+            [
+              [
+                "0"
+              ],
+              [
+                "0"
+              ],
+              [
+                "0"
+              ],
+              [
+                "0"
+              ]
+            ],
+            [
+              [
+                "-I*positive_energy"
+              ],
+              [
+                "0"
+              ],
+              [
+                "0"
+              ],
+              [
+                "-scalar_spatial_component"
+              ]
+            ],
+            [
+              [
+                "0"
+              ],
+              [
+                "-2*positive_energy*real_stereographic_angle/(real_stereographic_angle**2 + 1)"
+              ],
+              [
+                "0"
+              ],
+              [
+                "-positive_energy*(1 - real_stereographic_angle**2)/(real_stereographic_angle**2 + 1) - scalar_spatial_component"
+              ]
+            ],
+            [
+              [
+                "I*positive_energy"
+              ],
+              [
+                "0"
+              ],
+              [
+                "0"
+              ],
+              [
+                "-scalar_spatial_component"
+              ]
+            ]
+          ],
+          "vertices": [
+            "Phi1",
+            "gauge2",
+            "gauge1",
+            "Phi2"
+          ]
+        }
+      ],
+      "spatial_direction_and_two_real_transverse_polarizations": [
+        [
+          [
+            "2*real_stereographic_angle/(real_stereographic_angle**2 + 1)"
+          ],
+          [
+            "0"
+          ],
+          [
+            "(1 - real_stereographic_angle**2)/(real_stereographic_angle**2 + 1)"
+          ]
+        ],
+        [
+          [
+            "(1 - real_stereographic_angle**2)/(real_stereographic_angle**2 + 1)"
+          ],
+          [
+            "0"
+          ],
+          [
+            "-2*real_stereographic_angle/(real_stereographic_angle**2 + 1)"
+          ]
+        ],
+        [
+          [
+            "0"
+          ],
+          [
+            "1"
+          ],
+          [
+            "0"
+          ]
+        ]
+      ],
+      "strict_cumulative_component_norm_upper": 12
+    }
+  },
+  "all_degree_finite_mass_box_remainder": {
+    "all_degree_composition_count": "binomial(integer_total_insertions + 3, 3)",
+    "all_degree_radial_integral": "1/(4*pi**2*integer_total_insertions*positive_fermion_mass**integer_total_insertions*(integer_total_insertions + 2))",
+    "cyclic_labelled_box_orders": [
+      [
+        "Phi1",
+        "Phi2",
+        "gauge1",
+        "gauge2"
+      ],
+      [
+        "Phi1",
+        "Phi2",
+        "gauge2",
+        "gauge1"
+      ],
+      [
+        "Phi1",
+        "gauge1",
+        "Phi2",
+        "gauge2"
+      ],
+      [
+        "Phi1",
+        "gauge1",
+        "gauge2",
+        "Phi2"
+      ],
+      [
+        "Phi1",
+        "gauge2",
+        "Phi2",
+        "gauge1"
+      ],
+      [
+        "Phi1",
+        "gauge2",
+        "gauge1",
+        "Phi2"
+      ]
+    ],
+    "dimensionless_radial_primitive": "2*(positive_radial_variable + 1)**(-integer_total_insertions/2 - 1)/(integer_total_insertions + 2) - 2/(integer_total_insertions*(positive_radial_variable + 1)**(integer_total_insertions/2)) + 4/(integer_total_insertions*(integer_total_insertions + 2))",
+    "normalized_box_epsilon": "1000000/positive_fermion_mass",
+    "scope": "All Taylor degrees n>=3 are bounded, not just the enumerated examples. The complete regulated degree-zero term and the vanishing degree-one term are removed by Ward/Lorentz arguments; the finite degree-two term is the inherited leading operator. The bound requires mF>=24 and cumulative external Euclidean component norm strictly below 12.",
+    "small_degree_independent_compositions": [
+      {
+        "degree": 0,
+        "enumerated": 1,
+        "formula": "1"
+      },
+      {
+        "degree": 1,
+        "enumerated": 4,
+        "formula": "4"
+      },
+      {
+        "degree": 2,
+        "enumerated": 10,
+        "formula": "10"
+      },
+      {
+        "degree": 3,
+        "enumerated": 20,
+        "formula": "20"
+      },
+      {
+        "degree": 4,
+        "enumerated": 35,
+        "formula": "35"
+      },
+      {
+        "degree": 5,
+        "enumerated": 56,
+        "formula": "56"
+      },
+      {
+        "degree": 6,
+        "enumerated": 84,
+        "formula": "84"
+      },
+      {
+        "degree": 7,
+        "enumerated": 120,
+        "formula": "120"
+      },
+      {
+        "degree": 8,
+        "enumerated": 165,
+        "formula": "165"
+      },
+      {
+        "degree": 9,
+        "enumerated": 220,
+        "formula": "220"
+      },
+      {
+        "degree": 10,
+        "enumerated": 286,
+        "formula": "286"
+      },
+      {
+        "degree": 11,
+        "enumerated": 364,
+        "formula": "364"
+      },
+      {
+        "degree": 12,
+        "enumerated": 455,
+        "formula": "455"
+      }
+    ],
+    "uniform_per_color_polarization_box_remainder_upper": "62500*positive_Yukawa_squared*positive_gauge_squared/(pi**2*positive_fermion_mass**3)",
+    "unrounded_box_remainder_upper": "62208*positive_Yukawa_squared*positive_gauge_squared/(pi**2*positive_fermion_mass**3)",
+    "weighted_tail_majorant": "-nonnegative_Neumann_ratio**3*(7*nonnegative_Neumann_ratio - 8)/(6*(nonnegative_Neumann_ratio - 1)**2)"
+  },
+  "checked_scalar_entries": 606,
+  "claim": "P8-S6.129.FINITE_MASS_FIRST_TWO_GAUGE_CUT",
+  "controls": {
+    "crossing_center_zero_not_used_as_disc_test": true,
+    "finite_field_series_not_substituted_for_momentum_tail": true,
+    "individual_unregulated_UV_box_not_used_as_finite_integral": true,
+    "near_center_not_forced_to_nonzero": true,
+    "no_complex_conjugation_of_unphysical_scalar_momentum": true,
+    "original_V_G_B_and_P8_not_closed": true,
+    "perturbative_gauge_cut_not_a_confinement_theorem": true,
+    "rejected_inputs": 31,
+    "small_mass_tail_bound_inconclusive_not_excluded": true
+  },
+  "date": "2026-09-10",
+  "exact_residuals": {
+    "calibration_actual_Neumann_ratio": "0",
+    "calibration_actual_cut_relative_bound_dictionary": "0",
+    "calibration_actual_per_box_relative_error": "0",
+    "calibration_dimensionless_leading_interior_jump": "0",
+    "calibration_same_fermion_mass": "0",
+    "calibration_same_positive_transition_scale": "0",
+    "calibration_strict_cut_relative_upper_dictionary": "0",
+    "cuts_crossing_antisymmetric_leading_difference": "0",
+    "cuts_four_polarization_product_error": "0",
+    "cuts_inherited_threshold_dictionary": "0",
+    "cuts_interior_leading_difference": "0",
+    "cuts_interior_relative_error": "0",
+    "cuts_leading_crossing_center_cancellation": "0",
+    "cuts_optical_phase_and_color_factor": "0",
+    "cuts_per_pair_leading_amplitude_normalization": "0",
+    "cuts_single_channel_error": "0",
+    "cuts_single_channel_leading_cut": "0",
+    "cuts_strict_five_epsilon_margin": "0",
+    "cuts_three_particle_sewing_earliest_loop": "0",
+    "cuts_two_crossed_channel_errors": "0",
+    "cuts_two_one_loop_transitions_and_two_particle_sewing": "0",
+    "dirac_Clifford_0_0": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "dirac_Clifford_0_1": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "dirac_Clifford_0_2": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "dirac_Clifford_0_3": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "dirac_Clifford_1_0": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "dirac_Clifford_1_1": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "dirac_Clifford_1_2": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "dirac_Clifford_1_3": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "dirac_Clifford_2_0": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "dirac_Clifford_2_1": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "dirac_Clifford_2_2": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "dirac_Clifford_2_3": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "dirac_Clifford_3_0": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "dirac_Clifford_3_1": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "dirac_Clifford_3_2": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "dirac_Clifford_3_3": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "dirac_Hermitian_gamma_0": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "dirac_Hermitian_gamma_1": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "dirac_Hermitian_gamma_2": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "dirac_Hermitian_gamma_3": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "dirac_Ward_resolvent_numerator": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "dirac_propagator_inverse_numerator": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "dirac_propagator_norm_numerator": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "dirac_real_polarization_norm_numerator": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "kinematics_Euclidean_momentum_conservation": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        1
+      ]
+    },
+    "kinematics_channel_invariant": "0",
+    "kinematics_degree_two_Ward_nullity": "0",
+    "kinematics_degree_two_Ward_system_rank": "0",
+    "kinematics_degree_two_unique_gauge_tensor_kernel": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        36,
+        1
+      ]
+    },
+    "kinematics_energy_strict_rational_majorant": "0",
+    "kinematics_first_gauge_null": "0",
+    "kinematics_first_gauge_transversality": "0",
+    "kinematics_first_scalar_mass_shell": "0",
+    "kinematics_first_transverse_vector_unit": "0",
+    "kinematics_one_gauge_color_trace_0": "0",
+    "kinematics_one_gauge_color_trace_1": "0",
+    "kinematics_one_gauge_color_trace_2": "0",
+    "kinematics_one_gauge_color_trace_3": "0",
+    "kinematics_one_gauge_color_trace_4": "0",
+    "kinematics_one_gauge_color_trace_5": "0",
+    "kinematics_one_gauge_color_trace_6": "0",
+    "kinematics_one_gauge_color_trace_7": "0",
+    "kinematics_regulated_Ward_telescoping_orientation_0": "0",
+    "kinematics_regulated_Ward_telescoping_orientation_1": "0",
+    "kinematics_routing_0_closed": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        1
+      ]
+    },
+    "kinematics_routing_0_four_propagators": "0",
+    "kinematics_routing_1_closed": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        1
+      ]
+    },
+    "kinematics_routing_1_four_propagators": "0",
+    "kinematics_routing_2_closed": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        1
+      ]
+    },
+    "kinematics_routing_2_four_propagators": "0",
+    "kinematics_routing_3_closed": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        1
+      ]
+    },
+    "kinematics_routing_3_four_propagators": "0",
+    "kinematics_routing_4_closed": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        1
+      ]
+    },
+    "kinematics_routing_4_four_propagators": "0",
+    "kinematics_routing_5_closed": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        1
+      ]
+    },
+    "kinematics_routing_5_four_propagators": "0",
+    "kinematics_second_gauge_null": "0",
+    "kinematics_second_gauge_transversality": "0",
+    "kinematics_second_scalar_mass_shell": "0",
+    "kinematics_second_transverse_vector_unit": "0",
+    "kinematics_spatial_gauge_direction_unit": "0",
+    "kinematics_spatial_l1_Cauchy_majorant": "0",
+    "kinematics_three_maximal_external_l1_bounds": "0",
+    "kinematics_transverse_vectors_orthogonal": "0",
+    "kinematics_two_gauge_color_commutator_trace_0_0": "0",
+    "kinematics_two_gauge_color_commutator_trace_0_1": "0",
+    "kinematics_two_gauge_color_commutator_trace_0_2": "0",
+    "kinematics_two_gauge_color_commutator_trace_0_3": "0",
+    "kinematics_two_gauge_color_commutator_trace_0_4": "0",
+    "kinematics_two_gauge_color_commutator_trace_0_5": "0",
+    "kinematics_two_gauge_color_commutator_trace_0_6": "0",
+    "kinematics_two_gauge_color_commutator_trace_0_7": "0",
+    "kinematics_two_gauge_color_commutator_trace_1_0": "0",
+    "kinematics_two_gauge_color_commutator_trace_1_1": "0",
+    "kinematics_two_gauge_color_commutator_trace_1_2": "0",
+    "kinematics_two_gauge_color_commutator_trace_1_3": "0",
+    "kinematics_two_gauge_color_commutator_trace_1_4": "0",
+    "kinematics_two_gauge_color_commutator_trace_1_5": "0",
+    "kinematics_two_gauge_color_commutator_trace_1_6": "0",
+    "kinematics_two_gauge_color_commutator_trace_1_7": "0",
+    "kinematics_two_gauge_color_commutator_trace_2_0": "0",
+    "kinematics_two_gauge_color_commutator_trace_2_1": "0",
+    "kinematics_two_gauge_color_commutator_trace_2_2": "0",
+    "kinematics_two_gauge_color_commutator_trace_2_3": "0",
+    "kinematics_two_gauge_color_commutator_trace_2_4": "0",
+    "kinematics_two_gauge_color_commutator_trace_2_5": "0",
+    "kinematics_two_gauge_color_commutator_trace_2_6": "0",
+    "kinematics_two_gauge_color_commutator_trace_2_7": "0",
+    "kinematics_two_gauge_color_commutator_trace_3_0": "0",
+    "kinematics_two_gauge_color_commutator_trace_3_1": "0",
+    "kinematics_two_gauge_color_commutator_trace_3_2": "0",
+    "kinematics_two_gauge_color_commutator_trace_3_3": "0",
+    "kinematics_two_gauge_color_commutator_trace_3_4": "0",
+    "kinematics_two_gauge_color_commutator_trace_3_5": "0",
+    "kinematics_two_gauge_color_commutator_trace_3_6": "0",
+    "kinematics_two_gauge_color_commutator_trace_3_7": "0",
+    "kinematics_two_gauge_color_commutator_trace_4_0": "0",
+    "kinematics_two_gauge_color_commutator_trace_4_1": "0",
+    "kinematics_two_gauge_color_commutator_trace_4_2": "0",
+    "kinematics_two_gauge_color_commutator_trace_4_3": "0",
+    "kinematics_two_gauge_color_commutator_trace_4_4": "0",
+    "kinematics_two_gauge_color_commutator_trace_4_5": "0",
+    "kinematics_two_gauge_color_commutator_trace_4_6": "0",
+    "kinematics_two_gauge_color_commutator_trace_4_7": "0",
+    "kinematics_two_gauge_color_commutator_trace_5_0": "0",
+    "kinematics_two_gauge_color_commutator_trace_5_1": "0",
+    "kinematics_two_gauge_color_commutator_trace_5_2": "0",
+    "kinematics_two_gauge_color_commutator_trace_5_3": "0",
+    "kinematics_two_gauge_color_commutator_trace_5_4": "0",
+    "kinematics_two_gauge_color_commutator_trace_5_5": "0",
+    "kinematics_two_gauge_color_commutator_trace_5_6": "0",
+    "kinematics_two_gauge_color_commutator_trace_5_7": "0",
+    "kinematics_two_gauge_color_commutator_trace_6_0": "0",
+    "kinematics_two_gauge_color_commutator_trace_6_1": "0",
+    "kinematics_two_gauge_color_commutator_trace_6_2": "0",
+    "kinematics_two_gauge_color_commutator_trace_6_3": "0",
+    "kinematics_two_gauge_color_commutator_trace_6_4": "0",
+    "kinematics_two_gauge_color_commutator_trace_6_5": "0",
+    "kinematics_two_gauge_color_commutator_trace_6_6": "0",
+    "kinematics_two_gauge_color_commutator_trace_6_7": "0",
+    "kinematics_two_gauge_color_commutator_trace_7_0": "0",
+    "kinematics_two_gauge_color_commutator_trace_7_1": "0",
+    "kinematics_two_gauge_color_commutator_trace_7_2": "0",
+    "kinematics_two_gauge_color_commutator_trace_7_3": "0",
+    "kinematics_two_gauge_color_commutator_trace_7_4": "0",
+    "kinematics_two_gauge_color_commutator_trace_7_5": "0",
+    "kinematics_two_gauge_color_commutator_trace_7_6": "0",
+    "kinematics_two_gauge_color_commutator_trace_7_7": "0",
+    "series_all_ordered_insertions_degree_0": "0",
+    "series_all_ordered_insertions_degree_1": "0",
+    "series_all_ordered_insertions_degree_10": "0",
+    "series_all_ordered_insertions_degree_11": "0",
+    "series_all_ordered_insertions_degree_12": "0",
+    "series_all_ordered_insertions_degree_2": "0",
+    "series_all_ordered_insertions_degree_3": "0",
+    "series_all_ordered_insertions_degree_4": "0",
+    "series_all_ordered_insertions_degree_5": "0",
+    "series_all_ordered_insertions_degree_6": "0",
+    "series_all_ordered_insertions_degree_7": "0",
+    "series_all_ordered_insertions_degree_8": "0",
+    "series_all_ordered_insertions_degree_9": "0",
+    "series_distinct_insertions_degree_0": "0",
+    "series_distinct_insertions_degree_1": "0",
+    "series_distinct_insertions_degree_10": "0",
+    "series_distinct_insertions_degree_11": "0",
+    "series_distinct_insertions_degree_12": "0",
+    "series_distinct_insertions_degree_2": "0",
+    "series_distinct_insertions_degree_3": "0",
+    "series_distinct_insertions_degree_4": "0",
+    "series_distinct_insertions_degree_5": "0",
+    "series_distinct_insertions_degree_6": "0",
+    "series_distinct_insertions_degree_7": "0",
+    "series_distinct_insertions_degree_8": "0",
+    "series_distinct_insertions_degree_9": "0",
+    "series_geometric_tail_closed_form": "0",
+    "series_half_disc_six_majorant_margin": "0",
+    "series_primitive_derivative": "0",
+    "series_primitive_infinity_anchor": "0",
+    "series_primitive_zero_anchor": "0",
+    "series_radial_integer_four_check": "0",
+    "series_radial_integer_three_check": "0",
+    "series_six_cyclic_box_orders": "0",
+    "series_strict_rounded_constant_margin": "0",
+    "series_tail_constant_majorant_and_routing": "0",
+    "series_tail_constant_spin_orders_radial": "0",
+    "series_tail_majorant_monotonic_derivative": "0",
+    "series_weak_composition_ratio": "0",
+    "series_weight_majorant_positive_residual": "0",
+    "series_weight_reduction": "0"
+  },
+  "first_two_gauge_cut_bound": {
+    "box_scale_z": "positive_Yukawa_squared*positive_gauge_squared/(16*pi**2*positive_fermion_mass**2)",
+    "crossed_channel_difference_absolute_error_upper": "2*positive_box_epsilon*positive_box_scale**2*(positive_box_epsilon + 8)/pi",
+    "first_parent_loop_order": 3,
+    "first_transition_inventory": [
+      "Six cyclic one-loop fermion boxes, with two active equal-mass opposite-Yukawa flavors",
+      "Single-gauge transition vanishes by color; the possible fermion triangle attached to a three-gauge vertex also has a single color trace",
+      "No direct H Yukawa or Phi^2 F^2 tree vertex; Phi parity eliminates a Phi single-particle exchange",
+      "An H-to-two-gauge transition needs at least two loops; a heavy-H exchange is not a missing one-loop transition",
+      "Mass, wavefunction and parameter counterterms enter the transition at the next perturbative order",
+      "Two one-loop transitions sewn across two gauge lines give three parent loops; three-gauge final states first need at least four"
+    ],
+    "four_pair_product_absolute_error_upper": "positive_box_scale**2*(4*positive_box_epsilon**2 + 32*positive_box_epsilon)",
+    "interior_relative_error_upper": "9*positive_box_epsilon*(positive_box_epsilon + 8)/16",
+    "interior_simplified_relative_error_upper": "5*positive_box_epsilon",
+    "leading_operator_coefficient": "-positive_Yukawa_squared*positive_gauge_squared/(48*pi**2*positive_fermion_mass**2)",
+    "leading_parallel_transition_magnitude": "4*positive_box_scale*real_s/3",
+    "leading_single_channel_rho": "8*positive_box_scale**2*real_s**2/(9*pi)",
+    "normalized_box_error_epsilon": "1000000/positive_fermion_mass",
+    "optical_identical_particle_color_phase_factor": "1/(4*pi)",
+    "scope": "Sew the holomorphic continuations of the two transition factors. Below scalar threshold their product is not replaced by an absolute square of complex external momenta. The s and u boundary prescriptions are opposite. Local counterterms have no discontinuity; this certificate is not the entire three-loop amplitude or its all-order continuation.",
+    "single_channel_rho_absolute_error_upper": "positive_box_epsilon*positive_box_scale**2*(positive_box_epsilon + 8)/pi"
+  },
+  "formulation": "FORMULATION.md",
+  "named_exact_check_count": 190,
+  "not_established": [
+    "All higher-loop or nonperturbative corrections to the gauge candidate",
+    "A confinement mass gap or exact gauge-sector spectrum",
+    "A complete new-model three-loop amplitude or b2 error budget",
+    "A new applicable infrared-subtracted or gapped dispersion relation",
+    "Finite-gravity IR/Regge Delta and controlled common bounce-parent matching",
+    "Original V G B or P8 closure or exclusion of any whole ladder row"
+  ],
+  "prior_sha256": {
+    "S6_128_fully_rebuilt": "279ec9e7cefbb9b92a3700f92cb3e114ec55c723ee247ecf0b22bbef783027c9",
+    "momentum_remainder_extends_not_relabels_leading_parent_claim": true,
+    "old_scalar_action_and_reports_not_modified": true,
+    "same_GY14_unbroken_candidate_and_prospective_boundary": true
+  },
+  "proof_checks": {
+    "actual_strict_Neumann_disc": true,
+    "all_four_transverse_pairs_color_optical_and_identical_factors_retained": true,
+    "both_Ward_cyclic_orientations": true,
+    "both_crossed_channels_and_opposite_boundary_signs_retained": true,
+    "center_and_near_center_inconclusive_bounds_are_valid_inputs": true,
+    "complex_shifts_controlled_without_arbitrary_loop_contour_translation": true,
+    "crossing_center_not_falsely_certified_nonzero": true,
+    "entire_n_ge_three_tail_not_only_finite_sample": true,
+    "finite_gravity_common_parent_and_original_P8_remain_open": true,
+    "finite_mass_relative_cut_error_below_five_e_minus_194": true,
+    "finite_mass_relative_cut_error_below_one": true,
+    "first_two_gauge_discontinuity_complete_at_three_parent_loops": true,
+    "four_Hermitian_Clifford_generators": true,
+    "four_dimensional_norm_only_after_UV_convergent_Taylor_subtraction": true,
+    "gauge_and_Yukawa_parameters_positive": true,
+    "local_analytic_germ_not_ruled_out": true,
+    "local_counterterms_do_not_change_discontinuity": true,
+    "near_center_bound_can_be_inconclusive": true,
+    "no_confinement_mass_or_full_candidate_no_go_inferred": true,
+    "no_new_all_orders_UV_construction_requirement": true,
+    "nonzero_finite_mass_cut_not_discarded_by_tiny_absolute_size": true,
+    "old_scalar_two_loop_bound_not_relabelled_as_new_model": true,
+    "opposite_interior_channel_also_nonzero": true,
+    "per_box_error_below_half": true,
+    "physical_anchor_and_Bose_even_continuation_retained": true,
+    "positive_nonzero_transition_scale": true,
+    "positive_radial_primitive_has_zero_and_infinity_anchors": true,
+    "regulated_full_sum_precedes_degree_zero_removal": true,
+    "same_positive_finite_fermion_mass": true,
+    "six_complete_four_propagator_routes": true,
+    "six_distinct_cyclic_box_orders": true,
+    "small_mass_bound_can_be_inconclusive": true,
+    "strict_nonzero_interior_two_gauge_boundary_mismatch": true,
+    "two_holomorphic_cut_factors_not_unphysical_absolute_square": true
+  },
+  "same_candidate_rational_calibration": {
+    "bounds": {
+      "actual_strict_Neumann_disc": true,
+      "crossing_center_not_falsely_certified_nonzero": true,
+      "finite_mass_relative_cut_error_below_five_e_minus_194": true,
+      "finite_mass_relative_cut_error_below_one": true,
+      "gauge_and_Yukawa_parameters_positive": true,
+      "near_center_bound_can_be_inconclusive": true,
+      "opposite_interior_channel_also_nonzero": true,
+      "per_box_error_below_half": true,
+      "positive_nonzero_transition_scale": true,
+      "same_positive_finite_fermion_mass": true,
+      "small_mass_bound_can_be_inconclusive": true,
+      "strict_nonzero_interior_two_gauge_boundary_mismatch": true
+    },
+    "box_scale_z": "1630783081054687499999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999988867187500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000019/(11796480000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000*pi**2*(-59/15 + sqrt(65985)/45)**2)",
+    "candidate": "GY14-unbroken, exactly the prospective S6.128 boundary",
+    "center": {
+      "Neumann_ratio_upper": "3/25000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "absolute_boundary_difference_error_over_dA_z2_div_9pi_upper": "7200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009/40000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "absolute_boundary_difference_over_dA_z2_div_9pi_lower": "-7200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009/40000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "fermion_mass": "100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "leading_boundary_difference_over_dA_z2_div_9pi": "0",
+      "per_box_error_over_z_upper": "1/100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "relative_boundary_difference_error_upper": null,
+      "s": "2",
+      "scope": "The complete first two-gauge discontinuity, with finite-mass one-loop transitions; not an all-loop amplitude or a physical scalar cross section below s=4.",
+      "strict_nonzero_boundary_difference_at_this_order": false,
+      "u": "2"
+    },
+    "fermion_mass": "100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "first_two_gauge_cut_relative_error_upper_at_interior": "7200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009/160000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "interior": {
+      "Neumann_ratio_upper": "3/25000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "absolute_boundary_difference_error_over_dA_z2_div_9pi_upper": "7200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009/40000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "absolute_boundary_difference_over_dA_z2_div_9pi_lower": "159999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999992799999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999991/40000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "fermion_mass": "100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "leading_boundary_difference_over_dA_z2_div_9pi": "-4",
+      "per_box_error_over_z_upper": "1/100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "relative_boundary_difference_error_upper": "7200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009/160000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "s": "3/2",
+      "scope": "The complete first two-gauge discontinuity, with finite-mass one-loop transitions; not an all-loop amplitude or a physical scalar cross section below s=4.",
+      "strict_nonzero_boundary_difference_at_this_order": true,
+      "u": "5/2"
+    },
+    "near_center_control": {
+      "Neumann_ratio_upper": "3/25000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "absolute_boundary_difference_error_over_dA_z2_div_9pi_upper": "7200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009/40000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "absolute_boundary_difference_over_dA_z2_div_9pi_lower": "-7199996800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009/40000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "fermion_mass": "100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "leading_boundary_difference_over_dA_z2_div_9pi": "1/12500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "per_box_error_over_z_upper": "1/100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "relative_boundary_difference_error_upper": "7200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009/3200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "s": "200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001/100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "scope": "The complete first two-gauge discontinuity, with finite-mass one-loop transitions; not an all-loop amplitude or a physical scalar cross section below s=4.",
+      "strict_nonzero_boundary_difference_at_this_order": false,
+      "u": "199999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999/100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "per_box_error_over_z_upper": "1/100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "scope": "This resolves the one-loop fermion-box momentum remainder needed to retain the first two-gauge cut in S6.128. It does not compute higher-loop matching, a new-model complete b2 budget, confinement, finite-gravity contours or a common bounce parent.",
+    "small_mass_control": {
+      "Neumann_ratio_upper": "1/2",
+      "absolute_boundary_difference_error_over_dA_z2_div_9pi_upper": "3907000000",
+      "absolute_boundary_difference_over_dA_z2_div_9pi_lower": "-3906999996",
+      "fermion_mass": "24",
+      "leading_boundary_difference_over_dA_z2_div_9pi": "-4",
+      "per_box_error_over_z_upper": "125000/3",
+      "relative_boundary_difference_error_upper": "976750000",
+      "s": "3/2",
+      "scope": "The complete first two-gauge discontinuity, with finite-mass one-loop transitions; not an all-loop amplitude or a physical scalar cross section below s=4.",
+      "strict_nonzero_boundary_difference_at_this_order": false,
+      "u": "5/2"
+    },
+    "strict_simple_relative_upper": "1/20000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "97b31048d1c6add55ec50bb65da2c0003e7af712cf5989a5860cb8bfba977514",
+    "README.md": "2bac2dd83f2a046f5973931edfe6d199772b77b2f18e9b4150c2b40c0d511991",
+    "notes/cut.md": "b4946936a7fd41f7ad86ac33d33fdd9db162515192496d3072e7fbd6ffcc935b",
+    "notes/dirac.md": "a20340de37f2278215abe3a8e381797f1d90db90252e1d99e8d3cbbec3b14ad2",
+    "notes/kinematics.md": "e735c98b5c48a586847932c1267e51bdf508aef4c9ed3b1b9967177d2496e89e",
+    "notes/literature.md": "f029c0a999acf2760582e9a3afbf69240cc725fd5ddbbbdf610b9f24b53e8469",
+    "notes/scope.md": "63803d446e88c50a8f4ff8953d6217a1a6fa6c371646da1ab7d49a0927bf1898",
+    "notes/series.md": "c5bb3d2e311aebf040b3bf43cccc4817bc66bbd9c019756626b7b9efecca3bbd",
+    "src/p8_vacuum_finite_mass_gauge_cut/__init__.py": "744c111a947b1d27125a3743e06c4502ea783f4598ad0877f3d449623fe4d101",
+    "src/p8_vacuum_finite_mass_gauge_cut/audit.py": "774fbb14267ebeb5a79a51444e4e72e7574fb14485aac65c6421fd2739773c60",
+    "src/p8_vacuum_finite_mass_gauge_cut/calibration.py": "4c9b4ae88487be2529101d7cc41189c704928cfe6b3822f907641e041ddcec66",
+    "src/p8_vacuum_finite_mass_gauge_cut/cuts.py": "949c89b7db870de83d5e3f42a5c8baad4fab5f0b54655bee92b0014897c49da9",
+    "src/p8_vacuum_finite_mass_gauge_cut/dirac.py": "9e7368a3bdc452a20e59c5178b983a0db6df007f9ff14543edfdc2a9d6764a9b",
+    "src/p8_vacuum_finite_mass_gauge_cut/kinematics.py": "92c8b4555f84119e847f74de303c6e5adab451d585f44ed5a71bd7301eee714f",
+    "src/p8_vacuum_finite_mass_gauge_cut/series.py": "523da2e0042e0ceb8f167edb01680c020be6a979e5f9ee5b90b021086d9b897f",
+    "src/p8_vacuum_finite_mass_gauge_cut/verify.py": "08cb74a0b9fb26fa849003d6e04956b64863511f7b2ce8a63dd1be3ee0099f0e",
+    "tests/test_finite_mass_first_gauge_cut_certificate.py": "97b37740f6401233302d9790791649866785a6f4d4670c72eeba6b134a1ced66",
+    "tests/test_finite_mass_first_gauge_cut_science.py": "83f63f0161d2b2ce0c259d127ea42f4dba7120696e139269624b2d632f96c984"
+  },
+  "status": "UNIFORM_ALL_DEGREE_ONE_LOOP_FERMION_BOX_MOMENTUM_REMAINDER_AND_NONZERO_COMPLETE_FIRST_TWO_GAUGE_CUT_AT_THREE_PARENT_LOOPS; NOT_ALL_LOOP_AMPLITUDE_CONFINEMENT_UV_NO_GO_V_G_B_OR_ORIGINAL_P8_CLOSURE",
+  "verdict": "For the same prospective GY14-unbroken candidate, all Taylor degrees at least three of each one-loop fermion transition box are uniformly bounded after the full regulated Ward cancellations. The independent rank-14 Ward system fixes the degree-two tensor and the inherited determinant fixes its coefficient. Sewing the two holomorphically continued transitions gives a complete first two-gauge cut bound, with opposite crossed-channel boundary signs. At s=3/2 and mF=10^200, the relative finite-mass error is strictly below 5 times 10^-194, so the boundary mismatch inside the old massive scalar disc cannot vanish at this perturbative order. The crossing center and inconclusive bounds are not misclassified. Direct inheritance of the old gapped dispersion hypotheses remains unjustified. No all-loop amplitude, confinement spectrum, entire candidate or row exclusion, finite-gravity or common-parent result is asserted.",
+  "verification_boundary": "Exact Clifford and Ward matrices, complete finite-degree tensor-basis linear constraints, six routing inventories, all-degree radial and geometric identities, rational cut normalization and strict error inequalities. Uniform norm estimates, Ward-regulated Taylor subtraction, analytic continuation, channel completeness and cutting arguments are written proofs, not proof-assistant formalized or nonperturbative. Native and ordinary scientific replays use unmodified SymPy.",
+  "written_proofs": [
+    "notes/dirac.md",
+    "notes/series.md",
+    "notes/kinematics.md",
+    "notes/cut.md",
+    "notes/literature.md",
+    "notes/scope.md"
+  ]
+}
