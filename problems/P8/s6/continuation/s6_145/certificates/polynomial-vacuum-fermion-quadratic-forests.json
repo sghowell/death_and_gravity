@@ -1,0 +1,480 @@
+{
+  "actual_enclosure_and_partial_frontier": {
+    "actual": {
+      "actual_reference_parameters": {
+        "Y_upper": "5566406249999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999981/86400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "a_upper": "292968749999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999/1920000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "actual_Y": "5566406249999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999981/(57600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000*(-59/15 + sqrt(65985)/45))",
+        "actual_a": "292968749999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999/(1280000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000*(-59/15 + sqrt(65985)/45))",
+        "mF": "100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "tree_b2": "1/250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+      },
+      "bounds": {
+        "actual_mass_in_domain": true,
+        "actual_nonlocal_upper_below_one_e_minus_799": true,
+        "both_soft_tails_strictly_positive": true,
+        "self_rounded_prefactor_conservative": true,
+        "shared_positive_Y_enclosure": true,
+        "shared_positive_gauge_enclosure": true,
+        "vertex_rounded_prefactor_conservative": true
+      },
+      "enclosure": {
+        "N": 6,
+        "Q_lower": "144",
+        "Y_upper": "5566406249999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999981/86400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "a_upper": "292968749999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999/1920000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "both_quadratic_primitives_soft_tail_upper": "422372817993164062499999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999997116601562500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004921/4299816960000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "fermion_mass": "100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "inner_on_shell_disc_radius": "1/2",
+        "minimum_Cauchy_radius": "2500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000/9",
+        "nonlocal_on_shell_divided_remainder_upper": "422372817993164062499999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999997116601562500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004921/12899450880000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "outer_s_disc_center": 1,
+        "outer_s_disc_radius": 2,
+        "scope": "Only the on-shell-affine-subtracted nonlocal primitive remainder. Finite MS mass and slope, other forests and canonical two-loop pole remain uncomputed.",
+        "self_energy_soft_tail_upper": "422372817993164062499999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999997116601562500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004921/8599633920000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "vertex_soft_tail_upper": "422372817993164062499999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999997116601562500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004921/8599633920000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+      },
+      "scope": "Nonlocal OS primitive correction only; no finite MS local references or full matched canonical pole."
+    },
+    "primitive_frontier": [
+      {
+        "id": "scalar_Phi0_W0_F0",
+        "status": "UNEVALUATED"
+      },
+      {
+        "id": "scalar_Phi2_W0_F2",
+        "status": "BOUNDED_ON_SHELL_NONLOCAL_REMAINDER_NOT_FINITE_LOCAL_REFERENCES"
+      },
+      {
+        "id": "scalar_Phi2_W1_F0",
+        "status": "BOUNDED_PAIRED_SECTOR"
+      },
+      {
+        "id": "scalar_Phi4_W0_F4",
+        "status": "BOUNDED_PAIRED_PRIMITIVE_ROW"
+      },
+      {
+        "id": "scalar_Phi4_W1_F2",
+        "status": "BOUNDED_PAIRED_IN_COMMON_MS_INTERACTION_SCHEME"
+      },
+      {
+        "id": "scalar_Phi4_W2_F0",
+        "status": "BOUNDED_PAIRED_IN_COMMON_MS_INTERACTION_SCHEME"
+      },
+      {
+        "id": "gauge_Phi0",
+        "status": "UNEVALUATED"
+      },
+      {
+        "id": "gauge_Phi2",
+        "status": "BOUNDED_ON_SHELL_NONLOCAL_REMAINDER_NOT_FINITE_LOCAL_REFERENCES"
+      },
+      {
+        "id": "gauge_Phi4",
+        "status": "BOUNDED_PAIRED_PRIMITIVE_ROW"
+      }
+    ]
+  },
+  "checked_scalar_entries": 74,
+  "claim": "P8-S6.145.PAIRED_QUADRATIC_NONLOCAL_REMAINDERS",
+  "complete_proper_cycle_catalog": {
+    "all_proper_cycles": [
+      [
+        {
+          "UV_degree": 1,
+          "boson_lines": 1,
+          "edges": [
+            1,
+            4
+          ],
+          "fermion_lines": 1,
+          "local_after_chord_closure": false
+        },
+        {
+          "UV_degree": 0,
+          "boson_lines": 0,
+          "edges": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "fermion_lines": 4,
+          "local_after_chord_closure": true
+        },
+        {
+          "UV_degree": -1,
+          "boson_lines": 1,
+          "edges": [
+            0,
+            2,
+            3,
+            4
+          ],
+          "fermion_lines": 3,
+          "local_after_chord_closure": false
+        }
+      ],
+      [
+        {
+          "UV_degree": 0,
+          "boson_lines": 1,
+          "edges": [
+            0,
+            3,
+            4
+          ],
+          "fermion_lines": 2,
+          "local_after_chord_closure": false
+        },
+        {
+          "UV_degree": 0,
+          "boson_lines": 1,
+          "edges": [
+            1,
+            2,
+            4
+          ],
+          "fermion_lines": 2,
+          "local_after_chord_closure": false
+        },
+        {
+          "UV_degree": 0,
+          "boson_lines": 0,
+          "edges": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "fermion_lines": 4,
+          "local_after_chord_closure": true
+        }
+      ],
+      [
+        {
+          "UV_degree": 1,
+          "boson_lines": 1,
+          "edges": [
+            2,
+            4
+          ],
+          "fermion_lines": 1,
+          "local_after_chord_closure": false
+        },
+        {
+          "UV_degree": 0,
+          "boson_lines": 0,
+          "edges": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "fermion_lines": 4,
+          "local_after_chord_closure": true
+        },
+        {
+          "UV_degree": -1,
+          "boson_lines": 1,
+          "edges": [
+            0,
+            1,
+            3,
+            4
+          ],
+          "fermion_lines": 3,
+          "local_after_chord_closure": false
+        }
+      ]
+    ],
+    "scope": "Three words per scalar/gauge quadratic primitive. The whole four-fermion cycle gives a local Phi^2 term after chord closure; its degree-zero subtraction vanishes under the nonlocal on-shell projection. All pairs of proper cycles overlap, so no product of their counterterms is a forest.",
+    "words": [
+      {
+        "boson_vertices": [
+          1,
+          2
+        ],
+        "fermion_arcs": [
+          1,
+          3
+        ],
+        "kind": "self_energy",
+        "proper_cycle_degrees": [
+          0,
+          1,
+          -1
+        ],
+        "word": [
+          "P1",
+          "B",
+          "B",
+          "P2"
+        ]
+      },
+      {
+        "boson_vertices": [
+          1,
+          3
+        ],
+        "fermion_arcs": [
+          2,
+          2
+        ],
+        "kind": "vertex",
+        "proper_cycle_degrees": [
+          0,
+          0,
+          0
+        ],
+        "word": [
+          "P1",
+          "B",
+          "P2",
+          "B"
+        ]
+      },
+      {
+        "boson_vertices": [
+          2,
+          3
+        ],
+        "fermion_arcs": [
+          1,
+          3
+        ],
+        "kind": "self_energy",
+        "proper_cycle_degrees": [
+          0,
+          1,
+          -1
+        ],
+        "word": [
+          "P1",
+          "P2",
+          "B",
+          "B"
+        ]
+      }
+    ]
+  },
+  "controls": {
+    "finite_MS_slope_not_silently_zero": true,
+    "nonlocal_bound_not_complete_pole": true,
+    "original_P8_not_closed": true,
+    "other_matching_and_vacuum_rows_open": true,
+    "project_before_unbounded_integrals": true,
+    "proper_MS_finite_terms_retained": true,
+    "rejected_inputs": 64,
+    "two_overlapping_vertex_subtractions": true,
+    "whole_fermion_cycle_local_term_accounted": true
+  },
+  "date": "2026-09-10",
+  "exact_residuals": {
+    "calibration_all_self_and_vertex_words_summed": "0",
+    "calibration_equal_conservative_self_and_vertex_bounds": "0",
+    "calibration_minimum_radius": "0",
+    "calibration_one_third_after_OS_Cauchy": "0",
+    "calibration_same_mass": "0",
+    "catalog_cyclic_determinant_and_contraction_factor": "0",
+    "catalog_one_local_fermion_cycle_0": "0",
+    "catalog_one_local_fermion_cycle_1": "0",
+    "catalog_one_local_fermion_cycle_2": "0",
+    "catalog_one_vertex_word": "0",
+    "catalog_overall_quadratic_UV_degree": "0",
+    "catalog_proper_cycles_overlap_0_0": "0",
+    "catalog_proper_cycles_overlap_0_1": "0",
+    "catalog_proper_cycles_overlap_0_2": "0",
+    "catalog_proper_cycles_overlap_1_0": "0",
+    "catalog_proper_cycles_overlap_1_1": "0",
+    "catalog_proper_cycles_overlap_1_2": "0",
+    "catalog_proper_cycles_overlap_2_0": "0",
+    "catalog_proper_cycles_overlap_2_1": "0",
+    "catalog_proper_cycles_overlap_2_2": "0",
+    "catalog_proper_degrees_0": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        1
+      ]
+    },
+    "catalog_proper_degrees_1": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        1
+      ]
+    },
+    "catalog_proper_degrees_2": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        1
+      ]
+    },
+    "catalog_three_proper_cycles_0": "0",
+    "catalog_three_proper_cycles_1": "0",
+    "catalog_three_proper_cycles_2": "0",
+    "catalog_two_self_energy_words": "0",
+    "exactly_two_partial_rows_advance": "0",
+    "forest_high_region_one_pair_plus_complement": "0",
+    "forest_opposite_high_region_pair": "0",
+    "forest_proper_vertex_anchor_absolute_upper": "0",
+    "forest_self_kernel_coupling_dictionary": "0",
+    "forest_two_finite_local_Yukawa_anchors": "0",
+    "forest_two_overlapping_subtractions_and_local_anchors": "0",
+    "four_previous_quartic_rows_unchanged": "0",
+    "nine_rows_retained": "0",
+    "pole_actual_two_disc_constant": "0",
+    "pole_arbitrary_local_reference_independence": "0",
+    "pole_combined_coupling_dictionary": "0",
+    "pole_degree_four_soft_becomes_quadratic_invariant": "0",
+    "pole_geometric_Cauchy_remainder_sum": "0",
+    "pole_mass_and_kinetic_polynomial_removed": "0",
+    "pole_no_Yukawa_no_quadratic_increment": "0",
+    "pole_third_invariant_affine_subtraction": "0",
+    "regions_basic_radial_moment": "0",
+    "regions_both_MS_anchor_insertions": "0",
+    "regions_compact_radial_density": "0",
+    "regions_complete_vertex_radial_factor": "0",
+    "regions_exact_vertex_base": "0",
+    "regions_exact_vertex_prefactor": "0",
+    "regions_high_complement_outer_log": "0",
+    "regions_high_paired_inner_integral": "0",
+    "regions_log_radial_moment": "0",
+    "regions_middle_log_ratio": "0",
+    "regions_middle_opposite_log_large_y": "0",
+    "regions_middle_opposite_log_small_y": "0",
+    "regions_minimum_radius_on_half_domain": "0",
+    "regions_raw_vertex_trace_to_base_ratio": "0",
+    "regions_self_radial_moment": "0",
+    "regions_self_rounding_slack": "0",
+    "regions_soft_geometric_tail_gap": "0",
+    "regions_symmetric_high_includes_complement": "0",
+    "regions_symmetric_middle_three_terms": "0",
+    "regions_three_self_propagators_trace": "0",
+    "regions_two_self_marks": "0",
+    "regions_vertex_rounding_slack": "0",
+    "two_nonlocal_quadratic_rows": "0",
+    "two_vacuum_rows_wholly_unevaluated": "0"
+  },
+  "formulation": "FORMULATION.md",
+  "named_exact_check_count": 68,
+  "not_established": [
+    "Finite MS mass and slope references for these quadratic rows",
+    "Two primitive vacuum rows and other counterterm/matching insertions",
+    "Complete matched/canonical two-loop amplitude, pole or error",
+    "Higher-loop truncation control, V contours, finite-gravity G, common-parent B or original P8 closure"
+  ],
+  "on_shell_nonlocal_projection": {
+    "local_reference_boundary": "This identity does not evaluate f_MS(1) or f_MS'(1). It cannot by itself fix the canonical two-loop field factor or certify the complete pole.",
+    "on_shell_affine_map": "f_R(s)=f(s)-f(1)-(s-1)f'(1), independent of an arbitrary mass/kinetic polynomial.",
+    "projection": "The complete two-point function is even and O(4) invariant. Soft degrees zero and two are a mass plus kinetic polynomial; odd degrees vanish. Subtract these before integrations.",
+    "second_Cauchy_bound": "If the soft tail is bounded by E on |s-1|<=2, then |f_R(s)|/(s-1)^2<=E/3 on |s-1|<=1/2."
+  },
+  "paired_MS_forest_and_regions": {
+    "forest": {
+      "finite_anchors": 2,
+      "not_established": "Finite MS mass/slope references, parameter insertions, canonical factors and complete two-loop pole/error.",
+      "overall_reference": "The full degree-two UV polynomial is mass plus kinetic; both are removed by the declared physical on-shell affine subtraction.",
+      "paired_vertex_integrand": "-Dq*Kl + G - Kq*Dl",
+      "self_energy_reference": {
+        "MS_gauge_kinetic_inverse_coefficient": "Cf*a*(-2*Integral((1 - x)*log((Euclidean_p_squared*x*(1 - x) + m**2*x)/m**2), (x, 0, 1)) - 1)/Q",
+        "MS_gauge_mass_inverse_correction": "Cf*a*m*(-4*Integral(log((Euclidean_p_squared*x*(1 - x) + m**2*x)/m**2), (x, 0, 1)) - 2)/Q",
+        "MS_scalar_kinetic_inverse_coefficient": "-Y*Integral((1 - x)*log((Euclidean_p_squared*x*(1 - x) + m**2*x - x + 1)/m**2), (x, 0, 1))/Q",
+        "MS_scalar_mass_inverse_correction": "Y*m*Integral(log((Euclidean_p_squared*x*(1 - x) + m**2*x - x + 1)/m**2), (x, 0, 1))/Q",
+        "gauge_parameter_Delta": "Euclidean_p_squared*x*(1 - x) + m**2*x",
+        "mass_coefficient_convention": "Coefficient of identity in the Euclidean inverse; kinetic coefficient multiplies i slash(p)",
+        "scalar_parameter_Delta": "Euclidean_p_squared*x*(1 - x) + m**2*x - x + 1",
+        "scope": "All internal momenta are retained. These are formal one-loop proper kernels, not exact charged-particle propagators or a MOM-only Taylor replacement.",
+        "subgraph_ownership": "Complete one-loop proper MS self-energy, including its scalar/gauge mass and kinetic counterterms exactly once. The outer marked propagator is -S Sigma_MS S."
+      },
+      "vertex_reference": {
+        "finite_MS_anchor": "(-6*Cf*a + Y*(J0 + 2*R))/Q",
+        "local_anchor_absolute_upper": "(6*Cf*a + 2*Y)/Q",
+        "paired_proper_MS_counterterm": "(-4*Cf*a + Y)/Q",
+        "proper_UV_vertex_pole": "(4*Cf*a - Y)/Q"
+      },
+      "whole_fermion_cycle": "Its local proper quartic subtraction becomes a Phi^2 tadpole after closing the boson chord. It contributes zero to the projected nonlocal on-shell remainder. No value for that mass reference is inferred."
+    },
+    "regions": {
+      "complete_vertex_constant": "95/2",
+      "exact_self_prefactor": "8062156800000",
+      "exact_vertex_prefactor": "25530163200000",
+      "first_subtraction_MIDDLE_radius": "sqrt(m^2+x)/360; K0(l) has no soft momentum",
+      "paired_HIGH_radius": "sqrt(m^2+x)/360 for raw minus the first subtraction; inherited paired kernel norm <=32 sqrt(m^2+x)/y^(5/2)",
+      "raw_MIDDLE_radius": "sqrt(m^2+x)/360; x<=y",
+      "regions": "Use symmetry q<->l. Half-domain x=q^2<=y=l^2. MIDDLE x<=y<=4(m^2+x); HIGH y>=4(m^2+x). Then multiply by two.",
+      "second_subtraction_radius": "sqrt(m^2+y)/360; K0(q) has no soft momentum, in BOTH middle and high regions",
+      "self_energy_radial_moment": "15/4",
+      "symmetric_high_constant": "67/2",
+      "symmetric_middle_constant": "12",
+      "two_local_anchor_constant": "2",
+      "vertex_base": 537477120000
+    }
+  },
+  "prior_sha256": {
+    "S6_144_fully_rebuilt": "32208fdf95cbaa1bfdef6e3d43f84450b0b2d41e9ec043fc544b6eeca3e5ea0d",
+    "all_prior_scientific_sources_and_reports_unchanged": true,
+    "same_GY14_nongravitational_reference_model": true,
+    "two_nonlocal_quadratic_rows_not_finite_local_references": true
+  },
+  "proof_checks": {
+    "O4_evenness_removes_lower_soft_polynomial": true,
+    "V_G_B_and_original_P8_open": true,
+    "actual_mass_in_domain": true,
+    "actual_nonlocal_upper_below_one_e_minus_799": true,
+    "all_momentum_regions_integrated": true,
+    "all_proper_cycles_explicitly_enumerated": true,
+    "all_three_cyclic_quadratic_words": true,
+    "both_finite_MS_vertex_anchors_retained": true,
+    "both_proper_vertex_subtractions_retained": true,
+    "both_soft_tails_strictly_positive": true,
+    "complete_MS_self_energy_not_only_local_anchor": true,
+    "finite_mass_slope_and_canonical_factor_not_claimed": true,
+    "high_pair_and_complement_use_distinct_valid_radii": true,
+    "local_whole_fermion_cycle_killed_by_OS_projection": true,
+    "massless_chord_diagonal_integrable": true,
+    "middle_raw_and_both_subtractions_bounded": true,
+    "overlapping_cycles_never_multiplied_as_forest": true,
+    "pointwise_soft_projection_precedes_loop_integrals": true,
+    "self_rounded_prefactor_conservative": true,
+    "shared_positive_Y_enclosure": true,
+    "shared_positive_gauge_enclosure": true,
+    "two_disc_Cauchy_OS_remainder_bound": true,
+    "two_vacuum_rows_and_other_matching_open": true,
+    "vertex_rounded_prefactor_conservative": true
+  },
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "5345ad0f654e83b3849839971d10518f8b228e88e71f2579283a494b7c21878c",
+    "README.md": "98c6104d1d8431504f696a76dbf1207ff7ca820da62ef52901aba8301151f06b",
+    "notes/bounds.md": "988b801e3b3196483bbfc538d8710a3a0e4264f9d8e6786da8327ec2978abbd5",
+    "notes/catalog.md": "6f8f35f6d3d9afeaade9c9384e80b846921f362803dea796e4658fac936b515b",
+    "notes/forest.md": "71fcace7b5872a57c4150e7ff0815acaa2e848729d210c7a670ced145e9e9ab6",
+    "notes/projection.md": "d15cd4042f5b39b203389192d2d9749c84226125c5f7fab4a33110ebf349e25a",
+    "notes/regions.md": "9d359aee9bcab232770ec3a1fceda6a047b4d5c0fca431731420e6d72492feb2",
+    "notes/scope.md": "02e91b95566f96efd6af4f764d7fdb8bf42a892bfcb04eee940d3d6c4120f9db",
+    "src/p8_vacuum_fermion_quadratic_forests/__init__.py": "628c39d2d9e2054e18e6008309bc9eec2d3e2df6f3f8f25574519eee71a6a09e",
+    "src/p8_vacuum_fermion_quadratic_forests/audit.py": "379e734721c75a3392fa33249520856d2d36071a224f44273d3b6b9cf47b4df1",
+    "src/p8_vacuum_fermion_quadratic_forests/calibration.py": "4bf839478071fe19f6ea33253400e704d970432ce806c12d9c18ad20410da281",
+    "src/p8_vacuum_fermion_quadratic_forests/catalog.py": "99d907e2463a725e89a4f573e9d2c96d9b69e0ee736c7c54235bf6d21850e5fa",
+    "src/p8_vacuum_fermion_quadratic_forests/forest.py": "714fb0bbb2fbdec01a4892a6fa97a9a1524b5f173139512a28fd7f63d7e56098",
+    "src/p8_vacuum_fermion_quadratic_forests/pole.py": "b87fefb12a8e50756893d50febc36e4f8b495b331692418fd2ba9938e982ebf5",
+    "src/p8_vacuum_fermion_quadratic_forests/regions.py": "7c54d394210699806928e44d82223d0c5cd409a2eeefd89193fb8bd770da83e2",
+    "src/p8_vacuum_fermion_quadratic_forests/verify.py": "e9ed29ce90215451cdac9a3fea58eb3ad17d7a38c2f68ce79f8c695a72da84dd",
+    "tests/test_fermion_quadratic_forests_certificate.py": "1528b9247c0ec974a8844c4b6237082b66ca32eac7a6e08d19fa33a8ac811278",
+    "tests/test_fermion_quadratic_forests_science.py": "95c68d3ece4a80cb16119de47d6bdfb923a7251cafc989754366ebd361cc0283"
+  },
+  "status": "BOTH_QUADRATIC_PRIMITIVE_NONLOCAL_OS_REMAINDERS_BOUNDED; NOT_FINITE_MS_LOCAL_REFERENCES_FULL_MATCHING_CANONICAL_POLE_HIGHER_LOOPS_V_G_B_OR_ORIGINAL_P8",
+  "verdict": "Each scalar/gauge quadratic primitive has two self-energy words and one vertex word. The complete proper-cycle catalog includes the whole four-fermion cycle; its local term and the overall affine polynomial vanish under the nonlocal on-shell projection. Both overlapping Yukawa vertex subtractions and both finite MS anchors are retained. Symmetric middle/high momentum regions use distinct legitimate radii for the paired kernel and its complementary subtraction. Exact radial moments and a second Cauchy estimate bound the divided on-shell nonlocal remainder below 1e-799. Finite MS local references, other matching/canonical contributions, full two-loop pole/error and original P8 remain open.",
+  "verification_boundary": "Exact determinant weights, exhaustive proper cycle inventory, overlapping forest identity, radial moments and local-polynomial annihilation; independent graph, matrix, momentum-region and Cauchy tests. Analytic continuation and convergence arguments are written proofs, not formalization or independent peer review. Native, ordinary, CLI and direct science retain unmodified SymPy with interpreter-only allowances.",
+  "written_proofs": [
+    "notes/catalog.md",
+    "notes/forest.md",
+    "notes/regions.md",
+    "notes/projection.md",
+    "notes/bounds.md",
+    "notes/scope.md"
+  ]
+}
