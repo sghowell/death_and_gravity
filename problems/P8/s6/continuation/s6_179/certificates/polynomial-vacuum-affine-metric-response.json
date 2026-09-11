@@ -1,0 +1,632 @@
+{
+  "actual_conditional_operator_state_and_homogeneous_source_bridge": {
+    "bridge": {
+      "actual_lapse_scale_operator_and_readout_vertices": {
+        "L": {
+          "delta_log_frequency": "ordinary_prepared_lapse_source0 - ordinary_prepared_logscale_source0*physical_momentum_fraction",
+          "delta_log_g": "-(ordinary_prepared_lapse_source0 - 2*ordinary_prepared_logscale_source0*physical_momentum_fraction - ordinary_prepared_logscale_source0)/2",
+          "energy": {
+            "A": "1",
+            "B": "1",
+            "delta_A": "-ordinary_prepared_lapse_source0 - 3*ordinary_prepared_logscale_source0",
+            "delta_B": "-ordinary_prepared_lapse_source0 - 3*ordinary_prepared_logscale_source0"
+          },
+          "frequency_squared": "N**2*(m**2 + k**2/a**2)",
+          "g_squared": "a*m**2/(N*(m**2 + k**2/a**2))",
+          "pressure": {
+            "A": "2*physical_momentum_fraction/3 + 1/3",
+            "B": "-1/3",
+            "delta_A": "4*ordinary_prepared_logscale_source0*physical_momentum_fraction*(physical_momentum_fraction - 1)/3 - (ordinary_prepared_lapse_source0 + 3*ordinary_prepared_logscale_source0)*(2*physical_momentum_fraction/3 + 1/3)",
+            "delta_B": "ordinary_prepared_lapse_source0/3 + ordinary_prepared_logscale_source0"
+          }
+        },
+        "T": {
+          "delta_log_frequency": "ordinary_prepared_lapse_source0 - ordinary_prepared_logscale_source0*physical_momentum_fraction",
+          "delta_log_g": "-(ordinary_prepared_lapse_source0 - ordinary_prepared_logscale_source0)/2",
+          "energy": {
+            "A": "1",
+            "B": "1",
+            "delta_A": "-ordinary_prepared_lapse_source0 - 3*ordinary_prepared_logscale_source0",
+            "delta_B": "-ordinary_prepared_lapse_source0 - 3*ordinary_prepared_logscale_source0"
+          },
+          "frequency_squared": "N**2*(m**2 + k**2/a**2)",
+          "g_squared": "a/N",
+          "pressure": {
+            "A": "1/3",
+            "B": "2*physical_momentum_fraction/3 - 1/3",
+            "delta_A": "-ordinary_prepared_lapse_source0/3 - ordinary_prepared_logscale_source0",
+            "delta_B": "4*ordinary_prepared_logscale_source0*physical_momentum_fraction*(physical_momentum_fraction - 1)/3 - (ordinary_prepared_lapse_source0 + 3*ordinary_prepared_logscale_source0)*(2*physical_momentum_fraction/3 - 1/3)"
+          }
+        }
+      },
+      "measure": "Only the three physical Proca canonical modes are quantized. The metric-independent constant longitudinal k map is used only at k>0; the regular Cartesian k=0 limit keeps the third polarization.",
+      "prescription": "The S6.176 ordinary covariant dimensional prescription at mu=m is exactly the S6.84/S6.85 physical vector prescription. All mass-source jets vanish as functions; the scalar profile in the OLD total clock response is not included.",
+      "state": "The S6.176 source-aware conditional state uses the same S6.55 all-order Cauchy covariance at t0=-1/2, canonical mass1000 and physical metric. Sources vanish on an initial neighborhood; there is no independent state variation."
+    },
+    "homogeneous": {
+      "arbitrary_homogeneous_invariants": {
+        "Box_u": "Derivative(u(t), (t, 2))/N(t)**2 + 3*Derivative(a(t), t)*Derivative(u(t), t)/(N(t)**2*a(t)) - Derivative(N(t), t)*Derivative(u(t), t)/N(t)**3",
+        "X": "Derivative(u(t), t)**2/N(t)**2",
+        "u_Hess_u_u": "(Derivative(u(t), (t, 2)) - Derivative(N(t), t)*Derivative(u(t), t)/N(t))*Derivative(u(t), t)**2/N(t)**4"
+      },
+      "exact_sector_equality": "On these histories F(Wbar)=0 and Wbar-S=0. Every first metric and light variation of the complete mean action vanishes before restricting its test variation. Therefore the full conditional mean stress equals the ordinary connected Proca stress on the SAME varied metric, with no source/contact contribution.",
+      "preparation": "All histories agree with the CD clock and zero source near the original Cauchy slice. A homogeneous smooth coherent shift defines the local sourced algebra state; no finite spatial energy or global Fock implementability is inferred.",
+      "source": "For every sufficiently small smooth homogeneous physical metric/clock history inside the same analytic domain, the complete source is S=S0(t)dt. Thus dS=0 and the compatible unique classical mean is Wbar=S, even when S0 is nonzero."
+    }
+  },
+  "checked_scalar_entries": 74,
+  "claim": "P8-S6.179.SAME_PARENT_CONDITIONAL_HOMOGENEOUS_METRIC_RESPONSE_AND_UNCANCELLED_FULL_CHART_CONTACTS",
+  "complete_prepared_metric_response_and_nonstationary_chart": {
+    "bounds": {
+      "actual_conditional_physical_stress_C10_to_C0_over_kappa": {
+        "energy": "9812012227615092671289/2684354560000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "pressure": "37823674017900993546667/8053063680000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+      },
+      "clock_current_C0_contact_rows_over_kappa": {
+        "N": "1050936613002303788778969716363837329/2013265920000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "vhat": "288963565290945848222269648372144433/402653184000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+      },
+      "clock_current_C10_to_C0_over_kappa": "32687577714187329626763401549928978394433/402653184000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "clock_current_uniform_display": "1e-784 per unit joint C10 clock-chart lapse/log-scale norm; includes the nonzero background contacts",
+      "clock_input_C10_constant": "46090764897/8",
+      "continuum_nonlocal_response_parts": {
+        "energy": {
+          "exact_minus_reference_variation": "12655193750883605514667/8053063680000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "varied_reference_minus_adiabatic": "774182467/1800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "pressure": {
+          "exact_minus_reference_variation": "12655193750883605514667/8053063680000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "varied_reference_minus_adiabatic": "113244389/360000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        }
+      },
+      "matched_physical_local_response_parts": {
+        "energy": "7500073/3600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "pressure": "2250011/720000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+      },
+      "normalization": "The fixed kappa=1e800 and fixed reference volume a0^3 are used. No division by H or the zero bounce density, scalar counter-profile, field-dependent state reset or ultraviolet momentum cutoff is used.",
+      "physical_uniform_display": "5e-795 per unit joint C10 physical lapse/log-scale norm",
+      "source_pinned_current_state_sha": "1175702d6980db090396863b807af0e767241daeb7d8dabf138ed11c67e1ae75",
+      "source_pinned_old_response_sha": "fea66d1775ce50b7ef941af5b0987269f86ab6f1e6a5a3a23fc53ca63ba3bb01",
+      "uncancelled_reference_stress_C0_over_kappa": {
+        "energy": "7300022913723393048841625708246801/167772160000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "pressure": "26269415026449622565660877124740403/603979776000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+      }
+    },
+    "chart": {
+      "clock_current_background": [
+        [
+          "3*pressure/(2*(u**2 + 1)**3) - rho"
+        ],
+        [
+          "3*pressure"
+        ]
+      ],
+      "clock_retarded_response": [
+        [
+          "3*delta_pressure/(2*(u**2 + 1)**3) - delta_rho + 3*n*(2*pressure*(u**2 + 1)**3 - 2*pressure*(3*u**6 + 9*u**4 + 9*u**2 + 1) + 3*pressure - 2*rho*(u**2 + 1)**3)/(4*(u**2 + 1)**6) + vhat*(9*pressure/(2*(u**2 + 1)**3) - 3*rho)"
+        ],
+        [
+          "3*delta_pressure + n*(3*pressure + 9*pressure/(2*(u**2 + 1)**3)) + 9*pressure*vhat"
+        ]
+      ],
+      "complete_nonstationary_clock_contact": [
+        [
+          "3*(2*pressure*(u**2 + 1)**3 - 2*pressure*(3*u**6 + 9*u**4 + 9*u**2 + 1) + 3*pressure - 2*rho*(u**2 + 1)**3)/(4*(u**2 + 1)**6)",
+          "9*pressure/(2*(u**2 + 1)**3) - 3*rho"
+        ],
+        [
+          "3*pressure + 9*pressure/(2*(u**2 + 1)**3)",
+          "9*pressure"
+        ]
+      ],
+      "linear_input_map": [
+        [
+          "1",
+          "0"
+        ],
+        [
+          "1/(2*(u**2 + 1)**3)",
+          "1"
+        ]
+      ],
+      "nonzero_second_metric_map_contact": [
+        [
+          "-3*pressure*(3*u**6 + 9*u**4 + 9*u**2 + 1)/(2*(u**2 + 1)**6)",
+          "0"
+        ],
+        [
+          "0",
+          "0"
+        ]
+      ],
+      "normalization": "Currents and their variations are divided by the FIXED reference a0(t)^3, then by kappa for the bounds. This is not a background-cancelled current, moving-volume physical stress, or an ordinary symmetric retarded-action Hessian.",
+      "normalized_physical_stress_to_clock_current_map": [
+        [
+          "-1",
+          "3/(2*(u**2 + 1)**3)"
+        ],
+        [
+          "0",
+          "3"
+        ]
+      ],
+      "omega_N": "1/(2*(u**2 + 1)**3)",
+      "omega_NN": "-(3*u**6 + 9*u**4 + 9*u**2 + 1)/(2*(u**2 + 1)**6)",
+      "physical_metric_map": "g_physical=R^(-1/2)g_hat+(1-R^(-1/2))du du/X, not R-1/2. The complete analytic R is unchanged; only its exact reference-clock jets enter this linear response.",
+      "physical_volume_readout_contacts": [
+        [
+          "0",
+          "-3*rho"
+        ],
+        [
+          "3*pressure",
+          "9*pressure"
+        ]
+      ]
+    },
+    "chart_envelopes": {
+      "C0_physical_source_upper": "3/2",
+      "C0_stress_output_upper": "3",
+      "C10_input_upper": "46090764897/8",
+      "Leibniz_C10_rows": {
+        "0": "3/2",
+        "1": "3",
+        "10": "46090764897/8",
+        "2": "51/4",
+        "3": "351/4",
+        "4": "1551/2",
+        "5": "16173/2",
+        "6": "193281/2",
+        "7": "1300689",
+        "8": "77858751/4",
+        "9": "320565543"
+      },
+      "coefficient_derivative_envelopes": {
+        "0": {
+          "absolute_upper": "1/2",
+          "denominator_power": 3,
+          "reconstruction": "0"
+        },
+        "1": {
+          "absolute_upper": "3/2",
+          "denominator_power": 4,
+          "reconstruction": "0"
+        },
+        "10": {
+          "absolute_upper": "26351424225/8",
+          "denominator_power": 13,
+          "reconstruction": "0"
+        },
+        "2": {
+          "absolute_upper": "33/4",
+          "denominator_power": 5,
+          "reconstruction": "0"
+        },
+        "3": {
+          "absolute_upper": "57",
+          "denominator_power": 6,
+          "reconstruction": "0"
+        },
+        "4": {
+          "absolute_upper": "981/2",
+          "denominator_power": 7,
+          "reconstruction": "0"
+        },
+        "5": {
+          "absolute_upper": "9945/2",
+          "denominator_power": 8,
+          "reconstruction": "0"
+        },
+        "6": {
+          "absolute_upper": "232695/4",
+          "denominator_power": 9,
+          "reconstruction": "0"
+        },
+        "7": {
+          "absolute_upper": "1539405/2",
+          "denominator_power": 10,
+          "reconstruction": "0"
+        },
+        "8": {
+          "absolute_upper": "45447885/4",
+          "denominator_power": 11,
+          "reconstruction": "0"
+        },
+        "9": {
+          "absolute_upper": "740073915/4",
+          "denominator_power": 12,
+          "reconstruction": "0"
+        }
+      },
+      "omega_NN_absolute_upper": "9/16",
+      "omega_N_upper": "1/2"
+    },
+    "limits": {
+      "causal_boundary": "Mean-current pullback preserves the retarded kernel plus local contacts. It is not the gradient of half a single-branch source times its retarded inverse; no symmetric-noise bound follows.",
+      "controls": {
+        "C10_proof_not_relabelled_C4": true,
+        "local_tail_not_total_quantum_asymptotic": true,
+        "retarded_response_not_single_branch_Hessian": true,
+        "second_map_contact_is_nonzero": true
+      },
+      "finite_time_boundary": "The displayed ratio of this one local term to kappa H^2 grows quadratically in either tail. This is not a total-state asymptotic estimate or a no-go, and no vacuum/Newton counterterm is changed here.",
+      "flat_local_density": "The fixed mu=m local Proca prescription contains c=5m^4/(128pi^2), rho=-c and P=c. Its physical stress variation vanishes but its uncancelled clock-current response does not.",
+      "nonzero_second_map_cosmological_contact_at_bounce": "-3*c/2",
+      "prepared_norm_diagnostic": "For a fixed smooth compact cutoff equal to one near the bounce, f_frequency=frequency^-4 cutoff*cos(frequency*t) has bounded C4 norm but its tenth local derivative is -frequency^6. This diagnoses the stated C10 comparison proof; it does NOT prove that the actual retarded stress operator cannot satisfy a sharper estimate.",
+      "uncancelled_cosmological_density_clock_Hessian_at_bounce": [
+        [
+          "15*c/4",
+          "15*c/2"
+        ],
+        [
+          "15*c/2",
+          "9*c"
+        ]
+      ]
+    }
+  },
+  "controls": {
+    "C10_not_no_loss_inverse_or_actual_C4_impossibility": true,
+    "homogeneous_source_cancellation_not_spatial_claim": true,
+    "local_vacuum_tail_control_not_total_asymptotic": true,
+    "nonzero_second_metric_map_contact_retained": true,
+    "original_P8_not_closed": true,
+    "physical_vector_not_old_profile_total": true,
+    "rejected_inputs": 103,
+    "retarded_mean_response_not_noise_or_single_branch_Hessian": true,
+    "same_preparation_not_mode_reset": true
+  },
+  "date": "2026-09-11",
+  "exact_residuals": {
+    "bounds_all_current_terms_retained": "0",
+    "bounds_energy_exact_reassembled_physical_response": "0",
+    "bounds_physical_response_joint_reconstruction": "0",
+    "bounds_pressure_exact_reassembled_physical_response": "0",
+    "bridge_L_actual_frequency_source": "0",
+    "bridge_L_actual_normalization_source": "0",
+    "bridge_L_energy_contact_A": "0",
+    "bridge_L_energy_contact_B": "0",
+    "bridge_L_energy_weight_A": "0",
+    "bridge_L_energy_weight_B": "0",
+    "bridge_L_pressure_contact_A": "0",
+    "bridge_L_pressure_contact_B": "0",
+    "bridge_L_pressure_weight_A": "0",
+    "bridge_L_pressure_weight_B": "0",
+    "bridge_L_whole_metric_family_canonical_factor": "0",
+    "bridge_T_actual_frequency_source": "0",
+    "bridge_T_actual_normalization_source": "0",
+    "bridge_T_energy_contact_A": "0",
+    "bridge_T_energy_contact_B": "0",
+    "bridge_T_energy_weight_A": "0",
+    "bridge_T_energy_weight_B": "0",
+    "bridge_T_pressure_contact_A": "0",
+    "bridge_T_pressure_contact_B": "0",
+    "bridge_T_pressure_weight_A": "0",
+    "bridge_T_pressure_weight_B": "0",
+    "bridge_T_whole_metric_family_canonical_factor": "0",
+    "bridge_canonical_mass_same": "0",
+    "bridge_zero_momentum_cartesian_longitudinal_normalization": "0",
+    "chart_clock_jet_not_global_chart_replacement_first": "0",
+    "chart_clock_jet_not_global_chart_replacement_second": "0",
+    "chart_full_R_clock_first_X": "0",
+    "chart_full_R_clock_second_X": "0",
+    "chart_full_R_clock_value": "0",
+    "chart_full_chart_first_N": "0",
+    "chart_full_chart_second_N": "0",
+    "chart_full_contact_matrix": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "chart_full_nonstationary_current_chain_rule": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        1
+      ]
+    },
+    "chart_omega_first_plus_second_combination": "0",
+    "chart_omega_second_sharp_lower_square": "0",
+    "envelopes_coefficient_reconstruction_0": "0",
+    "envelopes_coefficient_reconstruction_1": "0",
+    "envelopes_coefficient_reconstruction_10": "0",
+    "envelopes_coefficient_reconstruction_2": "0",
+    "envelopes_coefficient_reconstruction_3": "0",
+    "envelopes_coefficient_reconstruction_4": "0",
+    "envelopes_coefficient_reconstruction_5": "0",
+    "envelopes_coefficient_reconstruction_6": "0",
+    "envelopes_coefficient_reconstruction_7": "0",
+    "envelopes_coefficient_reconstruction_8": "0",
+    "envelopes_coefficient_reconstruction_9": "0",
+    "envelopes_continuous_C10_input_constant": "0",
+    "homogeneous_closed_source_spatial_derivatives": "0",
+    "homogeneous_complete_mean_density_zero": "0",
+    "homogeneous_every_first_mean_variation_zero": "0",
+    "homogeneous_homogeneous_X_on_clock": "0",
+    "limits_causal_vs_single_branch_control": "0",
+    "limits_cutoff_plateau_fourth_jet": "0",
+    "limits_cutoff_plateau_tenth_jet": "0",
+    "limits_literal_cosmological_density_contact_matrix": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "limits_nonzero_cosmological_NN_bounce": "0",
+    "limits_nonzero_cosmological_cross_bounce": "0",
+    "limits_physical_constant_stress_response_zero": "0",
+    "limits_specified_local_tail_ratio_leading": "0",
+    "nine_primitive_rows_retained": "0",
+    "one_conditional_metric_matching_row_added": "0",
+    "primitive_rows_unchanged": "0",
+    "prior_matching_rows_retained": "0"
+  },
+  "formulation": "FORMULATION.md",
+  "named_exact_check_count": 67,
+  "not_established": [
+    "Arbitrary spatial or independently prepared initial-state response, a symmetric-noise norm or no-loss coupled inverse",
+    "A self-consistent quantum-corrected background, global-time error control or actual total-state tail estimate",
+    "Full affine/light/tensor/auxiliary/mixed quantum contributions, interacting measure/state, cutoff or omitted-order control",
+    "Complete vacuum matching/contour/cuts/truncation, finite-gravity IR/Regge remainder or V/G/B closure"
+  ],
+  "observable_and_scope": {
+    "chart_result": "The actual full analytic metric map has the checked clock jets. Its mean currents use fixed reference volume, retaining physical volume/normalization and nonzero second-map background contacts; the C10-to-C0 bound is below1e-784 after kappa normalization.",
+    "histories": "Smooth homogeneous physical N=1+epsilon n and a=a0 exp(epsilon v), compactly supported strictly inside [-1/2,1/2] and zero on an initial neighborhood. The state has no independent variation.",
+    "not_inferred": "No old background-cancelling profile or total clock result is transferred. Derivative loss, no arbitrary spatial/noise norm, no coupled inverse, no full quantum background/measure/state/cutoff and open V/G/B are explicit.",
+    "parent": "Same complete regular affine parent, fixed physical metric and mass, conditional canonical measure and all-order Cauchy state as S6.176; no scalar profile is added.",
+    "physical_result": "The full conditional vector mean stress has the actual ordinary-Proca prepared C10-to-C0 response, below5e-795 after fixed-kappa normalization."
+  },
+  "primitive_and_matching_frontier": {
+    "matching": [
+      {
+        "id": "fixed_sigma_isolated_MS_conversion",
+        "status": "CANCELLED_NONLOCAL_ORDER_TWO_WITH_SAME_REGULATED_REFERENCE"
+      },
+      {
+        "id": "remaining_scale_parameter_field_map_and_cross_terms",
+        "status": "OPEN"
+      },
+      {
+        "id": "remaining_counterterm_and_vacuum_source_assembly",
+        "status": "ASSEMBLED_FOR_FIXED_ORDER_PHI_POLE_B2_VACUUM_AND_H_SOURCE"
+      },
+      {
+        "id": "full_matched_two_loop_pole_and_amplitude_error",
+        "status": "FIXED_ORDER_PHI_POLE_AND_B2_BOUNDED_PHYSICAL_TRUNCATION_OPEN"
+      },
+      {
+        "id": "finite_EFT_higher_order_truncation",
+        "status": "OPEN"
+      },
+      {
+        "id": "V_contour_and_cut_control",
+        "status": "OPEN"
+      },
+      {
+        "id": "finite_gravity_G",
+        "status": "OPEN"
+      },
+      {
+        "id": "common_parent_B",
+        "status": "OPEN"
+      },
+      {
+        "id": "complete_wineglass_interaction_forest_MS",
+        "status": "BOUNDED_WITH_REGULATED_FINITE_LOCAL_ANCHOR_AND_FULL_SCALE_TERM"
+      },
+      {
+        "id": "complete_double_bubble_interaction_forest_MS",
+        "status": "BOUNDED_WITH_ACTUAL_NESTED_MS_FORESTS_AND_BOTH_SCALE_TERMS"
+      },
+      {
+        "id": "complete_scalar_OS_insertion_interaction_forest_MS",
+        "status": "BOUNDED_WITH_FULL_REGULATED_SLOPE_TIMES_OUTER_REFERENCE"
+      },
+      {
+        "id": "complete_scalar_quadratic_finite_MS_slope_and_converted_OS_bound",
+        "status": "BOUNDED_WITH_FIXED_INNER_OS_AND_INTERACTION_MS_COORDINATES"
+      },
+      {
+        "id": "first_finite_Phi_field_covariance_and_MS_projection_commutator",
+        "status": "EXACT_REGULATED_FIELD_DIRECTION_AND_BOUNDED_FIRST_SLOPE_CROSS_TERMS"
+      },
+      {
+        "id": "complete_GY14_second_Phi_normalization_and_canonical_unit_disc_pole",
+        "status": "BOUNDED_WITH_DIRECT_MS_OWNERSHIP_AND_FULL_FINITE_FIELD_REEXPANSION"
+      },
+      {
+        "id": "complete_two_loop_vacuum_reference_and_first_source_square",
+        "status": "BOUNDED_WITH_FULL_REGULATED_SOURCE_REDUCIBLE_CANCELLATION"
+      },
+      {
+        "id": "complete_two_loop_derivative_map_with_matched_physical_source",
+        "status": "TRANSPORTED_FOR_FULL_ACTION_AND_PHYSICAL_SOURCE_NOT_ORDINARY_PSI_MS_OR_TRUNCATION"
+      },
+      {
+        "id": "complete_matched_two_loop_low_energy_Phi_elastic_cut",
+        "status": "BOUNDED_ON_PHYSICAL_WINDOW_4_TO_6_WITH_FULL_FIRST_AMPLITUDE_NOT_PHYSICAL_REMAINDER_OR_GLOBAL_DISPERSION"
+      },
+      {
+        "id": "full_finite_kappa_analytic_target_classical_vacuum_match",
+        "status": "BOUNDED_ON_SAME_RESTRICTED_FLAT_SCHWARTZ_CLASS_NOT_QUANTUM_TARGET_OR_ROLLING_COMMON_PARENT_MATCH"
+      },
+      {
+        "id": "GY14_SAT8_pointwise_fermion_mass_protection_and_named_low_order_invariance",
+        "status": "NEW_ANALYTIC_EFT_BRANCH_WITH_GLOBAL_REAL_MASS_FLOOR_AND_SAME_NAMED_TWO_LOOP_DATA_NOT_ROLLING_STATE_OR_COMMON_PARENT_CLOSURE"
+      },
+      {
+        "id": "polynomial_clock_transparent_physical_source_map_and_full_target_classical_bound",
+        "status": "KINEMATIC_CLOCK_ARGUMENT_ALIGNED_WITH_PROTECTED_MASSES_AND_SAME_NAMED_VACUUM_DATA_NOT_BACKGROUND_SOLUTION_QUANTUM_STATE_OR_COMMON_PARENT_CLOSURE"
+      },
+      {
+        "id": "free_flat_clock_Dirac_out_energy_with_complete_transition_series_remainder",
+        "status": "BOUNDED_FOR_SPECIFIED_QUADRATIC_MODEWISE_IN_OUT_STATE_NOT_INTERACTING_OR_CURVED_BOUNCE_STRESS"
+      },
+      {
+        "id": "Hadamard_regular_free_flat_SAT8_in_out_state_and_uniform_one_particle_norm_limit",
+        "status": "HADAMARD_FOR_SPECIFIED_FREE_EXTERNAL_MASS_OPERATOR_USING_IDENTIFIED_EXTERNAL_THEOREM_NOT_INTERACTING_CURVED_STATE_OR_NUMERICAL_STRESS"
+      },
+      {
+        "id": "exact_four_frame_free_transition_and_uniform_same_operator_in_out_T00_difference",
+        "status": "BOUNDED_FOR_FREE_FLAT_HADAMARD_STATE_DIFFERENCE_NOT_ABSOLUTE_STRESS_INTERACTING_CURVED_STATE_OR_BACKREACTION"
+      },
+      {
+        "id": "free_flat_absolute_one_loop_local_energy_with_fixed_saturated_mass_reference",
+        "status": "BOUNDED_IN_EXPLICIT_MS_AND_SATURATED_MASS_REFERENCE_QUADRATIC_SCHEME_NOT_FULL_CURVED_INTERACTING_PARENT_STRESS"
+      },
+      {
+        "id": "complete_free_flat_homogeneous_one_loop_stress_with_dimensional_curvature_improvement",
+        "status": "BOUNDED_SPECIFIED_QUADRATIC_MS_MR_FLAT_TENSOR_NOT_FULL_INTERACTING_CURVED_PARENT_STRESS"
+      },
+      {
+        "id": "actual_CD_free_Dirac_Hadamard_in_out_state_and_uniform_state_stress_difference",
+        "status": "CURVED_FREE_HADAMARD_STATE_AND_STATE_DIFFERENCE_BOUNDED_NOT_ABSOLUTE_PARENT_STRESS"
+      },
+      {
+        "id": "complete_free_curved_one_loop_stress_with_explicit_EC_Newton_reference",
+        "status": "BOUNDED_SPECIFIED_QUADRATIC_CURVED_TENSOR_NOT_FULL_INTERACTING_PARENT_OR_BACKGROUND_RESPONSE"
+      },
+      {
+        "id": "minimal_Einstein_canonical_clock_free_sector_null_equation_mismatch",
+        "status": "EXCLUDED_NAMED_MINIMAL_DIAGNOSTIC_WITH_SMALL_EXTRA_NULL_BUDGET_NOT_FULL_INTERACTING_PARENT_OR_DHOST_ROW"
+      },
+      {
+        "id": "actual_CD_leading_clock_Euler_source_decomposition_and_matching_domain_gap",
+        "status": "LEADING_TARGET_SOURCES_AND_CONSTRAINT_DOMAIN_REQUIREMENTS_IDENTIFIED_NOT_PROPAGATING_PARENT_OR_QUANTUM_BOUNCE"
+      },
+      {
+        "id": "analytic_CD_REG_AFFINE_ISO_classical_parent_clock_vacuum_and_local_constraints",
+        "status": "NEW_REGULAR_CLASSICAL_PARENT_AND_LOCAL_CONSTRAINT_BLOCKS_NOT_QUANTUM_MATCHING_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "same_classical_affine_parent_closed_source_lift_and_scoped_vector_Schur_control",
+        "status": "EXACT_CLASSICAL_AND_COMMON_REGULATOR_IDENTITIES_FULL_EUCLIDEAN_AND_LEADING_LORENTZ_BOUNDS_NOT_FULL_QUANTUM_MATCHING"
+      },
+      {
+        "id": "regular_affine_parent_conditional_Gaussian_Hadamard_family_and_ordinary_Proca_stress",
+        "status": "SOURCE_AWARE_CONDITIONAL_VECTOR_STATE_AND_FIXED_CLOCK_STRESS_NOT_FULL_PARENT_QUANTUM_SOLUTION"
+      },
+      {
+        "id": "full_fixed_canonical_affine_family_actual_classical_gravitational_decoupling",
+        "status": "ANCHORED_FULL_FUNCTION_CLASSICAL_LIMIT_AND_TREE_AMPLITUDE_NOT_QUANTUM_CONTOUR_TRUNCATION_OR_V_CLOSURE"
+      },
+      {
+        "id": "complete_affine_vector_retarded_mean_energy_and_causal_cubic_light_force",
+        "status": "FIXED_CD_FULL_SOURCE_FINITE_TIME_CONDITIONAL_GAUSSIAN_MEAN_AND_LIGHT_FORCE_NOT_METRIC_NOISE_FULL_PARENT_OR_B_CLOSURE"
+      },
+      {
+        "id": "same_affine_conditional_prepared_homogeneous_metric_response_with_uncancelled_chart_contacts",
+        "status": "COMPLETE_CONDITIONAL_VECTOR_HOMOGENEOUS_C10_TO_C0_BOUND_NOT_SPATIAL_NOISE_COUPLED_BACKGROUND_CUTOFF_OR_V_G_B"
+      }
+    ],
+    "primitive": [
+      {
+        "id": "scalar_Phi0_W0_F0",
+        "status": "BOUNDED_PAIRED_VACUUM_PRIMITIVE_WITH_ASSIGNED_LOCAL_FOREST"
+      },
+      {
+        "id": "scalar_Phi2_W0_F2",
+        "status": "BOUNDED_NONLOCAL_AND_FINITE_MS_MASS_AND_SLOPE_REFERENCES"
+      },
+      {
+        "id": "scalar_Phi2_W1_F0",
+        "status": "BOUNDED_PAIRED_NONLOCAL_AND_FINITE_MS_LOCAL_REFERENCES"
+      },
+      {
+        "id": "scalar_Phi4_W0_F4",
+        "status": "BOUNDED_PAIRED_PRIMITIVE_ROW"
+      },
+      {
+        "id": "scalar_Phi4_W1_F2",
+        "status": "BOUNDED_PAIRED_IN_COMMON_MS_INTERACTION_SCHEME"
+      },
+      {
+        "id": "scalar_Phi4_W2_F0",
+        "status": "BOUNDED_PAIRED_IN_COMMON_MS_INTERACTION_SCHEME"
+      },
+      {
+        "id": "gauge_Phi0",
+        "status": "BOUNDED_PAIRED_VACUUM_PRIMITIVE_WITH_ASSIGNED_LOCAL_FOREST"
+      },
+      {
+        "id": "gauge_Phi2",
+        "status": "BOUNDED_NONLOCAL_AND_FINITE_MS_MASS_AND_SLOPE_REFERENCES"
+      },
+      {
+        "id": "gauge_Phi4",
+        "status": "BOUNDED_PAIRED_PRIMITIVE_ROW"
+      }
+    ]
+  },
+  "prior_sha256": {
+    "S6_178_fully_rebuilt": "c25ba2599f6297513798ff45291a831aa46be8397dad43fec3d6dc8fdfaea488",
+    "S6_85_complete_ordinary_response_source_rebuilt": "fea66d1775ce50b7ef941af5b0987269f86ab6f1e6a5a3a23fc53ca63ba3bb01",
+    "only_old_physical_vector_block_bridged_not_scalar_profile_or_total_clock_response": true,
+    "same_full_parent_and_all_frozen_scientific_bytes_unchanged": true
+  },
+  "proof_checks": {
+    "C10_derivative_loss_not_coupled_inverse": true,
+    "all_prior_frozen_scientific_bytes_unchanged": true,
+    "bounds_both_nonlocal_parts_retained": true,
+    "bounds_complete_clock_current_below_one_e_minus_784": true,
+    "bounds_nonstationary_contact_rows_positive": true,
+    "bounds_physical_local_parts_retained": true,
+    "bounds_physical_response_below_five_e_minus_795": true,
+    "bounds_physical_response_positive": true,
+    "bounds_uncancelled_state_bounds_positive": true,
+    "chart_C10_input_bound_positive": true,
+    "chart_full_slab_chart_coefficients_finite": true,
+    "compact_slab_not_global_tail_or_physical_cutoff": true,
+    "complete_full_R_parent_unchanged": true,
+    "fixed_reference_volume_and_kappa_normalization": true,
+    "full_chart_clock_jets_not_global_polynomial_replacement": true,
+    "homogeneous_complete_mean_source_force_cancels": true,
+    "literal_arbitrary_lapse_scale_operator_bridge": true,
+    "longitudinal_fixed_comoving_map_and_zero_mode_retained": true,
+    "no_old_scalar_stress_canceling_profile_added": true,
+    "nonlinear_second_map_contact_not_dropped": true,
+    "nonzero_background_first_variation_retained": true,
+    "physical_readout_contacts_checked_before_canonical_substitution": true,
+    "retarded_response_plus_local_contacts_not_symmetric_action": true,
+    "same_conditional_canonical_measure_and_prepared_Hadamard_state": true,
+    "same_covariant_dimensional_subtraction_and_finite_parts": true,
+    "source_pinned_full_continuum_physical_response_only": true,
+    "spatial_noise_full_quantum_parent_and_V_G_B_open": true
+  },
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "fc503e8fcb8c167c5f52739fb6d6b0ec53352fa5302ea00821aeb7a0dd5cf3dc",
+    "README.md": "973af57638ba6ddb1e1ca8839ec94d715f61c071868a080d057f7502abd8278f",
+    "notes/bounds.md": "5c659662f3b659699e6c9a7cee6ed95c0a17e955fd11c540953d31e0b2fd398d",
+    "notes/bridge.md": "3611407ba53e4f3d7bd5a3bc7bc4b22184c131c3014f10fce79decce6747c410",
+    "notes/chart.md": "daa979a282210d93a98db33e662ceb0df0e947e673f5cb502e8020107883bb2e",
+    "notes/continuum.md": "6d36cd3c826ca3487e8c7267aaccb365b47983fb7f9eaa7e74baf245c72e0378",
+    "notes/homogeneous.md": "ffe62f9414db402d9ea5fa3a64d9f94cdd26e42a068a328c951a7fc9c9805a49",
+    "notes/scope.md": "b5827e4f5f4c2013d7c808277fd637a7f11fde2f6217c77298b8e7a15a7914ba",
+    "notes/validation.md": "27f6ac730c500752ddea578b890a6433c07007f7cacf8d74b931c2df039a3feb",
+    "src/p8_vacuum_affine_metric_response/__init__.py": "81c746acd3df8c9789b9878699a4a1e885af2e5027d31e5197bb3e1448d641af",
+    "src/p8_vacuum_affine_metric_response/audit.py": "b69476bc6434589e29f589e0883e4299da88a3aa42fdfeed5164ddb57c4e2250",
+    "src/p8_vacuum_affine_metric_response/bounds.py": "622c57492bb7706f60a265f21de0910b40f02db8bcdb32c6780d36507a131e3f",
+    "src/p8_vacuum_affine_metric_response/bridge.py": "cdfb64b43412f9d2990f9b809aeae29cac6c30340d9e642e0a106d261c3bd016",
+    "src/p8_vacuum_affine_metric_response/chart.py": "0fd4706b82ef531fa2cbb5b07a3e8e87a625e854157e7dca3ba6eb41a65c329c",
+    "src/p8_vacuum_affine_metric_response/limits.py": "cf15714a17937a44ef08e618efc47593e44819f87c8ff22ef423d94811cb53d4",
+    "src/p8_vacuum_affine_metric_response/verify.py": "1212987e30e98c87d5a134e759d060498b85d75fef66b37656531993345bbdb3",
+    "tests/test_affine_metric_response_certificate.py": "8cb64dd2318237e82d16f8de6b2a7212e90edab26ce08739628da98908d6788a",
+    "tests/test_affine_metric_response_science.py": "211f9e104afb4d4745f45f6d1c423943333ea92c04706e440ad8d3d36afe5b6a"
+  },
+  "status": "ACTUAL_CONDITIONAL_VECTOR_PREPARED_HOMOGENEOUS_METRIC_RESPONSE_BOUNDED_WITH_NONSTATIONARY_CONTACTS; NOT_SPATIAL_NOISE_COUPLED_BACKGROUND_FULL_PARENT_CUTOFF_V_G_B_OR_ORIGINAL_P8",
+  "verdict": "The unchanged regular affine parent and its specified conditional canonical vector measure/state have the same complete prepared homogeneous physical stress-response operator as ordinary Proca. Literal arbitrary-lapse/scale mode and readout vertices, exact homogeneous source cancellation and the fixed covariant prescription justify transferring the source-pinned all-continuum physical vector norm below5e-795 per kappa. The full analytic chart is differentiated with its nonzero background first variation: readout/volume and second-map contacts give a new clock-current C10-to-C0 norm below1e-784 per kappa. No old scalar counter-profile or background-cancelled clock total is installed. This is not a spatial/noise norm, coupled inverse or self-consistent/full interacting quantum background, and V/G/B and original P8 remain open.",
+  "verification_boundary": "New exact operator/source/chart/current identities, continuous rational chart envelopes and a source-pinned complete continuum stress bound have written proofs. Every old report is fully rebuilt before certification; only the physically matched vector block is used. Independent literal metric variations, nonlinear chart controls, preparation and derivative-loss tests supplement the argument. Native, direct science, ordinary and CLI use original SymPy; only full regression uses its audited exact GCD adapter. Not FORMALIZED or a full quantum-parent certificate.",
+  "written_proofs": [
+    "notes/bridge.md",
+    "notes/homogeneous.md",
+    "notes/continuum.md",
+    "notes/chart.md",
+    "notes/bounds.md",
+    "notes/scope.md",
+    "notes/validation.md"
+  ]
+}
