@@ -1,0 +1,620 @@
+{
+  "all_order_mass_symbol_bounds": {
+    "all_order_recurrence": "s^(n)=P_n/(1+x^8)^(n+1/8), P_0=x, P_(n+1)=(1+x^8) P_n'-(8n+1)x^7 P_n. Written induction, not the finite replay, covers every n.",
+    "compact_bounds_through_eight": {
+      "0": "3",
+      "1": "1",
+      "2": "1152",
+      "3": "1478592",
+      "4": "2096320320",
+      "5": "3262514349600",
+      "6": "5549647961332800",
+      "7": "10291490408456661600",
+      "8": "20782409221293672405600"
+    },
+    "complex_disk_argument": "For real x>=2, use |z-x|<=x/4 and s(z)=(1+z^-8)^(-1/8) with the branch equal to the positive real profile. |z^-8|<1/2 and |h'(w)|<1/2, so |s(z)-1|<5x^-8. Cauchy gives |d_x^n(s-1)|<=5 n!4^n x^(-8-n) for every n. Oddness gives the negative tail.",
+    "derivative_polynomials_checked": {
+      "0": "x",
+      "1": "1",
+      "2": "-9*x**7",
+      "3": "90*x**14 - 63*x**6",
+      "4": "-990*x**21 + 2457*x**13 - 378*x**5",
+      "5": "11880*x**28 - 69930*x**20 + 42525*x**12 - 1890*x**4",
+      "6": "-154440*x**35 + 1801170*x**27 - 2631825*x**19 + 580230*x**11 - 7560*x**3",
+      "7": "2162160*x**42 - 45031140*x**34 + 127586340*x**26 - 72053415*x**18 + 6730290*x**10 - 22680*x**2",
+      "8": "-32432400*x**49 + 1126526940*x**41 - 5486235300*x**33 + 6127328025*x**25 - 1613285100*x**17 + 68550300*x**9 - 45360*x"
+    },
+    "gates": {
+      "all_orders_proved_by_written_Cauchy_argument": true,
+      "complex_derivative_cap_below_one_half": true,
+      "complex_profile_coefficient_below_five": true,
+      "inverse_power_disk_below_one_half": true,
+      "real_denominator_strictly_positive": true
+    },
+    "physical_symbol_bound": "|d_t^n(M-M_asym)|<=5 Delta tau^8 n!4^n |t|^(-8-n), |t|>=2tau. Compact real-time derivatives have finite recurrence-polynomial bounds. Hence each fixed profile belongs to S^-8 on each tail; this is not uniform in tau->0."
+  },
+  "checked_scalar_entries": 55,
+  "claim": "P8-S6.166.HADAMARD_FREE_FLAT_DIRAC_STATE_AND_UNIFORM_OPERATOR_NORM_IN_OUT_LIMIT",
+  "controls": {
+    "Hadamard_smoothness_not_numeric_remainder_bound": true,
+    "external_theorem_not_claimed_locally_formalized": true,
+    "finite_derivative_checks_not_all_order_proof": true,
+    "first_quantized_unitary_not_global_Fock_implementer": true,
+    "free_flat_state_not_interacting_curved_B_state": true,
+    "negative_source_mass_is_only_convention": true,
+    "old_energy_enclosure_and_all_frozen_inputs_unchanged": true,
+    "original_P8_not_closed": true,
+    "rejected_inputs": 178
+  },
+  "date": "2026-09-10",
+  "exact_residuals": {
+    "all_primitive_rows_unchanged": "0",
+    "all_prior_matching_rows_unchanged": "0",
+    "nine_prior_primitive_rows_retained": "0",
+    "only_named_free_Hadamard_item_added": "0",
+    "scattering_all_momentum_mass_tail_integral_coefficient": "0",
+    "scattering_opposite_source_Hamiltonian_label": "0",
+    "scattering_physical_Hamiltonian_squared": "0",
+    "scattering_positive_time_spinor_inner_product": "0",
+    "scattering_projector_two_factor_bound": "0",
+    "scattering_same_fixed_mass_and_switching_scale": "0",
+    "scattering_source_Clifford_relation_0_0": "0",
+    "scattering_source_Clifford_relation_0_1": "0",
+    "scattering_source_Clifford_relation_0_2": "0",
+    "scattering_source_Clifford_relation_0_3": "0",
+    "scattering_source_Clifford_relation_1_1": "0",
+    "scattering_source_Clifford_relation_1_2": "0",
+    "scattering_source_Clifford_relation_1_3": "0",
+    "scattering_source_Clifford_relation_2_2": "0",
+    "scattering_source_Clifford_relation_2_3": "0",
+    "scattering_source_Clifford_relation_3_3": "0",
+    "scattering_source_spatial_Dirac_coefficient_1": "0",
+    "scattering_source_spatial_Dirac_coefficient_2": "0",
+    "scattering_source_spatial_Dirac_coefficient_3": "0",
+    "scattering_source_spinor_hermitian_form_0": "0",
+    "scattering_source_spinor_hermitian_form_1": "0",
+    "scattering_source_spinor_hermitian_form_2": "0",
+    "scattering_source_spinor_hermitian_form_3": "0",
+    "scattering_source_time_Dirac_coefficient": "0",
+    "symbols_all_order_highest_coefficient_induction": "0",
+    "symbols_degree_at_order_1": "0",
+    "symbols_degree_at_order_2": "0",
+    "symbols_degree_at_order_3": "0",
+    "symbols_degree_at_order_4": "0",
+    "symbols_degree_at_order_5": "0",
+    "symbols_degree_at_order_6": "0",
+    "symbols_degree_at_order_7": "0",
+    "symbols_degree_at_order_8": "0",
+    "symbols_initial_profile_polynomial": "0",
+    "symbols_leading_coefficient_at_order_1": "0",
+    "symbols_leading_coefficient_at_order_2": "0",
+    "symbols_leading_coefficient_at_order_3": "0",
+    "symbols_leading_coefficient_at_order_4": "0",
+    "symbols_leading_coefficient_at_order_5": "0",
+    "symbols_leading_coefficient_at_order_6": "0",
+    "symbols_leading_coefficient_at_order_7": "0",
+    "symbols_leading_coefficient_at_order_8": "0",
+    "symbols_literal_derivative_recurrence_1": "0",
+    "symbols_literal_derivative_recurrence_2": "0",
+    "symbols_literal_derivative_recurrence_3": "0",
+    "symbols_literal_derivative_recurrence_4": "0",
+    "symbols_literal_derivative_recurrence_5": "0",
+    "symbols_literal_derivative_recurrence_6": "0",
+    "symbols_literal_derivative_recurrence_7": "0",
+    "symbols_literal_derivative_recurrence_8": "0",
+    "symbols_tail_physical_time_scaling": "0"
+  },
+  "external_hadamard_theorem_application": {
+    "H1": "h_out=h_in=identity, c_out=c_in=1, including bounded inverse metric and lapse.",
+    "H2": "h-h_asym=0, shift=0, c-c_asym=0, so the geometric tails satisfy every required symbol bound.",
+    "H3": "Our all-order proof gives the real source mass -M(t) minus its asymptote in S^-8; all spatial derivatives vanish.",
+    "H4": "The asymptotic Fourier Hamiltonians have eigenvalues +/-sqrt(p^2+M_asym^2), with M_asym>0. Their spectra omit zero.",
+    "conclusion": "The theorem therefore applies to these specified free in/out states: they are pure quasifree Hadamard states.",
+    "geometry": "The specified four-dimensional flat spacetime with Cauchy surface R^3 has the trivial spin structure and Euclidean bounded geometry.",
+    "identified_version": "Gerard and Stoskopf, arXiv:2108.11955v2, 18 October 2021",
+    "primary_source": "https://arxiv.org/pdf/2108.11955",
+    "quantitative_boundary": "The external theorem is used, not re-proved or formalized here. It supplies no numerical stress or Hadamard-remainder seminorm bound in this application.",
+    "state_identification": "Our norm limits of transported asymptotic projectors agree with the theorem's limits; the checked Hamiltonian-sign dictionary exchanges spectral labels.",
+    "theorem": "Theorem 1.1; hypotheses H1-H3 in 3.1.3, H4 in 3.3; symbol definition in 4.2"
+  },
+  "first_quantized_operator_norm_in_out_limit": {
+    "actual_unit_time_norm_enclosures": {
+      "one_particle_Moller_operator_norm_error": "3/56000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "transported_asymptotic_projector_norm_error": "3/28000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "gates": {
+      "actual_one_particle_wave_error_below_one_e_minus_604": true,
+      "actual_projector_error_below_two_e_minus_604": true,
+      "actual_unit_time_in_tail_domain": true,
+      "same_asymptotic_physical_gap_positive": true
+    },
+    "norm_scope": "Uniform one-particle L2 operator norm, not a second-quantized global Fock implementer, a local Sobolev/Hadamard remainder seminorm or a numerical stress bound.",
+    "operator_norm_proof": "W(T)=U(0,T)exp(-i H_asym T). The derivative is i U(0,T)(H(T)-H_asym)exp(-i H_asym T), of norm <=|M(T)-M_asym|. Its integrable tail makes W and W* norm Cauchy; the limit is unitary on the one-particle L2 space. Transported spectral projectors differ by at most twice the wave-operator error.",
+    "physical_Hamiltonian": [
+      [
+        "M",
+        "0",
+        "p3",
+        "p1 - I*p2"
+      ],
+      [
+        "0",
+        "M",
+        "p1 + I*p2",
+        "-p3"
+      ],
+      [
+        "p3",
+        "p1 - I*p2",
+        "-M",
+        "0"
+      ],
+      [
+        "p1 + I*p2",
+        "-p3",
+        "0",
+        "-M"
+      ]
+    ],
+    "physical_gamma": [
+      [
+        [
+          "1",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "-1",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "-1"
+        ]
+      ],
+      [
+        [
+          "0",
+          "0",
+          "0",
+          "1"
+        ],
+        [
+          "0",
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "-1",
+          "0",
+          "0"
+        ],
+        [
+          "-1",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      [
+        [
+          "0",
+          "0",
+          "0",
+          "-I"
+        ],
+        [
+          "0",
+          "0",
+          "I",
+          "0"
+        ],
+        [
+          "0",
+          "I",
+          "0",
+          "0"
+        ],
+        [
+          "-I",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      [
+        [
+          "0",
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "-1"
+        ],
+        [
+          "-1",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0",
+          "0"
+        ]
+      ]
+    ],
+    "same_positive_physical_asymptotic_masses": [
+      "99700000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "100300000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    ],
+    "source_Hamiltonian": [
+      [
+        "-M",
+        "0",
+        "-p3",
+        "-p1 + I*p2"
+      ],
+      [
+        "0",
+        "-M",
+        "-p1 - I*p2",
+        "p3"
+      ],
+      [
+        "-p3",
+        "-p1 + I*p2",
+        "M",
+        "0"
+      ],
+      [
+        "-p1 - I*p2",
+        "p3",
+        "0",
+        "M"
+      ]
+    ],
+    "source_frame_gamma": [
+      [
+        [
+          "-I",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "-I",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "I",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "I"
+        ]
+      ],
+      [
+        [
+          "0",
+          "0",
+          "0",
+          "I"
+        ],
+        [
+          "0",
+          "0",
+          "I",
+          "0"
+        ],
+        [
+          "0",
+          "-I",
+          "0",
+          "0"
+        ],
+        [
+          "-I",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      [
+        [
+          "0",
+          "0",
+          "0",
+          "1"
+        ],
+        [
+          "0",
+          "0",
+          "-1",
+          "0"
+        ],
+        [
+          "0",
+          "-1",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      [
+        [
+          "0",
+          "0",
+          "I",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "-I"
+        ],
+        [
+          "-I",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "I",
+          "0",
+          "0"
+        ]
+      ]
+    ],
+    "source_mass_dictionary": "Set the paper's real mass to -M(t). Its (-,+,+,+) frame gamma matrices are Gamma_0=-i gamma_+^0 and Gamma_j=i gamma_+^j. Its slash plus mass equals the physical i gamma_+^mu partial_mu-M. H_source=-H_physical, so the spectral +/- labels exchange. This is a convention dictionary, not a negative physical mass or a different state.",
+    "source_spinor_form": [
+      [
+        "1",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "-1",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "-1"
+      ]
+    ]
+  },
+  "formulation": "FORMULATION.md",
+  "named_exact_check_count": 55,
+  "not_established": [
+    "A numerical bound on the smooth Hadamard remainder or its stress-relevant derivatives",
+    "A specified finite local stress-renormalization prescription and quantitative backreaction",
+    "A global infinite-volume Fock implementer or interacting gauge asymptotic particle state",
+    "The curved bounce's common-parent state, cutoff, physical loop errors, V/G/B or original P8 closure"
+  ],
+  "primitive_and_matching_frontier": {
+    "matching": [
+      {
+        "id": "fixed_sigma_isolated_MS_conversion",
+        "status": "CANCELLED_NONLOCAL_ORDER_TWO_WITH_SAME_REGULATED_REFERENCE"
+      },
+      {
+        "id": "remaining_scale_parameter_field_map_and_cross_terms",
+        "status": "OPEN"
+      },
+      {
+        "id": "remaining_counterterm_and_vacuum_source_assembly",
+        "status": "ASSEMBLED_FOR_FIXED_ORDER_PHI_POLE_B2_VACUUM_AND_H_SOURCE"
+      },
+      {
+        "id": "full_matched_two_loop_pole_and_amplitude_error",
+        "status": "FIXED_ORDER_PHI_POLE_AND_B2_BOUNDED_PHYSICAL_TRUNCATION_OPEN"
+      },
+      {
+        "id": "finite_EFT_higher_order_truncation",
+        "status": "OPEN"
+      },
+      {
+        "id": "V_contour_and_cut_control",
+        "status": "OPEN"
+      },
+      {
+        "id": "finite_gravity_G",
+        "status": "OPEN"
+      },
+      {
+        "id": "common_parent_B",
+        "status": "OPEN"
+      },
+      {
+        "id": "complete_wineglass_interaction_forest_MS",
+        "status": "BOUNDED_WITH_REGULATED_FINITE_LOCAL_ANCHOR_AND_FULL_SCALE_TERM"
+      },
+      {
+        "id": "complete_double_bubble_interaction_forest_MS",
+        "status": "BOUNDED_WITH_ACTUAL_NESTED_MS_FORESTS_AND_BOTH_SCALE_TERMS"
+      },
+      {
+        "id": "complete_scalar_OS_insertion_interaction_forest_MS",
+        "status": "BOUNDED_WITH_FULL_REGULATED_SLOPE_TIMES_OUTER_REFERENCE"
+      },
+      {
+        "id": "complete_scalar_quadratic_finite_MS_slope_and_converted_OS_bound",
+        "status": "BOUNDED_WITH_FIXED_INNER_OS_AND_INTERACTION_MS_COORDINATES"
+      },
+      {
+        "id": "first_finite_Phi_field_covariance_and_MS_projection_commutator",
+        "status": "EXACT_REGULATED_FIELD_DIRECTION_AND_BOUNDED_FIRST_SLOPE_CROSS_TERMS"
+      },
+      {
+        "id": "complete_GY14_second_Phi_normalization_and_canonical_unit_disc_pole",
+        "status": "BOUNDED_WITH_DIRECT_MS_OWNERSHIP_AND_FULL_FINITE_FIELD_REEXPANSION"
+      },
+      {
+        "id": "complete_two_loop_vacuum_reference_and_first_source_square",
+        "status": "BOUNDED_WITH_FULL_REGULATED_SOURCE_REDUCIBLE_CANCELLATION"
+      },
+      {
+        "id": "complete_two_loop_derivative_map_with_matched_physical_source",
+        "status": "TRANSPORTED_FOR_FULL_ACTION_AND_PHYSICAL_SOURCE_NOT_ORDINARY_PSI_MS_OR_TRUNCATION"
+      },
+      {
+        "id": "complete_matched_two_loop_low_energy_Phi_elastic_cut",
+        "status": "BOUNDED_ON_PHYSICAL_WINDOW_4_TO_6_WITH_FULL_FIRST_AMPLITUDE_NOT_PHYSICAL_REMAINDER_OR_GLOBAL_DISPERSION"
+      },
+      {
+        "id": "full_finite_kappa_analytic_target_classical_vacuum_match",
+        "status": "BOUNDED_ON_SAME_RESTRICTED_FLAT_SCHWARTZ_CLASS_NOT_QUANTUM_TARGET_OR_ROLLING_COMMON_PARENT_MATCH"
+      },
+      {
+        "id": "GY14_SAT8_pointwise_fermion_mass_protection_and_named_low_order_invariance",
+        "status": "NEW_ANALYTIC_EFT_BRANCH_WITH_GLOBAL_REAL_MASS_FLOOR_AND_SAME_NAMED_TWO_LOOP_DATA_NOT_ROLLING_STATE_OR_COMMON_PARENT_CLOSURE"
+      },
+      {
+        "id": "polynomial_clock_transparent_physical_source_map_and_full_target_classical_bound",
+        "status": "KINEMATIC_CLOCK_ARGUMENT_ALIGNED_WITH_PROTECTED_MASSES_AND_SAME_NAMED_VACUUM_DATA_NOT_BACKGROUND_SOLUTION_QUANTUM_STATE_OR_COMMON_PARENT_CLOSURE"
+      },
+      {
+        "id": "free_flat_clock_Dirac_out_energy_with_complete_transition_series_remainder",
+        "status": "BOUNDED_FOR_SPECIFIED_QUADRATIC_MODEWISE_IN_OUT_STATE_NOT_INTERACTING_OR_CURVED_BOUNCE_STRESS"
+      },
+      {
+        "id": "Hadamard_regular_free_flat_SAT8_in_out_state_and_uniform_one_particle_norm_limit",
+        "status": "HADAMARD_FOR_SPECIFIED_FREE_EXTERNAL_MASS_OPERATOR_USING_IDENTIFIED_EXTERNAL_THEOREM_NOT_INTERACTING_CURVED_STATE_OR_NUMERICAL_STRESS"
+      }
+    ],
+    "primitive": [
+      {
+        "id": "scalar_Phi0_W0_F0",
+        "status": "BOUNDED_PAIRED_VACUUM_PRIMITIVE_WITH_ASSIGNED_LOCAL_FOREST"
+      },
+      {
+        "id": "scalar_Phi2_W0_F2",
+        "status": "BOUNDED_NONLOCAL_AND_FINITE_MS_MASS_AND_SLOPE_REFERENCES"
+      },
+      {
+        "id": "scalar_Phi2_W1_F0",
+        "status": "BOUNDED_PAIRED_NONLOCAL_AND_FINITE_MS_LOCAL_REFERENCES"
+      },
+      {
+        "id": "scalar_Phi4_W0_F4",
+        "status": "BOUNDED_PAIRED_PRIMITIVE_ROW"
+      },
+      {
+        "id": "scalar_Phi4_W1_F2",
+        "status": "BOUNDED_PAIRED_IN_COMMON_MS_INTERACTION_SCHEME"
+      },
+      {
+        "id": "scalar_Phi4_W2_F0",
+        "status": "BOUNDED_PAIRED_IN_COMMON_MS_INTERACTION_SCHEME"
+      },
+      {
+        "id": "gauge_Phi0",
+        "status": "BOUNDED_PAIRED_VACUUM_PRIMITIVE_WITH_ASSIGNED_LOCAL_FOREST"
+      },
+      {
+        "id": "gauge_Phi2",
+        "status": "BOUNDED_NONLOCAL_AND_FINITE_MS_MASS_AND_SLOPE_REFERENCES"
+      },
+      {
+        "id": "gauge_Phi4",
+        "status": "BOUNDED_PAIRED_PRIMITIVE_ROW"
+      }
+    ]
+  },
+  "prior_sha256": {
+    "S6_165_fully_rebuilt": "b9b4c42ca2a054b86797a78e4e6b3e53658288cee87e9cf2b65579015cccd6d0",
+    "all_prior_scientific_sources_and_reports_unchanged": true,
+    "same_specified_free_flat_operator_and_in_out_projectors": true
+  },
+  "proof_checks": {
+    "actual_one_particle_wave_error_below_one_e_minus_604": true,
+    "actual_projector_error_below_two_e_minus_604": true,
+    "actual_unit_time_in_tail_domain": true,
+    "adjoint_limits_preserve_unitarity_and_projector_purity": true,
+    "all_frozen_scientific_sources_and_reports_unchanged": true,
+    "all_order_symbol_tail_not_finite_derivative_sampling": true,
+    "all_orders_proved_by_written_Cauchy_argument": true,
+    "both_active_profile_signs_and_constant_inert_masses": true,
+    "bounded_geometry_and_trivial_spin_structure_of_R3": true,
+    "compact_time_derivatives_finite_for_each_order": true,
+    "complex_derivative_cap_below_one_half": true,
+    "complex_profile_coefficient_below_five": true,
+    "external_theorem_and_hypotheses_identified": true,
+    "finite_energy_not_used_as_Hadamard_proof": true,
+    "inverse_power_disk_below_one_half": true,
+    "numerical_stress_and_interacting_curved_state_not_inferred": true,
+    "operator_norm_limit_is_first_quantized": true,
+    "physical_and_source_Dirac_operators_coincide": true,
+    "real_denominator_strictly_positive": true,
+    "same_asymptotic_physical_gap_positive": true,
+    "source_spectral_labels_exchanged_explicitly": true
+  },
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "52f0d45a6a8debea1e30ae8394f3b7676403e2199d324cbad58b02b804338e68",
+    "README.md": "fa286d4948ae1339e86aed657e910708fd86317922a589592b253adb20385580",
+    "notes/operator.md": "39ae569119742644d6281f1f52faf1c975a50fe50ae013821a646783ff555ed8",
+    "notes/scope.md": "6b49dcbc3f04867f37baf95d6715d2eaab24445ac159a3da1b4d6d14eab6d8fd",
+    "notes/tails.md": "75da0c9b0070d50e5bce10b883fc61abe30be470cfb1020188d6b04603eb044e",
+    "notes/theorem.md": "343ca065a3376ec55b5a55bc7fd7a120459b40482a915e29bc2525c2802bb186",
+    "src/p8_vacuum_flat_dirac_hadamard/__init__.py": "edfed70cbbc7954cecf34ffbd0fd5a7f0e81daf4238cff3faae993cd7e567708",
+    "src/p8_vacuum_flat_dirac_hadamard/audit.py": "93c4e4e9162539312a097b35d58f6328ef43c30c236f66292527d7d34deded58",
+    "src/p8_vacuum_flat_dirac_hadamard/scattering.py": "7eaf9e78054669ad6da946e252a396f1db856b6746387742056b217fa6d1dcfe",
+    "src/p8_vacuum_flat_dirac_hadamard/symbols.py": "83a9c79c355ade6098953ecd90b18a69a54842d09276d88ff847a82fb7a1a237",
+    "src/p8_vacuum_flat_dirac_hadamard/verify.py": "4ab862b493eba80055b60df73ac58e9d6c4fe6debb1903870dbb34ac6bd74a9a",
+    "tests/test_flat_dirac_hadamard_certificate.py": "4fc9c6a335d4c121600f464245dd2703654548d8e2d3a62cf1e9d79b03f5ec35",
+    "tests/test_flat_dirac_hadamard_science.py": "67f7b8ed0218672de3c045bcfc4c61c5c9e89350c76c925a9d9b92809a30f91f"
+  },
+  "status": "IDENTIFIED_EXTERNAL_HADAMARD_THEOREM_APPLIES_TO_THE_SPECIFIED_FREE_FLAT_SAT8_DIRAC_IN_OUT_STATES_WITH_UNIFORM_FIRST_QUANTIZED_NORM_LIMIT; NOT_NUMERICAL_STRESS_INTERACTING_CURVED_STATE_V_G_B_OR_ORIGINAL_P8",
+  "verdict": "All-order Cauchy and compact derivative arguments establish S^-8 mass tails. A uniform bounded-perturbation estimate gives norm-convergent one-particle Moller operators and asymptotic projectors, identifying the same in/out state as the external theorem application. The actual unit-time operator error is below 1e-604 and projector error below 2e-604. The stated free state is Hadamard by the identified external result, not by the finite-energy estimate. No numerical local stress, physical loop error or interacting curved common-parent state is bounded.",
+  "verification_boundary": "Exact finite recurrence and Clifford-dictionary checks accompany written all-order analytic and operator-norm arguments. Independent high-order real/complex derivative checks and finite-interval unitary evolution diagnostics test the bounds. The external Hadamard theorem is cited and its hypotheses are matched, not re-proved or formalized. Numerical diagnostics are not validated integration. Native, direct science, ordinary and CLI retain unmodified SymPy.",
+  "written_proofs": [
+    "notes/tails.md",
+    "notes/operator.md",
+    "notes/theorem.md",
+    "notes/scope.md"
+  ]
+}
