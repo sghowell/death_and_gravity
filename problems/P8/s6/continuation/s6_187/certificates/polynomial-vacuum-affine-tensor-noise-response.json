@@ -1,0 +1,478 @@
+{
+  "actual_tensor_action_and_TT_class": {
+    "projector": {
+      "bounded_projector": "Pi_TT(A)=P A_sym P-(1/2)P tr(PA), P=I-n n^T, n=k/|k|; Frobenius operator norm1",
+      "compatible_detector_construction": "q=L psi is also compact TT. A nonzero compact psi cannot solve Lpsi=0 by zero-data uniqueness, hence gives nonzero q.",
+      "local_compact_construction": "For any compact smooth symmetric potential A_ij(t,x), apply Q_ik Q_jl-(1/2)Q_ij Q_kl with Q_ij=-Delta delta_ij+partial_i partial_j. The resulting psi is compact, transverse and traceless.",
+      "local_compact_operator_symbol": [
+        [
+          "-k0*k1*(A01*(k1**2 + k2**2) - A11*k0*k1 - A12*k0*k2) - k0*k2*(A02*(k1**2 + k2**2) - A12*k0*k1 - A22*k0*k2) + (k1**2 + k2**2)*(A00*(k1**2 + k2**2) - A01*k0*k1 - A02*k0*k2) - (k1**2 + k2**2)*(A00*(k1**2 + k2**2) - 2*A01*k0*k1 - 2*A02*k0*k2 + A11*(k0**2 + k2**2) - 2*A12*k1*k2 + A22*(k0**2 + k1**2))/2",
+          "-k0*k1*(A00*(k1**2 + k2**2) - A01*k0*k1 - A02*k0*k2) + k0*k1*(A00*(k1**2 + k2**2) - 2*A01*k0*k1 - 2*A02*k0*k2 + A11*(k0**2 + k2**2) - 2*A12*k1*k2 + A22*(k0**2 + k1**2))/2 - k1*k2*(A02*(k1**2 + k2**2) - A12*k0*k1 - A22*k0*k2) + (k0**2 + k2**2)*(A01*(k1**2 + k2**2) - A11*k0*k1 - A12*k0*k2)",
+          "-k0*k2*(A00*(k1**2 + k2**2) - A01*k0*k1 - A02*k0*k2) + k0*k2*(A00*(k1**2 + k2**2) - 2*A01*k0*k1 - 2*A02*k0*k2 + A11*(k0**2 + k2**2) - 2*A12*k1*k2 + A22*(k0**2 + k1**2))/2 - k1*k2*(A01*(k1**2 + k2**2) - A11*k0*k1 - A12*k0*k2) + (k0**2 + k1**2)*(A02*(k1**2 + k2**2) - A12*k0*k1 - A22*k0*k2)"
+        ],
+        [
+          "-k0*k1*(-A01*k0*k1 + A11*(k0**2 + k2**2) - A12*k1*k2) + k0*k1*(A00*(k1**2 + k2**2) - 2*A01*k0*k1 - 2*A02*k0*k2 + A11*(k0**2 + k2**2) - 2*A12*k1*k2 + A22*(k0**2 + k1**2))/2 - k0*k2*(-A02*k0*k1 + A12*(k0**2 + k2**2) - A22*k1*k2) + (k1**2 + k2**2)*(-A00*k0*k1 + A01*(k0**2 + k2**2) - A02*k1*k2)",
+          "-k0*k1*(-A00*k0*k1 + A01*(k0**2 + k2**2) - A02*k1*k2) - k1*k2*(-A02*k0*k1 + A12*(k0**2 + k2**2) - A22*k1*k2) + (k0**2 + k2**2)*(-A01*k0*k1 + A11*(k0**2 + k2**2) - A12*k1*k2) - (k0**2 + k2**2)*(A00*(k1**2 + k2**2) - 2*A01*k0*k1 - 2*A02*k0*k2 + A11*(k0**2 + k2**2) - 2*A12*k1*k2 + A22*(k0**2 + k1**2))/2",
+          "-k0*k2*(-A00*k0*k1 + A01*(k0**2 + k2**2) - A02*k1*k2) - k1*k2*(-A01*k0*k1 + A11*(k0**2 + k2**2) - A12*k1*k2) + k1*k2*(A00*(k1**2 + k2**2) - 2*A01*k0*k1 - 2*A02*k0*k2 + A11*(k0**2 + k2**2) - 2*A12*k1*k2 + A22*(k0**2 + k1**2))/2 + (k0**2 + k1**2)*(-A02*k0*k1 + A12*(k0**2 + k2**2) - A22*k1*k2)"
+        ],
+        [
+          "-k0*k1*(-A01*k0*k2 - A11*k1*k2 + A12*(k0**2 + k1**2)) - k0*k2*(-A02*k0*k2 - A12*k1*k2 + A22*(k0**2 + k1**2)) + k0*k2*(A00*(k1**2 + k2**2) - 2*A01*k0*k1 - 2*A02*k0*k2 + A11*(k0**2 + k2**2) - 2*A12*k1*k2 + A22*(k0**2 + k1**2))/2 + (k1**2 + k2**2)*(-A00*k0*k2 - A01*k1*k2 + A02*(k0**2 + k1**2))",
+          "-k0*k1*(-A00*k0*k2 - A01*k1*k2 + A02*(k0**2 + k1**2)) - k1*k2*(-A02*k0*k2 - A12*k1*k2 + A22*(k0**2 + k1**2)) + k1*k2*(A00*(k1**2 + k2**2) - 2*A01*k0*k1 - 2*A02*k0*k2 + A11*(k0**2 + k2**2) - 2*A12*k1*k2 + A22*(k0**2 + k1**2))/2 + (k0**2 + k2**2)*(-A01*k0*k2 - A11*k1*k2 + A12*(k0**2 + k1**2))",
+          "-k0*k2*(-A00*k0*k2 - A01*k1*k2 + A02*(k0**2 + k1**2)) - k1*k2*(-A01*k0*k2 - A11*k1*k2 + A12*(k0**2 + k1**2)) + (k0**2 + k1**2)*(-A02*k0*k2 - A12*k1*k2 + A22*(k0**2 + k1**2)) - (k0**2 + k1**2)*(A00*(k1**2 + k2**2) - 2*A01*k0*k1 - 2*A02*k0*k2 + A11*(k0**2 + k2**2) - 2*A12*k1*k2 + A22*(k0**2 + k1**2))/2"
+        ]
+      ],
+      "noncompact_projection_boundary": "General TT projection need not preserve compact spatial support. The stress covariance extends by continuity in its proven tensor norm, not by falsely asserting compact support.",
+      "zero_momentum_boundary": "Use a bounded representative at k=0, a measure-zero point for the stated L2 spaces. No division by |k| occurs in the energy estimate or local compact construction."
+    },
+    "tree": {
+      "canonical_tensor": "h=sqrt(kappa)gamma/2 in unit-Frobenius transverse traceless polarizations",
+      "full_parent_restriction": "X=1,R=1,trace K=3H,uHu=0 and S=0 exactly. The fixed scalar coefficient and original homogeneous M1 have no tensor dependence in this unimodular chart; no old profile is substituted.",
+      "leading_source_only_equation": "L h = Pi_TT T_centered/sqrt(kappa); this defines the tree-propagated vector-noise component, not the full quantum tensor equation",
+      "metric_chart": "g_ij=-a^2(exp gamma)_ij, gamma symmetric transverse traceless; N=1, shift=0,u=t",
+      "quadratic_classical_tensor_action": "kappa/8 integral a^3 [tr gamma_t^2-a^-2 sum_i tr(partial_i gamma)^2]",
+      "self_adjoint_weight": "a^3 dt dx",
+      "tree_tensor_operator": "L=partial_t^2+3H partial_t-a^-2 Delta, H=4t/(1+t^2)"
+    }
+  },
+  "adjoint_energy_and_compatible_noise": {
+    "detectors": {
+      "advanced_initial_data": [
+        [
+          "4096*moment1/15625"
+        ],
+        [
+          "-4096*moment0/15625"
+        ]
+      ],
+      "compatibility": "For each momentum and TT component, integral a^3 f0 q=0 and integral a^3 f1 q=0; equivalently the advanced v=Gadv q has v(t0)=v'(t0)=0",
+      "exact_response_observable": "For q in this class, integral a^3 q h=T[v]/sqrt(kappa) for the source-only tree equation Lh=T_TT/sqrt(kappa). All homogeneous tensor contributions vanish in this pairing.",
+      "finite_order_boundary": "Full tensor self-energy, fixed-profile response contacts, intrinsic/cross correlations at higher order and the finite-coupling remainder have not been bounded or discarded from a full-solution claim.",
+      "fundamental_modes": "f0(t0)=1,f0'(t0)=0 and f1(t0)=0,f1'(t0)=1; W=f0 f1'-f0' f1=a0^3/a^3",
+      "initial_state_boundary": "No uncorrelated zero quantum metric initial state, sharp switch of the interaction or unrestricted finite-initial-time stress convolution is imposed. This is a restricted detector observable of the source-only leading component, not a complete metric state.",
+      "leading_gamma_standard_deviation_display": "1e-771 D(q)",
+      "leading_gamma_variance_upper_per_D_squared": "112500000000000000000000000000000000009/3125000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "leading_h_standard_deviation_display": "5e-372 D(q)",
+      "leading_h_variance_upper_per_D_squared": "112500000000000000000000000000000000009/125000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "energy": {
+      "actual_second_time_majorant": "1841/5",
+      "actual_third_time_majorant": "15113/5",
+      "all_momentum_boundary": "An added v^2 energy term controls zero momentum. Delta commutes with the actual operator. No momentum band or inverse momentum denominator is used.",
+      "backward_energy_bound": "y=sqrt(2E), |y'|<=3y+||a^(3/2)q||; zero final data gives y<54||q||L2(dt dx)",
+      "complete_adjoint_stress_smearing_norm_squared_upper": "16168748",
+      "complete_adjoint_stress_smearing_norm_upper": "5000",
+      "detector_norm": "D(q)^2=sum_(|alpha|<=2)||partial_x^alpha q||L2(dt dx;F)^2+||partial_t q||L2(dt dx;F)^2",
+      "energy": "E=1/2 integral[a^3 v_t^2+a|grad v|^2+a^3 v^2]dx, summed in the TT Frobenius norm",
+      "exact_energy_derivative": "3*H*a**3*v**2/2 - 3*H*a**3*v_t**2/2 + H*a*gradient_norm**2/2 + a**3*q*v_t + a**3*v*v_t",
+      "field_first_time_and_spatial_L2_constant": "54",
+      "second_time_display_upper": "400",
+      "third_time_display_upper": "4000"
+    }
+  },
+  "checked_scalar_entries": 79,
+  "claim": "P8-S6.187.ACTUAL_CD_BOUNDARY_COMPATIBLE_TREE_TENSOR_PROPAGATED_STRESS_NOISE_AND_ALL_MOMENTUM_ADJOINT_BOUND",
+  "controls": {
+    "complete_parent_not_minimal_scalar_surrogate": true,
+    "generic_detector_boundary_is_a_negative_control": true,
+    "leading_component_not_full_metric_state_or_remainder": true,
+    "no_initial_factorization_or_switched_conservation": true,
+    "noncompact_TT_projection_not_mislabeled_compact": true,
+    "original_P8_not_closed": true,
+    "rejected_inputs": 109,
+    "two_actual_weighted_boundary_moments": true,
+    "zero_momentum_not_discarded": true
+  },
+  "date": "2026-09-11",
+  "exact_residuals": {
+    "TT_projector_and_compact_class_full_local_compact_tensor_symmetric": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        3
+      ]
+    },
+    "TT_projector_and_compact_class_full_local_compact_tensor_trace": "0",
+    "TT_projector_and_compact_class_full_local_compact_tensor_transverse": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        1,
+        3
+      ]
+    },
+    "TT_projector_and_compact_class_nonzero_compact_TT_symbol": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        3
+      ]
+    },
+    "TT_projector_and_compact_class_orthogonal_TT_projection_idempotent": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        3
+      ]
+    },
+    "TT_projector_and_compact_class_orthogonal_TT_projection_trace": "0",
+    "TT_projector_and_compact_class_orthogonal_TT_projection_transverse": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        1,
+        3
+      ]
+    },
+    "TT_projector_and_compact_class_polynomial_projector_square": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        3
+      ]
+    },
+    "TT_projector_and_compact_class_polynomial_projector_trace": "0",
+    "TT_projector_and_compact_class_polynomial_transverse_projector": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        1,
+        3
+      ]
+    },
+    "actual_tensor_tree_actual_tensor_FT_per_kappa": "0",
+    "actual_tensor_tree_actual_tensor_GT_per_kappa": "0",
+    "actual_tensor_tree_actual_tensor_spatial_R3": "0",
+    "actual_tensor_tree_canonical_unit_polarization_kinetic": "0",
+    "actual_tensor_tree_complete_R_on_unit_clock": "0",
+    "actual_tensor_tree_complete_extrinsic_tensor_kinetic": "0",
+    "actual_tensor_tree_full_source_zero_on_unimodular_tensor_history": "0",
+    "actual_tensor_tree_physical_canonical_tensor_stress_pairing": "0",
+    "actual_tensor_tree_tensor_extrinsic_trace_first": "0",
+    "actual_tensor_tree_tensor_extrinsic_trace_second": "0",
+    "actual_tensor_tree_unimodular_tensor_determinant_through_quadratic": "0",
+    "all_momentum_adjoint_energy_actual_H_endpoint_bound_factorization": "0",
+    "all_momentum_adjoint_energy_actual_Hprime_upper_factorization": "0",
+    "all_momentum_adjoint_energy_actual_maximum_volume_square_root": "0",
+    "all_momentum_adjoint_energy_complete_smearing_norm_count": "0",
+    "all_momentum_adjoint_energy_cross_energy_control": "0",
+    "all_momentum_adjoint_energy_exact_positive_energy_terms": "0",
+    "all_momentum_adjoint_energy_exact_wave_energy_density": "0",
+    "all_momentum_adjoint_energy_independent_actual_wave_energy_derivative": "0",
+    "all_momentum_adjoint_energy_second_time_wave_reconstruction": "0",
+    "all_momentum_adjoint_energy_third_time_scale_derivative_bound": "0",
+    "compatible_noise_observable_actual_weighted_Green_identity": "0",
+    "compatible_noise_observable_both_moment_to_initial_data_inversion": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        1
+      ]
+    },
+    "compatible_noise_observable_canonical_tensor_noise_display": "0",
+    "compatible_noise_observable_dimensionless_metric_noise_display": "0",
+    "compatible_noise_observable_weighted_Wronskian_conserved": "0",
+    "nine_primitive_rows_retained": "0",
+    "one_new_scoped_row_added": "0",
+    "primitive_rows_unchanged": "0",
+    "prior_matching_rows_retained": "0"
+  },
+  "formulation": "FORMULATION.md",
+  "named_exact_check_count": 40,
+  "not_established": [
+    "An unrestricted finite-initial-time quantum metric state, all intrinsic or mixed correlations, or a Proca/CD boundary-divergence theorem",
+    "The complete tensor self-energy inverse, its finite-coupling remainder or an interacting scalar/mixed/nonlinear stochastic background",
+    "Physical cutoff/threshold/heavy or omitted-order matching, full parent measure/loops or an interacting vacuum amplitude",
+    "Finite-gravity IR/Regge and original V/G/B or P8 closure"
+  ],
+  "observable_and_scope": {
+    "bound": "The actual all-momentum advanced energy estimate gives N(Gadv q)<5000 D(q). The unchanged CD stress bound gives leading source-only tensor STD below5e-372 D(q), or dimensionless metric STD below1e-771 D(q).",
+    "class": "Compact TT detectors have two exact weighted Fourier moment conditions. They are equivalently q=L psi with compact TT psi and remove both free initial-data contributions.",
+    "initial_state": "The restricted observable does not require a factorized zero quantum metric state, a sharp source switch or a claimed Proca/CD initial-time divergence.",
+    "remaining": "Full tensor self-energy and finite-coupling remainder, unrestricted initial-state correlations, scalar/mixed and nonlinear response, interacting parent loops/matching, physical heavy/cutoff bounds and original V/G/B.",
+    "tree": "The actual clock tensor action has canonical field h=sqrt(kappa)gamma/2 and wave operator L=partial_t^2+3H partial_t-a^-2 Delta."
+  },
+  "primitive_and_matching_frontier": {
+    "matching": [
+      {
+        "id": "fixed_sigma_isolated_MS_conversion",
+        "status": "CANCELLED_NONLOCAL_ORDER_TWO_WITH_SAME_REGULATED_REFERENCE"
+      },
+      {
+        "id": "remaining_scale_parameter_field_map_and_cross_terms",
+        "status": "OPEN"
+      },
+      {
+        "id": "remaining_counterterm_and_vacuum_source_assembly",
+        "status": "ASSEMBLED_FOR_FIXED_ORDER_PHI_POLE_B2_VACUUM_AND_H_SOURCE"
+      },
+      {
+        "id": "full_matched_two_loop_pole_and_amplitude_error",
+        "status": "FIXED_ORDER_PHI_POLE_AND_B2_BOUNDED_PHYSICAL_TRUNCATION_OPEN"
+      },
+      {
+        "id": "finite_EFT_higher_order_truncation",
+        "status": "OPEN"
+      },
+      {
+        "id": "V_contour_and_cut_control",
+        "status": "OPEN"
+      },
+      {
+        "id": "finite_gravity_G",
+        "status": "OPEN"
+      },
+      {
+        "id": "common_parent_B",
+        "status": "OPEN"
+      },
+      {
+        "id": "complete_wineglass_interaction_forest_MS",
+        "status": "BOUNDED_WITH_REGULATED_FINITE_LOCAL_ANCHOR_AND_FULL_SCALE_TERM"
+      },
+      {
+        "id": "complete_double_bubble_interaction_forest_MS",
+        "status": "BOUNDED_WITH_ACTUAL_NESTED_MS_FORESTS_AND_BOTH_SCALE_TERMS"
+      },
+      {
+        "id": "complete_scalar_OS_insertion_interaction_forest_MS",
+        "status": "BOUNDED_WITH_FULL_REGULATED_SLOPE_TIMES_OUTER_REFERENCE"
+      },
+      {
+        "id": "complete_scalar_quadratic_finite_MS_slope_and_converted_OS_bound",
+        "status": "BOUNDED_WITH_FIXED_INNER_OS_AND_INTERACTION_MS_COORDINATES"
+      },
+      {
+        "id": "first_finite_Phi_field_covariance_and_MS_projection_commutator",
+        "status": "EXACT_REGULATED_FIELD_DIRECTION_AND_BOUNDED_FIRST_SLOPE_CROSS_TERMS"
+      },
+      {
+        "id": "complete_GY14_second_Phi_normalization_and_canonical_unit_disc_pole",
+        "status": "BOUNDED_WITH_DIRECT_MS_OWNERSHIP_AND_FULL_FINITE_FIELD_REEXPANSION"
+      },
+      {
+        "id": "complete_two_loop_vacuum_reference_and_first_source_square",
+        "status": "BOUNDED_WITH_FULL_REGULATED_SOURCE_REDUCIBLE_CANCELLATION"
+      },
+      {
+        "id": "complete_two_loop_derivative_map_with_matched_physical_source",
+        "status": "TRANSPORTED_FOR_FULL_ACTION_AND_PHYSICAL_SOURCE_NOT_ORDINARY_PSI_MS_OR_TRUNCATION"
+      },
+      {
+        "id": "complete_matched_two_loop_low_energy_Phi_elastic_cut",
+        "status": "BOUNDED_ON_PHYSICAL_WINDOW_4_TO_6_WITH_FULL_FIRST_AMPLITUDE_NOT_PHYSICAL_REMAINDER_OR_GLOBAL_DISPERSION"
+      },
+      {
+        "id": "full_finite_kappa_analytic_target_classical_vacuum_match",
+        "status": "BOUNDED_ON_SAME_RESTRICTED_FLAT_SCHWARTZ_CLASS_NOT_QUANTUM_TARGET_OR_ROLLING_COMMON_PARENT_MATCH"
+      },
+      {
+        "id": "GY14_SAT8_pointwise_fermion_mass_protection_and_named_low_order_invariance",
+        "status": "NEW_ANALYTIC_EFT_BRANCH_WITH_GLOBAL_REAL_MASS_FLOOR_AND_SAME_NAMED_TWO_LOOP_DATA_NOT_ROLLING_STATE_OR_COMMON_PARENT_CLOSURE"
+      },
+      {
+        "id": "polynomial_clock_transparent_physical_source_map_and_full_target_classical_bound",
+        "status": "KINEMATIC_CLOCK_ARGUMENT_ALIGNED_WITH_PROTECTED_MASSES_AND_SAME_NAMED_VACUUM_DATA_NOT_BACKGROUND_SOLUTION_QUANTUM_STATE_OR_COMMON_PARENT_CLOSURE"
+      },
+      {
+        "id": "free_flat_clock_Dirac_out_energy_with_complete_transition_series_remainder",
+        "status": "BOUNDED_FOR_SPECIFIED_QUADRATIC_MODEWISE_IN_OUT_STATE_NOT_INTERACTING_OR_CURVED_BOUNCE_STRESS"
+      },
+      {
+        "id": "Hadamard_regular_free_flat_SAT8_in_out_state_and_uniform_one_particle_norm_limit",
+        "status": "HADAMARD_FOR_SPECIFIED_FREE_EXTERNAL_MASS_OPERATOR_USING_IDENTIFIED_EXTERNAL_THEOREM_NOT_INTERACTING_CURVED_STATE_OR_NUMERICAL_STRESS"
+      },
+      {
+        "id": "exact_four_frame_free_transition_and_uniform_same_operator_in_out_T00_difference",
+        "status": "BOUNDED_FOR_FREE_FLAT_HADAMARD_STATE_DIFFERENCE_NOT_ABSOLUTE_STRESS_INTERACTING_CURVED_STATE_OR_BACKREACTION"
+      },
+      {
+        "id": "free_flat_absolute_one_loop_local_energy_with_fixed_saturated_mass_reference",
+        "status": "BOUNDED_IN_EXPLICIT_MS_AND_SATURATED_MASS_REFERENCE_QUADRATIC_SCHEME_NOT_FULL_CURVED_INTERACTING_PARENT_STRESS"
+      },
+      {
+        "id": "complete_free_flat_homogeneous_one_loop_stress_with_dimensional_curvature_improvement",
+        "status": "BOUNDED_SPECIFIED_QUADRATIC_MS_MR_FLAT_TENSOR_NOT_FULL_INTERACTING_CURVED_PARENT_STRESS"
+      },
+      {
+        "id": "actual_CD_free_Dirac_Hadamard_in_out_state_and_uniform_state_stress_difference",
+        "status": "CURVED_FREE_HADAMARD_STATE_AND_STATE_DIFFERENCE_BOUNDED_NOT_ABSOLUTE_PARENT_STRESS"
+      },
+      {
+        "id": "complete_free_curved_one_loop_stress_with_explicit_EC_Newton_reference",
+        "status": "BOUNDED_SPECIFIED_QUADRATIC_CURVED_TENSOR_NOT_FULL_INTERACTING_PARENT_OR_BACKGROUND_RESPONSE"
+      },
+      {
+        "id": "minimal_Einstein_canonical_clock_free_sector_null_equation_mismatch",
+        "status": "EXCLUDED_NAMED_MINIMAL_DIAGNOSTIC_WITH_SMALL_EXTRA_NULL_BUDGET_NOT_FULL_INTERACTING_PARENT_OR_DHOST_ROW"
+      },
+      {
+        "id": "actual_CD_leading_clock_Euler_source_decomposition_and_matching_domain_gap",
+        "status": "LEADING_TARGET_SOURCES_AND_CONSTRAINT_DOMAIN_REQUIREMENTS_IDENTIFIED_NOT_PROPAGATING_PARENT_OR_QUANTUM_BOUNCE"
+      },
+      {
+        "id": "analytic_CD_REG_AFFINE_ISO_classical_parent_clock_vacuum_and_local_constraints",
+        "status": "NEW_REGULAR_CLASSICAL_PARENT_AND_LOCAL_CONSTRAINT_BLOCKS_NOT_QUANTUM_MATCHING_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "same_classical_affine_parent_closed_source_lift_and_scoped_vector_Schur_control",
+        "status": "EXACT_CLASSICAL_AND_COMMON_REGULATOR_IDENTITIES_FULL_EUCLIDEAN_AND_LEADING_LORENTZ_BOUNDS_NOT_FULL_QUANTUM_MATCHING"
+      },
+      {
+        "id": "regular_affine_parent_conditional_Gaussian_Hadamard_family_and_ordinary_Proca_stress",
+        "status": "SOURCE_AWARE_CONDITIONAL_VECTOR_STATE_AND_FIXED_CLOCK_STRESS_NOT_FULL_PARENT_QUANTUM_SOLUTION"
+      },
+      {
+        "id": "full_fixed_canonical_affine_family_actual_classical_gravitational_decoupling",
+        "status": "ANCHORED_FULL_FUNCTION_CLASSICAL_LIMIT_AND_TREE_AMPLITUDE_NOT_QUANTUM_CONTOUR_TRUNCATION_OR_V_CLOSURE"
+      },
+      {
+        "id": "complete_affine_vector_retarded_mean_energy_and_causal_cubic_light_force",
+        "status": "FIXED_CD_FULL_SOURCE_FINITE_TIME_CONDITIONAL_GAUSSIAN_MEAN_AND_LIGHT_FORCE_NOT_METRIC_NOISE_FULL_PARENT_OR_B_CLOSURE"
+      },
+      {
+        "id": "same_affine_conditional_prepared_homogeneous_metric_response_with_uncancelled_chart_contacts",
+        "status": "COMPLETE_CONDITIONAL_VECTOR_HOMOGENEOUS_C10_TO_C0_BOUND_NOT_SPATIAL_NOISE_COUPLED_BACKGROUND_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "same_affine_parent_prepared_homogeneous_retained_tree_plus_conditional_vector_causal_inverse",
+        "status": "UNIQUE_RETAINED_LINEAR_PREPARED_CAUSAL_INVERSE_WITH_NUMERIC_LOCAL_LAPSE_RECOVERY_NOT_FULL_INVERSE_SMALLNESS_QUANTUM_BACKGROUND_OR_V_G_B"
+      },
+      {
+        "id": "same_massive_scalar_range_kernel_explicit_full_half_line_L1_majorant",
+        "status": "MASS_INDEPENDENT_EXPLICIT_SCALAR_KERNEL_NORM_NOT_FULL_INVERSE_SMALLNESS_BACKGROUND_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "new_CD_REG_AFFINE_ISO_QG1_fixed_coefficient_stationary_Gaussian_mean_and_actual_response",
+        "status": "NEW_PARENT_RETAINED_MEAN_STATIONARITY_AND_BOUNDED_COEFFICIENT_CORRECTION_NOT_FULL_QUANTUM_BACKGROUND_STABILITY_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "actual_classical_Hamiltonian_C0_and_C10_inverse_and_first_formal_Gaussian_response",
+        "status": "QUANTIFIED_PREPARED_CLASSICAL_PROPAGATOR_AND_FIRST_FORMAL_COEFFICIENT_NOT_FINITE_COUPLING_ERROR_STABILITY_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "complete_finite_time_canonical_vacuum_source_mean_and_scalar_force_noise_with_fixed_profile",
+        "status": "FULL_CONDITIONAL_GAUSSIAN_VACUUM_SOURCE_CAUSAL_AND_NOISE_BOUNDS_NOT_INTERACTING_AMPLITUDE_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "actual_all_order_CD_state_complete_clock_source_smeared_force_noise_and_canonical_normalization",
+        "status": "SAME_STATE_FULL_SOURCE_SMEARED_SCALAR_NOISE_BOUND_NOT_METRIC_NOISE_SOLUTION_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "actual_all_order_CD_full_local_smeared_metric_stress_covariance",
+        "status": "FULL_SPACETIME_TENSOR_STRESS_NOISE_BOUND_NOT_METRIC_SOLUTION_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "actual_CD_boundary_compatible_tree_tensor_noise_response",
+        "status": "RESTRICTED_DETECTOR_TREE_PROPAGATED_NOISE_NOT_FULL_QUANTUM_TENSOR_STATE_OR_V_G_B"
+      }
+    ],
+    "primitive": [
+      {
+        "id": "scalar_Phi0_W0_F0",
+        "status": "BOUNDED_PAIRED_VACUUM_PRIMITIVE_WITH_ASSIGNED_LOCAL_FOREST"
+      },
+      {
+        "id": "scalar_Phi2_W0_F2",
+        "status": "BOUNDED_NONLOCAL_AND_FINITE_MS_MASS_AND_SLOPE_REFERENCES"
+      },
+      {
+        "id": "scalar_Phi2_W1_F0",
+        "status": "BOUNDED_PAIRED_NONLOCAL_AND_FINITE_MS_LOCAL_REFERENCES"
+      },
+      {
+        "id": "scalar_Phi4_W0_F4",
+        "status": "BOUNDED_PAIRED_PRIMITIVE_ROW"
+      },
+      {
+        "id": "scalar_Phi4_W1_F2",
+        "status": "BOUNDED_PAIRED_IN_COMMON_MS_INTERACTION_SCHEME"
+      },
+      {
+        "id": "scalar_Phi4_W2_F0",
+        "status": "BOUNDED_PAIRED_IN_COMMON_MS_INTERACTION_SCHEME"
+      },
+      {
+        "id": "gauge_Phi0",
+        "status": "BOUNDED_PAIRED_VACUUM_PRIMITIVE_WITH_ASSIGNED_LOCAL_FOREST"
+      },
+      {
+        "id": "gauge_Phi2",
+        "status": "BOUNDED_NONLOCAL_AND_FINITE_MS_MASS_AND_SLOPE_REFERENCES"
+      },
+      {
+        "id": "gauge_Phi4",
+        "status": "BOUNDED_PAIRED_PRIMITIVE_ROW"
+      }
+    ]
+  },
+  "prior_sha256": {
+    "S6_176_actual_CD_Gaussian_sector_transitively_rebuilt": "1175702d6980db090396863b807af0e767241daeb7d8dabf138ed11c67e1ae75",
+    "S6_186_fully_rebuilt": "cdbcd5e9a070b1c1c4d24ebc4f0b602ef71d8ddce6f85381cf7cb55e44343f2c",
+    "all_frozen_scientific_bytes_unchanged": true,
+    "fixed_stress_prescription_and_full_source_retained": true
+  },
+  "proof_checks": {
+    "actual_full_parent_tensor_restriction": true,
+    "actual_tensor_tree_actual_tensor_kinetic_positive": true,
+    "actual_tensor_tree_actual_tensor_speed_one": true,
+    "actual_tensor_tree_same_fixed_kappa": true,
+    "all_momentum_adjoint_energy_backward_exponential_below_twenty_seven": true,
+    "all_momentum_adjoint_energy_complete_backward_energy_display": true,
+    "all_momentum_adjoint_energy_energy_growth_coefficient_below_six": true,
+    "all_momentum_adjoint_energy_full_adjoint_norm_below_five_thousand": true,
+    "all_momentum_adjoint_energy_maximum_volume_square_root_below_two": true,
+    "all_momentum_adjoint_energy_second_time_bound_below_four_hundred": true,
+    "all_momentum_adjoint_energy_third_time_bound_below_four_thousand": true,
+    "compatible_class_nonempty_not_every_detector": true,
+    "compatible_noise_observable_actual_gamma_variance_below_display": true,
+    "compatible_noise_observable_actual_h_variance_below_display": true,
+    "compatible_noise_observable_positive_initial_Wronskian": true,
+    "fixed_scalar_profile_and_original_M1_retained": true,
+    "full_momentum_energy_including_zero": true,
+    "full_self_energy_and_finite_coupling_remainder_still_open": true,
+    "full_source_zero_on_unimodular_clock_tensor_history": true,
+    "full_stress_not_only_scalar_source_noise": true,
+    "homogeneous_tensor_part_annihilated_only_in_stated_class": true,
+    "no_compact_support_claim_for_general_TT_projection": true,
+    "no_scalar_Minkowski_divergence_transferred_to_Proca": true,
+    "no_sharp_or_arbitrary_gravity_switch": true,
+    "no_uncorrelated_zero_quantum_initial_data": true,
+    "original_V_G_B_not_closed": true,
+    "same_actual_all_order_CD_state": true,
+    "source_only_tree_component_not_full_quantum_state": true,
+    "stress_distribution_test_space_respected": true,
+    "tree_canonical_normalization_not_scalar_mixed_reduction": true,
+    "two_boundary_conditions_not_one": true,
+    "weighted_moments_use_actual_homogeneous_modes": true
+  },
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "cf6513028a80637b4a46d5d3842b39ad2a3eabd25151099fad340f23f5bf518c",
+    "README.md": "4ad88192cc3599a9c8f823384e8459ae162d8e352816ad34299ea9264b74f207",
+    "notes/boundary.md": "18d893e5fbea6590c341a7868e51ab35cea0386aa59dd4684da58297c33a8ace",
+    "notes/energy.md": "43f7a030755897dc7e8bda2ce390ce0b7e16e5d42198a1cfa00e82407946595b",
+    "notes/noise.md": "2a49d80e38c1dc5cb3ec4eb19a36919be871899158d037b27d4cc53976472edf",
+    "notes/projector.md": "bf92b65d8e420d0f7ae4db1bfacd8a189703334cc2b5c1d55cc3906c17f30c9e",
+    "notes/scope.md": "f600b9ddc1aef3165721c9ac29504ac89f77ddde037c4175034fb6007ccea474",
+    "notes/tree.md": "f178917c7f1fd325f903a4572a737c579276c953e00b439a5e4800179e68901c",
+    "notes/validation.md": "bd843c09e4a1e3fb7f6dd3fa539976fffe213886b6028779d0f210168317299d",
+    "src/p8_vacuum_affine_tensor_noise_response/__init__.py": "a91e69d7c2d6ad7d9748ea7f9ca0dcbd16a43b1e9bb80e66fa114676b7df85be",
+    "src/p8_vacuum_affine_tensor_noise_response/audit.py": "1db1d1af5d18193782c572a431bf60bd768171e66a5cb2e0b80ec1299b91d6a5",
+    "src/p8_vacuum_affine_tensor_noise_response/detectors.py": "916dce24b78d9033f105a25a85e5fb78f48bd103ceabd0005f11a62b8c68eb46",
+    "src/p8_vacuum_affine_tensor_noise_response/energy.py": "59cbdb260e504f8799b49ea8383dd4dfd1e307ba82fdbfffdb38ab7fabf54d3e",
+    "src/p8_vacuum_affine_tensor_noise_response/projector.py": "50925249d1f407e4f4792b765f2a0dbfb731249f0568bc84e6b28b6b77ecf794",
+    "src/p8_vacuum_affine_tensor_noise_response/tree.py": "7db701eb7330a42686788708c41afc0c9aa50cf3a939e139d2e4f3cd99962ff3",
+    "src/p8_vacuum_affine_tensor_noise_response/verify.py": "13406ee733a431b090ef788f5d185192aad1cfb74ffee8e02e143cb7daf3925d",
+    "tests/test_affine_tensor_noise_response_certificate.py": "a76c084894a4cb71fa2b7edfa866f253d2296eb3f934a7f2b19cad965a6f747f",
+    "tests/test_affine_tensor_noise_response_science.py": "6c1e8bc963c8370bd7e34713e078bf29801f5ff4f72b387bc9073b48f232361a"
+  },
+  "status": "ACTUAL_CD_RESTRICTED_COMPATIBLE_TT_DETECTOR_TREE_PROPAGATED_NOISE_BOUND; NOT_FULL_QUANTUM_TENSOR_STATE_SELF_ENERGY_REMAINDER_BACKGROUND_CUTOFF_V_G_B_OR_ORIGINAL_P8",
+  "verdict": "The unchanged full parent gives the actual canonical tree tensor wave operator on the fixed CD clock. A nonempty but restricted compact transverse-traceless detector class has two exact homogeneous-mode moment compatibilities, so its advanced stress test vanishes near both time endpoints and annihilates every free tensor initial-data contribution. A continuous all-momentum wave energy estimate, including zero momentum, bounds the adjoint stress-test norm by5000 times the declared detector norm. Combining it with the actual all-order CD stress covariance gives source-only tree-propagated canonical tensor standard deviation below5e-372 D(q), and dimensionless metric standard deviation below1e-771 D(q). No factorized zero quantum metric state, arbitrary gravity switch, full tensor self-energy control or finite-coupling remainder is asserted. Original V/G/B and P8 remain OPEN.",
+  "verification_boundary": "Exact full-parent tensor action and canonical source, polynomial/orthogonal TT projectors, weighted Green/Wronskian identities and complete energy/derivative majorants. Independent actual-wave ODE, compact detector, incompatible-boundary, rotated-polarization, energy and normalization fixtures supplement the written continuous argument. The bound is a restricted source-only leading component, not a full quantum state. Native, direct science, ordinary and CLI use original SymPy; only full regression uses the audited exact GCD adapter. Analytic and distributional arguments are not FORMALIZED.",
+  "written_proofs": [
+    "notes/tree.md",
+    "notes/projector.md",
+    "notes/boundary.md",
+    "notes/energy.md",
+    "notes/noise.md",
+    "notes/scope.md",
+    "notes/validation.md"
+  ]
+}
