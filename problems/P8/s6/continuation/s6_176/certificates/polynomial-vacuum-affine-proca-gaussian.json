@@ -1,0 +1,581 @@
+{
+  "checked_scalar_entries": 94,
+  "claim": "P8-S6.176.SOURCE_AWARE_CONDITIONAL_AFFINE_PROCA_HADAMARD_FAMILY_AND_FIXED_CLOCK_GAUSSIAN_STRESS",
+  "conditional_Gaussian_state_and_canonical_bridge": {
+    "bridge": {
+      "canonical_field": "A_mu=sqrt(kappa*zeta) W_mu; the source is J_mu=sqrt(kappa/zeta) S_mu",
+      "canonical_mass": "1000",
+      "complete_canonical_source": "sqrt(kappa)*source_S/sqrt(zeta)",
+      "kappa": "100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "modes": {
+        "longitudinal": {
+          "canonical_rate": "H*(a**2*m**2 + 3*k**2)/(2*(a**2*m**2 + k**2))",
+          "energy": "(a**2*m**2*v**2 + a**2*p**2 + k**2*v**2)/(2*a**5)",
+          "normalizer_squared": "a*m**2/(m**2 + k**2/a**2)",
+          "physical_Hamiltonian": "N*(A**2*a*m**2/2 + pi_A**2*(m**2 + k**2/a**2)/(2*a*m**2))",
+          "pressure": "(-a**4*m**4*v**2 + a**4*m**2*p**2 - 2*a**2*k**2*m**2*v**2 + 3*a**2*k**2*p**2 - k**4*v**2)/(6*a**5*(a**2*m**2 + k**2))"
+        },
+        "transverse": {
+          "canonical_rate": "H/2",
+          "energy": "(a**2*m**2*v**2 + a**2*p**2 + k**2*v**2)/(2*a**5)",
+          "normalizer_squared": "a",
+          "physical_Hamiltonian": "N*(A**2*a*(m**2 + k**2/a**2)/2 + pi_A**2/(2*a))",
+          "pressure": "(-a**2*m**2*v**2 + a**2*p**2 + k**2*v**2)/(6*a**5)"
+        }
+      },
+      "quantization_choice": "Canonical three-polarization Proca phase measure and the same covariant dimensional finite prescription as S6.82, mu=m=1000. This defines only the retained conditional Gaussian vector sector.",
+      "signature_bridge": "g_old=-g_P8, with the same lower A components, connection, volume, positive physical mode energy and canonical phase covariance; the ordinary actions coincide.",
+      "zeta": "1/1000000"
+    },
+    "clock": {
+      "H": "4*u/(u**2 + 1)",
+      "M_tau": "10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "a": "(u**2 + 1)**2",
+      "mass_time": "1000",
+      "tau": "1"
+    },
+    "state": {
+      "Hadamard": "The source-free covariance is Hadamard by Proca time-slice propagation; the mean is smooth, so its tensor square adds no wavefront singularities.",
+      "W_two_point_normalization": "Connected C_W=C_A/(kappa*zeta); the unscaled covariance cannot be assigned directly to W.",
+      "admissible_histories": "Smooth real compact spacetime perturbations of the CD metric and u=t, supported strictly to the future of a common Cauchy neighborhood of t0; physical g remains globally hyperbolic and the full analytic coefficient domain is respected. S is then compact and smooth.",
+      "family": "Keep the reference Cauchy covariance fixed, evolve the source-free Proca fluctuations on each metric, and add the unique retarded classical mean Abar=G_P,ret J with J=sqrt(kappa/zeta)S. This is a state on the sourced affine Proca algebra, identified with the homogeneous algebra by the classical shift.",
+      "mass": "1000",
+      "positivity_and_CCR": "The c-number shift preserves positivity and the field commutator; the connected covariance is exactly the source-free covariance. There is no assertion of a global preferred Fock implementation.",
+      "primary_support": "Moretti-Murro-Volpe arXiv:2210.09278v3 Proposition4.7, with the Proca wavefront-set gap repaired by Fewster arXiv:2503.12544v2 Theorem5.1. The actual globally hyperbolic metrics, shared Cauchy neighborhoods and fixed positive mass are checked.",
+      "reference_state": "Exactly the S6.55 cutoff-summed all-order Proca Cauchy state at t0=-1/2, mass=1000, not its older finite-order comparison. Extend with the actual global CD Proca equation."
+    }
+  },
+  "controls": {
+    "C5_time_bound_not_functional_response_bound": true,
+    "compact_slab_bound_not_claimed_uniform_on_all_real_time": true,
+    "conditional_Gaussian_not_full_interacting_parent": true,
+    "old_nonminimal_energy_not_reused": true,
+    "old_scalar_tadpole_profiles_not_added": true,
+    "original_P8_not_closed": true,
+    "rejected_inputs": 100,
+    "source_mean_not_omitted_off_clock": true,
+    "unscaled_covariance_not_assigned_to_W": true
+  },
+  "date": "2026-09-11",
+  "exact_residuals": {
+    "Gaussian_actual_covariant_clock_source_first_variation": "0",
+    "Gaussian_actual_covariant_clock_source_value": "0",
+    "Gaussian_coherent_two_point_symmetric_addition": "0",
+    "Gaussian_finite_Gaussian_stress_split": "0",
+    "Gaussian_linear_source_contact_has_zero_mean": "0",
+    "Gaussian_pure_mean_stress_below_quartic_zero": "0",
+    "Gaussian_source_contact_first_nonzero_degree_four": "0",
+    "Gaussian_source_force_below_cubic_zero": "0",
+    "Gaussian_source_force_cubic_retained": "0",
+    "canonical_canonical_source_and_contact_normalization": "0",
+    "canonical_chosen_mass_matches_earlier_ordinary_sector": "0",
+    "canonical_chosen_zeta_within_frozen_parent_range": "0",
+    "canonical_literal_longitudinal_reduced_action": "0",
+    "canonical_literal_temporal_constraint": "0",
+    "canonical_longitudinal_canonical_symplectic_map": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "canonical_longitudinal_full_fixed_comoving_canonical_rate": "0",
+    "canonical_longitudinal_metric_energy_before_canonical_substitution": "0",
+    "canonical_longitudinal_metric_pressure_before_canonical_substitution": "0",
+    "canonical_longitudinal_old_ordinary_energy_readout_bridge": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "canonical_longitudinal_old_ordinary_pressure_readout_bridge": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "canonical_transverse_canonical_symplectic_map": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "canonical_transverse_full_fixed_comoving_canonical_rate": "0",
+    "canonical_transverse_metric_energy_before_canonical_substitution": "0",
+    "canonical_transverse_metric_pressure_before_canonical_substitution": "0",
+    "canonical_transverse_old_ordinary_energy_readout_bridge": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "canonical_transverse_old_ordinary_pressure_readout_bridge": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "clock_actual_clock_metric_and_old_Hubble": "0",
+    "clock_longitudinal_actual_clock_operator_equals_frozen_state_operator": "0",
+    "clock_transverse_actual_clock_operator_equals_frozen_state_operator": "0",
+    "local_literal_covariant_finite_0_energy": "0",
+    "local_literal_covariant_finite_0_pressure": "0",
+    "local_literal_covariant_finite_1_energy": "0",
+    "local_literal_covariant_finite_1_pressure": "0",
+    "local_literal_covariant_finite_2_energy": "0",
+    "local_literal_covariant_finite_2_pressure": "0",
+    "local_ordinary_local_Ward_identity_0": "0",
+    "local_ordinary_local_Ward_identity_1": "0",
+    "local_ordinary_local_Ward_identity_2": "0",
+    "nine_primitive_rows_retained": "0",
+    "one_conditional_sector_matching_row_added": "0",
+    "prescription_finite_curvature_piece_at_mu_mass": "0",
+    "prescription_ordinary_finite_matching_has_no_clock_norm": "0",
+    "prescription_ordinary_pole_has_no_clock_norm": "0",
+    "prescription_scalar_heat_covariant_basis": "0",
+    "prescription_vector_heat_covariant_basis": "0",
+    "primitive_rows_unchanged": "0",
+    "prior_matching_rows_retained": "0",
+    "state_W_covariance_normalization": "0",
+    "state_coherent_commutator_unchanged": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "state_coherent_connected_covariance_unchanged": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "state_positive_Cauchy_Gram_CCR": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "state_positive_Cauchy_Gram_Hermiticity": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "stress_energy_physical_units_order_0": "0",
+    "stress_energy_physical_units_order_1": "0",
+    "stress_energy_physical_units_order_2": "0",
+    "stress_energy_physical_units_order_3": "0",
+    "stress_energy_physical_units_order_4": "0",
+    "stress_energy_physical_units_order_5": "0",
+    "stress_pressure_physical_units_order_0": "0",
+    "stress_pressure_physical_units_order_1": "0",
+    "stress_pressure_physical_units_order_2": "0",
+    "stress_pressure_physical_units_order_3": "0",
+    "stress_pressure_physical_units_order_4": "0",
+    "stress_pressure_physical_units_order_5": "0"
+  },
+  "formulation": "FORMULATION.md",
+  "named_exact_check_count": 64,
+  "not_established": [
+    "Quantitative nonlinear sourced mean, symmetric noise or functional metric-response norms",
+    "Full affine/metric/light/tensor quantum measure, auxiliary and mixed loops or a controlled interacting state",
+    "A self-consistent quantum-corrected background, physical cutoff or all omitted-order bounds",
+    "Common vacuum matching, contour/truncation, finite-gravity IR/Regge remainder, V/G/B or original P8 closure"
+  ],
+  "observable_and_scope": {
+    "new_state_family": "Actual compact sourced histories after the common Cauchy neighborhood; source-free Hadamard fluctuations plus the retarded smooth coherent mean.",
+    "no_cancellation": "No old stress-canceling scalar profile is installed. The bounded conditional vector stress is a contribution to a prescribed-clock residual, not a solved quantum bounce.",
+    "parent": "Same CD-REG-AFFINE-ISO classical target, now specialized to zeta=1e-6 within its certified range and kappa=1e800.",
+    "quantitative_result": "On the unchanged clock and [-1/2,1/2], each of twelve rho/P time derivatives through order five is below 1e30 in physical units, or 1e-770 against kappa.",
+    "quantized_component": "ONLY the retained conditional Gaussian vector, with canonical three-polarization measure, fixed S6.55 all-order Cauchy covariance and S6.82 covariant dimensional finite prescription at mu=m=1000.",
+    "remaining": "Full parent measure, light/tensor/auxiliary loops and mixed interactions, quantitative sourced response/noise, physical cutoff, full matching and V/G/B remain open."
+  },
+  "primitive_and_matching_frontier": {
+    "matching": [
+      {
+        "id": "fixed_sigma_isolated_MS_conversion",
+        "status": "CANCELLED_NONLOCAL_ORDER_TWO_WITH_SAME_REGULATED_REFERENCE"
+      },
+      {
+        "id": "remaining_scale_parameter_field_map_and_cross_terms",
+        "status": "OPEN"
+      },
+      {
+        "id": "remaining_counterterm_and_vacuum_source_assembly",
+        "status": "ASSEMBLED_FOR_FIXED_ORDER_PHI_POLE_B2_VACUUM_AND_H_SOURCE"
+      },
+      {
+        "id": "full_matched_two_loop_pole_and_amplitude_error",
+        "status": "FIXED_ORDER_PHI_POLE_AND_B2_BOUNDED_PHYSICAL_TRUNCATION_OPEN"
+      },
+      {
+        "id": "finite_EFT_higher_order_truncation",
+        "status": "OPEN"
+      },
+      {
+        "id": "V_contour_and_cut_control",
+        "status": "OPEN"
+      },
+      {
+        "id": "finite_gravity_G",
+        "status": "OPEN"
+      },
+      {
+        "id": "common_parent_B",
+        "status": "OPEN"
+      },
+      {
+        "id": "complete_wineglass_interaction_forest_MS",
+        "status": "BOUNDED_WITH_REGULATED_FINITE_LOCAL_ANCHOR_AND_FULL_SCALE_TERM"
+      },
+      {
+        "id": "complete_double_bubble_interaction_forest_MS",
+        "status": "BOUNDED_WITH_ACTUAL_NESTED_MS_FORESTS_AND_BOTH_SCALE_TERMS"
+      },
+      {
+        "id": "complete_scalar_OS_insertion_interaction_forest_MS",
+        "status": "BOUNDED_WITH_FULL_REGULATED_SLOPE_TIMES_OUTER_REFERENCE"
+      },
+      {
+        "id": "complete_scalar_quadratic_finite_MS_slope_and_converted_OS_bound",
+        "status": "BOUNDED_WITH_FIXED_INNER_OS_AND_INTERACTION_MS_COORDINATES"
+      },
+      {
+        "id": "first_finite_Phi_field_covariance_and_MS_projection_commutator",
+        "status": "EXACT_REGULATED_FIELD_DIRECTION_AND_BOUNDED_FIRST_SLOPE_CROSS_TERMS"
+      },
+      {
+        "id": "complete_GY14_second_Phi_normalization_and_canonical_unit_disc_pole",
+        "status": "BOUNDED_WITH_DIRECT_MS_OWNERSHIP_AND_FULL_FINITE_FIELD_REEXPANSION"
+      },
+      {
+        "id": "complete_two_loop_vacuum_reference_and_first_source_square",
+        "status": "BOUNDED_WITH_FULL_REGULATED_SOURCE_REDUCIBLE_CANCELLATION"
+      },
+      {
+        "id": "complete_two_loop_derivative_map_with_matched_physical_source",
+        "status": "TRANSPORTED_FOR_FULL_ACTION_AND_PHYSICAL_SOURCE_NOT_ORDINARY_PSI_MS_OR_TRUNCATION"
+      },
+      {
+        "id": "complete_matched_two_loop_low_energy_Phi_elastic_cut",
+        "status": "BOUNDED_ON_PHYSICAL_WINDOW_4_TO_6_WITH_FULL_FIRST_AMPLITUDE_NOT_PHYSICAL_REMAINDER_OR_GLOBAL_DISPERSION"
+      },
+      {
+        "id": "full_finite_kappa_analytic_target_classical_vacuum_match",
+        "status": "BOUNDED_ON_SAME_RESTRICTED_FLAT_SCHWARTZ_CLASS_NOT_QUANTUM_TARGET_OR_ROLLING_COMMON_PARENT_MATCH"
+      },
+      {
+        "id": "GY14_SAT8_pointwise_fermion_mass_protection_and_named_low_order_invariance",
+        "status": "NEW_ANALYTIC_EFT_BRANCH_WITH_GLOBAL_REAL_MASS_FLOOR_AND_SAME_NAMED_TWO_LOOP_DATA_NOT_ROLLING_STATE_OR_COMMON_PARENT_CLOSURE"
+      },
+      {
+        "id": "polynomial_clock_transparent_physical_source_map_and_full_target_classical_bound",
+        "status": "KINEMATIC_CLOCK_ARGUMENT_ALIGNED_WITH_PROTECTED_MASSES_AND_SAME_NAMED_VACUUM_DATA_NOT_BACKGROUND_SOLUTION_QUANTUM_STATE_OR_COMMON_PARENT_CLOSURE"
+      },
+      {
+        "id": "free_flat_clock_Dirac_out_energy_with_complete_transition_series_remainder",
+        "status": "BOUNDED_FOR_SPECIFIED_QUADRATIC_MODEWISE_IN_OUT_STATE_NOT_INTERACTING_OR_CURVED_BOUNCE_STRESS"
+      },
+      {
+        "id": "Hadamard_regular_free_flat_SAT8_in_out_state_and_uniform_one_particle_norm_limit",
+        "status": "HADAMARD_FOR_SPECIFIED_FREE_EXTERNAL_MASS_OPERATOR_USING_IDENTIFIED_EXTERNAL_THEOREM_NOT_INTERACTING_CURVED_STATE_OR_NUMERICAL_STRESS"
+      },
+      {
+        "id": "exact_four_frame_free_transition_and_uniform_same_operator_in_out_T00_difference",
+        "status": "BOUNDED_FOR_FREE_FLAT_HADAMARD_STATE_DIFFERENCE_NOT_ABSOLUTE_STRESS_INTERACTING_CURVED_STATE_OR_BACKREACTION"
+      },
+      {
+        "id": "free_flat_absolute_one_loop_local_energy_with_fixed_saturated_mass_reference",
+        "status": "BOUNDED_IN_EXPLICIT_MS_AND_SATURATED_MASS_REFERENCE_QUADRATIC_SCHEME_NOT_FULL_CURVED_INTERACTING_PARENT_STRESS"
+      },
+      {
+        "id": "complete_free_flat_homogeneous_one_loop_stress_with_dimensional_curvature_improvement",
+        "status": "BOUNDED_SPECIFIED_QUADRATIC_MS_MR_FLAT_TENSOR_NOT_FULL_INTERACTING_CURVED_PARENT_STRESS"
+      },
+      {
+        "id": "actual_CD_free_Dirac_Hadamard_in_out_state_and_uniform_state_stress_difference",
+        "status": "CURVED_FREE_HADAMARD_STATE_AND_STATE_DIFFERENCE_BOUNDED_NOT_ABSOLUTE_PARENT_STRESS"
+      },
+      {
+        "id": "complete_free_curved_one_loop_stress_with_explicit_EC_Newton_reference",
+        "status": "BOUNDED_SPECIFIED_QUADRATIC_CURVED_TENSOR_NOT_FULL_INTERACTING_PARENT_OR_BACKGROUND_RESPONSE"
+      },
+      {
+        "id": "minimal_Einstein_canonical_clock_free_sector_null_equation_mismatch",
+        "status": "EXCLUDED_NAMED_MINIMAL_DIAGNOSTIC_WITH_SMALL_EXTRA_NULL_BUDGET_NOT_FULL_INTERACTING_PARENT_OR_DHOST_ROW"
+      },
+      {
+        "id": "actual_CD_leading_clock_Euler_source_decomposition_and_matching_domain_gap",
+        "status": "LEADING_TARGET_SOURCES_AND_CONSTRAINT_DOMAIN_REQUIREMENTS_IDENTIFIED_NOT_PROPAGATING_PARENT_OR_QUANTUM_BOUNCE"
+      },
+      {
+        "id": "analytic_CD_REG_AFFINE_ISO_classical_parent_clock_vacuum_and_local_constraints",
+        "status": "NEW_REGULAR_CLASSICAL_PARENT_AND_LOCAL_CONSTRAINT_BLOCKS_NOT_QUANTUM_MATCHING_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "same_classical_affine_parent_closed_source_lift_and_scoped_vector_Schur_control",
+        "status": "EXACT_CLASSICAL_AND_COMMON_REGULATOR_IDENTITIES_FULL_EUCLIDEAN_AND_LEADING_LORENTZ_BOUNDS_NOT_FULL_QUANTUM_MATCHING"
+      },
+      {
+        "id": "regular_affine_parent_conditional_Gaussian_Hadamard_family_and_ordinary_Proca_stress",
+        "status": "SOURCE_AWARE_CONDITIONAL_VECTOR_STATE_AND_FIXED_CLOCK_STRESS_NOT_FULL_PARENT_QUANTUM_SOLUTION"
+      }
+    ],
+    "primitive": [
+      {
+        "id": "scalar_Phi0_W0_F0",
+        "status": "BOUNDED_PAIRED_VACUUM_PRIMITIVE_WITH_ASSIGNED_LOCAL_FOREST"
+      },
+      {
+        "id": "scalar_Phi2_W0_F2",
+        "status": "BOUNDED_NONLOCAL_AND_FINITE_MS_MASS_AND_SLOPE_REFERENCES"
+      },
+      {
+        "id": "scalar_Phi2_W1_F0",
+        "status": "BOUNDED_PAIRED_NONLOCAL_AND_FINITE_MS_LOCAL_REFERENCES"
+      },
+      {
+        "id": "scalar_Phi4_W0_F4",
+        "status": "BOUNDED_PAIRED_PRIMITIVE_ROW"
+      },
+      {
+        "id": "scalar_Phi4_W1_F2",
+        "status": "BOUNDED_PAIRED_IN_COMMON_MS_INTERACTION_SCHEME"
+      },
+      {
+        "id": "scalar_Phi4_W2_F0",
+        "status": "BOUNDED_PAIRED_IN_COMMON_MS_INTERACTION_SCHEME"
+      },
+      {
+        "id": "gauge_Phi0",
+        "status": "BOUNDED_PAIRED_VACUUM_PRIMITIVE_WITH_ASSIGNED_LOCAL_FOREST"
+      },
+      {
+        "id": "gauge_Phi2",
+        "status": "BOUNDED_NONLOCAL_AND_FINITE_MS_MASS_AND_SLOPE_REFERENCES"
+      },
+      {
+        "id": "gauge_Phi4",
+        "status": "BOUNDED_PAIRED_PRIMITIVE_ROW"
+      }
+    ]
+  },
+  "prior_sha256": {
+    "S6_175_fully_rebuilt": "151f0642185a494dd1a49e77360349c5105596fbf4485cdb911586ef0d480b94",
+    "S6_55_explicit_all_order_state_rebuilt": "8ba1aa16cee4dbe890b233fac864a83de569402e06b26c9c18ae56ef763a9200",
+    "S6_82_ordinary_Proca_stress_rebuilt": "4e3c6103906b8ddb344806b7fe9309493f3c8dfda28629e70912872be65c09f8",
+    "same_classical_target_and_all_prior_scientific_bytes_unchanged": true
+  },
+  "proof_checks": {
+    "Proca_propagation_wavefront_gap_repair_checked": true,
+    "actual_common_Cauchy_and_global_hyperbolicity_conditions": true,
+    "all_prior_frozen_scientific_bytes_unchanged": true,
+    "all_twelve_absolute_bounds_below_one_e_30": true,
+    "all_twelve_normalized_bounds_below_one_e_minus_770": true,
+    "canonical_measure_and_finite_prescription_explicit": true,
+    "coherent_shift_maps_sourced_algebra_not_false_homogeneous_bisolution": true,
+    "complete_action_and_canonical_source_contact_retained": true,
+    "connected_Hadamard_covariance_and_CCR_preserved": true,
+    "no_full_parent_quantization_or_GY14_matching_transfer": true,
+    "nonzero_source_higher_insertions_and_contacts_retained": true,
+    "older_scalar_stress_canceling_profiles_not_transferred": true,
+    "ordinary_metric_readouts_not_inferred_from_modes_alone": true,
+    "physical_lapse_scale_variation_precedes_canonical_substitution": true,
+    "retarded_mean_distinct_from_symmetric_noise_kernel": true,
+    "same_all_order_Cauchy_state_not_old_finite_order_reference": true,
+    "same_positive_fixed_mass_and_hierarchy": true,
+    "selected_zeta_within_frozen_parent_range": true,
+    "stress_time_derivatives_not_quantitative_functional_response_norm": true
+  },
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "54bb7408189e5b168256ee620bbb9d50a4f0d8bbfe36066a1d0b64293593a016",
+    "README.md": "ed354a018fb26845ae21e3b4e10c1469cc994dd4f5118dee3df0b56b86102c3b",
+    "notes/bridge.md": "3fd89b5f8b5aba05c7bee3c528972993ca470dac4b19cea66e55c5349af0fe11",
+    "notes/renormalization.md": "ef1e398139c6015924cb22810ed4a20666bee1879a5c485d844b00e4e0863f50",
+    "notes/response.md": "3ac1d98b09773e7c142f274e89eb02d9eab1108b0f9f57044e90fb6ecc5d05dd",
+    "notes/scope.md": "07c9ebd72e6869ef8cf8e3eec345bf3297e81f45776215f9346ad3ac487641d9",
+    "notes/state.md": "68d3798125f549d844c6707f691aa681917a50257b54b766ac27670d8c5fb318",
+    "notes/stress.md": "eeb9e0a9d8ad7ab2a7447ce1fe489974d4a11aa4d1e5584a4a0a86b5a4b13b81",
+    "notes/validation.md": "10a41077016d0ca67a2833cabc32f36dc413e8688b42278ab56ed45c338f0c3c",
+    "src/p8_vacuum_affine_proca_gaussian/__init__.py": "60812d9d109d484252aec845a740853a5fa95b4294d4386833d3a619207cccbf",
+    "src/p8_vacuum_affine_proca_gaussian/audit.py": "2091ad38ce0eed6994c9795e71419e5a7dc3c5b7835817887b899a03b606e1a5",
+    "src/p8_vacuum_affine_proca_gaussian/bridge.py": "6358a318863f59f2bf7a580e0145bd2efa0e78000541d33534bca8f8c54f2045",
+    "src/p8_vacuum_affine_proca_gaussian/gaussian.py": "b817946afacede2e9b4b50e31366ffd49e364797d85cbeb996f243077412e4eb",
+    "src/p8_vacuum_affine_proca_gaussian/state.py": "91e12837ed1c6c8927d2b1a21c581c7990e2d725cf3a6ec105313cbce8d95446",
+    "src/p8_vacuum_affine_proca_gaussian/stress.py": "46cb136e61dc70b1a7d4437375a2c78289448e2c6bdf12af5248aa7ca8a3682d",
+    "src/p8_vacuum_affine_proca_gaussian/verify.py": "fa54b7782cff9686bbbd5a8af3d7562f66391dafea4d26000e273d5303203f97",
+    "tests/test_affine_proca_gaussian_certificate.py": "23bee1f6e3b4f567888698cb736a2fa6aa86bb596caaf9addaa804f024a532f4",
+    "tests/test_affine_proca_gaussian_science.py": "f171d41b44224b351b15dc10888c7f466185ab905a2f91692a11466a5df6c608"
+  },
+  "specified_vector_stress_and_reference_clock_response": {
+    "Gaussian": {
+      "clock_bridge": "S and its first variation vanish on the full clock. The extra linear-in-vector second/third metric insertions have zero expectation in the zero-mean Gaussian; their odd Gaussian contractions also vanish. The source functional starts at fourth order, and the added physical mean force starts at third order.",
+      "conditional_mean": "For each admissible history, Wbar=G_O,ret S with fixed zero initial mean. The fluctuation covariance is the ordinary source-free Proca Hadamard covariance for that same metric and initial state.",
+      "free_response_equality": "For perturbations with the SAME fixed preparation, the reference-clock vector one-point function and its first two history-response orders coincide with ordinary connected Proca. This is an identity of this conditional sector, not a quantitative bound on those functional derivatives or a transfer of an older full-parent response.",
+      "no_profile_transfer": "The older scalar profiles which canceled ordinary Proca stress are NOT added. The classical target is unchanged; its quantum residual is not set to zero.",
+      "nonzero_second_source_operator_contact": "-2*A*source2",
+      "renormalized_split": "The conditional vector stress is ordinary connected Proca stress plus the classical FULL sourced-vector stress evaluated at Wbar, including variations through S and the local S^2/2 contact. Smooth mean terms require no new ultraviolet subtraction.",
+      "source_influence_boundary": "The Gaussian cumulant expansion terminates at its connected two-point kernel, with temporal-constraint and explicit source contact terms retained separately. Its causal mean and symmetric covariance are distinct kernels; no retarded single-branch action replacement or numerical noise/response norm is asserted."
+    },
+    "local": {
+      "actual_local_coefficients": {
+        "0": {
+          "energy": "-5/2",
+          "pressure": "5/2"
+        },
+        "1": {
+          "energy": "-160*u**2/(u**2 + 1)**2",
+          "pressure": "80*(5*u**2 + 1)/(3*(u**2 + 1)**2)"
+        },
+        "2": {
+          "energy": "-32*(21*u**4 - 14*u**2 + 1)/(u**2 + 1)**4",
+          "pressure": "64*(7*u**4 - 1)/(u**2 + 1)**4"
+        }
+      },
+      "prescription": "The ordinary constant-mass specialization of the frozen covariant dimensional prescription at mu=m. Finite local coefficients multiply m^(4-2n)/(64*pi^2), n=0,1,2 in physical tau=1 units; no new reference-state normal ordering or stress-canceling scalar profile is introduced."
+    },
+    "prescription": {
+      "constant_mass_domain": "All clock-normal mass-deviation terms vanish identically as functions for this constant-mass vector, not only on the clock. The remaining ordinary covariant prescription contains no X denominator and extends through the parent vacuum and null-gradient loci.",
+      "curvature_signature": "R_old=-R_P8; curvature squares, connection and volume are unchanged by the overall metric signature reversal.",
+      "density_boundary": "The displayed finite density supplies the local part matched to fourth-order mode subtraction, not the complete state-dependent determinant. Compact Euler variations of the retained box-R divergence vanish; no infinite-time boundary flux is discarded.",
+      "mu_mass_specialization": "-R_old**2/18 + 5*R_old*positive_mass**2/3 + Ricci_squared/45 - Riemann_squared/45 + 5*positive_mass**4/2",
+      "ordinary_finite_heat_matching_density_before_64_pi_squared": "-R_old**2/18 - R_old*positive_mass**2*(log_mass_ratio - 5/3) + Ricci_squared/45 - Riemann_squared/45 - 2*log_mass_ratio*(-R_old**2/8 + 29*Ricci_squared/60 - Riemann_squared/15) + positive_mass**4*(5/2 - 3*log_mass_ratio)",
+      "ordinary_pole_density_before_common_factor": "-R_old**2/4 + R_old*positive_mass**2 + 29*Ricci_squared/30 - 2*Riemann_squared/15 + 3*positive_mass**4",
+      "pole_factor": "1/(64*pi^2*epsilon_DR), D=3-2epsilon_DR spatial dimensions; fixed four-dimensional heat coefficients are evaluated as covariant invariants in D+1 dimensions before metric variation and the dimension limit."
+    },
+    "stress": {
+      "M_tau": "10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "bounds_by_time_derivative_order": {
+        "0": {
+          "absolute_energy_derivative_upper": "7300022913723393048841625708246801/1677721600000000000000000",
+          "absolute_pressure_derivative_upper": "26269415026449622565660877124740403/6039797760000000000000000",
+          "normalized_energy_decomposition": {
+            "exact_mode_minus_projected_reference": "54385878013736610179277124740403/503316480000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "new_ordinary_finite_local_matched_term": "1250020000093/28800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "projected_reference_minus_actual_differentiated_subtraction": "40976759/7200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "total": "7300022913723393048841625708246801/167772160000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+          },
+          "normalized_pressure_decomposition": {
+            "exact_mode_minus_projected_reference": "54385878013736610179277124740403/603979776000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "finite_local_matched_term": "208338333341/4800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "projected_reference_minus_differentiated_subtraction": "1487093/480000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "total": "26269415026449622565660877124740403/603979776000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+          }
+        },
+        "1": {
+          "absolute_energy_derivative_upper": "163157969592379535354268212621209/966367641600000000000",
+          "absolute_pressure_derivative_upper": "163157812306696538257499086221209/905969664000000000000",
+          "normalized_energy_decomposition": {
+            "exact_mode_minus_projected_reference": "54385878013736610179277124740403/32212254720000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "new_ordinary_finite_local_matched_term": "50000333/14400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "projected_reference_minus_actual_differentiated_subtraction": "171921389/3600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "total": "163157969592379535354268212621209/96636764160000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+          },
+          "normalized_pressure_decomposition": {
+            "exact_mode_minus_projected_reference": "54385878013736610179277124740403/30198988800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "finite_local_matched_term": "42500201/21600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "projected_reference_minus_differentiated_subtraction": "59371989/800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "total": "163157812306696538257499086221209/90596966400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+          }
+        },
+        "2": {
+          "absolute_energy_derivative_upper": "1577190463128548647627325570758343/412316860416000000",
+          "absolute_pressure_derivative_upper": "13215768360615498781455111735234409/3092376453120000000",
+          "normalized_energy_decomposition": {
+            "exact_mode_minus_projected_reference": "1577190462398361695199036617471687/41231686041600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "new_ordinary_finite_local_matched_term": "170001863/9600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "projected_reference_minus_actual_differentiated_subtraction": "62774387/75000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "total": "1577190463128548647627325570758343/41231686041600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+          },
+          "normalized_pressure_decomposition": {
+            "exact_mode_minus_projected_reference": "1468418706370888474840482367990881/34359738368000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "finite_local_matched_term": "152500547/14400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "projected_reference_minus_differentiated_subtraction": "10004724823/1200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "total": "13215768360615498781455111735234409/309237645312000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+          }
+        },
+        "3": {
+          "absolute_energy_derivative_upper": "28110700698353147165817058841924457009/274877906944000000",
+          "absolute_pressure_derivative_upper": "47485669740746616818537666938129633247/412316860416000000",
+          "normalized_energy_decomposition": {
+            "exact_mode_minus_projected_reference": "44977121117360176618262182160313281/43980465111040000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "new_ordinary_finite_local_matched_term": "1060017997/9600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "projected_reference_minus_actual_differentiated_subtraction": "8827462829/150000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "total": "28110700698353147165817058841924457009/27487790694400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+          },
+          "normalized_pressure_decomposition": {
+            "exact_mode_minus_projected_reference": "75977071585190044420450143262342991/65970697666560000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "finite_local_matched_term": "985005373/14400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "projected_reference_minus_differentiated_subtraction": "3261697836199/7200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "total": "47485669740746616818537666938129633247/41231686041600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+          }
+        },
+        "4": {
+          "absolute_energy_derivative_upper": "2027042402609640158313207854866826795332309/659706976665600000",
+          "absolute_pressure_derivative_upper": "17063038114719883822048574335915162310109157/4947802324992000000",
+          "normalized_energy_decomposition": {
+            "exact_mode_minus_projected_reference": "345948570045378577350381790473703483/11258999068426240000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "new_ordinary_finite_local_matched_term": "16420397071/19200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "projected_reference_minus_actual_differentiated_subtraction": "1678998709297/480000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "total": "2027042402609640158313207854866826795332309/65970697666560000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+          },
+          "normalized_pressure_decomposition": {
+            "exact_mode_minus_projected_reference": "582418367649105358409878728844975727/16888498602639360000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "finite_local_matched_term": "15505116991/28800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "projected_reference_minus_differentiated_subtraction": "13756858184593/800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "total": "17063038114719883822048574335915162310109157/494780232499200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+          }
+        },
+        "5": {
+          "absolute_energy_derivative_upper": "1003063936198211503289795987297971279777891995227/9895604649984000000",
+          "absolute_pressure_derivative_upper": "559851561001769276489300656720787704519427928913/4947802324992000000",
+          "normalized_energy_decomposition": {
+            "exact_mode_minus_projected_reference": "18260221700746108077522832462964528459/18014398509481984000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "new_ordinary_finite_local_matched_term": "501016461/64000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "projected_reference_minus_actual_differentiated_subtraction": "565548097113083/3600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "total": "1003063936198211503289795987297971279777891995227/989560464998400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+          },
+          "normalized_pressure_decomposition": {
+            "exact_mode_minus_projected_reference": "30575359918176626086518344589181383779/27021597764222976000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "finite_local_matched_term": "478255217/96000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "projected_reference_minus_differentiated_subtraction": "4275264710183533/7200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "total": "559851561001769276489300656720787704519427928913/494780232499200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+          }
+        }
+      },
+      "canonical_mass_time": "1000",
+      "global_boundary": "The state and renormalized free stress are smooth on every compact time interval; these numerical constants apply only on [-1/2,1/2].",
+      "meaning": "The denominator is the fixed kappa reference scale, not the vanishing classical energy density at the bounce. This bounds the specified conditional vector contribution and the corresponding prescribed-clock residual, not a self-consistent solution.",
+      "state_and_radial_integral": "Exactly the S6.55 all-order Cauchy data and the full S6.82 ordinary Proca readout/subtraction/local matching, including all three polarizations and all momenta. No proof-band endpoint is a physical cutoff.",
+      "tau": "1",
+      "time_interval": [
+        "-1/2",
+        "1/2"
+      ],
+      "uniform_absolute_upper": "1e30 for each rho/P derivative of order zero through five in tau=1 units",
+      "uniform_normalized_upper": "1e-770 for each rho/P derivative of order zero through five"
+    }
+  },
+  "status": "CONDITIONAL_SOURCED_VECTOR_GAUSSIAN_HADAMARD_FAMILY_AND_SPECIFIED_CLOCK_C5_STRESS; NOT_FULL_PARENT_QUANTUM_SOLUTION_MATCHING_CUTOFF_V_G_B_OR_ORIGINAL_P8",
+  "verdict": "The same regular classical affine parent admits an explicitly normalized conditional Gaussian vector sector at zeta=1e-6 and kappa=1e800. Its actual arbitrary-lapse/scale readouts and complete clock operator equal ordinary mass1000 Proca, with a stated canonical measure, fixed all-order Cauchy covariance and covariant finite prescription. Compact sourced histories have a positive coherent Hadamard family with unchanged connected Proca fluctuations. On the reference clock the twelve specified energy/pressure time derivatives through order five are below1e30 on [-1/2,1/2], or1e-770 against kappa; no old scalar stress-canceling profiles are installed. The source-induced mean force starts cubically. These conditional-sector identities and bounds do not supply a full interacting parent, a self-consistent quantum bounce, physical cutoff, full real-time matching or V/G/B closure.",
+  "verification_boundary": "Exact canonical, physical metric variation, covariance, source-degree, local Ward and normalization identities bridge fully replayed source-pinned ordinary-Proca calculations. Independent lapse/scale variations, constrained canonical evolution, state/normalization and source-contact controls supplement written coherent-state and theorem-hypothesis proofs. This is not formalization or a full quantum-parent certificate. Native, direct science, ordinary and CLI use original SymPy; full regression alone uses the separately audited exact GCD adapter.",
+  "written_proofs": [
+    "notes/bridge.md",
+    "notes/state.md",
+    "notes/renormalization.md",
+    "notes/stress.md",
+    "notes/response.md",
+    "notes/scope.md",
+    "notes/validation.md"
+  ]
+}
