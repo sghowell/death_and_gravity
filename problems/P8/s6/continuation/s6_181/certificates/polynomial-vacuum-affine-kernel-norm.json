@@ -1,0 +1,471 @@
+{
+  "checked_scalar_entries": 83,
+  "claim": "P8-S6.181.SAME_MASSIVE_SCALAR_RANGE_KERNEL_EXPLICIT_MASS_INDEPENDENT_FULL_HALF_LINE_L1_BOUND",
+  "continuous_density_and_band_bounds": {
+    "dyadic": {
+      "band_kernel": "K_j(t)=-2 Im[e^(2it) integral_0^infinity a(x)phi_j(x)e^(itx) dx]",
+      "band_kernel_L1_upper_over_A": "35",
+      "band_support": "[h/2,2h], length3h/2; the two transition derivatives have disjoint interiors",
+      "chi_transition": "-6*t**5 + 15*t**4 - 10*t**3 + 1",
+      "definition": "chi(y)=1 for y<=1; chi(y)=1-10(y-1)^3+15(y-1)^4-6(y-1)^5 for 1<y<2; chi(y)=0 for y>=2",
+      "g_L1_upper_over_h_A": "3/2",
+      "g_second_L1_upper_times_h_over_A": "195/4",
+      "hypothesis": "On [h/2,2h], max(|a|,h|a'|,h^2|a''|)<=A_j",
+      "partition": "h_j=2^j; phi_j(x)=chi(x/h_j)-chi(2x/h_j); sum over every integer j is1",
+      "partition_derivative_bounds": [
+        "1",
+        "15/4",
+        "24"
+      ]
+    },
+    "tail": {
+      "A": "-3*v**4 + v**2 + 16/15",
+      "B": "v*(3*v**4 - 2*v**2 + 3)",
+      "D_lower": "D>=r: use the common 16/15 gap for r<=1, and tanh(1)>3/4 for r>=1",
+      "Dr_over_r_upper": "60",
+      "Drr_over_r_upper": "348",
+      "Q_ratio_derivative_envelopes": [
+        "2040",
+        "29016"
+      ],
+      "U_derivative_envelopes": [
+        "2",
+        "12",
+        "60"
+      ],
+      "a_r_derivative_envelopes_times_r_squared": [
+        "2",
+        "4092",
+        "16753452"
+      ],
+      "common_tail_constant": "20000000",
+      "interval": "x>=1; r=arcosh(1+x/2)>=log(1+x)>=log(2)>1/2",
+      "same_density": "a(x)=U/Q, U=B(tanh r)/2, D=A(tanh r)+B(tanh r)*r, Q=D^2+pi^2*U^2",
+      "weighted_x_derivative_envelopes_times_r_squared": [
+        "2",
+        "4092",
+        "16757544"
+      ]
+    },
+    "threshold": {
+      "D_envelopes": {
+        "D": 16,
+        "Dx": 94,
+        "Dxx": 982,
+        "Dz": 94,
+        "Dzz": 794
+      },
+      "Q_derivative_envelopes": [
+        "3168",
+        "50066"
+      ],
+      "b_derivative_envelopes": [
+        "2",
+        "6342",
+        "40283065"
+      ],
+      "common_threshold_constant": "200000000",
+      "density": "a(x)=sqrt(x)*b(x), b=c(x)*C(z)/(2Q), Q=D^2+pi^2*z*C(z)^2/4",
+      "f_derivative_envelopes": [
+        "4",
+        "16",
+        "128"
+      ],
+      "f_integral": "atanh(sqrt(z))/sqrt(z)=integral_0^1 (1-z*t^2)^-1 dt, continued at z=0",
+      "interval": "0<x<=2, z=1-4/(x+2)^2 in [0,3/4]",
+      "inverse_Q_derivative_envelopes": [
+        "1",
+        "3168",
+        "20122514"
+      ],
+      "threshold_c": "sqrt(x + 4)/(x + 2)",
+      "weighted_a_envelopes_over_sqrt_x": [
+        "2",
+        "12685",
+        "322289889/2"
+      ]
+    }
+  },
+  "controls": {
+    "all_frequency_retained_mathematics_not_physical_EFT_cutoff": true,
+    "band_derivative_rescaling_factors_retained": true,
+    "curved_C_not_replaced_by_scalar_norm": true,
+    "large_frequency_log_tail_not_deleted": true,
+    "original_P8_not_closed": true,
+    "rejected_inputs": 90,
+    "same_massive_inverse_identified_not_an_arbitrary_L1_kernel": true,
+    "sine_factor_two_and_half_line_L1_normalization_retained": true,
+    "threshold_square_root_not_assumed_smooth_at_zero": true
+  },
+  "date": "2026-09-11",
+  "exact_residuals": {
+    "dyadic_Fourier_min_split_integral": "0",
+    "dyadic_band_second_product_upper": "0",
+    "dyadic_chi_first_max": "0",
+    "dyadic_chi_left": "0",
+    "dyadic_chi_left_first": "0",
+    "dyadic_chi_left_second": "0",
+    "dyadic_chi_monotone": "0",
+    "dyadic_chi_right": "0",
+    "dyadic_chi_right_first": "0",
+    "dyadic_chi_right_second": "0",
+    "dyadic_chi_second_square_completion": "0",
+    "dyadic_chi_second_u_form": "0",
+    "dyadic_finite_partition_telescope": "0",
+    "dyadic_partition_first_upper": "0",
+    "dyadic_partition_second_upper": "0",
+    "dyadic_sine_band_norm_square": "0",
+    "dyadic_small_band_geometric": "0",
+    "dyadic_tail_inverse_square_integral": "0",
+    "estimate_all_bands_numeric_norm": "0",
+    "estimate_band_Laplace_normalization": "0",
+    "estimate_mass_fraction_rescaling": "0",
+    "estimate_mass_kernel_integrated_scaling": "0",
+    "estimate_same_parent_inverse_beta_substitution": "0",
+    "estimate_same_parent_inverse_weight_substitution": "0",
+    "estimate_same_source_positive_static_moment": "0",
+    "estimate_same_source_zero_instantaneous": "0",
+    "estimate_small_band_total": "0",
+    "estimate_tail_band_total": "0",
+    "nine_primitive_rows_retained": "0",
+    "one_scalar_norm_row_added": "0",
+    "primitive_rows_unchanged": "0",
+    "prior_matching_rows_retained": "0",
+    "tail_tail_A_lower_completion": "0",
+    "tail_tail_A_rr_triangle": "0",
+    "tail_tail_B_endpoint": "0",
+    "tail_tail_B_lower_completion": "0",
+    "tail_tail_B_monotone_completion": "0",
+    "tail_tail_B_rr_triangle": "0",
+    "tail_tail_D_r_triangle": "0",
+    "tail_tail_D_rr_triangle": "0",
+    "tail_tail_Q_r_ratio": "0",
+    "tail_tail_Q_rr_ratio": "0",
+    "tail_tail_a_r_envelope": "0",
+    "tail_tail_a_rr_envelope": "0",
+    "tail_tail_exp_partial_sum": "0",
+    "tail_tail_frequency_cosine": "0",
+    "tail_tail_log2_positive_integrand": "0",
+    "tail_tail_q_derivative": "0",
+    "tail_tail_second_chain": "0",
+    "tail_tail_tanh_lower_fraction": "0",
+    "tail_tail_x2_a_second_envelope": "0",
+    "tail_tail_x_first_chain": "0",
+    "threshold_C_pair_positive_completion": "0",
+    "threshold_D0_envelope": "0",
+    "threshold_Dxx_envelope": "0",
+    "threshold_Dz_envelope": "0",
+    "threshold_Dzz_envelope": "0",
+    "threshold_G_first_product": "0",
+    "threshold_G_second_product": "0",
+    "threshold_Qx_envelope": "0",
+    "threshold_Qxx_envelope": "0",
+    "threshold_V_first_product": "0",
+    "threshold_V_second_product": "0",
+    "threshold_Vx_envelope": "0",
+    "threshold_Vxx_envelope": "0",
+    "threshold_Vzz_envelope": "0",
+    "threshold_b_first_envelope": "0",
+    "threshold_b_second_envelope": "0",
+    "threshold_f_first_integrand": "0",
+    "threshold_f_second_integrand": "0",
+    "threshold_inverse_Q_second_envelope": "0",
+    "threshold_pi_integral_identity": "0",
+    "threshold_positive_D_gap_completion": "0",
+    "threshold_positive_pi_integrand_division": "0",
+    "threshold_same_parent_density_D": "0",
+    "threshold_same_parent_density_U": "0",
+    "threshold_threshold_c_upper_completion": "0",
+    "threshold_threshold_fraction": "0",
+    "threshold_threshold_sqrt_factor": "0",
+    "threshold_threshold_z_first": "0",
+    "threshold_threshold_z_second": "0",
+    "threshold_weighted_a_first_envelope": "0",
+    "threshold_weighted_a_second_envelope": "0"
+  },
+  "formulation": "FORMULATION.md",
+  "named_exact_check_count": 83,
+  "not_established": [
+    "A numeric full curved weak-log remainder majorant or small/stable coupled inverse",
+    "A compatible quantum preparation and controlled nonlinear corrected background, spatial/noise or global-time response",
+    "Full interacting measure/state/loops, physical cutoff or omitted-order error control",
+    "Complete vacuum matching/contour/cuts/truncation, finite-gravity IR/Regge or original V/G/B closure"
+  ],
+  "observable_and_scope": {
+    "current_parent_transfer": "The current retained coupled inverse may take K_L1=300000000000 in its constructive weight. The other scalar C controlling the complete curved weak-log remainder is still unevaluated.",
+    "derivation": "Continuous two-derivative threshold and logarithmic-tail estimates, a C2 all-integer dyadic partition, two integrations by parts in each compact band, an absolutely summable Fourier L1 bound, and same-kernel Laplace identification.",
+    "new_quantitative_result": "For the same normalized massive scalar range inverse, ||K_m||L1(0,infinity)<201600000000<300000000000 for every fixed m>0.",
+    "not_implied": "No small full inverse, stability, nonlinear quantum background, new compatible preparation, full interacting loops/state/measure, physical cutoff or V/G/B closure. The enormous coarse bound is not a measured norm."
+  },
+  "primitive_and_matching_frontier": {
+    "matching": [
+      {
+        "id": "fixed_sigma_isolated_MS_conversion",
+        "status": "CANCELLED_NONLOCAL_ORDER_TWO_WITH_SAME_REGULATED_REFERENCE"
+      },
+      {
+        "id": "remaining_scale_parameter_field_map_and_cross_terms",
+        "status": "OPEN"
+      },
+      {
+        "id": "remaining_counterterm_and_vacuum_source_assembly",
+        "status": "ASSEMBLED_FOR_FIXED_ORDER_PHI_POLE_B2_VACUUM_AND_H_SOURCE"
+      },
+      {
+        "id": "full_matched_two_loop_pole_and_amplitude_error",
+        "status": "FIXED_ORDER_PHI_POLE_AND_B2_BOUNDED_PHYSICAL_TRUNCATION_OPEN"
+      },
+      {
+        "id": "finite_EFT_higher_order_truncation",
+        "status": "OPEN"
+      },
+      {
+        "id": "V_contour_and_cut_control",
+        "status": "OPEN"
+      },
+      {
+        "id": "finite_gravity_G",
+        "status": "OPEN"
+      },
+      {
+        "id": "common_parent_B",
+        "status": "OPEN"
+      },
+      {
+        "id": "complete_wineglass_interaction_forest_MS",
+        "status": "BOUNDED_WITH_REGULATED_FINITE_LOCAL_ANCHOR_AND_FULL_SCALE_TERM"
+      },
+      {
+        "id": "complete_double_bubble_interaction_forest_MS",
+        "status": "BOUNDED_WITH_ACTUAL_NESTED_MS_FORESTS_AND_BOTH_SCALE_TERMS"
+      },
+      {
+        "id": "complete_scalar_OS_insertion_interaction_forest_MS",
+        "status": "BOUNDED_WITH_FULL_REGULATED_SLOPE_TIMES_OUTER_REFERENCE"
+      },
+      {
+        "id": "complete_scalar_quadratic_finite_MS_slope_and_converted_OS_bound",
+        "status": "BOUNDED_WITH_FIXED_INNER_OS_AND_INTERACTION_MS_COORDINATES"
+      },
+      {
+        "id": "first_finite_Phi_field_covariance_and_MS_projection_commutator",
+        "status": "EXACT_REGULATED_FIELD_DIRECTION_AND_BOUNDED_FIRST_SLOPE_CROSS_TERMS"
+      },
+      {
+        "id": "complete_GY14_second_Phi_normalization_and_canonical_unit_disc_pole",
+        "status": "BOUNDED_WITH_DIRECT_MS_OWNERSHIP_AND_FULL_FINITE_FIELD_REEXPANSION"
+      },
+      {
+        "id": "complete_two_loop_vacuum_reference_and_first_source_square",
+        "status": "BOUNDED_WITH_FULL_REGULATED_SOURCE_REDUCIBLE_CANCELLATION"
+      },
+      {
+        "id": "complete_two_loop_derivative_map_with_matched_physical_source",
+        "status": "TRANSPORTED_FOR_FULL_ACTION_AND_PHYSICAL_SOURCE_NOT_ORDINARY_PSI_MS_OR_TRUNCATION"
+      },
+      {
+        "id": "complete_matched_two_loop_low_energy_Phi_elastic_cut",
+        "status": "BOUNDED_ON_PHYSICAL_WINDOW_4_TO_6_WITH_FULL_FIRST_AMPLITUDE_NOT_PHYSICAL_REMAINDER_OR_GLOBAL_DISPERSION"
+      },
+      {
+        "id": "full_finite_kappa_analytic_target_classical_vacuum_match",
+        "status": "BOUNDED_ON_SAME_RESTRICTED_FLAT_SCHWARTZ_CLASS_NOT_QUANTUM_TARGET_OR_ROLLING_COMMON_PARENT_MATCH"
+      },
+      {
+        "id": "GY14_SAT8_pointwise_fermion_mass_protection_and_named_low_order_invariance",
+        "status": "NEW_ANALYTIC_EFT_BRANCH_WITH_GLOBAL_REAL_MASS_FLOOR_AND_SAME_NAMED_TWO_LOOP_DATA_NOT_ROLLING_STATE_OR_COMMON_PARENT_CLOSURE"
+      },
+      {
+        "id": "polynomial_clock_transparent_physical_source_map_and_full_target_classical_bound",
+        "status": "KINEMATIC_CLOCK_ARGUMENT_ALIGNED_WITH_PROTECTED_MASSES_AND_SAME_NAMED_VACUUM_DATA_NOT_BACKGROUND_SOLUTION_QUANTUM_STATE_OR_COMMON_PARENT_CLOSURE"
+      },
+      {
+        "id": "free_flat_clock_Dirac_out_energy_with_complete_transition_series_remainder",
+        "status": "BOUNDED_FOR_SPECIFIED_QUADRATIC_MODEWISE_IN_OUT_STATE_NOT_INTERACTING_OR_CURVED_BOUNCE_STRESS"
+      },
+      {
+        "id": "Hadamard_regular_free_flat_SAT8_in_out_state_and_uniform_one_particle_norm_limit",
+        "status": "HADAMARD_FOR_SPECIFIED_FREE_EXTERNAL_MASS_OPERATOR_USING_IDENTIFIED_EXTERNAL_THEOREM_NOT_INTERACTING_CURVED_STATE_OR_NUMERICAL_STRESS"
+      },
+      {
+        "id": "exact_four_frame_free_transition_and_uniform_same_operator_in_out_T00_difference",
+        "status": "BOUNDED_FOR_FREE_FLAT_HADAMARD_STATE_DIFFERENCE_NOT_ABSOLUTE_STRESS_INTERACTING_CURVED_STATE_OR_BACKREACTION"
+      },
+      {
+        "id": "free_flat_absolute_one_loop_local_energy_with_fixed_saturated_mass_reference",
+        "status": "BOUNDED_IN_EXPLICIT_MS_AND_SATURATED_MASS_REFERENCE_QUADRATIC_SCHEME_NOT_FULL_CURVED_INTERACTING_PARENT_STRESS"
+      },
+      {
+        "id": "complete_free_flat_homogeneous_one_loop_stress_with_dimensional_curvature_improvement",
+        "status": "BOUNDED_SPECIFIED_QUADRATIC_MS_MR_FLAT_TENSOR_NOT_FULL_INTERACTING_CURVED_PARENT_STRESS"
+      },
+      {
+        "id": "actual_CD_free_Dirac_Hadamard_in_out_state_and_uniform_state_stress_difference",
+        "status": "CURVED_FREE_HADAMARD_STATE_AND_STATE_DIFFERENCE_BOUNDED_NOT_ABSOLUTE_PARENT_STRESS"
+      },
+      {
+        "id": "complete_free_curved_one_loop_stress_with_explicit_EC_Newton_reference",
+        "status": "BOUNDED_SPECIFIED_QUADRATIC_CURVED_TENSOR_NOT_FULL_INTERACTING_PARENT_OR_BACKGROUND_RESPONSE"
+      },
+      {
+        "id": "minimal_Einstein_canonical_clock_free_sector_null_equation_mismatch",
+        "status": "EXCLUDED_NAMED_MINIMAL_DIAGNOSTIC_WITH_SMALL_EXTRA_NULL_BUDGET_NOT_FULL_INTERACTING_PARENT_OR_DHOST_ROW"
+      },
+      {
+        "id": "actual_CD_leading_clock_Euler_source_decomposition_and_matching_domain_gap",
+        "status": "LEADING_TARGET_SOURCES_AND_CONSTRAINT_DOMAIN_REQUIREMENTS_IDENTIFIED_NOT_PROPAGATING_PARENT_OR_QUANTUM_BOUNCE"
+      },
+      {
+        "id": "analytic_CD_REG_AFFINE_ISO_classical_parent_clock_vacuum_and_local_constraints",
+        "status": "NEW_REGULAR_CLASSICAL_PARENT_AND_LOCAL_CONSTRAINT_BLOCKS_NOT_QUANTUM_MATCHING_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "same_classical_affine_parent_closed_source_lift_and_scoped_vector_Schur_control",
+        "status": "EXACT_CLASSICAL_AND_COMMON_REGULATOR_IDENTITIES_FULL_EUCLIDEAN_AND_LEADING_LORENTZ_BOUNDS_NOT_FULL_QUANTUM_MATCHING"
+      },
+      {
+        "id": "regular_affine_parent_conditional_Gaussian_Hadamard_family_and_ordinary_Proca_stress",
+        "status": "SOURCE_AWARE_CONDITIONAL_VECTOR_STATE_AND_FIXED_CLOCK_STRESS_NOT_FULL_PARENT_QUANTUM_SOLUTION"
+      },
+      {
+        "id": "full_fixed_canonical_affine_family_actual_classical_gravitational_decoupling",
+        "status": "ANCHORED_FULL_FUNCTION_CLASSICAL_LIMIT_AND_TREE_AMPLITUDE_NOT_QUANTUM_CONTOUR_TRUNCATION_OR_V_CLOSURE"
+      },
+      {
+        "id": "complete_affine_vector_retarded_mean_energy_and_causal_cubic_light_force",
+        "status": "FIXED_CD_FULL_SOURCE_FINITE_TIME_CONDITIONAL_GAUSSIAN_MEAN_AND_LIGHT_FORCE_NOT_METRIC_NOISE_FULL_PARENT_OR_B_CLOSURE"
+      },
+      {
+        "id": "same_affine_conditional_prepared_homogeneous_metric_response_with_uncancelled_chart_contacts",
+        "status": "COMPLETE_CONDITIONAL_VECTOR_HOMOGENEOUS_C10_TO_C0_BOUND_NOT_SPATIAL_NOISE_COUPLED_BACKGROUND_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "same_affine_parent_prepared_homogeneous_retained_tree_plus_conditional_vector_causal_inverse",
+        "status": "UNIQUE_RETAINED_LINEAR_PREPARED_CAUSAL_INVERSE_WITH_NUMERIC_LOCAL_LAPSE_RECOVERY_NOT_FULL_INVERSE_SMALLNESS_QUANTUM_BACKGROUND_OR_V_G_B"
+      },
+      {
+        "id": "same_massive_scalar_range_kernel_explicit_full_half_line_L1_majorant",
+        "status": "MASS_INDEPENDENT_EXPLICIT_SCALAR_KERNEL_NORM_NOT_FULL_INVERSE_SMALLNESS_BACKGROUND_CUTOFF_OR_V_G_B"
+      }
+    ],
+    "primitive": [
+      {
+        "id": "scalar_Phi0_W0_F0",
+        "status": "BOUNDED_PAIRED_VACUUM_PRIMITIVE_WITH_ASSIGNED_LOCAL_FOREST"
+      },
+      {
+        "id": "scalar_Phi2_W0_F2",
+        "status": "BOUNDED_NONLOCAL_AND_FINITE_MS_MASS_AND_SLOPE_REFERENCES"
+      },
+      {
+        "id": "scalar_Phi2_W1_F0",
+        "status": "BOUNDED_PAIRED_NONLOCAL_AND_FINITE_MS_LOCAL_REFERENCES"
+      },
+      {
+        "id": "scalar_Phi4_W0_F4",
+        "status": "BOUNDED_PAIRED_PRIMITIVE_ROW"
+      },
+      {
+        "id": "scalar_Phi4_W1_F2",
+        "status": "BOUNDED_PAIRED_IN_COMMON_MS_INTERACTION_SCHEME"
+      },
+      {
+        "id": "scalar_Phi4_W2_F0",
+        "status": "BOUNDED_PAIRED_IN_COMMON_MS_INTERACTION_SCHEME"
+      },
+      {
+        "id": "gauge_Phi0",
+        "status": "BOUNDED_PAIRED_VACUUM_PRIMITIVE_WITH_ASSIGNED_LOCAL_FOREST"
+      },
+      {
+        "id": "gauge_Phi2",
+        "status": "BOUNDED_NONLOCAL_AND_FINITE_MS_MASS_AND_SLOPE_REFERENCES"
+      },
+      {
+        "id": "gauge_Phi4",
+        "status": "BOUNDED_PAIRED_PRIMITIVE_ROW"
+      }
+    ]
+  },
+  "prior_sha256": {
+    "S6_180_fully_rebuilt": "ad283ebc8d7159256c851b51a1f46056ec5ccb1924e34e6f6f02a28b0866aa3d",
+    "S6_86_same_scalar_kernel_transitively_rebuilt": "0f04fd277040ad21525eb1d9102e6af45c4d695fac3f69d0d37710a7ab8a0db6",
+    "all_frozen_scientific_bytes_unchanged": true,
+    "new_continuous_constants_derived_from_literal_source_density": true
+  },
+  "proof_checks": {
+    "C2_partition_and_two_integrations_by_parts": true,
+    "absolute_L1_sum_and_positive_spectral_Laplace_identification": true,
+    "continuous_threshold_and_tail_derivatives_not_sample_only": true,
+    "curved_remainder_C_not_evaluated_and_no_smallness_inferred": true,
+    "dyadic_band_constant_rounded_outward": true,
+    "dyadic_chi_second_strict_upper": true,
+    "dyadic_geometric_sum_below_four": true,
+    "dyadic_sqrt_two_times_four_below_six": true,
+    "estimate_positive_numeric_kernel_upper": true,
+    "estimate_rounded_bound_strictly_larger": true,
+    "estimate_same_old_kernel_L1_object": true,
+    "every_integer_frequency_band_including_infinite_tail": true,
+    "no_nonprepared_background_residual_fed_to_prepared_inverse": true,
+    "only_K_constant_replaced_in_current_retained_inverse": true,
+    "original_V_G_B_and_full_quantum_background_still_open": true,
+    "same_mass_scaling_and_zero_instantaneous_term": true,
+    "same_source_pinned_density_not_a_new_model": true,
+    "tail_Dr_uniform_ratio": true,
+    "tail_Drr_uniform_ratio": true,
+    "tail_all_scaled_tail_constants_below_common": true,
+    "tail_exp_two_partial_sum_exceeds_seven": true,
+    "tail_large_r_D_lower_exceeds_r": true,
+    "threshold_D_gap_strictly_above_one": true,
+    "threshold_all_scaled_endpoint_constants_below_common": true,
+    "threshold_c_first_triangle_below_one": true,
+    "threshold_c_second_triangle_below_one": true,
+    "threshold_pi_rational_upper_squared_below_ten": true
+  },
+  "same_kernel_norm_and_current_inverse_transfer": {
+    "current_adapted_inverse_C0_formula": "2*exp((4*C*(15625/6144 + 300000000000/gamma) + 1)**2)*Max(15625/6144, 300000000000/gamma)",
+    "current_inverse_beta_upper": "C*(15625/6144 + 300000000000/gamma)",
+    "current_inverse_weight_choice": "(4*C*(15625/6144 + 300000000000/gamma) + 1)**2",
+    "identification": "Absolute L1 summation of all dyadic sine kernels; their Laplace transforms sum by the nonnegative spectral density and partition to the source-pinned R(p^2)=1/F_m(p^2). Uniqueness of Laplace transforms identifies the same retained inverse, with no pole, tail or instantaneous term deleted.",
+    "local_lapse_recovery": "The already quantified actual C1<15000 is unchanged, not replaced by the scalar kernel norm.",
+    "mass_scope": "For every fixed m>0: K_m(t)=m K_1(mt), so the complete half-line L1 norm is mass independent; this includes the same current mass1000",
+    "remaining_unevaluated_constant": "The full current curved weak-log remainder majorant C, including its matching and fixed local contacts, is still not numerically bounded here. This scalar bound does not establish a small or stable full inverse.",
+    "rounded_full_half_line_kernel_L1_upper": "300000000000",
+    "tail_band_sum_upper": "960000000",
+    "threshold_band_sum_upper": "4800000000",
+    "unrounded_full_half_line_kernel_L1_upper": "201600000000"
+  },
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "173595845476f38730be64481582b491601540146849a0c2fbaa00acf2694041",
+    "README.md": "c7d9084eb1c072436fdace5a1a3ac346de95dc7b6838b515e4fc8644170b9bf0",
+    "notes/norm.md": "f4115f1d0e746fe8846ec94c9d4ef145e1139d013a2b81f3e01eaf51be4db293",
+    "notes/partition.md": "bbfaacfd1ecb514088c70df0c685bfc092e9dfaeb29a37ef22452794eea8ec29",
+    "notes/scope.md": "9233fb9892c7976de21639fcc97adf09ba4a5cf45fd3548832a976daeffb7531",
+    "notes/tail.md": "fa0d5e1a0c2bf21baea42ed82a4c511583553593d1a742fa17ddf15d421ee568",
+    "notes/threshold.md": "c69b10de24cf8181a5d4244ee01d849ca6960bc8fc9a44f403d245e6b0d661b7",
+    "notes/transfer.md": "0eaf124412a37f0054651d4313036ab72225c34cb88cc55cf827929aeb6fda39",
+    "notes/validation.md": "0739df4e9d046d97c2d8aa200be1febac93c2949b123aa04c5d1b2c4bcdf691d",
+    "src/p8_vacuum_affine_kernel_norm/__init__.py": "6a901da9bd16cc7bc7854cdd0a12b96de987883342ba17225f29c6405f78c0a3",
+    "src/p8_vacuum_affine_kernel_norm/audit.py": "988fd0bafd2c6ab563126bd54fe61850a33001705c9ddb573d68dcfd0719d09b",
+    "src/p8_vacuum_affine_kernel_norm/dyadic.py": "8e5ecd5b5e42fd69b9e26d7ae0b67e372f964cf55c7ca604e05aa0fb7839fda7",
+    "src/p8_vacuum_affine_kernel_norm/estimate.py": "8dbd69272f1af1559fb673b70fe8ed2004fdcb63fd0aadaa0a78f4afd84a0983",
+    "src/p8_vacuum_affine_kernel_norm/tail.py": "95351e781ff39c78401aa858d7d31437d20da6c0dd1a9e72deff068d6a68bd04",
+    "src/p8_vacuum_affine_kernel_norm/threshold.py": "deed58a6e956a79c350340a593a6c50501072eb8a0b107ab9058de440308dc35",
+    "src/p8_vacuum_affine_kernel_norm/verify.py": "2c99957b09310653c6440215d50f07ec52f49a9aeb24b61266181a9e1d8b1835",
+    "tests/test_affine_kernel_norm_certificate.py": "d94bbb7d3c3189b06ff6e85cf3fb3390d6ae66aaccab1f52b5e1d826571ec007",
+    "tests/test_affine_kernel_norm_science.py": "120051fae5cc930e5906cf0c388a9c83f94616d657f016181fbd853f8a9543c8"
+  },
+  "status": "EXPLICIT_ALL_FREQUENCY_SCALAR_KERNEL_NORM_BELOW_3E11_FOR_EVERY_POSITIVE_MASS; NOT_SMALL_FULL_INVERSE_QUANTUM_BACKGROUND_STABILITY_CUTOFF_V_G_B_OR_ORIGINAL_P8",
+  "verdict": "The same normalized massive scalar range inverse has full half-line L1 norm below201600000000 and hence below3e11 for every positive mass. Explicit continuous endpoint/tail derivative envelopes and a C2 dyadic partition control every frequency band. Absolute L1 summation and the nonnegative spectral Laplace representation identify the same inverse, without discarded poles, instantaneous terms or tails. This replaces only the K_L1 parameter in the current retained coupled inverse; the full curved weak-log majorant C remains unevaluated. It does not yield a small or stable full inverse, a quantum background or original P8 closure.",
+  "verification_boundary": "Exact density/derivative/product/partition/normalization identities and continuous written endpoint/tail/Fourier/Laplace estimates, with independent high-precision density, derivative and spectral-transform checks. The source-pinned current inverse chain is rebuilt unchanged. Native, direct science, ordinary and CLI use original SymPy; only full regression uses its audited exact GCD adapter. Not FORMALIZED, an optimal norm or a full quantum-parent certificate.",
+  "written_proofs": [
+    "notes/threshold.md",
+    "notes/tail.md",
+    "notes/partition.md",
+    "notes/norm.md",
+    "notes/transfer.md",
+    "notes/scope.md",
+    "notes/validation.md"
+  ]
+}
