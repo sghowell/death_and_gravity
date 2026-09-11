@@ -1,0 +1,445 @@
+{
+  "checked_scalar_entries": 79,
+  "claim": "P8-S6.177.FULL_FIXED_CANONICAL_FUNCTION_AFFINE_FAMILY_AND_ACTUAL_CLASSICAL_GRAVITATIONAL_DECOUPLING",
+  "controls": {
+    "base_order_not_changed_to_an_integer_sequence": true,
+    "finite_gravity_forward_pole_not_erased": true,
+    "higher_independent_interactions_not_discarded": true,
+    "null_source_not_set_to_zero": true,
+    "off_base_bounce_not_claimed": true,
+    "original_P8_not_closed": true,
+    "physical_X_domain_not_mislabeled_fixed": true,
+    "rejected_inputs": 87,
+    "tree_b2_not_physical_omitted_order_control": true
+  },
+  "date": "2026-09-11",
+  "exact_residuals": {
+    "amplitude_actual_gamma_is_positive": "0",
+    "amplitude_actual_lambda_is_fixed": "0",
+    "amplitude_complete_mass_one_tree_amplitude": "0",
+    "amplitude_crossing_s_t": "0",
+    "amplitude_crossing_s_u": "0",
+    "amplitude_forward_b2": "0",
+    "amplitude_forward_full_tree": "0",
+    "amplitude_literal_derivative_contact_pairing": "0",
+    "amplitude_massive_on_shell_Galileon_stu": "0",
+    "amplitude_nonzero_gamma_not_erased": "0",
+    "amplitude_original_DHOST_quartic_to_boundary_equivalent_Galileon": "0",
+    "amplitude_potential_four_leg_factorial": "0",
+    "coefficients_A4_exact_ratio_to_signed_majorant": "0",
+    "coefficients_A4_null_limit": "0",
+    "coefficients_A5_exact_ratio_to_signed_majorant": "0",
+    "coefficients_A5_null_limit": "0",
+    "coefficients_A5_quotient_analytic_at_null": "0",
+    "coefficients_lower_domain_denominator": "0",
+    "coefficients_reciprocal_fixed_domain_factor": "0",
+    "family_actual_full_base_F_anchor": "0",
+    "family_actual_full_base_R_anchor": "0",
+    "family_canonical_A3_four_field_scaling": "0",
+    "family_canonical_A4_four_field_scaling": "0",
+    "family_canonical_A5_six_field_scaling": "0",
+    "family_dependent_A4_not_falsely_fixed": "0",
+    "family_dependent_A5_not_falsely_fixed": "0",
+    "family_domain_R_convex_combination": "0",
+    "family_domain_lower_margin": "0",
+    "family_full_fixed_a3_K_derivative": "0",
+    "family_full_fixed_f_K_derivative": "0",
+    "family_full_fixed_r_K_derivative": "0",
+    "family_full_independent_F_fixed": "0",
+    "family_full_nonminimal_r_fixed": "0",
+    "family_physical_R_X_chain": "0",
+    "family_physical_R_u_chain": "0",
+    "family_vacuum_regular_q_ODE_order_3": "0",
+    "family_vacuum_regular_q_ODE_order_4": "0",
+    "family_vacuum_regular_q_ODE_order_5": "0",
+    "germs_canonical_quartic_DHOST_fixed": "0",
+    "germs_canonical_quartic_potential_fixed": "0",
+    "germs_full_F_even_in_Phi": "0",
+    "germs_full_R_even_in_Phi": "0",
+    "germs_full_fixed_F_Y_cubed_nonzero_coefficient": "0",
+    "germs_full_fixed_a3_Phi_squared_nonzero_coefficient": "0",
+    "germs_full_fixed_a3_Y_nonzero_coefficient": "0",
+    "germs_literal_full_F_derivative_0_0": "0",
+    "germs_literal_full_F_derivative_0_1": "0",
+    "germs_literal_full_F_derivative_0_2": "0",
+    "germs_literal_full_F_derivative_1_0": "0",
+    "germs_literal_full_F_derivative_1_1": "0",
+    "germs_literal_full_F_derivative_2_0": "0",
+    "germs_literal_full_F_derivative_2_1": "0",
+    "germs_literal_full_F_derivative_3_0": "0",
+    "germs_literal_full_F_derivative_4_0": "0",
+    "germs_literal_full_R_YY_leading": "0",
+    "gravity_de_Donder_gauge_fixed_normalization": "0",
+    "gravity_linear_gauge_direction_null": "0",
+    "gravity_literal_EH_Gamma_Gamma_to_Fierz_Pauli": "0",
+    "gravity_on_shell_scalar_vertex_Ward_coefficient": "0",
+    "gravity_two_physical_tensor_polarizations": "0",
+    "nine_primitive_rows_retained": "0",
+    "one_actual_decoupling_matching_row_added": "0",
+    "pole_all_incoming_on_shell_sum": "0",
+    "pole_fixed_nonzero_transfer_limit": "0",
+    "pole_literal_stress_projector_contraction": "0",
+    "pole_negative_forward_v_squared_pole": "0",
+    "pole_shrinking_forward_limit": "0",
+    "primitive_rows_unchanged": "0",
+    "prior_matching_rows_retained": "0",
+    "source_canonical_source_leading_coefficient": "0",
+    "source_canonical_source_normalization": "0",
+    "source_canonical_source_vanishes": "0",
+    "source_contact_vanishes": "0",
+    "source_literal_complete_source_canonical_chain": "0",
+    "source_nonzero_null_gradient_J": "0",
+    "source_nonzero_null_gradient_source": "0",
+    "source_regular_all_Y_source_decomposition": "0",
+    "source_retained_source_squared_contact": "0",
+    "source_source_contact_leading_coefficient": "0"
+  },
+  "fixed_canonical_family_and_gravitational_limit": {
+    "family": {
+      "anchor_boundary": "At kappa0 the entire action and maps equal S6.174/S6.176. The same bounce is NOT asserted to solve the off-base family.",
+      "exact_canonical_coefficients": {
+        "A3": "Derivative(fixed_r(Phi, Y), Y)/Y",
+        "A4": "-7*Derivative(fixed_r(Phi, Y), Y)**2/(4*kappa + 4*fixed_r(Phi, Y)) - Derivative(fixed_r(Phi, Y), Y)/Y",
+        "A5": "Derivative(fixed_r(Phi, Y), Y)**2/(Y*(kappa + fixed_r(Phi, Y)))",
+        "F": "fixed_f(Phi, Y)",
+        "curvature": "-kappa/2 - fixed_r(Phi, Y)/2"
+      },
+      "exact_physical_family": {
+        "F": "fixed_f(sqrt(kappa)*u, X*kappa)/kappa",
+        "R": "1 + fixed_r(sqrt(kappa)*u, X*kappa)/kappa"
+      },
+      "fixed_affine_construction": "At each kappa use the generic-R S6.174 regular metric chart, source-centered isotropic full-quotient mass, lower q and shift B; zeta=1e-6. Href(Phi)=H_base(Phi/sqrt(kappa0)) is fixed.",
+      "fixed_canonical_definitions": "f(Phi,Y)=kappa0 F_base(Phi/sqrt(kappa0),Y/kappa0); r(Phi,Y)=kappa0 [R_base(Phi/sqrt(kappa0),Y/kappa0)-1]; a3=r_Y/Y. These are the complete S6.109 functions, not their Taylor germs.",
+      "fixed_domain": "Every real Phi and -kappa0/4096<Y<6kappa0/5 for every kappa>=kappa0. The physical u,X strip is rescaled, not incorrectly held fixed.",
+      "fixed_gamma": "1/97656250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "fixed_lambda": "1/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "fixed_switch_order": 1024,
+      "kappa0": "100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "regular_lower_q_integral": "q(u,X)=(3X/4) R(u,X)^(3/4) integral_0^1 sqrt(t) R_X(u,tX) R_u(u,tX) R(u,tX)^(-7/4) dt; analytic at X=0 from either sign.",
+      "regular_q_leading_coefficients": {
+        "q4": "a*a_phi/3",
+        "q5": "3*a*b_phi/11 + 9*a_phi*b/22",
+        "q6": "-2*a**2*a_phi/13 + 3*a*c_phi/13 + 6*a_phi*c/13 + 9*b*b_phi/26"
+      },
+      "uniform_R_enclosure": [
+        "4097/8192",
+        "6/5"
+      ]
+    },
+    "germs": {
+      "canonical_quadratic": "(Y-Phi^2)/2",
+      "canonical_quartic": "lambda Y^2-gamma Phi^4/3+2gamma (L4-L3)",
+      "fixed_higher_coefficients": {
+        "a3_Phi_squared": "3/4882812500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "a3_Y": "3/9765625000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "f_Y_cubed": "-853/1953125000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+      },
+      "full_flat_limit": "f(Phi,Y)+a3(Phi,Y)(L3-L4), with ALL higher independent interactions retained",
+      "mass_squared": "1",
+      "no_cubic_scalar_vertex": true
+    },
+    "gravity": {
+      "actual_quadratic_Gamma_Gamma": "-h00*h11*k2**2 - h00*h11*k3**2 + 2*h00*h12*k1*k2 + 2*h00*h13*k1*k3 - h00*h22*k1**2 - h00*h22*k3**2 + 2*h00*h23*k2*k3 - h00*h33*k1**2 - h00*h33*k2**2 + h01**2*k2**2 + h01**2*k3**2 - 2*h01*h02*k1*k2 - 2*h01*h03*k1*k3 - 2*h01*h12*k0*k2 - 2*h01*h13*k0*k3 + 2*h01*h22*k0*k1 + 2*h01*h33*k0*k1 + h02**2*k1**2 + h02**2*k3**2 - 2*h02*h03*k2*k3 + 2*h02*h11*k0*k2 - 2*h02*h12*k0*k1 - 2*h02*h23*k0*k3 + 2*h02*h33*k0*k2 + h03**2*k1**2 + h03**2*k2**2 + 2*h03*h11*k0*k3 - 2*h03*h13*k0*k1 + 2*h03*h22*k0*k3 - 2*h03*h23*k0*k2 - h11*h22*k0**2 + h11*h22*k3**2 - 2*h11*h23*k2*k3 - h11*h33*k0**2 + h11*h33*k2**2 + h12**2*k0**2 - h12**2*k3**2 + 2*h12*h13*k2*k3 + 2*h12*h23*k1*k3 - 2*h12*h33*k1*k2 + h13**2*k0**2 - h13**2*k2**2 - 2*h13*h22*k1*k3 + 2*h13*h23*k1*k2 - h22*h33*k0**2 + h22*h33*k1**2 + h23**2*k0**2 - h23**2*k1**2",
+      "canonical_physical_polarizations": "sqrt(2)*h_plus and sqrt(2)*h_cross have density (time derivative squared-spatial derivative squared)/2",
+      "de_Donder_propagator": "i P/(p^2+i0), P_mnrs=(eta_mr eta_ns+eta_ms eta_nr-eta_mn eta_rs)/2",
+      "full_action_limit": "Einstein interactions beyond its quadratic density are O(kappa^-1/2); the fixed nonminimal r R term and all metric corrections to the full scalar, M1 and canonical Proca actions vanish on fixed compact jets. The latter spectator sectors keep their full kappa-independent canonical quadratic actions.",
+      "linear_EH_boundary": "-sqrt(kappa) partial_mu[partial_nu h^(mu nu)-partial^mu trace(h)]; retained as an exact divergence, zero for the stated compact/Schwartz variations",
+      "physical_metric": "g_mu_nu=eta_mu_nu+2 h_mu_nu/sqrt(kappa); h has kappa-independent canonical Fierz-Pauli normalization",
+      "scalar_graviton_vertex": "i [p_mu q_nu+p_nu q_mu-eta_mu_nu(p.q+m^2)]/sqrt(kappa), all momenta incoming",
+      "two_polarization_density": "cross_time**2 - cross_z**2 + plus_time**2 - plus_z**2",
+      "uniformity": "For fixed compact C^(j+2) canonical jets strictly inside the coefficient strip, choose kappa large enough that the inverse metric stays in a compact nonsingular neighborhood of eta. Analyticity and Taylor's integral remainder give a finite C_j times kappa^-1/2 bound for the remaining density and its j jet derivatives, after the exact EH divergence. No momentum-uniform scattering or quantum-continuum estimate is claimed."
+    }
+  },
+  "formulation": "FORMULATION.md",
+  "full_source_and_tree_observables": {
+    "amplitude": {
+      "actual_fixed_gamma": "1/97656250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "actual_forward_b2": "1/250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "boundary_identity": "div[Y(grad(Phi) Box(Phi)-Hess(Phi).grad(Phi))]=2(L3-L4)+Y[(Box(Phi))^2-Hess(Phi)^2] on flat space; compact/Schwartz variations justify its integrated use only for the constant quartic coefficient.",
+      "canonical_mass_squared": "1",
+      "complete_on_shell_tree_amplitude": "3*gamma*s*t*u - 8*gamma + 2*lambda*((s - 2)**2 + (t - 2)**2 + (u - 2)**2)",
+      "forward_amplitude": "4*crossing_v**2*lambda - 8*gamma + 8*lambda",
+      "four_field_action": "lambda Y^2-gamma Phi^4/3+2gamma(L4-L3)",
+      "literal_labelled_DHOST_vertex": "2*gamma*(8*mass_squared*(-mass_squared + s/2)*(-mass_squared + t/2) + 8*mass_squared*(-mass_squared + s/2)*(-mass_squared + u/2) + 8*mass_squared*(-mass_squared + t/2)*(-mass_squared + u/2) - 4*(-mass_squared + s/2)**2*(-mass_squared + t/2) - 4*(-mass_squared + s/2)**2*(-mass_squared + u/2) - 4*(-mass_squared + s/2)*(-mass_squared + t/2)**2 - 4*(-mass_squared + s/2)*(-mass_squared + u/2)**2 - 4*(-mass_squared + t/2)**2*(-mass_squared + u/2) - 4*(-mass_squared + t/2)*(-mass_squared + u/2)**2)",
+      "scope": "The complete higher-field independent functions remain in the limiting action. A positive four-point tree b2 and this exact amplitude do not bound quantum remainders, prove a full contour relation or give a UV completion.",
+      "tree_ownership": "No scalar cubic vertex exists. Higher scalar vertices start at six fields; gravity-dependent Ia and the source contact start at eight, and the vector-source vertex has four scalar legs plus one vector. Thus none changes the tree four-scalar amplitude of the decoupled vacuum. This is not all-order matching."
+    },
+    "coefficients": {
+      "absolute_A4_bound": "7*Y**2*(Y*a_Y + 2*regular_a)**2/(2*kappa)",
+      "absolute_A5_bound": "2*abs(Y)*(2a+Y*a_Y)^2/kappa",
+      "dependent_A4": "-7*Y**2*(Y*a_Y + 2*regular_a)**2/(4*kappa + 4*r)",
+      "dependent_A5": "(Y**3*a_Y**2 + 4*Y**2*a_Y*regular_a + 4*Y*regular_a**2)/(kappa + r)",
+      "generic_finite_jet_bound": "For any fixed compact set strictly inside the canonical strip and any finite derivative order j, analytic f,r,a and the uniformly nonzero R denominator give finite C_j with ||Delta A4||_Cj+||Delta A5||_Cj<=C_j/kappa. The analogous source and contact norms are O(kappa^-1/2) and O(kappa^-1). Constants depend on the full compact jet set and j, not on kappa."
+    },
+    "pole": {
+      "approaching_forward_t_minus_tau_over_kappa_limit": "-(-2*mass_squared**2 + 4*mass_squared*s - s**2)/positive_tau",
+      "boundary": "Fixed nonzero transfer gravitational exchange vanishes as 1/kappa, but the shrinking-forward path has a generally nonzero limit. This is a tree diagnostic of nonuniformity, not a gravitational dispersion prescription or bound on the Regge/IR remainder. All scalar-graviton channels, loops and physical cuts still require their specified observable.",
+      "crossing_centered_v_squared_pole": "-1/(kappa*t)",
+      "exact_scalar_stress_contraction": "2*mass_squared**2 - 4*mass_squared*s - 2*mass_squared*t + s**2 + s*t",
+      "fixed_t_decoupling": "0",
+      "minimal_tree_t_channel": "(-2*mass_squared**2 + 4*mass_squared*s + 2*mass_squared*t - s**2 - s*t)/(kappa*t)"
+    },
+    "source": {
+      "canonical_J_mu": "(-3*Href*Phi_mu*Y**2*regular_a/sqrt(kappa) + 3*Phi_mu*Y**2*regular_a*(Y**2*a_Phi/4 + Z_Phi*(Y*a_Y + 2*regular_a)/2)/(kappa*(Y**2*regular_a/kappa + 1)) + Phi_mu*regular_a*(Box_Phi*Y - Z_Phi))/(sqrt(kappa)*sqrt(zeta))",
+      "complete_contact_per_component": "(-3*Href*Phi_mu*Y**2*regular_a/sqrt(kappa) + 3*Phi_mu*Y**2*regular_a*(Y**2*a_Phi/4 + Z_Phi*(Y*a_Y + 2*regular_a)/2)/(kappa*(Y**2*regular_a/kappa + 1)) + Phi_mu*regular_a*(Box_Phi*Y - Z_Phi))**2/(2*kappa)",
+      "full_fixed_vector_action": "-F(A)^2/4+A^2/(2zeta)-A.J+kappa S^2/2; A=sqrt(kappa*zeta) W, mass1000 fixed. The source-free vector is a free spectator in the classical decoupled limit.",
+      "literal_complete_canonical_source": "-3*Href*Phi_mu*r/kappa**(3/2) + Phi_mu*r*(Box_Phi/Y - Z_Phi/Y**2)/kappa + 3*Phi_mu*r*(r_Phi/4 + Z_Phi*r_Y/(2*Y))/(kappa**2*(1 + r/kappa))",
+      "norm_bound": "On a fixed compact canonical jet set let v,b,c bound Euclidean norms of V,B,C. Ustar=v+b/sqrt(kappa0)+2c/kappa0 bounds ||U|| for all kappa>=kappa0, since R>1/2. Thus ||J||<=Ustar/sqrt(kappa*zeta), and |kappa S^2/2|<=Ustar^2/(2kappa) at eta.",
+      "not_inferred": "No regulator-removed determinant, uniform on-shell Green norm, interacting-state limit or full contour theorem is inferred.",
+      "regular_U_mu": "-3*Href*Phi_mu*Y**2*regular_a/sqrt(kappa) + 3*Phi_mu*Y**2*regular_a*(Y**2*a_Phi/4 + Z_Phi*(Y*a_Y + 2*regular_a)/2)/(kappa*(Y**2*regular_a/kappa + 1)) + Phi_mu*regular_a*(Box_Phi*Y - Z_Phi)",
+      "regular_source_numerator": {
+        "B_mu": "-3*Href*Phi_mu*Y**2*regular_a",
+        "C_mu": "3*Phi_mu*Y**2*regular_a*(Y**2*a_Phi/4 + Z_Phi*(Y*a_Y + 2*regular_a)/2)",
+        "V_mu": "Phi_mu*regular_a*(Box_Phi*Y - Z_Phi)"
+      }
+    }
+  },
+  "named_exact_check_count": 79,
+  "not_established": [
+    "A regulator-removed quantum decoupling limit, all-order amplitude or uniform physical omitted-order bound",
+    "A full vacuum contour/cut relation and a UV completion of the complete scalar action",
+    "A finite-gravity IR/Regge prescription or quantitative finite remainder",
+    "A common interacting affine/light/metric state, physical cutoff, controlled quantum background/response or off-base clock solution",
+    "V/G/B or original P8 closure"
+  ],
+  "observable_and_scope": {
+    "anchor": "Complete S6.174/S6.176 CD-REG-AFFINE-ISO at kappa0=1e800 and zeta=1e-6; no old scientific byte is changed.",
+    "family": "Physical coefficients and regular affine maps are explicitly kappa dependent, with identical full base action at kappa0. Dependent Ia gravity corrections are labeled, not called fixed nongravitational couplings.",
+    "fixed_data": "Canonical Phi mass1; ALL independent functions f(Phi,Y), r(Phi,Y), a3=r_Y/Y; original canonical M1 and vector mass1000.",
+    "limit": "The actual full classical action tends on compact canonical jets to free normalized gravity, the FULL fixed scalar f+a3(L3-L4), free M1 and free massive Proca, with specified density/jet decay.",
+    "remaining": "No uniform forward graviton bound, quantum regulator removal, full contour/cuts/truncation, interacting parent/cutoff/background result, G or B closure.",
+    "tree": "The complete four-scalar tree amplitude of this limit is 2lambda sum(s-2)^2+3gamma stu-8gamma; b2=4lambda, not a physical error-controlled dispersion result."
+  },
+  "primitive_and_matching_frontier": {
+    "matching": [
+      {
+        "id": "fixed_sigma_isolated_MS_conversion",
+        "status": "CANCELLED_NONLOCAL_ORDER_TWO_WITH_SAME_REGULATED_REFERENCE"
+      },
+      {
+        "id": "remaining_scale_parameter_field_map_and_cross_terms",
+        "status": "OPEN"
+      },
+      {
+        "id": "remaining_counterterm_and_vacuum_source_assembly",
+        "status": "ASSEMBLED_FOR_FIXED_ORDER_PHI_POLE_B2_VACUUM_AND_H_SOURCE"
+      },
+      {
+        "id": "full_matched_two_loop_pole_and_amplitude_error",
+        "status": "FIXED_ORDER_PHI_POLE_AND_B2_BOUNDED_PHYSICAL_TRUNCATION_OPEN"
+      },
+      {
+        "id": "finite_EFT_higher_order_truncation",
+        "status": "OPEN"
+      },
+      {
+        "id": "V_contour_and_cut_control",
+        "status": "OPEN"
+      },
+      {
+        "id": "finite_gravity_G",
+        "status": "OPEN"
+      },
+      {
+        "id": "common_parent_B",
+        "status": "OPEN"
+      },
+      {
+        "id": "complete_wineglass_interaction_forest_MS",
+        "status": "BOUNDED_WITH_REGULATED_FINITE_LOCAL_ANCHOR_AND_FULL_SCALE_TERM"
+      },
+      {
+        "id": "complete_double_bubble_interaction_forest_MS",
+        "status": "BOUNDED_WITH_ACTUAL_NESTED_MS_FORESTS_AND_BOTH_SCALE_TERMS"
+      },
+      {
+        "id": "complete_scalar_OS_insertion_interaction_forest_MS",
+        "status": "BOUNDED_WITH_FULL_REGULATED_SLOPE_TIMES_OUTER_REFERENCE"
+      },
+      {
+        "id": "complete_scalar_quadratic_finite_MS_slope_and_converted_OS_bound",
+        "status": "BOUNDED_WITH_FIXED_INNER_OS_AND_INTERACTION_MS_COORDINATES"
+      },
+      {
+        "id": "first_finite_Phi_field_covariance_and_MS_projection_commutator",
+        "status": "EXACT_REGULATED_FIELD_DIRECTION_AND_BOUNDED_FIRST_SLOPE_CROSS_TERMS"
+      },
+      {
+        "id": "complete_GY14_second_Phi_normalization_and_canonical_unit_disc_pole",
+        "status": "BOUNDED_WITH_DIRECT_MS_OWNERSHIP_AND_FULL_FINITE_FIELD_REEXPANSION"
+      },
+      {
+        "id": "complete_two_loop_vacuum_reference_and_first_source_square",
+        "status": "BOUNDED_WITH_FULL_REGULATED_SOURCE_REDUCIBLE_CANCELLATION"
+      },
+      {
+        "id": "complete_two_loop_derivative_map_with_matched_physical_source",
+        "status": "TRANSPORTED_FOR_FULL_ACTION_AND_PHYSICAL_SOURCE_NOT_ORDINARY_PSI_MS_OR_TRUNCATION"
+      },
+      {
+        "id": "complete_matched_two_loop_low_energy_Phi_elastic_cut",
+        "status": "BOUNDED_ON_PHYSICAL_WINDOW_4_TO_6_WITH_FULL_FIRST_AMPLITUDE_NOT_PHYSICAL_REMAINDER_OR_GLOBAL_DISPERSION"
+      },
+      {
+        "id": "full_finite_kappa_analytic_target_classical_vacuum_match",
+        "status": "BOUNDED_ON_SAME_RESTRICTED_FLAT_SCHWARTZ_CLASS_NOT_QUANTUM_TARGET_OR_ROLLING_COMMON_PARENT_MATCH"
+      },
+      {
+        "id": "GY14_SAT8_pointwise_fermion_mass_protection_and_named_low_order_invariance",
+        "status": "NEW_ANALYTIC_EFT_BRANCH_WITH_GLOBAL_REAL_MASS_FLOOR_AND_SAME_NAMED_TWO_LOOP_DATA_NOT_ROLLING_STATE_OR_COMMON_PARENT_CLOSURE"
+      },
+      {
+        "id": "polynomial_clock_transparent_physical_source_map_and_full_target_classical_bound",
+        "status": "KINEMATIC_CLOCK_ARGUMENT_ALIGNED_WITH_PROTECTED_MASSES_AND_SAME_NAMED_VACUUM_DATA_NOT_BACKGROUND_SOLUTION_QUANTUM_STATE_OR_COMMON_PARENT_CLOSURE"
+      },
+      {
+        "id": "free_flat_clock_Dirac_out_energy_with_complete_transition_series_remainder",
+        "status": "BOUNDED_FOR_SPECIFIED_QUADRATIC_MODEWISE_IN_OUT_STATE_NOT_INTERACTING_OR_CURVED_BOUNCE_STRESS"
+      },
+      {
+        "id": "Hadamard_regular_free_flat_SAT8_in_out_state_and_uniform_one_particle_norm_limit",
+        "status": "HADAMARD_FOR_SPECIFIED_FREE_EXTERNAL_MASS_OPERATOR_USING_IDENTIFIED_EXTERNAL_THEOREM_NOT_INTERACTING_CURVED_STATE_OR_NUMERICAL_STRESS"
+      },
+      {
+        "id": "exact_four_frame_free_transition_and_uniform_same_operator_in_out_T00_difference",
+        "status": "BOUNDED_FOR_FREE_FLAT_HADAMARD_STATE_DIFFERENCE_NOT_ABSOLUTE_STRESS_INTERACTING_CURVED_STATE_OR_BACKREACTION"
+      },
+      {
+        "id": "free_flat_absolute_one_loop_local_energy_with_fixed_saturated_mass_reference",
+        "status": "BOUNDED_IN_EXPLICIT_MS_AND_SATURATED_MASS_REFERENCE_QUADRATIC_SCHEME_NOT_FULL_CURVED_INTERACTING_PARENT_STRESS"
+      },
+      {
+        "id": "complete_free_flat_homogeneous_one_loop_stress_with_dimensional_curvature_improvement",
+        "status": "BOUNDED_SPECIFIED_QUADRATIC_MS_MR_FLAT_TENSOR_NOT_FULL_INTERACTING_CURVED_PARENT_STRESS"
+      },
+      {
+        "id": "actual_CD_free_Dirac_Hadamard_in_out_state_and_uniform_state_stress_difference",
+        "status": "CURVED_FREE_HADAMARD_STATE_AND_STATE_DIFFERENCE_BOUNDED_NOT_ABSOLUTE_PARENT_STRESS"
+      },
+      {
+        "id": "complete_free_curved_one_loop_stress_with_explicit_EC_Newton_reference",
+        "status": "BOUNDED_SPECIFIED_QUADRATIC_CURVED_TENSOR_NOT_FULL_INTERACTING_PARENT_OR_BACKGROUND_RESPONSE"
+      },
+      {
+        "id": "minimal_Einstein_canonical_clock_free_sector_null_equation_mismatch",
+        "status": "EXCLUDED_NAMED_MINIMAL_DIAGNOSTIC_WITH_SMALL_EXTRA_NULL_BUDGET_NOT_FULL_INTERACTING_PARENT_OR_DHOST_ROW"
+      },
+      {
+        "id": "actual_CD_leading_clock_Euler_source_decomposition_and_matching_domain_gap",
+        "status": "LEADING_TARGET_SOURCES_AND_CONSTRAINT_DOMAIN_REQUIREMENTS_IDENTIFIED_NOT_PROPAGATING_PARENT_OR_QUANTUM_BOUNCE"
+      },
+      {
+        "id": "analytic_CD_REG_AFFINE_ISO_classical_parent_clock_vacuum_and_local_constraints",
+        "status": "NEW_REGULAR_CLASSICAL_PARENT_AND_LOCAL_CONSTRAINT_BLOCKS_NOT_QUANTUM_MATCHING_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "same_classical_affine_parent_closed_source_lift_and_scoped_vector_Schur_control",
+        "status": "EXACT_CLASSICAL_AND_COMMON_REGULATOR_IDENTITIES_FULL_EUCLIDEAN_AND_LEADING_LORENTZ_BOUNDS_NOT_FULL_QUANTUM_MATCHING"
+      },
+      {
+        "id": "regular_affine_parent_conditional_Gaussian_Hadamard_family_and_ordinary_Proca_stress",
+        "status": "SOURCE_AWARE_CONDITIONAL_VECTOR_STATE_AND_FIXED_CLOCK_STRESS_NOT_FULL_PARENT_QUANTUM_SOLUTION"
+      },
+      {
+        "id": "full_fixed_canonical_affine_family_actual_classical_gravitational_decoupling",
+        "status": "ANCHORED_FULL_FUNCTION_CLASSICAL_LIMIT_AND_TREE_AMPLITUDE_NOT_QUANTUM_CONTOUR_TRUNCATION_OR_V_CLOSURE"
+      }
+    ],
+    "primitive": [
+      {
+        "id": "scalar_Phi0_W0_F0",
+        "status": "BOUNDED_PAIRED_VACUUM_PRIMITIVE_WITH_ASSIGNED_LOCAL_FOREST"
+      },
+      {
+        "id": "scalar_Phi2_W0_F2",
+        "status": "BOUNDED_NONLOCAL_AND_FINITE_MS_MASS_AND_SLOPE_REFERENCES"
+      },
+      {
+        "id": "scalar_Phi2_W1_F0",
+        "status": "BOUNDED_PAIRED_NONLOCAL_AND_FINITE_MS_LOCAL_REFERENCES"
+      },
+      {
+        "id": "scalar_Phi4_W0_F4",
+        "status": "BOUNDED_PAIRED_PRIMITIVE_ROW"
+      },
+      {
+        "id": "scalar_Phi4_W1_F2",
+        "status": "BOUNDED_PAIRED_IN_COMMON_MS_INTERACTION_SCHEME"
+      },
+      {
+        "id": "scalar_Phi4_W2_F0",
+        "status": "BOUNDED_PAIRED_IN_COMMON_MS_INTERACTION_SCHEME"
+      },
+      {
+        "id": "gauge_Phi0",
+        "status": "BOUNDED_PAIRED_VACUUM_PRIMITIVE_WITH_ASSIGNED_LOCAL_FOREST"
+      },
+      {
+        "id": "gauge_Phi2",
+        "status": "BOUNDED_NONLOCAL_AND_FINITE_MS_MASS_AND_SLOPE_REFERENCES"
+      },
+      {
+        "id": "gauge_Phi4",
+        "status": "BOUNDED_PAIRED_PRIMITIVE_ROW"
+      }
+    ]
+  },
+  "prior_sha256": {
+    "S6_176_fully_rebuilt": "1175702d6980db090396863b807af0e767241daeb7d8dabf138ed11c67e1ae75",
+    "same_full_base_action_and_all_prior_scientific_bytes_unchanged": true
+  },
+  "proof_checks": {
+    "Einstein_boundary_and_normalized_tensor_kinetic_retained": true,
+    "all_full_source_terms_and_contact_retained": true,
+    "all_prior_frozen_scientific_bytes_unchanged": true,
+    "analytic_null_coefficients_and_unique_regular_q": true,
+    "canonical_mass_and_nonzero_interactions_do_not_drift": true,
+    "classical_limit_not_quantum_continuum_or_cutoff_bound": true,
+    "complete_independent_canonical_functions_held_fixed": true,
+    "dependent_Ia_gravity_coefficients_explicit": true,
+    "fixed_canonical_domain_not_fixed_physical_X_strip": true,
+    "fixed_transfer_limit_not_uniform_forward_limit": true,
+    "free_canonical_M1_and_massive_vector_spectators": true,
+    "full_base_functions_and_action_anchor_not_just_Taylor_jets": true,
+    "full_function_compact_jet_limit_not_small_field_truncation": true,
+    "literal_DHOST_tree_vertex_and_complete_four_scalar_ownership": true,
+    "no_EFT_pole_deletion_or_Regge_remainder_assumption": true,
+    "off_base_clock_equations_not_asserted": true,
+    "positive_tree_b2_not_UV_completion": true,
+    "prior_parent_state_not_promoted_to_interacting_state": true,
+    "uniform_positive_R_and_regular_full_affine_quotient": true
+  },
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "60f35600a4073738a9c4231cb3b3eda116843413f5d88641c4057dfddfbbfde6",
+    "README.md": "e367196c8144c8958ffedd3a19e68f1483631c91df53ca6c0800e3fdac6ac661",
+    "notes/affine.md": "b6a295889121bff72535109eaf647cfaba716e5a3493a2da8f86c3d5b21097dc",
+    "notes/amplitude.md": "6c22916dd203f8753165321685ecbed37f9109afad12df23e81008a4a13aa841",
+    "notes/family.md": "f719c14a03dbf377548bedb88262d611d9a6b8b41e25881003770f044d4472cf",
+    "notes/gravity.md": "94910b13c1d3f3f8da8a76b4c814cdbccdf043db2f4abc0c929a681c0202ec3a",
+    "notes/scope.md": "3ab10882520e73249458f53513c46d165f6d243da8ef7a729d90050253feed18",
+    "notes/source.md": "23abab8e583ba5e1cc62c317d00daaa64a6036e267d5939606c4ce3db6cef572",
+    "notes/validation.md": "6b5eb4b0c46b2532a677198c09d077f217d89dabdeb602c8250d2f1311391961",
+    "src/p8_vacuum_canonical_affine_decoupling/__init__.py": "9c8577f4675f2c7a9cafa2145e7e5a0bc10f22d32b99b323598cc7ce99da84a0",
+    "src/p8_vacuum_canonical_affine_decoupling/amplitude.py": "383bfbb5578fd255efa5f4c2a30f7a9166baa8c7c9490190ee8ec7bc5d1d1f1a",
+    "src/p8_vacuum_canonical_affine_decoupling/audit.py": "9d4fbf25adbffdb08518a6992b489d95bafef10b3528a4f7de5593975c1d8dbe",
+    "src/p8_vacuum_canonical_affine_decoupling/family.py": "2dbf77a52f5a8269b56c636ec12481b79b3829e1f5b5ee8b612d110485552703",
+    "src/p8_vacuum_canonical_affine_decoupling/gravity.py": "83dd680c29678a95c4fcc62e0649625608bab65ce3ce382b69ab062f4a4f2a15",
+    "src/p8_vacuum_canonical_affine_decoupling/source.py": "cae439541e86c3258fe9345bc050c194448545c4e3f7ce7d1543447e22fdd80d",
+    "src/p8_vacuum_canonical_affine_decoupling/verify.py": "2e0187cf202a58eee02b46d65d82ff8bca88204255687e914521815f95bfffe9",
+    "tests/test_canonical_affine_decoupling_certificate.py": "c9aac287fdf6497d78c9f9b93f88b5d548914012ab127caef8b503044717349b",
+    "tests/test_canonical_affine_decoupling_science.py": "8687cdd84da7ba6ccf4164f95728cc8af19e5d43eabe1e106baa08871330ffc5"
+  },
+  "status": "ANCHORED_FULL_FUNCTION_CLASSICAL_DECOUPLING_AND_TREE_AMPLITUDE; NOT_QUANTUM_CONTOUR_TRUNCATION_PHYSICAL_CUTOFF_V_G_B_OR_ORIGINAL_P8",
+  "verdict": "A continuous family through the complete S6.174/S6.176 base action holds the full independent canonical scalar functions f,r,a3 and all vacuum masses fixed. Its regular affine chart and quotient extend on a fixed canonical domain; only explicitly gravity-dependent Ia coefficients vary. After retaining the exact Einstein boundary, the full classical action tends uniformly on compact canonical jets to the complete fixed scalar action plus free normalized tensor, M1 and massive-Proca spectators. The complete canonical vector source and its contact vanish with explicit coefficient/norm rates. The exact four-scalar tree amplitude retains nonzero gamma and has b2=4lambda. Fixed-transfer graviton decoupling is not uniform in the forward limit. No quantum-continuum, full contour/cut/truncation, common interacting parent, physical cutoff, G/B or original P8 closure follows.",
+  "verification_boundary": "Literal full analytic function derivatives and anchored chain rules, complete regular source scaling, exact Einstein quadratic normalization and retained boundary, labelled tensor four-point vertices and dense stress/projector controls supplement written compact-domain and finite-jet proofs. Exact algebra and written analysis are not FORMALIZED or a quantum UV theorem. Native, direct science, ordinary and CLI use original SymPy; full regression alone uses the separately audited exact GCD adapter.",
+  "written_proofs": [
+    "notes/family.md",
+    "notes/affine.md",
+    "notes/gravity.md",
+    "notes/source.md",
+    "notes/amplitude.md",
+    "notes/scope.md",
+    "notes/validation.md"
+  ]
+}
