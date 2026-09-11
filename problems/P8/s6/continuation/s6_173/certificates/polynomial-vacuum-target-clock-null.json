@@ -1,0 +1,500 @@
+{
+  "actual_leading_clock_source_decomposition": {
+    "actual_CD_Hubble": "4*u/(u**2 + 1)",
+    "actual_CD_scale_factor": "(u**2 + 1)**2",
+    "actual_bounce_table": {
+      "A3": {
+        "P_Euler": "0",
+        "null_Euler": "-12",
+        "rho_Euler": "-12"
+      },
+      "A4": {
+        "P_Euler": "0",
+        "null_Euler": "0",
+        "rho_Euler": "0"
+      },
+      "A5": {
+        "P_Euler": "0",
+        "null_Euler": "0",
+        "rho_Euler": "0"
+      },
+      "Einstein": {
+        "P_Euler": "8",
+        "null_Euler": "8",
+        "rho_Euler": "0"
+      },
+      "canonical_clock": {
+        "P_Euler": "1/2",
+        "null_Euler": "1",
+        "rho_Euler": "1/2"
+      },
+      "curvature_nonEinstein": {
+        "P_Euler": "0",
+        "null_Euler": "24",
+        "rho_Euler": "24"
+      },
+      "original_M1": {
+        "P_Euler": "1/200",
+        "null_Euler": "1/100",
+        "rho_Euler": "1/200"
+      },
+      "scalar_F_minus_canonical": {
+        "P_Euler": "-1701/200",
+        "null_Euler": "-2101/100",
+        "rho_Euler": "-2501/200"
+      }
+    },
+    "actual_original_M1_velocity": "1/(10*(u**2 + 1)**6)",
+    "classical_scope": "This rechecks the leading target background equations and identifies their required parent matching data. It does not construct a healthy propagating UV parent, quantum-corrected bounce or response bound. The small S6.171 free stress remains an added source needing state-aware background control.",
+    "complete_first_metric_variation_table": {
+      "A3": {
+        "P_Euler": "0",
+        "null_Euler": "-12*(5*u**2 + 1)/(u**2 + 1)**5",
+        "rho_Euler": "-12*(5*u**2 + 1)/(u**2 + 1)**5"
+      },
+      "A4": {
+        "P_Euler": "0",
+        "null_Euler": "0",
+        "rho_Euler": "0"
+      },
+      "A5": {
+        "P_Euler": "0",
+        "null_Euler": "0",
+        "rho_Euler": "0"
+      },
+      "Einstein": {
+        "P_Euler": "8*(5*u**2 + 1)/(u**2 + 1)**2",
+        "null_Euler": "-8*(u - 1)*(u + 1)/(u**2 + 1)**2",
+        "rho_Euler": "-48*u**2/(u**2 + 1)**2"
+      },
+      "canonical_clock": {
+        "P_Euler": "1/2",
+        "null_Euler": "1",
+        "rho_Euler": "1/2"
+      },
+      "curvature_nonEinstein": {
+        "P_Euler": "0",
+        "null_Euler": "24*(7*u**2 + 1)/(u**2 + 1)**5",
+        "rho_Euler": "24*(7*u**2 + 1)/(u**2 + 1)**5"
+      },
+      "original_M1": {
+        "P_Euler": "1/(200*(u**2 + 1)**12)",
+        "null_Euler": "1/(100*(u**2 + 1)**12)",
+        "rho_Euler": "1/(200*(u**2 + 1)**12)"
+      },
+      "scalar_F_minus_canonical": {
+        "P_Euler": "-(100*u**24 + 9200*u**22 + 88200*u**20 + 398000*u**18 + 1081500*u**16 + 1951200*u**14 + 2444400*u**12 + 2162400*u**10 + 1345500*u**8 + 574000*u**6 + 158600*u**4 + 25200*u**2 + 1701)/(200*(u**2 + 1)**12)",
+        "null_Euler": "-(100*u**24 + 400*u**22 - 600*u**20 - 6000*u**18 + 300*u**16 + 84000*u**14 + 294000*u**12 + 516000*u**10 + 541500*u**8 + 350800*u**6 + 135400*u**4 + 27600*u**2 + 2101)/(100*(u**2 + 1)**12)",
+        "rho_Euler": "-(100*u**24 - 8400*u**22 - 89400*u**20 - 410000*u**18 - 1080900*u**16 - 1783200*u**14 - 1856400*u**12 - 1130400*u**10 - 262500*u**8 + 127600*u**6 + 112200*u**4 + 30000*u**2 + 2501)/(200*(u**2 + 1)**12)"
+      }
+    },
+    "full_analytic_target_clock_F0": "-(8000*u**22 + 81600*u**20 + 376000*u**18 + 1032000*u**16 + 1872000*u**14 + 2352000*u**12 + 2083200*u**10 + 1296000*u**8 + 552000*u**6 + 152000*u**4 + 24000*u**2 + 1601)/(200*(u**2 + 1)**12)",
+    "full_analytic_target_clock_FX": "(800*u**22 + 7200*u**20 + 28000*u**18 + 49200*u**16 - 4800*u**14 - 201600*u**12 - 436800*u**10 - 492000*u**8 - 328800*u**6 - 128800*u**4 - 26400*u**2 - 2001)/(200*(u**2 + 1)**12)",
+    "interpretation": "The extra curvature value and all A_i action values vanish on the unit clock, yet the curvature X derivative and the lapse derivative in A3 contribute to the first metric equations. The original rolling M1 scalar is retained. The canonical-clock reference is the kinetic X/2 term; the entire lower potential remains in F minus that reference. Values are dimensionless Euler sources; multiply by kappa for the physical action. Individual pieces are not independently conserved physical matter tensors.",
+    "normalized_by_physical_kappa": "100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "source_ancestry": "Read the unchanged S6.109 full analytic family. Its original scalar is the actual CD_matter witness plus the frozen retuned margin times(X-1)^2/h^2. The rational/Gaussian switch and that margin leave the needed first clock jets unchanged; no constant-branch replacement is asserted globally."
+  },
+  "checked_scalar_entries": 57,
+  "claim": "P8-S6.173.ACTUAL_CD_LEADING_CLOCK_EULER_SOURCES_AND_CONSTRAINT_MATCHING_DOMAIN_GAP",
+  "complete_covariant_variations_and_structural_controls": {
+    "homogeneous": {
+      "complete_homogeneous_invariants": {
+        "L3": "-Ndot*(-Ndot/lapse**3 + 3*v/lapse**2)/lapse**5",
+        "L4": "Ndot**2/lapse**8",
+        "L5": "Ndot**2/lapse**10",
+        "R": "6*Ndot*v/lapse**3 - 12*v**2/lapse**2 - 6*vdot/lapse**2",
+        "X": "lapse**(-2)",
+        "Z": "-Ndot/lapse**5",
+        "box_u": "-Ndot/lapse**3 + 3*v/lapse**2"
+      },
+      "complete_piecewise_first_metric_variations": {
+        "A3": {
+          "P_Euler": "0",
+          "null_Euler": "-9*v**2*A3clock(t) - 3*v*Derivative(A3clock(t), t) - 3*vdot*A3clock(t)",
+          "rho_Euler": "-9*v**2*A3clock(t) - 3*v*Derivative(A3clock(t), t) - 3*vdot*A3clock(t)"
+        },
+        "A4": {
+          "P_Euler": "0",
+          "null_Euler": "0",
+          "rho_Euler": "0"
+        },
+        "A5": {
+          "P_Euler": "0",
+          "null_Euler": "0",
+          "rho_Euler": "0"
+        },
+        "Einstein": {
+          "P_Euler": "3*v**2 + 2*vdot",
+          "null_Euler": "2*vdot",
+          "rho_Euler": "-3*v**2"
+        },
+        "curvature_nonEinstein": {
+          "P_Euler": "0",
+          "null_Euler": "6*(2*v**2 + vdot)/h(t)",
+          "rho_Euler": "6*(2*v**2 + vdot)/h(t)"
+        },
+        "original_M1": {
+          "P_Euler": "chidot**2/2",
+          "null_Euler": "chidot**2",
+          "rho_Euler": "chidot**2/2"
+        },
+        "scalar_F": {
+          "P_Euler": "F0(t)",
+          "null_Euler": "2*FX(t)",
+          "rho_Euler": "-F0(t) + 2*FX(t)"
+        }
+      },
+      "representative_scope": "F and curvature use exact first clock jets; the A_i first variations need their clock values only. These local representatives are not proposed global replacements of the frozen S6.109 analytic target. The physical action is kappa times this dimensionless kernel.",
+      "symbols": {
+        "A3": "A3clock(t)",
+        "F0": "F0(t)",
+        "FX": "FX(t)",
+        "H": "v",
+        "Hdot": "vdot",
+        "chidot": "chidot",
+        "h": "h(t)",
+        "t": "t"
+      },
+      "variation_warning": "The lapse and scale factor are varied before imposing N=1,Ndot=0. The curvature nonidentity and A3 action values vanish on the clock but their metric variations do not. A4,A5 have zero first background variation, not zero constraint/second-variation effects."
+    },
+    "structural": {
+      "actual_normalized_clock_first_jet_distance_lower": "9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "actual_vacuum_class_gradient_invariant_upper": "1/25000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "constraint_warning": "A4,A5 have zero first background metric variation but nonzero lapse-velocity quadratic terms. With the actual clock coefficients their contribution is necessary for the Ia trace/lapse degeneracy. Deleting them changes the Hessian rank; this is not an allowed way to simplify the propagating theory.",
+      "correct_fixed_momentum_Routhian": "-lapse*momentum**2*exp(-3*log_a)/2",
+      "correct_original_M1_energy": "momentum**2*exp(-6*log_a)/2",
+      "correct_original_M1_pressure": "momentum**2*exp(-6*log_a)/2",
+      "deleted_A4_A5_hessian_determinant": "-(4*h + 3)/(3*h**2)",
+      "deleted_A4_A5_velocity_hessian": [
+        [
+          "-2/3",
+          "-1/h"
+        ],
+        [
+          "-1/h",
+          "2/h"
+        ]
+      ],
+      "domain_warning": "Every field in the frozen flat Schwartz/Fourier unit class has |partial_t Psi|<=1. The canonical clock has partial_t Psi=sqrt(kappa), so its normalized pointwise first-jet distance from this class is at least1-1/sqrt(kappa)>1/2, even on a finite interval. The class also has |X|<=4/kappa, unlike clock X=1. The small common-class action norm does not bound clock actions, equations, or variations outside this class.",
+      "full_clock_trace_lapse_velocity_hessian": [
+        [
+          "-2/3",
+          "-1/h"
+        ],
+        [
+          "-1/h",
+          "-3/(2*h**2)"
+        ]
+      ],
+      "gates": {
+        "actual_normalized_first_jet_gap_above_one_half": true,
+        "actual_vacuum_class_X_does_not_reach_clock": true,
+        "correct_matter_variation_retained_before_source_substitution": true,
+        "deleted_hessian_determinant_strictly_negative": true,
+        "deleting_zero_background_terms_changes_rank": true,
+        "full_velocity_hessian_rank_one": true
+      },
+      "incorrect_early_matter_substitution_energy": "-momentum**2*exp(-6*log_a)/2",
+      "incorrect_early_matter_substitution_pressure": "-momentum**2*exp(-6*log_a)/2",
+      "matter_warning": "Vary the metric while holding the scalar field fixed, before substituting its conserved-momentum solution. Direct substitution into the Lagrangian flips both energy and pressure. A fixed-momentum Routhian includes the Legendre term and restores the correct signs.",
+      "same_vacuum_matching_class": "Same real Schwartz Psi with Fourier support in the Euclidean four-momentum unit ball and Fourier L1 norm <=1. Let U=||Psi||_2. All jets have sup norm <=1 and L2 norm <=U. The canonical target gradient invariant obeys |X|<=4/kappa."
+    }
+  },
+  "controls": {
+    "A3_lapse_derivative_not_dropped_after_clock_value": true,
+    "M1_source_not_silently_removed": true,
+    "curvature_X_derivative_not_dropped_after_clock_value": true,
+    "leading_target_reconstruction_not_parent_matching": true,
+    "matter_momentum_substitution_not_before_metric_variation": true,
+    "original_P8_not_closed": true,
+    "rejected_inputs": 55,
+    "vacuum_norm_class_not_clock_neighborhood": true,
+    "zero_background_A4_A5_not_deleted_from_constraints": true
+  },
+  "date": "2026-09-11",
+  "exact_residuals": {
+    "all_previous_matching_rows_retained": "0",
+    "homogeneous_A3_energy": "0",
+    "homogeneous_A3_pressure": "0",
+    "homogeneous_A3_value_zero_not_first_variation": "0",
+    "homogeneous_A4_energy": "0",
+    "homogeneous_A4_pressure": "0",
+    "homogeneous_A5_energy": "0",
+    "homogeneous_A5_pressure": "0",
+    "homogeneous_Einstein_energy": "0",
+    "homogeneous_Einstein_pressure": "0",
+    "homogeneous_L3_complete_lapse_expression": "0",
+    "homogeneous_L4_complete_lapse_expression": "0",
+    "homogeneous_L5_complete_lapse_expression": "0",
+    "homogeneous_curvature_nonEinstein_energy": "0",
+    "homogeneous_curvature_nonEinstein_pressure": "0",
+    "homogeneous_curvature_nonidentity_value_zero": "0",
+    "homogeneous_original_M1_energy": "0",
+    "homogeneous_original_M1_pressure": "0",
+    "homogeneous_scalar_F_energy": "0",
+    "homogeneous_scalar_F_pressure": "0",
+    "nine_primitive_rows_retained": "0",
+    "only_actual_target_decomposition_added": "0",
+    "primitive_rows_unchanged": "0",
+    "structural_Routhian_energy_restores_fixed_momentum_variation": "0",
+    "structural_Routhian_pressure_restores_fixed_momentum_variation": "0",
+    "structural_actual_canonical_clock_velocity": "0",
+    "structural_actual_first_jet_gap": "0",
+    "structural_actual_trace_lapse_C": "0",
+    "structural_actual_trace_lapse_D": "0",
+    "structural_correct_original_matter_energy": "0",
+    "structural_correct_original_matter_pressure": "0",
+    "structural_deleted_A4_A5_determinant": "0",
+    "structural_early_substitution_energy_sign_flip": "0",
+    "structural_early_substitution_pressure_sign_flip": "0",
+    "structural_full_Ia_hessian_determinant": "0",
+    "structural_matter_canonical_momentum": "0",
+    "structural_trace_lapse_complete_square": "0",
+    "target_bounce_F0": "0",
+    "target_bounce_FX": "0",
+    "target_bounce_geometric_null": "0",
+    "target_entire_time_energy_equation": "0",
+    "target_entire_time_null_equation": "0",
+    "target_entire_time_pressure_equation": "0",
+    "target_exact_CD_Hubble": "0",
+    "target_full_analytic_A3_clock_value": "0",
+    "target_full_analytic_A4_clock_value": "0",
+    "target_full_analytic_A5_clock_value": "0",
+    "target_full_analytic_curvature_clock_value": "0",
+    "target_full_analytic_curvature_first_clock_jet": "0",
+    "target_full_analytic_scalar_clock_value": "0",
+    "target_full_analytic_scalar_first_clock_jet": "0",
+    "target_independent_A3_source": "0",
+    "target_independent_curvature_source": "0",
+    "target_original_M1_conserved_momentum": "0",
+    "target_original_M1_momentum_value": "0",
+    "target_target_scalar_first_jet_from_null_equation": "0",
+    "target_target_scalar_value_from_pressure_equation": "0"
+  },
+  "formulation": "FORMULATION.md",
+  "named_exact_check_count": 57,
+  "not_established": [
+    "A propagating healthy UV parent reproducing the full leading clock action and constraint neighborhood",
+    "Quantum target matching, interacting state/cutoff, omitted-order bounds or state-aware background/perturbation response",
+    "An extension of the vacuum Fourier-unit action estimate to the large-gradient unit clock",
+    "Vacuum contour/truncation, finite-gravity Regge/IR remainder, V/G/B or original P8 closure"
+  ],
+  "observable_and_scope": {
+    "fixed_source": "S6.109 analytic family and its source-pinned original CD witness and retuned margin; S6.164 vacuum matching test class is unchanged.",
+    "next_matching_requirement": "A common propagating parent must reproduce these leading clock sources and constraint structure in a genuine clock-neighborhood domain. A tiny action difference on the disjoint unit Fourier-jet vacuum class does not provide that result.",
+    "not_inferred": "No propagating UV parent, physical cutoff, higher-loop bound, actual quantum-corrected bounce, background response, V/G/B or original P8 closure.",
+    "quantity": "The unchanged analytic CD_matter target's leading classical metric Euler sources on the full unit-clock trajectory, with original rolling matter and correct overall kappa normalization.",
+    "variational_boundary": "Action values are not metric equations. Curvature X derivatives and the A3 lapse derivative are retained; A4,A5 remain present in the constraint/second-variation analysis."
+  },
+  "primitive_and_matching_frontier": {
+    "matching": [
+      {
+        "id": "fixed_sigma_isolated_MS_conversion",
+        "status": "CANCELLED_NONLOCAL_ORDER_TWO_WITH_SAME_REGULATED_REFERENCE"
+      },
+      {
+        "id": "remaining_scale_parameter_field_map_and_cross_terms",
+        "status": "OPEN"
+      },
+      {
+        "id": "remaining_counterterm_and_vacuum_source_assembly",
+        "status": "ASSEMBLED_FOR_FIXED_ORDER_PHI_POLE_B2_VACUUM_AND_H_SOURCE"
+      },
+      {
+        "id": "full_matched_two_loop_pole_and_amplitude_error",
+        "status": "FIXED_ORDER_PHI_POLE_AND_B2_BOUNDED_PHYSICAL_TRUNCATION_OPEN"
+      },
+      {
+        "id": "finite_EFT_higher_order_truncation",
+        "status": "OPEN"
+      },
+      {
+        "id": "V_contour_and_cut_control",
+        "status": "OPEN"
+      },
+      {
+        "id": "finite_gravity_G",
+        "status": "OPEN"
+      },
+      {
+        "id": "common_parent_B",
+        "status": "OPEN"
+      },
+      {
+        "id": "complete_wineglass_interaction_forest_MS",
+        "status": "BOUNDED_WITH_REGULATED_FINITE_LOCAL_ANCHOR_AND_FULL_SCALE_TERM"
+      },
+      {
+        "id": "complete_double_bubble_interaction_forest_MS",
+        "status": "BOUNDED_WITH_ACTUAL_NESTED_MS_FORESTS_AND_BOTH_SCALE_TERMS"
+      },
+      {
+        "id": "complete_scalar_OS_insertion_interaction_forest_MS",
+        "status": "BOUNDED_WITH_FULL_REGULATED_SLOPE_TIMES_OUTER_REFERENCE"
+      },
+      {
+        "id": "complete_scalar_quadratic_finite_MS_slope_and_converted_OS_bound",
+        "status": "BOUNDED_WITH_FIXED_INNER_OS_AND_INTERACTION_MS_COORDINATES"
+      },
+      {
+        "id": "first_finite_Phi_field_covariance_and_MS_projection_commutator",
+        "status": "EXACT_REGULATED_FIELD_DIRECTION_AND_BOUNDED_FIRST_SLOPE_CROSS_TERMS"
+      },
+      {
+        "id": "complete_GY14_second_Phi_normalization_and_canonical_unit_disc_pole",
+        "status": "BOUNDED_WITH_DIRECT_MS_OWNERSHIP_AND_FULL_FINITE_FIELD_REEXPANSION"
+      },
+      {
+        "id": "complete_two_loop_vacuum_reference_and_first_source_square",
+        "status": "BOUNDED_WITH_FULL_REGULATED_SOURCE_REDUCIBLE_CANCELLATION"
+      },
+      {
+        "id": "complete_two_loop_derivative_map_with_matched_physical_source",
+        "status": "TRANSPORTED_FOR_FULL_ACTION_AND_PHYSICAL_SOURCE_NOT_ORDINARY_PSI_MS_OR_TRUNCATION"
+      },
+      {
+        "id": "complete_matched_two_loop_low_energy_Phi_elastic_cut",
+        "status": "BOUNDED_ON_PHYSICAL_WINDOW_4_TO_6_WITH_FULL_FIRST_AMPLITUDE_NOT_PHYSICAL_REMAINDER_OR_GLOBAL_DISPERSION"
+      },
+      {
+        "id": "full_finite_kappa_analytic_target_classical_vacuum_match",
+        "status": "BOUNDED_ON_SAME_RESTRICTED_FLAT_SCHWARTZ_CLASS_NOT_QUANTUM_TARGET_OR_ROLLING_COMMON_PARENT_MATCH"
+      },
+      {
+        "id": "GY14_SAT8_pointwise_fermion_mass_protection_and_named_low_order_invariance",
+        "status": "NEW_ANALYTIC_EFT_BRANCH_WITH_GLOBAL_REAL_MASS_FLOOR_AND_SAME_NAMED_TWO_LOOP_DATA_NOT_ROLLING_STATE_OR_COMMON_PARENT_CLOSURE"
+      },
+      {
+        "id": "polynomial_clock_transparent_physical_source_map_and_full_target_classical_bound",
+        "status": "KINEMATIC_CLOCK_ARGUMENT_ALIGNED_WITH_PROTECTED_MASSES_AND_SAME_NAMED_VACUUM_DATA_NOT_BACKGROUND_SOLUTION_QUANTUM_STATE_OR_COMMON_PARENT_CLOSURE"
+      },
+      {
+        "id": "free_flat_clock_Dirac_out_energy_with_complete_transition_series_remainder",
+        "status": "BOUNDED_FOR_SPECIFIED_QUADRATIC_MODEWISE_IN_OUT_STATE_NOT_INTERACTING_OR_CURVED_BOUNCE_STRESS"
+      },
+      {
+        "id": "Hadamard_regular_free_flat_SAT8_in_out_state_and_uniform_one_particle_norm_limit",
+        "status": "HADAMARD_FOR_SPECIFIED_FREE_EXTERNAL_MASS_OPERATOR_USING_IDENTIFIED_EXTERNAL_THEOREM_NOT_INTERACTING_CURVED_STATE_OR_NUMERICAL_STRESS"
+      },
+      {
+        "id": "exact_four_frame_free_transition_and_uniform_same_operator_in_out_T00_difference",
+        "status": "BOUNDED_FOR_FREE_FLAT_HADAMARD_STATE_DIFFERENCE_NOT_ABSOLUTE_STRESS_INTERACTING_CURVED_STATE_OR_BACKREACTION"
+      },
+      {
+        "id": "free_flat_absolute_one_loop_local_energy_with_fixed_saturated_mass_reference",
+        "status": "BOUNDED_IN_EXPLICIT_MS_AND_SATURATED_MASS_REFERENCE_QUADRATIC_SCHEME_NOT_FULL_CURVED_INTERACTING_PARENT_STRESS"
+      },
+      {
+        "id": "complete_free_flat_homogeneous_one_loop_stress_with_dimensional_curvature_improvement",
+        "status": "BOUNDED_SPECIFIED_QUADRATIC_MS_MR_FLAT_TENSOR_NOT_FULL_INTERACTING_CURVED_PARENT_STRESS"
+      },
+      {
+        "id": "actual_CD_free_Dirac_Hadamard_in_out_state_and_uniform_state_stress_difference",
+        "status": "CURVED_FREE_HADAMARD_STATE_AND_STATE_DIFFERENCE_BOUNDED_NOT_ABSOLUTE_PARENT_STRESS"
+      },
+      {
+        "id": "complete_free_curved_one_loop_stress_with_explicit_EC_Newton_reference",
+        "status": "BOUNDED_SPECIFIED_QUADRATIC_CURVED_TENSOR_NOT_FULL_INTERACTING_PARENT_OR_BACKGROUND_RESPONSE"
+      },
+      {
+        "id": "minimal_Einstein_canonical_clock_free_sector_null_equation_mismatch",
+        "status": "EXCLUDED_NAMED_MINIMAL_DIAGNOSTIC_WITH_SMALL_EXTRA_NULL_BUDGET_NOT_FULL_INTERACTING_PARENT_OR_DHOST_ROW"
+      },
+      {
+        "id": "actual_CD_leading_clock_Euler_source_decomposition_and_matching_domain_gap",
+        "status": "LEADING_TARGET_SOURCES_AND_CONSTRAINT_DOMAIN_REQUIREMENTS_IDENTIFIED_NOT_PROPAGATING_PARENT_OR_QUANTUM_BOUNCE"
+      }
+    ],
+    "primitive": [
+      {
+        "id": "scalar_Phi0_W0_F0",
+        "status": "BOUNDED_PAIRED_VACUUM_PRIMITIVE_WITH_ASSIGNED_LOCAL_FOREST"
+      },
+      {
+        "id": "scalar_Phi2_W0_F2",
+        "status": "BOUNDED_NONLOCAL_AND_FINITE_MS_MASS_AND_SLOPE_REFERENCES"
+      },
+      {
+        "id": "scalar_Phi2_W1_F0",
+        "status": "BOUNDED_PAIRED_NONLOCAL_AND_FINITE_MS_LOCAL_REFERENCES"
+      },
+      {
+        "id": "scalar_Phi4_W0_F4",
+        "status": "BOUNDED_PAIRED_PRIMITIVE_ROW"
+      },
+      {
+        "id": "scalar_Phi4_W1_F2",
+        "status": "BOUNDED_PAIRED_IN_COMMON_MS_INTERACTION_SCHEME"
+      },
+      {
+        "id": "scalar_Phi4_W2_F0",
+        "status": "BOUNDED_PAIRED_IN_COMMON_MS_INTERACTION_SCHEME"
+      },
+      {
+        "id": "gauge_Phi0",
+        "status": "BOUNDED_PAIRED_VACUUM_PRIMITIVE_WITH_ASSIGNED_LOCAL_FOREST"
+      },
+      {
+        "id": "gauge_Phi2",
+        "status": "BOUNDED_NONLOCAL_AND_FINITE_MS_MASS_AND_SLOPE_REFERENCES"
+      },
+      {
+        "id": "gauge_Phi4",
+        "status": "BOUNDED_PAIRED_PRIMITIVE_ROW"
+      }
+    ]
+  },
+  "prior_sha256": {
+    "S6_172_fully_rebuilt": "06a5393e97b58301c4b503dd20ff3758158d91cad1dd59f8926750ee274fcaa5",
+    "all_prior_scientific_sources_and_reports_unchanged": true,
+    "same_actual_CD_target_clock_and_original_rolling_matter": true
+  },
+  "proof_checks": {
+    "A3_value_zero_not_variation_zero": true,
+    "A4_A5_constraint_role_retained": true,
+    "actual_normalized_first_jet_gap_above_one_half": true,
+    "actual_vacuum_class_X_does_not_reach_clock": true,
+    "all_prior_frozen_scientific_bytes_unchanged": true,
+    "correct_matter_variation_retained_before_source_substitution": true,
+    "curvature_value_zero_not_variation_zero": true,
+    "deleted_hessian_determinant_strictly_negative": true,
+    "deleting_zero_background_terms_changes_rank": true,
+    "entire_time_energy_and_pressure_equations_checked": true,
+    "full_analytic_first_clock_jets_not_global_packet_replacement": true,
+    "full_velocity_hessian_rank_one": true,
+    "original_rolling_matter_retained": true,
+    "physical_overall_kappa_normalization_retained": true,
+    "quantum_free_source_still_needs_state_aware_background_control": true,
+    "same_original_CD_matter_target_and_clock": true,
+    "signed_leading_parent_requirement_not_a_UV_construction": true,
+    "vacuum_action_norm_domain_not_extended_to_clock": true
+  },
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "00a59b36bf119f03c3cb0b3a65814a0bdbd382e3a9c38ecef68fc6c3acd4fc7a",
+    "README.md": "47c41f7b478b9e04fc366b087843cd766a96e0afb9d7953b1ca6fa537da9ad78",
+    "notes/geometry.md": "a8aa25bd389dc06b1429e749ae622fe3e5cc4548a8450372c2cd4e97a8d4ea71",
+    "notes/matching.md": "ca2d70e91f900e0e82af926a98780d5b451e16ca8031775c82be3d2a9335789d",
+    "notes/scope.md": "093176c58500abd04e05608b8afb393fd6f384c503817ac544e4ff006438ff26",
+    "notes/target.md": "ce9dafdb9f535dff6bb31f913f5e8cd31473b388e51b1a6e9bb10a32c19478c3",
+    "notes/validation.md": "5e36d816219ac04309ac4c9cc5ab6d13d05fecc8f1a5a1b5018fac60708953bd",
+    "src/p8_vacuum_target_clock_null/__init__.py": "e88923977256c8e245450127c11f65cd29e8a0854e8c252645f10b4c3c0fdc3c",
+    "src/p8_vacuum_target_clock_null/audit.py": "a1e8f7e4503c689d979f2d1f5696f2c9d68489b69874dc503c9c4ded047c8cfd",
+    "src/p8_vacuum_target_clock_null/homogeneous.py": "04c85c761e806cfe0342329a3991b67b5323724215ef75e79bdc1180aecf3c71",
+    "src/p8_vacuum_target_clock_null/structural.py": "a14eb75355c9896a7c8728bfb2aa94b140211ce1ad4f4ea9d36354f04890642c",
+    "src/p8_vacuum_target_clock_null/target.py": "424c64cb45b5c18e2d19599d47621d272b57e068f367535ea9bfcea315b7663f",
+    "src/p8_vacuum_target_clock_null/verify.py": "8479634b27adfc0c308e45a2cf8b2afc1bfaee2d4b2f07e8002249c31d3412ab",
+    "tests/test_target_clock_null_certificate.py": "2c1433038cce185046725476850240a8dd9e1c318ba9a126b83c4fffaa914002",
+    "tests/test_target_clock_null_science.py": "e8523ab431dac36917366bc358f2d376d97b4e975ad10f129bac3df6f93f1e5c"
+  },
+  "status": "EXACT_LEADING_ACTUAL_CD_TARGET_BACKGROUND_SOURCE_DECOMPOSITION_WITH_CONSTRAINT_AND_DOMAIN_CONTROLS; NOT_PROPAGATING_PARENT_QUANTUM_BOUNCE_CUTOFF_V_G_B_OR_ORIGINAL_P8",
+  "verdict": "The unchanged full analytic CD_matter target retains the exact first clock jets. Varying the covariant action before fixing the lapse gives curvature and A3 null sources+24kappa and-12kappa at the bounce, while the scalar correction relative to a canonical clock gives-2101kappa/100. The original M1 source+kappa/100 is retained; both full metric equations cancel exactly at every time. A4,A5 have zero first background variation but are required for the clock velocity-Hessian degeneracy. The unit Fourier-jet vacuum matching class remains separated from the canonical clock by a normalized first-jet gap above1/2. These identify leading common-parent requirements; they do not construct the parent, control quantum-corrected background response, or close V/G/B and original P8.",
+  "verification_boundary": "Exact full-target first clock jets, complete homogeneous covariant first metric variations, both entire-time equations, original matter conservation and trace/lapse Hessian controls support written proofs. Independent direct tensor contractions, functional metric variations, matter Routhian/sign and matching-domain controls supplement them. These do not formalize continuum theorems or certify an interacting completion. Native, direct science, ordinary and CLI use original SymPy; only full regression uses its separately audited exact GCD adapter.",
+  "written_proofs": [
+    "notes/geometry.md",
+    "notes/target.md",
+    "notes/matching.md",
+    "notes/scope.md",
+    "notes/validation.md"
+  ]
+}
