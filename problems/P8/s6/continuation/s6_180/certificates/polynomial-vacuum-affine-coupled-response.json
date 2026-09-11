@@ -1,0 +1,747 @@
+{
+  "actual_current_parent_tree_and_uncancelled_time_channel": {
+    "clock": {
+      "coefficient_clock_N_jets": {
+        "U": [
+          "1",
+          "3/(2*(u**2 + 1)**3)",
+          "-3*(6*u**6 + 18*u**4 + 18*u**2 - 1)/(4*(u**2 + 1)**6)"
+        ],
+        "a": [
+          "-1/3",
+          "1/(6*(u**2 + 1)**3)",
+          "-(2*u**6 + 6*u**4 + 6*u**2 + 1)/(4*(u**2 + 1)**6)"
+        ],
+        "b": [
+          "0",
+          "-6*u/(u**2 + 1)**4",
+          "6*u*(5*u**6 + 15*u**4 + 15*u**2 + 2)/(u**2 + 1)**7 + 18*u/(u**2 + 1)**7"
+        ],
+        "f": [
+          "-(8000*u**22 + 81600*u**20 + 376000*u**18 + 1032000*u**16 + 1872000*u**14 + 2352000*u**12 + 2083200*u**10 + 1296000*u**8 + 552000*u**6 + 152000*u**4 + 24000*u**2 + 1601)/(200*(u**2 + 1)**12)",
+          "-(3200*u**28 + 38400*u**26 + 208000*u**24 + 646400*u**22 + 1180800*u**20 + 966400*u**18 - 931200*u**16 - 4032000*u**14 - 6211200*u**12 - 5862400*u**10 - 3676800*u**8 - 1529604*u**6 - 400012*u**4 - 57612*u**2 - 3201)/(400*(u**2 + 1)**15)",
+          "-252*u**2/(u**2 + 1)**8 + 18/(u**2 + 1)**7 + (19200*u**34 + 288000*u**32 + 1996800*u**30 + 8222400*u**28 + 21270400*u**26 + 31470432*u**24 + 6404384*u**22 - 90581088*u**20 - 247664160*u**18 - 381231360*u**16 - 401355456*u**14 - 303186456*u**12 - 165579600*u**10 - 64538120*u**8 - 17470998*u**6 - 3170122*u**4 - 371634*u**2 - 24771)/(800*(u**2 + 1)**18)"
+        ]
+      },
+      "primitive_N": "0",
+      "primitive_NN": "-18*u/(u**2 + 1)**7"
+    },
+    "mode_covariance": {
+      "source_policy": "Only S6.87's exact ordinary mode covariance/readout identities are recomputed. Its scalar-profile current formulas and full-parent inverse are not copied."
+    },
+    "quadratic": {
+      "J": "(3200*u**34 + 48000*u**32 + 332800*u**30 + 1410400*u**28 + 4068800*u**26 + 8413616*u**24 + 12776592*u**22 + 14351856*u**20 + 11894320*u**18 + 7327520*u**16 + 3706272*u**14 + 2123580*u**12 + 1571848*u**10 + 1038260*u**8 + 474252*u**6 + 134232*u**4 + 20604*u**2 + 1215)/(800*(u**2 + 1)**18)",
+      "actual_raw_quadratic_density": "(50*matterdot**2*u**18 + 450*matterdot**2*u**16 + 1800*matterdot**2*u**14 + 4200*matterdot**2*u**12 + 6300*matterdot**2*u**10 + 6300*matterdot**2*u**8 + 4200*matterdot**2*u**6 + 1800*matterdot**2*u**4 + 450*matterdot**2*u**2 + 50*matterdot**2 - 10*matterdot*n*u**6 - 30*matterdot*n*u**4 - 30*matterdot*n*u**2 + 5*matterdot*n + 30*matterdot*u**6*v + 90*matterdot*u**4*v + 90*matterdot*u**2*v + 30*matterdot*v - 4400*n**2*u**16 - 31200*n**2*u**14 - 95200*n**2*u**12 - 159700*n**2*u**10 - 156500*n**2*u**8 - 87398*n**2*u**6 - 23844*n**2*u**4 - 1494*n**2*u**2 + 152*n**2 + 2400*n*u**17*vdot + 19200*n*u**15*vdot + 67200*n*u**13*vdot + 133800*n*u**11*vdot + 165000*n*u**9*vdot + 128400*n*u**7*vdot + 61200*n*u**5*vdot + 16200*n*u**3*vdot + 1800*n*u*vdot - 300*u**18*vdot**2 - 7200*u**17*v*vdot - 39600*u**16*v**2 - 2700*u**16*vdot**2 - 57600*u**15*v*vdot - 280800*u**14*v**2 - 10800*u**14*vdot**2 - 201600*u**13*v*vdot - 856800*u**12*v**2 - 25200*u**12*vdot**2 - 403200*u**11*v*vdot - 1461600*u**10*v**2 - 37800*u**10*vdot**2 - 504000*u**9*v*vdot - 1512000*u**8*v**2 - 37800*u**8*vdot**2 - 403200*u**7*v*vdot - 957600*u**6*v**2 - 25200*u**6*vdot**2 - 201600*u**5*v*vdot - 352800*u**4*v**2 - 10800*u**4*vdot**2 - 57600*u**3*v*vdot - 64800*u**2*v**2 - 2700*u**2*vdot**2 - 7200*u*v*vdot - 3600*v**2 - 300*vdot**2)/(100*(u**2 + 1)**9)",
+      "boundary_reduced_quadratic_density": "50*matterdot**2*u**18/(100*u**18 + 900*u**16 + 3600*u**14 + 8400*u**12 + 12600*u**10 + 12600*u**8 + 8400*u**6 + 3600*u**4 + 900*u**2 + 100) + 450*matterdot**2*u**16/(100*u**18 + 900*u**16 + 3600*u**14 + 8400*u**12 + 12600*u**10 + 12600*u**8 + 8400*u**6 + 3600*u**4 + 900*u**2 + 100) + 1800*matterdot**2*u**14/(100*u**18 + 900*u**16 + 3600*u**14 + 8400*u**12 + 12600*u**10 + 12600*u**8 + 8400*u**6 + 3600*u**4 + 900*u**2 + 100) + 4200*matterdot**2*u**12/(100*u**18 + 900*u**16 + 3600*u**14 + 8400*u**12 + 12600*u**10 + 12600*u**8 + 8400*u**6 + 3600*u**4 + 900*u**2 + 100) + 6300*matterdot**2*u**10/(100*u**18 + 900*u**16 + 3600*u**14 + 8400*u**12 + 12600*u**10 + 12600*u**8 + 8400*u**6 + 3600*u**4 + 900*u**2 + 100) + 6300*matterdot**2*u**8/(100*u**18 + 900*u**16 + 3600*u**14 + 8400*u**12 + 12600*u**10 + 12600*u**8 + 8400*u**6 + 3600*u**4 + 900*u**2 + 100) + 4200*matterdot**2*u**6/(100*u**18 + 900*u**16 + 3600*u**14 + 8400*u**12 + 12600*u**10 + 12600*u**8 + 8400*u**6 + 3600*u**4 + 900*u**2 + 100) + 1800*matterdot**2*u**4/(100*u**18 + 900*u**16 + 3600*u**14 + 8400*u**12 + 12600*u**10 + 12600*u**8 + 8400*u**6 + 3600*u**4 + 900*u**2 + 100) + 450*matterdot**2*u**2/(100*u**18 + 900*u**16 + 3600*u**14 + 8400*u**12 + 12600*u**10 + 12600*u**8 + 8400*u**6 + 3600*u**4 + 900*u**2 + 100) + 50*matterdot**2/(100*u**18 + 900*u**16 + 3600*u**14 + 8400*u**12 + 12600*u**10 + 12600*u**8 + 8400*u**6 + 3600*u**4 + 900*u**2 + 100) - 10*matterdot*n*u**6/(100*u**18 + 900*u**16 + 3600*u**14 + 8400*u**12 + 12600*u**10 + 12600*u**8 + 8400*u**6 + 3600*u**4 + 900*u**2 + 100) - 30*matterdot*n*u**4/(100*u**18 + 900*u**16 + 3600*u**14 + 8400*u**12 + 12600*u**10 + 12600*u**8 + 8400*u**6 + 3600*u**4 + 900*u**2 + 100) - 30*matterdot*n*u**2/(100*u**18 + 900*u**16 + 3600*u**14 + 8400*u**12 + 12600*u**10 + 12600*u**8 + 8400*u**6 + 3600*u**4 + 900*u**2 + 100) + 5*matterdot*n/(100*u**18 + 900*u**16 + 3600*u**14 + 8400*u**12 + 12600*u**10 + 12600*u**8 + 8400*u**6 + 3600*u**4 + 900*u**2 + 100) + 30*matterdot*u**6*v/(100*u**18 + 900*u**16 + 3600*u**14 + 8400*u**12 + 12600*u**10 + 12600*u**8 + 8400*u**6 + 3600*u**4 + 900*u**2 + 100) + 90*matterdot*u**4*v/(100*u**18 + 900*u**16 + 3600*u**14 + 8400*u**12 + 12600*u**10 + 12600*u**8 + 8400*u**6 + 3600*u**4 + 900*u**2 + 100) + 90*matterdot*u**2*v/(100*u**18 + 900*u**16 + 3600*u**14 + 8400*u**12 + 12600*u**10 + 12600*u**8 + 8400*u**6 + 3600*u**4 + 900*u**2 + 100) + 30*matterdot*v/(100*u**18 + 900*u**16 + 3600*u**14 + 8400*u**12 + 12600*u**10 + 12600*u**8 + 8400*u**6 + 3600*u**4 + 900*u**2 + 100) - 4400*n**2*u**16/(100*u**18 + 900*u**16 + 3600*u**14 + 8400*u**12 + 12600*u**10 + 12600*u**8 + 8400*u**6 + 3600*u**4 + 900*u**2 + 100) - 31200*n**2*u**14/(100*u**18 + 900*u**16 + 3600*u**14 + 8400*u**12 + 12600*u**10 + 12600*u**8 + 8400*u**6 + 3600*u**4 + 900*u**2 + 100) - 95200*n**2*u**12/(100*u**18 + 900*u**16 + 3600*u**14 + 8400*u**12 + 12600*u**10 + 12600*u**8 + 8400*u**6 + 3600*u**4 + 900*u**2 + 100) - 159700*n**2*u**10/(100*u**18 + 900*u**16 + 3600*u**14 + 8400*u**12 + 12600*u**10 + 12600*u**8 + 8400*u**6 + 3600*u**4 + 900*u**2 + 100) - 156500*n**2*u**8/(100*u**18 + 900*u**16 + 3600*u**14 + 8400*u**12 + 12600*u**10 + 12600*u**8 + 8400*u**6 + 3600*u**4 + 900*u**2 + 100) - 87398*n**2*u**6/(100*u**18 + 900*u**16 + 3600*u**14 + 8400*u**12 + 12600*u**10 + 12600*u**8 + 8400*u**6 + 3600*u**4 + 900*u**2 + 100) - 23844*n**2*u**4/(100*u**18 + 900*u**16 + 3600*u**14 + 8400*u**12 + 12600*u**10 + 12600*u**8 + 8400*u**6 + 3600*u**4 + 900*u**2 + 100) - 1494*n**2*u**2/(100*u**18 + 900*u**16 + 3600*u**14 + 8400*u**12 + 12600*u**10 + 12600*u**8 + 8400*u**6 + 3600*u**4 + 900*u**2 + 100) + 152*n**2/(100*u**18 + 900*u**16 + 3600*u**14 + 8400*u**12 + 12600*u**10 + 12600*u**8 + 8400*u**6 + 3600*u**4 + 900*u**2 + 100) + 2400*n*u**17*vdot/(100*u**18 + 900*u**16 + 3600*u**14 + 8400*u**12 + 12600*u**10 + 12600*u**8 + 8400*u**6 + 3600*u**4 + 900*u**2 + 100) + 19200*n*u**15*vdot/(100*u**18 + 900*u**16 + 3600*u**14 + 8400*u**12 + 12600*u**10 + 12600*u**8 + 8400*u**6 + 3600*u**4 + 900*u**2 + 100) + 67200*n*u**13*vdot/(100*u**18 + 900*u**16 + 3600*u**14 + 8400*u**12 + 12600*u**10 + 12600*u**8 + 8400*u**6 + 3600*u**4 + 900*u**2 + 100) + 133800*n*u**11*vdot/(100*u**18 + 900*u**16 + 3600*u**14 + 8400*u**12 + 12600*u**10 + 12600*u**8 + 8400*u**6 + 3600*u**4 + 900*u**2 + 100) + 165000*n*u**9*vdot/(100*u**18 + 900*u**16 + 3600*u**14 + 8400*u**12 + 12600*u**10 + 12600*u**8 + 8400*u**6 + 3600*u**4 + 900*u**2 + 100) + 128400*n*u**7*vdot/(100*u**18 + 900*u**16 + 3600*u**14 + 8400*u**12 + 12600*u**10 + 12600*u**8 + 8400*u**6 + 3600*u**4 + 900*u**2 + 100) + 61200*n*u**5*vdot/(100*u**18 + 900*u**16 + 3600*u**14 + 8400*u**12 + 12600*u**10 + 12600*u**8 + 8400*u**6 + 3600*u**4 + 900*u**2 + 100) + 16200*n*u**3*vdot/(100*u**18 + 900*u**16 + 3600*u**14 + 8400*u**12 + 12600*u**10 + 12600*u**8 + 8400*u**6 + 3600*u**4 + 900*u**2 + 100) + 1800*n*u*vdot/(100*u**18 + 900*u**16 + 3600*u**14 + 8400*u**12 + 12600*u**10 + 12600*u**8 + 8400*u**6 + 3600*u**4 + 900*u**2 + 100) - 300*u**18*vdot**2/(100*u**18 + 900*u**16 + 3600*u**14 + 8400*u**12 + 12600*u**10 + 12600*u**8 + 8400*u**6 + 3600*u**4 + 900*u**2 + 100) - 7200*u**17*v*vdot/(100*u**18 + 900*u**16 + 3600*u**14 + 8400*u**12 + 12600*u**10 + 12600*u**8 + 8400*u**6 + 3600*u**4 + 900*u**2 + 100) - 39600*u**16*v**2/(100*u**18 + 900*u**16 + 3600*u**14 + 8400*u**12 + 12600*u**10 + 12600*u**8 + 8400*u**6 + 3600*u**4 + 900*u**2 + 100) - 2700*u**16*vdot**2/(100*u**18 + 900*u**16 + 3600*u**14 + 8400*u**12 + 12600*u**10 + 12600*u**8 + 8400*u**6 + 3600*u**4 + 900*u**2 + 100) - 57600*u**15*v*vdot/(100*u**18 + 900*u**16 + 3600*u**14 + 8400*u**12 + 12600*u**10 + 12600*u**8 + 8400*u**6 + 3600*u**4 + 900*u**2 + 100) - 280800*u**14*v**2/(100*u**18 + 900*u**16 + 3600*u**14 + 8400*u**12 + 12600*u**10 + 12600*u**8 + 8400*u**6 + 3600*u**4 + 900*u**2 + 100) - 10800*u**14*vdot**2/(100*u**18 + 900*u**16 + 3600*u**14 + 8400*u**12 + 12600*u**10 + 12600*u**8 + 8400*u**6 + 3600*u**4 + 900*u**2 + 100) - 201600*u**13*v*vdot/(100*u**18 + 900*u**16 + 3600*u**14 + 8400*u**12 + 12600*u**10 + 12600*u**8 + 8400*u**6 + 3600*u**4 + 900*u**2 + 100) - 856800*u**12*v**2/(100*u**18 + 900*u**16 + 3600*u**14 + 8400*u**12 + 12600*u**10 + 12600*u**8 + 8400*u**6 + 3600*u**4 + 900*u**2 + 100) - 25200*u**12*vdot**2/(100*u**18 + 900*u**16 + 3600*u**14 + 8400*u**12 + 12600*u**10 + 12600*u**8 + 8400*u**6 + 3600*u**4 + 900*u**2 + 100) - 403200*u**11*v*vdot/(100*u**18 + 900*u**16 + 3600*u**14 + 8400*u**12 + 12600*u**10 + 12600*u**8 + 8400*u**6 + 3600*u**4 + 900*u**2 + 100) - 1461600*u**10*v**2/(100*u**18 + 900*u**16 + 3600*u**14 + 8400*u**12 + 12600*u**10 + 12600*u**8 + 8400*u**6 + 3600*u**4 + 900*u**2 + 100) - 37800*u**10*vdot**2/(100*u**18 + 900*u**16 + 3600*u**14 + 8400*u**12 + 12600*u**10 + 12600*u**8 + 8400*u**6 + 3600*u**4 + 900*u**2 + 100) - 504000*u**9*v*vdot/(100*u**18 + 900*u**16 + 3600*u**14 + 8400*u**12 + 12600*u**10 + 12600*u**8 + 8400*u**6 + 3600*u**4 + 900*u**2 + 100) - 1512000*u**8*v**2/(100*u**18 + 900*u**16 + 3600*u**14 + 8400*u**12 + 12600*u**10 + 12600*u**8 + 8400*u**6 + 3600*u**4 + 900*u**2 + 100) - 37800*u**8*vdot**2/(100*u**18 + 900*u**16 + 3600*u**14 + 8400*u**12 + 12600*u**10 + 12600*u**8 + 8400*u**6 + 3600*u**4 + 900*u**2 + 100) - 403200*u**7*v*vdot/(100*u**18 + 900*u**16 + 3600*u**14 + 8400*u**12 + 12600*u**10 + 12600*u**8 + 8400*u**6 + 3600*u**4 + 900*u**2 + 100) - 957600*u**6*v**2/(100*u**18 + 900*u**16 + 3600*u**14 + 8400*u**12 + 12600*u**10 + 12600*u**8 + 8400*u**6 + 3600*u**4 + 900*u**2 + 100) - 25200*u**6*vdot**2/(100*u**18 + 900*u**16 + 3600*u**14 + 8400*u**12 + 12600*u**10 + 12600*u**8 + 8400*u**6 + 3600*u**4 + 900*u**2 + 100) - 201600*u**5*v*vdot/(100*u**18 + 900*u**16 + 3600*u**14 + 8400*u**12 + 12600*u**10 + 12600*u**8 + 8400*u**6 + 3600*u**4 + 900*u**2 + 100) - 352800*u**4*v**2/(100*u**18 + 900*u**16 + 3600*u**14 + 8400*u**12 + 12600*u**10 + 12600*u**8 + 8400*u**6 + 3600*u**4 + 900*u**2 + 100) - 10800*u**4*vdot**2/(100*u**18 + 900*u**16 + 3600*u**14 + 8400*u**12 + 12600*u**10 + 12600*u**8 + 8400*u**6 + 3600*u**4 + 900*u**2 + 100) - 57600*u**3*v*vdot/(100*u**18 + 900*u**16 + 3600*u**14 + 8400*u**12 + 12600*u**10 + 12600*u**8 + 8400*u**6 + 3600*u**4 + 900*u**2 + 100) - 64800*u**2*v**2/(100*u**18 + 900*u**16 + 3600*u**14 + 8400*u**12 + 12600*u**10 + 12600*u**8 + 8400*u**6 + 3600*u**4 + 900*u**2 + 100) + 360*u**2*v**2/(u**4 + 2*u**2 + 1) - 2700*u**2*vdot**2/(100*u**18 + 900*u**16 + 3600*u**14 + 8400*u**12 + 12600*u**10 + 12600*u**8 + 8400*u**6 + 3600*u**4 + 900*u**2 + 100) - 7200*u*v*vdot/(100*u**18 + 900*u**16 + 3600*u**14 + 8400*u**12 + 12600*u**10 + 12600*u**8 + 8400*u**6 + 3600*u**4 + 900*u**2 + 100) + 72*u*v*vdot/(u**2 + 1) - 3600*v**2/(100*u**18 + 900*u**16 + 3600*u**14 + 8400*u**12 + 12600*u**10 + 12600*u**8 + 8400*u**6 + 3600*u**4 + 900*u**2 + 100) + 36*v**2/(u**2 + 1) - 300*vdot**2/(100*u**18 + 900*u**16 + 3600*u**14 + 8400*u**12 + 12600*u**10 + 12600*u**8 + 8400*u**6 + 3600*u**4 + 900*u**2 + 100)",
+      "delta": "1/(2*(u**2 + 1)**3)",
+      "ell": "1/(10*(u**2 + 1)**6)",
+      "theta": "u*(4*u**6 + 12*u**4 + 12*u**2 + 3)/(u**2 + 1)**4",
+      "w": "-(2*u**6 + 6*u**4 + 6*u**2 - 1)/(20*(u**2 + 1)**9)"
+    },
+    "quantum": {
+      "complete_adapted_vector_response": [
+        [
+          "-3*prepared_time_shift(time)*scaled_pressure(time)*Derivative(H(time), time) - 3*scaled_pressure(time)*Derivative(invariant_scale(time), time)"
+        ],
+        [
+          "(9*H(time)*scaled_pressure(time) + 3*Derivative(scaled_pressure(time), time))*prepared_time_shift(time) + 9*invariant_scale(time)*scaled_pressure(time) + 3*pure_scale_pressure_response(time) + 3*scaled_pressure(time)*Derivative(prepared_time_shift(time), time)"
+        ]
+      ],
+      "difference_from_OLD_profile_cancelled_scale_channel": "9*H(time)*prepared_time_shift(time)*scaled_pressure(time) + 9*invariant_scale(time)*scaled_pressure(time) - 3*scaled_rho(time)*Derivative(prepared_time_shift(time), time)",
+      "difference_from_OLD_profile_cancelled_time_channel": "-3*H(time)*scaled_pressure(time)*Derivative(prepared_time_shift(time), time) - 3*H(time)*scaled_rho(time)*Derivative(prepared_time_shift(time), time) + 3*prepared_time_shift(time)*scaled_rho(time)*Derivative(H(time), time) - scaled_pressure(time)*Derivative(prepared_time_shift(time), (time, 2)) + 3*scaled_rho(time)*Derivative(invariant_scale(time), time) - scaled_rho(time)*Derivative(prepared_time_shift(time), (time, 2)) - Derivative(prepared_time_shift(time), time)*Derivative(scaled_pressure(time), time) - Derivative(prepared_time_shift(time), time)*Derivative(scaled_rho(time), time)",
+      "exact_time_change": "For a prepared diffeomorphism psi=t+epsilon eta, N=psi',a=a0(psi),f_N=f0(psi)/sqrt(psi'),p_N=sqrt(psi')p0(psi). The same Cauchy data and covariant finite prescription give delta rho=rho' eta and delta P=P' eta.",
+      "local_cross_density": "9*invariant_scale(time)**2*scaled_pressure(time)/2 - 3*prepared_time_shift(time)**2*scaled_pressure(time)*Derivative(H(time), time)/2 - 3*prepared_time_shift(time)*scaled_pressure(time)*Derivative(invariant_scale(time), time)",
+      "local_scale_channel_addition": "(9*H(time)*scaled_pressure(time) + 3*Derivative(scaled_pressure(time), time))*prepared_time_shift(time) + 9*invariant_scale(time)*scaled_pressure(time) + 3*scaled_pressure(time)*Derivative(prepared_time_shift(time), time)",
+      "local_time_channel": "-3*prepared_time_shift(time)*scaled_pressure(time)*Derivative(H(time), time) - 3*scaled_pressure(time)*Derivative(invariant_scale(time), time)",
+      "normalization": "rho,P are 64*pi^2 times the actual unscaled physical conditional vector stress. Q_vector=64*pi^2 delta_e and gamma=1/(64*pi^2*kappa); the classical normalized tree has kappa divided out.",
+      "physical_sources": [
+        [
+          "Derivative(prepared_time_shift(time), time)"
+        ],
+        [
+          "H(time)*prepared_time_shift(time) + invariant_scale(time)"
+        ]
+      ],
+      "uncancelled_physical_current_variation": [
+        [
+          "-3*(H(time)*prepared_time_shift(time) + invariant_scale(time))*scaled_rho(time) - prepared_time_shift(time)*Derivative(scaled_rho(time), time) - pure_scale_energy_response(time)"
+        ],
+        [
+          "3*(3*H(time)*prepared_time_shift(time) + 3*invariant_scale(time) + Derivative(prepared_time_shift(time), time))*scaled_pressure(time) + 3*prepared_time_shift(time)*Derivative(scaled_pressure(time), time) + 3*pure_scale_pressure_response(time)"
+        ]
+      ]
+    },
+    "tree": {
+      "A": "-3/(2*(u**2 + 1)**6)",
+      "A_absolute_lower": "6144/15625",
+      "A_inverse_upper": "15625/6144",
+      "adapted_density": "6*u*(4*u**6 + 12*u**4 + 12*u**2 + 3)*(-8*u**2*eta(u)/(u**2 + 1)**2 + 4*u*Derivative(eta(u), u)/(u**2 + 1) + 3*u*Derivative(eta(u), u)/(u**2 + 1)**4 + Derivative(invariant_scale(u), u) + 4*eta(u)/(u**2 + 1) - Derivative(eta(u), (u, 2))/(2*(u**2 + 1)**3))*Derivative(eta(u), u)/(u**2 + 1)**4 + (-3*u**2*(4*u**6 + 12*u**4 + 12*u**2 + 3)**2/(u**2 + 1)**8 + (3200*u**34 + 48000*u**32 + 332800*u**30 + 1410400*u**28 + 4068800*u**26 + 8413616*u**24 + 12776592*u**22 + 14351856*u**20 + 11894320*u**18 + 7327520*u**16 + 3706272*u**14 + 2123580*u**12 + 1571848*u**10 + 1038260*u**8 + 474252*u**6 + 134232*u**4 + 20604*u**2 + 1215)/(800*(u**2 + 1)**18))*Derivative(eta(u), u)**2 - 3*(-8*u**2*eta(u)/(u**2 + 1)**2 + 4*u*Derivative(eta(u), u)/(u**2 + 1) + 3*u*Derivative(eta(u), u)/(u**2 + 1)**4 + Derivative(invariant_scale(u), u) + 4*eta(u)/(u**2 + 1) - Derivative(eta(u), (u, 2))/(2*(u**2 + 1)**3))**2 - 9*(4*u*eta(u)/(u**2 + 1) + invariant_scale(u) - Derivative(eta(u), u)/(2*(u**2 + 1)**3))**2/(200*(u**2 + 1)**12) + 3*(4*u*eta(u)/(u**2 + 1) + invariant_scale(u) - Derivative(eta(u), u)/(2*(u**2 + 1)**3))*(2*u**6 + 6*u**4 + 6*u**2 - 1)*Derivative(eta(u), u)/(200*(u**2 + 1)**15)",
+      "adapted_tree_currents": [
+        [
+          "-(800*u**26*Derivative(eta(u), (u, 2)) - 2400*u**26*Derivative(invariant_scale(u), u) + 8000*u**25*Derivative(eta(u), u) + 9600*u**24*eta(u) + 8800*u**24*Derivative(eta(u), (u, 2)) - 26400*u**24*Derivative(invariant_scale(u), u) + 83200*u**23*Derivative(eta(u), u) + 76800*u**22*eta(u) + 43200*u**22*Derivative(eta(u), (u, 2)) - 129600*u**22*Derivative(invariant_scale(u), u) - 300*u**22*Derivative(invariant_scale(u), (u, 3)) + 387200*u**21*Derivative(eta(u), u) - 6000*u**21*Derivative(invariant_scale(u), (u, 2)) + 249600*u**20*eta(u) + 126200*u**20*Derivative(eta(u), (u, 2)) - 390600*u**20*Derivative(invariant_scale(u), u) - 3300*u**20*Derivative(invariant_scale(u), (u, 3)) + 1068000*u**19*Derivative(eta(u), u) - 60000*u**19*Derivative(invariant_scale(u), (u, 2)) + 427200*u**18*eta(u) + 246000*u**18*Derivative(eta(u), (u, 2)) - 853200*u**18*Derivative(invariant_scale(u), u) - 16500*u**18*Derivative(invariant_scale(u), (u, 3)) + 1948000*u**17*Derivative(eta(u), u) - 270000*u**17*Derivative(invariant_scale(u), (u, 2)) + 480000*u**16*eta(u) + 336604*u**16*Derivative(eta(u), (u, 2)) + 150*u**16*Derivative(eta(u), (u, 4)) - 1506600*u**16*Derivative(invariant_scale(u), u) - 49500*u**16*Derivative(invariant_scale(u), (u, 3)) + 2480000*u**15*Derivative(eta(u), u) - 720000*u**15*Derivative(invariant_scale(u), (u, 2)) + 672000*u**14*eta(u) + 314532*u**14*Derivative(eta(u), (u, 2)) + 1200*u**14*Derivative(eta(u), (u, 4)) - 2232000*u**14*Derivative(invariant_scale(u), u) - 99000*u**14*Derivative(invariant_scale(u), (u, 3)) + 2276600*u**13*Derivative(eta(u), u) - 1260000*u**13*Derivative(invariant_scale(u), (u, 2)) + 1344000*u**12*eta(u) + 144412*u**12*Derivative(eta(u), (u, 2)) + 4200*u**12*Derivative(eta(u), (u, 4)) - 2682000*u**12*Derivative(invariant_scale(u), u) - 138600*u**12*Derivative(invariant_scale(u), (u, 3)) + 1549200*u**11*Derivative(eta(u), u) - 1512000*u**11*Derivative(invariant_scale(u), (u, 2)) + 2025600*u**10*eta(u) - 100876*u**10*Derivative(eta(u), (u, 2)) + 8400*u**10*Derivative(eta(u), (u, 4)) - 2462400*u**10*Derivative(invariant_scale(u), u) - 138600*u**10*Derivative(invariant_scale(u), (u, 3)) + 789000*u**9*Derivative(eta(u), u) - 1260000*u**9*Derivative(invariant_scale(u), (u, 2)) + 1891200*u**8*eta(u) - 258220*u**8*Derivative(eta(u), (u, 2)) + 10500*u**8*Derivative(eta(u), (u, 4)) - 1633200*u**8*Derivative(invariant_scale(u), u) - 99000*u**8*Derivative(invariant_scale(u), (u, 3)) + 268000*u**7*Derivative(eta(u), u) - 720000*u**7*Derivative(invariant_scale(u), (u, 2)) + 1056000*u**6*eta(u) - 235476*u**6*Derivative(eta(u), (u, 2)) + 8400*u**6*Derivative(eta(u), (u, 4)) - 739200*u**6*Derivative(invariant_scale(u), u) - 49500*u**6*Derivative(invariant_scale(u), (u, 3)) + 21000*u**5*Derivative(eta(u), u) - 270000*u**5*Derivative(invariant_scale(u), (u, 2)) + 326400*u**4*eta(u) - 117189*u**4*Derivative(eta(u), (u, 2)) + 4200*u**4*Derivative(eta(u), (u, 4)) - 210597*u**4*Derivative(invariant_scale(u), u) - 16500*u**4*Derivative(invariant_scale(u), (u, 3)) - 27588*u**3*Derivative(eta(u), u) - 60000*u**3*Derivative(invariant_scale(u), (u, 2)) + 43188*u**2*eta(u) - 30870*u**2*Derivative(eta(u), (u, 2)) + 1200*u**2*Derivative(eta(u), (u, 4)) - 32394*u**2*Derivative(invariant_scale(u), u) - 3300*u**2*Derivative(invariant_scale(u), (u, 3)) - 8988*u*Derivative(eta(u), u) - 6000*u*Derivative(invariant_scale(u), (u, 2)) + 12*eta(u) - 3297*Derivative(eta(u), (u, 2)) + 150*Derivative(eta(u), (u, 4)) - 1797*Derivative(invariant_scale(u), u) - 300*Derivative(invariant_scale(u), (u, 3)))/(100*(u**2 + 1)**14)"
+        ],
+        [
+          "3*(200*u**26*Derivative(invariant_scale(u), (u, 2)) + 2400*u**25*Derivative(invariant_scale(u), u) - 800*u**24*Derivative(eta(u), u) + 2600*u**24*Derivative(invariant_scale(u), (u, 2)) - 8000*u**23*eta(u) + 28800*u**23*Derivative(invariant_scale(u), u) - 8000*u**22*Derivative(eta(u), u) + 15600*u**22*Derivative(invariant_scale(u), (u, 2)) - 75200*u**21*eta(u) + 158400*u**21*Derivative(invariant_scale(u), u) - 35200*u**20*Derivative(eta(u), u) - 100*u**20*Derivative(eta(u), (u, 3)) + 57200*u**20*Derivative(invariant_scale(u), (u, 2)) - 312000*u**19*eta(u) + 200*u**19*Derivative(eta(u), (u, 2)) + 528000*u**19*Derivative(invariant_scale(u), u) - 84000*u**18*Derivative(eta(u), u) - 1000*u**18*Derivative(eta(u), (u, 3)) + 143000*u**18*Derivative(invariant_scale(u), (u, 2)) - 744000*u**17*eta(u) + 1800*u**17*Derivative(eta(u), (u, 2)) + 1188000*u**17*Derivative(invariant_scale(u), u) - 99200*u**16*Derivative(eta(u), u) - 4500*u**16*Derivative(eta(u), (u, 3)) + 257400*u**16*Derivative(invariant_scale(u), (u, 2)) - 1104000*u**15*eta(u) + 7200*u**15*Derivative(eta(u), (u, 2)) + 1900800*u**15*Derivative(invariant_scale(u), u) + 12800*u**14*Derivative(eta(u), u) - 12000*u**14*Derivative(eta(u), (u, 3)) + 343200*u**14*Derivative(invariant_scale(u), (u, 2)) - 1008000*u**13*eta(u) + 16800*u**13*Derivative(eta(u), (u, 2)) + 2217600*u**13*Derivative(invariant_scale(u), u) + 246400*u**12*Derivative(eta(u), u) - 21000*u**12*Derivative(eta(u), (u, 3)) + 343200*u**12*Derivative(invariant_scale(u), (u, 2)) - 470400*u**11*eta(u) + 25200*u**11*Derivative(eta(u), (u, 2)) + 1900800*u**11*Derivative(invariant_scale(u), u) + 430400*u**10*Derivative(eta(u), u) - 25200*u**10*Derivative(eta(u), (u, 3)) + 257400*u**10*Derivative(invariant_scale(u), (u, 2)) + 48000*u**9*eta(u) + 25200*u**9*Derivative(eta(u), (u, 2)) + 1188000*u**9*Derivative(invariant_scale(u), u) + 412000*u**8*Derivative(eta(u), u) - 21000*u**8*Derivative(eta(u), (u, 3)) + 143000*u**8*Derivative(invariant_scale(u), (u, 2)) + 216000*u**7*eta(u) + 16800*u**7*Derivative(eta(u), (u, 2)) + 528000*u**7*Derivative(invariant_scale(u), u) + 244800*u**6*Derivative(eta(u), u) - 12000*u**6*Derivative(eta(u), (u, 3)) + 57200*u**6*Derivative(invariant_scale(u), (u, 2)) + 136000*u**5*eta(u) + 7200*u**5*Derivative(eta(u), (u, 2)) + 158400*u**5*Derivative(invariant_scale(u), u) + 89600*u**4*Derivative(eta(u), u) - 4500*u**4*Derivative(eta(u), (u, 3)) + 15600*u**4*Derivative(invariant_scale(u), (u, 2)) + 40000*u**3*eta(u) + 1800*u**3*Derivative(eta(u), (u, 2)) + 28800*u**3*Derivative(invariant_scale(u), u) - 3*u**2*invariant_scale(u) + 18401*u**2*Derivative(eta(u), u) - 1000*u**2*Derivative(eta(u), (u, 3)) + 2600*u**2*Derivative(invariant_scale(u), (u, 2)) + 4788*u*eta(u) + 200*u*Derivative(eta(u), (u, 2)) + 2400*u*Derivative(invariant_scale(u), u) - 3*invariant_scale(u) + 1601*Derivative(eta(u), u) - 100*Derivative(eta(u), (u, 3)) + 200*Derivative(invariant_scale(u), (u, 2)))/(100*(u**2 + 1)**13)"
+        ]
+      ],
+      "complete_derivative_coefficients": {
+        "00": {
+          "0": "-3*(800*u**24 + 6400*u**22 + 20800*u**20 + 35600*u**18 + 40000*u**16 + 56000*u**14 + 112000*u**12 + 168800*u**10 + 157600*u**8 + 88000*u**6 + 27200*u**4 + 3599*u**2 + 1)/(25*(u**2 + 1)**14)",
+          "1": "-u*(2000*u**22 + 18800*u**20 + 78000*u**18 + 189000*u**16 + 298000*u**14 + 322000*u**12 + 247150*u**10 + 140150*u**8 + 57100*u**6 + 9900*u**4 - 4650*u**2 - 2247)/(25*(u**2 + 1)**13)",
+          "2": "-(800*u**22 + 7200*u**20 + 28000*u**18 + 63000*u**16 + 92000*u**14 + 89604*u**12 + 43324*u**10 - 31840*u**8 - 80520*u**6 - 65340*u**4 - 24276*u**2 - 3297)/(100*(u**2 + 1)**12)",
+          "3": "0",
+          "4": "-3/(2*(u**2 + 1)**6)"
+        },
+        "01": {
+          "0": "0",
+          "1": "3*(800*u**22 + 7200*u**20 + 28000*u**18 + 67000*u**16 + 122400*u**14 + 190400*u**12 + 240800*u**10 + 222000*u**8 + 136000*u**6 + 50400*u**4 + 9600*u**2 + 599)/(100*(u**2 + 1)**12)",
+          "2": "60*u/(u**2 + 1)**4",
+          "3": "3/(u**2 + 1)**3",
+          "4": "0"
+        },
+        "10": {
+          "0": "-3*u*(2000*u**22 + 18800*u**20 + 78000*u**18 + 186000*u**16 + 276000*u**14 + 252000*u**12 + 117600*u**10 - 12000*u**8 - 54000*u**6 - 34000*u**4 - 10000*u**2 - 1197)/(25*(u**2 + 1)**13)",
+          "1": "-3*(800*u**22 + 7200*u**20 + 28000*u**18 + 56000*u**16 + 43200*u**14 - 56000*u**12 - 190400*u**10 - 240000*u**8 - 172000*u**6 - 72800*u**4 - 16800*u**2 - 1601)/(100*(u**2 + 1)**12)",
+          "2": "6*u/(u**2 + 1)**4",
+          "3": "-3/(u**2 + 1)**3",
+          "4": "0"
+        },
+        "11": {
+          "0": "-9/(100*(u**2 + 1)**12)",
+          "1": "72*u/(u**2 + 1)",
+          "2": "6",
+          "3": "0",
+          "4": "0"
+        }
+      },
+      "matter_reconstruction_rate": "-3*(4*u*eta(u)/(u**2 + 1) + invariant_scale(u) - Derivative(eta(u), u)/(2*(u**2 + 1)**3))/(10*(u**2 + 1)**6) + (2*u**6 + 6*u**4 + 6*u**2 - 1)*Derivative(eta(u), u)/(20*(u**2 + 1)**9)",
+      "source_reconstruction": {
+        "hat_v": "4*u*eta(u)/(u**2 + 1) + invariant_scale(u) - Derivative(eta(u), u)/(2*(u**2 + 1)**3)",
+        "n": "Derivative(eta(u), u)",
+        "physical_v": "4*u*eta(u)/(u**2 + 1) + invariant_scale(u)"
+      }
+    }
+  },
+  "checked_scalar_entries": 140,
+  "claim": "P8-S6.180.CURRENT_PARENT_RETAINED_HOMOGENEOUS_CAUSAL_INVERSE_WITH_UNCANCELLED_QUANTUM_CURRENT_AND_BOUNDED_LAPSE_RECOVERY",
+  "controls": {
+    "C0_lapse_recovery_uses_actual_local_first_row": true,
+    "finite_inverse_not_smallness_stability_or_cutoff": true,
+    "full_boundary_and_fixed_charge_not_dropped": true,
+    "inactive_loop_direction_completed_by_current_classical_constraint": true,
+    "nonzero_reference_residual_not_false_prepared_force": true,
+    "old_profile_inverse_not_blindly_transferred": true,
+    "original_P8_not_closed": true,
+    "rejected_inputs": 101,
+    "variable_fourth_coefficient_not_pulled_out_of_integral": true
+  },
+  "date": "2026-09-11",
+  "exact_residuals": {
+    "clock_literal_full_F_clock_jet_0": "0",
+    "clock_literal_full_F_clock_jet_1": "0",
+    "clock_literal_full_F_clock_jet_2": "0",
+    "clock_literal_full_R_clock_jet_0": "0",
+    "clock_literal_full_R_clock_jet_1": "0",
+    "clock_literal_full_R_clock_jet_2": "0",
+    "clock_literal_full_R_clock_jet_3": "0",
+    "clock_primitive_first_lapse_zero": "0",
+    "clock_primitive_second_lapse_not_dropped": "0",
+    "first_row_A_derivative_1": "0",
+    "first_row_A_derivative_2": "0",
+    "first_row_A_derivative_3": "0",
+    "first_row_A_derivative_4": "0",
+    "first_row_coefficient_0_0_derivative_0": "0",
+    "first_row_coefficient_0_1_derivative_0": "0",
+    "first_row_coefficient_0_1_derivative_1": "0",
+    "first_row_coefficient_0_2_derivative_0": "0",
+    "first_row_coefficient_0_2_derivative_1": "0",
+    "first_row_coefficient_0_2_derivative_2": "0",
+    "first_row_coefficient_0_3_derivative_0": "0",
+    "first_row_coefficient_0_3_derivative_1": "0",
+    "first_row_coefficient_0_3_derivative_2": "0",
+    "first_row_coefficient_0_3_derivative_3": "0",
+    "first_row_coefficient_1_0_derivative_0": "0",
+    "first_row_coefficient_1_1_derivative_0": "0",
+    "first_row_coefficient_1_1_derivative_1": "0",
+    "first_row_coefficient_1_2_derivative_0": "0",
+    "first_row_coefficient_1_2_derivative_1": "0",
+    "first_row_coefficient_1_2_derivative_2": "0",
+    "first_row_coefficient_1_3_derivative_0": "0",
+    "first_row_coefficient_1_3_derivative_1": "0",
+    "first_row_coefficient_1_3_derivative_2": "0",
+    "first_row_coefficient_1_3_derivative_3": "0",
+    "inverse_constructive_weight_positive_gap": "0",
+    "inverse_elementary_log_bound_derivative": "0",
+    "inverse_local_primitive_kernel_0": "0",
+    "inverse_local_primitive_kernel_1": "0",
+    "inverse_local_primitive_kernel_2": "0",
+    "inverse_local_primitive_kernel_3": "0",
+    "inverse_local_primitive_output_derivative_0": "0",
+    "inverse_local_primitive_output_derivative_1": "0",
+    "inverse_local_primitive_output_derivative_2": "0",
+    "inverse_local_primitive_output_derivative_3": "0",
+    "inverse_original_force_I3_bound": "0",
+    "inverse_original_force_I4_bound": "0",
+    "inverse_physical_scale_reconstruction": "0",
+    "inverse_simple_parameterized_weight_square": "0",
+    "inverse_variable_fourth_coefficient_full_remainder": "0",
+    "inverse_variable_fourth_coefficient_primitive_endpoint": "0",
+    "matching_L_all_momentum_physical_pair": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        1
+      ]
+    },
+    "matching_L_whole_dimensional_high_current": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        1
+      ]
+    },
+    "matching_T_all_momentum_physical_pair": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        1
+      ]
+    },
+    "matching_T_whole_dimensional_high_current": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        1
+      ]
+    },
+    "matching_all_dimension_proper_momentum_diagonal_scale": "0",
+    "matching_exact_massive_reference_first_derivative": "0",
+    "matching_exact_massive_reference_threshold": "0",
+    "matching_longitudinal_dimensional_square_jet": "0",
+    "matching_matched_leading_four_primitive_kernel": "0",
+    "matching_physical_radial_pair_square": "0",
+    "matching_positive_radial_polynomial": "0",
+    "matching_transverse_square_and_first_dimensional_jet": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        1
+      ]
+    },
+    "mode_covariance_L_full_moving_coordinate_normalization": "0",
+    "mode_covariance_T_full_moving_coordinate_normalization": "0",
+    "mode_covariance_literal_current_time_covariance_L_energy_exact_time_change_scalar_readout": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        1,
+        3
+      ]
+    },
+    "mode_covariance_literal_current_time_covariance_L_exact_covariance_time_change": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        3
+      ]
+    },
+    "mode_covariance_literal_current_time_covariance_L_pressure_exact_time_change_scalar_readout": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        1,
+        3
+      ]
+    },
+    "mode_covariance_literal_current_time_covariance_L_pure_time_change_canonical_rate": "0",
+    "mode_covariance_literal_current_time_covariance_L_pure_time_change_frequency": "0",
+    "mode_covariance_literal_current_time_covariance_T_energy_exact_time_change_scalar_readout": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        1,
+        3
+      ]
+    },
+    "mode_covariance_literal_current_time_covariance_T_exact_covariance_time_change": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        3
+      ]
+    },
+    "mode_covariance_literal_current_time_covariance_T_pressure_exact_time_change_scalar_readout": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        1,
+        3
+      ]
+    },
+    "mode_covariance_literal_current_time_covariance_T_pure_time_change_canonical_rate": "0",
+    "mode_covariance_literal_current_time_covariance_T_pure_time_change_frequency": "0",
+    "nine_primitive_rows_retained": "0",
+    "one_retained_current_parent_inverse_row_added": "0",
+    "primitive_rows_unchanged": "0",
+    "prior_matching_rows_retained": "0",
+    "quadratic_actual_lapse_pivot_matches_independent_full_Hamiltonian": "0",
+    "quadratic_actual_matter_kinetic_normalization": "0",
+    "quadratic_actual_matter_mixed_normalization": "0",
+    "quadratic_actual_tree_trace_kinetic_normalization": "0",
+    "quadratic_background_constraint_no_n_v_contact": "0",
+    "quadratic_fixed_matter_charge_background_Ward": "0",
+    "quadratic_literal_quadratic_and_full_weighted_boundary": "0",
+    "quadratic_physical_scale_source_mass_cancels_with_boundary": "0",
+    "quantum_actual_uncancelled_scale_channel": "0",
+    "quantum_actual_uncancelled_time_channel_from_full_varied_Ward": "0",
+    "quantum_local_cross_density_eta": "0",
+    "quantum_local_cross_density_scale": "0",
+    "quantum_new_pure_scale_minus_old_physical_pressure_is_local": "0",
+    "quantum_only_scale_nonlocal_channel": "0",
+    "quantum_prepared_source_map_roundtrip": "0",
+    "quantum_time_channel_has_no_eta_derivative": "0",
+    "quantum_time_channel_no_fourth_derivative": "0",
+    "quantum_time_scale_channel_at_most_first": "0",
+    "tree_actual_fourth_time_coefficient": "0",
+    "tree_actual_second_scale_coefficient": "0",
+    "tree_actual_third_scale_time_cross": "0",
+    "tree_actual_third_time_scale_cross": "0",
+    "tree_actual_zero_charge_reconstruction": "0",
+    "tree_derivative_inventory_zero_01_4": "0",
+    "tree_derivative_inventory_zero_10_4": "0",
+    "tree_derivative_inventory_zero_11_3": "0",
+    "tree_derivative_inventory_zero_11_4": "0",
+    "tree_fixed_charge_metric_Euler_not_wrong_substitution": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        1
+      ]
+    },
+    "tree_independent_physical_current_to_adapted_tree": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        1
+      ]
+    },
+    "tree_literal_free_matter_charge_equation": "0",
+    "tree_strict_time_inverse_reciprocal": "0",
+    "tree_strict_time_pivot_continuous_lower": "0"
+  },
+  "formulation": "FORMULATION.md",
+  "matched_retained_inverse_and_physical_reconstruction": {
+    "first_row": {
+      "C1_bound_uses": "The unit slab, |H'|<=4, the exact current coefficients and the fixed S6.176 physical stress/first derivative bounds. It is a numeric bound for the local first-row reconstruction, not for the full inverse.",
+      "actual_A_derivative_envelopes": {
+        "1": "9",
+        "2": "153/2",
+        "3": "1575/2",
+        "4": "37989/4"
+      },
+      "actual_classical_first_row_coefficient_derivative_envelopes": {
+        "(0, 0)": {
+          "0": "7530476523/13107200"
+        },
+        "(0, 1)": {
+          "0": "1522861993/13107200",
+          "1": "28030460247/26214400"
+        },
+        "(0, 2)": {
+          "0": "1953382397/13107200",
+          "1": "11344133189/13107200",
+          "2": "101062900699/26214400"
+        },
+        "(0, 3)": {
+          "0": "0",
+          "1": "0",
+          "2": "0",
+          "3": "0"
+        },
+        "(1, 0)": {
+          "0": "0"
+        },
+        "(1, 1)": {
+          "0": "3708591159/13107200",
+          "1": "6960514767/13107200"
+        },
+        "(1, 2)": {
+          "0": "30",
+          "1": "165",
+          "2": "1140"
+        },
+        "(1, 3)": {
+          "0": "3",
+          "1": "9",
+          "2": "99/2",
+          "3": "342"
+        }
+      },
+      "kernel_diagonal_row_upper": "39",
+      "kernel_first_output_derivative_integral_upper": "2985661941658020019531250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000021/200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "physical_lapse_reconstruction_C1_upper": "2995261941658020019531250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000021/200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "quantum_first_row_added_bound": "21/200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "inverse": {
+      "actual_local_primitive_kernels": {
+        "0": "(-r + t)**3*coefficient(r)/6",
+        "1": "-(-r + t)**3*Derivative(coefficient(r), r)/6 + (-r + t)**2*coefficient(r)/2",
+        "2": "(-r + t)**3*Derivative(coefficient(r), (r, 2))/6 - (-r + t)**2*Derivative(coefficient(r), r) + (-r + t)*coefficient(r)",
+        "3": "-(-r + t)**3*Derivative(coefficient(r), (r, 3))/6 + 3*(-r + t)**2*Derivative(coefficient(r), (r, 2))/2 + (3*r - 3*t)*Derivative(coefficient(r), r) + coefficient(r)"
+      },
+      "adapted_inverse_C0_upper_formula": "2*exp((4*C*(K_L1/gamma + 15625/6144) + 1)**2)*Max(15625/6144, K_L1/gamma)",
+      "contraction_upper": "2*C*(K_L1/gamma + 15625/6144)/(4*C*(K_L1/gamma + 15625/6144) + 1)",
+      "diagonal_inverse": "B0=diag(A^-1 multiplication,gamma^-1 K_m convolution). The rank-one loop block alone is not inverted as a two-source identity.",
+      "existence": "For each smooth prepared original two-force there is a unique smooth prepared solution of the retained current-parent homogeneous tree-plus-conditional-vector RESPONSE equations on I. The same initial covariance and zero matter-charge perturbation are retained. The original lapse/scale have finite C0 dependence on the original forcing.",
+      "explicit_exponential_weight": "(4*C*(K_L1/gamma + 15625/6144) + 1)**2",
+      "integrable_composition_constant": "C*(K_L1/gamma + 15625/6144)",
+      "nonstationary_boundary": "This is the derivative of the equations at the uncorrected CD reference, whose conditional vector one-point stress is nonzero. Its residual is not a prepared forcing near the original Cauchy slice. The inverse is not applied to that residual without a compatible preparation/background construction.",
+      "normal_form": "I4(T+gamma Q)=diag(A(t),gamma F_m(partial_t^2))+V, A=-6delta(t)^2, gamma=1/(64pi^2*kappa). All coefficient multipliers remain inside their derivatives.",
+      "original_force_I3_upper": "47/30",
+      "original_force_I4_upper": "13/30",
+      "physical_scale_over_adapted_upper": "13/5",
+      "uncomputed": "C and the full K_m L1 norm are finite by the matched continuum and scalar-kernel proofs but are not numerically evaluated here. The explicit local C1 bound does not make the full inverse small.",
+      "variable_fourth_coefficient_remainder": "(-6*r + 6*t)*Derivative(A(r), (r, 2)) + (-r + t)**3*Derivative(A(r), (r, 4))/6 - 2*(-r + t)**2*Derivative(A(r), (r, 3)) - 4*Derivative(A(r), r)",
+      "weak_log_majorant_parameters": {
+        "A_inverse_upper": "15625/6144",
+        "C": "C",
+        "K_L1": "K_L1",
+        "gamma": "gamma"
+      }
+    },
+    "matching": {
+      "actual_full_dimensional_current_pairs": {
+        "L": {
+          "high_pair": [
+            [
+              "0"
+            ],
+            [
+              "2*spatial_dimension - 2"
+            ]
+          ],
+          "pair": [
+            [
+              "0"
+            ],
+            [
+              "2*spatial_dimension + 2*z - 4"
+            ]
+          ],
+          "weights": {
+            "N": [
+              "-1",
+              "-1"
+            ],
+            "Z": [
+              "spatial_dimension + 2*z - 2",
+              "2 - spatial_dimension"
+            ]
+          }
+        },
+        "T": {
+          "high_pair": [
+            [
+              "0"
+            ],
+            [
+              "2*spatial_dimension - 6"
+            ]
+          ],
+          "pair": [
+            [
+              "0"
+            ],
+            [
+              "2*spatial_dimension - 2*z - 4"
+            ]
+          ],
+          "weights": {
+            "N": [
+              "-1",
+              "-1"
+            ],
+            "Z": [
+              "spatial_dimension - 2",
+              "-spatial_dimension + 2*z + 2"
+            ]
+          }
+        }
+      },
+      "current_matching": "The S6.179 whole physical operator/state/prescription bridge and these full-D vertices give exactly S6.87's pure-scale nonlocal current and its dimensional fourth-order contact. The current adds9P*w, which is local of order0. No old scalar profile is installed.",
+      "curved_remainder": "After four zero-past primitives, I4 Q_w,scale=F_m(partial_t^2)+V_scalar. The unchanged all-order state, full-D diagonal amplitude and fixed -4 coefficient give a weak-log integrable kernel with every fixed diagonal derivative, as proved in S6.87. There is no unmatched fourth-order local remainder; new uncancelled contacts are lower order.",
+      "fixed_finite_fourth_coefficient": "-4",
+      "inverse_kernel": "The same source-pinned S6.86 scalar kernel K_m is in L1(0,infinity), has no instantaneous term and Laplace transform1/F_m(s^2). It is only the active range inverse of the normalized isolated loop block.",
+      "massive_scalar_reference_F": "-Integral(p*y**2*(3*y**4 - 2*y**2 + 3)/(4*m**2 + p*(1 - y**2)), (y, 0, 1)) - 4",
+      "reference_first_sheet_gap": "16/15",
+      "reference_inverse_absolute_upper": "15/16",
+      "reference_inverse_moments": [
+        "1/4",
+        "9/(560*m**2)"
+      ]
+    }
+  },
+  "named_exact_check_count": 109,
+  "not_established": [
+    "A numerical full inverse norm, small backreaction, stability or an all-frequency healthy physical EFT propagator",
+    "A compatible quantum preparation, nonlinear corrected background, global-time errors or arbitrary spatial/noise response",
+    "Full affine/light/tensor/auxiliary/mixed loops, an interacting measure/state, physical cutoff or omitted-order control",
+    "Complete vacuum matching/contour/cuts/truncation, finite-gravity IR/Regge remainder or original V/G/B closure"
+  ],
+  "observable_and_scope": {
+    "background_boundary": "The CD reference still has nonzero quantum one-point stress. Its residual is not a prepared force at the original initial neighborhood; no corrected background or new compatible quantum Cauchy data are supplied.",
+    "fixed_object": "The current complete affine/CD/M1 classical parent plus only the specified conditional Gaussian vector mean response, with no old stress-canceling profile.",
+    "new_inverse": "Unique smooth prepared causal solution of the retained HOMOGENEOUS LINEAR RESPONSE equations for every smooth prepared original two-force, with a finite C0 bound in the physical lapse and scale.",
+    "new_numeric_piece": "The actual local first-row lapse-reconstruction constant is below15000, with full tree boundaries and the conditional pressure/first-derivative contribution retained.",
+    "remaining": "Spatial/noise response, nonlinear remainder and background, full interacting measure/state and loops, physical cutoff/omitted terms, vacuum matching/cuts/contour/truncation, finite-gravity IR/Regge and original V/G/B.",
+    "unknown_constants": "The curved weak-log majorant and full scalar-kernel L1 norm are finite but not numerically evaluated. The resulting inverse is not shown small or stable."
+  },
+  "primitive_and_matching_frontier": {
+    "matching": [
+      {
+        "id": "fixed_sigma_isolated_MS_conversion",
+        "status": "CANCELLED_NONLOCAL_ORDER_TWO_WITH_SAME_REGULATED_REFERENCE"
+      },
+      {
+        "id": "remaining_scale_parameter_field_map_and_cross_terms",
+        "status": "OPEN"
+      },
+      {
+        "id": "remaining_counterterm_and_vacuum_source_assembly",
+        "status": "ASSEMBLED_FOR_FIXED_ORDER_PHI_POLE_B2_VACUUM_AND_H_SOURCE"
+      },
+      {
+        "id": "full_matched_two_loop_pole_and_amplitude_error",
+        "status": "FIXED_ORDER_PHI_POLE_AND_B2_BOUNDED_PHYSICAL_TRUNCATION_OPEN"
+      },
+      {
+        "id": "finite_EFT_higher_order_truncation",
+        "status": "OPEN"
+      },
+      {
+        "id": "V_contour_and_cut_control",
+        "status": "OPEN"
+      },
+      {
+        "id": "finite_gravity_G",
+        "status": "OPEN"
+      },
+      {
+        "id": "common_parent_B",
+        "status": "OPEN"
+      },
+      {
+        "id": "complete_wineglass_interaction_forest_MS",
+        "status": "BOUNDED_WITH_REGULATED_FINITE_LOCAL_ANCHOR_AND_FULL_SCALE_TERM"
+      },
+      {
+        "id": "complete_double_bubble_interaction_forest_MS",
+        "status": "BOUNDED_WITH_ACTUAL_NESTED_MS_FORESTS_AND_BOTH_SCALE_TERMS"
+      },
+      {
+        "id": "complete_scalar_OS_insertion_interaction_forest_MS",
+        "status": "BOUNDED_WITH_FULL_REGULATED_SLOPE_TIMES_OUTER_REFERENCE"
+      },
+      {
+        "id": "complete_scalar_quadratic_finite_MS_slope_and_converted_OS_bound",
+        "status": "BOUNDED_WITH_FIXED_INNER_OS_AND_INTERACTION_MS_COORDINATES"
+      },
+      {
+        "id": "first_finite_Phi_field_covariance_and_MS_projection_commutator",
+        "status": "EXACT_REGULATED_FIELD_DIRECTION_AND_BOUNDED_FIRST_SLOPE_CROSS_TERMS"
+      },
+      {
+        "id": "complete_GY14_second_Phi_normalization_and_canonical_unit_disc_pole",
+        "status": "BOUNDED_WITH_DIRECT_MS_OWNERSHIP_AND_FULL_FINITE_FIELD_REEXPANSION"
+      },
+      {
+        "id": "complete_two_loop_vacuum_reference_and_first_source_square",
+        "status": "BOUNDED_WITH_FULL_REGULATED_SOURCE_REDUCIBLE_CANCELLATION"
+      },
+      {
+        "id": "complete_two_loop_derivative_map_with_matched_physical_source",
+        "status": "TRANSPORTED_FOR_FULL_ACTION_AND_PHYSICAL_SOURCE_NOT_ORDINARY_PSI_MS_OR_TRUNCATION"
+      },
+      {
+        "id": "complete_matched_two_loop_low_energy_Phi_elastic_cut",
+        "status": "BOUNDED_ON_PHYSICAL_WINDOW_4_TO_6_WITH_FULL_FIRST_AMPLITUDE_NOT_PHYSICAL_REMAINDER_OR_GLOBAL_DISPERSION"
+      },
+      {
+        "id": "full_finite_kappa_analytic_target_classical_vacuum_match",
+        "status": "BOUNDED_ON_SAME_RESTRICTED_FLAT_SCHWARTZ_CLASS_NOT_QUANTUM_TARGET_OR_ROLLING_COMMON_PARENT_MATCH"
+      },
+      {
+        "id": "GY14_SAT8_pointwise_fermion_mass_protection_and_named_low_order_invariance",
+        "status": "NEW_ANALYTIC_EFT_BRANCH_WITH_GLOBAL_REAL_MASS_FLOOR_AND_SAME_NAMED_TWO_LOOP_DATA_NOT_ROLLING_STATE_OR_COMMON_PARENT_CLOSURE"
+      },
+      {
+        "id": "polynomial_clock_transparent_physical_source_map_and_full_target_classical_bound",
+        "status": "KINEMATIC_CLOCK_ARGUMENT_ALIGNED_WITH_PROTECTED_MASSES_AND_SAME_NAMED_VACUUM_DATA_NOT_BACKGROUND_SOLUTION_QUANTUM_STATE_OR_COMMON_PARENT_CLOSURE"
+      },
+      {
+        "id": "free_flat_clock_Dirac_out_energy_with_complete_transition_series_remainder",
+        "status": "BOUNDED_FOR_SPECIFIED_QUADRATIC_MODEWISE_IN_OUT_STATE_NOT_INTERACTING_OR_CURVED_BOUNCE_STRESS"
+      },
+      {
+        "id": "Hadamard_regular_free_flat_SAT8_in_out_state_and_uniform_one_particle_norm_limit",
+        "status": "HADAMARD_FOR_SPECIFIED_FREE_EXTERNAL_MASS_OPERATOR_USING_IDENTIFIED_EXTERNAL_THEOREM_NOT_INTERACTING_CURVED_STATE_OR_NUMERICAL_STRESS"
+      },
+      {
+        "id": "exact_four_frame_free_transition_and_uniform_same_operator_in_out_T00_difference",
+        "status": "BOUNDED_FOR_FREE_FLAT_HADAMARD_STATE_DIFFERENCE_NOT_ABSOLUTE_STRESS_INTERACTING_CURVED_STATE_OR_BACKREACTION"
+      },
+      {
+        "id": "free_flat_absolute_one_loop_local_energy_with_fixed_saturated_mass_reference",
+        "status": "BOUNDED_IN_EXPLICIT_MS_AND_SATURATED_MASS_REFERENCE_QUADRATIC_SCHEME_NOT_FULL_CURVED_INTERACTING_PARENT_STRESS"
+      },
+      {
+        "id": "complete_free_flat_homogeneous_one_loop_stress_with_dimensional_curvature_improvement",
+        "status": "BOUNDED_SPECIFIED_QUADRATIC_MS_MR_FLAT_TENSOR_NOT_FULL_INTERACTING_CURVED_PARENT_STRESS"
+      },
+      {
+        "id": "actual_CD_free_Dirac_Hadamard_in_out_state_and_uniform_state_stress_difference",
+        "status": "CURVED_FREE_HADAMARD_STATE_AND_STATE_DIFFERENCE_BOUNDED_NOT_ABSOLUTE_PARENT_STRESS"
+      },
+      {
+        "id": "complete_free_curved_one_loop_stress_with_explicit_EC_Newton_reference",
+        "status": "BOUNDED_SPECIFIED_QUADRATIC_CURVED_TENSOR_NOT_FULL_INTERACTING_PARENT_OR_BACKGROUND_RESPONSE"
+      },
+      {
+        "id": "minimal_Einstein_canonical_clock_free_sector_null_equation_mismatch",
+        "status": "EXCLUDED_NAMED_MINIMAL_DIAGNOSTIC_WITH_SMALL_EXTRA_NULL_BUDGET_NOT_FULL_INTERACTING_PARENT_OR_DHOST_ROW"
+      },
+      {
+        "id": "actual_CD_leading_clock_Euler_source_decomposition_and_matching_domain_gap",
+        "status": "LEADING_TARGET_SOURCES_AND_CONSTRAINT_DOMAIN_REQUIREMENTS_IDENTIFIED_NOT_PROPAGATING_PARENT_OR_QUANTUM_BOUNCE"
+      },
+      {
+        "id": "analytic_CD_REG_AFFINE_ISO_classical_parent_clock_vacuum_and_local_constraints",
+        "status": "NEW_REGULAR_CLASSICAL_PARENT_AND_LOCAL_CONSTRAINT_BLOCKS_NOT_QUANTUM_MATCHING_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "same_classical_affine_parent_closed_source_lift_and_scoped_vector_Schur_control",
+        "status": "EXACT_CLASSICAL_AND_COMMON_REGULATOR_IDENTITIES_FULL_EUCLIDEAN_AND_LEADING_LORENTZ_BOUNDS_NOT_FULL_QUANTUM_MATCHING"
+      },
+      {
+        "id": "regular_affine_parent_conditional_Gaussian_Hadamard_family_and_ordinary_Proca_stress",
+        "status": "SOURCE_AWARE_CONDITIONAL_VECTOR_STATE_AND_FIXED_CLOCK_STRESS_NOT_FULL_PARENT_QUANTUM_SOLUTION"
+      },
+      {
+        "id": "full_fixed_canonical_affine_family_actual_classical_gravitational_decoupling",
+        "status": "ANCHORED_FULL_FUNCTION_CLASSICAL_LIMIT_AND_TREE_AMPLITUDE_NOT_QUANTUM_CONTOUR_TRUNCATION_OR_V_CLOSURE"
+      },
+      {
+        "id": "complete_affine_vector_retarded_mean_energy_and_causal_cubic_light_force",
+        "status": "FIXED_CD_FULL_SOURCE_FINITE_TIME_CONDITIONAL_GAUSSIAN_MEAN_AND_LIGHT_FORCE_NOT_METRIC_NOISE_FULL_PARENT_OR_B_CLOSURE"
+      },
+      {
+        "id": "same_affine_conditional_prepared_homogeneous_metric_response_with_uncancelled_chart_contacts",
+        "status": "COMPLETE_CONDITIONAL_VECTOR_HOMOGENEOUS_C10_TO_C0_BOUND_NOT_SPATIAL_NOISE_COUPLED_BACKGROUND_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "same_affine_parent_prepared_homogeneous_retained_tree_plus_conditional_vector_causal_inverse",
+        "status": "UNIQUE_RETAINED_LINEAR_PREPARED_CAUSAL_INVERSE_WITH_NUMERIC_LOCAL_LAPSE_RECOVERY_NOT_FULL_INVERSE_SMALLNESS_QUANTUM_BACKGROUND_OR_V_G_B"
+      }
+    ],
+    "primitive": [
+      {
+        "id": "scalar_Phi0_W0_F0",
+        "status": "BOUNDED_PAIRED_VACUUM_PRIMITIVE_WITH_ASSIGNED_LOCAL_FOREST"
+      },
+      {
+        "id": "scalar_Phi2_W0_F2",
+        "status": "BOUNDED_NONLOCAL_AND_FINITE_MS_MASS_AND_SLOPE_REFERENCES"
+      },
+      {
+        "id": "scalar_Phi2_W1_F0",
+        "status": "BOUNDED_PAIRED_NONLOCAL_AND_FINITE_MS_LOCAL_REFERENCES"
+      },
+      {
+        "id": "scalar_Phi4_W0_F4",
+        "status": "BOUNDED_PAIRED_PRIMITIVE_ROW"
+      },
+      {
+        "id": "scalar_Phi4_W1_F2",
+        "status": "BOUNDED_PAIRED_IN_COMMON_MS_INTERACTION_SCHEME"
+      },
+      {
+        "id": "scalar_Phi4_W2_F0",
+        "status": "BOUNDED_PAIRED_IN_COMMON_MS_INTERACTION_SCHEME"
+      },
+      {
+        "id": "gauge_Phi0",
+        "status": "BOUNDED_PAIRED_VACUUM_PRIMITIVE_WITH_ASSIGNED_LOCAL_FOREST"
+      },
+      {
+        "id": "gauge_Phi2",
+        "status": "BOUNDED_NONLOCAL_AND_FINITE_MS_MASS_AND_SLOPE_REFERENCES"
+      },
+      {
+        "id": "gauge_Phi4",
+        "status": "BOUNDED_PAIRED_PRIMITIVE_ROW"
+      }
+    ]
+  },
+  "prior_sha256": {
+    "S6_179_fully_rebuilt": "17a635f2d77b93b8a815cc3e89eae976c06e80d1880c1df02b475d41aec2ad78",
+    "S6_86_massive_scalar_kernel_transitively_rebuilt": "0f04fd277040ad21525eb1d9102e6af45c4d695fac3f69d0d37710a7ab8a0db6",
+    "S6_87_curved_matching_source_rebuilt": "25eabbd3c7847a746ad7d9b015f27cf63cb3e23aa6d6acfb9b8697fc720bf8fc",
+    "actual_current_tree_and_uncancelled_contacts_rederived_not_old_profile_total_transferred": true,
+    "all_frozen_scientific_bytes_unchanged": true
+  },
+  "proof_checks": {
+    "actual_C1_numeric_but_full_inverse_norm_not_evaluated": true,
+    "constructive_finite_weight_in_terms_of_unevaluated_majorants": true,
+    "exact_prepared_time_covariance_and_conserved_physical_Ward": true,
+    "first_row_C1_below_15000": true,
+    "first_row_C1_positive_finite": true,
+    "first_row_quantum_first_row_small": true,
+    "free_M1_charge_reduced_variationally_not_wrong_substitution": true,
+    "full_dimensional_current_and_finite_fourth_contact_matching": true,
+    "full_quantum_background_stability_cutoff_and_V_G_B_open": true,
+    "full_uncancelled_volume_readout_and_chart_contacts_retained": true,
+    "inverse_contraction_strictly_below_half": true,
+    "literal_weighted_boundary_and_lapse_pivot_rederived": true,
+    "no_old_scalar_stress_canceling_profile_installed": true,
+    "nonprepared_background_residual_not_fed_to_prepared_inverse": true,
+    "physical_and_adapted_tree_current_routes_agree": true,
+    "physical_lapse_recovered_without_derivative_of_arbitrary_C0_scale": true,
+    "prepared_state_charge_and_causality_not_reset": true,
+    "rank_one_loop_completed_by_actual_tree_not_pseudoinverse": true,
+    "same_all_momentum_massive_scalar_range_kernel": true,
+    "same_complete_analytic_parent_and_actual_clock_jets": true,
+    "same_conditional_vector_measure_state_and_covariant_prescription": true,
+    "time_channel_is_actual_local_constraint_not_discarded_kernel": true,
+    "variable_coefficient_primitive_commutators_retained": true,
+    "weak_log_remainder_and_all_diagonal_derivatives_integrable": true
+  },
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "e66c2f3936424a10120b21a03849b5c6fb986f388ac7b38877b29fed37a544be",
+    "README.md": "7ddcc9d19e21a926d3c8ed2c05da62a2fb031648aa0e194e10b3ce0e66cfb1a8",
+    "notes/inverse.md": "37aad370401c12eed696fe01683ec2369f1239f98d7306d029f45949cca6b1e5",
+    "notes/matching.md": "3a61f6ee3954834bd04e51eccba52e38792ce34ac8a13b9e3d1abd678d5a30fc",
+    "notes/quantum.md": "1ad4171a60b789f5cc24351aaea6e47925bfc0caba54af3f1f1ac9afcb6ed5fc",
+    "notes/recovery.md": "0d739d640971deb94dc644e632ceabe3d76d937fac72d27e203eedd92c3959d6",
+    "notes/scope.md": "ccd3707a1cbef3ea4b7e9fe72cf6631308860f437b7e7775e30bd25dc89233fb",
+    "notes/tree.md": "99f699baab9681e43498f3ff4c0437f12b8b88073c4c15298632df4c0e1981a7",
+    "notes/validation.md": "677b7ae39410c3af3796a0868fafe590ee103d920e89eea34352e81d2d238d14",
+    "src/p8_vacuum_affine_coupled_response/__init__.py": "4c41524b23cac0414f81133f8a847dcd9bee2ad2e916438a6e22456d75bd3770",
+    "src/p8_vacuum_affine_coupled_response/audit.py": "1f500bce88fe64497bb5fcb67011e57d4fe594d570c4a07da04d10dc59e52a49",
+    "src/p8_vacuum_affine_coupled_response/classical.py": "65f8458a2d18dbf9ea00abca364a6bd7eede32002b2d17d754d332d58a1c1806",
+    "src/p8_vacuum_affine_coupled_response/inverse.py": "183c2f668d4109121a7ed4058e3f6f5b87355bcd8fbf543c28c85b3d76f50b62",
+    "src/p8_vacuum_affine_coupled_response/matching.py": "20038fa550c0efd764ab6526fd9f334959ea72d7409944572ba7df03c576840b",
+    "src/p8_vacuum_affine_coupled_response/quantum.py": "815e270d0b79e02fefcc3eeb902adbb0ce056961e04b5c5b148efb580b43d85f",
+    "src/p8_vacuum_affine_coupled_response/verify.py": "f8d30eeb765e96611deeadb0d45f0bb38437fadb39db34db7ba420399e36e9f6",
+    "tests/test_affine_coupled_response_certificate.py": "5ee44b24b3d4b2d4aa65a132086769d1355fd3588f5339c99f9a2d720dac9e8b",
+    "tests/test_affine_coupled_response_science.py": "b75a8c5c40e8dfecde8b4931b3162dee12e5deba05bfb1a659e3c3ab2a285047"
+  },
+  "status": "UNIQUE_CURRENT_PARENT_PREPARED_RETAINED_LINEAR_CAUSAL_INVERSE_WITH_EXPLICIT_LOCAL_LAPSE_RECOVERY; NOT_SMALL_FULL_INVERSE_QUANTUM_BACKGROUND_STABILITY_CUTOFF_V_G_B_OR_ORIGINAL_P8",
+  "verdict": "The complete current affine/CD/M1 target gives a literal prepared matter-reduced tree with a uniformly nonzero fourth-order time channel. Exact time covariance and the full uncancelled conditional vector current leave only one nonlocal scale channel, with no old stress-canceling profile. Whole-dimensional vertices and the shared scheme/state match the existing massive scalar range inverse and curved weak-log remainder. A constructive finite weighted Volterra inverse yields unique smooth prepared retained homogeneous linear responses, and the actual first row gives physical lapse recovery with explicit C1 below15000. The full inverse's kernel majorants remain unevaluated and smallness or stability is not established. The nonzero background residual is not a prepared force, and no self-consistent/full quantum background, cutoff or V/G/B closure follows.",
+  "verification_boundary": "New literal full-target tree/boundary/charge identities, exact uncancelled time covariance and Ward algebra, full-dimensional current matching, variable-coefficient primitive formulas and continuous local first-row bounds support written matched-kernel and Volterra arguments. Every reused report is rebuilt, with the current tree and contacts independently rederived. Native, direct science, ordinary and CLI use original SymPy; only full regression uses its audited exact GCD adapter. The finite kernel majorants are not numerically evaluated. Not FORMALIZED or a full quantum-parent certificate.",
+  "written_proofs": [
+    "notes/tree.md",
+    "notes/quantum.md",
+    "notes/matching.md",
+    "notes/inverse.md",
+    "notes/recovery.md",
+    "notes/scope.md",
+    "notes/validation.md"
+  ]
+}
