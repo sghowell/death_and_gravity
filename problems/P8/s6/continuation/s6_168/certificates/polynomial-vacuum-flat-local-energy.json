@@ -1,0 +1,419 @@
+{
+  "checked_scalar_entries": 55,
+  "claim": "P8-S6.168.FREE_FLAT_DIRAC_ABSOLUTE_ONE_LOOP_LOCAL_ENERGY_WITH_FIXED_SATURATED_MASS_REFERENCE",
+  "controls": {
+    "absolute_MS_finite_terms_not_set_to_zero": true,
+    "free_T00_not_pressure_or_curved_interacting_stress": true,
+    "full_exact_state_not_an_adiabatic_truncation": true,
+    "named_low_order_invariance_not_full_quantum_matching": true,
+    "new_higher_field_prescription_not_old_functional_identity": true,
+    "original_P8_not_closed": true,
+    "reference_coefficient_not_chosen_to_fit_energy": true,
+    "rejected_inputs": 158,
+    "unsaturated_mass_counterterm_is_a_growing_negative_control": true
+  },
+  "date": "2026-09-10",
+  "exact_projector_and_dimensional_subtraction": {
+    "frames": {
+      "Bloch_comparison_bound": "|z4-cos(theta0)| <= |theta0 theta2|+theta1^2+theta2^2+theta3^2 <= A^2(2r^2+r^4+r^6) <3 A^2 r^2. The exact alternating axes remove a would-be theta0 theta1 term.",
+      "all_momentum_remainder": "For N color/flavor copies and two occupied helicities, use omega<=2E and radial measure1/(2pi^2). The three absolute allowances are 8NC Delta/(3pi^2 tau^4 m0), 24N1024^2 Delta^2/(5pi^2 tau^4 m0^2), and NDelta^4/(672pi^2 tau^4 m0^4). They bound the full exact-state energy after the displayed two UV terms are subtracted, uniformly for every real time.",
+      "exact_state_comparison": "In the fourth exact frame the half-line unitary Duhamel integral bounds the in- or out-state projector distance from the instantaneous negative projector by integral_halfline |g4| <= 2^42 pDelta/(tau^4 E^6). The comparison projector need not be an exact solution or a Hadamard state. The exact in/out states are unchanged.",
+      "first_frame_Taylor_bound": "For u=q0^2>=0, Taylor's integral remainder for (1+u)^(-1/2) has magnitude <=3u^2/8. Here q0=p Mdot/(2omega^3), |Mdot|<=Delta/tau. This is a bound on the full first-frame projector, not a truncation of the exact state.",
+      "first_frame_energy_per_helicity": "-omega/sqrt(q**2 + 1)",
+      "four_frame_Bloch_z": "(-sin(theta0)*sin(theta2) + cos(theta0)*cos(theta1)*cos(theta2))*cos(theta3) - sin(theta1)*sin(theta3)*cos(theta0)",
+      "gates": {
+        "Bloch_sum_strictly_below_three": true,
+        "all_remainder_radial_integrals_finite": true,
+        "real_angle_series_ratio_at_most_one_over_1024": true
+      },
+      "physical_energy_operator": "In the physical mass eigenbasis the energy operator is omega sigma3. The time-dependent basis connection g0 sigma2/tau belongs to the evolution generator, not to that physical energy observable. Nor is -e4/tau the local Dirac energy.",
+      "real_frame_angle_bound": "Real e_j>=tau omega>=tau E. With A=2pDelta/(tau E^3), r=1024/(tau E)<=1/1024 and w<=1, |theta_j|<=|g_j/e_j|<=A r^j, j=0..3.",
+      "subtracted_energy_per_color_flavor": "-2 omega + p^2 Mdot^2/(4 omega^5)"
+    },
+    "subtraction": {
+      "Dirac_trace_and_regularization": "Four-component Dirac trace, two occupied helicities, d=3-2epsilon spatial dimensions, full d-dimensional angular measure and MSbar subtraction at mu=mF. These are the same trace and scale conventions as the frozen fermion two-point and potential anchors.",
+      "MSbar_derivative_energy_per_color_flavor": "-real_mass_rate**2*(log(positive_mass**2/mean_mass**2) + 2/3)/(16*pi**2)",
+      "MSbar_potential_per_color_flavor": "-positive_mass**4*(log(positive_mass**2/mean_mass**2) - 3/2)/(16*pi**2)",
+      "covariant_counterterm_dictionary": "The relevant pole action per Dirac copy is Ibar/Q integral sqrt(-g)[M^4-(partial M)^2], together with the required curvature counterterms. It cancels both displayed energy poles. M is a prescribed scalar under metric variation. The flat homogeneous 00 variation of a local curvature term R F(M) is zero; this is not true for all pressure components.",
+      "dimensionally_regularized_derivative_energy": "Mdot^2/4 mu^(2epsilon) integral d^d p/(2pi)^d p^2/(p^2+M^2)^(5/2) = Mdot^2/Q [Ibar-2/3-log(M^2/mu^2)]+O(epsilon)",
+      "dimensionally_regularized_vacuum_energy": "-2 mu^(2epsilon) integral d^d p/(2pi)^d sqrt(p^2+M^2) = M^4/Q [Ibar+3/2-log(M^2/mu^2)]+O(epsilon)",
+      "finite_part_warning": "Keeping only the three-dimensional angular prefactor would lose the -2/3 evanescent contribution. No cutoff finite part or instantaneous-vacuum normal-ordering replaces the fixed MSbar prescription.",
+      "normalized_derivative_gamma_factor": "(1 - 2*epsilon/3)*exp(epsilon*(EulerGamma - log_mass_ratio))*gamma(epsilon + 1)",
+      "normalized_vacuum_gamma_factor": "2*exp(epsilon*(EulerGamma - log_mass_ratio))*gamma(epsilon + 1)/((epsilon - 2)*(epsilon - 1))",
+      "relation_to_external_adiabatic_formula": "In del Rio et al. arXiv:1703.00908v2, section IV equations44-48, set a=1. The derivative term is p^2 sdot^2/(4(p^2+m^2)^(5/2)); the remaining terms are the fourth-order expansion in s of -2sqrt(p^2+(m+s)^2). Here the full M is kept in both terms, and the dimensionally regulated finite parts are restored. No derivative expansion approximates the exact state remainder."
+    }
+  },
+  "exact_residuals": {
+    "all_prior_matching_rows_unchanged": "0",
+    "all_prior_primitive_rows_unchanged": "0",
+    "energy_exact_sum_not_a_selected_subset": "0",
+    "energy_same_amplitude_upper": "0",
+    "energy_same_mass_reference": "0",
+    "energy_same_time_scale": "0",
+    "energy_vacuum_subtracted_remainder_included": "0",
+    "energy_zero_profile_constant_vacuum_reference": "0",
+    "extension_all_lower_mass_reference_field_jets_unchanged": "0",
+    "extension_dimensional_mass_reference_coefficient": "0",
+    "extension_first_changed_mass_reference_field_degree": "0",
+    "extension_first_counterterm_weight": "0",
+    "extension_forest_contraction_weight_identity": "0",
+    "extension_four_source_change_loop_floor": "0",
+    "extension_next_changed_mass_reference_field_degree": "0",
+    "extension_same_inherited_connected_loop_identity": "0",
+    "extension_ten_source_change_allowed_at_one_loop": "0",
+    "extension_two_source_change_loop_floor": "0",
+    "extension_vacuum_change_loop_floor": "0",
+    "frames_Taylor_remainder_mass_dimension": "0",
+    "frames_evolution_connection_not_a_physical_energy_term": "0",
+    "frames_exact_alternating_Bloch_z": "0",
+    "frames_first_frame_full_energy_series": "0",
+    "frames_first_frame_full_factor": "0",
+    "frames_first_frame_radial_integral": "0",
+    "frames_fourth_first_full_factor": "0",
+    "frames_fourth_first_radial_integral": "0",
+    "frames_frame_remainder_mass_dimension": "0",
+    "frames_no_second_axis_cross_with_first": "0",
+    "frames_nonzero_first_third_axis_cross": "0",
+    "frames_nonzero_second_fourth_axis_cross": "0",
+    "frames_second_order_two_helicity_subtraction": "0",
+    "frames_state_remainder_mass_dimension": "0",
+    "nine_prior_primitive_rows_retained": "0",
+    "only_named_quadratic_local_energy_added": "0",
+    "reference_fixed_mass_anchor_cancellation_not_a_fit": "0",
+    "reference_fixed_zero_field_vacuum_reference": "0",
+    "reference_full_potential_even_coefficient_10": "0",
+    "reference_full_potential_even_coefficient_12": "0",
+    "reference_full_potential_even_coefficient_6": "0",
+    "reference_full_potential_even_coefficient_8": "0",
+    "reference_pair_quadratic_coefficient": "0",
+    "reference_pair_quartic_coefficient": "0",
+    "reference_pair_vacuum_constant": "0",
+    "reference_sixth_coefficient": "0",
+    "reference_strict_decrease_of_even_tail_coefficients": "0",
+    "subtraction_derivative_MS_finite_part": "0",
+    "subtraction_derivative_UV_pole_normalization": "0",
+    "subtraction_same_MS_kinetic_energy_and_two_point_slope": "0",
+    "subtraction_same_frozen_zero_momentum_slope": "0",
+    "subtraction_same_pair_quadratic_potential_coefficient": "0",
+    "subtraction_same_vacuum_potential_constant": "0",
+    "subtraction_spatial_dimension_factor_not_omitted": "0",
+    "subtraction_vacuum_MS_finite_part": "0",
+    "subtraction_vacuum_UV_pole_normalization": "0"
+  },
+  "fixed_reference_and_absolute_energy": {
+    "energy": {
+      "absolute_one_loop_energy_over_named_kappa": "3362056532695042875000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001400856573427368750000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000885086581129560551900744739821/373561752913965000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "active_color_flavor_multiplicity": 6,
+      "actual_uniform_exact_rational_enclosures": {
+        "MSbar_derivative_energy_upper": "375000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "complete_absolute_one_loop_energy_upper": "67241130653900857500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000028017131468547375000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000017701731622591211038014894796420000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000/74712350582793",
+        "complete_higher_even_potential_upper": "202500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000/999991",
+        "first_frame_second_order_Taylor_remainder_upper": "62500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000/74713023",
+        "fixed_mass_anchor_potential_upper": "2500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "fourth_to_first_frame_energy_upper": "335544320000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000/1089",
+        "full_quartic_potential_upper": "900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "state_to_fourth_frame_energy_upper": "70368744177664000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000/297"
+      },
+      "complete_exact_state_subtracted_remainder_upper": "17701890939609667338240062500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000/74713023",
+      "decimal_diagnostics_only": {
+        "MSbar_derivative_energy_upper": "3.750000000000000000000000000e+593",
+        "complete_absolute_one_loop_energy_upper": "9.000002025018225164026476238e+788",
+        "complete_higher_even_potential_upper": "2.025018225164026476238286145e+782",
+        "first_frame_second_order_Taylor_remainder_upper": "8.365342143899062951849773232e+386",
+        "fixed_mass_anchor_potential_upper": "2.500000000000000000000000000e+393",
+        "fourth_to_first_frame_energy_upper": "3.081215059687786960514233242e+401",
+        "full_quartic_potential_upper": "9.000000000000000000000000000e+788",
+        "state_to_fourth_frame_energy_upper": "2.369317985779932659932659933e+410"
+      },
+      "gates": {
+        "actual_absolute_logarithm_bound_below_one_hundredth": true,
+        "actual_complete_absolute_one_loop_energy_below_one_e789": true,
+        "actual_named_reference_ratio_below_one_e_minus11": true,
+        "actual_subtracted_state_remainder_below_one_e411": true,
+        "all_nonzero_actual_allowances_positive": true,
+        "derivative_log_plus_two_thirds_below_one": true,
+        "entire_accepted_parameter_domain_derivative_factor_below_one": true
+      },
+      "reference_ratio_warning": "The kappa comparison is a named dimensionful reference ratio, not a relative error against the bounce density, which is zero at H=0.",
+      "same_clock_profile_time_scale": "1/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "same_mass_profile_amplitude_upper": "300000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "same_quadratic_mean_mass": "100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "scope": "For either the same free in- or out-Hadamard state, at every real time, the absolute value of the specified quadratic one-loop local T00 plus its fixed MS/vacuum/saturated-mass references is bounded by the displayed sum. This includes vacuum polarization and the exact state remainder, not just particle occupations. It does not include scalar/heavy/gauge quantum increments, higher fermion loops, pressure, curved response or the physical EFT cutoff.",
+      "strict_loop_denominator_lower": 144
+    },
+    "extension": {
+      "branch_name": "GY14-SAT8-MR",
+      "classical_match": "The change carries one formal loop power, so the complete classical zero-fermion S6.164 full-target action match is unchanged. This is not a quantum target match or a parent clock solution.",
+      "finite_functional_definition": "At formal loop order one replace only the finite fermion pole-mass reference potential -fF(1)Phi^2/2 by -fF(1)chi(Phi)^2/2, chi=f_R(Phi). Its coefficient is the previously fixed mass anchor, not fitted to a clock energy. The fermion determinant and its minimal pole counterterms already use the same chi. Keep the zero-field vacuum reference and minimal field/quartic finite prescription.",
+      "finite_order_invariance": "The new loop-one degree-ten vertex has weighted excess5. L_eff=1-E/2+sum[(n-2)/2+j] plus nonnegative physical-map degree. Forest contraction preserves that excess. It cannot contribute to named E<=4 data through loop two, including physical Phi pole/residue/four-point, vacuum, H source and the low cut. No complete higher-field quantum functional or higher-loop invariance follows.",
+      "first_changed_finite_vertex": {
+        "formal_loop_grade": 1,
+        "scalar_valence": 10,
+        "weighted_excess": 5
+      },
+      "gates": {
+        "all_named_up_to_four_source_two_loop_data_protected": true,
+        "finite_mass_reference_not_retuned_to_cancel_energy": true,
+        "new_higher_field_one_loop_data_not_identified": true
+      },
+      "not_a_frozen_rewrite": "This selects a separately named higher-field EFT prescription. Original GY14, frozen SAT8, and all earlier source/report bytes are unchanged. It is not inferred that SAT8 had already fixed this finite high-field extension.",
+      "same_regulated_lift": "Use chi_D=Phi_D/[1+(Phi_D/R_D)^8]^(1/8), R_D=mu^-epsilon R. Apply the argument replacement to the inherited dimensional mass-reference coefficient before Laurent finite products; do not discard its positive-epsilon terms. The k-th mass-reference difference has dimension2-8k+8k epsilon, exactly D-(8k+2)(1-epsilon).",
+      "source_count_loop_floors": {
+        "0": 6,
+        "1": 6,
+        "10": 1,
+        "2": 5,
+        "4": 4,
+        "8": 2
+      },
+      "unsaturated_counterterm_control": "Along Phi=sqrt(kappa)t, the original -fF(1)Phi^2/2 grows without bound while the protected-mass determinant stays bounded. A bounded mass alone therefore cannot bound that unsaturated one-loop reference contribution. This is not an exclusion of the entire parent theory."
+    },
+    "reference": {
+      "all_higher_even_coefficients": "48*N/(even_degree*(even_degree - 4)*(even_degree - 3)*(even_degree - 2)*(even_degree - 1))",
+      "first_reference_subtracted_terms": "-8*N*Yukawa**4*scalar_argument**4/(3*Q) - exact_f_one_minus_f_zero*scalar_argument**2/2",
+      "full_potential_bound": "After subtracting the fixed all-flavor zero-field vacuum constant and -f(1)chi^2/2, the paired potential is -.5[f(1)-f(0)]chi^2 -(8/3)NY^2 chi^4/Q plus the positive complete even tail. For |ychi|<=Delta<m, the tail is <=NDelta^6/[15Q m^2(1-(Delta/m)^2)].",
+      "gates": {
+        "all_higher_even_potential_coefficients_positive": true,
+        "frozen_anchor_increment_lower_positive": true,
+        "frozen_anchor_increment_upper_below_two_thirds": true,
+        "zero_field_inert_vacuum_constants_removed_by_same_reference": true
+      },
+      "mass_anchor_bound": "For mF>=36, 0<f(1)-f(0)<4NY/(3Q). This uses the positive complete moment series a_n=3(n!)^2/[n(2n+3)(2n+1)!], not subtraction of two enormous decimal mass terms.",
+      "one_loop_MS_pole_mass_anchor": "2*N*Yukawa**2*(2*mean_mass**2 + (4*mean_mass**2 - 1)*Integral(-log(1 - x*(1 - x)/mean_mass**2), (x, 0, 1)))/Q",
+      "paired_potential_dimensionless": "-N*((1 - mass_ratio)**4*(2*log(1 - mass_ratio) - 3/2) + (mass_ratio + 1)**4*(2*log(mass_ratio + 1) - 3/2))/2",
+      "reference_coordinate": "This is the one-loop fermion increment in the named MS field coordinate with physical Phi pole mass reference, fixed vacuum zero, and minimal field/quartic subtractions. No extra finite kinetic or quartic counterterm is added. The fixed local physical unit-residue source and parameter dictionary remains the inherited one; the computed quadratic contribution is not silently the entire canonically re-expressed scalar/heavy energy.",
+      "same_frozen_all_order_anchor": "f(1)=f(0)+(2NY/Q)[2/3-sum_{n>=1} a_n/mF^(2n)]",
+      "zero_momentum_mass_anchor": "4*N*Yukawa**2*mean_mass**2/Q"
+    }
+  },
+  "formulation": "FORMULATION.md",
+  "named_exact_check_count": 55,
+  "not_established": [
+    "Full pressure, scalar source, curved Hadamard state or interacting gauge/fermion stress",
+    "Complete canonical-field and heavy-background energy or higher-loop and physical-cutoff remainders",
+    "Quantum target matching, a common-parent clock or bounce solution, global V contours/cuts or finite-gravity G",
+    "Original P8 closure, an identity of full higher-field functionals, or formalization of the analytic proofs"
+  ],
+  "observable_and_source_context": {
+    "coordinate": "Named MS scalar-field coordinate. The inherited physical unit-residue source/parameter conversion is not a second finite energy subtraction, nor is this quadratic increment the entire canonically re-expressed interacting parent stress.",
+    "fixed_scientific_boundary": "S6.167 supplies exact-frame bounds and S6.166 the same free Hadamard state. This new separately named finite high-field prescription is not retroactively assigned to the frozen SAT8 functional.",
+    "quantity": "Absolute local one-loop Dirac T00 of either S6.166 free flat Hadamard state, at fixed prescribed scalar mass argument; includes the MS finite parts, the fixed vacuum zero and the GY14-SAT8-MR saturated finite pole-mass reference.",
+    "reference_not_bounce_density": "The kappa comparison is not a relative error against the zero density at a flat bounce.",
+    "source_context": [
+      {
+        "location": "Section IV equations44-50 and section V equations65-85",
+        "role": "External-scalar Dirac energy subtraction and covariant counterterm structure. Our resummed fixed-mass dimensional finite parts, exact rotating-frame remainder and rational bounds are derived here.",
+        "url": "https://arxiv.org/pdf/1703.00908",
+        "version": "v2, 23 May 2017"
+      }
+    ]
+  },
+  "primitive_and_matching_frontier": {
+    "matching": [
+      {
+        "id": "fixed_sigma_isolated_MS_conversion",
+        "status": "CANCELLED_NONLOCAL_ORDER_TWO_WITH_SAME_REGULATED_REFERENCE"
+      },
+      {
+        "id": "remaining_scale_parameter_field_map_and_cross_terms",
+        "status": "OPEN"
+      },
+      {
+        "id": "remaining_counterterm_and_vacuum_source_assembly",
+        "status": "ASSEMBLED_FOR_FIXED_ORDER_PHI_POLE_B2_VACUUM_AND_H_SOURCE"
+      },
+      {
+        "id": "full_matched_two_loop_pole_and_amplitude_error",
+        "status": "FIXED_ORDER_PHI_POLE_AND_B2_BOUNDED_PHYSICAL_TRUNCATION_OPEN"
+      },
+      {
+        "id": "finite_EFT_higher_order_truncation",
+        "status": "OPEN"
+      },
+      {
+        "id": "V_contour_and_cut_control",
+        "status": "OPEN"
+      },
+      {
+        "id": "finite_gravity_G",
+        "status": "OPEN"
+      },
+      {
+        "id": "common_parent_B",
+        "status": "OPEN"
+      },
+      {
+        "id": "complete_wineglass_interaction_forest_MS",
+        "status": "BOUNDED_WITH_REGULATED_FINITE_LOCAL_ANCHOR_AND_FULL_SCALE_TERM"
+      },
+      {
+        "id": "complete_double_bubble_interaction_forest_MS",
+        "status": "BOUNDED_WITH_ACTUAL_NESTED_MS_FORESTS_AND_BOTH_SCALE_TERMS"
+      },
+      {
+        "id": "complete_scalar_OS_insertion_interaction_forest_MS",
+        "status": "BOUNDED_WITH_FULL_REGULATED_SLOPE_TIMES_OUTER_REFERENCE"
+      },
+      {
+        "id": "complete_scalar_quadratic_finite_MS_slope_and_converted_OS_bound",
+        "status": "BOUNDED_WITH_FIXED_INNER_OS_AND_INTERACTION_MS_COORDINATES"
+      },
+      {
+        "id": "first_finite_Phi_field_covariance_and_MS_projection_commutator",
+        "status": "EXACT_REGULATED_FIELD_DIRECTION_AND_BOUNDED_FIRST_SLOPE_CROSS_TERMS"
+      },
+      {
+        "id": "complete_GY14_second_Phi_normalization_and_canonical_unit_disc_pole",
+        "status": "BOUNDED_WITH_DIRECT_MS_OWNERSHIP_AND_FULL_FINITE_FIELD_REEXPANSION"
+      },
+      {
+        "id": "complete_two_loop_vacuum_reference_and_first_source_square",
+        "status": "BOUNDED_WITH_FULL_REGULATED_SOURCE_REDUCIBLE_CANCELLATION"
+      },
+      {
+        "id": "complete_two_loop_derivative_map_with_matched_physical_source",
+        "status": "TRANSPORTED_FOR_FULL_ACTION_AND_PHYSICAL_SOURCE_NOT_ORDINARY_PSI_MS_OR_TRUNCATION"
+      },
+      {
+        "id": "complete_matched_two_loop_low_energy_Phi_elastic_cut",
+        "status": "BOUNDED_ON_PHYSICAL_WINDOW_4_TO_6_WITH_FULL_FIRST_AMPLITUDE_NOT_PHYSICAL_REMAINDER_OR_GLOBAL_DISPERSION"
+      },
+      {
+        "id": "full_finite_kappa_analytic_target_classical_vacuum_match",
+        "status": "BOUNDED_ON_SAME_RESTRICTED_FLAT_SCHWARTZ_CLASS_NOT_QUANTUM_TARGET_OR_ROLLING_COMMON_PARENT_MATCH"
+      },
+      {
+        "id": "GY14_SAT8_pointwise_fermion_mass_protection_and_named_low_order_invariance",
+        "status": "NEW_ANALYTIC_EFT_BRANCH_WITH_GLOBAL_REAL_MASS_FLOOR_AND_SAME_NAMED_TWO_LOOP_DATA_NOT_ROLLING_STATE_OR_COMMON_PARENT_CLOSURE"
+      },
+      {
+        "id": "polynomial_clock_transparent_physical_source_map_and_full_target_classical_bound",
+        "status": "KINEMATIC_CLOCK_ARGUMENT_ALIGNED_WITH_PROTECTED_MASSES_AND_SAME_NAMED_VACUUM_DATA_NOT_BACKGROUND_SOLUTION_QUANTUM_STATE_OR_COMMON_PARENT_CLOSURE"
+      },
+      {
+        "id": "free_flat_clock_Dirac_out_energy_with_complete_transition_series_remainder",
+        "status": "BOUNDED_FOR_SPECIFIED_QUADRATIC_MODEWISE_IN_OUT_STATE_NOT_INTERACTING_OR_CURVED_BOUNCE_STRESS"
+      },
+      {
+        "id": "Hadamard_regular_free_flat_SAT8_in_out_state_and_uniform_one_particle_norm_limit",
+        "status": "HADAMARD_FOR_SPECIFIED_FREE_EXTERNAL_MASS_OPERATOR_USING_IDENTIFIED_EXTERNAL_THEOREM_NOT_INTERACTING_CURVED_STATE_OR_NUMERICAL_STRESS"
+      },
+      {
+        "id": "exact_four_frame_free_transition_and_uniform_same_operator_in_out_T00_difference",
+        "status": "BOUNDED_FOR_FREE_FLAT_HADAMARD_STATE_DIFFERENCE_NOT_ABSOLUTE_STRESS_INTERACTING_CURVED_STATE_OR_BACKREACTION"
+      },
+      {
+        "id": "free_flat_absolute_one_loop_local_energy_with_fixed_saturated_mass_reference",
+        "status": "BOUNDED_IN_EXPLICIT_MS_AND_SATURATED_MASS_REFERENCE_QUADRATIC_SCHEME_NOT_FULL_CURVED_INTERACTING_PARENT_STRESS"
+      }
+    ],
+    "primitive": [
+      {
+        "id": "scalar_Phi0_W0_F0",
+        "status": "BOUNDED_PAIRED_VACUUM_PRIMITIVE_WITH_ASSIGNED_LOCAL_FOREST"
+      },
+      {
+        "id": "scalar_Phi2_W0_F2",
+        "status": "BOUNDED_NONLOCAL_AND_FINITE_MS_MASS_AND_SLOPE_REFERENCES"
+      },
+      {
+        "id": "scalar_Phi2_W1_F0",
+        "status": "BOUNDED_PAIRED_NONLOCAL_AND_FINITE_MS_LOCAL_REFERENCES"
+      },
+      {
+        "id": "scalar_Phi4_W0_F4",
+        "status": "BOUNDED_PAIRED_PRIMITIVE_ROW"
+      },
+      {
+        "id": "scalar_Phi4_W1_F2",
+        "status": "BOUNDED_PAIRED_IN_COMMON_MS_INTERACTION_SCHEME"
+      },
+      {
+        "id": "scalar_Phi4_W2_F0",
+        "status": "BOUNDED_PAIRED_IN_COMMON_MS_INTERACTION_SCHEME"
+      },
+      {
+        "id": "gauge_Phi0",
+        "status": "BOUNDED_PAIRED_VACUUM_PRIMITIVE_WITH_ASSIGNED_LOCAL_FOREST"
+      },
+      {
+        "id": "gauge_Phi2",
+        "status": "BOUNDED_NONLOCAL_AND_FINITE_MS_MASS_AND_SLOPE_REFERENCES"
+      },
+      {
+        "id": "gauge_Phi4",
+        "status": "BOUNDED_PAIRED_PRIMITIVE_ROW"
+      }
+    ]
+  },
+  "prior_sha256": {
+    "S6_167_fully_rebuilt": "01ae1949bc7d1b8eb01002e6388c2734d1bfcfb3445cb6bfcb7d7bb96512ddce",
+    "all_prior_scientific_sources_and_reports_unchanged": true,
+    "same_free_flat_operator_exact_frames_and_Hadamard_states": true
+  },
+  "proof_checks": {
+    "Bloch_sum_strictly_below_three": true,
+    "MS_finite_parts_restored_not_removed_by_normal_ordering": true,
+    "actual_absolute_logarithm_bound_below_one_hundredth": true,
+    "actual_complete_absolute_one_loop_energy_below_one_e789": true,
+    "actual_named_reference_ratio_below_one_e_minus11": true,
+    "actual_subtracted_state_remainder_below_one_e411": true,
+    "all_halfline_transition_orders_retained": true,
+    "all_higher_even_potential_coefficients_positive": true,
+    "all_named_up_to_four_source_two_loop_data_protected": true,
+    "all_nonzero_actual_allowances_positive": true,
+    "all_remainder_radial_integrals_finite": true,
+    "derivative_log_plus_two_thirds_below_one": true,
+    "entire_accepted_parameter_domain_derivative_factor_below_one": true,
+    "finite_mass_counterterm_coefficient_fixed_by_prior_pole": true,
+    "finite_mass_reference_not_retuned_to_cancel_energy": true,
+    "frozen_anchor_increment_lower_positive": true,
+    "frozen_anchor_increment_upper_below_two_thirds": true,
+    "full_dimensional_angular_factor_retained": true,
+    "full_positive_potential_tail_retained": true,
+    "higher_field_extension_named_and_not_a_frozen_rewrite": true,
+    "inert_flavor_vacuum_reference_retained": true,
+    "instantaneous_fourth_frame_not_claimed_as_exact_Hadamard_state": true,
+    "new_higher_field_one_loop_data_not_identified": true,
+    "original_V_G_B_and_P8_remain_open": true,
+    "pressure_and_curved_counterterms_not_inferred_from_T00": true,
+    "real_angle_series_ratio_at_most_one_over_1024": true,
+    "same_exact_in_out_Hadamard_states": true,
+    "scalar_heavy_gauge_and_higher_loop_energy_not_included": true,
+    "subtracted_mode_remainder_integrated_over_all_momenta": true,
+    "whole_quadratic_momentum_space_not_a_physical_cutoff": true,
+    "zero_field_inert_vacuum_constants_removed_by_same_reference": true
+  },
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "0ec752d43c8759dd5f1a4e4c6e2d03c084ec3e31d6b1ac56e2ed34ba627f6237",
+    "README.md": "96abcf4bda74a8effab99fd169a91e581451fa62b10766288a2c96aa9db21cba",
+    "notes/dimensional.md": "b4c1e818b83fcf28a0687d617eab6663d2613f6a1eacbcfb25661e3f37242411",
+    "notes/energy.md": "239a66dcc1193bad6548352b9c2f45fa48e741c5f0ebadde3ea7febdc83aba69",
+    "notes/frames.md": "0070395339167dced28c4658dd07aef2553fb18bb742a067efe2e94b275a52e5",
+    "notes/reference.md": "4e08a4b3f6cedc7c65c5bb574440c344d573f575d581024a9cf7f22bfc8b753d",
+    "notes/scope.md": "d610a1631bd097fb2d09c10724271323edbe2dc899ba1f5115be2b5139d60a5f",
+    "notes/validation.md": "56ae95ff969e1100724fbafeab639ff5281270190fa92e3928785f50387b6cbc",
+    "src/p8_vacuum_flat_local_energy/__init__.py": "c147630743e3b8e13cfe0302f20e189c441e9c975e1b1625813a6e74b5773e34",
+    "src/p8_vacuum_flat_local_energy/audit.py": "80d3082cf40de3913d05080b79d17141dff71eee490336122d5e55ae01e699ae",
+    "src/p8_vacuum_flat_local_energy/energy.py": "d03b4e1ee53b46830ea0e60560627b38df630966f158d0ed042d0e6a07a35a7c",
+    "src/p8_vacuum_flat_local_energy/extension.py": "20fdfcda2f8d13db8737f61636ada0cb4af2b2a399497e33b1825a7ca6b08687",
+    "src/p8_vacuum_flat_local_energy/frames.py": "4bc6057fab8ae3298b696f2531bf1d1533a58d4bdfb9c1de3fad404180b0a1db",
+    "src/p8_vacuum_flat_local_energy/reference.py": "a0553bc30c6b22cd97ce00b6e54d9c36f4a50120855dfef18b471c9655491385",
+    "src/p8_vacuum_flat_local_energy/subtraction.py": "7c048fdfed170db2a6f7971108a21aba3080b17dd32101a8033d876eab72f3c4",
+    "src/p8_vacuum_flat_local_energy/verify.py": "dcf040c8c9dfb417f0ffaff8eff6e282e24497b6b9c5293246568352297a9858",
+    "tests/test_flat_local_energy_certificate.py": "53c95d8d9c29446055fc4222418f5b191a580560bba2e7ab94425852c603375d",
+    "tests/test_flat_local_energy_science.py": "d43aaa62bd233d53fd5dd737a55f845cad18717b1f21d9aeffe87b1b1ddc94ae"
+  },
+  "status": "BOUNDED_ABSOLUTE_FREE_FLAT_ONE_LOOP_LOCAL_T00_IN_EXPLICIT_MS_VACUUM_AND_SATURATED_MASS_REFERENCE_PRESCRIPTION; NOT_FULL_PHYSICAL_STRESS_CURVED_INTERACTING_STATE_HIGHER_LOOP_REMAINDER_V_G_B_OR_ORIGINAL_P8",
+  "verdict": "The full exact quadratic state is compared with four instantaneous rotating frames, not replaced by an adiabatic truncation. Complete momentum estimates bound its subtracted remainder below1e411. Full dimensional MS finite terms and the fixed vacuum reference are restored. The separately named GY14-SAT8-MR finite mass-reference extension preserves all named vacuum coefficients through loop two while bounding the entire paired potential. All local terms and exact state remainders sum to less than1e789, or1e-11 of the named kappa reference, for every real time. This specified free one-loop T00 is not the full physical curved/interacting parent stress or a bounce-density relative error.",
+  "verification_boundary": "Exact alternating-frame/projector and dimensional gamma finite-part algebra, full radial integrals and a complete convergent paired potential tail. Independent Pauli products, nonzero-regulator radial quadratures, 600-digit actual mass-anchor cancellation, full potential/anchor integrals, curvature/source and unsaturated-counterterm controls supplement the written analytic arguments. Numerical diagnostics are not validated integration. All own exact payloads are serialized before freeze. Native, direct science, ordinary and CLI use unmodified SymPy; only full regression uses the separately audited exact GCD adapter.",
+  "written_proofs": [
+    "notes/frames.md",
+    "notes/dimensional.md",
+    "notes/reference.md",
+    "notes/energy.md",
+    "notes/scope.md",
+    "notes/validation.md"
+  ]
+}
