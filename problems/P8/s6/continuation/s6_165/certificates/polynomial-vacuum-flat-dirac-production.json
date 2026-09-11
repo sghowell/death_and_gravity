@@ -1,0 +1,353 @@
+{
+  "actual_free_clock_energy_and_reference_scale_comparison": {
+    "bounds": {
+      "free_out_particle_energy_below_one_e_784": true,
+      "named_reference_scale_ratio_below_one_e_minus_16": true,
+      "out_frequency_ratio_below_two": true,
+      "strict_small_relative_mass_modulation": true,
+      "uniform_exact_transition_amplitude_below_one_e_minus_9": true,
+      "uniform_mixing_cap_below_one_hundredth": true
+    },
+    "complete_quadratic_transition_and_out_energy_enclosure": {
+      "complete_free_out_particle_energy_density_upper": "5760000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000008000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000/3267",
+      "first_transition_part_of_energy_upper": "8000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000/3267",
+      "higher_transition_part_of_energy_upper": "640000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000/363",
+      "max_integrated_mixing_upper": "1/660",
+      "strict_mass_lower": "99000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "uniform_exact_transition_amplitude_upper": "9000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001/12937320000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "out_energy_upper_divided_by_named_kappa_reference_scale": "720000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001/40837500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "profile_amplitude_rational_upper": "300000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "quadratic_subsystem_mean_mass": "100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "reference_scale_scope": "rho_out/kappa compares with the named kappa*m_Phi^4 scale in m_Phi=1 units. It is NOT a relative error against the bounce's total energy density, which vanishes at H=0, and is not a semiclassical background-response bound.",
+    "same_active_color_flavor_multiplicity": 6,
+    "same_profile_time_scale": "1/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "state_and_parameter_scope": "The specified free/quadratic Dirac operator uses the SAT8 numerical interaction-boundary parameters and the clock argument aligned by S6.164. This does not identify a higher-loop fermion pole or an interacting gauge-invariant asymptotic particle state."
+  },
+  "checked_scalar_entries": 48,
+  "claim": "P8-S6.165.FREE_FLAT_CLOCK_DIRAC_OUT_ENERGY_AND_COMPLETE_TRANSITION_REMAINDER",
+  "complete_transition_remainder_and_out_energy": {
+    "energy": {
+      "all_higher_transition_upper": "Delta**3*p**3/(5*(m0**2 + p**2)**3)",
+      "complete_free_out_energy_upper": "8*N*(Delta**6/(225*m0**2) + 5*Delta**2/(m0**2*tau**4))/pi**2",
+      "energy_argument": "omega_out<=2E, E=sqrt(p^2+m0^2), and (A+B)^2<=2A^2+2B^2. The radial integrals are integral p^4/E^7 dp=1/(5m0^2) and integral p^8/E^11 dp=1/(9m0^2). Both upper terms decay as p^-3 in the transition amplitude, making the out-particle energy density finite.",
+      "mode_measure": "rho_out=4N/(2pi^2) integral_0^infinity p^2 omega_out |beta_p|^2 dp. N=6 active color/flavor components, two spin/helicity states and particles plus antiparticles. The twelve inert flavors have constant flat masses and beta=0.",
+      "scope": "Energy of the free out-particle Hamiltonian normal ordered against its free out-vacuum, per unit spatial volume. It is not a finite total energy, a bound on transient renormalized local stress/coherence, an interacting gauge observable or curved-space backreaction.",
+      "transition_integral_upper": "5*Delta*p/(tau**2*(m0**2 + p**2)**2)"
+    },
+    "transition": {
+      "absolute_integrated_derivative_factor": "9*r**2/2 + 5*r/4 + 9/2",
+      "absolute_omega_derivative_bounds": "|omega'|<=|M'| and |omega''|<=|M''|+|M'|^2/omega. Substitution into the exact twice-integrated expression gives coefficients1,10,18 for |M'''|/E^4, |M'M''|/E^5 and |M'|^3/E^6.",
+      "all_orders_mixing_tail": "The interaction generator is off diagonal. Only odd Dyson orders contribute to beta. With eta=integral |v|<=p Delta/(p^2+m0^2), absolute convergence bounds beta-I1 by sinh(eta)-eta<=eta^3 exp(eta)/6<=eta^3/5 when eta<=1/100. These are all transition-coupling orders of a quadratic evolution, NOT all Feynman loop orders.",
+      "bounds": {
+        "derivative_factor_strictly_below_five": true,
+        "odd_series_geometric_coefficient_below_one_fifth": true
+      },
+      "transition_integral_bound": "|I1(p)|<=5 p Delta/[tau^2(p^2+m0^2)^2] for Delta/m0<1/100. The instantaneous omega in the phase is the full varying frequency, not expanded in Delta.",
+      "twice_integrated_transition_integrand": "p*(Derivative(M(t), (t, 3))/omega(t)**4 - 3*Derivative(M(t), t)*Derivative(omega(t), (t, 2))/omega(t)**5 - 7*Derivative(M(t), (t, 2))*Derivative(omega(t), t)/omega(t)**5 + 15*Derivative(M(t), t)*Derivative(omega(t), t)**2/omega(t)**6)/8"
+    }
+  },
+  "controls": {
+    "all_transition_orders_not_all_Feynman_loops": true,
+    "colored_free_modes_not_interacting_gauge_asymptotic_states": true,
+    "finite_energy_not_Hadamard_or_curved_state_certificate": true,
+    "free_out_particle_energy_not_transient_renormalized_stress": true,
+    "higher_transition_terms_not_set_to_zero": true,
+    "modewise_evolution_not_global_infinite_volume_Fock_unitary": true,
+    "original_P8_not_closed": true,
+    "reference_scale_ratio_not_bounce_backreaction_bound": true,
+    "rejected_inputs": 154
+  },
+  "date": "2026-09-10",
+  "exact_residuals": {
+    "all_parent_matching_rows_unchanged": "0",
+    "all_parent_primitive_rows_unchanged": "0",
+    "calibration_all_energy_allowances_included": "0",
+    "calibration_clock_source_variations_preserved": "0",
+    "calibration_reference_scale_not_bounce_density": "0",
+    "calibration_same_actual_clock_transition_scale": "0",
+    "calibration_same_actual_profile_amplitude_upper": "0",
+    "calibration_same_mass_reference": "0",
+    "calibration_same_protected_pointwise_mass_floor": "0",
+    "calibration_zero_momentum_has_zero_transition": "0",
+    "energy_complete_radial_energy_composition": "0",
+    "energy_first_amplitude_large_momentum_degree": "0",
+    "energy_first_radial_integral": "0",
+    "energy_higher_amplitude_large_momentum_degree": "0",
+    "energy_higher_radial_integral": "0",
+    "energy_out_frequency_and_two_norm_factors": "0",
+    "energy_spherical_measure_with_Dirac_degeneracy": "0",
+    "energy_two_norm_inequality_positive_difference": "0",
+    "mode_both_helicities_same_squared_frequency": "0",
+    "mode_helicity_characteristic_polynomial": "0",
+    "mode_instantaneous_mixing_rate": "0",
+    "mode_instantaneous_rotation_0_0": "0",
+    "mode_instantaneous_rotation_0_1": "0",
+    "mode_instantaneous_rotation_1_0": "0",
+    "mode_instantaneous_rotation_1_1": "0",
+    "mode_mode_probability_conserved": "0",
+    "mode_moving_basis_connection_0_0": "0",
+    "mode_moving_basis_connection_0_1": "0",
+    "mode_moving_basis_connection_1_0": "0",
+    "mode_moving_basis_connection_1_1": "0",
+    "mode_two_helicities_particles_and_antiparticles": "0",
+    "nine_primitive_rows_retained": "0",
+    "only_free_flat_in_out_state_item_added": "0",
+    "profile_four_total_variation_pieces": "0",
+    "profile_full_profile_first_derivative": "0",
+    "profile_full_profile_second_derivative": "0",
+    "profile_full_profile_third_derivative": "0",
+    "profile_positive_extremum_equation": "0",
+    "profile_squared_first_derivative_antiderivative": "0",
+    "profile_two_first_derivative_half_lines": "0",
+    "profile_weighted_variation_exact": "0",
+    "transition_cubic_mass_derivative_absolute_coefficient": "0",
+    "transition_exact_twice_integration_by_parts": "0",
+    "transition_max_mixing_from_two_ab_le_square": "0",
+    "transition_mixed_mass_derivative_absolute_coefficient": "0",
+    "transition_profile_integral_composition": "0",
+    "transition_third_and_higher_tail_coefficient": "0",
+    "transition_zero_mixing_has_zero_transition": "0"
+  },
+  "formulation": "FORMULATION.md",
+  "free_mode_state_and_switching_profile": {
+    "mode": {
+      "helicity_Hamiltonian": [
+        [
+          "m",
+          "p"
+        ],
+        [
+          "p",
+          "-m"
+        ]
+      ],
+      "instantaneous_rotation": [
+        [
+          "cos(angle/2)",
+          "-sin(angle/2)"
+        ],
+        [
+          "sin(angle/2)",
+          "cos(angle/2)"
+        ]
+      ],
+      "interaction_equations": {
+        "alpha_prime": "-beta*mixing*exp(I*phase)",
+        "beta_prime": "alpha*mixing*exp(-I*phase)"
+      },
+      "mixing_rate": "p*Derivative(M(t), t)/(2*p**2 + 2*M(t)**2)",
+      "phase_prescription": "phase'=2omega, omega=sqrt(p^2+M(t)^2). In the dimensionless x=t/tau test solver its accumulated half-phase obeys Phi'=tau omega.",
+      "scope": "This is the quadratic Dirac subsystem on a prescribed flat time-dependent scalar argument. Gauge interactions are omitted. No asymptotic colored-particle observable of the full interacting GY14 gauge theory, Hadamard remainder or curved-space state is identified.",
+      "state": "For each momentum/helicity use the positive/negative energy in basis at t=-infinity. The integrable mass tails give modewise unitary Moller limits. They define translation-invariant free quasifree in/out states; no finite total energy or single global infinite-volume Fock unitary is asserted."
+    },
+    "profile": {
+      "extremum_positive_eighth_power": "7/10",
+      "first_derivative": "(x**8 + 1)**(-9/8)",
+      "first_derivative_L1": "2",
+      "first_derivative_cubed_integral_upper": "2",
+      "first_times_second_derivative_absolute_integral": "1",
+      "normalized_profile": "x/(x**8 + 1)**(1/8)",
+      "second_derivative": "-9*x**7/(x**8 + 1)**(17/8)",
+      "tail": "For |x|>=1, |s(x)-sgn(x)|<=1/(8|x|^8), by convexity of (1+u)^(-1/8). Hence the mass difference from each asymptote is time integrable. Derivatives decay sufficiently for both transition-integral integrations by parts.",
+      "third_derivative": "-9*x**6*(7 - 10*x**8)/(x**8 + 1)**(25/8)",
+      "third_derivative_absolute_integral_upper": "36",
+      "total_variation": "s' increases from zero to one and decreases to zero. Therefore integral |s's''|=1, and integral (s')^3<=integral s'=2. On each side s'' has one extremum, at |x|^8=7/10. Thus integral |s'''|=4 max|s''|<=36 using the previously proved |s''|<=9."
+    }
+  },
+  "named_exact_check_count": 48,
+  "not_established": [
+    "Gauge-invariant asymptotic colored particles or the full interacting GY14 state",
+    "A curved FLRW production estimate, transient renormalized local stress/coherence or backreaction",
+    "A Hadamard remainder or a single global infinite-volume Fock unitary from finite occupation energy",
+    "Physical omitted Feynman-loop errors, quantum target matching, V/G/B or original P8 closure"
+  ],
+  "primitive_and_matching_frontier": {
+    "matching": [
+      {
+        "id": "fixed_sigma_isolated_MS_conversion",
+        "status": "CANCELLED_NONLOCAL_ORDER_TWO_WITH_SAME_REGULATED_REFERENCE"
+      },
+      {
+        "id": "remaining_scale_parameter_field_map_and_cross_terms",
+        "status": "OPEN"
+      },
+      {
+        "id": "remaining_counterterm_and_vacuum_source_assembly",
+        "status": "ASSEMBLED_FOR_FIXED_ORDER_PHI_POLE_B2_VACUUM_AND_H_SOURCE"
+      },
+      {
+        "id": "full_matched_two_loop_pole_and_amplitude_error",
+        "status": "FIXED_ORDER_PHI_POLE_AND_B2_BOUNDED_PHYSICAL_TRUNCATION_OPEN"
+      },
+      {
+        "id": "finite_EFT_higher_order_truncation",
+        "status": "OPEN"
+      },
+      {
+        "id": "V_contour_and_cut_control",
+        "status": "OPEN"
+      },
+      {
+        "id": "finite_gravity_G",
+        "status": "OPEN"
+      },
+      {
+        "id": "common_parent_B",
+        "status": "OPEN"
+      },
+      {
+        "id": "complete_wineglass_interaction_forest_MS",
+        "status": "BOUNDED_WITH_REGULATED_FINITE_LOCAL_ANCHOR_AND_FULL_SCALE_TERM"
+      },
+      {
+        "id": "complete_double_bubble_interaction_forest_MS",
+        "status": "BOUNDED_WITH_ACTUAL_NESTED_MS_FORESTS_AND_BOTH_SCALE_TERMS"
+      },
+      {
+        "id": "complete_scalar_OS_insertion_interaction_forest_MS",
+        "status": "BOUNDED_WITH_FULL_REGULATED_SLOPE_TIMES_OUTER_REFERENCE"
+      },
+      {
+        "id": "complete_scalar_quadratic_finite_MS_slope_and_converted_OS_bound",
+        "status": "BOUNDED_WITH_FIXED_INNER_OS_AND_INTERACTION_MS_COORDINATES"
+      },
+      {
+        "id": "first_finite_Phi_field_covariance_and_MS_projection_commutator",
+        "status": "EXACT_REGULATED_FIELD_DIRECTION_AND_BOUNDED_FIRST_SLOPE_CROSS_TERMS"
+      },
+      {
+        "id": "complete_GY14_second_Phi_normalization_and_canonical_unit_disc_pole",
+        "status": "BOUNDED_WITH_DIRECT_MS_OWNERSHIP_AND_FULL_FINITE_FIELD_REEXPANSION"
+      },
+      {
+        "id": "complete_two_loop_vacuum_reference_and_first_source_square",
+        "status": "BOUNDED_WITH_FULL_REGULATED_SOURCE_REDUCIBLE_CANCELLATION"
+      },
+      {
+        "id": "complete_two_loop_derivative_map_with_matched_physical_source",
+        "status": "TRANSPORTED_FOR_FULL_ACTION_AND_PHYSICAL_SOURCE_NOT_ORDINARY_PSI_MS_OR_TRUNCATION"
+      },
+      {
+        "id": "complete_matched_two_loop_low_energy_Phi_elastic_cut",
+        "status": "BOUNDED_ON_PHYSICAL_WINDOW_4_TO_6_WITH_FULL_FIRST_AMPLITUDE_NOT_PHYSICAL_REMAINDER_OR_GLOBAL_DISPERSION"
+      },
+      {
+        "id": "full_finite_kappa_analytic_target_classical_vacuum_match",
+        "status": "BOUNDED_ON_SAME_RESTRICTED_FLAT_SCHWARTZ_CLASS_NOT_QUANTUM_TARGET_OR_ROLLING_COMMON_PARENT_MATCH"
+      },
+      {
+        "id": "GY14_SAT8_pointwise_fermion_mass_protection_and_named_low_order_invariance",
+        "status": "NEW_ANALYTIC_EFT_BRANCH_WITH_GLOBAL_REAL_MASS_FLOOR_AND_SAME_NAMED_TWO_LOOP_DATA_NOT_ROLLING_STATE_OR_COMMON_PARENT_CLOSURE"
+      },
+      {
+        "id": "polynomial_clock_transparent_physical_source_map_and_full_target_classical_bound",
+        "status": "KINEMATIC_CLOCK_ARGUMENT_ALIGNED_WITH_PROTECTED_MASSES_AND_SAME_NAMED_VACUUM_DATA_NOT_BACKGROUND_SOLUTION_QUANTUM_STATE_OR_COMMON_PARENT_CLOSURE"
+      },
+      {
+        "id": "free_flat_clock_Dirac_out_energy_with_complete_transition_series_remainder",
+        "status": "BOUNDED_FOR_SPECIFIED_QUADRATIC_MODEWISE_IN_OUT_STATE_NOT_INTERACTING_OR_CURVED_BOUNCE_STRESS"
+      }
+    ],
+    "primitive": [
+      {
+        "id": "scalar_Phi0_W0_F0",
+        "status": "BOUNDED_PAIRED_VACUUM_PRIMITIVE_WITH_ASSIGNED_LOCAL_FOREST"
+      },
+      {
+        "id": "scalar_Phi2_W0_F2",
+        "status": "BOUNDED_NONLOCAL_AND_FINITE_MS_MASS_AND_SLOPE_REFERENCES"
+      },
+      {
+        "id": "scalar_Phi2_W1_F0",
+        "status": "BOUNDED_PAIRED_NONLOCAL_AND_FINITE_MS_LOCAL_REFERENCES"
+      },
+      {
+        "id": "scalar_Phi4_W0_F4",
+        "status": "BOUNDED_PAIRED_PRIMITIVE_ROW"
+      },
+      {
+        "id": "scalar_Phi4_W1_F2",
+        "status": "BOUNDED_PAIRED_IN_COMMON_MS_INTERACTION_SCHEME"
+      },
+      {
+        "id": "scalar_Phi4_W2_F0",
+        "status": "BOUNDED_PAIRED_IN_COMMON_MS_INTERACTION_SCHEME"
+      },
+      {
+        "id": "gauge_Phi0",
+        "status": "BOUNDED_PAIRED_VACUUM_PRIMITIVE_WITH_ASSIGNED_LOCAL_FOREST"
+      },
+      {
+        "id": "gauge_Phi2",
+        "status": "BOUNDED_NONLOCAL_AND_FINITE_MS_MASS_AND_SLOPE_REFERENCES"
+      },
+      {
+        "id": "gauge_Phi4",
+        "status": "BOUNDED_PAIRED_PRIMITIVE_ROW"
+      }
+    ]
+  },
+  "prior_sha256": {
+    "S6_164_fully_rebuilt": "2684caa2dd2764c3fcc525c31b571188b323ca8c2cc81da0ce8eb9b2e69bd1b0",
+    "all_prior_scientific_sources_and_reports_unchanged": true,
+    "same_protected_mass_profile_and_aligned_clock_argument": true,
+    "specified_quadratic_flat_subsystem_not_full_interacting_state": true
+  },
+  "proof_checks": {
+    "all_prior_scientific_sources_and_reports_unchanged": true,
+    "both_integration_by_parts_boundary_terms_vanish": true,
+    "complete_odd_transition_Dyson_tail_retained": true,
+    "derivative_factor_strictly_below_five": true,
+    "finite_energy_not_promoted_to_Hadamard_or_local_stress_bound": true,
+    "free_out_particle_energy_below_one_e_784": true,
+    "full_momentum_energy_integral_finite": true,
+    "full_time_dependent_frequency_in_transition_phase": true,
+    "integrable_mass_tails_give_modewise_in_out_limits": true,
+    "interacting_gauge_particle_observable_not_inferred": true,
+    "kappa_reference_ratio_not_bounce_density_error": true,
+    "modewise_CAR_probability_preserved": true,
+    "named_reference_scale_ratio_below_one_e_minus_16": true,
+    "odd_series_geometric_coefficient_below_one_fifth": true,
+    "only_specified_quadratic_flat_Dirac_operator": true,
+    "out_frequency_ratio_below_two": true,
+    "profile_total_variation_bounds_not_sampling_claims": true,
+    "spin_particle_antiparticle_and_active_color_flavor_counts": true,
+    "strict_small_relative_mass_modulation": true,
+    "uniform_exact_transition_amplitude_below_one_e_minus_9": true,
+    "uniform_mixing_cap_below_one_hundredth": true,
+    "zero_momentum_and_constant_mass_production_vanish": true
+  },
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "4087845059e7aeb1e0c7feb3e57ea43f5c6ec93daeeedd87472e670c11741ba3",
+    "README.md": "c9037e274baad210b79c847825ec85ccc342e1c36af7ecd5c345b7d98a57ad69",
+    "notes/energy.md": "311580e66fb7f8a079fd4ea53c5fdedd5de6692a6fc1166f0a90a3f0e63af653",
+    "notes/profile.md": "93ebbdd2dee24ee49a0ef5787d90d47251c6804849fc27d6c66dad995c5fbe86",
+    "notes/scope.md": "1a7e1cba2fa3ee288f042c788de58a5841a1b3e9e903eb012372af6a6e16e524",
+    "notes/state.md": "86928f397096263ace2c9421cf16f940123801890a80d88380d06b58f14b3047",
+    "notes/transition.md": "ab25d10227eb92f88ee98adbf543758020e4a14eba13e890fbc6bf3396a19c58",
+    "notes/validation.md": "8cf50aac347b26c669235c3871f9b73aaf0b1ae882a900460a0fa27e45c8fe8b",
+    "src/p8_vacuum_flat_dirac_production/__init__.py": "3a39fa5cfcabd61dcdf8a2445f70333bec0de638dbe9bed01c2e6619a466a9fc",
+    "src/p8_vacuum_flat_dirac_production/audit.py": "a8fcf7fb9f21585626bcb1626b3d5cf825ab7571292e1b8aef61a99bf0a82f90",
+    "src/p8_vacuum_flat_dirac_production/calibration.py": "8c004677c8aff0b0100530f0b0f5a43bdb05e3c4c13a4b46944be01732eb11db",
+    "src/p8_vacuum_flat_dirac_production/energy.py": "1c3f974adc7993d2bbd7d55c1097524771b9babf16d442679b47601b19e8e9e0",
+    "src/p8_vacuum_flat_dirac_production/mode.py": "fde416cbebd546eb4f82f766e221ab800345fddd97a991545f910911f04479eb",
+    "src/p8_vacuum_flat_dirac_production/profile.py": "4e5d4def1a058c53403664decf9005282f1de4427c24dbf5fb5572cb9f7be58b",
+    "src/p8_vacuum_flat_dirac_production/transition.py": "c6d8accf3bea457ccedcbfaaaf6913ab7136e7a99e3bacace2e895c2814c6733",
+    "src/p8_vacuum_flat_dirac_production/verify.py": "bf3945a048bb77ea58790acd2a379f6e65ed0109820fa28c6dafb1cb3b7cfa28",
+    "tests/test_flat_dirac_production_certificate.py": "1361df9df64020bb6166f007fb9cceb7ca3efb3775159a3e3dc3f0754a518513",
+    "tests/test_flat_dirac_production_science.py": "8384fbfe6745aaabea6516279d767833d26b551a2c66fa3f4abaa80467c45a70"
+  },
+  "status": "SPECIFIED_FREE_FLAT_CLOCK_DIRAC_IN_OUT_STATE_WITH_COMPLETE_TRANSITION_SERIES_REMAINDER_AND_FINITE_OUT_PARTICLE_ENERGY; NOT_INTERACTING_OR_CURVED_STATE_LOCAL_STRESS_PHYSICAL_LOOP_REMAINDER_V_G_B_OR_ORIGINAL_P8",
+  "verdict": "For the specified quadratic flat Dirac subsystem with masses mF +/- Delta s(t/tau), the protected SAT8 profile has positive in/out masses and integrable tails, giving modewise in/out evolution. Two integrations by parts bound the first transition integral uniformly in momentum. The complete odd Dyson tail in the transition coupling is retained, not discarded. Both terms decay as p^-3; the exact spin/flavor/particle count and radial integrals give free out-particle energy below 1e784 and a ratio below 1e-16 to the named kappa reference scale. The uniform transition amplitude is below 1e-9. These are exact bounds for the stated quadratic evolution, not all Feynman loops, an interacting gauge asymptotic state, a local renormalized stress bound, a curved bounce state or original P8 closure.",
+  "verification_boundary": "Exact two-level rotation and mode norm, full-profile total-variation estimates, boundary-controlled integrations by parts, convergent odd transition-series tail and complete momentum energy integration with rational calibrated parameters. Independent tests solve finite-interval mode equations with refinement and norm checks, compare nonzero higher transition terms, integrate switching/radial functions and test zero-momentum/constant-mass controls. Numerical ODE diagnostics supplement the written proof and are not validated integration or formalization. Native, direct science, ordinary and CLI retain unmodified SymPy with interpreter-only allowances.",
+  "written_proofs": [
+    "notes/state.md",
+    "notes/profile.md",
+    "notes/transition.md",
+    "notes/energy.md",
+    "notes/validation.md",
+    "notes/scope.md"
+  ]
+}
