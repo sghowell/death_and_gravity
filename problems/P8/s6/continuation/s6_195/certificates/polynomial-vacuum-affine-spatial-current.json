@@ -1,0 +1,493 @@
+{
+  "checked_scalar_entries": 272,
+  "claim": "P8-S6.195.ACTUAL_SPATIAL_TWO_MOMENTUM_PROCA_METRIC_VERTICES_CONTACT_AND_UNIFORM_FINITE_BAND_GAUSSIAN_RESPONSE",
+  "controls": {
+    "actual_parent_state_constraint_and_physical_vertex_retained": true,
+    "complete_metric_contact_and_reverse_pair_count": true,
+    "finite_band_not_full_continuum_or_physical_cutoff": true,
+    "high_transfer_contact_and_nonintegrable_majorant_controls": true,
+    "independent_coupled_evolution_and_Kubo_normalization": true,
+    "independent_spatial_Legendre_and_noncommuting_lattice_variations": true,
+    "original_P8_not_closed": true,
+    "rejected_inputs": 117,
+    "two_momenta_and_energy_feature_factorization": true
+  },
+  "date": "2026-09-11",
+  "exact_residuals": {
+    "actual_off_diagonal_Gaussian_response_full_covariance_off_diagonal_pair_source": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "actual_off_diagonal_Gaussian_response_full_two_mode_symplectic_transport": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "actual_off_diagonal_Gaussian_response_pair_current_counts_both_reverse_blocks": "0",
+    "actual_off_diagonal_Gaussian_response_reversed_pair_source_transpose": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "actual_off_diagonal_Gaussian_response_unequal_propagators_full_Kubo_trace_identity": "0",
+    "complete_spatial_Hamiltonian_actual_temporal_constraint": "0",
+    "complete_spatial_Hamiltonian_full_source_zero_for_spatial_unimodular_shear": "0",
+    "complete_spatial_Hamiltonian_full_three_mode_canonical_generator_symplectic": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        6,
+        6
+      ]
+    },
+    "complete_spatial_Hamiltonian_instantaneous_three_mode_frequency_identity": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        3
+      ]
+    },
+    "complete_spatial_Hamiltonian_positive_constraint_Schur_term": "0",
+    "complete_spatial_Hamiltonian_ten_feature_complete_energy_identity": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        6,
+        6
+      ]
+    },
+    "nine_primitive_rows_retained": "0",
+    "one_new_scoped_row_added": "0",
+    "primitive_rows_unchanged": "0",
+    "prior_matching_rows_retained": "0",
+    "two_momentum_physical_vertices_constraint_has_no_unimodular_metric_vertex": "0",
+    "two_momentum_physical_vertices_full_off_diagonal_contact_factorization": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        6,
+        6
+      ]
+    },
+    "two_momentum_physical_vertices_full_off_diagonal_first_vertex_factorization": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        6,
+        6
+      ]
+    },
+    "two_momentum_physical_vertices_full_ordered_mixed_exponential_second": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        3
+      ]
+    },
+    "two_momentum_physical_vertices_real_contact_reverse_pair_adjoint": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        6,
+        6
+      ]
+    },
+    "two_momentum_physical_vertices_real_first_vertex_reverse_pair_adjoint": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        6,
+        6
+      ]
+    },
+    "uniform_external_momentum_finite_band_all_band_radial_measure": "0",
+    "uniform_external_momentum_finite_band_proper_canonical_two_chain_factors": "0",
+    "uniform_external_momentum_finite_band_selected_band_is_computational_only": "0",
+    "uniform_external_momentum_finite_band_zero_mode_high_transfer_contact": "0"
+  },
+  "formulation": "FORMULATION.md",
+  "full_spatial_Hamiltonian_and_vertices": {
+    "hamiltonian": {
+      "domain": "The same conditional actual Proca state at the isotropic clock, varied by smooth external spatial unimodular shear with the common zero initial neighborhood. The source is exactly zero on this restricted external metric family, including spatially varying shear.",
+      "full_H": "H=integral[pi^t E pi/a+(div pi)^2/(a^3m^2)+a m^2 A^t E^-1 A+(curl A)^t E(curl A)/a]/2, E=exp gamma.",
+      "spatial_operator": "K=E/a-grad div/(a^3m^2), V=a m^2 E^-1+curl E curl/a on real fields. Curl is self-adjoint under compact/periodic integration by parts.",
+      "temporal_constraint": "A0=-div pi/(a^3m^2); no independent fourth oscillator and no removal of the longitudinal constraint energy."
+    },
+    "vertices": {
+      "balanced_form": "For the actual symplectic normalizers T_k^t M0(k) T_k=omega_k I, ||T_k^t M_D(k,q)T_q||op<=sqrt(omega_k omega_q)||D||op. This is an instantaneous energy identity, not a frequency-dependent cutoff or inverse.",
+      "first_vertex": "M_D(k,q)=diag(-a m^2 D_(k-q)+C_k^t D_(k-q) C_q/a,D_(k-q)/a). Both momenta remain in the magnetic contraction.",
+      "second_contact": "M_DGamma uses the same electric/magnetic terms and POSITIVE mass term with H=(D Gamma+Gamma D)/2 in position space. Its Fourier coefficient is the full convolution, not one mode product except for a specified plane-wave pair.",
+      "uniform_all_momenta_bound": "The ten-row energy feature map gives M_D=F_k^t diag(-D,D,D,0)F_q. Since F_k^t F_k=M0(k), the two-sided energy-relative norm is <=||D||op for every k,q, including zero and noncollinear momenta. The contact norm is <=||D||op||Gamma||op for a single pointwise or Fourier pair."
+    }
+  },
+  "named_exact_check_count": 25,
+  "not_established": [
+    "A covariantly renormalized full spatial/mixed continuum response and quantitative infinite-tail matching",
+    "A full feedback inverse, finite-coupling interacting quantum background or its stability",
+    "Full parent state/measure/loops, physical heavy/cutoff/threshold and omitted-order matching",
+    "Complete vacuum cuts/contour/truncation, finite-gravity IR/Regge or original V/G/B and P8 closure"
+  ],
+  "observable_and_scope": {
+    "boundary": "The growing internal-momentum bound is not an infinite renormalized spatial-tail estimate. No homogeneous covariant subtraction is transferred, no physical cutoff is declared and no full inverse, quantum background or V/G/B closure follows.",
+    "domain": "The same actual Gaussian Proca state at the isotropic CD clock and prescribed smooth spatial unimodular shear, with the common zero initial neighborhood.",
+    "exact_spatial_vertices": "The complete constrained physical Hamiltonian gives two-momentum first vertices and nonzero local metric contacts with full Fourier convolution, and energy-relative norms uniform in both internal and external momenta.",
+    "finite_band_bound": "For the common computational band |k|<=K=1e16, the complete projected current response is below2e104 times the temporal supremum of a fixed external Fourier input, uniformly in its momentum. The canonical display is8e-696.",
+    "response": "Two distinct unperturbed propagators give the exact off-diagonal Gaussian covariance tangent. The finite-regulator current includes its retarded Kubo term and the second metric contact."
+  },
+  "primitive_and_matching_frontier": {
+    "matching": [
+      {
+        "id": "fixed_sigma_isolated_MS_conversion",
+        "status": "CANCELLED_NONLOCAL_ORDER_TWO_WITH_SAME_REGULATED_REFERENCE"
+      },
+      {
+        "id": "remaining_scale_parameter_field_map_and_cross_terms",
+        "status": "OPEN"
+      },
+      {
+        "id": "remaining_counterterm_and_vacuum_source_assembly",
+        "status": "ASSEMBLED_FOR_FIXED_ORDER_PHI_POLE_B2_VACUUM_AND_H_SOURCE"
+      },
+      {
+        "id": "full_matched_two_loop_pole_and_amplitude_error",
+        "status": "FIXED_ORDER_PHI_POLE_AND_B2_BOUNDED_PHYSICAL_TRUNCATION_OPEN"
+      },
+      {
+        "id": "finite_EFT_higher_order_truncation",
+        "status": "OPEN"
+      },
+      {
+        "id": "V_contour_and_cut_control",
+        "status": "OPEN"
+      },
+      {
+        "id": "finite_gravity_G",
+        "status": "OPEN"
+      },
+      {
+        "id": "common_parent_B",
+        "status": "OPEN"
+      },
+      {
+        "id": "complete_wineglass_interaction_forest_MS",
+        "status": "BOUNDED_WITH_REGULATED_FINITE_LOCAL_ANCHOR_AND_FULL_SCALE_TERM"
+      },
+      {
+        "id": "complete_double_bubble_interaction_forest_MS",
+        "status": "BOUNDED_WITH_ACTUAL_NESTED_MS_FORESTS_AND_BOTH_SCALE_TERMS"
+      },
+      {
+        "id": "complete_scalar_OS_insertion_interaction_forest_MS",
+        "status": "BOUNDED_WITH_FULL_REGULATED_SLOPE_TIMES_OUTER_REFERENCE"
+      },
+      {
+        "id": "complete_scalar_quadratic_finite_MS_slope_and_converted_OS_bound",
+        "status": "BOUNDED_WITH_FIXED_INNER_OS_AND_INTERACTION_MS_COORDINATES"
+      },
+      {
+        "id": "first_finite_Phi_field_covariance_and_MS_projection_commutator",
+        "status": "EXACT_REGULATED_FIELD_DIRECTION_AND_BOUNDED_FIRST_SLOPE_CROSS_TERMS"
+      },
+      {
+        "id": "complete_GY14_second_Phi_normalization_and_canonical_unit_disc_pole",
+        "status": "BOUNDED_WITH_DIRECT_MS_OWNERSHIP_AND_FULL_FINITE_FIELD_REEXPANSION"
+      },
+      {
+        "id": "complete_two_loop_vacuum_reference_and_first_source_square",
+        "status": "BOUNDED_WITH_FULL_REGULATED_SOURCE_REDUCIBLE_CANCELLATION"
+      },
+      {
+        "id": "complete_two_loop_derivative_map_with_matched_physical_source",
+        "status": "TRANSPORTED_FOR_FULL_ACTION_AND_PHYSICAL_SOURCE_NOT_ORDINARY_PSI_MS_OR_TRUNCATION"
+      },
+      {
+        "id": "complete_matched_two_loop_low_energy_Phi_elastic_cut",
+        "status": "BOUNDED_ON_PHYSICAL_WINDOW_4_TO_6_WITH_FULL_FIRST_AMPLITUDE_NOT_PHYSICAL_REMAINDER_OR_GLOBAL_DISPERSION"
+      },
+      {
+        "id": "full_finite_kappa_analytic_target_classical_vacuum_match",
+        "status": "BOUNDED_ON_SAME_RESTRICTED_FLAT_SCHWARTZ_CLASS_NOT_QUANTUM_TARGET_OR_ROLLING_COMMON_PARENT_MATCH"
+      },
+      {
+        "id": "GY14_SAT8_pointwise_fermion_mass_protection_and_named_low_order_invariance",
+        "status": "NEW_ANALYTIC_EFT_BRANCH_WITH_GLOBAL_REAL_MASS_FLOOR_AND_SAME_NAMED_TWO_LOOP_DATA_NOT_ROLLING_STATE_OR_COMMON_PARENT_CLOSURE"
+      },
+      {
+        "id": "polynomial_clock_transparent_physical_source_map_and_full_target_classical_bound",
+        "status": "KINEMATIC_CLOCK_ARGUMENT_ALIGNED_WITH_PROTECTED_MASSES_AND_SAME_NAMED_VACUUM_DATA_NOT_BACKGROUND_SOLUTION_QUANTUM_STATE_OR_COMMON_PARENT_CLOSURE"
+      },
+      {
+        "id": "free_flat_clock_Dirac_out_energy_with_complete_transition_series_remainder",
+        "status": "BOUNDED_FOR_SPECIFIED_QUADRATIC_MODEWISE_IN_OUT_STATE_NOT_INTERACTING_OR_CURVED_BOUNCE_STRESS"
+      },
+      {
+        "id": "Hadamard_regular_free_flat_SAT8_in_out_state_and_uniform_one_particle_norm_limit",
+        "status": "HADAMARD_FOR_SPECIFIED_FREE_EXTERNAL_MASS_OPERATOR_USING_IDENTIFIED_EXTERNAL_THEOREM_NOT_INTERACTING_CURVED_STATE_OR_NUMERICAL_STRESS"
+      },
+      {
+        "id": "exact_four_frame_free_transition_and_uniform_same_operator_in_out_T00_difference",
+        "status": "BOUNDED_FOR_FREE_FLAT_HADAMARD_STATE_DIFFERENCE_NOT_ABSOLUTE_STRESS_INTERACTING_CURVED_STATE_OR_BACKREACTION"
+      },
+      {
+        "id": "free_flat_absolute_one_loop_local_energy_with_fixed_saturated_mass_reference",
+        "status": "BOUNDED_IN_EXPLICIT_MS_AND_SATURATED_MASS_REFERENCE_QUADRATIC_SCHEME_NOT_FULL_CURVED_INTERACTING_PARENT_STRESS"
+      },
+      {
+        "id": "complete_free_flat_homogeneous_one_loop_stress_with_dimensional_curvature_improvement",
+        "status": "BOUNDED_SPECIFIED_QUADRATIC_MS_MR_FLAT_TENSOR_NOT_FULL_INTERACTING_CURVED_PARENT_STRESS"
+      },
+      {
+        "id": "actual_CD_free_Dirac_Hadamard_in_out_state_and_uniform_state_stress_difference",
+        "status": "CURVED_FREE_HADAMARD_STATE_AND_STATE_DIFFERENCE_BOUNDED_NOT_ABSOLUTE_PARENT_STRESS"
+      },
+      {
+        "id": "complete_free_curved_one_loop_stress_with_explicit_EC_Newton_reference",
+        "status": "BOUNDED_SPECIFIED_QUADRATIC_CURVED_TENSOR_NOT_FULL_INTERACTING_PARENT_OR_BACKGROUND_RESPONSE"
+      },
+      {
+        "id": "minimal_Einstein_canonical_clock_free_sector_null_equation_mismatch",
+        "status": "EXCLUDED_NAMED_MINIMAL_DIAGNOSTIC_WITH_SMALL_EXTRA_NULL_BUDGET_NOT_FULL_INTERACTING_PARENT_OR_DHOST_ROW"
+      },
+      {
+        "id": "actual_CD_leading_clock_Euler_source_decomposition_and_matching_domain_gap",
+        "status": "LEADING_TARGET_SOURCES_AND_CONSTRAINT_DOMAIN_REQUIREMENTS_IDENTIFIED_NOT_PROPAGATING_PARENT_OR_QUANTUM_BOUNCE"
+      },
+      {
+        "id": "analytic_CD_REG_AFFINE_ISO_classical_parent_clock_vacuum_and_local_constraints",
+        "status": "NEW_REGULAR_CLASSICAL_PARENT_AND_LOCAL_CONSTRAINT_BLOCKS_NOT_QUANTUM_MATCHING_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "same_classical_affine_parent_closed_source_lift_and_scoped_vector_Schur_control",
+        "status": "EXACT_CLASSICAL_AND_COMMON_REGULATOR_IDENTITIES_FULL_EUCLIDEAN_AND_LEADING_LORENTZ_BOUNDS_NOT_FULL_QUANTUM_MATCHING"
+      },
+      {
+        "id": "regular_affine_parent_conditional_Gaussian_Hadamard_family_and_ordinary_Proca_stress",
+        "status": "SOURCE_AWARE_CONDITIONAL_VECTOR_STATE_AND_FIXED_CLOCK_STRESS_NOT_FULL_PARENT_QUANTUM_SOLUTION"
+      },
+      {
+        "id": "full_fixed_canonical_affine_family_actual_classical_gravitational_decoupling",
+        "status": "ANCHORED_FULL_FUNCTION_CLASSICAL_LIMIT_AND_TREE_AMPLITUDE_NOT_QUANTUM_CONTOUR_TRUNCATION_OR_V_CLOSURE"
+      },
+      {
+        "id": "complete_affine_vector_retarded_mean_energy_and_causal_cubic_light_force",
+        "status": "FIXED_CD_FULL_SOURCE_FINITE_TIME_CONDITIONAL_GAUSSIAN_MEAN_AND_LIGHT_FORCE_NOT_METRIC_NOISE_FULL_PARENT_OR_B_CLOSURE"
+      },
+      {
+        "id": "same_affine_conditional_prepared_homogeneous_metric_response_with_uncancelled_chart_contacts",
+        "status": "COMPLETE_CONDITIONAL_VECTOR_HOMOGENEOUS_C10_TO_C0_BOUND_NOT_SPATIAL_NOISE_COUPLED_BACKGROUND_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "same_affine_parent_prepared_homogeneous_retained_tree_plus_conditional_vector_causal_inverse",
+        "status": "UNIQUE_RETAINED_LINEAR_PREPARED_CAUSAL_INVERSE_WITH_NUMERIC_LOCAL_LAPSE_RECOVERY_NOT_FULL_INVERSE_SMALLNESS_QUANTUM_BACKGROUND_OR_V_G_B"
+      },
+      {
+        "id": "same_massive_scalar_range_kernel_explicit_full_half_line_L1_majorant",
+        "status": "MASS_INDEPENDENT_EXPLICIT_SCALAR_KERNEL_NORM_NOT_FULL_INVERSE_SMALLNESS_BACKGROUND_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "new_CD_REG_AFFINE_ISO_QG1_fixed_coefficient_stationary_Gaussian_mean_and_actual_response",
+        "status": "NEW_PARENT_RETAINED_MEAN_STATIONARITY_AND_BOUNDED_COEFFICIENT_CORRECTION_NOT_FULL_QUANTUM_BACKGROUND_STABILITY_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "actual_classical_Hamiltonian_C0_and_C10_inverse_and_first_formal_Gaussian_response",
+        "status": "QUANTIFIED_PREPARED_CLASSICAL_PROPAGATOR_AND_FIRST_FORMAL_COEFFICIENT_NOT_FINITE_COUPLING_ERROR_STABILITY_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "complete_finite_time_canonical_vacuum_source_mean_and_scalar_force_noise_with_fixed_profile",
+        "status": "FULL_CONDITIONAL_GAUSSIAN_VACUUM_SOURCE_CAUSAL_AND_NOISE_BOUNDS_NOT_INTERACTING_AMPLITUDE_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "actual_all_order_CD_state_complete_clock_source_smeared_force_noise_and_canonical_normalization",
+        "status": "SAME_STATE_FULL_SOURCE_SMEARED_SCALAR_NOISE_BOUND_NOT_METRIC_NOISE_SOLUTION_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "actual_all_order_CD_full_local_smeared_metric_stress_covariance",
+        "status": "FULL_SPACETIME_TENSOR_STRESS_NOISE_BOUND_NOT_METRIC_SOLUTION_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "actual_CD_boundary_compatible_tree_tensor_noise_response",
+        "status": "RESTRICTED_DETECTOR_TREE_PROPAGATED_NOISE_NOT_FULL_QUANTUM_TENSOR_STATE_OR_V_G_B"
+      },
+      {
+        "id": "actual_CD_homogeneous_shear_Hamiltonian_contact_and_modewise_remainder",
+        "status": "ACTUAL_SHEAR_MODEWISE_FINITE_AMPLITUDE_REMAINDER_NOT_CONTINUUM_SELF_ENERGY_OR_V_G_B"
+      },
+      {
+        "id": "actual_fixed_local_covariant_full_spatial_tensor_Hessian",
+        "status": "ACTUAL_FIXED_FINITE_LOCAL_TENSOR_HESSIAN_BOUND_NOT_COMPLETE_DETERMINANT_RESPONSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_CD_full_matrix_adiabatic_uniform_covariance_tail",
+        "status": "ACTUAL_UNCHANGED_STATE_UNIFORM_HIGH_BAND_COVARIANCE_REMAINDER_NOT_RESPONSE_SUBTRACTION_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_matrix_covariance_tail_C2_response_and_Taylor_remainder",
+        "status": "ACTUAL_UNCHANGED_STATE_C2_HIGH_BAND_COVARIANCE_TAIL_NOT_COMPLETE_COVARIANT_RESPONSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_physical_shear_current_C2_fourth_order_comparison",
+        "status": "ACTUAL_STATE_C2_CURRENT_MODE_COMPARISON_NOT_FIXED_COVARIANT_MATCHING_OR_V_G_B"
+      },
+      {
+        "id": "actual_homogeneous_shear_full_fixed_covariant_mode_subtraction_matching",
+        "status": "ACTUAL_HOMOGENEOUS_SHEAR_FIXED_COVARIANT_MODE_SUBTRACTION_MATCHING_NOT_FULL_FEEDBACK_OR_V_G_B"
+      },
+      {
+        "id": "actual_complete_fixed_covariant_homogeneous_current_C2_and_canonical_response",
+        "status": "ACTUAL_COMPLETE_FIXED_COVARIANT_HOMOGENEOUS_CURRENT_C2_AND_CANONICAL_RESPONSE_NOT_FULL_FEEDBACK_OR_V_G_B"
+      },
+      {
+        "id": "actual_spatial_two_momentum_metric_vertices_and_finite_band_Gaussian_response",
+        "status": "ACTUAL_SPATIAL_TWO_MOMENTUM_CURRENT_FINITE_BAND_NOT_RENORMALIZED_CONTINUUM_INVERSE_OR_V_G_B"
+      }
+    ],
+    "primitive": [
+      {
+        "id": "scalar_Phi0_W0_F0",
+        "status": "BOUNDED_PAIRED_VACUUM_PRIMITIVE_WITH_ASSIGNED_LOCAL_FOREST"
+      },
+      {
+        "id": "scalar_Phi2_W0_F2",
+        "status": "BOUNDED_NONLOCAL_AND_FINITE_MS_MASS_AND_SLOPE_REFERENCES"
+      },
+      {
+        "id": "scalar_Phi2_W1_F0",
+        "status": "BOUNDED_PAIRED_NONLOCAL_AND_FINITE_MS_LOCAL_REFERENCES"
+      },
+      {
+        "id": "scalar_Phi4_W0_F4",
+        "status": "BOUNDED_PAIRED_PRIMITIVE_ROW"
+      },
+      {
+        "id": "scalar_Phi4_W1_F2",
+        "status": "BOUNDED_PAIRED_IN_COMMON_MS_INTERACTION_SCHEME"
+      },
+      {
+        "id": "scalar_Phi4_W2_F0",
+        "status": "BOUNDED_PAIRED_IN_COMMON_MS_INTERACTION_SCHEME"
+      },
+      {
+        "id": "gauge_Phi0",
+        "status": "BOUNDED_PAIRED_VACUUM_PRIMITIVE_WITH_ASSIGNED_LOCAL_FOREST"
+      },
+      {
+        "id": "gauge_Phi2",
+        "status": "BOUNDED_NONLOCAL_AND_FINITE_MS_MASS_AND_SLOPE_REFERENCES"
+      },
+      {
+        "id": "gauge_Phi4",
+        "status": "BOUNDED_PAIRED_PRIMITIVE_ROW"
+      }
+    ]
+  },
+  "prior_sha256": {
+    "S6_176_actual_CD_Gaussian_sector_transitively_rebuilt": "1175702d6980db090396863b807af0e767241daeb7d8dabf138ed11c67e1ae75",
+    "S6_194_fully_rebuilt": "16b91d124384e673e03edb32e2303e5572aeac2fe106593151bfb9b6e8550d8f",
+    "all_frozen_scientific_bytes_unchanged": true,
+    "fixed_stress_prescription_and_full_source_retained": true
+  },
+  "proof_checks": {
+    "actual_common_preparation_not_new_metric_state": true,
+    "actual_off_diagonal_Gaussian_response_contact_retained_separately_from_covariance": true,
+    "actual_off_diagonal_Gaussian_response_full_real_regulator_before_continuum": true,
+    "actual_off_diagonal_Gaussian_response_two_different_momenta_and_propagators": true,
+    "all_energy_features_before_norm_estimation": true,
+    "all_external_momenta_in_the_finite_band_bound": true,
+    "both_distinct_internal_momenta_in_the_magnetic_vertex": true,
+    "complete_spatial_Hamiltonian_actual_mass_positive": true,
+    "complete_spatial_Hamiltonian_feature_shape_keeps_constraint": true,
+    "complete_spatial_Hamiltonian_no_new_source_at_fixed_unimodular_clock": true,
+    "complete_spatial_Hamiltonian_positive_scale": true,
+    "constraint_energy_and_longitudinal_polarization_retained": true,
+    "covariance_and_Kubo_sign_and_factor_agree": true,
+    "finite_band_not_a_physical_cutoff": true,
+    "finite_regulator_contact_not_noise_anticommutator": true,
+    "full_pointwise_exponential_second_contact_convolution": true,
+    "full_source_zero_on_spatial_unimodular_external_family": true,
+    "full_two_propagator_off_diagonal_covariance_tangent": true,
+    "high_external_transfer_contact_not_dropped": true,
+    "no_full_inverse_interacting_background_or_stability": true,
+    "no_homogeneous_subtraction_transfer_to_full_space": true,
+    "original_V_G_B_not_closed": true,
+    "regular_zero_momentum_and_noncollinear_pairs": true,
+    "same_full_parent_M1_profile_state_and_prescription": true,
+    "spatial_Legendre_transform_before_temporal_elimination": true,
+    "two_momentum_physical_vertices_all_three_physical_energy_pieces": true,
+    "two_momentum_physical_vertices_arbitrary_two_momenta_not_identified": true,
+    "two_momentum_physical_vertices_no_spurious_temporal_constraint_variation": true,
+    "two_momentum_physical_vertices_second_mass_sign_is_positive": true,
+    "uniform_external_momentum_finite_band_actual_initial_covariance_to_slab_bound": true,
+    "uniform_external_momentum_finite_band_common_exponential_transport_bound": true,
+    "uniform_external_momentum_finite_band_complete_contact_display": true,
+    "uniform_external_momentum_finite_band_elementary_e_bound": true,
+    "uniform_external_momentum_finite_band_finite_contact_display": true,
+    "uniform_external_momentum_finite_band_finite_memory_display": true,
+    "uniform_external_momentum_finite_band_full_finite_sum_display": true,
+    "uniform_external_momentum_finite_band_high_transfer_contact_not_zero": true,
+    "uniform_external_momentum_finite_band_trace_dimension_and_frequency_factors": true,
+    "uniform_external_momentum_finite_band_two_source_terms_and_both_propagators": true
+  },
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "a6b6fc8b9f10a65b8de128f420b08c861b8817e9953f76383b8dee60c3038474",
+    "README.md": "7143941b992378a52df5538362d12c906944c99a72f7dbe1b73c2ffc3d7ca788",
+    "notes/bounds.md": "a042a3720bc282ece3945cba16f1efd5a3c57acfea3c1eb90754a4c8ab0134b8",
+    "notes/hamiltonian.md": "02265846b527a400773c360894cb7c6a2b30840fa0da18ce06d6260bf9acb834",
+    "notes/limit.md": "aab291a9c639fa41ae1a01edd73895f9729d2d71baf76b624ebb81ed829a1271",
+    "notes/response.md": "7fbf3d5c52d12ee63163093949edd410e5d47ae39b6c07b801b47b4525a83b0d",
+    "notes/scope.md": "33ac86771fd47d8df5e8e0073f2b7f3a303bce675a6c7882416fa4a050d1c220",
+    "notes/validation.md": "1d988d312761eead54492a8df9012d62a4fdcf0dafb19be8e49662c715de747b",
+    "notes/vertices.md": "0bbc863ea3f918eac89cb2405161618546f5723468bb978e75ed456899d594d7",
+    "src/p8_vacuum_affine_spatial_current/__init__.py": "320d1d4fda664293724cfe0670eca65f670fa70ef14a1f39424be4578f7cea68",
+    "src/p8_vacuum_affine_spatial_current/audit.py": "483a6f3ae9bbea16e80b5b10f687a8cfa3f51e69723d1585c3296ef85f8608b9",
+    "src/p8_vacuum_affine_spatial_current/bounds.py": "93ef6445f22c77592f5c6ca0f52b5ee6eb0ea8162a9f335d1e3ce2b540110077",
+    "src/p8_vacuum_affine_spatial_current/hamiltonian.py": "09b80ec5917d76b3b34101f82615af7f7576f162fae46b4562f715778ecc0505",
+    "src/p8_vacuum_affine_spatial_current/response.py": "d09f091c8acb7bcf194c41bd8a917d82ad6d4606dc7ca36f4289e27ba36525fd",
+    "src/p8_vacuum_affine_spatial_current/verify.py": "05b64469fa661743244662de34fdfecdc8bbffe1a1606f6b4f8cd5d1593ee3a1",
+    "src/p8_vacuum_affine_spatial_current/vertices.py": "a48b3c4eacdb21c292ba254273e4c4b4287d22b7680ac413926fd9e405ebd3e6",
+    "tests/test_affine_spatial_current_certificate.py": "19d0ec64c134e8bfd7fd1b0afdc8a897b456c16120faa2b761907b427fb87724",
+    "tests/test_affine_spatial_current_science.py": "549a7d5d7dc0e2fd8279b1c829388b32faffc870644b576869d3373d8abdc66b"
+  },
+  "status": "ACTUAL_SPATIAL_TWO_MOMENTUM_PROCA_METRIC_VERTICES_CONTACT_AND_UNIFORM_FINITE_BAND_GAUSSIAN_RESPONSE; NOT_RENORMALIZED_SPATIAL_CONTINUUM_INVERSE_BACKGROUND_CUTOFF_V_G_B_OR_ORIGINAL_P8",
+  "two_momentum_response_and_finite_band": {
+    "bounds": {
+      "UV_boundary": "This is an exact finite-regulator response and an all-momentum vertex estimate, not a covariantly renormalized full spatial response. The displayed internal-momentum majorants grow; neither they nor S194's homogeneous subtraction are an infinite spatial-tail proof. The band is not a physical cutoff or a stability/inverse theorem.",
+      "constants": {
+        "canonical_projected_current_display": "1/125000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "e_series_upper": "8877691/3265920",
+        "finite_band_contact_before_rounding": "100000000000000000000000000000000000000000000000000000000000000000000000000000/9",
+        "finite_band_current_display": "200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "finite_band_memory_before_rounding": "200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000/27",
+        "full_covariance_pair_source_and_transport": "64000000000000000000000",
+        "full_same_time_metric_contact": "24000000000000",
+        "full_six_dimensional_pair_readout": "600000000000000000000000"
+      },
+      "finite_band": "For the common sharp Galerkin band |k|,|q|<=K with K>=1000 and q=k-p, the propagation overlap measure is at most K^3/(6pi^2)<K^3/54 and nu_k,nu_q<2K. The current's memory term is <1e24 K^5 integral||Gamma_p|| and its contact is <1e13 K^4||Gamma_p(t)||, uniformly in external p.",
+      "large_transfer_contact": "If |p|>2K the propagation overlap is empty, but the second metric contact need not vanish: the pointwise product of opposite external Fourier modes has zero total momentum. The explicit zero-mode cos(p x) fixture has current derivative -m tr(D^2)/4, not zero.",
+      "ordered_pair_current_bound": "The propagated integrand has absolute value <1e24 nu_k nu_q ||D_(q-k)(t)||op integral ||Gamma_(k-q)(s)||op ds. The local contact integrand is <3e13 nu_k ||D||op||Gamma||op for a specified Fourier pair.",
+      "pair_covariance_bound": "||delta Sigma_kq(t)||op <1e23 sqrt(nu_k nu_q) integral_(t0)^t ||Gamma_(k-q)(s)||op ds for the balanced off-diagonal covariance tangent. This is an operator norm, not a momentum-integrable ultraviolet majorant.",
+      "preparation_and_norm": "Use the actual unchanged isotropic CD state, uniform balanced covariance bound4e12, two-propagator product norm<=exp(22|t-s|)<4e9, and omega_k(t)<2nu_k on the unit slab, nu_k=sqrt(m^2+|k|^2/a(t0)^2). No growth estimate of exp(|k||t-s|) is used.",
+      "selected_display": "At K=1e16, the full projected current is bounded by2e104 sup_I||Gamma_p|| for unit detector polarization. Multiplication by4/(a^3 kappa) yields the projected canonical linear-response display8e-696."
+    },
+    "response": {
+      "Fourier_covariance": "C(k,q)=<sym Z(k) Z(q)^dagger>, with unperturbed C(k,q)=delta(k-q)C_k. Complex amplitudes are the complexification of the real-field canonical algebra; reversed pairs obey the corresponding adjoint relation.",
+      "Kubo": "On every common finite real-mode regulator the complete expression equals -<H_DGamma>+i integral <[H_D(t),H_Gamma(s)]>ds. The factor and sign follow from varying +H_Gamma and reading out -H_D, not from replacing the commutator by the noise anticommutator.",
+      "exact_pair_tangent": "delta C_kq'=A_k delta C_kq+delta C_kq A_q^t+J M_Gamma(k,q)C_q+C_k M_Gamma(k,q)J^t, delta C_kq(t0)=0. The initial state is unchanged because the prescribed external perturbation vanishes in the common preparation neighborhood.",
+      "full_current": "delta J_D(t)=-1/2 integral tr[M_D(q,k;t)delta C_kq(t)]dkdq-1/2 integral tr[M_DGamma(k,k;t)C_k(t)]dk, with the indicated Fourier measures and external-momentum pairing. The second term is a local-in-time metric contact.",
+      "initial_state_boundary": "External-metric vector response only. No factorized or vanishing quantum metric initial data or switched-on interaction is presumed.",
+      "retarded_solution": "Integrate U_k(t,s)[J M_Gamma(k,q;s)C_q(s)+C_k(s)M_Gamma(k,q;s)J^t]U_q(t,s)^t from t0 to t. The propagators and physical momenta are generally different."
+    }
+  },
+  "verdict": "The unchanged actual conditional Proca sector has the full spatially varying unimodular Hamiltonian with its positive temporal-constraint energy. Exact first metric vertices retain two distinct momenta, while the second variation retains the pointwise ordered contact and its full Fourier convolution. A ten-row energy factorization bounds the two-sided vertices uniformly for all momenta and preserves the constrained longitudinal mode. The exact off-diagonal covariance tangent has two distinct propagators and gives the same finite-regulator sign and factor as the Kubo commutator, together with the local metric contact. At computational K1e16 the complete projected current response is bounded by2e104 uniformly in external momentum, giving canonical display8e-696. The contact can survive when external momentum exceeds2K and the propagation overlap is empty. The internal-momentum majorants grow and are not a renormalized spatial continuum bound. Full spatial subtraction/tail matching, response inverse, finite-coupling interacting background, physical cutoff and original V/G/B and P8 remain open.",
+  "verification_boundary": "Exact constrained spatial Hamiltonian and two-momentum feature identities, full local contacts, covariance/Kubo algebra and quantitative finite-band majorants. Independent real-space Legendre, noncommuting lattice Fourier variations and direct coupled Gaussian evolution supplement continuous written proofs. Native, direct science, ordinary and CLI use original SymPy; only full regression uses the audited exact GCD adapter. Analytic energy and continuum-scope arguments are not FORMALIZED.",
+  "written_proofs": [
+    "notes/hamiltonian.md",
+    "notes/vertices.md",
+    "notes/response.md",
+    "notes/bounds.md",
+    "notes/limit.md",
+    "notes/scope.md",
+    "notes/validation.md"
+  ]
+}
