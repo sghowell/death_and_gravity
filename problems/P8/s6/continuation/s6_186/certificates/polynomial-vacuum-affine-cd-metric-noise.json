@@ -1,0 +1,2562 @@
+{
+  "checked_scalar_entries": 81,
+  "claim": "P8-S6.186.ACTUAL_ALL_ORDER_CD_STATE_FULL_LOCAL_SPACETIME_SMEARED_PROCA_METRIC_STRESS_COVARIANCE_AND_NORMALIZATION_BOUND",
+  "complete_pair_smearing_and_noise": {
+    "noise": {
+      "Einstein_normalized_metric_force_standard_deviation_display": "1e-375 N[h], with delta g_ab=2h_ab/sqrt(kappa) and the variational factor1/2 retained; this is not yet a fully constraint-reduced canonical mixed-mode norm",
+      "actual_mode_remainder_variance_coefficient_upper": "288000000000",
+      "complete_stress_variance_coefficient_upper": "3600000000000000000000000000000000000288000000000",
+      "complete_stress_variance_display_upper": "100000000000000000000000000000000000000000000000000",
+      "distributional_boundary": "Compact smooth smearing precedes the limit. The two-particle kernel is Hilbert-Schmidt by the full radial bounds; momentum regulators are proof devices, not physical cutoffs. No pointwise variance is defined.",
+      "exact_Wick_pair_formula": "Var T[f]=2 sum_(r,s=1)^3 integral d^3k d^3l/(2pi)^6 |integral_I dt a^3 sum_(a,b) fhat_ab(t,k+l) conjugate(u_r(t,k))^T M_ab conjugate(u_s(t,l))|^2",
+      "normalization_boundary": "The reference Einstein metric normalization suppresses a fixed canonical vector stress. Lapse/shift constraints and scalar-metric mixing have not been inverted or canonically diagonalized here. This is not S6.185's raw-clock source covariance, where the scalar field dictionary cancels the apparent suppression.",
+      "observable": "Var T[f]=omega((T[f]-omega(T[f]))^2) for arbitrary real compact symmetric physical-frame test tensors on the actual CD clock; local quadratic stress, not products of separately smeared fields",
+      "physical_stress_divided_by_kappa_standard_deviation_display": "1e-775 N[f]",
+      "prescription": "The same fixed covariant stress and fixed scalar coefficient are retained. Their deterministic c-number contributions cancel in centering. Actual-state Wick ordering is a computation of that centered operator, not a new mean prescription.",
+      "reference_pair_variance_coefficient_upper": "3600000000000000000000000000000000000000000000000",
+      "remaining": "This is the conditional vector noise input. It is not Gaussian statistics for the quadratic stress, a metric solution, a stable inverse, complete quantum loops or original V/G/B closure.",
+      "smearing_norm": "N[f]^2=sum_(j=0)^3 ||partial_t^j f||L2(dt dx;F)^2+||grad_spatial f||L2(dt dx;F)^2",
+      "stress_standard_deviation_display": "1e25 N[f]"
+    },
+    "pair": {
+      "Fourier_convention": "Each spatial integral has d^3k/(2pi)^3; P=k+l preserves this inner/outer convention; Uj(P)^2=sum_(r<=j) integral_I ||partial_t^r fhat(t,P)||F^2 dt",
+      "compact_time_test": "Arbitrary smooth compact symmetric physical-frame f_ab(t,x), supported strictly inside the unit CD slab; no band restriction",
+      "continuous_reference_pair_time_bound": "5824000000000000000000000",
+      "error_full_internal_integral_upper": "4(1+|P|/(Amax m))*J10 <8 m^-7 (1+|P|^2)",
+      "error_pair_estimate": "|I_error(k,l)|<=1e15 sqrt(nu mu)(nu^-6+mu^-6) U0(P)",
+      "fourth_resolvent_radial_integral": "125/(262144*pi)",
+      "inverse_sum_phase_holomorphic_upper": "2/(nu+mu), from Re W_k>nu/2 and Re W_l>mu/2",
+      "reference_full_internal_integral_upper": "125/(1048576*pi)",
+      "reference_pair_display": "10000000000000000000000000",
+      "reference_pair_estimate": "|I_ref(k,l)|<=1e25 sqrt(nu mu)/(nu+mu)^3 U3(P), P=k+l",
+      "tenth_resolvent_radial_integral": "1/(26843545600000000000000*pi)",
+      "third_Leibniz_coefficients": {
+        "0": "48",
+        "1": "33",
+        "2": "9",
+        "3": "1"
+      }
+    }
+  },
+  "controls": {
+    "complete_radial_integrals_not_a_finite_grid": true,
+    "creation_pairs_include_complex_conjugate_modes": true,
+    "full_local_tensor_not_only_energy_or_pressure": true,
+    "mean_cancellation_not_zero_noise": true,
+    "no_time_derivative_assumption_on_fast_mixing": true,
+    "noise_input_not_a_metric_stability_certificate": true,
+    "original_P8_not_closed": true,
+    "rejected_inputs": 108,
+    "state_not_reset_or_replaced_by_reference": true
+  },
+  "date": "2026-09-11",
+  "exact_residuals": {
+    "centered_stress_noise_Wick_pair_exchange_factor": "0",
+    "centered_stress_noise_actual_fixed_mass": "0",
+    "centered_stress_noise_canonical_gravity_metric_dictionary": "0",
+    "centered_stress_noise_canonical_metric_and_clock_dictionaries_not_conflated": "0",
+    "centered_stress_noise_fixed_counterterm_cancels_only_centered_covariance": "0",
+    "centered_stress_noise_full_pair_error_radial_factor": "0",
+    "centered_stress_noise_full_source_first_metric_variation_zero": "0",
+    "centered_stress_noise_physical_normalized_variance": "0",
+    "full_physical_stress_exact_volume_cancellation": "0",
+    "full_physical_stress_literal_covariant_full_stress": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "full_physical_stress_longitudinal_electric_constraint_readout": "0",
+    "full_physical_stress_longitudinal_mass_spatial_readout": "0",
+    "full_physical_stress_longitudinal_physical_energy": "0",
+    "full_physical_stress_longitudinal_temporal_constraint_readout": "0",
+    "full_physical_stress_same_mass": "0",
+    "full_physical_stress_stress_quadratic_form_0_0": "0",
+    "full_physical_stress_stress_quadratic_form_0_1": "0",
+    "full_physical_stress_stress_quadratic_form_0_2": "0",
+    "full_physical_stress_stress_quadratic_form_0_3": "0",
+    "full_physical_stress_stress_quadratic_form_1_0": "0",
+    "full_physical_stress_stress_quadratic_form_1_1": "0",
+    "full_physical_stress_stress_quadratic_form_1_2": "0",
+    "full_physical_stress_stress_quadratic_form_1_3": "0",
+    "full_physical_stress_stress_quadratic_form_2_0": "0",
+    "full_physical_stress_stress_quadratic_form_2_1": "0",
+    "full_physical_stress_stress_quadratic_form_2_2": "0",
+    "full_physical_stress_stress_quadratic_form_2_3": "0",
+    "full_physical_stress_stress_quadratic_form_3_0": "0",
+    "full_physical_stress_stress_quadratic_form_3_1": "0",
+    "full_physical_stress_stress_quadratic_form_3_2": "0",
+    "full_physical_stress_stress_quadratic_form_3_3": "0",
+    "full_physical_stress_transverse_electric_constraint_readout": "0",
+    "full_physical_stress_transverse_magnetic_constraint_readout": "0",
+    "full_physical_stress_transverse_mass_spatial_readout": "0",
+    "full_physical_stress_transverse_physical_energy": "0",
+    "nine_primitive_rows_retained": "0",
+    "one_new_scoped_row_added": "0",
+    "pair_smearing_complete_radial_resolvent_fourth": "0",
+    "pair_smearing_complete_radial_resolvent_tenth": "0",
+    "pair_smearing_complete_third_integration_by_parts_operator": "0",
+    "pair_smearing_full_angular_fourth_integral": "0",
+    "pair_smearing_full_angular_tenth_integral": "0",
+    "pair_smearing_full_test_Leibniz_majorant_0": "0",
+    "pair_smearing_full_test_Leibniz_majorant_1": "0",
+    "pair_smearing_full_test_Leibniz_majorant_2": "0",
+    "pair_smearing_full_test_Leibniz_majorant_3": "0",
+    "pair_smearing_reference_AM_GM_gap": "0",
+    "pair_smearing_squared_remainder_split_gap": "0",
+    "primitive_rows_unchanged": "0",
+    "prior_matching_rows_retained": "0",
+    "reference_and_actual_state_actual_evolved_E": "0",
+    "reference_and_actual_state_actual_initial_B6": "0",
+    "reference_and_actual_state_actual_reference_residual_constant": "0",
+    "reference_and_actual_state_constant_initial_amplitude_CCR": "0",
+    "reference_and_actual_state_longitudinal_complex_denominator_1": "0",
+    "reference_and_actual_state_longitudinal_complex_denominator_2": "0",
+    "reference_and_actual_state_longitudinal_complex_denominator_3": "0",
+    "reference_and_actual_state_longitudinal_complex_denominator_4": "0",
+    "reference_and_actual_state_reference_pair_norm_count": "0",
+    "reference_and_actual_state_reference_real_volume_already_cancelled": "0",
+    "reference_and_actual_state_remainder_pair_safe_count": "0",
+    "reference_and_actual_state_same_unmodified_all_order_mixing_envelope": "0",
+    "reference_and_actual_state_transverse_complex_denominator_1": "0",
+    "reference_and_actual_state_transverse_complex_denominator_2": "0",
+    "reference_and_actual_state_transverse_complex_denominator_3": "0",
+    "reference_and_actual_state_transverse_complex_denominator_4": "0"
+  },
+  "formulation": "FORMULATION.md",
+  "full_stress_and_actual_state": {
+    "reference": {
+      "actual_W8_complex_coefficient_majorants": {
+        "longitudinal": {
+          "1": {
+            "complex_coefficient_upper": "312369657/24500000",
+            "quadratic_denominator_power": 2
+          },
+          "2": {
+            "complex_coefficient_upper": "4421939389266343263/1200500000000000",
+            "quadratic_denominator_power": 4
+          },
+          "3": {
+            "complex_coefficient_upper": "112053403038053470757072031321/29412250000000000000000",
+            "quadratic_denominator_power": 6
+          },
+          "4": {
+            "complex_coefficient_upper": "22798526354326855366353983172260890267003/2882400500000000000000000000000",
+            "quadratic_denominator_power": 8
+          },
+          "ratio_defect": "34609584074205821287529617250663807148046690267003/2659719768591384110200050000000000000000000000000000000"
+        },
+        "transverse": {
+          "1": {
+            "complex_coefficient_upper": "72876891/4900000",
+            "quadratic_denominator_power": 2
+          },
+          "2": {
+            "complex_coefficient_upper": "946012107386497101/240100000000000",
+            "quadratic_denominator_power": 4
+          },
+          "3": {
+            "complex_coefficient_upper": "927311211364654531994119683/235298000000000000000",
+            "quadratic_denominator_power": 6
+          },
+          "4": {
+            "complex_coefficient_upper": "938412132241837448078410048933951639821/115296020000000000000000000000",
+            "quadratic_denominator_power": 8
+          },
+          "ratio_defect": "538288966442091395991799614440198563333650546607/35462930247885121469334000000000000000000000000000000"
+        }
+      },
+      "actual_state_remainder_coefficient": "115613982997673351/62500000000",
+      "complex_Wprime_upper_over_nu": "60000",
+      "complex_reference_momentum_upper_over_sqrt_nu": "12601/200",
+      "complex_reference_real_part_lower_over_nu": "247/250",
+      "each_phase_stripped_ten_field_component_display_upper_over_sqrt_nu": "1000",
+      "exact_mode_decomposition": "u_actual=alpha_initial u_ref+e, with ||e||<=4000 R nu^(-11/2); alpha_initial is constant, not alpha(t), and |alpha_initial|<2",
+      "inner_amplitude_Cauchy_radius": "1/20000",
+      "outer_complex_time_radius": "1/10000",
+      "phase_stripped_ten_field_Euclidean_norm_upper_over_sqrt_nu": "4000",
+      "reference_pair_bound": "||a_ref(t,k,l)||F <=1e9 sqrt(nu mu) on the inner complex disc, after both actual constant alpha_initial factors",
+      "reference_stress_pair_coefficient_upper": "1000000000",
+      "relative_a_inverse_squared_defect_upper": "3/4997",
+      "remainder_pair_bound": "||a_error(t,k,l)||F <=1e15 sqrt(nu mu)(nu^-6+mu^-6) on the real slab; no derivatives of the rapidly oscillating mixing are taken",
+      "remainder_stress_pair_coefficient_upper": "1000000000000000",
+      "source_pinned_constants": {
+        "B6": "1813229",
+        "C": "5207948696836",
+        "E": "5347035781757616"
+      }
+    },
+    "stress": {
+      "common_volume_factor": "a^(-3/2) in every field mode; a^3 in the local stress smearing",
+      "contracted_matrix_bound": "||M_f||op <= (1/2) sum_(a,b)|f_ab| <=2 ||f||F; all16 tensor entries",
+      "each_stress_matrix_operator_norm_upper": "1/2",
+      "field_order": [
+        "E0",
+        "E1",
+        "E2",
+        "B0",
+        "B1",
+        "B2",
+        "mA0",
+        "mA1",
+        "mA2",
+        "mA3"
+      ],
+      "phase_stripped_mode_readouts": {
+        "longitudinal": [
+          [
+            "0"
+          ],
+          [
+            "0"
+          ],
+          [
+            "m*p/omega"
+          ],
+          [
+            "0"
+          ],
+          [
+            "0"
+          ],
+          [
+            "0"
+          ],
+          [
+            "-I*k*p/(a*omega)"
+          ],
+          [
+            "0"
+          ],
+          [
+            "0"
+          ],
+          [
+            "f*omega"
+          ]
+        ],
+        "one_transverse": [
+          [
+            "p"
+          ],
+          [
+            "0"
+          ],
+          [
+            "0"
+          ],
+          [
+            "0"
+          ],
+          [
+            "I*f*k/a"
+          ],
+          [
+            "0"
+          ],
+          [
+            "0"
+          ],
+          [
+            "f*m"
+          ],
+          [
+            "0"
+          ],
+          [
+            "0"
+          ]
+        ]
+      },
+      "physical_stress": [
+        [
+          "B0**2/2 + B1**2/2 + B2**2/2 + E0**2/2 + E1**2/2 + E2**2/2 + mA0**2/2 + mA1**2/2 + mA2**2/2 + mA3**2/2",
+          "-B1*E2 + B2*E1 + mA0*mA1",
+          "B0*E2 - B2*E0 + mA0*mA2",
+          "-B0*E1 + B1*E0 + mA0*mA3"
+        ],
+        [
+          "-B1*E2 + B2*E1 + mA0*mA1",
+          "-B0**2/2 + B1**2/2 + B2**2/2 - E0**2/2 + E1**2/2 + E2**2/2 + mA0**2/2 + mA1**2/2 - mA2**2/2 - mA3**2/2",
+          "-B0*B1 - E0*E1 + mA1*mA2",
+          "-B0*B2 - E0*E2 + mA1*mA3"
+        ],
+        [
+          "B0*E2 - B2*E0 + mA0*mA2",
+          "-B0*B1 - E0*E1 + mA1*mA2",
+          "B0**2/2 - B1**2/2 + B2**2/2 + E0**2/2 - E1**2/2 + E2**2/2 + mA0**2/2 - mA1**2/2 + mA2**2/2 - mA3**2/2",
+          "-B1*B2 - E1*E2 + mA2*mA3"
+        ],
+        [
+          "-B0*E1 + B1*E0 + mA0*mA3",
+          "-B0*B2 - E0*E2 + mA1*mA3",
+          "-B1*B2 - E1*E2 + mA2*mA3",
+          "B0**2/2 + B1**2/2 - B2**2/2 + E0**2/2 + E1**2/2 - E2**2/2 + mA0**2/2 - mA1**2/2 - mA2**2/2 + mA3**2/2"
+        ]
+      ],
+      "quadratic_matrices": {
+        "(0, 0)": [
+          [
+            "1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/2",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/2",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/2",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/2",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/2"
+          ]
+        ],
+        "(0, 1)": [
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/2",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "-1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "-1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/2",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/2",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "(0, 2)": [
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "-1/2",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "-1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/2",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/2",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "(0, 3)": [
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "-1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "-1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/2"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/2",
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "(1, 0)": [
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/2",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "-1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "-1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/2",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/2",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "(1, 1)": [
+          [
+            "-1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "-1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/2",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/2",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/2",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "-1/2",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "-1/2"
+          ]
+        ],
+        "(1, 2)": [
+          [
+            "0",
+            "-1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "-1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "-1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "-1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/2",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/2",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "(1, 3)": [
+          [
+            "0",
+            "0",
+            "-1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "-1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "-1/2",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "-1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/2"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/2",
+            "0",
+            "0"
+          ]
+        ],
+        "(2, 0)": [
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "-1/2",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "-1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/2",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/2",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "(2, 1)": [
+          [
+            "0",
+            "-1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "-1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "-1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "-1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/2",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/2",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "(2, 2)": [
+          [
+            "1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "-1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "-1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/2",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/2",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "-1/2",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/2",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "-1/2"
+          ]
+        ],
+        "(2, 3)": [
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "-1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "-1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "-1/2",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "-1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/2"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/2",
+            "0"
+          ]
+        ],
+        "(3, 0)": [
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "-1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "-1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/2"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/2",
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "(3, 1)": [
+          [
+            "0",
+            "0",
+            "-1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "-1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "-1/2",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "-1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/2"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/2",
+            "0",
+            "0"
+          ]
+        ],
+        "(3, 2)": [
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "-1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "-1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "-1/2",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "-1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/2"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/2",
+            "0"
+          ]
+        ],
+        "(3, 3)": [
+          [
+            "1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "-1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "-1/2",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/2",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "-1/2",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "-1/2",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1/2"
+          ]
+        ]
+      }
+    }
+  },
+  "named_exact_check_count": 66,
+  "not_established": [
+    "A coincident stress variance, Gaussian higher stress statistics or a physical momentum cutoff",
+    "Fully reduced canonical mixed-mode noise, a small or stable full inverse, spatial/nonlinear/stochastic metric solutions or finite-coupling remainders",
+    "Complete interacting parent state/measure/loops and heavy/cutoff/threshold or omitted-order matching",
+    "Complete vacuum cuts/contour/truncation, finite-gravity IR/Regge or original V/G/B closure"
+  ],
+  "observable_and_scope": {
+    "noise": "The actual all-order CD state's complete local Proca stress has smeared standard deviation below1e25 in the specified three-time-derivative and one-spatial-derivative tensor norm.",
+    "normalization": "The same bounds become1e-775 for stress/kappa and1e-375 for the Einstein-normalized metric test coupling, not a fully reduced mixed-mode norm.",
+    "remaining": "Actual spatial/nonlinear/finite-coupling metric response, full interacting parent measures/loops, heavy/cutoff/threshold and omitted-order matching, full vacuum and finite-gravity V/G/B.",
+    "scope": "All tensor components, physical polarizations, temporal constraint and the complete momentum range are retained. No flat state, WKB reset, physical momentum cutoff or separately smoothed field product replaces the observable."
+  },
+  "primitive_and_matching_frontier": {
+    "matching": [
+      {
+        "id": "fixed_sigma_isolated_MS_conversion",
+        "status": "CANCELLED_NONLOCAL_ORDER_TWO_WITH_SAME_REGULATED_REFERENCE"
+      },
+      {
+        "id": "remaining_scale_parameter_field_map_and_cross_terms",
+        "status": "OPEN"
+      },
+      {
+        "id": "remaining_counterterm_and_vacuum_source_assembly",
+        "status": "ASSEMBLED_FOR_FIXED_ORDER_PHI_POLE_B2_VACUUM_AND_H_SOURCE"
+      },
+      {
+        "id": "full_matched_two_loop_pole_and_amplitude_error",
+        "status": "FIXED_ORDER_PHI_POLE_AND_B2_BOUNDED_PHYSICAL_TRUNCATION_OPEN"
+      },
+      {
+        "id": "finite_EFT_higher_order_truncation",
+        "status": "OPEN"
+      },
+      {
+        "id": "V_contour_and_cut_control",
+        "status": "OPEN"
+      },
+      {
+        "id": "finite_gravity_G",
+        "status": "OPEN"
+      },
+      {
+        "id": "common_parent_B",
+        "status": "OPEN"
+      },
+      {
+        "id": "complete_wineglass_interaction_forest_MS",
+        "status": "BOUNDED_WITH_REGULATED_FINITE_LOCAL_ANCHOR_AND_FULL_SCALE_TERM"
+      },
+      {
+        "id": "complete_double_bubble_interaction_forest_MS",
+        "status": "BOUNDED_WITH_ACTUAL_NESTED_MS_FORESTS_AND_BOTH_SCALE_TERMS"
+      },
+      {
+        "id": "complete_scalar_OS_insertion_interaction_forest_MS",
+        "status": "BOUNDED_WITH_FULL_REGULATED_SLOPE_TIMES_OUTER_REFERENCE"
+      },
+      {
+        "id": "complete_scalar_quadratic_finite_MS_slope_and_converted_OS_bound",
+        "status": "BOUNDED_WITH_FIXED_INNER_OS_AND_INTERACTION_MS_COORDINATES"
+      },
+      {
+        "id": "first_finite_Phi_field_covariance_and_MS_projection_commutator",
+        "status": "EXACT_REGULATED_FIELD_DIRECTION_AND_BOUNDED_FIRST_SLOPE_CROSS_TERMS"
+      },
+      {
+        "id": "complete_GY14_second_Phi_normalization_and_canonical_unit_disc_pole",
+        "status": "BOUNDED_WITH_DIRECT_MS_OWNERSHIP_AND_FULL_FINITE_FIELD_REEXPANSION"
+      },
+      {
+        "id": "complete_two_loop_vacuum_reference_and_first_source_square",
+        "status": "BOUNDED_WITH_FULL_REGULATED_SOURCE_REDUCIBLE_CANCELLATION"
+      },
+      {
+        "id": "complete_two_loop_derivative_map_with_matched_physical_source",
+        "status": "TRANSPORTED_FOR_FULL_ACTION_AND_PHYSICAL_SOURCE_NOT_ORDINARY_PSI_MS_OR_TRUNCATION"
+      },
+      {
+        "id": "complete_matched_two_loop_low_energy_Phi_elastic_cut",
+        "status": "BOUNDED_ON_PHYSICAL_WINDOW_4_TO_6_WITH_FULL_FIRST_AMPLITUDE_NOT_PHYSICAL_REMAINDER_OR_GLOBAL_DISPERSION"
+      },
+      {
+        "id": "full_finite_kappa_analytic_target_classical_vacuum_match",
+        "status": "BOUNDED_ON_SAME_RESTRICTED_FLAT_SCHWARTZ_CLASS_NOT_QUANTUM_TARGET_OR_ROLLING_COMMON_PARENT_MATCH"
+      },
+      {
+        "id": "GY14_SAT8_pointwise_fermion_mass_protection_and_named_low_order_invariance",
+        "status": "NEW_ANALYTIC_EFT_BRANCH_WITH_GLOBAL_REAL_MASS_FLOOR_AND_SAME_NAMED_TWO_LOOP_DATA_NOT_ROLLING_STATE_OR_COMMON_PARENT_CLOSURE"
+      },
+      {
+        "id": "polynomial_clock_transparent_physical_source_map_and_full_target_classical_bound",
+        "status": "KINEMATIC_CLOCK_ARGUMENT_ALIGNED_WITH_PROTECTED_MASSES_AND_SAME_NAMED_VACUUM_DATA_NOT_BACKGROUND_SOLUTION_QUANTUM_STATE_OR_COMMON_PARENT_CLOSURE"
+      },
+      {
+        "id": "free_flat_clock_Dirac_out_energy_with_complete_transition_series_remainder",
+        "status": "BOUNDED_FOR_SPECIFIED_QUADRATIC_MODEWISE_IN_OUT_STATE_NOT_INTERACTING_OR_CURVED_BOUNCE_STRESS"
+      },
+      {
+        "id": "Hadamard_regular_free_flat_SAT8_in_out_state_and_uniform_one_particle_norm_limit",
+        "status": "HADAMARD_FOR_SPECIFIED_FREE_EXTERNAL_MASS_OPERATOR_USING_IDENTIFIED_EXTERNAL_THEOREM_NOT_INTERACTING_CURVED_STATE_OR_NUMERICAL_STRESS"
+      },
+      {
+        "id": "exact_four_frame_free_transition_and_uniform_same_operator_in_out_T00_difference",
+        "status": "BOUNDED_FOR_FREE_FLAT_HADAMARD_STATE_DIFFERENCE_NOT_ABSOLUTE_STRESS_INTERACTING_CURVED_STATE_OR_BACKREACTION"
+      },
+      {
+        "id": "free_flat_absolute_one_loop_local_energy_with_fixed_saturated_mass_reference",
+        "status": "BOUNDED_IN_EXPLICIT_MS_AND_SATURATED_MASS_REFERENCE_QUADRATIC_SCHEME_NOT_FULL_CURVED_INTERACTING_PARENT_STRESS"
+      },
+      {
+        "id": "complete_free_flat_homogeneous_one_loop_stress_with_dimensional_curvature_improvement",
+        "status": "BOUNDED_SPECIFIED_QUADRATIC_MS_MR_FLAT_TENSOR_NOT_FULL_INTERACTING_CURVED_PARENT_STRESS"
+      },
+      {
+        "id": "actual_CD_free_Dirac_Hadamard_in_out_state_and_uniform_state_stress_difference",
+        "status": "CURVED_FREE_HADAMARD_STATE_AND_STATE_DIFFERENCE_BOUNDED_NOT_ABSOLUTE_PARENT_STRESS"
+      },
+      {
+        "id": "complete_free_curved_one_loop_stress_with_explicit_EC_Newton_reference",
+        "status": "BOUNDED_SPECIFIED_QUADRATIC_CURVED_TENSOR_NOT_FULL_INTERACTING_PARENT_OR_BACKGROUND_RESPONSE"
+      },
+      {
+        "id": "minimal_Einstein_canonical_clock_free_sector_null_equation_mismatch",
+        "status": "EXCLUDED_NAMED_MINIMAL_DIAGNOSTIC_WITH_SMALL_EXTRA_NULL_BUDGET_NOT_FULL_INTERACTING_PARENT_OR_DHOST_ROW"
+      },
+      {
+        "id": "actual_CD_leading_clock_Euler_source_decomposition_and_matching_domain_gap",
+        "status": "LEADING_TARGET_SOURCES_AND_CONSTRAINT_DOMAIN_REQUIREMENTS_IDENTIFIED_NOT_PROPAGATING_PARENT_OR_QUANTUM_BOUNCE"
+      },
+      {
+        "id": "analytic_CD_REG_AFFINE_ISO_classical_parent_clock_vacuum_and_local_constraints",
+        "status": "NEW_REGULAR_CLASSICAL_PARENT_AND_LOCAL_CONSTRAINT_BLOCKS_NOT_QUANTUM_MATCHING_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "same_classical_affine_parent_closed_source_lift_and_scoped_vector_Schur_control",
+        "status": "EXACT_CLASSICAL_AND_COMMON_REGULATOR_IDENTITIES_FULL_EUCLIDEAN_AND_LEADING_LORENTZ_BOUNDS_NOT_FULL_QUANTUM_MATCHING"
+      },
+      {
+        "id": "regular_affine_parent_conditional_Gaussian_Hadamard_family_and_ordinary_Proca_stress",
+        "status": "SOURCE_AWARE_CONDITIONAL_VECTOR_STATE_AND_FIXED_CLOCK_STRESS_NOT_FULL_PARENT_QUANTUM_SOLUTION"
+      },
+      {
+        "id": "full_fixed_canonical_affine_family_actual_classical_gravitational_decoupling",
+        "status": "ANCHORED_FULL_FUNCTION_CLASSICAL_LIMIT_AND_TREE_AMPLITUDE_NOT_QUANTUM_CONTOUR_TRUNCATION_OR_V_CLOSURE"
+      },
+      {
+        "id": "complete_affine_vector_retarded_mean_energy_and_causal_cubic_light_force",
+        "status": "FIXED_CD_FULL_SOURCE_FINITE_TIME_CONDITIONAL_GAUSSIAN_MEAN_AND_LIGHT_FORCE_NOT_METRIC_NOISE_FULL_PARENT_OR_B_CLOSURE"
+      },
+      {
+        "id": "same_affine_conditional_prepared_homogeneous_metric_response_with_uncancelled_chart_contacts",
+        "status": "COMPLETE_CONDITIONAL_VECTOR_HOMOGENEOUS_C10_TO_C0_BOUND_NOT_SPATIAL_NOISE_COUPLED_BACKGROUND_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "same_affine_parent_prepared_homogeneous_retained_tree_plus_conditional_vector_causal_inverse",
+        "status": "UNIQUE_RETAINED_LINEAR_PREPARED_CAUSAL_INVERSE_WITH_NUMERIC_LOCAL_LAPSE_RECOVERY_NOT_FULL_INVERSE_SMALLNESS_QUANTUM_BACKGROUND_OR_V_G_B"
+      },
+      {
+        "id": "same_massive_scalar_range_kernel_explicit_full_half_line_L1_majorant",
+        "status": "MASS_INDEPENDENT_EXPLICIT_SCALAR_KERNEL_NORM_NOT_FULL_INVERSE_SMALLNESS_BACKGROUND_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "new_CD_REG_AFFINE_ISO_QG1_fixed_coefficient_stationary_Gaussian_mean_and_actual_response",
+        "status": "NEW_PARENT_RETAINED_MEAN_STATIONARITY_AND_BOUNDED_COEFFICIENT_CORRECTION_NOT_FULL_QUANTUM_BACKGROUND_STABILITY_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "actual_classical_Hamiltonian_C0_and_C10_inverse_and_first_formal_Gaussian_response",
+        "status": "QUANTIFIED_PREPARED_CLASSICAL_PROPAGATOR_AND_FIRST_FORMAL_COEFFICIENT_NOT_FINITE_COUPLING_ERROR_STABILITY_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "complete_finite_time_canonical_vacuum_source_mean_and_scalar_force_noise_with_fixed_profile",
+        "status": "FULL_CONDITIONAL_GAUSSIAN_VACUUM_SOURCE_CAUSAL_AND_NOISE_BOUNDS_NOT_INTERACTING_AMPLITUDE_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "actual_all_order_CD_state_complete_clock_source_smeared_force_noise_and_canonical_normalization",
+        "status": "SAME_STATE_FULL_SOURCE_SMEARED_SCALAR_NOISE_BOUND_NOT_METRIC_NOISE_SOLUTION_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "actual_all_order_CD_full_local_smeared_metric_stress_covariance",
+        "status": "FULL_SPACETIME_TENSOR_STRESS_NOISE_BOUND_NOT_METRIC_SOLUTION_CUTOFF_OR_V_G_B"
+      }
+    ],
+    "primitive": [
+      {
+        "id": "scalar_Phi0_W0_F0",
+        "status": "BOUNDED_PAIRED_VACUUM_PRIMITIVE_WITH_ASSIGNED_LOCAL_FOREST"
+      },
+      {
+        "id": "scalar_Phi2_W0_F2",
+        "status": "BOUNDED_NONLOCAL_AND_FINITE_MS_MASS_AND_SLOPE_REFERENCES"
+      },
+      {
+        "id": "scalar_Phi2_W1_F0",
+        "status": "BOUNDED_PAIRED_NONLOCAL_AND_FINITE_MS_LOCAL_REFERENCES"
+      },
+      {
+        "id": "scalar_Phi4_W0_F4",
+        "status": "BOUNDED_PAIRED_PRIMITIVE_ROW"
+      },
+      {
+        "id": "scalar_Phi4_W1_F2",
+        "status": "BOUNDED_PAIRED_IN_COMMON_MS_INTERACTION_SCHEME"
+      },
+      {
+        "id": "scalar_Phi4_W2_F0",
+        "status": "BOUNDED_PAIRED_IN_COMMON_MS_INTERACTION_SCHEME"
+      },
+      {
+        "id": "gauge_Phi0",
+        "status": "BOUNDED_PAIRED_VACUUM_PRIMITIVE_WITH_ASSIGNED_LOCAL_FOREST"
+      },
+      {
+        "id": "gauge_Phi2",
+        "status": "BOUNDED_NONLOCAL_AND_FINITE_MS_MASS_AND_SLOPE_REFERENCES"
+      },
+      {
+        "id": "gauge_Phi4",
+        "status": "BOUNDED_PAIRED_PRIMITIVE_ROW"
+      }
+    ]
+  },
+  "prior_sha256": {
+    "S6_176_actual_CD_Gaussian_sector_transitively_rebuilt": "1175702d6980db090396863b807af0e767241daeb7d8dabf138ed11c67e1ae75",
+    "S6_185_fully_rebuilt": "39e536b6de14a434e8db2a69e65529723abbf8c5769629f5e1f3dc4019d97eb6",
+    "all_frozen_scientific_bytes_unchanged": true,
+    "fixed_stress_prescription_and_full_source_retained": true
+  },
+  "proof_checks": {
+    "Einstein_test_normalization_not_reduced_mixed_mode_chart": true,
+    "all_tensor_components_and_pair_cross_terms_kept": true,
+    "all_three_modes_and_temporal_constraint_kept": true,
+    "centered_stress_noise_canonical_metric_variance_below_display": true,
+    "centered_stress_noise_complete_variance_below_one_e_fifty": true,
+    "centered_stress_noise_physical_normalized_variance_below_display": true,
+    "centered_stress_noise_strictly_positive_upper_not_zero_noise_assertion": true,
+    "exact_initial_amplitude_and_full_evolved_remainder": true,
+    "full_internal_and_external_momenta_not_homogeneous_only": true,
+    "full_local_stress_not_bilocal_smoothed_field_products": true,
+    "full_physical_stress_all_sixteen_operator_norms_at_most_half": true,
+    "full_physical_stress_all_sixteen_stress_matrices_symmetric": true,
+    "full_physical_stress_complete_positive_energy_matrix": true,
+    "no_physical_cutoff_inferred_from_proof_regulator": true,
+    "no_vanishing_bounce_density_denominator": true,
+    "noise_input_not_metric_solution": true,
+    "original_V_G_B_not_closed": true,
+    "pair_smearing_Cauchy_radius_below_one": true,
+    "pair_smearing_display_exceeds_complete_reference_pair_bound": true,
+    "pair_smearing_error_internal_integral_below_inverse_mass_seventh": true,
+    "pair_smearing_reference_internal_integral_below_inverse_mass": true,
+    "pair_smearing_same_fixed_positive_mass": true,
+    "pair_smearing_unit_time_Cauchy_weight": true,
+    "quadratic_stress_not_assumed_Gaussian": true,
+    "reference_and_actual_state_actual_state_remainder_below_two_million": true,
+    "reference_and_actual_state_all_full_W8_ratio_defects_below_one_thousandth": true,
+    "reference_and_actual_state_all_full_constraint_components_below_one_thousand": true,
+    "reference_and_actual_state_complex_H_below_three": true,
+    "reference_and_actual_state_complex_W_absolute_upper_below_three_nu": true,
+    "reference_and_actual_state_complex_W_real_part_above_half_nu": true,
+    "reference_and_actual_state_complex_canonical_rate_below_five": true,
+    "reference_and_actual_state_complex_omega_modulus_lower": true,
+    "reference_and_actual_state_complex_omega_upper_below_two_nu": true,
+    "reference_and_actual_state_complex_u_and_quadratic_margin": true,
+    "reference_and_actual_state_complex_z_below_one_point_zero_one": true,
+    "reference_and_actual_state_full_scale_relative_defect_below_one_thousandth": true,
+    "reference_and_actual_state_reference_momentum_below_sixty_four_sqrt_nu": true,
+    "reference_and_actual_state_reference_pair_display_covers_full_count": true,
+    "reference_and_actual_state_remainder_pair_display_covers_full_count": true,
+    "reference_and_actual_state_remainder_relative_factor_below_one": true,
+    "reference_and_actual_state_ten_field_norm_below_four_thousand": true,
+    "same_all_order_state_not_W8_or_flat_vacuum": true,
+    "same_mean_prescription_c_numbers_only_cancel_in_centering": true,
+    "time_smearing_precedes_distributional_limit": true
+  },
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "0211d03862eed2e39308b3ee7b55711073a1581388d3c6ca708938f6b61dfcf4",
+    "README.md": "6de37b18edebdf9fff6d87c589c445356919f80841f917c5e2649977d7922dec",
+    "notes/noise.md": "75a82954c2017225327ca820a851f99733d08fea3dfad857127ddf8d55c1c77c",
+    "notes/oscillatory.md": "bcdeb0a6695115a729a84a43334f4ec116d6f7448350c4f757f9eb9906c7ac52",
+    "notes/reference.md": "a8f27fca9d01094d063ea18584ab094a25d425a36729831ce9d82d4f5e89169a",
+    "notes/scope.md": "6dbe5599d3e04568ac2d36006e8283a394dad3cd47c38fc4dfd6a4fb14696080",
+    "notes/state.md": "4b71901e763fc474cbc1547c6105bab3abf0140477ef5b6c6587304e44a7550e",
+    "notes/stress.md": "d92ccff4aa440367c4eac3be7ed5607058f3bcd30be562e9e1cf865bbce447a1",
+    "notes/validation.md": "5ca749c0f25216889a46e05e2243aa8e8d89d012723f7800595d205a0e5660ce",
+    "src/p8_vacuum_affine_cd_metric_noise/__init__.py": "38b5fa23435dbc90c2126a1f723ce2b22512dd53b5461945d8b035a60d4c9adc",
+    "src/p8_vacuum_affine_cd_metric_noise/audit.py": "3cde396d2194dc0c373ceca96837c41f845923f80c88b12d305c3763e96877d2",
+    "src/p8_vacuum_affine_cd_metric_noise/noise.py": "a697942adce708ae41d052cb31dab4826a1008387a70a29102ad82f3de0bf09a",
+    "src/p8_vacuum_affine_cd_metric_noise/oscillatory.py": "dbe2bd1d00b60bb28548b11267d4de2f371b534fab60248760370a4fa659000e",
+    "src/p8_vacuum_affine_cd_metric_noise/reference.py": "83ac475b3afd24f4dccf4ba8abcdd89433017c642b7c8ee17b40fb4cbd329c7d",
+    "src/p8_vacuum_affine_cd_metric_noise/stress.py": "d6495cb3f9a1a57830b1947f1ff5fe7204caa495fd82edbf06e2b8467e005a6d",
+    "src/p8_vacuum_affine_cd_metric_noise/verify.py": "e933bd81834f94d22c94136bffe537eca880c30a07b697346ac6d858ad4ccb53",
+    "tests/test_affine_cd_metric_noise_certificate.py": "1067f5e93fd7d293fe2b35ea7d82622d9f7ced7e469d90d567d1ac71e37c44bb",
+    "tests/test_affine_cd_metric_noise_science.py": "0bf077720ac24678bfe24af92d077dbcc742be5845240ff43fceef8a02c01df9"
+  },
+  "status": "SAME_ALL_ORDER_CD_STATE_FULL_LOCAL_SMEARED_METRIC_STRESS_NOISE_BOUND; NOT_METRIC_SOLUTION_REDUCED_MIXED_MODE_STABILITY_QUANTUM_BACKGROUND_CUTOFF_V_G_B_OR_ORIGINAL_P8",
+  "verdict": "The actual unchanged all-order CD Gaussian vector state's full local metric stress has a continuous compact-spacetime smearing bound, retaining every tensor component, polarization, temporal constraint and internal/external momentum. A full analytic reference-phase estimate and the exact evolved-state remainder control the complete two-particle Wick kernel. Its standard deviation is below1e25 in the declared three-time-derivative and one-spatial-derivative tensor norm, below1e-775 for stress/kappa and below1e-375 for the Einstein-normalized metric test coupling. The same fixed mean prescription and scalar retuning are retained; c-numbers cancel only in centering. This is a conditional stress-noise input, not a fully reduced mixed-mode norm, metric solution, stability, physical cutoff, interacting quantum background or original V/G/B closure.",
+  "verification_boundary": "Exact physical stress, constrained mode readouts, full integration-by-parts/Leibniz and radial identities; continuous complex coefficient and exact-state remainder bounds; complete two-particle covariance and smearing argument. Independent covariant metric variation, complex-time reference, actual preparation, polarization rotation, Fock-pair, radial and normalization fixtures supplement the proofs. Native, direct science, ordinary and CLI use original SymPy; only full regression uses the audited exact GCD adapter. Analytic and distributional arguments are not FORMALIZED.",
+  "written_proofs": [
+    "notes/stress.md",
+    "notes/reference.md",
+    "notes/state.md",
+    "notes/oscillatory.md",
+    "notes/noise.md",
+    "notes/scope.md",
+    "notes/validation.md"
+  ]
+}
