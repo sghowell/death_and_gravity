@@ -1,0 +1,584 @@
+{
+  "checked_scalar_entries": 213,
+  "claim": "P8-S6.175.EXACT_SOURCED_AFFINE_VECTOR_SCHUR_REDUCTION_AND_SCOPED_VACUUM_RESPONSE_BOUNDS",
+  "controls": {
+    "Euclidean_norm_not_transferred_to_real_time": true,
+    "finite_germ_support_not_assigned_to_full_analytic_source": true,
+    "free_Lorenz_constraint_not_imposed_on_sourced_vector": true,
+    "generic_pole_packets_not_an_actual_source_image_exclusion": true,
+    "homogeneous_lift_not_asserted_for_arbitrary_vector_initial_data": true,
+    "original_P8_not_closed": true,
+    "rejected_inputs": 114,
+    "retarded_kernel_not_varied_as_symmetric_single_branch_action": true,
+    "source_squared_contact_not_dropped": true
+  },
+  "date": "2026-09-11",
+  "exact_residuals": {
+    "Lorentz_leading_inverse_constant": "0",
+    "Lorentz_leading_remainder_constant": "0",
+    "Lorentz_leading_source_action_constant": "0",
+    "Lorentz_strict_leading_pole_margin": "0",
+    "Lorentz_transverse_pole_eigenvalue": "0",
+    "homogeneous_CD_conformal_derivative": "0",
+    "homogeneous_CD_conformal_future": "0",
+    "homogeneous_CD_conformal_past": "0",
+    "homogeneous_CD_positive_conformal_factor": "0",
+    "homogeneous_all_extra_first_variations_zero": "0",
+    "homogeneous_homogeneous_source_closed": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "nine_primitive_rows_retained": "0",
+    "one_same_parent_scoped_response_row_added": "0",
+    "operator_Euclidean_gradient_unchanged": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        1
+      ]
+    },
+    "operator_Euclidean_inverse": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "operator_K_gradient_zero": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        1
+      ]
+    },
+    "operator_Lorentz_left_inverse": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "operator_Lorentz_pairing_self_adjoint": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "operator_Lorentz_right_inverse": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "operator_NO_normally_hyperbolic": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "operator_ON_normally_hyperbolic": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "operator_closed_source_identity": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        1
+      ]
+    },
+    "operator_divergence_K_zero": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        1,
+        4
+      ]
+    },
+    "operator_mixed_DK_zero": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "operator_mixed_KD_zero": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "operator_retarded_response_algebra": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "operator_source_contact_complete_square": "0",
+    "operator_sourced_divergence_identity": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        1,
+        4
+      ]
+    },
+    "primitive_rows_unchanged": "0",
+    "prior_matching_rows_retained": "0",
+    "vacuum_Euclidean_action_coefficient": "0",
+    "vacuum_RX_bound_factor_margin": "0",
+    "vacuum_R_lower_margin_above_half": "0",
+    "vacuum_component_bound_at_minimum": "0",
+    "vacuum_component_bound_expansion": "0",
+    "vacuum_delta_bound_factor_margin": "0",
+    "vacuum_full_source_L2_four_components": "0",
+    "vacuum_leading_source_lower_degrees_zero": "0",
+    "vacuum_leading_vacuum_source_from_regular_r": "0",
+    "variation_clock_degree_four": "0",
+    "variation_clock_degrees_below_four": "0",
+    "variation_four_point_single_vertex_two_loops": "0",
+    "variation_single_branch_kernel_is_symmetrized": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        1
+      ]
+    },
+    "variation_two_point_single_vertex_three_loops": "0",
+    "variation_vacuum_degree_eight": "0",
+    "variation_vacuum_degrees_below_eight": "0",
+    "variation_vacuum_single_vertex_four_loops": "0"
+  },
+  "exact_sourced_vector_and_homogeneous_reduction": {
+    "homogeneous": {
+      "CD_conformal_range": [
+        "-pi/4",
+        "pi/4"
+      ],
+      "CD_conformal_time": "t/(2*(t**2 + 1)) + atan(t)/2",
+      "CD_scale_factor": "(t**2 + 1)**2",
+      "Green_operator_consequence": "Unique retarded and advanced Proca inverses N G_L = G_L N with causal support; divergence W=divergence S. Existence is not a quantitative spacetime L2 bound and does not supply a chosen Hadamard state.",
+      "causal_theorem_hypotheses": "The physical CD spacetime is conformal to the open flat time slab (-pi/4,pi/4) x R^3. Every slice is Cauchy. Smooth positive constant zeta makes L/zeta normally hyperbolic on the smooth one-form bundle. The retarded/advanced theorem is applied to compact smooth sources.",
+      "closed_source_condition": "dS=0, W=S, hence F(W)=0 and W-S=0; all first variations of the extra action vanish, including variations through the source and metric",
+      "homogeneous_lift": "Every smooth spatially homogeneous solution of the same light target and M1, within the analytic domain, has S=S0(t)dt and an exact classical parent lift W=S. This specifies compatible vector data; it does not identify that lift with a retarded solution for a noncompact past source."
+    },
+    "operator": {
+      "Euclidean_inverse": [
+        [
+          "(p0**2*zeta + 1)/(zeta*(p0**2 + p1**2 + p2**2 + p3**2) + 1)",
+          "p0*p1*zeta/(zeta*(p0**2 + p1**2 + p2**2 + p3**2) + 1)",
+          "p0*p2*zeta/(zeta*(p0**2 + p1**2 + p2**2 + p3**2) + 1)",
+          "p0*p3*zeta/(zeta*(p0**2 + p1**2 + p2**2 + p3**2) + 1)"
+        ],
+        [
+          "p0*p1*zeta/(zeta*(p0**2 + p1**2 + p2**2 + p3**2) + 1)",
+          "(p1**2*zeta + 1)/(zeta*(p0**2 + p1**2 + p2**2 + p3**2) + 1)",
+          "p1*p2*zeta/(zeta*(p0**2 + p1**2 + p2**2 + p3**2) + 1)",
+          "p1*p3*zeta/(zeta*(p0**2 + p1**2 + p2**2 + p3**2) + 1)"
+        ],
+        [
+          "p0*p2*zeta/(zeta*(p0**2 + p1**2 + p2**2 + p3**2) + 1)",
+          "p1*p2*zeta/(zeta*(p0**2 + p1**2 + p2**2 + p3**2) + 1)",
+          "(p2**2*zeta + 1)/(zeta*(p0**2 + p1**2 + p2**2 + p3**2) + 1)",
+          "p2*p3*zeta/(zeta*(p0**2 + p1**2 + p2**2 + p3**2) + 1)"
+        ],
+        [
+          "p0*p3*zeta/(zeta*(p0**2 + p1**2 + p2**2 + p3**2) + 1)",
+          "p1*p3*zeta/(zeta*(p0**2 + p1**2 + p2**2 + p3**2) + 1)",
+          "p2*p3*zeta/(zeta*(p0**2 + p1**2 + p2**2 + p3**2) + 1)",
+          "(p3**2*zeta + 1)/(zeta*(p0**2 + p1**2 + p2**2 + p3**2) + 1)"
+        ]
+      ],
+      "Euclidean_operator": [
+        [
+          "zeta*(p1**2 + p2**2 + p3**2) + 1",
+          "-p0*p1*zeta",
+          "-p0*p2*zeta",
+          "-p0*p3*zeta"
+        ],
+        [
+          "-p0*p1*zeta",
+          "zeta*(p0**2 + p2**2 + p3**2) + 1",
+          "-p1*p2*zeta",
+          "-p1*p3*zeta"
+        ],
+        [
+          "-p0*p2*zeta",
+          "-p1*p2*zeta",
+          "zeta*(p0**2 + p1**2 + p3**2) + 1",
+          "-p2*p3*zeta"
+        ],
+        [
+          "-p0*p3*zeta",
+          "-p1*p3*zeta",
+          "-p2*p3*zeta",
+          "zeta*(p0**2 + p1**2 + p2**2) + 1"
+        ]
+      ],
+      "Lorentz_inverse_off_pole": [
+        [
+          "(-p0**2*zeta + 1)/(-zeta*(p0**2 - p1**2 - p2**2 - p3**2) + 1)",
+          "p0*p1*zeta/(-zeta*(p0**2 - p1**2 - p2**2 - p3**2) + 1)",
+          "p0*p2*zeta/(-zeta*(p0**2 - p1**2 - p2**2 - p3**2) + 1)",
+          "p0*p3*zeta/(-zeta*(p0**2 - p1**2 - p2**2 - p3**2) + 1)"
+        ],
+        [
+          "-p0*p1*zeta/(-zeta*(p0**2 - p1**2 - p2**2 - p3**2) + 1)",
+          "(p1**2*zeta + 1)/(-zeta*(p0**2 - p1**2 - p2**2 - p3**2) + 1)",
+          "p1*p2*zeta/(-zeta*(p0**2 - p1**2 - p2**2 - p3**2) + 1)",
+          "p1*p3*zeta/(-zeta*(p0**2 - p1**2 - p2**2 - p3**2) + 1)"
+        ],
+        [
+          "-p0*p2*zeta/(-zeta*(p0**2 - p1**2 - p2**2 - p3**2) + 1)",
+          "p1*p2*zeta/(-zeta*(p0**2 - p1**2 - p2**2 - p3**2) + 1)",
+          "(p2**2*zeta + 1)/(-zeta*(p0**2 - p1**2 - p2**2 - p3**2) + 1)",
+          "p2*p3*zeta/(-zeta*(p0**2 - p1**2 - p2**2 - p3**2) + 1)"
+        ],
+        [
+          "-p0*p3*zeta/(-zeta*(p0**2 - p1**2 - p2**2 - p3**2) + 1)",
+          "p1*p3*zeta/(-zeta*(p0**2 - p1**2 - p2**2 - p3**2) + 1)",
+          "p2*p3*zeta/(-zeta*(p0**2 - p1**2 - p2**2 - p3**2) + 1)",
+          "(p3**2*zeta + 1)/(-zeta*(p0**2 - p1**2 - p2**2 - p3**2) + 1)"
+        ]
+      ],
+      "Lorentz_operator": [
+        [
+          "zeta*(p1**2 + p2**2 + p3**2) + 1",
+          "-p0*p1*zeta",
+          "-p0*p2*zeta",
+          "-p0*p3*zeta"
+        ],
+        [
+          "p0*p1*zeta",
+          "zeta*(-p0**2 + p2**2 + p3**2) + 1",
+          "-p1*p2*zeta",
+          "-p1*p3*zeta"
+        ],
+        [
+          "p0*p2*zeta",
+          "-p1*p2*zeta",
+          "zeta*(-p0**2 + p1**2 + p3**2) + 1",
+          "-p2*p3*zeta"
+        ],
+        [
+          "p0*p3*zeta",
+          "-p1*p3*zeta",
+          "-p2*p3*zeta",
+          "zeta*(-p0**2 + p1**2 + p2**2) + 1"
+        ]
+      ],
+      "covariant_identity": "K=div d, D=grad div, KD=DK=0, O=I+zeta K, N=I+zeta D, L=ON=NO. L/zeta is normally hyperbolic on one-forms after raising/lowering by the physical metric.",
+      "fixed_metric_vector_determinant": "At a specified common finite regulator the W translation has unit Jacobian. The vector quadratic determinant depends on g,zeta,kappa but not u; it is not a renormalized stress tensor or a bound on light/gravity loops.",
+      "real_time_boundary": "A retarded inverse solves the sourced equation. A single-branch quadratic action requires its specified variational/in-out boundary inverse; varying S G_ret S symmetrizes G_ret and does not give a purely retarded equation.",
+      "source_action_kernel": "kappa/2 <S,(I-O_inverse)S>; the local +S^2/2 contact is retained"
+    },
+    "variation": {
+      "clock_first_possible_source_functional_degree": 4,
+      "retarded_single_branch_error": [
+        [
+          "-b*s1/2 + c*s1/2"
+        ],
+        [
+          "b*s0/2 - c*s0/2"
+        ]
+      ],
+      "single_eight_scalar_vertex_first_possible_light_loop_orders": {
+        "four_point": 2,
+        "two_point": 3,
+        "vacuum": 4
+      },
+      "vacuum_first_possible_source_functional_degree": 8
+    }
+  },
+  "formulation": "FORMULATION.md",
+  "full_source_and_finite_germ_estimates": {
+    "Lorentz": {
+      "estimate": "The complete flat inverse is used on S4; |p_M^2|<=|p_E|^2<=16 and ||p_sharp tensor p_flat||_2<=16. No derivative expansion is used for this finite-germ estimate.",
+      "generic_real_time_limit": "Transverse source packets with p_M^2-mass^2 in [epsilon,2epsilon] have inverse norm at least 1/(2 zeta epsilon). Such smooth compact Fourier packets can be reflected to give real Schwartz sources. Thus there is no global unweighted L2 inverse bound over arbitrary sources.",
+      "leading_I_minus_inverse_norm_upper": "1/62",
+      "leading_decimal_upper": "1e-2392",
+      "leading_degree_eight_Lorentz_source_action_absolute_upper_divided_by_U_squared": "1/28870999813079833984375000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "leading_inverse_Euclidean_component_norm_upper": "63/62",
+      "leading_source_support_radius": 4,
+      "not_an_image_no_go": "The generic packet argument does not prove the actual nonlinear image S(Phi) contains those packets, does not exclude this parent, and does not replace a weighted/state/contour bound for the actual full source."
+    },
+    "vacuum": {
+      "Euclidean_decimal_upper": "1e-2389",
+      "Euclidean_observable_change": "The independent real Euclidean functional uses X_L=-X_E, Box_L=-Box_E, Z_L=Z_E and its Euclidean one-form source. The same absolute pointwise estimates apply. This positive action bound is NOT a Lorentzian real-time matching bound.",
+      "Euclidean_positive_source_action_upper_divided_by_U_squared": "1/29103830456733703613281250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "class": "Real Schwartz Phi on R^4, Fourier support in the Euclidean momentum unit ball and Fourier L1 at most one, with U=||Phi||_2; u=Phi/sqrt(kappa). This is a Lorentzian real-spacetime class, not a Wick rotation.",
+      "full_function_bounds": {
+        "B_X_absolute_upper": "3*X*n",
+        "B_upper": "X**2*(n + 1)",
+        "R_X_absolute_upper": "4*X*n/(u**2 + 1)**3",
+        "R_lower": "1 - 1/(128*n)",
+        "R_minus_one_absolute_upper": "2*X**2*n/(u**2 + 1)**3",
+        "R_u_identity": "-6u(R-1)/(1+u^2)",
+        "regular_r_absolute_upper": "2*n/(u**2 + 1)**3"
+      },
+      "full_source_frequency_support": "The complete analytic source has infinitely many even field degrees; no finite Fourier-support radius is inferred for it. Only S4 has radius at most four on the stated class.",
+      "leading_vacuum_source": "S4_mu=(n/kappa^2) partial_mu Phi [Z_Phi-X_Phi Box Phi], degree four with five derivatives",
+      "leading_vector_L2_upper_divided_by_U": "1/152587890625000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "parameters": {
+        "kappa": "100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "n": 1024,
+        "zeta_upper": "1/2000"
+      },
+      "per_component_source_L2_upper_divided_by_U": "61035156250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003662109375000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009/9313225746154785156250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "simple_full_source_vector_L2_upper_divided_by_U": "1/38146972656250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "small_domain": {
+        "X_absolute_upper": "4/kappa",
+        "kappa_lower": "64*n",
+        "rho": "1/(16*n)"
+      }
+    }
+  },
+  "named_exact_check_count": 47,
+  "not_established": [
+    "A quantitative full-source real-time matching or in-in influence bound on the stated vacuum class",
+    "A selected vector Hadamard state, renormalized stress/metric response or controlled interacting quantum background",
+    "A physical cutoff, all omitted-order bounds or transfer of old GY14 matching to this parent",
+    "Vacuum contour/truncation, finite-gravity IR/Regge remainder, V/G/B or original P8 closure"
+  ],
+  "observable_and_scope": {
+    "Gaussian": "Exact source contact and Schur identity at a specified common regulator and boundary prescription, not a renormalized determinant or a state-independent in-in stress bound.",
+    "classical": "Closed-source and all homogeneous classical lifts; causal fixed-background response for compact sources with the sourced divergence constraint.",
+    "parent": "The SAME CD-REG-AFFINE-ISO of S6.174, with complete S6.109 analytic light target and original M1; no new action or transfer from GY14.",
+    "quantitative": "Complete nonlinear source L2 bound and an independent Euclidean positive action bound on the small vacuum class; leading S4-only Lorentzian degree-eight functional estimate below the mass pole.",
+    "remaining": "Full-source real-time/state/contour control, interacting renormalized parent stress and response, physical cutoff and omitted orders, V/G/B and original P8 remain open."
+  },
+  "primitive_and_matching_frontier": {
+    "matching": [
+      {
+        "id": "fixed_sigma_isolated_MS_conversion",
+        "status": "CANCELLED_NONLOCAL_ORDER_TWO_WITH_SAME_REGULATED_REFERENCE"
+      },
+      {
+        "id": "remaining_scale_parameter_field_map_and_cross_terms",
+        "status": "OPEN"
+      },
+      {
+        "id": "remaining_counterterm_and_vacuum_source_assembly",
+        "status": "ASSEMBLED_FOR_FIXED_ORDER_PHI_POLE_B2_VACUUM_AND_H_SOURCE"
+      },
+      {
+        "id": "full_matched_two_loop_pole_and_amplitude_error",
+        "status": "FIXED_ORDER_PHI_POLE_AND_B2_BOUNDED_PHYSICAL_TRUNCATION_OPEN"
+      },
+      {
+        "id": "finite_EFT_higher_order_truncation",
+        "status": "OPEN"
+      },
+      {
+        "id": "V_contour_and_cut_control",
+        "status": "OPEN"
+      },
+      {
+        "id": "finite_gravity_G",
+        "status": "OPEN"
+      },
+      {
+        "id": "common_parent_B",
+        "status": "OPEN"
+      },
+      {
+        "id": "complete_wineglass_interaction_forest_MS",
+        "status": "BOUNDED_WITH_REGULATED_FINITE_LOCAL_ANCHOR_AND_FULL_SCALE_TERM"
+      },
+      {
+        "id": "complete_double_bubble_interaction_forest_MS",
+        "status": "BOUNDED_WITH_ACTUAL_NESTED_MS_FORESTS_AND_BOTH_SCALE_TERMS"
+      },
+      {
+        "id": "complete_scalar_OS_insertion_interaction_forest_MS",
+        "status": "BOUNDED_WITH_FULL_REGULATED_SLOPE_TIMES_OUTER_REFERENCE"
+      },
+      {
+        "id": "complete_scalar_quadratic_finite_MS_slope_and_converted_OS_bound",
+        "status": "BOUNDED_WITH_FIXED_INNER_OS_AND_INTERACTION_MS_COORDINATES"
+      },
+      {
+        "id": "first_finite_Phi_field_covariance_and_MS_projection_commutator",
+        "status": "EXACT_REGULATED_FIELD_DIRECTION_AND_BOUNDED_FIRST_SLOPE_CROSS_TERMS"
+      },
+      {
+        "id": "complete_GY14_second_Phi_normalization_and_canonical_unit_disc_pole",
+        "status": "BOUNDED_WITH_DIRECT_MS_OWNERSHIP_AND_FULL_FINITE_FIELD_REEXPANSION"
+      },
+      {
+        "id": "complete_two_loop_vacuum_reference_and_first_source_square",
+        "status": "BOUNDED_WITH_FULL_REGULATED_SOURCE_REDUCIBLE_CANCELLATION"
+      },
+      {
+        "id": "complete_two_loop_derivative_map_with_matched_physical_source",
+        "status": "TRANSPORTED_FOR_FULL_ACTION_AND_PHYSICAL_SOURCE_NOT_ORDINARY_PSI_MS_OR_TRUNCATION"
+      },
+      {
+        "id": "complete_matched_two_loop_low_energy_Phi_elastic_cut",
+        "status": "BOUNDED_ON_PHYSICAL_WINDOW_4_TO_6_WITH_FULL_FIRST_AMPLITUDE_NOT_PHYSICAL_REMAINDER_OR_GLOBAL_DISPERSION"
+      },
+      {
+        "id": "full_finite_kappa_analytic_target_classical_vacuum_match",
+        "status": "BOUNDED_ON_SAME_RESTRICTED_FLAT_SCHWARTZ_CLASS_NOT_QUANTUM_TARGET_OR_ROLLING_COMMON_PARENT_MATCH"
+      },
+      {
+        "id": "GY14_SAT8_pointwise_fermion_mass_protection_and_named_low_order_invariance",
+        "status": "NEW_ANALYTIC_EFT_BRANCH_WITH_GLOBAL_REAL_MASS_FLOOR_AND_SAME_NAMED_TWO_LOOP_DATA_NOT_ROLLING_STATE_OR_COMMON_PARENT_CLOSURE"
+      },
+      {
+        "id": "polynomial_clock_transparent_physical_source_map_and_full_target_classical_bound",
+        "status": "KINEMATIC_CLOCK_ARGUMENT_ALIGNED_WITH_PROTECTED_MASSES_AND_SAME_NAMED_VACUUM_DATA_NOT_BACKGROUND_SOLUTION_QUANTUM_STATE_OR_COMMON_PARENT_CLOSURE"
+      },
+      {
+        "id": "free_flat_clock_Dirac_out_energy_with_complete_transition_series_remainder",
+        "status": "BOUNDED_FOR_SPECIFIED_QUADRATIC_MODEWISE_IN_OUT_STATE_NOT_INTERACTING_OR_CURVED_BOUNCE_STRESS"
+      },
+      {
+        "id": "Hadamard_regular_free_flat_SAT8_in_out_state_and_uniform_one_particle_norm_limit",
+        "status": "HADAMARD_FOR_SPECIFIED_FREE_EXTERNAL_MASS_OPERATOR_USING_IDENTIFIED_EXTERNAL_THEOREM_NOT_INTERACTING_CURVED_STATE_OR_NUMERICAL_STRESS"
+      },
+      {
+        "id": "exact_four_frame_free_transition_and_uniform_same_operator_in_out_T00_difference",
+        "status": "BOUNDED_FOR_FREE_FLAT_HADAMARD_STATE_DIFFERENCE_NOT_ABSOLUTE_STRESS_INTERACTING_CURVED_STATE_OR_BACKREACTION"
+      },
+      {
+        "id": "free_flat_absolute_one_loop_local_energy_with_fixed_saturated_mass_reference",
+        "status": "BOUNDED_IN_EXPLICIT_MS_AND_SATURATED_MASS_REFERENCE_QUADRATIC_SCHEME_NOT_FULL_CURVED_INTERACTING_PARENT_STRESS"
+      },
+      {
+        "id": "complete_free_flat_homogeneous_one_loop_stress_with_dimensional_curvature_improvement",
+        "status": "BOUNDED_SPECIFIED_QUADRATIC_MS_MR_FLAT_TENSOR_NOT_FULL_INTERACTING_CURVED_PARENT_STRESS"
+      },
+      {
+        "id": "actual_CD_free_Dirac_Hadamard_in_out_state_and_uniform_state_stress_difference",
+        "status": "CURVED_FREE_HADAMARD_STATE_AND_STATE_DIFFERENCE_BOUNDED_NOT_ABSOLUTE_PARENT_STRESS"
+      },
+      {
+        "id": "complete_free_curved_one_loop_stress_with_explicit_EC_Newton_reference",
+        "status": "BOUNDED_SPECIFIED_QUADRATIC_CURVED_TENSOR_NOT_FULL_INTERACTING_PARENT_OR_BACKGROUND_RESPONSE"
+      },
+      {
+        "id": "minimal_Einstein_canonical_clock_free_sector_null_equation_mismatch",
+        "status": "EXCLUDED_NAMED_MINIMAL_DIAGNOSTIC_WITH_SMALL_EXTRA_NULL_BUDGET_NOT_FULL_INTERACTING_PARENT_OR_DHOST_ROW"
+      },
+      {
+        "id": "actual_CD_leading_clock_Euler_source_decomposition_and_matching_domain_gap",
+        "status": "LEADING_TARGET_SOURCES_AND_CONSTRAINT_DOMAIN_REQUIREMENTS_IDENTIFIED_NOT_PROPAGATING_PARENT_OR_QUANTUM_BOUNCE"
+      },
+      {
+        "id": "analytic_CD_REG_AFFINE_ISO_classical_parent_clock_vacuum_and_local_constraints",
+        "status": "NEW_REGULAR_CLASSICAL_PARENT_AND_LOCAL_CONSTRAINT_BLOCKS_NOT_QUANTUM_MATCHING_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "same_classical_affine_parent_closed_source_lift_and_scoped_vector_Schur_control",
+        "status": "EXACT_CLASSICAL_AND_COMMON_REGULATOR_IDENTITIES_FULL_EUCLIDEAN_AND_LEADING_LORENTZ_BOUNDS_NOT_FULL_QUANTUM_MATCHING"
+      }
+    ],
+    "primitive": [
+      {
+        "id": "scalar_Phi0_W0_F0",
+        "status": "BOUNDED_PAIRED_VACUUM_PRIMITIVE_WITH_ASSIGNED_LOCAL_FOREST"
+      },
+      {
+        "id": "scalar_Phi2_W0_F2",
+        "status": "BOUNDED_NONLOCAL_AND_FINITE_MS_MASS_AND_SLOPE_REFERENCES"
+      },
+      {
+        "id": "scalar_Phi2_W1_F0",
+        "status": "BOUNDED_PAIRED_NONLOCAL_AND_FINITE_MS_LOCAL_REFERENCES"
+      },
+      {
+        "id": "scalar_Phi4_W0_F4",
+        "status": "BOUNDED_PAIRED_PRIMITIVE_ROW"
+      },
+      {
+        "id": "scalar_Phi4_W1_F2",
+        "status": "BOUNDED_PAIRED_IN_COMMON_MS_INTERACTION_SCHEME"
+      },
+      {
+        "id": "scalar_Phi4_W2_F0",
+        "status": "BOUNDED_PAIRED_IN_COMMON_MS_INTERACTION_SCHEME"
+      },
+      {
+        "id": "gauge_Phi0",
+        "status": "BOUNDED_PAIRED_VACUUM_PRIMITIVE_WITH_ASSIGNED_LOCAL_FOREST"
+      },
+      {
+        "id": "gauge_Phi2",
+        "status": "BOUNDED_NONLOCAL_AND_FINITE_MS_MASS_AND_SLOPE_REFERENCES"
+      },
+      {
+        "id": "gauge_Phi4",
+        "status": "BOUNDED_PAIRED_PRIMITIVE_ROW"
+      }
+    ]
+  },
+  "prior_sha256": {
+    "S6_174_fully_rebuilt": "e0cf546e77cf12ff4e0f2e6bef706ff6de1eddc40cacff3b0b151fcb7009a4f4",
+    "all_prior_scientific_sources_and_reports_unchanged": true,
+    "same_regular_classical_affine_parent_and_complete_target": true
+  },
+  "proof_checks": {
+    "CD_global_hyperbolicity_and_compact_source_hypotheses_checked": true,
+    "Euclidean_bound_not_Lorentzian_matching_transfer": true,
+    "Euclidean_full_source_numerical_bound": true,
+    "actual_kappa_in_small_domain": true,
+    "actual_parent_X_domain_included": true,
+    "all_prior_frozen_scientific_bytes_unchanged": true,
+    "all_source_contact_and_divergence_terms_retained": true,
+    "closed_source_lift_uses_compatible_vector_data": true,
+    "common_regulator_translation_not_renormalized_stress": true,
+    "component_normalized_uniform_bound": true,
+    "finite_germ_bound_uses_complete_propagator_only_on_its_support": true,
+    "full_nonlinear_source_not_assumed_bandlimited": true,
+    "generic_operator_unboundedness_not_nonlinear_image_no_go": true,
+    "leading_Lorentz_action_numerical_bound": true,
+    "leading_band_strictly_below_minimum_vector_mass": true,
+    "n_even_at_least_four": true,
+    "no_qualitative_Green_to_Hadamard_or_stress_inference": true,
+    "retarded_equation_not_single_branch_variational_kernel": true,
+    "same_full_analytic_parent_source_and_physical_metric": true
+  },
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "9bdc5babe87a0d1fe25ccfd07f0345f6cc56f8fda54705b6ee09745d404db9c6",
+    "README.md": "deeee06b50f85be652a875d959d7ddf8e78fd26fc9d0b42bf1115b1c384b5800",
+    "notes/gaussian.md": "27abce5a731d6ab2f227e3673586c0ecbe657e90152e61bc7c927110186901ee",
+    "notes/homogeneous.md": "72ae3900bf2494cce6f2ac1d07480c1cd527486e3072aec87219c5ade5b1e1b3",
+    "notes/lorentz.md": "c7697a3373e825f9c851964ac56ae82614c7bc03dd0ac0a80cf831a599e269ca",
+    "notes/operator.md": "8d768ecc13d0bb3b2148f4a9fe1599628852ce0deb5650cb3a6402e1b5fcd7dd",
+    "notes/scope.md": "11269ecc5fe8536b0866e31b46e5839b6b16daf94ecefcbfadf5e6ce336df601",
+    "notes/vacuum.md": "3be25143a7faa69c66690057dd58a1f253d8a5e77756e87ae6c4d1b463fcd7da",
+    "notes/validation.md": "c4a60446c4a5ff9a252a08a8ca684230b190b99968128f31618f9cfbd9ac1598",
+    "src/p8_vacuum_affine_vector_schur/__init__.py": "8e179bdba091052c62be020fd098002aad8697020644e2b9a3ed618e524cfa06",
+    "src/p8_vacuum_affine_vector_schur/audit.py": "20bd95ee02ea8380cbe8e4837decd8b8e7676edb587e5dddccda6c6dbdd90f2f",
+    "src/p8_vacuum_affine_vector_schur/gaussian.py": "e993537cfc1bf26c1d0a9f3be57453bc26c411826b78073b5c6a5fc56d589545",
+    "src/p8_vacuum_affine_vector_schur/homogeneous.py": "d7c669612cb06c1401e1deb36b6fe4f75623b51b1c8d40fc41a2afa68af16229",
+    "src/p8_vacuum_affine_vector_schur/lorentz.py": "ea3ee3cff054e5153d6de995ef440908f8132b2bbd5180bbc409b66edd5690a9",
+    "src/p8_vacuum_affine_vector_schur/vacuum.py": "beac3507a70d84384d7718b1c1d0ebcfbd269423ec105a1cf2260a6c885f577c",
+    "src/p8_vacuum_affine_vector_schur/verify.py": "6c435de6489fa8a08b728d89f42ff30b5f1dd8b9ce4ed4a07cff9d83af54556e",
+    "tests/test_affine_vector_schur_certificate.py": "c4f5132305edd2a5b3747c0caf2b37be438b1d3e9ff27cc53bbdf09c6f47ac7c",
+    "tests/test_affine_vector_schur_science.py": "345851359045ba78d79622f1c2fc5683ef34b71c2150b431ac22ee208e20c50e"
+  },
+  "status": "EXACT_CLASSICAL_LIFT_AND_COMMON_REGULATOR_SCHUR_FULL_EUCLIDEAN_AND_LEADING_LORENTZ_CONTROL; NOT_FULL_SOURCE_REAL_TIME_QUANTUM_MATCHING_CUTOFF_V_G_B_OR_ORIGINAL_P8",
+  "verdict": "For the same separately named CD-REG-AFFINE-ISO parent, the full source gives an exact closed-source/homogeneous classical lift, a causal fixed-background sourced Proca inverse and a common-regulator Gaussian Schur identity with all contact and divergence terms retained. The full analytic source has an explicit small-field L2 bound and a tiny independent Euclidean source-action bound. Its leading vacuum degree-four source has a separate below-pole Lorentzian estimate using the complete propagator. The full nonlinear source is not assumed bandlimited; no complete real-time/state/influence bound, renormalized interacting stress, physical cutoff, V/G/B or original P8 closure follows.",
+  "verification_boundary": "Exact matrix/operator identities, explicit full-function inequalities and written causal/functional proofs are supplemented by independent coordinate Euler equations, dense Gaussian solves, high-precision actual-source controls, support/pole and source-omission tests. This is not a formalized theorem or a renormalized quantum-state certificate. Native, direct science, ordinary and CLI use original SymPy; full regression alone uses its separately audited exact GCD adapter.",
+  "written_proofs": [
+    "notes/operator.md",
+    "notes/homogeneous.md",
+    "notes/gaussian.md",
+    "notes/vacuum.md",
+    "notes/lorentz.md",
+    "notes/scope.md",
+    "notes/validation.md"
+  ]
+}
