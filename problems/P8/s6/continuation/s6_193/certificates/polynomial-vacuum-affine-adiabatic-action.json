@@ -1,0 +1,631 @@
+{
+  "checked_scalar_entries": 172,
+  "claim": "P8-S6.193.ACTUAL_HOMOGENEOUS_SHEAR_FULL_NONCOMMUTING_ADIABATIC_CURRENT_ACTION_AND_FIXED_COVARIANT_SUBTRACTION_MATCHING",
+  "controls": {
+    "actual_parent_state_constraint_and_physical_vertex_retained": true,
+    "arbitrary_shear_curvature_not_isotropic_extrapolation": true,
+    "compact_variational_identity_not_phase_heuristic": true,
+    "evanescent_finite_contacts_not_discarded": true,
+    "fixed_prescription_and_actual_state_not_changed": true,
+    "full_noncommuting_word_and_oriented_angular_contractions": true,
+    "matching_not_full_feedback_background_or_cutoff": true,
+    "original_P8_not_closed": true,
+    "rejected_inputs": 115
+  },
+  "date": "2026-09-11",
+  "dimension_limit_and_fixed_prescription": {
+    "MSbar_radial_convention": "The local radial integrals are dimensionally continued with d=3-2epsilon_DR and the standard exp(epsilon_DR*EulerGamma) normalization. Actual convergent state-minus-comparison integrals stay in physical dimension3.",
+    "complete_dimension_limit": {
+      "curvature": "-4*a4_scalar - 2*a4_vector_4*ell + 2*a4_vector_4/epsilon_DR",
+      "einstein": "-ell + 5/3 + 1/epsilon_DR",
+      "fixed_scalar": "a4_scalar",
+      "fixed_vector": "a4_vector_4",
+      "vacuum": "-3*ell + 5/2 + 3/epsilon_DR"
+    },
+    "fixed_finite_density": "Before 1/(64pi^2), the matched finite local density is -(3ell-5/2)m^4-(ell-5/3)m^2 R_old-2ell*a4V(4)-4a4s. It is the original prescription, not retuned coefficients.",
+    "fixed_pole": "Before 1/(64pi^2 epsilon_DR), subtract exactly 3m^4+m^2 R_old+2a4V(4), keeping these four-dimensional scalar coefficients while continuing invariant contractions and volume."
+  },
+  "exact_residuals": {
+    "actual_shear_covariant_matching_complete_general_dimension_curvature_monomial_0": "0",
+    "actual_shear_covariant_matching_complete_general_dimension_curvature_monomial_1": "0",
+    "actual_shear_covariant_matching_complete_general_dimension_curvature_monomial_10": "0",
+    "actual_shear_covariant_matching_complete_general_dimension_curvature_monomial_2": "0",
+    "actual_shear_covariant_matching_complete_general_dimension_curvature_monomial_3": "0",
+    "actual_shear_covariant_matching_complete_general_dimension_curvature_monomial_4": "0",
+    "actual_shear_covariant_matching_complete_general_dimension_curvature_monomial_5": "0",
+    "actual_shear_covariant_matching_complete_general_dimension_curvature_monomial_6": "0",
+    "actual_shear_covariant_matching_complete_general_dimension_curvature_monomial_7": "0",
+    "actual_shear_covariant_matching_complete_general_dimension_curvature_monomial_8": "0",
+    "actual_shear_covariant_matching_complete_general_dimension_curvature_monomial_9": "0",
+    "actual_shear_covariant_matching_complete_second_order_covariant_matching": "0",
+    "actual_shear_covariant_matching_explicit_weighted_time_divergence_coefficient_0": "0",
+    "actual_shear_covariant_matching_explicit_weighted_time_divergence_coefficient_1": "0",
+    "actual_shear_covariant_matching_explicit_weighted_time_divergence_coefficient_2": "0",
+    "complete_ordered_local_variation_all_trace_frequency_variation_order_0_0": "0",
+    "complete_ordered_local_variation_all_trace_frequency_variation_order_2_0": "0",
+    "complete_ordered_local_variation_all_trace_frequency_variation_order_2_1": "0",
+    "complete_ordered_local_variation_all_trace_frequency_variation_order_2_2": "0",
+    "complete_ordered_local_variation_all_trace_frequency_variation_order_4_0": "0",
+    "complete_ordered_local_variation_all_trace_frequency_variation_order_4_1": "0",
+    "complete_ordered_local_variation_all_trace_frequency_variation_order_4_10": "0",
+    "complete_ordered_local_variation_all_trace_frequency_variation_order_4_2": "0",
+    "complete_ordered_local_variation_all_trace_frequency_variation_order_4_3": "0",
+    "complete_ordered_local_variation_all_trace_frequency_variation_order_4_4": "0",
+    "complete_ordered_local_variation_all_trace_frequency_variation_order_4_5": "0",
+    "complete_ordered_local_variation_all_trace_frequency_variation_order_4_6": "0",
+    "complete_ordered_local_variation_all_trace_frequency_variation_order_4_7": "0",
+    "complete_ordered_local_variation_all_trace_frequency_variation_order_4_8": "0",
+    "complete_ordered_local_variation_all_trace_frequency_variation_order_4_9": "0",
+    "complete_ordered_local_variation_all_word_K_variation_order_0_identity": "0",
+    "complete_ordered_local_variation_all_word_K_variation_order_2_K1": "0",
+    "complete_ordered_local_variation_all_word_K_variation_order_2_K1_K1": "0",
+    "complete_ordered_local_variation_all_word_K_variation_order_2_K2": "0",
+    "complete_ordered_local_variation_all_word_K_variation_order_2_identity": "0",
+    "complete_ordered_local_variation_all_word_K_variation_order_4_K1": "0",
+    "complete_ordered_local_variation_all_word_K_variation_order_4_K1_K1": "0",
+    "complete_ordered_local_variation_all_word_K_variation_order_4_K1_K1_K1": "0",
+    "complete_ordered_local_variation_all_word_K_variation_order_4_K1_K1_K1_K1": "0",
+    "complete_ordered_local_variation_all_word_K_variation_order_4_K1_K1_K2": "0",
+    "complete_ordered_local_variation_all_word_K_variation_order_4_K1_K2": "0",
+    "complete_ordered_local_variation_all_word_K_variation_order_4_K1_K2_K1": "0",
+    "complete_ordered_local_variation_all_word_K_variation_order_4_K1_K3": "0",
+    "complete_ordered_local_variation_all_word_K_variation_order_4_K2": "0",
+    "complete_ordered_local_variation_all_word_K_variation_order_4_K2_K1": "0",
+    "complete_ordered_local_variation_all_word_K_variation_order_4_K2_K1_K1": "0",
+    "complete_ordered_local_variation_all_word_K_variation_order_4_K2_K2": "0",
+    "complete_ordered_local_variation_all_word_K_variation_order_4_K3": "0",
+    "complete_ordered_local_variation_all_word_K_variation_order_4_K3_K1": "0",
+    "complete_ordered_local_variation_all_word_K_variation_order_4_K4": "0",
+    "complete_ordered_local_variation_all_word_K_variation_order_4_identity": "0",
+    "complete_ordered_local_variation_complete_ordered_B_inverse_jet_1": "0",
+    "complete_ordered_local_variation_complete_ordered_B_inverse_jet_2": "0",
+    "complete_ordered_local_variation_complete_ordered_B_inverse_jet_3": "0",
+    "complete_ordered_local_variation_complete_ordered_B_inverse_jet_4": "0",
+    "complete_ordered_local_variation_complete_ordered_inverseB_inverse_jet_1": "0",
+    "complete_ordered_local_variation_complete_ordered_inverseB_inverse_jet_2": "0",
+    "complete_ordered_local_variation_complete_ordered_inverseB_inverse_jet_3": "0",
+    "complete_ordered_local_variation_complete_ordered_inverseB_inverse_jet_4": "0",
+    "complete_ordered_local_variation_complete_positive_root_jet_1": "0",
+    "complete_ordered_local_variation_complete_positive_root_jet_2": "0",
+    "complete_ordered_local_variation_complete_positive_root_jet_3": "0",
+    "complete_ordered_local_variation_complete_positive_root_jet_4": "0",
+    "complete_ordered_local_variation_ordered_reference_phase_1_K1": "0",
+    "complete_ordered_local_variation_ordered_reference_phase_1_identity": "0",
+    "complete_ordered_local_variation_ordered_reference_phase_2_K1": "0",
+    "complete_ordered_local_variation_ordered_reference_phase_2_K1_K1": "0",
+    "complete_ordered_local_variation_ordered_reference_phase_2_K2": "0",
+    "complete_ordered_local_variation_ordered_reference_phase_2_identity": "0",
+    "complete_ordered_local_variation_ordered_reference_phase_3_K1": "0",
+    "complete_ordered_local_variation_ordered_reference_phase_3_K1_K1": "0",
+    "complete_ordered_local_variation_ordered_reference_phase_3_K1_K1_K1": "0",
+    "complete_ordered_local_variation_ordered_reference_phase_3_K1_K2": "0",
+    "complete_ordered_local_variation_ordered_reference_phase_3_K2": "0",
+    "complete_ordered_local_variation_ordered_reference_phase_3_K2_K1": "0",
+    "complete_ordered_local_variation_ordered_reference_phase_3_K3": "0",
+    "complete_ordered_local_variation_ordered_reference_phase_3_identity": "0",
+    "complete_ordered_local_variation_ordered_reference_phase_4_K1": "0",
+    "complete_ordered_local_variation_ordered_reference_phase_4_K1_K1": "0",
+    "complete_ordered_local_variation_ordered_reference_phase_4_K1_K1_K1": "0",
+    "complete_ordered_local_variation_ordered_reference_phase_4_K1_K1_K1_K1": "0",
+    "complete_ordered_local_variation_ordered_reference_phase_4_K1_K1_K2": "0",
+    "complete_ordered_local_variation_ordered_reference_phase_4_K1_K2": "0",
+    "complete_ordered_local_variation_ordered_reference_phase_4_K1_K2_K1": "0",
+    "complete_ordered_local_variation_ordered_reference_phase_4_K1_K3": "0",
+    "complete_ordered_local_variation_ordered_reference_phase_4_K2": "0",
+    "complete_ordered_local_variation_ordered_reference_phase_4_K2_K1": "0",
+    "complete_ordered_local_variation_ordered_reference_phase_4_K2_K1_K1": "0",
+    "complete_ordered_local_variation_ordered_reference_phase_4_K2_K2": "0",
+    "complete_ordered_local_variation_ordered_reference_phase_4_K3": "0",
+    "complete_ordered_local_variation_ordered_reference_phase_4_K3_K1": "0",
+    "complete_ordered_local_variation_ordered_reference_phase_4_K4": "0",
+    "complete_ordered_local_variation_ordered_reference_phase_4_identity": "0",
+    "complete_ordered_local_variation_ordered_reference_symmetry_1_K1": "0",
+    "complete_ordered_local_variation_ordered_reference_symmetry_1_identity": "0",
+    "complete_ordered_local_variation_ordered_reference_symmetry_2_K1": "0",
+    "complete_ordered_local_variation_ordered_reference_symmetry_2_K1_K1": "0",
+    "complete_ordered_local_variation_ordered_reference_symmetry_2_K2": "0",
+    "complete_ordered_local_variation_ordered_reference_symmetry_2_identity": "0",
+    "complete_ordered_local_variation_ordered_reference_symmetry_3_K1": "0",
+    "complete_ordered_local_variation_ordered_reference_symmetry_3_K1_K1": "0",
+    "complete_ordered_local_variation_ordered_reference_symmetry_3_K1_K1_K1": "0",
+    "complete_ordered_local_variation_ordered_reference_symmetry_3_K1_K2": "0",
+    "complete_ordered_local_variation_ordered_reference_symmetry_3_K2": "0",
+    "complete_ordered_local_variation_ordered_reference_symmetry_3_K2_K1": "0",
+    "complete_ordered_local_variation_ordered_reference_symmetry_3_K3": "0",
+    "complete_ordered_local_variation_ordered_reference_symmetry_3_identity": "0",
+    "complete_ordered_local_variation_ordered_reference_symmetry_4_K1": "0",
+    "complete_ordered_local_variation_ordered_reference_symmetry_4_K1_K1": "0",
+    "complete_ordered_local_variation_ordered_reference_symmetry_4_K1_K1_K1": "0",
+    "complete_ordered_local_variation_ordered_reference_symmetry_4_K1_K1_K1_K1": "0",
+    "complete_ordered_local_variation_ordered_reference_symmetry_4_K1_K1_K2": "0",
+    "complete_ordered_local_variation_ordered_reference_symmetry_4_K1_K2": "0",
+    "complete_ordered_local_variation_ordered_reference_symmetry_4_K1_K2_K1": "0",
+    "complete_ordered_local_variation_ordered_reference_symmetry_4_K1_K3": "0",
+    "complete_ordered_local_variation_ordered_reference_symmetry_4_K2": "0",
+    "complete_ordered_local_variation_ordered_reference_symmetry_4_K2_K1": "0",
+    "complete_ordered_local_variation_ordered_reference_symmetry_4_K2_K1_K1": "0",
+    "complete_ordered_local_variation_ordered_reference_symmetry_4_K2_K2": "0",
+    "complete_ordered_local_variation_ordered_reference_symmetry_4_K3": "0",
+    "complete_ordered_local_variation_ordered_reference_symmetry_4_K3_K1": "0",
+    "complete_ordered_local_variation_ordered_reference_symmetry_4_K4": "0",
+    "complete_ordered_local_variation_ordered_reference_symmetry_4_identity": "0",
+    "fixed_finite_dimension_limit_full_evanescent_Einstein_finite_coefficient": "0",
+    "fixed_finite_dimension_limit_full_evanescent_curvature_finite_contact": "0",
+    "fixed_finite_dimension_limit_full_evanescent_vacuum_finite_coefficient": "0",
+    "fixed_finite_dimension_limit_isotropic_dimension_3_R": "0",
+    "fixed_finite_dimension_limit_isotropic_dimension_3_Ricci2": "0",
+    "fixed_finite_dimension_limit_isotropic_dimension_3_Riemann2": "0",
+    "fixed_finite_dimension_limit_isotropic_dimension_4_R": "0",
+    "fixed_finite_dimension_limit_isotropic_dimension_4_Ricci2": "0",
+    "fixed_finite_dimension_limit_isotropic_dimension_4_Riemann2": "0",
+    "fixed_finite_dimension_limit_isotropic_dimension_5_R": "0",
+    "fixed_finite_dimension_limit_isotropic_dimension_5_Ricci2": "0",
+    "fixed_finite_dimension_limit_isotropic_dimension_5_Riemann2": "0",
+    "fixed_finite_dimension_limit_isotropic_dimension_6_R": "0",
+    "fixed_finite_dimension_limit_isotropic_dimension_6_Ricci2": "0",
+    "fixed_finite_dimension_limit_isotropic_dimension_6_Riemann2": "0",
+    "fixed_finite_dimension_limit_same_four_dimensional_Proca_pole_polynomial": "0",
+    "full_dimension_angular_contractions_all_endpoint_pairing_count_1": "0",
+    "full_dimension_angular_contractions_all_endpoint_pairing_count_2": "0",
+    "full_dimension_angular_contractions_all_endpoint_pairing_count_3": "0",
+    "full_dimension_angular_contractions_all_endpoint_pairing_count_4": "0",
+    "full_dimension_angular_contractions_first_and_square": "0",
+    "full_dimension_angular_contractions_four_tracefree": "0",
+    "full_dimension_angular_contractions_mixed_first_second": "0",
+    "full_dimension_angular_contractions_noncommuting_mixed_square": "0",
+    "full_dimension_angular_contractions_ordered_cube": "0",
+    "full_dimension_angular_contractions_ordered_fourth": "0",
+    "full_dimension_angular_contractions_ordered_square": "0",
+    "full_dimension_angular_contractions_physical_dimension_inverse_cubic_radial_ratio_0": "0",
+    "full_dimension_angular_contractions_physical_dimension_inverse_cubic_radial_ratio_1": "0",
+    "full_dimension_angular_contractions_physical_dimension_inverse_cubic_radial_ratio_2": "0",
+    "full_dimension_angular_contractions_physical_dimension_inverse_cubic_radial_ratio_3": "0",
+    "full_dimension_angular_contractions_physical_dimension_inverse_cubic_radial_ratio_4": "0",
+    "full_dimension_angular_contractions_physical_dimension_inverse_frequency_radial_ratio_0": "0",
+    "full_dimension_angular_contractions_physical_dimension_inverse_frequency_radial_ratio_1": "0",
+    "full_dimension_angular_contractions_physical_dimension_inverse_frequency_radial_ratio_2": "0",
+    "full_dimension_angular_contractions_physical_dimension_inverse_frequency_radial_ratio_3": "0",
+    "full_dimension_angular_contractions_physical_dimension_inverse_frequency_radial_ratio_4": "0",
+    "full_dimension_angular_contractions_square_and_second": "0",
+    "full_dimension_angular_contractions_three_tracefree": "0",
+    "full_dimension_angular_contractions_tracefree_first": "0",
+    "full_dimension_angular_contractions_tracefree_pair": "0",
+    "full_dimension_angular_contractions_two_squares": "0",
+    "full_dimension_angular_contractions_two_tracefree_and_second": "0",
+    "full_dimension_angular_contractions_two_tracefree_and_square": "0",
+    "full_dimension_angular_contractions_unimodular_second_jet": "0",
+    "nine_primitive_rows_retained": "0",
+    "one_new_scoped_row_added": "0",
+    "primitive_rows_unchanged": "0",
+    "prior_matching_rows_retained": "0"
+  },
+  "formulation": "FORMULATION.md",
+  "full_local_action_and_covariant_matching": {
+    "action": {
+      "Euler_frequency_coefficients": {
+        "0": "-d/2",
+        "2": "(-d*omega2/(2*omega) + 3*d*omega1**2/(4*omega**2) - 3*tr_K1K1/4 + tr_K2/2)/(4*omega**2)",
+        "4": "(d*omega4/(2*omega) - 7*d*omega1*omega3/(2*omega**2) - 15*d*omega2**2/(4*omega**2) + 69*d*omega1**2*omega2/(4*omega**3) - 183*d*omega1**4/(16*omega**4) + 45*tr_K1K1K1K1/16 - 25*tr_K1K1K2/4 + 5*tr_K1K3/2 + 5*tr_K2K2/4 - tr_K4/2 + 15*omega1*tr_K1K1K1/(4*omega) - 4*omega1*tr_K1K2/omega + omega1*tr_K3/omega + 3*omega1*(-d*omega3/(2*omega) + 3*d*omega1*omega2/omega**2 - 11*d*omega1**3/(4*omega**3) + 5*tr_K1K1K1/4 - 2*tr_K1K2 + tr_K3/2 + 9*omega1*tr_K1K1/(4*omega) - omega1*tr_K2/omega - 3*omega1**2*tr_K1/(4*omega**2))/omega - 15*omega2*tr_K1K1/(4*omega) + 5*omega2*tr_K2/(2*omega) + 21*omega1**2*tr_K1K1/(8*omega**2) - 13*omega1**2*tr_K2/(4*omega**2) + 9*omega1**3*tr_K1/(4*omega**3))/(16*omega**4)"
+      },
+      "Euler_matrix_coefficients": {
+        "0": {},
+        "2": {
+          "K1": "omega1/(8*omega**2)",
+          "K1 K1": "1/(8*omega)",
+          "K2": "-1/(8*omega)",
+          "identity": "omega2/(8*omega**2) - omega1**2/(4*omega**3)"
+        },
+        "4": {
+          "K1": "-omega3/(32*omega**4) + 7*omega1*omega2/(32*omega**5) - 15*omega1**3/(64*omega**6)",
+          "K1 K1": "11*omega2/(64*omega**4) - 39*omega1**2/(64*omega**5)",
+          "K1 K1 K1": "-27*omega1/(64*omega**4)",
+          "K1 K1 K1 K1": "-9/(64*omega**3)",
+          "K1 K1 K2": "7/(64*omega**3)",
+          "K1 K2": "21*omega1/(64*omega**4)",
+          "K1 K2 K1": "7/(64*omega**3)",
+          "K1 K3": "-1/(16*omega**3)",
+          "K2": "-omega2/(8*omega**4) + 27*omega1**2/(64*omega**5)",
+          "K2 K1": "21*omega1/(64*omega**4)",
+          "K2 K1 K1": "7/(64*omega**3)",
+          "K2 K2": "-3/(32*omega**3)",
+          "K3": "-3*omega1/(16*omega**4)",
+          "K3 K1": "-1/(16*omega**3)",
+          "K4": "1/(32*omega**3)",
+          "identity": "-omega4/(32*omega**4) + 11*omega1*omega3/(32*omega**5) + 7*omega2**2/(32*omega**5) - 115*omega1**2*omega2/(64*omega**6) + 45*omega1**4/(32*omega**7)"
+        }
+      },
+      "fourth_Euler_formula": "U=-t'+2p t+2s^3, v=trU-2tr(ts), Z=tr(t^2+s^4). E_K4=Sym{K^-1[U'+[U,A]-3pU]}/(16omega^3), E_omega4=-[3Z+v'-3p v]/(16omega^4). Both the commutator and raw second-jet variations are retained.",
+      "full_current_variation": "At K0=I, deltaG=diag(2deltaomega/omega I-deltaK,deltaK), so J=-deltaomega tr(Sigma_QQ)+(omega/2)tr[deltaK(Sigma_QQ-Sigma_PP)]. Every word/trace coefficient through marker order4 agrees with the compact local Euler variation.",
+      "general_domain": "Any positive symmetric K(t), scalar omega(t)>0 and V=omega^2 K^-1. A constant canonical GL change sets K0=I at one evaluation point without constraining arbitrary symmetric noncommuting K1..K4.",
+      "independent_frequency_trace_counts": {
+        "0": 1,
+        "2": 3,
+        "4": 11
+      },
+      "independent_matrix_word_counts": {
+        "0": 1,
+        "2": 4,
+        "4": 16
+      },
+      "local_action": "L0=-d omega/2; L2=tr(s^2)/(4omega); L4=tr(t^2+s^4)/(16omega^3), A=K'K^-1, p=omega'/omega, s=pI/2-A/2, t=s'-p s. These are local finite marker terms, not a full time-nonlocal determinant."
+    },
+    "angular": {
+      "algebra": "Matrix words preserve order; only adjacent rank-one projectors P=nn^t satisfy P^2=P. Cyclic trace rotations and word reversal use symmetric F,G, not commutation.",
+      "explicit_sphere_moments": {
+        "first_and_square": "2*tr_FFF/(d*(d + 2))",
+        "four_tracefree": "(12*tr_FF**2 + 48*tr_FFFF)/(d*(d + 2)*(d + 4)*(d + 6))",
+        "mixed_first_second": "2*tr_FG/(d*(d + 2))",
+        "noncommuting_mixed_square": "(tr_FFGG + tr_FG**2 + tr_FGFG)/(d*(d + 2))",
+        "ordered_cube": "tr_FFF/d",
+        "ordered_fourth": "tr_FFFF/d",
+        "ordered_square": "tr_FF/d",
+        "square_and_second": "(tr_FF**2 + 2*tr_FFG)/(d*(d + 2))",
+        "three_tracefree": "8*tr_FFF/(d*(d + 2)*(d + 4))",
+        "tracefree_first": 0,
+        "tracefree_pair": "2*tr_FF/(d*(d + 2))",
+        "two_squares": "(tr_FF**2 + 2*tr_FFFF)/(d*(d + 2))",
+        "two_tracefree_and_second": "(2*tr_FF**2 + 8*tr_FFG)/(d*(d + 2)*(d + 4))",
+        "two_tracefree_and_square": "(2*tr_FF**2 + 8*tr_FFFF)/(d*(d + 2)*(d + 4))",
+        "unimodular_second_jet": "tr_FF/d"
+      },
+      "radial_identity": "Integral z^n/omega^(2alpha) divided by its n0 value equals (d/2)_n/(alpha)_n after meromorphic continuation. alpha=1/2 at order2 and3/2 at order4; retain the d dependence before the dimension limit.",
+      "sphere_contraction": "Each product of r quadratic projections is averaged by all pairings of its2r endpoints divided by d(d+2)...(d+2r-2). Each contraction loop is a trace of its oriented matrix-edge words.",
+      "unimodular_constraints": "At E=I, F=E' and G=E'' obey trF=0 and trG=trF^2. Ordered projections n^t FG n and n^t GF n agree as scalars, but trFGFG and trFFGG need not agree."
+    },
+    "matching": {
+      "complete_angular_and_radial_result": {
+        "curvature": {
+          "R": "(4*H**2*d**2 + 4*H**2*d + 8*Hdot*d + tr_FF)/4",
+          "Ricci2": "(16*H**4*d**3 + 16*H**4*d**2 + 64*H**2*Hdot*d**2 + 4*H**2*d**2*tr_FF + 8*H**2*d*tr_FF - 8*H*d*tr_FFF + 8*H*d*tr_FG + 16*Hdot**2*d**2 + 16*Hdot**2*d + 8*Hdot*d*tr_FF + tr_FF**2 + 4*tr_FFFF - 8*tr_FFG + 4*tr_GG)/16",
+          "Riemann2": "(16*H**4*d**2 + 16*H**4*d + 64*H**2*Hdot*d + 8*H**2*d*tr_FF + 24*H**2*tr_FF - 24*H*tr_FFF + 32*H*tr_FG + 32*Hdot**2*d + 16*Hdot*tr_FF + tr_FF**2 + tr_FFFF - 8*tr_FFG + 8*tr_GG)/8",
+          "a4s": "(80*H**4*d**4 + 128*H**4*d**3 + 112*H**4*d**2 + 64*H**4*d + 320*H**2*Hdot*d**3 + 192*H**2*Hdot*d**2 + 256*H**2*Hdot*d + 32*H**2*d**2*tr_FF + 56*H**2*d*tr_FF + 96*H**2*tr_FF + 16*H*d*tr_FFF - 16*H*d*tr_FG - 96*H*tr_FFF + 128*H*tr_FG + 288*Hdot**2*d**2 + 96*Hdot**2*d + 64*Hdot*d*tr_FF + 64*Hdot*tr_FF + 7*tr_FF**2 - 4*tr_FFFF - 16*tr_FFG + 24*tr_GG)/5760",
+          "a4v": "(80*H**4*d**5 - 832*H**4*d**4 + 1072*H**4*d**3 + 1024*H**4*d**2 - 960*H**4*d + 320*H**2*Hdot*d**4 - 3648*H**2*Hdot*d**3 + 7936*H**2*Hdot*d**2 - 3840*H**2*Hdot*d + 32*H**2*d**3*tr_FF + 296*H**2*d**2*tr_FF + 576*H**2*d*tr_FF - 1440*H**2*tr_FF + 16*H*d**2*tr_FFF - 16*H*d**2*tr_FG - 1536*H*d*tr_FFF + 1568*H*d*tr_FG + 1440*H*tr_FFF - 1920*H*tr_FG + 288*Hdot**2*d**3 - 864*Hdot**2*d**2 + 960*Hdot**2*d + 64*Hdot*d**2*tr_FF + 544*Hdot*d*tr_FF - 960*Hdot*tr_FF + 7*d*tr_FF**2 - 4*d*tr_FFFF - 16*d*tr_FFG + 24*d*tr_GG + 60*tr_FF**2 + 660*tr_FFFF - 960*tr_FFG + 240*tr_GG)/5760"
+        },
+        "fourth": "(400*H**4*d**5 + 7104*H**4*d**4 - 36112*H**4*d**3 + 53760*H**4*d**2 - 20160*H**4*d + 2880*H**2*Hdot*d**4 - 2880*H**2*Hdot*d**3 - 9216*H**2*Hdot*d**2 + 16128*H**2*Hdot*d + 768*H**2*d**3*tr_FF - 9528*H**2*d**2*tr_FF + 36288*H**2*d*tr_FF - 30240*H**2*tr_FF - 128*H*d**2*tr_FFF - 144*H*d**2*tr_FG + 3264*H*d*tr_FFF + 1440*H*d*tr_FG - 18144*H*tr_FFF + 8064*H*tr_FG + 6048*Hdot**2*d**3 - 18144*Hdot**2*d**2 + 20160*Hdot**2*d + 1440*Hdot*d**2*tr_FF - 4320*Hdot*d*tr_FF + 4032*Hdot*tr_FF + 147*d*tr_FF**2 + 732*d*tr_FFFF - 1152*d*tr_FFG + 504*d*tr_GG + 1260*tr_FF**2 + 1764*tr_FFFF - 8064*tr_FFG + 5040*tr_GG)/60480",
+        "fourth_remaining": "0",
+        "fourth_weighted_divergence_coefficients": [
+          "-4*d*(5*d**3 - 96*d**2 + 229*d - 126)/945",
+          "(d**2 - 164*d + 252)/630",
+          "-(17*d - 252)/3780"
+        ],
+        "second": "-(d - 6)*(4*H**2*d**2 - 4*H**2*d - tr_FF)/96",
+        "second_remaining": "0"
+      },
+      "dimensionally_continued_Hamiltonian": "K=a^(2-d)E+kk^t/(a^d m^2), V=a^(d-2)m^2Q+a^(d-4)[(k^tQk)Q-Qkk^tQ], Q=E^-1. KV=omega^2 I and there are d physical modes.",
+      "fourth_covariant_monomial_count": 11,
+      "matching_result": "The same J_ad4 is the compact variation of local orders0,2,4. Their full dimensional integrals reproduce the original four-dimensional pole coefficients and, after its named subtraction, exactly the S176 finite covariant action on arbitrary admitted homogeneous shears. This is not an isotropic-only extrapolation or a retuned subtraction.",
+      "pointwise_coordinate_choice": "A constant unimodular spatial coordinate change sets E=I at one evaluation time; all time jets are transformed by that constant map. No time-dependent momentum relabeling is differentiated.",
+      "root_free_full_shear_symbols": "A=K'K^-1, p=omega'/omega, s=pI/2-A/2, t=(p'-p^2)I/2-A'/2+pA/2. All rank-one constraint and noncommuting shear products are included.",
+      "weighted_boundary_terms": "The three differences are d_t(a^d H^3), d_t(a^d H trF^2), and d_t(a^d trF^3). Their exact general-d coefficients are displayed. Compact metric variations have zero contribution from these terms before and after the dimension limit."
+    }
+  },
+  "named_exact_check_count": 172,
+  "not_established": [
+    "A numerical nonlinear local-current norm or complete spatial/mixed physical response",
+    "A full feedback inverse, finite-coupling interacting quantum background or its stability",
+    "Full parent state/measure/loops, physical heavy/cutoff/threshold and omitted-order matching",
+    "Complete vacuum cuts/contour/truncation, finite-gravity IR/Regge or original V/G/B and P8 closure"
+  ],
+  "observable_and_scope": {
+    "boundary": "A numerical nonlinear local-current norm and complete spatial/mixed response, feedback inverse, finite-coupling interacting background, physical cutoff and V/G/B closure are not established here.",
+    "conclusion": "The original fixed-prescription homogeneous current equals the convergent S192 actual-minus-J_ad4 comparison plus the variation of the unchanged finite local action. No counterterm or state is selected anew.",
+    "domain": "The same actual Gaussian Proca state and homogeneous unimodular shear family of S192, with smooth normalized detector D and unchanged common preparation.",
+    "identity": "The actual J_ad4 is the compact metric variation of the complete local marker orders0,2,4 for generic noncommuting positive K and independent frequency.",
+    "matching": "Full general-d shear angular/radial integration matches covariant curvature polynomials modulo explicit compact total derivatives. The original fixed four-dimensional pole coefficients give exactly the S176 finite local action, including all evanescent finite contacts."
+  },
+  "primitive_and_matching_frontier": {
+    "matching": [
+      {
+        "id": "fixed_sigma_isolated_MS_conversion",
+        "status": "CANCELLED_NONLOCAL_ORDER_TWO_WITH_SAME_REGULATED_REFERENCE"
+      },
+      {
+        "id": "remaining_scale_parameter_field_map_and_cross_terms",
+        "status": "OPEN"
+      },
+      {
+        "id": "remaining_counterterm_and_vacuum_source_assembly",
+        "status": "ASSEMBLED_FOR_FIXED_ORDER_PHI_POLE_B2_VACUUM_AND_H_SOURCE"
+      },
+      {
+        "id": "full_matched_two_loop_pole_and_amplitude_error",
+        "status": "FIXED_ORDER_PHI_POLE_AND_B2_BOUNDED_PHYSICAL_TRUNCATION_OPEN"
+      },
+      {
+        "id": "finite_EFT_higher_order_truncation",
+        "status": "OPEN"
+      },
+      {
+        "id": "V_contour_and_cut_control",
+        "status": "OPEN"
+      },
+      {
+        "id": "finite_gravity_G",
+        "status": "OPEN"
+      },
+      {
+        "id": "common_parent_B",
+        "status": "OPEN"
+      },
+      {
+        "id": "complete_wineglass_interaction_forest_MS",
+        "status": "BOUNDED_WITH_REGULATED_FINITE_LOCAL_ANCHOR_AND_FULL_SCALE_TERM"
+      },
+      {
+        "id": "complete_double_bubble_interaction_forest_MS",
+        "status": "BOUNDED_WITH_ACTUAL_NESTED_MS_FORESTS_AND_BOTH_SCALE_TERMS"
+      },
+      {
+        "id": "complete_scalar_OS_insertion_interaction_forest_MS",
+        "status": "BOUNDED_WITH_FULL_REGULATED_SLOPE_TIMES_OUTER_REFERENCE"
+      },
+      {
+        "id": "complete_scalar_quadratic_finite_MS_slope_and_converted_OS_bound",
+        "status": "BOUNDED_WITH_FIXED_INNER_OS_AND_INTERACTION_MS_COORDINATES"
+      },
+      {
+        "id": "first_finite_Phi_field_covariance_and_MS_projection_commutator",
+        "status": "EXACT_REGULATED_FIELD_DIRECTION_AND_BOUNDED_FIRST_SLOPE_CROSS_TERMS"
+      },
+      {
+        "id": "complete_GY14_second_Phi_normalization_and_canonical_unit_disc_pole",
+        "status": "BOUNDED_WITH_DIRECT_MS_OWNERSHIP_AND_FULL_FINITE_FIELD_REEXPANSION"
+      },
+      {
+        "id": "complete_two_loop_vacuum_reference_and_first_source_square",
+        "status": "BOUNDED_WITH_FULL_REGULATED_SOURCE_REDUCIBLE_CANCELLATION"
+      },
+      {
+        "id": "complete_two_loop_derivative_map_with_matched_physical_source",
+        "status": "TRANSPORTED_FOR_FULL_ACTION_AND_PHYSICAL_SOURCE_NOT_ORDINARY_PSI_MS_OR_TRUNCATION"
+      },
+      {
+        "id": "complete_matched_two_loop_low_energy_Phi_elastic_cut",
+        "status": "BOUNDED_ON_PHYSICAL_WINDOW_4_TO_6_WITH_FULL_FIRST_AMPLITUDE_NOT_PHYSICAL_REMAINDER_OR_GLOBAL_DISPERSION"
+      },
+      {
+        "id": "full_finite_kappa_analytic_target_classical_vacuum_match",
+        "status": "BOUNDED_ON_SAME_RESTRICTED_FLAT_SCHWARTZ_CLASS_NOT_QUANTUM_TARGET_OR_ROLLING_COMMON_PARENT_MATCH"
+      },
+      {
+        "id": "GY14_SAT8_pointwise_fermion_mass_protection_and_named_low_order_invariance",
+        "status": "NEW_ANALYTIC_EFT_BRANCH_WITH_GLOBAL_REAL_MASS_FLOOR_AND_SAME_NAMED_TWO_LOOP_DATA_NOT_ROLLING_STATE_OR_COMMON_PARENT_CLOSURE"
+      },
+      {
+        "id": "polynomial_clock_transparent_physical_source_map_and_full_target_classical_bound",
+        "status": "KINEMATIC_CLOCK_ARGUMENT_ALIGNED_WITH_PROTECTED_MASSES_AND_SAME_NAMED_VACUUM_DATA_NOT_BACKGROUND_SOLUTION_QUANTUM_STATE_OR_COMMON_PARENT_CLOSURE"
+      },
+      {
+        "id": "free_flat_clock_Dirac_out_energy_with_complete_transition_series_remainder",
+        "status": "BOUNDED_FOR_SPECIFIED_QUADRATIC_MODEWISE_IN_OUT_STATE_NOT_INTERACTING_OR_CURVED_BOUNCE_STRESS"
+      },
+      {
+        "id": "Hadamard_regular_free_flat_SAT8_in_out_state_and_uniform_one_particle_norm_limit",
+        "status": "HADAMARD_FOR_SPECIFIED_FREE_EXTERNAL_MASS_OPERATOR_USING_IDENTIFIED_EXTERNAL_THEOREM_NOT_INTERACTING_CURVED_STATE_OR_NUMERICAL_STRESS"
+      },
+      {
+        "id": "exact_four_frame_free_transition_and_uniform_same_operator_in_out_T00_difference",
+        "status": "BOUNDED_FOR_FREE_FLAT_HADAMARD_STATE_DIFFERENCE_NOT_ABSOLUTE_STRESS_INTERACTING_CURVED_STATE_OR_BACKREACTION"
+      },
+      {
+        "id": "free_flat_absolute_one_loop_local_energy_with_fixed_saturated_mass_reference",
+        "status": "BOUNDED_IN_EXPLICIT_MS_AND_SATURATED_MASS_REFERENCE_QUADRATIC_SCHEME_NOT_FULL_CURVED_INTERACTING_PARENT_STRESS"
+      },
+      {
+        "id": "complete_free_flat_homogeneous_one_loop_stress_with_dimensional_curvature_improvement",
+        "status": "BOUNDED_SPECIFIED_QUADRATIC_MS_MR_FLAT_TENSOR_NOT_FULL_INTERACTING_CURVED_PARENT_STRESS"
+      },
+      {
+        "id": "actual_CD_free_Dirac_Hadamard_in_out_state_and_uniform_state_stress_difference",
+        "status": "CURVED_FREE_HADAMARD_STATE_AND_STATE_DIFFERENCE_BOUNDED_NOT_ABSOLUTE_PARENT_STRESS"
+      },
+      {
+        "id": "complete_free_curved_one_loop_stress_with_explicit_EC_Newton_reference",
+        "status": "BOUNDED_SPECIFIED_QUADRATIC_CURVED_TENSOR_NOT_FULL_INTERACTING_PARENT_OR_BACKGROUND_RESPONSE"
+      },
+      {
+        "id": "minimal_Einstein_canonical_clock_free_sector_null_equation_mismatch",
+        "status": "EXCLUDED_NAMED_MINIMAL_DIAGNOSTIC_WITH_SMALL_EXTRA_NULL_BUDGET_NOT_FULL_INTERACTING_PARENT_OR_DHOST_ROW"
+      },
+      {
+        "id": "actual_CD_leading_clock_Euler_source_decomposition_and_matching_domain_gap",
+        "status": "LEADING_TARGET_SOURCES_AND_CONSTRAINT_DOMAIN_REQUIREMENTS_IDENTIFIED_NOT_PROPAGATING_PARENT_OR_QUANTUM_BOUNCE"
+      },
+      {
+        "id": "analytic_CD_REG_AFFINE_ISO_classical_parent_clock_vacuum_and_local_constraints",
+        "status": "NEW_REGULAR_CLASSICAL_PARENT_AND_LOCAL_CONSTRAINT_BLOCKS_NOT_QUANTUM_MATCHING_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "same_classical_affine_parent_closed_source_lift_and_scoped_vector_Schur_control",
+        "status": "EXACT_CLASSICAL_AND_COMMON_REGULATOR_IDENTITIES_FULL_EUCLIDEAN_AND_LEADING_LORENTZ_BOUNDS_NOT_FULL_QUANTUM_MATCHING"
+      },
+      {
+        "id": "regular_affine_parent_conditional_Gaussian_Hadamard_family_and_ordinary_Proca_stress",
+        "status": "SOURCE_AWARE_CONDITIONAL_VECTOR_STATE_AND_FIXED_CLOCK_STRESS_NOT_FULL_PARENT_QUANTUM_SOLUTION"
+      },
+      {
+        "id": "full_fixed_canonical_affine_family_actual_classical_gravitational_decoupling",
+        "status": "ANCHORED_FULL_FUNCTION_CLASSICAL_LIMIT_AND_TREE_AMPLITUDE_NOT_QUANTUM_CONTOUR_TRUNCATION_OR_V_CLOSURE"
+      },
+      {
+        "id": "complete_affine_vector_retarded_mean_energy_and_causal_cubic_light_force",
+        "status": "FIXED_CD_FULL_SOURCE_FINITE_TIME_CONDITIONAL_GAUSSIAN_MEAN_AND_LIGHT_FORCE_NOT_METRIC_NOISE_FULL_PARENT_OR_B_CLOSURE"
+      },
+      {
+        "id": "same_affine_conditional_prepared_homogeneous_metric_response_with_uncancelled_chart_contacts",
+        "status": "COMPLETE_CONDITIONAL_VECTOR_HOMOGENEOUS_C10_TO_C0_BOUND_NOT_SPATIAL_NOISE_COUPLED_BACKGROUND_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "same_affine_parent_prepared_homogeneous_retained_tree_plus_conditional_vector_causal_inverse",
+        "status": "UNIQUE_RETAINED_LINEAR_PREPARED_CAUSAL_INVERSE_WITH_NUMERIC_LOCAL_LAPSE_RECOVERY_NOT_FULL_INVERSE_SMALLNESS_QUANTUM_BACKGROUND_OR_V_G_B"
+      },
+      {
+        "id": "same_massive_scalar_range_kernel_explicit_full_half_line_L1_majorant",
+        "status": "MASS_INDEPENDENT_EXPLICIT_SCALAR_KERNEL_NORM_NOT_FULL_INVERSE_SMALLNESS_BACKGROUND_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "new_CD_REG_AFFINE_ISO_QG1_fixed_coefficient_stationary_Gaussian_mean_and_actual_response",
+        "status": "NEW_PARENT_RETAINED_MEAN_STATIONARITY_AND_BOUNDED_COEFFICIENT_CORRECTION_NOT_FULL_QUANTUM_BACKGROUND_STABILITY_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "actual_classical_Hamiltonian_C0_and_C10_inverse_and_first_formal_Gaussian_response",
+        "status": "QUANTIFIED_PREPARED_CLASSICAL_PROPAGATOR_AND_FIRST_FORMAL_COEFFICIENT_NOT_FINITE_COUPLING_ERROR_STABILITY_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "complete_finite_time_canonical_vacuum_source_mean_and_scalar_force_noise_with_fixed_profile",
+        "status": "FULL_CONDITIONAL_GAUSSIAN_VACUUM_SOURCE_CAUSAL_AND_NOISE_BOUNDS_NOT_INTERACTING_AMPLITUDE_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "actual_all_order_CD_state_complete_clock_source_smeared_force_noise_and_canonical_normalization",
+        "status": "SAME_STATE_FULL_SOURCE_SMEARED_SCALAR_NOISE_BOUND_NOT_METRIC_NOISE_SOLUTION_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "actual_all_order_CD_full_local_smeared_metric_stress_covariance",
+        "status": "FULL_SPACETIME_TENSOR_STRESS_NOISE_BOUND_NOT_METRIC_SOLUTION_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "actual_CD_boundary_compatible_tree_tensor_noise_response",
+        "status": "RESTRICTED_DETECTOR_TREE_PROPAGATED_NOISE_NOT_FULL_QUANTUM_TENSOR_STATE_OR_V_G_B"
+      },
+      {
+        "id": "actual_CD_homogeneous_shear_Hamiltonian_contact_and_modewise_remainder",
+        "status": "ACTUAL_SHEAR_MODEWISE_FINITE_AMPLITUDE_REMAINDER_NOT_CONTINUUM_SELF_ENERGY_OR_V_G_B"
+      },
+      {
+        "id": "actual_fixed_local_covariant_full_spatial_tensor_Hessian",
+        "status": "ACTUAL_FIXED_FINITE_LOCAL_TENSOR_HESSIAN_BOUND_NOT_COMPLETE_DETERMINANT_RESPONSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_CD_full_matrix_adiabatic_uniform_covariance_tail",
+        "status": "ACTUAL_UNCHANGED_STATE_UNIFORM_HIGH_BAND_COVARIANCE_REMAINDER_NOT_RESPONSE_SUBTRACTION_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_matrix_covariance_tail_C2_response_and_Taylor_remainder",
+        "status": "ACTUAL_UNCHANGED_STATE_C2_HIGH_BAND_COVARIANCE_TAIL_NOT_COMPLETE_COVARIANT_RESPONSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_physical_shear_current_C2_fourth_order_comparison",
+        "status": "ACTUAL_STATE_C2_CURRENT_MODE_COMPARISON_NOT_FIXED_COVARIANT_MATCHING_OR_V_G_B"
+      },
+      {
+        "id": "actual_homogeneous_shear_full_fixed_covariant_mode_subtraction_matching",
+        "status": "ACTUAL_HOMOGENEOUS_SHEAR_FIXED_COVARIANT_MODE_SUBTRACTION_MATCHING_NOT_FULL_FEEDBACK_OR_V_G_B"
+      }
+    ],
+    "primitive": [
+      {
+        "id": "scalar_Phi0_W0_F0",
+        "status": "BOUNDED_PAIRED_VACUUM_PRIMITIVE_WITH_ASSIGNED_LOCAL_FOREST"
+      },
+      {
+        "id": "scalar_Phi2_W0_F2",
+        "status": "BOUNDED_NONLOCAL_AND_FINITE_MS_MASS_AND_SLOPE_REFERENCES"
+      },
+      {
+        "id": "scalar_Phi2_W1_F0",
+        "status": "BOUNDED_PAIRED_NONLOCAL_AND_FINITE_MS_LOCAL_REFERENCES"
+      },
+      {
+        "id": "scalar_Phi4_W0_F4",
+        "status": "BOUNDED_PAIRED_PRIMITIVE_ROW"
+      },
+      {
+        "id": "scalar_Phi4_W1_F2",
+        "status": "BOUNDED_PAIRED_IN_COMMON_MS_INTERACTION_SCHEME"
+      },
+      {
+        "id": "scalar_Phi4_W2_F0",
+        "status": "BOUNDED_PAIRED_IN_COMMON_MS_INTERACTION_SCHEME"
+      },
+      {
+        "id": "gauge_Phi0",
+        "status": "BOUNDED_PAIRED_VACUUM_PRIMITIVE_WITH_ASSIGNED_LOCAL_FOREST"
+      },
+      {
+        "id": "gauge_Phi2",
+        "status": "BOUNDED_NONLOCAL_AND_FINITE_MS_MASS_AND_SLOPE_REFERENCES"
+      },
+      {
+        "id": "gauge_Phi4",
+        "status": "BOUNDED_PAIRED_PRIMITIVE_ROW"
+      }
+    ]
+  },
+  "prior_sha256": {
+    "S6_176_actual_CD_Gaussian_sector_transitively_rebuilt": "1175702d6980db090396863b807af0e767241daeb7d8dabf138ed11c67e1ae75",
+    "S6_192_fully_rebuilt": "3e7a44038928cdcb613d07545ac27418fc0dc21d819d19e9407692f57ff2dba7",
+    "all_frozen_scientific_bytes_unchanged": true,
+    "fixed_stress_prescription_and_full_source_retained": true
+  },
+  "proof_checks": {
+    "actual_shear_covariant_matching_all_shear_invariants_retained": true,
+    "actual_shear_covariant_matching_boundary_coefficients_kept_dimension_dependent": true,
+    "actual_shear_covariant_matching_full_general_dimension_fourth_order_residual_zero": true,
+    "actual_shear_covariant_matching_no_premature_Euler_topological_reduction": true,
+    "actual_shear_covariant_matching_physical_convergent_mode_integral_not_continued": true,
+    "all_oriented_sphere_pairings_and_trace_classes": true,
+    "all_weighted_boundary_terms_exact_at_general_dimension": true,
+    "arbitrary_shear_not_isotropic_extrapolation": true,
+    "complete_independent_K_and_frequency_variations": true,
+    "complete_ordered_local_variation_arbitrary_noncommuting_fourth_jet_retained": true,
+    "complete_ordered_local_variation_complete_both_independent_variations": true,
+    "complete_ordered_local_variation_complete_second_and_fourth_matrix_word_bases": true,
+    "complete_ordered_local_variation_no_vacuum_phase_heuristic_used_as_proof": true,
+    "complete_ordered_local_variation_noncommuting_connection_is_not_dropped": true,
+    "constant_pointwise_coordinate_change_only": true,
+    "evanescent_polarization_and_curvature_coefficients_retained": true,
+    "every_noncommuting_fourth_order_matrix_word_retained": true,
+    "fixed_finite_dimension_limit_Einstein_evanescent_coefficient_retained": true,
+    "fixed_finite_dimension_limit_actual_polarization_factor_is_dimension_dependent": true,
+    "fixed_finite_dimension_limit_no_actual_state_continuation_or_reset": true,
+    "fixed_finite_dimension_limit_scalar_finite_curvature_contact_retained": true,
+    "full_dimension_angular_contractions_fourth_order_pairings_complete": true,
+    "full_dimension_angular_contractions_no_dimension_three_angular_shortcut": true,
+    "full_dimension_angular_contractions_noncommuting_trace_classes_distinct": true,
+    "full_dimension_angular_contractions_projector_not_identity": true,
+    "full_finite_local_contact_matching_on_admitted_shears": true,
+    "full_temporal_constraint_in_every_dimension": true,
+    "interacting_parent_background_and_cutoff_still_open": true,
+    "no_Euler_removal_before_the_dimension_limit": true,
+    "no_full_spatial_mixed_or_inverse_claim": true,
+    "original_V_G_B_not_closed": true,
+    "original_four_dimensional_pole_coefficients_not_retuned": true,
+    "physical_state_and_convergent_integral_stay_dimension_three": true,
+    "positive_root_removed_only_inside_exact_similar_traces": true,
+    "same_actual_three_mode_covariance_and_physical_vertices": true,
+    "same_full_parent_M1_profile_state_and_prescription": true
+  },
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "80c401386689c72450916f8fe5c055ce7952598ad5d970d09e1009065634348d",
+    "README.md": "37d42e01b52c51bbd402833f727ec0c3d7922956b23f895c942aad2ae51b031c",
+    "notes/action.md": "14c2d7789f751da8078e5f6fa76d7b561adbf5829087781618171e88bcc13b05",
+    "notes/angular.md": "f2c4ae4300ad024a5162c79be8e14675d459ce2de49179b1dd2e949da6f35ef0",
+    "notes/dimension.md": "d3ff495ef7b3a98ec3ed2d4804142c8ee6d16878d14049afbe6c1f3b2ff9c2ee",
+    "notes/matching.md": "ec193ce85c0588bbabbb51f368e7a6ba793b5efdc2ef594dd90791ab77bcea14",
+    "notes/scope.md": "aad107b387ccde6e301cc18989d90839a44660011438984c4c1c959b488be866",
+    "notes/validation.md": "468e2c8ff198b80ebb4748a95b180dc13d4928b0f8c6d43c04228f3f10aeaa2e",
+    "notes/variation.md": "d1648a699e908a94badf9c04169f68627031a277d8906ea50fd62b218909a7d8",
+    "src/p8_vacuum_affine_adiabatic_action/__init__.py": "9eab3aac05316dbcbe07e4791db58a4f999310eaf3028dd80eda30dbab38d89f",
+    "src/p8_vacuum_affine_adiabatic_action/action.py": "bc15278bad60184217006097388ec7f3b7937fbac99ee44dc481e8d5a8a405f9",
+    "src/p8_vacuum_affine_adiabatic_action/angular.py": "3e457d429cd0fea8a2ecf19e5cd66eb3d370e5777d94bd3b96c130a4cba219fb",
+    "src/p8_vacuum_affine_adiabatic_action/audit.py": "d5df4eccf263fd0db5d63aae10ac2ee82feef8e893a99e27ee4980193f3d3207",
+    "src/p8_vacuum_affine_adiabatic_action/curvature.py": "2a505aaa70bb795875634b2c8eaa982b24ae7edaa2fa62088d5c524db04ba93c",
+    "src/p8_vacuum_affine_adiabatic_action/matching.py": "6a34dd2945cf1fb1cd4a6c3819d66a5380d0826fa92920def719f95a05d43b9b",
+    "src/p8_vacuum_affine_adiabatic_action/verify.py": "b86a0d362dfdd92b2f3a5fe379720e8bad0b8ef2889008badc9f173a5b30603b",
+    "tests/test_affine_adiabatic_action_certificate.py": "175df776994c01993f675cc9562cfa76cda7ff5fc5ec2b1ddd72e561790e54a9",
+    "tests/test_affine_adiabatic_action_science.py": "ecfa1d7b10591a34c0e43488f0b7d735195b25c3ab9a6e2442302f0d30231b52"
+  },
+  "status": "ACTUAL_HOMOGENEOUS_SHEAR_FIXED_COVARIANT_SUBTRACTION_AND_FINITE_CONTACT_MATCHING; NOT_FULL_SPATIAL_MIXED_RESPONSE_INVERSE_BACKGROUND_CUTOFF_V_G_B_OR_ORIGINAL_P8",
+  "verdict": "The actual fourth-order homogeneous-shear mode current is the compact variation of the full local finite marker action, as verified for every noncommuting matrix word and independent frequency trace. Complete oriented angular contractions and radial continuation in general dimension give the covariant curvature expression modulo explicit compact total derivatives. Keeping the original four-dimensional scalar pole coefficients and all evanescent polarization and curvature factors reproduces exactly the S176 finite local density, including 5/2,5/3 and the -4a4s contact. The original fixed-prescription homogeneous current is therefore the convergent S192 comparison plus the variation of that unchanged local action. No state, parent or counterterm is selected anew. A numerical nonlinear local-current norm and full spatial/mixed response, feedback inverse, interacting finite-coupling background, physical cutoff and original V/G/B and P8 closure are not established.",
+  "verification_boundary": "Exact full noncommuting word/current variations, sphere pairings, general-d shear curvature coefficients, compact boundary identities and finite Laurent coefficients. Independent Cartesian sphere integration, non-diagonal Christoffel/Riemann and literal metric/frequency Euler fixtures supplement written proofs. Native, direct science, ordinary and CLI use original SymPy; only full regression uses the audited exact GCD adapter. Analytic and variational arguments are not FORMALIZED.",
+  "written_proofs": [
+    "notes/action.md",
+    "notes/variation.md",
+    "notes/angular.md",
+    "notes/dimension.md",
+    "notes/matching.md",
+    "notes/scope.md",
+    "notes/validation.md"
+  ]
+}
