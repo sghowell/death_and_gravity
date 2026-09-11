@@ -1,0 +1,385 @@
+{
+  "analytic_complex_disk_and_exact_frames": {
+    "rotation": {
+      "asymptotic_state_identity": "All four additional frame rotations tend to identity at both time infinities because their g_j vanish and e_j have a positive real gap. The initial mass rotation retains the physical asymptotic eigenbasis. The final transition amplitude is exactly the original in/out transition amplitude, up to harmless phases.",
+      "complete_evolution": "After removing the final diagonal phase the interaction is off diagonal with norm |g4|. The exact unitary Duhamel integral bounds its transition amplitude by integral |g4|. g4 is not set to zero and no finite adiabatic approximation replaces the evolution.",
+      "covariance_difference": "For one helicity two pure rank-one projectors differ with eigenvalues +/-|beta|. Both helicities give trace norm4|beta| per color/flavor. Unitary evolution preserves this norm at any real time.",
+      "exact_connection_magnitude_formula": "(e(t)*Derivative(g(t), t) - g(t)*Derivative(e(t), t))/(2*e(t)**2 + 2*g(t)**2)",
+      "exact_recursion": "Starting after the physical mass rotation with e0=tau omega and g0=pDelta s'/(2omega^2) on sigma2, set e_(j+1)=sqrt(e_j^2+g_j^2), g_(j+1)=(-1)^j partial_x atan(g_j/e_j)/2 for j=0,1,2,3. The off-diagonal axes alternate sigma2,sigma1,sigma2,sigma1,sigma2.",
+      "sigma1_diagonalizing_rotation": [
+        [
+          "cos(theta/2)",
+          "-sin(theta/2)"
+        ],
+        [
+          "sin(theta/2)",
+          "cos(theta/2)"
+        ]
+      ],
+      "sigma2_diagonalizing_rotation": [
+        [
+          "cos(theta/2)",
+          "I*sin(theta/2)"
+        ],
+        [
+          "I*sin(theta/2)",
+          "cos(theta/2)"
+        ]
+      ]
+    },
+    "tube": {
+      "Cauchy_radius_loss_per_exact_rotation": "1/512",
+      "complex_frequency_floor_factors": {
+        "0": "9/10",
+        "1": "27/32",
+        "2": "405/512",
+        "3": "6075/8192",
+        "4": "91125/131072"
+      },
+      "fixed_adiabatic_gap_threshold": 1048576,
+      "four_nested_radii": {
+        "0": "1/64",
+        "1": "7/512",
+        "2": "3/256",
+        "3": "5/512",
+        "4": "1/128"
+      },
+      "four_step_induction": "On disk r_j, |e_j|>=c_j tau E and |g_j|<=G_j w(x), c_j=.9(15/16)^j>.5, G_j=2pDelta/E^2[1024/(tau E)]^j. With tau*m0>=2^20, |g_j/e_j|<1/4. The next exact square root has modulus at least 15/16; Cauchy with radius loss1/512 bounds the next connection by G_(j+1)w. All square roots/atan branches are fixed by the real positive-frequency frame.",
+      "gates": {
+        "all_five_frequency_floors_above_one_half": true,
+        "all_nested_disks_have_positive_radius": true,
+        "complex_first_derivative_weight_factor_below_two": true,
+        "complex_profile_modulus_below_two": true,
+        "complex_ratio_cap_below_one_quarter": true,
+        "frame_mixing_bound_contracts": true,
+        "initial_sqrt_floor_nine_tenths": true,
+        "mass_square_relative_change_below_one_tenth": true,
+        "next_connection_factor_below_one": true,
+        "relative_eighth_power_disk_defect_below_one_quarter": true,
+        "sqrt_modulus_floor_valid": true
+      },
+      "initial_disk_radius": "1/64",
+      "initial_frequency_and_mixing": "E=sqrt(p^2+m0^2), m0=.99m. Delta/m0<.01 gives |M(z)^2-m^2|<.1m^2, so the principal omega is analytic and |omega|>=.9E. e0=tau omega and |g0|<=2pDelta/E^2 w(x).",
+      "integrated_transition_constant": 4398046511104,
+      "profile_disk_proof": "For each real x and |z-x|<=1/64, |z^8-x^8|/(1+x^8)<=8r(1+r)^7<1/4. The positive-real-root branch extends analytically; |s(z)|<2 and |s'(z)|<2w(x), w=(1+x^8)^(-9/8), integral w=2.",
+      "profile_integrable_weight": "(x**8 + 1)**(-9/8)",
+      "transition_consequence": "The final exact off-diagonal generator is integrable: integral |g4|<=2^42 pDelta/(tau^4 E^6). Unitarity bounds the full transition by this integral, without discarding the final coupling or any of its Dyson orders."
+    }
+  },
+  "checked_scalar_entries": 40,
+  "claim": "P8-S6.167.EXACT_FOUR_FRAME_DIRAC_TRANSITION_AND_UNIFORM_LOCAL_IN_OUT_ENERGY_DIFFERENCE",
+  "complete_transition_and_energy_enclosures": {
+    "active_color_flavor_multiplicity": 6,
+    "actual_bound_decimal_diagnostics": {
+      "complete_free_out_particle_energy_upper": "12522733637615576029.14594",
+      "mass_floor": "9.900000000000000000000000e+199",
+      "uniform_exact_transition_amplitude_upper": "6.937054459560018999100992e-391",
+      "uniform_in_out_local_energy_density_difference_upper": "2.369317985779932659932660e+410"
+    },
+    "actual_complete_exact_frame_enclosures": {
+      "complete_free_out_particle_energy_upper": "247588007857076054979824844800000/19771083137421",
+      "mass_floor": "99000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "uniform_exact_transition_amplitude_upper": "1/1441534019704704405739903450012207031250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "uniform_in_out_local_energy_density_difference_upper": "70368744177664000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000/297"
+    },
+    "cutoff_scope": "The estimate is for the explicitly specified quadratic operator on its full momentum space, not a proof that the physical SAT8 interacting EFT has a cutoff above those momenta.",
+    "external_source_energy_exchange": "For the homogeneous prescribed mass, the state-difference identity is d_t Delta rho=M'(t) Delta<bar psi psi>; it is not an isolated conserved fermion energy. The background source remains external in this calculation.",
+    "gates": {
+      "actual_adiabatic_gap_exceeds_fixed_threshold": true,
+      "actual_local_state_energy_difference_below_one_e_411": true,
+      "actual_out_particle_energy_below_one_e_20": true,
+      "actual_uniform_transition_below_one_e_minus_390": true,
+      "out_energy_reference_ratio_below_one_e_minus_780": true,
+      "positive_real_time_frequency_below_twice_floor": true,
+      "sharper_out_energy_allowance_than_frozen_parent": true,
+      "state_difference_reference_ratio_below_one_e_minus_389": true
+    },
+    "local_energy_difference_proof": "Use the SAME free operator and the S6.166 Hadamard in/out states. The symmetric Dirac T00 is the one-particle Hamiltonian bilinear. The covariance difference has trace norm4|beta| per color/flavor, invariant under time evolution. Since ||H(t)||<=2E, |rho_in(t)-rho_out_state(t)|<=4N/pi^2 integral p^2 E|beta| dp<=8NC Delta/(3pi^2 tau^4 m0) for every real t.",
+    "new_out_energy_over_named_kappa_scale": "1/7985476884984735849037720549970962528180118411569310410413891077041625976562500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "out_energy_proof": "rho_out=4N/(2pi^2) integral p^2 omega_out |beta|^2 dp. Use omega_out<=2E, |beta|<=C pDelta/(tau^4 E^6), and integral p^4/E^11=8/(315m0^6). These are all exact quadratic transition orders.",
+    "renormalization_scope": "Both expectation values use one identical local state-independent subtraction and finite counterterm prescription for this same external mass. Those terms cancel in the state difference. No absolute local renormalized energy, curved/interacting state or backreaction bound is inferred. The named kappa comparison is not a relative error against the zero bounce density.",
+    "same_mass_profile_amplitude_rational_upper": "300000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "same_profile_time_scale": "1/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "same_quadratic_operator_mean_mass": "100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "uniform_local_state_difference_over_named_kappa_scale": "1/422062385041499510407447814941406250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "controls": {
+    "external_mass_exchange_not_isolated_conservation": true,
+    "final_coupling_and_its_transition_orders_retained": true,
+    "fixed_complex_gap_not_only_real_eigenvalue_sampling": true,
+    "original_P8_not_closed": true,
+    "out_state_energy_not_zero_during_transition": true,
+    "quadratic_whole_momentum_operator_not_physical_cutoff": true,
+    "rejected_inputs": 169,
+    "state_coherence_not_replaced_by_occupation_energy": true,
+    "state_difference_not_absolute_or_relative_bounce_stress": true
+  },
+  "date": "2026-09-10",
+  "exact_residuals": {
+    "all_prior_matching_rows_unchanged": "0",
+    "all_prior_primitive_rows_unchanged": "0",
+    "energy_all_energy_difference_factors": "0",
+    "energy_all_out_energy_factors": "0",
+    "energy_out_energy_radial_integral": "0",
+    "energy_same_clock_transition_scale": "0",
+    "energy_same_mass_profile_amplitude_upper": "0",
+    "energy_same_mass_reference": "0",
+    "energy_same_protected_mass_floor": "0",
+    "energy_state_difference_radial_integral": "0",
+    "energy_zero_mass_variation_exact_transition": "0",
+    "energy_zero_momentum_exact_transition": "0",
+    "nine_prior_primitive_rows_retained": "0",
+    "only_named_free_energy_difference_added": "0",
+    "rotation_exact_atan_derivative_connection": "0",
+    "rotation_out_energy_spin_particle_antiparticle_count": "0",
+    "rotation_projector_difference_determinant": "0",
+    "rotation_projector_difference_squared": "0",
+    "rotation_projector_difference_traceless": "0",
+    "rotation_sigma1_frame_exact_diagonalization": "0",
+    "rotation_sigma1_to_sigma2_connection_negative": "0",
+    "rotation_sigma2_frame_exact_diagonalization": "0",
+    "rotation_sigma2_to_sigma1_connection_positive": "0",
+    "rotation_two_helicity_projector_trace_norm_factor": "0",
+    "rotation_x_rotation_unitary": "0",
+    "rotation_y_rotation_unitary": "0",
+    "tube_Cauchy_step_and_frequency_floor_factor": "0",
+    "tube_actual_transition_constant": "0",
+    "tube_disk_polynomial_relative_constant": "0",
+    "tube_four_step_transition_power": "0",
+    "tube_frequency_floor_recursion_0": "0",
+    "tube_frequency_floor_recursion_1": "0",
+    "tube_frequency_floor_recursion_2": "0",
+    "tube_frequency_floor_recursion_3": "0",
+    "tube_initial_mass_square_relative_allowance": "0",
+    "tube_nested_disk_difference_0": "0",
+    "tube_nested_disk_difference_1": "0",
+    "tube_nested_disk_difference_2": "0",
+    "tube_nested_disk_difference_3": "0",
+    "tube_profile_L1_and_four_rotations_constant": "0"
+  },
+  "formulation": "FORMULATION.md",
+  "named_exact_check_count": 40,
+  "not_established": [
+    "An absolute local renormalized stress bound or a relative error against bounce density",
+    "An interacting gauge state, curved FLRW state, backreaction or common parent background solution",
+    "The physical EFT cutoff, omitted quantum loops, quantum target matching or global V/G/B",
+    "Original P8 closure or formalization of the written analytic arguments"
+  ],
+  "observable_and_source_context": {
+    "background": "The same prescribed Minkowski SAT8 external mass and the same free in/out Hadamard states as S6.166.",
+    "difference_vs_out_particles": "The local out-state energy is not set to zero during the transition. It differs from the late-time out-particle Hamiltonian energy above its own vacuum.",
+    "not_a_cutoff": "Whole-momentum results for this specified quadratic operator do not establish the interacting EFT cutoff or high-energy applicability.",
+    "quantitative_input": "Our explicit fixed-disk inequalities, four-step complex-gap induction and exact unitary Duhamel bound; no numerical constant is taken from the cited papers.",
+    "quantity": "rho_in(t)-rho_out_state(t), for the symmetric Dirac T00 with the external mass held as a prescribed scalar under metric variation, and one identical local state-independent subtraction/finite counterterm prescription.",
+    "source_context": [
+      {
+        "location": "Section IV, equations4.6-4.9",
+        "role": "Iterated unitary frames are a known construction. Here the final off-diagonal term is retained and bounded.",
+        "url": "https://arxiv.org/pdf/1805.05107",
+        "version": "v2"
+      },
+      {
+        "location": "Section IV, equations40-41 and discussion following42",
+        "role": "Dirac energy bilinear and state-independent local subtractions in an external scalar background.",
+        "url": "https://arxiv.org/pdf/1703.00908"
+      }
+    ]
+  },
+  "primitive_and_matching_frontier": {
+    "matching": [
+      {
+        "id": "fixed_sigma_isolated_MS_conversion",
+        "status": "CANCELLED_NONLOCAL_ORDER_TWO_WITH_SAME_REGULATED_REFERENCE"
+      },
+      {
+        "id": "remaining_scale_parameter_field_map_and_cross_terms",
+        "status": "OPEN"
+      },
+      {
+        "id": "remaining_counterterm_and_vacuum_source_assembly",
+        "status": "ASSEMBLED_FOR_FIXED_ORDER_PHI_POLE_B2_VACUUM_AND_H_SOURCE"
+      },
+      {
+        "id": "full_matched_two_loop_pole_and_amplitude_error",
+        "status": "FIXED_ORDER_PHI_POLE_AND_B2_BOUNDED_PHYSICAL_TRUNCATION_OPEN"
+      },
+      {
+        "id": "finite_EFT_higher_order_truncation",
+        "status": "OPEN"
+      },
+      {
+        "id": "V_contour_and_cut_control",
+        "status": "OPEN"
+      },
+      {
+        "id": "finite_gravity_G",
+        "status": "OPEN"
+      },
+      {
+        "id": "common_parent_B",
+        "status": "OPEN"
+      },
+      {
+        "id": "complete_wineglass_interaction_forest_MS",
+        "status": "BOUNDED_WITH_REGULATED_FINITE_LOCAL_ANCHOR_AND_FULL_SCALE_TERM"
+      },
+      {
+        "id": "complete_double_bubble_interaction_forest_MS",
+        "status": "BOUNDED_WITH_ACTUAL_NESTED_MS_FORESTS_AND_BOTH_SCALE_TERMS"
+      },
+      {
+        "id": "complete_scalar_OS_insertion_interaction_forest_MS",
+        "status": "BOUNDED_WITH_FULL_REGULATED_SLOPE_TIMES_OUTER_REFERENCE"
+      },
+      {
+        "id": "complete_scalar_quadratic_finite_MS_slope_and_converted_OS_bound",
+        "status": "BOUNDED_WITH_FIXED_INNER_OS_AND_INTERACTION_MS_COORDINATES"
+      },
+      {
+        "id": "first_finite_Phi_field_covariance_and_MS_projection_commutator",
+        "status": "EXACT_REGULATED_FIELD_DIRECTION_AND_BOUNDED_FIRST_SLOPE_CROSS_TERMS"
+      },
+      {
+        "id": "complete_GY14_second_Phi_normalization_and_canonical_unit_disc_pole",
+        "status": "BOUNDED_WITH_DIRECT_MS_OWNERSHIP_AND_FULL_FINITE_FIELD_REEXPANSION"
+      },
+      {
+        "id": "complete_two_loop_vacuum_reference_and_first_source_square",
+        "status": "BOUNDED_WITH_FULL_REGULATED_SOURCE_REDUCIBLE_CANCELLATION"
+      },
+      {
+        "id": "complete_two_loop_derivative_map_with_matched_physical_source",
+        "status": "TRANSPORTED_FOR_FULL_ACTION_AND_PHYSICAL_SOURCE_NOT_ORDINARY_PSI_MS_OR_TRUNCATION"
+      },
+      {
+        "id": "complete_matched_two_loop_low_energy_Phi_elastic_cut",
+        "status": "BOUNDED_ON_PHYSICAL_WINDOW_4_TO_6_WITH_FULL_FIRST_AMPLITUDE_NOT_PHYSICAL_REMAINDER_OR_GLOBAL_DISPERSION"
+      },
+      {
+        "id": "full_finite_kappa_analytic_target_classical_vacuum_match",
+        "status": "BOUNDED_ON_SAME_RESTRICTED_FLAT_SCHWARTZ_CLASS_NOT_QUANTUM_TARGET_OR_ROLLING_COMMON_PARENT_MATCH"
+      },
+      {
+        "id": "GY14_SAT8_pointwise_fermion_mass_protection_and_named_low_order_invariance",
+        "status": "NEW_ANALYTIC_EFT_BRANCH_WITH_GLOBAL_REAL_MASS_FLOOR_AND_SAME_NAMED_TWO_LOOP_DATA_NOT_ROLLING_STATE_OR_COMMON_PARENT_CLOSURE"
+      },
+      {
+        "id": "polynomial_clock_transparent_physical_source_map_and_full_target_classical_bound",
+        "status": "KINEMATIC_CLOCK_ARGUMENT_ALIGNED_WITH_PROTECTED_MASSES_AND_SAME_NAMED_VACUUM_DATA_NOT_BACKGROUND_SOLUTION_QUANTUM_STATE_OR_COMMON_PARENT_CLOSURE"
+      },
+      {
+        "id": "free_flat_clock_Dirac_out_energy_with_complete_transition_series_remainder",
+        "status": "BOUNDED_FOR_SPECIFIED_QUADRATIC_MODEWISE_IN_OUT_STATE_NOT_INTERACTING_OR_CURVED_BOUNCE_STRESS"
+      },
+      {
+        "id": "Hadamard_regular_free_flat_SAT8_in_out_state_and_uniform_one_particle_norm_limit",
+        "status": "HADAMARD_FOR_SPECIFIED_FREE_EXTERNAL_MASS_OPERATOR_USING_IDENTIFIED_EXTERNAL_THEOREM_NOT_INTERACTING_CURVED_STATE_OR_NUMERICAL_STRESS"
+      },
+      {
+        "id": "exact_four_frame_free_transition_and_uniform_same_operator_in_out_T00_difference",
+        "status": "BOUNDED_FOR_FREE_FLAT_HADAMARD_STATE_DIFFERENCE_NOT_ABSOLUTE_STRESS_INTERACTING_CURVED_STATE_OR_BACKREACTION"
+      }
+    ],
+    "primitive": [
+      {
+        "id": "scalar_Phi0_W0_F0",
+        "status": "BOUNDED_PAIRED_VACUUM_PRIMITIVE_WITH_ASSIGNED_LOCAL_FOREST"
+      },
+      {
+        "id": "scalar_Phi2_W0_F2",
+        "status": "BOUNDED_NONLOCAL_AND_FINITE_MS_MASS_AND_SLOPE_REFERENCES"
+      },
+      {
+        "id": "scalar_Phi2_W1_F0",
+        "status": "BOUNDED_PAIRED_NONLOCAL_AND_FINITE_MS_LOCAL_REFERENCES"
+      },
+      {
+        "id": "scalar_Phi4_W0_F4",
+        "status": "BOUNDED_PAIRED_PRIMITIVE_ROW"
+      },
+      {
+        "id": "scalar_Phi4_W1_F2",
+        "status": "BOUNDED_PAIRED_IN_COMMON_MS_INTERACTION_SCHEME"
+      },
+      {
+        "id": "scalar_Phi4_W2_F0",
+        "status": "BOUNDED_PAIRED_IN_COMMON_MS_INTERACTION_SCHEME"
+      },
+      {
+        "id": "gauge_Phi0",
+        "status": "BOUNDED_PAIRED_VACUUM_PRIMITIVE_WITH_ASSIGNED_LOCAL_FOREST"
+      },
+      {
+        "id": "gauge_Phi2",
+        "status": "BOUNDED_NONLOCAL_AND_FINITE_MS_MASS_AND_SLOPE_REFERENCES"
+      },
+      {
+        "id": "gauge_Phi4",
+        "status": "BOUNDED_PAIRED_PRIMITIVE_ROW"
+      }
+    ]
+  },
+  "prior_sha256": {
+    "S6_166_fully_rebuilt": "b7843dda9b7b2a3687b1a5ce8ef2b57eb860f2517ad1a708e3115412a251df82",
+    "all_prior_scientific_sources_and_reports_unchanged": true,
+    "same_free_flat_operator_and_in_out_Hadamard_states": true
+  },
+  "proof_checks": {
+    "Cauchy_bound_controls_each_exact_connection": true,
+    "absolute_stress_and_interacting_cutoff_not_inferred": true,
+    "actual_adiabatic_gap_exceeds_fixed_threshold": true,
+    "actual_local_state_energy_difference_below_one_e_411": true,
+    "actual_out_particle_energy_below_one_e_20": true,
+    "actual_uniform_transition_below_one_e_minus_390": true,
+    "all_five_frequency_floors_above_one_half": true,
+    "all_frozen_scientific_sources_and_reports_unchanged": true,
+    "all_nested_disks_have_positive_radius": true,
+    "complete_quadratic_transition_not_Feynman_loop_truncation": true,
+    "complex_first_derivative_weight_factor_below_two": true,
+    "complex_profile_modulus_below_two": true,
+    "complex_ratio_cap_below_one_quarter": true,
+    "external_mass_source_energy_exchange_not_omitted": true,
+    "fixed_complex_branches_have_strict_gaps": true,
+    "four_rotations_preserve_asymptotic_state": true,
+    "frame_mixing_bound_contracts": true,
+    "full_radial_momentum_integrals_converge": true,
+    "initial_sqrt_floor_nine_tenths": true,
+    "mass_square_relative_change_below_one_tenth": true,
+    "next_connection_factor_below_one": true,
+    "out_energy_reference_ratio_below_one_e_minus_780": true,
+    "positive_real_time_frequency_below_twice_floor": true,
+    "relative_eighth_power_disk_defect_below_one_quarter": true,
+    "remaining_off_diagonal_generator_not_discarded": true,
+    "same_operator_Hadamard_state_difference": true,
+    "sharper_out_energy_allowance_than_frozen_parent": true,
+    "sqrt_modulus_floor_valid": true,
+    "state_difference_reference_ratio_below_one_e_minus_389": true,
+    "state_independent_local_subtractions_cancel_only_in_difference": true
+  },
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "78f7f475eb98e9f0f2e61dff0bead9ae04261a9613d1b88389f749587efe22aa",
+    "README.md": "0ccdafe1eff782794375421f19f52201253f08fb64aaaacf5126e3a410d2bcf4",
+    "notes/complex_disk.md": "7da3c2db226f41cf743438602380af3f42e094bbe9bfe19d34948a6a5284d6f0",
+    "notes/energy.md": "5844b1f2d811606ff5b3dda557404b8a47b21f7a986aca2e53dd68cbf037621a",
+    "notes/frames.md": "39a4504aac14b090847032ca791053d31b183ed5065bc8ef85f5f0bdf9812f24",
+    "notes/scope.md": "00be17b0364d5367600097fdb689c0e563658f39927229ab2f77899390e991f8",
+    "src/p8_vacuum_superadiabatic_state_energy/__init__.py": "804c169e0aa9a44e4a0d4c2f9397966efd40997589ae1e61bd3bca64e2885617",
+    "src/p8_vacuum_superadiabatic_state_energy/audit.py": "c71ecfc16cda0942de19fc6c586107f9268274de8ccc811ad24f2a2200b2a959",
+    "src/p8_vacuum_superadiabatic_state_energy/energy.py": "a76abbc41e7137a1532b72716307232955532d5794188505322c6d96250912d5",
+    "src/p8_vacuum_superadiabatic_state_energy/rotation.py": "b3a365311a9a75f49babb7ec4595e380492df6ced715e40644a9c143fc1d508d",
+    "src/p8_vacuum_superadiabatic_state_energy/tube.py": "919769f57bc95cd475213e400941f896fc7fb703a677526aece93c35d34941c5",
+    "src/p8_vacuum_superadiabatic_state_energy/verify.py": "c0737b0ccebcbfa7b78b5b26f16cc799a0ad9f1b0d85d74bd49556a50c1e51b2",
+    "tests/test_superadiabatic_state_energy_certificate.py": "4e816e4c1ccf625ba5850bf4fe0326e255a3730b981d989caec487317d0bda2d",
+    "tests/test_superadiabatic_state_energy_science.py": "d2be9b1e44ea7cd9981859da4effa0a4e2dc2bc30409c0bddd92ac3ee692cc5c"
+  },
+  "status": "COMPLETE_EXACT_QUADRATIC_TRANSITION_WITH_P_MINUS_FIVE_UV_BOUND_AND_UNIFORM_FREE_FLAT_HADAMARD_IN_OUT_LOCAL_ENERGY_DIFFERENCE; NOT_ABSOLUTE_STRESS_INTERACTING_CURVED_STATE_BACKREACTION_V_G_B_OR_ORIGINAL_P8",
+  "verdict": "Four exact rotating-frame steps preserve the asymptotic state and retain the final off-diagonal connection. A fixed complex disk, strict frequency gaps and Cauchy estimates bound the exact transition by 2^42 pDelta/(tau^4 E^6), not by a truncated adiabatic evolution. The actual uniform amplitude is below 1e-390 and out-particle energy below 1e20. The same-operator Hadamard in/out local T00 difference, including coherence, is uniformly below 1e411 at every real time. These are quadratic flat-space statements, not absolute renormalized stress, a physical interacting cutoff or bounce backreaction.",
+  "verification_boundary": "Exact frame/connection and projector algebra, a written fixed-disk induction and unitarity bound, complete momentum integration, and exact actual-parameter inequalities. Independent Taylor-jet and direct derivative diagnostics test the full frame recurrence at 1200-digit precision for the actual parameters; projector coherence, the exact mode energy-exchange identity and radial quadratures test normalization and scope. Numerical diagnostics are not validated integration. The external references supply context and the inherited Hadamard theorem, not these new constants. Native, direct science, ordinary and CLI use unmodified SymPy.",
+  "written_proofs": [
+    "notes/complex_disk.md",
+    "notes/frames.md",
+    "notes/energy.md",
+    "notes/scope.md"
+  ]
+}
