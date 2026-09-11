@@ -1,0 +1,419 @@
+{
+  "checked_scalar_entries": 34,
+  "claim": "P8-S6.189.ACTUAL_FIXED_PROCA_FINITE_LOCAL_COVARIANT_FULL_SPATIAL_TENSOR_HESSIAN_AND_CANONICAL_H4_BOUND",
+  "controls": {
+    "both_TT_polarizations_and_correct_Frobenius_factor": true,
+    "fourth_derivative_piece_not_discarded": true,
+    "full_spatial_curvature_not_homogeneous_substitution": true,
+    "local_Hessian_not_complete_quantum_response": true,
+    "no_cutoff_or_inverse_from_coefficient_smallness": true,
+    "no_new_local_prescription_or_state_reset": true,
+    "omitted_weighted_adjoint_is_a_negative_control": true,
+    "original_P8_not_closed": true,
+    "rejected_inputs": 111
+  },
+  "date": "2026-09-11",
+  "direct_curvature_and_fixed_prescription": {
+    "curvature": {
+      "P8_scalar": "(-a(t)**2*Derivative(gamma_plus(t, z), t)**2 - 12*a(t)*Derivative(a(t), (t, 2)) - 12*Derivative(a(t), t)**2 + Derivative(gamma_plus(t, z), z)**2)/(2*a(t)**2)",
+      "direct_metric": "diag(1,-a^2 exp(g),-a^2 exp(-g),-a^2), g=g(t,z); full dynamic four-dimensional connection and curvature are contracted before expansion",
+      "quadratic_Weyl_squared": "Derivative(gamma_plus(t, z), (t, 2))**2 + 2*Derivative(a(t), t)*Derivative(gamma_plus(t, z), t)*Derivative(gamma_plus(t, z), (t, 2))/a(t) + Derivative(a(t), t)**2*Derivative(gamma_plus(t, z), t)**2/a(t)**2 + 2*Derivative(gamma_plus(t, z), (t, 2))*Derivative(gamma_plus(t, z), (z, 2))/a(t)**2 - 4*Derivative(gamma_plus(t, z), t, z)**2/a(t)**2 + 2*Derivative(a(t), t)*Derivative(gamma_plus(t, z), t)*Derivative(gamma_plus(t, z), (z, 2))/a(t)**3 + Derivative(gamma_plus(t, z), (z, 2))**2/a(t)**4",
+      "tensor_Weyl_rule": "The compact quadratic integral of C^2 is (1/2) integral a^3 tr[(gamma_tt+H gamma_t-a^-2 Delta gamma)^2]. The displayed plus polarization has Frobenius norm squared2; both orthonormal TT polarizations are retained by spatial rotations and bilinear orthogonality.",
+      "tensor_scalar_rule": "For compact TT gamma, the second scalar-curvature density against a time-only coefficient is (1/4)a^3 tr[gamma_t^2-a^-2(grad gamma)^2]; R_old=-R_P8 and its first TT variation is zero."
+    },
+    "prescription": {
+      "compact_variational_representative": "-R_old**2/18 + 5*R_old*mass**2/3 - Weyl_squared/30 + 5*mass**4/2",
+      "fixed_scalar_profile": "The fixed QG1 scalar coefficient and original homogeneous M1 are independent of a compact unimodular TT gamma history with N1,u=t,X1. They are not changed to cancel this metric Hessian.",
+      "independent_physical_local_stress_signs": {
+        "0": {
+          "energy": "-5/2",
+          "pressure": "5/2"
+        },
+        "1": {
+          "energy": "-160*t**2/(t**2 + 1)**2",
+          "pressure": "80*(5*t**2 + 1)/(3*(t**2 + 1)**2)"
+        },
+        "2": {
+          "energy": "32*(-21*t**4 + 14*t**2 - 1)/(t**8 + 4*t**6 + 6*t**4 + 4*t**2 + 1)",
+          "pressure": "64*(7*t**4 - 1)/(t**8 + 4*t**6 + 6*t**4 + 4*t**2 + 1)"
+        }
+      },
+      "literal_fixed_finite_density_before_64_pi_squared": "Euler_density/90 - R_old**2/18 + 5*R_old*mass**2/3 - Weyl_squared/30 + 5*mass**4/2",
+      "physical_sign": "In +---, delta S=(1/2) integral sqrt(-g) T_ab delta g^ab, so rho=-EL_N/a^3 and pressure=EL_a/(3Na^2); R_old=-R_P8.",
+      "same_prescription": "The source-pinned mu=m finite local action is matched to fourth-order mode subtraction. It is not the full state-dependent determinant. Euler and box-R compact variations vanish; no infinite-time flux is discarded."
+    }
+  },
+  "exact_residuals": {
+    "direct_tensor_curvature_direct_dynamic_Weyl_quadratic": "0",
+    "direct_tensor_curvature_exact_dynamic_spatial_scalar_curvature": "0",
+    "direct_tensor_curvature_full_cosmic_Weyl_action_boundary": "0",
+    "direct_tensor_curvature_full_nonlinear_unimodular_volume": "0",
+    "fixed_covariant_prescription_independent_covariant_sign_0_energy": "0",
+    "fixed_covariant_prescription_independent_covariant_sign_0_pressure": "0",
+    "fixed_covariant_prescription_independent_covariant_sign_1_energy": "0",
+    "fixed_covariant_prescription_independent_covariant_sign_1_pressure": "0",
+    "fixed_covariant_prescription_independent_covariant_sign_2_energy": "0",
+    "fixed_covariant_prescription_independent_covariant_sign_2_pressure": "0",
+    "fixed_covariant_prescription_literal_covariant_finite_basis": "0",
+    "fixed_covariant_prescription_same_actual_kappa": "0",
+    "fixed_covariant_prescription_same_actual_mass": "0",
+    "full_Sobolev_bound_actual_Aprime_control": "0",
+    "full_Sobolev_bound_actual_H_absolute_bound_factor": "0",
+    "full_Sobolev_bound_actual_Hprime_absolute_formula": "0",
+    "full_Sobolev_bound_actual_Hsecond_absolute_formula": "0",
+    "full_Sobolev_bound_actual_Rprime_absolute_formula": "0",
+    "full_Sobolev_bound_canonical_local_operator_display": "0",
+    "full_Sobolev_bound_complete_bilaplacian_multiindex_count": "0",
+    "full_Sobolev_bound_complete_laplacian_multiindex_count": "0",
+    "full_Sobolev_bound_full_A_wave_coefficient_sum": "0",
+    "full_Sobolev_bound_full_fourth_order_coefficient_sum": "0",
+    "full_spatial_local_operator_actual_background_old_curvature": "0",
+    "full_spatial_local_operator_actual_weighted_adjoint": "0",
+    "full_spatial_local_operator_canonical_quadratic_action_factor": "0",
+    "full_spatial_local_operator_complete_fourth_order_spatial_composition": "0",
+    "full_spatial_local_operator_fixed_local_A_curvature_term": "0",
+    "full_spatial_local_operator_independent_literal_action_Euler_variation": "0",
+    "full_spatial_local_operator_weighted_A_wave_operator": "0",
+    "nine_primitive_rows_retained": "0",
+    "one_new_scoped_row_added": "0",
+    "primitive_rows_unchanged": "0",
+    "prior_matching_rows_retained": "0"
+  },
+  "formulation": "FORMULATION.md",
+  "full_spatial_operator_and_Sobolev_bound": {
+    "bounds": {
+      "background_bounds": {
+        "abs_A": "500000",
+        "abs_Aprime": "4",
+        "abs_H": "8/5",
+        "abs_Hprime": "4",
+        "abs_Hsecond": "12",
+        "abs_R0_upper": "72",
+        "abs_Rprime_upper": "120"
+      },
+      "complete_canonical_local_response_display": "||Qloc h||L2<6e-796 ||h||H4",
+      "domain": "Actual CD slab [-1/2,1/2] and arbitrary compact spatial/time TT test; fixed mass1000 and kappa1e800",
+      "full_A_wave_coefficient_sum": "3900004",
+      "full_DdagD_actual_coefficient_sum": "18817/125",
+      "full_DdagD_display": "160",
+      "laplacian_norm": "||Delta partial_t^j h||<=sqrt(3)||h||H4<2||h||H4 for j<=2; ||Delta^2 h||<=sqrt(15)||h||H4<4||h||H4",
+      "local_response_upper_before_inverse_kappa": "2925005/54",
+      "norm": "||h||H4^2=sum_(j+|alpha|<=4)||partial_t^j partial_x^alpha h||L2(dt dx;F)^2, with every spatial multiindex counted once",
+      "scope": "A bound for the complete specified finite-local tensor Hessian with full spatial derivatives. It is not the nonlocal/state-dependent response, a finite-coupling feedback bound, a cutoff or a pole-removal prescription."
+    },
+    "operator": {
+      "actual_A": "2*(625000*t**4 + 1249993*t**2 + 624999)/(3*(t**2 + 1)**2)",
+      "actual_R0": "24*(7*t**2 + 1)/(t**2 + 1)**2",
+      "full_DdagD": "t^4+6H t^3+(4H'+11H^2)t^2+(H''+7HH'+6H^3)t-2a^-2 Delta t^2-2H a^-2 Delta t+a^-4 Delta^2; the pure Delta coefficient cancels",
+      "full_canonical_local_response": "Qloc=(1/(8pi^2 kappa))[A L+A'partial_t+(1/60)Ddag D]; the total Euler equation reads -Lh-Qloc h+source=0",
+      "quadratic_gamma_action": "(1/(64pi^2)) integral a^3 {A tr[gamma_t^2-a^-2(grad gamma)^2]-(1/60)tr[(D gamma)^2]}, A=5m^2/12-R0/36",
+      "response_boundary": "This is the complete Hessian of the specified finite local matching density, not the full determinant response, its inverse, an order-reduced solution or a discarded-pole prescription.",
+      "wave_operators": "L=tt+3H t-a^-2 Delta, D=tt+H t-a^-2 Delta, Ddag=tt+5H t+2H'+6H^2-a^-2 Delta in the a^3 measure"
+    }
+  },
+  "named_exact_check_count": 34,
+  "not_established": [
+    "A complete state/subtraction-dependent determinant response or uniform integrable UV-subtracted response remainder",
+    "All remaining renormalized contacts, a full response inverse, finite-coupling feedback or nonlinear quantum background",
+    "A physical cutoff or pole-deletion prescription from the small fixed local operator coefficient",
+    "Full interacting parent matching, finite-gravity IR/Regge or original V/G/B and P8 closure"
+  ],
+  "observable_and_scope": {
+    "bound": "On the fixed CD slab, ||Qloc h||L2<6e-796 ||h||H4 in the stated full-spacetime canonical TT norm.",
+    "boundary": "This is the full Hessian of the specified finite local matching action, not the entire state/subtraction-dependent determinant response, a stable inverse, finite-coupling error or cutoff.",
+    "operator": "Its complete compact TT Hessian has A=5m^2/12-R0/36 and Qloc=(A L+A'partial_t+Ddag D/60)/(8pi^2 kappa), with all spatial derivatives and the actual weighted adjoint.",
+    "prescription": "The same fixed mu=m local Proca density, including its evanescent finite curvature terms and physical signs, is retained without a new counterterm choice.",
+    "remaining": "The uniformly UV-subtracted nonlocal response and its remaining finite contacts, full mixed/nonlinear feedback, interacting parent matching and original V/G/B."
+  },
+  "primitive_and_matching_frontier": {
+    "matching": [
+      {
+        "id": "fixed_sigma_isolated_MS_conversion",
+        "status": "CANCELLED_NONLOCAL_ORDER_TWO_WITH_SAME_REGULATED_REFERENCE"
+      },
+      {
+        "id": "remaining_scale_parameter_field_map_and_cross_terms",
+        "status": "OPEN"
+      },
+      {
+        "id": "remaining_counterterm_and_vacuum_source_assembly",
+        "status": "ASSEMBLED_FOR_FIXED_ORDER_PHI_POLE_B2_VACUUM_AND_H_SOURCE"
+      },
+      {
+        "id": "full_matched_two_loop_pole_and_amplitude_error",
+        "status": "FIXED_ORDER_PHI_POLE_AND_B2_BOUNDED_PHYSICAL_TRUNCATION_OPEN"
+      },
+      {
+        "id": "finite_EFT_higher_order_truncation",
+        "status": "OPEN"
+      },
+      {
+        "id": "V_contour_and_cut_control",
+        "status": "OPEN"
+      },
+      {
+        "id": "finite_gravity_G",
+        "status": "OPEN"
+      },
+      {
+        "id": "common_parent_B",
+        "status": "OPEN"
+      },
+      {
+        "id": "complete_wineglass_interaction_forest_MS",
+        "status": "BOUNDED_WITH_REGULATED_FINITE_LOCAL_ANCHOR_AND_FULL_SCALE_TERM"
+      },
+      {
+        "id": "complete_double_bubble_interaction_forest_MS",
+        "status": "BOUNDED_WITH_ACTUAL_NESTED_MS_FORESTS_AND_BOTH_SCALE_TERMS"
+      },
+      {
+        "id": "complete_scalar_OS_insertion_interaction_forest_MS",
+        "status": "BOUNDED_WITH_FULL_REGULATED_SLOPE_TIMES_OUTER_REFERENCE"
+      },
+      {
+        "id": "complete_scalar_quadratic_finite_MS_slope_and_converted_OS_bound",
+        "status": "BOUNDED_WITH_FIXED_INNER_OS_AND_INTERACTION_MS_COORDINATES"
+      },
+      {
+        "id": "first_finite_Phi_field_covariance_and_MS_projection_commutator",
+        "status": "EXACT_REGULATED_FIELD_DIRECTION_AND_BOUNDED_FIRST_SLOPE_CROSS_TERMS"
+      },
+      {
+        "id": "complete_GY14_second_Phi_normalization_and_canonical_unit_disc_pole",
+        "status": "BOUNDED_WITH_DIRECT_MS_OWNERSHIP_AND_FULL_FINITE_FIELD_REEXPANSION"
+      },
+      {
+        "id": "complete_two_loop_vacuum_reference_and_first_source_square",
+        "status": "BOUNDED_WITH_FULL_REGULATED_SOURCE_REDUCIBLE_CANCELLATION"
+      },
+      {
+        "id": "complete_two_loop_derivative_map_with_matched_physical_source",
+        "status": "TRANSPORTED_FOR_FULL_ACTION_AND_PHYSICAL_SOURCE_NOT_ORDINARY_PSI_MS_OR_TRUNCATION"
+      },
+      {
+        "id": "complete_matched_two_loop_low_energy_Phi_elastic_cut",
+        "status": "BOUNDED_ON_PHYSICAL_WINDOW_4_TO_6_WITH_FULL_FIRST_AMPLITUDE_NOT_PHYSICAL_REMAINDER_OR_GLOBAL_DISPERSION"
+      },
+      {
+        "id": "full_finite_kappa_analytic_target_classical_vacuum_match",
+        "status": "BOUNDED_ON_SAME_RESTRICTED_FLAT_SCHWARTZ_CLASS_NOT_QUANTUM_TARGET_OR_ROLLING_COMMON_PARENT_MATCH"
+      },
+      {
+        "id": "GY14_SAT8_pointwise_fermion_mass_protection_and_named_low_order_invariance",
+        "status": "NEW_ANALYTIC_EFT_BRANCH_WITH_GLOBAL_REAL_MASS_FLOOR_AND_SAME_NAMED_TWO_LOOP_DATA_NOT_ROLLING_STATE_OR_COMMON_PARENT_CLOSURE"
+      },
+      {
+        "id": "polynomial_clock_transparent_physical_source_map_and_full_target_classical_bound",
+        "status": "KINEMATIC_CLOCK_ARGUMENT_ALIGNED_WITH_PROTECTED_MASSES_AND_SAME_NAMED_VACUUM_DATA_NOT_BACKGROUND_SOLUTION_QUANTUM_STATE_OR_COMMON_PARENT_CLOSURE"
+      },
+      {
+        "id": "free_flat_clock_Dirac_out_energy_with_complete_transition_series_remainder",
+        "status": "BOUNDED_FOR_SPECIFIED_QUADRATIC_MODEWISE_IN_OUT_STATE_NOT_INTERACTING_OR_CURVED_BOUNCE_STRESS"
+      },
+      {
+        "id": "Hadamard_regular_free_flat_SAT8_in_out_state_and_uniform_one_particle_norm_limit",
+        "status": "HADAMARD_FOR_SPECIFIED_FREE_EXTERNAL_MASS_OPERATOR_USING_IDENTIFIED_EXTERNAL_THEOREM_NOT_INTERACTING_CURVED_STATE_OR_NUMERICAL_STRESS"
+      },
+      {
+        "id": "exact_four_frame_free_transition_and_uniform_same_operator_in_out_T00_difference",
+        "status": "BOUNDED_FOR_FREE_FLAT_HADAMARD_STATE_DIFFERENCE_NOT_ABSOLUTE_STRESS_INTERACTING_CURVED_STATE_OR_BACKREACTION"
+      },
+      {
+        "id": "free_flat_absolute_one_loop_local_energy_with_fixed_saturated_mass_reference",
+        "status": "BOUNDED_IN_EXPLICIT_MS_AND_SATURATED_MASS_REFERENCE_QUADRATIC_SCHEME_NOT_FULL_CURVED_INTERACTING_PARENT_STRESS"
+      },
+      {
+        "id": "complete_free_flat_homogeneous_one_loop_stress_with_dimensional_curvature_improvement",
+        "status": "BOUNDED_SPECIFIED_QUADRATIC_MS_MR_FLAT_TENSOR_NOT_FULL_INTERACTING_CURVED_PARENT_STRESS"
+      },
+      {
+        "id": "actual_CD_free_Dirac_Hadamard_in_out_state_and_uniform_state_stress_difference",
+        "status": "CURVED_FREE_HADAMARD_STATE_AND_STATE_DIFFERENCE_BOUNDED_NOT_ABSOLUTE_PARENT_STRESS"
+      },
+      {
+        "id": "complete_free_curved_one_loop_stress_with_explicit_EC_Newton_reference",
+        "status": "BOUNDED_SPECIFIED_QUADRATIC_CURVED_TENSOR_NOT_FULL_INTERACTING_PARENT_OR_BACKGROUND_RESPONSE"
+      },
+      {
+        "id": "minimal_Einstein_canonical_clock_free_sector_null_equation_mismatch",
+        "status": "EXCLUDED_NAMED_MINIMAL_DIAGNOSTIC_WITH_SMALL_EXTRA_NULL_BUDGET_NOT_FULL_INTERACTING_PARENT_OR_DHOST_ROW"
+      },
+      {
+        "id": "actual_CD_leading_clock_Euler_source_decomposition_and_matching_domain_gap",
+        "status": "LEADING_TARGET_SOURCES_AND_CONSTRAINT_DOMAIN_REQUIREMENTS_IDENTIFIED_NOT_PROPAGATING_PARENT_OR_QUANTUM_BOUNCE"
+      },
+      {
+        "id": "analytic_CD_REG_AFFINE_ISO_classical_parent_clock_vacuum_and_local_constraints",
+        "status": "NEW_REGULAR_CLASSICAL_PARENT_AND_LOCAL_CONSTRAINT_BLOCKS_NOT_QUANTUM_MATCHING_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "same_classical_affine_parent_closed_source_lift_and_scoped_vector_Schur_control",
+        "status": "EXACT_CLASSICAL_AND_COMMON_REGULATOR_IDENTITIES_FULL_EUCLIDEAN_AND_LEADING_LORENTZ_BOUNDS_NOT_FULL_QUANTUM_MATCHING"
+      },
+      {
+        "id": "regular_affine_parent_conditional_Gaussian_Hadamard_family_and_ordinary_Proca_stress",
+        "status": "SOURCE_AWARE_CONDITIONAL_VECTOR_STATE_AND_FIXED_CLOCK_STRESS_NOT_FULL_PARENT_QUANTUM_SOLUTION"
+      },
+      {
+        "id": "full_fixed_canonical_affine_family_actual_classical_gravitational_decoupling",
+        "status": "ANCHORED_FULL_FUNCTION_CLASSICAL_LIMIT_AND_TREE_AMPLITUDE_NOT_QUANTUM_CONTOUR_TRUNCATION_OR_V_CLOSURE"
+      },
+      {
+        "id": "complete_affine_vector_retarded_mean_energy_and_causal_cubic_light_force",
+        "status": "FIXED_CD_FULL_SOURCE_FINITE_TIME_CONDITIONAL_GAUSSIAN_MEAN_AND_LIGHT_FORCE_NOT_METRIC_NOISE_FULL_PARENT_OR_B_CLOSURE"
+      },
+      {
+        "id": "same_affine_conditional_prepared_homogeneous_metric_response_with_uncancelled_chart_contacts",
+        "status": "COMPLETE_CONDITIONAL_VECTOR_HOMOGENEOUS_C10_TO_C0_BOUND_NOT_SPATIAL_NOISE_COUPLED_BACKGROUND_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "same_affine_parent_prepared_homogeneous_retained_tree_plus_conditional_vector_causal_inverse",
+        "status": "UNIQUE_RETAINED_LINEAR_PREPARED_CAUSAL_INVERSE_WITH_NUMERIC_LOCAL_LAPSE_RECOVERY_NOT_FULL_INVERSE_SMALLNESS_QUANTUM_BACKGROUND_OR_V_G_B"
+      },
+      {
+        "id": "same_massive_scalar_range_kernel_explicit_full_half_line_L1_majorant",
+        "status": "MASS_INDEPENDENT_EXPLICIT_SCALAR_KERNEL_NORM_NOT_FULL_INVERSE_SMALLNESS_BACKGROUND_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "new_CD_REG_AFFINE_ISO_QG1_fixed_coefficient_stationary_Gaussian_mean_and_actual_response",
+        "status": "NEW_PARENT_RETAINED_MEAN_STATIONARITY_AND_BOUNDED_COEFFICIENT_CORRECTION_NOT_FULL_QUANTUM_BACKGROUND_STABILITY_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "actual_classical_Hamiltonian_C0_and_C10_inverse_and_first_formal_Gaussian_response",
+        "status": "QUANTIFIED_PREPARED_CLASSICAL_PROPAGATOR_AND_FIRST_FORMAL_COEFFICIENT_NOT_FINITE_COUPLING_ERROR_STABILITY_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "complete_finite_time_canonical_vacuum_source_mean_and_scalar_force_noise_with_fixed_profile",
+        "status": "FULL_CONDITIONAL_GAUSSIAN_VACUUM_SOURCE_CAUSAL_AND_NOISE_BOUNDS_NOT_INTERACTING_AMPLITUDE_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "actual_all_order_CD_state_complete_clock_source_smeared_force_noise_and_canonical_normalization",
+        "status": "SAME_STATE_FULL_SOURCE_SMEARED_SCALAR_NOISE_BOUND_NOT_METRIC_NOISE_SOLUTION_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "actual_all_order_CD_full_local_smeared_metric_stress_covariance",
+        "status": "FULL_SPACETIME_TENSOR_STRESS_NOISE_BOUND_NOT_METRIC_SOLUTION_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "actual_CD_boundary_compatible_tree_tensor_noise_response",
+        "status": "RESTRICTED_DETECTOR_TREE_PROPAGATED_NOISE_NOT_FULL_QUANTUM_TENSOR_STATE_OR_V_G_B"
+      },
+      {
+        "id": "actual_CD_homogeneous_shear_Hamiltonian_contact_and_modewise_remainder",
+        "status": "ACTUAL_SHEAR_MODEWISE_FINITE_AMPLITUDE_REMAINDER_NOT_CONTINUUM_SELF_ENERGY_OR_V_G_B"
+      },
+      {
+        "id": "actual_fixed_local_covariant_full_spatial_tensor_Hessian",
+        "status": "ACTUAL_FIXED_FINITE_LOCAL_TENSOR_HESSIAN_BOUND_NOT_COMPLETE_DETERMINANT_RESPONSE_OR_V_G_B"
+      }
+    ],
+    "primitive": [
+      {
+        "id": "scalar_Phi0_W0_F0",
+        "status": "BOUNDED_PAIRED_VACUUM_PRIMITIVE_WITH_ASSIGNED_LOCAL_FOREST"
+      },
+      {
+        "id": "scalar_Phi2_W0_F2",
+        "status": "BOUNDED_NONLOCAL_AND_FINITE_MS_MASS_AND_SLOPE_REFERENCES"
+      },
+      {
+        "id": "scalar_Phi2_W1_F0",
+        "status": "BOUNDED_PAIRED_NONLOCAL_AND_FINITE_MS_LOCAL_REFERENCES"
+      },
+      {
+        "id": "scalar_Phi4_W0_F4",
+        "status": "BOUNDED_PAIRED_PRIMITIVE_ROW"
+      },
+      {
+        "id": "scalar_Phi4_W1_F2",
+        "status": "BOUNDED_PAIRED_IN_COMMON_MS_INTERACTION_SCHEME"
+      },
+      {
+        "id": "scalar_Phi4_W2_F0",
+        "status": "BOUNDED_PAIRED_IN_COMMON_MS_INTERACTION_SCHEME"
+      },
+      {
+        "id": "gauge_Phi0",
+        "status": "BOUNDED_PAIRED_VACUUM_PRIMITIVE_WITH_ASSIGNED_LOCAL_FOREST"
+      },
+      {
+        "id": "gauge_Phi2",
+        "status": "BOUNDED_NONLOCAL_AND_FINITE_MS_MASS_AND_SLOPE_REFERENCES"
+      },
+      {
+        "id": "gauge_Phi4",
+        "status": "BOUNDED_PAIRED_PRIMITIVE_ROW"
+      }
+    ]
+  },
+  "prior_sha256": {
+    "S6_176_actual_CD_Gaussian_sector_transitively_rebuilt": "1175702d6980db090396863b807af0e767241daeb7d8dabf138ed11c67e1ae75",
+    "S6_188_fully_rebuilt": "017e45a3054f3db472ce50ac88c0bc33328127c4d970a184b18552c0e6789f99",
+    "all_frozen_scientific_bytes_unchanged": true,
+    "fixed_stress_prescription_and_full_source_retained": true
+  },
+  "proof_checks": {
+    "actual_a_cubed_weighted_adjoint": true,
+    "canonical_TT_normalization_not_scalar_mixed_chart": true,
+    "compact_Euler_and_box_R_variations_only": true,
+    "complete_fourth_derivative_operator_retained": true,
+    "direct_dynamic_four_dimensional_curvature_checked": true,
+    "finite_density_not_complete_state_dependent_determinant": true,
+    "full_Sobolev_bound_actual_A_below_display": true,
+    "full_Sobolev_bound_actual_Aprime_below_display": true,
+    "full_Sobolev_bound_actual_R0_upper_enclosure": true,
+    "full_Sobolev_bound_actual_Rprime_upper_enclosure": true,
+    "full_Sobolev_bound_bilaplacian_count_below_four_squared": true,
+    "full_Sobolev_bound_full_fourth_order_coefficient_below_display": true,
+    "full_Sobolev_bound_full_operator_coefficient_below_sixty_thousand": true,
+    "full_Sobolev_bound_laplacian_count_below_two_squared": true,
+    "full_Sobolev_bound_pi_squared_lower": true,
+    "full_Sobolev_bound_positive_A_from_actual_mass_and_curvature": true,
+    "full_Sobolev_bound_same_fixed_hierarchy": true,
+    "full_feedback_and_finite_coupling_remainder_still_open": true,
+    "full_joint_spacetime_H4_not_homogeneous_only_norm": true,
+    "full_local_metric_Hessian_not_only_centered_noise": true,
+    "no_new_physical_cutoff_from_local_norm": true,
+    "no_singular_inverse_or_extra_pole_deletion": true,
+    "nonlocal_UV_subtracted_response_still_required": true,
+    "original_V_G_B_not_closed": true,
+    "original_scalar_profile_and_M1_unchanged": true,
+    "physical_local_stress_signs_independently_recovered": true,
+    "same_fixed_finite_density_not_new_counterterm": true,
+    "spatial_terms_and_both_tensor_polarizations_retained": true
+  },
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "009c55d8bc1f5842467f8187d6af873e4636afd35d800fa40bd4dd91e1c409a1",
+    "README.md": "f5401fe251c86b033b38eec56972c445aba95d82b213df2ed80f31de56f61764",
+    "notes/bounds.md": "d3f13887704711a1a6961ad6d10bec720b403267fe0f059b8d8d33bfe2bef6a6",
+    "notes/contact.md": "c7123cf3cb0c5b9508a64a2ec3eea9223b85587eed70ad0223e820b7ea272a17",
+    "notes/curvature.md": "e0f1c94e95b03389d2d83bb0f6f9fdafd0f7d2a11e96b22de610d5e46635250c",
+    "notes/operator.md": "8a5047a073d9e9413e727cf09deadd7929a5835e41a7cd478c56e7c6efa3797e",
+    "notes/prescription.md": "3e2076bb07510848b7695e67cb81fcfc280f5bbb25e8912f6e71686132a90350",
+    "notes/scope.md": "8e61b62b9a91f25c61d53a82479633ae743b027cff6c0604c09fccd966e1bbac",
+    "notes/validation.md": "93718f3dcca3375a487cd8b216a3eab390abe18b15ce0098f53d02803166142a",
+    "src/p8_vacuum_affine_local_tensor_response/__init__.py": "de0d22e68e4d57b43323336fa39aa5f2ddfc45674d75ae4d02430b1380c46c24",
+    "src/p8_vacuum_affine_local_tensor_response/audit.py": "e8d06d96db37bfacbf453a3869b3df3e56c7643bbb88d9b6004d46eb1e68d2cc",
+    "src/p8_vacuum_affine_local_tensor_response/bounds.py": "999cb176714c74d5e1f84b2c74ee7cccd65d70538285c75ef71e0719489d4b4d",
+    "src/p8_vacuum_affine_local_tensor_response/geometry.py": "16e3fc49f26f16fba370a93a027fe11528692e60b8bc34e1e9390523a906b743",
+    "src/p8_vacuum_affine_local_tensor_response/operator.py": "734b97abfe11c784899a0fd19c749ed0747a2924279e7ee1aafd5f8d2b50c86b",
+    "src/p8_vacuum_affine_local_tensor_response/prescription.py": "172fcfd7d589758645239a9b0aa0cdccf37415c1a4c142b686cfab9f1c4a9253",
+    "src/p8_vacuum_affine_local_tensor_response/verify.py": "0e71b0e6b7706bd8c779b3df14cf3c97b973483dd7cee995b6d28fd89df2f5cc",
+    "tests/test_affine_local_tensor_response_certificate.py": "e5e2546f0916a990b5659ddda7080f0312331db70811b1f15cd9344483ceae5f",
+    "tests/test_affine_local_tensor_response_science.py": "017ddef9edb94cfbbc8c307fc94986aa54eac547615bbd15a9c253ce50b399cb"
+  },
+  "status": "ACTUAL_FIXED_FINITE_LOCAL_FULL_SPATIAL_TENSOR_HESSIAN_AND_H4_BOUND; NOT_COMPLETE_DETERMINANT_RESPONSE_INVERSE_FINITE_COUPLING_BACKGROUND_CUTOFF_V_G_B_OR_ORIGINAL_P8",
+  "verdict": "The same source-pinned finite local Proca matching density has a complete compact-spacetime TT metric Hessian with the physical canonical normalization. Direct dynamic four-dimensional curvature, the compact Weyl boundary and independent lapse/scale stress variations fix its signs and factors. Its operator retains the A-weighted wave term and full fourth-order Ddag D term with all spatial derivatives and the actual a^3 weighted adjoint. On the unchanged CD slab, its canonical H4-to-L2 norm is below6e-796. This is the Hessian of the specified finite local action, not the entire state/subtraction-dependent determinant response or a small full inverse, finite-coupling error or physical cutoff. Original V/G/B and P8 remain OPEN.",
+  "verification_boundary": "Direct dynamic four-dimensional curvature, exact local prescription and independent stress-sign variations, full weighted Euler operator and continuous fourth-Sobolev majorants. Independent rotated polarization, compact action-variation and full-momentum norm fixtures supplement the written proofs. Native, direct science, ordinary and CLI use original SymPy; only full regression uses the audited exact GCD adapter. Analytic and functional arguments are not FORMALIZED.",
+  "written_proofs": [
+    "notes/curvature.md",
+    "notes/prescription.md",
+    "notes/operator.md",
+    "notes/bounds.md",
+    "notes/contact.md",
+    "notes/scope.md",
+    "notes/validation.md"
+  ]
+}
