@@ -1,0 +1,561 @@
+{
+  "actual_Hamiltonian_and_continuous_real_norm": {
+    "Hamiltonian": {
+      "J": "(3200*u**34 + 48000*u**32 + 332800*u**30 + 1410400*u**28 + 4068800*u**26 + 8413616*u**24 + 12776592*u**22 + 14351856*u**20 + 11894320*u**18 + 7327520*u**16 + 3706272*u**14 + 2123580*u**12 + 1571848*u**10 + 1038260*u**8 + 474252*u**6 + 134232*u**4 + 20604*u**2 + 1215)/(800*(u**2 + 1)**18)",
+      "J_positive_polynomial": "3200*u**34 + 48000*u**32 + 332800*u**30 + 1410400*u**28 + 4068800*u**26 + 8413616*u**24 + 12776592*u**22 + 14351856*u**20 + 11894320*u**18 + 7327520*u**16 + 3706272*u**14 + 2123580*u**12 + 1571848*u**10 + 1038260*u**8 + 474252*u**6 + 134232*u**4 + 20604*u**2 + 1215",
+      "actual_lapse_force_row": [
+        [
+          "400*(u**2 + 1)**18/(3200*u**34 + 48000*u**32 + 332800*u**30 + 1410400*u**28 + 4068800*u**26 + 8413616*u**24 + 12776592*u**22 + 14351856*u**20 + 11894320*u**18 + 7327520*u**16 + 3706272*u**14 + 2123580*u**12 + 1571848*u**10 + 1038260*u**8 + 474252*u**6 + 134232*u**4 + 20604*u**2 + 1215)",
+          "200*(u**2 + 1)**15/(3200*u**34 + 48000*u**32 + 332800*u**30 + 1410400*u**28 + 4068800*u**26 + 8413616*u**24 + 12776592*u**22 + 14351856*u**20 + 11894320*u**18 + 7327520*u**16 + 3706272*u**14 + 2123580*u**12 + 1571848*u**10 + 1038260*u**8 + 474252*u**6 + 134232*u**4 + 20604*u**2 + 1215)"
+        ]
+      ],
+      "actual_lapse_state_row": [
+        [
+          "12*(-1 + 3/(2*(u**2 + 1)**3))*(u**2 + 1)**6/(3200*u**34 + 48000*u**32 + 332800*u**30 + 1410400*u**28 + 4068800*u**26 + 8413616*u**24 + 12776592*u**22 + 14351856*u**20 + 11894320*u**18 + 7327520*u**16 + 3706272*u**14 + 2123580*u**12 + 1571848*u**10 + 1038260*u**8 + 474252*u**6 + 134232*u**4 + 20604*u**2 + 1215)",
+          "40*u*(u**2 + 1)**14*(4*u**6 + 12*u**4 + 12*u**2 + 3)/(3200*u**34 + 48000*u**32 + 332800*u**30 + 1410400*u**28 + 4068800*u**26 + 8413616*u**24 + 12776592*u**22 + 14351856*u**20 + 11894320*u**18 + 7327520*u**16 + 3706272*u**14 + 2123580*u**12 + 1571848*u**10 + 1038260*u**8 + 474252*u**6 + 134232*u**4 + 20604*u**2 + 1215)"
+        ]
+      ],
+      "actual_phase_matrix": [
+        [
+          "12*u*(-1 + 3/(2*(u**2 + 1)**3))*(u**2 + 1)**2*(4*u**6 + 12*u**4 + 12*u**2 + 3)/(3200*u**34 + 48000*u**32 + 332800*u**30 + 1410400*u**28 + 4068800*u**26 + 8413616*u**24 + 12776592*u**22 + 14351856*u**20 + 11894320*u**18 + 7327520*u**16 + 3706272*u**14 + 2123580*u**12 + 1571848*u**10 + 1038260*u**8 + 474252*u**6 + 134232*u**4 + 20604*u**2 + 1215)",
+          "400*u**2*(u**2 + 1)**10*(4*u**6 + 12*u**4 + 12*u**2 + 3)**2/(3200*u**34 + 48000*u**32 + 332800*u**30 + 1410400*u**28 + 4068800*u**26 + 8413616*u**24 + 12776592*u**22 + 14351856*u**20 + 11894320*u**18 + 7327520*u**16 + 3706272*u**14 + 2123580*u**12 + 1571848*u**10 + 1038260*u**8 + 474252*u**6 + 134232*u**4 + 20604*u**2 + 1215) - 1/6"
+        ],
+        [
+          "-9*(-1 + 3/(2*(u**2 + 1)**3))**2/(25*(u**2 + 1)**6*(3200*u**34 + 48000*u**32 + 332800*u**30 + 1410400*u**28 + 4068800*u**26 + 8413616*u**24 + 12776592*u**22 + 14351856*u**20 + 11894320*u**18 + 7327520*u**16 + 3706272*u**14 + 2123580*u**12 + 1571848*u**10 + 1038260*u**8 + 474252*u**6 + 134232*u**4 + 20604*u**2 + 1215)) - 9/(100*(u**2 + 1)**12)",
+          "-12*u*(-1 + 3/(2*(u**2 + 1)**3))*(u**2 + 1)**2*(4*u**6 + 12*u**4 + 12*u**2 + 3)/(3200*u**34 + 48000*u**32 + 332800*u**30 + 1410400*u**28 + 4068800*u**26 + 8413616*u**24 + 12776592*u**22 + 14351856*u**20 + 11894320*u**18 + 7327520*u**16 + 3706272*u**14 + 2123580*u**12 + 1571848*u**10 + 1038260*u**8 + 474252*u**6 + 134232*u**4 + 20604*u**2 + 1215) - 12*u/(u**2 + 1)"
+        ]
+      ],
+      "actual_physical_force_matrix": [
+        [
+          "400*u*(u**2 + 1)**14*(4*u**6 + 12*u**4 + 12*u**2 + 3)/(3200*u**34 + 48000*u**32 + 332800*u**30 + 1410400*u**28 + 4068800*u**26 + 8413616*u**24 + 12776592*u**22 + 14351856*u**20 + 11894320*u**18 + 7327520*u**16 + 3706272*u**14 + 2123580*u**12 + 1571848*u**10 + 1038260*u**8 + 474252*u**6 + 134232*u**4 + 20604*u**2 + 1215)",
+          "200*u*(u**2 + 1)**11*(4*u**6 + 12*u**4 + 12*u**2 + 3)/(3200*u**34 + 48000*u**32 + 332800*u**30 + 1410400*u**28 + 4068800*u**26 + 8413616*u**24 + 12776592*u**22 + 14351856*u**20 + 11894320*u**18 + 7327520*u**16 + 3706272*u**14 + 2123580*u**12 + 1571848*u**10 + 1038260*u**8 + 474252*u**6 + 134232*u**4 + 20604*u**2 + 1215)"
+        ],
+        [
+          "-12*(-1 + 3/(2*(u**2 + 1)**3))*(u**2 + 1)**6/(3200*u**34 + 48000*u**32 + 332800*u**30 + 1410400*u**28 + 4068800*u**26 + 8413616*u**24 + 12776592*u**22 + 14351856*u**20 + 11894320*u**18 + 7327520*u**16 + 3706272*u**14 + 2123580*u**12 + 1571848*u**10 + 1038260*u**8 + 474252*u**6 + 134232*u**4 + 20604*u**2 + 1215)",
+          "-6*(-1 + 3/(2*(u**2 + 1)**3))*(u**2 + 1)**3/(3200*u**34 + 48000*u**32 + 332800*u**30 + 1410400*u**28 + 4068800*u**26 + 8413616*u**24 + 12776592*u**22 + 14351856*u**20 + 11894320*u**18 + 7327520*u**16 + 3706272*u**14 + 2123580*u**12 + 1571848*u**10 + 1038260*u**8 + 474252*u**6 + 134232*u**4 + 20604*u**2 + 1215) - 1"
+        ]
+      ],
+      "generic_lapse_reconstruction": "(L*vhat + delta*gV + gN + p*theta)/(2*J)",
+      "generic_regular_denominator": "2*J",
+      "original_charge": "Original nonzero M1 charge retained; independent perturbation of that charge is zero",
+      "original_classical_reference": "The unchanged S6.180 classical T0, not the new retuned classical action in isolation",
+      "physical_forces": "gN,gV are original lapse and log-scale Euler forces divided by kappa*a0^3",
+      "reduced_forced_Hamiltonian": "9*ell**2*vhat**2/2 + gV*vhat - p**2/12 + (L*vhat + delta*gV + gN + p*theta)**2/(4*J)",
+      "weighted_force_matrix": [
+        [
+          "400*u*(u**2 + 1)**14*(4*u**6 + 12*u**4 + 12*u**2 + 3)/(3200*u**34 + 48000*u**32 + 332800*u**30 + 1410400*u**28 + 4068800*u**26 + 8413616*u**24 + 12776592*u**22 + 14351856*u**20 + 11894320*u**18 + 7327520*u**16 + 3706272*u**14 + 2123580*u**12 + 1571848*u**10 + 1038260*u**8 + 474252*u**6 + 134232*u**4 + 20604*u**2 + 1215)",
+          "200*u*(u**2 + 1)**11*(4*u**6 + 12*u**4 + 12*u**2 + 3)/(3200*u**34 + 48000*u**32 + 332800*u**30 + 1410400*u**28 + 4068800*u**26 + 8413616*u**24 + 12776592*u**22 + 14351856*u**20 + 11894320*u**18 + 7327520*u**16 + 3706272*u**14 + 2123580*u**12 + 1571848*u**10 + 1038260*u**8 + 474252*u**6 + 134232*u**4 + 20604*u**2 + 1215)"
+        ],
+        [
+          "-120*(-1 + 3/(2*(u**2 + 1)**3))*(u**2 + 1)**6/(3200*u**34 + 48000*u**32 + 332800*u**30 + 1410400*u**28 + 4068800*u**26 + 8413616*u**24 + 12776592*u**22 + 14351856*u**20 + 11894320*u**18 + 7327520*u**16 + 3706272*u**14 + 2123580*u**12 + 1571848*u**10 + 1038260*u**8 + 474252*u**6 + 134232*u**4 + 20604*u**2 + 1215)",
+          "-60*(-1 + 3/(2*(u**2 + 1)**3))*(u**2 + 1)**3/(3200*u**34 + 48000*u**32 + 332800*u**30 + 1410400*u**28 + 4068800*u**26 + 8413616*u**24 + 12776592*u**22 + 14351856*u**20 + 11894320*u**18 + 7327520*u**16 + 3706272*u**14 + 2123580*u**12 + 1571848*u**10 + 1038260*u**8 + 474252*u**6 + 134232*u**4 + 20604*u**2 + 1215) - 10"
+        ]
+      ],
+      "weighted_phase_matrix": [
+        [
+          "12*u*(-1 + 3/(2*(u**2 + 1)**3))*(u**2 + 1)**2*(4*u**6 + 12*u**4 + 12*u**2 + 3)/(3200*u**34 + 48000*u**32 + 332800*u**30 + 1410400*u**28 + 4068800*u**26 + 8413616*u**24 + 12776592*u**22 + 14351856*u**20 + 11894320*u**18 + 7327520*u**16 + 3706272*u**14 + 2123580*u**12 + 1571848*u**10 + 1038260*u**8 + 474252*u**6 + 134232*u**4 + 20604*u**2 + 1215)",
+          "40*u**2*(u**2 + 1)**10*(4*u**6 + 12*u**4 + 12*u**2 + 3)**2/(3200*u**34 + 48000*u**32 + 332800*u**30 + 1410400*u**28 + 4068800*u**26 + 8413616*u**24 + 12776592*u**22 + 14351856*u**20 + 11894320*u**18 + 7327520*u**16 + 3706272*u**14 + 2123580*u**12 + 1571848*u**10 + 1038260*u**8 + 474252*u**6 + 134232*u**4 + 20604*u**2 + 1215) - 1/60"
+        ],
+        [
+          "-18*(-1 + 3/(2*(u**2 + 1)**3))**2/(5*(u**2 + 1)**6*(3200*u**34 + 48000*u**32 + 332800*u**30 + 1410400*u**28 + 4068800*u**26 + 8413616*u**24 + 12776592*u**22 + 14351856*u**20 + 11894320*u**18 + 7327520*u**16 + 3706272*u**14 + 2123580*u**12 + 1571848*u**10 + 1038260*u**8 + 474252*u**6 + 134232*u**4 + 20604*u**2 + 1215)) - 9/(10*(u**2 + 1)**12)",
+          "-12*u*(-1 + 3/(2*(u**2 + 1)**3))*(u**2 + 1)**2*(4*u**6 + 12*u**4 + 12*u**2 + 3)/(3200*u**34 + 48000*u**32 + 332800*u**30 + 1410400*u**28 + 4068800*u**26 + 8413616*u**24 + 12776592*u**22 + 14351856*u**20 + 11894320*u**18 + 7327520*u**16 + 3706272*u**14 + 2123580*u**12 + 1571848*u**10 + 1038260*u**8 + 474252*u**6 + 134232*u**4 + 20604*u**2 + 1215) - 12*u/(u**2 + 1)"
+        ]
+      ]
+    },
+    "real_norm": {
+      "J_lower": "521838526464/19073486328125",
+      "classical_physical_C0_to_C0_upper": "53000",
+      "continuous_basic_envelopes": {
+        "H": "8/5",
+        "L": "3/200",
+        "delta": "1/2",
+        "ell": "1/10",
+        "one_over_two_J": 20,
+        "theta": "8/5",
+        "w0": "1/20"
+      },
+      "interval": [
+        "-1/2",
+        "1/2"
+      ],
+      "matter_rate_and_prepared_field_C0_upper": "14253/2",
+      "norm": "Joint maximum of both physical force components; phase max(abs(vhat),10abs(p))",
+      "phase_coefficient_upper": "7",
+      "phase_force_upper": "48",
+      "physical_lapse_C0_upper": "52530",
+      "physical_log_scale_C0_upper": "41265",
+      "state_C0_upper": "15000",
+      "weighted_force_row_upper": [
+        "48",
+        "29/2"
+      ],
+      "weighted_phase_row_upper": [
+        "28/5",
+        "249/40"
+      ]
+    }
+  },
+  "checked_scalar_entries": 47,
+  "claim": "P8-S6.183.ACTUAL_CLASSICAL_CAUSAL_HAMILTONIAN_C0_AND_C10_INVERSE_AND_FIRST_FORMAL_STATIONARY_GAUSSIAN_RESPONSE_BOUND",
+  "classical_jet_norm_and_actual_first_formal_response": {
+    "C10": {
+      "classical_physical_C10_to_C10_upper": "1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "complex_disc_radius": "1/100000000",
+      "complex_force_matrix_upper": "30000",
+      "complex_lapse_force_row_upper": "125",
+      "complex_lapse_state_row_upper": "1000",
+      "complex_phase_matrix_upper": "200000",
+      "complex_two_J_inverse_upper": "50",
+      "complex_weighted_force_rows": [
+        "750",
+        "22510"
+      ],
+      "complex_weighted_phase_rows": [
+        "334801/60",
+        "167499"
+      ],
+      "phase_derivative_upper": {
+        "0": "15000",
+        "1": "1500000000000",
+        "10": "5443200000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "2": "300000000000000000000",
+        "3": "90000000000000000000000000000",
+        "4": "36000000000000000000000000000000000000",
+        "5": "18000000000000000000000000000000000000000000000",
+        "6": "10800000000000000000000000000000000000000000000000000000",
+        "7": "7560000000000000000000000000000000000000000000000000000000000000",
+        "8": "6048000000000000000000000000000000000000000000000000000000000000000000000",
+        "9": "5443200000000000000000000000000000000000000000000000000000000000000000000000000000"
+      },
+      "physical_lapse_derivative_upper": {
+        "0": "15000125",
+        "1": "3000025000000000",
+        "10": "59875698960000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "2": "900007500000000000000000",
+        "3": "360003000000000000000000000000000",
+        "4": "180001500000000000000000000000000000000000",
+        "5": "108000900000000000000000000000000000000000000000000",
+        "6": "75600630000000000000000000000000000000000000000000000000000",
+        "7": "60480504000000000000000000000000000000000000000000000000000000000000",
+        "8": "54432453600000000000000000000000000000000000000000000000000000000000000000000",
+        "9": "54432453600000000000000000000000000000000000000000000000000000000000000000000000000000"
+      },
+      "physical_log_scale_derivative_upper": {
+        "0": "45030375/2",
+        "1": "6751556250000000",
+        "10": "538886733840000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "2": "2700322500000000000000000",
+        "3": "1350101250000000000000000000000000",
+        "4": "810042750000000000000000000000000000000000",
+        "5": "567022725000000000000000000000000000000000000000000",
+        "6": "453614580000000000000000000000000000000000000000000000000000",
+        "7": "408250962000000000000000000000000000000000000000000000000000000000000",
+        "8": "408249450000000000000000000000000000000000000000000000000000000000000000000000",
+        "9": "449073185400000000000000000000000000000000000000000000000000000000000000000000000000000"
+      },
+      "polynomial_disc_modulus_lower": "1000",
+      "polynomial_disc_variation_upper": "42597337/3125000",
+      "positive_polynomial_degree_coefficient_sum": "1363114784",
+      "scaled_derivative_recurrence": "x[j+1] <= radius/(j+1)*(M*sum(x[0:j+1])+B*G*sum(radius^i/i!,i=0..j)); x0<=15000G"
+    },
+    "formal_response": {
+      "actual_complete_stationary_physical_response": [
+        [
+          "-delta_r - physical_n*(fixed_reference_pressure_over_kappa(u) + fixed_reference_rho_over_kappa(u))"
+        ],
+        [
+          "3*delta_p + physical_n*(3*fixed_reference_pressure_over_kappa(u) + 3*fixed_reference_rho_over_kappa(u))"
+        ]
+      ],
+      "actual_source_pinned_physical_stress_response_upper": "37823674017900993546667/8053063680000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "classical_after_quantum_C10_to_C0_upper": "1/250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "first_formal_response_C10_force_to_C0_metric_upper": "1/250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "formal_equations": "(T0+alpha Qstar)(h0+alpha h1+...)=g; T0 h0=g, T0 h1=-Qstar h0, prepared data at every coefficient",
+      "future_extension": "A prepared response need not vanish at the right observation endpoint. A smooth future extension and later cutoff cannot alter earlier mode ODEs, local jets or retarded stress; all bounds use only the observation/past interval.",
+      "marker_scope": "alpha multiplies BOTH the fixed new scalar coefficient and the specified conditional Gaussian vector functional; reference mean is stationary at every formal alpha",
+      "new_named_parent": "CD-REG-AFFINE-ISO-QG1",
+      "not_an_error_bound": "h1 is a uniquely defined formal coefficient. No differentiable exact solution branch in alpha, finite-alpha remainder, C0 contraction, pole deletion or stability theorem is asserted.",
+      "physical_stationary_current_row_upper": [
+        "161061273600000000000000037823674017900993546667/8053063680000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "161061273600000000000000037823674017900993546667/2684354560000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+      ],
+      "stationary_quantum_C10_to_C0_upper": "7/100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    }
+  },
+  "controls": {
+    "all_ten_readout_jets_bounded": true,
+    "fixed_charge_Routhian_not_naive_velocity_substitution": true,
+    "formal_small_coefficient_not_full_error_or_stability": true,
+    "full_physical_force_map_kept": true,
+    "no_division_by_crossing_velocity_chart_pivot": true,
+    "old_frozen_parent_not_overwritten": true,
+    "original_P8_not_closed": true,
+    "rejected_inputs": 105,
+    "right_endpoint_not_artificially_zeroed": true
+  },
+  "date": "2026-09-11",
+  "exact_residuals": {
+    "C10_norm_Leibniz_triangle_sum": "0",
+    "C10_norm_complex_inverse_two_J": "0",
+    "C10_norm_direct_force_reconstruction_bound": "0",
+    "C10_norm_disc_polynomial_variation": "0",
+    "C10_norm_positive_polynomial_derivative_sum": "0",
+    "C10_norm_weighted_reconstruction_crude_bound": "0",
+    "Hamiltonian_actual_full_target_J": "0",
+    "Hamiltonian_actual_full_target_matter_mix": "0",
+    "Hamiltonian_actual_full_target_theta": "0",
+    "Hamiltonian_algebraic_constraint": "0",
+    "Hamiltonian_complete_physical_force_matrix": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        1
+      ]
+    },
+    "Hamiltonian_constraint_eliminated_Hamiltonian": "0",
+    "Hamiltonian_literal_Legendre_with_physical_force_source": "0",
+    "Hamiltonian_literal_momentum": "0",
+    "Hamiltonian_original_lapse_Euler_with_source": "0",
+    "Hamiltonian_original_scale_Euler_with_source": "0",
+    "Hamiltonian_same_original_matter_background_charge": "0",
+    "Hamiltonian_theta_alternative": "0",
+    "Hamiltonian_unforced_original_matter_rate": "0",
+    "Hamiltonian_weighted_Hamilton_momentum": "0",
+    "Hamiltonian_weighted_Hamilton_velocity": "0",
+    "Hamiltonian_weighted_lapse_reconstruction": "0",
+    "first_formal_response_actual_stationary_adapted_parent_bridge": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        1
+      ]
+    },
+    "first_formal_response_first_formal_coefficient_envelope": "0",
+    "first_formal_response_fixed_profile_not_live_response": "0",
+    "first_formal_response_literal_fixed_profile_plus_unretuned_vector": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        1
+      ]
+    },
+    "first_formal_response_phase_followed_by_quantum_envelope": "0",
+    "first_formal_response_retained_nonlocal_pressure_current": "0",
+    "first_formal_response_retained_nonlocal_rho_current": "0",
+    "first_formal_response_same_anchor_epsilon": "0",
+    "nine_primitive_rows_retained": "0",
+    "one_new_scoped_row_added": "0",
+    "primitive_rows_unchanged": "0",
+    "prior_matching_rows_retained": "0",
+    "real_norm_L_absolute_bound": "0",
+    "real_norm_actual_real_J_denominator": "0",
+    "real_norm_force_row_one": "0",
+    "real_norm_force_row_two": "0",
+    "real_norm_lapse_reconstruction_envelope": "0",
+    "real_norm_original_matter_rate_envelope": "0",
+    "real_norm_physical_scale_reconstruction_envelope": "0",
+    "real_norm_prepared_state_exponential_majorant": "0",
+    "real_norm_row_one_bound": "0",
+    "real_norm_row_two_bound": "0"
+  },
+  "formulation": "FORMULATION.md",
+  "named_exact_check_count": 44,
+  "not_established": [
+    "An exact solution branch differentiable in the formal loop marker or finite-coupling truncation error",
+    "A no-loss quantum endomorphism, C0 feedback contraction or small/stable full retained inverse",
+    "Full interacting quantum, nonlinear, spatial/noise, global-time or physical cutoff control",
+    "Complete vacuum cuts/contour/truncation, finite-gravity IR/Regge or original V/G/B closure"
+  ],
+  "observable_and_scope": {
+    "actual_quantum": "The new stationary Qstar is the unchanged conditional vector response PLUS the fixed new scalar coefficient, not either term separately.",
+    "classical_C0": "The actual prepared classical physical metric inverse on I has joint C0 norm below53000, with the original M1 charge retained.",
+    "classical_C10": "Uniform radius1e-8 complex discs and a scaled derivative recurrence bound the same inverse from physical C10 forces to physical C10 metric by1e96.",
+    "first_coefficient": "h0=Bcl g and h1=-Bcl Qstar h0 are uniquely defined prepared formal coefficients; ||h1||C0<4e-669||g||C10.",
+    "not_established": "No finite-alpha error, differentiable exact alpha branch, C0 contraction, full response stability, nonlinear or spatial/noise quantum solution, physical cutoff or original V/G/B completion."
+  },
+  "primitive_and_matching_frontier": {
+    "matching": [
+      {
+        "id": "fixed_sigma_isolated_MS_conversion",
+        "status": "CANCELLED_NONLOCAL_ORDER_TWO_WITH_SAME_REGULATED_REFERENCE"
+      },
+      {
+        "id": "remaining_scale_parameter_field_map_and_cross_terms",
+        "status": "OPEN"
+      },
+      {
+        "id": "remaining_counterterm_and_vacuum_source_assembly",
+        "status": "ASSEMBLED_FOR_FIXED_ORDER_PHI_POLE_B2_VACUUM_AND_H_SOURCE"
+      },
+      {
+        "id": "full_matched_two_loop_pole_and_amplitude_error",
+        "status": "FIXED_ORDER_PHI_POLE_AND_B2_BOUNDED_PHYSICAL_TRUNCATION_OPEN"
+      },
+      {
+        "id": "finite_EFT_higher_order_truncation",
+        "status": "OPEN"
+      },
+      {
+        "id": "V_contour_and_cut_control",
+        "status": "OPEN"
+      },
+      {
+        "id": "finite_gravity_G",
+        "status": "OPEN"
+      },
+      {
+        "id": "common_parent_B",
+        "status": "OPEN"
+      },
+      {
+        "id": "complete_wineglass_interaction_forest_MS",
+        "status": "BOUNDED_WITH_REGULATED_FINITE_LOCAL_ANCHOR_AND_FULL_SCALE_TERM"
+      },
+      {
+        "id": "complete_double_bubble_interaction_forest_MS",
+        "status": "BOUNDED_WITH_ACTUAL_NESTED_MS_FORESTS_AND_BOTH_SCALE_TERMS"
+      },
+      {
+        "id": "complete_scalar_OS_insertion_interaction_forest_MS",
+        "status": "BOUNDED_WITH_FULL_REGULATED_SLOPE_TIMES_OUTER_REFERENCE"
+      },
+      {
+        "id": "complete_scalar_quadratic_finite_MS_slope_and_converted_OS_bound",
+        "status": "BOUNDED_WITH_FIXED_INNER_OS_AND_INTERACTION_MS_COORDINATES"
+      },
+      {
+        "id": "first_finite_Phi_field_covariance_and_MS_projection_commutator",
+        "status": "EXACT_REGULATED_FIELD_DIRECTION_AND_BOUNDED_FIRST_SLOPE_CROSS_TERMS"
+      },
+      {
+        "id": "complete_GY14_second_Phi_normalization_and_canonical_unit_disc_pole",
+        "status": "BOUNDED_WITH_DIRECT_MS_OWNERSHIP_AND_FULL_FINITE_FIELD_REEXPANSION"
+      },
+      {
+        "id": "complete_two_loop_vacuum_reference_and_first_source_square",
+        "status": "BOUNDED_WITH_FULL_REGULATED_SOURCE_REDUCIBLE_CANCELLATION"
+      },
+      {
+        "id": "complete_two_loop_derivative_map_with_matched_physical_source",
+        "status": "TRANSPORTED_FOR_FULL_ACTION_AND_PHYSICAL_SOURCE_NOT_ORDINARY_PSI_MS_OR_TRUNCATION"
+      },
+      {
+        "id": "complete_matched_two_loop_low_energy_Phi_elastic_cut",
+        "status": "BOUNDED_ON_PHYSICAL_WINDOW_4_TO_6_WITH_FULL_FIRST_AMPLITUDE_NOT_PHYSICAL_REMAINDER_OR_GLOBAL_DISPERSION"
+      },
+      {
+        "id": "full_finite_kappa_analytic_target_classical_vacuum_match",
+        "status": "BOUNDED_ON_SAME_RESTRICTED_FLAT_SCHWARTZ_CLASS_NOT_QUANTUM_TARGET_OR_ROLLING_COMMON_PARENT_MATCH"
+      },
+      {
+        "id": "GY14_SAT8_pointwise_fermion_mass_protection_and_named_low_order_invariance",
+        "status": "NEW_ANALYTIC_EFT_BRANCH_WITH_GLOBAL_REAL_MASS_FLOOR_AND_SAME_NAMED_TWO_LOOP_DATA_NOT_ROLLING_STATE_OR_COMMON_PARENT_CLOSURE"
+      },
+      {
+        "id": "polynomial_clock_transparent_physical_source_map_and_full_target_classical_bound",
+        "status": "KINEMATIC_CLOCK_ARGUMENT_ALIGNED_WITH_PROTECTED_MASSES_AND_SAME_NAMED_VACUUM_DATA_NOT_BACKGROUND_SOLUTION_QUANTUM_STATE_OR_COMMON_PARENT_CLOSURE"
+      },
+      {
+        "id": "free_flat_clock_Dirac_out_energy_with_complete_transition_series_remainder",
+        "status": "BOUNDED_FOR_SPECIFIED_QUADRATIC_MODEWISE_IN_OUT_STATE_NOT_INTERACTING_OR_CURVED_BOUNCE_STRESS"
+      },
+      {
+        "id": "Hadamard_regular_free_flat_SAT8_in_out_state_and_uniform_one_particle_norm_limit",
+        "status": "HADAMARD_FOR_SPECIFIED_FREE_EXTERNAL_MASS_OPERATOR_USING_IDENTIFIED_EXTERNAL_THEOREM_NOT_INTERACTING_CURVED_STATE_OR_NUMERICAL_STRESS"
+      },
+      {
+        "id": "exact_four_frame_free_transition_and_uniform_same_operator_in_out_T00_difference",
+        "status": "BOUNDED_FOR_FREE_FLAT_HADAMARD_STATE_DIFFERENCE_NOT_ABSOLUTE_STRESS_INTERACTING_CURVED_STATE_OR_BACKREACTION"
+      },
+      {
+        "id": "free_flat_absolute_one_loop_local_energy_with_fixed_saturated_mass_reference",
+        "status": "BOUNDED_IN_EXPLICIT_MS_AND_SATURATED_MASS_REFERENCE_QUADRATIC_SCHEME_NOT_FULL_CURVED_INTERACTING_PARENT_STRESS"
+      },
+      {
+        "id": "complete_free_flat_homogeneous_one_loop_stress_with_dimensional_curvature_improvement",
+        "status": "BOUNDED_SPECIFIED_QUADRATIC_MS_MR_FLAT_TENSOR_NOT_FULL_INTERACTING_CURVED_PARENT_STRESS"
+      },
+      {
+        "id": "actual_CD_free_Dirac_Hadamard_in_out_state_and_uniform_state_stress_difference",
+        "status": "CURVED_FREE_HADAMARD_STATE_AND_STATE_DIFFERENCE_BOUNDED_NOT_ABSOLUTE_PARENT_STRESS"
+      },
+      {
+        "id": "complete_free_curved_one_loop_stress_with_explicit_EC_Newton_reference",
+        "status": "BOUNDED_SPECIFIED_QUADRATIC_CURVED_TENSOR_NOT_FULL_INTERACTING_PARENT_OR_BACKGROUND_RESPONSE"
+      },
+      {
+        "id": "minimal_Einstein_canonical_clock_free_sector_null_equation_mismatch",
+        "status": "EXCLUDED_NAMED_MINIMAL_DIAGNOSTIC_WITH_SMALL_EXTRA_NULL_BUDGET_NOT_FULL_INTERACTING_PARENT_OR_DHOST_ROW"
+      },
+      {
+        "id": "actual_CD_leading_clock_Euler_source_decomposition_and_matching_domain_gap",
+        "status": "LEADING_TARGET_SOURCES_AND_CONSTRAINT_DOMAIN_REQUIREMENTS_IDENTIFIED_NOT_PROPAGATING_PARENT_OR_QUANTUM_BOUNCE"
+      },
+      {
+        "id": "analytic_CD_REG_AFFINE_ISO_classical_parent_clock_vacuum_and_local_constraints",
+        "status": "NEW_REGULAR_CLASSICAL_PARENT_AND_LOCAL_CONSTRAINT_BLOCKS_NOT_QUANTUM_MATCHING_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "same_classical_affine_parent_closed_source_lift_and_scoped_vector_Schur_control",
+        "status": "EXACT_CLASSICAL_AND_COMMON_REGULATOR_IDENTITIES_FULL_EUCLIDEAN_AND_LEADING_LORENTZ_BOUNDS_NOT_FULL_QUANTUM_MATCHING"
+      },
+      {
+        "id": "regular_affine_parent_conditional_Gaussian_Hadamard_family_and_ordinary_Proca_stress",
+        "status": "SOURCE_AWARE_CONDITIONAL_VECTOR_STATE_AND_FIXED_CLOCK_STRESS_NOT_FULL_PARENT_QUANTUM_SOLUTION"
+      },
+      {
+        "id": "full_fixed_canonical_affine_family_actual_classical_gravitational_decoupling",
+        "status": "ANCHORED_FULL_FUNCTION_CLASSICAL_LIMIT_AND_TREE_AMPLITUDE_NOT_QUANTUM_CONTOUR_TRUNCATION_OR_V_CLOSURE"
+      },
+      {
+        "id": "complete_affine_vector_retarded_mean_energy_and_causal_cubic_light_force",
+        "status": "FIXED_CD_FULL_SOURCE_FINITE_TIME_CONDITIONAL_GAUSSIAN_MEAN_AND_LIGHT_FORCE_NOT_METRIC_NOISE_FULL_PARENT_OR_B_CLOSURE"
+      },
+      {
+        "id": "same_affine_conditional_prepared_homogeneous_metric_response_with_uncancelled_chart_contacts",
+        "status": "COMPLETE_CONDITIONAL_VECTOR_HOMOGENEOUS_C10_TO_C0_BOUND_NOT_SPATIAL_NOISE_COUPLED_BACKGROUND_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "same_affine_parent_prepared_homogeneous_retained_tree_plus_conditional_vector_causal_inverse",
+        "status": "UNIQUE_RETAINED_LINEAR_PREPARED_CAUSAL_INVERSE_WITH_NUMERIC_LOCAL_LAPSE_RECOVERY_NOT_FULL_INVERSE_SMALLNESS_QUANTUM_BACKGROUND_OR_V_G_B"
+      },
+      {
+        "id": "same_massive_scalar_range_kernel_explicit_full_half_line_L1_majorant",
+        "status": "MASS_INDEPENDENT_EXPLICIT_SCALAR_KERNEL_NORM_NOT_FULL_INVERSE_SMALLNESS_BACKGROUND_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "new_CD_REG_AFFINE_ISO_QG1_fixed_coefficient_stationary_Gaussian_mean_and_actual_response",
+        "status": "NEW_PARENT_RETAINED_MEAN_STATIONARITY_AND_BOUNDED_COEFFICIENT_CORRECTION_NOT_FULL_QUANTUM_BACKGROUND_STABILITY_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "actual_classical_Hamiltonian_C0_and_C10_inverse_and_first_formal_Gaussian_response",
+        "status": "QUANTIFIED_PREPARED_CLASSICAL_PROPAGATOR_AND_FIRST_FORMAL_COEFFICIENT_NOT_FINITE_COUPLING_ERROR_STABILITY_CUTOFF_OR_V_G_B"
+      }
+    ],
+    "primitive": [
+      {
+        "id": "scalar_Phi0_W0_F0",
+        "status": "BOUNDED_PAIRED_VACUUM_PRIMITIVE_WITH_ASSIGNED_LOCAL_FOREST"
+      },
+      {
+        "id": "scalar_Phi2_W0_F2",
+        "status": "BOUNDED_NONLOCAL_AND_FINITE_MS_MASS_AND_SLOPE_REFERENCES"
+      },
+      {
+        "id": "scalar_Phi2_W1_F0",
+        "status": "BOUNDED_PAIRED_NONLOCAL_AND_FINITE_MS_LOCAL_REFERENCES"
+      },
+      {
+        "id": "scalar_Phi4_W0_F4",
+        "status": "BOUNDED_PAIRED_PRIMITIVE_ROW"
+      },
+      {
+        "id": "scalar_Phi4_W1_F2",
+        "status": "BOUNDED_PAIRED_IN_COMMON_MS_INTERACTION_SCHEME"
+      },
+      {
+        "id": "scalar_Phi4_W2_F0",
+        "status": "BOUNDED_PAIRED_IN_COMMON_MS_INTERACTION_SCHEME"
+      },
+      {
+        "id": "gauge_Phi0",
+        "status": "BOUNDED_PAIRED_VACUUM_PRIMITIVE_WITH_ASSIGNED_LOCAL_FOREST"
+      },
+      {
+        "id": "gauge_Phi2",
+        "status": "BOUNDED_NONLOCAL_AND_FINITE_MS_MASS_AND_SLOPE_REFERENCES"
+      },
+      {
+        "id": "gauge_Phi4",
+        "status": "BOUNDED_PAIRED_PRIMITIVE_ROW"
+      }
+    ]
+  },
+  "prior_sha256": {
+    "S6_179_same_physical_response_transitively_rebuilt": "17a635f2d77b93b8a815cc3e89eae976c06e80d1880c1df02b475d41aec2ad78",
+    "S6_182_fully_rebuilt": "f754f6d62795d5a1c0ade4c576395f1587fc35f9c9895bc8b7b15b2b2dec2e16",
+    "actual_S6_180_classical_reference_rederived": true,
+    "all_frozen_scientific_bytes_unchanged": true
+  },
+  "proof_checks": {
+    "C10_norm_all_lapse_jets_below_C10_bound": true,
+    "C10_norm_all_physical_scale_jets_below_C10_bound": true,
+    "C10_norm_complex_H_below_three": true,
+    "C10_norm_complex_delta_below_three_halves": true,
+    "C10_norm_complex_denominator_lower": true,
+    "C10_norm_complex_denominator_upper": true,
+    "C10_norm_complex_ell_below_one": true,
+    "C10_norm_complex_inverse_two_J_below_fifty": true,
+    "C10_norm_complex_lapse_state_below_majorant": true,
+    "C10_norm_complex_theta_below_six": true,
+    "C10_norm_complex_w_below_six": true,
+    "C10_norm_complex_weighted_force_below_majorant": true,
+    "C10_norm_complex_weighted_phase_below_majorant": true,
+    "C10_norm_disc_polynomial_modulus_above_one_thousand": true,
+    "C10_norm_disc_within_fifty_one_hundredths": true,
+    "C10_norm_scaled_derivative_induction_closes": true,
+    "Hamiltonian_J_constant_positive": true,
+    "Hamiltonian_J_polynomial_even": true,
+    "Hamiltonian_all_J_polynomial_coefficients_positive": true,
+    "Hamiltonian_no_division_by_J_minus_three_theta_squared": true,
+    "Leibniz_recurrence_keeps_force_and_readout_derivatives": true,
+    "actual_full_target_classical_reference_not_new_action_alone": true,
+    "actual_stationary_quantum_current_includes_fixed_profile": true,
+    "continuous_real_bounds_not_sampled_ODE_verdict": true,
+    "derivative_loss_prevents_claimed_C0_feedback_contraction": true,
+    "first_formal_response_actual_stress_below_five_e_minus_795": true,
+    "first_formal_response_classical_quantum_composition_below_display": true,
+    "first_formal_response_complete_stationary_current_below_Q": true,
+    "first_formal_response_first_formal_coefficient_below_display": true,
+    "formal_coefficient_does_not_assume_exact_parameter_branch": true,
+    "formal_marker_scales_both_profile_and_Gaussian_functional": true,
+    "future_extension_causal_no_right_endpoint_vanishing_assumption": true,
+    "no_finite_coupling_remainder_or_pole_deletion_claim": true,
+    "original_V_G_B_not_closed": true,
+    "original_force_density_and_matter_charge_retained": true,
+    "real_norm_actual_J_above_one_fortieth": true,
+    "real_norm_inverse_two_J_below_twenty": true,
+    "real_norm_matter_rate_below_seventy_two_hundred": true,
+    "real_norm_strict_physical_C0_bound": true,
+    "real_norm_strict_state_bound": true,
+    "real_norm_subtracted_A12_absolute_enclosed": true,
+    "real_norm_weighted_force_norm_at_most_forty_eight": true,
+    "real_norm_weighted_phase_norm_below_seven": true,
+    "reference_functions_not_adaptively_reselected": true,
+    "regular_Hamiltonian_pivot_not_velocity_chart_division": true,
+    "uniform_complex_discs_control_all_ten_classical_jets": true
+  },
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "bc32c83bac4468a8b33d32ac7a9523079ef74b34ba871d6676f072f7c5489aac",
+    "README.md": "23636ac170dfbf8e00029eec7917cef7462fbd62e462bd6ecfbbf453cb0c3f8a",
+    "notes/Hamiltonian.md": "33504e11a3e0a99c358439ce1a86e305467245bc41d1012620155b42be0bfdc5",
+    "notes/causality.md": "4ab75e6c60fd98ff46aa357b818456fd718ae01421598bc4b0fddb07976a7242",
+    "notes/first-order.md": "758cd08e2f1a1098fd4b9c64bb3058a57d4d0bdd25aa6f56954c63359198c2f2",
+    "notes/jets.md": "76cdf422efbdd178c331a6a9d01553315621b78118b8db33fdac7564b8c51130",
+    "notes/real-norm.md": "263053742a992891a84c3d6d4e2d8a1db29da14ebfda9dab502f9a84f6b5fb70",
+    "notes/scope.md": "308a957e12767ea369a7ecc9cd6e448caab94c36b749ffc5beacea853e1eaa56",
+    "notes/validation.md": "6612b6d1a4a96b65cfab23006c9049315ee3d78a8f089f0a6ab628bb5f1be10c",
+    "src/p8_vacuum_affine_classical_propagator/__init__.py": "c1c89af534a9c07dfd13d9e3dd0e5a02587ca798971454be9619bd5ce8c12746",
+    "src/p8_vacuum_affine_classical_propagator/audit.py": "0242413b25b63047da2b445d5d988bda79bc47b1f76ca0d1a6714498914fb238",
+    "src/p8_vacuum_affine_classical_propagator/hamiltonian.py": "65b9f89d127270862a1d722ee2dc606a76273e4b5e7802c3cdb484d847840d3a",
+    "src/p8_vacuum_affine_classical_propagator/jet_bounds.py": "3bdc732fc7fb800ab4a39888b49b58f94bae4a4c6dbf198bbaecf7ba59f3f19d",
+    "src/p8_vacuum_affine_classical_propagator/perturbation.py": "4879e8b9ae98f2078ee7ed81f001ba0a0c4d07a3b242c53cd5e2b5a2c7fa79c5",
+    "src/p8_vacuum_affine_classical_propagator/real_bounds.py": "d8a2dbf51112b9c66e0aff214971f0dc137c3b4e5a4f4ccf5faf7de9e19991e5",
+    "src/p8_vacuum_affine_classical_propagator/verify.py": "afa081f2b86af30685c134dbd5a0f0c9a2d456b824f2bda3534e16a220778780",
+    "tests/test_affine_classical_propagator_certificate.py": "fcbf8e5eeeb0e0174d7933b61c0d569b615478dc84d1d65ccce309d7783853d1",
+    "tests/test_affine_classical_propagator_science.py": "c78fe7e0a4354f93d8ed0046324d9ceb2596f6aca2528d48fff9cd463d6e435f"
+  },
+  "status": "QUANTIFIED_CLASSICAL_PREPARED_PROPAGATOR_AND_FIRST_FORMAL_RESPONSE; NOT_FINITE_COUPLING_ERROR_FULL_INVERSE_STABILITY_QUANTUM_BACKGROUND_CUTOFF_V_G_B_OR_ORIGINAL_P8",
+  "verdict": "The unchanged actual classical reference admits a prepared physical C0 inverse below53000 and C10 inverse below1e96 on the stated slab, with the correct force map and original M1 charge. Uniform complex discs and a scaled derivative recurrence give a continuous ten-jet estimate. The actual new stationary Gaussian-plus-fixed-profile response then gives a unique first formal metric coefficient below4e-669 per unit physical C10 force. Future extension preserves causality without imposing right-endpoint zero data. This is not a finite-coupling error, small full inverse, stability theorem, full quantum background, physical cutoff or original V/G/B closure.",
+  "verification_boundary": "Exact source-normalized Legendre, weighted Hamiltonian, original Euler and matter-charge identities; continuous real polynomial and complex-disc Cauchy bounds; scaled Leibniz recurrence; actual source-pinned stationary response and norm composition. Independent rational-time, high-precision complex-disc, derivative and ODE fixtures supplement the written proof. Native, direct science, ordinary and CLI use unmodified SymPy; only full regression uses the audited exact GCD adapter. The analytic and formal-parameter arguments are not FORMALIZED.",
+  "written_proofs": [
+    "notes/Hamiltonian.md",
+    "notes/real-norm.md",
+    "notes/jets.md",
+    "notes/first-order.md",
+    "notes/causality.md",
+    "notes/scope.md",
+    "notes/validation.md"
+  ]
+}
