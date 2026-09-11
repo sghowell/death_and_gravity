@@ -1,0 +1,504 @@
+{
+  "actual_geometry_exact_frames_and_Hadamard_state": {
+    "Hadamard": {
+      "conventions": "Gamma0=-i gamma_plus^0, Gammaj=i gamma_plus^j, beta_source=gamma_plus^0 and m_source=-M. The source curved slash-plus-mass equals the physical i gamma^mu nabla_mu-M. Rescaling a^(3/2) gives H_source=-H_physical, so the source spectral labels exchange and the physical occupied negative-energy projector remains fixed.",
+      "excluded_shortcuts": "Neither finite N20 nor in-minus-out finiteness alone proves Hadamard. The scale factor is not asymptotically static, so the S6.166 flat in/out theorem is not imported unchanged. No infinite-order constants are inferred from one fixed m*tau gap. No momentum derivative bound of the exact state is needed for the Sobolev multiplier argument.",
+      "external_primary_reference": {
+        "locations": "Definition2.3; hypotheses(H1-H3),(M) in4.5; Proposition6.8 and its construction; Theorem6.9; Proposition3.8",
+        "role": "A local pure Hadamard reference with order-zero projectors, the correct principal energy branch and a smoothing evolution defect. This external theorem is applied, not re-proved or formalized.",
+        "url": "https://arxiv.org/pdf/2108.11630",
+        "version": "v3, 11 January 2022"
+      },
+      "finite_order_symbols": "On each compact time interval P_N is an exact selfadjoint order-zero classical projector with the negative principal branch. Its exact evolution defect is the conjugate of [g_N sigma_axis,P_minus], order -N-1. Smooth high-momentum cutoffs handle the zero-momentum helicity chart; bounded low-momentum multipliers are Sobolev smoothing.",
+      "formal_uniqueness_proof": "Compare P_N with the external reference pi(t). If their difference starts in order -k, k>=1, projection identities force its leading diagonal energy blocks to vanish. The evolution equations in order1-k force its off-diagonal blocks to commute with the principal Hamiltonian; the nonzero gap2p/a forces them to vanish. Induction through k=N+1 gives P_N-pi in Psi^(-N-2). This works for both rank-two energy blocks of the four-component spinor.",
+      "hypothesis_witness": "Use U=(-1,1)xR^3 and a smooth comparison scale a_tilde=1+zeta(t)(a(t)-1), 1<=a_tilde<=25, zeta=theta(t+2)theta(2-t), theta(s)=E(s)/(E(s)+E(1-s)), E(s)=0 for s<=0 and exp(-1/s) otherwise. The comparison is exactly physical on U, globally hyperbolic and bounded relative to dt^2+dx^2. Set u_tilde=0. The original smooth scalar mass has bounded derivatives for each fixed tau. Cosmic-time monotonicity gives causal compatibility. This only witnesses theorem hypotheses, not a change of physical metric or a different physical state.",
+      "same_in_out_state_identified": "The exact in/out projectors differ from P_N by at most the half-line integral|g_N|=O(p^(-N/4)). For each desired Sobolev order choose N sufficiently large, then its finite high-p threshold. Combining with the fixed reference pi makes each difference W^-infinity. Local evolution is bounded on every Sobolev space and time derivatives cost finite powers of momentum. Thus the spacetime two-point differences are smooth, and these SAME actual curved in/out states are Hadamard globally by propagation."
+    },
+    "disk": {
+      "Cauchy_factor": 163840,
+      "all_order_high_momentum_condition": "min_t LE>=min(tau*p/4,(m0^3*p/4)^(1/4)). For each fixed N it suffices that p>=max(8K_N/tau,4(2K_N)^4/m0^3). This does NOT require the fixed actual mass-timescale to exceed unbounded N.",
+      "complex_frequency_floors": {
+        "0": "9/10",
+        "1": "711/800",
+        "10": "85214484743641624809/107374182400000000000",
+        "11": "6731944294747688359911/8589934592000000000000",
+        "12": "531823599285067380432969/687194767360000000000000",
+        "13": "42014064343520323054204551/54975581388800000000000000",
+        "14": "3319111083138105521282159529/4398046511104000000000000000",
+        "15": "262209775567910336181290602791/351843720888320000000000000000",
+        "16": "20714572269864916558321957620489/28147497671065600000000000000000",
+        "17": "1636451209319328408107434652018631/2251799813685248000000000000000000",
+        "18": "129279645536226944240487337509471849/180143985094819840000000000000000000",
+        "19": "10213091997361928594998499663248276071/14411518807585587200000000000000000000",
+        "2": "56169/64000",
+        "20": "806834267791592359004881473396613809609/1152921504606846976000000000000000000000",
+        "3": "4437351/5120000",
+        "4": "350550729/409600000",
+        "5": "27693507591/32768000000",
+        "6": "2187787099689/2621440000000",
+        "7": "172835180875431/209715200000000",
+        "8": "13653979289159049/16777216000000000",
+        "9": "1078664363843564871/1342177280000000000"
+      },
+      "complex_profile_bounds": "On |z-t|<=L/1024 the physical SAT8 branch has |s(z/tau)|<2 and |s'(z/tau)|<2w(t/tau). The momentum ratio is near one and |omega(z)|>=.9E.",
+      "exact_induction": "For any positive integer N, K_N=8192N, and LE>=2K_N, e_(j+1)=sqrt(e_j^2+g_j^2), g_(j+1)=(-1)^j partial_t atan(g_j/e_j)/2. On disk j, |g_j|<=G0*(K_N/(LE))^j and |e_j|>=.9*(1-1/(4N))^j E>.5E. Every connection and all exact transition orders are retained.",
+      "gates": {
+        "all_order_Bernoulli_floor_above_one_half": true,
+        "all_twenty_one_frequency_floors_above_one_half": true,
+        "complex_ratio_cap_allows_sqrt_induction": true,
+        "frequency_modulus_above_nine_tenths": true,
+        "initial_majorant_dimensionless_slack": true,
+        "mass_square_relative_error_below_one_over_24": true,
+        "metric_relative_defect_below_one_over_256": true,
+        "momentum_square_relative_defect_below_one_over_16": true,
+        "profile_complex_modulus_below_two": true,
+        "profile_derivative_weight_below_two": true,
+        "profile_eighth_power_defect_below_one_over_32": true,
+        "total_frequency_defect_below_one_ninth": true
+      },
+      "initial_connection_majorant": "G0=16q/E^2*(Delta/tau*w(t/tau)+mL/D). It satisfies G0/E<=32/(LE). The expansion-induced term is retained even if Delta=0.",
+      "local_lengths": "L=sqrt(t^2+tau^2), D=1+t^2, q=p/D^2, E=sqrt(q^2+m0^2), m0=.99m; 0<tau<=1, Delta/m<=.003.",
+      "nested_relative_radii": {
+        "0": "1/1024",
+        "1": "39/40960",
+        "10": "3/4096",
+        "11": "29/40960",
+        "12": "7/10240",
+        "13": "27/40960",
+        "14": "13/20480",
+        "15": "5/8192",
+        "16": "3/5120",
+        "17": "23/40960",
+        "18": "11/20480",
+        "19": "21/40960",
+        "2": "19/20480",
+        "20": "1/2048",
+        "3": "37/40960",
+        "4": "9/10240",
+        "5": "7/8192",
+        "6": "17/20480",
+        "7": "33/40960",
+        "8": "1/1280",
+        "9": "31/40960"
+      },
+      "order": 20
+    },
+    "geometry": {
+      "Cauchy_dictionary": "For signature(+---), psi_c=a^(3/2)psi identifies the physical Cauchy norm with flat L2. Its helicity Hamiltonian is q sigma1+M sigma3, q=p/a. No metric-dependent source variation is replaced by variation of this rescaling.",
+      "Hubble": "4*t/(t**2 + 1)",
+      "Moller_bound": "For each fixed p and T>=max(1,tau), ||W_infinity-W(T)||<=p/(3T^3)+Delta*tau^8/(56T^7). W and adjoints converge in each finite mode; dominated convergence then gives strong one-particle unitary limits, NOT momentum-uniform norm convergence or a global Fock implementer.",
+      "active_copies": 6,
+      "all_copies": 42,
+      "amplitude_upper": "300000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "ancestry": "The analytic affine-domain family inherits the retuned exceptional-vacuum tree; p8_affine.dictionary.target reads this pinned CD_matter witness. The retuning proportional to (X-1)^2 does not change its background jets.",
+      "inert_copies": 36,
+      "initial_exact_connection": "q*(H*M + Mdot)/(2*M**2 + 2*q**2)",
+      "mass_transition_time": "1/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "mean_mass": "100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "momentum": "p/(t**2 + 1)**2",
+      "physical_helicity_Hamiltonian": [
+        [
+          "M",
+          "q"
+        ],
+        [
+          "q",
+          "-M"
+        ]
+      ],
+      "physical_scalar_curvature": "-24*(7*t**2 + 1)/(t**2 + 1)**2",
+      "scale_factor": "(t**2 + 1)**2",
+      "units": "Use the existing reference time unit mPhi=1 and original CD bounce scale one. The canonical clock is Phi=sqrt(kappa)t. tau=R/sqrt(kappa)=1e-100 is the mass transition time, NOT the geometric bounce time.",
+      "witness_background": {
+        "H": "4*t/(t**2 + 1)",
+        "Hdot_at_bounce": "4",
+        "a": "(t**2 + 1)**2",
+        "a_lower_bound": "1",
+        "chi_dot": "1/(10*(t**2 + 1)**6)",
+        "phi": "t",
+        "tail_power": "4"
+      },
+      "witness_sha256": "caf8c8e688a7565b9d00f921c099a28da00f97522ed26ad182a8227eb80cd4dd"
+    },
+    "transition": {
+      "actual_uniform_transition_diagnostic": "9.212784737832923551497609425e-1897",
+      "actual_uniform_transition_upper": "281250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009375000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001/305282287607380920485817017757342932890244827384932719132032810396990183095730297289736006795895965455945286849978295382849125812089270913863672875926274940596387940205188602612309818767299201193265850153794188637235151873028371483087539672851562500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "all_order_complete_transition": "For each finite N satisfying the uniform LE condition, |beta_p|<=integral_R G0*(K_N/(LE))^N dt. The same bound controls either half-line transition relative to the exact N-frame instantaneous projector.",
+      "all_order_vs_finite_order": "N20 gives the explicit numerical bound. Arbitrarily high N, with an N-dependent high-momentum threshold, supplies rapid UV comparison for Hadamard regularity. No fixed finite adiabatic order implies Hadamard.",
+      "compact_bound_all_N": "32K_N^N p(Delta+m*tau)/(tau^N Ec^(N+2)), Ec=sqrt(p^2/16+m0^2), on |t|<=1.",
+      "gates": {
+        "actual_twenty_frame_uniform_gap": true,
+        "actual_uniform_beta_below_one_e_minus_1890": true,
+        "constant_mass_geometric_bound_nonzero": true
+      },
+      "twenty_frame_tail": "min(4mpK20/m0^22,2048mK20/(15p^5m0^16)), with the continuous value zero at p=0 and K20=(163840)^20.",
+      "two_tail_bound_all_N": "96mK_N^N(4/p)^(N/4)*integral_0^(p/4) y^(N/4)/(y^2+m0^2)^((N+2)/2)dy. The integral converges at infinity for every N>=1; thus O(p^(-N/4))."
+    }
+  },
+  "checked_scalar_entries": 85,
+  "claim": "P8-S6.170.ACTUAL_CD_CURVED_DIRAC_HADAMARD_IN_OUT_STATE_AND_UNIFORM_STATE_STRESS_DIFFERENCE",
+  "controls": {
+    "D_only_geometry_not_substituted_for_actual_CD": true,
+    "constant_mass_flavors_not_called_inert_on_curved_metric": true,
+    "finite_adiabatic_order_not_Hadamard": true,
+    "four_flat_frames_not_sufficient_curved_UV_control": true,
+    "modewise_Moller_bound_not_uniform_in_momentum": true,
+    "original_P8_not_closed": true,
+    "rejected_inputs": 137,
+    "state_difference_not_absolute_stress_or_bounce_error": true,
+    "unbounded_order_not_assumed_from_fixed_gap": true
+  },
+  "date": "2026-09-10",
+  "exact_residuals": {
+    "all_previous_matching_rows_retained": "0",
+    "energy_compact_energy_prefactor": "0",
+    "energy_compact_radial": "0",
+    "energy_compact_radial_momentum_rescaling": "0",
+    "energy_energy_and_pressure_same_state": "0",
+    "energy_pressure_to_energy_operator_allowance": "0",
+    "energy_tail_energy_prefactor": "0",
+    "energy_tail_low_plus_high_momentum_integrals": "0",
+    "geometry_actual_CD_tail_power": "0",
+    "geometry_actual_bounce_acceleration": "0",
+    "geometry_inert_plus_active_color_flavor_copies": "0",
+    "geometry_initial_rotation_connection": "0",
+    "geometry_physical_comoving_momentum": "0",
+    "geometry_physical_mode_gap": "0",
+    "geometry_physical_squared_mode_offdiagonal": "0",
+    "geometry_pinned_Hubble": "0",
+    "geometry_pinned_scale_factor": "0",
+    "geometry_same_amplitude_upper": "0",
+    "geometry_same_clock_scale": "0",
+    "geometry_same_mass": "0",
+    "geometry_same_transition_time": "0",
+    "geometry_volume_spinor_connection_cancelled": "0",
+    "hadamard_Sylvester_negative_gap_21": "0",
+    "hadamard_Sylvester_positive_gap_12": "0",
+    "hadamard_leading_projection_diagonal_11": "0",
+    "hadamard_leading_projection_diagonal_22": "0",
+    "hadamard_leading_projection_offdiagonal_12": "0",
+    "hadamard_leading_projection_offdiagonal_21": "0",
+    "hadamard_zero_diagonal_and_offdiagonal_imply_zero": "0",
+    "nine_primitive_rows_retained": "0",
+    "one_scoped_curved_state_added": "0",
+    "primitive_rows_unchanged": "0",
+    "transition_all_order_tail_UV_exponent": "0",
+    "transition_all_order_tail_mass_exponent": "0",
+    "transition_compact_twenty_frame_UV_exponent": "0",
+    "transition_full_twenty_frame_tail_radial": "0",
+    "transition_tail_substitution_factor": "0",
+    "transition_twenty_frame_small_momentum_tail_factor": "0",
+    "transition_uniform_majorant_includes_constant_mass_geometry": "0",
+    "transition_zero_momentum_exact_transition": "0",
+    "tube_Cauchy_step_factor_slack": "0",
+    "tube_actual_twenty_frame_factor": "0",
+    "tube_all_order_final_radius": "0",
+    "tube_all_order_initial_radius": "0",
+    "tube_frequency_floor_recursion_0": "0",
+    "tube_frequency_floor_recursion_1": "0",
+    "tube_frequency_floor_recursion_10": "0",
+    "tube_frequency_floor_recursion_11": "0",
+    "tube_frequency_floor_recursion_12": "0",
+    "tube_frequency_floor_recursion_13": "0",
+    "tube_frequency_floor_recursion_14": "0",
+    "tube_frequency_floor_recursion_15": "0",
+    "tube_frequency_floor_recursion_16": "0",
+    "tube_frequency_floor_recursion_17": "0",
+    "tube_frequency_floor_recursion_18": "0",
+    "tube_frequency_floor_recursion_19": "0",
+    "tube_frequency_floor_recursion_2": "0",
+    "tube_frequency_floor_recursion_3": "0",
+    "tube_frequency_floor_recursion_4": "0",
+    "tube_frequency_floor_recursion_5": "0",
+    "tube_frequency_floor_recursion_6": "0",
+    "tube_frequency_floor_recursion_7": "0",
+    "tube_frequency_floor_recursion_8": "0",
+    "tube_frequency_floor_recursion_9": "0",
+    "tube_geometry_relative_square_defect": "0",
+    "tube_radius_loss_0": "0",
+    "tube_radius_loss_1": "0",
+    "tube_radius_loss_10": "0",
+    "tube_radius_loss_11": "0",
+    "tube_radius_loss_12": "0",
+    "tube_radius_loss_13": "0",
+    "tube_radius_loss_14": "0",
+    "tube_radius_loss_15": "0",
+    "tube_radius_loss_16": "0",
+    "tube_radius_loss_17": "0",
+    "tube_radius_loss_18": "0",
+    "tube_radius_loss_19": "0",
+    "tube_radius_loss_2": "0",
+    "tube_radius_loss_3": "0",
+    "tube_radius_loss_4": "0",
+    "tube_radius_loss_5": "0",
+    "tube_radius_loss_6": "0",
+    "tube_radius_loss_7": "0",
+    "tube_radius_loss_8": "0",
+    "tube_radius_loss_9": "0"
+  },
+  "formulation": "FORMULATION.md",
+  "named_exact_check_count": 85,
+  "not_established": [
+    "Absolute curved stress, physical Newton/curvature references, vacuum polarization or anomaly bounds",
+    "Full canonical scalar/heavy/gauge interacting parent state, physical cutoff and loop remainders",
+    "Quantum target matching, controlled parent background/response, V/G/B or original P8 closure",
+    "Momentum-uniform Moller convergence, global Fock implementability or formalization of external theorems"
+  ],
+  "observable_and_source_context": {
+    "external_reference": {
+      "locations": "Definition2.3; hypotheses(H1-H3),(M) in4.5; Proposition6.8 and its construction; Theorem6.9; Proposition3.8",
+      "role": "A local pure Hadamard reference with order-zero projectors, the correct principal energy branch and a smoothing evolution defect. This external theorem is applied, not re-proved or formalized.",
+      "url": "https://arxiv.org/pdf/2108.11630",
+      "version": "v3, 11 January 2022"
+    },
+    "finite_reference": "Identical local state-independent subtraction and finite counterterm prescriptions are used for both states; they cancel. No absolute curved Newton/curvature reference is thereby fixed.",
+    "quantity": "Exact free quadratic in/out states on the prescribed actual CD geometry, including42copies, plus uniform differences in their physical energy density and pressure.",
+    "state_not_parent": "The state is for a specified quadratic operator on the full momentum space. No physical interacting EFT cutoff, absolute parent stress or parent background solution is asserted."
+  },
+  "primitive_and_matching_frontier": {
+    "matching": [
+      {
+        "id": "fixed_sigma_isolated_MS_conversion",
+        "status": "CANCELLED_NONLOCAL_ORDER_TWO_WITH_SAME_REGULATED_REFERENCE"
+      },
+      {
+        "id": "remaining_scale_parameter_field_map_and_cross_terms",
+        "status": "OPEN"
+      },
+      {
+        "id": "remaining_counterterm_and_vacuum_source_assembly",
+        "status": "ASSEMBLED_FOR_FIXED_ORDER_PHI_POLE_B2_VACUUM_AND_H_SOURCE"
+      },
+      {
+        "id": "full_matched_two_loop_pole_and_amplitude_error",
+        "status": "FIXED_ORDER_PHI_POLE_AND_B2_BOUNDED_PHYSICAL_TRUNCATION_OPEN"
+      },
+      {
+        "id": "finite_EFT_higher_order_truncation",
+        "status": "OPEN"
+      },
+      {
+        "id": "V_contour_and_cut_control",
+        "status": "OPEN"
+      },
+      {
+        "id": "finite_gravity_G",
+        "status": "OPEN"
+      },
+      {
+        "id": "common_parent_B",
+        "status": "OPEN"
+      },
+      {
+        "id": "complete_wineglass_interaction_forest_MS",
+        "status": "BOUNDED_WITH_REGULATED_FINITE_LOCAL_ANCHOR_AND_FULL_SCALE_TERM"
+      },
+      {
+        "id": "complete_double_bubble_interaction_forest_MS",
+        "status": "BOUNDED_WITH_ACTUAL_NESTED_MS_FORESTS_AND_BOTH_SCALE_TERMS"
+      },
+      {
+        "id": "complete_scalar_OS_insertion_interaction_forest_MS",
+        "status": "BOUNDED_WITH_FULL_REGULATED_SLOPE_TIMES_OUTER_REFERENCE"
+      },
+      {
+        "id": "complete_scalar_quadratic_finite_MS_slope_and_converted_OS_bound",
+        "status": "BOUNDED_WITH_FIXED_INNER_OS_AND_INTERACTION_MS_COORDINATES"
+      },
+      {
+        "id": "first_finite_Phi_field_covariance_and_MS_projection_commutator",
+        "status": "EXACT_REGULATED_FIELD_DIRECTION_AND_BOUNDED_FIRST_SLOPE_CROSS_TERMS"
+      },
+      {
+        "id": "complete_GY14_second_Phi_normalization_and_canonical_unit_disc_pole",
+        "status": "BOUNDED_WITH_DIRECT_MS_OWNERSHIP_AND_FULL_FINITE_FIELD_REEXPANSION"
+      },
+      {
+        "id": "complete_two_loop_vacuum_reference_and_first_source_square",
+        "status": "BOUNDED_WITH_FULL_REGULATED_SOURCE_REDUCIBLE_CANCELLATION"
+      },
+      {
+        "id": "complete_two_loop_derivative_map_with_matched_physical_source",
+        "status": "TRANSPORTED_FOR_FULL_ACTION_AND_PHYSICAL_SOURCE_NOT_ORDINARY_PSI_MS_OR_TRUNCATION"
+      },
+      {
+        "id": "complete_matched_two_loop_low_energy_Phi_elastic_cut",
+        "status": "BOUNDED_ON_PHYSICAL_WINDOW_4_TO_6_WITH_FULL_FIRST_AMPLITUDE_NOT_PHYSICAL_REMAINDER_OR_GLOBAL_DISPERSION"
+      },
+      {
+        "id": "full_finite_kappa_analytic_target_classical_vacuum_match",
+        "status": "BOUNDED_ON_SAME_RESTRICTED_FLAT_SCHWARTZ_CLASS_NOT_QUANTUM_TARGET_OR_ROLLING_COMMON_PARENT_MATCH"
+      },
+      {
+        "id": "GY14_SAT8_pointwise_fermion_mass_protection_and_named_low_order_invariance",
+        "status": "NEW_ANALYTIC_EFT_BRANCH_WITH_GLOBAL_REAL_MASS_FLOOR_AND_SAME_NAMED_TWO_LOOP_DATA_NOT_ROLLING_STATE_OR_COMMON_PARENT_CLOSURE"
+      },
+      {
+        "id": "polynomial_clock_transparent_physical_source_map_and_full_target_classical_bound",
+        "status": "KINEMATIC_CLOCK_ARGUMENT_ALIGNED_WITH_PROTECTED_MASSES_AND_SAME_NAMED_VACUUM_DATA_NOT_BACKGROUND_SOLUTION_QUANTUM_STATE_OR_COMMON_PARENT_CLOSURE"
+      },
+      {
+        "id": "free_flat_clock_Dirac_out_energy_with_complete_transition_series_remainder",
+        "status": "BOUNDED_FOR_SPECIFIED_QUADRATIC_MODEWISE_IN_OUT_STATE_NOT_INTERACTING_OR_CURVED_BOUNCE_STRESS"
+      },
+      {
+        "id": "Hadamard_regular_free_flat_SAT8_in_out_state_and_uniform_one_particle_norm_limit",
+        "status": "HADAMARD_FOR_SPECIFIED_FREE_EXTERNAL_MASS_OPERATOR_USING_IDENTIFIED_EXTERNAL_THEOREM_NOT_INTERACTING_CURVED_STATE_OR_NUMERICAL_STRESS"
+      },
+      {
+        "id": "exact_four_frame_free_transition_and_uniform_same_operator_in_out_T00_difference",
+        "status": "BOUNDED_FOR_FREE_FLAT_HADAMARD_STATE_DIFFERENCE_NOT_ABSOLUTE_STRESS_INTERACTING_CURVED_STATE_OR_BACKREACTION"
+      },
+      {
+        "id": "free_flat_absolute_one_loop_local_energy_with_fixed_saturated_mass_reference",
+        "status": "BOUNDED_IN_EXPLICIT_MS_AND_SATURATED_MASS_REFERENCE_QUADRATIC_SCHEME_NOT_FULL_CURVED_INTERACTING_PARENT_STRESS"
+      },
+      {
+        "id": "complete_free_flat_homogeneous_one_loop_stress_with_dimensional_curvature_improvement",
+        "status": "BOUNDED_SPECIFIED_QUADRATIC_MS_MR_FLAT_TENSOR_NOT_FULL_INTERACTING_CURVED_PARENT_STRESS"
+      },
+      {
+        "id": "actual_CD_free_Dirac_Hadamard_in_out_state_and_uniform_state_stress_difference",
+        "status": "CURVED_FREE_HADAMARD_STATE_AND_STATE_DIFFERENCE_BOUNDED_NOT_ABSOLUTE_PARENT_STRESS"
+      }
+    ],
+    "primitive": [
+      {
+        "id": "scalar_Phi0_W0_F0",
+        "status": "BOUNDED_PAIRED_VACUUM_PRIMITIVE_WITH_ASSIGNED_LOCAL_FOREST"
+      },
+      {
+        "id": "scalar_Phi2_W0_F2",
+        "status": "BOUNDED_NONLOCAL_AND_FINITE_MS_MASS_AND_SLOPE_REFERENCES"
+      },
+      {
+        "id": "scalar_Phi2_W1_F0",
+        "status": "BOUNDED_PAIRED_NONLOCAL_AND_FINITE_MS_LOCAL_REFERENCES"
+      },
+      {
+        "id": "scalar_Phi4_W0_F4",
+        "status": "BOUNDED_PAIRED_PRIMITIVE_ROW"
+      },
+      {
+        "id": "scalar_Phi4_W1_F2",
+        "status": "BOUNDED_PAIRED_IN_COMMON_MS_INTERACTION_SCHEME"
+      },
+      {
+        "id": "scalar_Phi4_W2_F0",
+        "status": "BOUNDED_PAIRED_IN_COMMON_MS_INTERACTION_SCHEME"
+      },
+      {
+        "id": "gauge_Phi0",
+        "status": "BOUNDED_PAIRED_VACUUM_PRIMITIVE_WITH_ASSIGNED_LOCAL_FOREST"
+      },
+      {
+        "id": "gauge_Phi2",
+        "status": "BOUNDED_NONLOCAL_AND_FINITE_MS_MASS_AND_SLOPE_REFERENCES"
+      },
+      {
+        "id": "gauge_Phi4",
+        "status": "BOUNDED_PAIRED_PRIMITIVE_ROW"
+      }
+    ]
+  },
+  "prior_sha256": {
+    "S6_169_fully_rebuilt": "97f1821d03f6e2f60367caf25bbc650b7122e31aa07cb77409755c084b89a972",
+    "all_prior_scientific_sources_and_reports_unchanged": true,
+    "same_mass_profile_and_original_physical_frame": true
+  },
+  "proof_checks": {
+    "absolute_curved_stress_not_inferred": true,
+    "actual_CD_geometry_and_reference_time_pinned": true,
+    "actual_twenty_frame_uniform_gap": true,
+    "actual_uniform_beta_below_one_e_minus_1890": true,
+    "all_exact_rotations_and_final_connection_retained": true,
+    "all_forty_two_copies_included": true,
+    "all_order_Bernoulli_floor_above_one_half": true,
+    "all_prior_frozen_scientific_bytes_unchanged": true,
+    "all_twenty_one_frequency_floors_above_one_half": true,
+    "arbitrary_order_high_momentum_threshold_explicit": true,
+    "both_time_tails_and_full_momentum_integrals": true,
+    "complete_curved_state_energy_difference_below_one_e_minus_1090": true,
+    "complex_ratio_cap_allows_sqrt_induction": true,
+    "constant_mass_geometric_bound_nonzero": true,
+    "external_local_Hadamard_hypotheses_checked": true,
+    "finite_N20_not_used_as_Hadamard_criterion": true,
+    "frequency_modulus_above_nine_tenths": true,
+    "geometric_connection_and_all_42_copies_retained": true,
+    "initial_majorant_dimensionless_slack": true,
+    "mass_square_relative_error_below_one_over_24": true,
+    "metric_relative_defect_below_one_over_256": true,
+    "modewise_and_strong_not_uniform_Moller_limits": true,
+    "momentum_square_relative_defect_below_one_over_16": true,
+    "no_absolute_parent_stress_or_background_control": true,
+    "physical_spinor_Cauchy_normalization_derived": true,
+    "profile_complex_modulus_below_two": true,
+    "profile_derivative_weight_below_two": true,
+    "profile_eighth_power_defect_below_one_over_32": true,
+    "reference_ratio_below_one_e_minus_1890": true,
+    "same_counterterm_state_difference_only": true,
+    "same_states_identified_by_all_order_projector_comparison": true,
+    "total_frequency_defect_below_one_ninth": true
+  },
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "5ea1653c67900b8fa22aa1b3adea3b70883a392794f3756f27bdca0cea87cdf9",
+    "README.md": "f798dae9d2e53b5df64e5a22285df6e140a7f854fcd0c1a06fc1c091e20aaf24",
+    "notes/disk.md": "7552ef6a032d42a2a623d08bae8402fc44b1573cf1b3276724b5702857b7f3d4",
+    "notes/energy.md": "4dabcff4662948325cd9b4fd7b1204d70d6db8134e242b8c70568da6c54e493a",
+    "notes/frames.md": "c5df61d5d45e46579178c0b2d2da1337e7c1bf17aed8df466e4a071a73c2e0f0",
+    "notes/geometry.md": "ba8eb8df5339e00be3ddcffd4088542b37c9a2d6e39bce8069da5414b1752b51",
+    "notes/hadamard.md": "a7aa8995f9aac6101b63eb977b791fcd6be5ec5d0b40645c6b73e3b14a73eef4",
+    "notes/scope.md": "1db14e24bf9bd317b90ad2a24d9c7a2cd56427717e4a908d8392aed173fbc02d",
+    "notes/validation.md": "203eea15bd33b67634b72bbab47a4a8a7f3b8b8cacaa6fd8c3da37172f64fcb2",
+    "src/p8_vacuum_curved_dirac_state/__init__.py": "21b869bab2f0c6c77bbffc66d675f4356338f9a7732161ec6c9d03b2374c308f",
+    "src/p8_vacuum_curved_dirac_state/audit.py": "da7fe1dd8a8d051cfa452a78fc44b8ebe5f7b153490cb878146d167b47bc803c",
+    "src/p8_vacuum_curved_dirac_state/energy.py": "15f3e9c73b9b3e6d63e04f82c0d139dec88e9769c5717b8b5d58ec7b1ce71c97",
+    "src/p8_vacuum_curved_dirac_state/geometry.py": "d36acfa8bb673e779dcd381b14bb65dae19936cff91c2670cba1df35b83a6345",
+    "src/p8_vacuum_curved_dirac_state/hadamard.py": "2e0bde8a08cba7d52f2b7f5ec185ac16195d632edb1d11dc0c31be578ce3397c",
+    "src/p8_vacuum_curved_dirac_state/transition.py": "96b78fb1d5ac002b0c4a8f74f5207215bbf8052d1a2716027ca7b240a21a863d",
+    "src/p8_vacuum_curved_dirac_state/tube.py": "e26dd9e4075aa74601435d5faff95049fcf712c1773314e1ed4f190f871f61ad",
+    "src/p8_vacuum_curved_dirac_state/verify.py": "04ed7802d363e3675fe94b89fbd2be8cbddb22dcb23346452a4993822987d0e1",
+    "tests/test_curved_dirac_state_certificate.py": "bacd1863b95e0a5d72ca0b406d22a860215336dd4988f5878e7ff2bb89cf1012",
+    "tests/test_curved_dirac_state_science.py": "2bfd20261b0f303681b7d3f1eacba18fbf22a2a959261359cd988b3061e6dd2d"
+  },
+  "status": "CURVED_FREE_HADAMARD_IN_OUT_STATE_AND_UNIFORM_STATE_DIFFERENCE_BOUNDED; NOT_ABSOLUTE_CURVED_INTERACTING_PARENT_STRESS_V_G_B_OR_ORIGINAL_P8",
+  "uniform_physical_state_stress_difference": {
+    "actual_decimal_diagnostics": {
+      "compact_state_energy_difference_upper": "2.618580401104801604802462016e-1095",
+      "mass_floor": "9.900000000000000000000000000e+199",
+      "state_pressure_difference_upper": "4.364300668508002674670770027e-1096",
+      "tail_state_energy_difference_upper": "1.183328200748551055608802464e-3092",
+      "total_state_energy_difference_upper": "2.618580401104801604802462016e-1095"
+    },
+    "actual_uniform_enclosures": {
+      "compact_state_energy_difference_upper": "210000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000007/80196124553364560772892329705496596557300626472950492313073322570448206958056376068756334377135162713223942579721115514019087057882326574696355653491128848266941863818644282564165611961641041795617264092890102977762012415041681379079818725585937500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "mass_floor": "99000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "state_pressure_difference_upper": "1032192000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000034406400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004664443/2365079948428184934665522273810741228390664235439077558903307970589602161041432197918906808382968510608229935407071361847039700241419269479685163848237579090010035894248402265956320895483148291802907858816240604937775060534477233886718750000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "tail_state_energy_difference_upper": "14441/1220371490417020090126688479778504245815616220556799565997578932192777172879995974158362646224441955938199141076920207351413674015180221609744666588357883947373599532635914481917606241219374763572191877614159238873980939388275146484375000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "total_state_energy_difference_upper": "1032192000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000034406400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004664443/394179991404697489110920378968456871398444039239846259817217995098267026840238699653151134730494751768038322567845226974506616706903211579947527308039596515001672649041400377659386815913858048633817976469373434156295843422412872314453125000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "energy_bound": "A rank-one projector difference has trace norm2|beta| per helicity. Both helicities and 42 copies give |Delta rho|<=4N/pi^2 integral p^2 sqrt(p^2+m0^2)|beta|dp, since omega(t)<=2sqrt(p^2+m0^2) and a^-3<=1. Pi^2>9 yields the displayed rational allowances.",
+    "gates": {
+      "absolute_curved_stress_not_inferred": true,
+      "all_forty_two_copies_included": true,
+      "complete_curved_state_energy_difference_below_one_e_minus_1090": true,
+      "reference_ratio_below_one_e_minus_1890": true
+    },
+    "physical_observable": "For the two exact curved Hadamard states of this SAME prescribed-mass operator, compare T_hat00 and isotropic P in the physical FLRW orthonormal frame. Identical local subtractions and finite counterterms cancel. These are differences between states, NOT either absolute stress.",
+    "pressure_bound": "The physical isotropic pressure operator is (q/3)sigma1 before the mass rotation, with norm q/3. Since q<=p<=sqrt(p^2+m0^2), the same state difference is bounded by one sixth the conservative energy allowance. This is not a pressure formula obtained by differentiating an energy inequality.",
+    "reference_scale_ratio": "1032192000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000034406400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004664443/39417999140469748911092037896845687139844403923984625981721799509826702684023869965315113473049475176803832256784522697450661670690321157994752730803959651500167264904140037765938681591385804863381797646937343415629584342241287231445312500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "source_Ward_identity": "partial_t Delta rho+3H(Delta rho+Delta P)=Mdot Delta<bar psi psi>. The prescribed external mass exchanges energy; the free fermion subsystem is not separately conserved."
+  },
+  "verdict": "The prescribed actual CD geometry has exact free in/out states for all42 fermion copies. Variable disks bound arbitrary finite exact rotations; all-order comparison with the checked local external reference identifies these SAME states as Hadamard. Twenty frames give uniform beta below1e-1890 and local energy-density difference below1e-1090, with pressure difference at most one sixth this conservative bound. These are state differences, not absolute curved or full parent stress, a controlled parent bounce or original P8 closure.",
+  "verification_boundary": "Written variable-disk, all-order exact-frame, tail and Hadamard-comparison proofs; exact geometry, Pauli/Sylvester and full radial algebra; independent full-function jets, complex disks, high-precision actual-scale refinements and complete numerical quadratures. Finite tests are not validated integration or a formal proof. Native, direct science, ordinary and CLI use original SymPy; only full regression uses its separately audited exact GCD adapter.",
+  "written_proofs": [
+    "notes/geometry.md",
+    "notes/disk.md",
+    "notes/frames.md",
+    "notes/hadamard.md",
+    "notes/energy.md",
+    "notes/scope.md",
+    "notes/validation.md"
+  ]
+}
