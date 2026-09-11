@@ -1,0 +1,498 @@
+{
+  "actual_clock_vacuum_and_constraint_blocks": {
+    "clock": {
+      "J": "(3200*u**34 + 48000*u**32 + 332800*u**30 + 1410400*u**28 + 4068800*u**26 + 8413616*u**24 + 12776592*u**22 + 14351856*u**20 + 11894320*u**18 + 7327520*u**16 + 3706272*u**14 + 2123580*u**12 + 1571848*u**10 + 1038260*u**8 + 474252*u**6 + 134232*u**4 + 20604*u**2 + 1215)/(800*(u**2 + 1)**18)",
+      "joint_lapse_temporal_Jacobian": [
+        [
+          "-(3200*u**34 + 48000*u**32 + 332800*u**30 + 1410400*u**28 + 4068800*u**26 + 8413616*u**24 + 12776592*u**22 + 14351856*u**20 + 11894320*u**18 + 7327520*u**16 + 3706272*u**14 + 2123580*u**12 + 1571848*u**10 + 1038260*u**8 + 474252*u**6 + 134232*u**4 + 20604*u**2 + 1215)/(400*(u**2 + 1)**18)",
+          "0"
+        ],
+        [
+          "0",
+          "-1"
+        ]
+      ],
+      "lapse_denominator": "800*(u**2 + 1)**18",
+      "lapse_numerator_coefficients": [
+        "3200",
+        "48000",
+        "332800",
+        "1410400",
+        "4068800",
+        "8413616",
+        "12776592",
+        "14351856",
+        "11894320",
+        "7327520",
+        "3706272",
+        "2123580",
+        "1571848",
+        "1038260",
+        "474252",
+        "134232",
+        "20604",
+        "1215"
+      ],
+      "nonlinear_count": "At each finite clock point, continuity, the nonzero ten-velocity block and the nonsingular joint lapse/normal-vector Jacobian give a nonempty local canonical neighborhood with seven physical modes (2 tensor,2 light scalar,3 vector). No uniform neighborhood size or stability throughout it is supplied.",
+      "positive_lapse_numerator_in_u_squared": "3200*nonnegative_u_squared**17 + 48000*nonnegative_u_squared**16 + 332800*nonnegative_u_squared**15 + 1410400*nonnegative_u_squared**14 + 4068800*nonnegative_u_squared**13 + 8413616*nonnegative_u_squared**12 + 12776592*nonnegative_u_squared**11 + 14351856*nonnegative_u_squared**10 + 11894320*nonnegative_u_squared**9 + 7327520*nonnegative_u_squared**8 + 3706272*nonnegative_u_squared**7 + 2123580*nonnegative_u_squared**6 + 1571848*nonnegative_u_squared**5 + 1038260*nonnegative_u_squared**4 + 474252*nonnegative_u_squared**3 + 134232*nonnegative_u_squared**2 + 20604*nonnegative_u_squared + 1215",
+      "u": "u"
+    },
+    "dynamics": {
+      "canonical_longitudinal_frequency": "(-12*H**2*r**2 + 4*H**2*r - H**2 - 4*Hdot*r - 2*Hdot + 4*m_squared + 4*q)/4",
+      "canonical_transverse_frequency": "-H**2/4 - Hdot/2 + m_squared + q",
+      "canonical_vacuum_blocks": "At u=0,du=0,W=0,chi=constant: Einstein gravity plus mass-one canonical Phi=sqrt(kappa)u, a canonical massless chi, and canonical A=sqrt(kappa*zeta)W with mass_squared=1/zeta. There is no quadratic light-vector mixing.",
+      "clock_quadratic_action": "Exactly the unchanged retuned CD/M1 light quadratic action plus a positive, minimally physical-metric-coupled Proca block. The additional source is quadratic in deviations; background and first variation vanish.",
+      "full_trace_temporal_Hamiltonian_after_elimination": "-f + j**2/(2*volume) - j*source_lower - 3*(-b - j*(R - 1) + p)**2/(4*R*volume)",
+      "longitudinal_eliminated_positive_kinetic": "a*positive_mu/(positive_mu + k**2/a**2)",
+      "normalized_temporal_schur": "1 - 3*(R - 1)**2/(2*R)",
+      "uniform_frequency_floor": "For all real CD times and q=k_com^2/a^2>=0, Omega_L^2>=q+1/zeta-15>=q+1985; Omega_T^2>=q+1/zeta-3. This is a time-dependent oscillator floor, not a physical EFT cutoff or a stationary scattering gap.",
+      "vacuum_leading_vector_light_vertex_degree": 5,
+      "vacuum_source_first_degree": 4,
+      "vector_mass_squared": "1/zeta>=2000"
+    },
+    "target": {
+      "clock_jet_order_F": 2,
+      "clock_jet_order_R": 3,
+      "global_domain": "Every real u, -1/4096<X<6/5, with 1/2<R<6/5",
+      "same_target": "Unchanged S6.109 full analytic CD_matter action with original rolling M1 and retuned margin1/200",
+      "vacuum_R_minus_one_has_X_squared_factor": true
+    }
+  },
+  "checked_scalar_entries": 844,
+  "claim": "P8-S6.174.REGULAR_CLASSICAL_SOURCE_ALIGNED_AFFINE_PARENT_WITH_EXACT_CD_CLOCK_AND_VACUUM_QUADRATIC_BLOCKS",
+  "controls": {
+    "finite_vector_mass_not_cutoff": true,
+    "fixed_mu_mass_not_inherited_off_clock": true,
+    "full_quantum_parent_and_matching_not_claimed": true,
+    "metric_inverse_not_only_timelike_coordinate_gauge": true,
+    "nonzero_null_gradients_not_excluded": true,
+    "original_P8_not_closed": true,
+    "rejected_inputs": 84,
+    "secondary_lapse_boundary_not_dropped": true,
+    "unshifted_regular_q_clock_source_not_set_to_zero": true
+  },
+  "date": "2026-09-11",
+  "exact_residuals": {
+    "affine_anisotropy_has_p_minus_half_factor": "0",
+    "affine_full_update_determinant_lemma": "0",
+    "affine_mass_update_clock_equals_old_11_over_9": "0",
+    "affine_positive_temporal_schur_margin_identity": "0",
+    "affine_regular_anisotropy_conversion": "0",
+    "affine_spatial_mass_update_clock_equals_old": "0",
+    "chart_V_squared_removed": "0",
+    "chart_full_generic_R_ADM_time_action": "0",
+    "chart_generic_R_spatial_gradient_removed": "0",
+    "chart_inverse_metric_coefficient": "0",
+    "chart_inverse_norm_derivative_one": "0",
+    "chart_metric_rank_one_jacobian_factor": "0",
+    "chart_mixed_K_V_removed": "0",
+    "chart_norm_denominator_exactly_one": "0",
+    "chart_regular_D_rationalization": "0",
+    "chart_vacuum_D_first_germ": "0",
+    "chart_vacuum_D_zero": "0",
+    "chart_volume_trace_coefficient": "0",
+    "clock_actual_target_clock_lapse_equation": "0",
+    "clock_boundary_I_NN_retained": "0",
+    "clock_boundary_I_N_zero": "0",
+    "dynamics_canonical_frequency_all_normalization_derivatives": "0",
+    "dynamics_full_joint_trace_temporal_Legendre": "0",
+    "dynamics_full_longitudinal_kinetic_after_constraint": "0",
+    "dynamics_homogeneous_longitudinal_matches_transverse": "0",
+    "dynamics_joint_temporal_Euler": "0",
+    "dynamics_joint_trace_Euler": "0",
+    "dynamics_longitudinal_H2_floor_identity": "0",
+    "dynamics_longitudinal_temporal_Euler": "0",
+    "dynamics_same_uniform_temporal_schur": "0",
+    "full_quotient_complement_trace_zero": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        60
+      ]
+    },
+    "full_quotient_full_complement_cross_term": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        60,
+        4
+      ]
+    },
+    "full_quotient_full_projective_columns": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "full_quotient_full_trace_right_inverse": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "full_quotient_retained_mass_exactly_Lorentz": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "full_quotient_retained_response_exact_physical_Lorentz": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "full_quotient_updated_all60_Euler_lift": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        60,
+        4
+      ]
+    },
+    "nine_primitive_rows_retained": "0",
+    "one_separate_classical_parent_added": "0",
+    "primitive_rows_unchanged": "0",
+    "prior_matching_rows_retained": "0",
+    "source_clock_source_first_zero": "0",
+    "source_clock_source_second_nontrivial": "0",
+    "source_clock_source_zero": "0",
+    "source_full_covariant_source_to_clock_chart": "0",
+    "source_literal_all64_alpha": "0",
+    "source_literal_all64_c": "0",
+    "source_literal_all64_d": "0",
+    "source_regular_lower_q_cancels_from_shifted_source": "0",
+    "source_regular_null_gradient_Hessian_coefficient": "0",
+    "source_regular_null_gradient_box_coefficient": "0",
+    "source_source_has_no_lapse_velocity": "0",
+    "source_source_signature_dictionary": "0",
+    "target_F_clock_jet_0": "0",
+    "target_F_clock_jet_1": "0",
+    "target_F_clock_jet_2": "0",
+    "target_R_clock_jet_0": "0",
+    "target_R_clock_jet_1": "0",
+    "target_R_clock_jet_2": "0",
+    "target_R_clock_jet_3": "0",
+    "target_R_vacuum_first_X": "0",
+    "target_R_vacuum_second_X": "0",
+    "target_R_vacuum_value": "0",
+    "target_full_F_vacuum_mass_one": "0",
+    "target_full_F_vacuum_positive_kinetic": "0",
+    "target_full_F_vacuum_tadpole": "0",
+    "target_full_F_vacuum_value": "0"
+  },
+  "formulation": "FORMULATION.md",
+  "named_exact_check_count": 67,
+  "not_established": [
+    "An interacting quantum parent, transfer of GY14 matching or free-sector state/stress bounds",
+    "A physical cutoff, all omitted-order bounds, or uniform nonlinear stability/causality on the connected domain",
+    "Controlled vector integration, quantum-corrected background or perturbation response",
+    "Vacuum contour/truncation, finite-gravity IR/Regge remainder, V/G/B or original P8 closure"
+  ],
+  "observable_and_scope": {
+    "new_operators": "A covariant source-centered isotropic trace mass update and curl of W=T-B du, with vacuum-regular lower q retained.",
+    "not_a_transfer": "No GY14 interacting-sector, fixed-order vacuum matching, full-state, heavy-elimination or loop bound is transferred to this new parent.",
+    "object": "Separately named CD-REG-AFFINE-ISO local classical EFT; the full S6.109 light target and original M1 matter are unchanged.",
+    "proved_boundary": "Exact 56-direction algebraic reduction; regular covariant coefficient/chart domain; exact classical clock and vacuum quadratic blocks; local nonlinear seven-mode neighborhoods at each finite clock point.",
+    "remaining": "Physical cutoff, omitted/quantum operators, causal/stable response in controlled neighborhoods, full parent vacuum dispersion and finite-gravity IR/Regge estimates remain open."
+  },
+  "primitive_and_matching_frontier": {
+    "matching": [
+      {
+        "id": "fixed_sigma_isolated_MS_conversion",
+        "status": "CANCELLED_NONLOCAL_ORDER_TWO_WITH_SAME_REGULATED_REFERENCE"
+      },
+      {
+        "id": "remaining_scale_parameter_field_map_and_cross_terms",
+        "status": "OPEN"
+      },
+      {
+        "id": "remaining_counterterm_and_vacuum_source_assembly",
+        "status": "ASSEMBLED_FOR_FIXED_ORDER_PHI_POLE_B2_VACUUM_AND_H_SOURCE"
+      },
+      {
+        "id": "full_matched_two_loop_pole_and_amplitude_error",
+        "status": "FIXED_ORDER_PHI_POLE_AND_B2_BOUNDED_PHYSICAL_TRUNCATION_OPEN"
+      },
+      {
+        "id": "finite_EFT_higher_order_truncation",
+        "status": "OPEN"
+      },
+      {
+        "id": "V_contour_and_cut_control",
+        "status": "OPEN"
+      },
+      {
+        "id": "finite_gravity_G",
+        "status": "OPEN"
+      },
+      {
+        "id": "common_parent_B",
+        "status": "OPEN"
+      },
+      {
+        "id": "complete_wineglass_interaction_forest_MS",
+        "status": "BOUNDED_WITH_REGULATED_FINITE_LOCAL_ANCHOR_AND_FULL_SCALE_TERM"
+      },
+      {
+        "id": "complete_double_bubble_interaction_forest_MS",
+        "status": "BOUNDED_WITH_ACTUAL_NESTED_MS_FORESTS_AND_BOTH_SCALE_TERMS"
+      },
+      {
+        "id": "complete_scalar_OS_insertion_interaction_forest_MS",
+        "status": "BOUNDED_WITH_FULL_REGULATED_SLOPE_TIMES_OUTER_REFERENCE"
+      },
+      {
+        "id": "complete_scalar_quadratic_finite_MS_slope_and_converted_OS_bound",
+        "status": "BOUNDED_WITH_FIXED_INNER_OS_AND_INTERACTION_MS_COORDINATES"
+      },
+      {
+        "id": "first_finite_Phi_field_covariance_and_MS_projection_commutator",
+        "status": "EXACT_REGULATED_FIELD_DIRECTION_AND_BOUNDED_FIRST_SLOPE_CROSS_TERMS"
+      },
+      {
+        "id": "complete_GY14_second_Phi_normalization_and_canonical_unit_disc_pole",
+        "status": "BOUNDED_WITH_DIRECT_MS_OWNERSHIP_AND_FULL_FINITE_FIELD_REEXPANSION"
+      },
+      {
+        "id": "complete_two_loop_vacuum_reference_and_first_source_square",
+        "status": "BOUNDED_WITH_FULL_REGULATED_SOURCE_REDUCIBLE_CANCELLATION"
+      },
+      {
+        "id": "complete_two_loop_derivative_map_with_matched_physical_source",
+        "status": "TRANSPORTED_FOR_FULL_ACTION_AND_PHYSICAL_SOURCE_NOT_ORDINARY_PSI_MS_OR_TRUNCATION"
+      },
+      {
+        "id": "complete_matched_two_loop_low_energy_Phi_elastic_cut",
+        "status": "BOUNDED_ON_PHYSICAL_WINDOW_4_TO_6_WITH_FULL_FIRST_AMPLITUDE_NOT_PHYSICAL_REMAINDER_OR_GLOBAL_DISPERSION"
+      },
+      {
+        "id": "full_finite_kappa_analytic_target_classical_vacuum_match",
+        "status": "BOUNDED_ON_SAME_RESTRICTED_FLAT_SCHWARTZ_CLASS_NOT_QUANTUM_TARGET_OR_ROLLING_COMMON_PARENT_MATCH"
+      },
+      {
+        "id": "GY14_SAT8_pointwise_fermion_mass_protection_and_named_low_order_invariance",
+        "status": "NEW_ANALYTIC_EFT_BRANCH_WITH_GLOBAL_REAL_MASS_FLOOR_AND_SAME_NAMED_TWO_LOOP_DATA_NOT_ROLLING_STATE_OR_COMMON_PARENT_CLOSURE"
+      },
+      {
+        "id": "polynomial_clock_transparent_physical_source_map_and_full_target_classical_bound",
+        "status": "KINEMATIC_CLOCK_ARGUMENT_ALIGNED_WITH_PROTECTED_MASSES_AND_SAME_NAMED_VACUUM_DATA_NOT_BACKGROUND_SOLUTION_QUANTUM_STATE_OR_COMMON_PARENT_CLOSURE"
+      },
+      {
+        "id": "free_flat_clock_Dirac_out_energy_with_complete_transition_series_remainder",
+        "status": "BOUNDED_FOR_SPECIFIED_QUADRATIC_MODEWISE_IN_OUT_STATE_NOT_INTERACTING_OR_CURVED_BOUNCE_STRESS"
+      },
+      {
+        "id": "Hadamard_regular_free_flat_SAT8_in_out_state_and_uniform_one_particle_norm_limit",
+        "status": "HADAMARD_FOR_SPECIFIED_FREE_EXTERNAL_MASS_OPERATOR_USING_IDENTIFIED_EXTERNAL_THEOREM_NOT_INTERACTING_CURVED_STATE_OR_NUMERICAL_STRESS"
+      },
+      {
+        "id": "exact_four_frame_free_transition_and_uniform_same_operator_in_out_T00_difference",
+        "status": "BOUNDED_FOR_FREE_FLAT_HADAMARD_STATE_DIFFERENCE_NOT_ABSOLUTE_STRESS_INTERACTING_CURVED_STATE_OR_BACKREACTION"
+      },
+      {
+        "id": "free_flat_absolute_one_loop_local_energy_with_fixed_saturated_mass_reference",
+        "status": "BOUNDED_IN_EXPLICIT_MS_AND_SATURATED_MASS_REFERENCE_QUADRATIC_SCHEME_NOT_FULL_CURVED_INTERACTING_PARENT_STRESS"
+      },
+      {
+        "id": "complete_free_flat_homogeneous_one_loop_stress_with_dimensional_curvature_improvement",
+        "status": "BOUNDED_SPECIFIED_QUADRATIC_MS_MR_FLAT_TENSOR_NOT_FULL_INTERACTING_CURVED_PARENT_STRESS"
+      },
+      {
+        "id": "actual_CD_free_Dirac_Hadamard_in_out_state_and_uniform_state_stress_difference",
+        "status": "CURVED_FREE_HADAMARD_STATE_AND_STATE_DIFFERENCE_BOUNDED_NOT_ABSOLUTE_PARENT_STRESS"
+      },
+      {
+        "id": "complete_free_curved_one_loop_stress_with_explicit_EC_Newton_reference",
+        "status": "BOUNDED_SPECIFIED_QUADRATIC_CURVED_TENSOR_NOT_FULL_INTERACTING_PARENT_OR_BACKGROUND_RESPONSE"
+      },
+      {
+        "id": "minimal_Einstein_canonical_clock_free_sector_null_equation_mismatch",
+        "status": "EXCLUDED_NAMED_MINIMAL_DIAGNOSTIC_WITH_SMALL_EXTRA_NULL_BUDGET_NOT_FULL_INTERACTING_PARENT_OR_DHOST_ROW"
+      },
+      {
+        "id": "actual_CD_leading_clock_Euler_source_decomposition_and_matching_domain_gap",
+        "status": "LEADING_TARGET_SOURCES_AND_CONSTRAINT_DOMAIN_REQUIREMENTS_IDENTIFIED_NOT_PROPAGATING_PARENT_OR_QUANTUM_BOUNCE"
+      },
+      {
+        "id": "analytic_CD_REG_AFFINE_ISO_classical_parent_clock_vacuum_and_local_constraints",
+        "status": "NEW_REGULAR_CLASSICAL_PARENT_AND_LOCAL_CONSTRAINT_BLOCKS_NOT_QUANTUM_MATCHING_CUTOFF_OR_V_G_B"
+      }
+    ],
+    "primitive": [
+      {
+        "id": "scalar_Phi0_W0_F0",
+        "status": "BOUNDED_PAIRED_VACUUM_PRIMITIVE_WITH_ASSIGNED_LOCAL_FOREST"
+      },
+      {
+        "id": "scalar_Phi2_W0_F2",
+        "status": "BOUNDED_NONLOCAL_AND_FINITE_MS_MASS_AND_SLOPE_REFERENCES"
+      },
+      {
+        "id": "scalar_Phi2_W1_F0",
+        "status": "BOUNDED_PAIRED_NONLOCAL_AND_FINITE_MS_LOCAL_REFERENCES"
+      },
+      {
+        "id": "scalar_Phi4_W0_F4",
+        "status": "BOUNDED_PAIRED_PRIMITIVE_ROW"
+      },
+      {
+        "id": "scalar_Phi4_W1_F2",
+        "status": "BOUNDED_PAIRED_IN_COMMON_MS_INTERACTION_SCHEME"
+      },
+      {
+        "id": "scalar_Phi4_W2_F0",
+        "status": "BOUNDED_PAIRED_IN_COMMON_MS_INTERACTION_SCHEME"
+      },
+      {
+        "id": "gauge_Phi0",
+        "status": "BOUNDED_PAIRED_VACUUM_PRIMITIVE_WITH_ASSIGNED_LOCAL_FOREST"
+      },
+      {
+        "id": "gauge_Phi2",
+        "status": "BOUNDED_NONLOCAL_AND_FINITE_MS_MASS_AND_SLOPE_REFERENCES"
+      },
+      {
+        "id": "gauge_Phi4",
+        "status": "BOUNDED_PAIRED_PRIMITIVE_ROW"
+      }
+    ]
+  },
+  "prior_sha256": {
+    "S6_173_fully_rebuilt": "3740dfeae08879dda0039c10fd94c09018ef964d1ca12690624089927a852ba5",
+    "all_prior_scientific_sources_and_reports_unchanged": true,
+    "same_complete_analytic_target_and_original_M1": true
+  },
+  "proof_checks": {
+    "all64_source_and_all60_quotient_checks_retained": true,
+    "all_prior_frozen_scientific_bytes_unchanged": true,
+    "classical_clock_exact_and_quadratic_vector_positive": true,
+    "clock_constraint_count_local_at_each_finite_time_only": true,
+    "clock_lapse_denominator_positive": true,
+    "clock_lapse_polynomial_coefficients_positive": true,
+    "covariant_metric_map_explicit_inverse_and_jacobian": true,
+    "frequency_floor_not_stationary_gap_or_cutoff": true,
+    "full_source_pinned_analytic_target_retained": true,
+    "generic_R_lapse_time_and_spatial_boundaries_retained": true,
+    "mass_update_anisotropy_removable_through_null_gradient": true,
+    "new_mass_update_not_old_fixed_mu_away_from_clock": true,
+    "new_source_clock_value_and_first_variation_zero": true,
+    "no_old_quantum_or_GY14_matching_transfer": true,
+    "nonzero_higher_source_not_discarded": true,
+    "physical_matter_metric_not_replaced_by_hat_metric": true,
+    "source_centering_linear_and_constant_terms_retained": true,
+    "unique_vacuum_regular_lower_q_not_reset_on_clock": true,
+    "vacuum_all_seven_physical_quadratic_modes_healthy": true
+  },
+  "regular_classical_parent_and_full_algebraic_reduction": {
+    "affine": {
+      "algebraic_reduction_scope": "The 56 trace-complement directions remain algebraic; the four projective directions remain gauge. Eliminating them is exact, with no omitted derivative expansion. W is retained and is not integrated out.",
+      "candidate": "CD-REG-AFFINE-ISO",
+      "covariant_mass_update_metric_coefficient": "8*p**2/(8*p + 5) + 1",
+      "covariant_mass_update_u_u_coefficient": "(-8*p**2/(8*p + 5) - p/(6*p**3 - 3))/X",
+      "exact_reduced_action": "S_CD_target+S_M1+kappa*int sqrt(-g)[-zeta F(W)^2/4+(W-S)_mu*(W-S)^mu/2]",
+      "mass_update_action": "Add +1/2*(T-Tstar)_mu*Xi^{mu nu}*(T-Tstar)_nu and -zeta*F(T-B du)^2/4 to the source-pinned S6.109 affine action, all with overall kappa. Source centering includes its linear and constant terms.",
+      "new_mass_update_at_timelike_frame": [
+        [
+          "-p/(6*p**3 - 3) + 1",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "-8*p**2/(8*p + 5) - 1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "-8*p**2/(8*p + 5) - 1",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "-8*p**2/(8*p + 5) - 1"
+        ]
+      ],
+      "normalized_temporal_schur_factor": "1 - 3*(positive_R - 1)**2/(2*positive_R)",
+      "not_inferred": "A full physical constraint count away from the clock/vacuum, a stable cone on every background, a physical cutoff, interacting quantum matching, or UV admissibility.",
+      "same_domain": [
+        "1/2",
+        "6/5"
+      ],
+      "temporal_schur_lower": "1/4",
+      "unchanged_stationary_connection_when_zeta_zero": true,
+      "updated_quotient_determinant_ratio": "-3*(8*p + 5)**3*(2*p**3 - 1)/(512*p**7)"
+    },
+    "chart": {
+      "C": "1/sqrt(positive_R(u, X))",
+      "D": "(1 - 1/sqrt(positive_R(u, X)))/X",
+      "X_map": "X_physical=X_hat exactly; the algebraic metric map has explicit inverse and nonzero field-space Jacobian",
+      "determinant_ratio_physical_to_hat": "positive_R(u, X)**(-3/2)",
+      "inverse_map": "g_hat=C^(-1)*g_physical+(1-C^(-1))*du*du/X; both coefficient quotients extend analytically through X=0",
+      "metric_jacobian_determinant_at_fixed_du": "positive_R(u, X)**(-9/2)",
+      "metric_map": "g_physical=C*g_hat+D*du*du, C=R^(-1/2), D=(1-C)/X; the physical matter metric remains g_physical",
+      "remaining_linear_V": "3*positive_s**2*Derivative(positive_R(u, positive_s**2), u)*Subs(Derivative(positive_R(u, X), X), X, positive_s**2)/(2*positive_R(u, positive_s**2))",
+      "spatial_lapse_gradient_after_full_boundary": "0",
+      "time_boundary_rule": "sqrt(hhat)*I_s*(dot s-N^i partial_i s)=total_divergence-N*sqrt(hhat)*[I*Khat+s*I_u]",
+      "time_linear_boundary_primitive": "I(u,s)=int_1^s R(u,r^2)^(-3/4)*[3*r^2*R_u*R_X/(2R)](u,r^2) dr",
+      "transformed_trace_coefficient_per_hat_volume": "-positive_R(u, X)**(1/4)/3",
+      "vacuum_C_germ": "-a*xsmall**2/2 - b*xsmall**3/2 + 1",
+      "vacuum_D_germ": "a*xsmall/2 + b*xsmall**2/2"
+    },
+    "source": {
+      "new_local_B": "3*H_clock*(R - 1) + 3*R_u/4 + 3*q_regular/2",
+      "new_retained_vector": "W_mu=T_mu-B(u,X)*partial_mu u, T=V_trace+U_trace of the unrestricted projective quotient",
+      "new_source_second_variation_coefficient": "-2*lapse_perturbation*(3*H_clock*lapse_perturbation + Khat_first)/h",
+      "normal_source_timelike_hat_chart": "(R - 1)*(-3*H_clock*s + Khat)",
+      "regular_lower_dictionary": "The unique S6.109 vacuum-regular analytic q is retained. Its nonzero clock boundary is not reset to the old singular choice.",
+      "regularity": "R-1 is divisible by X^2; all X denominators in S and B have analytic removable limits, including nonzero null gradients. S is generally nonzero away from the clock.",
+      "shifted_source_P8": "(R - 1)*(Box_P8_u/positive_X - 3*H_clock + uHu_P8*(-1/positive_X**2 + 3*R_X/(2*R*positive_X)) + 3*R_u/(4*R))",
+      "source_one_form": "S_mu=partial_mu u times shifted_source_P8; Box and uHu use the prescribed +--- physical metric",
+      "unshifted_trace_coefficients_source_signature": {
+        "alpha": "3*R_u/4 + 3*q_regular/2 + R_u*(3*R - 3)/(4*R)",
+        "c": "(1 - R)/positive_X",
+        "d": "(1 - R)/positive_X**2 + R_X*(3*R - 3)/(2*R*positive_X)"
+      }
+    }
+  },
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "9d4ac66ee55890bdd606a338e82aed9c6091b7c4682f6601098227ff16360468",
+    "README.md": "cbd0e2ded40470966447e19f373830d179e509c8007bfb53478744e664e787a2",
+    "notes/affine.md": "d62dc03d87d4d7e8396c56154dca2f61ed2ec9785da306fb62d11f3418db5272",
+    "notes/chart.md": "2361e28b0666590c1eb9ab5c460837d4fd84bbe42fc89c61350597b0e718b5b5",
+    "notes/constraints.md": "a801105a0efc3ad47dd55ecfe731f3bddbbd01ff23fe1ee59a64194bba759d6b",
+    "notes/modes.md": "5feb6b1c81f6a1421c297abd6d262aa7cd272534d130583e2713f993367d8e79",
+    "notes/scope.md": "b537dfc1cb080148e45cd58cc456908d506695ba402974260f8e6a41005ac01d",
+    "notes/source.md": "afdd50b56888531182b226d171c610bae7d283ccd99e5aadb66d47e836a5b9dc",
+    "notes/validation.md": "1d90b5734b68acf0bdc17298a3b348817981ba490588004dcbdb975103ba600f",
+    "src/p8_vacuum_analytic_affine_parent/__init__.py": "c0c8bcd97401779c977f0352ac3d927cbc77099edfa3a0ce778523732d0c0e51",
+    "src/p8_vacuum_analytic_affine_parent/affine.py": "c94a076bc3f0e3a18888238b380236b994befd4a89fd97020f825f2bc5f94226",
+    "src/p8_vacuum_analytic_affine_parent/audit.py": "56985f7d1f0fb4da79ac7a2a903208ed805e8c9103fbb2fe2793164147e9ee1d",
+    "src/p8_vacuum_analytic_affine_parent/chart.py": "f667991deee7d5981acef51a5f3848432584b5c44b65db5e3b0db4a3cfa8894b",
+    "src/p8_vacuum_analytic_affine_parent/dynamics.py": "3dabf8b7674bfe2d8b5a517ec31e88b0f4045194ff0664f840b89732110fedb7",
+    "src/p8_vacuum_analytic_affine_parent/source.py": "af47668afd5217c35aad35cbcb85be6e7bf475d88c4adb5c0d735661c19ff9c2",
+    "src/p8_vacuum_analytic_affine_parent/verify.py": "c652b2743357464ddd30a55c3576f0cd9038e9a3bec3c9219624eb542875ef75",
+    "tests/test_analytic_affine_parent_certificate.py": "bba1e848a113cc5ed161a00c8ef5b0fdd4bdbded87d54fa3451ed92f8489a6d3",
+    "tests/test_analytic_affine_parent_science.py": "2193eca884b557f10c368087491663c47922aee5fbe1fb3c7b037990a89944e0"
+  },
+  "status": "SEPARATE_REGULAR_CLASSICAL_AFFINE_VECTOR_PARENT_EXACT_TARGET_REDUCTION_AND_LOCAL_CLOCK_CONSTRAINTS; NOT_QUANTUM_MATCHING_CUTOFF_V_G_B_OR_ORIGINAL_P8",
+  "verdict": "The separately named CD-REG-AFFINE-ISO classical EFT retains the complete analytic S6.109 target and original M1. A regular covariant metric chart, the vacuum-regular lower dictionary, and a new source-centered isotropic trace mass give an exact full-quotient reduction to that target plus a retained Proca field with nonlinear source. The source and its first variation vanish on the entire CD clock, giving an exact classical clock and the unchanged light quadratic block plus positive Proca. The joint lapse/vector auxiliary Jacobian is nonsingular at every finite clock point, with local seven-mode neighborhoods; the vacuum has the stated healthy seven-mode quadratic spectrum. This constructs classical common-domain structure, not quantum target matching, a physical cutoff, a controlled interacting state/background response, or V/G/B and original P8 closure.",
+  "verification_boundary": "Full source-pinned generic-R covariant/ADM identities, all60 quotient Euler lifts, source centering, explicit analytic inverse/limits and exact clock lapse polynomial support written proofs. Independent tensor and finite metric variations, dense quotient/constraint solves, exact spectral limits and numerical full-function controls supplement them. Local constraint counting is not a formalized theorem or a nonlinear stability claim. Native, direct science, ordinary and CLI use original SymPy; full regression alone uses its separately audited exact GCD adapter.",
+  "written_proofs": [
+    "notes/chart.md",
+    "notes/affine.md",
+    "notes/source.md",
+    "notes/constraints.md",
+    "notes/modes.md",
+    "notes/scope.md",
+    "notes/validation.md"
+  ]
+}
