@@ -438,7 +438,10 @@ around a pre-registered problems document and a certificate-gated ledger.
   This is still linear light evolution and its leading heavy response,
   not a full nonlinear solution or UV-admissible completion.
 
-The [current P8 continuation audit](docs/assessment-2026-09-12-p8-affine-scalar-tame-propagator.md)
+The [current P8 continuation audit](docs/assessment-2026-09-12-p8-affine-quantum-forced-constraints.md)
+establishes the full force-dependent scalar constraints and an ordered quantum
+graph equivalence, retaining both contacts and the unclosed inverse/domain boundary.
+The [uniform classical propagator audit](docs/assessment-2026-09-12-p8-affine-scalar-tame-propagator.md)
 establishes a uniform two-chart classical scalar propagator through the bounce,
 with twelve spatial derivatives lost and an explicit, non-small constant.
 The [regular scalar Hamiltonian and infrared audit](docs/assessment-2026-09-12-p8-affine-reduced-scalar-hamiltonian.md)
