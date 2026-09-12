@@ -442,6 +442,9 @@ The [current P8 continuation audit](docs/assessment-2026-09-12-p8-retarded-phase
 an independently confirmed retarded pair-phase error and withdraws the
 S6.212/S6.213 physical finite-matching and assembled-current identifications
 pending an explicitly corrected successor. Frozen evidence is preserved.
+The [corrected local scalar UV audit](docs/assessment-2026-09-12-p8-affine-ordered-scalar-symbol.md)
+supplies the full trace/constraint coefficients and original finite term;
+it does not by itself restore the complete current or finish the scalar response.
 The independent [full ADM vertex audit](docs/assessment-2026-09-12-p8-affine-full-adm-vertices.md)
 establishes the lapse, shift, trace and metric-chart inputs without relying
 on that withdrawn physical endpoint identification.
