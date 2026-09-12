@@ -438,7 +438,11 @@ around a pre-registered problems document and a certificate-gated ledger.
   This is still linear light evolution and its leading heavy response,
   not a full nonlinear solution or UV-admissible completion.
 
-The [current P8 continuation audit](docs/assessment-2026-09-12-p8-affine-quantum-forced-constraints.md)
+The [current P8 continuation audit](docs/assessment-2026-09-12-p8-affine-isolated-shear-resolvent.md)
+establishes the isolated shear pole-plus-continuum factor and both finite-window
+causal inverse identities, retaining the pole and the full initial boundary.
+This is not yet an inverse of the full curved coupled quantum system.
+The [full quantum-force graph audit](docs/assessment-2026-09-12-p8-affine-quantum-forced-constraints.md)
 establishes the full force-dependent scalar constraints and an ordered quantum
 graph equivalence, retaining both contacts and the unclosed inverse/domain boundary.
 The [uniform classical propagator audit](docs/assessment-2026-09-12-p8-affine-scalar-tame-propagator.md)
