@@ -1,0 +1,700 @@
+{
+  "actual_dimensional_geometry_modes_and_fixed_source_UV_coefficients": {
+    "density": {
+      "actual_evanescent_odd_endpoint": "The j1/r0/d3 spatial difference is zero in physical dimension but its dimension derivative is nonzero. It contributes to the source-value logarithmic finite term and cannot be deleted before the dimension limit.",
+      "complete_coefficients": "All105 full angular coefficients, not only divergent slots, reproduce the complete actual S211 physical values. Spatial differences are taken after all physical pairs and source-derivative slots are assembled.",
+      "fixed_source_reconstruction": "For each slot write A*T+B*V+C*W. From normalized channels, A=fT, B=2(fV-fT), C=d(fS-fT)/(d-1)-B. Differentiate these invariant coefficients atd3, not the d-dependent scalar test tensor.",
+      "full_log_dimension_jets": [
+        [
+          [
+            "p**2*(-30*m**2*t**8 - 120*m**2*t**6 - 180*m**2*t**4 - 120*m**2*t**2 - 30*m**2 + 13*p**2 - 280*t**6 - 600*t**4 - 360*t**2 - 40)/(960*(t**2 + 1)**2)",
+            "p**2*(975*m**2*t**8 + 3900*m**2*t**6 + 5850*m**2*t**4 + 3900*m**2*t**2 + 975*m**2 + 551*p**2 - 30230*t**6 - 68430*t**4 - 46170*t**2 - 7970)/(50400*(t**2 + 1)**2)"
+          ],
+          [
+            "-p**2*(-30*m**2*t**8 - 120*m**2*t**6 - 180*m**2*t**4 - 120*m**2*t**2 - 30*m**2 + 13*p**2 - 280*t**6 - 600*t**4 - 360*t**2 - 40)/(480*(t**2 + 1)**2)",
+            "-p**2*(1020*m**2*t**8 + 4080*m**2*t**6 + 6120*m**2*t**4 + 4080*m**2*t**2 + 1020*m**2 + 223*p**2 - 7465*t**6 - 16725*t**4 - 11055*t**2 - 1795)/(12600*(t**2 + 1)**2)"
+          ],
+          [
+            "p**4/(80*(t**2 + 1)**2)",
+            "11*p**4/(2100*(t**2 + 1)**2)"
+          ]
+        ],
+        [
+          [
+            "13*p**2*t*(t**2 + 1)/120",
+            "1619*p**2*t*(t**2 + 1)/25200"
+          ],
+          [
+            "-13*p**2*t*(t**2 + 1)/120",
+            "-59*p**2*t*(t**2 + 1)/1575"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        [
+          [
+            "13*p**2*(t**2 + 1)**2/480",
+            "1619*p**2*(t**2 + 1)**2/100800"
+          ],
+          [
+            "-13*p**2*(t**2 + 1)**2/480",
+            "-59*p**2*(t**2 + 1)**2/6300"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ]
+      ],
+      "odd_endpoint_dimension_slope": [
+        "-31*p**2*(3*t**2 + 1)/420",
+        "p**2*(3*t**2 + 1)/14",
+        "0"
+      ],
+      "sphere_normalization": "Coefficient tables use normalized S^(d-1) averages. Restore the complete Fourier factor2*pi^(d/2)/[Gamma(d/2)*(2pi)^d] only in the radial Laurent calculation. Physicald3 corresponds to1/(2pi^2)."
+    },
+    "geometry": {
+      "active_representation": "Take k=(X,Y,Z,u), ell=-k+y e4. Z^2 is the squared radius in d-3 remaining transverse directions. Add d-4 passive scalar terms to every full matrix trace; TL/LT/LL are vector contractions in the active block. The negative passive factor atd3 removes the auxiliary fourth direction.",
+      "channels": "Use normalized tensor,vector,scalar channels. The scalar test tensor has V=W=(d-1)/d; its dimension dependence must be removed by invariant reconstruction before differentiating a fixed physical source.",
+      "magnetic_vertex": "Use the actual general-d field strength, not a three-dimensional dual vector. The creation-pair magnetic matrix is-(k.D.ell)I+ell k^t D+D ell k^t-(k.ell)D. It reduces exactly to Ck^t D Cell atd3 and retains its passive-dimension identity term.",
+      "normalized_moments": "The exact transverse moment of X^(2A)Y^(2B)Z^(2C) is(1-u^2)^(A+B+C)*(1/2)_A*(1/2)_B*((d-3)/2)_C/((d-1)/2)_(A+B+C). Odd X/Y moments vanish; odd grouped-radius powers are outside this representation and rejected. Remaining normalized sphere moments are< u^(2n)>=(1/2)_n/(d/2)_n."
+    },
+    "jets": {
+      "actual_reference": "Use the existing general-d clock-matching P2/P4 coefficients for the first two WKB corrections. They determine all UV degrees through4. Full normalized amplitudes, four inverse phases and all source time derivatives retain the massive constraint and magnetic vertex.",
+      "analytic_pair": "The symbolic coefficient computation first uses real d so the two phase branches are Schwarz partners, then analytically continues those coefficient expressions. At complex d the parameter is not conjugated; this is not the Hermitian adjoint of a noninteger-dimensional Hilbert space.",
+      "canonical_rates": "The continued Hamiltonian K=a^(2-d)[I+kk^t/(a^2m^2)] has transverse/longitudinal canonical dilution rates(d-2)H/2 and[(d-2)/2+z]H. In Wbar variables the transverse b includes(d-3)aH/2, and longitudinal adds a*z*H. These terms cannot be frozen atd3 before extracting a finite part.",
+      "finite_ring": "After each endpoint iteration only the degrees needed by subsequent endpoints are retained. This exact filtration optimization does not alter any coefficient through total grade4."
+    }
+  },
+  "checked_scalar_entries": 379,
+  "claim": "P8-S6.212.ACTUAL_DIMENSIONAL_SPATIAL_UV_FINITE_PART_WITH_EVANESCENT_MODE_AND_COUNTERTERM_VARIATIONS",
+  "continued_fixed_counterterm_original_MSbar_finite_part_and_norms": {
+    "matching": {
+      "MSbar_normalization": "The original normalized radial convention is reproduced by multiplying the raw spatial Fourier integral by[e^EulerGamma*mu^2/(4pi)]^epsilon with d=3-2epsilon. The angular factor and m^(-2epsilon) tail then give the finite multiplier1-log2-ell/2, ell=log(m^2/mu^2). The split radius is the fixed comovingm, not a*m.",
+      "coefficient_norm": {
+        "checks": {
+          "source_0_T_exact_log_polynomial_reconstruction": "0",
+          "source_0_V_exact_log_polynomial_reconstruction": "0",
+          "source_0_W_exact_log_polynomial_reconstruction": "0",
+          "source_1_T_exact_log_polynomial_reconstruction": "0",
+          "source_1_V_exact_log_polynomial_reconstruction": "0",
+          "source_1_W_exact_log_polynomial_reconstruction": "0",
+          "source_2_T_exact_log_polynomial_reconstruction": "0",
+          "source_2_V_exact_log_polynomial_reconstruction": "0",
+          "source_2_W_exact_log_polynomial_reconstruction": "0"
+        },
+        "rows": {
+          "source_0_T": "60204792703/4838400",
+          "source_0_V": "37916024569/1209600",
+          "source_0_W": "437/302400",
+          "source_1_T": "155/9072",
+          "source_1_V": "43055/2322432",
+          "source_1_W": "0",
+          "source_2_T": "65075/9289728",
+          "source_2_V": "147025/18579456",
+          "source_2_W": "0"
+        },
+        "sum": "2905633954513/66355200"
+      },
+      "continued_Hessians": "Derive the complete spatial differences of R_old,R_old_squared,Ricci_squared and Riemann_squared in d+1 dimensions with the original proper-clock measure. The full continued Euler variation is-a^(d-2)(d-3)[(d-2)H^2+2H_prime]p^2(T-2V)Gamma; only its physical value vanishes.",
+      "finite_UV_difference": "Let F2,F4 be the physical spatial coefficient operators, and f4_d the normalized-sphere complete logarithmic invariant coefficient before the Fourier factor. The finite UV difference after the original fixed pole subtraction is-m^2 F2 Gamma/2+(1-log2-ell/2)F4 Gamma-(partial_d f4_d at3)/(2pi^2)+[partial_d H_pole(d) at3]/(32pi^2). The full source-value log includes the evanescent j1 endpoint. The homogeneous contact remains in its anchor.",
+      "fixed_counterterm": "Keep the original pole scalar weights m^2 H_R-H_R2/4+29 H_Ric2/30-2 H_Riem2/15 while continuing invariant contractions and volume. Their dimension derivative is retained; no finite coefficient is selected anew.",
+      "norm_scope": "At the fixedell0,m1000 slab, the exact log-polynomial row bound uses|t|<=1/2,0<=log(1+t^2)<=1/4,0<log2<1,a>=1 and pi^2>9. It bounds only this local finite UV difference in the two-time/four-spatial Z24 norm. A full assembled matched response, inverse or background is not inferred here.",
+      "proper_time_contact": "The volume derivative contributes log(a) times the physical pole. The full finite first-time-derivative coefficient equals the proper-time derivative of the second-time coefficient. Dropping this volume logarithm would violate that Green identity."
+    }
+  },
+  "controls": {
+    "all_four_dimensional_WKB_orders_and_full_source_jets": true,
+    "complex_dimension_radial_finite_part_two_resolutions": true,
+    "continued_Euler_and_volume_Green_controls": true,
+    "evanescent_odd_endpoint_and_fixed_source_basis": true,
+    "exact_finite_coefficient_norm_and_origin": true,
+    "literal_integer_dimension_field_strength_and_sphere": true,
+    "literal_noncommuting_metric_second_variation": true,
+    "original_P8_not_closed": true,
+    "rejected_inputs": 134
+  },
+  "date": "2026-09-11",
+  "exact_residuals": {
+    "actual_general_dimension_magnetic_and_angular_geometry_all_general_dimension_channel_contractions": "0",
+    "actual_general_dimension_magnetic_and_angular_geometry_grouped_radius_second_moment": "0",
+    "actual_general_dimension_magnetic_and_angular_geometry_literal_general_magnetic_vertex_reduces_to_3D_dual": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        3
+      ]
+    },
+    "actual_general_dimension_magnetic_and_angular_geometry_normalized_longitudinal_square": "0",
+    "actual_general_dimension_magnetic_and_angular_geometry_normalized_sphere_identity": "0",
+    "actual_general_dimension_magnetic_and_angular_geometry_scalar_00_physical_3D": "0",
+    "actual_general_dimension_magnetic_and_angular_geometry_scalar_01_physical_3D": "0",
+    "actual_general_dimension_magnetic_and_angular_geometry_scalar_10_physical_3D": "0",
+    "actual_general_dimension_magnetic_and_angular_geometry_scalar_11_physical_3D": "0",
+    "actual_general_dimension_magnetic_and_angular_geometry_scalar_LL_physical_3D": "0",
+    "actual_general_dimension_magnetic_and_angular_geometry_scalar_LT_physical_3D": "0",
+    "actual_general_dimension_magnetic_and_angular_geometry_scalar_TL_physical_3D": "0",
+    "actual_general_dimension_magnetic_and_angular_geometry_tensor_00_physical_3D": "0",
+    "actual_general_dimension_magnetic_and_angular_geometry_tensor_01_physical_3D": "0",
+    "actual_general_dimension_magnetic_and_angular_geometry_tensor_10_physical_3D": "0",
+    "actual_general_dimension_magnetic_and_angular_geometry_tensor_11_physical_3D": "0",
+    "actual_general_dimension_magnetic_and_angular_geometry_tensor_LL_physical_3D": "0",
+    "actual_general_dimension_magnetic_and_angular_geometry_tensor_LT_physical_3D": "0",
+    "actual_general_dimension_magnetic_and_angular_geometry_tensor_TL_physical_3D": "0",
+    "actual_general_dimension_magnetic_and_angular_geometry_vector_00_physical_3D": "0",
+    "actual_general_dimension_magnetic_and_angular_geometry_vector_01_physical_3D": "0",
+    "actual_general_dimension_magnetic_and_angular_geometry_vector_10_physical_3D": "0",
+    "actual_general_dimension_magnetic_and_angular_geometry_vector_11_physical_3D": "0",
+    "actual_general_dimension_magnetic_and_angular_geometry_vector_LL_physical_3D": "0",
+    "actual_general_dimension_magnetic_and_angular_geometry_vector_LT_physical_3D": "0",
+    "actual_general_dimension_magnetic_and_angular_geometry_vector_TL_physical_3D": "0",
+    "complete_dimension_dependent_modes_and_source_jets_all_105_dimension_dependent_endpoint_rows": "0",
+    "complete_dimension_dependent_modes_and_source_jets_longitudinal_actual_general_dimension_first_WKB": "0",
+    "complete_dimension_dependent_modes_and_source_jets_longitudinal_fourth_order_cancellation": "0",
+    "complete_dimension_dependent_modes_and_source_jets_longitudinal_k_all_physical_frequency_and_momentum_jets": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        15,
+        1
+      ]
+    },
+    "complete_dimension_dependent_modes_and_source_jets_longitudinal_l_all_physical_frequency_and_momentum_jets": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        15,
+        1
+      ]
+    },
+    "complete_dimension_dependent_modes_and_source_jets_longitudinal_second_order_cancellation": "0",
+    "complete_dimension_dependent_modes_and_source_jets_transverse_actual_general_dimension_first_WKB": "0",
+    "complete_dimension_dependent_modes_and_source_jets_transverse_fourth_order_cancellation": "0",
+    "complete_dimension_dependent_modes_and_source_jets_transverse_k_all_physical_frequency_and_momentum_jets": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        15,
+        1
+      ]
+    },
+    "complete_dimension_dependent_modes_and_source_jets_transverse_l_all_physical_frequency_and_momentum_jets": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        15,
+        1
+      ]
+    },
+    "complete_dimension_dependent_modes_and_source_jets_transverse_second_order_cancellation": "0",
+    "continued_counterterm_and_original_MSbar_finite_UV_difference_continued_Euler_spatial_variation_not_dropped": "0",
+    "continued_counterterm_and_original_MSbar_finite_UV_difference_finite_time_Green_coefficient_including_volume_log": "0",
+    "continued_counterterm_and_original_MSbar_finite_UV_difference_full_fixed_pole_at_physical_dimension": "0",
+    "continued_counterterm_and_original_MSbar_finite_UV_difference_measure_dimension_log_derivative": "0",
+    "continued_counterterm_and_original_MSbar_finite_UV_difference_normalized_sphere_measure_physical": "0",
+    "continued_counterterm_and_original_MSbar_finite_UV_difference_original_MSbar_radial_normalization_0_0": "0",
+    "continued_counterterm_and_original_MSbar_finite_UV_difference_original_MSbar_radial_normalization_0_1": "0",
+    "continued_counterterm_and_original_MSbar_finite_UV_difference_original_MSbar_radial_normalization_0_2": "0",
+    "continued_counterterm_and_original_MSbar_finite_UV_difference_original_MSbar_radial_normalization_0_3": "0",
+    "continued_counterterm_and_original_MSbar_finite_UV_difference_original_MSbar_radial_normalization_1_0": "0",
+    "continued_counterterm_and_original_MSbar_finite_UV_difference_original_MSbar_radial_normalization_1_1": "0",
+    "continued_counterterm_and_original_MSbar_finite_UV_difference_original_MSbar_radial_normalization_1_2": "0",
+    "continued_counterterm_and_original_MSbar_finite_UV_difference_original_MSbar_radial_normalization_1_3": "0",
+    "continued_counterterm_and_original_MSbar_finite_UV_difference_original_MSbar_radial_normalization_2_0": "0",
+    "continued_counterterm_and_original_MSbar_finite_UV_difference_original_MSbar_radial_normalization_2_1": "0",
+    "continued_counterterm_and_original_MSbar_finite_UV_difference_original_MSbar_radial_normalization_2_2": "0",
+    "continued_counterterm_and_original_MSbar_finite_UV_difference_original_MSbar_radial_normalization_2_3": "0",
+    "continued_counterterm_and_original_MSbar_finite_UV_difference_source_0_T_exact_log_polynomial_reconstruction": "0",
+    "continued_counterterm_and_original_MSbar_finite_UV_difference_source_0_V_exact_log_polynomial_reconstruction": "0",
+    "continued_counterterm_and_original_MSbar_finite_UV_difference_source_0_W_exact_log_polynomial_reconstruction": "0",
+    "continued_counterterm_and_original_MSbar_finite_UV_difference_source_1_T_exact_log_polynomial_reconstruction": "0",
+    "continued_counterterm_and_original_MSbar_finite_UV_difference_source_1_V_exact_log_polynomial_reconstruction": "0",
+    "continued_counterterm_and_original_MSbar_finite_UV_difference_source_1_W_exact_log_polynomial_reconstruction": "0",
+    "continued_counterterm_and_original_MSbar_finite_UV_difference_source_2_T_exact_log_polynomial_reconstruction": "0",
+    "continued_counterterm_and_original_MSbar_finite_UV_difference_source_2_V_exact_log_polynomial_reconstruction": "0",
+    "continued_counterterm_and_original_MSbar_finite_UV_difference_source_2_W_exact_log_polynomial_reconstruction": "0",
+    "fixed_source_invariant_dimension_coefficients_all_105_full_physical_angular_coefficients": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        105,
+        1
+      ]
+    },
+    "fixed_source_invariant_dimension_coefficients_odd_endpoint_physical_spatial_difference_zero": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        1
+      ]
+    },
+    "fixed_source_invariant_dimension_coefficients_scalar_basis_dimension_derivative_contact": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        35,
+        1
+      ]
+    },
+    "fixed_source_invariant_dimension_coefficients_scalar_full_dimension_invariant_reconstruction": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        35,
+        1
+      ]
+    },
+    "fixed_source_invariant_dimension_coefficients_tensor_full_dimension_invariant_reconstruction": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        35,
+        1
+      ]
+    },
+    "fixed_source_invariant_dimension_coefficients_vector_full_dimension_invariant_reconstruction": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        35,
+        1
+      ]
+    },
+    "nine_primitive_rows_retained": "0",
+    "one_new_scoped_row_added": "0",
+    "primitive_rows_unchanged": "0",
+    "prior_matching_rows_retained": "0"
+  },
+  "formulation": "FORMULATION.md",
+  "named_exact_check_count": 73,
+  "not_established": [
+    "Full subtracted spatial reference dimension-limit interchange and assembly with the fixed homogeneous current and actual known remainders",
+    "Permission to reset the state/reference, change the original regulator or finite coefficients, remove evanescent endpoints/Euler/volume terms, or count the local target twice",
+    "A full matched spatial/scalar/metric response or reduced inverse, controlled finite-coupling background/stability or physical cutoff",
+    "Remaining parent loops/scattering/IR/Regge or original V/G/B and P8 closure"
+  ],
+  "observable_and_scope": {
+    "boundary": "The complete dimension-limit interchange and assembly with the anchored homogeneous current and known remainders remain. No full response, reduced mixed inverse, finite-coupling background or original P8 closure follows from this local coefficient.",
+    "counterterms": "The full metric second variation of the original fixed scalar pole weights continues R_old,R_squared,Ricci_squared,Riemann_squared and volume. The evanescent Euler and log(a) terms remain.",
+    "dimensional_modes": "The actual general-d constrained WKB modes and full field-strength vertex yield all spatial UV coefficient derivatives. All105 physical angular coefficients are reproduced without freezing polarization multiplicity or canonical rates.",
+    "evanescent_data": "An odd endpoint vanishes atd3 but contributes through its dimension derivative. Invariant reconstruction fixes the physical source before differentiation, retaining the scalar-basis correction.",
+    "finite_UV_difference": "The explicit local finite spatial UV difference uses the unchanged MSbar convention, lower comoving band and scale. Its proper-time first derivative coefficient satisfies the full Green identity. The Z24 coefficient bound is1e5, canonically4e-795."
+  },
+  "primitive_and_matching_frontier": {
+    "matching": [
+      {
+        "id": "fixed_sigma_isolated_MS_conversion",
+        "status": "CANCELLED_NONLOCAL_ORDER_TWO_WITH_SAME_REGULATED_REFERENCE"
+      },
+      {
+        "id": "remaining_scale_parameter_field_map_and_cross_terms",
+        "status": "OPEN"
+      },
+      {
+        "id": "remaining_counterterm_and_vacuum_source_assembly",
+        "status": "ASSEMBLED_FOR_FIXED_ORDER_PHI_POLE_B2_VACUUM_AND_H_SOURCE"
+      },
+      {
+        "id": "full_matched_two_loop_pole_and_amplitude_error",
+        "status": "FIXED_ORDER_PHI_POLE_AND_B2_BOUNDED_PHYSICAL_TRUNCATION_OPEN"
+      },
+      {
+        "id": "finite_EFT_higher_order_truncation",
+        "status": "OPEN"
+      },
+      {
+        "id": "V_contour_and_cut_control",
+        "status": "OPEN"
+      },
+      {
+        "id": "finite_gravity_G",
+        "status": "OPEN"
+      },
+      {
+        "id": "common_parent_B",
+        "status": "OPEN"
+      },
+      {
+        "id": "complete_wineglass_interaction_forest_MS",
+        "status": "BOUNDED_WITH_REGULATED_FINITE_LOCAL_ANCHOR_AND_FULL_SCALE_TERM"
+      },
+      {
+        "id": "complete_double_bubble_interaction_forest_MS",
+        "status": "BOUNDED_WITH_ACTUAL_NESTED_MS_FORESTS_AND_BOTH_SCALE_TERMS"
+      },
+      {
+        "id": "complete_scalar_OS_insertion_interaction_forest_MS",
+        "status": "BOUNDED_WITH_FULL_REGULATED_SLOPE_TIMES_OUTER_REFERENCE"
+      },
+      {
+        "id": "complete_scalar_quadratic_finite_MS_slope_and_converted_OS_bound",
+        "status": "BOUNDED_WITH_FIXED_INNER_OS_AND_INTERACTION_MS_COORDINATES"
+      },
+      {
+        "id": "first_finite_Phi_field_covariance_and_MS_projection_commutator",
+        "status": "EXACT_REGULATED_FIELD_DIRECTION_AND_BOUNDED_FIRST_SLOPE_CROSS_TERMS"
+      },
+      {
+        "id": "complete_GY14_second_Phi_normalization_and_canonical_unit_disc_pole",
+        "status": "BOUNDED_WITH_DIRECT_MS_OWNERSHIP_AND_FULL_FINITE_FIELD_REEXPANSION"
+      },
+      {
+        "id": "complete_two_loop_vacuum_reference_and_first_source_square",
+        "status": "BOUNDED_WITH_FULL_REGULATED_SOURCE_REDUCIBLE_CANCELLATION"
+      },
+      {
+        "id": "complete_two_loop_derivative_map_with_matched_physical_source",
+        "status": "TRANSPORTED_FOR_FULL_ACTION_AND_PHYSICAL_SOURCE_NOT_ORDINARY_PSI_MS_OR_TRUNCATION"
+      },
+      {
+        "id": "complete_matched_two_loop_low_energy_Phi_elastic_cut",
+        "status": "BOUNDED_ON_PHYSICAL_WINDOW_4_TO_6_WITH_FULL_FIRST_AMPLITUDE_NOT_PHYSICAL_REMAINDER_OR_GLOBAL_DISPERSION"
+      },
+      {
+        "id": "full_finite_kappa_analytic_target_classical_vacuum_match",
+        "status": "BOUNDED_ON_SAME_RESTRICTED_FLAT_SCHWARTZ_CLASS_NOT_QUANTUM_TARGET_OR_ROLLING_COMMON_PARENT_MATCH"
+      },
+      {
+        "id": "GY14_SAT8_pointwise_fermion_mass_protection_and_named_low_order_invariance",
+        "status": "NEW_ANALYTIC_EFT_BRANCH_WITH_GLOBAL_REAL_MASS_FLOOR_AND_SAME_NAMED_TWO_LOOP_DATA_NOT_ROLLING_STATE_OR_COMMON_PARENT_CLOSURE"
+      },
+      {
+        "id": "polynomial_clock_transparent_physical_source_map_and_full_target_classical_bound",
+        "status": "KINEMATIC_CLOCK_ARGUMENT_ALIGNED_WITH_PROTECTED_MASSES_AND_SAME_NAMED_VACUUM_DATA_NOT_BACKGROUND_SOLUTION_QUANTUM_STATE_OR_COMMON_PARENT_CLOSURE"
+      },
+      {
+        "id": "free_flat_clock_Dirac_out_energy_with_complete_transition_series_remainder",
+        "status": "BOUNDED_FOR_SPECIFIED_QUADRATIC_MODEWISE_IN_OUT_STATE_NOT_INTERACTING_OR_CURVED_BOUNCE_STRESS"
+      },
+      {
+        "id": "Hadamard_regular_free_flat_SAT8_in_out_state_and_uniform_one_particle_norm_limit",
+        "status": "HADAMARD_FOR_SPECIFIED_FREE_EXTERNAL_MASS_OPERATOR_USING_IDENTIFIED_EXTERNAL_THEOREM_NOT_INTERACTING_CURVED_STATE_OR_NUMERICAL_STRESS"
+      },
+      {
+        "id": "exact_four_frame_free_transition_and_uniform_same_operator_in_out_T00_difference",
+        "status": "BOUNDED_FOR_FREE_FLAT_HADAMARD_STATE_DIFFERENCE_NOT_ABSOLUTE_STRESS_INTERACTING_CURVED_STATE_OR_BACKREACTION"
+      },
+      {
+        "id": "free_flat_absolute_one_loop_local_energy_with_fixed_saturated_mass_reference",
+        "status": "BOUNDED_IN_EXPLICIT_MS_AND_SATURATED_MASS_REFERENCE_QUADRATIC_SCHEME_NOT_FULL_CURVED_INTERACTING_PARENT_STRESS"
+      },
+      {
+        "id": "complete_free_flat_homogeneous_one_loop_stress_with_dimensional_curvature_improvement",
+        "status": "BOUNDED_SPECIFIED_QUADRATIC_MS_MR_FLAT_TENSOR_NOT_FULL_INTERACTING_CURVED_PARENT_STRESS"
+      },
+      {
+        "id": "actual_CD_free_Dirac_Hadamard_in_out_state_and_uniform_state_stress_difference",
+        "status": "CURVED_FREE_HADAMARD_STATE_AND_STATE_DIFFERENCE_BOUNDED_NOT_ABSOLUTE_PARENT_STRESS"
+      },
+      {
+        "id": "complete_free_curved_one_loop_stress_with_explicit_EC_Newton_reference",
+        "status": "BOUNDED_SPECIFIED_QUADRATIC_CURVED_TENSOR_NOT_FULL_INTERACTING_PARENT_OR_BACKGROUND_RESPONSE"
+      },
+      {
+        "id": "minimal_Einstein_canonical_clock_free_sector_null_equation_mismatch",
+        "status": "EXCLUDED_NAMED_MINIMAL_DIAGNOSTIC_WITH_SMALL_EXTRA_NULL_BUDGET_NOT_FULL_INTERACTING_PARENT_OR_DHOST_ROW"
+      },
+      {
+        "id": "actual_CD_leading_clock_Euler_source_decomposition_and_matching_domain_gap",
+        "status": "LEADING_TARGET_SOURCES_AND_CONSTRAINT_DOMAIN_REQUIREMENTS_IDENTIFIED_NOT_PROPAGATING_PARENT_OR_QUANTUM_BOUNCE"
+      },
+      {
+        "id": "analytic_CD_REG_AFFINE_ISO_classical_parent_clock_vacuum_and_local_constraints",
+        "status": "NEW_REGULAR_CLASSICAL_PARENT_AND_LOCAL_CONSTRAINT_BLOCKS_NOT_QUANTUM_MATCHING_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "same_classical_affine_parent_closed_source_lift_and_scoped_vector_Schur_control",
+        "status": "EXACT_CLASSICAL_AND_COMMON_REGULATOR_IDENTITIES_FULL_EUCLIDEAN_AND_LEADING_LORENTZ_BOUNDS_NOT_FULL_QUANTUM_MATCHING"
+      },
+      {
+        "id": "regular_affine_parent_conditional_Gaussian_Hadamard_family_and_ordinary_Proca_stress",
+        "status": "SOURCE_AWARE_CONDITIONAL_VECTOR_STATE_AND_FIXED_CLOCK_STRESS_NOT_FULL_PARENT_QUANTUM_SOLUTION"
+      },
+      {
+        "id": "full_fixed_canonical_affine_family_actual_classical_gravitational_decoupling",
+        "status": "ANCHORED_FULL_FUNCTION_CLASSICAL_LIMIT_AND_TREE_AMPLITUDE_NOT_QUANTUM_CONTOUR_TRUNCATION_OR_V_CLOSURE"
+      },
+      {
+        "id": "complete_affine_vector_retarded_mean_energy_and_causal_cubic_light_force",
+        "status": "FIXED_CD_FULL_SOURCE_FINITE_TIME_CONDITIONAL_GAUSSIAN_MEAN_AND_LIGHT_FORCE_NOT_METRIC_NOISE_FULL_PARENT_OR_B_CLOSURE"
+      },
+      {
+        "id": "same_affine_conditional_prepared_homogeneous_metric_response_with_uncancelled_chart_contacts",
+        "status": "COMPLETE_CONDITIONAL_VECTOR_HOMOGENEOUS_C10_TO_C0_BOUND_NOT_SPATIAL_NOISE_COUPLED_BACKGROUND_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "same_affine_parent_prepared_homogeneous_retained_tree_plus_conditional_vector_causal_inverse",
+        "status": "UNIQUE_RETAINED_LINEAR_PREPARED_CAUSAL_INVERSE_WITH_NUMERIC_LOCAL_LAPSE_RECOVERY_NOT_FULL_INVERSE_SMALLNESS_QUANTUM_BACKGROUND_OR_V_G_B"
+      },
+      {
+        "id": "same_massive_scalar_range_kernel_explicit_full_half_line_L1_majorant",
+        "status": "MASS_INDEPENDENT_EXPLICIT_SCALAR_KERNEL_NORM_NOT_FULL_INVERSE_SMALLNESS_BACKGROUND_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "new_CD_REG_AFFINE_ISO_QG1_fixed_coefficient_stationary_Gaussian_mean_and_actual_response",
+        "status": "NEW_PARENT_RETAINED_MEAN_STATIONARITY_AND_BOUNDED_COEFFICIENT_CORRECTION_NOT_FULL_QUANTUM_BACKGROUND_STABILITY_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "actual_classical_Hamiltonian_C0_and_C10_inverse_and_first_formal_Gaussian_response",
+        "status": "QUANTIFIED_PREPARED_CLASSICAL_PROPAGATOR_AND_FIRST_FORMAL_COEFFICIENT_NOT_FINITE_COUPLING_ERROR_STABILITY_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "complete_finite_time_canonical_vacuum_source_mean_and_scalar_force_noise_with_fixed_profile",
+        "status": "FULL_CONDITIONAL_GAUSSIAN_VACUUM_SOURCE_CAUSAL_AND_NOISE_BOUNDS_NOT_INTERACTING_AMPLITUDE_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "actual_all_order_CD_state_complete_clock_source_smeared_force_noise_and_canonical_normalization",
+        "status": "SAME_STATE_FULL_SOURCE_SMEARED_SCALAR_NOISE_BOUND_NOT_METRIC_NOISE_SOLUTION_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "actual_all_order_CD_full_local_smeared_metric_stress_covariance",
+        "status": "FULL_SPACETIME_TENSOR_STRESS_NOISE_BOUND_NOT_METRIC_SOLUTION_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "actual_CD_boundary_compatible_tree_tensor_noise_response",
+        "status": "RESTRICTED_DETECTOR_TREE_PROPAGATED_NOISE_NOT_FULL_QUANTUM_TENSOR_STATE_OR_V_G_B"
+      },
+      {
+        "id": "actual_CD_homogeneous_shear_Hamiltonian_contact_and_modewise_remainder",
+        "status": "ACTUAL_SHEAR_MODEWISE_FINITE_AMPLITUDE_REMAINDER_NOT_CONTINUUM_SELF_ENERGY_OR_V_G_B"
+      },
+      {
+        "id": "actual_fixed_local_covariant_full_spatial_tensor_Hessian",
+        "status": "ACTUAL_FIXED_FINITE_LOCAL_TENSOR_HESSIAN_BOUND_NOT_COMPLETE_DETERMINANT_RESPONSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_CD_full_matrix_adiabatic_uniform_covariance_tail",
+        "status": "ACTUAL_UNCHANGED_STATE_UNIFORM_HIGH_BAND_COVARIANCE_REMAINDER_NOT_RESPONSE_SUBTRACTION_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_matrix_covariance_tail_C2_response_and_Taylor_remainder",
+        "status": "ACTUAL_UNCHANGED_STATE_C2_HIGH_BAND_COVARIANCE_TAIL_NOT_COMPLETE_COVARIANT_RESPONSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_physical_shear_current_C2_fourth_order_comparison",
+        "status": "ACTUAL_STATE_C2_CURRENT_MODE_COMPARISON_NOT_FIXED_COVARIANT_MATCHING_OR_V_G_B"
+      },
+      {
+        "id": "actual_homogeneous_shear_full_fixed_covariant_mode_subtraction_matching",
+        "status": "ACTUAL_HOMOGENEOUS_SHEAR_FIXED_COVARIANT_MODE_SUBTRACTION_MATCHING_NOT_FULL_FEEDBACK_OR_V_G_B"
+      },
+      {
+        "id": "actual_complete_fixed_covariant_homogeneous_current_C2_and_canonical_response",
+        "status": "ACTUAL_COMPLETE_FIXED_COVARIANT_HOMOGENEOUS_CURRENT_C2_AND_CANONICAL_RESPONSE_NOT_FULL_FEEDBACK_OR_V_G_B"
+      },
+      {
+        "id": "actual_spatial_two_momentum_metric_vertices_and_finite_band_Gaussian_response",
+        "status": "ACTUAL_SPATIAL_TWO_MOMENTUM_CURRENT_FINITE_BAND_NOT_RENORMALIZED_CONTINUUM_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_full_spatial_separated_support_weak_Gaussian_response_and_quantitative_tail",
+        "status": "ACTUAL_CONTINUUM_SEPARATED_SUPPORT_WEAK_RESPONSE_NOT_COINCIDENT_EXTENSION_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_overlapping_time_spatial_retarded_state_remainder_with_complete_contact",
+        "status": "ACTUAL_RETARDED_MEMORY_CONTACT_COMPARISON_NOT_REFERENCE_DIAGONAL_MATCHING_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_reference_six_step_retarded_boundary_extraction_and_full_finite_bulk",
+        "status": "ACTUAL_REFERENCE_FINITE_BULK_AND_EXPLICIT_ENDPOINTS_NOT_COVARIANT_SPATIAL_MATCHING_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_canonical_flat_Proca_full_tensor_cut_and_subtracted_dispersion_benchmark",
+        "status": "CANONICAL_FLAT_FULL_TENSOR_CUT_BENCHMARK_NOT_CURVED_MATCHING_FULL_PARENT_AMPLITUDE_OR_V_G_B"
+      },
+      {
+        "id": "full_spatial_flat_Proca_covariant_and_time_subtraction_conversion_with_nonlocal_coefficient_bounds",
+        "status": "FULL_SPATIAL_FLAT_NONLOCAL_SUBTRACTION_CONVERSION_NOT_CURVED_MATCHING_LOCAL_POLYNOMIAL_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_curved_reference_initial_state_prefactor_full_memory_contact_and_regulator_tail",
+        "status": "ACTUAL_CURVED_INITIAL_PREFACTOR_REMOVED_WITH_FINITE_FULL_RESPONSE_CORRECTION_NOT_SPATIAL_MATCHING_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_curved_reference_joint_spatial_analyticity_full_readouts_and_far_endpoint_Taylor_tail",
+        "status": "ACTUAL_UNIT_W8_JOINT_SPATIAL_ANALYTICITY_AND_FAR_ENDPOINT_TAYLOR_TAIL_NOT_NEAR_REGION_LOCAL_MATCHING_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_curved_reference_all_momentum_spatial_Taylor_subtracted_endpoint_remainder",
+        "status": "ACTUAL_UNIT_W8_ALL_MOMENTUM_ENDPOINT_REMAINDER_WITH_ORIGINAL_TAIL_NOT_LOCAL_MATCHING_FULL_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "fixed_covariant_local_full_tracefree_spatial_Hessian_proper_time_and_norm",
+        "status": "FIXED_LOCAL_FULL_TRACEFREE_SPATIAL_HESSIAN_NOT_QUANTUM_MATCHING_MIXED_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "finite_endpoint_spatial_Taylor_cells_restored_with_original_regulator_tail",
+        "status": "TEN_FINITE_ENDPOINT_TAYLOR_CELLS_RESTORED_NOT_REMAINING_UV_CONTACT_MATCHING_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_leading_full_Proca_sharp_two_leg_regulator_conversion_coefficient",
+        "status": "ACTUAL_LEADING_SHARP_BAND_ARTIFACT_NOT_FULL_REGULATOR_COVARIANT_MATCHING_OR_V_G_B"
+      },
+      {
+        "id": "complete_four_sector_spatial_UV_symbol_with_independent_detector_time",
+        "status": "COMPLETE_SPATIAL_UV_SYMBOL_EXTRACTION_NOT_FULL_CONTACT_COVARIANT_MATCHING_OR_V_G_B"
+      },
+      {
+        "id": "uniform_actual_UV_subtracted_endpoint_remainder_with_original_regulator_tail",
+        "status": "UNIFORM_UV_SUBTRACTED_ENDPOINT_REMAINDER_NOT_FULL_CONTACT_COVARIANT_MATCHING_OR_V_G_B"
+      },
+      {
+        "id": "complete_original_UV_shape_conversion_centered_cancellations_and_uniform_tail",
+        "status": "ACTUAL_K2_AND_FINITE_CONVERSION_CANCEL_WITH_UNIFORM_TAIL_NOT_CURVED_A1_EVALUATION_FULL_CONTACT_MATCHING_OR_V_G_B"
+      },
+      {
+        "id": "explicit_actual_curved_linear_regulator_conversion_all_tensor_channels_and_source_jets",
+        "status": "ACTUAL_CURVED_A1_EVALUATED_WITH_COEFFICIENT_NORMS_NOT_FULL_ONE_BALL_CONTACT_COVARIANT_MATCHING_OR_V_G_B"
+      },
+      {
+        "id": "explicit_actual_curved_linear_regulator_conversion_all_tensor_channels_and_source_jets",
+        "status": "ACTUAL_CURVED_A1_EVALUATED_WITH_COEFFICIENT_NORMS_NOT_FULL_ONE_BALL_CONTACT_COVARIANT_MATCHING_OR_V_G_B"
+      },
+      {
+        "id": "explicit_actual_curved_linear_regulator_conversion_all_tensor_channels_and_source_jets",
+        "status": "ACTUAL_CURVED_A1_EVALUATED_WITH_COEFFICIENT_NORMS_NOT_FULL_ONE_BALL_CONTACT_COVARIANT_MATCHING_OR_V_G_B"
+      }
+    ],
+    "primitive": [
+      {
+        "id": "scalar_Phi0_W0_F0",
+        "status": "BOUNDED_PAIRED_VACUUM_PRIMITIVE_WITH_ASSIGNED_LOCAL_FOREST"
+      },
+      {
+        "id": "scalar_Phi2_W0_F2",
+        "status": "BOUNDED_NONLOCAL_AND_FINITE_MS_MASS_AND_SLOPE_REFERENCES"
+      },
+      {
+        "id": "scalar_Phi2_W1_F0",
+        "status": "BOUNDED_PAIRED_NONLOCAL_AND_FINITE_MS_LOCAL_REFERENCES"
+      },
+      {
+        "id": "scalar_Phi4_W0_F4",
+        "status": "BOUNDED_PAIRED_PRIMITIVE_ROW"
+      },
+      {
+        "id": "scalar_Phi4_W1_F2",
+        "status": "BOUNDED_PAIRED_IN_COMMON_MS_INTERACTION_SCHEME"
+      },
+      {
+        "id": "scalar_Phi4_W2_F0",
+        "status": "BOUNDED_PAIRED_IN_COMMON_MS_INTERACTION_SCHEME"
+      },
+      {
+        "id": "gauge_Phi0",
+        "status": "BOUNDED_PAIRED_VACUUM_PRIMITIVE_WITH_ASSIGNED_LOCAL_FOREST"
+      },
+      {
+        "id": "gauge_Phi2",
+        "status": "BOUNDED_NONLOCAL_AND_FINITE_MS_MASS_AND_SLOPE_REFERENCES"
+      },
+      {
+        "id": "gauge_Phi4",
+        "status": "BOUNDED_PAIRED_PRIMITIVE_ROW"
+      }
+    ]
+  },
+  "prior_sha256": {
+    "S6_176_actual_CD_Gaussian_sector_transitively_rebuilt": "1175702d6980db090396863b807af0e767241daeb7d8dabf138ed11c67e1ae75",
+    "S6_211_fully_rebuilt": "94514af725bfc242cf045064e48742c22e5282eb966daa110483c46928ad3f65",
+    "all_frozen_scientific_bytes_unchanged": true,
+    "fixed_stress_prescription_and_full_source_retained": true
+  },
+  "proof_checks": {
+    "Euler_and_volume_evanescent_terms_retained": true,
+    "actual_full_general_dimension_magnetic_vertex": true,
+    "actual_general_dimension_magnetic_and_angular_geometry_all_21_physical_channel_contractions_reproduced": true,
+    "actual_general_dimension_magnetic_and_angular_geometry_analytic_general_dimension_not_integer_fit": true,
+    "actual_general_dimension_magnetic_and_angular_geometry_full_3D_magnetic_duality_identity_replayed": true,
+    "actual_general_dimension_magnetic_and_angular_geometry_no_three_dimensional_polarization_count_shortcut": true,
+    "actual_general_dimension_magnetic_and_angular_geometry_passive_trace_terms_not_dropped": true,
+    "actual_nonzero_evanescent_odd_endpoint_retained": true,
+    "all_105_physical_angular_coefficients_reproduced": true,
+    "all_four_WKB_orders_in_independent_dimensional_tests": true,
+    "all_source_jets_and_independent_detector_time": true,
+    "complete_dimension_dependent_modes_and_source_jets_actual_dimension_dependent_rates_and_WKB_coefficients": true,
+    "complete_dimension_dependent_modes_and_source_jets_all_five_endpoint_labels_and_source_jets": true,
+    "complete_dimension_dependent_modes_and_source_jets_no_complex_dimension_conjugation": true,
+    "complete_dimension_dependent_modes_and_source_jets_physical_dimension_frequency_and_momentum_limits_checked": true,
+    "complete_dimension_dependent_modes_and_source_jets_source_detector_times_not_coalesced_before_derivatives": true,
+    "continued_counterterm_and_original_MSbar_finite_UV_difference_continued_Euler_and_volume_evanescent_terms_retained": true,
+    "continued_counterterm_and_original_MSbar_finite_UV_difference_exact_lower_comoving_band_term_retained": true,
+    "continued_counterterm_and_original_MSbar_finite_UV_difference_finite_local_UV_difference_bound": true,
+    "continued_counterterm_and_original_MSbar_finite_UV_difference_finite_proper_time_Green_identity": true,
+    "continued_counterterm_and_original_MSbar_finite_UV_difference_fixed_four_dimensional_scalar_pole_weights": true,
+    "continued_counterterm_and_original_MSbar_finite_UV_difference_full_regulator_limit_and_current_assembly_not_claimed": true,
+    "continued_counterterm_and_original_MSbar_finite_UV_difference_original_MSbar_radial_normalization_replayed": true,
+    "continued_counterterm_and_original_MSbar_finite_UV_difference_original_V_G_B_not_closed": true,
+    "continued_curvature_Hessians_varied_before_limit": true,
+    "explicit_finite_coefficient_bound_not_full_response_inverse": true,
+    "finite_time_Green_identity_not_missing_first_derivative": true,
+    "fixed_comoving_lower_band_term_retained": true,
+    "fixed_source_invariant_dimension_coefficients_all_105_coefficients_with_actual_dimensional_modes": true,
+    "fixed_source_invariant_dimension_coefficients_contact_difference_zero_before_integration_unchanged": true,
+    "fixed_source_invariant_dimension_coefficients_fixed_source_not_dimension_varying_scalar_probe": true,
+    "fixed_source_invariant_dimension_coefficients_full_log_source_value_includes_all_endpoint_labels": true,
+    "fixed_source_invariant_dimension_coefficients_nonzero_evanescent_odd_endpoint": true,
+    "fixed_source_invariants_before_dimension_derivative": true,
+    "full_dimensional_limit_and_response_assembly_still_required": true,
+    "no_finite_local_target_added_twice": true,
+    "original_MSbar_normalization_and_scale": true,
+    "original_V_G_B_not_closed": true,
+    "original_one_leg_contact_cancelled_only_in_difference": true,
+    "same_actual_CD_parent_mass_and_prepared_state": true,
+    "same_unit_W8_comparison_and_fixed_prescription": true
+  },
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "f905469ec905aaa5b2f990a77c4320c92cc2a94ed6e6a74ffdad8c0c435582cb",
+    "README.md": "da92585c6fa91923bf6ee145d75b3814aca3552b3abf6fc0747f49795d56d52e",
+    "notes/curvature.md": "34294cea4364b7c9d88e0b5f4ac6ca89ee0d5402926beddffd8e7ebdab3a0b68",
+    "notes/dimension.md": "02ec526c4a34a5221237577e5cb44770d5d12665324e63706bfc795c5d627705",
+    "notes/finite.md": "fa7f99064de8f0ac95a85c00fb1a6aa41958c14cb38b40f5bf239f14c65ee3f2",
+    "notes/geometry.md": "1673c43dbe1feb381cb08a272cdde48fcac13708c961d088a5689381eae93499",
+    "notes/modes.md": "3060d0e3e84288a27c3e3348a7a7ca9d03424982cc2e93b208e1052ece9ba80f",
+    "notes/scope.md": "3200624cf31b2902153b3006f57b25af4eb6f8bba68b166c2afec992d3e21d3b",
+    "notes/validation.md": "417c3742f850886c425ce8123174cb07777003c624f58754147a8b9b030b0c52",
+    "src/p8_vacuum_affine_dimensional_spatial_symbol/__init__.py": "f535dcca810f1bb06ba111b9791a3e818775bb0e62fc525de6162e7173893ec6",
+    "src/p8_vacuum_affine_dimensional_spatial_symbol/audit.py": "26f5defb36e863e9335a572633de5df4bd8231e90c59944c601bfa41821ea236",
+    "src/p8_vacuum_affine_dimensional_spatial_symbol/density.py": "2f41e6530bed32284820d270ff37d2c872cecac40514cea5f7f10dc88626c45d",
+    "src/p8_vacuum_affine_dimensional_spatial_symbol/geometry.py": "bdc25baf04ab07f8b0700301560b2baeee2ca003f4b31e38b684a5b62c971c78",
+    "src/p8_vacuum_affine_dimensional_spatial_symbol/jets.py": "288a02c782a77aadca79ff912e45703b426a8b06364545a3b341679bdfcf33f3",
+    "src/p8_vacuum_affine_dimensional_spatial_symbol/matching.py": "41189b210827d464cff189f62d2b358d3b6b6e765e0272a49ab31dfac99dca0e",
+    "src/p8_vacuum_affine_dimensional_spatial_symbol/verify.py": "7dc0002221cdb080dce85329a8d2390ff6295f8614ac0fa590bad18f17f8d9ec",
+    "tests/test_affine_dimensional_spatial_symbol_certificate.py": "61c98806a609d8c1fd14ac555dacf4704b4e20d7ddaeb862365bb9caf5996c6e",
+    "tests/test_affine_dimensional_spatial_symbol_science.py": "25ca8be980a8311426516439a12ce33ea6d3810d3a43ca042f3eb91f659f45a7"
+  },
+  "status": "ACTUAL_DIMENSIONAL_SPATIAL_UV_FINITE_PART_WITH_EVANESCENT_MODE_AND_COUNTERTERM_VARIATIONS; NOT_FULL_DIMENSION_LIMIT_ASSEMBLED_RESPONSE_INVERSE_BACKGROUND_CUTOFF_V_G_B_OR_ORIGINAL_P8",
+  "verdict": "The actual dimension-dependent spatial ultraviolet finite difference is evaluated in the original MSbar prescription. The full field-strength vertex and active/passive sphere contractions retain the actual dimensional mode multiplicity. Actual continued canonical rates and all WKB/source jets reproduce all105 physical angular coefficients. Invariant reconstruction fixes the physical source before taking dimension derivatives; the evanescent odd endpoint is nonzero and retained. Full continued R_old,R_squared,Ricci_squared,Riemann_squared and volume Hessians are varied at the original fixed four-dimensional scalar pole weights, retaining the Euler and log(a) contributions. The exact finite expression keeps the original comoving lower-band polynomial and scale. Its first-time coefficient is the proper-time derivative of the second one, and an explicit rational log-polynomial norm is below1e5 Z24, canonically4e-795. Independent literal field-strength/sphere and noncommuting full metric second variations in dimensions3,4,5,6, all-four-order WKB Cauchy coefficients, complex-dimension radial finite-part extraction at two resolutions and omission controls check the result. No full assembled-current dimension limit, reduced mixed inverse, finite-coupling background/stability, remaining parent loops/cutoff, finite-gravity IR/Regge or original V/G/B and P8 closure is supplied.",
+  "verification_boundary": "Exact genuine general-dimensional field-strength geometry, actual dimensional canonical rates and UV jets, all physical coefficient limits and fixed-source invariant derivatives, continued fixed pole Hessians and original MSbar radial normalization, finite proper-time Green identity and explicit coefficient norm. Independent integer-dimensional matrix/sphere checks, literal mixed metric curvature variations, full four-order WKB coefficient tests, complex-epsilon finite parts and two resolutions supplement the written analytic derivation. Native, direct science, ordinary and CLI retain original SymPy; only full regression uses the audited exact GCD adapter. Continuous Fourier, local-variation and dimensional arguments are not FORMALIZED; full current assembly remains outside this checkpoint.",
+  "written_proofs": [
+    "notes/geometry.md",
+    "notes/modes.md",
+    "notes/dimension.md",
+    "notes/curvature.md",
+    "notes/finite.md",
+    "notes/scope.md",
+    "notes/validation.md"
+  ]
+}
