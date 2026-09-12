@@ -438,9 +438,11 @@ around a pre-registered problems document and a certificate-gated ledger.
   This is still linear light evolution and its leading heavy response,
   not a full nonlinear solution or UV-admissible completion.
 
-The [current P8 continuation audit](docs/assessment-2026-09-12-p8-affine-corrected-spatial-current.md)
-establishes the corrected complete tracefree current, original-regulator limit
-and known prepared Ward input. The [phase erratum](docs/assessment-2026-09-12-p8-retarded-phase-erratum.md)
+The [current P8 continuation audit](docs/assessment-2026-09-12-p8-affine-homogeneous-trace-anchor.md)
+establishes the full homogeneous trace anchor, original volume matching and
+both ordered zero-transfer cross zeros. The [corrected tracefree current](docs/assessment-2026-09-12-p8-affine-corrected-spatial-current.md)
+supplies the complete tracefree response, original-regulator limit and known
+prepared Ward input. The [phase erratum](docs/assessment-2026-09-12-p8-retarded-phase-erratum.md)
 still withdraws the old S6.212/S6.213 physical formulas; their frozen evidence
 is preserved and this successor corrects the complete endpoint/bulk branch.
 The [corrected local scalar UV audit](docs/assessment-2026-09-12-p8-affine-ordered-scalar-symbol.md)
