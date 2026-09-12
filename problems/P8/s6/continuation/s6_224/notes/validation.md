@@ -1,0 +1,13 @@
+# Independent checks and immutable validation boundary
+
+The initial matrix probe checked the complete spatial-projector contraction, both coordinate inverse products, full quotient inverse products and exact convolution constants in0.08 seconds. A separate full four-metric probe checked opposite source/detector gauge legs, literal linearized Riemann/Weyl/scalar-curvature Hessians and a wrong-sign control in0.06 seconds. The source-pinned geometry module passed16 named checks and7 gates in1.52 seconds; the resolvent and bound modules passed16+8 checks and7+5 gates in0.23 seconds.
+
+Three independent rational rotations test the full four-dimensional tensors, including mixed time/spatial metric entries. Six independent full-metric gauge/matrix solves cover very small and large transfer with nonzero forces. Four separate forced-wave solutions check the actual time-domain B inverse and double-primitive cancellation, includingq0. Other tests check exact continuous coordinate/metric bounds, both complete shifted physical reciprocal densities, matrix inverse normalization and physical kappa units.
+
+The first private suite had two failures because Python division introduced floating coefficients in otherwise exact integer-parameter fixtures. The test parameters were converted explicitly to exact rationals before rerunning; no production formula changed. The corrected independent suite passed19 tests in4.37 seconds. The expanded integrated suite passed270 tests in4.90 seconds.
+
+There are six package files, two science/certificate test files, two root markdown files and seven proof notes:17 immutable inputs. The native report has20 fields,44 named identities,105 scalar entries,25 gates,nine controls and180 rejected inputs. All report fields, source hashes, missing/extra fields and false completion claims are checked. Private research probes are outside the frozen manifest; fresh outcomes belong in the external audit.
+
+Native, direct science, ordinary and CLI retain original SymPy. Only full P8 regression uses the audited exact-GCD adapter and the explicit S219 helper-directory PYTHONPATH allowance. The immediate scalar-factor parent and complete nonzero-transfer spatial input are rebuilt read-only, retaining their frozen finite/trace/force predecessors. No frozen scientific, proof, test or report bytes are edited.
+
+The algebra, opposite-leg geometry, source normalization and convolution constants are exact. Causal graph inversion, positive-measure primitive bounds, Plancherel/Minkowski/Young and dominated continuity are written proofs, not FORMALIZED. High-precision shifted dispersion is an independent diagnostic, not the proof of continuum existence or a full coupled inverse.

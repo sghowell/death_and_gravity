@@ -438,7 +438,12 @@ around a pre-registered problems document and a certificate-gated ledger.
   This is still linear light evolution and its leading heavy response,
   not a full nonlinear solution or UV-admissible completion.
 
-The [current P8 continuation audit](docs/assessment-2026-09-12-p8-affine-isolated-shear-resolvent.md)
+The [current P8 continuation audit](docs/assessment-2026-09-12-p8-affine-flat-scalar-quotient-inverse.md)
+establishes the complete two-channel flat scalar quotient reference inverse,
+uniformly in spatial momentum without spatial derivative loss, with the pole,
+initial boundary and physical normalization retained. The full curved quantum
+inverse remains further work.
+The [isolated shear resolvent audit](docs/assessment-2026-09-12-p8-affine-isolated-shear-resolvent.md)
 establishes the isolated shear pole-plus-continuum factor and both finite-window
 causal inverse identities, retaining the pole and the full initial boundary.
 This is not yet an inverse of the full curved coupled quantum system.
