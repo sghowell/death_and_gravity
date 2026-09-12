@@ -1,0 +1,11 @@
+# Literature, provenance and remaining original obligations
+
+The chart motivation is consistent with the unitary-gauge crossing analysis of Mironov, Rubakov and Volkova, [arXiv:1807.08361v2](https://arxiv.org/pdf/1807.08361), especially Section3. That paper treats its specified beyond-Horndeski scalar system; it does not prove this full two-scalar fixed-QG1 or quantum estimate. Ijjas, [arXiv:1710.05990v2](https://arxiv.org/pdf/1710.05990), emphasizes gauge and scale restrictions in a specified conformal L4 setting. Neither citation replaces the explicit complete action reduction here. Mironov and Volkova, [arXiv:1712.09909](https://arxiv.org/abs/1712.09909), explain why an unmodified equation-elimination shortcut can miss terms in beyond-Horndeski quadratic actions. Full weighted boundaries and Euler-first gradients are retained here.
+
+The repository already contains a complementary principal chart in p8.gamma. Its actual source is pinned, and the exact factor-two normalization is checked. S221 extends this input to complete finite-q retuning and a quantitative two-chart all-transfer comparison; it does not rebrand the old principal formula as a new discovery.
+
+Only the classical coefficient-sector propagator is addressed. The fixed-profile Gaussian reference response remains the derivative-losing weak current from S219/S220. Full quantum lapse and shift equations are nonlocal. Inserting the classical constraints into that response is a comparison, not their elimination. The new polynomial bound does not itself repair its functional-space mismatch.
+
+The phase response still needs the actual physical forcing maps, a controlled inverse in compatible spaces and justified quantum feedback. Finite nonlinear sourced-parent remainders, quantum-corrected background and stability, heavy-sector and physical cutoff control, full UV matching/positivity and original V/G/B remain open. No energy-density division, source switch, changed state, retuned finite counterterm or arbitrary uncorrelated zero quantum data is introduced.
+
+Scoped P8(a), A.20–A.23 and all nine original primitive statuses are unchanged. Exactly one further scoped classical comparison row is appended. Original P8 is not finished or closed. No user choice is required for this continuation.

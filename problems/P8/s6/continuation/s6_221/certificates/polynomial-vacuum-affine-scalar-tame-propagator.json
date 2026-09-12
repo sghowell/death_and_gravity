@@ -1,0 +1,919 @@
+{
+  "actual_coefficients_complete_charts_and_uniform_majorants": {
+    "charts": {
+      "Euler_operator": "For L=ydot^T K ydot/2+ydot^T B y+y^T D y/2, the exact equation is K ydd+(K'+3HK+B-B^T)yd+(B'+3HB-D)y=0. Every coefficient derivative includes q'=-2Hq.",
+      "auxiliary_determinant": "(-9*A*E**2*ell**2 - 18*A*Jc - 2*E**2*ell**2*q + 4*E**2*q**2 + 12*E*Tcorr*q - 4*Jc*q + 9*Tcorr**2)/(2*Jc)",
+      "central_B": [
+        [
+          "-4*q**2*(-E**2*H*ell**2 + 2*E*Theta*q - 2*H*Jc + 3*Tcorr*Theta)/(-9*A*E**2*ell**2 - 18*A*Jc - 2*E**2*ell**2*q + 4*E**2*q**2 + 12*E*Tcorr*q - 4*Jc*q + 9*Tcorr**2)",
+          "6*Theta*ell*q*(2*E*q + 3*Tcorr)/(-9*A*E**2*ell**2 - 18*A*Jc - 2*E**2*ell**2*q + 4*E**2*q**2 + 12*E*Tcorr*q - 4*Jc*q + 9*Tcorr**2)"
+        ],
+        [
+          "2*E*ell*q*(-9*A*Theta + 2*E*H*q + 3*H*Tcorr - 2*Theta*q)/(-9*A*E**2*ell**2 - 18*A*Jc - 2*E**2*ell**2*q + 4*E**2*q**2 + 12*E*Tcorr*q - 4*Jc*q + 9*Tcorr**2)",
+          "3*E*Theta*ell**2*(9*A + 2*q)/(-9*A*E**2*ell**2 - 18*A*Jc - 2*E**2*ell**2*q + 4*E**2*q**2 + 12*E*Tcorr*q - 4*Jc*q + 9*Tcorr**2)"
+        ]
+      ],
+      "central_D": [
+        [
+          "-4*q**2*(-9*A*Theta**2 - E**2*H**2*ell**2 + 4*E*H*Theta*q - 2*H**2*Jc + 6*H*Tcorr*Theta - 2*Theta**2*q)/(-9*A*E**2*ell**2 - 18*A*Jc - 2*E**2*ell**2*q + 4*E**2*q**2 + 12*E*Tcorr*q - 4*Jc*q + 9*Tcorr**2)",
+          "-ell*q*(-9*A*E**2*ell**2 - 18*A*Jc + 54*A*Theta**2 - 2*E**2*ell**2*q + 4*E**2*q**2 - 12*E*H*Theta*q + 12*E*Tcorr*q - 18*H*Tcorr*Theta - 4*Jc*q + 9*Tcorr**2 + 12*Theta**2*q)/(-9*A*E**2*ell**2 - 18*A*Jc - 2*E**2*ell**2*q + 4*E**2*q**2 + 12*E*Tcorr*q - 4*Jc*q + 9*Tcorr**2)"
+        ],
+        [
+          "-ell*q*(-9*A*E**2*ell**2 - 18*A*Jc + 54*A*Theta**2 - 2*E**2*ell**2*q + 4*E**2*q**2 - 12*E*H*Theta*q + 12*E*Tcorr*q - 18*H*Tcorr*Theta - 4*Jc*q + 9*Tcorr**2 + 12*Theta**2*q)/(-9*A*E**2*ell**2 - 18*A*Jc - 2*E**2*ell**2*q + 4*E**2*q**2 + 12*E*Tcorr*q - 4*Jc*q + 9*Tcorr**2)",
+          "-(27*A*E**2*ell**4 - 18*A*E**2*ell**2*q + 54*A*Jc*ell**2 - 36*A*Jc*q - 162*A*Theta**2*ell**2 + 6*E**2*ell**4*q - 16*E**2*ell**2*q**2 + 8*E**2*q**3 - 36*E*Tcorr*ell**2*q + 24*E*Tcorr*q**2 + 12*Jc*ell**2*q - 8*Jc*q**2 - 27*Tcorr**2*ell**2 + 18*Tcorr**2*q - 36*Theta**2*ell**2*q)/(2*(-9*A*E**2*ell**2 - 18*A*Jc - 2*E**2*ell**2*q + 4*E**2*q**2 + 12*E*Tcorr*q - 4*Jc*q + 9*Tcorr**2))"
+        ]
+      ],
+      "central_K": [
+        [
+          "4*q**2*(E**2*ell**2 + 2*Jc)/(-9*A*E**2*ell**2 - 18*A*Jc - 2*E**2*ell**2*q + 4*E**2*q**2 + 12*E*Tcorr*q - 4*Jc*q + 9*Tcorr**2)",
+          "2*E*ell*q*(2*E*q + 3*Tcorr)/(-9*A*E**2*ell**2 - 18*A*Jc - 2*E**2*ell**2*q + 4*E**2*q**2 + 12*E*Tcorr*q - 4*Jc*q + 9*Tcorr**2)"
+        ],
+        [
+          "2*E*ell*q*(2*E*q + 3*Tcorr)/(-9*A*E**2*ell**2 - 18*A*Jc - 2*E**2*ell**2*q + 4*E**2*q**2 + 12*E*Tcorr*q - 4*Jc*q + 9*Tcorr**2)",
+          "(-18*A*Jc + 4*E**2*q**2 + 12*E*Tcorr*q - 4*Jc*q + 9*Tcorr**2)/(-9*A*E**2*ell**2 - 18*A*Jc - 2*E**2*ell**2*q + 4*E**2*q**2 + 12*E*Tcorr*q - 4*Jc*q + 9*Tcorr**2)"
+        ]
+      ],
+      "central_principal_G": [
+        [
+          "(2*E*H*Theta - 2*E*Theta1 + 2*E1*Theta - 2*Theta**2)/E**2",
+          "ell"
+        ],
+        [
+          "ell",
+          "1"
+        ]
+      ],
+      "central_principal_K": [
+        [
+          "ell**2 + 2*Jc/E**2",
+          "ell"
+        ],
+        [
+          "ell",
+          "1"
+        ]
+      ],
+      "complete_pair_swap": "With b=-pv/(2q), the weighted boundary gives pv vdot ->2q v bdot+2Hq v b. The second term is essential. Jointly eliminate x=(v,ps) with the actual full retuned quadratic Hamiltonian, retaining all A,Tcorr,Jc terms.",
+      "finite_q_warning": "The complementary auxiliary Hessian can vanish at a finite q. It is used only above the explicitly proved q>=4096 threshold where Delta>1/8. The original first-order Hamiltonian remains the low-momentum comparison.",
+      "normalized_denominator": "(2*E + 3*Tcorr*inverse_q)**2 - (9*A*inverse_q**2 + 2*inverse_q)*(E**2*ell**2 + 2*Jc)",
+      "outer_K": [
+        [
+          "(E**2*ell**2 + 2*Jc)/Theta**2",
+          "-E*ell/Theta"
+        ],
+        [
+          "-E*ell/Theta",
+          "1"
+        ]
+      ],
+      "outer_principal_G": [
+        [
+          "(2*E*H*Theta - 2*E*Theta1 + 2*E1*Theta - 2*Theta**2)/Theta**2",
+          "-E*ell/Theta"
+        ],
+        [
+          "-E*ell/Theta",
+          "1"
+        ]
+      ],
+      "principal_bridge": "The earlier repository gamma chart already supplies the bare complementary principal algebra. This successor verifies its exact factor-two normalization and extends the full finite-q retuned action, uniform remainders and quantitative two-chart estimates; that older qualitative algebra is not represented as new."
+    },
+    "coefficients": {
+      "actual_Jc": "(1 - 3/(u**2 + 1)**3)*(-fixed_reference_pressure_over_kappa(u)/2 - fixed_reference_rho_over_kappa(u)/2) - (-3/(2*(u**2 + 1)**3) + 21/(4*(u**2 + 1)**6))*fixed_reference_pressure_over_kappa(u)/2 + (3200*u**34 + 48000*u**32 + 332800*u**30 + 1410400*u**28 + 4068800*u**26 + 8413616*u**24 + 12776592*u**22 + 14351856*u**20 + 11894320*u**18 + 7327520*u**16 + 3706272*u**14 + 2123580*u**12 + 1571848*u**10 + 1038260*u**8 + 474252*u**6 + 134232*u**4 + 20604*u**2 + 1215)/(800*(u**2 + 1)**18)",
+      "actual_coefficient_box": "Pointwise |Theta|<=2, |H|<=2, ell<=1/10, |E|<=1, |w|<=1/10, 1/100<Jc<100. In the central chart additionally |E|<=1/2. A,Tcorr and their first two jets are<1e-6; every coefficient time jet through2 is<1e6. The fixed profile is not recomputed and no high stress jet beyond the original five is used.",
+      "actual_principal_gradient": "(3200*u**34 + 48000*u**32 + 332800*u**30 + 1410400*u**28 + 4068800*u**26 + 8413600*u**24 + 12776400*u**22 + 14350800*u**20 + 11890800*u**18 + 7319600*u**16 + 3693600*u**14 + 2108796*u**12 + 1559176*u**10 + 1030340*u**8 + 470732*u**6 + 133176*u**4 + 20412*u**2 + 1199)/(800*(u**2 + 1)**18)",
+      "bare_J_minus_F": "1/(50*(u**2 + 1)**6)",
+      "chart_cover": "The v chart is used only where |t|>=1/8, giving |Theta|>=3/10. The complementary b=-pv/(2q) chart is used only where |t|<=1/4, giving1/4<|E|<=1/2. Switch at+-3/16; at most two switches cover every ordered subinterval.",
+      "coefficient_time_jet_envelopes": {
+        "E": [
+          "93/64",
+          "9/2",
+          "99/4"
+        ],
+        "H": [
+          "2",
+          "5",
+          "13"
+        ],
+        "J": [
+          "3848766721573/107374182400",
+          "3993359652681/21474836480",
+          "241216786862451/214748364800"
+        ],
+        "Theta": [
+          "109/32",
+          "441/64",
+          "1057/64"
+        ],
+        "delta": [
+          "1/2",
+          "3/2",
+          "33/4"
+        ],
+        "ell": [
+          "1/10",
+          "3/5",
+          "51/10"
+        ]
+      },
+      "fixed_retuning_DeltaJ_Tcorr_A_jet_envelopes": {
+        "0": [
+          "59/800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "1/40000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "1/100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        ],
+        "1": [
+          "11/32000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "7/100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "1/100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        ],
+        "2": [
+          "2057/800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "29/80000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "1/100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        ]
+      },
+      "lower_bounds": {
+        "F": "2574832893952/95367431640625",
+        "Jc": "683984193406894079999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999/25000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "Jc_minus_F": "131071999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999/25000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+      },
+      "momentum_cover": "For |P|>=100, q=|P|^2/a^2>=4096. Smaller physical transfers use the regular first-order comparison, not the potentially singular finite-q b chart. These thresholds are mathematical, not physical EFT cutoffs.",
+      "positive_even_gradient_numerator": "3200*u**34 + 48000*u**32 + 332800*u**30 + 1410400*u**28 + 4068800*u**26 + 8413600*u**24 + 12776400*u**22 + 14350800*u**20 + 11890800*u**18 + 7319600*u**16 + 3693600*u**14 + 2108796*u**12 + 1559176*u**10 + 1030340*u**8 + 470732*u**6 + 133176*u**4 + 20412*u**2 + 1199",
+      "principal_scope": "For the full two-scalar coefficient-sector principal pair the characteristic speeds squared are1 andF/Jc. Bare F>0 and J-F=1/[50(1+t^2)^6] hold at all real times. Fixed QG1 positivity and separation are asserted only on the original unit slab, using |DeltaJ|<4epsilon. This is not a finite-q frozen-frequency stability inference."
+    },
+    "majorants": {
+      "central_denominator_bounds": [
+        "2555883493623977491/16777216000000000000",
+        "18415636506376022509/16777216000000000000"
+      ],
+      "coefficient_enclosure": "After q=1/z each central coefficient K,K',G,G',Omega,R multiplied by E^4 Delta^2 is a polynomial. Bound its absolute coefficient polynomial on the exact coefficient/jet box and multiply4^4*8^2. Outer coefficients multiplied by Theta^4 are polynomials and use4^4. All48 entries are below1e18, with no time or momentum sampling.",
+      "coefficient_entry_majorants": {
+        "central_G": [
+          "423920602325715399562549196376953424675215243/17179869184000000000000000000000000",
+          "339135667934969275723777620035274655081/2748779069440000000000000000000000000",
+          "339135667934969275723777620035274655081/2748779069440000000000000000000000000",
+          "339135667934969275723777620035274655081/274877906944000000000000000000000000"
+        ],
+        "central_Gdot": [
+          "6782732689432457807724268656029835112275339617/68719476736000000000000000000",
+          "339135667934969275723777620035274655081/274877906944000000000000000000",
+          "339135667934969275723777620035274655081/274877906944000000000000000000",
+          "0"
+        ],
+        "central_K": [
+          "1473269336146588176742509/1638400000000000000",
+          "75430447185363097715992067527/671088640000000000000000000",
+          "75430447185363097715992067527/671088640000000000000000000",
+          "339135290782733210791015242254768202581/274877906944000000000000000000000000"
+        ],
+        "central_Kdot": [
+          "673072134193867536046815742509/204800000000000000",
+          "195319443275826202240746851709067527/167772160000000000000000000",
+          "195319443275826202240746851709067527/167772160000000000000000000",
+          "383923589227196567873034772699/13743895347200000000000000"
+        ],
+        "central_gyro": [
+          "0",
+          "67887402472351478896305667527/33554432000000000000000000",
+          "67887402472351478896305667527/33554432000000000000000000",
+          "0"
+        ],
+        "central_lower": [
+          "124301116725056534857588307920945744675215243/4194304000000000000000000000000",
+          "1414516342458073206088101643070857743/83886080000000000000000000",
+          "338155585218938167202351651636222689/41943040000000000000000000",
+          "20370156846535807729628166640356984571965243/54975581388800000000000000000000000000"
+        ],
+        "outer_G": [
+          "6144016384",
+          "1024/5",
+          "1024/5",
+          "4096"
+        ],
+        "outer_Gdot": [
+          "6144022528000000",
+          "2355200000",
+          "2355200000",
+          "0"
+        ],
+        "outer_K": [
+          "5120256/25",
+          "1024/5",
+          "1024/5",
+          "4096"
+        ],
+        "outer_Kdot": [
+          "207083520000",
+          "2355200000",
+          "2355200000",
+          "0"
+        ],
+        "outer_gyro": [
+          "0",
+          "1433664/125",
+          "1433664/125",
+          "0"
+        ],
+        "outer_lower": [
+          "96000048001152/15625",
+          "9769325376240024/78125",
+          "24/78125",
+          "137600396816/625"
+        ]
+      },
+      "common_absolute_entry_bound": "1000000000000000000",
+      "common_positive_operator_interval": [
+        "1/100000000",
+        "10000"
+      ],
+      "determinant_lower_bounds": {
+        "central_K": "1/25",
+        "other_three": "1/200"
+      },
+      "normalized_polynomial_term_counts": {
+        "central_G": [
+          104,
+          26,
+          26,
+          26
+        ],
+        "central_Gdot": [
+          234,
+          26,
+          26,
+          1
+        ],
+        "central_K": [
+          12,
+          12,
+          12,
+          23
+        ],
+        "central_Kdot": [
+          27,
+          45,
+          45,
+          30
+        ],
+        "central_gyro": [
+          1,
+          29,
+          29,
+          1
+        ],
+        "central_lower": [
+          158,
+          67,
+          133,
+          91
+        ],
+        "outer_G": [
+          4,
+          1,
+          1,
+          1
+        ],
+        "outer_Gdot": [
+          7,
+          3,
+          3,
+          1
+        ],
+        "outer_K": [
+          2,
+          1,
+          1,
+          1
+        ],
+        "outer_Kdot": [
+          5,
+          3,
+          3,
+          1
+        ],
+        "outer_gyro": [
+          1,
+          3,
+          3,
+          1
+        ],
+        "outer_lower": [
+          4,
+          11,
+          1,
+          7
+        ]
+      },
+      "positivity_argument": "The complete central auxiliary Hessian has positive ps diagonal and determinant q^2 Delta/(2Jc), hence positive inverse and K. Both G determinants use positive F. Outer K uses positive Jc. Every matrix has positive trace below1e4 and determinant at least1/200, so lambda_min>=det/trace>1e-8. No assertion is made outside its chart domain.",
+      "trace_upper_bounds": {
+        "both_G": "80029/25",
+        "central_K": "13438717788186376000009/2097152000000000000",
+        "outer_K": "80029/25"
+      }
+    }
+  },
+  "checked_scalar_entries": 126,
+  "claim": "P8-S6.221.UNIFORM_TWO_CHART_QG1_CLASSICAL_SCALAR_PHASE_PROPAGATOR_WITH_TWELVE_SPATIAL_DERIVATIVE_LOSS",
+  "controls": {
+    "all_previous_frontiers_unchanged_and_original_P8_open": true,
+    "exact_polynomial_majorants_and_twelve_derivative_Sobolev_weight": true,
+    "finite_q_auxiliary_degeneracy_with_regular_original_phase_system": true,
+    "independent_actual_gradient_and_full_matter_characteristic": true,
+    "independent_energy_curve_with_nonsymmetric_lower_term": true,
+    "independent_finite_q_saddle_and_phase_reconstruction": true,
+    "independent_original_canonical_flow_equals_both_complete_chart_Euler_operators": true,
+    "nonzero_deleted_weighted_transport_control": true,
+    "rejected_inputs": 176
+  },
+  "date": "2026-09-12",
+  "energy_and_all_transfer_tame_phase_comparison": {
+    "Duhamel_Sobolev_statement": "For any real r, the classical coefficient-sector phase system on the unit slab satisfies ||Z||Linf H^r <= exp(1e29)(||Z(initial)||H^(r+12)+||f||L1 H^(r+12)). The propagator is continuous on this scale, by pointwise ODE continuity and dominated convergence. The additive f is mathematical phase forcing, not an unproved map from physical quantum sources.",
+    "all_transfer_propagator_log_constant": "100000000000000000000000000000",
+    "chart_transport_entry_sum_majorant": "320*q + 50",
+    "common_conversion_constant": "1000000000000",
+    "conversion_argument": "For Z=(v,sigma,pv,ps), lambda=1+|P|^2, both charts obey sqrt(E)<=1e12 lambda |Z| and |Z|<=1e12 lambda sqrt(E). Initial/final conversions and at most two switches give1e72 lambda^6. Low |P|<=100 uses the regular first-order bound exp[1000(10001)^2]. With log10<3, the common constant is exp(1e29).",
+    "energy_argument": "For both real and imaginary Fourier parts use E=(ydot^T K ydot+q y^T G y)/2. The exact skew term does no work. Complete coefficient bounds and q>=1 give |E'|<1e28 E and the safely enlarged root-energy Gronwall rate1e28.",
+    "energy_growth_majorant": "1600000000000000000000000012",
+    "finite_q_degenerate_auxiliary_control": "152/25",
+    "general_energy_derivative": "-3*H*(dy0*(K0*dy0 + K1*dy1) + dy1*(K1*dy0 + K2*dy1)) - dy0*(Kd0*dy0 + Kd1*dy1)/2 - dy1*(Kd1*dy0 + Kd2*dy1)/2 + q*(y0*(y0*(-2*G0*H + Gd0) + y1*(-2*G1*H + Gd1)) + y1*(y0*(-2*G1*H + Gd1) + y1*(-2*G2*H + Gd2)))/2 - y0*(R0*dy0 + R2*dy1) - y1*(R1*dy0 + R3*dy1)",
+    "high_transfer_propagator": "1e72 exp(1e28 |t-s|)(1+|P|^2)^6 for |P|>=100; at most two chart switches",
+    "phase_energy_conversion_bounds": {
+      "central_inverse": "600000000000",
+      "forward": 50200,
+      "outer_inverse": 150000000
+    },
+    "safe_root_energy_rate": "10000000000000000000000000000",
+    "spatial_derivative_loss": 12,
+    "strict_scope": "A polynomial-momentum classical comparison with12 lost spatial derivatives is established. The constant exp(1e29) is not small relative to kappa, the estimate is not same-space or a quantum contraction, and neither finite nonlinear stability nor the full quantum constraint inverse follows. A measure-zero P=0 assignment is not the literal homogeneous constraint."
+  },
+  "exact_residuals": {
+    "actual_coefficient_jets_and_characteristics_actual_physical_transfer_threshold": "0",
+    "actual_coefficient_jets_and_characteristics_bare_bounce_scalar_speed": "0",
+    "actual_coefficient_jets_and_characteristics_central_E_derivative": "0",
+    "actual_coefficient_jets_and_characteristics_central_E_endpoint": "0",
+    "actual_coefficient_jets_and_characteristics_exact_scalar_gradient_gap": "0",
+    "actual_coefficient_jets_and_characteristics_full_gradient_denominator": "0",
+    "actual_coefficient_jets_and_characteristics_full_gradient_numerator_constant": "0",
+    "actual_coefficient_jets_and_characteristics_full_matter_mixed_characteristic_factor": "0",
+    "actual_coefficient_jets_and_characteristics_outer_Theta_lower_arithmetic": "0",
+    "actual_coefficient_jets_and_characteristics_outer_Theta_lower_representation": "0",
+    "actual_coefficient_jets_and_characteristics_retuned_principal_shift_only_J": "0",
+    "all_previous_matching_rows_unchanged": "0",
+    "all_primitive_rows_unchanged": "0",
+    "complete_finite_transfer_two_chart_algebra_both_gyroscopic_matrices_skew": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "complete_finite_transfer_two_chart_algebra_both_valid_chart_principal_characteristic_polynomials": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        1
+      ]
+    },
+    "complete_finite_transfer_two_chart_algebra_central_complete_principal_gradient": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "complete_finite_transfer_two_chart_algebra_central_complete_principal_kinetic": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "complete_finite_transfer_two_chart_algebra_central_inverse_phase_velocity_map": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        1
+      ]
+    },
+    "complete_finite_transfer_two_chart_algebra_complete_finite_q_auxiliary_determinant": "0",
+    "complete_finite_transfer_two_chart_algebra_exact_central_kinetic_determinant": "0",
+    "complete_finite_transfer_two_chart_algebra_full_K_B_D_reconstruction": "0",
+    "complete_finite_transfer_two_chart_algebra_full_auxiliary_elimination_matches_exact_reduced_L": "0",
+    "complete_finite_transfer_two_chart_algebra_full_weighted_pair_swap_stationarity": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        1
+      ]
+    },
+    "complete_finite_transfer_two_chart_algebra_historical_b_chart_principal_kinetic_factor_two": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "complete_finite_transfer_two_chart_algebra_historical_full_boundary_principal_gradient_factor_two": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "complete_finite_transfer_two_chart_algebra_normalized_positive_denominator": "0",
+    "complete_finite_transfer_two_chart_algebra_outer_complete_kinetic": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "energy_and_polynomial_phase_propagator_bare_finite_q_auxiliary_degeneracy_control": "0",
+    "energy_and_polynomial_phase_propagator_central_b_velocity_from_full_weighted_canonical_equation": "0",
+    "energy_and_polynomial_phase_propagator_central_inverse_reconstruction_from_K": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        1
+      ]
+    },
+    "energy_and_polynomial_phase_propagator_general_complete_energy_identity_without_symmetric_R": "0",
+    "energy_and_polynomial_phase_propagator_low_band_lambda": "0",
+    "energy_and_polynomial_phase_propagator_phase_Sobolev_derivative_loss": "0",
+    "energy_and_polynomial_phase_propagator_skew_velocity_work_zero": "0",
+    "energy_and_polynomial_phase_propagator_two_switch_total_lambda_exponent": "0",
+    "nine_original_primitive_rows": "0",
+    "one_new_scoped_tame_classical_checkpoint": "0",
+    "uniform_denominator_coercivity_and_48_coefficient_majorants_central_G_determinant": "0",
+    "uniform_denominator_coercivity_and_48_coefficient_majorants_central_K11_exact": "0",
+    "uniform_denominator_coercivity_and_48_coefficient_majorants_central_K22_exact": "0",
+    "uniform_denominator_coercivity_and_48_coefficient_majorants_forty_eight_entry_count": "0",
+    "uniform_denominator_coercivity_and_48_coefficient_majorants_forty_eight_normalized_polynomial_reconstructions": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        48,
+        1
+      ]
+    },
+    "uniform_denominator_coercivity_and_48_coefficient_majorants_normalized_denominator_from_actual_auxiliary_Hessian": "0",
+    "uniform_denominator_coercivity_and_48_coefficient_majorants_outer_G_determinant": "0",
+    "uniform_denominator_coercivity_and_48_coefficient_majorants_outer_K_determinant": "0"
+  },
+  "formulation": "FORMULATION.md",
+  "named_exact_check_count": 45,
+  "not_established": [
+    "A same-space scalar propagator, kappa-smallness or a contraction for the derivative-losing Gaussian response",
+    "Elimination of full nonlocal quantum constraints or a physical-source-to-phase forcing map",
+    "A numerical high-time-jet stress bound or a literal global homogeneous constraint from P=0 assignment",
+    "Finite nonlinear parent remainder, quantum background/stability, heavy/physical cutoff or original V/G/B/P8 closure"
+  ],
+  "observable_and_scope": {
+    "actual_characteristics": "The original unit-slab fixed-QG1 coefficient pair has speeds squared1 andF/Jc, with F>1/100 and Jc-F>1/1000. This does not substitute a principal rescaling for a crossing chart.",
+    "classical_propagator": "The complete regular coefficient-sector first-order system has ||U(t,s;P)||<=exp(1e29)(1+|P|^2)^6 on every ordered subinterval of the unit slab.",
+    "functional_space": "For any real r, H^(r+12) initial data and L1 H^(r+12) additive phase forcing give C_t H^r comparison evolution. Twelve spatial derivatives are lost.",
+    "remaining": "The constant is not a kappa-smallness bound. Full nonlocal quantum constraints, physical-source maps, same-space coupled inverse, nonlinear parent, quantum background/stability, physical cutoff/heavy sector and original V/G/B remain open."
+  },
+  "primitive_and_matching_frontier": {
+    "matching": [
+      {
+        "id": "fixed_sigma_isolated_MS_conversion",
+        "status": "CANCELLED_NONLOCAL_ORDER_TWO_WITH_SAME_REGULATED_REFERENCE"
+      },
+      {
+        "id": "remaining_scale_parameter_field_map_and_cross_terms",
+        "status": "OPEN"
+      },
+      {
+        "id": "remaining_counterterm_and_vacuum_source_assembly",
+        "status": "ASSEMBLED_FOR_FIXED_ORDER_PHI_POLE_B2_VACUUM_AND_H_SOURCE"
+      },
+      {
+        "id": "full_matched_two_loop_pole_and_amplitude_error",
+        "status": "FIXED_ORDER_PHI_POLE_AND_B2_BOUNDED_PHYSICAL_TRUNCATION_OPEN"
+      },
+      {
+        "id": "finite_EFT_higher_order_truncation",
+        "status": "OPEN"
+      },
+      {
+        "id": "V_contour_and_cut_control",
+        "status": "OPEN"
+      },
+      {
+        "id": "finite_gravity_G",
+        "status": "OPEN"
+      },
+      {
+        "id": "common_parent_B",
+        "status": "OPEN"
+      },
+      {
+        "id": "complete_wineglass_interaction_forest_MS",
+        "status": "BOUNDED_WITH_REGULATED_FINITE_LOCAL_ANCHOR_AND_FULL_SCALE_TERM"
+      },
+      {
+        "id": "complete_double_bubble_interaction_forest_MS",
+        "status": "BOUNDED_WITH_ACTUAL_NESTED_MS_FORESTS_AND_BOTH_SCALE_TERMS"
+      },
+      {
+        "id": "complete_scalar_OS_insertion_interaction_forest_MS",
+        "status": "BOUNDED_WITH_FULL_REGULATED_SLOPE_TIMES_OUTER_REFERENCE"
+      },
+      {
+        "id": "complete_scalar_quadratic_finite_MS_slope_and_converted_OS_bound",
+        "status": "BOUNDED_WITH_FIXED_INNER_OS_AND_INTERACTION_MS_COORDINATES"
+      },
+      {
+        "id": "first_finite_Phi_field_covariance_and_MS_projection_commutator",
+        "status": "EXACT_REGULATED_FIELD_DIRECTION_AND_BOUNDED_FIRST_SLOPE_CROSS_TERMS"
+      },
+      {
+        "id": "complete_GY14_second_Phi_normalization_and_canonical_unit_disc_pole",
+        "status": "BOUNDED_WITH_DIRECT_MS_OWNERSHIP_AND_FULL_FINITE_FIELD_REEXPANSION"
+      },
+      {
+        "id": "complete_two_loop_vacuum_reference_and_first_source_square",
+        "status": "BOUNDED_WITH_FULL_REGULATED_SOURCE_REDUCIBLE_CANCELLATION"
+      },
+      {
+        "id": "complete_two_loop_derivative_map_with_matched_physical_source",
+        "status": "TRANSPORTED_FOR_FULL_ACTION_AND_PHYSICAL_SOURCE_NOT_ORDINARY_PSI_MS_OR_TRUNCATION"
+      },
+      {
+        "id": "complete_matched_two_loop_low_energy_Phi_elastic_cut",
+        "status": "BOUNDED_ON_PHYSICAL_WINDOW_4_TO_6_WITH_FULL_FIRST_AMPLITUDE_NOT_PHYSICAL_REMAINDER_OR_GLOBAL_DISPERSION"
+      },
+      {
+        "id": "full_finite_kappa_analytic_target_classical_vacuum_match",
+        "status": "BOUNDED_ON_SAME_RESTRICTED_FLAT_SCHWARTZ_CLASS_NOT_QUANTUM_TARGET_OR_ROLLING_COMMON_PARENT_MATCH"
+      },
+      {
+        "id": "GY14_SAT8_pointwise_fermion_mass_protection_and_named_low_order_invariance",
+        "status": "NEW_ANALYTIC_EFT_BRANCH_WITH_GLOBAL_REAL_MASS_FLOOR_AND_SAME_NAMED_TWO_LOOP_DATA_NOT_ROLLING_STATE_OR_COMMON_PARENT_CLOSURE"
+      },
+      {
+        "id": "polynomial_clock_transparent_physical_source_map_and_full_target_classical_bound",
+        "status": "KINEMATIC_CLOCK_ARGUMENT_ALIGNED_WITH_PROTECTED_MASSES_AND_SAME_NAMED_VACUUM_DATA_NOT_BACKGROUND_SOLUTION_QUANTUM_STATE_OR_COMMON_PARENT_CLOSURE"
+      },
+      {
+        "id": "free_flat_clock_Dirac_out_energy_with_complete_transition_series_remainder",
+        "status": "BOUNDED_FOR_SPECIFIED_QUADRATIC_MODEWISE_IN_OUT_STATE_NOT_INTERACTING_OR_CURVED_BOUNCE_STRESS"
+      },
+      {
+        "id": "Hadamard_regular_free_flat_SAT8_in_out_state_and_uniform_one_particle_norm_limit",
+        "status": "HADAMARD_FOR_SPECIFIED_FREE_EXTERNAL_MASS_OPERATOR_USING_IDENTIFIED_EXTERNAL_THEOREM_NOT_INTERACTING_CURVED_STATE_OR_NUMERICAL_STRESS"
+      },
+      {
+        "id": "exact_four_frame_free_transition_and_uniform_same_operator_in_out_T00_difference",
+        "status": "BOUNDED_FOR_FREE_FLAT_HADAMARD_STATE_DIFFERENCE_NOT_ABSOLUTE_STRESS_INTERACTING_CURVED_STATE_OR_BACKREACTION"
+      },
+      {
+        "id": "free_flat_absolute_one_loop_local_energy_with_fixed_saturated_mass_reference",
+        "status": "BOUNDED_IN_EXPLICIT_MS_AND_SATURATED_MASS_REFERENCE_QUADRATIC_SCHEME_NOT_FULL_CURVED_INTERACTING_PARENT_STRESS"
+      },
+      {
+        "id": "complete_free_flat_homogeneous_one_loop_stress_with_dimensional_curvature_improvement",
+        "status": "BOUNDED_SPECIFIED_QUADRATIC_MS_MR_FLAT_TENSOR_NOT_FULL_INTERACTING_CURVED_PARENT_STRESS"
+      },
+      {
+        "id": "actual_CD_free_Dirac_Hadamard_in_out_state_and_uniform_state_stress_difference",
+        "status": "CURVED_FREE_HADAMARD_STATE_AND_STATE_DIFFERENCE_BOUNDED_NOT_ABSOLUTE_PARENT_STRESS"
+      },
+      {
+        "id": "complete_free_curved_one_loop_stress_with_explicit_EC_Newton_reference",
+        "status": "BOUNDED_SPECIFIED_QUADRATIC_CURVED_TENSOR_NOT_FULL_INTERACTING_PARENT_OR_BACKGROUND_RESPONSE"
+      },
+      {
+        "id": "minimal_Einstein_canonical_clock_free_sector_null_equation_mismatch",
+        "status": "EXCLUDED_NAMED_MINIMAL_DIAGNOSTIC_WITH_SMALL_EXTRA_NULL_BUDGET_NOT_FULL_INTERACTING_PARENT_OR_DHOST_ROW"
+      },
+      {
+        "id": "actual_CD_leading_clock_Euler_source_decomposition_and_matching_domain_gap",
+        "status": "LEADING_TARGET_SOURCES_AND_CONSTRAINT_DOMAIN_REQUIREMENTS_IDENTIFIED_NOT_PROPAGATING_PARENT_OR_QUANTUM_BOUNCE"
+      },
+      {
+        "id": "analytic_CD_REG_AFFINE_ISO_classical_parent_clock_vacuum_and_local_constraints",
+        "status": "NEW_REGULAR_CLASSICAL_PARENT_AND_LOCAL_CONSTRAINT_BLOCKS_NOT_QUANTUM_MATCHING_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "same_classical_affine_parent_closed_source_lift_and_scoped_vector_Schur_control",
+        "status": "EXACT_CLASSICAL_AND_COMMON_REGULATOR_IDENTITIES_FULL_EUCLIDEAN_AND_LEADING_LORENTZ_BOUNDS_NOT_FULL_QUANTUM_MATCHING"
+      },
+      {
+        "id": "regular_affine_parent_conditional_Gaussian_Hadamard_family_and_ordinary_Proca_stress",
+        "status": "SOURCE_AWARE_CONDITIONAL_VECTOR_STATE_AND_FIXED_CLOCK_STRESS_NOT_FULL_PARENT_QUANTUM_SOLUTION"
+      },
+      {
+        "id": "full_fixed_canonical_affine_family_actual_classical_gravitational_decoupling",
+        "status": "ANCHORED_FULL_FUNCTION_CLASSICAL_LIMIT_AND_TREE_AMPLITUDE_NOT_QUANTUM_CONTOUR_TRUNCATION_OR_V_CLOSURE"
+      },
+      {
+        "id": "complete_affine_vector_retarded_mean_energy_and_causal_cubic_light_force",
+        "status": "FIXED_CD_FULL_SOURCE_FINITE_TIME_CONDITIONAL_GAUSSIAN_MEAN_AND_LIGHT_FORCE_NOT_METRIC_NOISE_FULL_PARENT_OR_B_CLOSURE"
+      },
+      {
+        "id": "same_affine_conditional_prepared_homogeneous_metric_response_with_uncancelled_chart_contacts",
+        "status": "COMPLETE_CONDITIONAL_VECTOR_HOMOGENEOUS_C10_TO_C0_BOUND_NOT_SPATIAL_NOISE_COUPLED_BACKGROUND_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "same_affine_parent_prepared_homogeneous_retained_tree_plus_conditional_vector_causal_inverse",
+        "status": "UNIQUE_RETAINED_LINEAR_PREPARED_CAUSAL_INVERSE_WITH_NUMERIC_LOCAL_LAPSE_RECOVERY_NOT_FULL_INVERSE_SMALLNESS_QUANTUM_BACKGROUND_OR_V_G_B"
+      },
+      {
+        "id": "same_massive_scalar_range_kernel_explicit_full_half_line_L1_majorant",
+        "status": "MASS_INDEPENDENT_EXPLICIT_SCALAR_KERNEL_NORM_NOT_FULL_INVERSE_SMALLNESS_BACKGROUND_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "new_CD_REG_AFFINE_ISO_QG1_fixed_coefficient_stationary_Gaussian_mean_and_actual_response",
+        "status": "NEW_PARENT_RETAINED_MEAN_STATIONARITY_AND_BOUNDED_COEFFICIENT_CORRECTION_NOT_FULL_QUANTUM_BACKGROUND_STABILITY_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "actual_classical_Hamiltonian_C0_and_C10_inverse_and_first_formal_Gaussian_response",
+        "status": "QUANTIFIED_PREPARED_CLASSICAL_PROPAGATOR_AND_FIRST_FORMAL_COEFFICIENT_NOT_FINITE_COUPLING_ERROR_STABILITY_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "complete_finite_time_canonical_vacuum_source_mean_and_scalar_force_noise_with_fixed_profile",
+        "status": "FULL_CONDITIONAL_GAUSSIAN_VACUUM_SOURCE_CAUSAL_AND_NOISE_BOUNDS_NOT_INTERACTING_AMPLITUDE_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "actual_all_order_CD_state_complete_clock_source_smeared_force_noise_and_canonical_normalization",
+        "status": "SAME_STATE_FULL_SOURCE_SMEARED_SCALAR_NOISE_BOUND_NOT_METRIC_NOISE_SOLUTION_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "actual_all_order_CD_full_local_smeared_metric_stress_covariance",
+        "status": "FULL_SPACETIME_TENSOR_STRESS_NOISE_BOUND_NOT_METRIC_SOLUTION_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "actual_CD_boundary_compatible_tree_tensor_noise_response",
+        "status": "RESTRICTED_DETECTOR_TREE_PROPAGATED_NOISE_NOT_FULL_QUANTUM_TENSOR_STATE_OR_V_G_B"
+      },
+      {
+        "id": "actual_CD_homogeneous_shear_Hamiltonian_contact_and_modewise_remainder",
+        "status": "ACTUAL_SHEAR_MODEWISE_FINITE_AMPLITUDE_REMAINDER_NOT_CONTINUUM_SELF_ENERGY_OR_V_G_B"
+      },
+      {
+        "id": "actual_fixed_local_covariant_full_spatial_tensor_Hessian",
+        "status": "ACTUAL_FIXED_FINITE_LOCAL_TENSOR_HESSIAN_BOUND_NOT_COMPLETE_DETERMINANT_RESPONSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_CD_full_matrix_adiabatic_uniform_covariance_tail",
+        "status": "ACTUAL_UNCHANGED_STATE_UNIFORM_HIGH_BAND_COVARIANCE_REMAINDER_NOT_RESPONSE_SUBTRACTION_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_matrix_covariance_tail_C2_response_and_Taylor_remainder",
+        "status": "ACTUAL_UNCHANGED_STATE_C2_HIGH_BAND_COVARIANCE_TAIL_NOT_COMPLETE_COVARIANT_RESPONSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_physical_shear_current_C2_fourth_order_comparison",
+        "status": "ACTUAL_STATE_C2_CURRENT_MODE_COMPARISON_NOT_FIXED_COVARIANT_MATCHING_OR_V_G_B"
+      },
+      {
+        "id": "actual_homogeneous_shear_full_fixed_covariant_mode_subtraction_matching",
+        "status": "ACTUAL_HOMOGENEOUS_SHEAR_FIXED_COVARIANT_MODE_SUBTRACTION_MATCHING_NOT_FULL_FEEDBACK_OR_V_G_B"
+      },
+      {
+        "id": "actual_complete_fixed_covariant_homogeneous_current_C2_and_canonical_response",
+        "status": "ACTUAL_COMPLETE_FIXED_COVARIANT_HOMOGENEOUS_CURRENT_C2_AND_CANONICAL_RESPONSE_NOT_FULL_FEEDBACK_OR_V_G_B"
+      },
+      {
+        "id": "actual_spatial_two_momentum_metric_vertices_and_finite_band_Gaussian_response",
+        "status": "ACTUAL_SPATIAL_TWO_MOMENTUM_CURRENT_FINITE_BAND_NOT_RENORMALIZED_CONTINUUM_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_full_spatial_separated_support_weak_Gaussian_response_and_quantitative_tail",
+        "status": "ACTUAL_CONTINUUM_SEPARATED_SUPPORT_WEAK_RESPONSE_NOT_COINCIDENT_EXTENSION_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_overlapping_time_spatial_retarded_state_remainder_with_complete_contact",
+        "status": "ACTUAL_RETARDED_MEMORY_CONTACT_COMPARISON_NOT_REFERENCE_DIAGONAL_MATCHING_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_reference_six_step_retarded_boundary_extraction_and_full_finite_bulk",
+        "status": "ACTUAL_REFERENCE_FINITE_BULK_AND_EXPLICIT_ENDPOINTS_NOT_COVARIANT_SPATIAL_MATCHING_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_canonical_flat_Proca_full_tensor_cut_and_subtracted_dispersion_benchmark",
+        "status": "CANONICAL_FLAT_FULL_TENSOR_CUT_BENCHMARK_NOT_CURVED_MATCHING_FULL_PARENT_AMPLITUDE_OR_V_G_B"
+      },
+      {
+        "id": "full_spatial_flat_Proca_covariant_and_time_subtraction_conversion_with_nonlocal_coefficient_bounds",
+        "status": "FULL_SPATIAL_FLAT_NONLOCAL_SUBTRACTION_CONVERSION_NOT_CURVED_MATCHING_LOCAL_POLYNOMIAL_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_curved_reference_initial_state_prefactor_full_memory_contact_and_regulator_tail",
+        "status": "ACTUAL_CURVED_INITIAL_PREFACTOR_REMOVED_WITH_FINITE_FULL_RESPONSE_CORRECTION_NOT_SPATIAL_MATCHING_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_curved_reference_joint_spatial_analyticity_full_readouts_and_far_endpoint_Taylor_tail",
+        "status": "ACTUAL_UNIT_W8_JOINT_SPATIAL_ANALYTICITY_AND_FAR_ENDPOINT_TAYLOR_TAIL_NOT_NEAR_REGION_LOCAL_MATCHING_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_curved_reference_all_momentum_spatial_Taylor_subtracted_endpoint_remainder",
+        "status": "ACTUAL_UNIT_W8_ALL_MOMENTUM_ENDPOINT_REMAINDER_WITH_ORIGINAL_TAIL_NOT_LOCAL_MATCHING_FULL_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "fixed_covariant_local_full_tracefree_spatial_Hessian_proper_time_and_norm",
+        "status": "FIXED_LOCAL_FULL_TRACEFREE_SPATIAL_HESSIAN_NOT_QUANTUM_MATCHING_MIXED_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "finite_endpoint_spatial_Taylor_cells_restored_with_original_regulator_tail",
+        "status": "TEN_FINITE_ENDPOINT_TAYLOR_CELLS_RESTORED_NOT_REMAINING_UV_CONTACT_MATCHING_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_leading_full_Proca_sharp_two_leg_regulator_conversion_coefficient",
+        "status": "ACTUAL_LEADING_SHARP_BAND_ARTIFACT_NOT_FULL_REGULATOR_COVARIANT_MATCHING_OR_V_G_B"
+      },
+      {
+        "id": "complete_four_sector_spatial_UV_symbol_with_independent_detector_time",
+        "status": "HISTORICAL_ANNIHILATION_CREATION_PHASE_ERROR_CORRECTED_ENDPOINT_COEFFICIENTS_IN_S216"
+      },
+      {
+        "id": "uniform_actual_UV_subtracted_endpoint_remainder_with_original_regulator_tail",
+        "status": "UNIFORM_UV_SUBTRACTED_ENDPOINT_REMAINDER_NOT_FULL_CONTACT_COVARIANT_MATCHING_OR_V_G_B"
+      },
+      {
+        "id": "complete_original_UV_shape_conversion_centered_cancellations_and_uniform_tail",
+        "status": "ACTUAL_K2_AND_FINITE_CONVERSION_CANCEL_WITH_UNIFORM_TAIL_NOT_CURVED_A1_EVALUATION_FULL_CONTACT_MATCHING_OR_V_G_B"
+      },
+      {
+        "id": "explicit_actual_curved_linear_regulator_conversion_all_tensor_channels_and_source_jets",
+        "status": "ACTUAL_CURVED_A1_EVALUATED_WITH_COEFFICIENT_NORMS_NOT_FULL_ONE_BALL_CONTACT_COVARIANT_MATCHING_OR_V_G_B"
+      },
+      {
+        "id": "actual_spatial_UV_difference_complete_contact_cancellation_and_fixed_curved_pole",
+        "status": "FULL_SPATIAL_UV_DIFFERENCE_AND_POLE_IDENTIFIED_NOT_FINITE_DIMENSIONAL_MATCHING_OR_FULL_RESPONSE"
+      },
+      {
+        "id": "actual_dimensional_spatial_UV_finite_part_with_evanescent_modes_and_counterterms",
+        "status": "HISTORICAL_PHYSICAL_FINITE_IDENTIFICATION_WITHDRAWN_EXPLICIT_EVANESCENT_CORRECTION_IN_S216"
+      },
+      {
+        "id": "complete_matched_tracefree_spatial_Gaussian_current_with_anchored_original_regulator",
+        "status": "HISTORICAL_PHASE_ERROR_SUPERSEDED_BY_CORRECTED_S217_FULL_TRACEFREE_CURRENT_AND_ANCHORED_REGULATOR"
+      },
+      {
+        "id": "full_constrained_ADM_Proca_vertices_metric_chart_contacts_and_all_momentum_forms",
+        "status": "FULL_ADM_LOCAL_AND_FINITE_REGULATOR_GAUSSIAN_INPUT_NOT_FULL_NEW_SECTOR_CONTINUUM_REDUCED_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "prepared_ordered_Ward_reconstruction_full_chart_correction_and_three_remaining_scalar_kernels",
+        "status": "PREPARED_WARD_RECONSTRUCTION_WITH_COMPLETE_S219_REFERENCE_GAUSSIAN_METRIC_CURRENT_NOT_REDUCED_INVERSE_OR_NONLINEAR_BACKGROUND"
+      },
+      {
+        "id": "corrected_retarded_pair_phase_full_ordered_scalar_UV_and_fixed_six_invariant_finite_matching",
+        "status": "CORRECTED_LOCAL_SPATIAL_UV_SCALAR_FINITE_PART_NOT_FULL_CURRENT_REASSEMBLY_SCALAR_ANCHOR_REDUCED_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "corrected_full_retarded_tracefree_spatial_current_original_regulator_and_prepared_Ward_input",
+        "status": "CORRECTED_COMPLETE_TRACEFREE_SPATIAL_WEAK_CURRENT_AND_KNOWN_WARD_INPUT_NOT_FULL_SCALAR_REDUCED_INVERSE_BACKGROUND_OR_V_G_B"
+      },
+      {
+        "id": "full_homogeneous_trace_Gaussian_anchor_original_volume_matching_and_ordered_cross_zeros",
+        "status": "COMPLETE_HOMOGENEOUS_TRACE_ANCHOR_AND_FULL_HOMOGENEOUS_HILBERT_LIFT_NOT_NONZERO_TRANSFER_SCALAR_REMAINDERS_REDUCED_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "full_spatial_scalar_remainders_original_regulator_and_complete_prepared_Gaussian_metric_response",
+        "status": "COMPLETE_REFERENCE_GAUSSIAN_METRIC_RESPONSE_WEAK_BOUND_NOT_REDUCED_INVERSE_FULL_SOURCED_PARENT_BACKGROUND_OR_V_G_B"
+      },
+      {
+        "id": "regular_QG1_scalar_coefficient_Hamiltonian_complete_infrared_Ward_pullback_and_comparison_bounds",
+        "status": "REGULAR_CLASSICAL_COEFFICIENT_PHASE_SYSTEM_AND_IR_SAFE_REFERENCE_SCALAR_WEAK_RESPONSE_NOT_FULL_QUANTUM_CONSTRAINT_INVERSE_OR_P8"
+      },
+      {
+        "id": "uniform_two_chart_QG1_classical_scalar_phase_propagator_with_twelve_spatial_derivative_loss",
+        "status": "TAME_CLASSICAL_COEFFICIENT_PROPAGATOR_NOT_SAME_SPACE_QUANTUM_INVERSE_STABILITY_OR_P8"
+      }
+    ],
+    "primitive": [
+      {
+        "id": "scalar_Phi0_W0_F0",
+        "status": "BOUNDED_PAIRED_VACUUM_PRIMITIVE_WITH_ASSIGNED_LOCAL_FOREST"
+      },
+      {
+        "id": "scalar_Phi2_W0_F2",
+        "status": "BOUNDED_NONLOCAL_AND_FINITE_MS_MASS_AND_SLOPE_REFERENCES"
+      },
+      {
+        "id": "scalar_Phi2_W1_F0",
+        "status": "BOUNDED_PAIRED_NONLOCAL_AND_FINITE_MS_LOCAL_REFERENCES"
+      },
+      {
+        "id": "scalar_Phi4_W0_F4",
+        "status": "BOUNDED_PAIRED_PRIMITIVE_ROW"
+      },
+      {
+        "id": "scalar_Phi4_W1_F2",
+        "status": "BOUNDED_PAIRED_IN_COMMON_MS_INTERACTION_SCHEME"
+      },
+      {
+        "id": "scalar_Phi4_W2_F0",
+        "status": "BOUNDED_PAIRED_IN_COMMON_MS_INTERACTION_SCHEME"
+      },
+      {
+        "id": "gauge_Phi0",
+        "status": "BOUNDED_PAIRED_VACUUM_PRIMITIVE_WITH_ASSIGNED_LOCAL_FOREST"
+      },
+      {
+        "id": "gauge_Phi2",
+        "status": "BOUNDED_NONLOCAL_AND_FINITE_MS_MASS_AND_SLOPE_REFERENCES"
+      },
+      {
+        "id": "gauge_Phi4",
+        "status": "BOUNDED_PAIRED_PRIMITIVE_ROW"
+      }
+    ]
+  },
+  "prior_sha256": {
+    "S6_182_fixed_QG1_and_original_five_stress_jets_unchanged": true,
+    "S6_220_regular_full_retuned_scalar_coefficient_system_fully_rebuilt": "cfd123d4faed1ce2efddb229931f6af79df203a7ea3c5af091d9d0e1857db4d8",
+    "earlier_core_gamma_complementary_principal_chart_source": "5e411e649be38bcdea745e8602840fd1e1fe774608798a6948ceb88dbfe35bfe",
+    "no_frozen_scientific_proof_test_or_report_bytes_changed": true
+  },
+  "proof_checks": {
+    "actual_coefficient_jets_and_characteristics_F_lower": true,
+    "actual_coefficient_jets_and_characteristics_Jc_lower": true,
+    "actual_coefficient_jets_and_characteristics_all_base_jets": true,
+    "actual_coefficient_jets_and_characteristics_all_retuning_jets": true,
+    "actual_coefficient_jets_and_characteristics_bare_J_upper": true,
+    "actual_coefficient_jets_and_characteristics_central_E_separation": true,
+    "actual_coefficient_jets_and_characteristics_current_fixed_QG1_not_bare_parent_only": true,
+    "actual_coefficient_jets_and_characteristics_no_Theta_squared_rescaling_as_crossing_proof": true,
+    "actual_coefficient_jets_and_characteristics_no_global_current_retuning_bound_inferred": true,
+    "actual_coefficient_jets_and_characteristics_positive_even_gradient_polynomial": true,
+    "actual_coefficient_jets_and_characteristics_strict_characteristic_separation": true,
+    "actual_coefficient_jets_and_characteristics_two_switches_inside_both_chart_domains": true,
+    "actual_high_frequency_pair_not_frozen_q_spectrum": true,
+    "all_physical_transfers_covered": true,
+    "complete_finite_transfer_two_chart_algebra_central_K_bounded_at_high_q": true,
+    "complete_finite_transfer_two_chart_algebra_central_K_minus_principal_decays": true,
+    "complete_finite_transfer_two_chart_algebra_central_gyroscopic_remainder_bounded": true,
+    "complete_finite_transfer_two_chart_algebra_central_potential_remainder_bounded": true,
+    "complete_finite_transfer_two_chart_algebra_full_retuning_and_time_boundary_retained": true,
+    "complete_finite_transfer_two_chart_algebra_no_Theta_denominator_in_central_coefficients": true,
+    "complete_finite_transfer_two_chart_algebra_no_ell_or_E_denominator_in_outer_coefficients": true,
+    "complete_finite_transfer_two_chart_algebra_not_every_finite_q_auxiliary_chart_invertible": true,
+    "complete_finite_transfer_two_chart_algebra_outer_coefficients_and_remainders_no_q": true,
+    "energy_and_polynomial_phase_propagator_all_phase_conversions_below_common": true,
+    "energy_and_polynomial_phase_propagator_auxiliary_singularity_is_below_chart_threshold": true,
+    "energy_and_polynomial_phase_propagator_central_forward_velocity_margin": true,
+    "energy_and_polynomial_phase_propagator_central_inverse_arithmetic": true,
+    "energy_and_polynomial_phase_propagator_energy_lower_to_vector_conversion": true,
+    "energy_and_polynomial_phase_propagator_full_central_transport_bound": true,
+    "energy_and_polynomial_phase_propagator_full_energy_growth_bound": true,
+    "energy_and_polynomial_phase_propagator_full_log_constant_absorption": true,
+    "energy_and_polynomial_phase_propagator_log10_below_three_from_exp_series": true,
+    "energy_and_polynomial_phase_propagator_low_band_exponent": true,
+    "energy_and_polynomial_phase_propagator_outer_forward_velocity_margin": true,
+    "energy_and_polynomial_phase_propagator_polynomial_not_uniform_same_space_inverse": true,
+    "energy_and_polynomial_phase_propagator_quantum_constraint_and_derivative_loss_still_open": true,
+    "finite_q_chart_failure_explicitly_excluded": true,
+    "no_frozen_input_edits_or_primitive_promotion": true,
+    "original_weighted_boundary_and_full_QG1_retuning_retained": true,
+    "same_space_quantum_derivative_loss_not_solved": true,
+    "uniform_denominator_coercivity_and_48_coefficient_majorants_Delta_lower_above_one_eighth": true,
+    "uniform_denominator_coercivity_and_48_coefficient_majorants_Delta_upper_below_two": true,
+    "uniform_denominator_coercivity_and_48_coefficient_majorants_actual_fixed_profile_jets_through_two_only": true,
+    "uniform_denominator_coercivity_and_48_coefficient_majorants_all_48_entry_envelopes": true,
+    "uniform_denominator_coercivity_and_48_coefficient_majorants_all_envelopes_nonnegative": true,
+    "uniform_denominator_coercivity_and_48_coefficient_majorants_all_trace_bounds_below_upper": true,
+    "uniform_denominator_coercivity_and_48_coefficient_majorants_central_determinant_above_common": true,
+    "uniform_denominator_coercivity_and_48_coefficient_majorants_common_minimum_eigenvalue_margin": true,
+    "uniform_denominator_coercivity_and_48_coefficient_majorants_full_lower_order_terms_and_q_time_derivative": true,
+    "uniform_denominator_coercivity_and_48_coefficient_majorants_not_an_all_finite_q_complementary_chart": true,
+    "unique_matching_identifiers": true
+  },
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "94915ce2850e954dd414dd86660ec95d4ec99819d9d9da75fd3310a296c6802a",
+    "README.md": "8d0946f2c9687361b917ae7241c51bf807622e544fb30ee03caa439a06ee2b84",
+    "notes/charts.md": "ca644e076f716d72f38c2ef3bd841c7f4d3c5b94a99ff5609e067ef81f888ebd",
+    "notes/coefficients.md": "8cfddd0fa9f577eb8564dcdf97183eab3af15af5533407302276ba97d5722b70",
+    "notes/comparison.md": "4fc0257caf22c81aab114eba2fab4fcdafa633ee2539fa4915c5c191594f2c13",
+    "notes/energy.md": "580299dc0bcd676a86ff3b566ba6622475628f0d6c909e0d9a5796aff0b0e2a2",
+    "notes/majorants.md": "f10ef5478958b7c835525faf5dd8f336ad1384cbe1e6be286ada35c51a3c06ef",
+    "notes/scope.md": "c3e29c66a9e63dfd4a79bd7b605c80062c5017aed2f43425f94856654c2bb4b9",
+    "notes/validation.md": "cb922e5f89841a31579ae4600ff620f523c80ea9910ea821d1c3a3e7fb496c80",
+    "src/p8_vacuum_affine_scalar_tame_propagator/__init__.py": "677a3d94b1f45b7cf0792a2d1edd2ebbab7071bae9210d298ad230253eb1097e",
+    "src/p8_vacuum_affine_scalar_tame_propagator/audit.py": "ea13e286bddf068b847e4101c37483e346d5d2f9abf969423c5c1226e3fa93db",
+    "src/p8_vacuum_affine_scalar_tame_propagator/charts.py": "b089ec95a041a11000a55617c8df1cab32d22842ea1e44abaafa60f7408b01c7",
+    "src/p8_vacuum_affine_scalar_tame_propagator/coefficients.py": "b4d8862932af39907bad92e56b6f3aa58dc59c0c6cbf8e6bfe2b0a89b197ee2c",
+    "src/p8_vacuum_affine_scalar_tame_propagator/energy.py": "9ed9961843f35ee7f0e07400694e20d2bb326f45c2fef29a161cd6f2d3efb18f",
+    "src/p8_vacuum_affine_scalar_tame_propagator/majorants.py": "8a5919a2e2356d26d4ba324d09ac3686e8ce518f866178aae7147ca2cb53a03b",
+    "src/p8_vacuum_affine_scalar_tame_propagator/verify.py": "1c56bad456410331d94b25f473a47639691197a80c6a33d40f117efd1ff32a86",
+    "tests/test_affine_scalar_tame_propagator_certificate.py": "abb9eb9f7e142dfbb21fd4551a00961c300a2f627896983463cf004d7c47e7da",
+    "tests/test_affine_scalar_tame_propagator_science.py": "9a16dc7bf0d33b923a4f023e93e15ca104468bb5c3ab3904838a3266ee1977bf"
+  },
+  "status": "UNIFORM_POLYNOMIAL_MOMENTUM_CLASSICAL_COEFFICIENT_PROPAGATOR; NOT_SAME_SPACE_QUANTUM_INVERSE_SMALLNESS_NONLINEAR_STABILITY_CUTOFF_V_G_B_OR_ORIGINAL_P8",
+  "verdict": "The actual unit-slab fixed-QG1 two-scalar coefficient-sector principal pair has speeds squared1 andF/Jc, with F>1/100 and Jc-F>1/1000. Earlier core gamma algebra is explicitly reused, not represented as new. The complete finite-transfer retuned Hamiltonian admits an outer v chart where |Theta|>=3/10 and a complementary b=-pv/(2q) chart where |E|>1/4. The weighted canonical boundary, all A,Tcorr,Jc terms and q'=-2Hq are retained. At physical |P|>=100 the central normalized auxiliary denominator lies strictly between1/8 and2. Both complete kinetic and principal gradient matrices lie between1e-8 I and1e4 I. Exact polynomial enclosures bound all48 full coefficient/remainder entries by1e18 using only actual profile jets through2. The complete energy identity, phase conversions and at most two switches yield ||U(t,s;P)||<=exp(1e29)(1+|P|^2)^6, while smaller momenta use the original regular first-order system. Thus the classical coefficient-sector comparison extends uniformly from H^(r+12) initial data and L1 H^(r+12) additive phase forcing to C_t H^r for every real r. Independent finite-q saddle solves, original canonical-flow versus complete Euler comparisons, coefficient and energy fixtures and deleted-boundary/finite-q-degeneracy controls supplement the written continuum proof. The enormous constant is not a smallness bound, twelve derivatives are lost, and the nonlocal quantum lapse/shift constraints are not solved. Full quantum inversion, physical forcing maps, nonlinear sourced-parent remainder, background/stability, physical cutoff/heavy control and original V/G/B/P8 remain open.",
+  "verification_boundary": "Exact complete finite-transfer reductions, actual coefficient inequalities, positive normalized denominator,48 polynomial enclosures, energy identity and conversion arithmetic are checked. Independent dynamics and variational fixtures supplement them. Chart patching, Gronwall, Duhamel, Plancherel and dominated Sobolev continuity are written proofs, not FORMALIZED. Native/direct/ordinary/CLI retain original SymPy; only separately audited full regression uses the exact-GCD adapter. Frozen predecessors remain unchanged.",
+  "written_proofs": [
+    "notes/coefficients.md",
+    "notes/charts.md",
+    "notes/majorants.md",
+    "notes/energy.md",
+    "notes/comparison.md",
+    "notes/scope.md",
+    "notes/validation.md"
+  ]
+}
