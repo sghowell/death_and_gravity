@@ -438,7 +438,11 @@ around a pre-registered problems document and a certificate-gated ledger.
   This is still linear light evolution and its leading heavy response,
   not a full nonlinear solution or UV-admissible completion.
 
-The [current P8 continuation audit](docs/assessment-2026-09-12-p8-affine-matched-spatial-current.md) separates
+The [current P8 continuation audit](docs/assessment-2026-09-12-p8-retarded-phase-erratum.md) records
+an independently confirmed retarded pair-phase error and withdraws the
+S6.212/S6.213 physical finite-matching and assembled-current identifications
+pending an explicitly corrected successor. Frozen evidence is preserved.
+The [preceding P8 audit](docs/assessment-2026-09-12-p8-affine-matched-spatial-current.md) separates
 the completed scoped P8(a) objective and certificate gates from the
 outstanding P8(b) UV-matching and positivity questions.
 P8 is not marked finished or closed.
