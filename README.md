@@ -438,7 +438,12 @@ around a pre-registered problems document and a certificate-gated ledger.
   This is still linear light evolution and its leading heavy response,
   not a full nonlinear solution or UV-admissible completion.
 
-The [current P8 continuation audit](docs/assessment-2026-09-12-p8-affine-flat-scalar-quotient-inverse.md)
+The [current P8 continuation audit](docs/assessment-2026-09-12-p8-affine-curved-scalar-reference.md)
+establishes the actual curved scalar curvature coordinates, complete original
+finite local Hessian and a causal curved-coordinate reference inverse, uniformly
+in spatial momentum. Its middle nonlocal factors remain the specified flat
+reference factors; full actual curved quantum matching is still further work.
+The [flat scalar quotient inverse audit](docs/assessment-2026-09-12-p8-affine-flat-scalar-quotient-inverse.md)
 establishes the complete two-channel flat scalar quotient reference inverse,
 uniformly in spatial momentum without spatial derivative loss, with the pole,
 initial boundary and physical normalization retained. The full curved quantum

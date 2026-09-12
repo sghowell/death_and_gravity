@@ -1,0 +1,634 @@
+{
+  "actual_curved_geometry_and_complete_original_local_Hessian": {
+    "geometry": {
+      "actual_profile": {
+        "U": "4*(u**2 + 1)**2*(7*u**2 + 1)",
+        "a": "(u**2 + 1)**2",
+        "conformal_primitive": "u/(2*u**2 + 2) + atan(u)/2",
+        "h": "4*u*(u**2 + 1)",
+        "hprime": "4*(u**2 + 1)**2*(3*u**2 + 1)",
+        "t": "u"
+      },
+      "chart": "Q=2wI-2cPi in the original exponential synchronous spatial chart, with fixed background conformal time. S=a^2 deltaR_old/6 and C0101/(a^2 phase)=W/3. This is not the full lapse/shift/clock reconstruction.",
+      "continuous_coefficient_bounds": {
+        "C_norm": "8",
+        "Cprime_norm": "35",
+        "a4_upper": "390625/65536",
+        "abs_U": "275/16",
+        "abs_h": "5/2",
+        "abs_hprime": "175/16",
+        "conformal_window_upper": "1"
+      },
+      "coordinate_leading_matrix": [
+        [
+          "1",
+          "-1/3"
+        ],
+        [
+          "0",
+          "-1"
+        ]
+      ],
+      "first_curvature_channels": {
+        "detector": [
+          [
+            "2*spatial_transfer**2*wD(conformal_time)/3 - Derivative(cD(conformal_time), (conformal_time, 2))/3 + Derivative(wD(conformal_time), (conformal_time, 2)) - Derivative(cD(conformal_time), conformal_time)*Derivative(scale(conformal_time), conformal_time)/scale(conformal_time) + 3*Derivative(scale(conformal_time), conformal_time)*Derivative(wD(conformal_time), conformal_time)/scale(conformal_time)"
+          ],
+          [
+            "-spatial_transfer**2*wD(conformal_time) - Derivative(cD(conformal_time), (conformal_time, 2))"
+          ]
+        ],
+        "source": [
+          [
+            "2*spatial_transfer**2*wG(conformal_time)/3 - Derivative(cG(conformal_time), (conformal_time, 2))/3 + Derivative(wG(conformal_time), (conformal_time, 2)) - Derivative(cG(conformal_time), conformal_time)*Derivative(scale(conformal_time), conformal_time)/scale(conformal_time) + 3*Derivative(scale(conformal_time), conformal_time)*Derivative(wG(conformal_time), conformal_time)/scale(conformal_time)"
+          ],
+          [
+            "-spatial_transfer**2*wG(conformal_time) - Derivative(cG(conformal_time), (conformal_time, 2))"
+          ]
+        ]
+      },
+      "first_order_coefficient": [
+        [
+          "3*Derivative(scale(conformal_time), conformal_time)/scale(conformal_time)",
+          "-Derivative(scale(conformal_time), conformal_time)/scale(conformal_time)"
+        ],
+        [
+          "0",
+          "0"
+        ]
+      ],
+      "spatial_matrix": [
+        [
+          "2*spatial_transfer**2/3",
+          "0"
+        ],
+        [
+          "-spatial_transfer**2",
+          "0"
+        ]
+      ]
+    },
+    "local": {
+      "actual_fixed_coefficients": {
+        "R_old": "5000000/3",
+        "R_old_squared": "-1/18",
+        "Weyl_squared": "-1/30",
+        "constant": "2500000000000"
+      },
+      "boundary": "This is the complete original finite local Hessian on the exponential synchronous spatial scalar quotient, before64pi^2 and in conformal Lebesgue measure. Compact Euler and box-R variations vanish as variational boundaries. The background-curvature, second-metric-variation, volume and Einstein terms are retained.",
+      "complete_lower_order_local_remainder": "20000000*spatial_transfer**2*scale(conformal_time)**2*wD(conformal_time)*wG(conformal_time)/3 - 8*spatial_transfer**2*wD(conformal_time)*wG(conformal_time)*Derivative(scale(conformal_time), (conformal_time, 2))/(3*scale(conformal_time)) + 2500000000000*cD(conformal_time)*cG(conformal_time)*scale(conformal_time)**4 + 10000000*cD(conformal_time)*cG(conformal_time)*scale(conformal_time)*Derivative(scale(conformal_time), (conformal_time, 2)) - 2*cD(conformal_time)*cG(conformal_time)*Derivative(scale(conformal_time), (conformal_time, 2))**2/scale(conformal_time)**2 - 7500000000000*cD(conformal_time)*scale(conformal_time)**4*wG(conformal_time) + 10000000*cD(conformal_time)*scale(conformal_time)**2*Derivative(cG(conformal_time), (conformal_time, 2))/3 - 10000000*cD(conformal_time)*scale(conformal_time)**2*Derivative(wG(conformal_time), (conformal_time, 2)) - 30000000*cD(conformal_time)*scale(conformal_time)*wG(conformal_time)*Derivative(scale(conformal_time), (conformal_time, 2)) + 10000000*cD(conformal_time)*scale(conformal_time)*Derivative(cG(conformal_time), conformal_time)*Derivative(scale(conformal_time), conformal_time) - 30000000*cD(conformal_time)*scale(conformal_time)*Derivative(scale(conformal_time), conformal_time)*Derivative(wG(conformal_time), conformal_time) - 4*cD(conformal_time)*Derivative(cG(conformal_time), (conformal_time, 2))*Derivative(scale(conformal_time), (conformal_time, 2))/(3*scale(conformal_time)) + 4*cD(conformal_time)*Derivative(scale(conformal_time), (conformal_time, 2))*Derivative(wG(conformal_time), (conformal_time, 2))/scale(conformal_time) + 6*cD(conformal_time)*wG(conformal_time)*Derivative(scale(conformal_time), (conformal_time, 2))**2/scale(conformal_time)**2 - 4*cD(conformal_time)*Derivative(cG(conformal_time), conformal_time)*Derivative(scale(conformal_time), conformal_time)*Derivative(scale(conformal_time), (conformal_time, 2))/scale(conformal_time)**2 + 12*cD(conformal_time)*Derivative(scale(conformal_time), conformal_time)*Derivative(scale(conformal_time), (conformal_time, 2))*Derivative(wG(conformal_time), conformal_time)/scale(conformal_time)**2 - 7500000000000*cG(conformal_time)*scale(conformal_time)**4*wD(conformal_time) + 10000000*cG(conformal_time)*scale(conformal_time)**2*Derivative(cD(conformal_time), (conformal_time, 2))/3 - 10000000*cG(conformal_time)*scale(conformal_time)**2*Derivative(wD(conformal_time), (conformal_time, 2)) - 30000000*cG(conformal_time)*scale(conformal_time)*wD(conformal_time)*Derivative(scale(conformal_time), (conformal_time, 2)) + 10000000*cG(conformal_time)*scale(conformal_time)*Derivative(cD(conformal_time), conformal_time)*Derivative(scale(conformal_time), conformal_time) - 30000000*cG(conformal_time)*scale(conformal_time)*Derivative(scale(conformal_time), conformal_time)*Derivative(wD(conformal_time), conformal_time) - 4*cG(conformal_time)*Derivative(cD(conformal_time), (conformal_time, 2))*Derivative(scale(conformal_time), (conformal_time, 2))/(3*scale(conformal_time)) + 4*cG(conformal_time)*Derivative(scale(conformal_time), (conformal_time, 2))*Derivative(wD(conformal_time), (conformal_time, 2))/scale(conformal_time) + 6*cG(conformal_time)*wD(conformal_time)*Derivative(scale(conformal_time), (conformal_time, 2))**2/scale(conformal_time)**2 - 4*cG(conformal_time)*Derivative(cD(conformal_time), conformal_time)*Derivative(scale(conformal_time), conformal_time)*Derivative(scale(conformal_time), (conformal_time, 2))/scale(conformal_time)**2 + 12*cG(conformal_time)*Derivative(scale(conformal_time), conformal_time)*Derivative(scale(conformal_time), (conformal_time, 2))*Derivative(wD(conformal_time), conformal_time)/scale(conformal_time)**2 + 22500000000000*scale(conformal_time)**4*wD(conformal_time)*wG(conformal_time) - 10000000*scale(conformal_time)**2*wD(conformal_time)*Derivative(cG(conformal_time), (conformal_time, 2)) + 30000000*scale(conformal_time)**2*wD(conformal_time)*Derivative(wG(conformal_time), (conformal_time, 2)) - 10000000*scale(conformal_time)**2*wG(conformal_time)*Derivative(cD(conformal_time), (conformal_time, 2)) + 30000000*scale(conformal_time)**2*wG(conformal_time)*Derivative(wD(conformal_time), (conformal_time, 2)) + 20000000*scale(conformal_time)**2*Derivative(cD(conformal_time), conformal_time)*Derivative(cG(conformal_time), conformal_time)/3 - 40000000*scale(conformal_time)**2*Derivative(cD(conformal_time), conformal_time)*Derivative(wG(conformal_time), conformal_time)/3 - 40000000*scale(conformal_time)**2*Derivative(cG(conformal_time), conformal_time)*Derivative(wD(conformal_time), conformal_time)/3 + 40000000*scale(conformal_time)**2*Derivative(wD(conformal_time), conformal_time)*Derivative(wG(conformal_time), conformal_time) + 90000000*scale(conformal_time)*wD(conformal_time)*wG(conformal_time)*Derivative(scale(conformal_time), (conformal_time, 2)) - 30000000*scale(conformal_time)*wD(conformal_time)*Derivative(cG(conformal_time), conformal_time)*Derivative(scale(conformal_time), conformal_time) + 90000000*scale(conformal_time)*wD(conformal_time)*Derivative(scale(conformal_time), conformal_time)*Derivative(wG(conformal_time), conformal_time) - 30000000*scale(conformal_time)*wG(conformal_time)*Derivative(cD(conformal_time), conformal_time)*Derivative(scale(conformal_time), conformal_time) + 90000000*scale(conformal_time)*wG(conformal_time)*Derivative(scale(conformal_time), conformal_time)*Derivative(wD(conformal_time), conformal_time) + 4*wD(conformal_time)*Derivative(cG(conformal_time), (conformal_time, 2))*Derivative(scale(conformal_time), (conformal_time, 2))/scale(conformal_time) - 12*wD(conformal_time)*Derivative(scale(conformal_time), (conformal_time, 2))*Derivative(wG(conformal_time), (conformal_time, 2))/scale(conformal_time) + 4*wG(conformal_time)*Derivative(cD(conformal_time), (conformal_time, 2))*Derivative(scale(conformal_time), (conformal_time, 2))/scale(conformal_time) - 12*wG(conformal_time)*Derivative(scale(conformal_time), (conformal_time, 2))*Derivative(wD(conformal_time), (conformal_time, 2))/scale(conformal_time) - 8*Derivative(cD(conformal_time), conformal_time)*Derivative(cG(conformal_time), conformal_time)*Derivative(scale(conformal_time), (conformal_time, 2))/(3*scale(conformal_time)) + 16*Derivative(cD(conformal_time), conformal_time)*Derivative(scale(conformal_time), (conformal_time, 2))*Derivative(wG(conformal_time), conformal_time)/(3*scale(conformal_time)) + 16*Derivative(cG(conformal_time), conformal_time)*Derivative(scale(conformal_time), (conformal_time, 2))*Derivative(wD(conformal_time), conformal_time)/(3*scale(conformal_time)) - 16*Derivative(scale(conformal_time), (conformal_time, 2))*Derivative(wD(conformal_time), conformal_time)*Derivative(wG(conformal_time), conformal_time)/scale(conformal_time) - 18*wD(conformal_time)*wG(conformal_time)*Derivative(scale(conformal_time), (conformal_time, 2))**2/scale(conformal_time)**2 + 12*wD(conformal_time)*Derivative(cG(conformal_time), conformal_time)*Derivative(scale(conformal_time), conformal_time)*Derivative(scale(conformal_time), (conformal_time, 2))/scale(conformal_time)**2 - 36*wD(conformal_time)*Derivative(scale(conformal_time), conformal_time)*Derivative(scale(conformal_time), (conformal_time, 2))*Derivative(wG(conformal_time), conformal_time)/scale(conformal_time)**2 + 12*wG(conformal_time)*Derivative(cD(conformal_time), conformal_time)*Derivative(scale(conformal_time), conformal_time)*Derivative(scale(conformal_time), (conformal_time, 2))/scale(conformal_time)**2 - 36*wG(conformal_time)*Derivative(scale(conformal_time), conformal_time)*Derivative(scale(conformal_time), (conformal_time, 2))*Derivative(wD(conformal_time), conformal_time)/scale(conformal_time)**2",
+      "curvature_square_factor": "(4*spatial_transfer**2*wD(conformal_time)/45 + 4*Derivative(cD(conformal_time), (conformal_time, 2))/45)*(-spatial_transfer**2*wG(conformal_time) - Derivative(cG(conformal_time), (conformal_time, 2))) + (-8*spatial_transfer**2*wD(conformal_time)/3 + 4*Derivative(cD(conformal_time), (conformal_time, 2))/3 - 4*Derivative(wD(conformal_time), (conformal_time, 2)) + 4*Derivative(cD(conformal_time), conformal_time)*Derivative(scale(conformal_time), conformal_time)/scale(conformal_time) - 12*Derivative(scale(conformal_time), conformal_time)*Derivative(wD(conformal_time), conformal_time)/scale(conformal_time))*(2*spatial_transfer**2*wG(conformal_time)/3 - Derivative(cG(conformal_time), (conformal_time, 2))/3 + Derivative(wG(conformal_time), (conformal_time, 2)) - Derivative(cG(conformal_time), conformal_time)*Derivative(scale(conformal_time), conformal_time)/scale(conformal_time) + 3*Derivative(scale(conformal_time), conformal_time)*Derivative(wG(conformal_time), conformal_time)/scale(conformal_time))",
+      "mixed_rescaled_scalar_curvature": "4*spatial_transfer**2*(cD(conformal_time)*wG(conformal_time) + cG(conformal_time)*wD(conformal_time)) - 20*spatial_transfer**2*wD(conformal_time)*wG(conformal_time) + 4*Derivative(cD(conformal_time), conformal_time)*Derivative(cG(conformal_time), conformal_time) - 8*Derivative(cD(conformal_time), conformal_time)*Derivative(wG(conformal_time), conformal_time) - 8*Derivative(cG(conformal_time), conformal_time)*Derivative(wD(conformal_time), conformal_time) + 24*Derivative(wD(conformal_time), conformal_time)*Derivative(wG(conformal_time), conformal_time)",
+      "order_not_norm": "The remainder has total differential order at most2 in conformal time and comoving space. This does not make it a bounded or small same-space perturbation of the complete quantum-force system.",
+      "trace_volume_jets": [
+        "-cD(conformal_time) + 3*wD(conformal_time)",
+        "-cG(conformal_time) + 3*wG(conformal_time)"
+      ],
+      "weighted_derivative_orders_in_remainder": [
+        0,
+        1,
+        2
+      ],
+      "zero_transfer_TF_normalization": "8/3"
+    }
+  },
+  "checked_scalar_entries": 55,
+  "claim": "P8-S6.225.ACTUAL_CURVED_SCALAR_CURVATURE_COORDINATES_COMPLETE_FINITE_LOCAL_HESSIAN_AND_ORDERED_UNIFORM_REFERENCE_INVERSE",
+  "controls": {
+    "all_original_primitive_statuses_unchanged": true,
+    "deleting_coefficient_derivative_changes_actual_adjoint": true,
+    "deleting_lower_order_local_remainder_changes_Hessian": true,
+    "finite_order_two_not_a_zero_local_remainder": true,
+    "flat_coordinate_operator_misses_actual_Hubble_terms": true,
+    "physical_conformal_density_not_constant": true,
+    "physical_inverse_bound_not_kappa_small": true,
+    "rejected_inputs": 169,
+    "retained_flat_quotient_and_shear_pole_inputs": true
+  },
+  "date": "2026-09-12",
+  "exact_residuals": {
+    "actual_curvature_coordinates_actual_background_scalar_curvature": "0",
+    "actual_curvature_coordinates_actual_conformal_Hubble": "0",
+    "actual_curvature_coordinates_actual_conformal_Hubble_derivative": "0",
+    "actual_curvature_coordinates_actual_rescaled_background_curvature": "0",
+    "actual_curvature_coordinates_actual_scale_factor": "0",
+    "actual_curvature_coordinates_coefficient_derivative_Frobenius": "0",
+    "actual_curvature_coordinates_coefficient_matrix_Frobenius": "0",
+    "actual_curvature_coordinates_complete_detector_first_scalar_curvature": "0",
+    "actual_curvature_coordinates_complete_source_first_scalar_curvature": "0",
+    "actual_curvature_coordinates_curvature_coordinate_operator_with_first_order_coefficient": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        1
+      ]
+    },
+    "actual_curvature_coordinates_curved_detector_Weyl_component": "0",
+    "actual_curvature_coordinates_curved_source_Weyl_component": "0",
+    "actual_curvature_coordinates_literal_exponential_metric_inverse": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "actual_curvature_coordinates_original_S189_background_scalar_curvature_bridge": "0",
+    "actual_curvature_coordinates_proper_to_conformal_clock": "0",
+    "actual_curvature_coordinates_zero_background_Weyl_component": "0",
+    "complete_original_finite_local_Hessian_complete_Einstein_density_Hessian": "0",
+    "complete_original_finite_local_Hessian_complete_R2_density_Hessian": "0",
+    "complete_original_finite_local_Hessian_complete_original_local_Hessian_not_only_curvature_square": "0",
+    "complete_original_finite_local_Hessian_complete_volume_density_Hessian": "0",
+    "complete_original_finite_local_Hessian_literal_mixed_curvature_second_variation": "0",
+    "complete_original_finite_local_Hessian_unchanged_Weyl_finite_coefficient": "0",
+    "complete_original_finite_local_Hessian_unchanged_trace_curvature_square_coefficient": "0",
+    "complete_original_finite_local_Hessian_zero_transfer_TF_full_local_reconstruction": "0",
+    "complete_original_finite_local_Hessian_zero_transfer_unit_Frobenius_TF_fourth_bridge": "0",
+    "complete_original_finite_local_Hessian_zero_transfer_unit_Frobenius_TF_kinetic_bridge": "0",
+    "nine_original_primitive_rows": "0",
+    "one_new_curvature_reference_input": "0",
+    "ordered_curvature_adapted_reference_inverse_adjoint_Volterra_strict_margin": "0",
+    "ordered_curvature_adapted_reference_inverse_complete_formal_adjoint_in_conformal_density": "0",
+    "ordered_curvature_adapted_reference_inverse_full_curved_reference_kernel_bound": "0",
+    "ordered_curvature_adapted_reference_inverse_full_curved_reference_operator_bound": "0",
+    "ordered_curvature_adapted_reference_inverse_ordered_triangle_with_left_linear_kernel": "0",
+    "ordered_curvature_adapted_reference_inverse_physical_force_density_bound_keeps_kappa_and_a4": "0",
+    "ordered_curvature_adapted_reference_inverse_primal_Volterra_majorant": "0",
+    "ordered_curvature_adapted_reference_inverse_retained_derivative_of_transposed_coefficient": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        1
+      ]
+    },
+    "unchanged_previous_matching_rows": "0",
+    "unchanged_primitive_rows": "0"
+  },
+  "formulation": "FORMULATION.md",
+  "named_exact_check_count": 38,
+  "not_established": [
+    "Identification of the specified flat scalar factors with the full actual curved mass and state response",
+    "Compatible-space boundedness or smallness of the complete local, state, contact, tree and matter remainder",
+    "A complete S222 auxiliary/clock graph bridge, full quantum inverse or finite-coupling/nonlinear parent remainder",
+    "Pole deletion, order reduction, small backreaction, stability, physical cutoff or original V/G/B/P8 closure"
+  ],
+  "observable_and_scope": {
+    "actual_geometry": "In fixed conformal time the actual exponential spatial scalar chart gives S=(D^2+3hD+2q/3)w-(D^2+3hD)c/3 and W=-qw-D^2c. Their matrix is Bc=B0+C D with ||C||<8 and ||C'||<35 on the original slab.",
+    "boundary": "The physical conformal-density reference inverse retains right multiplication by64pi^2 kappa a^4 and costs at most2250pi^2 kappa T^4 exp(108T). The scalar factors are still the specified flat reference factors. Actual curved mass/state/contact/tree/matter differences and the full quantum-force graph remain open.",
+    "complete_local_Hessian": "The unchanged finite R_old^2, Weyl, Einstein and volume Hessians are retained completely. The curvature-square factor is -4SD SG-(4/45)WD WG and the explicit remainder has weighted total differential order at most2, not an asserted small compatible-space norm. Its homogeneous unit-Frobenius TF restriction agrees with S189.",
+    "ordered_reference_inverse": "The causal inverses Y=Bc^-1 and Z=(Bc*)^-1 retain Bc*=B0^T-D(C^T), including Cprime. The curvature-adapted reference inverse is the ordered Y Kdiag Z, represented by Y Jdiag partial Z. Its norm is at most375T^4 exp(108T)/64 on C_tH^r and L2_tH^r, all momenta and every realr."
+  },
+  "ordered_curvature_coordinate_reference_inverse_and_physical_density": {
+    "adjoint_velocity_equation": "v=(R0')^T*f+(R0')^T*(C^T v)+(R0')^T*((C')^T Iv), z=Iv. Its reordered Volterra kernel is below108 forT<=1. Bc*=B0^T-D(C^T), not B0^T-C^T D.",
+    "complete_formal_adjoint_action": [
+      [
+        "-spatial_transfer**2*cD(conformal_time) + 2*spatial_transfer**2*wD(conformal_time)/3 + Derivative(wD(conformal_time), (conformal_time, 2)) - 3*wD(conformal_time)*Derivative(scale(conformal_time), (conformal_time, 2))/scale(conformal_time) - 3*Derivative(scale(conformal_time), conformal_time)*Derivative(wD(conformal_time), conformal_time)/scale(conformal_time) + 3*wD(conformal_time)*Derivative(scale(conformal_time), conformal_time)**2/scale(conformal_time)**2"
+      ],
+      [
+        "-Derivative(cD(conformal_time), (conformal_time, 2)) - Derivative(wD(conformal_time), (conformal_time, 2))/3 + wD(conformal_time)*Derivative(scale(conformal_time), (conformal_time, 2))/scale(conformal_time) + Derivative(scale(conformal_time), conformal_time)*Derivative(wD(conformal_time), conformal_time)/scale(conformal_time) - wD(conformal_time)*Derivative(scale(conformal_time), conformal_time)**2/scale(conformal_time)**2"
+      ]
+    ],
+    "coordinate_inverse_bounds": "||partial_t Y(t,s)||<=(5/2)exp(20(t-s)), ||Y(t,s)||<=(5/2)(t-s)exp(20(t-s)); ||partial_t Z(t,s)||<=(5/2)exp(108(t-s)), ||Z(t,s)||<=(5/2)(t-s)exp(108(t-s)). Y=Bc^-1 andZ=(Bc*)^-1 are retarded kernels in their actual order.",
+    "exact_integration_by_parts_boundary": "(-cD(conformal_time) - wD(conformal_time)/3)*Derivative(cG(conformal_time), conformal_time) - (-Derivative(cD(conformal_time), conformal_time) - Derivative(wD(conformal_time), conformal_time)/3)*cG(conformal_time) - cG(conformal_time)*wD(conformal_time)*Derivative(scale(conformal_time), conformal_time)/scale(conformal_time) + wD(conformal_time)*Derivative(wG(conformal_time), conformal_time) - wG(conformal_time)*Derivative(wD(conformal_time), conformal_time) + 3*wD(conformal_time)*wG(conformal_time)*Derivative(scale(conformal_time), conformal_time)/scale(conformal_time)",
+    "graph": "The causal forward graph includes the complete initial boundary. Both inverse products hold there. Smooth coefficient Volterra inverses and the explicit scalar forward distributions define the ordered composition; no initial atom or shear pole is deleted.",
+    "ordinary_composite_kernel": "Ecurv(t,s)=integral_s^t du integral_s^u dv Y(t,u)Jdiag(u-v)partial_v Z(v,s). Z(s,s)=0 permits moving the middle causal derivative onto Z. This is the ordered inverseY Kdiag Z, not a commuting convolution ansatz.",
+    "physical_units": "Define the conformal-density reference force by Qbar_ref=M_(1/(64pi^2 kappa a^4)) Aref. Its inverse is Ecurv composed on the RIGHT withM_(64pi^2 kappa a^4), with norm below2250pi^2 kappa T^4 exp(108T). The time-dependent density is not commuted through the kernel.",
+    "primal_velocity_equation": "u=R0'*f-R0'*(C u), y=Iu. Its Volterra kernel is bounded by20; both causal coordinate inverse identities follow from this equation and the unchanged initial boundary.",
+    "reference_definition": "Aref=Bc* diag(Ftrace(D_eta^2+q),(8/3)F2(D_eta^2+q)) Bc. The scalar factors remain the fixed flat reference factors, not an asserted actual curved state/mass substitution.",
+    "scope": "The actual finite local Hessian's explicit lower-order remainder is retained separately. Conformal mass-scale/state/contact/tree/matter differences and the full S222 auxiliary/clock bridge are not proved bounded perturbations here.",
+    "spaces": "For every realr, the normalized curvature-adapted reference inverse is bounded onC_tH^r by375T^4 exp(108T)/64, all comoving momenta, withT<=1. A scalar dominating difference kernel gives the sameL2_tH^r bound. These are amplitude and dual-source norms; the metric embedding costs the retained factor14 when used.",
+    "uniform_kernel_bound": "375*elapsed**3*exp(108*elapsed)/16",
+    "uniform_operator_bound": "375*window**4*exp(108*window)/64"
+  },
+  "primitive_and_matching_frontier": {
+    "matching": [
+      {
+        "id": "fixed_sigma_isolated_MS_conversion",
+        "status": "CANCELLED_NONLOCAL_ORDER_TWO_WITH_SAME_REGULATED_REFERENCE"
+      },
+      {
+        "id": "remaining_scale_parameter_field_map_and_cross_terms",
+        "status": "OPEN"
+      },
+      {
+        "id": "remaining_counterterm_and_vacuum_source_assembly",
+        "status": "ASSEMBLED_FOR_FIXED_ORDER_PHI_POLE_B2_VACUUM_AND_H_SOURCE"
+      },
+      {
+        "id": "full_matched_two_loop_pole_and_amplitude_error",
+        "status": "FIXED_ORDER_PHI_POLE_AND_B2_BOUNDED_PHYSICAL_TRUNCATION_OPEN"
+      },
+      {
+        "id": "finite_EFT_higher_order_truncation",
+        "status": "OPEN"
+      },
+      {
+        "id": "V_contour_and_cut_control",
+        "status": "OPEN"
+      },
+      {
+        "id": "finite_gravity_G",
+        "status": "OPEN"
+      },
+      {
+        "id": "common_parent_B",
+        "status": "OPEN"
+      },
+      {
+        "id": "complete_wineglass_interaction_forest_MS",
+        "status": "BOUNDED_WITH_REGULATED_FINITE_LOCAL_ANCHOR_AND_FULL_SCALE_TERM"
+      },
+      {
+        "id": "complete_double_bubble_interaction_forest_MS",
+        "status": "BOUNDED_WITH_ACTUAL_NESTED_MS_FORESTS_AND_BOTH_SCALE_TERMS"
+      },
+      {
+        "id": "complete_scalar_OS_insertion_interaction_forest_MS",
+        "status": "BOUNDED_WITH_FULL_REGULATED_SLOPE_TIMES_OUTER_REFERENCE"
+      },
+      {
+        "id": "complete_scalar_quadratic_finite_MS_slope_and_converted_OS_bound",
+        "status": "BOUNDED_WITH_FIXED_INNER_OS_AND_INTERACTION_MS_COORDINATES"
+      },
+      {
+        "id": "first_finite_Phi_field_covariance_and_MS_projection_commutator",
+        "status": "EXACT_REGULATED_FIELD_DIRECTION_AND_BOUNDED_FIRST_SLOPE_CROSS_TERMS"
+      },
+      {
+        "id": "complete_GY14_second_Phi_normalization_and_canonical_unit_disc_pole",
+        "status": "BOUNDED_WITH_DIRECT_MS_OWNERSHIP_AND_FULL_FINITE_FIELD_REEXPANSION"
+      },
+      {
+        "id": "complete_two_loop_vacuum_reference_and_first_source_square",
+        "status": "BOUNDED_WITH_FULL_REGULATED_SOURCE_REDUCIBLE_CANCELLATION"
+      },
+      {
+        "id": "complete_two_loop_derivative_map_with_matched_physical_source",
+        "status": "TRANSPORTED_FOR_FULL_ACTION_AND_PHYSICAL_SOURCE_NOT_ORDINARY_PSI_MS_OR_TRUNCATION"
+      },
+      {
+        "id": "complete_matched_two_loop_low_energy_Phi_elastic_cut",
+        "status": "BOUNDED_ON_PHYSICAL_WINDOW_4_TO_6_WITH_FULL_FIRST_AMPLITUDE_NOT_PHYSICAL_REMAINDER_OR_GLOBAL_DISPERSION"
+      },
+      {
+        "id": "full_finite_kappa_analytic_target_classical_vacuum_match",
+        "status": "BOUNDED_ON_SAME_RESTRICTED_FLAT_SCHWARTZ_CLASS_NOT_QUANTUM_TARGET_OR_ROLLING_COMMON_PARENT_MATCH"
+      },
+      {
+        "id": "GY14_SAT8_pointwise_fermion_mass_protection_and_named_low_order_invariance",
+        "status": "NEW_ANALYTIC_EFT_BRANCH_WITH_GLOBAL_REAL_MASS_FLOOR_AND_SAME_NAMED_TWO_LOOP_DATA_NOT_ROLLING_STATE_OR_COMMON_PARENT_CLOSURE"
+      },
+      {
+        "id": "polynomial_clock_transparent_physical_source_map_and_full_target_classical_bound",
+        "status": "KINEMATIC_CLOCK_ARGUMENT_ALIGNED_WITH_PROTECTED_MASSES_AND_SAME_NAMED_VACUUM_DATA_NOT_BACKGROUND_SOLUTION_QUANTUM_STATE_OR_COMMON_PARENT_CLOSURE"
+      },
+      {
+        "id": "free_flat_clock_Dirac_out_energy_with_complete_transition_series_remainder",
+        "status": "BOUNDED_FOR_SPECIFIED_QUADRATIC_MODEWISE_IN_OUT_STATE_NOT_INTERACTING_OR_CURVED_BOUNCE_STRESS"
+      },
+      {
+        "id": "Hadamard_regular_free_flat_SAT8_in_out_state_and_uniform_one_particle_norm_limit",
+        "status": "HADAMARD_FOR_SPECIFIED_FREE_EXTERNAL_MASS_OPERATOR_USING_IDENTIFIED_EXTERNAL_THEOREM_NOT_INTERACTING_CURVED_STATE_OR_NUMERICAL_STRESS"
+      },
+      {
+        "id": "exact_four_frame_free_transition_and_uniform_same_operator_in_out_T00_difference",
+        "status": "BOUNDED_FOR_FREE_FLAT_HADAMARD_STATE_DIFFERENCE_NOT_ABSOLUTE_STRESS_INTERACTING_CURVED_STATE_OR_BACKREACTION"
+      },
+      {
+        "id": "free_flat_absolute_one_loop_local_energy_with_fixed_saturated_mass_reference",
+        "status": "BOUNDED_IN_EXPLICIT_MS_AND_SATURATED_MASS_REFERENCE_QUADRATIC_SCHEME_NOT_FULL_CURVED_INTERACTING_PARENT_STRESS"
+      },
+      {
+        "id": "complete_free_flat_homogeneous_one_loop_stress_with_dimensional_curvature_improvement",
+        "status": "BOUNDED_SPECIFIED_QUADRATIC_MS_MR_FLAT_TENSOR_NOT_FULL_INTERACTING_CURVED_PARENT_STRESS"
+      },
+      {
+        "id": "actual_CD_free_Dirac_Hadamard_in_out_state_and_uniform_state_stress_difference",
+        "status": "CURVED_FREE_HADAMARD_STATE_AND_STATE_DIFFERENCE_BOUNDED_NOT_ABSOLUTE_PARENT_STRESS"
+      },
+      {
+        "id": "complete_free_curved_one_loop_stress_with_explicit_EC_Newton_reference",
+        "status": "BOUNDED_SPECIFIED_QUADRATIC_CURVED_TENSOR_NOT_FULL_INTERACTING_PARENT_OR_BACKGROUND_RESPONSE"
+      },
+      {
+        "id": "minimal_Einstein_canonical_clock_free_sector_null_equation_mismatch",
+        "status": "EXCLUDED_NAMED_MINIMAL_DIAGNOSTIC_WITH_SMALL_EXTRA_NULL_BUDGET_NOT_FULL_INTERACTING_PARENT_OR_DHOST_ROW"
+      },
+      {
+        "id": "actual_CD_leading_clock_Euler_source_decomposition_and_matching_domain_gap",
+        "status": "LEADING_TARGET_SOURCES_AND_CONSTRAINT_DOMAIN_REQUIREMENTS_IDENTIFIED_NOT_PROPAGATING_PARENT_OR_QUANTUM_BOUNCE"
+      },
+      {
+        "id": "analytic_CD_REG_AFFINE_ISO_classical_parent_clock_vacuum_and_local_constraints",
+        "status": "NEW_REGULAR_CLASSICAL_PARENT_AND_LOCAL_CONSTRAINT_BLOCKS_NOT_QUANTUM_MATCHING_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "same_classical_affine_parent_closed_source_lift_and_scoped_vector_Schur_control",
+        "status": "EXACT_CLASSICAL_AND_COMMON_REGULATOR_IDENTITIES_FULL_EUCLIDEAN_AND_LEADING_LORENTZ_BOUNDS_NOT_FULL_QUANTUM_MATCHING"
+      },
+      {
+        "id": "regular_affine_parent_conditional_Gaussian_Hadamard_family_and_ordinary_Proca_stress",
+        "status": "SOURCE_AWARE_CONDITIONAL_VECTOR_STATE_AND_FIXED_CLOCK_STRESS_NOT_FULL_PARENT_QUANTUM_SOLUTION"
+      },
+      {
+        "id": "full_fixed_canonical_affine_family_actual_classical_gravitational_decoupling",
+        "status": "ANCHORED_FULL_FUNCTION_CLASSICAL_LIMIT_AND_TREE_AMPLITUDE_NOT_QUANTUM_CONTOUR_TRUNCATION_OR_V_CLOSURE"
+      },
+      {
+        "id": "complete_affine_vector_retarded_mean_energy_and_causal_cubic_light_force",
+        "status": "FIXED_CD_FULL_SOURCE_FINITE_TIME_CONDITIONAL_GAUSSIAN_MEAN_AND_LIGHT_FORCE_NOT_METRIC_NOISE_FULL_PARENT_OR_B_CLOSURE"
+      },
+      {
+        "id": "same_affine_conditional_prepared_homogeneous_metric_response_with_uncancelled_chart_contacts",
+        "status": "COMPLETE_CONDITIONAL_VECTOR_HOMOGENEOUS_C10_TO_C0_BOUND_NOT_SPATIAL_NOISE_COUPLED_BACKGROUND_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "same_affine_parent_prepared_homogeneous_retained_tree_plus_conditional_vector_causal_inverse",
+        "status": "UNIQUE_RETAINED_LINEAR_PREPARED_CAUSAL_INVERSE_WITH_NUMERIC_LOCAL_LAPSE_RECOVERY_NOT_FULL_INVERSE_SMALLNESS_QUANTUM_BACKGROUND_OR_V_G_B"
+      },
+      {
+        "id": "same_massive_scalar_range_kernel_explicit_full_half_line_L1_majorant",
+        "status": "MASS_INDEPENDENT_EXPLICIT_SCALAR_KERNEL_NORM_NOT_FULL_INVERSE_SMALLNESS_BACKGROUND_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "new_CD_REG_AFFINE_ISO_QG1_fixed_coefficient_stationary_Gaussian_mean_and_actual_response",
+        "status": "NEW_PARENT_RETAINED_MEAN_STATIONARITY_AND_BOUNDED_COEFFICIENT_CORRECTION_NOT_FULL_QUANTUM_BACKGROUND_STABILITY_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "actual_classical_Hamiltonian_C0_and_C10_inverse_and_first_formal_Gaussian_response",
+        "status": "QUANTIFIED_PREPARED_CLASSICAL_PROPAGATOR_AND_FIRST_FORMAL_COEFFICIENT_NOT_FINITE_COUPLING_ERROR_STABILITY_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "complete_finite_time_canonical_vacuum_source_mean_and_scalar_force_noise_with_fixed_profile",
+        "status": "FULL_CONDITIONAL_GAUSSIAN_VACUUM_SOURCE_CAUSAL_AND_NOISE_BOUNDS_NOT_INTERACTING_AMPLITUDE_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "actual_all_order_CD_state_complete_clock_source_smeared_force_noise_and_canonical_normalization",
+        "status": "SAME_STATE_FULL_SOURCE_SMEARED_SCALAR_NOISE_BOUND_NOT_METRIC_NOISE_SOLUTION_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "actual_all_order_CD_full_local_smeared_metric_stress_covariance",
+        "status": "FULL_SPACETIME_TENSOR_STRESS_NOISE_BOUND_NOT_METRIC_SOLUTION_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "actual_CD_boundary_compatible_tree_tensor_noise_response",
+        "status": "RESTRICTED_DETECTOR_TREE_PROPAGATED_NOISE_NOT_FULL_QUANTUM_TENSOR_STATE_OR_V_G_B"
+      },
+      {
+        "id": "actual_CD_homogeneous_shear_Hamiltonian_contact_and_modewise_remainder",
+        "status": "ACTUAL_SHEAR_MODEWISE_FINITE_AMPLITUDE_REMAINDER_NOT_CONTINUUM_SELF_ENERGY_OR_V_G_B"
+      },
+      {
+        "id": "actual_fixed_local_covariant_full_spatial_tensor_Hessian",
+        "status": "ACTUAL_FIXED_FINITE_LOCAL_TENSOR_HESSIAN_BOUND_NOT_COMPLETE_DETERMINANT_RESPONSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_CD_full_matrix_adiabatic_uniform_covariance_tail",
+        "status": "ACTUAL_UNCHANGED_STATE_UNIFORM_HIGH_BAND_COVARIANCE_REMAINDER_NOT_RESPONSE_SUBTRACTION_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_matrix_covariance_tail_C2_response_and_Taylor_remainder",
+        "status": "ACTUAL_UNCHANGED_STATE_C2_HIGH_BAND_COVARIANCE_TAIL_NOT_COMPLETE_COVARIANT_RESPONSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_physical_shear_current_C2_fourth_order_comparison",
+        "status": "ACTUAL_STATE_C2_CURRENT_MODE_COMPARISON_NOT_FIXED_COVARIANT_MATCHING_OR_V_G_B"
+      },
+      {
+        "id": "actual_homogeneous_shear_full_fixed_covariant_mode_subtraction_matching",
+        "status": "ACTUAL_HOMOGENEOUS_SHEAR_FIXED_COVARIANT_MODE_SUBTRACTION_MATCHING_NOT_FULL_FEEDBACK_OR_V_G_B"
+      },
+      {
+        "id": "actual_complete_fixed_covariant_homogeneous_current_C2_and_canonical_response",
+        "status": "ACTUAL_COMPLETE_FIXED_COVARIANT_HOMOGENEOUS_CURRENT_C2_AND_CANONICAL_RESPONSE_NOT_FULL_FEEDBACK_OR_V_G_B"
+      },
+      {
+        "id": "actual_spatial_two_momentum_metric_vertices_and_finite_band_Gaussian_response",
+        "status": "ACTUAL_SPATIAL_TWO_MOMENTUM_CURRENT_FINITE_BAND_NOT_RENORMALIZED_CONTINUUM_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_full_spatial_separated_support_weak_Gaussian_response_and_quantitative_tail",
+        "status": "ACTUAL_CONTINUUM_SEPARATED_SUPPORT_WEAK_RESPONSE_NOT_COINCIDENT_EXTENSION_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_overlapping_time_spatial_retarded_state_remainder_with_complete_contact",
+        "status": "ACTUAL_RETARDED_MEMORY_CONTACT_COMPARISON_NOT_REFERENCE_DIAGONAL_MATCHING_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_reference_six_step_retarded_boundary_extraction_and_full_finite_bulk",
+        "status": "ACTUAL_REFERENCE_FINITE_BULK_AND_EXPLICIT_ENDPOINTS_NOT_COVARIANT_SPATIAL_MATCHING_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_canonical_flat_Proca_full_tensor_cut_and_subtracted_dispersion_benchmark",
+        "status": "CANONICAL_FLAT_FULL_TENSOR_CUT_BENCHMARK_NOT_CURVED_MATCHING_FULL_PARENT_AMPLITUDE_OR_V_G_B"
+      },
+      {
+        "id": "full_spatial_flat_Proca_covariant_and_time_subtraction_conversion_with_nonlocal_coefficient_bounds",
+        "status": "FULL_SPATIAL_FLAT_NONLOCAL_SUBTRACTION_CONVERSION_NOT_CURVED_MATCHING_LOCAL_POLYNOMIAL_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_curved_reference_initial_state_prefactor_full_memory_contact_and_regulator_tail",
+        "status": "ACTUAL_CURVED_INITIAL_PREFACTOR_REMOVED_WITH_FINITE_FULL_RESPONSE_CORRECTION_NOT_SPATIAL_MATCHING_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_curved_reference_joint_spatial_analyticity_full_readouts_and_far_endpoint_Taylor_tail",
+        "status": "ACTUAL_UNIT_W8_JOINT_SPATIAL_ANALYTICITY_AND_FAR_ENDPOINT_TAYLOR_TAIL_NOT_NEAR_REGION_LOCAL_MATCHING_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_curved_reference_all_momentum_spatial_Taylor_subtracted_endpoint_remainder",
+        "status": "ACTUAL_UNIT_W8_ALL_MOMENTUM_ENDPOINT_REMAINDER_WITH_ORIGINAL_TAIL_NOT_LOCAL_MATCHING_FULL_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "fixed_covariant_local_full_tracefree_spatial_Hessian_proper_time_and_norm",
+        "status": "FIXED_LOCAL_FULL_TRACEFREE_SPATIAL_HESSIAN_NOT_QUANTUM_MATCHING_MIXED_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "finite_endpoint_spatial_Taylor_cells_restored_with_original_regulator_tail",
+        "status": "TEN_FINITE_ENDPOINT_TAYLOR_CELLS_RESTORED_NOT_REMAINING_UV_CONTACT_MATCHING_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_leading_full_Proca_sharp_two_leg_regulator_conversion_coefficient",
+        "status": "ACTUAL_LEADING_SHARP_BAND_ARTIFACT_NOT_FULL_REGULATOR_COVARIANT_MATCHING_OR_V_G_B"
+      },
+      {
+        "id": "complete_four_sector_spatial_UV_symbol_with_independent_detector_time",
+        "status": "HISTORICAL_ANNIHILATION_CREATION_PHASE_ERROR_CORRECTED_ENDPOINT_COEFFICIENTS_IN_S216"
+      },
+      {
+        "id": "uniform_actual_UV_subtracted_endpoint_remainder_with_original_regulator_tail",
+        "status": "UNIFORM_UV_SUBTRACTED_ENDPOINT_REMAINDER_NOT_FULL_CONTACT_COVARIANT_MATCHING_OR_V_G_B"
+      },
+      {
+        "id": "complete_original_UV_shape_conversion_centered_cancellations_and_uniform_tail",
+        "status": "ACTUAL_K2_AND_FINITE_CONVERSION_CANCEL_WITH_UNIFORM_TAIL_NOT_CURVED_A1_EVALUATION_FULL_CONTACT_MATCHING_OR_V_G_B"
+      },
+      {
+        "id": "explicit_actual_curved_linear_regulator_conversion_all_tensor_channels_and_source_jets",
+        "status": "ACTUAL_CURVED_A1_EVALUATED_WITH_COEFFICIENT_NORMS_NOT_FULL_ONE_BALL_CONTACT_COVARIANT_MATCHING_OR_V_G_B"
+      },
+      {
+        "id": "actual_spatial_UV_difference_complete_contact_cancellation_and_fixed_curved_pole",
+        "status": "FULL_SPATIAL_UV_DIFFERENCE_AND_POLE_IDENTIFIED_NOT_FINITE_DIMENSIONAL_MATCHING_OR_FULL_RESPONSE"
+      },
+      {
+        "id": "actual_dimensional_spatial_UV_finite_part_with_evanescent_modes_and_counterterms",
+        "status": "HISTORICAL_PHYSICAL_FINITE_IDENTIFICATION_WITHDRAWN_EXPLICIT_EVANESCENT_CORRECTION_IN_S216"
+      },
+      {
+        "id": "complete_matched_tracefree_spatial_Gaussian_current_with_anchored_original_regulator",
+        "status": "HISTORICAL_PHASE_ERROR_SUPERSEDED_BY_CORRECTED_S217_FULL_TRACEFREE_CURRENT_AND_ANCHORED_REGULATOR"
+      },
+      {
+        "id": "full_constrained_ADM_Proca_vertices_metric_chart_contacts_and_all_momentum_forms",
+        "status": "FULL_ADM_LOCAL_AND_FINITE_REGULATOR_GAUSSIAN_INPUT_NOT_FULL_NEW_SECTOR_CONTINUUM_REDUCED_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "prepared_ordered_Ward_reconstruction_full_chart_correction_and_three_remaining_scalar_kernels",
+        "status": "PREPARED_WARD_RECONSTRUCTION_WITH_COMPLETE_S219_REFERENCE_GAUSSIAN_METRIC_CURRENT_NOT_REDUCED_INVERSE_OR_NONLINEAR_BACKGROUND"
+      },
+      {
+        "id": "corrected_retarded_pair_phase_full_ordered_scalar_UV_and_fixed_six_invariant_finite_matching",
+        "status": "CORRECTED_LOCAL_SPATIAL_UV_SCALAR_FINITE_PART_NOT_FULL_CURRENT_REASSEMBLY_SCALAR_ANCHOR_REDUCED_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "corrected_full_retarded_tracefree_spatial_current_original_regulator_and_prepared_Ward_input",
+        "status": "CORRECTED_COMPLETE_TRACEFREE_SPATIAL_WEAK_CURRENT_AND_KNOWN_WARD_INPUT_NOT_FULL_SCALAR_REDUCED_INVERSE_BACKGROUND_OR_V_G_B"
+      },
+      {
+        "id": "full_homogeneous_trace_Gaussian_anchor_original_volume_matching_and_ordered_cross_zeros",
+        "status": "COMPLETE_HOMOGENEOUS_TRACE_ANCHOR_AND_FULL_HOMOGENEOUS_HILBERT_LIFT_NOT_NONZERO_TRANSFER_SCALAR_REMAINDERS_REDUCED_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "full_spatial_scalar_remainders_original_regulator_and_complete_prepared_Gaussian_metric_response",
+        "status": "COMPLETE_REFERENCE_GAUSSIAN_METRIC_RESPONSE_WEAK_BOUND_NOT_REDUCED_INVERSE_FULL_SOURCED_PARENT_BACKGROUND_OR_V_G_B"
+      },
+      {
+        "id": "regular_QG1_scalar_coefficient_Hamiltonian_complete_infrared_Ward_pullback_and_comparison_bounds",
+        "status": "REGULAR_CLASSICAL_COEFFICIENT_PHASE_SYSTEM_AND_IR_SAFE_REFERENCE_SCALAR_WEAK_RESPONSE_NOT_FULL_QUANTUM_CONSTRAINT_INVERSE_OR_P8"
+      },
+      {
+        "id": "uniform_two_chart_QG1_classical_scalar_phase_propagator_with_twelve_spatial_derivative_loss",
+        "status": "TAME_CLASSICAL_COEFFICIENT_PROPAGATOR_NOT_SAME_SPACE_QUANTUM_INVERSE_STABILITY_OR_P8"
+      },
+      {
+        "id": "full_quantum_forced_scalar_constraints_ordered_Schur_graph_identity_and_first_response_domain",
+        "status": "EXACT_FORCE_INTERFACE_AND_ADMISSIBLE_GRAPH_EQUIVALENCE_NOT_QUANTUM_INVERSE_CONTRACTION_STABILITY_OR_P8"
+      },
+      {
+        "id": "isolated_fixed_shear_factor_unique_subthreshold_zero_pole_plus_cut_and_finite_window_causal_inverse",
+        "status": "ISOLATED_REFERENCE_INVERSE_WITH_UNDAMPED_POLE_NOT_FULL_COUPLED_POLE_STABILITY_OR_P8"
+      },
+      {
+        "id": "full_flat_scalar_gauge_quotient_two_channel_causal_reference_inverse_uniform_all_momentum_bound",
+        "status": "FLAT_REFERENCE_QUOTIENT_INVERSE_NO_SPATIAL_LOSS_NOT_FULL_CURVED_COUPLED_INVERSE_OR_P8"
+      },
+      {
+        "id": "actual_curved_scalar_curvature_coordinates_complete_finite_local_Hessian_and_ordered_reference_inverse",
+        "status": "CURVATURE_ADAPTED_REFERENCE_UNIFORM_INVERSE_NOT_ACTUAL_FULL_CURVED_QUANTUM_INVERSE_OR_P8"
+      }
+    ],
+    "primitive": [
+      {
+        "id": "scalar_Phi0_W0_F0",
+        "status": "BOUNDED_PAIRED_VACUUM_PRIMITIVE_WITH_ASSIGNED_LOCAL_FOREST"
+      },
+      {
+        "id": "scalar_Phi2_W0_F2",
+        "status": "BOUNDED_NONLOCAL_AND_FINITE_MS_MASS_AND_SLOPE_REFERENCES"
+      },
+      {
+        "id": "scalar_Phi2_W1_F0",
+        "status": "BOUNDED_PAIRED_NONLOCAL_AND_FINITE_MS_LOCAL_REFERENCES"
+      },
+      {
+        "id": "scalar_Phi4_W0_F4",
+        "status": "BOUNDED_PAIRED_PRIMITIVE_ROW"
+      },
+      {
+        "id": "scalar_Phi4_W1_F2",
+        "status": "BOUNDED_PAIRED_IN_COMMON_MS_INTERACTION_SCHEME"
+      },
+      {
+        "id": "scalar_Phi4_W2_F0",
+        "status": "BOUNDED_PAIRED_IN_COMMON_MS_INTERACTION_SCHEME"
+      },
+      {
+        "id": "gauge_Phi0",
+        "status": "BOUNDED_PAIRED_VACUUM_PRIMITIVE_WITH_ASSIGNED_LOCAL_FOREST"
+      },
+      {
+        "id": "gauge_Phi2",
+        "status": "BOUNDED_NONLOCAL_AND_FINITE_MS_MASS_AND_SLOPE_REFERENCES"
+      },
+      {
+        "id": "gauge_Phi4",
+        "status": "BOUNDED_PAIRED_PRIMITIVE_ROW"
+      }
+    ]
+  },
+  "prior_sha256": {
+    "S6_189_unchanged_original_finite_local_Hessian_fully_rebuilt": "567a8a84e981c637b000ef671c350b63c54f4fc357ca60eaf1ce1de9c1293b02",
+    "S6_222_full_quantum_force_graph_transitively_rebuilt_not_inverted_here": true,
+    "S6_223_original_shear_pole_and_S6_86_trace_factor_transitively_rebuilt": true,
+    "S6_224_full_flat_scalar_quotient_uniform_inverse_fully_rebuilt": "a2287a5083d5dceab6886f4f7de3304ce3a7af56c772e76dc869115ad8ac3fb5",
+    "original_state_prescription_and_all_frozen_scientific_bytes_unchanged": true
+  },
+  "proof_checks": {
+    "actual_curvature_coordinates_actual_scale_not_below_one": true,
+    "actual_curvature_coordinates_background_curvature_scale_below18": true,
+    "actual_curvature_coordinates_coefficient_derivative_norm_strictly_below35": true,
+    "actual_curvature_coordinates_coefficient_norm_strictly_below8": true,
+    "actual_curvature_coordinates_leading_second_time_derivative_matrix_invertible": true,
+    "actual_curvature_coordinates_physical_conformal_density_below6": true,
+    "actual_formal_adjoint_coefficient_derivative_and_factor_order_retained": true,
+    "complete_original_finite_local_Hessian_all_lower_order_terms_retained": true,
+    "complete_original_finite_local_Hessian_complete_Weyl_curvature_coefficient_negative": true,
+    "complete_original_finite_local_Hessian_complete_trace_curvature_coefficient_negative": true,
+    "complete_original_finite_local_Hessian_original_mass_and_volume_coefficients_nonzero": true,
+    "complete_original_finite_local_Hessian_remainder_has_actual_second_order_terms": true,
+    "complete_original_finite_local_Hessian_remainder_has_no_fourth_order_monomial": true,
+    "fixed_flat_scalar_factors_not_asserted_actual_curved_mass_or_state": true,
+    "no_full_quantum_inverse_kappa_smallness_or_primitive_promotion": true,
+    "ordered_curvature_adapted_reference_inverse_actual_nonzero_coefficient_derivative_retained": true,
+    "ordered_curvature_adapted_reference_inverse_adjoint_Volterra_constant_strict_enclosure": true,
+    "ordered_curvature_adapted_reference_inverse_original_shifted_shear_primitive_bound_retained": true,
+    "ordered_curvature_adapted_reference_inverse_physical_force_bound_not_kappa_small": true,
+    "ordered_curvature_adapted_reference_inverse_primal_Volterra_constant_finite": true,
+    "ordered_curvature_adapted_reference_inverse_uniform_reference_constant_below_six": true,
+    "original_finite_coefficients_and_all_background_local_terms_retained": true,
+    "uniform_reference_bound_keeps_pole_and_complete_initial_boundary": true,
+    "unique_matching_identifiers": true
+  },
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "c2f1e2c7125e88ed075df41aea6533811a46aaa0cd3abeca769f1df235fd809e",
+    "README.md": "e9a38ba887428b735cb17dfe3f3a5e72b93c0105ef962ebcdb56266abca8fdf4",
+    "notes/adjoint.md": "8dfbf985fc1dcf0b88499f2ecb4af66b4276a4bf21b4274847c1c28a17122a9d",
+    "notes/coordinates.md": "6bb8eac2f28f274d1756d5f2f38dd92d774084bf2e0aa5892f5d74fd6ae6af36",
+    "notes/geometry.md": "10ebe62879f3416b55b634a132ae8c0741e88c0ea04806222adee27e268673f1",
+    "notes/inverse.md": "0ed67665d4d825cf35edd2279aa69990a29cc28130fbc5f61be3d750be41f530",
+    "notes/local.md": "e8fa933a7daf340f7ec87410461f690448c06ceb13b518b23141d4ef2af7d825",
+    "notes/scope-validation.md": "21e619ca0443ba4ac07b94f6973c35999455914b8b8890868c1c64a7fb16601c",
+    "notes/spaces.md": "933bf8a78952ff24b5ec334c9bc6948e1f07f501ef78dae1484f88fbddf86010",
+    "src/p8_vacuum_affine_curved_scalar_reference/__init__.py": "0c1539b2b995e362f9d2081bc99dc22475e4af4c9f43c95acfe4d88f71245292",
+    "src/p8_vacuum_affine_curved_scalar_reference/audit.py": "000265c0ec9d8a0578e4583d4137dda4bf1f38fe5d4bd0d9fdd45df556cf9bab",
+    "src/p8_vacuum_affine_curved_scalar_reference/geometry.py": "ad90aa59e5d3a87b230d1971b8d350fa6d0ae6b6f6e97995f6d0d73460d843c0",
+    "src/p8_vacuum_affine_curved_scalar_reference/local.py": "e17cd07c3f66c9171b4f35fbef47ab2e3afd6388f3fb6b38b02d5a8311d5b831",
+    "src/p8_vacuum_affine_curved_scalar_reference/resolvent.py": "29b77d3aaddcf77b61c4fe47984bd5491ddda39063994954b8b77060698323c9",
+    "src/p8_vacuum_affine_curved_scalar_reference/verify.py": "30e6cdfe7e5ce3d848a4ef2ebcb06b46f61d9658a52d544d7ee1da1b65a11a6c",
+    "tests/test_affine_curved_scalar_reference_certificate.py": "c87f650d3e7a8822d142889b415464fac384e2a5431732fe716686c7f0dfb686",
+    "tests/test_affine_curved_scalar_reference_science.py": "d1441c75fb94ddb7c1eba19297b1093b11ca709d8762f37a0c2cb606eec41d69"
+  },
+  "status": "ACTUAL_LOCAL_GEOMETRY_AND_CURVATURE_ADAPTED_REFERENCE_INVERSE; NOT_ACTUAL_FULL_CURVED_QUANTUM_INVERSE_KAPPA_SMALLNESS_STABILITY_CUTOFF_V_G_B_OR_ORIGINAL_P8",
+  "verdict": "The literal four-dimensional exponential spatial scalar chart on the unchanged a=(1+t^2)^2 background gives S=a^2 deltaR_old/6 and W=3C0101/(a^2 phase), with Bc=B0+C D in fixed conformal time. Continuous whole-slab bounds give ||C||<8, ||Cprime||<35 and conformal length at most1. The complete original finite local scalar Hessian is the curvature-square factor -4SD SG-(4/45)WD WG plus the explicitly retained background-curvature, second-variation, Einstein and volume terms of total differential order at most2. Its homogeneous unit-Frobenius tracefree restriction agrees with the source-pinned S189 fourth and kinetic terms. Both causal curvature-coordinate inverses exist by separate Volterra velocity equations; the formal conformal-density adjoint retains -D(C^T), including its coefficient derivative. Their first-derivative kernels are bounded by (5/2)exp(20 elapsed) and (5/2)exp(108 elapsed). The ordered reference Aref=Bc* diag(Ftrace(D^2+q),(8/3)F2(D^2+q)) Bc has inverse Y Kdiag Z, represented by an ordinary Y Jdiag partial Z kernel. The retained shifted trace and pole-plus-cut shear primitives give kernel bound375 elapsed^3 exp(108 elapsed)/16 and inverse norm375T^4 exp(108T)/64<6T^4 exp(108T) on C_tH^r and L2_tH^r, every realr and all comoving momenta without spatial derivative loss. Both inverse products include the full causal initial boundary. Conformal physical force normalization keeps right multiplication by64pi^2 kappa a^4, yielding a bound below2250pi^2 kappa T^4 exp(108T), not kappa smallness. Independent complete linearized Weyl components, an ADM/warped-metric local action reconstruction, actual interval bounds, integrated adjoints and noncommuting finite causal fixtures supplement the written functional proof. The scalar factors remain the specified flat reference factors. Actual curved mass/state/contact/tree/matter differences, the full S222 force graph inverse and original V/G/B/P8 closure are not established.",
+  "verification_boundary": "Exact actual geometry, complete finite Hessian, original tensor bridge, adjoint boundary and all convolution constants are checked. Causal variable-coefficient Volterra inversion, distribution graph extension and uniform function-space estimates are written proofs, not FORMALIZED. Finite causal matrix controls establish ordering diagnostics, not a continuum discretization limit. Native/direct/ordinary/CLI retain original SymPy; only full regression uses the audited exact-GCD adapter. All frozen predecessors are unchanged.",
+  "written_proofs": [
+    "notes/geometry.md",
+    "notes/local.md",
+    "notes/coordinates.md",
+    "notes/adjoint.md",
+    "notes/inverse.md",
+    "notes/spaces.md",
+    "notes/scope-validation.md"
+  ]
+}
