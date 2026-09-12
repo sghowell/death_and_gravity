@@ -438,7 +438,12 @@ around a pre-registered problems document and a certificate-gated ledger.
   This is still linear light evolution and its leading heavy response,
   not a full nonlinear solution or UV-admissible completion.
 
-The [current P8 continuation audit](docs/assessment-2026-09-12-p8-affine-scalar-matching-scale.md)
+The [current P8 continuation audit](docs/assessment-2026-09-12-p8-affine-scalar-transfer-moment.md)
+derives conditional lower bounds on the full low spectral weight and higher
+forward coefficient needed by the original scalar matching tolerances. It retains
+all low cuts and heavy positive weight; the separate positive atom is not an
+exact unitary completion. Full quantum matching and original P8 remain open.
+The [scalar matching-scale audit](docs/assessment-2026-09-12-p8-affine-scalar-matching-scale.md)
 derives the complete original massive scalar tree in normalized identical channels
 and a conditional tradeoff between full angular and physical coefficient matching
 errors. Its nominal tree ceiling is not a physical cutoff; full quantum matching,
