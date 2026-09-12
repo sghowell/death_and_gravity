@@ -1,0 +1,601 @@
+{
+  "checked_scalar_entries": 42,
+  "claim": "P8-S6.233.SEPARATE_LOCAL_CANONICAL_TWO_SCALAR_MODEL_WITH_COERCIVE_POTENTIAL_COMPLETE_ORIGINAL_MASSIVE_TREE_MATCHING_AND_UNIFORM_ALL_ANGLE_REMAINDER",
+  "complete_original_tree_remainder_and_full_first_elastic_comparison": {
+    "cut": {
+      "all_partial_waves_scope": "For s>4, k>0 and a-k=M_H^2>0. The two exchange denominators have a convergent even angular power series with infinitely many nonzero even Legendre coefficients; the contact and s-channel term affect only l0. No l0/l2 truncation is used for the new model.",
+      "complete_angular_integral": "2*angular_d + 2*coupling_squared*log((angular_a + angular_k)/(angular_a - angular_k))/angular_k",
+      "complete_squared_angular_integral": "2*angular_d**2 + 4*coupling_squared**2/(angular_a**2 - angular_k**2) + (4*angular_d*coupling_squared/angular_k + 2*coupling_squared**2/(angular_a*angular_k))*log((angular_a + angular_k)/(angular_a - angular_k))",
+      "first_absorptive_scope": "In the named window s<=10^196<M_H^2, the heavy single pole and the HH pair cut are inaccessible, and phi-parity forbids the mixed phi-H two-body channel. The first elastic absorptive coefficient uses the complete new tree in the light two-body cut. This is not the full real loop amplitude or a bounded all-loop error.",
+      "first_elastic_comparison": "For4<s<=10^196, rho_first_original<=rho_first_V2S_T1<(61/60)^2 rho_first_original; both vanish at the massive threshold. Its relative difference is less than121/3600. This follows from the all-angle positive tree matching, not from replacing the new rational amplitude by its original quartic truncation.",
+      "full_rational_angular_form": "2*angular_a*coupling_squared/(-angle_cosine**2*angular_k**2 + angular_a**2) + angular_d",
+      "normalization": "t0_tree=beta*I1/(64pi) and rho_first=beta*I2/(64pi), beta=sqrt(1-4/s). The original identical state and phase-space factors remain. At threshold beta0, the displayed integral limits are finite.",
+      "physical_substitution": {
+        "a": "physical_s/2 + 195312500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "d": "-292968749999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999/1280000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 + 1/(67108864*(195312500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002 - physical_s))",
+        "g2": "1/67108864",
+        "k": "physical_s/2 - 2"
+      },
+      "relative_first_elastic_error_upper": "121/3600",
+      "threshold_integrals": [
+        "2*angular_d + 4*coupling_squared/angular_a",
+        "2*(angular_d + 2*coupling_squared/angular_a)**2"
+      ]
+    },
+    "matching": {
+      "actual_matching_energy": "100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "boundary": "The uniform error compares two complete TREE amplitudes. It is not the full angular quantum error premise of S231, a physical cutoff, exact unitarity or common-parent bounce matching. The heavy pole and all its higher terms remain.",
+      "complete_named_model_tree": "-positive_trilinear**2*(3/positive_heavy_gap - 2/positive_heavy_gap**2) + positive_trilinear**2*(1/(positive_heavy_gap + s + t - 2) + 1/(positive_heavy_gap - t + 2) + 1/(positive_heavy_gap - s + 2))",
+      "complete_original_target_tree": "positive_trilinear**2*((s - 2)**2 + (t - 2)**2 + (-s - t + 2)**2)/positive_heavy_gap**3 + 3*positive_trilinear**2*s*t*(-s - t + 4)/positive_heavy_gap**4 - 8*positive_trilinear**2/positive_heavy_gap**4",
+      "exact_full_angular_remainder": "positive_trilinear**2*((s - 2)**4/(positive_heavy_gap - s + 2) + (t - 2)**4/(positive_heavy_gap - t + 2) + (-s - t + 2)**4/(positive_heavy_gap + s + t - 2))/positive_heavy_gap**4",
+      "exact_matching_identity": "For s+t+u=4, A_V2S_T1=A_original+gamma*sum(channel-2)^4/[D-(channel-2)]. The exact finite geometric identity retains the original mass and potential. It is not an identification of full-field actions or a derivative expansion with an omitted remainder.",
+      "forward_coefficients": "The named model has exactly b20_tree=4lambda and b21_tree=-3gamma, b40_tree=gamma^2/lambda, and its forward constant differs from the original tree by16gamma/(D+2). Its higher coefficients do not vanish.",
+      "forward_remainder": "2*crossing_v**4*positive_trilinear**2/(positive_heavy_gap**3*(-crossing_v**2 + positive_heavy_gap**2)) + 16*positive_trilinear**2/(positive_heavy_gap**4*(positive_heavy_gap + 2))",
+      "uniform_bound_inputs": "All |channel-2|<=s-2, every heavy denominator is positive below its s-channel pole, and A_original>=lambda(s-2)^2 because the Galileon term is nonnegative physically and4lambda>8gamma. No massless approximation or forward-only estimate is used.",
+      "uniform_tree_relative_error": "On4<=s<=10^196 and the complete physical angular interval, 0<A_V2S_T1-A_original<(1/60)A_original. For r=(s-2)/D<1, the relative error is at most6r^2/(1-r). The actual r<32/625 gives6144/370625<1/60."
+    }
+  },
+  "controls": {
+    "all_original_primitive_statuses_unchanged": true,
+    "constant_and_higher_coefficients_not_identical": true,
+    "first_elastic_comparison_not_full_loop_error": true,
+    "massive_shifted_cubic_identity_keeps_potential": true,
+    "omitting_contact_does_not_match_original_tree": true,
+    "positive_tree_potential_not_quantum_UV_completion": true,
+    "rational_tree_has_infinite_even_angular_channels": true,
+    "rejected_inputs": 213,
+    "two_scalar_model_not_original_affine_parent": true
+  },
+  "date": "2026-09-12",
+  "exact_residuals": {
+    "complete_original_tree_matching_and_uniform_massive_error_actual_gamma_parameter_match": "0",
+    "complete_original_tree_matching_and_uniform_massive_error_actual_lambda_parameter_match": "0",
+    "complete_original_tree_matching_and_uniform_massive_error_complete_lambda_lower_polynomial": "0",
+    "complete_original_tree_matching_and_uniform_massive_error_complete_tree_matching_identity": "0",
+    "complete_original_tree_matching_and_uniform_massive_error_exact_forward_remainder": "0",
+    "complete_original_tree_matching_and_uniform_massive_error_finite_geometric_identity_with_remainder": "0",
+    "complete_original_tree_matching_and_uniform_massive_error_forward_fourth_coefficient_remainder": "0",
+    "complete_original_tree_matching_and_uniform_massive_error_forward_second_coefficient_remainder_zero": "0",
+    "complete_original_tree_matching_and_uniform_massive_error_forward_transfer_second_coefficient_remainder_zero": "0",
+    "complete_original_tree_matching_and_uniform_massive_error_literal_original_source_tree": "0",
+    "complete_original_tree_matching_and_uniform_massive_error_massive_shifted_channel_sum": "0",
+    "complete_original_tree_matching_and_uniform_massive_error_massive_shifted_cubic_identity": "0",
+    "complete_original_tree_matching_and_uniform_massive_error_named_rational_error_upper": "0",
+    "complete_original_tree_matching_and_uniform_massive_error_relative_bound_from_gap_relation": "0",
+    "complete_original_tree_matching_and_uniform_massive_error_relative_error_monotonicity": "0",
+    "complete_rational_angular_integrals_and_first_elastic_comparison_angular_exchange_evenness": "0",
+    "complete_rational_angular_integrals_and_first_elastic_comparison_complete_angular_geometric_remainder": "0",
+    "complete_rational_angular_integrals_and_first_elastic_comparison_first_angular_primitive": "0",
+    "complete_rational_angular_integrals_and_first_elastic_comparison_first_elastic_relative_error_constant": "0",
+    "complete_rational_angular_integrals_and_first_elastic_comparison_first_integral_threshold_limit": "0",
+    "complete_rational_angular_integrals_and_first_elastic_comparison_full_squared_angular_primitive": "0",
+    "complete_rational_angular_integrals_and_first_elastic_comparison_physical_positive_denominator_gap": "0",
+    "complete_rational_angular_integrals_and_first_elastic_comparison_squared_integral_threshold_limit": "0",
+    "nine_original_primitive_rows": "0",
+    "one_new_separate_tree_model": "0",
+    "separate_local_two_scalar_model_and_full_classical_potential_actual_fixed_coupling_squared": "0",
+    "separate_local_two_scalar_model_and_full_classical_potential_actual_positive_coupling_root": "0",
+    "separate_local_two_scalar_model_and_full_classical_potential_canonical_heavy_velocity_entry": "0",
+    "separate_local_two_scalar_model_and_full_classical_potential_canonical_light_velocity_entry": "0",
+    "separate_local_two_scalar_model_and_full_classical_potential_canonical_velocity_cross_zero": "0",
+    "separate_local_two_scalar_model_and_full_classical_potential_explicit_global_quadratic_coercivity_identity": "0",
+    "separate_local_two_scalar_model_and_full_classical_potential_full_potential_positive_square_identity": "0",
+    "separate_local_two_scalar_model_and_full_classical_potential_heavy_vacuum_mass_squared": "0",
+    "separate_local_two_scalar_model_and_full_classical_potential_light_vacuum_mass_squared": "0",
+    "separate_local_two_scalar_model_and_full_classical_potential_literal_contact_vertex_factor": "0",
+    "separate_local_two_scalar_model_and_full_classical_potential_literal_cubic_vertex_factor": "0",
+    "separate_local_two_scalar_model_and_full_classical_potential_positive_square_remaining_quartic": "0",
+    "separate_local_two_scalar_model_and_full_classical_potential_unchanged_positive_atom_coupling": "0",
+    "separate_local_two_scalar_model_and_full_classical_potential_unchanged_positive_atom_mass": "0",
+    "separate_local_two_scalar_model_and_full_classical_potential_vacuum_mass_cross_zero": "0",
+    "unchanged_previous_matching_rows": "0",
+    "unchanged_primitive_rows": "0"
+  },
+  "formulation": "FORMULATION.md",
+  "named_exact_check_count": 42,
+  "not_established": [
+    "A mathematically constructed full quantum UV theory, physical mass/LSZ and real-loop matching, all-loop error or exact resonance width",
+    "Identification of V2S-T1 with the original affine/Proca/DHOST parent or a match of its complete independent canonical functions and higher-field vertices",
+    "A covariant common-parent field/state/derivative domain, controlled heavy stress and nonlinear bounce, finite-gravity forward or Regge control",
+    "A physical cutoff, UV-parent exclusion, original V/G/B or P8 closure"
+  ],
+  "observable_and_scope": {
+    "exact_tree_matching": "Its literal full exchange/contact amplitude equals the complete original S177/S182 massive four-scalar tree plus gamma*sum(channel-2)^4/[D-(channel-2)], D=2lambda/gamma. The new contact is explicitly part of this separate model, not an edit to an old counterterm.",
+    "higher_coefficients": "The new tree has b20=4lambda, b21=-3gamma and b40=gamma^2/lambda, with forward constant difference16gamma/(D+2). All heavy exchange poles, infinite even angular channels and higher terms remain.",
+    "new_named_scope": "V2S-T1 is a separately named local polynomial light/heavy scalar model with canonical kinetic matrix, positive masses and globally coercive nonnegative classical potential. It is not the original Proca/DHOST affine parent.",
+    "physical_boundary": "Classical flat model and controlled tree/first-elastic matching only. No full quantum mass/residue, real loops, resonance width, exact unitarity, high-energy arc, original independent-function correspondence, covariant bounce parent, physical cutoff or original V/G/B/P8 closure.",
+    "uniform_error": "On all physical angles and4<=s<=10^196, the original tree is positive and the new amplitude has relative tree error strictly below1/60. The complete first elastic coefficient differs by less than121/3600 for s>4 and both vanish at threshold."
+  },
+  "primitive_and_matching_frontier": {
+    "matching": [
+      {
+        "id": "fixed_sigma_isolated_MS_conversion",
+        "status": "CANCELLED_NONLOCAL_ORDER_TWO_WITH_SAME_REGULATED_REFERENCE"
+      },
+      {
+        "id": "remaining_scale_parameter_field_map_and_cross_terms",
+        "status": "OPEN"
+      },
+      {
+        "id": "remaining_counterterm_and_vacuum_source_assembly",
+        "status": "ASSEMBLED_FOR_FIXED_ORDER_PHI_POLE_B2_VACUUM_AND_H_SOURCE"
+      },
+      {
+        "id": "full_matched_two_loop_pole_and_amplitude_error",
+        "status": "FIXED_ORDER_PHI_POLE_AND_B2_BOUNDED_PHYSICAL_TRUNCATION_OPEN"
+      },
+      {
+        "id": "finite_EFT_higher_order_truncation",
+        "status": "OPEN"
+      },
+      {
+        "id": "V_contour_and_cut_control",
+        "status": "OPEN"
+      },
+      {
+        "id": "finite_gravity_G",
+        "status": "OPEN"
+      },
+      {
+        "id": "common_parent_B",
+        "status": "OPEN"
+      },
+      {
+        "id": "complete_wineglass_interaction_forest_MS",
+        "status": "BOUNDED_WITH_REGULATED_FINITE_LOCAL_ANCHOR_AND_FULL_SCALE_TERM"
+      },
+      {
+        "id": "complete_double_bubble_interaction_forest_MS",
+        "status": "BOUNDED_WITH_ACTUAL_NESTED_MS_FORESTS_AND_BOTH_SCALE_TERMS"
+      },
+      {
+        "id": "complete_scalar_OS_insertion_interaction_forest_MS",
+        "status": "BOUNDED_WITH_FULL_REGULATED_SLOPE_TIMES_OUTER_REFERENCE"
+      },
+      {
+        "id": "complete_scalar_quadratic_finite_MS_slope_and_converted_OS_bound",
+        "status": "BOUNDED_WITH_FIXED_INNER_OS_AND_INTERACTION_MS_COORDINATES"
+      },
+      {
+        "id": "first_finite_Phi_field_covariance_and_MS_projection_commutator",
+        "status": "EXACT_REGULATED_FIELD_DIRECTION_AND_BOUNDED_FIRST_SLOPE_CROSS_TERMS"
+      },
+      {
+        "id": "complete_GY14_second_Phi_normalization_and_canonical_unit_disc_pole",
+        "status": "BOUNDED_WITH_DIRECT_MS_OWNERSHIP_AND_FULL_FINITE_FIELD_REEXPANSION"
+      },
+      {
+        "id": "complete_two_loop_vacuum_reference_and_first_source_square",
+        "status": "BOUNDED_WITH_FULL_REGULATED_SOURCE_REDUCIBLE_CANCELLATION"
+      },
+      {
+        "id": "complete_two_loop_derivative_map_with_matched_physical_source",
+        "status": "TRANSPORTED_FOR_FULL_ACTION_AND_PHYSICAL_SOURCE_NOT_ORDINARY_PSI_MS_OR_TRUNCATION"
+      },
+      {
+        "id": "complete_matched_two_loop_low_energy_Phi_elastic_cut",
+        "status": "BOUNDED_ON_PHYSICAL_WINDOW_4_TO_6_WITH_FULL_FIRST_AMPLITUDE_NOT_PHYSICAL_REMAINDER_OR_GLOBAL_DISPERSION"
+      },
+      {
+        "id": "full_finite_kappa_analytic_target_classical_vacuum_match",
+        "status": "BOUNDED_ON_SAME_RESTRICTED_FLAT_SCHWARTZ_CLASS_NOT_QUANTUM_TARGET_OR_ROLLING_COMMON_PARENT_MATCH"
+      },
+      {
+        "id": "GY14_SAT8_pointwise_fermion_mass_protection_and_named_low_order_invariance",
+        "status": "NEW_ANALYTIC_EFT_BRANCH_WITH_GLOBAL_REAL_MASS_FLOOR_AND_SAME_NAMED_TWO_LOOP_DATA_NOT_ROLLING_STATE_OR_COMMON_PARENT_CLOSURE"
+      },
+      {
+        "id": "polynomial_clock_transparent_physical_source_map_and_full_target_classical_bound",
+        "status": "KINEMATIC_CLOCK_ARGUMENT_ALIGNED_WITH_PROTECTED_MASSES_AND_SAME_NAMED_VACUUM_DATA_NOT_BACKGROUND_SOLUTION_QUANTUM_STATE_OR_COMMON_PARENT_CLOSURE"
+      },
+      {
+        "id": "free_flat_clock_Dirac_out_energy_with_complete_transition_series_remainder",
+        "status": "BOUNDED_FOR_SPECIFIED_QUADRATIC_MODEWISE_IN_OUT_STATE_NOT_INTERACTING_OR_CURVED_BOUNCE_STRESS"
+      },
+      {
+        "id": "Hadamard_regular_free_flat_SAT8_in_out_state_and_uniform_one_particle_norm_limit",
+        "status": "HADAMARD_FOR_SPECIFIED_FREE_EXTERNAL_MASS_OPERATOR_USING_IDENTIFIED_EXTERNAL_THEOREM_NOT_INTERACTING_CURVED_STATE_OR_NUMERICAL_STRESS"
+      },
+      {
+        "id": "exact_four_frame_free_transition_and_uniform_same_operator_in_out_T00_difference",
+        "status": "BOUNDED_FOR_FREE_FLAT_HADAMARD_STATE_DIFFERENCE_NOT_ABSOLUTE_STRESS_INTERACTING_CURVED_STATE_OR_BACKREACTION"
+      },
+      {
+        "id": "free_flat_absolute_one_loop_local_energy_with_fixed_saturated_mass_reference",
+        "status": "BOUNDED_IN_EXPLICIT_MS_AND_SATURATED_MASS_REFERENCE_QUADRATIC_SCHEME_NOT_FULL_CURVED_INTERACTING_PARENT_STRESS"
+      },
+      {
+        "id": "complete_free_flat_homogeneous_one_loop_stress_with_dimensional_curvature_improvement",
+        "status": "BOUNDED_SPECIFIED_QUADRATIC_MS_MR_FLAT_TENSOR_NOT_FULL_INTERACTING_CURVED_PARENT_STRESS"
+      },
+      {
+        "id": "actual_CD_free_Dirac_Hadamard_in_out_state_and_uniform_state_stress_difference",
+        "status": "CURVED_FREE_HADAMARD_STATE_AND_STATE_DIFFERENCE_BOUNDED_NOT_ABSOLUTE_PARENT_STRESS"
+      },
+      {
+        "id": "complete_free_curved_one_loop_stress_with_explicit_EC_Newton_reference",
+        "status": "BOUNDED_SPECIFIED_QUADRATIC_CURVED_TENSOR_NOT_FULL_INTERACTING_PARENT_OR_BACKGROUND_RESPONSE"
+      },
+      {
+        "id": "minimal_Einstein_canonical_clock_free_sector_null_equation_mismatch",
+        "status": "EXCLUDED_NAMED_MINIMAL_DIAGNOSTIC_WITH_SMALL_EXTRA_NULL_BUDGET_NOT_FULL_INTERACTING_PARENT_OR_DHOST_ROW"
+      },
+      {
+        "id": "actual_CD_leading_clock_Euler_source_decomposition_and_matching_domain_gap",
+        "status": "LEADING_TARGET_SOURCES_AND_CONSTRAINT_DOMAIN_REQUIREMENTS_IDENTIFIED_NOT_PROPAGATING_PARENT_OR_QUANTUM_BOUNCE"
+      },
+      {
+        "id": "analytic_CD_REG_AFFINE_ISO_classical_parent_clock_vacuum_and_local_constraints",
+        "status": "NEW_REGULAR_CLASSICAL_PARENT_AND_LOCAL_CONSTRAINT_BLOCKS_NOT_QUANTUM_MATCHING_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "same_classical_affine_parent_closed_source_lift_and_scoped_vector_Schur_control",
+        "status": "EXACT_CLASSICAL_AND_COMMON_REGULATOR_IDENTITIES_FULL_EUCLIDEAN_AND_LEADING_LORENTZ_BOUNDS_NOT_FULL_QUANTUM_MATCHING"
+      },
+      {
+        "id": "regular_affine_parent_conditional_Gaussian_Hadamard_family_and_ordinary_Proca_stress",
+        "status": "SOURCE_AWARE_CONDITIONAL_VECTOR_STATE_AND_FIXED_CLOCK_STRESS_NOT_FULL_PARENT_QUANTUM_SOLUTION"
+      },
+      {
+        "id": "full_fixed_canonical_affine_family_actual_classical_gravitational_decoupling",
+        "status": "ANCHORED_FULL_FUNCTION_CLASSICAL_LIMIT_AND_TREE_AMPLITUDE_NOT_QUANTUM_CONTOUR_TRUNCATION_OR_V_CLOSURE"
+      },
+      {
+        "id": "complete_affine_vector_retarded_mean_energy_and_causal_cubic_light_force",
+        "status": "FIXED_CD_FULL_SOURCE_FINITE_TIME_CONDITIONAL_GAUSSIAN_MEAN_AND_LIGHT_FORCE_NOT_METRIC_NOISE_FULL_PARENT_OR_B_CLOSURE"
+      },
+      {
+        "id": "same_affine_conditional_prepared_homogeneous_metric_response_with_uncancelled_chart_contacts",
+        "status": "COMPLETE_CONDITIONAL_VECTOR_HOMOGENEOUS_C10_TO_C0_BOUND_NOT_SPATIAL_NOISE_COUPLED_BACKGROUND_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "same_affine_parent_prepared_homogeneous_retained_tree_plus_conditional_vector_causal_inverse",
+        "status": "UNIQUE_RETAINED_LINEAR_PREPARED_CAUSAL_INVERSE_WITH_NUMERIC_LOCAL_LAPSE_RECOVERY_NOT_FULL_INVERSE_SMALLNESS_QUANTUM_BACKGROUND_OR_V_G_B"
+      },
+      {
+        "id": "same_massive_scalar_range_kernel_explicit_full_half_line_L1_majorant",
+        "status": "MASS_INDEPENDENT_EXPLICIT_SCALAR_KERNEL_NORM_NOT_FULL_INVERSE_SMALLNESS_BACKGROUND_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "new_CD_REG_AFFINE_ISO_QG1_fixed_coefficient_stationary_Gaussian_mean_and_actual_response",
+        "status": "NEW_PARENT_RETAINED_MEAN_STATIONARITY_AND_BOUNDED_COEFFICIENT_CORRECTION_NOT_FULL_QUANTUM_BACKGROUND_STABILITY_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "actual_classical_Hamiltonian_C0_and_C10_inverse_and_first_formal_Gaussian_response",
+        "status": "QUANTIFIED_PREPARED_CLASSICAL_PROPAGATOR_AND_FIRST_FORMAL_COEFFICIENT_NOT_FINITE_COUPLING_ERROR_STABILITY_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "complete_finite_time_canonical_vacuum_source_mean_and_scalar_force_noise_with_fixed_profile",
+        "status": "FULL_CONDITIONAL_GAUSSIAN_VACUUM_SOURCE_CAUSAL_AND_NOISE_BOUNDS_NOT_INTERACTING_AMPLITUDE_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "actual_all_order_CD_state_complete_clock_source_smeared_force_noise_and_canonical_normalization",
+        "status": "SAME_STATE_FULL_SOURCE_SMEARED_SCALAR_NOISE_BOUND_NOT_METRIC_NOISE_SOLUTION_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "actual_all_order_CD_full_local_smeared_metric_stress_covariance",
+        "status": "FULL_SPACETIME_TENSOR_STRESS_NOISE_BOUND_NOT_METRIC_SOLUTION_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "actual_CD_boundary_compatible_tree_tensor_noise_response",
+        "status": "RESTRICTED_DETECTOR_TREE_PROPAGATED_NOISE_NOT_FULL_QUANTUM_TENSOR_STATE_OR_V_G_B"
+      },
+      {
+        "id": "actual_CD_homogeneous_shear_Hamiltonian_contact_and_modewise_remainder",
+        "status": "ACTUAL_SHEAR_MODEWISE_FINITE_AMPLITUDE_REMAINDER_NOT_CONTINUUM_SELF_ENERGY_OR_V_G_B"
+      },
+      {
+        "id": "actual_fixed_local_covariant_full_spatial_tensor_Hessian",
+        "status": "ACTUAL_FIXED_FINITE_LOCAL_TENSOR_HESSIAN_BOUND_NOT_COMPLETE_DETERMINANT_RESPONSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_CD_full_matrix_adiabatic_uniform_covariance_tail",
+        "status": "ACTUAL_UNCHANGED_STATE_UNIFORM_HIGH_BAND_COVARIANCE_REMAINDER_NOT_RESPONSE_SUBTRACTION_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_matrix_covariance_tail_C2_response_and_Taylor_remainder",
+        "status": "ACTUAL_UNCHANGED_STATE_C2_HIGH_BAND_COVARIANCE_TAIL_NOT_COMPLETE_COVARIANT_RESPONSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_physical_shear_current_C2_fourth_order_comparison",
+        "status": "ACTUAL_STATE_C2_CURRENT_MODE_COMPARISON_NOT_FIXED_COVARIANT_MATCHING_OR_V_G_B"
+      },
+      {
+        "id": "actual_homogeneous_shear_full_fixed_covariant_mode_subtraction_matching",
+        "status": "ACTUAL_HOMOGENEOUS_SHEAR_FIXED_COVARIANT_MODE_SUBTRACTION_MATCHING_NOT_FULL_FEEDBACK_OR_V_G_B"
+      },
+      {
+        "id": "actual_complete_fixed_covariant_homogeneous_current_C2_and_canonical_response",
+        "status": "ACTUAL_COMPLETE_FIXED_COVARIANT_HOMOGENEOUS_CURRENT_C2_AND_CANONICAL_RESPONSE_NOT_FULL_FEEDBACK_OR_V_G_B"
+      },
+      {
+        "id": "actual_spatial_two_momentum_metric_vertices_and_finite_band_Gaussian_response",
+        "status": "ACTUAL_SPATIAL_TWO_MOMENTUM_CURRENT_FINITE_BAND_NOT_RENORMALIZED_CONTINUUM_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_full_spatial_separated_support_weak_Gaussian_response_and_quantitative_tail",
+        "status": "ACTUAL_CONTINUUM_SEPARATED_SUPPORT_WEAK_RESPONSE_NOT_COINCIDENT_EXTENSION_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_overlapping_time_spatial_retarded_state_remainder_with_complete_contact",
+        "status": "ACTUAL_RETARDED_MEMORY_CONTACT_COMPARISON_NOT_REFERENCE_DIAGONAL_MATCHING_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_reference_six_step_retarded_boundary_extraction_and_full_finite_bulk",
+        "status": "ACTUAL_REFERENCE_FINITE_BULK_AND_EXPLICIT_ENDPOINTS_NOT_COVARIANT_SPATIAL_MATCHING_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_canonical_flat_Proca_full_tensor_cut_and_subtracted_dispersion_benchmark",
+        "status": "CANONICAL_FLAT_FULL_TENSOR_CUT_BENCHMARK_NOT_CURVED_MATCHING_FULL_PARENT_AMPLITUDE_OR_V_G_B"
+      },
+      {
+        "id": "full_spatial_flat_Proca_covariant_and_time_subtraction_conversion_with_nonlocal_coefficient_bounds",
+        "status": "FULL_SPATIAL_FLAT_NONLOCAL_SUBTRACTION_CONVERSION_NOT_CURVED_MATCHING_LOCAL_POLYNOMIAL_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_curved_reference_initial_state_prefactor_full_memory_contact_and_regulator_tail",
+        "status": "ACTUAL_CURVED_INITIAL_PREFACTOR_REMOVED_WITH_FINITE_FULL_RESPONSE_CORRECTION_NOT_SPATIAL_MATCHING_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_curved_reference_joint_spatial_analyticity_full_readouts_and_far_endpoint_Taylor_tail",
+        "status": "ACTUAL_UNIT_W8_JOINT_SPATIAL_ANALYTICITY_AND_FAR_ENDPOINT_TAYLOR_TAIL_NOT_NEAR_REGION_LOCAL_MATCHING_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_curved_reference_all_momentum_spatial_Taylor_subtracted_endpoint_remainder",
+        "status": "ACTUAL_UNIT_W8_ALL_MOMENTUM_ENDPOINT_REMAINDER_WITH_ORIGINAL_TAIL_NOT_LOCAL_MATCHING_FULL_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "fixed_covariant_local_full_tracefree_spatial_Hessian_proper_time_and_norm",
+        "status": "FIXED_LOCAL_FULL_TRACEFREE_SPATIAL_HESSIAN_NOT_QUANTUM_MATCHING_MIXED_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "finite_endpoint_spatial_Taylor_cells_restored_with_original_regulator_tail",
+        "status": "TEN_FINITE_ENDPOINT_TAYLOR_CELLS_RESTORED_NOT_REMAINING_UV_CONTACT_MATCHING_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_leading_full_Proca_sharp_two_leg_regulator_conversion_coefficient",
+        "status": "ACTUAL_LEADING_SHARP_BAND_ARTIFACT_NOT_FULL_REGULATOR_COVARIANT_MATCHING_OR_V_G_B"
+      },
+      {
+        "id": "complete_four_sector_spatial_UV_symbol_with_independent_detector_time",
+        "status": "HISTORICAL_ANNIHILATION_CREATION_PHASE_ERROR_CORRECTED_ENDPOINT_COEFFICIENTS_IN_S216"
+      },
+      {
+        "id": "uniform_actual_UV_subtracted_endpoint_remainder_with_original_regulator_tail",
+        "status": "UNIFORM_UV_SUBTRACTED_ENDPOINT_REMAINDER_NOT_FULL_CONTACT_COVARIANT_MATCHING_OR_V_G_B"
+      },
+      {
+        "id": "complete_original_UV_shape_conversion_centered_cancellations_and_uniform_tail",
+        "status": "ACTUAL_K2_AND_FINITE_CONVERSION_CANCEL_WITH_UNIFORM_TAIL_NOT_CURVED_A1_EVALUATION_FULL_CONTACT_MATCHING_OR_V_G_B"
+      },
+      {
+        "id": "explicit_actual_curved_linear_regulator_conversion_all_tensor_channels_and_source_jets",
+        "status": "ACTUAL_CURVED_A1_EVALUATED_WITH_COEFFICIENT_NORMS_NOT_FULL_ONE_BALL_CONTACT_COVARIANT_MATCHING_OR_V_G_B"
+      },
+      {
+        "id": "actual_spatial_UV_difference_complete_contact_cancellation_and_fixed_curved_pole",
+        "status": "FULL_SPATIAL_UV_DIFFERENCE_AND_POLE_IDENTIFIED_NOT_FINITE_DIMENSIONAL_MATCHING_OR_FULL_RESPONSE"
+      },
+      {
+        "id": "actual_dimensional_spatial_UV_finite_part_with_evanescent_modes_and_counterterms",
+        "status": "HISTORICAL_PHYSICAL_FINITE_IDENTIFICATION_WITHDRAWN_EXPLICIT_EVANESCENT_CORRECTION_IN_S216"
+      },
+      {
+        "id": "complete_matched_tracefree_spatial_Gaussian_current_with_anchored_original_regulator",
+        "status": "HISTORICAL_PHASE_ERROR_SUPERSEDED_BY_CORRECTED_S217_FULL_TRACEFREE_CURRENT_AND_ANCHORED_REGULATOR"
+      },
+      {
+        "id": "full_constrained_ADM_Proca_vertices_metric_chart_contacts_and_all_momentum_forms",
+        "status": "FULL_ADM_LOCAL_AND_FINITE_REGULATOR_GAUSSIAN_INPUT_NOT_FULL_NEW_SECTOR_CONTINUUM_REDUCED_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "prepared_ordered_Ward_reconstruction_full_chart_correction_and_three_remaining_scalar_kernels",
+        "status": "PREPARED_WARD_RECONSTRUCTION_WITH_COMPLETE_S219_REFERENCE_GAUSSIAN_METRIC_CURRENT_NOT_REDUCED_INVERSE_OR_NONLINEAR_BACKGROUND"
+      },
+      {
+        "id": "corrected_retarded_pair_phase_full_ordered_scalar_UV_and_fixed_six_invariant_finite_matching",
+        "status": "CORRECTED_LOCAL_SPATIAL_UV_SCALAR_FINITE_PART_NOT_FULL_CURRENT_REASSEMBLY_SCALAR_ANCHOR_REDUCED_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "corrected_full_retarded_tracefree_spatial_current_original_regulator_and_prepared_Ward_input",
+        "status": "CORRECTED_COMPLETE_TRACEFREE_SPATIAL_WEAK_CURRENT_AND_KNOWN_WARD_INPUT_NOT_FULL_SCALAR_REDUCED_INVERSE_BACKGROUND_OR_V_G_B"
+      },
+      {
+        "id": "full_homogeneous_trace_Gaussian_anchor_original_volume_matching_and_ordered_cross_zeros",
+        "status": "COMPLETE_HOMOGENEOUS_TRACE_ANCHOR_AND_FULL_HOMOGENEOUS_HILBERT_LIFT_NOT_NONZERO_TRANSFER_SCALAR_REMAINDERS_REDUCED_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "full_spatial_scalar_remainders_original_regulator_and_complete_prepared_Gaussian_metric_response",
+        "status": "COMPLETE_REFERENCE_GAUSSIAN_METRIC_RESPONSE_WEAK_BOUND_NOT_REDUCED_INVERSE_FULL_SOURCED_PARENT_BACKGROUND_OR_V_G_B"
+      },
+      {
+        "id": "regular_QG1_scalar_coefficient_Hamiltonian_complete_infrared_Ward_pullback_and_comparison_bounds",
+        "status": "REGULAR_CLASSICAL_COEFFICIENT_PHASE_SYSTEM_AND_IR_SAFE_REFERENCE_SCALAR_WEAK_RESPONSE_NOT_FULL_QUANTUM_CONSTRAINT_INVERSE_OR_P8"
+      },
+      {
+        "id": "uniform_two_chart_QG1_classical_scalar_phase_propagator_with_twelve_spatial_derivative_loss",
+        "status": "TAME_CLASSICAL_COEFFICIENT_PROPAGATOR_NOT_SAME_SPACE_QUANTUM_INVERSE_STABILITY_OR_P8"
+      },
+      {
+        "id": "full_quantum_forced_scalar_constraints_ordered_Schur_graph_identity_and_first_response_domain",
+        "status": "EXACT_FORCE_INTERFACE_AND_ADMISSIBLE_GRAPH_EQUIVALENCE_NOT_QUANTUM_INVERSE_CONTRACTION_STABILITY_OR_P8"
+      },
+      {
+        "id": "isolated_fixed_shear_factor_unique_subthreshold_zero_pole_plus_cut_and_finite_window_causal_inverse",
+        "status": "ISOLATED_REFERENCE_INVERSE_WITH_UNDAMPED_POLE_NOT_FULL_COUPLED_POLE_STABILITY_OR_P8"
+      },
+      {
+        "id": "full_flat_scalar_gauge_quotient_two_channel_causal_reference_inverse_uniform_all_momentum_bound",
+        "status": "FLAT_REFERENCE_QUOTIENT_INVERSE_NO_SPATIAL_LOSS_NOT_FULL_CURVED_COUPLED_INVERSE_OR_P8"
+      },
+      {
+        "id": "actual_curved_scalar_curvature_coordinates_complete_finite_local_Hessian_and_ordered_reference_inverse",
+        "status": "CURVATURE_ADAPTED_REFERENCE_UNIFORM_INVERSE_NOT_ACTUAL_FULL_CURVED_QUANTUM_INVERSE_OR_P8"
+      },
+      {
+        "id": "original_channel_exterior_log_coercivity_and_ordered_weighted_bounded_curvature_reference_corrections",
+        "status": "WEIGHTED_REFERENCE_CORRECTIONS_INVERTIBLE_NOT_ACTUAL_FULL_QUANTUM_MATCHING_STABILITY_OR_P8"
+      },
+      {
+        "id": "actual_complete_finite_local_curvature_conjugation_uniform_weighted_bound_and_full_finite_reference_inverse",
+        "status": "ACTUAL_FULL_FINITE_LOCAL_REFERENCE_INVERTED_NOT_FULL_NONLOCAL_CURVED_QUANTUM_SYSTEM_OR_P8"
+      },
+      {
+        "id": "actual_homogeneous_tracefree_full_curved_quantum_and_classical_tensor_prepared_causal_inverse",
+        "status": "ACTUAL_HOMOGENEOUS_FULL_NONLOCAL_SHEAR_AND_TREE_INVERSE_NOT_NONZERO_TRANSFER_FULL_S222_STABILITY_OR_P8"
+      },
+      {
+        "id": "actual_full_scalar_clock_matter_coupled_prepared_causal_inverse_and_S222_feedback_on_smooth_bounded_Fourier_support",
+        "status": "ACTUAL_SMOOTH_BOUNDED_EXTERNAL_MOMENTUM_COUPLED_INVERSE_NOT_UNRESTRICTED_GRAPH_STABILITY_NONLINEAR_OR_P8"
+      },
+      {
+        "id": "actual_full_flat_vacuum_tree_Proca_TT_first_sheet_complex_pair_low_energy_bound_and_all_momentum_original_causal_graph_inverse",
+        "status": "ACTUAL_RETAINED_FLAT_MEAN_EQUATION_GROWING_POLES_AND_CAUSAL_INVERSE_NOT_CURVED_INSTABILITY_PHYSICAL_UV_NO_GO_OR_P8"
+      },
+      {
+        "id": "original_canonical_massive_scalar_partial_unitarity_necessary_correction_and_conditional_dispersion_matching_error_tradeoff",
+        "status": "EXACT_TREE_AND_CONDITIONAL_MATCHING_DISJUNCTION_NOT_PHYSICAL_CUTOFF_FULL_QUANTUM_DECOUPLING_UV_NO_GO_OR_P8"
+      },
+      {
+        "id": "original_scalar_transfer_matching_mandatory_low_spectral_weight_and_higher_forward_coefficient_with_positive_spectral_control",
+        "status": "CONDITIONAL_FULL_SPECTRAL_WEIGHT_AND_HIGHER_COEFFICIENT_REQUIREMENT_NOT_FULL_LOOP_BOUND_PHYSICAL_CUTOFF_EXACT_UNITARY_COMPLETION_OR_P8"
+      },
+      {
+        "id": "separate_V2S_T1_local_positive_two_scalar_model_complete_original_massive_tree_matching_and_uniform_all_angle_remainder",
+        "status": "SEPARATE_CLASSICAL_TWO_SCALAR_MODEL_AND_TREE_MATCHING_NOT_FULL_QUANTUM_ORIGINAL_AFFINE_PARENT_BOUNCE_UV_OR_P8"
+      }
+    ],
+    "primitive": [
+      {
+        "id": "scalar_Phi0_W0_F0",
+        "status": "BOUNDED_PAIRED_VACUUM_PRIMITIVE_WITH_ASSIGNED_LOCAL_FOREST"
+      },
+      {
+        "id": "scalar_Phi2_W0_F2",
+        "status": "BOUNDED_NONLOCAL_AND_FINITE_MS_MASS_AND_SLOPE_REFERENCES"
+      },
+      {
+        "id": "scalar_Phi2_W1_F0",
+        "status": "BOUNDED_PAIRED_NONLOCAL_AND_FINITE_MS_LOCAL_REFERENCES"
+      },
+      {
+        "id": "scalar_Phi4_W0_F4",
+        "status": "BOUNDED_PAIRED_PRIMITIVE_ROW"
+      },
+      {
+        "id": "scalar_Phi4_W1_F2",
+        "status": "BOUNDED_PAIRED_IN_COMMON_MS_INTERACTION_SCHEME"
+      },
+      {
+        "id": "scalar_Phi4_W2_F0",
+        "status": "BOUNDED_PAIRED_IN_COMMON_MS_INTERACTION_SCHEME"
+      },
+      {
+        "id": "gauge_Phi0",
+        "status": "BOUNDED_PAIRED_VACUUM_PRIMITIVE_WITH_ASSIGNED_LOCAL_FOREST"
+      },
+      {
+        "id": "gauge_Phi2",
+        "status": "BOUNDED_NONLOCAL_AND_FINITE_MS_MASS_AND_SLOPE_REFERENCES"
+      },
+      {
+        "id": "gauge_Phi4",
+        "status": "BOUNDED_PAIRED_PRIMITIVE_ROW"
+      }
+    ]
+  },
+  "prior_sha256": {
+    "S6_177_original_complete_canonical_tree_and_classical_decoupling_fully_rebuilt": "b85c821b59bc41489418c0c190a2cc573cd9852cb19254627c3e2150d1dd6446",
+    "S6_231_original_identical_normalization_and_S6_182_retained_target_vacuum_transitively_rebuilt": true,
+    "S6_232_required_full_spectral_weight_higher_coefficient_and_separate_positive_atom_fully_rebuilt": "6a6c17275c0ed6c2dec6e65deb596fc264945168d2ebd058a53277a13d0057ff",
+    "V2S_T1_is_separately_named_not_the_original_affine_parent": true,
+    "original_state_prescription_and_all_frozen_scientific_bytes_unchanged": true
+  },
+  "proof_checks": {
+    "complete_original_tree_matching_and_uniform_massive_error_actual_forward_constant_remainder_positive": true,
+    "complete_original_tree_matching_and_uniform_massive_error_actual_ratio_below_exact_rational_majorant": true,
+    "complete_original_tree_matching_and_uniform_massive_error_named_energy_above_scalar_threshold": true,
+    "complete_original_tree_matching_and_uniform_massive_error_named_energy_below_original_heavy_pole": true,
+    "complete_original_tree_matching_and_uniform_massive_error_original_massive_threshold_lower_margin_positive": true,
+    "complete_original_tree_matching_and_uniform_massive_error_uniform_relative_tree_error_below_one_sixtieth": true,
+    "complete_rational_angular_integrals_and_first_elastic_comparison_first_elastic_comparison_not_full_quantum_error": true,
+    "complete_rational_angular_integrals_and_first_elastic_comparison_new_heavy_pair_cut_above_named_window": true,
+    "complete_rational_angular_integrals_and_first_elastic_comparison_new_heavy_single_pole_above_named_window": true,
+    "complete_rational_angular_integrals_and_first_elastic_comparison_no_l0_l2_only_cut_for_rational_model": true,
+    "complete_rational_angular_integrals_and_first_elastic_comparison_positive_physical_exchange_denominator_gap": true,
+    "complete_two_field_kinetic_and_potential_checked": true,
+    "new_model_not_substituted_for_original_affine_action": true,
+    "original_mass_and_potential_retained_in_all_angle_target": true,
+    "separate_local_two_scalar_model_and_full_classical_potential_actual_coercive_square_all_coefficients_positive": true,
+    "separate_local_two_scalar_model_and_full_classical_potential_actual_contact_is_negative_and_tiny": true,
+    "separate_local_two_scalar_model_and_full_classical_potential_actual_dimensionless_exchange_strength_tiny": true,
+    "separate_local_two_scalar_model_and_full_classical_potential_actual_gap_greater_than_one": true,
+    "separate_local_two_scalar_model_and_full_classical_potential_actual_light_and_heavy_vacuum_masses_positive": true,
+    "separate_local_two_scalar_model_and_full_classical_potential_actual_remaining_quartic_strictly_positive": true,
+    "tree_cut_uses_complete_rational_amplitude": true,
+    "tree_matching_not_full_quantum_error_or_bounce_domain": true,
+    "unique_matching_identifiers": true
+  },
+  "schema": 1,
+  "separate_local_two_scalar_classical_model_and_potential": {
+    "Minkowski_classical_Lagrangian": "L=(partial phi)^2/2-phi^2/2+(partial H)^2/2-M_H^2 H^2/2+(g/2)H phi^2+(C/24)phi^4, signature+---. No original affine action or coefficient is changed.",
+    "actual_global_coercivity": "At the actual D>2, V>=(phi^2+H^2)/6 globally, with the displayed remainder a sum of nonnegative terms. This controls the classical flat potential, not a quantum or cosmological stability problem.",
+    "actual_parameters": {
+      "C": "-292968749999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999/1280000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "D": "195312500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "M_H_squared": "195312500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002",
+      "g": "1/8192",
+      "g_squared": "1/67108864",
+      "target_gamma": "1/97656250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "target_lambda": "1/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "canonical_kinetic_matrix": [
+      [
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "1"
+      ]
+    ],
+    "classical_vacuum_result": "The potential is coercive and nonnegative with unique global minimum phi=H=0. The canonical kinetic matrix is positive identity and the vacuum masses are1 and sqrt(D+2)>2. This is a classical flat two-field statement, not a quantum vacuum/matching theorem or a cosmological solution.",
+    "explicit_coercive_square_remainder": "light_phi**4*positive_trilinear**2*(9*positive_heavy_gap - 10)/(24*positive_heavy_gap**2*(3*positive_heavy_gap + 5)) + light_phi**2/3 + (heavy_H - 3*light_phi**2*positive_trilinear/(6*positive_heavy_gap + 10))**2*(3*positive_heavy_gap + 5)/6",
+    "full_classical_potential": "heavy_H**2*(positive_heavy_gap + 2)/2 - heavy_H*light_phi**2*positive_trilinear/2 + light_phi**4*positive_trilinear**2*(3/positive_heavy_gap - 2/positive_heavy_gap**2)/24 + light_phi**2/2",
+    "generic_parameter_domain": "D>1,g>0; the actual parameters obey this strict domain.",
+    "model_scope": "This separate local polynomial model has only the named light scalar and heavy scalar. It is not the original Proca/DHOST affine parent, does not match its full independent functions, and is not asserted to be an exact quantum UV completion. Classical power counting, a bounded potential and tree positivity do not close original V/G/B.",
+    "positive_square_potential": "light_phi**4*positive_trilinear**2*(positive_heavy_gap - 1)/(6*positive_heavy_gap**2*(positive_heavy_gap + 2)) + light_phi**2/2 + (heavy_H - light_phi**2*positive_trilinear/(2*positive_heavy_gap + 4))**2*(positive_heavy_gap + 2)/2",
+    "separately_named_model": "V2S-T1"
+  },
+  "source_sha256": {
+    "FORMULATION.md": "ed999dfbca6095d2fc7ef5b8d8d973c7d80b86c86edc2edb8056385d80fdcad1",
+    "README.md": "345fadfab8b60bb280c4d61d7b58551319a33a3233999a8826a2ec9d38fad66f",
+    "notes/amplitude.md": "c2916dd131854186f221dab4001fb76ee4c3a5236a630ac2914d4066f2889e19",
+    "notes/cut.md": "d919ca5003c9d86dbc24e805b103c30fd2add9cdc95dc85c4e036552199d3b44",
+    "notes/error.md": "cf336951ca98a7d354497cfc98d3920e945b15c5a6fc9fb8f3acb68afbbaf509",
+    "notes/literature.md": "557eed83f25d7ca0e02f61033ccbe613b8c2f44d69f3e144cffc03ef78014ded",
+    "notes/model.md": "02e6075b1eabcee35125f4c75a3c825f7757e8095fa45fee1f2a59eba7747539",
+    "notes/scope.md": "613f2523220345c92f38d389e4acbf8d6ab148aa5b26b446e65f9fcecb93ccff",
+    "notes/validation.md": "4a9a27d5e947f1d26d187f16ffbb69456c05ad1b2b6e42cd049b0a2dc8411a8e",
+    "src/p8_vacuum_affine_heavy_scalar_tree_matching/__init__.py": "b97cf1515be85236fcb50fc5cde97d98c3d2481113d5c1a6550185519ba57387",
+    "src/p8_vacuum_affine_heavy_scalar_tree_matching/audit.py": "f504fe3fcc2fa19dc5d53fc4280fe7335d391e0129ce7565fde190302dae4e17",
+    "src/p8_vacuum_affine_heavy_scalar_tree_matching/cut.py": "b2a1d1b23026b736b59a3eeba02e6111eeb074b2c3f719922b33c48ae5df4cf1",
+    "src/p8_vacuum_affine_heavy_scalar_tree_matching/matching.py": "c2150eb2ca74141c97009b4a56ef208c13e7c313f2812efe852959aa6a09e3c1",
+    "src/p8_vacuum_affine_heavy_scalar_tree_matching/model.py": "3969e56cdfe33a4906de2770d4171e956612edc7dd541dd49f32c060db9353e9",
+    "src/p8_vacuum_affine_heavy_scalar_tree_matching/verify.py": "8baf0a199d669c32be906303c1e1270d210eddbde4fddcefd70c1fc6c1cf549e",
+    "tests/test_affine_heavy_scalar_tree_matching_certificate.py": "4f4cb7b1b33e1edcffce69a0411503ad541d0f64dbab7cdf30d657d9f23be090",
+    "tests/test_affine_heavy_scalar_tree_matching_science.py": "73008cae0ea989c2909556d80228d66fe10628a9b743adff2e51d777b0e65cad"
+  },
+  "status": "SEPARATE_V2S_T1_CLASSICAL_MODEL_AND_COMPLETE_TREE_MATCHING; NOT_FULL_QUANTUM_ORIGINAL_AFFINE_PARENT_BOUNCE_UV_V_G_B_OR_ORIGINAL_P8",
+  "verdict": "The separately named V2S-T1 model has canonical light/heavy scalar kinetic terms, light mass1, M_H^2=D+2 with D=2lambda/gamma, g=1/8192 and contact C=-g^2(3/D-2/D^2). Its full potential completes into a positive heavy square, phi^2/2 and a strictly positive remaining phi^4 term g^2(D-1)/[6D^2(D+2)], giving a coercive nonnegative classical potential and unique flat vacuum with positive masses. A second exact positive square gives the global bound V>=(phi^2+H^2)/6 at the actual D>2. Its literal exchange/contact tree amplitude equals the COMPLETE original S177/S182 massive scalar tree plus the exact rational remainder gamma*sum(channel-2)^4/[D-(channel-2)]. The massive shifted-cubic identity retains the potential term and the original coefficients; no original action is edited. Over all physical angles and4<=s<=10^196, the original tree is positive and the relative TREE error lies strictly between0 and1/60, using6r^2/(1-r) with r=(s-2)/D<32/625. The new tree matches b20=4lambda and b21=-3gamma, has b40=gamma^2/lambda and forward constant difference16gamma/(D+2); all higher terms and the heavy pole remain. Complete rational angular primitives, including the threshold limits and infinitely many even channels, give the first elastic comparison rho_first_original<=rho_first_V2S_T1<(61/60)^2 rho_first_original above threshold in the named window. Heavy single and pair production lie above that window, and the mixed two-body channel is forbidden by phi parity. This is a local classical model and a controlled complete-tree/first-elastic comparison, not a full quantum amplitude error, exact unitary S matrix, resonance-width calculation, high-energy arc theorem, original independent-function matching, covariant common-parent bounce construction, physical cutoff or original V/G/B/P8 closure.",
+  "verification_boundary": "The complete potential square, canonical kinetic and mass entries, literal vertex factors, full original massive amplitude identity, rational all-angle margins and complete angular primitives are checked independently. Coercivity, uniform physical error, convergence of the even angular expansion and the first elastic comparison are written classical/perturbative-coefficient arguments, not FORMALIZED or full quantum theorems. All target predecessors remain frozen. Native/direct/ordinary/CLI retain original SymPy; only full regression uses the audited exact-GCD adapter.",
+  "written_proofs": [
+    "notes/model.md",
+    "notes/amplitude.md",
+    "notes/error.md",
+    "notes/cut.md",
+    "notes/scope.md",
+    "notes/literature.md",
+    "notes/validation.md"
+  ]
+}
