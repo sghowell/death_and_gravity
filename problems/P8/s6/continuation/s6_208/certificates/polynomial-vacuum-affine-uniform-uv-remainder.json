@@ -1,0 +1,532 @@
+{
+  "checked_scalar_entries": 34,
+  "claim": "P8-S6.208.UNIFORM_ACTUAL_CURVED_UV_SUBTRACTED_ENDPOINT_REMAINDER_AND_ORIGINAL_TWO_LEG_TAIL",
+  "complete_uniform_domain_and_all_momentum_endpoint_bounds": {
+    "domain": {
+      "constants": {
+        "complete_scaled_squared_frequency_defect": "428933/20467712",
+        "complex_direction_displacement_upper": "100*sqrt(9799)*(1/100 + 201/(10000*(sqrt(9799)/100 + 1)))/9799",
+        "complex_frame_rotation_displacement_upper": "40000*(1/100 + 201/(10000*(sqrt(9799)/100 + 1)))**2/(9799*(-100*sqrt(9799)*(1/100 + 201/(10000*(sqrt(9799)/100 + 1)))/9799 + 2)) + 200*sqrt(9799)*(1/100 + 201/(10000*(sqrt(9799)/100 + 1)))/9799",
+        "full_scaled_W_relative_defects": {
+          "longitudinal": "2237141275913452301997941310641389428215957802541528090267003/690244129805359743077316290157530316800000000000000000000000000000000",
+          "transverse": "104386515315338230056932489611108924174911935063461951639821/27609765192214389723092651606301212672000000000000000000000000000000"
+        },
+        "inverse_radius_numerator": "1/100",
+        "longitudinal_electric_norm_upper": "25/196",
+        "longitudinal_field_norm_squared_upper": 81,
+        "longitudinal_temporal_multiplier_upper": "10201/6272",
+        "relative_time_scale_defect": "3/4997",
+        "scaled_W_absolute_upper": "3",
+        "scaled_W_real_lower": "1563/2500",
+        "scaled_W_time_derivative_upper": "60000",
+        "scaled_canonical_momentum_upper": "72001/20000",
+        "scaled_omega_real_lower": "392/625",
+        "scaled_second_leg_square_defect": "201/10000",
+        "scaled_z_modulus_upper": "20043776/20038779",
+        "transverse_field_norm_squared_upper": "200001/2500",
+        "transverse_magnetic_norm_upper": "10201*sqrt(2)/5000"
+      },
+      "domain": "For real unit n and arbitrary real external P, set U=m+|P| and rho=epsilon/U, epsilon=1/100. Combine |x|<=rho with the original outer/inner complex time discs. The scaled momenta are n,-n+xP. This is a new joint inverse-radius domain, not an extension of the earlier real-internal-k domain by assumption.",
+      "full_frequency": "The exact scaled squared-frequency defect is bounded by ea+(1+ea)(2epsilon+epsilon^2)+Amax^2 epsilon^2<1/40. The positive analytic branches satisfy Re Omega>.98/Amax and |Omega|<2; |z|<1.01. All four actual W8 polynomial bounds remain valid and give relative What defect<.001, Re What>.5 and |What|<3. Hence each normalized inverse summed phase has modulus<1.",
+      "full_readouts": "Cauchy on the inner time disc gives |What_time|<=60000, Fhat<=1 and |Pihat|<4 for either Schwarz sign. A local analytic complex frame has genuine Euclidean vector norms<2. Transverse norms obey E<8,B<4,mxA<.02; longitudinal norms obey E<1,|mA0|<8,mAsp<4. Every full ten-field norm is<20 and the full sixteen-component pair norm is<1000.",
+      "scope": "These improved constants apply to NORMALIZED analytic modes in the stated inverse-radius domain. They are not substituted for the older all-real unscaled mode bound, and do not change the full W8 reference or actual state."
+    },
+    "estimates": {
+      "coefficient_bounds": "Each normalized source time-jet coefficient has bound9 C^2 c_jr R^(-(j-r)), C=1000. Summing all source jets gives B_j=9 C^2 sum(c_jr)R^-j. The inverse-radius degree-d coefficient is bounded by B_j rho^-d. All nine pairs and every source jet remain.",
+      "constants": {
+        "all_five_normalized_endpoint_row_bounds": [
+          "9000000",
+          "540000000000",
+          "50400000000000000",
+          "6552000000000000000000",
+          "1101600000000000000000000000"
+        ],
+        "complete_all_momentum_UV_subtracted_endpoint_bound": "12800000001800000003041548800000000000000000000000/9",
+        "complete_weighted_far_bound": "1644800000000000000000000000",
+        "complete_weighted_near_bound": "12800000000000000003026745600000000000000000000000/9",
+        "unexpanded_low_band_bound": "200000000000000000000000000000000000000"
+      },
+      "far": "For r>=L(P)=2(m+|P|)/epsilon, Cauchy gives the complete endpoint-j remainder<=2B_j epsilon^(j-5)(m+|P|)^(5-j)r^-4. Integrating its actual far threshold yields B_j(m+|P|)^(4-j)/(18epsilon^(4-j)), using pi^2>9.",
+      "low": "The unchanged low bandr<m remains unexpanded and is bounded by2e38 from S203. The improved normalized domain constants are not applied there.",
+      "near": "For m<=r<L(P), bound the actual complete raw row by4e27nu<8e27r. Retain every UV coefficient separately. For j+d<4 integrate the complete power; for j+d=4 retain log(L/m), bounded byL/m. The complete near powers are at most5. No odd endpoint or finite oversubtraction is deleted.",
+      "weight": "For every integer q0,...,6, (m+|P|)^q<=8m^q(1+|P|^2)^3 because m>=1. Plancherel and the full time-jet row give |Qnew|,|Qnew,K|<2e48||D||L2 X46[Gamma], with X46^2=sum_r0..4||(1-Delta)^3 partial_t^r Gamma||L2^2."
+    }
+  },
+  "controls": {
+    "actual_far_and_large_transfer_near_remainders": true,
+    "actual_parent_state_and_matching_unchanged": true,
+    "all_UV_coefficients_two_resolutions_at_separated_P": true,
+    "exact_original_far_near_low_removed_union_integrals": true,
+    "independent_actual_full_normalized_W8_domains": true,
+    "original_P8_not_closed": true,
+    "rejected_inputs": 130,
+    "same_six_spatial_derivatives_and_exact_order_guards": true,
+    "state_time_rebase_and_no_finite_piece_double_counting": true
+  },
+  "date": "2026-09-11",
+  "exact_residuals": {
+    "actual_uniform_joint_inverse_radius_and_time_domain_complete_second_leg_scaled_square": "0",
+    "actual_uniform_joint_inverse_radius_and_time_domain_full_sixteen_stress_pair_norm_count": "0",
+    "actual_uniform_joint_inverse_radius_and_time_domain_maximum_scaled_mass_radius": "0",
+    "actual_uniform_joint_inverse_radius_and_time_domain_same_actual_mass": "0",
+    "actual_uniform_joint_inverse_radius_and_time_domain_same_outer_inner_time_discs": "0",
+    "complete_all_momentum_far_near_low_endpoint_remainder_all_fifteen_UV_slots_retained": "0",
+    "complete_all_momentum_far_near_low_endpoint_remainder_all_thirty_five_source_time_jets_retained": "0",
+    "complete_all_momentum_far_near_low_endpoint_remainder_complete_far_fourth_power_radial_integral": "0",
+    "complete_all_momentum_far_near_low_endpoint_remainder_complete_mass_weight_monotonicity": "0",
+    "complete_all_momentum_far_near_low_endpoint_remainder_complete_near_logarithmic_radial_power": "0",
+    "complete_all_momentum_far_near_low_endpoint_remainder_complete_near_radial_power_0": "0",
+    "complete_all_momentum_far_near_low_endpoint_remainder_complete_near_radial_power_1": "0",
+    "complete_all_momentum_far_near_low_endpoint_remainder_complete_near_radial_power_2": "0",
+    "complete_all_momentum_far_near_low_endpoint_remainder_complete_near_radial_power_3": "0",
+    "complete_all_momentum_far_near_low_endpoint_remainder_complete_spatial_weight_Cauchy_identity": "0",
+    "complete_all_momentum_far_near_low_endpoint_remainder_maximum_finite_spatial_power": "0",
+    "complete_all_momentum_far_near_low_endpoint_remainder_sixth_degree_weight_constant": "0",
+    "exact_actual_current_repartition_and_canonical_bounds_both_canonical_uniform_endpoint_factors": "0",
+    "exact_actual_current_repartition_and_canonical_bounds_both_canonical_uniform_endpoint_tail_factors": "0",
+    "exact_actual_current_repartition_and_canonical_bounds_canonical_new_known_actual_piece": "0",
+    "exact_actual_current_repartition_and_canonical_bounds_canonical_new_known_actual_tail": "0",
+    "exact_actual_current_repartition_and_canonical_bounds_exact_complete_endpoint_repartition": "0",
+    "exact_actual_current_repartition_and_canonical_bounds_exact_full_actual_current_same_regulator": "0",
+    "exact_actual_current_repartition_and_canonical_bounds_unchanged_state_and_finite_time_piece": "0",
+    "exact_actual_current_repartition_and_canonical_bounds_unchanged_state_and_finite_time_tail": "0",
+    "nine_primitive_rows_retained": "0",
+    "one_new_scoped_row_added": "0",
+    "original_both_created_mode_removed_union_tail_all_five_far_tail_rows": "0",
+    "original_both_created_mode_removed_union_tail_complete_far_half_band_power_integral": "0",
+    "original_both_created_mode_removed_union_tail_exact_near_both_leg_radius_envelope": "0",
+    "original_both_created_mode_removed_union_tail_explicit_near_radius_factor": "0",
+    "original_both_created_mode_removed_union_tail_largest_near_tail_spatial_degree": "0",
+    "primitive_rows_unchanged": "0",
+    "prior_matching_rows_retained": "0"
+  },
+  "formulation": "FORMULATION.md",
+  "named_exact_check_count": 34,
+  "not_established": [
+    "Complete quantum UV/contact finite and divergent coefficients, subleading sharp-band conversion and original fixed covariant matching",
+    "Permission to replace the original masks, alter the full W8 reference or actual state, change finite counterterms or double-count earlier finite pieces",
+    "A full matched response, reduced lapse/shift or derivative-compatible mixed inverse, finite-coupling background or stability",
+    "Remaining parent loops/cutoff/scattering/IR/Regge or original V/G/B and P8 closure"
+  ],
+  "observable_and_scope": {
+    "boundary": "The full actual UV-symbol integral and contact still require all finite/divergent and subleading regulator-artifact covariant matching. No full response/inverse/background/stability/cutoff or original P8 closure is inferred.",
+    "canonical": "The uniform endpoint displays are8e-752 and16e-747/K; the complete newly known actual piece has2e-751 and2e-746/K.",
+    "domain": "The unchanged massive CD unit-W8 comparison with all physical pairs and source jets. A new joint inverse-radius/time domain uses rho(P)=1/[100(m+|P|)], with explicit normalized frequency/frame/readout bounds.",
+    "known_actual_piece": "An exact finite-regulator repartition, rebased from S201 state correction plus finite time remainder, gives5e48 M[D]Y[Gamma] and tail5e53 M[D]Y[Gamma]/K. Earlier finite endpoint pieces are not double-counted.",
+    "uniform_remainder": "The complete low plus high(E5-U) endpoint piece is bounded by2e48||D||L2 X46[Gamma] and original regulator error4e53||D||L2 X46[Gamma]/K. The full far/near regions and every power/log term remain."
+  },
+  "original_regulator_tail_and_exact_actual_current_repartition": {
+    "limit": {
+      "canonical": "Both metric factors give Qnew bounds8e-752 and16e-747/K, and the new known actual bounds2e-751 and2e-746/K.",
+      "exact_decomposition": "Jactual,K=(R_actual-unit,K+F_unit,K+Qnew,K)+(C_unit,K+U_K). Qnew is the complete low plus high(E5-U) endpoint piece at the original two-leg mask. U_K is the actual retained inverse-radius UV symbol integral. The contact keeps its one-leg band.",
+      "finite_terms_not_discarded": "The earlier Q203+Pfin+PUV and the new Qnew+U are both exactly the complete E5 endpoint row. This is a regrouping of the same finite-regulator current, not deletion of finite oversubtractions. No state, matching prescription or counterterm is changed.",
+      "new_known_bound": "The complete known actual piece is below5e48 M[D]Y[Gamma], with original regulator error5e53 M[D]Y[Gamma]/K. Here M is the unchanged detector spatial H1 norm and Y^2=N61^2+X46^2 is unchanged.",
+      "no_double_counting": "Rebase the estimate from S201's R_actual-unit+F_unit bound2e48 and tail2e52/K. Do NOT add Qnew to the S205 known piece, which already contains the old spatial remainder and restored finite cells. The S204 fixed local target is not added as an independently matched quantum contribution.",
+      "remaining": "The complete actual UV-symbol integral and full contact still need all finite/divergent coefficients, subleading sharp-band artifacts and original fixed covariant matching. No full matched response, reduced mixed inverse, finite-coupling background, stability, physical cutoff, remaining parent loops or finite-gravity IR/Regge result follows. Original V/G/B and P8 remain open."
+    },
+    "tail": {
+      "constants": {
+        "complete_far_removed_union_tail": "657920000000000000000000000000000",
+        "complete_near_removed_union_tail": "857600000000000000202791955200000000000000000000000000/3",
+        "complete_original_regulator_tail_numerator": "857600000004800000204765715200000000000000000000000000/3",
+        "unexpanded_low_removed_union_tail": "1600000000000000000000000000000000000000000"
+      },
+      "far": "On FAR, r>=2(m+|P|)/epsilon implies |P|<=epsilon*r/2. A removed pair therefore has r>K/2. Integrating the full Cauchy r^-4 majorant gives 2B_j(m+|P|)^(5-j)/(9epsilon^(5-j)K), for every endpoint.",
+      "low": "For r<m, removal implies K<m+|P|. The unexpanded low bound therefore gains only(m+|P|)/K. No complex frame or ultraviolet normalization is used at zero internal momentum.",
+      "near": "For r<2(m+|P|)/epsilon, both created-mode magnitudes are below201(m+|P|). Removal implies K<201(m+|P|). Multiply the complete near absolute bound by201(m+|P|)/K. The largest spatial degree becomes6, still controlled by the same X46 norm.",
+      "original_mask": "Every UV-subtracted endpoint uses chi_K=1_(|k|<=K,|-k+P|<=K). No mask derivative or one-leg replacement is used. The contact retains its distinct original one-mode band.",
+      "uniform_result": "Summing the entire far, near and low removed union gives |Qnew-Qnew,K|<4e53||D||L2 X46[Gamma]/K for K>=m. This removes a mathematical regulator, not a physical cutoff."
+    }
+  },
+  "primitive_and_matching_frontier": {
+    "matching": [
+      {
+        "id": "fixed_sigma_isolated_MS_conversion",
+        "status": "CANCELLED_NONLOCAL_ORDER_TWO_WITH_SAME_REGULATED_REFERENCE"
+      },
+      {
+        "id": "remaining_scale_parameter_field_map_and_cross_terms",
+        "status": "OPEN"
+      },
+      {
+        "id": "remaining_counterterm_and_vacuum_source_assembly",
+        "status": "ASSEMBLED_FOR_FIXED_ORDER_PHI_POLE_B2_VACUUM_AND_H_SOURCE"
+      },
+      {
+        "id": "full_matched_two_loop_pole_and_amplitude_error",
+        "status": "FIXED_ORDER_PHI_POLE_AND_B2_BOUNDED_PHYSICAL_TRUNCATION_OPEN"
+      },
+      {
+        "id": "finite_EFT_higher_order_truncation",
+        "status": "OPEN"
+      },
+      {
+        "id": "V_contour_and_cut_control",
+        "status": "OPEN"
+      },
+      {
+        "id": "finite_gravity_G",
+        "status": "OPEN"
+      },
+      {
+        "id": "common_parent_B",
+        "status": "OPEN"
+      },
+      {
+        "id": "complete_wineglass_interaction_forest_MS",
+        "status": "BOUNDED_WITH_REGULATED_FINITE_LOCAL_ANCHOR_AND_FULL_SCALE_TERM"
+      },
+      {
+        "id": "complete_double_bubble_interaction_forest_MS",
+        "status": "BOUNDED_WITH_ACTUAL_NESTED_MS_FORESTS_AND_BOTH_SCALE_TERMS"
+      },
+      {
+        "id": "complete_scalar_OS_insertion_interaction_forest_MS",
+        "status": "BOUNDED_WITH_FULL_REGULATED_SLOPE_TIMES_OUTER_REFERENCE"
+      },
+      {
+        "id": "complete_scalar_quadratic_finite_MS_slope_and_converted_OS_bound",
+        "status": "BOUNDED_WITH_FIXED_INNER_OS_AND_INTERACTION_MS_COORDINATES"
+      },
+      {
+        "id": "first_finite_Phi_field_covariance_and_MS_projection_commutator",
+        "status": "EXACT_REGULATED_FIELD_DIRECTION_AND_BOUNDED_FIRST_SLOPE_CROSS_TERMS"
+      },
+      {
+        "id": "complete_GY14_second_Phi_normalization_and_canonical_unit_disc_pole",
+        "status": "BOUNDED_WITH_DIRECT_MS_OWNERSHIP_AND_FULL_FINITE_FIELD_REEXPANSION"
+      },
+      {
+        "id": "complete_two_loop_vacuum_reference_and_first_source_square",
+        "status": "BOUNDED_WITH_FULL_REGULATED_SOURCE_REDUCIBLE_CANCELLATION"
+      },
+      {
+        "id": "complete_two_loop_derivative_map_with_matched_physical_source",
+        "status": "TRANSPORTED_FOR_FULL_ACTION_AND_PHYSICAL_SOURCE_NOT_ORDINARY_PSI_MS_OR_TRUNCATION"
+      },
+      {
+        "id": "complete_matched_two_loop_low_energy_Phi_elastic_cut",
+        "status": "BOUNDED_ON_PHYSICAL_WINDOW_4_TO_6_WITH_FULL_FIRST_AMPLITUDE_NOT_PHYSICAL_REMAINDER_OR_GLOBAL_DISPERSION"
+      },
+      {
+        "id": "full_finite_kappa_analytic_target_classical_vacuum_match",
+        "status": "BOUNDED_ON_SAME_RESTRICTED_FLAT_SCHWARTZ_CLASS_NOT_QUANTUM_TARGET_OR_ROLLING_COMMON_PARENT_MATCH"
+      },
+      {
+        "id": "GY14_SAT8_pointwise_fermion_mass_protection_and_named_low_order_invariance",
+        "status": "NEW_ANALYTIC_EFT_BRANCH_WITH_GLOBAL_REAL_MASS_FLOOR_AND_SAME_NAMED_TWO_LOOP_DATA_NOT_ROLLING_STATE_OR_COMMON_PARENT_CLOSURE"
+      },
+      {
+        "id": "polynomial_clock_transparent_physical_source_map_and_full_target_classical_bound",
+        "status": "KINEMATIC_CLOCK_ARGUMENT_ALIGNED_WITH_PROTECTED_MASSES_AND_SAME_NAMED_VACUUM_DATA_NOT_BACKGROUND_SOLUTION_QUANTUM_STATE_OR_COMMON_PARENT_CLOSURE"
+      },
+      {
+        "id": "free_flat_clock_Dirac_out_energy_with_complete_transition_series_remainder",
+        "status": "BOUNDED_FOR_SPECIFIED_QUADRATIC_MODEWISE_IN_OUT_STATE_NOT_INTERACTING_OR_CURVED_BOUNCE_STRESS"
+      },
+      {
+        "id": "Hadamard_regular_free_flat_SAT8_in_out_state_and_uniform_one_particle_norm_limit",
+        "status": "HADAMARD_FOR_SPECIFIED_FREE_EXTERNAL_MASS_OPERATOR_USING_IDENTIFIED_EXTERNAL_THEOREM_NOT_INTERACTING_CURVED_STATE_OR_NUMERICAL_STRESS"
+      },
+      {
+        "id": "exact_four_frame_free_transition_and_uniform_same_operator_in_out_T00_difference",
+        "status": "BOUNDED_FOR_FREE_FLAT_HADAMARD_STATE_DIFFERENCE_NOT_ABSOLUTE_STRESS_INTERACTING_CURVED_STATE_OR_BACKREACTION"
+      },
+      {
+        "id": "free_flat_absolute_one_loop_local_energy_with_fixed_saturated_mass_reference",
+        "status": "BOUNDED_IN_EXPLICIT_MS_AND_SATURATED_MASS_REFERENCE_QUADRATIC_SCHEME_NOT_FULL_CURVED_INTERACTING_PARENT_STRESS"
+      },
+      {
+        "id": "complete_free_flat_homogeneous_one_loop_stress_with_dimensional_curvature_improvement",
+        "status": "BOUNDED_SPECIFIED_QUADRATIC_MS_MR_FLAT_TENSOR_NOT_FULL_INTERACTING_CURVED_PARENT_STRESS"
+      },
+      {
+        "id": "actual_CD_free_Dirac_Hadamard_in_out_state_and_uniform_state_stress_difference",
+        "status": "CURVED_FREE_HADAMARD_STATE_AND_STATE_DIFFERENCE_BOUNDED_NOT_ABSOLUTE_PARENT_STRESS"
+      },
+      {
+        "id": "complete_free_curved_one_loop_stress_with_explicit_EC_Newton_reference",
+        "status": "BOUNDED_SPECIFIED_QUADRATIC_CURVED_TENSOR_NOT_FULL_INTERACTING_PARENT_OR_BACKGROUND_RESPONSE"
+      },
+      {
+        "id": "minimal_Einstein_canonical_clock_free_sector_null_equation_mismatch",
+        "status": "EXCLUDED_NAMED_MINIMAL_DIAGNOSTIC_WITH_SMALL_EXTRA_NULL_BUDGET_NOT_FULL_INTERACTING_PARENT_OR_DHOST_ROW"
+      },
+      {
+        "id": "actual_CD_leading_clock_Euler_source_decomposition_and_matching_domain_gap",
+        "status": "LEADING_TARGET_SOURCES_AND_CONSTRAINT_DOMAIN_REQUIREMENTS_IDENTIFIED_NOT_PROPAGATING_PARENT_OR_QUANTUM_BOUNCE"
+      },
+      {
+        "id": "analytic_CD_REG_AFFINE_ISO_classical_parent_clock_vacuum_and_local_constraints",
+        "status": "NEW_REGULAR_CLASSICAL_PARENT_AND_LOCAL_CONSTRAINT_BLOCKS_NOT_QUANTUM_MATCHING_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "same_classical_affine_parent_closed_source_lift_and_scoped_vector_Schur_control",
+        "status": "EXACT_CLASSICAL_AND_COMMON_REGULATOR_IDENTITIES_FULL_EUCLIDEAN_AND_LEADING_LORENTZ_BOUNDS_NOT_FULL_QUANTUM_MATCHING"
+      },
+      {
+        "id": "regular_affine_parent_conditional_Gaussian_Hadamard_family_and_ordinary_Proca_stress",
+        "status": "SOURCE_AWARE_CONDITIONAL_VECTOR_STATE_AND_FIXED_CLOCK_STRESS_NOT_FULL_PARENT_QUANTUM_SOLUTION"
+      },
+      {
+        "id": "full_fixed_canonical_affine_family_actual_classical_gravitational_decoupling",
+        "status": "ANCHORED_FULL_FUNCTION_CLASSICAL_LIMIT_AND_TREE_AMPLITUDE_NOT_QUANTUM_CONTOUR_TRUNCATION_OR_V_CLOSURE"
+      },
+      {
+        "id": "complete_affine_vector_retarded_mean_energy_and_causal_cubic_light_force",
+        "status": "FIXED_CD_FULL_SOURCE_FINITE_TIME_CONDITIONAL_GAUSSIAN_MEAN_AND_LIGHT_FORCE_NOT_METRIC_NOISE_FULL_PARENT_OR_B_CLOSURE"
+      },
+      {
+        "id": "same_affine_conditional_prepared_homogeneous_metric_response_with_uncancelled_chart_contacts",
+        "status": "COMPLETE_CONDITIONAL_VECTOR_HOMOGENEOUS_C10_TO_C0_BOUND_NOT_SPATIAL_NOISE_COUPLED_BACKGROUND_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "same_affine_parent_prepared_homogeneous_retained_tree_plus_conditional_vector_causal_inverse",
+        "status": "UNIQUE_RETAINED_LINEAR_PREPARED_CAUSAL_INVERSE_WITH_NUMERIC_LOCAL_LAPSE_RECOVERY_NOT_FULL_INVERSE_SMALLNESS_QUANTUM_BACKGROUND_OR_V_G_B"
+      },
+      {
+        "id": "same_massive_scalar_range_kernel_explicit_full_half_line_L1_majorant",
+        "status": "MASS_INDEPENDENT_EXPLICIT_SCALAR_KERNEL_NORM_NOT_FULL_INVERSE_SMALLNESS_BACKGROUND_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "new_CD_REG_AFFINE_ISO_QG1_fixed_coefficient_stationary_Gaussian_mean_and_actual_response",
+        "status": "NEW_PARENT_RETAINED_MEAN_STATIONARITY_AND_BOUNDED_COEFFICIENT_CORRECTION_NOT_FULL_QUANTUM_BACKGROUND_STABILITY_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "actual_classical_Hamiltonian_C0_and_C10_inverse_and_first_formal_Gaussian_response",
+        "status": "QUANTIFIED_PREPARED_CLASSICAL_PROPAGATOR_AND_FIRST_FORMAL_COEFFICIENT_NOT_FINITE_COUPLING_ERROR_STABILITY_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "complete_finite_time_canonical_vacuum_source_mean_and_scalar_force_noise_with_fixed_profile",
+        "status": "FULL_CONDITIONAL_GAUSSIAN_VACUUM_SOURCE_CAUSAL_AND_NOISE_BOUNDS_NOT_INTERACTING_AMPLITUDE_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "actual_all_order_CD_state_complete_clock_source_smeared_force_noise_and_canonical_normalization",
+        "status": "SAME_STATE_FULL_SOURCE_SMEARED_SCALAR_NOISE_BOUND_NOT_METRIC_NOISE_SOLUTION_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "actual_all_order_CD_full_local_smeared_metric_stress_covariance",
+        "status": "FULL_SPACETIME_TENSOR_STRESS_NOISE_BOUND_NOT_METRIC_SOLUTION_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "actual_CD_boundary_compatible_tree_tensor_noise_response",
+        "status": "RESTRICTED_DETECTOR_TREE_PROPAGATED_NOISE_NOT_FULL_QUANTUM_TENSOR_STATE_OR_V_G_B"
+      },
+      {
+        "id": "actual_CD_homogeneous_shear_Hamiltonian_contact_and_modewise_remainder",
+        "status": "ACTUAL_SHEAR_MODEWISE_FINITE_AMPLITUDE_REMAINDER_NOT_CONTINUUM_SELF_ENERGY_OR_V_G_B"
+      },
+      {
+        "id": "actual_fixed_local_covariant_full_spatial_tensor_Hessian",
+        "status": "ACTUAL_FIXED_FINITE_LOCAL_TENSOR_HESSIAN_BOUND_NOT_COMPLETE_DETERMINANT_RESPONSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_CD_full_matrix_adiabatic_uniform_covariance_tail",
+        "status": "ACTUAL_UNCHANGED_STATE_UNIFORM_HIGH_BAND_COVARIANCE_REMAINDER_NOT_RESPONSE_SUBTRACTION_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_matrix_covariance_tail_C2_response_and_Taylor_remainder",
+        "status": "ACTUAL_UNCHANGED_STATE_C2_HIGH_BAND_COVARIANCE_TAIL_NOT_COMPLETE_COVARIANT_RESPONSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_physical_shear_current_C2_fourth_order_comparison",
+        "status": "ACTUAL_STATE_C2_CURRENT_MODE_COMPARISON_NOT_FIXED_COVARIANT_MATCHING_OR_V_G_B"
+      },
+      {
+        "id": "actual_homogeneous_shear_full_fixed_covariant_mode_subtraction_matching",
+        "status": "ACTUAL_HOMOGENEOUS_SHEAR_FIXED_COVARIANT_MODE_SUBTRACTION_MATCHING_NOT_FULL_FEEDBACK_OR_V_G_B"
+      },
+      {
+        "id": "actual_complete_fixed_covariant_homogeneous_current_C2_and_canonical_response",
+        "status": "ACTUAL_COMPLETE_FIXED_COVARIANT_HOMOGENEOUS_CURRENT_C2_AND_CANONICAL_RESPONSE_NOT_FULL_FEEDBACK_OR_V_G_B"
+      },
+      {
+        "id": "actual_spatial_two_momentum_metric_vertices_and_finite_band_Gaussian_response",
+        "status": "ACTUAL_SPATIAL_TWO_MOMENTUM_CURRENT_FINITE_BAND_NOT_RENORMALIZED_CONTINUUM_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_full_spatial_separated_support_weak_Gaussian_response_and_quantitative_tail",
+        "status": "ACTUAL_CONTINUUM_SEPARATED_SUPPORT_WEAK_RESPONSE_NOT_COINCIDENT_EXTENSION_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_overlapping_time_spatial_retarded_state_remainder_with_complete_contact",
+        "status": "ACTUAL_RETARDED_MEMORY_CONTACT_COMPARISON_NOT_REFERENCE_DIAGONAL_MATCHING_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_reference_six_step_retarded_boundary_extraction_and_full_finite_bulk",
+        "status": "ACTUAL_REFERENCE_FINITE_BULK_AND_EXPLICIT_ENDPOINTS_NOT_COVARIANT_SPATIAL_MATCHING_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_canonical_flat_Proca_full_tensor_cut_and_subtracted_dispersion_benchmark",
+        "status": "CANONICAL_FLAT_FULL_TENSOR_CUT_BENCHMARK_NOT_CURVED_MATCHING_FULL_PARENT_AMPLITUDE_OR_V_G_B"
+      },
+      {
+        "id": "full_spatial_flat_Proca_covariant_and_time_subtraction_conversion_with_nonlocal_coefficient_bounds",
+        "status": "FULL_SPATIAL_FLAT_NONLOCAL_SUBTRACTION_CONVERSION_NOT_CURVED_MATCHING_LOCAL_POLYNOMIAL_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_curved_reference_initial_state_prefactor_full_memory_contact_and_regulator_tail",
+        "status": "ACTUAL_CURVED_INITIAL_PREFACTOR_REMOVED_WITH_FINITE_FULL_RESPONSE_CORRECTION_NOT_SPATIAL_MATCHING_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_curved_reference_joint_spatial_analyticity_full_readouts_and_far_endpoint_Taylor_tail",
+        "status": "ACTUAL_UNIT_W8_JOINT_SPATIAL_ANALYTICITY_AND_FAR_ENDPOINT_TAYLOR_TAIL_NOT_NEAR_REGION_LOCAL_MATCHING_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_curved_reference_all_momentum_spatial_Taylor_subtracted_endpoint_remainder",
+        "status": "ACTUAL_UNIT_W8_ALL_MOMENTUM_ENDPOINT_REMAINDER_WITH_ORIGINAL_TAIL_NOT_LOCAL_MATCHING_FULL_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "fixed_covariant_local_full_tracefree_spatial_Hessian_proper_time_and_norm",
+        "status": "FIXED_LOCAL_FULL_TRACEFREE_SPATIAL_HESSIAN_NOT_QUANTUM_MATCHING_MIXED_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "finite_endpoint_spatial_Taylor_cells_restored_with_original_regulator_tail",
+        "status": "TEN_FINITE_ENDPOINT_TAYLOR_CELLS_RESTORED_NOT_REMAINING_UV_CONTACT_MATCHING_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_leading_full_Proca_sharp_two_leg_regulator_conversion_coefficient",
+        "status": "ACTUAL_LEADING_SHARP_BAND_ARTIFACT_NOT_FULL_REGULATOR_COVARIANT_MATCHING_OR_V_G_B"
+      },
+      {
+        "id": "complete_four_sector_spatial_UV_symbol_with_independent_detector_time",
+        "status": "COMPLETE_SPATIAL_UV_SYMBOL_EXTRACTION_NOT_FULL_CONTACT_COVARIANT_MATCHING_OR_V_G_B"
+      },
+      {
+        "id": "uniform_actual_UV_subtracted_endpoint_remainder_with_original_regulator_tail",
+        "status": "UNIFORM_UV_SUBTRACTED_ENDPOINT_REMAINDER_NOT_FULL_CONTACT_COVARIANT_MATCHING_OR_V_G_B"
+      }
+    ],
+    "primitive": [
+      {
+        "id": "scalar_Phi0_W0_F0",
+        "status": "BOUNDED_PAIRED_VACUUM_PRIMITIVE_WITH_ASSIGNED_LOCAL_FOREST"
+      },
+      {
+        "id": "scalar_Phi2_W0_F2",
+        "status": "BOUNDED_NONLOCAL_AND_FINITE_MS_MASS_AND_SLOPE_REFERENCES"
+      },
+      {
+        "id": "scalar_Phi2_W1_F0",
+        "status": "BOUNDED_PAIRED_NONLOCAL_AND_FINITE_MS_LOCAL_REFERENCES"
+      },
+      {
+        "id": "scalar_Phi4_W0_F4",
+        "status": "BOUNDED_PAIRED_PRIMITIVE_ROW"
+      },
+      {
+        "id": "scalar_Phi4_W1_F2",
+        "status": "BOUNDED_PAIRED_IN_COMMON_MS_INTERACTION_SCHEME"
+      },
+      {
+        "id": "scalar_Phi4_W2_F0",
+        "status": "BOUNDED_PAIRED_IN_COMMON_MS_INTERACTION_SCHEME"
+      },
+      {
+        "id": "gauge_Phi0",
+        "status": "BOUNDED_PAIRED_VACUUM_PRIMITIVE_WITH_ASSIGNED_LOCAL_FOREST"
+      },
+      {
+        "id": "gauge_Phi2",
+        "status": "BOUNDED_NONLOCAL_AND_FINITE_MS_MASS_AND_SLOPE_REFERENCES"
+      },
+      {
+        "id": "gauge_Phi4",
+        "status": "BOUNDED_PAIRED_PRIMITIVE_ROW"
+      }
+    ]
+  },
+  "prior_sha256": {
+    "S6_176_actual_CD_Gaussian_sector_transitively_rebuilt": "1175702d6980db090396863b807af0e767241daeb7d8dabf138ed11c67e1ae75",
+    "S6_207_fully_rebuilt": "d3eed45830d5b1af1a26bfe969bdff93a3aafefddebc61e7ce9c9d375cfaf9dc",
+    "all_frozen_scientific_bytes_unchanged": true,
+    "fixed_stress_prescription_and_full_source_retained": true
+  },
+  "proof_checks": {
+    "actual_uniform_joint_inverse_radius_and_time_domain_both_scaled_W_real_parts_above_half": true,
+    "actual_uniform_joint_inverse_radius_and_time_domain_canonical_momentum_below_four": true,
+    "actual_uniform_joint_inverse_radius_and_time_domain_complete_pair_norm_below_one_thousand": true,
+    "actual_uniform_joint_inverse_radius_and_time_domain_complex_direction_within_one_fortieth": true,
+    "actual_uniform_joint_inverse_radius_and_time_domain_complex_frame_vectors_below_two": true,
+    "actual_uniform_joint_inverse_radius_and_time_domain_full_joint_frequency_defect_below_one_fortieth": true,
+    "actual_uniform_joint_inverse_radius_and_time_domain_full_longitudinal_field_norm_below_twenty": true,
+    "actual_uniform_joint_inverse_radius_and_time_domain_full_transverse_field_norm_below_twenty": true,
+    "actual_uniform_joint_inverse_radius_and_time_domain_longitudinal_electric_norm_below_one": true,
+    "actual_uniform_joint_inverse_radius_and_time_domain_longitudinal_temporal_multiplier_below_two": true,
+    "actual_uniform_joint_inverse_radius_and_time_domain_old_coefficient_majorants_dominate_new_ratio": true,
+    "actual_uniform_joint_inverse_radius_and_time_domain_positive_scaled_frequency_branch_lower": true,
+    "actual_uniform_joint_inverse_radius_and_time_domain_scaled_W_defects_below_one_thousandth": true,
+    "actual_uniform_joint_inverse_radius_and_time_domain_scaled_frequency_absolute_upper_two": true,
+    "actual_uniform_joint_inverse_radius_and_time_domain_transverse_magnetic_norm_below_four": true,
+    "actual_uniform_joint_inverse_radius_and_time_domain_unchanged_polynomial_z_domain": true,
+    "all_fifteen_UV_slots_and_thirty_five_source_jets": true,
+    "all_near_power_and_logarithmic_terms_retained": true,
+    "all_nine_pairs_and_all_ten_constrained_readouts": true,
+    "complete_actual_state_unit_reference_correction_kept": true,
+    "complete_all_momentum_far_near_low_endpoint_remainder_all_five_far_rows": true,
+    "complete_all_momentum_far_near_low_endpoint_remainder_all_source_jets_bounded": true,
+    "complete_all_momentum_far_near_low_endpoint_remainder_at_most_five_finite_spatial_powers": true,
+    "complete_all_momentum_far_near_low_endpoint_remainder_complete_raw_and_fifteen_near_coefficients": true,
+    "complete_all_momentum_far_near_low_endpoint_remainder_complete_uniform_finite_display": true,
+    "complete_all_momentum_far_near_low_endpoint_remainder_fixed_mass_weight_at_least_one": true,
+    "complete_all_momentum_far_near_low_endpoint_remainder_unchanged_low_band_anchor": true,
+    "complete_far_near_and_unexpanded_low_regions": true,
+    "exact_actual_current_repartition_and_canonical_bounds_fixed_local_target_not_double_counted": true,
+    "exact_actual_current_repartition_and_canonical_bounds_full_UV_and_contact_not_declared_matched": true,
+    "exact_actual_current_repartition_and_canonical_bounds_new_known_actual_bound": true,
+    "exact_actual_current_repartition_and_canonical_bounds_new_known_actual_tail": true,
+    "exact_actual_current_repartition_and_canonical_bounds_old_finite_pieces_not_double_counted": true,
+    "exact_actual_current_repartition_and_canonical_bounds_original_V_G_B_open": true,
+    "fixed_local_target_not_added_as_matched_quantum_term": true,
+    "full_UV_contact_covariant_matching_still_open": true,
+    "full_contact_keeps_original_one_mode_band": true,
+    "full_four_W8_coefficients_and_both_Schwarz_signs": true,
+    "improved_bounds_only_for_normalized_analytic_modes": true,
+    "old_finite_pieces_not_counted_twice": true,
+    "original_V_G_B_not_closed": true,
+    "original_both_created_mode_removed_union_tail_complete_original_one_and_two_leg_masks_retained": true,
+    "original_both_created_mode_removed_union_tail_complete_uniform_original_tail_display": true,
+    "original_both_created_mode_removed_union_tail_far_second_leg_inside_twice_first": true,
+    "original_both_created_mode_removed_union_tail_no_physical_cutoff_claim": true,
+    "original_both_created_mode_removed_union_tail_same_six_spatial_derivatives_for_tail": true,
+    "original_two_leg_removed_union_not_replaced": true,
+    "rebase_from_state_correction_and_finite_time_piece": true,
+    "same_actual_CD_parent_preparation_and_prescription": true,
+    "same_six_spatial_derivatives_for_bound_and_tail": true,
+    "source_time_differentiation_with_fixed_detector": true,
+    "uniform_external_momentum_dependent_analytic_radius": true
+  },
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "9adce42eee7e3d4e5f558261ef3a0f7d9da942812614264ee3fb93fcdd077c3a",
+    "README.md": "2655841e1fbd7ab46e08647ad468d309a0be9dc5e0ed598c8ae75d60496e1bc9",
+    "notes/domain.md": "67c398be99e47337df75a203395b5b94cf88bae6b0b1936cf5a68c4a364a44f1",
+    "notes/readouts.md": "c1b819e895966cb603433bdbe0cd8fbf93c8a632989baca12fc2a5171b03fb21",
+    "notes/remainder.md": "1bc4dcc359ce7a27e851859497932c0a49dac1d555ff13bb4743c860c9c03dfa",
+    "notes/repartition.md": "0f438ceb181c021df12208f7a72731a3652d99f93ed3c92ce42aa8d6cb669e3c",
+    "notes/scope.md": "b7134d8643cd690a6ce9a8774bcf93b8c4428c42eaddd6abb2e2649ebf9e9aef",
+    "notes/tail.md": "188ae7d60b9fa446d35e58d03295da475d6c2b5e849ebb43f72af4211d83fb66",
+    "notes/validation.md": "d6c5227c6471b75368cf148984207e5835421c4eaab9415690c61da383be8218",
+    "src/p8_vacuum_affine_uniform_uv_remainder/__init__.py": "654c6a0cc8d86b49545ef74ca501ad3463e34a7763e0da2a738988d9c73ff8a3",
+    "src/p8_vacuum_affine_uniform_uv_remainder/audit.py": "d70abd01715e25110ff2f88dcab415048bbd93ca0d584fc5ee09765972098c1d",
+    "src/p8_vacuum_affine_uniform_uv_remainder/domain.py": "b112a51ce8334600ed637f909c1f04be2825435b1deb9fe755e64129ac27de5c",
+    "src/p8_vacuum_affine_uniform_uv_remainder/estimates.py": "f35a57307b46e5be3cc1e723e0b427a32cda34bbaa7cfc200c95d0e04a1ee4c4",
+    "src/p8_vacuum_affine_uniform_uv_remainder/limit.py": "b09084d9984ae6d53f6a4b6b50de087e4279988deeece11cb483575402e3df0b",
+    "src/p8_vacuum_affine_uniform_uv_remainder/tail.py": "51b0c84c24e61545e9b09ca8af2c6dc90fc3fbd2f5177d345eaa317980bd8c49",
+    "src/p8_vacuum_affine_uniform_uv_remainder/verify.py": "c2540457ffb4db9ba86afed23c9324d105d30da606f6da278e52f77d2b1c74a0",
+    "tests/test_affine_uniform_uv_remainder_certificate.py": "90ac0f2e25ed523811052be886619a32c363d6373e59be2c422d2236afef0b0c",
+    "tests/test_affine_uniform_uv_remainder_science.py": "6259db7da82f40dffdd43d04a25a8a90cfdb343ca2087b3d2574a3c48a8001cb"
+  },
+  "status": "UNIFORM_ACTUAL_CURVED_UV_SUBTRACTED_ENDPOINT_REMAINDER_AND_ORIGINAL_TWO_LEG_TAIL; NOT_FULL_UV_CONTACT_REGULATOR_COVARIANT_MATCHING_RESPONSE_INVERSE_BACKGROUND_CUTOFF_V_G_B_OR_ORIGINAL_P8",
+  "verdict": "A new explicit joint inverse-radius/time domain rho(P)=1/[100(m+|P|)] controls the complete actual unit-W8 normalized frequencies, genuine complex polarization frames and all ten constrained readouts. All four W8 coefficients and both Schwarz signs remain; normalized field norm20 and full pair norm1000 are proved only in that domain. Complete Cauchy source-jet estimates retain all fifteen UV coefficient slots and all35 time-jet entries. Far, complementary near and unexpanded low regions give a uniform actual UV-subtracted endpoint bound2e48||D||L2 X46[Gamma], with original two-created-mode regulator error4e53||D||L2 X46[Gamma]/K. Every near power and logarithmic term is retained. The removed union adds at most one momentum power, so the same six-spatial-derivative X46 norm suffices. An exact finite-regulator repartition rebases from S201's actual-state correction and finite time remainder, without double-counting earlier finite endpoint pieces or adding the unmatched local target. The new known actual piece has5e48 M[D]Y[Gamma] and tail5e53 M[D]Y[Gamma]/K, with canonical displays2e-751 and2e-746/K. The complete actual UV-symbol integral and full one-leg contact still require all finite/divergent coefficients, subleading sharp-band artifacts and original fixed covariant matching. No full matched response, reduced mixed inverse, finite-coupling background/stability, physical cutoff, remaining parent loops or finite-gravity IR/Regge result is established. Original V/G/B and P8 remain open.",
+  "verification_boundary": "Exact scaled domain constants, full source-jet row bounds, all near power/log and far integrals, six-degree weight identities, original removed-union tail and exact finite-regulator repartition/canonical factors. Independent actual full W8 domains/readouts, all UV coefficients at separated external scales and two Cauchy resolutions, actual far and large-transfer near remainders, exact original far/near/low removed-region quadratures and exact-order/repartition controls supplement written continuous estimates. Native, direct science, ordinary and CLI use original SymPy; only full regression uses the audited exact GCD adapter. The Cauchy, global Fourier-norm and regulator-removal arguments are not FORMALIZED.",
+  "written_proofs": [
+    "notes/domain.md",
+    "notes/readouts.md",
+    "notes/remainder.md",
+    "notes/tail.md",
+    "notes/repartition.md",
+    "notes/scope.md",
+    "notes/validation.md"
+  ]
+}
