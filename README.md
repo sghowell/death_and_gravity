@@ -445,6 +445,9 @@ pending an explicitly corrected successor. Frozen evidence is preserved.
 The independent [full ADM vertex audit](docs/assessment-2026-09-12-p8-affine-full-adm-vertices.md)
 establishes the lapse, shift, trace and metric-chart inputs without relying
 on that withdrawn physical endpoint identification.
+The [prepared Ward audit](docs/assessment-2026-09-12-p8-affine-prepared-ward-reconstruction.md)
+records the conditional geometric reconstruction; its known tracefree input
+remains withdrawn pending corrected current assembly.
 The [preceding P8 audit](docs/assessment-2026-09-12-p8-affine-matched-spatial-current.md) separates
 the completed scoped P8(a) objective and certificate gates from the
 outstanding P8(b) UV-matching and positivity questions.
