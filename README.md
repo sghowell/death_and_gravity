@@ -438,7 +438,12 @@ around a pre-registered problems document and a certificate-gated ledger.
   This is still linear light evolution and its leading heavy response,
   not a full nonlinear solution or UV-admissible completion.
 
-The [current P8 continuation audit](docs/assessment-2026-09-12-p8-affine-finite-transfer-coupled-inverse.md)
+The [current P8 continuation audit](docs/assessment-2026-09-12-p8-affine-full-flat-tensor-response.md)
+identifies the complete original flat-vacuum tensor mean response, including
+its growing-pole pair and a pole-retaining all-momentum causal graph inverse.
+The low-disk propagator comparison is controlled; physical validity at the
+poles, curved-bounce instability and original P8 are not settled by this result.
+The [smooth Fourier-ball coupled inverse audit](docs/assessment-2026-09-12-p8-affine-finite-transfer-coupled-inverse.md)
 establishes an actual prepared scalar/clock/matter inverse and both original
 feedback identities on each smooth bounded-Fourier class, retaining full
 constraints, contacts and source normalization. Constants remain unevaluated;
