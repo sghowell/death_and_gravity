@@ -1,0 +1,589 @@
+{
+  "checked_scalar_entries": 450,
+  "claim": "P8-S6.199.ACTUAL_CANONICAL_FLAT_PROCA_FULL_TENSOR_CUT_SUBTRACTED_DISPERSION_AND_CURVATURE_WEIGHT_BENCHMARK",
+  "controlled_dispersion_and_curvature_benchmark": {
+    "curvature": {
+      "canonical": "For h=sqrt(kappa)gamma/2 the entire flat external-metric current dispersion density is multiplied by4/kappa. The spin0 projector is not asserted to be a canonically reduced propagating scalar or a full mixed constraint-reduced norm. This change of external-metric normalization does not make the response uniformly small at arbitrary spectral energy because it still grows as s^2.",
+      "comparison_boundary": "This is a four-dimensional ultraviolet tensor-weight and normalization comparison, not a dimensionally continued finite local action. It does not redo S193, discard evanescent Euler contacts, change its finite coefficients or match S198's full curved contact/endpoint sector.",
+      "heat_weight": "For the four-dimensional minimal Proca determinant, a4(vector)-a4(scalar)=-Riem^2/15+29Ric^2/60-R^2/8=13C^2/120-7Euler/40+R^2/72, modulo the separately tracked total-derivative coefficient. The Euler term is retained here.",
+      "physical_boundary": "The flat reference vacuum is a conditional external-metric Gaussian benchmark. No complete parent vacuum scattering amplitude, interacting loop remainder, gravity IR/Regge relation or P8 closure is asserted.",
+      "tensor_normalization": "For a transverse metric Fourier direction, the compact flat Weyl-squared Hessian is s^2 P2 and the R-squared Hessian is6s^2 P0. The full spatial stress cut accordingly has UV weights a4_C/(32pi^2) and6a4_R/(32pi^2)."
+    },
+    "dispersion": {
+      "UV_tail": "For a computational spectral lower limit Lambda>=4m^2 and |z|<=2m^2, the discarded D2 tail is<=2|z|^3/(128pi^2 Lambda) and D0 tail<=2|z|^3/(384pi^2 Lambda). Lambda is a squared spectral mass and not a physical cutoff.",
+      "analyticity": "The positive density grows as sigma^2. Three subtractions give a locally dominated integral analytic on C minus[4m^2,infinity). Two subtractions do not give an absolutely integrable ultraviolet majorant.",
+      "boundary": "The absorptive cut cannot fix finite local counterterms, full Ward/contact matching, a curved-background retarded kernel, a feedback inverse or finite-gravity Regge information.",
+      "controlled_low_energy": "For |z|<=2m^2, |D_i(z)|<=2|z|^3 I_i, I_i=integral rho_i/sigma^4. Also |D_i-z^3 I_i|<=2|z|^4 J_i, J_i=integral rho_i/sigma^5. These are convergent remainder bounds, not a chosen physical subtraction polynomial.",
+      "definition": "D_i(z)=z^3 integral_(4m^2)^infinity rho_i(sigma)/[sigma^3(sigma-z)]dsigma. This is the three-subtracted dispersive PART; the physical polynomial c0+c1 z+c2 z^2 and local tensor/contact matching are not chosen here.",
+      "moments": {
+        "spin0_I": "3/(8960*pi**2*mass**2)",
+        "spin0_J": "1/(32256*pi**2*mass**4)",
+        "spin2_I": "3/(3584*pi**2*mass**2)",
+        "spin2_J": "31/(322560*pi**2*mass**4)"
+      }
+    }
+  },
+  "controls": {
+    "actual_parent_normalization_and_constraint_retained": true,
+    "flat_cut_not_finite_local_or_curved_parent_matching": true,
+    "full_linear_curvature_Hessians_and_pre_cache_type_controls": true,
+    "independent_four_tensor_polarization_reconstruction": true,
+    "independent_subtracted_moments_and_spectral_tail_integrals": true,
+    "noncollinear_Lorentz_and_full_angular_tensor_checks": true,
+    "original_P8_not_closed": true,
+    "phase_space_Wick_and_retarded_oscillator_normalization": true,
+    "rejected_inputs": 121
+  },
+  "date": "2026-09-11",
+  "exact_residuals": {
+    "complete_physical_polarization_stress_complete_conserved_time_row_0": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        1,
+        4
+      ]
+    },
+    "complete_physical_polarization_stress_complete_conserved_time_row_1": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        1,
+        4
+      ]
+    },
+    "complete_physical_polarization_stress_complete_conserved_time_row_2": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        1,
+        4
+      ]
+    },
+    "complete_physical_polarization_stress_complete_conserved_time_row_3": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        1,
+        4
+      ]
+    },
+    "complete_physical_polarization_stress_complete_conserved_time_row_4": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        1,
+        4
+      ]
+    },
+    "complete_physical_polarization_stress_complete_conserved_time_row_5": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        1,
+        4
+      ]
+    },
+    "complete_physical_polarization_stress_complete_conserved_time_row_6": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        1,
+        4
+      ]
+    },
+    "complete_physical_polarization_stress_complete_conserved_time_row_7": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        1,
+        4
+      ]
+    },
+    "complete_physical_polarization_stress_complete_conserved_time_row_8": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        1,
+        4
+      ]
+    },
+    "complete_physical_polarization_stress_complete_symmetric_stress_pair_0": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "complete_physical_polarization_stress_complete_symmetric_stress_pair_1": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "complete_physical_polarization_stress_complete_symmetric_stress_pair_2": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "complete_physical_polarization_stress_complete_symmetric_stress_pair_3": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "complete_physical_polarization_stress_complete_symmetric_stress_pair_4": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "complete_physical_polarization_stress_complete_symmetric_stress_pair_5": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "complete_physical_polarization_stress_complete_symmetric_stress_pair_6": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "complete_physical_polarization_stress_complete_symmetric_stress_pair_7": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "complete_physical_polarization_stress_complete_symmetric_stress_pair_8": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "curvature_weight_and_scope_UV_spin0_cut_weight": "0",
+    "curvature_weight_and_scope_UV_spin2_cut_weight": "0",
+    "curvature_weight_and_scope_actual_canonical_two_metric_factors": "0",
+    "curvature_weight_and_scope_complete_Proca_Ricci_coefficient": "0",
+    "curvature_weight_and_scope_complete_Proca_Riemann_coefficient": "0",
+    "curvature_weight_and_scope_complete_Proca_scalar_coefficient": "0",
+    "curvature_weight_and_scope_full_Weyl_quadratic_form": "0",
+    "curvature_weight_and_scope_full_vector_minus_scalar_heat_weight": "0",
+    "curvature_weight_and_scope_spin0_curvature_Hessian_factor": "0",
+    "curvature_weight_and_scope_spin2_curvature_Hessian_factor": "0",
+    "full_tensor_cut_and_normalization_full_spin0_polynomial": "0",
+    "full_tensor_cut_and_normalization_full_spin2_polynomial": "0",
+    "full_tensor_cut_and_normalization_orthogonal_spin_projectors": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        9,
+        9
+      ]
+    },
+    "full_tensor_cut_and_normalization_phase_Wick_current_and_spectral_factors": "0",
+    "full_tensor_cut_and_normalization_spin0_projector": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        9,
+        9
+      ]
+    },
+    "full_tensor_cut_and_normalization_spin0_rank": "0",
+    "full_tensor_cut_and_normalization_spin0_strict_positive_square": "0",
+    "full_tensor_cut_and_normalization_spin0_upper_on_threshold_interval": "0",
+    "full_tensor_cut_and_normalization_spin2_projector": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        9,
+        9
+      ]
+    },
+    "full_tensor_cut_and_normalization_spin2_rank": "0",
+    "full_tensor_cut_and_normalization_spin2_upper_on_threshold_interval": "0",
+    "nine_primitive_rows_retained": "0",
+    "one_new_scoped_row_added": "0",
+    "primitive_rows_unchanged": "0",
+    "prior_matching_rows_retained": "0",
+    "subtracted_dispersive_remainder_complete_three_subtraction_identity": "0",
+    "subtracted_dispersive_remainder_positive_moment_ratio": "0",
+    "subtracted_dispersive_remainder_spectral_tail_inverse_lower_limit": "0",
+    "subtracted_dispersive_remainder_spin0_first_convergent_moment": "0",
+    "subtracted_dispersive_remainder_spin2_first_convergent_moment": "0"
+  },
+  "formulation": "FORMULATION.md",
+  "full_covariant_stress_and_tensor_spectral_cut": {
+    "polarizations": {
+      "COM_conservation": "For total momentum(2E,0), every pair has T0mu=0 by the exact on-shell relation E^2=k^2+m^2.",
+      "normalization": "Canonical ordinary Proca mass1000 in its flat reference vacuum. Readouts here omit the universal1/sqrt(2E) per leg, which is included exactly in Lorentz-invariant two-particle phase space. No dynamical gravity or full interacting vacuum is asserted.",
+      "pair_convention": "Tab=Z^T M_ab Z, with symmetric M. The displayed pair amplitude is u_k^T M_ab u_l; the Wick pair exchange factor2 belongs to the cut measure, not this amplitude.",
+      "physical_modes": "Two transverse and one longitudinal mode at k and-k. E,B,V0=mA0,V=mAsp include the temporal constraint. No independent A0 oscillator or Maxwell replacement is used.",
+      "polynomials": {
+        "spin0_COM": "(4*k**4 + 4*k**2*mass**2 + 3*mass**4)/3",
+        "spin0_invariant": "(12*mass**4 - 4*mass**2*s + s**2)/12",
+        "spin2_COM": "2*(13*k**4 + 40*k**2*mass**2 + 30*mass**4)/15",
+        "spin2_invariant": "(48*mass**4 + 56*mass**2*s + 13*s**2)/120"
+      },
+      "rotation_projection": "After angular averaging, K=a P2+b P0. The spin2 eigenvalue is(sum||Tij||F^2-sum tr(Tij)^2/3)/5; spin0 is sum tr(Tij)^2/3. Both sums include all nine polarization pairs."
+    },
+    "projectors": {
+      "Lorentz_phase_space": "The two-body integral with measure d^3k/((2pi)^3 2E) per leg and (2pi)^4 delta4(P-k-l) is beta/(8pi), beta=sqrt(1-4m^2/s).",
+      "conserved_projectors": "theta_ab=eta_ab-P_a P_b/s; P0=theta_ab theta_cd/3, P2=(theta_ac theta_bd+theta_ad theta_bc)/2-P0. At timelike P the transverse space is three dimensional. The finite matrices check the COM representatives; tensor covariance gives arbitrary timelike momentum.",
+      "densities": {
+        "spin0": "Piecewise((0, s <= 4*mass**2), (sqrt(-4*mass**2/s + 1)*(12*mass**4 - 4*mass**2*s + s**2)/(384*pi**2), True))",
+        "spin2": "Piecewise((0, s <= 4*mass**2), (sqrt(-4*mass**2/s + 1)*(48*mass**4 + 56*mass**2*s + 13*s**2)/(3840*pi**2), True))"
+      },
+      "normalization": "The connected stress Wightman cut is2*phase_space*(a P2+b P0). For the actual current i theta<[T,T]>/4, its positive dispersion density is Wightman/(8pi), so rho2=beta*(13s^2+56m^2s+48m^4)/(3840pi^2) and rho0=beta*(s^2-4m^2s+12m^4)/(384pi^2).",
+      "retarded_sign": "With Fourier convention exp(iP.x), the current kernel i theta<[T,T]>/4 has denominators1/(sigma-z), z=(omega+i0)^2-|p|^2. Thus Im chi(s+i0)=+pi rho(s) for positive energy.",
+      "support": "Both densities vanish below and at4m^2, and are strictly positive above it. They are a flat external-metric Gaussian benchmark, not full interacting parent scattering cuts."
+    }
+  },
+  "named_exact_check_count": 48,
+  "not_established": [
+    "Original finite local tensor/contact matching or the curved CD reference contact/endpoint response",
+    "Full interacting parent vacuum scattering cuts, truncation errors or finite-gravity IR/Regge data",
+    "Full response inverse, finite-coupling interacting background, stability or physical cutoff matching",
+    "A massless Maxwell replacement, a uniformly small all-energy response, or original V/G/B and P8 closure"
+  ],
+  "observable_and_scope": {
+    "UV": "The full tensor cut agrees with four-dimensional Proca heat weights13/120 for Weyl squared and1/72 for scalar curvature squared after the complete tensor Hessian factors.",
+    "boundary": "The cut does not choose finite local counterterms, fix the curved contact/endpoint sector, supply full parent scattering cuts or finite-gravity Regge data, or close original P8.",
+    "dispersion": "The three-subtracted nonlocal part has exact first convergent moments3/(3584pi^2 m^2) and3/(8960pi^2 m^2), controlled next-order errors and explicit spectral-tail bounds.",
+    "domain": "The same canonical mass1000 Proca sector in a flat reference vacuum, as an external-metric Gaussian spatial-matching benchmark; the actual CD state is not changed.",
+    "full_cut": "All nine physical polarization pairs yield conserved spin2 and spin0 densities above4m^2, with the complete Wick, Lorentz phase-space and actual current i/4 factors."
+  },
+  "primitive_and_matching_frontier": {
+    "matching": [
+      {
+        "id": "fixed_sigma_isolated_MS_conversion",
+        "status": "CANCELLED_NONLOCAL_ORDER_TWO_WITH_SAME_REGULATED_REFERENCE"
+      },
+      {
+        "id": "remaining_scale_parameter_field_map_and_cross_terms",
+        "status": "OPEN"
+      },
+      {
+        "id": "remaining_counterterm_and_vacuum_source_assembly",
+        "status": "ASSEMBLED_FOR_FIXED_ORDER_PHI_POLE_B2_VACUUM_AND_H_SOURCE"
+      },
+      {
+        "id": "full_matched_two_loop_pole_and_amplitude_error",
+        "status": "FIXED_ORDER_PHI_POLE_AND_B2_BOUNDED_PHYSICAL_TRUNCATION_OPEN"
+      },
+      {
+        "id": "finite_EFT_higher_order_truncation",
+        "status": "OPEN"
+      },
+      {
+        "id": "V_contour_and_cut_control",
+        "status": "OPEN"
+      },
+      {
+        "id": "finite_gravity_G",
+        "status": "OPEN"
+      },
+      {
+        "id": "common_parent_B",
+        "status": "OPEN"
+      },
+      {
+        "id": "complete_wineglass_interaction_forest_MS",
+        "status": "BOUNDED_WITH_REGULATED_FINITE_LOCAL_ANCHOR_AND_FULL_SCALE_TERM"
+      },
+      {
+        "id": "complete_double_bubble_interaction_forest_MS",
+        "status": "BOUNDED_WITH_ACTUAL_NESTED_MS_FORESTS_AND_BOTH_SCALE_TERMS"
+      },
+      {
+        "id": "complete_scalar_OS_insertion_interaction_forest_MS",
+        "status": "BOUNDED_WITH_FULL_REGULATED_SLOPE_TIMES_OUTER_REFERENCE"
+      },
+      {
+        "id": "complete_scalar_quadratic_finite_MS_slope_and_converted_OS_bound",
+        "status": "BOUNDED_WITH_FIXED_INNER_OS_AND_INTERACTION_MS_COORDINATES"
+      },
+      {
+        "id": "first_finite_Phi_field_covariance_and_MS_projection_commutator",
+        "status": "EXACT_REGULATED_FIELD_DIRECTION_AND_BOUNDED_FIRST_SLOPE_CROSS_TERMS"
+      },
+      {
+        "id": "complete_GY14_second_Phi_normalization_and_canonical_unit_disc_pole",
+        "status": "BOUNDED_WITH_DIRECT_MS_OWNERSHIP_AND_FULL_FINITE_FIELD_REEXPANSION"
+      },
+      {
+        "id": "complete_two_loop_vacuum_reference_and_first_source_square",
+        "status": "BOUNDED_WITH_FULL_REGULATED_SOURCE_REDUCIBLE_CANCELLATION"
+      },
+      {
+        "id": "complete_two_loop_derivative_map_with_matched_physical_source",
+        "status": "TRANSPORTED_FOR_FULL_ACTION_AND_PHYSICAL_SOURCE_NOT_ORDINARY_PSI_MS_OR_TRUNCATION"
+      },
+      {
+        "id": "complete_matched_two_loop_low_energy_Phi_elastic_cut",
+        "status": "BOUNDED_ON_PHYSICAL_WINDOW_4_TO_6_WITH_FULL_FIRST_AMPLITUDE_NOT_PHYSICAL_REMAINDER_OR_GLOBAL_DISPERSION"
+      },
+      {
+        "id": "full_finite_kappa_analytic_target_classical_vacuum_match",
+        "status": "BOUNDED_ON_SAME_RESTRICTED_FLAT_SCHWARTZ_CLASS_NOT_QUANTUM_TARGET_OR_ROLLING_COMMON_PARENT_MATCH"
+      },
+      {
+        "id": "GY14_SAT8_pointwise_fermion_mass_protection_and_named_low_order_invariance",
+        "status": "NEW_ANALYTIC_EFT_BRANCH_WITH_GLOBAL_REAL_MASS_FLOOR_AND_SAME_NAMED_TWO_LOOP_DATA_NOT_ROLLING_STATE_OR_COMMON_PARENT_CLOSURE"
+      },
+      {
+        "id": "polynomial_clock_transparent_physical_source_map_and_full_target_classical_bound",
+        "status": "KINEMATIC_CLOCK_ARGUMENT_ALIGNED_WITH_PROTECTED_MASSES_AND_SAME_NAMED_VACUUM_DATA_NOT_BACKGROUND_SOLUTION_QUANTUM_STATE_OR_COMMON_PARENT_CLOSURE"
+      },
+      {
+        "id": "free_flat_clock_Dirac_out_energy_with_complete_transition_series_remainder",
+        "status": "BOUNDED_FOR_SPECIFIED_QUADRATIC_MODEWISE_IN_OUT_STATE_NOT_INTERACTING_OR_CURVED_BOUNCE_STRESS"
+      },
+      {
+        "id": "Hadamard_regular_free_flat_SAT8_in_out_state_and_uniform_one_particle_norm_limit",
+        "status": "HADAMARD_FOR_SPECIFIED_FREE_EXTERNAL_MASS_OPERATOR_USING_IDENTIFIED_EXTERNAL_THEOREM_NOT_INTERACTING_CURVED_STATE_OR_NUMERICAL_STRESS"
+      },
+      {
+        "id": "exact_four_frame_free_transition_and_uniform_same_operator_in_out_T00_difference",
+        "status": "BOUNDED_FOR_FREE_FLAT_HADAMARD_STATE_DIFFERENCE_NOT_ABSOLUTE_STRESS_INTERACTING_CURVED_STATE_OR_BACKREACTION"
+      },
+      {
+        "id": "free_flat_absolute_one_loop_local_energy_with_fixed_saturated_mass_reference",
+        "status": "BOUNDED_IN_EXPLICIT_MS_AND_SATURATED_MASS_REFERENCE_QUADRATIC_SCHEME_NOT_FULL_CURVED_INTERACTING_PARENT_STRESS"
+      },
+      {
+        "id": "complete_free_flat_homogeneous_one_loop_stress_with_dimensional_curvature_improvement",
+        "status": "BOUNDED_SPECIFIED_QUADRATIC_MS_MR_FLAT_TENSOR_NOT_FULL_INTERACTING_CURVED_PARENT_STRESS"
+      },
+      {
+        "id": "actual_CD_free_Dirac_Hadamard_in_out_state_and_uniform_state_stress_difference",
+        "status": "CURVED_FREE_HADAMARD_STATE_AND_STATE_DIFFERENCE_BOUNDED_NOT_ABSOLUTE_PARENT_STRESS"
+      },
+      {
+        "id": "complete_free_curved_one_loop_stress_with_explicit_EC_Newton_reference",
+        "status": "BOUNDED_SPECIFIED_QUADRATIC_CURVED_TENSOR_NOT_FULL_INTERACTING_PARENT_OR_BACKGROUND_RESPONSE"
+      },
+      {
+        "id": "minimal_Einstein_canonical_clock_free_sector_null_equation_mismatch",
+        "status": "EXCLUDED_NAMED_MINIMAL_DIAGNOSTIC_WITH_SMALL_EXTRA_NULL_BUDGET_NOT_FULL_INTERACTING_PARENT_OR_DHOST_ROW"
+      },
+      {
+        "id": "actual_CD_leading_clock_Euler_source_decomposition_and_matching_domain_gap",
+        "status": "LEADING_TARGET_SOURCES_AND_CONSTRAINT_DOMAIN_REQUIREMENTS_IDENTIFIED_NOT_PROPAGATING_PARENT_OR_QUANTUM_BOUNCE"
+      },
+      {
+        "id": "analytic_CD_REG_AFFINE_ISO_classical_parent_clock_vacuum_and_local_constraints",
+        "status": "NEW_REGULAR_CLASSICAL_PARENT_AND_LOCAL_CONSTRAINT_BLOCKS_NOT_QUANTUM_MATCHING_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "same_classical_affine_parent_closed_source_lift_and_scoped_vector_Schur_control",
+        "status": "EXACT_CLASSICAL_AND_COMMON_REGULATOR_IDENTITIES_FULL_EUCLIDEAN_AND_LEADING_LORENTZ_BOUNDS_NOT_FULL_QUANTUM_MATCHING"
+      },
+      {
+        "id": "regular_affine_parent_conditional_Gaussian_Hadamard_family_and_ordinary_Proca_stress",
+        "status": "SOURCE_AWARE_CONDITIONAL_VECTOR_STATE_AND_FIXED_CLOCK_STRESS_NOT_FULL_PARENT_QUANTUM_SOLUTION"
+      },
+      {
+        "id": "full_fixed_canonical_affine_family_actual_classical_gravitational_decoupling",
+        "status": "ANCHORED_FULL_FUNCTION_CLASSICAL_LIMIT_AND_TREE_AMPLITUDE_NOT_QUANTUM_CONTOUR_TRUNCATION_OR_V_CLOSURE"
+      },
+      {
+        "id": "complete_affine_vector_retarded_mean_energy_and_causal_cubic_light_force",
+        "status": "FIXED_CD_FULL_SOURCE_FINITE_TIME_CONDITIONAL_GAUSSIAN_MEAN_AND_LIGHT_FORCE_NOT_METRIC_NOISE_FULL_PARENT_OR_B_CLOSURE"
+      },
+      {
+        "id": "same_affine_conditional_prepared_homogeneous_metric_response_with_uncancelled_chart_contacts",
+        "status": "COMPLETE_CONDITIONAL_VECTOR_HOMOGENEOUS_C10_TO_C0_BOUND_NOT_SPATIAL_NOISE_COUPLED_BACKGROUND_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "same_affine_parent_prepared_homogeneous_retained_tree_plus_conditional_vector_causal_inverse",
+        "status": "UNIQUE_RETAINED_LINEAR_PREPARED_CAUSAL_INVERSE_WITH_NUMERIC_LOCAL_LAPSE_RECOVERY_NOT_FULL_INVERSE_SMALLNESS_QUANTUM_BACKGROUND_OR_V_G_B"
+      },
+      {
+        "id": "same_massive_scalar_range_kernel_explicit_full_half_line_L1_majorant",
+        "status": "MASS_INDEPENDENT_EXPLICIT_SCALAR_KERNEL_NORM_NOT_FULL_INVERSE_SMALLNESS_BACKGROUND_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "new_CD_REG_AFFINE_ISO_QG1_fixed_coefficient_stationary_Gaussian_mean_and_actual_response",
+        "status": "NEW_PARENT_RETAINED_MEAN_STATIONARITY_AND_BOUNDED_COEFFICIENT_CORRECTION_NOT_FULL_QUANTUM_BACKGROUND_STABILITY_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "actual_classical_Hamiltonian_C0_and_C10_inverse_and_first_formal_Gaussian_response",
+        "status": "QUANTIFIED_PREPARED_CLASSICAL_PROPAGATOR_AND_FIRST_FORMAL_COEFFICIENT_NOT_FINITE_COUPLING_ERROR_STABILITY_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "complete_finite_time_canonical_vacuum_source_mean_and_scalar_force_noise_with_fixed_profile",
+        "status": "FULL_CONDITIONAL_GAUSSIAN_VACUUM_SOURCE_CAUSAL_AND_NOISE_BOUNDS_NOT_INTERACTING_AMPLITUDE_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "actual_all_order_CD_state_complete_clock_source_smeared_force_noise_and_canonical_normalization",
+        "status": "SAME_STATE_FULL_SOURCE_SMEARED_SCALAR_NOISE_BOUND_NOT_METRIC_NOISE_SOLUTION_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "actual_all_order_CD_full_local_smeared_metric_stress_covariance",
+        "status": "FULL_SPACETIME_TENSOR_STRESS_NOISE_BOUND_NOT_METRIC_SOLUTION_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "actual_CD_boundary_compatible_tree_tensor_noise_response",
+        "status": "RESTRICTED_DETECTOR_TREE_PROPAGATED_NOISE_NOT_FULL_QUANTUM_TENSOR_STATE_OR_V_G_B"
+      },
+      {
+        "id": "actual_CD_homogeneous_shear_Hamiltonian_contact_and_modewise_remainder",
+        "status": "ACTUAL_SHEAR_MODEWISE_FINITE_AMPLITUDE_REMAINDER_NOT_CONTINUUM_SELF_ENERGY_OR_V_G_B"
+      },
+      {
+        "id": "actual_fixed_local_covariant_full_spatial_tensor_Hessian",
+        "status": "ACTUAL_FIXED_FINITE_LOCAL_TENSOR_HESSIAN_BOUND_NOT_COMPLETE_DETERMINANT_RESPONSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_CD_full_matrix_adiabatic_uniform_covariance_tail",
+        "status": "ACTUAL_UNCHANGED_STATE_UNIFORM_HIGH_BAND_COVARIANCE_REMAINDER_NOT_RESPONSE_SUBTRACTION_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_matrix_covariance_tail_C2_response_and_Taylor_remainder",
+        "status": "ACTUAL_UNCHANGED_STATE_C2_HIGH_BAND_COVARIANCE_TAIL_NOT_COMPLETE_COVARIANT_RESPONSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_physical_shear_current_C2_fourth_order_comparison",
+        "status": "ACTUAL_STATE_C2_CURRENT_MODE_COMPARISON_NOT_FIXED_COVARIANT_MATCHING_OR_V_G_B"
+      },
+      {
+        "id": "actual_homogeneous_shear_full_fixed_covariant_mode_subtraction_matching",
+        "status": "ACTUAL_HOMOGENEOUS_SHEAR_FIXED_COVARIANT_MODE_SUBTRACTION_MATCHING_NOT_FULL_FEEDBACK_OR_V_G_B"
+      },
+      {
+        "id": "actual_complete_fixed_covariant_homogeneous_current_C2_and_canonical_response",
+        "status": "ACTUAL_COMPLETE_FIXED_COVARIANT_HOMOGENEOUS_CURRENT_C2_AND_CANONICAL_RESPONSE_NOT_FULL_FEEDBACK_OR_V_G_B"
+      },
+      {
+        "id": "actual_spatial_two_momentum_metric_vertices_and_finite_band_Gaussian_response",
+        "status": "ACTUAL_SPATIAL_TWO_MOMENTUM_CURRENT_FINITE_BAND_NOT_RENORMALIZED_CONTINUUM_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_full_spatial_separated_support_weak_Gaussian_response_and_quantitative_tail",
+        "status": "ACTUAL_CONTINUUM_SEPARATED_SUPPORT_WEAK_RESPONSE_NOT_COINCIDENT_EXTENSION_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_overlapping_time_spatial_retarded_state_remainder_with_complete_contact",
+        "status": "ACTUAL_RETARDED_MEMORY_CONTACT_COMPARISON_NOT_REFERENCE_DIAGONAL_MATCHING_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_reference_six_step_retarded_boundary_extraction_and_full_finite_bulk",
+        "status": "ACTUAL_REFERENCE_FINITE_BULK_AND_EXPLICIT_ENDPOINTS_NOT_COVARIANT_SPATIAL_MATCHING_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_canonical_flat_Proca_full_tensor_cut_and_subtracted_dispersion_benchmark",
+        "status": "CANONICAL_FLAT_FULL_TENSOR_CUT_BENCHMARK_NOT_CURVED_MATCHING_FULL_PARENT_AMPLITUDE_OR_V_G_B"
+      }
+    ],
+    "primitive": [
+      {
+        "id": "scalar_Phi0_W0_F0",
+        "status": "BOUNDED_PAIRED_VACUUM_PRIMITIVE_WITH_ASSIGNED_LOCAL_FOREST"
+      },
+      {
+        "id": "scalar_Phi2_W0_F2",
+        "status": "BOUNDED_NONLOCAL_AND_FINITE_MS_MASS_AND_SLOPE_REFERENCES"
+      },
+      {
+        "id": "scalar_Phi2_W1_F0",
+        "status": "BOUNDED_PAIRED_NONLOCAL_AND_FINITE_MS_LOCAL_REFERENCES"
+      },
+      {
+        "id": "scalar_Phi4_W0_F4",
+        "status": "BOUNDED_PAIRED_PRIMITIVE_ROW"
+      },
+      {
+        "id": "scalar_Phi4_W1_F2",
+        "status": "BOUNDED_PAIRED_IN_COMMON_MS_INTERACTION_SCHEME"
+      },
+      {
+        "id": "scalar_Phi4_W2_F0",
+        "status": "BOUNDED_PAIRED_IN_COMMON_MS_INTERACTION_SCHEME"
+      },
+      {
+        "id": "gauge_Phi0",
+        "status": "BOUNDED_PAIRED_VACUUM_PRIMITIVE_WITH_ASSIGNED_LOCAL_FOREST"
+      },
+      {
+        "id": "gauge_Phi2",
+        "status": "BOUNDED_NONLOCAL_AND_FINITE_MS_MASS_AND_SLOPE_REFERENCES"
+      },
+      {
+        "id": "gauge_Phi4",
+        "status": "BOUNDED_PAIRED_PRIMITIVE_ROW"
+      }
+    ]
+  },
+  "prior_sha256": {
+    "S6_176_actual_CD_Gaussian_sector_transitively_rebuilt": "1175702d6980db090396863b807af0e767241daeb7d8dabf138ed11c67e1ae75",
+    "S6_198_fully_rebuilt": "2aade0843ba6f18fa9bbd6352b66fbf0a95c22d49949f56d90990d15f9d8ebe2",
+    "all_frozen_scientific_bytes_unchanged": true,
+    "fixed_stress_prescription_and_full_source_retained": true
+  },
+  "proof_checks": {
+    "Wick_pair_exchange_and_Lorentz_phase_space_factors": true,
+    "actual_CD_state_not_replaced_by_flat_benchmark": true,
+    "actual_i_over_four_retarded_current_factor": true,
+    "all_nine_creation_pair_amplitudes": true,
+    "all_three_physical_modes_and_temporal_constraint": true,
+    "both_canonical_tensor_chain_factors": true,
+    "both_spin2_and_spin0_sectors_retained": true,
+    "canonical_flat_reference_Proca_sector_only": true,
+    "complete_physical_polarization_stress_nine_pair_amplitudes": true,
+    "complete_physical_polarization_stress_nonzero_longitudinal_temporal_constraint": true,
+    "complete_physical_polarization_stress_three_physical_polarizations": true,
+    "complete_rotational_tensor_projection": true,
+    "curvature_weight_and_scope_Euler_weight_retained": true,
+    "curvature_weight_and_scope_nonzero_complete_spin0_weight": true,
+    "curvature_weight_and_scope_nonzero_complete_spin2_weight": true,
+    "curvature_weight_and_scope_same_fixed_canonical_parent": true,
+    "finite_local_polynomial_not_selected_from_absorptive_cut": true,
+    "four_dimensional_heat_weights_with_Euler_retained": true,
+    "full_covariant_conserved_stress_not_only_spatial_trace": true,
+    "full_tensor_cut_and_normalization_no_Maxwell_only_replacement": true,
+    "full_tensor_cut_and_normalization_nonzero_longitudinal_scalar_UV": true,
+    "full_tensor_cut_and_normalization_two_physical_transverse_tensor_sectors": true,
+    "longitudinal_UV_not_silently_replaced_by_Maxwell": true,
+    "no_curved_spatial_or_interacting_matching_inferred": true,
+    "original_V_G_B_not_closed": true,
+    "same_full_parent_normalization_profile_and_prescription": true,
+    "strict_positive_massive_threshold_support": true,
+    "subtracted_dispersive_remainder_both_first_moments_positive": true,
+    "subtracted_dispersive_remainder_both_next_moments_positive": true,
+    "subtracted_dispersive_remainder_threshold_stays_massive": true,
+    "three_subtracted_remainder_and_actual_moment_bounds": true
+  },
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "0a9d924382048b809b2f7741c29b7488cd90cad084c79aba87d408e3cf4c382f",
+    "README.md": "7e1421190f78376f4e82bd98de171828c5653e80c12f36a8112f3c923051abf9",
+    "notes/curvature.md": "4a20ca2b2743a2f0f731268391e4eef96bc26441bd01d6749feedf5bf8419729",
+    "notes/dispersion.md": "a6d78020232d14b4b130f2a750927a0f75187985bd5d116acb0ad7025a03014b",
+    "notes/limit.md": "032334c430ba6eafe16294fd994d3ddb2a7daecbf0dc09e7f866dd9c1ff36894",
+    "notes/polarizations.md": "e87c70316209a41ff2becb692b13179f17bb06e50a9f2bb353a5f4f579dc9ee7",
+    "notes/projection.md": "f5b52fc7462b852e1a6a15e31f3a55633c3b7a76e18054b0d88d211cc453c00d",
+    "notes/scope.md": "7d399f0975f1e77972f367d8e5ca4e579cdbae838fe978039586301435ebba58",
+    "notes/validation.md": "68c037cf3148e4337930334086cf35f1294fda13df6042cbc49f52d7313e3ed8",
+    "src/p8_vacuum_affine_flat_tensor_cut/__init__.py": "4bf91092d471aae59cd4881e4bd4449f019e2292d889753bf8f1fdfc0480eed0",
+    "src/p8_vacuum_affine_flat_tensor_cut/audit.py": "f8b93ca6b6991e190c903c018ef0d704aaa9246be5ee50233d5d6cdc67386d3a",
+    "src/p8_vacuum_affine_flat_tensor_cut/curvature.py": "decb31b1eff6652d4c8de069404575dc49a1effa8e9854645d7ee52b7f715199",
+    "src/p8_vacuum_affine_flat_tensor_cut/dispersion.py": "ee4d8987c7f4174788d8392ae3fc97112037455e1ed28d8566e1f940d7af2b72",
+    "src/p8_vacuum_affine_flat_tensor_cut/polarizations.py": "ca49b7d070f413fa92c19c7f6346b105f7e51ea7e43e990b2bd662deaf738708",
+    "src/p8_vacuum_affine_flat_tensor_cut/projectors.py": "e0ff05fc56e39b4462ae319b34e6fdd6aa8dd870e7245e0ae92c60ed42c4afac",
+    "src/p8_vacuum_affine_flat_tensor_cut/verify.py": "6be9d0f9390082d52c80933c1d8d4ea81b11c2d056df1653a4c99f94bfe8c7b0",
+    "tests/test_affine_flat_tensor_cut_certificate.py": "ba9f88d79c87d8cfbd6933e7a120040163d5966fa5ab0de5b616f74681a48cef",
+    "tests/test_affine_flat_tensor_cut_science.py": "9d401d15a4835c903b50601ecdfbf22ddffd2005792348e2b10f3ccf86c680c3"
+  },
+  "status": "ACTUAL_CANONICAL_FLAT_PROCA_FULL_TENSOR_CUT_SUBTRACTED_DISPERSION_AND_CURVATURE_WEIGHT_BENCHMARK; NOT_CURVED_SPATIAL_MATCHING_FULL_PARENT_AMPLITUDE_INVERSE_BACKGROUND_CUTOFF_V_G_B_OR_ORIGINAL_P8",
+  "verdict": "The canonical mass1000 Proca flat reference vacuum has a full conserved stress cut derived from all nine physical polarization pairs, including the temporal constraint and longitudinal mode. Complete angular projection gives both spin2 and spin0, with densities beta(13s^2+56m^2s+48m^4)/(3840pi^2) and beta(s^2-4m^2s+12m^4)/(384pi^2) for the actual i/4 retarded current. They vanish through the massive threshold and are strictly positive above it. Three subtractions define a convergent dispersive part with exact positive moments, low-energy remainder bounds and controlled infinite spectral tails. Independent four-dimensional curvature Hessians match the ultraviolet tensor weights13/120 and1/72, retaining the Euler term and longitudinal contribution. Both canonical tensor factors multiply the density by4/kappa without providing uniform high-energy smallness. The absorptive cut does not fix finite local polynomials, redo the dimensionally continued prescription, match the curved CD contact/endpoint sector, or establish full parent scattering cuts, a response inverse, interacting background, physical cutoff or finite-gravity IR/Regge control. Original V/G/B and P8 remain open.",
+  "verification_boundary": "Exact full physical stress pairs, conserved tensor projectors, phase-space/Wick/current factors, spectral moments and ultraviolet curvature weights. Independent covariant potentials, noncollinear boosts, full angular tensors, oscillator current signs, spectral integrals and linearized four-dimensional curvature Hessians supplement written arguments. Native, direct science, ordinary and CLI use original SymPy; only full regression uses the audited exact GCD adapter. The analytic dispersion and covariance arguments are not FORMALIZED.",
+  "written_proofs": [
+    "notes/dispersion.md",
+    "notes/polarizations.md",
+    "notes/curvature.md",
+    "notes/projection.md",
+    "notes/limit.md",
+    "notes/scope.md",
+    "notes/validation.md"
+  ]
+}
