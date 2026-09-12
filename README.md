@@ -438,7 +438,12 @@ around a pre-registered problems document and a certificate-gated ledger.
   This is still linear light evolution and its leading heavy response,
   not a full nonlinear solution or UV-admissible completion.
 
-The [current P8 continuation audit](docs/assessment-2026-09-12-p8-affine-weighted-channel-resolvent.md)
+The [current P8 continuation audit](docs/assessment-2026-09-12-p8-affine-full-finite-local-reference.md)
+establishes a same-space bound for the complete original finite-local remainder
+and its ordered curved reference inverse, with a precise composed graph and
+all density and boundary factors retained. Actual full nonlocal coupled
+matching, stability and original P8 remain further work.
+The [weighted channel reference audit](docs/assessment-2026-09-12-p8-affine-weighted-channel-resolvent.md)
 establishes an all-momentum weighted inverse for explicitly bounded channel
 corrections and the actual curved reference. It retains the physical density,
 initial boundary and a growing comparison pole; weighted existence is not
