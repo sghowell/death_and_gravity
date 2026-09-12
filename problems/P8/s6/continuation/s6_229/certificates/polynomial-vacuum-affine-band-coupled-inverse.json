@@ -1,0 +1,813 @@
+{
+  "actual_full_classical_Ward_contacts_residual_adjoint_and_dimensional_scalar_matching": {
+    "both_ordered_Ward_and_distinct_clock_contact": {
+      "clock_bounce_second_coefficient": "3*(t**2 + 1)**6*pressure(t)/2",
+      "distinct_clock_eta_second_coefficient": "-3*(t**2 + 1)**6*(4*delta(t)**2 - 3*delta(t))*pressure(t)",
+      "full_Ward_external_momentum_degree": "2",
+      "full_Ward_monomial_count": 14,
+      "maximum_derivative_per_leg": [
+        1,
+        1
+      ],
+      "ordered_formula": "Source Ward on the full detector, then detector Ward on the synchronous source, plus distinct clock nn contact once; Gaussian one-point not zero."
+    },
+    "complete_weighted_adjoint_and_constraint_recovery": {
+      "complete_density_boundary": "(proper_time**2 + 1)**6*((En(proper_time) - Ev(proper_time)*delta(proper_time))*eta(proper_time) + Eb(proper_time)*spatial_c(proper_time))",
+      "normalized_physical_force_pullback": [
+        [
+          "-3*H(proper_time)*force_n(proper_time) + H(proper_time)*force_zeta(proper_time) + force_b(proper_time)*q(proper_time) - Derivative(force_n(proper_time), proper_time)"
+        ],
+        [
+          "force_zeta(proper_time)"
+        ],
+        [
+          "-3*H(proper_time)*force_b(proper_time) - Derivative(force_b(proper_time), proper_time)"
+        ],
+        [
+          "0"
+        ]
+      ],
+      "prepared_inverse": "eta=I n; w=zeta-H eta; c=I(b-q eta); r=sigma-ell eta",
+      "unprepared_counterexample": [
+        [
+          "Integral(P**2/(_source_time**2 + 1)**4, (_source_time, -1/2, proper_time))/(proper_time**2 + 1)**6"
+        ],
+        [
+          "0"
+        ],
+        [
+          "(proper_time**2 + 1)**(-6)"
+        ],
+        [
+          "0"
+        ]
+      ],
+      "weighted_old_residual_adjoint": [
+        [
+          "Eb(proper_time)*q(proper_time) - 3*En(proper_time)*H(proper_time) + Es(proper_time)*ell(proper_time) + 3*Ev(proper_time)*H(proper_time)*delta(proper_time) + Ev(proper_time)*H(proper_time) + Ev(proper_time)*Derivative(delta(proper_time), proper_time) + delta(proper_time)*Derivative(Ev(proper_time), proper_time) - Derivative(En(proper_time), proper_time)"
+        ],
+        [
+          "Ev(proper_time)"
+        ],
+        [
+          "-3*Eb(proper_time)*H(proper_time) - Derivative(Eb(proper_time), proper_time)"
+        ],
+        [
+          "Es(proper_time)"
+        ]
+      ]
+    },
+    "full_classical_mixed_principal": {
+      "actual_eta_pivot_inverse_bound": "15625/6144",
+      "actual_principal": [
+        [
+          "-6*delta(proper_time)**2",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "-1"
+        ]
+      ],
+      "adapted_tuple": "n=eta', zeta=w+H eta, v=zeta-delta eta', b=c'+q eta, sigma=r+ell eta; q=P^2/a^2",
+      "row_orders": [
+        4,
+        4,
+        4,
+        2
+      ],
+      "unshifted_matter_eta_second": "ell(proper_time)"
+    },
+    "full_dimensional_actual_scalar_matching": {
+      "all_dimension_double_trace_invariant": "(d**3 - 4*d**2 - 3*d + 16)/(4*d*(d + 2))",
+      "all_dimension_tracefree_invariant": "(2*d**2 + d - 8)/(2*d*(d + 2))",
+      "both_ordered_trace_tracefree_crosses": [
+        [
+          "0"
+        ],
+        [
+          "0"
+        ]
+      ],
+      "distinct_dimension_varying_test_jet": [
+        [
+          "4",
+          "-8/9"
+        ],
+        [
+          "-8/9",
+          "22/25"
+        ]
+      ],
+      "finite_transfer_phase": "Retain exp(-i(n dot P)Delta_sigma) as a smooth orderzero amplitude; its diagonal value is1. It is not inverse-k small.",
+      "fixed_fourth_finite_local_matrix": [
+        [
+          "-4",
+          "4/3"
+        ],
+        [
+          "4/3",
+          "-8/15"
+        ]
+      ],
+      "fixed_physical_first_dimension_jet": [
+        [
+          "46/15",
+          "-46/45"
+        ],
+        [
+          "-46/45",
+          "22/25"
+        ]
+      ],
+      "fixed_physical_scalar_matrix": [
+        [
+          "4",
+          "-4/3"
+        ],
+        [
+          "-4/3",
+          "8/5"
+        ]
+      ],
+      "literal_I_d_trace_pair": "(d - 1)*(d**2 - 5*d + 8)/4",
+      "off_diagonal_leading_matrix": [
+        [
+          "96",
+          "-32"
+        ],
+        [
+          "-32",
+          "192/5"
+        ]
+      ],
+      "proper_normalized_radial_matrix": [
+        [
+          "128",
+          "-128/3"
+        ],
+        [
+          "-128/3",
+          "256/5"
+        ]
+      ],
+      "reference": "gamma L0^T diag(Ftrace,(8/3)F2)L0 D^4 in proper time, gamma=1/(64pi^2 kappa); original factors, mass, cut and pole.",
+      "strong_remainder": "For each finite Pmax and each fixed j, four OUTPUT primitives of the actual scalar remainder have a uniform complete row-sum bound Cj(Pmax)(1+|log lag|). Full original state, dimensional jets, contacts and lower local terms remain. No Cj is numerically evaluated."
+    }
+  },
+  "actual_mixed_normal_form_ordered_inverse_and_smooth_ball_S222_graph": {
+    "actual_S222_smooth_band_inverse": "For h0 solve the full Euler equation with -J_adapt e, recover g=e+Qbar s and original Legendre Z. This gives both identities for I-Qbar Taux. General h uses RHS e+Qbar C G0 h; Daux and output density retained.",
+    "actual_kappa": "100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "actual_mass": "1000",
+    "actual_quantum_multiplier": "1/(6400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000*pi**2)",
+    "band_domain": "C^infinity prepared(I;H^r_ball), each finite ball and real r; common nonempty zero initial germ. No momentum derivatives of the selected state or spatial Schwartz output claimed.",
+    "finite_window_channel_norm": "Kmax=max(||Ktrace||L1(0,1),(3/8)||K2||L1(0,1)); full K2 retains its pole and is not half-line L1.",
+    "graph_boundary": "Solutions and feedback lie in the smooth Fourier-supported subgraph of X_r=H13_t H^(r+8),Y_r=L2_t H^(r-3). No maximality, graph-density, unrestricted X/Y surjectivity or uniform Pmax-to-infinity bound.",
+    "normal_form": "diag(I4,I4,I4,I2) T_adapt=diag(-6delta(t)^2,gamma L0^T diag(Ftrace,(8/3)F2)L0,-1)+V",
+    "ordered_inverse": "(I+B0 V)^-1 B0 diag(I4,I4,I4,I2)",
+    "original_reference_middle_inverse": [
+      [
+        "(1/Ftrace + 1/(24*Fshear))/gamma",
+        "1/(8*Fshear*gamma)"
+      ],
+      [
+        "1/(8*Fshear*gamma)",
+        "3/(8*Fshear*gamma)"
+      ]
+    ],
+    "reference_inverse_bound": "Max(15625/6144, 16*finite_window_Kmax/(9*gamma))",
+    "smoothness": "Prepared simultaneous time shifts retain both V_j=(Dt+Ds)^j V and A^(j)(t) on the eta component. Every fixed smooth seminorm has a finite bound; no analytic-in-order or all-P estimate.",
+    "unweighted_adapted_source_norm_bound": "2*reference_inverse_b0*exp((4*complete_remainder_C*reference_inverse_b0 + 1)**2)",
+    "weight": "(4*complete_remainder_C*reference_inverse_b0 + 1)**2",
+    "weighted_contraction_bound": "2*complete_remainder_C*reference_inverse_b0/(4*complete_remainder_C*reference_inverse_b0 + 1)"
+  },
+  "checked_scalar_entries": 164,
+  "claim": "P8-S6.229.ACTUAL_FULL_SCALAR_CLOCK_MATTER_PREPARED_CAUSAL_INVERSE_AND_S222_FEEDBACK_ON_SMOOTH_BOUNDED_FOURIER_SUPPORT",
+  "controls": {
+    "actual_direct_auxiliary_rank_two_retained": true,
+    "all_original_primitive_statuses_unchanged": true,
+    "dimension_varying_test_jet_not_physical_finite_part": true,
+    "distinct_clock_contact_not_zero": true,
+    "omitted_matter_invariant_changes_highest_matter_row": true,
+    "original_shear_inverse_pole_and_density_order_retained": true,
+    "rejected_inputs": 191,
+    "unprepared_constraint_kernel_nonzero": true,
+    "variable_eta_pivot_derivative_not_discarded": true
+  },
+  "date": "2026-09-12",
+  "exact_residuals": {
+    "both_ordered_Ward_and_distinct_clock_contact_both_opposite_leg_gauge_maps": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        26,
+        1
+      ]
+    },
+    "both_ordered_Ward_and_distinct_clock_contact_full_fourteen_bilinear_monomials": "0",
+    "both_ordered_Ward_and_distinct_clock_contact_maximum_one_derivative_each_leg": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        1
+      ]
+    },
+    "both_ordered_Ward_and_distinct_clock_contact_no_net_spatial_phase": "0",
+    "both_ordered_Ward_and_distinct_clock_contact_original_distinct_clock_bounce": "0",
+    "complete_weighted_adjoint_and_constraint_recovery_complete_normalized_force_pullback": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        1
+      ]
+    },
+    "complete_weighted_adjoint_and_constraint_recovery_full_weighted_adjoint_boundary": "0",
+    "complete_weighted_adjoint_and_constraint_recovery_physical_residual_clock_pullback": "0",
+    "complete_weighted_adjoint_and_constraint_recovery_unprepared_lapse_homogeneous": "0",
+    "complete_weighted_adjoint_and_constraint_recovery_unprepared_shift_homogeneous": "0",
+    "full_classical_mixed_principal_actual_background_matter_identity": "0",
+    "full_classical_mixed_principal_actual_delta": "0",
+    "full_classical_mixed_principal_actual_nonzero_pivot_bound": "0",
+    "full_classical_mixed_principal_all_above_row_orders": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        40,
+        1
+      ]
+    },
+    "full_classical_mixed_principal_complete_mixed_row_principal": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        4
+      ]
+    },
+    "full_classical_mixed_principal_unshifted_matter_cross_is_ell": "0",
+    "full_dimensional_actual_scalar_matching_both_ordered_crosses": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        1
+      ]
+    },
+    "full_dimensional_actual_scalar_matching_double_trace_dimension_jet": "0",
+    "full_dimensional_actual_scalar_matching_fixed_physical_dimension_jet": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "full_dimensional_actual_scalar_matching_fixed_physical_matrix": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "full_dimensional_actual_scalar_matching_four_primitive_Abel_matching": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "full_dimensional_actual_scalar_matching_full_double_trace_invariant": "0",
+    "full_dimensional_actual_scalar_matching_full_trace_invariant": "0",
+    "full_dimensional_actual_scalar_matching_full_tracefree_invariant": "0",
+    "full_dimensional_actual_scalar_matching_leading_determinant": "0",
+    "full_dimensional_actual_scalar_matching_proper_momentum_full_dimension_scale_exponent": "0",
+    "full_dimensional_actual_scalar_matching_two_original_channel_logarithms": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "nine_original_primitive_rows": "0",
+    "one_new_actual_smooth_ball_coupled_inverse": "0",
+    "ordered_mixed_inverse_and_actual_smooth_ball_graph_actual_gamma_normalization": "0",
+    "ordered_mixed_inverse_and_actual_smooth_ball_graph_actual_phase_force_sign": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        3
+      ]
+    },
+    "ordered_mixed_inverse_and_actual_smooth_ball_graph_all_four_coordinate_norms": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        4,
+        1
+      ]
+    },
+    "ordered_mixed_inverse_and_actual_smooth_ball_graph_both_middle_norm_factors": "0",
+    "ordered_mixed_inverse_and_actual_smooth_ball_graph_middle_inverse_left": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "ordered_mixed_inverse_and_actual_smooth_ball_graph_middle_inverse_right": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "ordered_mixed_inverse_and_actual_smooth_ball_graph_retained_actual_direct_auxiliary_block": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        3
+      ]
+    },
+    "ordered_mixed_inverse_and_actual_smooth_ball_graph_strict_half_contraction_margin": "0",
+    "ordered_mixed_inverse_and_actual_smooth_ball_graph_variable_pivot_derivative_commutator": "0",
+    "unchanged_previous_matching_rows": "0",
+    "unchanged_primitive_rows": "0"
+  },
+  "formulation": "FORMULATION.md",
+  "named_exact_check_count": 40,
+  "not_established": [
+    "Uniform Pmax-to-infinity estimates or a bounded inverse on the unrestricted original completed X_r/Y_r graph",
+    "Maximal graph characterization, graph-density, spatial Schwartz-output preservation or arbitrary unprepared initial data",
+    "Numerical complete remainder and inverse norms, small physical feedback, absence of growing modes, stability or a physical cutoff",
+    "Nonlinear and finite-coupling common-parent control, original V/G/B or P8 closure"
+  ],
+  "observable_and_scope": {
+    "actual_scope": "The original scalar/clock/matter classical tree, retuning, conditional Proca state and complete spatial current are solved together at the reference on each fixed bounded external-momentum ball.",
+    "boundary": "The internal loop is uncut. This is not a uniform Pmax-to-infinity bound, a maximal or unrestricted X/Y graph inverse, numerical smallness, stability, nonlinear parent control, a cutoff or original P8 closure.",
+    "main_result": "All-dimensional leading matching, both Ward legs and a uniform compact-ball strong remainder give an actual mixed-order causal inverse and both S222 feedback identities on smooth prepared Fourier-supported histories.",
+    "norm": "A finite unevaluated complete row-sum majorantC and original finite-window channel inverse norms give weight(4b0 C+1)^2 and adapted-source inverse bound2 exp(weight)b0. All physical kappa and output density factors remain."
+  },
+  "primitive_and_matching_frontier": {
+    "matching": [
+      {
+        "id": "fixed_sigma_isolated_MS_conversion",
+        "status": "CANCELLED_NONLOCAL_ORDER_TWO_WITH_SAME_REGULATED_REFERENCE"
+      },
+      {
+        "id": "remaining_scale_parameter_field_map_and_cross_terms",
+        "status": "OPEN"
+      },
+      {
+        "id": "remaining_counterterm_and_vacuum_source_assembly",
+        "status": "ASSEMBLED_FOR_FIXED_ORDER_PHI_POLE_B2_VACUUM_AND_H_SOURCE"
+      },
+      {
+        "id": "full_matched_two_loop_pole_and_amplitude_error",
+        "status": "FIXED_ORDER_PHI_POLE_AND_B2_BOUNDED_PHYSICAL_TRUNCATION_OPEN"
+      },
+      {
+        "id": "finite_EFT_higher_order_truncation",
+        "status": "OPEN"
+      },
+      {
+        "id": "V_contour_and_cut_control",
+        "status": "OPEN"
+      },
+      {
+        "id": "finite_gravity_G",
+        "status": "OPEN"
+      },
+      {
+        "id": "common_parent_B",
+        "status": "OPEN"
+      },
+      {
+        "id": "complete_wineglass_interaction_forest_MS",
+        "status": "BOUNDED_WITH_REGULATED_FINITE_LOCAL_ANCHOR_AND_FULL_SCALE_TERM"
+      },
+      {
+        "id": "complete_double_bubble_interaction_forest_MS",
+        "status": "BOUNDED_WITH_ACTUAL_NESTED_MS_FORESTS_AND_BOTH_SCALE_TERMS"
+      },
+      {
+        "id": "complete_scalar_OS_insertion_interaction_forest_MS",
+        "status": "BOUNDED_WITH_FULL_REGULATED_SLOPE_TIMES_OUTER_REFERENCE"
+      },
+      {
+        "id": "complete_scalar_quadratic_finite_MS_slope_and_converted_OS_bound",
+        "status": "BOUNDED_WITH_FIXED_INNER_OS_AND_INTERACTION_MS_COORDINATES"
+      },
+      {
+        "id": "first_finite_Phi_field_covariance_and_MS_projection_commutator",
+        "status": "EXACT_REGULATED_FIELD_DIRECTION_AND_BOUNDED_FIRST_SLOPE_CROSS_TERMS"
+      },
+      {
+        "id": "complete_GY14_second_Phi_normalization_and_canonical_unit_disc_pole",
+        "status": "BOUNDED_WITH_DIRECT_MS_OWNERSHIP_AND_FULL_FINITE_FIELD_REEXPANSION"
+      },
+      {
+        "id": "complete_two_loop_vacuum_reference_and_first_source_square",
+        "status": "BOUNDED_WITH_FULL_REGULATED_SOURCE_REDUCIBLE_CANCELLATION"
+      },
+      {
+        "id": "complete_two_loop_derivative_map_with_matched_physical_source",
+        "status": "TRANSPORTED_FOR_FULL_ACTION_AND_PHYSICAL_SOURCE_NOT_ORDINARY_PSI_MS_OR_TRUNCATION"
+      },
+      {
+        "id": "complete_matched_two_loop_low_energy_Phi_elastic_cut",
+        "status": "BOUNDED_ON_PHYSICAL_WINDOW_4_TO_6_WITH_FULL_FIRST_AMPLITUDE_NOT_PHYSICAL_REMAINDER_OR_GLOBAL_DISPERSION"
+      },
+      {
+        "id": "full_finite_kappa_analytic_target_classical_vacuum_match",
+        "status": "BOUNDED_ON_SAME_RESTRICTED_FLAT_SCHWARTZ_CLASS_NOT_QUANTUM_TARGET_OR_ROLLING_COMMON_PARENT_MATCH"
+      },
+      {
+        "id": "GY14_SAT8_pointwise_fermion_mass_protection_and_named_low_order_invariance",
+        "status": "NEW_ANALYTIC_EFT_BRANCH_WITH_GLOBAL_REAL_MASS_FLOOR_AND_SAME_NAMED_TWO_LOOP_DATA_NOT_ROLLING_STATE_OR_COMMON_PARENT_CLOSURE"
+      },
+      {
+        "id": "polynomial_clock_transparent_physical_source_map_and_full_target_classical_bound",
+        "status": "KINEMATIC_CLOCK_ARGUMENT_ALIGNED_WITH_PROTECTED_MASSES_AND_SAME_NAMED_VACUUM_DATA_NOT_BACKGROUND_SOLUTION_QUANTUM_STATE_OR_COMMON_PARENT_CLOSURE"
+      },
+      {
+        "id": "free_flat_clock_Dirac_out_energy_with_complete_transition_series_remainder",
+        "status": "BOUNDED_FOR_SPECIFIED_QUADRATIC_MODEWISE_IN_OUT_STATE_NOT_INTERACTING_OR_CURVED_BOUNCE_STRESS"
+      },
+      {
+        "id": "Hadamard_regular_free_flat_SAT8_in_out_state_and_uniform_one_particle_norm_limit",
+        "status": "HADAMARD_FOR_SPECIFIED_FREE_EXTERNAL_MASS_OPERATOR_USING_IDENTIFIED_EXTERNAL_THEOREM_NOT_INTERACTING_CURVED_STATE_OR_NUMERICAL_STRESS"
+      },
+      {
+        "id": "exact_four_frame_free_transition_and_uniform_same_operator_in_out_T00_difference",
+        "status": "BOUNDED_FOR_FREE_FLAT_HADAMARD_STATE_DIFFERENCE_NOT_ABSOLUTE_STRESS_INTERACTING_CURVED_STATE_OR_BACKREACTION"
+      },
+      {
+        "id": "free_flat_absolute_one_loop_local_energy_with_fixed_saturated_mass_reference",
+        "status": "BOUNDED_IN_EXPLICIT_MS_AND_SATURATED_MASS_REFERENCE_QUADRATIC_SCHEME_NOT_FULL_CURVED_INTERACTING_PARENT_STRESS"
+      },
+      {
+        "id": "complete_free_flat_homogeneous_one_loop_stress_with_dimensional_curvature_improvement",
+        "status": "BOUNDED_SPECIFIED_QUADRATIC_MS_MR_FLAT_TENSOR_NOT_FULL_INTERACTING_CURVED_PARENT_STRESS"
+      },
+      {
+        "id": "actual_CD_free_Dirac_Hadamard_in_out_state_and_uniform_state_stress_difference",
+        "status": "CURVED_FREE_HADAMARD_STATE_AND_STATE_DIFFERENCE_BOUNDED_NOT_ABSOLUTE_PARENT_STRESS"
+      },
+      {
+        "id": "complete_free_curved_one_loop_stress_with_explicit_EC_Newton_reference",
+        "status": "BOUNDED_SPECIFIED_QUADRATIC_CURVED_TENSOR_NOT_FULL_INTERACTING_PARENT_OR_BACKGROUND_RESPONSE"
+      },
+      {
+        "id": "minimal_Einstein_canonical_clock_free_sector_null_equation_mismatch",
+        "status": "EXCLUDED_NAMED_MINIMAL_DIAGNOSTIC_WITH_SMALL_EXTRA_NULL_BUDGET_NOT_FULL_INTERACTING_PARENT_OR_DHOST_ROW"
+      },
+      {
+        "id": "actual_CD_leading_clock_Euler_source_decomposition_and_matching_domain_gap",
+        "status": "LEADING_TARGET_SOURCES_AND_CONSTRAINT_DOMAIN_REQUIREMENTS_IDENTIFIED_NOT_PROPAGATING_PARENT_OR_QUANTUM_BOUNCE"
+      },
+      {
+        "id": "analytic_CD_REG_AFFINE_ISO_classical_parent_clock_vacuum_and_local_constraints",
+        "status": "NEW_REGULAR_CLASSICAL_PARENT_AND_LOCAL_CONSTRAINT_BLOCKS_NOT_QUANTUM_MATCHING_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "same_classical_affine_parent_closed_source_lift_and_scoped_vector_Schur_control",
+        "status": "EXACT_CLASSICAL_AND_COMMON_REGULATOR_IDENTITIES_FULL_EUCLIDEAN_AND_LEADING_LORENTZ_BOUNDS_NOT_FULL_QUANTUM_MATCHING"
+      },
+      {
+        "id": "regular_affine_parent_conditional_Gaussian_Hadamard_family_and_ordinary_Proca_stress",
+        "status": "SOURCE_AWARE_CONDITIONAL_VECTOR_STATE_AND_FIXED_CLOCK_STRESS_NOT_FULL_PARENT_QUANTUM_SOLUTION"
+      },
+      {
+        "id": "full_fixed_canonical_affine_family_actual_classical_gravitational_decoupling",
+        "status": "ANCHORED_FULL_FUNCTION_CLASSICAL_LIMIT_AND_TREE_AMPLITUDE_NOT_QUANTUM_CONTOUR_TRUNCATION_OR_V_CLOSURE"
+      },
+      {
+        "id": "complete_affine_vector_retarded_mean_energy_and_causal_cubic_light_force",
+        "status": "FIXED_CD_FULL_SOURCE_FINITE_TIME_CONDITIONAL_GAUSSIAN_MEAN_AND_LIGHT_FORCE_NOT_METRIC_NOISE_FULL_PARENT_OR_B_CLOSURE"
+      },
+      {
+        "id": "same_affine_conditional_prepared_homogeneous_metric_response_with_uncancelled_chart_contacts",
+        "status": "COMPLETE_CONDITIONAL_VECTOR_HOMOGENEOUS_C10_TO_C0_BOUND_NOT_SPATIAL_NOISE_COUPLED_BACKGROUND_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "same_affine_parent_prepared_homogeneous_retained_tree_plus_conditional_vector_causal_inverse",
+        "status": "UNIQUE_RETAINED_LINEAR_PREPARED_CAUSAL_INVERSE_WITH_NUMERIC_LOCAL_LAPSE_RECOVERY_NOT_FULL_INVERSE_SMALLNESS_QUANTUM_BACKGROUND_OR_V_G_B"
+      },
+      {
+        "id": "same_massive_scalar_range_kernel_explicit_full_half_line_L1_majorant",
+        "status": "MASS_INDEPENDENT_EXPLICIT_SCALAR_KERNEL_NORM_NOT_FULL_INVERSE_SMALLNESS_BACKGROUND_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "new_CD_REG_AFFINE_ISO_QG1_fixed_coefficient_stationary_Gaussian_mean_and_actual_response",
+        "status": "NEW_PARENT_RETAINED_MEAN_STATIONARITY_AND_BOUNDED_COEFFICIENT_CORRECTION_NOT_FULL_QUANTUM_BACKGROUND_STABILITY_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "actual_classical_Hamiltonian_C0_and_C10_inverse_and_first_formal_Gaussian_response",
+        "status": "QUANTIFIED_PREPARED_CLASSICAL_PROPAGATOR_AND_FIRST_FORMAL_COEFFICIENT_NOT_FINITE_COUPLING_ERROR_STABILITY_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "complete_finite_time_canonical_vacuum_source_mean_and_scalar_force_noise_with_fixed_profile",
+        "status": "FULL_CONDITIONAL_GAUSSIAN_VACUUM_SOURCE_CAUSAL_AND_NOISE_BOUNDS_NOT_INTERACTING_AMPLITUDE_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "actual_all_order_CD_state_complete_clock_source_smeared_force_noise_and_canonical_normalization",
+        "status": "SAME_STATE_FULL_SOURCE_SMEARED_SCALAR_NOISE_BOUND_NOT_METRIC_NOISE_SOLUTION_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "actual_all_order_CD_full_local_smeared_metric_stress_covariance",
+        "status": "FULL_SPACETIME_TENSOR_STRESS_NOISE_BOUND_NOT_METRIC_SOLUTION_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "actual_CD_boundary_compatible_tree_tensor_noise_response",
+        "status": "RESTRICTED_DETECTOR_TREE_PROPAGATED_NOISE_NOT_FULL_QUANTUM_TENSOR_STATE_OR_V_G_B"
+      },
+      {
+        "id": "actual_CD_homogeneous_shear_Hamiltonian_contact_and_modewise_remainder",
+        "status": "ACTUAL_SHEAR_MODEWISE_FINITE_AMPLITUDE_REMAINDER_NOT_CONTINUUM_SELF_ENERGY_OR_V_G_B"
+      },
+      {
+        "id": "actual_fixed_local_covariant_full_spatial_tensor_Hessian",
+        "status": "ACTUAL_FIXED_FINITE_LOCAL_TENSOR_HESSIAN_BOUND_NOT_COMPLETE_DETERMINANT_RESPONSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_CD_full_matrix_adiabatic_uniform_covariance_tail",
+        "status": "ACTUAL_UNCHANGED_STATE_UNIFORM_HIGH_BAND_COVARIANCE_REMAINDER_NOT_RESPONSE_SUBTRACTION_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_matrix_covariance_tail_C2_response_and_Taylor_remainder",
+        "status": "ACTUAL_UNCHANGED_STATE_C2_HIGH_BAND_COVARIANCE_TAIL_NOT_COMPLETE_COVARIANT_RESPONSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_physical_shear_current_C2_fourth_order_comparison",
+        "status": "ACTUAL_STATE_C2_CURRENT_MODE_COMPARISON_NOT_FIXED_COVARIANT_MATCHING_OR_V_G_B"
+      },
+      {
+        "id": "actual_homogeneous_shear_full_fixed_covariant_mode_subtraction_matching",
+        "status": "ACTUAL_HOMOGENEOUS_SHEAR_FIXED_COVARIANT_MODE_SUBTRACTION_MATCHING_NOT_FULL_FEEDBACK_OR_V_G_B"
+      },
+      {
+        "id": "actual_complete_fixed_covariant_homogeneous_current_C2_and_canonical_response",
+        "status": "ACTUAL_COMPLETE_FIXED_COVARIANT_HOMOGENEOUS_CURRENT_C2_AND_CANONICAL_RESPONSE_NOT_FULL_FEEDBACK_OR_V_G_B"
+      },
+      {
+        "id": "actual_spatial_two_momentum_metric_vertices_and_finite_band_Gaussian_response",
+        "status": "ACTUAL_SPATIAL_TWO_MOMENTUM_CURRENT_FINITE_BAND_NOT_RENORMALIZED_CONTINUUM_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_full_spatial_separated_support_weak_Gaussian_response_and_quantitative_tail",
+        "status": "ACTUAL_CONTINUUM_SEPARATED_SUPPORT_WEAK_RESPONSE_NOT_COINCIDENT_EXTENSION_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_overlapping_time_spatial_retarded_state_remainder_with_complete_contact",
+        "status": "ACTUAL_RETARDED_MEMORY_CONTACT_COMPARISON_NOT_REFERENCE_DIAGONAL_MATCHING_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_reference_six_step_retarded_boundary_extraction_and_full_finite_bulk",
+        "status": "ACTUAL_REFERENCE_FINITE_BULK_AND_EXPLICIT_ENDPOINTS_NOT_COVARIANT_SPATIAL_MATCHING_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_canonical_flat_Proca_full_tensor_cut_and_subtracted_dispersion_benchmark",
+        "status": "CANONICAL_FLAT_FULL_TENSOR_CUT_BENCHMARK_NOT_CURVED_MATCHING_FULL_PARENT_AMPLITUDE_OR_V_G_B"
+      },
+      {
+        "id": "full_spatial_flat_Proca_covariant_and_time_subtraction_conversion_with_nonlocal_coefficient_bounds",
+        "status": "FULL_SPATIAL_FLAT_NONLOCAL_SUBTRACTION_CONVERSION_NOT_CURVED_MATCHING_LOCAL_POLYNOMIAL_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_curved_reference_initial_state_prefactor_full_memory_contact_and_regulator_tail",
+        "status": "ACTUAL_CURVED_INITIAL_PREFACTOR_REMOVED_WITH_FINITE_FULL_RESPONSE_CORRECTION_NOT_SPATIAL_MATCHING_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_curved_reference_joint_spatial_analyticity_full_readouts_and_far_endpoint_Taylor_tail",
+        "status": "ACTUAL_UNIT_W8_JOINT_SPATIAL_ANALYTICITY_AND_FAR_ENDPOINT_TAYLOR_TAIL_NOT_NEAR_REGION_LOCAL_MATCHING_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_curved_reference_all_momentum_spatial_Taylor_subtracted_endpoint_remainder",
+        "status": "ACTUAL_UNIT_W8_ALL_MOMENTUM_ENDPOINT_REMAINDER_WITH_ORIGINAL_TAIL_NOT_LOCAL_MATCHING_FULL_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "fixed_covariant_local_full_tracefree_spatial_Hessian_proper_time_and_norm",
+        "status": "FIXED_LOCAL_FULL_TRACEFREE_SPATIAL_HESSIAN_NOT_QUANTUM_MATCHING_MIXED_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "finite_endpoint_spatial_Taylor_cells_restored_with_original_regulator_tail",
+        "status": "TEN_FINITE_ENDPOINT_TAYLOR_CELLS_RESTORED_NOT_REMAINING_UV_CONTACT_MATCHING_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_leading_full_Proca_sharp_two_leg_regulator_conversion_coefficient",
+        "status": "ACTUAL_LEADING_SHARP_BAND_ARTIFACT_NOT_FULL_REGULATOR_COVARIANT_MATCHING_OR_V_G_B"
+      },
+      {
+        "id": "complete_four_sector_spatial_UV_symbol_with_independent_detector_time",
+        "status": "HISTORICAL_ANNIHILATION_CREATION_PHASE_ERROR_CORRECTED_ENDPOINT_COEFFICIENTS_IN_S216"
+      },
+      {
+        "id": "uniform_actual_UV_subtracted_endpoint_remainder_with_original_regulator_tail",
+        "status": "UNIFORM_UV_SUBTRACTED_ENDPOINT_REMAINDER_NOT_FULL_CONTACT_COVARIANT_MATCHING_OR_V_G_B"
+      },
+      {
+        "id": "complete_original_UV_shape_conversion_centered_cancellations_and_uniform_tail",
+        "status": "ACTUAL_K2_AND_FINITE_CONVERSION_CANCEL_WITH_UNIFORM_TAIL_NOT_CURVED_A1_EVALUATION_FULL_CONTACT_MATCHING_OR_V_G_B"
+      },
+      {
+        "id": "explicit_actual_curved_linear_regulator_conversion_all_tensor_channels_and_source_jets",
+        "status": "ACTUAL_CURVED_A1_EVALUATED_WITH_COEFFICIENT_NORMS_NOT_FULL_ONE_BALL_CONTACT_COVARIANT_MATCHING_OR_V_G_B"
+      },
+      {
+        "id": "actual_spatial_UV_difference_complete_contact_cancellation_and_fixed_curved_pole",
+        "status": "FULL_SPATIAL_UV_DIFFERENCE_AND_POLE_IDENTIFIED_NOT_FINITE_DIMENSIONAL_MATCHING_OR_FULL_RESPONSE"
+      },
+      {
+        "id": "actual_dimensional_spatial_UV_finite_part_with_evanescent_modes_and_counterterms",
+        "status": "HISTORICAL_PHYSICAL_FINITE_IDENTIFICATION_WITHDRAWN_EXPLICIT_EVANESCENT_CORRECTION_IN_S216"
+      },
+      {
+        "id": "complete_matched_tracefree_spatial_Gaussian_current_with_anchored_original_regulator",
+        "status": "HISTORICAL_PHASE_ERROR_SUPERSEDED_BY_CORRECTED_S217_FULL_TRACEFREE_CURRENT_AND_ANCHORED_REGULATOR"
+      },
+      {
+        "id": "full_constrained_ADM_Proca_vertices_metric_chart_contacts_and_all_momentum_forms",
+        "status": "FULL_ADM_LOCAL_AND_FINITE_REGULATOR_GAUSSIAN_INPUT_NOT_FULL_NEW_SECTOR_CONTINUUM_REDUCED_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "prepared_ordered_Ward_reconstruction_full_chart_correction_and_three_remaining_scalar_kernels",
+        "status": "PREPARED_WARD_RECONSTRUCTION_WITH_COMPLETE_S219_REFERENCE_GAUSSIAN_METRIC_CURRENT_NOT_REDUCED_INVERSE_OR_NONLINEAR_BACKGROUND"
+      },
+      {
+        "id": "corrected_retarded_pair_phase_full_ordered_scalar_UV_and_fixed_six_invariant_finite_matching",
+        "status": "CORRECTED_LOCAL_SPATIAL_UV_SCALAR_FINITE_PART_NOT_FULL_CURRENT_REASSEMBLY_SCALAR_ANCHOR_REDUCED_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "corrected_full_retarded_tracefree_spatial_current_original_regulator_and_prepared_Ward_input",
+        "status": "CORRECTED_COMPLETE_TRACEFREE_SPATIAL_WEAK_CURRENT_AND_KNOWN_WARD_INPUT_NOT_FULL_SCALAR_REDUCED_INVERSE_BACKGROUND_OR_V_G_B"
+      },
+      {
+        "id": "full_homogeneous_trace_Gaussian_anchor_original_volume_matching_and_ordered_cross_zeros",
+        "status": "COMPLETE_HOMOGENEOUS_TRACE_ANCHOR_AND_FULL_HOMOGENEOUS_HILBERT_LIFT_NOT_NONZERO_TRANSFER_SCALAR_REMAINDERS_REDUCED_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "full_spatial_scalar_remainders_original_regulator_and_complete_prepared_Gaussian_metric_response",
+        "status": "COMPLETE_REFERENCE_GAUSSIAN_METRIC_RESPONSE_WEAK_BOUND_NOT_REDUCED_INVERSE_FULL_SOURCED_PARENT_BACKGROUND_OR_V_G_B"
+      },
+      {
+        "id": "regular_QG1_scalar_coefficient_Hamiltonian_complete_infrared_Ward_pullback_and_comparison_bounds",
+        "status": "REGULAR_CLASSICAL_COEFFICIENT_PHASE_SYSTEM_AND_IR_SAFE_REFERENCE_SCALAR_WEAK_RESPONSE_NOT_FULL_QUANTUM_CONSTRAINT_INVERSE_OR_P8"
+      },
+      {
+        "id": "uniform_two_chart_QG1_classical_scalar_phase_propagator_with_twelve_spatial_derivative_loss",
+        "status": "TAME_CLASSICAL_COEFFICIENT_PROPAGATOR_NOT_SAME_SPACE_QUANTUM_INVERSE_STABILITY_OR_P8"
+      },
+      {
+        "id": "full_quantum_forced_scalar_constraints_ordered_Schur_graph_identity_and_first_response_domain",
+        "status": "EXACT_FORCE_INTERFACE_AND_ADMISSIBLE_GRAPH_EQUIVALENCE_NOT_QUANTUM_INVERSE_CONTRACTION_STABILITY_OR_P8"
+      },
+      {
+        "id": "isolated_fixed_shear_factor_unique_subthreshold_zero_pole_plus_cut_and_finite_window_causal_inverse",
+        "status": "ISOLATED_REFERENCE_INVERSE_WITH_UNDAMPED_POLE_NOT_FULL_COUPLED_POLE_STABILITY_OR_P8"
+      },
+      {
+        "id": "full_flat_scalar_gauge_quotient_two_channel_causal_reference_inverse_uniform_all_momentum_bound",
+        "status": "FLAT_REFERENCE_QUOTIENT_INVERSE_NO_SPATIAL_LOSS_NOT_FULL_CURVED_COUPLED_INVERSE_OR_P8"
+      },
+      {
+        "id": "actual_curved_scalar_curvature_coordinates_complete_finite_local_Hessian_and_ordered_reference_inverse",
+        "status": "CURVATURE_ADAPTED_REFERENCE_UNIFORM_INVERSE_NOT_ACTUAL_FULL_CURVED_QUANTUM_INVERSE_OR_P8"
+      },
+      {
+        "id": "original_channel_exterior_log_coercivity_and_ordered_weighted_bounded_curvature_reference_corrections",
+        "status": "WEIGHTED_REFERENCE_CORRECTIONS_INVERTIBLE_NOT_ACTUAL_FULL_QUANTUM_MATCHING_STABILITY_OR_P8"
+      },
+      {
+        "id": "actual_complete_finite_local_curvature_conjugation_uniform_weighted_bound_and_full_finite_reference_inverse",
+        "status": "ACTUAL_FULL_FINITE_LOCAL_REFERENCE_INVERTED_NOT_FULL_NONLOCAL_CURVED_QUANTUM_SYSTEM_OR_P8"
+      },
+      {
+        "id": "actual_homogeneous_tracefree_full_curved_quantum_and_classical_tensor_prepared_causal_inverse",
+        "status": "ACTUAL_HOMOGENEOUS_FULL_NONLOCAL_SHEAR_AND_TREE_INVERSE_NOT_NONZERO_TRANSFER_FULL_S222_STABILITY_OR_P8"
+      },
+      {
+        "id": "actual_full_scalar_clock_matter_coupled_prepared_causal_inverse_and_S222_feedback_on_smooth_bounded_Fourier_support",
+        "status": "ACTUAL_SMOOTH_BOUNDED_EXTERNAL_MOMENTUM_COUPLED_INVERSE_NOT_UNRESTRICTED_GRAPH_STABILITY_NONLINEAR_OR_P8"
+      }
+    ],
+    "primitive": [
+      {
+        "id": "scalar_Phi0_W0_F0",
+        "status": "BOUNDED_PAIRED_VACUUM_PRIMITIVE_WITH_ASSIGNED_LOCAL_FOREST"
+      },
+      {
+        "id": "scalar_Phi2_W0_F2",
+        "status": "BOUNDED_NONLOCAL_AND_FINITE_MS_MASS_AND_SLOPE_REFERENCES"
+      },
+      {
+        "id": "scalar_Phi2_W1_F0",
+        "status": "BOUNDED_PAIRED_NONLOCAL_AND_FINITE_MS_LOCAL_REFERENCES"
+      },
+      {
+        "id": "scalar_Phi4_W0_F4",
+        "status": "BOUNDED_PAIRED_PRIMITIVE_ROW"
+      },
+      {
+        "id": "scalar_Phi4_W1_F2",
+        "status": "BOUNDED_PAIRED_IN_COMMON_MS_INTERACTION_SCHEME"
+      },
+      {
+        "id": "scalar_Phi4_W2_F0",
+        "status": "BOUNDED_PAIRED_IN_COMMON_MS_INTERACTION_SCHEME"
+      },
+      {
+        "id": "gauge_Phi0",
+        "status": "BOUNDED_PAIRED_VACUUM_PRIMITIVE_WITH_ASSIGNED_LOCAL_FOREST"
+      },
+      {
+        "id": "gauge_Phi2",
+        "status": "BOUNDED_NONLOCAL_AND_FINITE_MS_MASS_AND_SLOPE_REFERENCES"
+      },
+      {
+        "id": "gauge_Phi4",
+        "status": "BOUNDED_PAIRED_PRIMITIVE_ROW"
+      }
+    ]
+  },
+  "prior_sha256": {
+    "S6_219_actual_complete_spatial_current_original_regulator_and_Ward_fully_rebuilt": "df188e09486c7666c0dcf9c811702d1be096849acf993c8efae18bfffc9532a6",
+    "S6_220_full_classical_S6_216_dimensional_pairs_S6_176_reference_parent_bridge_and_original_trace_shear_inverses_transitively_rebuilt": true,
+    "S6_222_complete_forced_constraints_contacts_and_original_graph_fully_rebuilt": "05e36391c6636fa167c5569d79f706f04029548d9517c0686fa29aba70b15a40",
+    "S6_228_actual_homogeneous_strong_remainder_and_prepared_inverse_fully_rebuilt": "88da57811f211f16c36c38936bec26f6f616de515a86b93438ebde91e54da2a5",
+    "original_state_prescription_and_all_frozen_scientific_bytes_unchanged": true
+  },
+  "proof_checks": {
+    "actual_reference_parent_bridge_no_extra_nonlocal_matter_channel": true,
+    "all_original_gaussian_state_and_finite_contacts_retained": true,
+    "both_initial_constraints_and_physical_density_order_retained": true,
+    "both_ordered_Ward_and_distinct_clock_contact_Euler_time_order_at_most_two": true,
+    "both_ordered_Ward_and_distinct_clock_contact_both_ordered_Ward_terms_nonzero": true,
+    "both_ordered_Ward_and_distinct_clock_contact_clock_contact_nonzero_and_retained_once": true,
+    "both_ordered_Ward_and_distinct_clock_contact_external_degree_at_most_two": true,
+    "both_ordered_Ward_and_distinct_clock_contact_full_expression_bilinear": true,
+    "both_ordered_Ward_and_distinct_clock_contact_no_inverse_external_momentum_after_complete_cancellation": true,
+    "complete_weighted_adjoint_and_constraint_recovery_both_lapse_and_shift_recovered_by_weighted_uniqueness": true,
+    "complete_weighted_adjoint_and_constraint_recovery_density_at_output_before_source_adjoint": true,
+    "complete_weighted_adjoint_and_constraint_recovery_original_initial_germ_is_essential": true,
+    "full_classical_mixed_principal_all_remaining_local_rows_lower_order": true,
+    "full_classical_mixed_principal_matter_invariant_required": true,
+    "full_classical_mixed_principal_no_principal_H_Theta_E_or_q_division": true,
+    "full_classical_mixed_principal_retuning_terms_in_entire_action": true,
+    "full_dimensional_actual_scalar_matching_actual_state_comparison_not_flat_vacuum_replacement": true,
+    "full_dimensional_actual_scalar_matching_both_original_channels_nonzero": true,
+    "full_dimensional_actual_scalar_matching_compact_external_ball_not_internal_loop_cutoff": true,
+    "full_dimensional_actual_scalar_matching_complete_full_dimensional_matching_before_finite_part": true,
+    "full_dimensional_actual_scalar_matching_physical_dimension_jet_not_varying_test_jet": true,
+    "no_unrestricted_space_or_stability_promotion": true,
+    "ordered_mixed_inverse_and_actual_smooth_ball_graph_actual_Daux_rank_two": true,
+    "ordered_mixed_inverse_and_actual_smooth_ball_graph_actual_smooth_band_graph_not_unrestricted_completion": true,
+    "ordered_mixed_inverse_and_actual_smooth_ball_graph_all_original_parameters_fixed": true,
+    "ordered_mixed_inverse_and_actual_smooth_ball_graph_finite_window_not_half_line_shear_norm": true,
+    "ordered_mixed_inverse_and_actual_smooth_ball_graph_strict_contraction_for_every_finite_C_and_b0": true,
+    "ordered_mixed_inverse_and_actual_smooth_ball_graph_variable_pivot_commutator_is_nonzero": true,
+    "strong_band_normal_form_not_inferred_from_weak_bound": true,
+    "unique_matching_identifiers": true
+  },
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "feefeb62ce3bb703a08900d1a1fe1da647b11028ff0a51d710e2570d79252bd3",
+    "README.md": "35dcca583350bc66767b7d813913e9351176547013e7836c4ef68372b45099f6",
+    "notes/coordinates.md": "35230595b7d5d877415adfe78386b96c22b0ae0d96d78dfc0a5014ffe3ef2255",
+    "notes/inverse.md": "938e51a2cc52d2ea5ce4743a70adccd3c7d7c99c2f02804b4a1d7c52ad2db4d4",
+    "notes/matching.md": "f8123b6b1d85666756eb916cdf2fbde76675c6e1848a7c2dfd527f809660306e",
+    "notes/recovery.md": "5d7bba98d2a61178cf959411f3f578566c56158884ac3a7537c3a0d78397b8c6",
+    "notes/remainder.md": "50d59a3fef684af6a85b830a116bf7e611cfd965f215b385104951063e6289d6",
+    "notes/scope-validation.md": "6cbcb4f66a1478232ab159de20a36c0433a5bc445709e061df119a242d038f58",
+    "notes/ward.md": "5ce0b7fc68c9bbf1cdb020d28f4f61a18cd14638097423d17ccfb750c9d0159f",
+    "src/p8_vacuum_affine_band_coupled_inverse/__init__.py": "dd62b4d4676903d2bae6d6cdc046770a5f14b48e769a30254e392de98b5e11c4",
+    "src/p8_vacuum_affine_band_coupled_inverse/audit.py": "239ebc0984a68f8604d9124b5203c0f00720002d721d63bff9446dec8ce8b60c",
+    "src/p8_vacuum_affine_band_coupled_inverse/coordinates.py": "66febe44706810ee32f14b8827fe06f0cbacb9e24418ef4746a9ab7d46bd3981",
+    "src/p8_vacuum_affine_band_coupled_inverse/inverse.py": "701591e0b0084670af40d14684afa6575f17c45b83acbff6424c9fc211ce0f1e",
+    "src/p8_vacuum_affine_band_coupled_inverse/matching.py": "81c690720ab1c60666351df3e978283e77a3058cfce4dc3e0496c1c40060a68d",
+    "src/p8_vacuum_affine_band_coupled_inverse/verify.py": "feed3456c6480f99f02b67826112e68a8a2b8c6a0e3ffa993754b9a65754517b",
+    "tests/test_affine_band_coupled_inverse_certificate.py": "2fea1e04f38fc8c329834702cdde7288db96b7542ee8e14b3ecf48129eb7da05",
+    "tests/test_affine_band_coupled_inverse_science.py": "9c2e4215fe451069652d99be5ab8e230bcaddd7583e3ea680217e5e8f310d54e"
+  },
+  "status": "ACTUAL_SMOOTH_BOUNDED_EXTERNAL_MOMENTUM_COUPLED_INVERSE; NOT_UNRESTRICTED_GRAPH_NUMERICAL_SMALLNESS_STABILITY_NONLINEAR_CUTOFF_V_G_B_OR_ORIGINAL_P8",
+  "verdict": "The actual full sourced classical scalar action in prepared coordinates(n,zeta,b,sigma)=(eta',w+Heta,c'+qeta,r+ell eta) has mixed row orders(4,4,4,2) and principal diag(-6delta^2,0,0,-1), with the matter invariant essential. Both ordered Ward legs and the distinct nonlinear clock nn contact contain at most one derivative on either leg and no inverse external momentum after full cancellation. The complete dimensional scalar pair gives C(d),B(d) and the fixed-physical leading matrix[[4,-4/3],[-4/3,8/5]], including its fixed-physical first dimension jet. Proper full-dimensional matching retains the original fourth finite constants and the complete original factors. Uniform finite-transfer mode expansions on each fixed external momentum ball retain the orderzero residual phase, infinite internal loop, all-order prepared state, full contacts and classical retuning. They prove a strong mixed-row normal form with complete weak-log simultaneous derivative majorantsCj(Pmax). With the original finite-window trace/shear inverse kernels and b0=max(15625/6144,16Kmax/(9gamma),1), the finite weight(4b0C+1)^2 gives a strict bounded-causal contraction and ordered inverse(I+B0V)^-1 B0 diag(I4,I4,I4,I2). Prepared time-shift regularity retains derivatives of the variable eta pivot as well as the kernel. The weighted residual adjoint and original zero germ recover both lapse and shift equations. Full force, output density and rank-two direct auxiliary terms then give both identities for the ACTUAL S222 scalar/clock/matter feedback inverse on smooth prepared bounded-Fourier histories, including a general mathematical phase drive. The unweighted adapted-source bound is2 exp(weight)b0 times the row-primitive source norm; constants are finite but unevaluated and all kappa factors remain. This is an actual coupled reference linear result, not only a flat reference factorization, but it is not a uniform all-momentum bound, unrestricted or maximal X/Y graph inverse, numerical smallness, stability, nonlinear common-parent control, physical cutoff or original V/G/B/P8 closure.",
+  "verification_boundary": "Exact complete classical principal, both Ward legs and clock contact, fixed-physical dimensional jets, residual adjoint, finite-weight constants and causal-order controls are replayed. The actual state expansion, original singular extension, uniform compact-ball strong normal form, causal Neumann convergence, smooth regularity and Schur graph recovery are written continuum proofs, not FORMALIZED. Independent finite matrices and polynomial tests are diagnostics, not numerical continuum certificates. Native/direct/ordinary/CLI use original SymPy; only full regression uses the audited exact-GCD adapter. Frozen predecessors remain unchanged.",
+  "written_proofs": [
+    "notes/coordinates.md",
+    "notes/ward.md",
+    "notes/matching.md",
+    "notes/remainder.md",
+    "notes/inverse.md",
+    "notes/recovery.md",
+    "notes/scope-validation.md"
+  ]
+}

@@ -438,7 +438,12 @@ around a pre-registered problems document and a certificate-gated ledger.
   This is still linear light evolution and its leading heavy response,
   not a full nonlinear solution or UV-admissible completion.
 
-The [current P8 continuation audit](docs/assessment-2026-09-12-p8-affine-homogeneous-shear-inverse.md)
+The [current P8 continuation audit](docs/assessment-2026-09-12-p8-affine-finite-transfer-coupled-inverse.md)
+establishes an actual prepared scalar/clock/matter inverse and both original
+feedback identities on each smooth bounded-Fourier class, retaining full
+constraints, contacts and source normalization. Constants remain unevaluated;
+the unrestricted curved graph, stability and original P8 are still open.
+The [homogeneous quantum-plus-classical shear audit](docs/assessment-2026-09-12-p8-affine-homogeneous-shear-inverse.md)
 establishes an actual prepared inverse for the homogeneous curved quantum
 response plus classical tensor tree, retaining all contacts and the original
 shear pole. Its constants remain unevaluated; spatial coupled control,
