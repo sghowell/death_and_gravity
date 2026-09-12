@@ -438,7 +438,12 @@ around a pre-registered problems document and a certificate-gated ledger.
   This is still linear light evolution and its leading heavy response,
   not a full nonlinear solution or UV-admissible completion.
 
-The [current P8 continuation audit](docs/assessment-2026-09-12-p8-affine-full-finite-local-reference.md)
+The [current P8 continuation audit](docs/assessment-2026-09-12-p8-affine-homogeneous-shear-inverse.md)
+establishes an actual prepared inverse for the homogeneous curved quantum
+response plus classical tensor tree, retaining all contacts and the original
+shear pole. Its constants remain unevaluated; spatial coupled control,
+physical stability and original P8 are not closed by this time-domain result.
+The [complete finite-local reference audit](docs/assessment-2026-09-12-p8-affine-full-finite-local-reference.md)
 establishes a same-space bound for the complete original finite-local remainder
 and its ordered curved reference inverse, with a precise composed graph and
 all density and boundary factors retained. Actual full nonlocal coupled
