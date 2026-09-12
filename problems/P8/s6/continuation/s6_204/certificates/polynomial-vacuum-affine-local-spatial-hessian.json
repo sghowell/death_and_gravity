@@ -1,0 +1,698 @@
+{
+  "checked_scalar_entries": 177,
+  "claim": "P8-S6.204.FIXED_COVARIANT_LOCAL_FULL_TRACEFREE_SPATIAL_HESSIAN_WITH_PROPER_TIME_AND_NORM_CONTROL",
+  "complete_spatial_polynomial_maps_and_fixed_local_Hessians": {
+    "helicities": {
+      "B_eigenvalues": [
+        0,
+        0,
+        "p**2/2",
+        "p**2/2",
+        "2*p**2/3"
+      ],
+      "C_eigenvalues": [
+        0,
+        0,
+        0,
+        0,
+        "2*p**4/3"
+      ],
+      "basis": [
+        [
+          [
+            "sqrt(2)/2",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "-sqrt(2)/2",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        [
+          [
+            "0",
+            "sqrt(2)/2",
+            "0"
+          ],
+          [
+            "sqrt(2)/2",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        [
+          [
+            "0",
+            "0",
+            "sqrt(2)/2"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "sqrt(2)/2",
+            "0",
+            "0"
+          ]
+        ],
+        [
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "sqrt(2)/2"
+          ],
+          [
+            "0",
+            "sqrt(2)/2",
+            "0"
+          ]
+        ],
+        [
+          [
+            "-sqrt(6)/6",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "-sqrt(6)/6",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "sqrt(6)/3"
+          ]
+        ]
+      ],
+      "smooth_maps": "For q=P.P, define B_P(M)=TF sym(P tensor(MP)) and C_P(M)=TF(P tensor P)(P.M.P). Both are exact polynomial maps, with no division by |P| or a projector light-cone denominator. Their zero-momentum limits are unambiguous.",
+      "space": "All five symmetric tracefree spatial metric directions are retained: two tensor, two vector and one scalar shear relative to each nonzero external momentum. These are spatial helicity labels, not fully constraint-reduced propagating modes."
+    },
+    "local": {
+      "Einstein_quadratic": "Modulo compact spatial divergences, the quadratic Einstein action is integral a^2/4[||gamma'||^2-||grad gamma||^2+2||div gamma||^2]. No lapse or shift variation is claimed.",
+      "R_squared_quadratic": "With r=a''/a, the quadratic R_old^2 action is integral[(partial_i partial_j gamma_ij)^2+3r(||gamma'||^2-||grad gamma||^2+2||div gamma||^2)]. The conformal curvature shift6a''/a is independent of gamma because det exp(gamma)=1.",
+      "Weyl_quadratic": "The background is conformally flat. The compact four-dimensional Weyl-squared quadratic action has the flat conformal Hessian displayed by operators(), retaining all spatial tensor components. No flat physical state is substituted into a curved quantum kernel.",
+      "fixed_Hessian": "H_fixed=[(5/3)m^2 H_R-H_C/30-H_R2/18]/(64pi^2), as the compact action second variation. This is an explicit target supplied by the already fixed local prescription, not proof that the remaining quantum endpoint/contact sector matches it.",
+      "fixed_action": "After the already established original dimension limit at mu=m, the finite local density is[5m^4/2+(5/3)m^2 R_old-C^2/30-R_old^2/18+Euler/90]/(64pi^2). Only compact four-dimensional Euler variation is removed here; neither evanescent terms nor finite coefficients are retuned.",
+      "operators": "H_R=-(a^2 partial_eta^2+2aa' partial_eta+a^2(qI-2B))/2; H_R2=-6[r partial_eta^2+r' partial_eta+r(qI-2B)]+2C; H_C=partial_eta^4+(2qI-2B)partial_eta^2+q^2 I-2qB+2C/3.",
+      "parametrization": "Use g=a(eta)^2[-deta^2+exp(gamma)_ij dx^i dx^j], with gamma symmetric tracefree and a fixed. The determinant is exactly-a^8, so the volume term has zero variation. This is the same exponential/unimodular spatial parametrization."
+    }
+  },
+  "controls": {
+    "actual_parent_preparation_and_prescription_unchanged": true,
+    "actual_self_adjoint_pairing_and_derivative_norm": true,
+    "all_five_spatial_directions_and_noncommuting_time_jets": true,
+    "exact_compact_boundary_not_pointwise_discard": true,
+    "independent_literal_full_four_dimensional_curvature": true,
+    "no_quantum_matching_or_reduced_inverse_assumed": true,
+    "original_P8_not_closed": true,
+    "proper_time_measure_negative_control": true,
+    "rejected_inputs": 126
+  },
+  "date": "2026-09-11",
+  "exact_residuals": {
+    "actual_CD_local_Hessian_derivative_norm_actual_first_clock_derivative": "0",
+    "actual_CD_local_Hessian_derivative_norm_actual_second_clock_derivative": "0",
+    "actual_CD_local_Hessian_derivative_norm_canonical_full_local_spatial_bound": "0",
+    "complete_tracefree_spatial_space_and_polynomial_maps_all_five_traces_zero": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        5,
+        1
+      ]
+    },
+    "complete_tracefree_spatial_space_and_polynomial_maps_complete_orthonormal_tracefree_basis": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        5,
+        5
+      ]
+    },
+    "complete_tracefree_spatial_space_and_polynomial_maps_full_B_eigenvector_0": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        3
+      ]
+    },
+    "complete_tracefree_spatial_space_and_polynomial_maps_full_B_eigenvector_1": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        3
+      ]
+    },
+    "complete_tracefree_spatial_space_and_polynomial_maps_full_B_eigenvector_2": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        3
+      ]
+    },
+    "complete_tracefree_spatial_space_and_polynomial_maps_full_B_eigenvector_3": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        3
+      ]
+    },
+    "complete_tracefree_spatial_space_and_polynomial_maps_full_B_eigenvector_4": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        3
+      ]
+    },
+    "complete_tracefree_spatial_space_and_polynomial_maps_full_C_eigenvector_0": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        3
+      ]
+    },
+    "complete_tracefree_spatial_space_and_polynomial_maps_full_C_eigenvector_1": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        3
+      ]
+    },
+    "complete_tracefree_spatial_space_and_polynomial_maps_full_C_eigenvector_2": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        3
+      ]
+    },
+    "complete_tracefree_spatial_space_and_polynomial_maps_full_C_eigenvector_3": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        3
+      ]
+    },
+    "complete_tracefree_spatial_space_and_polynomial_maps_full_C_eigenvector_4": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        3
+      ]
+    },
+    "complete_tracefree_spatial_space_and_polynomial_maps_zero_momentum_B": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        3
+      ]
+    },
+    "complete_tracefree_spatial_space_and_polynomial_maps_zero_momentum_C": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        3
+      ]
+    },
+    "full_proper_time_conversion_and_measure_both_canonical_metric_directions": "0",
+    "full_proper_time_conversion_and_measure_fourth_clock_derivative_complete": "0",
+    "full_proper_time_conversion_and_measure_full_proper_time_scalar_R_old": "0",
+    "full_proper_time_conversion_and_measure_full_proper_time_scalar_R_old_squared": "0",
+    "full_proper_time_conversion_and_measure_full_proper_time_scalar_Weyl_squared": "0",
+    "full_proper_time_conversion_and_measure_full_proper_time_tensor_R_old": "0",
+    "full_proper_time_conversion_and_measure_full_proper_time_tensor_R_old_squared": "0",
+    "full_proper_time_conversion_and_measure_full_proper_time_tensor_Weyl_squared": "0",
+    "full_proper_time_conversion_and_measure_full_proper_time_vector_R_old": "0",
+    "full_proper_time_conversion_and_measure_full_proper_time_vector_R_old_squared": "0",
+    "full_proper_time_conversion_and_measure_full_proper_time_vector_Weyl_squared": "0",
+    "nine_primitive_rows_retained": "0",
+    "one_new_scoped_row_added": "0",
+    "original_fixed_local_action_and_full_conformal_Hessians_full_spatial_R_squared_Hessian_agrees_with_covariant_polynomial": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        3
+      ]
+    },
+    "original_fixed_local_action_and_full_conformal_Hessians_full_spatial_Weyl_Hessian_agrees_with_covariant_polynomial": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        3
+      ]
+    },
+    "original_fixed_local_action_and_full_conformal_Hessians_original_fixed_Einstein_coefficient": "0",
+    "original_fixed_local_action_and_full_conformal_Hessians_original_fixed_finite_curvature_density": "0",
+    "original_fixed_local_action_and_full_conformal_Hessians_unimodular_volume_all_directions": "0",
+    "primitive_rows_unchanged": "0",
+    "prior_matching_rows_retained": "0"
+  },
+  "formulation": "FORMULATION.md",
+  "named_exact_check_count": 37,
+  "not_established": [
+    "Fixed covariant matching of the remaining quantum contact/Taylor-integrand sector or its finite/divergent regulator artifacts",
+    "A full quantum response or a lapse/shift-constrained, canonically reduced mixed operator",
+    "A derivative-compatible inverse, interacting background or stability theorem",
+    "Full parent/cutoff/scattering/IR/Regge matching or original V/G/B and P8 closure"
+  ],
+  "observable_and_scope": {
+    "bound": "The local L2 Hessian is below5e4 Phi42[Gamma], with two-metric canonical coefficient2e-795.",
+    "boundary": "This supplies a fixed local matching target, not equality of the remaining quantum contact/Taylor sector to it, a full mixed inverse, interacting background, stability or original P8 closure.",
+    "domain": "The already-fixed finite local action on the actual compact CD slab, in the same exponential tracefree spatial metric parametrization.",
+    "full_spatial": "Both tensor, both vector and scalar shear directions are represented by smooth polynomial momentum maps. Their complete curvature Hessians retain every spatial and clock term.",
+    "proper_time": "The exact a^-1 density factor and partial_eta=a partial_t conversion preserve the compact action pairing; no constant-clock approximation is used."
+  },
+  "primitive_and_matching_frontier": {
+    "matching": [
+      {
+        "id": "fixed_sigma_isolated_MS_conversion",
+        "status": "CANCELLED_NONLOCAL_ORDER_TWO_WITH_SAME_REGULATED_REFERENCE"
+      },
+      {
+        "id": "remaining_scale_parameter_field_map_and_cross_terms",
+        "status": "OPEN"
+      },
+      {
+        "id": "remaining_counterterm_and_vacuum_source_assembly",
+        "status": "ASSEMBLED_FOR_FIXED_ORDER_PHI_POLE_B2_VACUUM_AND_H_SOURCE"
+      },
+      {
+        "id": "full_matched_two_loop_pole_and_amplitude_error",
+        "status": "FIXED_ORDER_PHI_POLE_AND_B2_BOUNDED_PHYSICAL_TRUNCATION_OPEN"
+      },
+      {
+        "id": "finite_EFT_higher_order_truncation",
+        "status": "OPEN"
+      },
+      {
+        "id": "V_contour_and_cut_control",
+        "status": "OPEN"
+      },
+      {
+        "id": "finite_gravity_G",
+        "status": "OPEN"
+      },
+      {
+        "id": "common_parent_B",
+        "status": "OPEN"
+      },
+      {
+        "id": "complete_wineglass_interaction_forest_MS",
+        "status": "BOUNDED_WITH_REGULATED_FINITE_LOCAL_ANCHOR_AND_FULL_SCALE_TERM"
+      },
+      {
+        "id": "complete_double_bubble_interaction_forest_MS",
+        "status": "BOUNDED_WITH_ACTUAL_NESTED_MS_FORESTS_AND_BOTH_SCALE_TERMS"
+      },
+      {
+        "id": "complete_scalar_OS_insertion_interaction_forest_MS",
+        "status": "BOUNDED_WITH_FULL_REGULATED_SLOPE_TIMES_OUTER_REFERENCE"
+      },
+      {
+        "id": "complete_scalar_quadratic_finite_MS_slope_and_converted_OS_bound",
+        "status": "BOUNDED_WITH_FIXED_INNER_OS_AND_INTERACTION_MS_COORDINATES"
+      },
+      {
+        "id": "first_finite_Phi_field_covariance_and_MS_projection_commutator",
+        "status": "EXACT_REGULATED_FIELD_DIRECTION_AND_BOUNDED_FIRST_SLOPE_CROSS_TERMS"
+      },
+      {
+        "id": "complete_GY14_second_Phi_normalization_and_canonical_unit_disc_pole",
+        "status": "BOUNDED_WITH_DIRECT_MS_OWNERSHIP_AND_FULL_FINITE_FIELD_REEXPANSION"
+      },
+      {
+        "id": "complete_two_loop_vacuum_reference_and_first_source_square",
+        "status": "BOUNDED_WITH_FULL_REGULATED_SOURCE_REDUCIBLE_CANCELLATION"
+      },
+      {
+        "id": "complete_two_loop_derivative_map_with_matched_physical_source",
+        "status": "TRANSPORTED_FOR_FULL_ACTION_AND_PHYSICAL_SOURCE_NOT_ORDINARY_PSI_MS_OR_TRUNCATION"
+      },
+      {
+        "id": "complete_matched_two_loop_low_energy_Phi_elastic_cut",
+        "status": "BOUNDED_ON_PHYSICAL_WINDOW_4_TO_6_WITH_FULL_FIRST_AMPLITUDE_NOT_PHYSICAL_REMAINDER_OR_GLOBAL_DISPERSION"
+      },
+      {
+        "id": "full_finite_kappa_analytic_target_classical_vacuum_match",
+        "status": "BOUNDED_ON_SAME_RESTRICTED_FLAT_SCHWARTZ_CLASS_NOT_QUANTUM_TARGET_OR_ROLLING_COMMON_PARENT_MATCH"
+      },
+      {
+        "id": "GY14_SAT8_pointwise_fermion_mass_protection_and_named_low_order_invariance",
+        "status": "NEW_ANALYTIC_EFT_BRANCH_WITH_GLOBAL_REAL_MASS_FLOOR_AND_SAME_NAMED_TWO_LOOP_DATA_NOT_ROLLING_STATE_OR_COMMON_PARENT_CLOSURE"
+      },
+      {
+        "id": "polynomial_clock_transparent_physical_source_map_and_full_target_classical_bound",
+        "status": "KINEMATIC_CLOCK_ARGUMENT_ALIGNED_WITH_PROTECTED_MASSES_AND_SAME_NAMED_VACUUM_DATA_NOT_BACKGROUND_SOLUTION_QUANTUM_STATE_OR_COMMON_PARENT_CLOSURE"
+      },
+      {
+        "id": "free_flat_clock_Dirac_out_energy_with_complete_transition_series_remainder",
+        "status": "BOUNDED_FOR_SPECIFIED_QUADRATIC_MODEWISE_IN_OUT_STATE_NOT_INTERACTING_OR_CURVED_BOUNCE_STRESS"
+      },
+      {
+        "id": "Hadamard_regular_free_flat_SAT8_in_out_state_and_uniform_one_particle_norm_limit",
+        "status": "HADAMARD_FOR_SPECIFIED_FREE_EXTERNAL_MASS_OPERATOR_USING_IDENTIFIED_EXTERNAL_THEOREM_NOT_INTERACTING_CURVED_STATE_OR_NUMERICAL_STRESS"
+      },
+      {
+        "id": "exact_four_frame_free_transition_and_uniform_same_operator_in_out_T00_difference",
+        "status": "BOUNDED_FOR_FREE_FLAT_HADAMARD_STATE_DIFFERENCE_NOT_ABSOLUTE_STRESS_INTERACTING_CURVED_STATE_OR_BACKREACTION"
+      },
+      {
+        "id": "free_flat_absolute_one_loop_local_energy_with_fixed_saturated_mass_reference",
+        "status": "BOUNDED_IN_EXPLICIT_MS_AND_SATURATED_MASS_REFERENCE_QUADRATIC_SCHEME_NOT_FULL_CURVED_INTERACTING_PARENT_STRESS"
+      },
+      {
+        "id": "complete_free_flat_homogeneous_one_loop_stress_with_dimensional_curvature_improvement",
+        "status": "BOUNDED_SPECIFIED_QUADRATIC_MS_MR_FLAT_TENSOR_NOT_FULL_INTERACTING_CURVED_PARENT_STRESS"
+      },
+      {
+        "id": "actual_CD_free_Dirac_Hadamard_in_out_state_and_uniform_state_stress_difference",
+        "status": "CURVED_FREE_HADAMARD_STATE_AND_STATE_DIFFERENCE_BOUNDED_NOT_ABSOLUTE_PARENT_STRESS"
+      },
+      {
+        "id": "complete_free_curved_one_loop_stress_with_explicit_EC_Newton_reference",
+        "status": "BOUNDED_SPECIFIED_QUADRATIC_CURVED_TENSOR_NOT_FULL_INTERACTING_PARENT_OR_BACKGROUND_RESPONSE"
+      },
+      {
+        "id": "minimal_Einstein_canonical_clock_free_sector_null_equation_mismatch",
+        "status": "EXCLUDED_NAMED_MINIMAL_DIAGNOSTIC_WITH_SMALL_EXTRA_NULL_BUDGET_NOT_FULL_INTERACTING_PARENT_OR_DHOST_ROW"
+      },
+      {
+        "id": "actual_CD_leading_clock_Euler_source_decomposition_and_matching_domain_gap",
+        "status": "LEADING_TARGET_SOURCES_AND_CONSTRAINT_DOMAIN_REQUIREMENTS_IDENTIFIED_NOT_PROPAGATING_PARENT_OR_QUANTUM_BOUNCE"
+      },
+      {
+        "id": "analytic_CD_REG_AFFINE_ISO_classical_parent_clock_vacuum_and_local_constraints",
+        "status": "NEW_REGULAR_CLASSICAL_PARENT_AND_LOCAL_CONSTRAINT_BLOCKS_NOT_QUANTUM_MATCHING_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "same_classical_affine_parent_closed_source_lift_and_scoped_vector_Schur_control",
+        "status": "EXACT_CLASSICAL_AND_COMMON_REGULATOR_IDENTITIES_FULL_EUCLIDEAN_AND_LEADING_LORENTZ_BOUNDS_NOT_FULL_QUANTUM_MATCHING"
+      },
+      {
+        "id": "regular_affine_parent_conditional_Gaussian_Hadamard_family_and_ordinary_Proca_stress",
+        "status": "SOURCE_AWARE_CONDITIONAL_VECTOR_STATE_AND_FIXED_CLOCK_STRESS_NOT_FULL_PARENT_QUANTUM_SOLUTION"
+      },
+      {
+        "id": "full_fixed_canonical_affine_family_actual_classical_gravitational_decoupling",
+        "status": "ANCHORED_FULL_FUNCTION_CLASSICAL_LIMIT_AND_TREE_AMPLITUDE_NOT_QUANTUM_CONTOUR_TRUNCATION_OR_V_CLOSURE"
+      },
+      {
+        "id": "complete_affine_vector_retarded_mean_energy_and_causal_cubic_light_force",
+        "status": "FIXED_CD_FULL_SOURCE_FINITE_TIME_CONDITIONAL_GAUSSIAN_MEAN_AND_LIGHT_FORCE_NOT_METRIC_NOISE_FULL_PARENT_OR_B_CLOSURE"
+      },
+      {
+        "id": "same_affine_conditional_prepared_homogeneous_metric_response_with_uncancelled_chart_contacts",
+        "status": "COMPLETE_CONDITIONAL_VECTOR_HOMOGENEOUS_C10_TO_C0_BOUND_NOT_SPATIAL_NOISE_COUPLED_BACKGROUND_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "same_affine_parent_prepared_homogeneous_retained_tree_plus_conditional_vector_causal_inverse",
+        "status": "UNIQUE_RETAINED_LINEAR_PREPARED_CAUSAL_INVERSE_WITH_NUMERIC_LOCAL_LAPSE_RECOVERY_NOT_FULL_INVERSE_SMALLNESS_QUANTUM_BACKGROUND_OR_V_G_B"
+      },
+      {
+        "id": "same_massive_scalar_range_kernel_explicit_full_half_line_L1_majorant",
+        "status": "MASS_INDEPENDENT_EXPLICIT_SCALAR_KERNEL_NORM_NOT_FULL_INVERSE_SMALLNESS_BACKGROUND_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "new_CD_REG_AFFINE_ISO_QG1_fixed_coefficient_stationary_Gaussian_mean_and_actual_response",
+        "status": "NEW_PARENT_RETAINED_MEAN_STATIONARITY_AND_BOUNDED_COEFFICIENT_CORRECTION_NOT_FULL_QUANTUM_BACKGROUND_STABILITY_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "actual_classical_Hamiltonian_C0_and_C10_inverse_and_first_formal_Gaussian_response",
+        "status": "QUANTIFIED_PREPARED_CLASSICAL_PROPAGATOR_AND_FIRST_FORMAL_COEFFICIENT_NOT_FINITE_COUPLING_ERROR_STABILITY_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "complete_finite_time_canonical_vacuum_source_mean_and_scalar_force_noise_with_fixed_profile",
+        "status": "FULL_CONDITIONAL_GAUSSIAN_VACUUM_SOURCE_CAUSAL_AND_NOISE_BOUNDS_NOT_INTERACTING_AMPLITUDE_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "actual_all_order_CD_state_complete_clock_source_smeared_force_noise_and_canonical_normalization",
+        "status": "SAME_STATE_FULL_SOURCE_SMEARED_SCALAR_NOISE_BOUND_NOT_METRIC_NOISE_SOLUTION_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "actual_all_order_CD_full_local_smeared_metric_stress_covariance",
+        "status": "FULL_SPACETIME_TENSOR_STRESS_NOISE_BOUND_NOT_METRIC_SOLUTION_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "actual_CD_boundary_compatible_tree_tensor_noise_response",
+        "status": "RESTRICTED_DETECTOR_TREE_PROPAGATED_NOISE_NOT_FULL_QUANTUM_TENSOR_STATE_OR_V_G_B"
+      },
+      {
+        "id": "actual_CD_homogeneous_shear_Hamiltonian_contact_and_modewise_remainder",
+        "status": "ACTUAL_SHEAR_MODEWISE_FINITE_AMPLITUDE_REMAINDER_NOT_CONTINUUM_SELF_ENERGY_OR_V_G_B"
+      },
+      {
+        "id": "actual_fixed_local_covariant_full_spatial_tensor_Hessian",
+        "status": "ACTUAL_FIXED_FINITE_LOCAL_TENSOR_HESSIAN_BOUND_NOT_COMPLETE_DETERMINANT_RESPONSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_CD_full_matrix_adiabatic_uniform_covariance_tail",
+        "status": "ACTUAL_UNCHANGED_STATE_UNIFORM_HIGH_BAND_COVARIANCE_REMAINDER_NOT_RESPONSE_SUBTRACTION_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_matrix_covariance_tail_C2_response_and_Taylor_remainder",
+        "status": "ACTUAL_UNCHANGED_STATE_C2_HIGH_BAND_COVARIANCE_TAIL_NOT_COMPLETE_COVARIANT_RESPONSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_physical_shear_current_C2_fourth_order_comparison",
+        "status": "ACTUAL_STATE_C2_CURRENT_MODE_COMPARISON_NOT_FIXED_COVARIANT_MATCHING_OR_V_G_B"
+      },
+      {
+        "id": "actual_homogeneous_shear_full_fixed_covariant_mode_subtraction_matching",
+        "status": "ACTUAL_HOMOGENEOUS_SHEAR_FIXED_COVARIANT_MODE_SUBTRACTION_MATCHING_NOT_FULL_FEEDBACK_OR_V_G_B"
+      },
+      {
+        "id": "actual_complete_fixed_covariant_homogeneous_current_C2_and_canonical_response",
+        "status": "ACTUAL_COMPLETE_FIXED_COVARIANT_HOMOGENEOUS_CURRENT_C2_AND_CANONICAL_RESPONSE_NOT_FULL_FEEDBACK_OR_V_G_B"
+      },
+      {
+        "id": "actual_spatial_two_momentum_metric_vertices_and_finite_band_Gaussian_response",
+        "status": "ACTUAL_SPATIAL_TWO_MOMENTUM_CURRENT_FINITE_BAND_NOT_RENORMALIZED_CONTINUUM_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_full_spatial_separated_support_weak_Gaussian_response_and_quantitative_tail",
+        "status": "ACTUAL_CONTINUUM_SEPARATED_SUPPORT_WEAK_RESPONSE_NOT_COINCIDENT_EXTENSION_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_overlapping_time_spatial_retarded_state_remainder_with_complete_contact",
+        "status": "ACTUAL_RETARDED_MEMORY_CONTACT_COMPARISON_NOT_REFERENCE_DIAGONAL_MATCHING_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_reference_six_step_retarded_boundary_extraction_and_full_finite_bulk",
+        "status": "ACTUAL_REFERENCE_FINITE_BULK_AND_EXPLICIT_ENDPOINTS_NOT_COVARIANT_SPATIAL_MATCHING_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_canonical_flat_Proca_full_tensor_cut_and_subtracted_dispersion_benchmark",
+        "status": "CANONICAL_FLAT_FULL_TENSOR_CUT_BENCHMARK_NOT_CURVED_MATCHING_FULL_PARENT_AMPLITUDE_OR_V_G_B"
+      },
+      {
+        "id": "full_spatial_flat_Proca_covariant_and_time_subtraction_conversion_with_nonlocal_coefficient_bounds",
+        "status": "FULL_SPATIAL_FLAT_NONLOCAL_SUBTRACTION_CONVERSION_NOT_CURVED_MATCHING_LOCAL_POLYNOMIAL_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_curved_reference_initial_state_prefactor_full_memory_contact_and_regulator_tail",
+        "status": "ACTUAL_CURVED_INITIAL_PREFACTOR_REMOVED_WITH_FINITE_FULL_RESPONSE_CORRECTION_NOT_SPATIAL_MATCHING_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_curved_reference_joint_spatial_analyticity_full_readouts_and_far_endpoint_Taylor_tail",
+        "status": "ACTUAL_UNIT_W8_JOINT_SPATIAL_ANALYTICITY_AND_FAR_ENDPOINT_TAYLOR_TAIL_NOT_NEAR_REGION_LOCAL_MATCHING_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_curved_reference_all_momentum_spatial_Taylor_subtracted_endpoint_remainder",
+        "status": "ACTUAL_UNIT_W8_ALL_MOMENTUM_ENDPOINT_REMAINDER_WITH_ORIGINAL_TAIL_NOT_LOCAL_MATCHING_FULL_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "fixed_covariant_local_full_tracefree_spatial_Hessian_proper_time_and_norm",
+        "status": "FIXED_LOCAL_FULL_TRACEFREE_SPATIAL_HESSIAN_NOT_QUANTUM_MATCHING_MIXED_INVERSE_OR_V_G_B"
+      }
+    ],
+    "primitive": [
+      {
+        "id": "scalar_Phi0_W0_F0",
+        "status": "BOUNDED_PAIRED_VACUUM_PRIMITIVE_WITH_ASSIGNED_LOCAL_FOREST"
+      },
+      {
+        "id": "scalar_Phi2_W0_F2",
+        "status": "BOUNDED_NONLOCAL_AND_FINITE_MS_MASS_AND_SLOPE_REFERENCES"
+      },
+      {
+        "id": "scalar_Phi2_W1_F0",
+        "status": "BOUNDED_PAIRED_NONLOCAL_AND_FINITE_MS_LOCAL_REFERENCES"
+      },
+      {
+        "id": "scalar_Phi4_W0_F4",
+        "status": "BOUNDED_PAIRED_PRIMITIVE_ROW"
+      },
+      {
+        "id": "scalar_Phi4_W1_F2",
+        "status": "BOUNDED_PAIRED_IN_COMMON_MS_INTERACTION_SCHEME"
+      },
+      {
+        "id": "scalar_Phi4_W2_F0",
+        "status": "BOUNDED_PAIRED_IN_COMMON_MS_INTERACTION_SCHEME"
+      },
+      {
+        "id": "gauge_Phi0",
+        "status": "BOUNDED_PAIRED_VACUUM_PRIMITIVE_WITH_ASSIGNED_LOCAL_FOREST"
+      },
+      {
+        "id": "gauge_Phi2",
+        "status": "BOUNDED_NONLOCAL_AND_FINITE_MS_MASS_AND_SLOPE_REFERENCES"
+      },
+      {
+        "id": "gauge_Phi4",
+        "status": "BOUNDED_PAIRED_PRIMITIVE_ROW"
+      }
+    ]
+  },
+  "prior_sha256": {
+    "S6_176_actual_CD_Gaussian_sector_transitively_rebuilt": "1175702d6980db090396863b807af0e767241daeb7d8dabf138ed11c67e1ae75",
+    "S6_203_fully_rebuilt": "cc0b8a208f63d7a9e170620c4d66c845eea4a362a4c27e252036d7289c975c36",
+    "all_frozen_scientific_bytes_unchanged": true,
+    "fixed_stress_prescription_and_full_source_retained": true
+  },
+  "proof_checks": {
+    "actual_CD_local_Hessian_derivative_norm_actual_a_cubed_bound": true,
+    "actual_CD_local_Hessian_derivative_norm_complete_Einstein_bound": true,
+    "actual_CD_local_Hessian_derivative_norm_complete_R_squared_bound": true,
+    "actual_CD_local_Hessian_derivative_norm_complete_Weyl_squared_bound": true,
+    "actual_CD_local_Hessian_derivative_norm_fixed_local_operator_display": true,
+    "actual_CD_local_Hessian_derivative_norm_same_two_metric_canonical_factors": true,
+    "actual_CD_local_L2_derivative_norm": true,
+    "all_five_tracefree_spatial_directions": true,
+    "already_fixed_finite_local_coefficients_not_retuned": true,
+    "both_external_metric_canonical_factors": true,
+    "both_vector_and_scalar_shears_retained": true,
+    "compact_Weyl_boundary_term_explicit": true,
+    "complete_conformal_curvature_Hessians": true,
+    "complete_tracefree_spatial_space_and_polynomial_maps_all_basis_matrices_symmetric": true,
+    "complete_tracefree_spatial_space_and_polynomial_maps_both_vector_directions_present": true,
+    "complete_tracefree_spatial_space_and_polynomial_maps_five_complete_tracefree_spatial_directions": true,
+    "complete_tracefree_spatial_space_and_polynomial_maps_scalar_shear_not_dropped": true,
+    "four_dimensional_Euler_only_after_dimension_limit": true,
+    "full_clock_derivative_and_friction_terms": true,
+    "full_four_dimensional_curvature_crosscheck": true,
+    "full_proper_time_conversion_and_measure_every_helicity_retained": true,
+    "full_proper_time_conversion_and_measure_same_actual_kappa": true,
+    "full_proper_time_conversion_and_measure_scalar_gradient_sign_not_suppressed": true,
+    "full_proper_time_conversion_and_measure_zero_vector_Einstein_gradient_not_vector_dynamics_claim": true,
+    "no_lapse_shift_or_reduced_mixed_operator_claim": true,
+    "noncommuting_matrix_time_jets_not_diagonal_only": true,
+    "original_V_G_B_not_closed": true,
+    "original_fixed_local_action_and_full_conformal_Hessians_finite_Weyl_coefficient_not_Proca_pole_weight": true,
+    "original_fixed_local_action_and_full_conformal_Hessians_no_lapse_shift_or_reduced_mixed_operator_claim": true,
+    "original_fixed_local_action_and_full_conformal_Hessians_physical_dimension_Euler_only_after_fixed_matching": true,
+    "original_fixed_local_action_and_full_conformal_Hessians_same_actual_mass": true,
+    "proper_time_density_measure_factor_retained": true,
+    "remaining_quantum_contact_matching_not_assumed": true,
+    "same_actual_CD_parent_preparation_and_prescription": true,
+    "smooth_polynomial_momentum_maps_at_zero": true,
+    "unimodular_volume_variation_exactly_zero": true
+  },
+  "proper_time_conversion_and_actual_CD_derivative_norm": {
+    "bounds": {
+      "canonical": "Both external metric factors yield2e-795 in the same norm. This local four-time/four-spatial derivative bound is not a bound for the full quantum response, a derivative-compatible mixed inverse or a stability theorem.",
+      "clock_bounds": "On the actual CD slab|t|<=1/2, a=(1+t^2)^2 satisfies1<=a<=25/16, a^3<4, |H|<=2, |Hdot|<=4 and |Hddot|<=12. These follow from the displayed exact rational derivatives, using1+t^2>=1 and |t|<=1/2.",
+      "constants": {
+        "complete_Einstein_coefficient_sum": "473/32",
+        "complete_R_squared_coefficient_sum": "19115/6",
+        "complete_Weyl_squared_coefficient_sum": "6131/8",
+        "fixed_local_Hessian_norm_upper": "14062615/324"
+      },
+      "full_helicity_bounds": "The sum of absolute proper-time coefficient bounds is below15 for H_R,3200 for H_R2 and800 for H_C, uniformly over all five spatial directions. The fixed coefficients, mass1000 and pi^2>9 give an operator upper bound below5e4.",
+      "matching_boundary": "The result supplies only the original finite local action target. It does not identify the remaining reference polynomial-integrand/contact sector with this target or eliminate its regulator artifacts.",
+      "norm": "Phi42[Gamma]^2=sum_(j=0)^4||(1-Delta)^2 partial_t^j Gamma||L2(dt dx;F)^2. Each q^r factor with r0,1,2 is dominated by(1+q)^2. Therefore ||H_fixed Gamma||L2<5e4 Phi42[Gamma] and |delta^2 S_fixed(D,Gamma)|<5e4||D||L2 Phi42[Gamma]."
+    },
+    "proper": {
+      "clock": "The full fourth conformal derivative produces H,Hdot,Hddot and every friction term. No slow-clock or constant-a approximation is used.",
+      "full_proper_time_operators": {
+        "scalar": {
+          "R_old": "-3*H*a**3*x1/2 - a**3*x2/2 + a*q*x0/6",
+          "R_old_squared": "-6*a**3*x1*(4*H*H1 + 3*H*(2*H**2 + H1) + H2) - 6*a**3*x2*(2*H**2 + H1) + 2*a*q*x0*(2*H**2 + H1) + 4*q**2*x0/(3*a)",
+          "Weyl_squared": "a**3*(6*H*x3 + x1*(6*H**3 + 7*H*H1 + H2) + x2*(11*H**2 + 4*H1) + x4) + 2*a*q*(H*x1 + x2)/3 + q**2*x0/(9*a)"
+        },
+        "tensor": {
+          "R_old": "-3*H*a**3*x1/2 - a**3*x2/2 - a*q*x0/2",
+          "R_old_squared": "-6*a**3*x1*(4*H*H1 + 3*H*(2*H**2 + H1) + H2) - 6*a**3*x2*(2*H**2 + H1) - 6*a*q*x0*(2*H**2 + H1)",
+          "Weyl_squared": "a**3*(6*H*x3 + x1*(6*H**3 + 7*H*H1 + H2) + x2*(11*H**2 + 4*H1) + x4) + 2*a*q*(H*x1 + x2) + q**2*x0/a"
+        },
+        "vector": {
+          "R_old": "-3*H*a**3*x1/2 - a**3*x2/2",
+          "R_old_squared": "-6*a**3*x1*(4*H*H1 + 3*H*(2*H**2 + H1) + H2) - 6*a**3*x2*(2*H**2 + H1)",
+          "Weyl_squared": "a**3*(6*H*x3 + x1*(6*H**3 + 7*H*H1 + H2) + x2*(11*H**2 + 4*H1) + x4) + a*q*(H*x1 + x2)"
+        }
+      },
+      "helicity_constants": {
+        "scalar": [
+          "-1/3",
+          "2/3",
+          "1/9",
+          "2/3"
+        ],
+        "tensor": [
+          "1",
+          "2",
+          "1",
+          "0"
+        ],
+        "vector": [
+          "0",
+          "1",
+          "0",
+          "0"
+        ]
+      },
+      "measure": "Because deta=dt/a and partial_eta=a partial_t, the proper-time density operator is a^-1 H_eta, not H_eta with a mere derivative substitution. This preserves the compact action bilinear and its self-adjoint pairing.",
+      "scope": "These helicities label the complete tracefree spatial subspace only. No lapse/shift constraint has been solved and no scalar or vector component is identified with a canonically reduced propagating degree of freedom."
+    }
+  },
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "507d72a711488b9ba88c308d59cf0515d801b945e440e05bb7fd67394e8b8f73",
+    "README.md": "cfbbc951a73ebc8f9f792ced788d94f95a844d1c6cc5970311f7fb967b3fdb41",
+    "notes/bounds.md": "ac59ecbcb31d4b0e28d783998353ee221f4e6eb0e6606575a0989897fde46611",
+    "notes/conformal.md": "bde0383d5819ef2c52ce319f137a22af63225e600c5f00199247f82ba2b9034c",
+    "notes/geometry.md": "88c462133f19f0017847693861f7f8f9313b8426d9c1ed4238872103f2a2c60f",
+    "notes/helicities.md": "daee0b3962e06c12c6ed22a6a64d342322bc4fdf270a54c5ebe5468a7ef7dde7",
+    "notes/proper-time.md": "207bda1c350a4f35946fa18e95fd5e5e19693582e3a0c42c60c9f990a53503c7",
+    "notes/scope.md": "3b858190789c56904d97bf4d171be1efb0881f30855fb4a3ebe88f5fdb43995f",
+    "notes/validation.md": "5d8144a82f2f23e47e1b9b1f028fa3b5c50d2db8b810e70c1d0076bd8dce3993",
+    "src/p8_vacuum_affine_local_spatial_hessian/__init__.py": "6a74b187d08fe5ad6697a923623c3b6d45c353faacc82e249c8c047eea0cea1c",
+    "src/p8_vacuum_affine_local_spatial_hessian/audit.py": "7f561c698b8b1b3ad2f30077c33663c7bdbe642ffd5f261e40e2b6ec2c36041b",
+    "src/p8_vacuum_affine_local_spatial_hessian/bounds.py": "dd8065f98b44d036b207166b20c2d36813bbd5575b169c9fb136a3589cd9603c",
+    "src/p8_vacuum_affine_local_spatial_hessian/helicities.py": "cb583a637819d71e19506e48643ba819bd7ea05c6c2d739d4325761ba421b882",
+    "src/p8_vacuum_affine_local_spatial_hessian/local.py": "5201ca28c05b160c3e0d252e95825c5b2aae772a58b658fdadecba12ad6ec48d",
+    "src/p8_vacuum_affine_local_spatial_hessian/proper.py": "ef97c114852d0daff05c4b9d786aa871ba2213de029a130815f059020f94d719",
+    "src/p8_vacuum_affine_local_spatial_hessian/verify.py": "bc92ae86c6cd06b866c8b0a6fd8246dc7571f771c45589a51d65ff834aa7b91f",
+    "tests/test_affine_local_spatial_hessian_certificate.py": "fe97a368ef3037665abab55d4e9c95252d594d744ba368fef453f0f53c8573a0",
+    "tests/test_affine_local_spatial_hessian_science.py": "aa3349ec50a1a6f54db263dd132aca70cc118a47c7454131d0b427b92bae486c"
+  },
+  "status": "FIXED_COVARIANT_LOCAL_FULL_TRACEFREE_SPATIAL_HESSIAN_WITH_PROPER_TIME_AND_NORM_CONTROL; NOT_QUANTUM_SPATIAL_MATCHING_FULL_MIXED_INVERSE_BACKGROUND_CUTOFF_V_G_B_OR_ORIGINAL_P8",
+  "verdict": "The already-fixed finite local covariant action has an explicit complete Hessian on the actual CD tracefree spatial metric subspace. Smooth polynomial momentum maps retain both tensor, both vector and scalar shear directions without a zero-momentum or light-cone singularity. Literal four-dimensional curvature jets, including noncommuting matrix time derivatives and generic spatial directions, reproduce the full compact Einstein, R-squared and Weyl-squared Hessians and their retained boundary term. The original dimensionally matched finite coefficients are unchanged, and compact Euler variation is removed only in physical dimension after that matching. The exact proper-time density factor a^-1 and all clock/friction terms are retained. The resulting local L2 operator is below5e4 Phi42[Gamma], with two-external-metric canonical coefficient2e-795. This is a fixed local matching target, not proof that the remaining quantum contact and Taylor-integrand sector matches it. No physical state or subtraction prescription is changed, and no full quantum response, reduced mixed inverse, nonlinear background, stability, physical cutoff, remaining parent loops or finite-gravity IR/Regge follows. Original V/G/B and P8 remain open.",
+  "verification_boundary": "Exact full spatial basis and polynomial maps, complete curvature-Hessian polynomials, original finite coefficients, proper-time measure/clock conversion and actual CD norm constants. Independent literal four-dimensional curvature, all five directions, noncommuting matrix jets, compact boundary terms, generic rotations, wrong-measure controls, self-adjoint pairings and derivative norms supplement written estimates. Native, direct science, ordinary and CLI use original SymPy; only full regression uses the audited exact GCD adapter. The compact geometric variation and continuous norm estimate are not FORMALIZED.",
+  "written_proofs": [
+    "notes/geometry.md",
+    "notes/helicities.md",
+    "notes/conformal.md",
+    "notes/proper-time.md",
+    "notes/bounds.md",
+    "notes/scope.md",
+    "notes/validation.md"
+  ]
+}
