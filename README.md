@@ -438,7 +438,12 @@ around a pre-registered problems document and a certificate-gated ledger.
   This is still linear light evolution and its leading heavy response,
   not a full nonlinear solution or UV-admissible completion.
 
-The [current P8 continuation audit](docs/assessment-2026-09-12-p8-affine-full-flat-tensor-response.md)
+The [current P8 continuation audit](docs/assessment-2026-09-12-p8-affine-scalar-matching-scale.md)
+derives the complete original massive scalar tree in normalized identical channels
+and a conditional tradeoff between full angular and physical coefficient matching
+errors. Its nominal tree ceiling is not a physical cutoff; full quantum matching,
+finite-gravity control, the common-parent bounce and original P8 remain open.
+The [complete flat-vacuum tensor audit](docs/assessment-2026-09-12-p8-affine-full-flat-tensor-response.md)
 identifies the complete original flat-vacuum tensor mean response, including
 its growing-pole pair and a pole-retaining all-momentum causal graph inverse.
 The low-disk propagator comparison is controlled; physical validity at the
