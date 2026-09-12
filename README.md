@@ -438,7 +438,11 @@ around a pre-registered problems document and a certificate-gated ledger.
   This is still linear light evolution and its leading heavy response,
   not a full nonlinear solution or UV-admissible completion.
 
-The [current P8 continuation audit](docs/assessment-2026-09-12-p8-affine-full-spatial-remainder.md)
+The [current P8 continuation audit](docs/assessment-2026-09-12-p8-affine-reduced-scalar-hamiltonian.md)
+establishes the complete fixed-QG1 classical scalar Hamiltonian and an
+infrared-safe Gaussian scalar pullback, retaining both metric-chart contacts
+and the quantum-constraint and derivative-loss boundaries.
+The [complete spatial response](docs/assessment-2026-09-12-p8-affine-full-spatial-remainder.md)
 establishes all three ordered scalar kernels and the full reference spatial
 Gaussian response, original-regulator remainder and prepared Ward input.
 The [homogeneous trace anchor](docs/assessment-2026-09-12-p8-affine-homogeneous-trace-anchor.md)
