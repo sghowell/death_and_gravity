@@ -1,0 +1,533 @@
+{
+  "checked_scalar_entries": 53,
+  "claim": "P8-S6.202.ACTUAL_CURVED_UNIT_W8_JOINT_SPATIAL_ANALYTICITY_FULL_READOUTS_AND_FAR_ENDPOINT_TAYLOR_REMAINDER",
+  "controls": {
+    "actual_full_endpoint_nonzero_fifth_Taylor_remainder": true,
+    "actual_parent_preparation_and_prescription_unchanged": true,
+    "complete_readouts_both_Schwarz_signs_and_all_nine_pairs": true,
+    "full_complex_frame_and_Euclidean_counterexample": true,
+    "independent_actual_W8_joint_complex_domain": true,
+    "independent_far_radial_and_removed_two_leg_union": true,
+    "no_near_region_local_matching_or_state_analyticity_assumed": true,
+    "original_P8_not_closed": true,
+    "rejected_inputs": 124
+  },
+  "date": "2026-09-11",
+  "exact_residuals": {
+    "complete_constrained_readouts_and_inverse_phase_full_longitudinal_constraint_bridge": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        10,
+        1
+      ]
+    },
+    "complete_constrained_readouts_and_inverse_phase_full_transverse_constraint_bridge": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        10,
+        1
+      ]
+    },
+    "complete_constrained_readouts_and_inverse_phase_same_real_volume_cancellation": "0",
+    "complete_constrained_readouts_and_inverse_phase_unchanged_joint_pair_upper_count": "0",
+    "far_endpoint_spatial_Taylor_remainder_actual_spatial_Taylor_numerator": "0",
+    "far_endpoint_spatial_Taylor_remainder_all_five_endpoint_coefficient_rows": "0",
+    "far_endpoint_spatial_Taylor_remainder_canonical_far_finite_piece": "0",
+    "far_endpoint_spatial_Taylor_remainder_canonical_far_regulator_tail": "0",
+    "far_endpoint_spatial_Taylor_remainder_far_half_band_radial_tail": "0",
+    "far_endpoint_spatial_Taylor_remainder_fifth_spatial_power_produces_integrable_internal_fourth_power": "0",
+    "far_endpoint_spatial_Taylor_remainder_spatial_Cauchy_geometric_remainder": "0",
+    "full_analytic_polarization_frame_both_transverse_directions": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        1,
+        2
+      ]
+    },
+    "full_analytic_polarization_frame_complete_complex_orthogonal_frame": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        3
+      ]
+    },
+    "full_analytic_polarization_frame_frame_sends_base_direction_to_new_direction": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        3,
+        1
+      ]
+    },
+    "full_analytic_polarization_frame_high_band_spatial_radius_factor": "0",
+    "full_analytic_polarization_frame_orientation_preserved": "0",
+    "joint_complex_frequency_domain_actual_outer_and_inner_time_radii": "0",
+    "joint_complex_frequency_domain_both_time_and_spatial_relative_defects": "0",
+    "joint_complex_frequency_domain_full_squared_momentum_defect": "0",
+    "joint_complex_frequency_domain_same_fixed_mass": "0",
+    "nine_primitive_rows_retained": "0",
+    "one_new_scoped_row_added": "0",
+    "primitive_rows_unchanged": "0",
+    "prior_matching_rows_retained": "0"
+  },
+  "formulation": "FORMULATION.md",
+  "full_constrained_readouts_and_far_endpoint_Taylor_tail": {
+    "boundary": {
+      "Cauchy": "For any real unit direction v, the pre-current row E(lambda v) is holomorphic for |lambda|<=delta nu and bounded by2e27nu. Its degree-four Taylor error at |P|<=delta nu/2 is<=4e57 |P|^5 nu^-4, in the operator norm from the five source time jets to the detector tensor.",
+      "constants": {
+        "endpoint_time_rows": [
+          [
+            "1"
+          ],
+          [
+            "2",
+            "1"
+          ],
+          [
+            "8",
+            "5",
+            "1"
+          ],
+          [
+            "48",
+            "33",
+            "9",
+            "1"
+          ],
+          [
+            "384",
+            "279",
+            "87",
+            "14",
+            "1"
+          ]
+        ],
+        "far_full_integral_upper": "1907348632812500000000000000000000000000000000000000000/3",
+        "far_removed_both_leg_tail_numerator": "23841857910156250000000000000000000000000000000000000000000/9",
+        "fourth_spatial_Taylor_remainder_numerator": "4000000000000000000000000000000000000000000000000000000000",
+        "full_first_five_endpoint_jet_row_over_nu": "1108202949000000000000000000"
+      },
+      "far_bound": "Since integral nu^-4<=Amax^3/(24m), the far remainder is below1e54||D||L2 X46[Gamma], where X46^2=sum_(j=0)^4||(1-Delta)^3 partial_t^j Gamma||L2^2. The factor |P|^5 is controlled by the six-spatial-derivative weight.",
+      "far_region": "Define FAR by real |k|>=m and |P|<=delta nu(k)/2. Integrate ONLY the degree-four spatial Taylor remainder over this region, retaining the original both-created-mode regulator. This is not the full endpoint kernel or its local Taylor polynomial.",
+      "far_tail": "On FAR, |P|<=delta |k| because nu<=2|k|. Hence |l|<=(1+delta)|k|, and a removed both-leg pair implies |k|>K/(1+delta)>K/2. The far remainder tail is below1e58||D||L2 X46[Gamma]/K for K>=1000. Both canonical displays are4e-746 and4e-742/K.",
+      "holomorphy": "The conjugate detector amplitude is replaced by its analytic Schwarz continuation. The W8 amplitudes and inverse phase are jointly holomorphic; time differentiation preserves that property. No assertion that Im itself is holomorphic, and no spatial derivative of the tests or Borel state, is used.",
+      "pre_current_row": "Apply the S198 product-rule recursion to the COMPLETE pre-current endpoint coefficients, before the final imaginary part and before multiplying test Fourier transforms. For j0..4, the coefficient of Gamma^(r) is bounded by9 Cref^2 c_jr INNER^(-(j-r)) nu^(1-j). The complete row from source time jets0..4 has norm below2e27nu jointly in complex p.",
+      "remaining": "The complementary near-momentum region, the full finite/divergent Taylor coefficients, complete reference contact and original fixed covariant spatial matching remain unresolved. This far Taylor piece is not a full response inverse, interacting background, physical cutoff or original V/G/B closure."
+    },
+    "readouts": {
+      "Schwarz": "The conjugate-on-real-parameters readouts have analytic Schwarz continuations on the same domain and identical bounds. Holomorphy is asserted for these pre-current coefficients, not for taking an imaginary part as a complex operation.",
+      "complete_pair": "Every fixed full stress matrix has operator norm<=1/2, hence the entire sixteen-component pair tensor has Frobenius norm<=2||u_k||||u_l||<1e9nu. All nine polarization pairs use this same bound; no COM or longitudinal-only replacement is made.",
+      "genuine_complex_bounds": "The analytic frame vectors have Euclidean norm<2. The joint domain gives |f|<=nu^-1/2, |p|<64sqrt(nu), |m/omega|<2, ||l/a||<2nu and |rho/(a omega)|<3. Thus each of all ten components is below1000sqrt(nu) and the complete field norm is below4000sqrt(nu).",
+      "phase_sum": "Both W frequencies have real part>.5nu on the joint domain. Their inverse sum g=1/(W_k+W_l) is holomorphic with |g|<1/nu.",
+      "readouts": "In the ten-field order(E,B,mA0,mAsp), T=(p e,i(l cross e)f/a,0,m f e), L=((m/omega)p n,0,-i rho p/(a omega),omega f n), with rho=sqrt(l.l). The common a^(-3/2) is outside and cancels the stress-smearing volume exactly."
+    }
+  },
+  "joint_complex_domain_and_complete_analytic_frame": {
+    "domain": {
+      "W8": "The complete four W8 coefficient polynomials are the same source-pinned rational functions as S186. The unchanged |u|<.51, |1+u^2|>.7, |z|<1.01 and |omega|>=.99nu bounds keep both full relative W defects below1e-3. Hence Re W>.5nu and |W|<3nu jointly.",
+      "branches": "Both squared frequencies lie in the right half-plane. Their positive-real square-root continuations have Re omega>=.99nu and |omega|<2nu. Also |z|=|1-m^2/omega^2|<1.01, and |l/a|Euclidean<2nu.",
+      "constants": {
+        "Wprime_over_nu": "60000",
+        "additional_momentum_frequency_defect": "3125001/1000000000000",
+        "canonical_momentum_amplitude_over_sqrt_nu": "12601/200",
+        "complete_relative_squared_frequency_defect": "603125001/999400000000",
+        "complex_z_modulus_upper": "1000003125001/998796874999",
+        "inner_readout_time_radius": "1/20000",
+        "outer_time_radius": "1/10000",
+        "physical_complex_spatial_momentum_over_nu": "157812601/100000000",
+        "relative_time_scale_defect": "3/4997",
+        "spatial_radius_over_nu": "1/1000000"
+      },
+      "domain": "Fix real |k|>=m, nu=sqrt(m^2+|k|^2/Amax^2), l=-k+p, ||p||complex_Euclidean<=delta nu with delta1e-6. Combine with |u-t|<=1e-4 about every real t in[-1/2,1/2]. Nu is tied to the original real k, not a complex norm.",
+      "frequency": "The time scale defect is ea=6r/(1-6r). Since |k|<=Amax nu, the extra squared-momentum defect is<=ep=2Amax delta+delta^2. Relative to the real-time omega(k)^2, the full squared-frequency defect is<=ea+(1+ea)ep<1e-3 for both legs.",
+      "time_derivative": "On the inner time disc1e-4/2, Cauchy from the outer disc gives |Wprime|<=60000nu. With |dT|,|dL|<5, |f_amp|<=nu^-1/2 and |p_amp|<64sqrt(nu), for either phase sign. No initial alpha or beta appears."
+    },
+    "frame": {
+      "analyticity": "On the joint p-ball, nu<=2|k| gives ||p||/|k|<=2delta. Thus |rho^2/|k|^2-1|<=2b+b^2<1e-5, rho stays on its positive branch, and ||n-n0||<1e-5. The denominator1+n.n0 is bounded away from zero. This is a local analytic frame for each fixed real k, not an assumed global frame over the momentum sphere.",
+      "complex_norm": "Bilinear n.n=1 does not imply Euclidean norm1. Use the explicit displacement: ||n||<2, ||K||op<=2e-5 and ||R-I||op<1e-4. Hence every polarization has genuine complex Euclidean norm<2.",
+      "constants": {
+        "direction_displacement_upper": "1500001/247500000000",
+        "relative_bilinear_length_squared_defect": "1000001/250000000000",
+        "relative_vector_perturbation": "1/500000",
+        "rotation_minus_identity_upper": "200001/9999950000",
+        "safe_direction_displacement": "1/100000"
+      },
+      "construction": "For each fixed real k choose a real orthonormal frame with n0=-k/|k|. Let rho=sqrt(l.l) on the branch rho(0)=|k| and n=l/rho. Set K=n n0^T-n0 n^T and R=I+K+K^2/(1+n.n0). The two transverse vectors are R e1,R e2 and the longitudinal one is n.",
+      "polarization_sum": "R^T R=I and det R=1 on n.n=1. Summing the two degenerate transverse modes and the longitudinal mode removes the arbitrary initial real transverse-frame choice. All physical polarizations remain."
+    }
+  },
+  "named_exact_check_count": 24,
+  "not_established": [
+    "The complementary near-momentum endpoint region or a full all-momentum Taylor-subtracted reference response",
+    "Finite and divergent Taylor coefficients, full reference contact and original fixed covariant spatial matching",
+    "Borel-state momentum analyticity, a new exact reference state, a full mixed inverse, interacting background or stability",
+    "Full parent/cutoff/scattering/IR/Regge matching or original V/G/B and P8 closure"
+  ],
+  "observable_and_scope": {
+    "analyticity": "For real |k|>=1000, nu=sqrt(m^2+|k|^2/Amax^2), the ball ||p||<=1e-6nu and fixed nested time discs control both full frequencies, the local complex frame, all constrained readouts and inverse summed phase.",
+    "boundary": "The complementary near region, finite and divergent Taylor coefficients, full reference contact and fixed covariant spatial matching are not included. No full inverse, interacting background, physical cutoff or original P8 closure.",
+    "domain": "Same actual CD sector and preparation; only the unit-W8 reference coefficients from S201 are continued in complex time and external momentum.",
+    "endpoint": "The complete pre-current row from source time jets0..4 has norm below2e27nu. Its fourth spatial Taylor error is below4e57|P|^5nu^-4 on |P|<=1e-6nu/2.",
+    "far_limit": "The far-region remainder is below1e54||D||L2 X46[Gamma], with the original both-leg tail below1e58||D||L2 X46[Gamma]/K. The canonical displays are4e-746 and4e-742/K."
+  },
+  "primitive_and_matching_frontier": {
+    "matching": [
+      {
+        "id": "fixed_sigma_isolated_MS_conversion",
+        "status": "CANCELLED_NONLOCAL_ORDER_TWO_WITH_SAME_REGULATED_REFERENCE"
+      },
+      {
+        "id": "remaining_scale_parameter_field_map_and_cross_terms",
+        "status": "OPEN"
+      },
+      {
+        "id": "remaining_counterterm_and_vacuum_source_assembly",
+        "status": "ASSEMBLED_FOR_FIXED_ORDER_PHI_POLE_B2_VACUUM_AND_H_SOURCE"
+      },
+      {
+        "id": "full_matched_two_loop_pole_and_amplitude_error",
+        "status": "FIXED_ORDER_PHI_POLE_AND_B2_BOUNDED_PHYSICAL_TRUNCATION_OPEN"
+      },
+      {
+        "id": "finite_EFT_higher_order_truncation",
+        "status": "OPEN"
+      },
+      {
+        "id": "V_contour_and_cut_control",
+        "status": "OPEN"
+      },
+      {
+        "id": "finite_gravity_G",
+        "status": "OPEN"
+      },
+      {
+        "id": "common_parent_B",
+        "status": "OPEN"
+      },
+      {
+        "id": "complete_wineglass_interaction_forest_MS",
+        "status": "BOUNDED_WITH_REGULATED_FINITE_LOCAL_ANCHOR_AND_FULL_SCALE_TERM"
+      },
+      {
+        "id": "complete_double_bubble_interaction_forest_MS",
+        "status": "BOUNDED_WITH_ACTUAL_NESTED_MS_FORESTS_AND_BOTH_SCALE_TERMS"
+      },
+      {
+        "id": "complete_scalar_OS_insertion_interaction_forest_MS",
+        "status": "BOUNDED_WITH_FULL_REGULATED_SLOPE_TIMES_OUTER_REFERENCE"
+      },
+      {
+        "id": "complete_scalar_quadratic_finite_MS_slope_and_converted_OS_bound",
+        "status": "BOUNDED_WITH_FIXED_INNER_OS_AND_INTERACTION_MS_COORDINATES"
+      },
+      {
+        "id": "first_finite_Phi_field_covariance_and_MS_projection_commutator",
+        "status": "EXACT_REGULATED_FIELD_DIRECTION_AND_BOUNDED_FIRST_SLOPE_CROSS_TERMS"
+      },
+      {
+        "id": "complete_GY14_second_Phi_normalization_and_canonical_unit_disc_pole",
+        "status": "BOUNDED_WITH_DIRECT_MS_OWNERSHIP_AND_FULL_FINITE_FIELD_REEXPANSION"
+      },
+      {
+        "id": "complete_two_loop_vacuum_reference_and_first_source_square",
+        "status": "BOUNDED_WITH_FULL_REGULATED_SOURCE_REDUCIBLE_CANCELLATION"
+      },
+      {
+        "id": "complete_two_loop_derivative_map_with_matched_physical_source",
+        "status": "TRANSPORTED_FOR_FULL_ACTION_AND_PHYSICAL_SOURCE_NOT_ORDINARY_PSI_MS_OR_TRUNCATION"
+      },
+      {
+        "id": "complete_matched_two_loop_low_energy_Phi_elastic_cut",
+        "status": "BOUNDED_ON_PHYSICAL_WINDOW_4_TO_6_WITH_FULL_FIRST_AMPLITUDE_NOT_PHYSICAL_REMAINDER_OR_GLOBAL_DISPERSION"
+      },
+      {
+        "id": "full_finite_kappa_analytic_target_classical_vacuum_match",
+        "status": "BOUNDED_ON_SAME_RESTRICTED_FLAT_SCHWARTZ_CLASS_NOT_QUANTUM_TARGET_OR_ROLLING_COMMON_PARENT_MATCH"
+      },
+      {
+        "id": "GY14_SAT8_pointwise_fermion_mass_protection_and_named_low_order_invariance",
+        "status": "NEW_ANALYTIC_EFT_BRANCH_WITH_GLOBAL_REAL_MASS_FLOOR_AND_SAME_NAMED_TWO_LOOP_DATA_NOT_ROLLING_STATE_OR_COMMON_PARENT_CLOSURE"
+      },
+      {
+        "id": "polynomial_clock_transparent_physical_source_map_and_full_target_classical_bound",
+        "status": "KINEMATIC_CLOCK_ARGUMENT_ALIGNED_WITH_PROTECTED_MASSES_AND_SAME_NAMED_VACUUM_DATA_NOT_BACKGROUND_SOLUTION_QUANTUM_STATE_OR_COMMON_PARENT_CLOSURE"
+      },
+      {
+        "id": "free_flat_clock_Dirac_out_energy_with_complete_transition_series_remainder",
+        "status": "BOUNDED_FOR_SPECIFIED_QUADRATIC_MODEWISE_IN_OUT_STATE_NOT_INTERACTING_OR_CURVED_BOUNCE_STRESS"
+      },
+      {
+        "id": "Hadamard_regular_free_flat_SAT8_in_out_state_and_uniform_one_particle_norm_limit",
+        "status": "HADAMARD_FOR_SPECIFIED_FREE_EXTERNAL_MASS_OPERATOR_USING_IDENTIFIED_EXTERNAL_THEOREM_NOT_INTERACTING_CURVED_STATE_OR_NUMERICAL_STRESS"
+      },
+      {
+        "id": "exact_four_frame_free_transition_and_uniform_same_operator_in_out_T00_difference",
+        "status": "BOUNDED_FOR_FREE_FLAT_HADAMARD_STATE_DIFFERENCE_NOT_ABSOLUTE_STRESS_INTERACTING_CURVED_STATE_OR_BACKREACTION"
+      },
+      {
+        "id": "free_flat_absolute_one_loop_local_energy_with_fixed_saturated_mass_reference",
+        "status": "BOUNDED_IN_EXPLICIT_MS_AND_SATURATED_MASS_REFERENCE_QUADRATIC_SCHEME_NOT_FULL_CURVED_INTERACTING_PARENT_STRESS"
+      },
+      {
+        "id": "complete_free_flat_homogeneous_one_loop_stress_with_dimensional_curvature_improvement",
+        "status": "BOUNDED_SPECIFIED_QUADRATIC_MS_MR_FLAT_TENSOR_NOT_FULL_INTERACTING_CURVED_PARENT_STRESS"
+      },
+      {
+        "id": "actual_CD_free_Dirac_Hadamard_in_out_state_and_uniform_state_stress_difference",
+        "status": "CURVED_FREE_HADAMARD_STATE_AND_STATE_DIFFERENCE_BOUNDED_NOT_ABSOLUTE_PARENT_STRESS"
+      },
+      {
+        "id": "complete_free_curved_one_loop_stress_with_explicit_EC_Newton_reference",
+        "status": "BOUNDED_SPECIFIED_QUADRATIC_CURVED_TENSOR_NOT_FULL_INTERACTING_PARENT_OR_BACKGROUND_RESPONSE"
+      },
+      {
+        "id": "minimal_Einstein_canonical_clock_free_sector_null_equation_mismatch",
+        "status": "EXCLUDED_NAMED_MINIMAL_DIAGNOSTIC_WITH_SMALL_EXTRA_NULL_BUDGET_NOT_FULL_INTERACTING_PARENT_OR_DHOST_ROW"
+      },
+      {
+        "id": "actual_CD_leading_clock_Euler_source_decomposition_and_matching_domain_gap",
+        "status": "LEADING_TARGET_SOURCES_AND_CONSTRAINT_DOMAIN_REQUIREMENTS_IDENTIFIED_NOT_PROPAGATING_PARENT_OR_QUANTUM_BOUNCE"
+      },
+      {
+        "id": "analytic_CD_REG_AFFINE_ISO_classical_parent_clock_vacuum_and_local_constraints",
+        "status": "NEW_REGULAR_CLASSICAL_PARENT_AND_LOCAL_CONSTRAINT_BLOCKS_NOT_QUANTUM_MATCHING_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "same_classical_affine_parent_closed_source_lift_and_scoped_vector_Schur_control",
+        "status": "EXACT_CLASSICAL_AND_COMMON_REGULATOR_IDENTITIES_FULL_EUCLIDEAN_AND_LEADING_LORENTZ_BOUNDS_NOT_FULL_QUANTUM_MATCHING"
+      },
+      {
+        "id": "regular_affine_parent_conditional_Gaussian_Hadamard_family_and_ordinary_Proca_stress",
+        "status": "SOURCE_AWARE_CONDITIONAL_VECTOR_STATE_AND_FIXED_CLOCK_STRESS_NOT_FULL_PARENT_QUANTUM_SOLUTION"
+      },
+      {
+        "id": "full_fixed_canonical_affine_family_actual_classical_gravitational_decoupling",
+        "status": "ANCHORED_FULL_FUNCTION_CLASSICAL_LIMIT_AND_TREE_AMPLITUDE_NOT_QUANTUM_CONTOUR_TRUNCATION_OR_V_CLOSURE"
+      },
+      {
+        "id": "complete_affine_vector_retarded_mean_energy_and_causal_cubic_light_force",
+        "status": "FIXED_CD_FULL_SOURCE_FINITE_TIME_CONDITIONAL_GAUSSIAN_MEAN_AND_LIGHT_FORCE_NOT_METRIC_NOISE_FULL_PARENT_OR_B_CLOSURE"
+      },
+      {
+        "id": "same_affine_conditional_prepared_homogeneous_metric_response_with_uncancelled_chart_contacts",
+        "status": "COMPLETE_CONDITIONAL_VECTOR_HOMOGENEOUS_C10_TO_C0_BOUND_NOT_SPATIAL_NOISE_COUPLED_BACKGROUND_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "same_affine_parent_prepared_homogeneous_retained_tree_plus_conditional_vector_causal_inverse",
+        "status": "UNIQUE_RETAINED_LINEAR_PREPARED_CAUSAL_INVERSE_WITH_NUMERIC_LOCAL_LAPSE_RECOVERY_NOT_FULL_INVERSE_SMALLNESS_QUANTUM_BACKGROUND_OR_V_G_B"
+      },
+      {
+        "id": "same_massive_scalar_range_kernel_explicit_full_half_line_L1_majorant",
+        "status": "MASS_INDEPENDENT_EXPLICIT_SCALAR_KERNEL_NORM_NOT_FULL_INVERSE_SMALLNESS_BACKGROUND_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "new_CD_REG_AFFINE_ISO_QG1_fixed_coefficient_stationary_Gaussian_mean_and_actual_response",
+        "status": "NEW_PARENT_RETAINED_MEAN_STATIONARITY_AND_BOUNDED_COEFFICIENT_CORRECTION_NOT_FULL_QUANTUM_BACKGROUND_STABILITY_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "actual_classical_Hamiltonian_C0_and_C10_inverse_and_first_formal_Gaussian_response",
+        "status": "QUANTIFIED_PREPARED_CLASSICAL_PROPAGATOR_AND_FIRST_FORMAL_COEFFICIENT_NOT_FINITE_COUPLING_ERROR_STABILITY_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "complete_finite_time_canonical_vacuum_source_mean_and_scalar_force_noise_with_fixed_profile",
+        "status": "FULL_CONDITIONAL_GAUSSIAN_VACUUM_SOURCE_CAUSAL_AND_NOISE_BOUNDS_NOT_INTERACTING_AMPLITUDE_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "actual_all_order_CD_state_complete_clock_source_smeared_force_noise_and_canonical_normalization",
+        "status": "SAME_STATE_FULL_SOURCE_SMEARED_SCALAR_NOISE_BOUND_NOT_METRIC_NOISE_SOLUTION_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "actual_all_order_CD_full_local_smeared_metric_stress_covariance",
+        "status": "FULL_SPACETIME_TENSOR_STRESS_NOISE_BOUND_NOT_METRIC_SOLUTION_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "actual_CD_boundary_compatible_tree_tensor_noise_response",
+        "status": "RESTRICTED_DETECTOR_TREE_PROPAGATED_NOISE_NOT_FULL_QUANTUM_TENSOR_STATE_OR_V_G_B"
+      },
+      {
+        "id": "actual_CD_homogeneous_shear_Hamiltonian_contact_and_modewise_remainder",
+        "status": "ACTUAL_SHEAR_MODEWISE_FINITE_AMPLITUDE_REMAINDER_NOT_CONTINUUM_SELF_ENERGY_OR_V_G_B"
+      },
+      {
+        "id": "actual_fixed_local_covariant_full_spatial_tensor_Hessian",
+        "status": "ACTUAL_FIXED_FINITE_LOCAL_TENSOR_HESSIAN_BOUND_NOT_COMPLETE_DETERMINANT_RESPONSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_CD_full_matrix_adiabatic_uniform_covariance_tail",
+        "status": "ACTUAL_UNCHANGED_STATE_UNIFORM_HIGH_BAND_COVARIANCE_REMAINDER_NOT_RESPONSE_SUBTRACTION_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_matrix_covariance_tail_C2_response_and_Taylor_remainder",
+        "status": "ACTUAL_UNCHANGED_STATE_C2_HIGH_BAND_COVARIANCE_TAIL_NOT_COMPLETE_COVARIANT_RESPONSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_physical_shear_current_C2_fourth_order_comparison",
+        "status": "ACTUAL_STATE_C2_CURRENT_MODE_COMPARISON_NOT_FIXED_COVARIANT_MATCHING_OR_V_G_B"
+      },
+      {
+        "id": "actual_homogeneous_shear_full_fixed_covariant_mode_subtraction_matching",
+        "status": "ACTUAL_HOMOGENEOUS_SHEAR_FIXED_COVARIANT_MODE_SUBTRACTION_MATCHING_NOT_FULL_FEEDBACK_OR_V_G_B"
+      },
+      {
+        "id": "actual_complete_fixed_covariant_homogeneous_current_C2_and_canonical_response",
+        "status": "ACTUAL_COMPLETE_FIXED_COVARIANT_HOMOGENEOUS_CURRENT_C2_AND_CANONICAL_RESPONSE_NOT_FULL_FEEDBACK_OR_V_G_B"
+      },
+      {
+        "id": "actual_spatial_two_momentum_metric_vertices_and_finite_band_Gaussian_response",
+        "status": "ACTUAL_SPATIAL_TWO_MOMENTUM_CURRENT_FINITE_BAND_NOT_RENORMALIZED_CONTINUUM_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_full_spatial_separated_support_weak_Gaussian_response_and_quantitative_tail",
+        "status": "ACTUAL_CONTINUUM_SEPARATED_SUPPORT_WEAK_RESPONSE_NOT_COINCIDENT_EXTENSION_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_overlapping_time_spatial_retarded_state_remainder_with_complete_contact",
+        "status": "ACTUAL_RETARDED_MEMORY_CONTACT_COMPARISON_NOT_REFERENCE_DIAGONAL_MATCHING_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_reference_six_step_retarded_boundary_extraction_and_full_finite_bulk",
+        "status": "ACTUAL_REFERENCE_FINITE_BULK_AND_EXPLICIT_ENDPOINTS_NOT_COVARIANT_SPATIAL_MATCHING_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_canonical_flat_Proca_full_tensor_cut_and_subtracted_dispersion_benchmark",
+        "status": "CANONICAL_FLAT_FULL_TENSOR_CUT_BENCHMARK_NOT_CURVED_MATCHING_FULL_PARENT_AMPLITUDE_OR_V_G_B"
+      },
+      {
+        "id": "full_spatial_flat_Proca_covariant_and_time_subtraction_conversion_with_nonlocal_coefficient_bounds",
+        "status": "FULL_SPATIAL_FLAT_NONLOCAL_SUBTRACTION_CONVERSION_NOT_CURVED_MATCHING_LOCAL_POLYNOMIAL_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_curved_reference_initial_state_prefactor_full_memory_contact_and_regulator_tail",
+        "status": "ACTUAL_CURVED_INITIAL_PREFACTOR_REMOVED_WITH_FINITE_FULL_RESPONSE_CORRECTION_NOT_SPATIAL_MATCHING_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_curved_reference_joint_spatial_analyticity_full_readouts_and_far_endpoint_Taylor_tail",
+        "status": "ACTUAL_UNIT_W8_JOINT_SPATIAL_ANALYTICITY_AND_FAR_ENDPOINT_TAYLOR_TAIL_NOT_NEAR_REGION_LOCAL_MATCHING_INVERSE_OR_V_G_B"
+      }
+    ],
+    "primitive": [
+      {
+        "id": "scalar_Phi0_W0_F0",
+        "status": "BOUNDED_PAIRED_VACUUM_PRIMITIVE_WITH_ASSIGNED_LOCAL_FOREST"
+      },
+      {
+        "id": "scalar_Phi2_W0_F2",
+        "status": "BOUNDED_NONLOCAL_AND_FINITE_MS_MASS_AND_SLOPE_REFERENCES"
+      },
+      {
+        "id": "scalar_Phi2_W1_F0",
+        "status": "BOUNDED_PAIRED_NONLOCAL_AND_FINITE_MS_LOCAL_REFERENCES"
+      },
+      {
+        "id": "scalar_Phi4_W0_F4",
+        "status": "BOUNDED_PAIRED_PRIMITIVE_ROW"
+      },
+      {
+        "id": "scalar_Phi4_W1_F2",
+        "status": "BOUNDED_PAIRED_IN_COMMON_MS_INTERACTION_SCHEME"
+      },
+      {
+        "id": "scalar_Phi4_W2_F0",
+        "status": "BOUNDED_PAIRED_IN_COMMON_MS_INTERACTION_SCHEME"
+      },
+      {
+        "id": "gauge_Phi0",
+        "status": "BOUNDED_PAIRED_VACUUM_PRIMITIVE_WITH_ASSIGNED_LOCAL_FOREST"
+      },
+      {
+        "id": "gauge_Phi2",
+        "status": "BOUNDED_NONLOCAL_AND_FINITE_MS_MASS_AND_SLOPE_REFERENCES"
+      },
+      {
+        "id": "gauge_Phi4",
+        "status": "BOUNDED_PAIRED_PRIMITIVE_ROW"
+      }
+    ]
+  },
+  "prior_sha256": {
+    "S6_176_actual_CD_Gaussian_sector_transitively_rebuilt": "1175702d6980db090396863b807af0e767241daeb7d8dabf138ed11c67e1ae75",
+    "S6_201_fully_rebuilt": "b75148fac1694e6a689f955d76cb30fc94734f063f85c4ec952215baa2d35eda",
+    "all_frozen_scientific_bytes_unchanged": true,
+    "fixed_stress_prescription_and_full_source_retained": true
+  },
+  "proof_checks": {
+    "Taylor_applied_only_to_coefficients_not_tests_or_band": true,
+    "all_first_five_endpoint_time_jet_rows": true,
+    "all_nine_physical_pairs_and_full_ten_field_readouts": true,
+    "analytic_Schwarz_not_in_place_complex_conjugation": true,
+    "both_external_metric_canonical_factors": true,
+    "both_internal_legs_in_one_joint_complex_domain": true,
+    "complete_constrained_readouts_and_inverse_phase_complete_longitudinal_electric_components": true,
+    "complete_constrained_readouts_and_inverse_phase_complete_longitudinal_mass_components": true,
+    "complete_constrained_readouts_and_inverse_phase_complete_temporal_constraint_component": true,
+    "complete_constrained_readouts_and_inverse_phase_complete_transverse_electric_components": true,
+    "complete_constrained_readouts_and_inverse_phase_complete_transverse_magnetic_components": true,
+    "complete_constrained_readouts_and_inverse_phase_full_pair_norm_below_existing_constant": true,
+    "complete_constrained_readouts_and_inverse_phase_same_joint_radius": true,
+    "complete_constrained_readouts_and_inverse_phase_ten_field_norm_below_four_thousand": true,
+    "explicit_convergent_radial_and_regulator_tail_bounds": true,
+    "far_endpoint_spatial_Taylor_remainder_Cauchy_half_disc_factor": true,
+    "far_endpoint_spatial_Taylor_remainder_complete_first_five_endpoint_bound": true,
+    "far_endpoint_spatial_Taylor_remainder_far_internal_power_is_absolutely_integrable": true,
+    "far_endpoint_spatial_Taylor_remainder_full_far_integral_display": true,
+    "far_endpoint_spatial_Taylor_remainder_removed_far_tail_display": true,
+    "far_endpoint_spatial_Taylor_remainder_same_two_leg_far_tail_geometry": true,
+    "far_region_and_removed_both_leg_union_retained": true,
+    "full_analytic_polarization_frame_bilinear_length_defect_safe": true,
+    "full_analytic_polarization_frame_direction_displacement_safe": true,
+    "full_analytic_polarization_frame_frame_denominator_safe": true,
+    "full_analytic_polarization_frame_length_modulus_above_point_nine_nine": true,
+    "full_analytic_polarization_frame_rotation_norm_below_two": true,
+    "full_sixteen_component_stress_tensor_bound": true,
+    "genuine_complex_Euclidean_polarization_norms": true,
+    "joint_complex_frequency_domain_canonical_momentum_below_sixty_four": true,
+    "joint_complex_frequency_domain_complete_joint_frequency_defect_below_one_thousandth": true,
+    "joint_complex_frequency_domain_full_complex_spatial_momentum_below_two_nu": true,
+    "joint_complex_frequency_domain_high_band_nu_below_twice_real_momentum": true,
+    "joint_complex_frequency_domain_inverse_scale_modulus_below_one_point_zero_one": true,
+    "joint_complex_frequency_domain_joint_omega_lower": true,
+    "joint_complex_frequency_domain_joint_omega_upper": true,
+    "joint_complex_frequency_domain_joint_z_modulus_below_one_point_zero_one": true,
+    "joint_complex_frequency_domain_unchanged_W8_complex_polynomial_bounds": true,
+    "local_frame_not_global_momentum_sphere_frame": true,
+    "near_region_and_fixed_local_matching_not_assumed": true,
+    "no_Borel_state_momentum_analyticity_assumed": true,
+    "original_V_G_B_not_closed": true,
+    "positive_frequency_and_bilinear_length_branches_controlled": true,
+    "pre_current_endpoint_coefficients_before_imaginary_part": true,
+    "same_actual_CD_parent_preparation_and_prescription": true,
+    "unit_W8_reference_not_replacement_physical_state": true
+  },
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "aab2632de3833f7539e06d7e20d4f90bd8eb63846d4e3996973f45ea2a73392c",
+    "README.md": "0bc61a81b08cd90ed9a50b37608066442888647b888ec2fa697f46f55d50ca3c",
+    "notes/domain.md": "0853d1dd7ef2bde441b9c4336e7cbd92a82117f88ad8a43bece874c2a717f091",
+    "notes/endpoints.md": "2aab366223f414f2f3c5014f1efd6022fecc6979e661cac7846fd28fdef0705e",
+    "notes/far-tail.md": "cef9155d8f39e3b4ed59054954ff69e5b3587837c71b698a7a488239fe4c6bce",
+    "notes/frame.md": "aa93fa22a6ec5f5bfacf262bc35ce63289abaae3f18886edda8839090df652c0",
+    "notes/readouts.md": "aa17aee9e283280c0b390235b10fb2effec79d6e4287502406e2b55f7d9694ea",
+    "notes/scope.md": "61ea94bea49f3740c62b17e012ee5f27f753c9ce729e834f39d3167e733187de",
+    "notes/validation.md": "0ca770904519fe31052d91b4cecebd21ed93ce75ddb0c6cfd266be73b4a16cb2",
+    "src/p8_vacuum_affine_reference_spatial_analyticity/__init__.py": "5adff792c56f654cddec68f778da934efdc8154596d8797665735e053b88eea2",
+    "src/p8_vacuum_affine_reference_spatial_analyticity/audit.py": "44e4949821439b004016ce484faa8295f78b14c2fbdd46f5d318fe22c71f9653",
+    "src/p8_vacuum_affine_reference_spatial_analyticity/boundary.py": "d494ad0867a07f46052f154a3472f6151cc72f9c8897f0784fb811451e4d264c",
+    "src/p8_vacuum_affine_reference_spatial_analyticity/domain.py": "a204fed263ae030050ecab624333d0287e4a8603562b191c532b79d1fa0557d2",
+    "src/p8_vacuum_affine_reference_spatial_analyticity/frame.py": "be9d4d468e6a5eb7fa587d84e58a565ac7572e41ed1a0eeb1f6714f5c438a31f",
+    "src/p8_vacuum_affine_reference_spatial_analyticity/readouts.py": "9e44d084c43951599d3e75834e746e1aae7d799e0f127fa152b102d1204eaaee",
+    "src/p8_vacuum_affine_reference_spatial_analyticity/verify.py": "fa947296cfe5fe028f37275d6aabee3781894248af4ae3c62578938c0fe499f3",
+    "tests/test_affine_reference_spatial_analyticity_certificate.py": "163ad88c2119a03b8363df06d42cd5dfde408c45e86901e5c903e67322a94af0",
+    "tests/test_affine_reference_spatial_analyticity_science.py": "693bb9ac254e4a3d89450779c26cc4013da34fcaac5da5293c20619cb08906f2"
+  },
+  "status": "ACTUAL_CURVED_UNIT_W8_JOINT_SPATIAL_ANALYTICITY_FULL_READOUTS_AND_FAR_ENDPOINT_TAYLOR_REMAINDER; NOT_NEAR_REGION_LOCAL_COVARIANT_MATCHING_FULL_INVERSE_BACKGROUND_CUTOFF_V_G_B_OR_ORIGINAL_P8",
+  "verdict": "For the same CD sector and preparation, the unit-W8 reference has a common complex time and external-momentum domain ||p||<=1e-6nu(k) for real |k|>=1000. Both frequency branches, a local complex-orthogonal polarization frame with genuine Euclidean norm bounds, all ten constrained field readouts, all nine physical pairs and the inverse summed phase are controlled. Analytic Schwarz continuation is applied to the complete pre-current coefficients, not to an imaginary-part operation or to the Borel state. The complete first-five-endpoint row from time jets0..4 is below2e27nu; its fourth spatial Taylor remainder is below4e57|P|^5nu^-4 when |P|<=1e-6nu/2. Only this far-region remainder is integrated. It is below1e54||D||L2 X46[Gamma], with the original both-created-mode regulator tail below1e58||D||L2 X46[Gamma]/K. The two canonical factors give4e-746 and4e-742/K. The complementary near-momentum region, full finite and divergent Taylor coefficients, complete reference contact and original fixed covariant spatial matching remain open. No full inverse, interacting background, stability, physical cutoff, remaining parent loops or finite-gravity IR/Regge follows. Original V/G/B and P8 remain open.",
+  "verification_boundary": "Exact joint-domain constants, complex frame identities, complete constrained-readout bridges, all endpoint recursion rows, Cauchy powers, radial bounds and canonical factors. Independent actual full W8 complex evaluations, genuine Euclidean frames, both Schwarz signs, all nine stress pairs, nonzero fifth Taylor remainders and removed two-leg integrals supplement written continuum estimates. Native, direct science, ordinary and CLI use original SymPy; only full regression uses the audited exact GCD adapter. Joint holomorphy, Cauchy estimates and the far continuum argument are not FORMALIZED.",
+  "written_proofs": [
+    "notes/domain.md",
+    "notes/frame.md",
+    "notes/readouts.md",
+    "notes/endpoints.md",
+    "notes/far-tail.md",
+    "notes/scope.md",
+    "notes/validation.md"
+  ]
+}
