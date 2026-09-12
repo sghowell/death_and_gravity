@@ -1,0 +1,523 @@
+{
+  "checked_scalar_entries": 994,
+  "claim": "P8-S6.200.FULL_SPATIAL_FLAT_PROCA_COVARIANT_AND_RETARDED_TIME_SUBTRACTION_CONVERSION_WITH_NONLOCAL_COEFFICIENT_BOUNDS",
+  "complete_tensor_and_exact_subtraction_conversion": {
+    "conversion": {
+      "centered_coefficients": "N_i(w-q,p)=sum_(k=0)^3 n_ik(p) w^k. Define J_in(q)=integral rho_i(s)/[s^3(s+q)^(n+1)]ds. Then A_r(p)=sum_i sum_(k=0)^r n_ik(p) J_i,r-k(q), for r=0,1,2.",
+      "complete_tensor": "Polynomial division is applied to the entire spatial tensor numerator, not only TT, trace, or a fixed COM channel. The residue N_i(s)=s Q_i(s) yields precisely the actual spatial spectral tensor.",
+      "exact_conversion": "F(w-q,p)=A0(p)+w A1(p)+w^2 A2(p)+B6(w,p), where B6=w^3 integral sum_i rho_i(s)Q_i(s,p)/s^2 /[(s+q)^3(s+q-w)]ds. This is an exact identity of convergent analytic integrals off the cut.",
+      "matching_boundary": "This is a conversion between explicitly defined nonlocal representatives. It neither fixes the remaining physical local tensor/contact polynomial nor equates the curved CD contact/endpoints to this flat benchmark.",
+      "time_operator": "In real time the finite conversion is A0 Gamma-A1 partial_t^2 Gamma+A2 partial_t^4 Gamma. Each coefficient is time local but generally nonpolynomial in spatial momentum."
+    },
+    "tensor": {
+      "definition": "A(z,p)=z I+p p^T; Q0=A_ij A_kl/3, Q2=(A_ik A_jl+A_il A_jk)/2-Q0, N_i=z Q_i. Q_i=z^2 Pi_i for the full covariant projectors restricted to spatial metric directions.",
+      "nonlocal_representative": "F(z,p)=sum_i N_i(z,p) integral rho_i(s)/[s^3(s-z)]ds. It has the full S199 spatial cut and a specified zero-momentum covariant subtraction. A physical local matching polynomial remains separate.",
+      "regularity": "The complete N_i is a polynomial of degree3 in z. Apparent lightcone1/z poles of individual projectors cancel before integration. Both spin sectors and all nine spatial tensor entries remain.",
+      "spectral_cut": "At s>4m^2, the spatial cut matrix is sum_i rho_i(s)Q_i(s,p)/s^2. It is not obtained by using COM projectors at nonzero p."
+    }
+  },
+  "controls": {
+    "actual_parent_normalization_state_and_prescription_retained": true,
+    "complete_matrix_improper_spectral_conversion": true,
+    "independent_centered_frequency_derivative_crosschecks": true,
+    "independent_nonzero_transfer_covariant_curvature_Hessians": true,
+    "literal_prepared_retarded_sine_kernel_extraction": true,
+    "operator_coefficient_and_infinite_tail_controls": true,
+    "original_P8_not_closed": true,
+    "rejected_inputs": 122,
+    "spatial_nonlocality_not_local_or_curved_matching": true
+  },
+  "date": "2026-09-11",
+  "exact_residuals": {
+    "all_spatial_coefficient_and_tail_bounds_absolute_sine_tail_antiderivative": "0",
+    "all_spatial_coefficient_and_tail_bounds_canonical_full_flat_nonlocal_display": "0",
+    "all_spatial_coefficient_and_tail_bounds_canonical_full_flat_nonlocal_tail": "0",
+    "all_spatial_coefficient_and_tail_bounds_canonical_standard_norm_display": "0",
+    "all_spatial_coefficient_and_tail_bounds_canonical_standard_norm_tail_display": "0",
+    "all_spatial_coefficient_and_tail_bounds_coefficient_Cauchy_bound": "0",
+    "all_spatial_coefficient_and_tail_bounds_coefficient_Cauchy_tail": "0",
+    "all_spatial_coefficient_and_tail_bounds_complete_absolute_sine_radial_constant": "0",
+    "all_spatial_coefficient_and_tail_bounds_complete_first_moment_sum": "0",
+    "all_spatial_coefficient_and_tail_bounds_complete_sine_tensor_density_weight": "0",
+    "all_spatial_coefficient_and_tail_bounds_complete_spectral_tail_constant": "0",
+    "complete_spatial_tensor_numerators_spin0_complete_centered_cubic": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        9,
+        9
+      ]
+    },
+    "complete_spatial_tensor_numerators_spin0_no_lightcone_pole": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        9,
+        9
+      ]
+    },
+    "complete_spatial_tensor_numerators_spin0_symmetric_full_tensor": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        9,
+        9
+      ]
+    },
+    "complete_spatial_tensor_numerators_spin0_zero_spatial_momentum_cubic": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        9,
+        9
+      ]
+    },
+    "complete_spatial_tensor_numerators_spin2_complete_centered_cubic": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        9,
+        9
+      ]
+    },
+    "complete_spatial_tensor_numerators_spin2_no_lightcone_pole": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        9,
+        9
+      ]
+    },
+    "complete_spatial_tensor_numerators_spin2_symmetric_full_tensor": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        9,
+        9
+      ]
+    },
+    "complete_spatial_tensor_numerators_spin2_zero_spatial_momentum_cubic": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        9,
+        9
+      ]
+    },
+    "exact_covariant_time_subtraction_conversion_generic_cubic_divided_difference": "0",
+    "exact_covariant_time_subtraction_conversion_spin0_full_tensor_spectral_residue": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        9,
+        9
+      ]
+    },
+    "exact_covariant_time_subtraction_conversion_spin0_zero_transfer_all_three_conversion_terms": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        9,
+        9
+      ]
+    },
+    "exact_covariant_time_subtraction_conversion_spin2_full_tensor_spectral_residue": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        9,
+        9
+      ]
+    },
+    "exact_covariant_time_subtraction_conversion_spin2_zero_transfer_all_three_conversion_terms": {
+      "all_entries_exactly_zero": true,
+      "shape": [
+        9,
+        9
+      ]
+    },
+    "nine_primitive_rows_retained": "0",
+    "one_new_scoped_row_added": "0",
+    "physical_flat_retarded_extraction_and_nonlocality_TT_first_time_coefficient": "0",
+    "physical_flat_retarded_extraction_and_nonlocality_TT_second_time_coefficient": "0",
+    "physical_flat_retarded_extraction_and_nonlocality_complete_sine_kernel_equation": "0",
+    "physical_flat_retarded_extraction_and_nonlocality_complete_transverse_scalar_channel": "0",
+    "physical_flat_retarded_extraction_and_nonlocality_complete_transverse_tensor_channel": "0",
+    "physical_flat_retarded_extraction_and_nonlocality_six_time_derivative_remainder_transform": "0",
+    "primitive_rows_unchanged": "0",
+    "prior_matching_rows_retained": "0"
+  },
+  "formulation": "FORMULATION.md",
+  "named_exact_check_count": 34,
+  "not_established": [
+    "The physical finite local tensor/contact polynomial or full curved CD reference contact/endpoint matching",
+    "Identification of the original one-mode contact and two-mode memory finite regulators",
+    "A full mixed response inverse, finite-coupling interacting background, stability or physical cutoff matching",
+    "Full parent scattering cuts, contour/truncation, finite-gravity IR/Regge or original V/G/B and P8 closure"
+  ],
+  "observable_and_scope": {
+    "boundary": "Finite spatially nonlocal conversion is not an adjustable local counterterm, the fixed physical finite polynomial, curved contact/endpoint matching, full response inverse or original P8 closure.",
+    "coefficients": "The full tensor coefficients have convergent spectral integral formulas and bound (q+m^2)^3/[80pi^2 m^(2r+2)] for r=0,1,2, with controlled inverse-Lambda spectral tails.",
+    "conversion": "The explicitly defined covariant nonlocal representative equals its full sixth-time-derivative subtracted retarded bulk plus three finite equal-time coefficients A0+w A1+w^2 A2 at every spatial momentum.",
+    "domain": "The same canonical mass1000 Proca flat reference vacuum, as a full spatial external-metric matching benchmark; the actual CD state is not changed.",
+    "weak_bound": "In the explicit six-spatial/four-time derivative source norm, the conversion bilinear is below1e10 and its spectral tail below1e17/Lambda; both canonical factors give4e-790 and4e-783/Lambda."
+  },
+  "primitive_and_matching_frontier": {
+    "matching": [
+      {
+        "id": "fixed_sigma_isolated_MS_conversion",
+        "status": "CANCELLED_NONLOCAL_ORDER_TWO_WITH_SAME_REGULATED_REFERENCE"
+      },
+      {
+        "id": "remaining_scale_parameter_field_map_and_cross_terms",
+        "status": "OPEN"
+      },
+      {
+        "id": "remaining_counterterm_and_vacuum_source_assembly",
+        "status": "ASSEMBLED_FOR_FIXED_ORDER_PHI_POLE_B2_VACUUM_AND_H_SOURCE"
+      },
+      {
+        "id": "full_matched_two_loop_pole_and_amplitude_error",
+        "status": "FIXED_ORDER_PHI_POLE_AND_B2_BOUNDED_PHYSICAL_TRUNCATION_OPEN"
+      },
+      {
+        "id": "finite_EFT_higher_order_truncation",
+        "status": "OPEN"
+      },
+      {
+        "id": "V_contour_and_cut_control",
+        "status": "OPEN"
+      },
+      {
+        "id": "finite_gravity_G",
+        "status": "OPEN"
+      },
+      {
+        "id": "common_parent_B",
+        "status": "OPEN"
+      },
+      {
+        "id": "complete_wineglass_interaction_forest_MS",
+        "status": "BOUNDED_WITH_REGULATED_FINITE_LOCAL_ANCHOR_AND_FULL_SCALE_TERM"
+      },
+      {
+        "id": "complete_double_bubble_interaction_forest_MS",
+        "status": "BOUNDED_WITH_ACTUAL_NESTED_MS_FORESTS_AND_BOTH_SCALE_TERMS"
+      },
+      {
+        "id": "complete_scalar_OS_insertion_interaction_forest_MS",
+        "status": "BOUNDED_WITH_FULL_REGULATED_SLOPE_TIMES_OUTER_REFERENCE"
+      },
+      {
+        "id": "complete_scalar_quadratic_finite_MS_slope_and_converted_OS_bound",
+        "status": "BOUNDED_WITH_FIXED_INNER_OS_AND_INTERACTION_MS_COORDINATES"
+      },
+      {
+        "id": "first_finite_Phi_field_covariance_and_MS_projection_commutator",
+        "status": "EXACT_REGULATED_FIELD_DIRECTION_AND_BOUNDED_FIRST_SLOPE_CROSS_TERMS"
+      },
+      {
+        "id": "complete_GY14_second_Phi_normalization_and_canonical_unit_disc_pole",
+        "status": "BOUNDED_WITH_DIRECT_MS_OWNERSHIP_AND_FULL_FINITE_FIELD_REEXPANSION"
+      },
+      {
+        "id": "complete_two_loop_vacuum_reference_and_first_source_square",
+        "status": "BOUNDED_WITH_FULL_REGULATED_SOURCE_REDUCIBLE_CANCELLATION"
+      },
+      {
+        "id": "complete_two_loop_derivative_map_with_matched_physical_source",
+        "status": "TRANSPORTED_FOR_FULL_ACTION_AND_PHYSICAL_SOURCE_NOT_ORDINARY_PSI_MS_OR_TRUNCATION"
+      },
+      {
+        "id": "complete_matched_two_loop_low_energy_Phi_elastic_cut",
+        "status": "BOUNDED_ON_PHYSICAL_WINDOW_4_TO_6_WITH_FULL_FIRST_AMPLITUDE_NOT_PHYSICAL_REMAINDER_OR_GLOBAL_DISPERSION"
+      },
+      {
+        "id": "full_finite_kappa_analytic_target_classical_vacuum_match",
+        "status": "BOUNDED_ON_SAME_RESTRICTED_FLAT_SCHWARTZ_CLASS_NOT_QUANTUM_TARGET_OR_ROLLING_COMMON_PARENT_MATCH"
+      },
+      {
+        "id": "GY14_SAT8_pointwise_fermion_mass_protection_and_named_low_order_invariance",
+        "status": "NEW_ANALYTIC_EFT_BRANCH_WITH_GLOBAL_REAL_MASS_FLOOR_AND_SAME_NAMED_TWO_LOOP_DATA_NOT_ROLLING_STATE_OR_COMMON_PARENT_CLOSURE"
+      },
+      {
+        "id": "polynomial_clock_transparent_physical_source_map_and_full_target_classical_bound",
+        "status": "KINEMATIC_CLOCK_ARGUMENT_ALIGNED_WITH_PROTECTED_MASSES_AND_SAME_NAMED_VACUUM_DATA_NOT_BACKGROUND_SOLUTION_QUANTUM_STATE_OR_COMMON_PARENT_CLOSURE"
+      },
+      {
+        "id": "free_flat_clock_Dirac_out_energy_with_complete_transition_series_remainder",
+        "status": "BOUNDED_FOR_SPECIFIED_QUADRATIC_MODEWISE_IN_OUT_STATE_NOT_INTERACTING_OR_CURVED_BOUNCE_STRESS"
+      },
+      {
+        "id": "Hadamard_regular_free_flat_SAT8_in_out_state_and_uniform_one_particle_norm_limit",
+        "status": "HADAMARD_FOR_SPECIFIED_FREE_EXTERNAL_MASS_OPERATOR_USING_IDENTIFIED_EXTERNAL_THEOREM_NOT_INTERACTING_CURVED_STATE_OR_NUMERICAL_STRESS"
+      },
+      {
+        "id": "exact_four_frame_free_transition_and_uniform_same_operator_in_out_T00_difference",
+        "status": "BOUNDED_FOR_FREE_FLAT_HADAMARD_STATE_DIFFERENCE_NOT_ABSOLUTE_STRESS_INTERACTING_CURVED_STATE_OR_BACKREACTION"
+      },
+      {
+        "id": "free_flat_absolute_one_loop_local_energy_with_fixed_saturated_mass_reference",
+        "status": "BOUNDED_IN_EXPLICIT_MS_AND_SATURATED_MASS_REFERENCE_QUADRATIC_SCHEME_NOT_FULL_CURVED_INTERACTING_PARENT_STRESS"
+      },
+      {
+        "id": "complete_free_flat_homogeneous_one_loop_stress_with_dimensional_curvature_improvement",
+        "status": "BOUNDED_SPECIFIED_QUADRATIC_MS_MR_FLAT_TENSOR_NOT_FULL_INTERACTING_CURVED_PARENT_STRESS"
+      },
+      {
+        "id": "actual_CD_free_Dirac_Hadamard_in_out_state_and_uniform_state_stress_difference",
+        "status": "CURVED_FREE_HADAMARD_STATE_AND_STATE_DIFFERENCE_BOUNDED_NOT_ABSOLUTE_PARENT_STRESS"
+      },
+      {
+        "id": "complete_free_curved_one_loop_stress_with_explicit_EC_Newton_reference",
+        "status": "BOUNDED_SPECIFIED_QUADRATIC_CURVED_TENSOR_NOT_FULL_INTERACTING_PARENT_OR_BACKGROUND_RESPONSE"
+      },
+      {
+        "id": "minimal_Einstein_canonical_clock_free_sector_null_equation_mismatch",
+        "status": "EXCLUDED_NAMED_MINIMAL_DIAGNOSTIC_WITH_SMALL_EXTRA_NULL_BUDGET_NOT_FULL_INTERACTING_PARENT_OR_DHOST_ROW"
+      },
+      {
+        "id": "actual_CD_leading_clock_Euler_source_decomposition_and_matching_domain_gap",
+        "status": "LEADING_TARGET_SOURCES_AND_CONSTRAINT_DOMAIN_REQUIREMENTS_IDENTIFIED_NOT_PROPAGATING_PARENT_OR_QUANTUM_BOUNCE"
+      },
+      {
+        "id": "analytic_CD_REG_AFFINE_ISO_classical_parent_clock_vacuum_and_local_constraints",
+        "status": "NEW_REGULAR_CLASSICAL_PARENT_AND_LOCAL_CONSTRAINT_BLOCKS_NOT_QUANTUM_MATCHING_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "same_classical_affine_parent_closed_source_lift_and_scoped_vector_Schur_control",
+        "status": "EXACT_CLASSICAL_AND_COMMON_REGULATOR_IDENTITIES_FULL_EUCLIDEAN_AND_LEADING_LORENTZ_BOUNDS_NOT_FULL_QUANTUM_MATCHING"
+      },
+      {
+        "id": "regular_affine_parent_conditional_Gaussian_Hadamard_family_and_ordinary_Proca_stress",
+        "status": "SOURCE_AWARE_CONDITIONAL_VECTOR_STATE_AND_FIXED_CLOCK_STRESS_NOT_FULL_PARENT_QUANTUM_SOLUTION"
+      },
+      {
+        "id": "full_fixed_canonical_affine_family_actual_classical_gravitational_decoupling",
+        "status": "ANCHORED_FULL_FUNCTION_CLASSICAL_LIMIT_AND_TREE_AMPLITUDE_NOT_QUANTUM_CONTOUR_TRUNCATION_OR_V_CLOSURE"
+      },
+      {
+        "id": "complete_affine_vector_retarded_mean_energy_and_causal_cubic_light_force",
+        "status": "FIXED_CD_FULL_SOURCE_FINITE_TIME_CONDITIONAL_GAUSSIAN_MEAN_AND_LIGHT_FORCE_NOT_METRIC_NOISE_FULL_PARENT_OR_B_CLOSURE"
+      },
+      {
+        "id": "same_affine_conditional_prepared_homogeneous_metric_response_with_uncancelled_chart_contacts",
+        "status": "COMPLETE_CONDITIONAL_VECTOR_HOMOGENEOUS_C10_TO_C0_BOUND_NOT_SPATIAL_NOISE_COUPLED_BACKGROUND_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "same_affine_parent_prepared_homogeneous_retained_tree_plus_conditional_vector_causal_inverse",
+        "status": "UNIQUE_RETAINED_LINEAR_PREPARED_CAUSAL_INVERSE_WITH_NUMERIC_LOCAL_LAPSE_RECOVERY_NOT_FULL_INVERSE_SMALLNESS_QUANTUM_BACKGROUND_OR_V_G_B"
+      },
+      {
+        "id": "same_massive_scalar_range_kernel_explicit_full_half_line_L1_majorant",
+        "status": "MASS_INDEPENDENT_EXPLICIT_SCALAR_KERNEL_NORM_NOT_FULL_INVERSE_SMALLNESS_BACKGROUND_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "new_CD_REG_AFFINE_ISO_QG1_fixed_coefficient_stationary_Gaussian_mean_and_actual_response",
+        "status": "NEW_PARENT_RETAINED_MEAN_STATIONARITY_AND_BOUNDED_COEFFICIENT_CORRECTION_NOT_FULL_QUANTUM_BACKGROUND_STABILITY_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "actual_classical_Hamiltonian_C0_and_C10_inverse_and_first_formal_Gaussian_response",
+        "status": "QUANTIFIED_PREPARED_CLASSICAL_PROPAGATOR_AND_FIRST_FORMAL_COEFFICIENT_NOT_FINITE_COUPLING_ERROR_STABILITY_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "complete_finite_time_canonical_vacuum_source_mean_and_scalar_force_noise_with_fixed_profile",
+        "status": "FULL_CONDITIONAL_GAUSSIAN_VACUUM_SOURCE_CAUSAL_AND_NOISE_BOUNDS_NOT_INTERACTING_AMPLITUDE_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "actual_all_order_CD_state_complete_clock_source_smeared_force_noise_and_canonical_normalization",
+        "status": "SAME_STATE_FULL_SOURCE_SMEARED_SCALAR_NOISE_BOUND_NOT_METRIC_NOISE_SOLUTION_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "actual_all_order_CD_full_local_smeared_metric_stress_covariance",
+        "status": "FULL_SPACETIME_TENSOR_STRESS_NOISE_BOUND_NOT_METRIC_SOLUTION_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "actual_CD_boundary_compatible_tree_tensor_noise_response",
+        "status": "RESTRICTED_DETECTOR_TREE_PROPAGATED_NOISE_NOT_FULL_QUANTUM_TENSOR_STATE_OR_V_G_B"
+      },
+      {
+        "id": "actual_CD_homogeneous_shear_Hamiltonian_contact_and_modewise_remainder",
+        "status": "ACTUAL_SHEAR_MODEWISE_FINITE_AMPLITUDE_REMAINDER_NOT_CONTINUUM_SELF_ENERGY_OR_V_G_B"
+      },
+      {
+        "id": "actual_fixed_local_covariant_full_spatial_tensor_Hessian",
+        "status": "ACTUAL_FIXED_FINITE_LOCAL_TENSOR_HESSIAN_BOUND_NOT_COMPLETE_DETERMINANT_RESPONSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_CD_full_matrix_adiabatic_uniform_covariance_tail",
+        "status": "ACTUAL_UNCHANGED_STATE_UNIFORM_HIGH_BAND_COVARIANCE_REMAINDER_NOT_RESPONSE_SUBTRACTION_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_matrix_covariance_tail_C2_response_and_Taylor_remainder",
+        "status": "ACTUAL_UNCHANGED_STATE_C2_HIGH_BAND_COVARIANCE_TAIL_NOT_COMPLETE_COVARIANT_RESPONSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_physical_shear_current_C2_fourth_order_comparison",
+        "status": "ACTUAL_STATE_C2_CURRENT_MODE_COMPARISON_NOT_FIXED_COVARIANT_MATCHING_OR_V_G_B"
+      },
+      {
+        "id": "actual_homogeneous_shear_full_fixed_covariant_mode_subtraction_matching",
+        "status": "ACTUAL_HOMOGENEOUS_SHEAR_FIXED_COVARIANT_MODE_SUBTRACTION_MATCHING_NOT_FULL_FEEDBACK_OR_V_G_B"
+      },
+      {
+        "id": "actual_complete_fixed_covariant_homogeneous_current_C2_and_canonical_response",
+        "status": "ACTUAL_COMPLETE_FIXED_COVARIANT_HOMOGENEOUS_CURRENT_C2_AND_CANONICAL_RESPONSE_NOT_FULL_FEEDBACK_OR_V_G_B"
+      },
+      {
+        "id": "actual_spatial_two_momentum_metric_vertices_and_finite_band_Gaussian_response",
+        "status": "ACTUAL_SPATIAL_TWO_MOMENTUM_CURRENT_FINITE_BAND_NOT_RENORMALIZED_CONTINUUM_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_full_spatial_separated_support_weak_Gaussian_response_and_quantitative_tail",
+        "status": "ACTUAL_CONTINUUM_SEPARATED_SUPPORT_WEAK_RESPONSE_NOT_COINCIDENT_EXTENSION_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_overlapping_time_spatial_retarded_state_remainder_with_complete_contact",
+        "status": "ACTUAL_RETARDED_MEMORY_CONTACT_COMPARISON_NOT_REFERENCE_DIAGONAL_MATCHING_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_reference_six_step_retarded_boundary_extraction_and_full_finite_bulk",
+        "status": "ACTUAL_REFERENCE_FINITE_BULK_AND_EXPLICIT_ENDPOINTS_NOT_COVARIANT_SPATIAL_MATCHING_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_canonical_flat_Proca_full_tensor_cut_and_subtracted_dispersion_benchmark",
+        "status": "CANONICAL_FLAT_FULL_TENSOR_CUT_BENCHMARK_NOT_CURVED_MATCHING_FULL_PARENT_AMPLITUDE_OR_V_G_B"
+      },
+      {
+        "id": "full_spatial_flat_Proca_covariant_and_time_subtraction_conversion_with_nonlocal_coefficient_bounds",
+        "status": "FULL_SPATIAL_FLAT_NONLOCAL_SUBTRACTION_CONVERSION_NOT_CURVED_MATCHING_LOCAL_POLYNOMIAL_INVERSE_OR_V_G_B"
+      }
+    ],
+    "primitive": [
+      {
+        "id": "scalar_Phi0_W0_F0",
+        "status": "BOUNDED_PAIRED_VACUUM_PRIMITIVE_WITH_ASSIGNED_LOCAL_FOREST"
+      },
+      {
+        "id": "scalar_Phi2_W0_F2",
+        "status": "BOUNDED_NONLOCAL_AND_FINITE_MS_MASS_AND_SLOPE_REFERENCES"
+      },
+      {
+        "id": "scalar_Phi2_W1_F0",
+        "status": "BOUNDED_PAIRED_NONLOCAL_AND_FINITE_MS_LOCAL_REFERENCES"
+      },
+      {
+        "id": "scalar_Phi4_W0_F4",
+        "status": "BOUNDED_PAIRED_PRIMITIVE_ROW"
+      },
+      {
+        "id": "scalar_Phi4_W1_F2",
+        "status": "BOUNDED_PAIRED_IN_COMMON_MS_INTERACTION_SCHEME"
+      },
+      {
+        "id": "scalar_Phi4_W2_F0",
+        "status": "BOUNDED_PAIRED_IN_COMMON_MS_INTERACTION_SCHEME"
+      },
+      {
+        "id": "gauge_Phi0",
+        "status": "BOUNDED_PAIRED_VACUUM_PRIMITIVE_WITH_ASSIGNED_LOCAL_FOREST"
+      },
+      {
+        "id": "gauge_Phi2",
+        "status": "BOUNDED_NONLOCAL_AND_FINITE_MS_MASS_AND_SLOPE_REFERENCES"
+      },
+      {
+        "id": "gauge_Phi4",
+        "status": "BOUNDED_PAIRED_PRIMITIVE_ROW"
+      }
+    ]
+  },
+  "prior_sha256": {
+    "S6_176_actual_CD_Gaussian_sector_transitively_rebuilt": "1175702d6980db090396863b807af0e767241daeb7d8dabf138ed11c67e1ae75",
+    "S6_199_fully_rebuilt": "e7a37017276d0b5474d81a295ab3f2574f69b883ffee34b032a0dadf9566ceec",
+    "all_frozen_scientific_bytes_unchanged": true,
+    "fixed_stress_prescription_and_full_source_retained": true
+  },
+  "proof_checks": {
+    "all_full_spatial_tensor_components": true,
+    "all_spatial_coefficient_and_tail_bounds_actual_mass_and_normalization": true,
+    "all_spatial_coefficient_and_tail_bounds_flat_bulk_tail_display": true,
+    "all_spatial_coefficient_and_tail_bounds_flat_bulk_unit_slab_display": true,
+    "all_spatial_coefficient_and_tail_bounds_full_flat_nonlocal_display": true,
+    "all_spatial_coefficient_and_tail_bounds_full_flat_nonlocal_tail_display": true,
+    "all_spatial_coefficient_and_tail_bounds_ordinary_conversion_display": true,
+    "all_spatial_coefficient_and_tail_bounds_ordinary_tail_display": true,
+    "all_spatial_coefficient_and_tail_bounds_positive_first_moments": true,
+    "all_spatial_momentum_coefficient_and_tail_bounds": true,
+    "all_three_equal_time_conversion_coefficients": true,
+    "analytic_spectral_integrals_and_negative_axis_discs": true,
+    "both_external_metric_canonical_chain_factors": true,
+    "both_spin_sectors_and_longitudinal_cut": true,
+    "complete_spatial_tensor_numerators_both_spin_sectors": true,
+    "complete_spatial_tensor_numerators_full_spatial_matrix": true,
+    "complete_spatial_tensor_numerators_nonzero_transfer_retained": true,
+    "contact_and_memory_regulators_not_silently_equated": true,
+    "exact_covariant_time_subtraction_conversion_cubic_numerator_not_dropped": true,
+    "exact_covariant_time_subtraction_conversion_generic_division_exact": true,
+    "exact_covariant_time_subtraction_conversion_three_equal_time_coefficients": true,
+    "flat_representative_not_actual_CD_state_replacement": true,
+    "generic_cubic_division_with_full_tensor_residue": true,
+    "independent_four_curvature_tensor_Hessians": true,
+    "lightcone_projector_poles_canceled_before_integration": true,
+    "no_curved_odd_endpoint_discard": true,
+    "no_physical_finite_polynomial_selected": true,
+    "not_fully_reduced_mixed_norm_or_same_space_inverse": true,
+    "original_V_G_B_not_closed": true,
+    "physical_flat_retarded_extraction_and_nonlocality_all_nonzero_displayed_TT_moments": true,
+    "physical_flat_retarded_extraction_and_nonlocality_complete_even_time_order_four": true,
+    "physical_flat_retarded_extraction_and_nonlocality_same_full_tensor_nonzero_transfer": true,
+    "same_full_parent_normalization_state_and_prescription": true,
+    "six_spatial_and_four_time_source_derivatives_explicit": true,
+    "spatially_nonlocal_coefficients_not_local_counterterms": true
+  },
+  "retarded_origin_and_uniform_spatial_bounds": {
+    "bounds": {
+      "analytic_disc": "For fixed real p, q=|p|^2, use |z+q|<=m^2. Then |s-z|>=3s/4 for s>=4m^2, |z|<=q+m^2 and ||z I+p p^T||op<=2(q+m^2).",
+      "canonical": "Both external-metric chain factors give4e-790||D||L2 Z and4e-783||D||L2 Z/Lambda. These derivative-losing flat-benchmark bounds are not a fully reduced mixed norm, same-space inverse or contraction.",
+      "coefficient_bound": "Cauchy gives ||A_r(p)||<=(q+m^2)^3/[80pi^2 m^(2r+2)] for r=0,1,2, at every real spatial momentum.",
+      "complete_flat_bulk": "The actual sixth-derivative spectral sine bulk has matrix majorant integral (2rho2+rho0)(1+q/s)^2/(s+q)^(7/2) ds <=7/[192pi^2 sqrt(4m^2+q)]. On the unit slab its bilinear is below1e-5||D||L2||partial_t^6 Gamma||L2 for m=1000, with spectral tail below||D||L2||partial_t^6 Gamma||L2/(100sqrt(Lambda)).",
+      "full_nonlocal_response": "Let U(Gamma)^2=Z(Gamma)^2+||partial_t^6 Gamma||L2^2. The complete specified flat covariant nonlocal representative has weak bound2e10||D||L2 U, and full spectral tail1e14||D||L2 U/sqrt(Lambda) for Lambda>=4m^2. Canonical displays are8e-790 and4e-786/sqrt(Lambda). The physical local polynomial and full curved response are not included.",
+      "full_tensor_norm": "On complex symmetric spatial matrices with Frobenius norm, ||Q0||<=||A||op^2 and ||Q2||<=2||A||op^2, using the rank-one trace term as well as A D A^T. Thus ||F||<=(32/3)(I2+I0)(q+m^2)^3 on the disc.",
+      "standard_norm": "For m=1000, let Z(Gamma)^2=sum_(r=0)^2||(1-Delta)^3 partial_t^(2r) Gamma||L2^2. Since m>=1, the full conversion is below1e10||D||L2 Z and its spectral tail below1e17||D||L2 Z/Lambda. The source norm includes six spatial and four time derivatives.",
+      "tail_bound": "With a computational squared-spectral-mass limit Lambda>=4m^2, ||A_r-A_r,Lambda||<=(q+m^2)^3/[9pi^2 m^(2r) Lambda]. This bounds actual improper tails, not an assumed physical cutoff.",
+      "weighted_norm": "Let Y(Gamma)^2=sum_(r=0)^2 m^(-4r)||(m^2-Delta)^3 partial_t^(2r) Gamma||L2^2. The conversion bilinear is bounded by sqrt(3)/(80pi^2 m^2)||D||L2 Y, with tail sqrt(3)/(9pi^2 Lambda)||D||L2 Y."
+    },
+    "flat": {
+      "exact_retarded_extraction": "For y=G_E,ret Gamma with E^2=s+q, y''+E^2 y=Gamma and common zero initial jets give y=Gamma/E^2-Gamma''/E^4+Gamma''''/E^6-G_E,ret Gamma^(6)/E^6. The final transform is exactly w^3/[E^6(E^2-w)].",
+      "no_curved_odd_term_discard": "The flat real tensor spectral sine kernel has only these even endpoint derivatives. This follows after the full flat tensor cut is reconstructed, not by dropping odd terms in the curved complex-amplitude S198 identity.",
+      "nonlocality": "For a unit-norm spatial TT direction transverse to p, A0_TT=-q^3 integral rho2(s)/[s^3(s+q)]ds. Around q=0 its q^(3+n) coefficient is(-1)^(n+1) moment(2,3+n), nonzero for every n>=0. Therefore the finite equal-time conversion is not a finite spatial differential counterterm.",
+      "physical_flat_kernel": "The complete spatial current spectral sine kernel is theta(t) integral sum_i rho_i(s)Pi_i(s,p) sin(sqrt(s+q)t)/sqrt(s+q) ds. Pi_i=Q_i/s^2; the S199 normalization already includes the full physical modes, Wick exchange and i/4.",
+      "positive_TT_moments": [
+        "3/(3584*pi**2*mass**2)",
+        "31/(322560*pi**2*mass**4)",
+        "157/(10644480*pi**2*mass**6)",
+        "79/(30750720*pi**2*mass**8)"
+      ],
+      "regulator_boundary": "The spectral integrals here and their tails define continuum flat quantities. They do not identify the original contact one-mode band with the memory two-mode band, or assert that a finite hard-band subtraction has the same physical local polynomial.",
+      "scope": "A full spatial flat nonlocal-representative conversion, not the curved CD endpoint/contact matching, fixed finite local action, full inverse, interacting background, cutoff or original V/G/B."
+    }
+  },
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "40d4565c8c84da34933ab958c45c18081957293977cb6a74885c08d9e0fc8ce6",
+    "README.md": "2b97c3e2b5c0f8ed4667015f1067b8c7278c86c16e25468e46897f32b81e2981",
+    "notes/bounds.md": "48e9926e48ee9a9a0d7e26103dee3396a8c312deb99d9a2b6a51fa438de8dc5f",
+    "notes/conversion.md": "7f65072ca222fd214c94041fc322d7d11a7bf22bec771e7625e238c2b8c8205e",
+    "notes/flat.md": "413e8061104fef2bdc02805c42827ac17bfeac04044bdd5b3fe46458fa15973f",
+    "notes/limit.md": "331cbe2ce0aa524dec6a5c057dba5a664ab96d0e4b4cee9bc56b9e93ad00f87e",
+    "notes/scope.md": "0926ae03c3ab0653dd3a6394d90ddbd7edcb3f7637f4d9c03cb0b21914c440c7",
+    "notes/tensor.md": "ac7badb40d17e8ba8de9d64ac4b5bf0980df64304e452da6ecf78ff21ef2bb7d",
+    "notes/validation.md": "51cb576afef6ddfd5a1e21fdf1a7387c60c9e0c2232cd3b14a069f3ac14e7cf6",
+    "src/p8_vacuum_affine_flat_spatial_conversion/__init__.py": "8e4c532c6591879a65ad8b2891ce150b4b213c753554e7cf4ed64d062901381b",
+    "src/p8_vacuum_affine_flat_spatial_conversion/audit.py": "a5d53152a27994806e7fe96fa2ab7c3e1f6fae6cfdb1a6bc69f38604797d52bd",
+    "src/p8_vacuum_affine_flat_spatial_conversion/bounds.py": "68249d8dedbcc7e10af4e6c0cf7d3c2aab1d45c152477d996ec29ebbb9ecaf1c",
+    "src/p8_vacuum_affine_flat_spatial_conversion/conversion.py": "da93bb646667856c2bb630d6809b9e3ef6bcf2c8f885b2476aaa794e0a44de49",
+    "src/p8_vacuum_affine_flat_spatial_conversion/flat.py": "e2a30c4b6033a1178c2ac7a94045c5e517588bea3e6383f5e8de3f4895ae7297",
+    "src/p8_vacuum_affine_flat_spatial_conversion/tensor.py": "1590d311692c6076e7872db81848cc06ddd3584a7edfa4be563d6eb3531c02e9",
+    "src/p8_vacuum_affine_flat_spatial_conversion/verify.py": "d660d54a8be113ab999fc0d7720edd84fa019f9114e796a9b2c9d8777210fe28",
+    "tests/test_affine_flat_spatial_conversion_certificate.py": "5a194db90f849c5fb048c1a06195a546335869aa1407c462eb2224eee858d9e3",
+    "tests/test_affine_flat_spatial_conversion_science.py": "c7da1b79b5e1fb3e66ea66010da1ff679dca91f575bb14f7678d5fdeede772d1"
+  },
+  "status": "FULL_SPATIAL_FLAT_PROCA_COVARIANT_AND_RETARDED_TIME_SUBTRACTION_CONVERSION_WITH_NONLOCAL_COEFFICIENT_BOUNDS; NOT_CURVED_SPATIAL_MATCHING_PHYSICAL_LOCAL_POLYNOMIAL_FULL_INVERSE_BACKGROUND_CUTOFF_V_G_B_OR_ORIGINAL_P8",
+  "verdict": "The full mass1000 canonical Proca flat spatial cut admits polynomial covariant tensor numerators with no lightcone projector pole. Exact cubic division expresses the specified covariant nonlocal representative as the actual flat sixth-time-derivative subtracted spectral bulk plus three convergent equal-time tensor coefficients. Their nonzero-transfer dependence is genuinely spatially nonlocal, with all-momentum coefficient bounds and explicit inverse-Lambda spectral tails. The standard six-spatial/four-time source norm gives conversion bound1e10 and tail1e17/Lambda; both external-metric canonical factors yield4e-790 and4e-783/Lambda. Combining this with the absolute spectral sine bulk gives the complete specified flat nonlocal weak bound2e10 in the stated six-spatial/six-time source norm, with tail1e14/sqrt(Lambda) and canonical displays8e-790 and4e-786/sqrt(Lambda). Complete nonzero-transfer curvature Hessians, matrix spectral integrals, frequency derivatives and prepared sine-kernel tests are independent checks. This representative conversion does not select the physical local polynomial, identify different finite regulators, remove curved odd endpoints, solve the actual CD covariant contact/endpoint matching, provide a mixed same-space inverse, finite-coupling background, stability, physical cutoff or finite-gravity Regge data. Original V/G/B and P8 remain open.",
+  "verification_boundary": "Exact complete spatial polynomial numerators, generic cubic division, spectral residues, moment constants, canonical factors and retarded identities. Independent covariant four-curvature tensors at nonzero transfer, full matrix improper spectral integrals, centered frequency derivatives, operator norms, infinite tails and literal prepared sine kernels supplement written analytic arguments. Native, direct science, ordinary and CLI use original SymPy; only full regression uses the audited exact GCD adapter. The continuous analytic and operator-norm arguments are not FORMALIZED.",
+  "written_proofs": [
+    "notes/tensor.md",
+    "notes/conversion.md",
+    "notes/flat.md",
+    "notes/bounds.md",
+    "notes/limit.md",
+    "notes/scope.md",
+    "notes/validation.md"
+  ]
+}
