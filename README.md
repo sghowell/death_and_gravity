@@ -438,7 +438,12 @@ around a pre-registered problems document and a certificate-gated ledger.
   This is still linear light evolution and its leading heavy response,
   not a full nonlinear solution or UV-admissible completion.
 
-The [current P8 continuation audit](docs/assessment-2026-09-12-p8-affine-curved-scalar-reference.md)
+The [current P8 continuation audit](docs/assessment-2026-09-12-p8-affine-weighted-channel-resolvent.md)
+establishes an all-momentum weighted inverse for explicitly bounded channel
+corrections and the actual curved reference. It retains the physical density,
+initial boundary and a growing comparison pole; weighted existence is not
+stability, and the complete actual curved remainder still needs its own bound.
+The [curved scalar reference audit](docs/assessment-2026-09-12-p8-affine-curved-scalar-reference.md)
 establishes the actual curved scalar curvature coordinates, complete original
 finite local Hessian and a causal curved-coordinate reference inverse, uniformly
 in spatial momentum. Its middle nonlocal factors remain the specified flat
