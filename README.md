@@ -438,12 +438,12 @@ around a pre-registered problems document and a certificate-gated ledger.
   This is still linear light evolution and its leading heavy response,
   not a full nonlinear solution or UV-admissible completion.
 
-The [current P8 continuation audit](docs/assessment-2026-09-13-p8-affine-heavy-source-filtration.md)
-derives the complete fixed-state heavy-source influence and countergraded
-clock-loop filtration, while retaining unsuppressed source-free quantum
-channels. The full physical forced-heavy estimate does not establish a
-nonlinear feedback bound, complete curved subtraction, physical loop sizes
-or original V/G/B/P8 closure.
+The [current P8 continuation audit](docs/assessment-2026-09-13-p8-affine-coupled-gaussian-state.md)
+constructs the complete current coupled scalar and tensor Gaussian free
+reference, with full physical canonical normalization, matrix sampling,
+complex CCR and a written all-order reduced two-cone short-distance proof.
+The full nonlocal/interacting state, physical curved subtraction, loop
+bounds, nonlinear bounce and original V/G/B/P8 closure remain separate.
 The [complete heavy ADM and common-clock response audit](docs/assessment-2026-09-13-p8-affine-heavy-adm-clock-response.md)
 bounds the entire actual heavy ADM and common-clock response at every transfer,
 with all ten metric directions, both ordered Ward terms, the distinct clock
