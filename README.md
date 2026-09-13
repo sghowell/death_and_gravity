@@ -438,7 +438,14 @@ around a pre-registered problems document and a certificate-gated ledger.
   This is still linear light evolution and its leading heavy response,
   not a full nonlinear solution or UV-admissible completion.
 
-The [current P8 continuation audit](docs/assessment-2026-09-13-p8-affine-heavy-homogeneous-response.md)
+The [current P8 continuation audit](docs/assessment-2026-09-13-p8-affine-heavy-spatial-response.md)
+bounds the entire actual heavy spatial response at every external transfer,
+with the full homogeneous anchor, prepared-state and time remainders,
+dimensionally matched UV subtraction and unchanged profile retained.
+Its restored original-frequency projection has an explicit tail bound;
+full ADM/common-clock reconstruction, a compatible inverse and P8 closure
+remain separate.
+The [complete heavy homogeneous response audit](docs/assessment-2026-09-13-p8-affine-heavy-homogeneous-response.md)
 bounds the entire actual heavy SLE homogeneous spatial response, including
 the full prepared covariance, all metric contacts, complete covariant finite
 matching and the unchanged fixed profile. Mass-uniform entire remainders
