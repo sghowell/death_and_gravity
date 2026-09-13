@@ -1,0 +1,17 @@
+# Independent validation and immutable replay boundary
+
+The source manifest consists of six package modules, two test modules, README, FORMULATION and seven proof notes: seventeen files. The native report has twenty fields. Every report field has a mutation-rejection test, and the private source hashes must equal the frozen repository/native hashes.
+
+The exact audit has103 named identities and205 scalar entries,37 proof gates, nine controls and181 rejected unsupported inputs. Nine original primitive rows and102 previous matching records are unchanged. No rejected-input count is presented as a continuum proof.
+
+The independent science suite contains389 tests. Besides every exact row, proof gate and invalid input, it includes six complete covariant scalar stress/boost fixtures, three full9-by9 angular tensor integrals, ten noncommuting Cartesian sphere comparisons in dimensions2 through6, and three literal four-index curvature Hessians. These retain the full trace, mass, Weyl and scalar curvature coefficients and distinguish the action from its Hessian.
+
+Sixteen seventy-digit full radial-versus-closed comparisons include tiny actual-heavy low-frequency values and very large complex ratios. Twelve complete reciprocal reconstructions integrate both thresholds and the entire infinite tail for two mass pairs, including n=10^200/512+2. Four additional complex quotient reconstructions check BOTH matrix inverse products. Two one-sided threshold tests retain the actual interior trace cusp. Separate oscillator tests retain the initial delta, and controls reject inheriting the Proca-only pole or summing separate inverses.
+
+The private reciprocal reconstruction maximum relative discrepancy was below6e-67 against a1e-50 tolerance. The radial discrepancy was below6e-71 against1e-55. These diagnostics are not the sign, contour or uniform mapping proof; those are written in the corresponding notes.
+
+One private numerical quadrature initially lost relative accuracy because the entire integrand was about10^-192. Rescaling the integration by its known overall ratio restored the same acceptance tolerance without modifying the formula or deleting the contribution. The first full science run passed384 tests and failed one strict native-Boolean control because its exact comparison returned SymPy BooleanTrue. Converting that control to native bool preserved the assertion; the expanded fresh suite passed all389 tests in71.60 seconds. Template count metadata was aligned with the actual new audit before freezing. Ruff imports, unused temporary data and collection construction were corrected before any native freeze. No inequality or test tolerance was weakened.
+
+Final private preflight must check all seventeen sources, four source-pinned predecessor reports, twenty report/certificate fields, serializable complete packets and every exact count, then rerun the science suite. Native generation and fresh repository, ordinary, standalone CLI and full-snapshot validation are separate gates. Their final execution evidence belongs in the external assessment rather than retroactive edits to these frozen notes.
+
+Native, direct, ordinary and CLI replays use original SymPy. Only full regression may use the separately audited exact-GCD adapter and its original-tuple self-checks. No frozen source, proof, test or report is edited to accommodate a later replay. Written continuum proofs are not FORMALIZED.
