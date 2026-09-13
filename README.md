@@ -438,12 +438,12 @@ around a pre-registered problems document and a certificate-gated ledger.
   This is still linear light evolution and its leading heavy response,
   not a full nonlinear solution or UV-admissible completion.
 
-The [current P8 continuation audit](docs/assessment-2026-09-13-p8-affine-two-mass-nonscalar-inverse.md)
-constructs the actual current conditional tensor/vector causal inverse,
-with full nonscalar curvature, both Ward legs and compatible shift-force
-recovery. Together with the scalar/clock/M1 inverse it covers the stated
-smooth prepared bounded-Fourier subgraphs; unrestricted forcing, stability,
-interacting bounce and original V/G/B/P8 closure remain separate.
+The [current P8 continuation audit](docs/assessment-2026-09-13-p8-affine-heavy-source-filtration.md)
+derives the complete fixed-state heavy-source influence and countergraded
+clock-loop filtration, while retaining unsuppressed source-free quantum
+channels. The full physical forced-heavy estimate does not establish a
+nonlinear feedback bound, complete curved subtraction, physical loop sizes
+or original V/G/B/P8 closure.
 The [complete heavy ADM and common-clock response audit](docs/assessment-2026-09-13-p8-affine-heavy-adm-clock-response.md)
 bounds the entire actual heavy ADM and common-clock response at every transfer,
 with all ten metric directions, both ordered Ward terms, the distinct clock
