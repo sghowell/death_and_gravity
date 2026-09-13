@@ -438,15 +438,15 @@ around a pre-registered problems document and a certificate-gated ledger.
   This is still linear light evolution and its leading heavy response,
   not a full nonlinear solution or UV-admissible completion.
 
-The [current P8 continuation audit](docs/assessment-2026-09-13-p8-affine-coupled-principal-obstruction.md)
-supplies the complete nonreference four-mode Gaussian principal reduction,
-retaining the heavy source, all eight physical modes and every chart time
-term. A full varying-coefficient cone estimate gives unbounded-momentum
-growth in the specified off-shell fluctuation chart. The
-[homogeneous physical vertices](docs/assessment-2026-09-13-p8-affine-physical-background-vertices.md)
-and all fixed preparations remain unchanged. Unforced realization, a
-controlled cutoff, the interacting quantum mean, nonlinear bounce and
-original V/G/B/P8 remain open.
+The [current P8 continuation audit](docs/assessment-2026-09-13-p8-affine-classical-principal-realization.md)
+supplies actual local unforced classical comparison solutions of the entire
+current action, with exact constraint data, strict Euler pivots and the
+full rolling-heavy Gaussian map. The
+[complete principal obstruction](docs/assessment-2026-09-13-p8-affine-coupled-principal-obstruction.md)
+then holds on compact nonreference solution intervals and survives regular
+on-shell phase changes. All fixed quantum preparations remain unchanged.
+An evaluated physical cutoff, the interacting quantum mean, macroscopic
+nonlinear bounce and original V/G/B/P8 remain open.
 The [complete heavy ADM and common-clock response audit](docs/assessment-2026-09-13-p8-affine-heavy-adm-clock-response.md)
 bounds the entire actual heavy ADM and common-clock response at every transfer,
 with all ten metric directions, both ordered Ward terms, the distinct clock
