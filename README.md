@@ -438,7 +438,13 @@ around a pre-registered problems document and a certificate-gated ledger.
   This is still linear light evolution and its leading heavy response,
   not a full nonlinear solution or UV-admissible completion.
 
-The [current P8 continuation audit](docs/assessment-2026-09-13-p8-affine-heavy-spatial-response.md)
+The [current P8 continuation audit](docs/assessment-2026-09-13-p8-affine-heavy-adm-clock-response.md)
+bounds the entire actual heavy ADM and common-clock response at every transfer,
+with all ten metric directions, both ordered Ward terms, the distinct clock
+contact and the unchanged fixed profile retained once. Its restored original
+projection includes the nonzero projected-mean contact. A compatible inverse,
+interacting nonlinear bounce and original V/G/B/P8 closure remain separate.
+The [complete heavy spatial response audit](docs/assessment-2026-09-13-p8-affine-heavy-spatial-response.md)
 bounds the entire actual heavy spatial response at every external transfer,
 with the full homogeneous anchor, prepared-state and time remainders,
 dimensionally matched UV subtraction and unchanged profile retained.

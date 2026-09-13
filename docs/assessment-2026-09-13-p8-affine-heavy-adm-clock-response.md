@@ -1,0 +1,23 @@
+# P8 continuation: complete actual heavy ADM and common-clock response
+
+S6.246 reconstructs the entire first heavy Gaussian metric response, its independently fixed finite prescription and whole fixed profile in the actual QG2-H8A420 reference. All ten ADM directions, both ordered Ward terms and the nonlinear common-clock contact are included for every external momentum. The state, masses, matching coefficients and full profile are unchanged. Original P8 remains OPEN.
+
+The complete ADM metric first and mixed second jets are derived before contractions. The canonical scalar Hamiltonian retains every momentum, gradient, mass and shift feature. Its second shift vertex vanishes, but the second metric shift contact does not; those statements are not interchanged. An independent canonical gauge bridge keeps the density-gradient term. Eighteen full IVP fixtures test this bridge and its covariance consequence; omitting the density gradient produces a large defect.
+
+The prepared source uses a retarded gauge primitive and the compact detector uses an advanced primitive. Their endpoint fluxes are treated separately. The whole weight-one Gaussian current is retained in both ordered Ward identities. The spatial profile is removed before applying the Gaussian Ward identity, and the entire fixed ADM profile is then restored once. Under the nonlinear clock, the Gaussian and profile contacts are kept separately before cancellation in their sum. A full fixed profile is not individually an on-shell metric functional.
+
+The normalized full ADM response is below10^-327; the common-clock response is below10^-300, on the stated source norm with thirteen time derivatives and eight spatial derivatives and detector norm with two spatial derivatives. The reconstruction constants and all factorial derivative sums are explicit. This is a first response bound, not a nonlinear tube estimate or compatible inverse.
+
+The computational Ward-completed approximant uses the original two-leg memory mask and the projected one-leg mean. The full fixed profile and finite prescription are not refitted at each cutoff. The complete mean-contact correction3a³(P_K-P)(4delta²-3delta)nDnG remains nonzero. The restored approximation error is below10^-200/K for K>=2m. This is not a claim that the bare finite-cutoff response satisfies the full unprojected Ward identity.
+
+The scalar gauge and stress-insertion argument uses the applicable free-field metric-variation identity in [Hollands and Wald, gr-qc/0404074v2](https://arxiv.org/abs/gr-qc/0404074v2). The paper does not supply this model's finite prescription or numerical constants; those are derived and checked here.
+
+Private preflight checked seventeen inputs and twenty report fields in114.334424 seconds; science passed363 tests in0.72 seconds. The separate repository preflight took107.974879 seconds; science passed363 tests in0.77 seconds. There are65 named identities,200 scalar entries,50 proof gates, nine controls and172 rejected unsupported inputs. All nine primitive rows and101 previous matching records remain unchanged, and one scoped record is appended.
+
+The native report contains71628 ASCII characters in six verified chunks. Its raw SHA256 is c1b11dd8afe198c5a176e0e66b64065fd1a3a4644f6f8054cf80e9ec38d20123. All seventeen private/repository/source hashes and twenty report fields agree. No frozen scientific bytes changed.
+
+Fresh ordinary replay passed388 tests in2710.51 seconds; standalone CLI replay passed, both exit0. The complete shared S246/S247 snapshot passed54435 tests in4544.13 seconds, exit0. All747 captured test files were collected and stayed unchanged; snapshot SHA256 a892717a21dbbba85f14220bb49e8870ab6b98428f5fa814dc8be24b8d7e4f38. The runner checked569 static namespace ancestors and128 exact-GCD self-tests; final counters were36811 domain fallbacks,7340 exact descents and94 mixed fallbacks. This single complete snapshot contained both independently frozen checkpoints, each retaining its own native/direct/ordinary/CLI gates.
+
+Native, direct, ordinary and CLI replays use original SymPy. Only full regression uses the separately audited exact-GCD adapter and frozen S219 helper allowance. These exact checks and written continuum proofs are not FORMALIZED.
+
+Publication uses the exact21-file manifest, staged native hashes and an explicit remote check, excluding later checkpoints and unrelated P4/P9 changes. S246 itself does not prove a compatible curved inverse, interacting light/mixed loops, finite inhomogeneous nonlinear feedback, a controlled same-state bounce, quantum gravitational limit, physical UV/Regge or original V/G/B/P8 closure. No user intervention is required.
