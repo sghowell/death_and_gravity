@@ -438,7 +438,12 @@ around a pre-registered problems document and a certificate-gated ledger.
   This is still linear light evolution and its leading heavy response,
   not a full nonlinear solution or UV-admissible completion.
 
-The [current P8 continuation audit](docs/assessment-2026-09-13-p8-affine-heavy-state-response.md)
+The [current P8 continuation audit](docs/assessment-2026-09-13-p8-affine-heavy-spatial-uv.md)
+derives the complete minimal-scalar spatial UV input and its same-scheme
+finite difference. Both ordered trace-gradient products, all six invariants
+and the full dimensional counteraction are retained. The local graph bound
+does not yet establish the full causal response, quantum inverse or P8 closure.
+The [complete state-selection response audit](docs/assessment-2026-09-13-p8-affine-heavy-state-response.md)
 bounds the entire exact heavy SLE-minus-comparison response and its unchanged
 fixed-profile summand. It retains all ADM Hamiltonian contacts, both reflected
 commutator branches and the finite-cutoff common-clock mean-tail contact.
