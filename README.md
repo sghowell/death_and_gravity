@@ -438,7 +438,12 @@ around a pre-registered problems document and a certificate-gated ledger.
   This is still linear light evolution and its leading heavy response,
   not a full nonlinear solution or UV-admissible completion.
 
-The [current P8 continuation audit](docs/assessment-2026-09-13-p8-affine-heavy-clock-quadratic.md)
+The [current P8 continuation audit](docs/assessment-2026-09-13-p8-affine-heavy-state-response.md)
+bounds the entire exact heavy SLE-minus-comparison response and its unchanged
+fixed-profile summand. It retains all ADM Hamiltonian contacts, both reflected
+commutator branches and the finite-cutoff common-clock mean-tail contact.
+The full renormalized comparison response, quantum inverse and P8 remain open.
+The [clock-quadratic and finite-local audit](docs/assessment-2026-09-13-p8-affine-heavy-clock-quadratic.md)
 checks the actual QG2 clock Hessian and every classical comparison hypothesis.
 The complete finite heavy ADM/clock response includes the full fixed-profile
 contacts, and the entire tensor Euler operator retains its physical weighted
