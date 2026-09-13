@@ -1,0 +1,13 @@
+# Independent validation boundaries
+
+All finite diagnostic helpers retain exact SymPy arithmetic; native/direct/ordinary/CLI use original SymPy. The audited exact-GCD adapter is reserved for full regression. Every frozen scientific source and report remains unchanged.
+
+Exact checks reconstruct the entire physical-density auxiliary Legendre transform, full Dirac bracket including its nonzero lower commutator, both inverse products, delta/measure cancellation, full configuration Schur determinant and crossing distinction. The full matrix Wick, Duhamel, canonical-basis and CTP-overlap routes check the mean, retarded sign, anomalous terms, noise transpose, seagulls and metaplectic phase. Noncommuting formal log-determinant series check countervertex splitting without a convergence inference.
+
+There are107 additional independent diagnostics. They re-enter the full scalar action at eight exact current-shaped coefficient fixtures, including Theta0 and the physical kappa=10^800 density; derive every primary/secondary bracket and physical Dirac bracket; and compare six sourced noncommuting Gaussian Schur integrations. Ten coupled and six tensor finite-Fock calculations reproduce complete unequal-time means, Wick noise and commutators, including both tensor polarizations. Their quartic vacuum moments are exactly supported within the chosen occupation space.
+
+Five separate full CTP evolution calculations compare occupation cutoffs10 and14 and the full classical Bogoliubov formula along short identity-branch paths. Five complete-turn controls detect the missing metaplectic sign. Four further exact squeezed-annihilator, norm and Weyl-Schrodinger phase calculations verify the differential logarithm prescription. Four time-dependent full-matrix integrations compare the retarded commutator integral with two-step finite variations of the entire evolved covariance. These finite numerical checks do not estimate a continuum cutoff error.
+
+A separately entered complete canonical action checks the whole scalar Hessian, all seven first and28 second coefficient vertices. Six full two-polarization actions independently check tensor scale vertices. Five scalar determinant series check noncommuting matrix Taylor coefficients through fifth order; five time-dependent symplectic maps check the connection and entire p dq boundary; six four-dimensional Taylor-jet diagnostics check the normal subtraction operation. The unchanged nine primitive and108 matching records are checked independently.
+
+Continuum Wick products, the symbol scaling estimate and distributional extension family require their written arguments; finite tests do not FORMALIZE them. No diagnostic or positive noise covariance is a numerical physical loop bound.
