@@ -1,0 +1,9 @@
+# Primary-source context and independent derivations
+
+[Henning, Lu and Murayama, One-loop Matching and Running with Covariant Derivative Expansion](https://arxiv.org/abs/1604.01019) provides the functional context for keeping mixed heavy/light effects after nonlocal heavy integration. Its one-light-particle-irreducible trace-log discussion motivates checking the complete light Hessian. The field-independent Gaussian heavy determinant does not remove mixed loops. Our literal model, all routings, integral coefficients and finite value condition are derived independently.
+
+[Denner, Techniques for the calculation of electroweak radiative corrections at the one-loop level and results for W-physics at LEP200](https://arxiv.org/abs/0709.1075), sections4.3.1-4.3.3, fixes the stated conventional A0, B0 and C0 notation and the Feynman prescription. In particular Cbar=-C0 because our heavy exchange is written1/(n-q²). The sign is independently checked by the full first-cut identity. No electroweak model assumption is imported.
+
+[de Rham, Melville, Tolley and Zhou, Massive Galileon Positivity Bounds](https://arxiv.org/abs/1702.08577) distinguishes low-energy matching and higher operators from a full UV completion. S231/S232 already state the precise physical dispersion premises used for the original target. A renormalization condition at one subthreshold point does not prove those premises or determine their full physical coefficients.
+
+The complete bubble/triangle/ordered-box expression, full UV cancellation, off-shell constant-Hessian check, symmetric loop sign and contact-to-classical-margin bounds are this checkpoint's own calculations. The cited works are methodological context, not certificates for our model, a common-parent bounce, an all-loop error or original P8 closure. No quoted formula supplies a missing high-energy or curved-space estimate.

@@ -438,7 +438,12 @@ around a pre-registered problems document and a certificate-gated ledger.
   This is still linear light evolution and its leading heavy response,
   not a full nonlinear solution or UV-admissible completion.
 
-The [current P8 continuation audit](docs/assessment-2026-09-12-p8-affine-heavy-scalar-one-loop.md)
+The [current P8 continuation audit](docs/assessment-2026-09-12-p8-affine-heavy-scalar-four-point-loop.md)
+derives the complete first four-point loop, including all ordered diagrams,
+full UV cancellation and the first elastic cut. One explicit symmetric-value
+matching contact preserves the contact-only classical quartic margin;
+full quantum matching and original P8 remain open.
+The [exact heavy integration and propagator audit](docs/assessment-2026-09-12-p8-affine-heavy-scalar-one-loop.md)
 derives exact finite-regulator heavy integration and complete first-loop
 propagator input for the separate two-scalar model, including a uniform
 complex-disk bound and the first heavy decay coefficient. These are not
