@@ -1,0 +1,13 @@
+# Independent validation and immutable publication boundary
+
+The package has58 named exact identities containing58 scalar entries,25 gates,nine controls and228 rejected unsupported inputs. It adds one first-loop matching record, giving90 records while preserving the same nine original primitive statuses. The17 scientific inputs are six modules, two tests, two root documents and seven notes; the report has20 top-level fields with individual mutation rejection and missing/extra controls.
+
+Independent2/3-site calculations reconstruct the entire Gaussian action, full light Hessian and ordered two-field Schur complement. Separate Gaussian quadrature checks the normalization with a nonzero source. Wick routes are enumerated with labelled external legs, distinguishing the mixed bubble, heavy source tadpole and identical heavy bubble. A finite matrix trace-log expansion independently verifies the quadratic and quartic field coefficients.
+
+Tests derive the source counterterm cross term and its cancellation before keeping the remaining tadpole/bubble. Literal propagator and vertex products fix the insertion sign. Complete complex B0 quadratures, numerical derivatives and the separately subtracted logarithm are compared. Threshold squares distinguish the physical cut from the pseudothreshold. Independent upper-boundary logarithm integrals reproduce both equal and mixed absorptive coefficients, with wrong-sign controls.
+
+Actual-parameter diagnostics use500 decimal digits, including the endpoint layer near1/M_H². They verify the mass and slope coefficients and the complex-disk propagator ratio on three directions. The continuum result is proved by the full logarithm series and a uniform integrable majorant, not those samples. Every named parameter margin is also checked rationally.
+
+Negative scope controls reject a continuum quantum construction, a full angular or all-loop error, exact LSZ, removal of mixed loops or the source tadpole, a stable heavy atom, exact width, a first-sheet resonance, an unproved absence of higher-loop light cuts, a retarded one-copy substitution, original-parent replacement, physical cutoff and P8 closure. Exact complex-domain tests include the anchor and disk boundary.
+
+Private science, full source/field manifest and lint/format checks precede freezing. The exact finite-regulator and written analytic arguments are not FORMALIZED. Source-pinned predecessors are fully rebuilt read-only. Native/direct/ordinary/CLI retain original SymPy; only full P8 regression uses the audited exact-GCD adapter. Every fresh replay path must pass before publication. Actual timings and any private harness corrections belong in the external assessment, not in edits to frozen scientific bytes.

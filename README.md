@@ -438,7 +438,12 @@ around a pre-registered problems document and a certificate-gated ledger.
   This is still linear light evolution and its leading heavy response,
   not a full nonlinear solution or UV-admissible completion.
 
-The [current P8 continuation audit](docs/assessment-2026-09-12-p8-affine-heavy-scalar-tree-matching.md)
+The [current P8 continuation audit](docs/assessment-2026-09-12-p8-affine-heavy-scalar-one-loop.md)
+derives exact finite-regulator heavy integration and complete first-loop
+propagator input for the separate two-scalar model, including a uniform
+complex-disk bound and the first heavy decay coefficient. These are not
+exact quantum propagator or full common-parent matching claims; P8 remains open.
+The [separate heavy-scalar tree matching audit](docs/assessment-2026-09-12-p8-affine-heavy-scalar-tree-matching.md)
 constructs a separate local two-scalar model with a globally coercive potential
 and a complete massive tree matching error below 1/60 up to energy 10^98.
 Its exact low coefficients and full first elastic comparison do not establish
