@@ -438,7 +438,12 @@ around a pre-registered problems document and a certificate-gated ledger.
   This is still linear light evolution and its leading heavy response,
   not a full nonlinear solution or UV-admissible completion.
 
-The [current P8 continuation audit](docs/assessment-2026-09-12-p8-affine-heavy-scalar-four-point-loop.md)
+The [current P8 continuation audit](docs/assessment-2026-09-12-p8-affine-heavy-scalar-loop-remainder.md)
+bounds the complete first-loop correction over the full stated physical
+energy-and-angle window, using the existing matching condition unchanged.
+The tree-plus-first-loop comparison is controlled; omitted loops, the
+original common-parent bounce and P8 remain open.
+The [four-point loop and symmetric matching audit](docs/assessment-2026-09-12-p8-affine-heavy-scalar-four-point-loop.md)
 derives the complete first four-point loop, including all ordered diagrams,
 full UV cancellation and the first elastic cut. One explicit symmetric-value
 matching contact preserves the contact-only classical quartic margin;
