@@ -438,12 +438,12 @@ around a pre-registered problems document and a certificate-gated ledger.
   This is still linear light evolution and its leading heavy response,
   not a full nonlinear solution or UV-admissible completion.
 
-The [current P8 continuation audit](docs/assessment-2026-09-13-p8-affine-two-mass-reference.md)
-inverts the complete same-prescription Proca-plus-heavy flat Gaussian reference,
-with both mass thresholds, fixed finite sum and the full cut-only reciprocal.
-Its flat scalar quotient inverse is uniform over external transfer and retains
-the physical normalization; an actual curved coupled inverse, stability,
-interacting nonlinear bounce and original V/G/B/P8 closure remain separate.
+The [current P8 continuation audit](docs/assessment-2026-09-13-p8-affine-two-mass-coupled-inverse.md)
+constructs the actual current conditional scalar/clock/M1 causal inverse,
+with both full Gaussian species, fixed finite prescriptions and every profile
+once. Complete constraint and force recovery holds on its stated smooth
+prepared bounded-Fourier subgraph; nonscalar sectors, unrestricted graph
+closure, stability, interacting bounce and original V/G/B/P8 remain separate.
 The [complete heavy ADM and common-clock response audit](docs/assessment-2026-09-13-p8-affine-heavy-adm-clock-response.md)
 bounds the entire actual heavy ADM and common-clock response at every transfer,
 with all ten metric directions, both ordered Ward terms, the distinct clock
