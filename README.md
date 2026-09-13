@@ -438,13 +438,20 @@ around a pre-registered problems document and a certificate-gated ledger.
   This is still linear light evolution and its leading heavy response,
   not a full nonlinear solution or UV-admissible completion.
 
-The [current P8 continuation audit](docs/assessment-2026-09-12-p8-affine-heavy-curved-state.md)
+The [current P8 continuation audit](docs/assessment-2026-09-13-p8-affine-heavy-clock-quadratic.md)
+checks the actual QG2 clock Hessian and every classical comparison hypothesis.
+The complete finite heavy ADM/clock response includes the full fixed-profile
+contacts, and the entire tensor Euler operator retains its physical weighted
+adjoint. Explicit local graph bounds do not establish the full nonlocal
+heavy response, a quantum inverse, stability or original P8 closure.
+The [specified heavy state and reference-stress audit](docs/assessment-2026-09-12-p8-affine-heavy-curved-state.md)
 specifies the added heavy field's prepared curved Gaussian state and full
 covariant scalar prescription, with all-momentum reference stress bounds
 through five time derivatives. A new fixed QG2 profile matches that mean
 and preserves first-loop vacuum matching within its own clock-tube budget.
-The changed clock Hessian, full quantum response, interacting bounce,
-quantum gravitational limit, UV, Regge and original P8 remain open.
+That state/mean construction alone does not establish the changed clock
+Hessian or full quantum response. Interacting bounce, quantum gravitational
+limit, UV, Regge and original P8 remain open.
 The [complete classical-limit parent-loop audit](docs/assessment-2026-09-12-p8-affine-heavy-parent-one-loop.md)
 computes the complete first loop of the full classical limiting parent,
 including all allowed higher-vertex contractions and dimensionally complete

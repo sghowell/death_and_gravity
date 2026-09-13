@@ -1,0 +1,13 @@
+# Validation and immutability boundary
+
+Six package modules, two test modules, two root Markdown files and seven proof notes form the seventeen-input source manifest. The read-only native certificate has twenty top-level fields. No frozen prior scientific, proof, test, certificate or prescription bytes are changed.
+
+The new audit contains49 named exact residuals,64 scalar entries (including the full4x4 metric-inverse second-jet identity),41 proof gates, nine controls,284 rejected inputs and97 matching rows. Each named scalar or matrix entry is checked. Certificate tests reject mutation of every top-level field, missing or extra fields, and verify every source hash and exact count.
+
+Science tests independently check the full Legendre transform and weighted phase damping, massive fundamental-matrix fixtures, a nonlinear ADM identity against the full Christoffel construction, scalar curvature/Weyl under complete time-coordinate changes, lapse/scale Euler matching, the nonzero state-profile second-chart chain rule, all local polynomial terms and momentum degrees, literal unimodular TT curvature, the full256-index Weyl contraction with its exact boundary, and the whole tensor weighted Euler operator. Negative controls reject principal-symbol-only and wrong-adjoint replacements. Numerical fixtures are diagnostics, not universal inequalities; the latter use the exact bounds and written arguments.
+
+The current Hamiltonian is represented by the complete generic rational Hamiltonian plus an exact simultaneous substitution map for the full current reference functions. Polynomial identities are checked before that substitution; every coefficient is phase-independent. This avoids an enormous expanded repeated denominator without truncating any current function or bypassing its hypotheses.
+
+Private science, lint and manifest/AST preflight precede freezing. The original-SymPy native rebuild checks every prior report and captured source byte, then emits the complete report as an exact lossless byte stream. The resulting report is never edited or reconstructed by a different JSON layout. Fresh repository science, ordinary replay, standalone CLI replay and the full regression must pass before publication. Completion timings and any private diagnostics belong in the external assessment, not mutable frozen proof files.
+
+Native, direct, ordinary and CLI runs retain original SymPy. Only the full regression uses the already audited exact-GCD adapter, with its128 self-checks and immutable snapshot. A passing finite certificate does not close the remaining quantum response, stability, UV, Regge or original P8 claims.
