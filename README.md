@@ -438,7 +438,12 @@ around a pre-registered problems document and a certificate-gated ledger.
   This is still linear light evolution and its leading heavy response,
   not a full nonlinear solution or UV-admissible completion.
 
-The [current P8 continuation audit](docs/assessment-2026-09-12-p8-affine-heavy-scalar-loop-remainder.md)
+The [current P8 continuation audit](docs/assessment-2026-09-12-p8-affine-heavy-scalar-loop-coefficients.md)
+bounds three complete first-loop low-energy coefficients using a directly
+proved joint complex neighborhood. The finite prescription is unchanged;
+these are truncated-amplitude results, not omitted-loop control or exact
+physical coefficient matching. Original P8 remains open.
+The [full physical-angle loop audit](docs/assessment-2026-09-12-p8-affine-heavy-scalar-loop-remainder.md)
 bounds the complete first-loop correction over the full stated physical
 energy-and-angle window, using the existing matching condition unchanged.
 The tree-plus-first-loop comparison is controlled; omitted loops, the
