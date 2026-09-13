@@ -438,14 +438,15 @@ around a pre-registered problems document and a certificate-gated ledger.
   This is still linear light evolution and its leading heavy response,
   not a full nonlinear solution or UV-admissible completion.
 
-The [current P8 continuation audit](docs/assessment-2026-09-13-p8-affine-physical-background-vertices.md)
-supplies the complete homogeneous physical lapse, scale and M1 Gaussian
-vertices, joint scalar/longitudinal-Proca constraint measure, all eight
-reference modes and the nonzero held-vector embedding contact. It retains
-the [fixed-state Gaussian response](docs/assessment-2026-09-13-p8-affine-gaussian-measure-response.md)
-and all original preparations. Arbitrary covariant vertices, nonlinear
-quantum measure, physical curved subtraction, loop bounds, the interacting
-state, nonlinear bounce and original V/G/B/P8 remain open.
+The [current P8 continuation audit](docs/assessment-2026-09-13-p8-affine-coupled-principal-obstruction.md)
+supplies the complete nonreference four-mode Gaussian principal reduction,
+retaining the heavy source, all eight physical modes and every chart time
+term. A full varying-coefficient cone estimate gives unbounded-momentum
+growth in the specified off-shell fluctuation chart. The
+[homogeneous physical vertices](docs/assessment-2026-09-13-p8-affine-physical-background-vertices.md)
+and all fixed preparations remain unchanged. Unforced realization, a
+controlled cutoff, the interacting quantum mean, nonlinear bounce and
+original V/G/B/P8 remain open.
 The [complete heavy ADM and common-clock response audit](docs/assessment-2026-09-13-p8-affine-heavy-adm-clock-response.md)
 bounds the entire actual heavy ADM and common-clock response at every transfer,
 with all ten metric directions, both ordered Ward terms, the distinct clock
