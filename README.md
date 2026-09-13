@@ -438,7 +438,13 @@ around a pre-registered problems document and a certificate-gated ledger.
   This is still linear light evolution and its leading heavy response,
   not a full nonlinear solution or UV-admissible completion.
 
-The [current P8 continuation audit](docs/assessment-2026-09-13-p8-affine-heavy-spatial-uv.md)
+The [current P8 continuation audit](docs/assessment-2026-09-13-p8-affine-heavy-homogeneous-response.md)
+bounds the entire actual heavy SLE homogeneous spatial response, including
+the full prepared covariance, all metric contacts, complete covariant finite
+matching and the unchanged fixed profile. Mass-uniform entire remainders
+control the first response and its original auxiliary projection; this does
+not yet establish the nonzero-transfer response, quantum inverse or P8 closure.
+The [complete scalar spatial UV audit](docs/assessment-2026-09-13-p8-affine-heavy-spatial-uv.md)
 derives the complete minimal-scalar spatial UV input and its same-scheme
 finite difference. Both ordered trace-gradient products, all six invariants
 and the full dimensional counteraction are retained. The local graph bound
