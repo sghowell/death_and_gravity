@@ -1,0 +1,7 @@
+# Primary sources and exactly what is imported
+
+[Heiner Olbermann, States of Low Energy on Robertson-Walker Spacetimes, arXiv:0704.2986v2](https://arxiv.org/abs/0704.2986v2), Theorems3.1 and4.9, supplies the smeared-energy construction and its Hadamard regularity. We checked the hypotheses against the explicit smooth flat-RW metric, positive mass, minimal coupling and nonzero compact smooth sampling amplitude. The phase/CCR convention is fixed independently here. Applying those hypotheses to this candidate is our inference; the paper supplies none of the enormous-mass stress constants, new physical profile or P8 closure.
+
+[Adrian del Rio and Jose Navarro-Salas, Equivalence of Adiabatic and DeWitt-Schwinger renormalization schemes, arXiv:1412.7570v2](https://arxiv.org/abs/1412.7570v2), SectionII and AppendixA, provides primary scalar adiabatic/heat-kernel context. The complete spatial-D scalar readout, its pole action and the finite metric-variation terms are derived independently in this package. A scalar result is not substituted for the different vector finite prescription.
+
+Internal frozen inputs are S238's full covariant H8A420 parent, S239's complete formal limiting-action first loop, S182's original fixed QG1 reference adjustment and S176's retained Proca Gaussian state/prescription. Their reports and source hashes are rebuilt read-only. Their results do not automatically quantize the new light clock Hessian, bound its response or establish nonlinear/UV/Regge closure.

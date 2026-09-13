@@ -438,7 +438,14 @@ around a pre-registered problems document and a certificate-gated ledger.
   This is still linear light evolution and its leading heavy response,
   not a full nonlinear solution or UV-admissible completion.
 
-The [current P8 continuation audit](docs/assessment-2026-09-12-p8-affine-heavy-parent-one-loop.md)
+The [current P8 continuation audit](docs/assessment-2026-09-12-p8-affine-heavy-curved-state.md)
+specifies the added heavy field's prepared curved Gaussian state and full
+covariant scalar prescription, with all-momentum reference stress bounds
+through five time derivatives. A new fixed QG2 profile matches that mean
+and preserves first-loop vacuum matching within its own clock-tube budget.
+The changed clock Hessian, full quantum response, interacting bounce,
+quantum gravitational limit, UV, Regge and original P8 remain open.
+The [complete classical-limit parent-loop audit](docs/assessment-2026-09-12-p8-affine-heavy-parent-one-loop.md)
 computes the complete first loop of the full classical limiting parent,
 including all allowed higher-vertex contractions and dimensionally complete
 counterterms. Explicit new symmetric matching controls the full-angle and
@@ -449,7 +456,8 @@ constructs a separate full covariant heavy-scalar parent with a connected
 regular affine domain, complete clock-coefficient bounds and a global flat
 relative-potential margin. Its prescribed-source stress bound is restricted
 to an explicit corridor; an unrestricted counterexample is retained.
-Quantum matching, the heavy state and original P8 remain open.
+That construction alone does not specify the heavy state, prove quantum
+matching or close original P8.
 The [complete low-energy loop audit](docs/assessment-2026-09-12-p8-affine-heavy-scalar-loop-coefficients.md)
 bounds three complete first-loop low-energy coefficients using a directly
 proved joint complex neighborhood. The finite prescription is unchanged;

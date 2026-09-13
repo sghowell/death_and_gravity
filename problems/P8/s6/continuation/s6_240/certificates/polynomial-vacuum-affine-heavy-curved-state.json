@@ -1,0 +1,794 @@
+{
+  "actual_heavy_state_full_covariant_stress_and_fixed_mean_profile": {
+    "quantum": {
+      "complete_D_scalar_adiabatic_readout": {
+        "P2": "5*h0**2*momentum_fraction**2/8 - h0**2*momentum_fraction/2 - h0**2*spatial_D**2/8 + h1*momentum_fraction/4 - h1*spatial_D/4",
+        "P4": "-1105*h0**4*momentum_fraction**4/128 + 221*h0**4*momentum_fraction**3/16 + 25*h0**4*momentum_fraction**2*spatial_D**2/64 - 47*h0**4*momentum_fraction**2/8 - 3*h0**4*momentum_fraction*spatial_D**2/16 + h0**4*momentum_fraction/2 - h0**4*spatial_D**4/128 - 221*h0**2*h1*momentum_fraction**3/32 + 25*h0**2*h1*momentum_fraction**2*spatial_D/32 + 61*h0**2*h1*momentum_fraction**2/8 + 13*h0**2*h1*momentum_fraction*spatial_D**2/32 - 3*h0**2*h1*momentum_fraction*spatial_D/8 - 3*h0**2*h1*momentum_fraction/2 - h0**2*h1*spatial_D**3/32 - 7*h0*h2*momentum_fraction**2/8 + 5*h0*h2*momentum_fraction*spatial_D/16 + h0*h2*momentum_fraction/2 + h0*h2*spatial_D**2/16 - 19*h1**2*momentum_fraction**2/32 + 3*h1**2*momentum_fraction*spatial_D/16 + 3*h1**2*momentum_fraction/8 + h1**2*spatial_D**2/32 - h3*momentum_fraction/16 + h3*spatial_D/16",
+        "pressure": [
+          "momentum_fraction/(2*spatial_D)",
+          "-5*h0**2*momentum_fraction**3/(16*spatial_D) + 3*h0**2*momentum_fraction**2/8 + h0**2*momentum_fraction**2/(4*spatial_D) - h0**2*momentum_fraction*spatial_D/16 - h0**2*momentum_fraction/4 - h1*momentum_fraction**2/(8*spatial_D) + h1*momentum_fraction/4 - h1*spatial_D/8",
+          "1155*h0**4*momentum_fraction**5/(256*spatial_D) - 315*h0**4*momentum_fraction**4/64 - 231*h0**4*momentum_fraction**4/(32*spatial_D) + 35*h0**4*momentum_fraction**3*spatial_D/128 + 245*h0**4*momentum_fraction**3/32 + 49*h0**4*momentum_fraction**3/(16*spatial_D) + 15*h0**4*momentum_fraction**2*spatial_D**2/64 - 15*h0**4*momentum_fraction**2*spatial_D/32 - 25*h0**4*momentum_fraction**2/8 - h0**4*momentum_fraction**2/(4*spatial_D) - 9*h0**4*momentum_fraction*spatial_D**3/256 - 3*h0**4*momentum_fraction*spatial_D**2/32 + h0**4*momentum_fraction*spatial_D/8 + h0**4*momentum_fraction/4 + 231*h0**2*h1*momentum_fraction**4/(64*spatial_D) - 35*h0**2*h1*momentum_fraction**3/8 - 63*h0**2*h1*momentum_fraction**3/(16*spatial_D) + 5*h0**2*h1*momentum_fraction**2*spatial_D/8 + 35*h0**2*h1*momentum_fraction**2/8 + 3*h0**2*h1*momentum_fraction**2/(4*spatial_D) + 3*h0**2*h1*momentum_fraction*spatial_D**2/16 - 7*h0**2*h1*momentum_fraction*spatial_D/16 - 3*h0**2*h1*momentum_fraction/4 - 3*h0**2*h1*spatial_D**3/64 + 7*h0*h2*momentum_fraction**3/(16*spatial_D) - 5*h0*h2*momentum_fraction**2/8 - h0*h2*momentum_fraction**2/(4*spatial_D) + 3*h0*h2*momentum_fraction*spatial_D/16 + h0*h2*momentum_fraction/4 + 21*h1**2*momentum_fraction**3/(64*spatial_D) - 15*h1**2*momentum_fraction**2/32 - 3*h1**2*momentum_fraction**2/(16*spatial_D) + 9*h1**2*momentum_fraction*spatial_D/64 + 3*h1**2*momentum_fraction/16 + h3*momentum_fraction**2/(32*spatial_D) - h3*momentum_fraction/16 + h3*spatial_D/32"
+        ],
+        "rho": [
+          "1/2",
+          "h0**2*momentum_fraction**2/16 - h0**2*momentum_fraction*spatial_D/8 + h0**2*spatial_D**2/16",
+          "-105*h0**4*momentum_fraction**4/256 + 35*h0**4*momentum_fraction**3*spatial_D/64 + 7*h0**4*momentum_fraction**3/16 - 5*h0**4*momentum_fraction**2*spatial_D**2/128 - 5*h0**4*momentum_fraction**2*spatial_D/8 - h0**4*momentum_fraction**2/16 - 3*h0**4*momentum_fraction*spatial_D**3/64 + h0**4*momentum_fraction*spatial_D**2/16 + h0**4*momentum_fraction*spatial_D/8 + 3*h0**4*spatial_D**4/256 - 7*h0**2*h1*momentum_fraction**3/32 + 5*h0**2*h1*momentum_fraction**2*spatial_D/16 + h0**2*h1*momentum_fraction**2/8 - 3*h0**2*h1*momentum_fraction*spatial_D**2/32 - h0**2*h1*momentum_fraction*spatial_D/8 - h0*h2*momentum_fraction**2/32 + h0*h2*momentum_fraction*spatial_D/16 - h0*h2*spatial_D**2/32 + h1**2*momentum_fraction**2/64 - h1**2*momentum_fraction*spatial_D/32 + h1**2*spatial_D**2/64"
+        ]
+      },
+      "complete_finite_local_stress_coefficients": {
+        "0": {
+          "pressure": "-(2*log_n - 3)/2",
+          "rho": "(2*log_n - 3)/2"
+        },
+        "1": {
+          "pressure": "2*(3*h0**2 + 2*h1)*(log_n - 1)/3",
+          "rho": "-2*h0**2*(log_n - 1)"
+        },
+        "2": {
+          "pressure": "-log_n*(18*h0**2*h1 + 12*h0*h2 + 9*h1**2 + 2*h3)/3",
+          "rho": "log_n*(6*h0**2*h1 + 2*h0*h2 - h1**2)"
+        }
+      },
+      "complete_scalar_finite_heat_matching_before_64pi2": "R_old*mass_squared*(log_n - 1)/3 - 2*log_n*(R_old**2/72 - Ricci_squared/180 + Riemann_squared/180) + mass_squared**2*(3/2 - log_n)",
+      "complete_scalar_pole_density_before_64pi2epsilon": "R_old**2/36 - R_old*mass_squared/3 - Ricci_squared/90 + Riemann_squared/90 + mass_squared**2",
+      "component_only_pole_subtraction_negative_control": {
+        "0": {
+          "pressure": "-(2*log_n - 3)/2",
+          "rho": "(2*log_n - 3)/2"
+        },
+        "1": {
+          "pressure": "2*(3*h0**2*log_n + 2*h0**2 + 2*h1*log_n)/3",
+          "rho": "-2*h0**2*(3*log_n + 2)/3"
+        },
+        "2": {
+          "pressure": "-(87*h0**4 + 270*h0**2*h1*log_n + 638*h0**2*h1 + 180*h0*h2*log_n + 228*h0*h2 + 135*h1**2*log_n + 171*h1**2 + 30*h3*log_n + 18*h3)/45",
+          "rho": "(29*h0**4 + 90*h0**2*h1*log_n + 174*h0**2*h1 + 30*h0*h2*log_n + 38*h0*h2 - 15*h1**2*log_n - 19*h1**2)/15"
+        }
+      },
+      "dimensional_matching_proof": "Integrate every omega^(1-2j) z^r term in D spatial dimensions using the complete gamma/rising-factorial identity. Its pole and component finite part are exact. The full covariant pole counterstress has the additional finite term -2*partial_D T_pole at D3, so subtraction ADDS2*partial_D T_pole to the component finite part. This cancels the false extra finite terms from component-only subtraction and gives the full displayed scalar density. The compact box-R/Euler variational boundary is retained; no infinite-time flux is dropped.",
+      "domain_and_response_boundary": "F alone is retuned; R, the S238 full affine maps and physical matter metric are unchanged. The new nonzero clock F jets CHANGE the classical light Hessian. The old kinetic/stability or complete quantum-response inverse results do not automatically transfer. All interacting light/mixed clock loops, full new response and same-state nonlinear bounce remain open.",
+      "fixed_locality": "The reference state, full CD history and renormalization prescription define rho_H_ref(u),P_H_ref(u) ONCE. Hold these functions fixed under every later state/source/metric variation. The new coefficient is globally smooth, not claimed real analytic in u. It is not a live nonlocal subtraction or an instruction to cancel the stress of each perturbed history.",
+      "fixed_new_normalized_scalar_coefficient": "X**1024*(-(X - 1)*(P_H_reference(u) + rho_H_reference(u))/2 - P_H_reference(u) + (57220458984375000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001171875000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000006 - 38146972656250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000781250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004*log(195312500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002))/(64*pi**2))/(100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000*(X**1024 + (1 - X)**1024)) - 3*(-X**1024/(X**1024 + (1 - X)**1024) + 1)/(12800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000*pi**2) - (57220458984375000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001171875000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000006 - 38146972656250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000781250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004*log(195312500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002))/(6400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000*pi**2)",
+      "flat_vacuum_matching": "At X0 the new coefficient is the constant -(p_v_H+p_v_Phi)/kappa0. Together with the unchanged old Proca cancellation it cancels the formal flat limiting-action Gaussian one-loop vacuum constant. Massless free spectator determinants are scaleless in this dimensional prescription. Interacting vacuum graphs start at two loops, by connected degree counting. The old first-order heavy-onepoint condition remains. This is not a finite-gravity quantum-limit or quantum-vacuum stability theorem.",
+      "full_reference_stress_definition": "rho_H_ref and P_H_ref are the full radial exact-SLE-minus-fourth-order-adiabatic mode integrals from state.data(), with measure p\u00b2dp/(2pi\u00b2), PLUS the displayed same-scheme local stress sum n^(2-j)*local[j]/(64pi\u00b2), ell=log n. All momenta and the full exact state are included. These symbols are names for that fixed source-defined integral, not adjustable independent functions.",
+      "new_candidate": "CD-REG-AFFINE-ISO-QG2-H8A420 with the separately fixed H8A420-VAC-OS4 finite vacuum coefficients retained",
+      "new_heavy_prescription": "For the conditional minimally coupled Gaussian H field use covariant dimensional regularization at mu1, with the COMPLETE pole action continued in spatial D=3-2epsilon and varied before taking its limit. No state-dependent normal ordering is used. Keep the old Proca prescription unchanged. The displayed new scalar finite matching is not borrowed from the vector.",
+      "new_profile_definition": "DeltaF_HQ=[-p_v_H+T(-P_H_ref+p_v_H-(rho_H_ref+P_H_ref)(X-1)/2)-p_v_Phi(1-T)]/kappa0. The last term matches the mass1 Phi Gaussian vacuum constant at mu1 while vanishing to order1024 at the clock. It does not assert that Phi fluctuations have been quantized on the curved clock background.",
+      "reference_mean_equations": "At X1, the profile pressure and energy cancel the ACTUAL heavy Gaussian reference stress; its scalar Euler expression is the same renormalized Ward identity. The extra light-vacuum switch has no clock jets. The old retained Proca/M1 mean equations therefore remain stationary after including this new specified H Gaussian sector, with the S238 recomputed affine mean. There is no separate H clock force because its source and relevant jets vanish and the reference coherent mean is0.",
+      "unchanged_low_vacuum_matching": "Every nonconstant new term contains T=O(X^1024). Thus no relevant vacuum mass, derivative, cubic, quartic or degree-six jet is changed, and the complete S239 first-loop four-Phi calculation with its finite OS4 condition is retained. The added flat potential is only a constant, so the previous relative classical comparison is unchanged; no full quantum-potential theorem is inferred.",
+      "vacuum_heavy_pressure": "(57220458984375000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001171875000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000006 - 38146972656250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000781250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004*log(195312500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002))/(64*pi**2)",
+      "vacuum_light_pressure": "3/(128*pi**2)"
+    },
+    "state": {
+      "SLE_definition": "For ANY exact normalized reference basis S, c1=integral w(|S'|\u00b2+omega\u00b2|S|\u00b2)/2 and c2=integral w(S'^2+omega\u00b2S\u00b2)/2. Put delta=sqrt(c1\u00b2-|c2|\u00b2), alpha=sqrt((c1+delta)/(2delta)), beta=-c2/sqrt(2delta(c1+delta)), and T=alpha S+beta conjugate(S). This formula has no singular phase choice at c2=0. Fix the physical positive-frequency convention exp(-i omega t) in the static limit and W2(t,t')=T(t)conjugate(T(t')).",
+      "WKB_comparison": "Use full positive W0=omega and W(j+1)\u00b2=omega\u00b2-U-(log Wj)''/2+(log Wj)'\u00b2/4 through W7. Initialize an exact comparison mode to W6 at t=-1. The selected state is the basis-independent SLE, NOT the WKB comparison mode. The full defect and its Volterra comparison are bounded in estimates.",
+      "actual_canonical_frequency_squared": "n + p**2/(u**2 + 1)**4 - 24*u**2/(u**2 + 1)**2 - 6/(u**2 + 1)",
+      "actual_parameters": {
+        "heavy_mass_squared": "195312500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002",
+        "kappa0": "100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "quantitative_time_interval": [
+          "-1",
+          "1"
+        ],
+        "sampling_interval": [
+          "-3/4",
+          "-1/2"
+        ],
+        "state_Cauchy_time": "-1/2"
+      },
+      "complete_stress_readout": "rho=(|S'|\u00b2+(n+p\u00b2/a\u00b2)|S|\u00b2)/2, P=(|S'|\u00b2-(n+p\u00b2/(3a\u00b2))|S|\u00b2)/2 per mode, integrated with p\u00b2dp/(2pi\u00b2), with the full fourth-order subtraction and separately derived covariant finite local matching. Source and coherent mean vanish on the reference. No finite momentum cutoff is used.",
+      "full_mode_equation": "S_p''+3H S_p'+(n+p\u00b2/a\u00b2)S_p=0 with S_p conjugate(S_p')-conjugate(S_p)S_p'=i/a\u00b3. Its canonical chi=a^(3/2)S has frequency\u00b2=omega\u00b2-3H'/2-9H\u00b2/4. The state is defined using exact solutions at every momentum.",
+      "full_reference_source_boundary": "The classical J_H=g Phi\u00b2 h(X)/2 has an eighth-order clock zero, and the stated finite onepoint switch has a1024th-order zero. The reference heavy mean and direct clock/source force vanish. Classical coherent mean starts at history order8 and its induced Euler force at order15; this does not remove the connected metric response of the heavy determinant.",
+      "light_vacuum_pressure_for_separate_constant_matching": "3/(128*pi**2)",
+      "reference": "Physical CD metric ds\u00b2=dt\u00b2-(1+t\u00b2)^4 dx\u00b2, u=t,X1,H_heavy0; use the recomputed S238 affine mean/source-centering, not a reset old connection trace. The old Proca and M1 choices are retained.",
+      "sampling": "x=8(t+5/8); phi=exp[-1/(1-x\u00b2)] on |x|<1 and0 outside; w=f\u00b2=phi\u00b2/Z with Z=integral phi\u00b2dt. Support[-3/4,-1/2]. The normalization obeys Z>1/216. This sampling is fixed once before t0.",
+      "scope": "The Gaussian heavy state is well defined on the whole reference and stress is smooth at each finite time. Numerical bounds apply only on[-1,1]. No full interacting light/metric state, quantitative curved response, nonlinear bounce or quantum gravitational decoupling is inferred.",
+      "state_existence": "The pointwise energy cone gives strict c1>|c2| and c1>=Omega_star/128 on the sampling interval. The minimizer is unique up to a phase and independent of the comparison basis. Olbermann0704.2986 Theorems3.1 and4.9 apply to this positive massive minimally coupled field on the smooth globally hyperbolic flat RW geometry: the selected quasifree state is Hadamard. This external regularity theorem is not the quantitative stress estimate.",
+      "state_family": "Retain the reference Cauchy covariance at t0 on compact smooth metric/source perturbations strictly to its future, sharing the Cauchy neighborhood and global hyperbolicity. Evolve source-free KG and add the unique retarded smooth coherent mean for the full prescribed source. Positivity, CCR and the Hadamard singularity are preserved. Do not re-minimize or recompute the state on a live history."
+    }
+  },
+  "checked_scalar_entries": 57,
+  "claim": "P8-S6.240.SPECIFIED_HEAVY_SLE_HADAMARD_STATE_WITH_FULL_COVARIANT_SCALAR_RENORMALIZATION_COMPLETE_ALL_MOMENTUM_REFERENCE_STRESS_BOUNDS_AND_FIXED_QG2_MEAN_PROFILE_PRESERVING_FIRST_LOOP_VACUUM_MATCHING",
+  "complete_uniform_stress_and_new_profile_bounds": {
+    "actual_scope": "Every comoving p>=0 and real time[-1,1] at the fixed actual n,kappa0. The global state is defined separately. No numerical momentum cutoff or late-time global bound is introduced.",
+    "complete_SLE_stress_difference_coefficients": {
+      "0": 160000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
+      "1": 640000000000000000000000000000160000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
+      "2": 3840000000000000000000000000001280000000000000000000000000000160000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
+      "3": 30720000000000000000000000000011520000000000000000000000000001920000000000000000000000000000160000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
+      "4": 307200000000000000000000000000122880000000000000000000000000023040000000000000000000000000002560000000000000000000000000000160000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
+      "5": 3686400000000000000000000000001536000000000000000000000000000307200000000000000000000000000038400000000000000000000000000003200000000000000000000000000000160000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+    },
+    "complete_actual_heavy_stress_all_five_jets_upper": "215135514736175537109375000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000095367431640631608963012695312500000000000000000000000000000000000000000000000000000000000000000000360000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000014160156250000067675781250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000135000000000000231/7031250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000072",
+    "complete_exact_mode_stress_difference_coefficients": {
+      "0": 4000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
+      "1": 12000000008000000000000000000004000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
+      "2": 52000000056000000000000000000028000000024000000000000000000004000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
+      "3": 316000000424000000000000000000192000000272000000000000000000052000000056000000000000000000004000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
+      "4": 2532000003864000000000000000001576000002848000000000000000000516000000920000000000000000000092000000120000000000000000000004000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
+      "5": 25324000042184000000000000000015820000033048000000000000000005420000012536000000000000000001280000002704000000000000000000164000000248000000000000000000004000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+    },
+    "complete_finite_local_heat_stress_upper": "2202987670898437500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000976562500000045117187500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000135000000000000231/72",
+    "complete_forced_error_derivative_coefficients": {
+      "0": 100000000000000000000000000000000000000000000000000000000000000000,
+      "1": 100000000200000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
+      "2": 100000000600000000000000000000100000000200000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
+      "3": 100000002200000000000000000000300000001400000000000000000000100000000200000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
+      "4": 100000011800000000000000000000600000008000000000000000000000700000002600000000000000000000100000000200000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
+      "5": 100000088600000000000000000001000000055200000000000000000002500000021400000000000000000001500000004600000000000000000000100000000200000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+    },
+    "complete_mode_difference_constant": 10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
+    "complete_normalized_heavy_stress_all_five_jets_upper": "215135514736175537109375000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000095367431640631608963012695312500000000000000000000000000000000000000000000000000000000000000000000360000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000014160156250000067675781250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000135000000000000231/703125000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000007200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "complete_sampling_derivative_bounds": {
+      "0": 216,
+      "1": 18576,
+      "10": 62945448066043767388598477783040000,
+      "2": 6390144,
+      "3": 4945971456,
+      "4": 6805656723456,
+      "5": 14632161955430400,
+      "6": 45301173414012518400,
+      "7": 190899144766648752537600,
+      "8": 1050708892795634733966950400,
+      "9": 7319238147214391556813776486400
+    },
+    "complete_source_error_coefficients": {
+      "0": 200000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
+      "1": 400000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
+      "2": 1600000000000000000000000000000800000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
+      "3": 9600000000000000000000000000004800000000000000000000000000001200000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
+      "4": 76800000000000000000000000000038400000000000000000000000000009600000000000000000000000000001600000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
+      "5": 768000000000000000000000000000384000000000000000000000000000096000000000000000000000000000016000000000000000000000000000002000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+    },
+    "complete_state_dependent_and_subtraction_stress_upper": "5000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000/97656250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001",
+    "complex_reference_domain": "Use the union of complex radius1/64 disks about[-1,1]. For v=1+t\u00b2, Re v>99/100, |v|<33/16, |Im v|/Re v<1/30. The complete inverse-scale expression has Re(v^-4)>1/32, hence Re omega\u00b2>=Omega_star\u00b2/2 for Omega_star\u00b2=n+p\u00b2/16. The branch is holomorphic and |omega| lies betweenOmega_star/2 and8Omega_star. Full analytic H,lambda,U bounds are included; the smooth whole QG1 scalar is not assumed analytic.",
+    "exact_comparison_mode_derivative_coefficients": {
+      "0": 20,
+      "1": 40000000000000000000000000000000,
+      "2": 160000000000000000000000000000000000000000000000000000000000000,
+      "3": 960000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
+      "4": 7680000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
+      "5": 76800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
+      "6": 921600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+    },
+    "finite_local_proof": "Derive all finite terms from the whole dimensionally continued scalar counteraction, including its evanescent metric variation. The rational pole form of H bounds its full complex jets. Separate the constant vacuum term before differentiating: the local bound is[462n\u00b2+10^12(40000n+10^6)]/576<10^399. Adding the full state/subtraction term gives stress below10^400, or10^-400 against kappa0, for both components and all derivatives0..5.",
+    "full_Riccati_iteration": "Normalize Wj=omega*wj and use the full square-root/logarithm map in state. Time domains lose1/1024 at each iteration. On |wj-1|<=1/100, Cauchy proves a complete map Lipschitz boundK|epsilon|\u00b2/Omega_star\u00b2 with K=10^8. On the auxiliary epsilon disk |epsilon|<=Omega_star/10^8 this is at most10^-8. The entire iterates remain in the branch ball. At epsilon1 the jth increment is at most(K/Omega_star\u00b2)^j. Seven iterates give the complete W6 oscillator defect below10^60/Omega_star^12.",
+    "full_SLE_state_error": "Ten integrations by parts of the full physical self-pair amplitude, with all compact-sampling derivatives and exact-mode errors included, give |c2|<10^80/Omega_star^10. The Wronskian lower boundc1>=Omega_star/128 gives |beta|<=|c2|/c1<10^83/Omega_star^11. The complex coefficient recursion has sum bound100*8194^j/Omega_star^j; no phase is deleted before these integrations.",
+    "full_adiabatic_subtraction_tail_constant": 2000000000000000000000000000000000000000000000000000000000000000000000000,
+    "full_exact_mode_comparison": "The exact normalized mode initialized to W6 at t=-1 differs by full variation-of-constants coefficients below10^62/Omega_star^13 over the entire interval. The exact exponent, not its first term, is bounded. Both comparison phases are retained and the evolution preserves CCR. The actual state remains the independently selected SLE.",
+    "full_matrix_and_readout_jet_bound": 1000000000000000000000000000000,
+    "full_radial_integral": "The complete sum is bounded by10^301/Omega_star^5 for every rho/P derivative through5. The full integral with p\u00b2dp/(2pi\u00b2) is64/(6pi\u00b2 n)<2/n. A deliberately looser bound10^310/n is used. This proves absolute convergence and differentiation of the full subtracted integral in the stated interval.",
+    "full_tail_proof": "The complete W6 stress readouts, with their phase already cancelled, are holomorphic in the auxiliary epsilon disk and bounded by10^4*Omega_star. Their first three even coefficients are the complete fourth-order adiabatic subtraction. The full tail at epsilon1, with a separate time Cauchy margin1/2048 through five derivatives, is below10^74/Omega_star^5. No complex Cauchy estimate is applied to the oscillatory mode phase.",
+    "new_full_scalar_profile_four_jet_budget": "Use the fixed source-defined profile in quantum, including the extra mass1 light-vacuum constant. Split it into its affine clock part and the full1-T remainder. Only X is complexified for the smooth reference stress. On |u|<=1,7/8<=X<=9/8 the heavy affine four-jets are at most9B/8, B=10^-400. A complex X radius1/64 gives remainder belowB/8 and the light-vacuum term belowB/8; the whole new profile is below2B. Combining it with the S239 finite extensions and S238 classical changes stays below a NEW10^-399 normalized four-jet budget.",
+    "not_inferred": "A small coefficient or reference-stress bound is not a bound for the full quantum response or its inverse. No old linear-stability rows are automatically transferred, no omitted interacting loop is controlled and no nonlinear same-state bounce, physical UV, finite-gravity Regge or original P8 closure is inferred."
+  },
+  "controls": {
+    "all_original_primitive_statuses_unchanged": true,
+    "both_flat_vacuum_constants_retained": true,
+    "comparison_basis_not_the_selected_state": true,
+    "complete_state_error_and_all_momenta_retained": true,
+    "fixed_physical_profile_not_adaptive_subtraction": true,
+    "full_dimensional_counteraction_before_limit": true,
+    "no_automatic_response_inverse_or_stability_transfer": true,
+    "physical_positive_frequency_and_CCR_retained": true,
+    "rejected_inputs": 343
+  },
+  "date": "2026-09-12",
+  "exact_residuals": {
+    "complete_all_momentum_stress_and_clock_tube_bounds_complete_SLE_squeezing_magnitude_inequality": "0",
+    "complete_all_momentum_stress_and_clock_tube_bounds_complete_actual_quantitative_stress_bound": "0",
+    "complete_all_momentum_stress_and_clock_tube_bounds_full_Riccati_fourth_adiabatic_coefficient": "0",
+    "complete_all_momentum_stress_and_clock_tube_bounds_full_Riccati_second_adiabatic_coefficient": "0",
+    "complete_all_momentum_stress_and_clock_tube_bounds_full_all_momentum_radial_integral": "0",
+    "complete_all_momentum_stress_and_clock_tube_bounds_full_uniform_smeared_energy_lower": "0",
+    "complete_all_momentum_stress_and_clock_tube_bounds_sampling_complex_bump_denominator_margin": "0",
+    "complete_all_momentum_stress_and_clock_tube_bounds_sampling_derivative_growth": "0",
+    "complete_all_momentum_stress_and_clock_tube_bounds_sampling_reciprocal_real_part_bound": "0",
+    "complete_all_momentum_stress_and_clock_tube_bounds_sampling_time_radius_scaling": "0",
+    "full_reference_modes_and_actual_Hadamard_state_complete_SLE_minimal_smeared_energy": "0",
+    "full_reference_modes_and_actual_Hadamard_state_complete_SLE_self_pair_zero": "0",
+    "full_reference_modes_and_actual_Hadamard_state_full_minimal_KG_canonical_equation": "0",
+    "full_reference_modes_and_actual_Hadamard_state_full_physical_mode_Ward_identity": "0",
+    "full_reference_modes_and_actual_Hadamard_state_global_Hubble_derivative_upper": "0",
+    "full_reference_modes_and_actual_Hadamard_state_global_Hubble_squared_margin": "0",
+    "full_reference_modes_and_actual_Hadamard_state_global_minimum_among_relative_Bogoliubov_states": "0",
+    "full_reference_modes_and_actual_Hadamard_state_independent_full_lapse_energy": "0",
+    "full_reference_modes_and_actual_Hadamard_state_independent_full_scale_pressure": "0",
+    "full_reference_modes_and_actual_Hadamard_state_phase_regular_SLE_CCR": "0",
+    "full_reference_modes_and_actual_Hadamard_state_phase_regular_alpha_formula": "0",
+    "full_reference_modes_and_actual_Hadamard_state_phase_regular_beta_formula": "0",
+    "full_reference_modes_and_actual_Hadamard_state_positive_frequency_Cauchy_Gram_CCR_0_0": "0",
+    "full_reference_modes_and_actual_Hadamard_state_positive_frequency_Cauchy_Gram_CCR_0_1": "0",
+    "full_reference_modes_and_actual_Hadamard_state_positive_frequency_Cauchy_Gram_CCR_1_0": "0",
+    "full_reference_modes_and_actual_Hadamard_state_positive_frequency_Cauchy_Gram_CCR_1_1": "0",
+    "full_reference_modes_and_actual_Hadamard_state_strict_pointwise_energy_cone": "0",
+    "full_reference_modes_and_actual_Hadamard_state_zero_mixing_static_vacuum_limit": "0",
+    "nine_original_primitive_rows": "0",
+    "one_new_separate_Gaussian_state_and_mean_record": "0",
+    "unchanged_original_primitive_statuses": "0",
+    "unchanged_previous_matching_records": "0",
+    "whole_dimensional_counteraction_and_fixed_mean_profile_Gaussian_vacuum_loop_degree_identity": "0",
+    "whole_dimensional_counteraction_and_fixed_mean_profile_complete_dimensional_pressure_pole_0": "0",
+    "whole_dimensional_counteraction_and_fixed_mean_profile_complete_dimensional_pressure_pole_1": "0",
+    "whole_dimensional_counteraction_and_fixed_mean_profile_complete_dimensional_pressure_pole_2": "0",
+    "whole_dimensional_counteraction_and_fixed_mean_profile_complete_dimensional_rho_pole_0": "0",
+    "whole_dimensional_counteraction_and_fixed_mean_profile_complete_dimensional_rho_pole_1": "0",
+    "whole_dimensional_counteraction_and_fixed_mean_profile_complete_dimensional_rho_pole_2": "0",
+    "whole_dimensional_counteraction_and_fixed_mean_profile_complete_heavy_and_light_flat_vacuum_constant": "0",
+    "whole_dimensional_counteraction_and_fixed_mean_profile_complete_new_one_loop_flat_pressure_cancel": "0",
+    "whole_dimensional_counteraction_and_fixed_mean_profile_complete_scalar_heat_covariant_basis": "0",
+    "whole_dimensional_counteraction_and_fixed_mean_profile_extra_light_vacuum_clock_flat_factor": "0",
+    "whole_dimensional_counteraction_and_fixed_mean_profile_full_actual_heavy_clock_energy_cancel": "0",
+    "whole_dimensional_counteraction_and_fixed_mean_profile_full_actual_heavy_clock_pressure_cancel": "0",
+    "whole_dimensional_counteraction_and_fixed_mean_profile_full_clock_scalar_mean_equation_is_actual_Ward": "0",
+    "whole_dimensional_counteraction_and_fixed_mean_profile_full_covariant_counterterm_finite_pressure_0": "0",
+    "whole_dimensional_counteraction_and_fixed_mean_profile_full_covariant_counterterm_finite_pressure_1": "0",
+    "whole_dimensional_counteraction_and_fixed_mean_profile_full_covariant_counterterm_finite_pressure_2": "0",
+    "whole_dimensional_counteraction_and_fixed_mean_profile_full_covariant_counterterm_finite_rho_0": "0",
+    "whole_dimensional_counteraction_and_fixed_mean_profile_full_covariant_counterterm_finite_rho_1": "0",
+    "whole_dimensional_counteraction_and_fixed_mean_profile_full_covariant_counterterm_finite_rho_2": "0",
+    "whole_dimensional_counteraction_and_fixed_mean_profile_full_finite_local_Ward_0": "0",
+    "whole_dimensional_counteraction_and_fixed_mean_profile_full_finite_local_Ward_1": "0",
+    "whole_dimensional_counteraction_and_fixed_mean_profile_full_finite_local_Ward_2": "0",
+    "whole_dimensional_counteraction_and_fixed_mean_profile_new_nonconstant_vacuum_jet_factor": "0",
+    "whole_dimensional_counteraction_and_fixed_mean_profile_no_new_flat_field_dependent_classical_potential": "0"
+  },
+  "formulation": "FORMULATION.md",
+  "named_exact_check_count": 57,
+  "not_established": [
+    "A full interacting light/metric quantum state on the clock or control of all light/mixed and omitted loops",
+    "A full new quantum response or compatible inverse bound, automatic old linear-stability transfer, or nonlinear same-state bounce",
+    "A quantitative global-time bound outside[-1,1], or global real analyticity of the smooth reference profile",
+    "Quantum gravitational decoupling, a quantum-vacuum stability theorem, physical UV completion or finite-gravity Regge estimates",
+    "A physical cutoff, all-parent exclusion or original V/G/B/P8 closure"
+  ],
+  "observable_and_scope": {
+    "clock": "The original physical CD metric/u/M1 with the S238 recomputed affine mean is stationary for the retained Proca-plus-H Gaussian reference truncation. The new scalar clock jets change the light Hessian; the old stability and quantum inverse results are not silently transferred. Combined coefficient four-jets fit a NEW10^-399 tube budget.",
+    "input": "The S238 full covariant parent and S239 complete formal limiting-action first loop are frozen. The new minimally coupled scalar state and its covariant mu1 prescription are specified; old Proca and M1 choices are retained.",
+    "profile": "A separately named fixed QG2 physical coefficient balances the actual specified heavy Gaussian mean stress. The new profile also retains the heavy and light flat Gaussian vacuum constants explicitly. Its nonconstant vacuum jets cannot change the S239 four-light first loop.",
+    "remaining": "Full interacting light/mixed clock loops and state, quantum gravitational decoupling, full new response/inverse, nonlinear same-state bounce, physical UV, finite-gravity Regge and original V/G/B/P8 remain open.",
+    "state": "A fixed smooth compact pre-t0 sampling determines the exact heavy state of low energy. Its physical phase, CCR and basis-independent minimizer are checked. The Hadamard theorem applies to the full exact state, not its finite WKB comparison.",
+    "stress": "The full state-dependent integral, complete adiabatic subtraction and the dimensionally matched local scalar action give rho/P and five time derivatives below10^-400 against kappa0 on[-1,1], uniformly over all momentum. No cutoff or local-only approximation is used."
+  },
+  "primitive_and_matching_frontier": {
+    "matching": [
+      {
+        "id": "fixed_sigma_isolated_MS_conversion",
+        "status": "CANCELLED_NONLOCAL_ORDER_TWO_WITH_SAME_REGULATED_REFERENCE"
+      },
+      {
+        "id": "remaining_scale_parameter_field_map_and_cross_terms",
+        "status": "OPEN"
+      },
+      {
+        "id": "remaining_counterterm_and_vacuum_source_assembly",
+        "status": "ASSEMBLED_FOR_FIXED_ORDER_PHI_POLE_B2_VACUUM_AND_H_SOURCE"
+      },
+      {
+        "id": "full_matched_two_loop_pole_and_amplitude_error",
+        "status": "FIXED_ORDER_PHI_POLE_AND_B2_BOUNDED_PHYSICAL_TRUNCATION_OPEN"
+      },
+      {
+        "id": "finite_EFT_higher_order_truncation",
+        "status": "OPEN"
+      },
+      {
+        "id": "V_contour_and_cut_control",
+        "status": "OPEN"
+      },
+      {
+        "id": "finite_gravity_G",
+        "status": "OPEN"
+      },
+      {
+        "id": "common_parent_B",
+        "status": "OPEN"
+      },
+      {
+        "id": "complete_wineglass_interaction_forest_MS",
+        "status": "BOUNDED_WITH_REGULATED_FINITE_LOCAL_ANCHOR_AND_FULL_SCALE_TERM"
+      },
+      {
+        "id": "complete_double_bubble_interaction_forest_MS",
+        "status": "BOUNDED_WITH_ACTUAL_NESTED_MS_FORESTS_AND_BOTH_SCALE_TERMS"
+      },
+      {
+        "id": "complete_scalar_OS_insertion_interaction_forest_MS",
+        "status": "BOUNDED_WITH_FULL_REGULATED_SLOPE_TIMES_OUTER_REFERENCE"
+      },
+      {
+        "id": "complete_scalar_quadratic_finite_MS_slope_and_converted_OS_bound",
+        "status": "BOUNDED_WITH_FIXED_INNER_OS_AND_INTERACTION_MS_COORDINATES"
+      },
+      {
+        "id": "first_finite_Phi_field_covariance_and_MS_projection_commutator",
+        "status": "EXACT_REGULATED_FIELD_DIRECTION_AND_BOUNDED_FIRST_SLOPE_CROSS_TERMS"
+      },
+      {
+        "id": "complete_GY14_second_Phi_normalization_and_canonical_unit_disc_pole",
+        "status": "BOUNDED_WITH_DIRECT_MS_OWNERSHIP_AND_FULL_FINITE_FIELD_REEXPANSION"
+      },
+      {
+        "id": "complete_two_loop_vacuum_reference_and_first_source_square",
+        "status": "BOUNDED_WITH_FULL_REGULATED_SOURCE_REDUCIBLE_CANCELLATION"
+      },
+      {
+        "id": "complete_two_loop_derivative_map_with_matched_physical_source",
+        "status": "TRANSPORTED_FOR_FULL_ACTION_AND_PHYSICAL_SOURCE_NOT_ORDINARY_PSI_MS_OR_TRUNCATION"
+      },
+      {
+        "id": "complete_matched_two_loop_low_energy_Phi_elastic_cut",
+        "status": "BOUNDED_ON_PHYSICAL_WINDOW_4_TO_6_WITH_FULL_FIRST_AMPLITUDE_NOT_PHYSICAL_REMAINDER_OR_GLOBAL_DISPERSION"
+      },
+      {
+        "id": "full_finite_kappa_analytic_target_classical_vacuum_match",
+        "status": "BOUNDED_ON_SAME_RESTRICTED_FLAT_SCHWARTZ_CLASS_NOT_QUANTUM_TARGET_OR_ROLLING_COMMON_PARENT_MATCH"
+      },
+      {
+        "id": "GY14_SAT8_pointwise_fermion_mass_protection_and_named_low_order_invariance",
+        "status": "NEW_ANALYTIC_EFT_BRANCH_WITH_GLOBAL_REAL_MASS_FLOOR_AND_SAME_NAMED_TWO_LOOP_DATA_NOT_ROLLING_STATE_OR_COMMON_PARENT_CLOSURE"
+      },
+      {
+        "id": "polynomial_clock_transparent_physical_source_map_and_full_target_classical_bound",
+        "status": "KINEMATIC_CLOCK_ARGUMENT_ALIGNED_WITH_PROTECTED_MASSES_AND_SAME_NAMED_VACUUM_DATA_NOT_BACKGROUND_SOLUTION_QUANTUM_STATE_OR_COMMON_PARENT_CLOSURE"
+      },
+      {
+        "id": "free_flat_clock_Dirac_out_energy_with_complete_transition_series_remainder",
+        "status": "BOUNDED_FOR_SPECIFIED_QUADRATIC_MODEWISE_IN_OUT_STATE_NOT_INTERACTING_OR_CURVED_BOUNCE_STRESS"
+      },
+      {
+        "id": "Hadamard_regular_free_flat_SAT8_in_out_state_and_uniform_one_particle_norm_limit",
+        "status": "HADAMARD_FOR_SPECIFIED_FREE_EXTERNAL_MASS_OPERATOR_USING_IDENTIFIED_EXTERNAL_THEOREM_NOT_INTERACTING_CURVED_STATE_OR_NUMERICAL_STRESS"
+      },
+      {
+        "id": "exact_four_frame_free_transition_and_uniform_same_operator_in_out_T00_difference",
+        "status": "BOUNDED_FOR_FREE_FLAT_HADAMARD_STATE_DIFFERENCE_NOT_ABSOLUTE_STRESS_INTERACTING_CURVED_STATE_OR_BACKREACTION"
+      },
+      {
+        "id": "free_flat_absolute_one_loop_local_energy_with_fixed_saturated_mass_reference",
+        "status": "BOUNDED_IN_EXPLICIT_MS_AND_SATURATED_MASS_REFERENCE_QUADRATIC_SCHEME_NOT_FULL_CURVED_INTERACTING_PARENT_STRESS"
+      },
+      {
+        "id": "complete_free_flat_homogeneous_one_loop_stress_with_dimensional_curvature_improvement",
+        "status": "BOUNDED_SPECIFIED_QUADRATIC_MS_MR_FLAT_TENSOR_NOT_FULL_INTERACTING_CURVED_PARENT_STRESS"
+      },
+      {
+        "id": "actual_CD_free_Dirac_Hadamard_in_out_state_and_uniform_state_stress_difference",
+        "status": "CURVED_FREE_HADAMARD_STATE_AND_STATE_DIFFERENCE_BOUNDED_NOT_ABSOLUTE_PARENT_STRESS"
+      },
+      {
+        "id": "complete_free_curved_one_loop_stress_with_explicit_EC_Newton_reference",
+        "status": "BOUNDED_SPECIFIED_QUADRATIC_CURVED_TENSOR_NOT_FULL_INTERACTING_PARENT_OR_BACKGROUND_RESPONSE"
+      },
+      {
+        "id": "minimal_Einstein_canonical_clock_free_sector_null_equation_mismatch",
+        "status": "EXCLUDED_NAMED_MINIMAL_DIAGNOSTIC_WITH_SMALL_EXTRA_NULL_BUDGET_NOT_FULL_INTERACTING_PARENT_OR_DHOST_ROW"
+      },
+      {
+        "id": "actual_CD_leading_clock_Euler_source_decomposition_and_matching_domain_gap",
+        "status": "LEADING_TARGET_SOURCES_AND_CONSTRAINT_DOMAIN_REQUIREMENTS_IDENTIFIED_NOT_PROPAGATING_PARENT_OR_QUANTUM_BOUNCE"
+      },
+      {
+        "id": "analytic_CD_REG_AFFINE_ISO_classical_parent_clock_vacuum_and_local_constraints",
+        "status": "NEW_REGULAR_CLASSICAL_PARENT_AND_LOCAL_CONSTRAINT_BLOCKS_NOT_QUANTUM_MATCHING_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "same_classical_affine_parent_closed_source_lift_and_scoped_vector_Schur_control",
+        "status": "EXACT_CLASSICAL_AND_COMMON_REGULATOR_IDENTITIES_FULL_EUCLIDEAN_AND_LEADING_LORENTZ_BOUNDS_NOT_FULL_QUANTUM_MATCHING"
+      },
+      {
+        "id": "regular_affine_parent_conditional_Gaussian_Hadamard_family_and_ordinary_Proca_stress",
+        "status": "SOURCE_AWARE_CONDITIONAL_VECTOR_STATE_AND_FIXED_CLOCK_STRESS_NOT_FULL_PARENT_QUANTUM_SOLUTION"
+      },
+      {
+        "id": "full_fixed_canonical_affine_family_actual_classical_gravitational_decoupling",
+        "status": "ANCHORED_FULL_FUNCTION_CLASSICAL_LIMIT_AND_TREE_AMPLITUDE_NOT_QUANTUM_CONTOUR_TRUNCATION_OR_V_CLOSURE"
+      },
+      {
+        "id": "complete_affine_vector_retarded_mean_energy_and_causal_cubic_light_force",
+        "status": "FIXED_CD_FULL_SOURCE_FINITE_TIME_CONDITIONAL_GAUSSIAN_MEAN_AND_LIGHT_FORCE_NOT_METRIC_NOISE_FULL_PARENT_OR_B_CLOSURE"
+      },
+      {
+        "id": "same_affine_conditional_prepared_homogeneous_metric_response_with_uncancelled_chart_contacts",
+        "status": "COMPLETE_CONDITIONAL_VECTOR_HOMOGENEOUS_C10_TO_C0_BOUND_NOT_SPATIAL_NOISE_COUPLED_BACKGROUND_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "same_affine_parent_prepared_homogeneous_retained_tree_plus_conditional_vector_causal_inverse",
+        "status": "UNIQUE_RETAINED_LINEAR_PREPARED_CAUSAL_INVERSE_WITH_NUMERIC_LOCAL_LAPSE_RECOVERY_NOT_FULL_INVERSE_SMALLNESS_QUANTUM_BACKGROUND_OR_V_G_B"
+      },
+      {
+        "id": "same_massive_scalar_range_kernel_explicit_full_half_line_L1_majorant",
+        "status": "MASS_INDEPENDENT_EXPLICIT_SCALAR_KERNEL_NORM_NOT_FULL_INVERSE_SMALLNESS_BACKGROUND_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "new_CD_REG_AFFINE_ISO_QG1_fixed_coefficient_stationary_Gaussian_mean_and_actual_response",
+        "status": "NEW_PARENT_RETAINED_MEAN_STATIONARITY_AND_BOUNDED_COEFFICIENT_CORRECTION_NOT_FULL_QUANTUM_BACKGROUND_STABILITY_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "actual_classical_Hamiltonian_C0_and_C10_inverse_and_first_formal_Gaussian_response",
+        "status": "QUANTIFIED_PREPARED_CLASSICAL_PROPAGATOR_AND_FIRST_FORMAL_COEFFICIENT_NOT_FINITE_COUPLING_ERROR_STABILITY_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "complete_finite_time_canonical_vacuum_source_mean_and_scalar_force_noise_with_fixed_profile",
+        "status": "FULL_CONDITIONAL_GAUSSIAN_VACUUM_SOURCE_CAUSAL_AND_NOISE_BOUNDS_NOT_INTERACTING_AMPLITUDE_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "actual_all_order_CD_state_complete_clock_source_smeared_force_noise_and_canonical_normalization",
+        "status": "SAME_STATE_FULL_SOURCE_SMEARED_SCALAR_NOISE_BOUND_NOT_METRIC_NOISE_SOLUTION_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "actual_all_order_CD_full_local_smeared_metric_stress_covariance",
+        "status": "FULL_SPACETIME_TENSOR_STRESS_NOISE_BOUND_NOT_METRIC_SOLUTION_CUTOFF_OR_V_G_B"
+      },
+      {
+        "id": "actual_CD_boundary_compatible_tree_tensor_noise_response",
+        "status": "RESTRICTED_DETECTOR_TREE_PROPAGATED_NOISE_NOT_FULL_QUANTUM_TENSOR_STATE_OR_V_G_B"
+      },
+      {
+        "id": "actual_CD_homogeneous_shear_Hamiltonian_contact_and_modewise_remainder",
+        "status": "ACTUAL_SHEAR_MODEWISE_FINITE_AMPLITUDE_REMAINDER_NOT_CONTINUUM_SELF_ENERGY_OR_V_G_B"
+      },
+      {
+        "id": "actual_fixed_local_covariant_full_spatial_tensor_Hessian",
+        "status": "ACTUAL_FIXED_FINITE_LOCAL_TENSOR_HESSIAN_BOUND_NOT_COMPLETE_DETERMINANT_RESPONSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_CD_full_matrix_adiabatic_uniform_covariance_tail",
+        "status": "ACTUAL_UNCHANGED_STATE_UNIFORM_HIGH_BAND_COVARIANCE_REMAINDER_NOT_RESPONSE_SUBTRACTION_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_matrix_covariance_tail_C2_response_and_Taylor_remainder",
+        "status": "ACTUAL_UNCHANGED_STATE_C2_HIGH_BAND_COVARIANCE_TAIL_NOT_COMPLETE_COVARIANT_RESPONSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_physical_shear_current_C2_fourth_order_comparison",
+        "status": "ACTUAL_STATE_C2_CURRENT_MODE_COMPARISON_NOT_FIXED_COVARIANT_MATCHING_OR_V_G_B"
+      },
+      {
+        "id": "actual_homogeneous_shear_full_fixed_covariant_mode_subtraction_matching",
+        "status": "ACTUAL_HOMOGENEOUS_SHEAR_FIXED_COVARIANT_MODE_SUBTRACTION_MATCHING_NOT_FULL_FEEDBACK_OR_V_G_B"
+      },
+      {
+        "id": "actual_complete_fixed_covariant_homogeneous_current_C2_and_canonical_response",
+        "status": "ACTUAL_COMPLETE_FIXED_COVARIANT_HOMOGENEOUS_CURRENT_C2_AND_CANONICAL_RESPONSE_NOT_FULL_FEEDBACK_OR_V_G_B"
+      },
+      {
+        "id": "actual_spatial_two_momentum_metric_vertices_and_finite_band_Gaussian_response",
+        "status": "ACTUAL_SPATIAL_TWO_MOMENTUM_CURRENT_FINITE_BAND_NOT_RENORMALIZED_CONTINUUM_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_full_spatial_separated_support_weak_Gaussian_response_and_quantitative_tail",
+        "status": "ACTUAL_CONTINUUM_SEPARATED_SUPPORT_WEAK_RESPONSE_NOT_COINCIDENT_EXTENSION_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_overlapping_time_spatial_retarded_state_remainder_with_complete_contact",
+        "status": "ACTUAL_RETARDED_MEMORY_CONTACT_COMPARISON_NOT_REFERENCE_DIAGONAL_MATCHING_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_reference_six_step_retarded_boundary_extraction_and_full_finite_bulk",
+        "status": "ACTUAL_REFERENCE_FINITE_BULK_AND_EXPLICIT_ENDPOINTS_NOT_COVARIANT_SPATIAL_MATCHING_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_canonical_flat_Proca_full_tensor_cut_and_subtracted_dispersion_benchmark",
+        "status": "CANONICAL_FLAT_FULL_TENSOR_CUT_BENCHMARK_NOT_CURVED_MATCHING_FULL_PARENT_AMPLITUDE_OR_V_G_B"
+      },
+      {
+        "id": "full_spatial_flat_Proca_covariant_and_time_subtraction_conversion_with_nonlocal_coefficient_bounds",
+        "status": "FULL_SPATIAL_FLAT_NONLOCAL_SUBTRACTION_CONVERSION_NOT_CURVED_MATCHING_LOCAL_POLYNOMIAL_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_curved_reference_initial_state_prefactor_full_memory_contact_and_regulator_tail",
+        "status": "ACTUAL_CURVED_INITIAL_PREFACTOR_REMOVED_WITH_FINITE_FULL_RESPONSE_CORRECTION_NOT_SPATIAL_MATCHING_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_curved_reference_joint_spatial_analyticity_full_readouts_and_far_endpoint_Taylor_tail",
+        "status": "ACTUAL_UNIT_W8_JOINT_SPATIAL_ANALYTICITY_AND_FAR_ENDPOINT_TAYLOR_TAIL_NOT_NEAR_REGION_LOCAL_MATCHING_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_curved_reference_all_momentum_spatial_Taylor_subtracted_endpoint_remainder",
+        "status": "ACTUAL_UNIT_W8_ALL_MOMENTUM_ENDPOINT_REMAINDER_WITH_ORIGINAL_TAIL_NOT_LOCAL_MATCHING_FULL_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "fixed_covariant_local_full_tracefree_spatial_Hessian_proper_time_and_norm",
+        "status": "FIXED_LOCAL_FULL_TRACEFREE_SPATIAL_HESSIAN_NOT_QUANTUM_MATCHING_MIXED_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "finite_endpoint_spatial_Taylor_cells_restored_with_original_regulator_tail",
+        "status": "TEN_FINITE_ENDPOINT_TAYLOR_CELLS_RESTORED_NOT_REMAINING_UV_CONTACT_MATCHING_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "actual_leading_full_Proca_sharp_two_leg_regulator_conversion_coefficient",
+        "status": "ACTUAL_LEADING_SHARP_BAND_ARTIFACT_NOT_FULL_REGULATOR_COVARIANT_MATCHING_OR_V_G_B"
+      },
+      {
+        "id": "complete_four_sector_spatial_UV_symbol_with_independent_detector_time",
+        "status": "HISTORICAL_ANNIHILATION_CREATION_PHASE_ERROR_CORRECTED_ENDPOINT_COEFFICIENTS_IN_S216"
+      },
+      {
+        "id": "uniform_actual_UV_subtracted_endpoint_remainder_with_original_regulator_tail",
+        "status": "UNIFORM_UV_SUBTRACTED_ENDPOINT_REMAINDER_NOT_FULL_CONTACT_COVARIANT_MATCHING_OR_V_G_B"
+      },
+      {
+        "id": "complete_original_UV_shape_conversion_centered_cancellations_and_uniform_tail",
+        "status": "ACTUAL_K2_AND_FINITE_CONVERSION_CANCEL_WITH_UNIFORM_TAIL_NOT_CURVED_A1_EVALUATION_FULL_CONTACT_MATCHING_OR_V_G_B"
+      },
+      {
+        "id": "explicit_actual_curved_linear_regulator_conversion_all_tensor_channels_and_source_jets",
+        "status": "ACTUAL_CURVED_A1_EVALUATED_WITH_COEFFICIENT_NORMS_NOT_FULL_ONE_BALL_CONTACT_COVARIANT_MATCHING_OR_V_G_B"
+      },
+      {
+        "id": "actual_spatial_UV_difference_complete_contact_cancellation_and_fixed_curved_pole",
+        "status": "FULL_SPATIAL_UV_DIFFERENCE_AND_POLE_IDENTIFIED_NOT_FINITE_DIMENSIONAL_MATCHING_OR_FULL_RESPONSE"
+      },
+      {
+        "id": "actual_dimensional_spatial_UV_finite_part_with_evanescent_modes_and_counterterms",
+        "status": "HISTORICAL_PHYSICAL_FINITE_IDENTIFICATION_WITHDRAWN_EXPLICIT_EVANESCENT_CORRECTION_IN_S216"
+      },
+      {
+        "id": "complete_matched_tracefree_spatial_Gaussian_current_with_anchored_original_regulator",
+        "status": "HISTORICAL_PHASE_ERROR_SUPERSEDED_BY_CORRECTED_S217_FULL_TRACEFREE_CURRENT_AND_ANCHORED_REGULATOR"
+      },
+      {
+        "id": "full_constrained_ADM_Proca_vertices_metric_chart_contacts_and_all_momentum_forms",
+        "status": "FULL_ADM_LOCAL_AND_FINITE_REGULATOR_GAUSSIAN_INPUT_NOT_FULL_NEW_SECTOR_CONTINUUM_REDUCED_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "prepared_ordered_Ward_reconstruction_full_chart_correction_and_three_remaining_scalar_kernels",
+        "status": "PREPARED_WARD_RECONSTRUCTION_WITH_COMPLETE_S219_REFERENCE_GAUSSIAN_METRIC_CURRENT_NOT_REDUCED_INVERSE_OR_NONLINEAR_BACKGROUND"
+      },
+      {
+        "id": "corrected_retarded_pair_phase_full_ordered_scalar_UV_and_fixed_six_invariant_finite_matching",
+        "status": "CORRECTED_LOCAL_SPATIAL_UV_SCALAR_FINITE_PART_NOT_FULL_CURRENT_REASSEMBLY_SCALAR_ANCHOR_REDUCED_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "corrected_full_retarded_tracefree_spatial_current_original_regulator_and_prepared_Ward_input",
+        "status": "CORRECTED_COMPLETE_TRACEFREE_SPATIAL_WEAK_CURRENT_AND_KNOWN_WARD_INPUT_NOT_FULL_SCALAR_REDUCED_INVERSE_BACKGROUND_OR_V_G_B"
+      },
+      {
+        "id": "full_homogeneous_trace_Gaussian_anchor_original_volume_matching_and_ordered_cross_zeros",
+        "status": "COMPLETE_HOMOGENEOUS_TRACE_ANCHOR_AND_FULL_HOMOGENEOUS_HILBERT_LIFT_NOT_NONZERO_TRANSFER_SCALAR_REMAINDERS_REDUCED_INVERSE_OR_V_G_B"
+      },
+      {
+        "id": "full_spatial_scalar_remainders_original_regulator_and_complete_prepared_Gaussian_metric_response",
+        "status": "COMPLETE_REFERENCE_GAUSSIAN_METRIC_RESPONSE_WEAK_BOUND_NOT_REDUCED_INVERSE_FULL_SOURCED_PARENT_BACKGROUND_OR_V_G_B"
+      },
+      {
+        "id": "regular_QG1_scalar_coefficient_Hamiltonian_complete_infrared_Ward_pullback_and_comparison_bounds",
+        "status": "REGULAR_CLASSICAL_COEFFICIENT_PHASE_SYSTEM_AND_IR_SAFE_REFERENCE_SCALAR_WEAK_RESPONSE_NOT_FULL_QUANTUM_CONSTRAINT_INVERSE_OR_P8"
+      },
+      {
+        "id": "uniform_two_chart_QG1_classical_scalar_phase_propagator_with_twelve_spatial_derivative_loss",
+        "status": "TAME_CLASSICAL_COEFFICIENT_PROPAGATOR_NOT_SAME_SPACE_QUANTUM_INVERSE_STABILITY_OR_P8"
+      },
+      {
+        "id": "full_quantum_forced_scalar_constraints_ordered_Schur_graph_identity_and_first_response_domain",
+        "status": "EXACT_FORCE_INTERFACE_AND_ADMISSIBLE_GRAPH_EQUIVALENCE_NOT_QUANTUM_INVERSE_CONTRACTION_STABILITY_OR_P8"
+      },
+      {
+        "id": "isolated_fixed_shear_factor_unique_subthreshold_zero_pole_plus_cut_and_finite_window_causal_inverse",
+        "status": "ISOLATED_REFERENCE_INVERSE_WITH_UNDAMPED_POLE_NOT_FULL_COUPLED_POLE_STABILITY_OR_P8"
+      },
+      {
+        "id": "full_flat_scalar_gauge_quotient_two_channel_causal_reference_inverse_uniform_all_momentum_bound",
+        "status": "FLAT_REFERENCE_QUOTIENT_INVERSE_NO_SPATIAL_LOSS_NOT_FULL_CURVED_COUPLED_INVERSE_OR_P8"
+      },
+      {
+        "id": "actual_curved_scalar_curvature_coordinates_complete_finite_local_Hessian_and_ordered_reference_inverse",
+        "status": "CURVATURE_ADAPTED_REFERENCE_UNIFORM_INVERSE_NOT_ACTUAL_FULL_CURVED_QUANTUM_INVERSE_OR_P8"
+      },
+      {
+        "id": "original_channel_exterior_log_coercivity_and_ordered_weighted_bounded_curvature_reference_corrections",
+        "status": "WEIGHTED_REFERENCE_CORRECTIONS_INVERTIBLE_NOT_ACTUAL_FULL_QUANTUM_MATCHING_STABILITY_OR_P8"
+      },
+      {
+        "id": "actual_complete_finite_local_curvature_conjugation_uniform_weighted_bound_and_full_finite_reference_inverse",
+        "status": "ACTUAL_FULL_FINITE_LOCAL_REFERENCE_INVERTED_NOT_FULL_NONLOCAL_CURVED_QUANTUM_SYSTEM_OR_P8"
+      },
+      {
+        "id": "actual_homogeneous_tracefree_full_curved_quantum_and_classical_tensor_prepared_causal_inverse",
+        "status": "ACTUAL_HOMOGENEOUS_FULL_NONLOCAL_SHEAR_AND_TREE_INVERSE_NOT_NONZERO_TRANSFER_FULL_S222_STABILITY_OR_P8"
+      },
+      {
+        "id": "actual_full_scalar_clock_matter_coupled_prepared_causal_inverse_and_S222_feedback_on_smooth_bounded_Fourier_support",
+        "status": "ACTUAL_SMOOTH_BOUNDED_EXTERNAL_MOMENTUM_COUPLED_INVERSE_NOT_UNRESTRICTED_GRAPH_STABILITY_NONLINEAR_OR_P8"
+      },
+      {
+        "id": "actual_full_flat_vacuum_tree_Proca_TT_first_sheet_complex_pair_low_energy_bound_and_all_momentum_original_causal_graph_inverse",
+        "status": "ACTUAL_RETAINED_FLAT_MEAN_EQUATION_GROWING_POLES_AND_CAUSAL_INVERSE_NOT_CURVED_INSTABILITY_PHYSICAL_UV_NO_GO_OR_P8"
+      },
+      {
+        "id": "original_canonical_massive_scalar_partial_unitarity_necessary_correction_and_conditional_dispersion_matching_error_tradeoff",
+        "status": "EXACT_TREE_AND_CONDITIONAL_MATCHING_DISJUNCTION_NOT_PHYSICAL_CUTOFF_FULL_QUANTUM_DECOUPLING_UV_NO_GO_OR_P8"
+      },
+      {
+        "id": "original_scalar_transfer_matching_mandatory_low_spectral_weight_and_higher_forward_coefficient_with_positive_spectral_control",
+        "status": "CONDITIONAL_FULL_SPECTRAL_WEIGHT_AND_HIGHER_COEFFICIENT_REQUIREMENT_NOT_FULL_LOOP_BOUND_PHYSICAL_CUTOFF_EXACT_UNITARY_COMPLETION_OR_P8"
+      },
+      {
+        "id": "separate_V2S_T1_local_positive_two_scalar_model_complete_original_massive_tree_matching_and_uniform_all_angle_remainder",
+        "status": "SEPARATE_CLASSICAL_TWO_SCALAR_MODEL_AND_TREE_MATCHING_NOT_FULL_QUANTUM_ORIGINAL_AFFINE_PARENT_BOUNCE_UV_OR_P8"
+      },
+      {
+        "id": "separate_V2S_T1_exact_heavy_integration_complete_first_light_self_energy_complex_disk_bound_and_leading_heavy_decay_coefficient",
+        "status": "SEPARATE_FINITE_REGULATOR_IDENTITY_AND_FIRST_LOOP_INPUT_NOT_ALL_LOOP_FOUR_POINT_ORIGINAL_PARENT_BOUNCE_UV_OR_P8"
+      },
+      {
+        "id": "separate_V2S_T1_OS4_complete_first_four_point_loop_UV_and_cut_matching_with_symmetric_contact_and_full_classical_quartic_margin",
+        "status": "SEPARATE_COMPLETE_FIRST_LOOP_REPRESENTATION_AND_SYMMETRIC_VALUE_MATCHING_NOT_FULL_ANGULAR_HIGHER_COEFFICIENT_ALL_LOOP_ORIGINAL_PARENT_BOUNCE_UV_OR_P8"
+      },
+      {
+        "id": "separate_V2S_T1_OS4_complete_physical_all_angle_first_loop_remainder_same_tree_window",
+        "status": "SEPARATE_FULL_FIRST_LOOP_ANGULAR_REMAINDER_NOT_HIGHER_QUANTUM_JETS_OMITTED_LOOPS_EXACT_UV_ORIGINAL_PARENT_BOUNCE_V_G_B_OR_P8"
+      },
+      {
+        "id": "separate_V2S_T1_OS4_full_first_loop_b20_b21_b40_matching_with_joint_complex_bidisk_remainders",
+        "status": "SEPARATE_COMPLETE_FIRST_LOOP_LOW_COEFFICIENT_MATCHING_NOT_OMITTED_LOOPS_EXACT_PHYSICAL_COEFFICIENTS_UV_ORIGINAL_PARENT_BOUNCE_V_G_B_OR_P8"
+      },
+      {
+        "id": "separate_covariant_H8A420_parent_with_full_affine_domain_clock_coefficient_tube_and_scoped_heavy_stress_control",
+        "status": "SEPARATE_SMOOTH_CLASSICAL_PARENT_AND_SCOPED_MATCHING_NOT_FULL_QUANTUM_PARENT_SAME_STATE_BOUNCE_UV_REGGE_ORIGINAL_V_G_B_OR_P8"
+      },
+      {
+        "id": "complete_H8A420_classical_limiting_action_first_loop_with_higher_vertices_and_separate_OS4_matching",
+        "status": "FORMAL_COMPLETE_FIRST_LOOP_OF_CLASSICAL_LIMIT_WITH_SCOPED_ERRORS_NOT_QUANTUM_DECOUPLING_ALL_LOOPS_CURVED_BOUNCE_UV_REGGE_OR_P8"
+      },
+      {
+        "id": "specified_H8A420_SLE_heavy_state_complete_MSbar_reference_stress_and_fixed_QG2_mean_profile",
+        "status": "SPECIFIED_GAUSSIAN_HEAVY_STATE_REFERENCE_STRESS_AND_RETAINED_MEAN_MATCHING_NOT_FULL_INTERACTING_CLOCK_RESPONSE_NONLINEAR_BOUNCE_UV_REGGE_OR_P8"
+      }
+    ],
+    "primitive": [
+      {
+        "id": "scalar_Phi0_W0_F0",
+        "status": "BOUNDED_PAIRED_VACUUM_PRIMITIVE_WITH_ASSIGNED_LOCAL_FOREST"
+      },
+      {
+        "id": "scalar_Phi2_W0_F2",
+        "status": "BOUNDED_NONLOCAL_AND_FINITE_MS_MASS_AND_SLOPE_REFERENCES"
+      },
+      {
+        "id": "scalar_Phi2_W1_F0",
+        "status": "BOUNDED_PAIRED_NONLOCAL_AND_FINITE_MS_LOCAL_REFERENCES"
+      },
+      {
+        "id": "scalar_Phi4_W0_F4",
+        "status": "BOUNDED_PAIRED_PRIMITIVE_ROW"
+      },
+      {
+        "id": "scalar_Phi4_W1_F2",
+        "status": "BOUNDED_PAIRED_IN_COMMON_MS_INTERACTION_SCHEME"
+      },
+      {
+        "id": "scalar_Phi4_W2_F0",
+        "status": "BOUNDED_PAIRED_IN_COMMON_MS_INTERACTION_SCHEME"
+      },
+      {
+        "id": "gauge_Phi0",
+        "status": "BOUNDED_PAIRED_VACUUM_PRIMITIVE_WITH_ASSIGNED_LOCAL_FOREST"
+      },
+      {
+        "id": "gauge_Phi2",
+        "status": "BOUNDED_NONLOCAL_AND_FINITE_MS_MASS_AND_SLOPE_REFERENCES"
+      },
+      {
+        "id": "gauge_Phi4",
+        "status": "BOUNDED_PAIRED_PRIMITIVE_ROW"
+      }
+    ]
+  },
+  "prior_sha256": {
+    "S6_176_retained_original_Proca_state_and_prescription_fully_rebuilt": "1175702d6980db090396863b807af0e767241daeb7d8dabf138ed11c67e1ae75",
+    "S6_182_original_fixed_QG1_reference_profile_and_vacuum_matching_fully_rebuilt": "f754f6d62795d5a1c0ade4c576395f1587fc35f9c9895bc8b7b15b2b2dec2e16",
+    "S6_239_complete_formal_classical_limit_first_loop_fully_rebuilt": "a09852126d79ca223af06555e10283328cb144a14945c127abee73b7ce8b9c05",
+    "all_frozen_original_and_separate_model_scientific_bytes_unchanged": true,
+    "new_heavy_state_and_profile_not_full_interacting_quantum_parent": true
+  },
+  "proof_checks": {
+    "all_frozen_scientific_prescriptions_unchanged": true,
+    "complete_all_momentum_stress_and_clock_tube_bounds_actual_mass_ceiling": true,
+    "complete_all_momentum_stress_and_clock_tube_bounds_actual_mass_floor": true,
+    "complete_all_momentum_stress_and_clock_tube_bounds_actual_squeezing_ratio_small": true,
+    "complete_all_momentum_stress_and_clock_tube_bounds_all_complete_SLE_stress_jets": true,
+    "complete_all_momentum_stress_and_clock_tube_bounds_all_complete_defect_jet_bounds": true,
+    "complete_all_momentum_stress_and_clock_tube_bounds_all_complete_exact_mode_stress_jets": true,
+    "complete_all_momentum_stress_and_clock_tube_bounds_all_complete_matrix_jet_bounds": true,
+    "complete_all_momentum_stress_and_clock_tube_bounds_all_ten_IBP_coefficients": true,
+    "complete_all_momentum_stress_and_clock_tube_bounds_auxiliary_epsilon_disk_contraction": true,
+    "complete_all_momentum_stress_and_clock_tube_bounds_closed_auxiliary_Riccati_ball": true,
+    "complete_all_momentum_stress_and_clock_tube_bounds_closed_full_Riccati_ball_bracket": true,
+    "complete_all_momentum_stress_and_clock_tube_bounds_combined_finite_classical_and_heavy_tube_budget": true,
+    "complete_all_momentum_stress_and_clock_tube_bounds_complete_U_upper": true,
+    "complete_all_momentum_stress_and_clock_tube_bounds_complete_W6_adiabatic_tail_all_five_jets": true,
+    "complete_all_momentum_stress_and_clock_tube_bounds_complete_base_Riccati_upper": true,
+    "complete_all_momentum_stress_and_clock_tube_bounds_complete_c2_exact_comparison_bound": true,
+    "complete_all_momentum_stress_and_clock_tube_bounds_complete_c2_over_c1": true,
+    "complete_all_momentum_stress_and_clock_tube_bounds_complete_heavy_stress_all_five_jets": true,
+    "complete_all_momentum_stress_and_clock_tube_bounds_complete_lambda_prime_upper": true,
+    "complete_all_momentum_stress_and_clock_tube_bounds_complete_light_vacuum_profile_extra_bound": true,
+    "complete_all_momentum_stress_and_clock_tube_bounds_complete_normalized_heavy_stress": true,
+    "complete_all_momentum_stress_and_clock_tube_bounds_complete_quantum_profile_nonaffine_four_jet": true,
+    "complete_all_momentum_stress_and_clock_tube_bounds_complete_renormalized_state_integral_constant": true,
+    "complete_all_momentum_stress_and_clock_tube_bounds_complex_H_prime_upper": true,
+    "complete_all_momentum_stress_and_clock_tube_bounds_complex_H_upper": true,
+    "complete_all_momentum_stress_and_clock_tube_bounds_complex_Re_inverse_scale_fourth": true,
+    "complete_all_momentum_stress_and_clock_tube_bounds_complex_inverse_scale_power": true,
+    "complete_all_momentum_stress_and_clock_tube_bounds_complex_v_lower": true,
+    "complete_all_momentum_stress_and_clock_tube_bounds_complex_v_phase_ratio": true,
+    "complete_all_momentum_stress_and_clock_tube_bounds_complex_v_upper": true,
+    "complete_all_momentum_stress_and_clock_tube_bounds_exact_mode_coefficient_error": true,
+    "complete_all_momentum_stress_and_clock_tube_bounds_finite_curvature_mass_term": true,
+    "complete_all_momentum_stress_and_clock_tube_bounds_finite_curvature_square_energy": true,
+    "complete_all_momentum_stress_and_clock_tube_bounds_finite_curvature_square_pressure": true,
+    "complete_all_momentum_stress_and_clock_tube_bounds_full_H_jet_complex_bound_0": true,
+    "complete_all_momentum_stress_and_clock_tube_bounds_full_H_jet_complex_bound_1": true,
+    "complete_all_momentum_stress_and_clock_tube_bounds_full_H_jet_complex_bound_2": true,
+    "complete_all_momentum_stress_and_clock_tube_bounds_full_H_jet_complex_bound_3": true,
+    "complete_all_momentum_stress_and_clock_tube_bounds_full_W6_defect_constant": true,
+    "complete_all_momentum_stress_and_clock_tube_bounds_full_auxiliary_readout_bound": true,
+    "complete_all_momentum_stress_and_clock_tube_bounds_full_exact_mode_c2_error": true,
+    "complete_all_momentum_stress_and_clock_tube_bounds_full_heavy_profile_and_light_extra_fit_two_B": true,
+    "complete_all_momentum_stress_and_clock_tube_bounds_full_local_heat_stress_all_five_jets": true,
+    "complete_all_momentum_stress_and_clock_tube_bounds_full_log_rate_on_auxiliary_disk": true,
+    "complete_all_momentum_stress_and_clock_tube_bounds_full_physical_self_pair_amplitude": true,
+    "complete_all_momentum_stress_and_clock_tube_bounds_full_radial_integral_constant": true,
+    "complete_all_momentum_stress_and_clock_tube_bounds_full_state_and_subtraction_below_local_budget": true,
+    "complete_all_momentum_stress_and_clock_tube_bounds_joint_time_Cauchy_tail_margin": true,
+    "complete_all_momentum_stress_and_clock_tube_bounds_local_nonconstant_five_jet_factor": true,
+    "complete_all_momentum_stress_and_clock_tube_bounds_log_map_difference_constant": true,
+    "complete_all_momentum_stress_and_clock_tube_bounds_normalized_Riccati_map_constant": true,
+    "complete_all_momentum_stress_and_clock_tube_bounds_sampling_weight_derivatives_through10": true,
+    "complete_all_momentum_stress_and_clock_tube_bounds_seven_iterations_leave_complex_room": true,
+    "complete_all_momentum_stress_and_clock_tube_bounds_small_full_Volterra_exponent": true,
+    "complete_all_momentum_stress_and_clock_tube_bounds_summed_full_nonlocal_subtraction_mode_bound": true,
+    "complete_new_profile_budget_separate_from_older_budgets": true,
+    "full_reference_modes_and_actual_Hadamard_state_SLE_not_an_instantaneous_or_finite_adiabatic_vacuum": true,
+    "full_reference_modes_and_actual_Hadamard_state_full_sampling_inside_quantitative_interval": true,
+    "full_reference_modes_and_actual_Hadamard_state_mass_positive_and_global_reference_frequency_gap": true,
+    "full_reference_modes_and_actual_Hadamard_state_new_reference_affine_mean_not_old_trace_reset": true,
+    "full_reference_modes_and_actual_Hadamard_state_physical_phase_and_CCR_fixed_before_Hadamard_identification": true,
+    "full_reference_modes_and_actual_Hadamard_state_reference_scale_factor_never_zero": true,
+    "full_reference_modes_and_actual_Hadamard_state_sampling_entirely_before_fixed_Cauchy_surface": true,
+    "full_state_error_not_only_a_local_heat_expansion": true,
+    "new_heavy_reference_state_and_scalar_prescription_explicit": true,
+    "no_automatic_old_Hessian_stability_or_inverse_transfer": true,
+    "unique_matching_identifiers": true,
+    "whole_dimensional_counteraction_and_fixed_mean_profile_conditional_Gaussian_mean_not_full_interacting_clock_state": true,
+    "whole_dimensional_counteraction_and_fixed_mean_profile_exact_old_full_R_and_affine_maps_unchanged_by_F_only_profile": true,
+    "whole_dimensional_counteraction_and_fixed_mean_profile_full_dimensional_counteraction_not_component_only_subtraction": true,
+    "whole_dimensional_counteraction_and_fixed_mean_profile_full_new_heavy_and_light_vacuum_constants_both_retained": true,
+    "whole_dimensional_counteraction_and_fixed_mean_profile_new_clock_scalar_Hessian_not_silently_identified_with_old": true,
+    "whole_dimensional_counteraction_and_fixed_mean_profile_nonconstant_profile_cannot_enter_first_four_point_loop": true
+  },
+  "schema": 1,
+  "source_sha256": {
+    "FORMULATION.md": "8b21b1e23feb84d7887c28f1969fdf49b7c1e7df2a327f77451bc205a8abe8bf",
+    "README.md": "cdbee5dcec4ed02a45166dbbf1ad13bb72ff109fef973534488e56179378560b",
+    "notes/bounds.md": "75d13a1fc66b2da0b962dd172a3b8440f56fd15fe19915c1ce11f513578c59dd",
+    "notes/literature.md": "24dc4e09d448b17d73362d4c7122e5618b3f76e1fdd010282cf24ea1ecf2be37",
+    "notes/profile.md": "add9f6dfff836145256577030921cbb2c338cd59b944372210c7bde3350c61bc",
+    "notes/renormalization.md": "ae9d6147830729b5409219cbc6788a1e3ca4681e3df364515ccaf99875cdd01b",
+    "notes/scope.md": "80f6eec5bf974efd4e1055a954834c28ea1bd7d4dbed8c9f1bc30c50797de089",
+    "notes/state.md": "a0c9fd8c9452dd03039b1730b51e31dd9452b6fa490003f00f0017ac7b9e2547",
+    "notes/validation.md": "98804655f650ec02656c2cad1bb27ad487f62f4db5afd3c91f3bce536779a2d5",
+    "src/p8_vacuum_affine_heavy_curved_state/__init__.py": "49c288cbad10af3c55698597fd551bd4712785cc68ef7690d71b4443019aa15f",
+    "src/p8_vacuum_affine_heavy_curved_state/audit.py": "9146f7711c49b97cea52499575936fc27de8c292483fd54f3d53591fe019cf56",
+    "src/p8_vacuum_affine_heavy_curved_state/estimates.py": "b6a97113ad984ae6d3ead78b916444e141c0b88b9d4d58718bf1e6c364e005a3",
+    "src/p8_vacuum_affine_heavy_curved_state/quantum.py": "23f04be3f7e71a31bc0bee55f0077f126892e324ea1e035921eb384961f0ee64",
+    "src/p8_vacuum_affine_heavy_curved_state/state.py": "2b86a42d77b743b83f113dd8eb43912ac4a7913c478e23a63fd28365b02fe968",
+    "src/p8_vacuum_affine_heavy_curved_state/verify.py": "e5a4db71ab3766e6ff1a7f40a8f03ef7ce31ab23a428c41e3864a1578ea3a1f0",
+    "tests/test_affine_heavy_curved_state_certificate.py": "ab619072319e42b806b793c6d1e1bb2fad1400b9c875b90112c7fa70441ff984",
+    "tests/test_affine_heavy_curved_state_science.py": "c4996f31f9cf03a6cfe69768f52322e374c2c88d454c0e5247f05dcd9ad4a504"
+  },
+  "status": "SPECIFIED_GAUSSIAN_HEAVY_STATE_REFERENCE_STRESS_AND_RETAINED_MEAN_MATCHING; NOT_FULL_INTERACTING_CLOCK_RESPONSE_NONLINEAR_BOUNCE_UV_REGGE_ORIGINAL_V_G_B_OR_P8",
+  "verdict": "A fixed compact sampling before t0=-1/2 specifies the added heavy scalar's exact state of low energy on the full CD reference. Physical positive frequency, CCR, the regular energy minimizer and basis independence are fixed; the applicable primary theorem supplies Hadamard regularity. A separate explicit analytic estimate retains the whole WKB comparison residual, full state-selection error, all momentum and the complete fourth-order subtraction. The dimensionally continued scalar pole action is varied before the limit, yielding the full finite mu1 matching rather than component-only subtraction. Both reference stress components and all time derivatives0..5 are below10^-400 against kappa0 on[-1,1]. A separately named QG2 physical scalar coefficient, fixed once from the actual source-defined stress, restores the retained Proca-plus-H Gaussian mean equations on the same physical CD metric with the recomputed S238 affine mean. Heavy and light flat Gaussian vacuum constants are explicitly retained and cancelled in the formal limiting-action one-loop vacuum. The nonconstant profile starts at field degree2048, so the S239 complete first-loop four-Phi result remains unchanged. The combined full normalized clock four-jets fit a NEW10^-399 budget on the named tube. The new scalar clock jets change the light Hessian: old stability and quantum inverse results do not automatically transfer. Full interacting light/mixed clock loops and state, quantum gravitational decoupling, full new response/inverse, nonlinear same-state bounce, physical UV, finite-gravity Regge and original V/G/B/P8 remain open.",
+  "verification_boundary": "Exact physical mode, CCR, dimensional-counteraction and profile identities accompany written complex-domain, full Volterra, repeated integration-by-parts and absolute radial-integral proofs with explicit constants. Independent finite-mass numerical exact-mode fixtures test the state construction, not the actual enormous hierarchy. The Hadamard theorem's hypotheses are checked against the primary paper; these arguments are not FORMALIZED. Native/direct/ordinary/CLI retain original SymPy; only full regression uses the audited exact-GCD adapter. No frozen scientific or prescription bytes are changed.",
+  "written_proofs": [
+    "notes/state.md",
+    "notes/renormalization.md",
+    "notes/bounds.md",
+    "notes/profile.md",
+    "notes/scope.md",
+    "notes/literature.md",
+    "notes/validation.md"
+  ]
+}
