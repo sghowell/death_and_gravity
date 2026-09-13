@@ -438,7 +438,13 @@ around a pre-registered problems document and a certificate-gated ledger.
   This is still linear light evolution and its leading heavy response,
   not a full nonlinear solution or UV-admissible completion.
 
-The [current P8 continuation audit](docs/assessment-2026-09-12-p8-affine-heavy-scalar-parent.md)
+The [current P8 continuation audit](docs/assessment-2026-09-12-p8-affine-heavy-parent-one-loop.md)
+computes the complete first loop of the full classical limiting parent,
+including all allowed higher-vertex contractions and dimensionally complete
+counterterms. Explicit new symmetric matching controls the full-angle and
+forward-coefficient corrections; finite clock extensions have a separate
+budget. Quantum gravitational decoupling, omitted loops and P8 remain open.
+The [covariant heavy-scalar parent audit](docs/assessment-2026-09-12-p8-affine-heavy-scalar-parent.md)
 constructs a separate full covariant heavy-scalar parent with a connected
 regular affine domain, complete clock-coefficient bounds and a global flat
 relative-potential margin. Its prescribed-source stress bound is restricted
