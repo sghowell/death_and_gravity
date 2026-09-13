@@ -438,7 +438,13 @@ around a pre-registered problems document and a certificate-gated ledger.
   This is still linear light evolution and its leading heavy response,
   not a full nonlinear solution or UV-admissible completion.
 
-The [current P8 continuation audit](docs/assessment-2026-09-12-p8-affine-heavy-scalar-loop-coefficients.md)
+The [current P8 continuation audit](docs/assessment-2026-09-12-p8-affine-heavy-scalar-parent.md)
+constructs a separate full covariant heavy-scalar parent with a connected
+regular affine domain, complete clock-coefficient bounds and a global flat
+relative-potential margin. Its prescribed-source stress bound is restricted
+to an explicit corridor; an unrestricted counterexample is retained.
+Quantum matching, the heavy state and original P8 remain open.
+The [complete low-energy loop audit](docs/assessment-2026-09-12-p8-affine-heavy-scalar-loop-coefficients.md)
 bounds three complete first-loop low-energy coefficients using a directly
 proved joint complex neighborhood. The finite prescription is unchanged;
 these are truncated-amplitude results, not omitted-loop control or exact
