@@ -438,14 +438,13 @@ around a pre-registered problems document and a certificate-gated ledger.
   This is still linear light evolution and its leading heavy response,
   not a full nonlinear solution or UV-admissible completion.
 
-The [current P8 continuation audit](docs/assessment-2026-09-14-p8-affine-nonlinear-auxiliary-measure.md)
-gives the full retained nonlinear canonical Hamiltonian, a local regular
-lapse/vector auxiliary branch, complete cotangent and boundary maps, and
-the finite second-class constraint density. It keeps all sources and
-physical fields. These classical and finite-measure identities do not
-determine the fixed interacting quantum mean or a continuum gauge measure.
-Controlled matching, actual cutoff, nonlinear bounce and original
-V/G/B/P8 remain open.
+The [current P8 continuation audit](docs/assessment-2026-09-14-p8-affine-spatial-gauge.md)
+gives the complete nonlinear spatial gauge, its full ghost operator, a local
+flat-torus slice and finite determinant/source contacts. Residual translations,
+canonical boundaries and all physical fields remain. These classical gauge
+and finite-vertex results do not determine the interacting quantum measure
+or fixed mean. Controlled matching, actual cutoff, nonlinear bounce and
+original V/G/B/P8 remain open.
 The [complete heavy ADM and common-clock response audit](docs/assessment-2026-09-13-p8-affine-heavy-adm-clock-response.md)
 bounds the entire actual heavy ADM and common-clock response at every transfer,
 with all ten metric directions, both ordered Ward terms, the distinct clock
