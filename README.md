@@ -438,13 +438,14 @@ around a pre-registered problems document and a certificate-gated ledger.
   This is still linear light evolution and its leading heavy response,
   not a full nonlinear solution or UV-admissible completion.
 
-The [current P8 continuation audit](docs/assessment-2026-09-14-p8-affine-physical-volume-correction.md)
-source-pins the correct physical factor C=R^(-1/2), full ADM/matter
-coefficients and fixed-reference volume contacts. S261's shifted-R
-identification is explicitly refuted and archived unchanged.
-This does not establish an interacting physical mean or quantum
-ordering/regulator; cutoff/matching, nonlinear bounce and original
-V/G/B/P8 remain open.
+The [current P8 continuation audit](docs/assessment-2026-09-14-p8-affine-finite-band-neighborhood.md)
+establishes a local full-parent classical physical bounce for signed
+initial lapse changes up to10^-230 and a complete sixteen-phase
+linear root-energy growth bound below2 on the stated tiny slab and band.
+It uses the [correct physical map](docs/assessment-2026-09-14-p8-affine-physical-volume-correction.md);
+S261's shifted-R binding remains explicitly refuted and archived unchanged.
+This is not an interacting quantum mean, physical cutoff or nonlinear
+inhomogeneous stability result. Original V/G/B/P8 remain open.
 The [complete heavy ADM and common-clock response audit](docs/assessment-2026-09-13-p8-affine-heavy-adm-clock-response.md)
 bounds the entire actual heavy ADM and common-clock response at every transfer,
 with all ten metric directions, both ordered Ward terms, the distinct clock
