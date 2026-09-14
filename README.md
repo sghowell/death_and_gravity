@@ -438,19 +438,19 @@ around a pre-registered problems document and a certificate-gated ledger.
   This is still linear light evolution and its leading heavy response,
   not a full nonlinear solution or UV-admissible completion.
 
-The [current P8 continuation audit](docs/assessment-2026-09-14-p8-affine-nonlinear-reference-volume.md)
-bounds the entire positive-lapse reference volume in the unchanged Gaussian
-state and identifies a precise obstruction: naive Gaussian substitution gives
-an infinite mean for the individual ADM kinetic coefficient M/N.
-The [full finite-momentum preparation bounds](docs/assessment-2026-09-14-p8-affine-quantitative-gaussian-window.md)
-retain the original sampled state and every canonical endpoint.
-The [nearby classical physical bounce](docs/assessment-2026-09-14-p8-affine-finite-band-neighborhood.md)
-remains a separate full-parent result. All use the
-[correct physical map](docs/assessment-2026-09-14-p8-affine-physical-volume-correction.md);
-S261's shifted-R binding remains explicitly refuted and archived unchanged.
-Neither the reference-volume result nor the individual-coefficient obstruction
-settles the complete constrained quantum theory, physical cutoff or nonlinear
-inhomogeneous stability. Original V/G/B/P8 remain open.
+The [current P8 continuation audit](docs/assessment-2026-09-14-p8-affine-nonlinear-spatial-reduction.md)
+constructs the full nonlinear spatial shape and cotangent momentum lift,
+solves the mean-zero momentum constraints, and retains the three global
+translations and the unchanged pure reference's zero-charge factor.
+The [quantitative nonlinear auxiliary branch](docs/assessment-2026-09-14-p8-affine-nonlinear-lapse-branch.md)
+gives an explicit bounce-slice domain with all matter, vector and spatial
+channels and every implicit physical-volume contact retained.
+These are local classical reduction and reference-symmetry results, not a
+nonlinear Gaussian pushforward, interacting mean or physical cutoff.
+The [reference-volume integrability boundary](docs/assessment-2026-09-14-p8-affine-nonlinear-reference-volume.md)
+and [correct physical map](docs/assessment-2026-09-14-p8-affine-physical-volume-correction.md)
+remain in force; S261's wrong physical binding stays explicitly refuted
+and archived unchanged. Original V/G/B/P8 remain open.
 The [complete heavy ADM and common-clock response audit](docs/assessment-2026-09-13-p8-affine-heavy-adm-clock-response.md)
 bounds the entire actual heavy ADM and common-clock response at every transfer,
 with all ten metric directions, both ordered Ward terms, the distinct clock
