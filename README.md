@@ -438,14 +438,12 @@ around a pre-registered problems document and a certificate-gated ledger.
   This is still linear light evolution and its leading heavy response,
   not a full nonlinear solution or UV-admissible completion.
 
-The [current P8 continuation audit](docs/assessment-2026-09-14-p8-affine-complement-measure.md)
-gives the complete sourced affine-connection complement, its finite
-conditional measure and the original-source contact terms. The retained
-canonical variables and all physical fields remain. An explicit ordering
-counterexample keeps the distinction between finite classical measure
-identities and full quantum equivalence. Physical gauge measure, fixed
-mean, controlled matching, actual cutoff, nonlinear bounce and original
-V/G/B/P8 remain open.
+The [current P8 continuation audit](docs/assessment-2026-09-14-p8-affine-spatial-brst.md)
+gives the complete spatial/projective BRST transformations, compensated
+trace gauge and conditional fixed-source Ward transport. Whole canonical
+source and endpoint terms remain. This is not a completed interacting
+gauge measure or physical mean; cutoff/matching, nonlinear bounce and
+original V/G/B/P8 remain open.
 The [complete heavy ADM and common-clock response audit](docs/assessment-2026-09-13-p8-affine-heavy-adm-clock-response.md)
 bounds the entire actual heavy ADM and common-clock response at every transfer,
 with all ten metric directions, both ordered Ward terms, the distinct clock
