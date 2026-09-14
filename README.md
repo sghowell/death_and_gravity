@@ -438,14 +438,14 @@ around a pre-registered problems document and a certificate-gated ledger.
   This is still linear light evolution and its leading heavy response,
   not a full nonlinear solution or UV-admissible completion.
 
-The [current P8 continuation audit](docs/assessment-2026-09-13-p8-affine-finite-window-growth.md)
-supplies an evaluated classical lifespan of 10^-60 and a full sixteen-phase
-propagator growth bound of 10^-300 exp(5*10^31) on the finite comoving band
-[10^64,2*10^64], retaining the entire current source and fixed heavy mass.
-This band is below the retained heavy mass scale; that does not establish a
-Wilsonian cutoff or identify the classical comparison with the fixed quantum
-mean. Controlled matching, interacting state and mean, macroscopic nonlinear
-bounce and original V/G/B/P8 remain open.
+The [current P8 continuation audit](docs/assessment-2026-09-14-p8-affine-nonlinear-auxiliary-measure.md)
+gives the full retained nonlinear canonical Hamiltonian, a local regular
+lapse/vector auxiliary branch, complete cotangent and boundary maps, and
+the finite second-class constraint density. It keeps all sources and
+physical fields. These classical and finite-measure identities do not
+determine the fixed interacting quantum mean or a continuum gauge measure.
+Controlled matching, actual cutoff, nonlinear bounce and original
+V/G/B/P8 remain open.
 The [complete heavy ADM and common-clock response audit](docs/assessment-2026-09-13-p8-affine-heavy-adm-clock-response.md)
 bounds the entire actual heavy ADM and common-clock response at every transfer,
 with all ten metric directions, both ordered Ward terms, the distinct clock
