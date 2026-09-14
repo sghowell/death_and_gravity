@@ -438,14 +438,19 @@ around a pre-registered problems document and a certificate-gated ledger.
   This is still linear light evolution and its leading heavy response,
   not a full nonlinear solution or UV-admissible completion.
 
-The [current P8 continuation audit](docs/assessment-2026-09-14-p8-affine-finite-band-neighborhood.md)
-establishes a local full-parent classical physical bounce for signed
-initial lapse changes up to10^-230 and a complete sixteen-phase
-linear root-energy growth bound below2 on the stated tiny slab and band.
-It uses the [correct physical map](docs/assessment-2026-09-14-p8-affine-physical-volume-correction.md);
+The [current P8 continuation audit](docs/assessment-2026-09-14-p8-affine-nonlinear-reference-volume.md)
+bounds the entire positive-lapse reference volume in the unchanged Gaussian
+state and identifies a precise obstruction: naive Gaussian substitution gives
+an infinite mean for the individual ADM kinetic coefficient M/N.
+The [full finite-momentum preparation bounds](docs/assessment-2026-09-14-p8-affine-quantitative-gaussian-window.md)
+retain the original sampled state and every canonical endpoint.
+The [nearby classical physical bounce](docs/assessment-2026-09-14-p8-affine-finite-band-neighborhood.md)
+remains a separate full-parent result. All use the
+[correct physical map](docs/assessment-2026-09-14-p8-affine-physical-volume-correction.md);
 S261's shifted-R binding remains explicitly refuted and archived unchanged.
-This is not an interacting quantum mean, physical cutoff or nonlinear
-inhomogeneous stability result. Original V/G/B/P8 remain open.
+Neither the reference-volume result nor the individual-coefficient obstruction
+settles the complete constrained quantum theory, physical cutoff or nonlinear
+inhomogeneous stability. Original V/G/B/P8 remain open.
 The [complete heavy ADM and common-clock response audit](docs/assessment-2026-09-13-p8-affine-heavy-adm-clock-response.md)
 bounds the entire actual heavy ADM and common-clock response at every transfer,
 with all ten metric directions, both ordered Ward terms, the distinct clock
