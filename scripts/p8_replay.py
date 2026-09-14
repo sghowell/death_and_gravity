@@ -81,13 +81,18 @@ def native_adapter():
 def ordinary(repo, target):
     import pytest
     from p8_snapshot_regression import CompleteSnapshot, static_snapshot_namespaces
+    from p8_test_helpers import sibling_test_imports
 
     tests, files = checkpoint_tests(repo, target)
     snapshot = CompleteSnapshot(tests, files)
     adapter = native_adapter()
     assert adapter.PolyElement._gcd is adapter.ORIGINAL_GCD
     try:
-        with static_snapshot_namespaces(snapshot, repo) as count:
+        with (
+            sibling_test_imports(snapshot) as helpers,
+            static_snapshot_namespaces(snapshot, repo) as count,
+        ):
+            print("Native ordinary captured sibling test helpers", helpers, flush=True)
             print("Native ordinary static namespace ancestors", count, flush=True)
             return pytest.main(
                 [

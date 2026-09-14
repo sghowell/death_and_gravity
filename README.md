@@ -438,7 +438,14 @@ around a pre-registered problems document and a certificate-gated ledger.
   This is still linear light evolution and its leading heavy response,
   not a full nonlinear solution or UV-admissible completion.
 
-The [current P8 continuation audit](docs/assessment-2026-09-14-p8-affine-quantitative-phase-domain.md)
+The [current P8 continuation audit](docs/assessment-2026-09-14-p8-affine-weyl-operator-comparison.md)
+establishes an explicit Weyl/calibrated-coherent operator comparison on the
+unchanged finite regulator, including positive volume, exact unitary
+comparison and nonzero leakage bounds on the evaluated tiny-time interval.
+The [full finite-time domain](docs/assessment-2026-09-14-p8-affine-quantitative-local-time.md)
+controls the entire nonlinear source, original reference flow and two
+explicit smooth cutoffs on that interval, retaining every time contact.
+The [evaluated bounce-slice phase domain](docs/assessment-2026-09-14-p8-affine-quantitative-phase-domain.md)
 evaluates a finite bounce-slice nonlinear phase domain for the unchanged
 pure reference, with all twelve invariant images controlled and a positive
 coherent volume operator within10^-255 of identity.

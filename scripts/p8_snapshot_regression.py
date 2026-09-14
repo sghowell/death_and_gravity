@@ -17,6 +17,7 @@ from pathlib import Path
 
 import p8_exact_regression as runner
 import pytest
+from p8_test_helpers import sibling_test_imports
 from sympy.core.random import seed
 
 REPO=Path(__file__).resolve().parents[1]
@@ -145,7 +146,8 @@ def main():
                "--rootdir",str(REPO)]
     if args.collect_only:
         arguments.extend(["--collect-only","-qq"])
-    with static_snapshot_namespaces(snapshot,REPO) as namespaces, runner.exact_runner() as counts:
+    with sibling_test_imports(snapshot) as helpers, static_snapshot_namespaces(snapshot,REPO) as namespaces, runner.exact_runner() as counts:
+        print("Captured sibling test helpers:",helpers,flush=True)
         print("Static snapshot namespace ancestors:",namespaces,flush=True)
         try:
             result=pytest.main(runner.pytest_arguments(arguments),plugins=[snapshot])
