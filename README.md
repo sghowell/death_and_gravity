@@ -438,15 +438,18 @@ around a pre-registered problems document and a certificate-gated ledger.
   This is still linear light evolution and its leading heavy response,
   not a full nonlinear solution or UV-admissible completion.
 
-The [current P8 continuation audit](docs/assessment-2026-09-14-p8-affine-nonlinear-spatial-reduction.md)
-constructs the full nonlinear spatial shape and cotangent momentum lift,
-solves the mean-zero momentum constraints, and retains the three global
-translations and the unchanged pure reference's zero-charge factor.
-The [quantitative nonlinear auxiliary branch](docs/assessment-2026-09-14-p8-affine-nonlinear-lapse-branch.md)
-gives an explicit bounce-slice domain with all matter, vector and spatial
-channels and every implicit physical-volume contact retained.
-These are local classical reduction and reference-symmetry results, not a
-nonlinear Gaussian pushforward, interacting mean or physical cutoff.
+The [current P8 continuation audit](docs/assessment-2026-09-14-p8-affine-quantitative-phase-domain.md)
+evaluates a finite bounce-slice nonlinear phase domain for the unchanged
+pure reference, with all twelve invariant images controlled and a positive
+coherent volume operator within10^-255 of identity.
+The [explicit finite quantum construction](docs/assessment-2026-09-14-p8-affine-local-quantum-regulator.md)
+retains the full moving canonical Hamiltonian, every ordering/cutoff
+contact, exact unitary evolution and dimension-sensitive comparison criteria.
+The [full nonlinear spatial reduction](docs/assessment-2026-09-14-p8-affine-nonlinear-spatial-reduction.md)
+and [quantitative auxiliary branch](docs/assessment-2026-09-14-p8-affine-nonlinear-lapse-branch.md)
+supply the complete local chart and preserve all three translations.
+These are defined finite regulators and scoped bounds, not an original
+interacting mean, physical matching, continuum removal or global completeness.
 The [reference-volume integrability boundary](docs/assessment-2026-09-14-p8-affine-nonlinear-reference-volume.md)
 and [correct physical map](docs/assessment-2026-09-14-p8-affine-physical-volume-correction.md)
 remain in force; S261's wrong physical binding stays explicitly refuted
