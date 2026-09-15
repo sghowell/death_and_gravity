@@ -438,35 +438,38 @@ around a pre-registered problems document and a certificate-gated ledger.
   This is still linear light evolution and its leading heavy response,
   not a full nonlinear solution or UV-admissible completion.
 
-The [current P8 continuation audit](docs/assessment-2026-09-14-p8-affine-finite-volume-turnaround.md)
-establishes a physical-volume turnaround on the longer interval10^-130
-for the unchanged finite regulator, both full operator orderings and both
-original cutoffs. The complete source, actual moving clock center and
-all nonlinear reconstruction contacts remain. Homogeneous variables are
-external; unique/strict minima, self-consistent feedback and longer-time
-core leakage are not established by this result.
-The [Weyl/calibrated-coherent comparison](docs/assessment-2026-09-14-p8-affine-weyl-operator-comparison.md)
-retains its exact unitary and nonzero leakage bounds on the earlier,
-much shorter interval; those bounds are not reassigned to the new time.
-The [full finite-time domain](docs/assessment-2026-09-14-p8-affine-quantitative-local-time.md)
-controls the entire nonlinear source, original reference flow and two
-explicit smooth cutoffs on that interval, retaining every time contact.
-The [evaluated bounce-slice phase domain](docs/assessment-2026-09-14-p8-affine-quantitative-phase-domain.md)
-evaluates a finite bounce-slice nonlinear phase domain for the unchanged
-pure reference, with all twelve invariant images controlled and a positive
-coherent volume operator within10^-255 of identity.
-The [explicit finite quantum construction](docs/assessment-2026-09-14-p8-affine-local-quantum-regulator.md)
-retains the full moving canonical Hamiltonian, every ordering/cutoff
-contact, exact unitary evolution and dimension-sensitive comparison criteria.
-The [full nonlinear spatial reduction](docs/assessment-2026-09-14-p8-affine-nonlinear-spatial-reduction.md)
+The [current P8 canonical-boundary correction](docs/assessment-2026-09-15-p8-affine-canonical-boundary-corrected-hybrid.md)
+repairs an omitted action boundary in the raw/prepared scalar momentum
+dictionary. S269-S274's identification with the original prepared physical
+state is refuted: both momentum shifts and their configuration-dependent
+unitary are required. Frozen sources and reports are archived unchanged;
+their explicit abstract finite-model inequalities are not all refuted.
+In particular, S272's longer physical interval is not retroactively repaired.
+
+S275 constructs four NEW corrected finite classical-homogeneous/quantum-mode
+solutions on the interval10^-180, retaining the full nonlinear source,
+both cutoffs, both operator orderings and every scalar-center force.
+Homogeneous deviation is below10^-390 and volume relative error below10^-380;
+both endpoints exceed the center by more than5*10^-360. Positive coherent
+outside-core probability is below10^-6, with coupled cutoff and ordering
+comparisons for background, state and volume. This is an explicitly defined
+fixed-reference canonical extension, not a derived full nonlinear ADM
+boundary generator or a quantization of the homogeneous variables.
+It does not assert a unique or strict volume minimum.
+
+The archived [finite self-consistent hybrid](docs/assessment-2026-09-14-p8-affine-selfconsistent-finite-feedback.md)
+and [core/regulator comparison](docs/assessment-2026-09-15-p8-affine-hybrid-core-regulator-comparison.md)
+are published with that physical qualification. Successful replay does
+not restore the missing original-state identification.
+The earlier [explicit finite quantum construction](docs/assessment-2026-09-14-p8-affine-local-quantum-regulator.md),
+[full nonlinear spatial reduction](docs/assessment-2026-09-14-p8-affine-nonlinear-spatial-reduction.md)
 and [quantitative auxiliary branch](docs/assessment-2026-09-14-p8-affine-nonlinear-lapse-branch.md)
-supply the complete local chart and preserve all three translations.
-These are defined finite regulators and scoped bounds, not an original
-interacting mean, physical matching, continuum removal or global completeness.
-The [reference-volume integrability boundary](docs/assessment-2026-09-14-p8-affine-nonlinear-reference-volume.md)
-and [correct physical map](docs/assessment-2026-09-14-p8-affine-physical-volume-correction.md)
-remain in force; S261's wrong physical binding stays explicitly refuted
-and archived unchanged. Original V/G/B/P8 remain open.
+remain scoped local constructions, not an original interacting quantum
+mean, physical UV matching, regulator removal or global completeness.
+The [individual-coefficient integrability boundary](docs/assessment-2026-09-14-p8-affine-nonlinear-reference-volume.md)
+and [correct physical volume map](docs/assessment-2026-09-14-p8-affine-physical-volume-correction.md)
+remain in force; S261's wrong physical binding stays explicitly refuted.
+Original V/G/B/P8 remain open; scoped P8(a) is unchanged.
 The [complete heavy ADM and common-clock response audit](docs/assessment-2026-09-13-p8-affine-heavy-adm-clock-response.md)
 bounds the entire actual heavy ADM and common-clock response at every transfer,
 with all ten metric directions, both ordered Ward terms, the distinct clock
