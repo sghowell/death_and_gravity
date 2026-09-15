@@ -438,6 +438,20 @@ around a pre-registered problems document and a certificate-gated ledger.
   This is still linear light evolution and its leading heavy response,
   not a full nonlinear solution or UV-admissible completion.
 
+The [original M1 gravitational cut and massive detector dictionary](docs/assessment-2026-09-15-p8-affine-massive-detector-ir-cut.md)
+now include the complete crossed first M1 nonanalytic sector, the massive
+analytic soft kernel and an explicit low-cut subtraction retaining the
+transfer contribution. This does not determine unknown local matching,
+other loops, finite detector errors or the Regge remainder.
+
+The [full homogeneous fold dynamics](docs/assessment-2026-09-15-p8-affine-homogeneous-fold-dynamics.md)
+rule out a C1 lapse continuation through the specified full-source fold
+family. A separate regular classical trajectory reaches a finite-proper-time
+curvature endpoint. These are not the original prepared quantum state,
+an EFT-validity theorem at the endpoint, or a general P8 no-go.
+Both packets passed their own original-SymPy replays and a complete
+70,401-test P8 regression. Original V/G/B/P8 remain open.
+
 The [full-source lapse-chart audit](docs/assessment-2026-09-15-p8-affine-global-lapse-chart-obstruction.md)
 distinguishes a removable sequential-elimination pole from a genuine lapse
 fold. An exact mean-preserving finite-wave path from the established local
