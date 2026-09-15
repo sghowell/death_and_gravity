@@ -438,11 +438,21 @@ around a pre-registered problems document and a certificate-gated ledger.
   This is still linear light evolution and its leading heavy response,
   not a full nonlinear solution or UV-admissible completion.
 
+The [complete massive graviton normal sheet and pole running](docs/assessment-2026-09-15-p8-affine-massive-graviton-threshold-sheet.md)
+now give the invariant continuation, removable external threshold and
+convergent channel lift without dropping its physical pole anchor.
+The [common crossed gravitational masters and external-leg matching](docs/assessment-2026-09-15-p8-affine-massive-common-gravity-masters.md)
+reproduce both complete gravity cuts and the massive soft self term.
+They do not yet fix the full rational/local amplitude, physical pole
+normalization, detector/Regge errors or original P8 closure.
+Both passed original-SymPy native, ordinary and CLI replay and the
+complete71,564-test captured P8 regression. Original V/G/B/P8 remain OPEN.
+
 The [isolated complete massive graviton cut](docs/assessment-2026-09-15-p8-affine-massive-graviton-isolated-replay.md)
 now includes the literal graviton production amplitude, whole nonforward
 sewing, all-even-spin expansion and a uniform physical-window moment bound.
 Its successor isolates a call-order-dependent inherited check dictionary;
-the rejected, unpublished S279 packet is preserved byte-for-byte in the
+the rejected S279 packet is preserved byte-for-byte in the
 [rejected-evidence archive](research/p8-rejected-packets/README.md), not
 certified or silently repaired.
 
