@@ -438,6 +438,15 @@ around a pre-registered problems document and a certificate-gated ledger.
   This is still linear light evolution and its leading heavy response,
   not a full nonlinear solution or UV-admissible completion.
 
+The [complete minimal heavy-transition soft pairing](docs/assessment-2026-09-15-p8-affine-heavy-resonance-soft-pole-pairing.md)
+now combines the full proper/contact/LSZ virtual coefficient with the
+formal real heavy-graviton threshold. The [whole quartic-gravity sector](docs/assessment-2026-09-15-p8-affine-whole-quartic-gravity-sector.md)
+has a closed finite forward coefficient and explicit regulator and
+original-parameter bounds. These are scoped results: Coulomb/width,
+higher matching, physical infrared and Regge obligations remain open.
+Both passed native, original-SymPy ordinary/CLI and the complete
+75,141-test captured P8 regression. Original V/G/B/P8 remain OPEN.
+
 The [complete minimal matter-graviton endpoint](docs/assessment-2026-09-15-p8-affine-complete-matter-graviton-endpoint.md)
 now includes both form factors, all massive insertions and full on-shell/
 onepoint terms, with a bounded known crossed coefficient and explicit
