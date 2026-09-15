@@ -438,6 +438,19 @@ around a pre-registered problems document and a certificate-gated ledger.
   This is still linear light evolution and its leading heavy response,
   not a full nonlinear solution or UV-admissible completion.
 
+The [complete dimensional gravity cuts and threshold Gram completion](docs/assessment-2026-09-15-p8-affine-massive-dimensional-cut-completion.md)
+now retain the finite evanescent rational terms and remove the entire
+spurious integer threshold principal part, without deleting genuine
+branches or physical graviton poles.
+The [Gaussian metric matching and explicit light-curvature frontier](docs/assessment-2026-09-15-p8-affine-gaussian-metric-pole-matching.md)
+give all three gapped metric cuts and the original whole-volume
+cancellation. The fixed H/Proca subkernel has a positive Newton shift and
+controlled inverse; the light curvature coefficients remain unmatched,
+so no full physical residue sign is claimed.
+Both passed native, original-SymPy ordinary/CLI and the complete
+72,171-test captured P8 regression. Full finite four-point matching,
+physical IR/Regge and original V/G/B/P8 remain OPEN.
+
 The [complete massive graviton normal sheet and pole running](docs/assessment-2026-09-15-p8-affine-massive-graviton-threshold-sheet.md)
 now give the invariant continuation, removable external threshold and
 convergent channel lift without dropping its physical pole anchor.
