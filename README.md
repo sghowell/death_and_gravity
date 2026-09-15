@@ -438,6 +438,13 @@ around a pre-registered problems document and a certificate-gated ledger.
   This is still linear light evolution and its leading heavy response,
   not a full nonlinear solution or UV-admissible completion.
 
+The [complete mixed heavy-gravity amplitude](docs/assessment-2026-09-15-p8-affine-whole-mixed-heavy-gravity-sector.md)
+now includes the whole minimal one-loop graph sum, all two-body cuts and
+an explicit known forward bound below10^-1001. It passed native,
+407 original-SymPy ordinary tests, independent CLI and the complete
+76,254-test P8 regression. Finite matching, physical IR and Regge remain
+open; original V/G/B/P8 are not closed.
+
 The [complete minimal heavy-transition soft pairing](docs/assessment-2026-09-15-p8-affine-heavy-resonance-soft-pole-pairing.md)
 now combines the full proper/contact/LSZ virtual coefficient with the
 formal real heavy-graviton threshold. The [whole quartic-gravity sector](docs/assessment-2026-09-15-p8-affine-whole-quartic-gravity-sector.md)
