@@ -438,10 +438,16 @@ around a pre-registered problems document and a certificate-gated ledger.
   This is still linear light evolution and its leading heavy response,
   not a full nonlinear solution or UV-admissible completion.
 
-The [current P8 continuation audit](docs/assessment-2026-09-14-p8-affine-weyl-operator-comparison.md)
-establishes an explicit Weyl/calibrated-coherent operator comparison on the
-unchanged finite regulator, including positive volume, exact unitary
-comparison and nonzero leakage bounds on the evaluated tiny-time interval.
+The [current P8 continuation audit](docs/assessment-2026-09-14-p8-affine-finite-volume-turnaround.md)
+establishes a physical-volume turnaround on the longer interval10^-130
+for the unchanged finite regulator, both full operator orderings and both
+original cutoffs. The complete source, actual moving clock center and
+all nonlinear reconstruction contacts remain. Homogeneous variables are
+external; unique/strict minima, self-consistent feedback and longer-time
+core leakage are not established by this result.
+The [Weyl/calibrated-coherent comparison](docs/assessment-2026-09-14-p8-affine-weyl-operator-comparison.md)
+retains its exact unitary and nonzero leakage bounds on the earlier,
+much shorter interval; those bounds are not reassigned to the new time.
 The [full finite-time domain](docs/assessment-2026-09-14-p8-affine-quantitative-local-time.md)
 controls the entire nonlinear source, original reference flow and two
 explicit smooth cutoffs on that interval, retaining every time contact.
