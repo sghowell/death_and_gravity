@@ -438,6 +438,13 @@ around a pre-registered problems document and a certificate-gated ledger.
   This is still linear light evolution and its leading heavy response,
   not a full nonlinear solution or UV-admissible completion.
 
+The [complete minimal scalar bremsstrahlung](docs/assessment-2026-09-15-p8-affine-massive-scalar-graviton-bremsstrahlung.md)
+now includes all26 emission graphs, the full Ward identity and an exact
+recoil map with a uniform real-minus-soft rate bound below10^-792.
+It passed native,706 original-SymPy ordinary tests, independent CLI and
+the complete76,254-test P8 regression. Virtual pairing and the remaining
+physical IR, matching and Regge obligations are separate; P8 remains open.
+
 The [complete mixed heavy-gravity amplitude](docs/assessment-2026-09-15-p8-affine-whole-mixed-heavy-gravity-sector.md)
 now includes the whole minimal one-loop graph sum, all two-body cuts and
 an explicit known forward bound below10^-1001. It passed native,
