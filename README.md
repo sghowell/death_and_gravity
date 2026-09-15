@@ -438,6 +438,18 @@ around a pre-registered problems document and a certificate-gated ledger.
   This is still linear light evolution and its leading heavy response,
   not a full nonlinear solution or UV-admissible completion.
 
+The [minimal-gravity physical pole completion](docs/assessment-2026-09-15-p8-affine-massive-gravity-pole-completion.md)
+now retains all seven graph classes, the scalar boxes and the full massive
+Coulomb kernel, modulo one Newton and two regular local matching anchors.
+The [full-D covariant local map and Gaussian metric matching](docs/assessment-2026-09-15-p8-affine-covariant-gaussian-four-point-matching.md)
+give the rank-two/eight-column local dictionary, both complete massive
+spin sectors, exact light nonlocal coefficient and finite-mass heavy
+forward bounds. No finite matching coefficient is chosen, no light loop
+is counted twice, and neither selected sector sign is full positivity.
+Both passed native, original-SymPy ordinary/CLI and the complete
+73,639-test captured P8 regression. Physical IR/Regge, full-source matching
+and original V/G/B/P8 remain OPEN; scoped P8(a) is unchanged.
+
 The [generated massive matter-graviton form factor](docs/assessment-2026-09-15-p8-affine-massive-matter-graviton-vertex.md)
 now has both stress insertions and metric contacts, its exact positive
 spectral slope and a bounded generated forward contribution.
