@@ -438,6 +438,13 @@ around a pre-registered problems document and a certificate-gated ledger.
   This is still linear light evolution and its leading heavy response,
   not a full nonlinear solution or UV-admissible completion.
 
+The [full-source lapse-chart audit](docs/assessment-2026-09-15-p8-affine-global-lapse-chart-obstruction.md)
+distinguishes a removable sequential-elimination pole from a genuine lapse
+fold. An exact mean-preserving finite-wave path from the established local
+domain rules out extending that same lapse Hamiltonian as a globally C1
+function on all finite phase inputs. This is not a dynamical singularity,
+a new gauge symmetry, a failure of the corrected finite hybrid, or P8 closure.
+
 The [current P8 canonical-boundary correction](docs/assessment-2026-09-15-p8-affine-canonical-boundary-corrected-hybrid.md)
 repairs an omitted action boundary in the raw/prepared scalar momentum
 dictionary. S269-S274's identification with the original prepared physical
