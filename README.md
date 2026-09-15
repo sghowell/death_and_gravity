@@ -438,6 +438,19 @@ around a pre-registered problems document and a certificate-gated ledger.
   This is still linear light evolution and its leading heavy response,
   not a full nonlinear solution or UV-admissible completion.
 
+The [generated massive matter-graviton form factor](docs/assessment-2026-09-15-p8-affine-massive-matter-graviton-vertex.md)
+now has both stress insertions and metric contacts, its exact positive
+spectral slope and a bounded generated forward contribution.
+The [ordinary gravity Ward bridge](docs/assessment-2026-09-15-p8-affine-ordinary-gravity-ward-bridge.md)
+supplies the specified gauge-fixing comparison and whole-topology
+spacelike continuity needed for the regulated charge/LSZ cancellation.
+The nonzero-transfer infrared pole and finite matching qualifications
+remain explicit; neither is a physical detector or Regge theorem.
+Both passed native, original-SymPy ordinary/CLI and the complete
+72,851-test captured P8 regression. Full finite matching and original
+V/G/B/P8 remain OPEN; scoped P8(a) is unchanged.
+
+
 The [complete dimensional gravity cuts and threshold Gram completion](docs/assessment-2026-09-15-p8-affine-massive-dimensional-cut-completion.md)
 now retain the finite evanescent rational terms and remove the entire
 spurious integer threshold principal part, without deleting genuine
