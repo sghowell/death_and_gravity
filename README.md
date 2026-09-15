@@ -438,6 +438,24 @@ around a pre-registered problems document and a certificate-gated ledger.
   This is still linear light evolution and its leading heavy response,
   not a full nonlinear solution or UV-admissible completion.
 
+The [isolated complete massive graviton cut](docs/assessment-2026-09-15-p8-affine-massive-graviton-isolated-replay.md)
+now includes the literal graviton production amplitude, whole nonforward
+sewing, all-even-spin expansion and a uniform physical-window moment bound.
+Its successor isolates a call-order-dependent inherited check dictionary;
+the rejected, unpublished S279 packet is preserved byte-for-byte in the
+[rejected-evidence archive](research/p8-rejected-packets/README.md), not
+certified or silently repaired.
+
+The [complete original elastic infrared and Proca cuts](docs/assessment-2026-09-15-p8-affine-massive-elastic-proca-infrared.md)
+retain every contact/heavy/gravity interference, the finite dimensional
+trace and phase-space terms, and all nine physical Proca polarizations.
+Together with the original M1 and graviton sectors, these specify the
+physical two-body first-loop cuts below the first heavy threshold.
+They do not yet determine the full real crossed amplitude, physical local
+matching, forward subtraction, finite detector/Regge errors or P8 closure.
+Both new packets passed original-SymPy native, ordinary and CLI replays,
+plus the complete71,032-test P8 snapshot. Original V/G/B/P8 remain open.
+
 The [original M1 gravitational cut and massive detector dictionary](docs/assessment-2026-09-15-p8-affine-massive-detector-ir-cut.md)
 now include the complete crossed first M1 nonanalytic sector, the massive
 analytic soft kernel and an explicit low-cut subtraction retaining the
