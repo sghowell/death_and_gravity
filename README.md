@@ -438,6 +438,17 @@ around a pre-registered problems document and a certificate-gated ledger.
   This is still linear light evolution and its leading heavy response,
   not a full nonlinear solution or UV-admissible completion.
 
+The [complete minimal matter-graviton endpoint](docs/assessment-2026-09-15-p8-affine-complete-matter-graviton-endpoint.md)
+now includes both form factors, all massive insertions and full on-shell/
+onepoint terms, with a bounded known crossed coefficient and explicit
+unmatched curvature anchors. The [full heavy-graviton production cut](docs/assessment-2026-09-15-p8-affine-heavy-graviton-production-threshold.md)
+includes every Ward/TT contribution, the complete dimensional phase and
+a regulated threshold expansion with an explicit conditional remainder.
+Its positive soft pole is retained; virtual pairing and heavy width are
+not inferred. Both passed native, original-SymPy ordinary/CLI and the
+complete74,426-test captured P8 regression. Full-source matching,
+physical IR/Regge and original V/G/B/P8 remain OPEN.
+
 The [minimal-gravity physical pole completion](docs/assessment-2026-09-15-p8-affine-massive-gravity-pole-completion.md)
 now retains all seven graph classes, the scalar boxes and the full massive
 Coulomb kernel, modulo one Newton and two regular local matching anchors.
