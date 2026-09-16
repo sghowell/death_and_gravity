@@ -459,6 +459,14 @@ error map retains the trajectory, coupling and contour bounds still
 needed from a UV construction. Native, 400 original-SymPy tests,
 independent CLI and the 78,218-test regression passed; P8 remains open.
 
+The [calorimetric soft resummation](docs/assessment-2026-09-15-p8-affine-calorimetric-soft-resummation.md)
+now sums the whole leading-soft total-energy distribution, retaining its
+finite gamma-function factor and unexpanded resolution power. The
+regulator and detector limits are distinguished explicitly. Native,
+398 original-SymPy tests, independent CLI and the 78,218-test regression
+passed; hard and nonleading all-radiation bounds remain separate.
+Original P8 remains open.
+
 The [complete minimal scalar bremsstrahlung](docs/assessment-2026-09-15-p8-affine-massive-scalar-graviton-bremsstrahlung.md)
 now includes all26 emission graphs, the full Ward identity and an exact
 recoil map with a uniform real-minus-soft rate bound below10^-792.
