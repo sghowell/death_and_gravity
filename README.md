@@ -537,6 +537,13 @@ state-correct simultaneous and hierarchical leading-soft limits. Native,
 passed. These fixed-kinematics statements are not uniform integrated
 remainder estimates or the full interacting rate; original P8 remains open.
 
+The [two-real collinear-current assessment](docs/assessment-2026-09-16-p8-affine-two-real-collinear-current.md)
+bounds the completed 47-tree pair class uniformly in collinear and hard
+forward neighborhoods, retaining its explicit soft-energy poles. Native,
+578 original-SymPy tests, independent CLI and the 83,650-test regression
+passed. This is not yet an integrated two-real correction or the full
+interacting rate; original P8 remains open.
+
 The [complete minimal scalar bremsstrahlung](docs/assessment-2026-09-15-p8-affine-massive-scalar-graviton-bremsstrahlung.md)
 now includes all26 emission graphs, the full Ward identity and an exact
 recoil map with a uniform real-minus-soft rate bound below10^-792.
