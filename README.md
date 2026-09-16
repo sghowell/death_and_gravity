@@ -452,6 +452,13 @@ the gravity-dominated forward cone and the absolute contour error still
 needed for Regge matching. Native, 385 original-SymPy tests, independent
 CLI and the 77,019-test regression passed; original P8 remains open.
 
+The [unequal-mass residue calculation](docs/assessment-2026-09-15-p8-affine-unequal-mass-regge-residue.md)
+fixes both spin-two spectral channels and the generated matter slope,
+including the heavy channel's near-quarter share. Its conditional Regge
+error map retains the trajectory, coupling and contour bounds still
+needed from a UV construction. Native, 400 original-SymPy tests,
+independent CLI and the 78,218-test regression passed; P8 remains open.
+
 The [complete minimal scalar bremsstrahlung](docs/assessment-2026-09-15-p8-affine-massive-scalar-graviton-bremsstrahlung.md)
 now includes all26 emission graphs, the full Ward identity and an exact
 recoil map with a uniform real-minus-soft rate bound below10^-792.
