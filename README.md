@@ -511,6 +511,12 @@ on the known mixed one-loop interference, using the full positive Born.
 Native,476 original-SymPy tests, independent CLI and the81,447-test
 regression passed. Physical matching and original P8 remain open.
 
+The [uniform single-real soft-limit assessment](docs/assessment-2026-09-16-p8-affine-uniform-radiation-soft-limit.md)
+bounds the complete one-graviton real-minus-soft error uniformly as
+the detector threshold vanishes, including all hard angles.
+Native,541 original-SymPy tests, independent CLI and the81,447-test
+regression passed. Full nonleading radiation and original P8 remain open.
+
 The [complete minimal scalar bremsstrahlung](docs/assessment-2026-09-15-p8-affine-massive-scalar-graviton-bremsstrahlung.md)
 now includes all26 emission graphs, the full Ward identity and an exact
 recoil map with a uniform real-minus-soft rate bound below10^-792.
