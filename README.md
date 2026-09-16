@@ -544,6 +544,13 @@ forward neighborhoods, retaining its explicit soft-energy poles. Native,
 passed. This is not yet an integrated two-real correction or the full
 interacting rate; original P8 remains open.
 
+The [complete two-real tree bound assessment](docs/assessment-2026-09-16-p8-affine-uniform-two-real-tree-bound.md)
+bounds all 434 original two-graviton trees uniformly in collinear and
+hard forward neighborhoods, with explicit soft-energy poles. Native,
+653 original-SymPy tests, independent CLI and the 86,231-test regression
+passed. Infrared subtraction and real-virtual completion remain separate;
+the bare bound is not an integrated rate or original P8 closure.
+
 The [complete minimal scalar bremsstrahlung](docs/assessment-2026-09-15-p8-affine-massive-scalar-graviton-bremsstrahlung.md)
 now includes all26 emission graphs, the full Ward identity and an exact
 recoil map with a uniform real-minus-soft rate bound below10^-792.
