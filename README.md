@@ -438,6 +438,13 @@ around a pre-registered problems document and a certificate-gated ledger.
   This is still linear light evolution and its leading heavy response,
   not a full nonlinear solution or UV-admissible completion.
 
+The [physical real-virtual pairing](docs/assessment-2026-09-15-p8-affine-physical-virtual-soft-pairing.md)
+now fixes the selected matter-Born rate's finite conversion from the
+analytic hard reference, including the full dimensional angular and phase
+factors. Its conversion/recoil error is below 10^-792 on the stated compact
+domain. Native, 380 original-SymPy tests, independent CLI and the complete
+77,019-test regression passed. Full matching and Regge remain open.
+
 The [complete minimal scalar bremsstrahlung](docs/assessment-2026-09-15-p8-affine-massive-scalar-graviton-bremsstrahlung.md)
 now includes all26 emission graphs, the full Ward identity and an exact
 recoil map with a uniform real-minus-soft rate bound below10^-792.
