@@ -445,6 +445,13 @@ factors. Its conversion/recoil error is below 10^-792 on the stated compact
 domain. Native, 380 original-SymPy tests, independent CLI and the complete
 77,019-test regression passed. Full matching and Regge remain open.
 
+The [first-Newton inclusive assembly](docs/assessment-2026-09-15-p8-affine-one-newton-inclusive-assembly.md)
+now includes the missing matter-loop interference, with a relative bound
+below 10^-199 against the full positive Born reference. It also identifies
+the gravity-dominated forward cone and the absolute contour error still
+needed for Regge matching. Native, 385 original-SymPy tests, independent
+CLI and the 77,019-test regression passed; original P8 remains open.
+
 The [complete minimal scalar bremsstrahlung](docs/assessment-2026-09-15-p8-affine-massive-scalar-graviton-bremsstrahlung.md)
 now includes all26 emission graphs, the full Ward identity and an exact
 recoil map with a uniform real-minus-soft rate bound below10^-792.
