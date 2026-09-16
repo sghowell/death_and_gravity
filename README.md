@@ -499,6 +499,12 @@ uniform fixed-resolution real-minus-soft error for their full interference.
 Native replay, 500 original-SymPy tests, independent CLI and the
 80,430-test regression passed. All-N nonleading radiation and P8 remain open.
 
+The [spectator-reference assessment](docs/assessment-2026-09-16-p8-affine-spectator-gravity-insertion.md)
+adds a uniform signed full-Born rate bound including M1 and a
+Gaussian-only response remainder bound. It explicitly credits S289's
+prior complete H/Proca amplitude. Native, 420 original-SymPy tests,
+independent CLI and the 80,430-test regression passed; P8 remains open.
+
 The [complete minimal scalar bremsstrahlung](docs/assessment-2026-09-15-p8-affine-massive-scalar-graviton-bremsstrahlung.md)
 now includes all26 emission graphs, the full Ward identity and an exact
 recoil map with a uniform real-minus-soft rate bound below10^-792.
