@@ -493,6 +493,12 @@ dimensional soft-division term. Native replay, 435 original-SymPy tests,
 independent CLI and the 79,510-test regression passed. The bound is on
 known real interference, not the full complex amplitude or P8 closure.
 
+The [full Einstein-radiation result](docs/assessment-2026-09-16-p8-affine-minimal-gravity-radiation.md)
+adds all 21 gravity-emission graphs to the 26 matter graphs and proves a
+uniform fixed-resolution real-minus-soft error for their full interference.
+Native replay, 500 original-SymPy tests, independent CLI and the
+80,430-test regression passed. All-N nonleading radiation and P8 remain open.
+
 The [complete minimal scalar bremsstrahlung](docs/assessment-2026-09-15-p8-affine-massive-scalar-graviton-bremsstrahlung.md)
 now includes all26 emission graphs, the full Ward identity and an exact
 recoil map with a uniform real-minus-soft rate bound below10^-792.
