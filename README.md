@@ -487,6 +487,12 @@ matching coordinates. Native replay, 439 original-SymPy tests,
 independent CLI and the 79,510-test regression passed. The stated
 compact-window bound does not fix physical matching or close P8.
 
+The [finite forward phase and all-angle real-interference bound](docs/assessment-2026-09-16-p8-affine-finite-forward-phase.md)
+now resolve the known one-loop forward coefficients, including the
+dimensional soft-division term. Native replay, 435 original-SymPy tests,
+independent CLI and the 79,510-test regression passed. The bound is on
+known real interference, not the full complex amplitude or P8 closure.
+
 The [complete minimal scalar bremsstrahlung](docs/assessment-2026-09-15-p8-affine-massive-scalar-graviton-bremsstrahlung.md)
 now includes all26 emission graphs, the full Ward identity and an exact
 recoil map with a uniform real-minus-soft rate bound below10^-792.
