@@ -523,6 +523,13 @@ ladder class and bounds its Gamma correction uniformly in positive
 transfer. Native,528 original-SymPy tests, independent CLI and the
 82,577-test regression passed. Omitted graphs and original P8 remain open.
 
+The [single-residual soft-dressing assessment](docs/assessment-2026-09-16-p8-affine-single-residual-soft-dressing.md)
+controls the state-correct leading-soft dressing of one complete signed
+47-tree radiative residual, with the remaining-energy cut and a relative
+bound below 2e-768 that vanishes with detector resolution. Native, 602
+original-SymPy tests, independent CLI and the 82,577-test regression passed.
+This named reference is not the full interacting rate; original P8 remains open.
+
 The [complete minimal scalar bremsstrahlung](docs/assessment-2026-09-15-p8-affine-massive-scalar-graviton-bremsstrahlung.md)
 now includes all26 emission graphs, the full Ward identity and an exact
 recoil map with a uniform real-minus-soft rate bound below10^-792.
