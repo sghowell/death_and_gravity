@@ -505,6 +505,12 @@ Gaussian-only response remainder bound. It explicitly credits S289's
 prior complete H/Proca amplitude. Native, 420 original-SymPy tests,
 independent CLI and the 80,430-test regression passed; P8 remains open.
 
+The [physical mixed-gravity assessment](docs/assessment-2026-09-16-p8-affine-mixed-gravity-physical-rate.md)
+proves the exact whole-box collapse and a uniform bound below4e-204
+on the known mixed one-loop interference, using the full positive Born.
+Native,476 original-SymPy tests, independent CLI and the81,447-test
+regression passed. Physical matching and original P8 remain open.
+
 The [complete minimal scalar bremsstrahlung](docs/assessment-2026-09-15-p8-affine-massive-scalar-graviton-bremsstrahlung.md)
 now includes all26 emission graphs, the full Ward identity and an exact
 recoil map with a uniform real-minus-soft rate bound below10^-792.
