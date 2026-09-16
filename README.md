@@ -517,6 +517,12 @@ the detector threshold vanishes, including all hard angles.
 Native,541 original-SymPy tests, independent CLI and the81,447-test
 regression passed. Full nonleading radiation and original P8 remain open.
 
+The [leading-ladder Coulomb-phase assessment](docs/assessment-2026-09-16-p8-affine-leading-ladder-coulomb-phase.md)
+derives the full-dimensional IR-divided phase for the named Gaussian
+ladder class and bounds its Gamma correction uniformly in positive
+transfer. Native,528 original-SymPy tests, independent CLI and the
+82,577-test regression passed. Omitted graphs and original P8 remain open.
+
 The [complete minimal scalar bremsstrahlung](docs/assessment-2026-09-15-p8-affine-massive-scalar-graviton-bremsstrahlung.md)
 now includes all26 emission graphs, the full Ward identity and an exact
 recoil map with a uniform real-minus-soft rate bound below10^-792.
