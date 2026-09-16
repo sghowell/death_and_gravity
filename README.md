@@ -551,6 +551,13 @@ hard forward neighborhoods, with explicit soft-energy poles. Native,
 passed. Infrared subtraction and real-virtual completion remain separate;
 the bare bound is not an integrated rate or original P8 closure.
 
+The [two-real soft-overlap assessment](docs/assessment-2026-09-16-p8-affine-two-real-soft-overlap.md)
+constructs a gauge-consistent subtraction of the full 434-tree amplitude
+with a cutoff-independent finite signed-measure bound. Native,
+614 original-SymPy tests, independent CLI and the 86,231-test regression
+passed. Matching it to every real-virtual contribution remains separate;
+the signed subtraction does not close the full interacting rate or P8.
+
 The [complete minimal scalar bremsstrahlung](docs/assessment-2026-09-15-p8-affine-massive-scalar-graviton-bremsstrahlung.md)
 now includes all26 emission graphs, the full Ward identity and an exact
 recoil map with a uniform real-minus-soft rate bound below10^-792.
