@@ -481,6 +481,12 @@ Native replay, 418 original-SymPy tests, independent CLI and the
 79,510-test regression passed. Hard and nonleading radiative terms remain
 separate; original P8 remains open.
 
+The [finite minimal-gravity reference](docs/assessment-2026-09-15-p8-affine-minimal-gravity-finite.md)
+now includes every known full-D finite term and all three unassigned
+matching coordinates. Native replay, 439 original-SymPy tests,
+independent CLI and the 79,510-test regression passed. The stated
+compact-window bound does not fix physical matching or close P8.
+
 The [complete minimal scalar bremsstrahlung](docs/assessment-2026-09-15-p8-affine-massive-scalar-graviton-bremsstrahlung.md)
 now includes all26 emission graphs, the full Ward identity and an exact
 recoil map with a uniform real-minus-soft rate bound below10^-792.
