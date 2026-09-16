@@ -474,6 +474,13 @@ virtual poles to use the same state. Native replay, 401 original-SymPy
 tests, independent CLI and the 78,218-test regression passed. Finite hard
 and nonleading radiation terms remain separate; original P8 remains open.
 
+The [radiative angular finite term](docs/assessment-2026-09-15-p8-affine-radiative-angular-finite.md)
+now controls the dimensional derivative and physical soft-reference
+conversion uniformly over radiation multiplicity and collinear directions.
+Native replay, 418 original-SymPy tests, independent CLI and the
+79,510-test regression passed. Hard and nonleading radiative terms remain
+separate; original P8 remains open.
+
 The [complete minimal scalar bremsstrahlung](docs/assessment-2026-09-15-p8-affine-massive-scalar-graviton-bremsstrahlung.md)
 now includes all26 emission graphs, the full Ward identity and an exact
 recoil map with a uniform real-minus-soft rate bound below10^-792.
