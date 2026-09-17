@@ -598,6 +598,14 @@ Native, 603 original-SymPy ordinary tests and independent CLI replay
 passed in the documented sequential acceptance batch; the 88,848-test
 regression passed. This remains a finite-tree result: original V/G/B/P8
 closure is open.
+
+The [uniform complete finite-tree amplitude bound assessment](docs/assessment-2026-09-16-p8-affine-uniform-all-tree-bound.md)
+extends the current control to complete finite-multiplicity hard tree
+amplitudes, with explicit factorial bounds uniform in energy hierarchies.
+Native, 636 original-SymPy ordinary tests and independent CLI replay
+passed in the documented sequential acceptance batch; the 88,848-test
+regression passed. This remains a finite-tree result: original V/G/B/P8
+closure is open.
 The [complete minimal scalar bremsstrahlung](docs/assessment-2026-09-15-p8-affine-massive-scalar-graviton-bremsstrahlung.md)
 now includes all26 emission graphs, the full Ward identity and an exact
 recoil map with a uniform real-minus-soft rate bound below10^-792.
