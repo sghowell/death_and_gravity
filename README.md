@@ -574,6 +574,14 @@ three-real coefficient. Native, 682 original-SymPy tests, independent
 CLI and the 88,848-test regression passed. Written all-order graph
 and vertex bounds are separate from amplitude or probability bounds;
 original P8 closure remains open.
+
+The [complete fixed-pair factorization and matching forests assessment](docs/assessment-2026-09-16-p8-affine-complete-pair-factorization.md)
+derives complete fixed-pair factorization, matching-forest inclusion-exclusion,
+and exact limits on isolated-cluster and multi-off-shell shortcuts.
+Native, 634 original-SymPy ordinary tests and independent CLI replay
+passed in the documented sequential acceptance batch; the 88,848-test
+regression passed. This remains a finite-tree result: original V/G/B/P8
+closure is open.
 The [complete minimal scalar bremsstrahlung](docs/assessment-2026-09-15-p8-affine-massive-scalar-graviton-bremsstrahlung.md)
 now includes all26 emission graphs, the full Ward identity and an exact
 recoil map with a uniform real-minus-soft rate bound below10^-792.
