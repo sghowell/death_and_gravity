@@ -558,6 +558,14 @@ with a cutoff-independent finite signed-measure bound. Native,
 passed. Matching it to every real-virtual contribution remains separate;
 the signed subtraction does not close the full interacting rate or P8.
 
+The [state-transport matching assessment](docs/assessment-2026-09-16-p8-affine-state-transport-soft-matching.md)
+constructs the connector needed to combine one- and two-real soft
+subtractions, matching the complete zero/one/two-real tree densities.
+Native, 632 original-SymPy tests, independent CLI and the 88,848-test
+regression passed. The named reference differs relatively from its
+elastic soft factor by less than 1e-653; full inclusive matching and
+original P8 closure remain open.
+
 The [complete minimal scalar bremsstrahlung](docs/assessment-2026-09-15-p8-affine-massive-scalar-graviton-bremsstrahlung.md)
 now includes all26 emission graphs, the full Ward identity and an exact
 recoil map with a uniform real-minus-soft rate bound below10^-792.
