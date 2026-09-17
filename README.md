@@ -566,6 +566,14 @@ regression passed. The named reference differs relatively from its
 elastic soft factor by less than 1e-653; full inclusive matching and
 original P8 closure remain open.
 
+
+The [all-multiplicity tree-source assessment](docs/assessment-2026-09-16-p8-affine-all-multiplicity-tree-source.md)
+derives the unchanged action's vertices and complete rooted tree source
+at every finite graviton multiplicity, including the new 5,116-tree
+three-real coefficient. Native, 682 original-SymPy tests, independent
+CLI and the 88,848-test regression passed. Written all-order graph
+and vertex bounds are separate from amplitude or probability bounds;
+original P8 closure remains open.
 The [complete minimal scalar bremsstrahlung](docs/assessment-2026-09-15-p8-affine-massive-scalar-graviton-bremsstrahlung.md)
 now includes all26 emission graphs, the full Ward identity and an exact
 recoil map with a uniform real-minus-soft rate bound below10^-792.
