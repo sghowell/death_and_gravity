@@ -606,6 +606,14 @@ Native, 636 original-SymPy ordinary tests and independent CLI replay
 passed in the documented sequential acceptance batch; the 88,848-test
 regression passed. This remains a finite-tree result: original V/G/B/P8
 closure is open.
+
+The [relative-energy complex tubes and Cauchy estimates assessment](docs/assessment-2026-09-16-p8-affine-relative-energy-complex-tube.md)
+proves relative-energy complex tubes and Cauchy bounds at every finite
+multiplicity, and exhibits an exact obstruction to fixed total-energy tubes.
+Native, 582 original-SymPy ordinary tests and independent CLI replay
+passed in the documented sequential acceptance batch; the 89,430-test
+regression passed. This remains a finite-tree result: original V/G/B/P8
+closure is open.
 The [complete minimal scalar bremsstrahlung](docs/assessment-2026-09-15-p8-affine-massive-scalar-graviton-bremsstrahlung.md)
 now includes all26 emission graphs, the full Ward identity and an exact
 recoil map with a uniform real-minus-soft rate bound below10^-792.
