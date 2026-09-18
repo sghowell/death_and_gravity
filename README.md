@@ -685,6 +685,42 @@ passed in the documented sequential acceptance batch; the covering
 98,832-test regression passed. The result has the assessment's stated
 scope; original V/G/B/P8 closure remains open.
 
+The [positive-energy soft conversion and conditioned-cloud transfer assessment](docs/assessment-2026-09-18-p8-affine-borel-soft-conversion.md)
+establishes positive-energy conversion moduli and conditioned additional-soft transfer.
+Native, 551 original-SymPy ordinary tests and separate CLI replay
+passed in the documented sequential acceptance batch; the covering
+103,129-test regression passed. The result has the assessment's stated
+scope; original V/G/B/P8 closure remains open.
+
+The [remaining-energy logarithm and common-space soft cutoff assessment](docs/assessment-2026-09-18-p8-affine-remaining-log-cutoff.md)
+controls the remaining-energy logarithm and both conditioned-density normalization errors.
+Native, 597 original-SymPy ordinary tests and separate CLI replay
+passed in the documented sequential acceptance batch; the covering
+103,129-test regression passed. The result has the assessment's stated
+scope; original V/G/B/P8 closure remains open.
+
+The [joint infrared and dimensional soft-regulator limit assessment](docs/assessment-2026-09-18-p8-affine-joint-soft-regulator.md)
+proves quantitative joint and iterated additional-soft regulator limits.
+Native, 701 original-SymPy ordinary tests and separate CLI replay
+passed in the documented sequential acceptance batch; the covering
+103,129-test regression passed. The result has the assessment's stated
+scope; original V/G/B/P8 closure remains open.
+
+The [complete dimensional radiation tree and polarization sew assessment](docs/assessment-2026-09-18-p8-affine-dimensional-gravity-radiation.md)
+retains the complete selected47-tree dimensional trace and polarization response.
+Native, 644 original-SymPy ordinary tests and separate CLI replay
+passed in the documented sequential acceptance batch; the covering
+103,129-test regression passed. The result has the assessment's stated
+scope; original V/G/B/P8 closure remains open.
+
+The [complete-tree dimensional real-minus-soft limit assessment](docs/assessment-2026-09-18-p8-affine-dimensional-real-remainder.md)
+proves the selected full-tree dimensional real-minus-soft limit at fixed nonforward hard data.
+Native, 849 original-SymPy ordinary tests and separate CLI replay
+passed in the documented sequential acceptance batch; the covering
+103,129-test regression passed. The result has the assessment's stated
+scope; original V/G/B/P8 closure remains open.
+
+
 The [complete minimal scalar bremsstrahlung](docs/assessment-2026-09-15-p8-affine-massive-scalar-graviton-bremsstrahlung.md)
 now includes all26 emission graphs, the full Ward identity and an exact
 recoil map with a uniform real-minus-soft rate bound below10^-792.
