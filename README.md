@@ -614,6 +614,77 @@ Native, 582 original-SymPy ordinary tests and independent CLI replay
 passed in the documented sequential acceptance batch; the 89,430-test
 regression passed. This remains a finite-tree result: original V/G/B/P8
 closure is open.
+
+The [three-soft current faces and one-block subtraction assessment](docs/assessment-2026-09-18-p8-affine-three-soft-current-subtraction.md)
+proves compatible three-soft-current faces and controls the 188 one-block graphs.
+Native, 1821 original-SymPy ordinary tests and separate CLI replay
+passed in the documented sequential acceptance batch; the covering
+98,832-test regression passed. The result has the assessment's stated
+scope; original V/G/B/P8 closure remains open.
+
+The [pair-plus-singleton and nonsingleton subtraction assessment](docs/assessment-2026-09-18-p8-affine-pair-singleton-subtraction.md)
+bounds all 1,349 nonsingleton graphs, retaining traceful off-shell pair tensors.
+Native, 742 original-SymPy ordinary tests and separate CLI replay
+passed in the documented sequential acceptance batch; the covering
+98,832-test regression passed. The result has the assessment's stated
+scope; original V/G/B/P8 closure remains open.
+
+The [complete three-real subtraction and signed measure assessment](docs/assessment-2026-09-18-p8-affine-three-singleton-subtraction.md)
+completes the 5,116-tree three-real subtraction and its finite signed measure.
+Native, 2517 original-SymPy ordinary tests and separate CLI replay
+passed in the documented sequential acceptance batch; the covering
+98,832-test regression passed. The result has the assessment's stated
+scope; original V/G/B/P8 closure remains open.
+
+The [three-real probability overlap and scheme transfer assessment](docs/assessment-2026-09-18-p8-affine-three-real-probability-overlap.md)
+relates the amplitude and probability subtractions through an explicit finite overlap.
+Native, 535 original-SymPy ordinary tests and separate CLI replay
+passed in the documented sequential acceptance batch; the covering
+98,832-test regression passed. The result has the assessment's stated
+scope; original V/G/B/P8 closure remains open.
+
+The [radiative finite conversion and soft-state transfer assessment](docs/assessment-2026-09-18-p8-affine-radiative-soft-state-transfer.md)
+controls radiative soft-state continuity and a same-state paired soft insertion.
+Native, 509 original-SymPy ordinary tests and separate CLI replay
+passed in the documented sequential acceptance batch; the covering
+98,832-test regression passed. The result has the assessment's stated
+scope; original V/G/B/P8 closure remains open.
+
+The [uniform radiative logarithmic soft coefficient assessment](docs/assessment-2026-09-18-p8-affine-radiative-logarithmic-soft-coefficient.md)
+bounds the complete named radiative logarithmic coefficient and its selected one-real signed contribution.
+Native, 662 original-SymPy ordinary tests and separate CLI replay
+passed in the documented sequential acceptance batch; the covering
+98,832-test regression passed. The result has the assessment's stated
+scope; original V/G/B/P8 closure remains open.
+
+The [known hard-soft subtraction and sharp logarithmic interference assessment](docs/assessment-2026-09-18-p8-affine-known-hard-soft-subtraction.md)
+controls the known hard-soft interference and sharpens the logarithmic contribution's finite bound.
+Native, 474 original-SymPy ordinary tests and separate CLI replay
+passed in the documented sequential acceptance batch; the covering
+98,832-test regression passed. The result has the assessment's stated
+scope; original V/G/B/P8 closure remains open.
+
+The [continuous logarithmic coefficient and angular-energy extension assessment](docs/assessment-2026-09-18-p8-affine-continuous-logarithmic-coefficient.md)
+extends the complete logarithmic TT coefficient continuously to positive Borel angular-energy measures.
+Native, 528 original-SymPy ordinary tests and separate CLI replay
+passed in the documented sequential acceptance batch; the covering
+98,832-test regression passed. The result has the assessment's stated
+scope; original V/G/B/P8 closure remains open.
+
+The [conditioned leading-cloud logarithmic coefficient assessment](docs/assessment-2026-09-18-p8-affine-leading-cloud-logarithmic-coefficient.md)
+defines the complete coefficient on the conditioned fixed-Born leading cloud and bounds its first two moments.
+Native, 527 original-SymPy ordinary tests and separate CLI replay
+passed in the documented sequential acceptance batch; the covering
+98,832-test regression passed. The result has the assessment's stated
+scope; original V/G/B/P8 closure remains open.
+
+The [positive-energy stability and quantitative infrared cutoff assessment](docs/assessment-2026-09-18-p8-affine-quantitative-soft-cutoff.md)
+proves positive-energy tail stability and quantitative conditioned infrared-cutoff errors.
+Native, 536 original-SymPy ordinary tests and separate CLI replay
+passed in the documented sequential acceptance batch; the covering
+98,832-test regression passed. The result has the assessment's stated
+scope; original V/G/B/P8 closure remains open.
+
 The [complete minimal scalar bremsstrahlung](docs/assessment-2026-09-15-p8-affine-massive-scalar-graviton-bremsstrahlung.md)
 now includes all26 emission graphs, the full Ward identity and an exact
 recoil map with a uniform real-minus-soft rate bound below10^-792.
