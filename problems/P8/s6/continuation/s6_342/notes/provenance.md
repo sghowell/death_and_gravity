@@ -1,0 +1,33 @@
+# Frozen direct evidence
+
+Each directly consumed report is rebuilt and compared in full, including
+its complete source manifest and original parameter record.
+
+S6_341_full_physical_contours_and_literal_weighted_TT_kernels_rebuilt
+ca619dedc6a1981023ab8db61c5358530d5a8e5c060a44debed38fc8dce1229d
+problems/P8/s6/continuation/s6_341/certificates/polynomial-vacuum-affine-physical-loop-contours.json
+
+S6_339_complete_bubble_radiation_and_known_sector_bound_rebuilt
+174317dc92bc5b1c2956e6c5bebee4504f582325ae7e28b16f03d5de01f70206
+problems/P8/s6/continuation/s6_339/certificates/polynomial-vacuum-affine-factorized-bubble-radiation.json
+
+S6_335_complete_full_tree_and_real_minus_soft_bound_rebuilt
+f1b5b057f0877a8722d63cb560cbe7507ca3e9e639455d121f574cd6034b3b62
+problems/P8/s6/continuation/s6_335/certificates/polynomial-vacuum-affine-dimensional-real-remainder.json
+
+S6_235_complete_original_mass_ordered_flat_coefficients_rebuilt
+1277412d19d9b022eb81c3728251d1836d88e4b047c8ad80794107c2aff7c911
+problems/P8/s6/continuation/s6_235/certificates/polynomial-vacuum-affine-heavy-scalar-four-point-loop.json
+
+S6_239_original_limiting_source_and_fixed_counterterms_rebuilt
+a09852126d79ca223af06555e10283328cb144a14945c127abee73b7ce8b9c05
+problems/P8/s6/continuation/s6_239/certificates/polynomial-vacuum-affine-heavy-parent-one-loop.json
+
+S6_297_original_full_Born_normalization_rebuilt
+6206f5d56959f01a8467e2c2b74ff43a2fad3cc75df0cee67e9bb8ce82f39564
+problems/P8/s6/continuation/s6_297/certificates/polynomial-vacuum-affine-one-newton-inclusive-assembly.json
+
+The six direct inputs retain all earlier qualifications and rejected
+history. The native report's full twenty-field equality is separate from
+private cold/fresh science checks and the later ordinary/CLI/full-suite
+acceptance gates. No completed ancestor cache is called uncached work.

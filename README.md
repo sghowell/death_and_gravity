@@ -3,6 +3,18 @@
 AI-assisted attack on ten open problems in theoretical cosmology, organised
 around a pre-registered problems document and a certificate-gated ledger.
 
+- Current P8 priority: [closure-driven plan](docs/p8-closure-plan.md) and the
+  approved [RATE4 candidate](docs/assessment-2026-09-20-p8-rate4-candidate.md).
+  Four new physical rate conditions retain the known matter-loop reference;
+  their four-direction first-order matching is constructed and checked.
+  The original parent remains conditional. The active task is to bound the
+  complete rate-normalized remainder and its separate curved/source inputs,
+  not to assign uncomputed terms zero. Full physical MATCH-1 and original
+  P8 remain open; validation/publication is tracked separately.
+- Latest P8 release: [S336-S347 and MATCH-1/RATE4](docs/assessment-2026-09-21-p8-s336-s347-release.md).
+  All twelve frozen packets passed ordinary/CLI acceptance and the covering
+  115,487-test snapshot. These are scoped radiative/curvature results;
+  successful replay does not close the remaining physical matching gates.
 - Problems document: `docs/problems/open-problems-theoretical-cosmology-2026.tex`
   (frozen at tag `problems-v1.1`; every later change goes in its Revision log).
 - Starting-point assessment and pre-work: `docs/assessment-2026-08-21-starting-points.md`.

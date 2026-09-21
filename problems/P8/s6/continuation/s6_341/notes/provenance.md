@@ -1,0 +1,29 @@
+# Frozen inputs and original source provenance
+
+All directly consumed reports are rebuilt and compared in full:
+
+S6_340_complete_selected_quadratic_cancellation_and_frontier_rebuilt
+79f298f3b8db27f6df41081e2f0ab80fd13eab8bc149699196c24eef4fda6cb7
+problems/P8/s6/continuation/s6_340/certificates/polynomial-vacuum-affine-quadratic-radiation-cancellation-radiation.json
+
+S6_235_full_mass_ordered_scalar_master_representation_rebuilt
+1277412d19d9b022eb81c3728251d1836d88e4b047c8ad80794107c2aff7c911
+problems/P8/s6/continuation/s6_235/certificates/polynomial-vacuum-affine-heavy-scalar-four-point-loop.json
+
+S6_236_complete_primitive_and_sharper_flat_remainder_rebuilt
+7a5e56979d2a755b7df1fc26f8e6d3d6a4e1bf760d4aa20911b139c250d28cb8
+problems/P8/s6/continuation/s6_236/certificates/polynomial-vacuum-affine-heavy-scalar-loop-remainder.json
+
+S6_239_original_parent_parameters_and_counterterms_rebuilt
+a09852126d79ca223af06555e10283328cb144a14945c127abee73b7ce8b9c05
+problems/P8/s6/continuation/s6_239/certificates/polynomial-vacuum-affine-heavy-parent-one-loop.json
+
+S6_295_literal_scalar_stress_vertex_and_original_recoil_rebuilt
+c5aeb643e173157f280201af2276924d5a211a5f1f97a271a0ed8dfc8c6d4d5f
+problems/P8/s6/continuation/s6_295/certificates/polynomial-vacuum-affine-massive-scalar-graviton-bremsstrahlung.json
+
+Every direct report's complete source manifest is retained. Their original
+source parameters, ordered graph conventions and open frontiers are used
+without revision. Cold and fresh preflight, source equality, the twenty-field
+native report and later ordinary/CLI/full acceptance are separate evidence.
+No inherited packet cache is represented as uncached work.
