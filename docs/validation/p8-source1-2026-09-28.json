@@ -1,0 +1,235 @@
+{
+  "timestamp_utc": "2026-09-29 00:28:33 UTC",
+  "local_study_date": "2026-09-28",
+  "base_commit": "a122e56dd45e43e21f707f026eb0d73f630e2795",
+  "milestone": "SOURCE-1",
+  "outcome": "BOUNDED_STUDY_COMPLETE_S0_RECOMMENDED_PENDING_PHYSICAL_ADOPTION",
+  "evidence_level": "VERIFIED_N",
+  "authority": "User approved SOURCE-1 bounded feasibility; approval is not physical source adoption.",
+  "study_complete": true,
+  "replacement_source_adopted": false,
+  "classical_action_modified": false,
+  "existing_COVZERO_boundary_adopted": true,
+  "physical_cutoff_adopted": false,
+  "state_changed": false,
+  "field_domain_restricted": false,
+  "common_quantum_reference_complete": false,
+  "physical_matching_established": false,
+  "physical_gravity_verdict_established": false,
+  "original_P8_open": true,
+  "recommended_candidate": "QG2-H8A420-RATE4-COVZERO-S0",
+  "next_decision": "Explicit adoption of the separately named S0 classical source-free candidate, then S0-REFERENCE; no repeat COVZERO boundary approval.",
+  "source_sha256": {
+    "README.md": "97346a5184af76adcede1ae01c6ddfb76565343231c5bdefdb7b75fd8582d541",
+    "CLAIMS.md": "541ca6316eea66c3568868e385f028530409163ac96890866c100dba1aa1f9ed",
+    "docs/p8-closure-plan.md": "9e273eeac81024a80a998bc774b94bfff909d8a79b9daab560e9970dc1d85c47",
+    "scripts/p8_source1.py": "dbe3e7d8a0f7892289c832d60ffe19ae782df6e40ff434925e5c1251e287abfb",
+    "docs/assessment-2026-09-28-p8-source1-feasibility.md": "4d651b907b14a67464990033cf1e48a9a4f951f935e792b92adf56a6f3e3d255",
+    "docs/candidates/p8-source-1-study.json": "8095e223de1a734daadd73bad39f34d38f2cd5a52aa229fbe81be71022ce69e2"
+  },
+  "protected_input_count": 503,
+  "protected_input_manifest_sha256": "82883e756ec85d42be59557e7f41a9fdbcc5e35188d01140f6d24c03c5995aae",
+  "protected_input_manifest_encoding": "sha256(json.dumps(manifest, sort_keys=True).encode())",
+  "preserved_preexisting_files": {
+    "docs/assessment-2026-09-21-p8-rate4-d8-candidate.md": "7dc612d7b3def5b97232c96d798292b64d62f0ef71b56eded20b4584748d8d1a",
+    "docs/assessment-2026-09-21-p8-rate4-parent.md": "d4a1ad3f8cd697bd93b5f5d30d2acf8e2538904d512790ea07cb93246a26fb50",
+    "docs/assessment-2026-09-21-p8-rate4-remainder.md": "26b9aeea14f38616c7ceb03b7a6f275365dabb70e9d5b43b5a451b9bed28cb63",
+    "docs/assessment-2026-09-22-p8-prescription1-feasibility.md": "57c49cc6c29f519b4d7b5d9c69bc81b92f71839eee4f82c18613acc2f5d0c255",
+    "docs/assessment-2026-09-22-p8-prescription2-gravity.md": "cadecb406ae0c5ede7b58839ae19f31c474647b55c644fd45d7b841579dc0d3f",
+    "docs/assessment-2026-09-22-p8-rate4-d8-witness.md": "d0b7120df976918cfeb96450dfcd301c714a87824c4ae43a02feda07e45594b0",
+    "docs/assessment-2026-09-24-p8-covzero-reference-seed.md": "df7b964284f05f4dd26df0919826ba93bb65330167b6b9543b222cc67cfbd131",
+    "docs/assessment-2026-09-24-p8-covzero-source-constraint-obstruction.md": "ca846e9411e544b5ed45c329c112f308f876962fdd6e214a72d156297f825dd4",
+    "docs/assessment-2026-09-24-p8-reference-regge.md": "bde4bc6454851fbedf59c882aaa3ff3dc88550de9bec99f19c66f555dd599ecc",
+    "docs/assessment-2026-09-24-p8-response-closure-blockers.md": "832ffed57b81ad49d7466bd3e5791a9bbaee0d08a16d8e03fe26b60a84621426",
+    "docs/assessment-2026-09-24-p8-source-response-pole-match.md": "91f61824c06cbc99eb4b242cc568cc82ca2f6aa06b73e481fa5eddaf25698dce",
+    "docs/candidates/p8-rate4-covzero-1.json": "015e18f4f04653bc39ef41d8858927280177aade4981472654956c786bbd9b38",
+    "docs/validation/p8-covzero-reference-2026-09-24.json": "63619a6990edc0714cf246491677d06b0403a806f97fe7624657f210364ea69b",
+    "docs/validation/p8-covzero-source-constraints-2026-09-24.json": "35bf8bfde310c1e2d454e25f02ad855e15107caad007be674b243e6e36376d7d",
+    "docs/validation/p8-prescription1-2026-09-22.json": "1a69c9ff92731ba046c893f16d33aa9c2f2e3f396cc4767a6e0294a52d1f4548",
+    "docs/validation/p8-prescription2-gravity-2026-09-22.json": "e68917c0def8f8da772b9c76f8d3f5eb4161abb67296dd746e2d1a57c16c4b0a",
+    "docs/validation/p8-rate4-d8-2026-09-21.json": "1d03620bc8a2038e1980eacf25d904dd2b9ccdcdf83d3b54dc24d3912c9dea54",
+    "docs/validation/p8-rate4-d8-witness-2026-09-22.json": "b7fcde1d17b2bbf09acf4b6ee02805f381a15786f97adb20bd30f8aa8eb5734f",
+    "docs/validation/p8-rate4-parent-2026-09-21.json": "5b837ccfa488d5f55c3bfc3479b289aab59cf72e740437c5fbece3300be50391",
+    "docs/validation/p8-rate4-remainder-2026-09-21.json": "3ee794a4e4ed0a711201add108317ed99750e38ae40ba61b02d4780ad1d7c101",
+    "docs/validation/p8-reference-regge-2026-09-24.json": "c0c5cc39283167a0ab61d1f918936d5796eb49e71caa68a8253e875d603f01e2",
+    "docs/validation/p8-response-closure-2026-09-24.json": "a47135efa9f6dfb75399b2783ee935b89faf509f322728c48e2625fa71c58215",
+    "docs/validation/p8-source-response-2026-09-24.json": "8341a5a3afdc0ff710a07e583c855f2c7bcb7c2d1690421babef4435c8b4a8a0",
+    "problems/P4/notes/s4-commutator.md": "6caded9b998d5caf64d552283dde49d1651030da907edae24b582148017f43ac",
+    "problems/P4/results/theorem_c/tc_energy.json": "7f48a49d2c89d792a97e1f2e2e17e9c072884b05fe8b19b83d1928683df01245",
+    "problems/P4/src/p4/validated/tc_commutator.py": "b63fbdce64c5bbe766b65b56742a958cef2e4d5ca1b0dbc022566561bbaf96b1",
+    "problems/P4/src/p4/validated/tc_energy.py": "afa902bc7cb3d3be575c2931d6a0b1dee2cb62af5b31db344056ef3997c30e9d",
+    "problems/P4/src/p4/validated/tc_tm.py": "66e059e80162f660f242fbf7089fc95b739fb15e547195cb9cbe8c25757efdd2",
+    "problems/P4/tests/test_tc_commutator.py": "7bea22406dac0c6724c43fc8584da782e538cf47f46a00a9babb666a88de7018",
+    "problems/P9/results/variants_queue_done.txt": "d117fa006ba9208500b2930ce69cbde436c647afa917cb7396a9bc9111a46dd2",
+    "scripts/p8_covzero_reference.py": "ee114ef55e8a2a5cad89ed094543df6a9b3db7195b407892616553cda97bf0c9",
+    "scripts/p8_covzero_source_constraints.py": "c484a95c11d7979e0f054eebd2edb35065e2cd6dca4ae03db9cca9efab3c6d99",
+    "scripts/p8_prescription1.py": "b5b53643fa9afd4c803d5d1942457a87080eb0810f09a2872a39ebf64b04e2f6",
+    "scripts/p8_prescription2_gravity.py": "5bff460ef3cc0f3e4fb293bdb54bfee76668be72dc8c47074d9adc7edf77ad1d",
+    "scripts/p8_rate4_d8.py": "1b21c1bd43bb68a36d30671217df9748d13862a1fb941a10b59e4b1b723710f5",
+    "scripts/p8_rate4_d8_witness.py": "4e917ab534680acbf920e1a31e4edde2180ff9e9014712c76c4696d239f53c37",
+    "scripts/p8_rate4_parent.py": "0840a6d589327a4f4bd340e4fe7d3483f7bca6e4140efb10c7685d549165485a",
+    "scripts/p8_rate4_remainder.py": "14920b563db7f640a65acb31c859ead22de6d44ea1158bfc26a0157bb3eae341",
+    "scripts/p8_reference_regge.py": "1f0c84bddbc2bbe28f42cb01933126980e38d94a2ca627e63009e7f89ede3621",
+    "scripts/p8_response_closure.py": "06b7c8689063c922cd0dfad95f89faae85a34a8bd621aa1bda302042e071b1be",
+    "scripts/p8_source_response.py": "3286d7f91f0d4abbcb3c2b78128585b51cddac3f4ba9fbf19bc73a64a44b19b3"
+  },
+  "new_audit": {
+    "milestone": "SOURCE-1",
+    "outcome": "BOUNDED_STUDY_COMPLETE_S0_RECOMMENDED_PENDING_PHYSICAL_ADOPTION",
+    "protected_input_files": 503,
+    "independent_null_branch_controls": [
+      {
+        "u": "0",
+        "a=b": "1/128",
+        "A": "0",
+        "kinetic_rank": 6,
+        "primary_bracket": "0"
+      },
+      {
+        "u": "1",
+        "a=b": "1/128",
+        "A": "896",
+        "kinetic_rank": 6,
+        "primary_bracket": "-7/128"
+      },
+      {
+        "u": "1/2",
+        "a=b": "1/64",
+        "A": "62464/125",
+        "kinetic_rank": 6,
+        "primary_bracket": "-61/500"
+      }
+    ],
+    "parallel_source_ansatz_result": "c=d=0 where X!=0 and 1-3X*R_X/(2R)!=0; regular continuation through X=0; no general scalar-vector-tensor no-go",
+    "algebraic_gradient_constraints": {
+      "vector_secondary_solution": "-G + a*f",
+      "vector_temporal_pivot": "-1",
+      "vacuum_second_class_matrix_determinant": "1 in unit positive density normalization",
+      "source_free_regular_branch_modes": 8,
+      "old_generic_local_Dirac_count": 9,
+      "global_second_class_pivot_bound_established": false
+    },
+    "clock_jets_and_affine_lift": {
+      "old_second_clock_jet": "-6*H*n**2/h - 2*k1*n/h",
+      "SALG_second_clock_jet": "4*lambda*n**2/h",
+      "unchanged_action_jet_through_degree": 2,
+      "all_old_clock_cubic_vertices_preserved": false,
+      "affine_lift": "Delta L/(kappa sqrt(-g))=W.(S_old-S_new)+(S_new^2-S_old^2)/2; full 56-mode complement unchanged"
+    },
+    "formal_vacuum_filtration": {
+      "R_minus_one_leading_field_degree": 6,
+      "old_source_minimum_scalar_degree": 6,
+      "old_source_leading_jet": "1024*du_mu*(3*u^2-7*X)*(X*Box(u)-uHu), homogeneous field degree six",
+      "SALG_minimum_scalar_degree": 7,
+      "source_tagged_one_loop_minimum_external_legs": 10,
+      "one_loop_four_scalar_source_graphs": 0,
+      "finite_graph_controls": 14,
+      "physical_common_reference_or_full_amplitude_equivalence_proved": false
+    },
+    "unchanged_action_EFT": {
+      "conditional_remainder_bound": "||G-G_p|| <= rho^(p+1)/(1-rho)*||G0||, rho=||G0 DeltaD||<1 on a specified common domain and boundary prescription",
+      "matrix_controls": 8,
+      "actual_P8_rho_bound": null,
+      "actual_P8_cutoff_or_extra_pole_mass": null,
+      "controlled_EFT_excluded": false,
+      "controlled_EFT_admitted": false
+    },
+    "rejected_authority_inputs": [
+      "replacement_source_adopted",
+      "physical_cutoff",
+      "field_domain_restricted",
+      "state_changed",
+      "extra_mode_prescription_adopted",
+      "existing_COVZERO_boundary_adopted",
+      "common_quantum_reference_complete",
+      "physical_matching_established",
+      "physical_gravity_verdict_established",
+      "original_P8_open"
+    ],
+    "classical_action_modified": false,
+    "replacement_source_adopted": false,
+    "common_quantum_reference_complete": false,
+    "physical_matching_established": false,
+    "physical_gravity_verdict_established": false,
+    "original_P8_open": true
+  },
+  "focused_replays": [
+    {
+      "command": ".venv/bin/python -B scripts/p8_match1_audit.py",
+      "exit_code": 0
+    },
+    {
+      "command": ".venv/bin/python -B scripts/p8_match1_rate_input.py",
+      "exit_code": 0
+    },
+    {
+      "command": ".venv/bin/python -B scripts/p8_rate4_candidate.py",
+      "exit_code": 0
+    },
+    {
+      "command": ".venv/bin/python -B scripts/p8_rate4_remainder.py",
+      "exit_code": 0
+    },
+    {
+      "command": ".venv/bin/python -B scripts/p8_rate4_parent.py",
+      "exit_code": 0
+    },
+    {
+      "command": ".venv/bin/python -B scripts/p8_rate4_d8.py",
+      "exit_code": 0
+    },
+    {
+      "command": ".venv/bin/python -B scripts/p8_rate4_d8_witness.py",
+      "exit_code": 0
+    },
+    {
+      "command": ".venv/bin/python -B scripts/p8_prescription1.py",
+      "exit_code": 0
+    },
+    {
+      "command": ".venv/bin/python -B scripts/p8_prescription2_gravity.py",
+      "exit_code": 0
+    },
+    {
+      "command": ".venv/bin/python -B scripts/p8_reference_regge.py",
+      "exit_code": 0
+    },
+    {
+      "command": ".venv/bin/python -B scripts/p8_source_response.py",
+      "exit_code": 0
+    },
+    {
+      "command": ".venv/bin/python -B scripts/p8_response_closure.py",
+      "exit_code": 0
+    },
+    {
+      "command": ".venv/bin/python -B scripts/p8_covzero_reference.py",
+      "exit_code": 0
+    },
+    {
+      "command": ".venv/bin/python -B scripts/p8_covzero_source_constraints.py",
+      "exit_code": 0
+    },
+    {
+      "command": ".venv/bin/python -B scripts/p8_source1.py",
+      "exit_code": 0
+    }
+  ],
+  "static_validation": {
+    "ruff_check": "passed for all 15 focused diagnostic scripts",
+    "ruff_format_check": "passed for all 15 focused diagnostic scripts",
+    "git_diff_check": "passed",
+    "local_markdown_links_checked": 293,
+    "frozen_P8_and_three_tracked_precursor_diagnostics": "empty worktree diff",
+    "git_index": "empty",
+    "full_115487_test_suite_rerun": false
+  },
+  "publication": "local uncommitted and unpushed; no prior artifacts or unrelated P4/P9 changes altered",
+  "limitations": [
+    "Local regular Dirac counts do not prove an on-shell instability or a physical extra-pole mass.",
+    "Source-only restriction covers the specified fixed-light Hessian-linear gradient-parallel ansatz, not all scalar-vector-tensor completions.",
+    "S0 preserves local classical/quadratic data and a formal vacuum source filtration, not a completed common quantum reference or full physical amplitude.",
+    "The required constraint domains and any branch transport still need justification; no unnecessarily global bound is added to the original closure contract.",
+    "The unchanged-action EFT comparison has no actual P8 validity/error bound and is not ruled out."
+  ]
+}

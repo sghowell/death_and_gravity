@@ -1,6 +1,6 @@
 # Claims ledger
 
-Current P8 matching status (2026-09-20): the
+Current P8 matching status (2026-09-28): the
 [MATCH-1 audit](docs/assessment-2026-09-20-p8-match1-renormalization-obstruction.md)
 constructs a finite direction invisible to the retained symmetric vacuum
 value and reference-clock jets, and derives a uniformly bounded four-value
@@ -21,6 +21,146 @@ complete retained Born-tree radiation conversion is bounded at first order,
 contributing less than 10^-783*lambda to the matching projection. The hard
 subtracted remainder, complementary curved data and higher-order physical
 error bounds remain open; no full matching or original P8 closure is claimed.
+The [RATE4.REMAINDER audit](docs/assessment-2026-09-21-p8-rate4-remainder.md)
+now proves a ten-derivative-or-lower local direction invisible to the four
+first-order rates but shifting the target coefficient beyond its allocated
+error. The stated candidate family is CONDITIONAL ONLY, not excluded.
+Its full gapped H/Proca subtracted increment is bounded below
+10^-1003*lambda; the complete hard/complementary/omitted-order budget is
+not bounded. The [RATE4.PARENT comparison](docs/assessment-2026-09-21-p8-rate4-parent.md)
+now gives stable four- and five-rate/local-polynomial input maps with
+conditional error budgets below lambda/2, requiring independently justified
+tail and pole/source bounds. An eight-rate alternative has a stable target
+projection but severely ill-conditioned heavy coordinates. The recommended
+RATE4-D8 proposal preserves the existing targets but adds an explicit tail
+restriction; RATE5-D10 fits one more coefficient instead. Following user
+approval, the [separately named RATE4-D8 conditional candidate](docs/assessment-2026-09-21-p8-rate4-d8-candidate.md)
+is now specified with complete-input matching/interval maps, a conditional
+formal-order normalization lemma and a double-Cauchy tail-witness criterion.
+The two known blind contacts are bounded if its new tail hypothesis holds.
+Its actual parent bounds and complete common-parent, higher-order, V/G and
+curved/state inputs remain absent; no physical MATCHED status follows.
+RATE5-D10 remains unadopted. The
+[RATE4-D8.WITNESS source audit](docs/assessment-2026-09-22-p8-rate4-d8-witness.md)
+now establishes a scoped formal data-sufficiency obstruction: any finite
+S/U coefficient prefix and the four first-order rates leave analytic-tail
+freedom, while analyticity alone supplies no magnitude bound. Independent
+pole/source and curved matching data remain necessary. This does not
+exclude a physical D8 parent or supply a unitary UV counterexample; the
+actual parent-bound witness is still absent. The authorized
+[PRESCRIPTION-1 feasibility study](docs/assessment-2026-09-22-p8-prescription1-feasibility.md)
+has now tested concrete quantum-prescription, direct-bound and common-parent
+compatibility routes. A finite proper-time physical local covariance fails
+reflection positivity, and an exact band-limited field is not the original
+local field; computational regulators and Wilsonian EFT are not excluded.
+The selected light-bubble UV shell, a restricted positive-spectral moment
+and the original heavy-state high-momentum readout admit quantitative bounds.
+None bounds the independent physical local/gravity counterfunctional or
+supplies the complete gravity functional and interacting bounce/state.
+No parent or physical cutoff is adopted; M/V/G/B/R/P8 remain open.
+The [PRESCRIPTION-2/gravity initial packet](docs/assessment-2026-09-22-p8-prescription2-gravity.md)
+now provides a proposed finite-functional boundary rule and its formal
+reference-clock jet compatibility, plus a constructive positive all-spin
+comparison kernel for a massive fixed-transfer arc. The detector and
+crossing correction is below J/80 for an independently supplied finite
+positive forward moment J; only the original leading heavy-exchange part
+is bounded here. The new four-rate projection has norm below one and
+conditional D8-tail error below lambda/400. Exact finite-gap positivity
+fails, including negative spin-256 and spin-512 controls at detector1/256;
+the approximate comparison remains available. The complete covariant
+reference, physical moment and observable/contour errors are not supplied.
+No finite-zero proposal was adopted by that initial packet, and no
+original gate was promoted.
+The [reference-reduction/finite-window continuation](docs/assessment-2026-09-24-p8-reference-regge.md)
+separates the 56-mode ultralocal affine factor from the actual constrained
+quantum measure. The original heavy source has no formal one-loop
+reference mean/quadratic contribution; its free metric determinant remains.
+The original Proca source instead has a nonzero quadratic jet and a
+nontrivial quartic exchange. A positive even-spin spectral fixture shows
+that full J can diverge while the finite-angle arc exists. A finite-window
+comparison and Regge-envelope tail bound avoid requiring full J, without
+supplying the actual model's finite-window, Regge, contour or observable
+errors. Common-reference completion and physical gravity remain open.
+The [constrained-source/pole-matching continuation](docs/assessment-2026-09-24-p8-source-response-pole-match.md)
+now derives the original source's cubic and source-squared quartic after
+the temporal-vector and lapse constraints, retaining both prepared-state
+momentum shifts. The scalar and longitudinal-vector one-loop kernels
+include their local contacts and unequal-momentum polarizations, at a
+common finite regulator and formal tree-clock vertex grade. Their
+continuum subtraction and bounds, the source-linear mixed block and
+other reference sectors remain open. Conditional Regge pole matching
+fixes C(0)/j'(0)=pi/(2kappa), not a physical finite-angle shape bound.
+No reference prescription or gate is promoted by these identities.
+
+The [continuum-extension/closure audit](docs/assessment-2026-09-24-p8-response-closure-blockers.md)
+establishes the source-squared ordered noise products and time-retarded
+extension families with conservative complete-phase scaling degree <=14.
+This is not a chosen covariant subtraction or a quantitative B bound.
+Two regular covariant finite functionals leave the retained first-order
+flat data and reference mean unchanged but have a rank-two reduced
+response map. They are witnesses of missing physical boundary data, not
+adopted parent changes or all-orders equivalent theories. Unique physical
+PRESCRIPTION-2 completion required an explicit physical specification;
+the current gravity route still lacks a quantitative same-observable
+remainder certificate. No asymptotic O(G) estimate supplies that input.
+
+Following user approval, the [RATE4-COVZERO-1 reference-seed packet](docs/assessment-2026-09-24-p8-covzero-reference-seed.md)
+adopts the additional first-order finite-boundary rule as NEW candidate
+data. It constructs a dimension-dependent light/metric seed whose
+arbitrary-tilt kinetic Schur complement vanishes, while the naive fixed
+four-dimensional coefficient lifts the degeneracy. The exact clock ADM
+and source continuation is regular through X=0, and an auxiliary-gradient
+point presentation supplies full cotangent chart bookkeeping. An explicit
+Proca scale transport preserves the existing finite prescription at mu=1.
+These results do not supply the complete gauge/constraint measure, Ward
+identity or renormalized loop functional. The prior closure note's prose
+X=-g*du*du is corrected to X=+g*du*du for +---; its calculations already
+used X=N^-2, so its witness results are unchanged.
+
+The subsequent [coupled-source admission audit](docs/assessment-2026-09-24-p8-covzero-source-constraint-obstruction.md)
+finds a classical obstruction to a uniform exact fixed-count canonical
+reference: the retained Proca source raises the scalar/metric kinetic
+rank on generic tilted and spacelike configurations, and its temporal
+constraint does not compensate. Exact bounds place a spacelike example
+inside the literal parent's regular coefficient domain, arbitrarily
+near the vacuum. This does not refute the earlier clock/unitary count
+or quadratic vacuum spectrum, nor exclude a controlled order-reduced
+EFT. That route needs a validity/error proof; a classical source repair
+would require separate authorization. No repair or domain restriction
+is adopted. The same audit corrects the seed note's prose curvature
+sign to -R*Ricci_P8/2; both diagnostics already use the inherited correct
+ADM kinetic sign. M/V/G/B/R/P8 remain OPEN, G UNTESTED.
+
+The authorized [SOURCE-1 feasibility study](docs/assessment-2026-09-28-p8-source1-feasibility.md)
+is now complete. A new actual-parent null-gradient calculation finds a
+nonzero scalar/vector primary bracket even where the kinetic null survives.
+Within the fixed-light, Hessian-linear gradient-parallel source class,
+all-tilt constraint preservation requires the second-derivative coefficients
+to vanish on the regular set. Source-free S0 and a first-derivative-only family
+have safe primary algebra and regular local secondary pairs at the vacuum
+and finite clock points. They preserve the classical clock and quadratic
+dynamics. The old source starts at scalar field degree six in the actual
+S238 vacuum, hence contributes no source-tagged four-scalar graph through
+one loop; this is a formal filtration, not a completed physical amplitude.
+That study recommended S0 without adopting it. Its common quantum measure
+and changed curved response remained further work.
+The unchanged-action EFT route remains conditional on a real validity and
+error estimate. No action, state, cutoff or domain is changed by this study.
+
+Following explicit user approval, the separately named
+[S0 candidate and canonical/vector reference bridge](docs/assessment-2026-09-28-p8-s0-reference.md)
+now replace the entire old source square by a source-free Proca mass term,
+while preserving the old sourced parent as historical evidence. Compact
+clock pivots give local auxiliary branches; an independent Legendre and
+Dirac calculation gives the full four-plus-two Gaussian split. The original
+state, physical probe contacts and inherited Proca finite conversion are
+retained. The exact finite-regulator source-response difference contains
+both the two-vertex term and local contact; vector gravitational response
+is not zero. A fixed-hat-spatial-metric lapse-only Horndeski map loses
+invertibility at finite clock times, without a singularity in the original
+canonical chart. Full light/metric measure, common quantum reference and
+causal bounds remain open. S0 adoption is resolved; no cutoff, new state or
+physical domain restriction is adopted. Original gates are not promoted.
 
 Current P8 correction (2026-09-15): the [original canonical-boundary audit](docs/assessment-2026-09-15-p8-affine-canonical-boundary-corrected-hybrid.md)
 refutes S6.269-S6.274's same-original-prepared-state identification. The
@@ -157,6 +297,19 @@ CONJECTURED, VERIFIED_N, CERTIFIED, FORMALIZED, REFUTED (see README).
 
 | id | problem | statement | level | evidence | updated |
 |---|---|---|---|---|---|
+| P8.S0_REFERENCE.CANONICAL_VECTOR_BRIDGE | P8(b), adopted source-free candidate and scoped quantum reference | Explicitly adopted QG2-H8A420-RATE4-COVZERO-S0 replaces the entire source square, retaining all other physical data and the original sourced parent. The complete trace/temporal Schur reduction and literal J>=243/[160(1+T^2)^18] on each compact clock interval give local auxiliary admission. An independent Legendre/Dirac reduction yields a coupled four-dimensional light/M1 block plus two-dimensional longitudinal Proca, canonical reduced brackets and the full nonzero lower constraint bracket. Exact old-minus-new homogeneous Gaussian response retains its two-vertex and local-contact difference, with equal first metric/light mean jets at a common finite regulator. Physical vector probes retain both contact types and the original state; ordinary Proca keeps its known dimensional finite/scale conversion. Vector parity does not remove gravitational response. A fixed-hat-spatial-metric lapse-only Horndeski map must have F_N=0 at u^2=(3/2)^(1/3)-1; the original canonical chart is regular there. Full light/metric measure, common reference, renormalized response bounds and M/V/G/B/R/P8 remain open | VERIFIED_N (exact Schur, Legendre, complete Dirac, probe/state/Ward/parity and determinant/heat identities; written compact-local and restricted-frame arguments; eleven invalid-input controls and 507 pinned inputs. Finite Gaussian and ordinary-vector scope, not full quantum matching.) | docs/candidates/p8-rate4-covzero-s0.json; scripts/p8_s0_reference.py; docs/assessment-2026-09-28-p8-s0-reference.md; docs/validation/p8-s0-reference-2026-09-28.json | 2026-09-28 |
+| P8.SOURCE1.BOUNDED_SOURCE_FEASIBILITY | P8(b), common-reference classical admission | The actual-parent null limit has A=1024[1-(1+u^2)^-3], a rank-six kinetic block and normalized primary bracket {Psi,p_T}=-A*a^2, nonzero at u=1,a=b=1/128. In the fixed-light source ansatz u_mu[c Box(u)+d uHu+f], two tilts force c=d=0 on X!=0,1-3X*R_X/(2R)!=0 for the intended local constraint count. Source-free S0 and first-derivative-only SALG retain the light primary and its secondary, with explicit Proca elimination and regular vacuum/finite-clock local pivots. An exact retained-trace affine lift preserves the 56-mode complement. Classical clock and quadratic data survive, but curved cubic/quartic response changes. Actual vacuum source degree six excludes source-tagged one-loop four-scalar graphs. At study completion S0 was recommended, not adopted; subsequent adoption is tracked in P8.S0_REFERENCE.CANONICAL_VECTOR_BRIDGE above. Required-domain constraint control, common quantum reference and M/V/G/B/R/P8 were not completed by the study. Unchanged-action EFT not excluded or admitted | VERIFIED_N (independent symbolic null Hessian and primary bracket, three actual coefficient controls, two-tilt ansatz identity, explicit temporal Legendre solve and vacuum four-constraint bracket determinant, clock and vacuum jets, exact affine-square identity, written graph-filtration proof with fourteen finite controls, eight conditional resolvent controls and ten authority rejections; 503 pinned inputs. Local and formal scope only.) | docs/candidates/p8-source-1-study.json; scripts/p8_source1.py; docs/assessment-2026-09-28-p8-source1-feasibility.md | 2026-09-28 |
+| P8.COVZERO1.COUPLED_SOURCE_CONSTRAINT_ADMISSION | P8(b), common-reference admission | The literal retained Proca source adds X*c*c^T to the pure scalar/metric velocity Hessian and generically raises its rank from six to seven. Its determinant is -4R^4(R-1)^2 b^4(2R-3X R_X)^2/X^3. At a=0,X=-b^2 the added acceleration coefficient is (R-1)^2/X and the temporal-Proca Hamiltonian Hessian is -1, so that auxiliary pair does not replace the lost scalar constraint. A written actual-parent bound at u=0,X=-e,0<e<=10^-430 proves R!=1 and a regular metric block. This obstructs one exact fixed-count canonical extension over the whole coefficient domain, not the prior clock/unitary count, the vacuum quadratic spectrum, every controlled EFT or original P8. No classical repair, cutoff, mode prescription or domain restriction adopted | VERIFIED_N (literal covariant contractions and pinned source, invariant null projection/determinant proof, five exact rank controls with independent Fraction determinants, separate purely spatial branch, temporal-vector Legendre check, literal parent binding and exact rational side conditions for an all-e interval; four rejected admission inputs; 500 protected source/inherited files. No on-shell instability time or completed quantum measure claimed.) | scripts/p8_covzero_source_constraints.py; docs/assessment-2026-09-24-p8-covzero-source-constraint-obstruction.md | 2026-09-24 |
+| P8.COVZERO1.DIMENSIONAL_REFERENCE_SEED_AND_LEGACY_TRANSPORT | P8(b), authorized finite-boundary candidate | RATE4-COVZERO-1's additional first-order boundary rule is adopted as new physical candidate data, not inferred from the old rates. The selected d-dimensional light/metric coefficient A4=-R_X/X-(3m-2)R_X^2/[2(m-1)R] has zero arbitrary-tilt kinetic Schur complement and recovers the old action at m=3; keeping 7/4 at all d instead leaves -(m-3)R_X^2/[4(m-1)R]. The associated clock chart cancels lapse velocity/gradient terms, retains its primitive and regular covariant source, and has a source trace pivot >1/6 near m=3. An independent-gradient point presentation gives a regular cotangent phase map through nonzero null gradients. The known local Proca conversion +log(10^6)P_V/(64pi^2) at mu=1 preserves its old mu=1000 prescription. Full regulated gauge/constraint measure, Ward/locality proof, loop values/bounds, gravity certificate and P8 remain open | VERIFIED_N (invariant Schur and full ADM identities, nine kinetic rank controls, four chart epsilon derivatives, three 30-phase cotangent fixtures, pinned Proca heat/finite-polynomial reproduction, scale transport and local stress Ward identity, four synthetic rate equalities and ten rejected inputs; 496 protected inherited files; written continuation and transport arguments. Boundary adoption is an assumption, not a verified consequence.) | docs/candidates/p8-rate4-covzero-1.json; scripts/p8_covzero_reference.py; docs/assessment-2026-09-24-p8-covzero-reference-seed.md | 2026-09-24 |
+| P8.PRESCRIPTION2.CONTINUUM_EXTENSION_AND_PHYSICAL_INPUT_BLOCKERS | P8(b), closure audit of both authorized tracks | The actual same-state source-squared noise products exist and the time-retarded kernels have local extension families, with conservative prepared-phase scaling degree <=14 and normal derivative ambiguity cap10. This does not choose a covariant subtraction or bound B. Two regular covariant finite functionals of vacuum field degrees8/12 preserve the retained first-order flat data and reference mean but induce a rank-two reduced response; their possible four-point effects begin no earlier than total loop grades3/5. Unique physical completion needs additional finite-boundary data. The current gravity route lacks a quantitative same-observable remainder certificate; O(G) alone supplies no error constant/domain. No candidate adopted, physical exclusion, all-orders equivalence, healthy UV completion or original gate closure | VERIFIED_N (three exact normal-jet projectors, Proca normalization limits, covariant field-degree and clock-jet controls, reduced response determinant102400/59049, scalar characteristic pencil, independent temporal-vector Legendre solve, reference transport, exact gravity allocation and nine input rejections; 494 protected inputs; written continuum extension and physical-input obstruction arguments) | scripts/p8_response_closure.py; docs/assessment-2026-09-24-p8-response-closure-blockers.md | 2026-09-24 |
+| P8.PRESCRIPTION2.REFERENCE_REDUCTION_AND_FINITE_WINDOW_GRAVITY | P8(b), continued quantum-reference and gravity applicability | The inherited 56 algebraic affine directions yield an ultralocal determinant in the stated perturbative dimensional measure, not the full constrained measure. Original heavy-source exchange starts at clock field degree16 and its formal one-loop source contribution at degree14; the free heavy metric determinant remains. The actual Proca quadratic source instead gives a nonzero quartic exchange control. An all-even-spin positive spectral fixture has divergent full forward J but finite finite-angle arc. A finite-window positive comparison plus a supplied Regge envelope bounds the normalized tail below 60 C/alpha plus its remainder, retaining separate contour/observable errors. No actual Regge/moment bound, complete reference, adopted parent or M/V/G/B/R/P8 closure | VERIFIED_N (three Gaussian block fixtures, heavy Schur and three jet controls, actual Proca source and symbol identities, finite-reference transport, five dyadic logarithm controls, nine Rodrigues controls, exact tail integration and eighteen missing/invalid input rejections; 342 protected inputs; written functional-degree and continuum spectral proofs) | scripts/p8_reference_regge.py; docs/assessment-2026-09-24-p8-reference-regge.md | 2026-09-24 |
+| P8.PRESCRIPTION2.CONSTRAINED_SOURCE_AND_CONDITIONAL_POLE_MATCH | P8(b), actual source interaction and gravity normalization | Joint temporal/trace elimination and the original canonical shifts give h3=-xi G n(P-6Theta n)/h and the lapse-reduced h4_xi2=xi^2 G^2[(P/2-6Theta n)^2/J-3n^2]/h^2. These supply the scalar-vector fish, two-scalar longitudinal bubble and both local contacts at a common finite regulator, with distinct leg momenta and formal tree-clock vertices; the contact is indefinite. No renormalized continuum value, full mixed response or B bound follows. Under explicit single-leading-Regge-pole/dispersion hypotheses, the original graviton pole fixes C(0)/j'(0)=pi/(2kappa); finite-angle shape and all residual/contour/observable inputs remain unproved. No model adoption or original gate closure | VERIFIED_N (joint Legendre and exact lapse solves, arbitrary-time source and boundary checks, pinned bounce J, nine row and six unequal-momentum controls, three correlated Wick controls, indexed longitudinal bubble and both local blocks, UV primitive, conditional pole/finite-part/transport checks, 27 input rejections; 419 protected inputs; written field-degree argument) | scripts/p8_source_response.py; docs/assessment-2026-09-24-p8-source-response-pole-match.md | 2026-09-24 |
+| P8.PRESCRIPTION2.MASSIVE_ARC_COMPARISON_AND_FINITE_BOUNDARY_PROPOSAL | P8(b), initial quantum-model and gravity packet | A ball-autocorrelation weight supplies a positive comparison at every spin and s>=32; physical detector and crossed-denominator differences are bounded by J/80, conditional on a finite positive forward moment and separate physical errors. The original leading heavy exchange contributes less than lambda/16 to this comparison error. Exact finite-gap all-even-spin positivity is impossible for the stated nonzero smearings. The new RATE4 arc projection has norm below one and conditional D8-tail error below lambda/400. A proposed covariant finite-contact lift preserves reference-clock variations through degree1023; local scalar/curvature sources give explicit correlated coefficients. No proposal adopted, complete covariant reference, full J, finite-gravity verdict, interacting bounce or P8 closure | VERIFIED_N (21 independent moments, 54 low-spin integrals, exact high-spin sign controls, Poisson identity, four arc images, independent inverse weights, twelve tail words with infinite bound, original heavy budget, three source fixtures, three finite-jet controls and sixteen input rejections; 321 protected inputs; written all-spin and clock-jet proofs) | scripts/p8_prescription2_gravity.py; docs/assessment-2026-09-22-p8-prescription2-gravity.md | 2026-09-22 |
+| P8.PRESCRIPTION1.CUTOFF_OBSTRUCTIONS_AND_SCOPED_BOUND_MECHANISMS | P8(b), authorized prescription feasibility | A finite proper-time covariance fails the physical local scalar positivity test; an exact spatially band-limited field fails the original locality identification. Computational regulators remain possible. The selected light-bubble short-time projection is below 33 times its absolute prefactor divided by Lambda^10; a restricted positive scalar-exchange class admits a one-moment bound. The existing S240 heavy-state normalized C5 readout tail is below 10^-697 above fixed comoving P=10^100 on [-1,1], with all local terms retained. No complete physical boundary action, all-sector matching, finite-gravity functional, interacting bounce, D8 witness or P8 closure; no parent or cutoff adopted | VERIFIED_N (five cutoff identities, thirteen independent projections, sixteen integrated shell coefficients, four shell enclosures, six boundary controls, three spectral fixtures, a half-line sign proof, square completion, tail antiderivative, four tail-scaling controls and seventeen input rejections; 318 protected inputs; written infinite-tail and cutoff-ansatz proofs) | scripts/p8_prescription1.py; docs/assessment-2026-09-22-p8-prescription1-feasibility.md | 2026-09-22 |
+| P8.RATE4_D8.WITNESS_SOURCE_INSUFFICIENCY | P8(b), retained-source witness audit | Formal local S^k R5 comparisons preserve any finite weighted S/U coefficient prefix, all four first-order rates and known first-order cuts while leaving the tail and its forward projection unbounded. Holomorphy alone supplies no supremum. Pole/source coordinates can vary with local compensation and no analytic-tail addition; the flat curvature/residue degeneracy persists. These are scoped data-sufficiency results, not unitary UV counterexamples or exclusions of a verified D8 member. Actual physical bounds and P8 closure remain absent | VERIFIED_N (15 forward controls, 20 tail sample nulls, five supremum controls, five large-norm/small-projection controls, 48 nuisance sample nulls, twelve Fraction/SymPy projections, two half-line proofs, six cap-shift controls, four Laurent identities and ten input rejections; 311 protected inputs, ten directly reviewed source files; written all-prefix proof) | scripts/p8_rate4_d8_witness.py; docs/assessment-2026-09-22-p8-rate4-d8-witness.md | 2026-09-22 |
+| P8.RATE4_D8.CONDITIONAL_CANDIDATE_AND_TAIL_WITNESS | P8(b), separately named RATE4-D8 v1 | Retained four targets admit a unique conditional first-order local fit and formal recursive normalization for supplied complete finite rate coefficients. Double-Cauchy holomorphy plus a bidisk supremum gives N64,D8<=M_R W(64/R), with W(1/2)=29/336; an optional M128<=23000lambda witness suffices for the declared tail cap. Under that cap the one-direction R5 and angular blind contacts shift b20 by less than lambda/1000 and 10^-7lambda. The conditional candidate is authorized and defined, but its actual parent bounds, physical realization, higher-order errors, V/G/B and P8 closure are not established | VERIFIED_N (sixteen Fraction/SymPy inverse entries, 256 input-box corners, 32 formal rate equalities with eight absorptive-square controls, three infinite analytic fixtures, general discriminant identity, 256 projection fixtures and 28 input rejections; 310 protected inputs; written formal-order and double-Cauchy proofs) | scripts/p8_rate4_d8.py; docs/assessment-2026-09-21-p8-rate4-d8-candidate.md | 2026-09-21 |
+| P8.RATE4.PARENT_INPUT_COMPARISON_AND_CONDITIONAL_LOCAL_MAPS | P8(b), proposed parent-input routes | Four retained rates fit the complete local polynomial through eight derivatives; a five-rate alternative fits through ten. Explicitly supplied weighted analytic-tail norms and pole/source bounds give sufficient total errors below lambda/2 in both designs, with local coefficient error norms below 27 and 20 respectively. Eight-rate heavy coordinates remain poorly conditioned at lambda/100 sample precision. RATE4-D8 and RATE5-D10 are proposals, not adopted or physically matched; no complete parent, actual physical error bounds, V/G theorem, curved/state control or P8 closure | VERIFIED_N (33 Fraction/SymPy projection comparisons, eighteen synthetic fitted coordinates, exact half-line/rational/generating identities, 329 tail monomials, 48 error corners and fourteen input rejections; 309 protected inputs; written infinite-tail/Cauchy proof, not a frozen physical matching certificate) | scripts/p8_rate4_parent.py; docs/assessment-2026-09-21-p8-rate4-parent.md | 2026-09-21 |
+| P8.RATE4.REMAINDER_IDENTIFIABILITY_AND_GAPPED_BOUND | P8(b), RATE4 v1 remainder decision | A local at-most-ten-derivative contact preserves all four first-order defining rates with unchanged matching coordinates but changes analytic b20 by -902256*zeta; its coefficient is not bounded by those data. Heavy residue is removed, heavy mass and stu contacts are not; exact conditional sensitivity bounds are derived. The complete gapped H/Proca subtracted increment is below 10^-1003*lambda. Outcome CONDITIONAL ONLY, not exclusion, full hard matching, a massless-gravity positivity theorem, higher-order control or P8 closure | VERIFIED_N (24 independent Fraction/SymPy comparisons, four half-line bounds, complete scoped contact rank, 24 literal assignments, eight rate-null equalities, exact majorants, 32 synthetic interval corners and ten invalid-input rejections; 308 protected inputs; written local/covariant/Cauchy arguments) | scripts/p8_rate4_remainder.py; docs/assessment-2026-09-21-p8-rate4-remainder.md | 2026-09-21 |
 | P8-S6.336.INDEPENDENT_HARD_RADIATIVE_CURVATURE_MATCHING_DIRECTION | P8(b), independent hard radiative matching | An explicit Weyl-curvature contact is invisible to the retained flat one-loop and soft data but has nonzero physical interference. Its finite chi remains unassigned; conditional rate bounds do not fix it. Original V/G/B/P8 remain OPEN | CERTIFIED (314 named checks, 719 scalar entries, 46 proof gates, 289 rejected inputs, 710 original-SymPy ordinary tests and separate CLI; covering 115487-test P8 snapshot; scoped algebra and written proofs, not FORMALIZED or physical matching) | problems/P8/s6/continuation/s6_336/certificates/polynomial-vacuum-affine-radiative-curvature-matching.json; problems/P8/s6/continuation/s6_336/src/p8_vacuum_affine_radiative_curvature_matching/verify.py; docs/assessment-2026-09-21-p8-s336-s347-release.md | 2026-09-21 |
 | P8-S6.337.COMPLETE_SELECTED_LOCAL_TADPOLE_RADIATION_AND_FINITE_REMAINDER | P8(b), local tadpole radiation | All six selected local tadpole radiation terms, full-D evanescence and external emissions give the known OS4 TT representative and scoped remainder bounds. Other loops and independent curvature matching remain open. Original V/G/B/P8 remain OPEN | CERTIFIED (340 named checks, 376 scalar entries, 61 proof gates, 327 rejected inputs, 796 original-SymPy ordinary tests and separate CLI; covering 115487-test P8 snapshot; scoped algebra and written proofs, not FORMALIZED or physical matching) | problems/P8/s6/continuation/s6_337/certificates/polynomial-vacuum-affine-local-tadpole-radiation.json; problems/P8/s6/continuation/s6_337/src/p8_vacuum_affine_local_tadpole_radiation/verify.py; docs/assessment-2026-09-21-p8-s336-s347-release.md | 2026-09-21 |
 | P8-S6.338.COMPLETE_SELECTED_MIXED_SOURCE_RADIATION_AND_FINITE_REMAINDER | P8(b), mixed-source radiation | All three selected source-contraction classes are retained; the existing conditions cancel two physical TT classes and the remaining class has an explicit centered-radiation coefficient and finite interference bound. No complete quantum matching. Original V/G/B/P8 remain OPEN | CERTIFIED (331 named checks, 331 scalar entries, 58 proof gates, 365 rejected inputs, 822 original-SymPy ordinary tests and separate CLI; covering 115487-test P8 snapshot; scoped algebra and written proofs, not FORMALIZED or physical matching) | problems/P8/s6/continuation/s6_338/certificates/polynomial-vacuum-affine-mixed-source-radiation.json; problems/P8/s6/continuation/s6_338/src/p8_vacuum_affine_mixed_source_radiation/verify.py; docs/assessment-2026-09-21-p8-s336-s347-release.md | 2026-09-21 |

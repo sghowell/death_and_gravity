@@ -1,0 +1,35 @@
+{
+  "milestone": "SOURCE-1",
+  "study_authorized": true,
+  "study_scope": "bounded feasibility, not physical model adoption",
+  "classical_action_modified": false,
+  "replacement_source_adopted": false,
+  "physical_cutoff": null,
+  "field_domain_restricted": false,
+  "state_changed": false,
+  "extra_mode_prescription_adopted": false,
+  "existing_COVZERO_boundary_adopted": true,
+  "common_quantum_reference_complete": false,
+  "physical_matching_established": false,
+  "physical_gravity_verdict_established": false,
+  "original_P8_open": true,
+  "retained": {
+    "physical_metric_signature": "+---",
+    "clock_norm": "X=g_phys^{mu nu}*partial_mu(u)*partial_nu(u)",
+    "light_and_matter_functions": "entire S238 parent with S240 fixed profiles and the original regular lower dictionary",
+    "vector_kinetic_coefficient": "1/1000000",
+    "canonical_vector_mass": "1000",
+    "rate_targets": "the original four RATE4 inclusive targets, not a fifth normalization",
+    "detector_resolution": "1/256",
+    "state": "original S176/S240/S251 preparations and both canonical boundary momentum shifts"
+  },
+  "source_only_ansatz": "S_mu=u_mu*(c(u,X)*Box(u)+d(u,X)*uHu+f(u,X)); light action and Maxwell term fixed",
+  "alternatives": [
+    {"id": "S0", "source": "0", "role": "recommended separately named candidate, pending adoption"},
+    {"id": "SALG", "source": "lambda*(R-1)*(X-1)*u_mu", "role": "first-derivative-only covariant comparison family; no lambda chosen"},
+    {"id": "SGRAD", "source": "partial_mu J(u,X)", "role": "source-free equivalence control with full field/source/boundary transport, not a repair of the original nonexact source"},
+    {"id": "EFT", "source": "original source unchanged", "role": "order-reduced comparison requiring a justified domain, prescription and complete error budget"}
+  ],
+  "next_candidate_name": "QG2-H8A420-RATE4-COVZERO-S0",
+  "decision": "S0 passes the bounded classical source admission study; full common-reference admission remains open and physical adoption requires user approval"
+}

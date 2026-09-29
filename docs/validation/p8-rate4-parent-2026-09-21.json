@@ -1,0 +1,222 @@
+{
+  "timestamp_utc": "2026-09-22 00:32:28 UTC",
+  "milestone": "RATE4.PARENT",
+  "evidence_level": "VERIFIED_N",
+  "base_commit": "a122e56dd45e43e21f707f026eb0d73f630e2795",
+  "outcome": "INPUT_DESIGN_COMPARED_NO_COMPLETE_PARENT_SUPPLIED",
+  "proposal_adopted": false,
+  "source_sha256": {
+    "README.md": "7feaf967b25c930e99a1a3387fa88c5391f03926b0065f31cc4ed1b27053913c",
+    "CLAIMS.md": "82127f63860669eeb18c2ab5371942c311d630ad718d48c9ccc04596da5d0dd7",
+    "docs/p8-closure-plan.md": "73c6e2f77cb5e4bc9993709890afe858c5a195a7b83fe17f7251d06b7665ad7f",
+    "docs/assessment-2026-09-21-p8-rate4-parent.md": "d4a1ad3f8cd697bd93b5f5d30d2acf8e2538904d512790ea07cb93246a26fb50",
+    "scripts/p8_rate4_parent.py": "0840a6d589327a4f4bd340e4fe7d3483f7bca6e4140efb10c7685d549165485a"
+  },
+  "protected_input_manifest_sha256": "be78576dc8acc7accacd55e4e47729802c22c51b575d8350a17d0a5139d743da",
+  "protected_input_manifest_encoding": "sha256(json.dumps(manifest, sort_keys=True).encode())",
+  "protected_input_count": 309,
+  "diagnostic": {
+    "command": ".venv/bin/python -B scripts/p8_rate4_parent.py",
+    "exit_code": 0,
+    "result": {
+      "milestone": "RATE4.PARENT",
+      "outcome": "INPUT_DESIGN_COMPARED_NO_COMPLETE_PARENT_SUPPLIED",
+      "recommendation": "RATE4-D8 parent-bounded first; RATE5-D10 if SU should be fitted rather than included in the tail bound",
+      "proposal_adopted": false,
+      "physical_matching_established": false,
+      "protected_input_files": 309,
+      "five_points": [
+        [
+          8,
+          -2,
+          -2
+        ],
+        [
+          10,
+          -3,
+          -3
+        ],
+        [
+          12,
+          -4,
+          -4
+        ],
+        [
+          16,
+          -6,
+          -6
+        ],
+        [
+          10,
+          -2,
+          -4
+        ]
+      ],
+      "four_projector_norm": "3544/3259",
+      "four_maximum_coordinate_error_amplification": "85231/3259",
+      "four_tail_projection_per_unit_N64": "332221287/6998649208832",
+      "four_sufficient_conditional_error_over_lambda": "<1620429/3259000<1/2",
+      "five_projector_norm": "630347/773752",
+      "five_maximum_coordinate_error_amplification": "1906116/96719",
+      "five_tail_projection_per_unit_N64": "217375713/6490702217216",
+      "five_sufficient_conditional_error_over_lambda": "<987/2000<1/2",
+      "eight_projection_norm": "<1 for n>=1024; not a bound on individual heavy coordinates",
+      "eight_coordinate_conditioning": {
+        "H": "1e774 < radius < 1e775 for independent sample errors lambda/100",
+        "J": "1e1168 < radius < 1e1169 for independent sample errors lambda/100"
+      },
+      "eight_J_cap_required_relative_sample_precision": "between 1e-982 and 1e-981",
+      "symbolic_fraction_comparisons": 33,
+      "synthetic_polynomial_fit_coordinates": 18,
+      "tail_monomial_checks": 329,
+      "sample_error_corners": 48,
+      "rejected_incomplete_or_invalid_inputs": 14,
+      "still_required": "actual parent bounds/data, complete hard evaluation, higher-order errors, admissible V/G functional, independent curved/source/state control; no P8 closure"
+    }
+  },
+  "preceding_diagnostic_replays": [
+    {
+      "command": ".venv/bin/python -B scripts/p8_match1_audit.py",
+      "exit_code": 0,
+      "result": {
+        "route_verdict": "CONDITIONAL_ONLY_FROM_RETAINED_DATA_NOT_A_PHYSICAL_EXCLUSION",
+        "pinned_reports": 11,
+        "pinned_report_and_source_files": 209,
+        "literal_vertex": "SymPy and independent Fraction polynomial ring agree",
+        "comparison": "OS4 value unchanged; clock jets through order1023 zero; four-jet tube bound <1e-590",
+        "selected_reference_sign_control": "eta=+-2e1000 gives delta_b20=+-8lambda; not full physical b20",
+        "matching_points_in_units_of_mu": [
+          [
+            8,
+            -2,
+            -2
+          ],
+          [
+            10,
+            -3,
+            -3
+          ],
+          [
+            12,
+            -4,
+            -4
+          ],
+          [
+            16,
+            -6,
+            -6
+          ]
+        ],
+        "projector_columns": [
+          "sigma2",
+          "RH_shape",
+          "constant",
+          "Newton_shape"
+        ],
+        "projector_error": "<15*epsilon/mu^2 for n>=32mu, conditional on four residual error bounds",
+        "independent_exact_weight_comparisons": 16,
+        "not_established": "physical matching values, total residual bounds, UV realization, gravitational positivity or quantum bounce"
+      }
+    },
+    {
+      "command": ".venv/bin/python -B scripts/p8_match1_rate_input.py",
+      "exit_code": 0,
+      "result": {
+        "status": "CONDITIONAL_RATE_INPUT_CONTRACT_NOT_PHYSICAL_MATCHING",
+        "protected_input_files": 268,
+        "born_over_lambda_open_intervals": [
+          [
+            136,
+            137
+          ],
+          [
+            228,
+            229
+          ],
+          [
+            344,
+            345
+          ],
+          [
+            648,
+            649
+          ]
+        ],
+        "sufficient_conditional_Cpos_error_over_lambda": "243/320 < 1",
+        "selected_real_remainder_bound": "<1e-787, not the total rate error",
+        "curvature_fit_radius_at_previous_amplitude_error": "9e793 < delta_c_RH_radius < 1e794",
+        "additional_exact_B_weight_comparisons": 16,
+        "synthetic_interval_corners": 48,
+        "rejected_invalid_inputs": 10,
+        "not_established": "physical rates, full IR conversion, complete error bounds, curved matching or a UV parent"
+      }
+    },
+    {
+      "command": ".venv/bin/python -B scripts/p8_rate4_candidate.py",
+      "exit_code": 0,
+      "result": {
+        "candidate": "QG2-H8A420-RATE4, matter-calibrated rate targets, v1",
+        "status": "FIRST_ORDER_FOUR_DIRECTION_NORMALIZATION_CONSTRUCTED",
+        "protected_input_files": 307,
+        "rate_jacobian": "nonzero for n>=32 and all four Born amplitudes>0",
+        "symbolic_fraction_coefficient_comparisons": 16,
+        "synthetic_first_order_rate_equalities": 16,
+        "off_point_finite_reference_checks": 12,
+        "synthetic_interval_corners": 64,
+        "target_bound_from_retained_matter_result": "abs(R_target-1)<2e-199",
+        "first_order_full_born_conversion_bound": "abs(D_rate)<1e-787 at the four centers",
+        "first_order_conversion_contribution_to_matching_projection": "<1e-783*lambda",
+        "heavy_residue_identity": "H=(n+2)*sum(1/(n-channel))-3",
+        "invisible_complementary_contact_b20_per_unit": -25579520,
+        "rejected_invalid_or_incomplete_inputs": 9,
+        "rejected_invalid_or_incomplete_interval_inputs": 3,
+        "not_established": "numerical full matching, omitted-order bounds, complementary curved data, a quantum decoupling theorem, V/G/B or original P8 closure"
+      }
+    },
+    {
+      "command": ".venv/bin/python -B scripts/p8_rate4_remainder.py",
+      "exit_code": 0,
+      "result": {
+        "milestone": "RATE4.REMAINDER",
+        "outcome": "CONDITIONAL_ONLY_COMPLEMENTARY_PROJECTION_NOT_BOUNDED",
+        "protected_input_files": 308,
+        "symbolic_fraction_comparisons": 24,
+        "halfline_sensitivity_bounds": 4,
+        "contact_only_basis_rank_through_eight_derivatives": 4,
+        "contact_only_basis_dimension_through_ten_derivatives": 5,
+        "contact_coefficients_in_1_S_U_S2_SU_order": [
+          21316224,
+          -152808,
+          2463528,
+          -18645,
+          3259
+        ],
+        "contact_b20_per_unit_at_mu1": -902256,
+        "contact_only_lambda_budget_requires": "abs(zeta)<=lambda/902256",
+        "literal_contact_assignments": 24,
+        "first_order_rate_null_equalities": 8,
+        "gapped_spectator_subtracted_projection_bound": "<1e-1003*lambda",
+        "conditional_first_order_mass_shift_bound": "<1e-388*lambda IF abs(delta_n)<=n/4",
+        "metric_sample_projection_bound_only": "<1e-989*lambda",
+        "massless_M1_sample_projection_bound_only": "<1e-998*lambda",
+        "synthetic_complete_budget_corners": 32,
+        "rejected_invalid_or_incomplete_inputs": 10,
+        "not_established": "full hard bound, admissible full V/G functional, physical complementary matching, higher-order bounds, a UV realization, curved/state control or P8 closure"
+      }
+    }
+  ],
+  "ruff": {
+    "exit_code": 0,
+    "output": "All checks passed!\n5 files already formatted\n",
+    "files": 5
+  },
+  "preserved": {
+    "inherited_309_inputs_checked_before_and_after": true,
+    "frozen_P8_git_diff_empty": true,
+    "previous_matching_diagnostics_git_diff_empty": true,
+    "preceding_RATE4_REMAINDER_script_assessment_receipt_hashes_unchanged": true,
+    "unrelated_P4_P9_seven_file_hashes_unchanged": true,
+    "git_index_empty": true
+  },
+  "scope": "Exact arithmetic and written proofs for conditional D8/D10 input designs and eight-rate conditioning, not actual physical inputs, a complete parent, full hard matching, an admissible V/G functional, curved/state control or P8 closure. The new diagnostic and four predecessors were executed successfully; the 115487-test publication suite was not rerun. No new model restrictions or fifth rate adopted. New work is uncommitted and unpushed."
+}

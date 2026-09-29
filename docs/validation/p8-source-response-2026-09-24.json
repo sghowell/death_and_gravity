@@ -1,0 +1,480 @@
+{
+  "timestamp_utc": "2026-09-24 17:14:21 UTC",
+  "base_commit": "a122e56dd45e43e21f707f026eb0d73f630e2795",
+  "milestone": "P8.PRESCRIPTION-2.CONSTRAINED-SOURCE + GRAVITY.POLE-MATCH",
+  "evidence_level": "VERIFIED_N",
+  "outcome": "ACTUAL_SOURCE_VERTICES_AND_FINITE_REGULATOR_RESPONSE_KERNEL_WITH_CONDITIONAL_POLE_NORMALIZATION",
+  "tracks_complete": false,
+  "physical_model_adopted": false,
+  "physical_matching_established": false,
+  "physical_gravity_verdict_established": false,
+  "original_P8_open": true,
+  "source_sha256": {
+    "CLAIMS.md": "47af2a24bf52d5ad4d4bc63b7728448547e8a31b3030dda82d0296726722c9bd",
+    "README.md": "e99018dacf977ca5bad0c4a38bcf4ce811adb6656e3eeedda5f2ca2b30930002",
+    "docs/assessment-2026-09-24-p8-source-response-pole-match.md": "91f61824c06cbc99eb4b242cc568cc82ca2f6aa06b73e481fa5eddaf25698dce",
+    "docs/p8-closure-plan.md": "efc6f530d33c6ceb490b6b3f812d553a4845c02335f947954874666ef2392b23",
+    "scripts/p8_source_response.py": "3286d7f91f0d4abbcb3c2b78128585b51cddac3f4ba9fbf19bc73a64a44b19b3"
+  },
+  "protected_input_count": 419,
+  "protected_input_manifest_sha256": "e2cecb2c483db2d2a97eb4260e899ec489581720e7ae0d590d89a8496381de5c",
+  "protected_input_manifest_encoding": "sha256(json.dumps(manifest, sort_keys=True).encode())",
+  "preserved_preexisting_files": {
+    "docs/assessment-2026-09-21-p8-rate4-d8-candidate.md": "7dc612d7b3def5b97232c96d798292b64d62f0ef71b56eded20b4584748d8d1a",
+    "docs/assessment-2026-09-21-p8-rate4-parent.md": "d4a1ad3f8cd697bd93b5f5d30d2acf8e2538904d512790ea07cb93246a26fb50",
+    "docs/assessment-2026-09-21-p8-rate4-remainder.md": "26b9aeea14f38616c7ceb03b7a6f275365dabb70e9d5b43b5a451b9bed28cb63",
+    "docs/assessment-2026-09-22-p8-prescription1-feasibility.md": "57c49cc6c29f519b4d7b5d9c69bc81b92f71839eee4f82c18613acc2f5d0c255",
+    "docs/assessment-2026-09-22-p8-prescription2-gravity.md": "cadecb406ae0c5ede7b58839ae19f31c474647b55c644fd45d7b841579dc0d3f",
+    "docs/assessment-2026-09-22-p8-rate4-d8-witness.md": "d0b7120df976918cfeb96450dfcd301c714a87824c4ae43a02feda07e45594b0",
+    "docs/assessment-2026-09-24-p8-reference-regge.md": "bde4bc6454851fbedf59c882aaa3ff3dc88550de9bec99f19c66f555dd599ecc",
+    "docs/validation/p8-prescription1-2026-09-22.json": "1a69c9ff92731ba046c893f16d33aa9c2f2e3f396cc4767a6e0294a52d1f4548",
+    "docs/validation/p8-prescription2-gravity-2026-09-22.json": "e68917c0def8f8da772b9c76f8d3f5eb4161abb67296dd746e2d1a57c16c4b0a",
+    "docs/validation/p8-rate4-d8-2026-09-21.json": "1d03620bc8a2038e1980eacf25d904dd2b9ccdcdf83d3b54dc24d3912c9dea54",
+    "docs/validation/p8-rate4-d8-witness-2026-09-22.json": "b7fcde1d17b2bbf09acf4b6ee02805f381a15786f97adb20bd30f8aa8eb5734f",
+    "docs/validation/p8-rate4-parent-2026-09-21.json": "5b837ccfa488d5f55c3bfc3479b289aab59cf72e740437c5fbece3300be50391",
+    "docs/validation/p8-rate4-remainder-2026-09-21.json": "3ee794a4e4ed0a711201add108317ed99750e38ae40ba61b02d4780ad1d7c101",
+    "docs/validation/p8-reference-regge-2026-09-24.json": "c0c5cc39283167a0ab61d1f918936d5796eb49e71caa68a8253e875d603f01e2",
+    "problems/P4/notes/s4-commutator.md": "6caded9b998d5caf64d552283dde49d1651030da907edae24b582148017f43ac",
+    "problems/P4/results/theorem_c/tc_energy.json": "7f48a49d2c89d792a97e1f2e2e17e9c072884b05fe8b19b83d1928683df01245",
+    "problems/P4/src/p4/validated/tc_commutator.py": "b63fbdce64c5bbe766b65b56742a958cef2e4d5ca1b0dbc022566561bbaf96b1",
+    "problems/P4/src/p4/validated/tc_energy.py": "afa902bc7cb3d3be575c2931d6a0b1dee2cb62af5b31db344056ef3997c30e9d",
+    "problems/P4/src/p4/validated/tc_tm.py": "66e059e80162f660f242fbf7089fc95b739fb15e547195cb9cbe8c25757efdd2",
+    "problems/P4/tests/test_tc_commutator.py": "7bea22406dac0c6724c43fc8584da782e538cf47f46a00a9babb666a88de7018",
+    "problems/P9/results/variants_queue_done.txt": "d117fa006ba9208500b2930ce69cbde436c647afa917cb7396a9bc9111a46dd2",
+    "scripts/p8_prescription1.py": "b5b53643fa9afd4c803d5d1942457a87080eb0810f09a2872a39ebf64b04e2f6",
+    "scripts/p8_prescription2_gravity.py": "5bff460ef3cc0f3e4fb293bdb54bfee76668be72dc8c47074d9adc7edf77ad1d",
+    "scripts/p8_rate4_d8.py": "1b21c1bd43bb68a36d30671217df9748d13862a1fb941a10b59e4b1b723710f5",
+    "scripts/p8_rate4_d8_witness.py": "4e917ab534680acbf920e1a31e4edde2180ff9e9014712c76c4696d239f53c37",
+    "scripts/p8_rate4_parent.py": "0840a6d589327a4f4bd340e4fe7d3483f7bca6e4140efb10c7685d549165485a",
+    "scripts/p8_rate4_remainder.py": "14920b563db7f640a65acb31c859ead22de6d44ea1158bfc26a0157bb3eae341",
+    "scripts/p8_reference_regge.py": "1f0c84bddbc2bbe28f42cb01933126980e38d94a2ca627e63009e7f89ede3621"
+  },
+  "new_audit": {
+    "milestone": "P8.PRESCRIPTION-2.CONSTRAINED-SOURCE + GRAVITY.POLE-MATCH",
+    "outcome": "ACTUAL_SOURCE_VERTICES_AND_FINITE_REGULATOR_RESPONSE_KERNEL_WITH_CONDITIONAL_POLE_NORMALIZATION",
+    "protected_input_files": 419,
+    "physical_model_adopted": false,
+    "tracks_complete": false,
+    "inherited_not_new": "S250 heavy filtration; S253 joint Gaussian reduction/state; S257 finite-regulator constraint measure; S275 both original canonical boundary shifts",
+    "source_cubic": "h3_tag1=-xi*G*n*(P-6*Theta*n)/h; P=pv+3*ell*sigma",
+    "source_quartic": "h4_tag2=xi^2*G^2*((P/2-6*Theta*n)^2/J-3*n^2)/h^2",
+    "source_scope": "source-squared one-loop quadratic blocks: mixed scalar-vector fish, two-scalar longitudinal bubble and both lapse-generated contacts; formal tree-clock vertices and fixed-state finite-regulator kernels, not a renormalized continuum bound",
+    "bounce_tree_J": "243/160",
+    "bounce_contact_sign": "indefinite; no sign or smallness claimed for the full response",
+    "arbitrary_time_momentum_row_controls": 9,
+    "unequal_momentum_polarization_controls": 6,
+    "correlated_wick_controls": 3,
+    "longitudinal_bubble_and_both_contact_blocks": true,
+    "contact_uv_control": "frozen flat vacuum <G^2> has cutoff^4/(16*pi^2*kappa) leading term; not a physical cutoff or the curved renormalized answer",
+    "conditional_regge_matching": "C(0)/j'(0)=pi/(2*kappa) only for the specified single leading-pole dispersion scope",
+    "conditional_finite_angle_tail": "<95*B/(kappa*a_rel) plus supplied residual error; B and a_rel still need physical interval bounds",
+    "fesr_scope": "published massless FESRs require finite-energy moments and a Regge complex-arc approximation; neither follows from four RATE4 samples",
+    "invalid_or_missing_inputs_rejected": 27,
+    "remaining": "renormalize and bound the same-state source kernel with other reference sectors; establish actual Regge/finite-window/contour/observable inputs; M/V/G/B/R/P8 OPEN"
+  },
+  "focused_replays": [
+    {
+      "command": ".venv/bin/python -B scripts/p8_match1_audit.py",
+      "exit_code": 0,
+      "observed_output": {
+        "route_verdict": "CONDITIONAL_ONLY_FROM_RETAINED_DATA_NOT_A_PHYSICAL_EXCLUSION",
+        "pinned_reports": 11,
+        "pinned_report_and_source_files": 209,
+        "literal_vertex": "SymPy and independent Fraction polynomial ring agree",
+        "comparison": "OS4 value unchanged; clock jets through order1023 zero; four-jet tube bound <1e-590",
+        "selected_reference_sign_control": "eta=+-2e1000 gives delta_b20=+-8lambda; not full physical b20",
+        "matching_points_in_units_of_mu": [
+          [
+            8,
+            -2,
+            -2
+          ],
+          [
+            10,
+            -3,
+            -3
+          ],
+          [
+            12,
+            -4,
+            -4
+          ],
+          [
+            16,
+            -6,
+            -6
+          ]
+        ],
+        "projector_columns": [
+          "sigma2",
+          "RH_shape",
+          "constant",
+          "Newton_shape"
+        ],
+        "projector_error": "<15*epsilon/mu^2 for n>=32mu, conditional on four residual error bounds",
+        "independent_exact_weight_comparisons": 16,
+        "not_established": "physical matching values, total residual bounds, UV realization, gravitational positivity or quantum bounce"
+      }
+    },
+    {
+      "command": ".venv/bin/python -B scripts/p8_match1_rate_input.py",
+      "exit_code": 0,
+      "observed_output": {
+        "status": "CONDITIONAL_RATE_INPUT_CONTRACT_NOT_PHYSICAL_MATCHING",
+        "protected_input_files": 268,
+        "born_over_lambda_open_intervals": [
+          [
+            136,
+            137
+          ],
+          [
+            228,
+            229
+          ],
+          [
+            344,
+            345
+          ],
+          [
+            648,
+            649
+          ]
+        ],
+        "sufficient_conditional_Cpos_error_over_lambda": "243/320 < 1",
+        "selected_real_remainder_bound": "<1e-787, not the total rate error",
+        "curvature_fit_radius_at_previous_amplitude_error": "9e793 < delta_c_RH_radius < 1e794",
+        "additional_exact_B_weight_comparisons": 16,
+        "synthetic_interval_corners": 48,
+        "rejected_invalid_inputs": 10,
+        "not_established": "physical rates, full IR conversion, complete error bounds, curved matching or a UV parent"
+      }
+    },
+    {
+      "command": ".venv/bin/python -B scripts/p8_rate4_candidate.py",
+      "exit_code": 0,
+      "observed_output": {
+        "candidate": "QG2-H8A420-RATE4, matter-calibrated rate targets, v1",
+        "status": "FIRST_ORDER_FOUR_DIRECTION_NORMALIZATION_CONSTRUCTED",
+        "protected_input_files": 307,
+        "rate_jacobian": "nonzero for n>=32 and all four Born amplitudes>0",
+        "symbolic_fraction_coefficient_comparisons": 16,
+        "synthetic_first_order_rate_equalities": 16,
+        "off_point_finite_reference_checks": 12,
+        "synthetic_interval_corners": 64,
+        "target_bound_from_retained_matter_result": "abs(R_target-1)<2e-199",
+        "first_order_full_born_conversion_bound": "abs(D_rate)<1e-787 at the four centers",
+        "first_order_conversion_contribution_to_matching_projection": "<1e-783*lambda",
+        "heavy_residue_identity": "H=(n+2)*sum(1/(n-channel))-3",
+        "invisible_complementary_contact_b20_per_unit": -25579520,
+        "rejected_invalid_or_incomplete_inputs": 9,
+        "rejected_invalid_or_incomplete_interval_inputs": 3,
+        "not_established": "numerical full matching, omitted-order bounds, complementary curved data, a quantum decoupling theorem, V/G/B or original P8 closure"
+      }
+    },
+    {
+      "command": ".venv/bin/python -B scripts/p8_rate4_remainder.py",
+      "exit_code": 0,
+      "observed_output": {
+        "milestone": "RATE4.REMAINDER",
+        "outcome": "CONDITIONAL_ONLY_COMPLEMENTARY_PROJECTION_NOT_BOUNDED",
+        "protected_input_files": 308,
+        "symbolic_fraction_comparisons": 24,
+        "halfline_sensitivity_bounds": 4,
+        "contact_only_basis_rank_through_eight_derivatives": 4,
+        "contact_only_basis_dimension_through_ten_derivatives": 5,
+        "contact_coefficients_in_1_S_U_S2_SU_order": [
+          21316224,
+          -152808,
+          2463528,
+          -18645,
+          3259
+        ],
+        "contact_b20_per_unit_at_mu1": -902256,
+        "contact_only_lambda_budget_requires": "abs(zeta)<=lambda/902256",
+        "literal_contact_assignments": 24,
+        "first_order_rate_null_equalities": 8,
+        "gapped_spectator_subtracted_projection_bound": "<1e-1003*lambda",
+        "conditional_first_order_mass_shift_bound": "<1e-388*lambda IF abs(delta_n)<=n/4",
+        "metric_sample_projection_bound_only": "<1e-989*lambda",
+        "massless_M1_sample_projection_bound_only": "<1e-998*lambda",
+        "synthetic_complete_budget_corners": 32,
+        "rejected_invalid_or_incomplete_inputs": 10,
+        "not_established": "full hard bound, admissible full V/G functional, physical complementary matching, higher-order bounds, a UV realization, curved/state control or P8 closure"
+      }
+    },
+    {
+      "command": ".venv/bin/python -B scripts/p8_rate4_parent.py",
+      "exit_code": 0,
+      "observed_output": {
+        "milestone": "RATE4.PARENT",
+        "outcome": "INPUT_DESIGN_COMPARED_NO_COMPLETE_PARENT_SUPPLIED",
+        "recommendation": "RATE4-D8 parent-bounded first; RATE5-D10 if SU should be fitted rather than included in the tail bound",
+        "proposal_adopted": false,
+        "physical_matching_established": false,
+        "protected_input_files": 309,
+        "five_points": [
+          [
+            8,
+            -2,
+            -2
+          ],
+          [
+            10,
+            -3,
+            -3
+          ],
+          [
+            12,
+            -4,
+            -4
+          ],
+          [
+            16,
+            -6,
+            -6
+          ],
+          [
+            10,
+            -2,
+            -4
+          ]
+        ],
+        "four_projector_norm": "3544/3259",
+        "four_maximum_coordinate_error_amplification": "85231/3259",
+        "four_tail_projection_per_unit_N64": "332221287/6998649208832",
+        "four_sufficient_conditional_error_over_lambda": "<1620429/3259000<1/2",
+        "five_projector_norm": "630347/773752",
+        "five_maximum_coordinate_error_amplification": "1906116/96719",
+        "five_tail_projection_per_unit_N64": "217375713/6490702217216",
+        "five_sufficient_conditional_error_over_lambda": "<987/2000<1/2",
+        "eight_projection_norm": "<1 for n>=1024; not a bound on individual heavy coordinates",
+        "eight_coordinate_conditioning": {
+          "H": "1e774 < radius < 1e775 for independent sample errors lambda/100",
+          "J": "1e1168 < radius < 1e1169 for independent sample errors lambda/100"
+        },
+        "eight_J_cap_required_relative_sample_precision": "between 1e-982 and 1e-981",
+        "symbolic_fraction_comparisons": 33,
+        "synthetic_polynomial_fit_coordinates": 18,
+        "tail_monomial_checks": 329,
+        "sample_error_corners": 48,
+        "rejected_incomplete_or_invalid_inputs": 14,
+        "still_required": "actual parent bounds/data, complete hard evaluation, higher-order errors, admissible V/G functional, independent curved/source/state control; no P8 closure"
+      }
+    },
+    {
+      "command": ".venv/bin/python -B scripts/p8_rate4_d8.py",
+      "exit_code": 0,
+      "observed_output": {
+        "candidate": "QG2-H8A420-RATE4-D8 v1, parent-bounded conditional candidate",
+        "status": "CONDITIONAL_CONSTRUCTION_NOT_PHYSICAL_MATCHING",
+        "development_authorized": true,
+        "parent_bounds_established": false,
+        "protected_input_files": 310,
+        "matching_basis": [
+          "1",
+          "S",
+          "U",
+          "S^2"
+        ],
+        "jacobian": "16*10011648/prod(a_i)>0",
+        "inverse_Fraction_SymPy_comparisons": 16,
+        "complete_input_interval_corners": 256,
+        "synthetic_formal_order_rate_equalities": 32,
+        "nonzero_absorptive_square_controls": 8,
+        "infinite_analytic_tail_fixtures": 3,
+        "bidisk_R128_sufficient_norm_factor": "29/336",
+        "bidisk_R128_sufficient_supremum": "23000*lambda; NOT established for this parent",
+        "conditional_R5_shift_over_lambda": "7048875/13669236736",
+        "conditional_angular_discriminant_shift_over_lambda": "125/1883242496",
+        "complete_projection_fixture_corners": 256,
+        "rejected_invalid_or_incomplete_inputs": 28,
+        "not_established": "physical parent or tail/pole/source bounds, complete hard values, higher-order errors, admissible V/G functional, curved/state control or P8 closure"
+      }
+    },
+    {
+      "command": ".venv/bin/python -B scripts/p8_rate4_d8_witness.py",
+      "exit_code": 0,
+      "observed_output": {
+        "milestone": "RATE4-D8.WITNESS",
+        "outcome": "RETAINED_SOURCE_ROUTE_INSUFFICIENT_NOT_A_PHYSICAL_EXCLUSION",
+        "physical_witness_established": false,
+        "protected_input_files": 311,
+        "direct_scope_sources": 10,
+        "arbitrary_prefix_obstruction": "S^k R5, k>=3, 2k>preserved_degree; a written all-k argument",
+        "tested_prefix_degrees": [
+          4,
+          8,
+          16,
+          32,
+          128
+        ],
+        "forward_coefficient_cross_checks": 15,
+        "tail_sample_null_equalities": 20,
+        "analytic_domain_without_supremum_controls": 5,
+        "large_norm_small_projection_controls": 5,
+        "nuisance_rate_null_equalities": 48,
+        "nuisance_Fraction_SymPy_projection_comparisons": 12,
+        "nuisance_halfline_sign_proofs": 2,
+        "independent_cap_shift_controls": 6,
+        "laurent_coordinate_identities": 4,
+        "curvature_residue_compensation_identity": "delta_B H-(n+2)delta_B Q+3delta_B=0",
+        "invalid_inputs_rejected": 10,
+        "scope": "Finite-order local EFT comparisons and source ownership only. No unitary UV counterexample, violation by a verified D8 member, all-order indistinguishability, supplied parent bound or P8 closure."
+      }
+    },
+    {
+      "command": ".venv/bin/python -B scripts/p8_prescription1.py",
+      "exit_code": 0,
+      "observed_output": {
+        "milestone": "P8.PRESCRIPTION-1",
+        "outcome": "FEASIBILITY_SCREEN_COMPLETE_NO_COMMON_QUANTUM_PARENT",
+        "physical_parent_adopted": false,
+        "protected_input_files": 318,
+        "proper_time_physical_local_covariance": "EXCLUDED_ANSATZ; not an exclusion of a computational regulator or original P8",
+        "spatial_cutoff_original_local_field": "NOT_LOCAL; coarse-grained observables remain possible",
+        "cutoff_obstruction_identities": 5,
+        "channel_power_projection_checks": 13,
+        "independent_shell_series_coefficients": 16,
+        "shell_series_enclosure_controls": 4,
+        "selected_shell_bound": "<=33*abs(prefactor)/Lambda^10 for Lambda>=2, strict for nonzero prefactor; not the complete matching error",
+        "selected_shell_leading_coefficient": "-18797/45169740",
+        "selected_shell_sign": "negative for positive prefactor, mass_squared=1, Lambda>=1000",
+        "selected_shell_at_test_scale_relative_to_lambda": "<1e-398 for Lambda=1e100, prefactor<=1; no physical cutoff adopted",
+        "RG_boundary_compensation_controls": 6,
+        "positive_spectral_moment_constant": "42800775168/3259",
+        "spectral_projection_controls": 3,
+        "spectral_halfline_sign_proofs": 1,
+        "stable_scalar_sector_square_completion": true,
+        "heavy_state_tail_antiderivative_identity": true,
+        "heavy_state_tail_scaling_controls": 4,
+        "heavy_reference_C5_normalized_tail": "<1e-697 above fixed comoving P=1e100, on [-1,1]; local terms retained",
+        "invalid_inputs_rejected": 17,
+        "scope": "Written cutoff-ansatz obstructions and scoped bound mechanisms only. No all-sector matching, physical cutoff, all-spin gravity functional, interacting-state/bounce theorem, D8 witness or P8 closure."
+      }
+    },
+    {
+      "command": ".venv/bin/python -B scripts/p8_prescription2_gravity.py",
+      "exit_code": 0,
+      "observed_output": {
+        "milestone": "P8.PRESCRIPTION-2 + GRAVITY.APPLICABILITY, initial packet",
+        "outcome": "BOUNDARY_PROPOSAL_AND_CONDITIONAL_ALL_SPIN_COMPARISON_NOT_PHYSICAL_MATCHING",
+        "physical_model_adopted": false,
+        "protected_input_files": 321,
+        "independent_radial_moments": 21,
+        "independent_low_spin_integrals": 54,
+        "finite_detector_exact_negative_controls": {
+          "256": "strictly negative, exact Fraction arithmetic",
+          "512": "strictly negative, exact Fraction arithmetic"
+        },
+        "all_spin_comparison": "written positive ball-autocorrelation kernel proof, every s>=32 and every spin",
+        "finite_gap_obstruction": "written Abel-Poisson proof; not a no-go for approximate finite-resolution bounds",
+        "arc_weights": [
+          "-4945350743999536201/20789235523463938048",
+          "1715914530634159673/3897981660649488384",
+          "-1147027886337673425/5197308880865984512",
+          "1145754377904134935/62367706570391814144"
+        ],
+        "arc_weight_norm": "9533462289350229901/10394617761731969024",
+        "tail_words_checked": 12,
+        "tail_operator_norm": "51209999472106018245039897396943/44512662441628002987539296648463122432",
+        "tail_maximizing_word": "S^3",
+        "D8_tail_hypothesis_consequence": "<lambda/400 for N64<=2000lambda, NOT a proof of the hypothesis",
+        "conditional_kernel_error_per_forward_moment": "2490930036736/223183898083125",
+        "kernel_error_upper_bound": "<=J/80 plus separately supplied complete physical errors; strict for J>0",
+        "original_heavy_tree_forward_moment": "<5lambda; selected leading scalar exchange only",
+        "original_heavy_tree_angular_crossing_error": "<lambda/16; not the full gravitational allowance",
+        "explicit_t_channel_pole_arc": "positive and <66/kappa <1e-198lambda; kept, not discarded",
+        "sixth_vs_third_moment_controls": 4,
+        "correlated_source_controls": 3,
+        "clock_switch_jet_controls": 3,
+        "clock_jet_statement": "proposed finite local lift has zero reference variations through degree1023; formal first-order counterterm effect only",
+        "invalid_inputs_rejected": 16,
+        "remaining": "complete renormalized covariant reference, physical complementary boundary review, full positive forward moment or sharper spectral estimate, finite-coupling/contour/low-cut errors, interacting state and global bounce; M/V/G/B/R/P8 remain open"
+      }
+    },
+    {
+      "command": ".venv/bin/python -B scripts/p8_reference_regge.py",
+      "exit_code": 0,
+      "observed_output": {
+        "milestone": "P8.PRESCRIPTION-2.REFERENCE-REDUCTION + GRAVITY.FINITE-WINDOW",
+        "outcome": "SCOPED_REFERENCE_REDUCTION_AND_FORWARD_MOMENT_FREE_TAIL_INTERFACE",
+        "physical_model_adopted": false,
+        "tracks_complete": false,
+        "protected_input_files": 342,
+        "algebraic_connection_modes": 56,
+        "retained_vector_components": 4,
+        "gaussian_block_fixtures": 3,
+        "measure_scope": "ultralocal determinants vanish only in the stated perturbative dimensional measure; constrained physical determinant not supplied",
+        "heavy_source_clock_jet_controls": 3,
+        "heavy_source_result": "tree source exchange begins at field degree16; source-dependent formal one-loop term begins at degree14; free heavy metric determinant remains",
+        "proca_source_result": "nonzero degree2 clock source gives degree4 exchange and possible degree2 one-loop response; flat Euclidean symbol is a nonzero control, not a curved physical bound",
+        "reference_conversion": "evanescent finite shifts require opposite boundary transport, not reset-to-zero",
+        "dyadic_log_controls": 5,
+        "rodrigues_controls": 9,
+        "positive_spectral_fixture": "written all-even-spin Regge fixture has divergent full J but a finite finite-angle arc; not a full unitary/crossing UV model",
+        "normalized_tail_coefficient_upper": "3078679463110639616/80441853551960625",
+        "conditional_tail_bound": "<60*C/alpha + supplied residual error at original detector; contour and observable errors remain separate",
+        "conditional_weak_gravity_sensitivity": "IF C/alpha<=gamma/kappa and gamma<=1e196, leading Regge tail <lambda/100; no gamma bound established",
+        "invalid_or_missing_inputs_rejected": 18,
+        "remaining": "dimensional/gauge/constraint/state reference and Proca-current response; actual finite-window moment, Regge envelope and all physical errors; M/V/G/B/R/P8 remain open"
+      }
+    },
+    {
+      "command": ".venv/bin/python -B scripts/p8_source_response.py",
+      "exit_code": 0,
+      "observed_output": {
+        "milestone": "P8.PRESCRIPTION-2.CONSTRAINED-SOURCE + GRAVITY.POLE-MATCH",
+        "outcome": "ACTUAL_SOURCE_VERTICES_AND_FINITE_REGULATOR_RESPONSE_KERNEL_WITH_CONDITIONAL_POLE_NORMALIZATION",
+        "protected_input_files": 419,
+        "physical_model_adopted": false,
+        "tracks_complete": false,
+        "inherited_not_new": "S250 heavy filtration; S253 joint Gaussian reduction/state; S257 finite-regulator constraint measure; S275 both original canonical boundary shifts",
+        "source_cubic": "h3_tag1=-xi*G*n*(P-6*Theta*n)/h; P=pv+3*ell*sigma",
+        "source_quartic": "h4_tag2=xi^2*G^2*((P/2-6*Theta*n)^2/J-3*n^2)/h^2",
+        "source_scope": "source-squared one-loop quadratic blocks: mixed scalar-vector fish, two-scalar longitudinal bubble and both lapse-generated contacts; formal tree-clock vertices and fixed-state finite-regulator kernels, not a renormalized continuum bound",
+        "bounce_tree_J": "243/160",
+        "bounce_contact_sign": "indefinite; no sign or smallness claimed for the full response",
+        "arbitrary_time_momentum_row_controls": 9,
+        "unequal_momentum_polarization_controls": 6,
+        "correlated_wick_controls": 3,
+        "longitudinal_bubble_and_both_contact_blocks": true,
+        "contact_uv_control": "frozen flat vacuum <G^2> has cutoff^4/(16*pi^2*kappa) leading term; not a physical cutoff or the curved renormalized answer",
+        "conditional_regge_matching": "C(0)/j'(0)=pi/(2*kappa) only for the specified single leading-pole dispersion scope",
+        "conditional_finite_angle_tail": "<95*B/(kappa*a_rel) plus supplied residual error; B and a_rel still need physical interval bounds",
+        "fesr_scope": "published massless FESRs require finite-energy moments and a Regge complex-arc approximation; neither follows from four RATE4 samples",
+        "invalid_or_missing_inputs_rejected": 27,
+        "remaining": "renormalize and bound the same-state source kernel with other reference sectors; establish actual Regge/finite-window/contour/observable inputs; M/V/G/B/R/P8 OPEN"
+      }
+    }
+  ],
+  "quality_checks": {
+    "existing_local_links_checked_before_receipt_creation": 284,
+    "ruff_check_all_eleven": "passed",
+    "ruff_format_check_all_eleven": "passed",
+    "git_diff_check": "passed",
+    "frozen_P8_and_three_tracked_precursor_diffs": "empty",
+    "preserved_preexisting_files": 28,
+    "full_115487_test_suite_rerun": false
+  },
+  "research_sources": [
+    {
+      "title": "Noumi and Tokuda, Finite energy sum rules for gravitational Regge amplitudes",
+      "url": "https://arxiv.org/abs/2212.08001",
+      "version": "v2",
+      "sections": "2, 4, 6.1-6.4",
+      "use": "Scope and normalization cross-check only; no published massless numerical bound, physical Regge scale or envelope imported."
+    }
+  ],
+  "scope_limits": [
+    "Formal grade-zero clock interaction coefficients of the unchanged parent; original grade-one fixed profiles retained with their proper loop counting.",
+    "Common finite-regulator Weyl kernels with original prepared-state transport, not renormalized continuum values or nonlinear Ward/measure closure.",
+    "Source-squared scalar and longitudinal-vector blocks only; source-linear mixed response, source-independent sectors and all physical remainder bounds remain.",
+    "Forward pole matching is conditional on the written single leading Regge sector and regular remainder/dispersion hypotheses; not proof of those hypotheses or of finite-angle bounds.",
+    "No new parent, finite-zero prescription, physical cutoff, initial state, detector, RATE5 target or weaker completion criterion adopted."
+  ],
+  "publication": {
+    "committed": false,
+    "pushed": false,
+    "reason": "This continuation adds a local research checkpoint; no commit or push was performed."
+  }
+}

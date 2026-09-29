@@ -1,0 +1,88 @@
+{
+  "schema": 1,
+  "candidate": "QG2-H8A420-RATE4-COVZERO-S0 v1",
+  "authorization": "User explicitly approved adoption of S0 and proceeding with S0-REFERENCE after the SOURCE-1 feasibility study.",
+  "local_adoption_date": "2026-09-28",
+  "source_change_adopted": true,
+  "physical_boundary_rule_adopted": true,
+  "original_parent_files_modified": false,
+  "common_quantum_reference_complete": false,
+  "physical_matching_established": false,
+  "physical_gravity_verdict_established": false,
+  "original_P8_open": true,
+  "order": "first quantum order only",
+  "classical_change": {
+    "old_vector_action": "kappa*sqrt(-g_phys)*[-zeta*F(W)^2/4+(W-S_old)^2/2]",
+    "new_vector_action": "kappa*sqrt(-g_phys)*[-zeta*F(W)^2/4+W^2/2]",
+    "source": "0",
+    "affine_lift": "Delta L=kappa*sqrt(-g_phys)*[W.S_old-S_old^2/2], W=T_trace-B(u,X)*du; complementary 56 connection directions unchanged",
+    "source_in_regulator_dimension": "0 at every d in the selected continuation",
+    "zeta": "1/1000000",
+    "canonical_vector_mass": "1000",
+    "other_classical_functions": "entire S238/S240 light and matter functions, fixed profiles, regular q and full B dictionary unchanged"
+  },
+  "retained": {
+    "classical_parent": "S238/S240 with only the explicitly adopted S0 source replacement",
+    "physical_metric_signature": "+---",
+    "clock_norm": "X=g_phys^{mu nu}*partial_mu(u)*partial_nu(u)",
+    "states": "original S176 Proca, S240 heavy and S251 coupled scalar/tensor preparations; no reset",
+    "matching_targets": "the original four RATE4 targets; no fifth OS4 condition on the full new amplitude",
+    "detector": "E=1/256",
+    "physical_cutoff": null,
+    "coefficient_domain": "unchanged; no physical field-domain restriction adopted",
+    "extra_mode_prescription": "none"
+  },
+  "additional_finite_functional": {
+    "basis": [
+      "1",
+      "S",
+      "U",
+      "S^2"
+    ],
+    "clock_switch": "(1-X)^1024/(X^1024+(1-X)^1024)",
+    "lift": "Fully symmetrized physical-metric covariant derivatives on each of four labelled scalar slots, then identify slots and divide by 4!; multiply the complete density by the switch.",
+    "coefficient_rule": "Solve the unchanged four rate equations with complete common-reference hard and radiative inputs. Missing inputs have no default value.",
+    "additional_complement": "zero in the completed fixed reference; known finite conversions are part of that reference, not erased",
+    "reference_change_rule": "Transport the entire boundary functional oppositely; never reset its complement to zero after changing reference."
+  },
+  "reference_seed": {
+    "id": "S0-REF-DIM-1",
+    "status": "SOURCE_FREE_CANONICAL_AND_PROCA_BRIDGE_IN_PROGRESS_NOT_FULL_QUANTIZATION",
+    "dimension": "d=4-2*epsilon; m=d-1",
+    "mu": "1",
+    "A1_A2": "0",
+    "A3": "R_X/X",
+    "A4": "-R_X/X-(3*m-2)*R_X^2/(2*(m-1)*R)",
+    "A5": "R_X^2/(R*X)",
+    "metric_map_C": "R^(-1/(m-1))",
+    "source_in_hat_variables": "0",
+    "matter_metric": "g_phys=C*g_hat+(1-C)*du*du/X; matter remains coupled to g_phys",
+    "extra_bare_evanescents": "none beyond this explicitly selected continuation",
+    "subtraction": "Normalize integrals as in the retained dimensional prescription; extract the complete off-shell local pole functional before on-shell projection. Keep d-dimensional tensor contractions and vary covariant counteractions before the dimension limit.",
+    "proca_legacy_transport": "+log(10^6)*P_V/(64*pi^2), P_V=3*(10^6)^2+10^6*R_old+2*a4V; R_old=-R_P8",
+    "gauge_target": "physical-metric background de Donder gauge with unit gauge parameter; projective trace gauge for algebraic connection reduction",
+    "measure_target": "canonical constrained phase measure with its first-class determinant, all boundaries and ordering transport retained; covariant equivalence is an open verification obligation",
+    "causal_target": "Minkowski Feynman reference for flat rates and fixed-state closed-time-path reference for the clock; shared local subtraction, distinct nonlocal finite parts",
+    "total_derivatives": "Retain surface terms; the bulk comparison is only for compactly supported variations away from the preparation and final surfaces.",
+    "curvature_density": "-R*Ricci_P8/2; inherited corrected sign"
+  },
+  "current_reference_scope": {
+    "clock": "compact finite-time physical probes after the original preparation, using full canonical boundaries; no global uniform tail radius asserted",
+    "vacuum": "covariant auxiliary-gradient chart near the flat vacuum; unitary gauge is not extended through du=0",
+    "vector_background": "zero mean vector; parity-preserving canonical state and regulator; nonzero vector background and dressed vector two-point functions are not completed by the Gaussian split",
+    "remaining_light_measure": "canonical-to-covariant gauge/second-class measure equivalence and common local counterfunctional remain open"
+  },
+  "open_reference_obligations": [
+    "required_constraint_domains_and_branch_or_gauge_transport",
+    "remaining_light_metric_constraint_and_gauge_measure_equivalence",
+    "common_light_metric_Ward_locality_and_counterfunctional",
+    "same_state_causal_response_finite_parts_and_bounds",
+    "complete_hard_rate_and_radiative_inputs"
+  ],
+  "independent_remaining": [
+    "higher_order_error_control",
+    "same_observable_quantitative_gravity_certificate",
+    "interacting_bounce_and_global_B_control",
+    "remaining_operator_row_coverage_and_original_P8_closure"
+  ]
+}

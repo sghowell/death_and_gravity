@@ -1,0 +1,160 @@
+{
+  "timestamp_utc": "2026-09-21 23:55:55 UTC",
+  "milestone": "RATE4.REMAINDER",
+  "evidence_level": "VERIFIED_N",
+  "base_commit": "a122e56dd45e43e21f707f026eb0d73f630e2795",
+  "outcome": "CONDITIONAL_ONLY_COMPLEMENTARY_PROJECTION_NOT_BOUNDED",
+  "source_sha256": {
+    "README.md": "5c3ddfee6d0249ed855efa9bc157ca7a03665e0e871c02ffdf4cdf33d9226bd4",
+    "CLAIMS.md": "bc34d47ec0ade556fdab342b19841a17397068d667afb4461e710be128adcc2c",
+    "docs/p8-closure-plan.md": "7964b647a9cfb935246004fe824ab8d3747126aa4a0dd0ff5a810da080d1515b",
+    "docs/assessment-2026-09-21-p8-rate4-remainder.md": "26b9aeea14f38616c7ceb03b7a6f275365dabb70e9d5b43b5a451b9bed28cb63",
+    "scripts/p8_rate4_remainder.py": "14920b563db7f640a65acb31c859ead22de6d44ea1158bfc26a0157bb3eae341"
+  },
+  "protected_input_manifest_sha256": "f67958940c2dfe6925b39b9a2a64c7c31529c6410d4a791a2888925713406c36",
+  "protected_input_count": 308,
+  "diagnostic": {
+    "command": ".venv/bin/python -B scripts/p8_rate4_remainder.py",
+    "exit_code": 0,
+    "result": {
+      "milestone": "RATE4.REMAINDER",
+      "outcome": "CONDITIONAL_ONLY_COMPLEMENTARY_PROJECTION_NOT_BOUNDED",
+      "protected_input_files": 308,
+      "symbolic_fraction_comparisons": 24,
+      "halfline_sensitivity_bounds": 4,
+      "contact_only_basis_rank_through_eight_derivatives": 4,
+      "contact_only_basis_dimension_through_ten_derivatives": 5,
+      "contact_coefficients_in_1_S_U_S2_SU_order": [
+        21316224,
+        -152808,
+        2463528,
+        -18645,
+        3259
+      ],
+      "contact_b20_per_unit_at_mu1": -902256,
+      "contact_only_lambda_budget_requires": "abs(zeta)<=lambda/902256",
+      "literal_contact_assignments": 24,
+      "first_order_rate_null_equalities": 8,
+      "gapped_spectator_subtracted_projection_bound": "<1e-1003*lambda",
+      "conditional_first_order_mass_shift_bound": "<1e-388*lambda IF abs(delta_n)<=n/4",
+      "metric_sample_projection_bound_only": "<1e-989*lambda",
+      "massless_M1_sample_projection_bound_only": "<1e-998*lambda",
+      "synthetic_complete_budget_corners": 32,
+      "rejected_invalid_or_incomplete_inputs": 10,
+      "not_established": "full hard bound, admissible full V/G functional, physical complementary matching, higher-order bounds, a UV realization, curved/state control or P8 closure"
+    }
+  },
+  "preceding_diagnostic_replays": [
+    {
+      "command": ".venv/bin/python -B scripts/p8_match1_audit.py",
+      "exit_code": 0,
+      "result": {
+        "route_verdict": "CONDITIONAL_ONLY_FROM_RETAINED_DATA_NOT_A_PHYSICAL_EXCLUSION",
+        "pinned_reports": 11,
+        "pinned_report_and_source_files": 209,
+        "literal_vertex": "SymPy and independent Fraction polynomial ring agree",
+        "comparison": "OS4 value unchanged; clock jets through order1023 zero; four-jet tube bound <1e-590",
+        "selected_reference_sign_control": "eta=+-2e1000 gives delta_b20=+-8lambda; not full physical b20",
+        "matching_points_in_units_of_mu": [
+          [
+            8,
+            -2,
+            -2
+          ],
+          [
+            10,
+            -3,
+            -3
+          ],
+          [
+            12,
+            -4,
+            -4
+          ],
+          [
+            16,
+            -6,
+            -6
+          ]
+        ],
+        "projector_columns": [
+          "sigma2",
+          "RH_shape",
+          "constant",
+          "Newton_shape"
+        ],
+        "projector_error": "<15*epsilon/mu^2 for n>=32mu, conditional on four residual error bounds",
+        "independent_exact_weight_comparisons": 16,
+        "not_established": "physical matching values, total residual bounds, UV realization, gravitational positivity or quantum bounce"
+      }
+    },
+    {
+      "command": ".venv/bin/python -B scripts/p8_match1_rate_input.py",
+      "exit_code": 0,
+      "result": {
+        "status": "CONDITIONAL_RATE_INPUT_CONTRACT_NOT_PHYSICAL_MATCHING",
+        "protected_input_files": 268,
+        "born_over_lambda_open_intervals": [
+          [
+            136,
+            137
+          ],
+          [
+            228,
+            229
+          ],
+          [
+            344,
+            345
+          ],
+          [
+            648,
+            649
+          ]
+        ],
+        "sufficient_conditional_Cpos_error_over_lambda": "243/320 < 1",
+        "selected_real_remainder_bound": "<1e-787, not the total rate error",
+        "curvature_fit_radius_at_previous_amplitude_error": "9e793 < delta_c_RH_radius < 1e794",
+        "additional_exact_B_weight_comparisons": 16,
+        "synthetic_interval_corners": 48,
+        "rejected_invalid_inputs": 10,
+        "not_established": "physical rates, full IR conversion, complete error bounds, curved matching or a UV parent"
+      }
+    },
+    {
+      "command": ".venv/bin/python -B scripts/p8_rate4_candidate.py",
+      "exit_code": 0,
+      "result": {
+        "candidate": "QG2-H8A420-RATE4, matter-calibrated rate targets, v1",
+        "status": "FIRST_ORDER_FOUR_DIRECTION_NORMALIZATION_CONSTRUCTED",
+        "protected_input_files": 307,
+        "rate_jacobian": "nonzero for n>=32 and all four Born amplitudes>0",
+        "symbolic_fraction_coefficient_comparisons": 16,
+        "synthetic_first_order_rate_equalities": 16,
+        "off_point_finite_reference_checks": 12,
+        "synthetic_interval_corners": 64,
+        "target_bound_from_retained_matter_result": "abs(R_target-1)<2e-199",
+        "first_order_full_born_conversion_bound": "abs(D_rate)<1e-787 at the four centers",
+        "first_order_conversion_contribution_to_matching_projection": "<1e-783*lambda",
+        "heavy_residue_identity": "H=(n+2)*sum(1/(n-channel))-3",
+        "invisible_complementary_contact_b20_per_unit": -25579520,
+        "rejected_invalid_or_incomplete_inputs": 9,
+        "rejected_invalid_or_incomplete_interval_inputs": 3,
+        "not_established": "numerical full matching, omitted-order bounds, complementary curved data, a quantum decoupling theorem, V/G/B or original P8 closure"
+      }
+    }
+  ],
+  "ruff": {
+    "exit_code": 0,
+    "output": "All checks passed!\n4 files already formatted\n",
+    "files": 4
+  },
+  "preserved": {
+    "inherited_308_inputs_checked_before_and_after": true,
+    "frozen_P8_git_diff_empty": true,
+    "previous_matching_diagnostics_git_diff_empty": true,
+    "unrelated_P4_P9_seven_file_hashes_unchanged": true,
+    "git_index_empty": true
+  },
+  "scope": "Actual focused diagnostic runs, not a rerun of the 115487-test publication suite. No new physical matching condition, full hard bound, UV realization, full V/G functional or P8 closure. New work is uncommitted and unpushed."
+}

@@ -7,10 +7,102 @@ around a pre-registered problems document and a certificate-gated ledger.
   approved [RATE4 candidate](docs/assessment-2026-09-20-p8-rate4-candidate.md).
   Four new physical rate conditions retain the known matter-loop reference;
   their four-direction first-order matching is constructed and checked.
-  The original parent remains conditional. The active task is to bound the
-  complete rate-normalized remainder and its separate curved/source inputs,
-  not to assign uncomputed terms zero. Full physical MATCH-1 and original
-  P8 remain open; validation/publication is tracked separately.
+  The [RATE4.REMAINDER audit](docs/assessment-2026-09-21-p8-rate4-remainder.md)
+  finds a local contact invisible to all four first-order rates but relevant
+  to the target coefficient: the candidate remains CONDITIONAL ONLY.
+  The gapped spectator remainder is bounded below 10^-1003*lambda.
+  The [RATE4.PARENT comparison](docs/assessment-2026-09-21-p8-rate4-parent.md)
+  recommends a parent-bounded RATE4-D8 proposal that retains the four targets;
+  a five-rate D10 alternative fits an additional coefficient instead of
+  bounding it in the tail. Both conditional budgets are below lambda/2.
+  Following user approval, the separately named
+  [RATE4-D8 conditional candidate](docs/assessment-2026-09-21-p8-rate4-d8-candidate.md)
+  now has exact matching/interval interfaces, a formal order-by-order
+  normalization lemma and an explicit sufficient analytic-tail witness.
+  Its physical tail, pole/source, higher-order and curved/state inputs are
+  still missing; defining the candidate has not established them. The
+  [RATE4-D8.WITNESS audit](docs/assessment-2026-09-22-p8-rate4-d8-witness.md)
+  now finds the retained-source route insufficient: finite coefficient
+  prefixes and analyticity do not supply the missing tail bound, and
+  pole/source enclosures require independent information. This is a formal
+  data-sufficiency obstruction, not a physical exclusion of the candidate.
+  The authorized [PRESCRIPTION-1 feasibility study](docs/assessment-2026-09-22-p8-prescription1-feasibility.md)
+  now rejects two specific regulator-as-exact-local-field identifications,
+  while deriving a selected UV-shell projection bound, a restricted
+  positive-spectral moment bound and an original-heavy-state readout tail.
+  These do not determine the independent physical boundary action or
+  complete the finite-gravity/interacting-bounce tests. No common quantum
+  parent is established; the present full-matching route stays conditional.
+  The next admissible model must supply the remaining local/gravity and
+  curved matching data, not just add a small spectator sector. No new
+  parent or physical cutoff was adopted in that feasibility packet.
+  The [PRESCRIPTION-2 and gravity initial packet](docs/assessment-2026-09-22-p8-prescription2-gravity.md)
+  now proposes an explicit additional finite-functional rule without
+  adopting it, and proves a positive all-spin massive-arc comparison with
+  detector/crossing error below J/80 for a separately supplied forward
+  spectral moment J. The original heavy-tree sector satisfies its scoped
+  budget; the complete moment and physical errors remain open. The new
+  RATE4-to-arc map has weight norm below one and conditional D8-tail error
+  below lambda/400. No physical gravity verdict or common parent follows.
+  The [reference-reduction and finite-window continuation](docs/assessment-2026-09-24-p8-reference-regge.md)
+  now separates 56 algebraic connection modes from the retained quantum
+  response, proves a formal one-loop clock-jet zero for the heavy source,
+  and identifies the nonzero Proca-source response as a remaining task.
+  A finite-window comparison plus a finite-angle Regge tail can replace
+  the overstrong full-forward-moment requirement. Its actual spectral,
+  Regge, contour and observable errors still need physical bounds.
+  The [constrained-source and pole-matching continuation](docs/assessment-2026-09-24-p8-source-response-pole-match.md)
+  derives the actual time-dependent source cubic and lapse-generated
+  quartic contact in the original prepared coordinates. Both source-squared
+  one-loop response blocks now have finite-regulator kernels, including
+  unequal-momentum vertices; continuum subtraction and bounds remain open.
+  Gravity pole matching fixes a forward Regge ratio only under explicit
+  hypotheses, not the missing finite-angle envelope or physical errors.
+  The [continuum-extension and closure audit](docs/assessment-2026-09-24-p8-response-closure-blockers.md)
+  now establishes source-squared noise distributions and time-retarded
+  extension families. Two covariant finite-functional witnesses preserve
+  the retained first-order flat data and reference mean but independently
+  change the response. That audit identified a required finite-boundary
+  decision. The current gravity
+  route also lacks a quantitative same-observable remainder certificate;
+  an asymptotic O(G) estimate is not that certificate. Following user
+  approval, the [RATE4-COVZERO-1 boundary rule and reference seed](docs/assessment-2026-09-24-p8-covzero-reference-seed.md)
+  are now recorded as a separately named candidate. Its dimensional
+  light/metric continuation preserves the kinetic degeneracy; copying
+  the four-dimensional coefficient unchanged does not. The known Proca
+  scale conversion preserves the old Gaussian prescription at a common
+  scale. The subsequent [coupled-source constraint audit](docs/assessment-2026-09-24-p8-covzero-source-constraint-obstruction.md)
+  finds that the retained Proca source lifts the scalar kinetic null
+  direction off the aligned slice, with an actual-parent spacelike
+  example and no compensating temporal-vector constraint. A uniform
+  exact fixed-count canonical reference cannot be inferred across the
+  regular coefficient domain. The subsequently authorized
+  [SOURCE-1 feasibility study](docs/assessment-2026-09-28-p8-source1-feasibility.md)
+  is complete: an independent null-gradient primary-bracket check confirms
+  the obstruction, while a source-free S0 candidate passes local classical
+  constraint and preservation checks. It retains the classical clock,
+  quadratic dynamics and formal first-loop flat four-scalar projection,
+  but changes the curved nonlinear response. Following explicit user
+  approval, the separately named
+  [S0 candidate](docs/assessment-2026-09-28-p8-s0-reference.md)
+  is now adopted. Its canonical/vector reference bridge establishes
+  compact-clock auxiliary pivots,
+  the source-free four-plus-two Gaussian split, physical vector probe
+  contacts and original-state transport. The exact
+  old-source response difference includes both its two-vertex kernel and
+  local contact. Ordinary Proca retains its known finite prescription;
+  the coupled light/metric measure, common subtraction and actual response
+  bounds remain open. A restricted lapse-only Horndeski-frame shortcut
+  becomes singular on the clock; the original canonical chart does not.
+  The unchanged-action EFT alternative still lacks a validity/error bound.
+  The old sourced parent is preserved. No cutoff, state change or physical
+  domain restriction is adopted, and no further S0 approval is needed.
+  PRESCRIPTION-2 and gravity are not complete.
+  RATE5-D10 remains unadopted. Eight low-energy rates alone
+  do not yield well-conditioned individual heavy matching coordinates.
+  The new complementary zeros are explicit boundary data, not inferred
+  values of missing inputs. Full physical MATCH-1 and
+  original P8 remain open; validation/publication is tracked separately.
 - Latest P8 release: [S336-S347 and MATCH-1/RATE4](docs/assessment-2026-09-21-p8-s336-s347-release.md).
   All twelve frozen packets passed ordinary/CLI acceptance and the covering
   115,487-test snapshot. These are scoped radiative/curvature results;

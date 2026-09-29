@@ -32,7 +32,7 @@ This plan changes priorities, not their hypotheses or earlier evidence.
 |---|---|---|
 | A: scoped QEI/incompleteness objective | COMPLETE IN STATED SCOPE | Preserve the A.16-A.18 theorem, calibration and qualifications; no new prerequisite imposed here. |
 | L: frozen linear/matter classification | COMPLETE IN STATED SCOPE | Preserve all 32 rows and their exact operator/matter hypotheses. |
-| M: decision-relevant quantum matching | OPEN; original retained-data route CONDITIONAL ONLY; approved RATE4 candidate has a constructed four-direction first-order normalization | A physical common-parent determination or enclosure of the finite matching combinations that enter the chosen test, with a justified omitted-term budget and fixed physical frame. A subtraction convention alone is insufficient. |
+| M: decision-relevant quantum matching | OPEN; original retained-data route and RATE4 remainder inference CONDITIONAL ONLY; RATE4's four-direction first-order normalization remains constructed | A physical common-parent determination or enclosure of the finite matching combinations that enter the chosen test, with a justified omitted-term budget and fixed physical frame. A subtraction convention alone is insufficient. |
 | V: vacuum necessary tests | OPEN | A justified scalar observable/decoupling limit, pole/cut subtraction, applicable analyticity/unitarity input and bounded errors giving a definite necessary-test verdict. A formal first-loop representative alone is insufficient. |
 | G: finite-gravity necessary tests | UNTESTED | The actual infrared prescription and a justified dispersion/contour error, combining the graviton pole and contour contribution before the forward limit. No guessed gravitational allowance. |
 | B: same-parent bounce matching | OPEN | The same action, quantum prescription, state and matter frame must support the claimed bounce domain and completeness, with controlled heavy/omitted terms and relevant stability margins. A short finite regulated hybrid is not enough. |
@@ -119,14 +119,279 @@ degenerate with the curvature-exchange and constant directions in this
 four-scalar amplitude; neither individual curved coefficients nor
 complementary higher-EFT terms are fixed by the four rates alone.
 
-The active calculation is **RATE4.REMAINDER**: assemble and bound the
-complete physically subtracted projection, with an admissible V/G
-functional and the earlier absolute `lambda` matching-error target.
-Separate calculated terms, the four removed directions, and independent
-complementary data; retain the distinct curved/source projection for B.
-No new arbitrary coefficient is requested from the user, and the original
-parent stays conditional. Do not resume numbered known-sector refinement
-as a substitute for this full remainder bound.
+The [RATE4.REMAINDER decision audit](assessment-2026-09-21-p8-rate4-remainder.md)
+now gives **CONDITIONAL ONLY** for this candidate family's complete
+projection bound. A covariant local contact with at most ten derivatives
+leaves all four first-order rates and fitted coordinates unchanged but
+shifts the analytic coefficient by `-902256*zeta`. The missing bound is
+decision-relevant even with exact known loops. The audit also bounds the
+entire gapped H/Proca subtracted increment below `10^-1003*lambda` and
+separates the heavy-residue cancellation from mass-shift sensitivity.
+This does not complete the full hard bound or justify its massless V/G
+functional; the original parent and RATE4 v1 remain conditional.
+
+The [RATE4.PARENT comparison](assessment-2026-09-21-p8-rate4-parent.md)
+has now examined the additional-input routes. It recommends a separately
+named **RATE4-D8, parent-bounded** proposal retaining the approved targets.
+Its complete eight-derivative local fit has coefficient error norms below
+27 and a sufficient conditional total error below
+`(1620429/3259000)*lambda < lambda/2`. If the stronger tail restriction on
+SU is inappropriate, **RATE5-D10** adds one off-angle rate and fits that
+coefficient; its local error norms are below 20 and its conditional total
+error is below `(987/2000)*lambda < lambda/2`. Both require independent
+pole/source and weighted-tail bounds. These are proposed additional inputs,
+not established properties or adopted conditions of RATE4 v1.
+
+The eight-rate alternative is algebraically invertible and has a stable
+target projection, but at independent sample error `lambda/100` its J
+coordinate radius lies between `10^1168` and `10^1169`. Stable b20
+inference must not be confused with controlled individual heavy or curved
+matching. This is conditioning, not an exclusion of exact eight-rate data.
+
+The user has now approved developing the separately named
+[RATE4-D8 v1 conditional candidate](assessment-2026-09-21-p8-rate4-d8-candidate.md).
+Its retained four targets, complete-input matching and interval maps,
+conditional formal-order normalization lemma and sufficient analytic-tail
+witness are specified. Approval authorizes this conditional definition,
+not the existence of a physical parent satisfying its bounds. RATE5-D10
+and its fifth target remain unadopted; no original frozen calculation changes.
+
+**RATE4-D8.WITNESS result: retained-source route insufficient.** The
+[source and identifiability audit](assessment-2026-09-22-p8-rate4-d8-witness.md)
+finds no actual parent-bound witness. Entire local S^k R5 comparisons
+preserve any finite weighted S/U coefficient prefix, the four first-order
+rates and known first-order cuts while leaving the unknown tail and its
+forward projection unbounded. Separate Q/J/T compensations vary pole/source
+coordinates without changing the analytic tail. These are formal EFT
+data-sufficiency obstructions, not physical UV counterexamples or exclusions
+of a parent that actually satisfies D8. Stop the unchanged-source inference
+route; another finite coefficient prefix cannot close this gap by itself.
+
+**PRESCRIPTION-1 feasibility study complete:** the user authorized all three
+avenues: a concrete quantum prescription, a smaller decision-projection
+bound and gravity/bounce compatibility. The
+[result and written proofs](assessment-2026-09-22-p8-prescription1-feasibility.md)
+give scoped negative and positive decisions, not a complete quantum parent:
+
+- A finite proper-time covariance fails a necessary positive-spectral and
+  reflection-positivity test when declared to be the exact physical local
+  scalar covariance. A sharply band-limited field is not the original exact
+  local field. These identifications stop; computational regulators and
+  Wilsonian EFT remain possible.
+- The selected light-bubble omitted short-time projection is bounded by
+  `33*abs(beta)/Lambda^10`. A restricted positive scalar-exchange class is
+  controlled by one physical spectral moment. Neither determines the
+  independent local/gravity boundary action. RG compensation explicitly
+  preserves that free physical integration constant.
+- The actual S240 heavy-state renormalized readout tail is below `10^-697`
+  above a test fixed comoving split `P=10^100`, uniformly through five time
+  derivatives on `[-1,1]`. The state and all local terms are retained. This
+  is not an interacting response, physical mode cutoff or global B theorem.
+- The matching projector is not a positive gravity functional: it has a
+  negative value even on the tested positive scalar exchange. No admissible
+  finite-gravity error allowance or common interacting bounce is supplied.
+
+**Next admission boundary:** a proposed local, source-bounded matching model
+must determine or bound the remaining independent local/gravity and curved
+terms, not merely add another negligible heavy sector. Action-determined
+positive-spectrum correlations are one surviving mechanism; the study's
+scalar example does not complete the original parent. A fully specified
+fixed-scale quantum-EFT boundary definition can also be proposed, but its
+finite values are new physical assumptions, not subtraction conventions or
+predictions of the present classical action. State their effect on the four
+targets, operator support and prepared state before adoption.
+
+Keep the current H8A420/RATE4-D8 route conditional and parked for full
+matching until such input is supplied. Do not repeat the already authorized
+feasibility request or the excluded regulator identifications. An actual
+source-bound model can resume M, followed by the independent V/G and B
+tests; a partial spectator bound alone cannot. This is a scoped research
+boundary, not an all-parent no-go or a new all-orders UV-completion
+requirement. A theorem for the actual finite-gravity observable remains an
+alternative only if its hypotheses and absolute error are verified.
+
+**PRESCRIPTION-2 and gravity applicability are now started.** The
+[first constructive packet](assessment-2026-09-22-p8-prescription2-gravity.md)
+contains a proposed RATE4-COVZERO-1 additional finite-functional rule,
+explicitly unadopted physical boundary data rather than a scheme inference.
+Its clock-localized lift has no reference background or quadratic-response
+change at first quantum order. This is a difference-functional jet lemma,
+not a complete interacting B theorem. A common covariant renormalized
+reference still has to be constructed; flat component references cannot
+be glued together by assertion. A local heavy-source alternative supplies
+flat/curved coefficient correlations but does not determine independent
+gravity matching by itself.
+
+In parallel, an actual ball-autocorrelation weight now gives a massive-arc
+positive comparison for every partial-wave spin and s>=32. At unchanged
+detector1/256, the finite-gap and crossed-denominator correction is below
+J/80, with J a separately required positive forward spectral moment. A
+finite bound J<=20lambda would allocate lambda/4 to this contribution;
+it is a sufficient target, not an adopted parent condition. The original
+leading heavy-scalar part has J_H<5lambda, not a full J bound. Complete
+finite-coupling/unitarity, contour and low-cut errors remain separate.
+
+The arc differs from the forward functional. Its freshly derived RATE4
+weights have norm below one and its D8 tail error is below lambda/400 IF
+the old tail hypothesis holds. Exact finite-gap positivity fails even at
+spin256 in the displayed control; do not replace the all-spin proof and
+error estimate with a finite low-spin search. The sixth matching moment
+alone does not control the required third forward moment.
+
+**September 24 continuation:** the
+[reference-reduction and finite-window packet](assessment-2026-09-24-p8-reference-regge.md)
+isolates the 56 algebraic connection modes and their ultralocal factor
+in a stated dimensional component-measure convention; it does not supply
+the constrained physical measure. The original heavy source has no direct
+formal one-loop reference-mean or quadratic-response contribution, but
+its free metric determinant remains. The original Proca source has a
+nonzero quadratic jet and produces a quartic exchange with a nonzero
+spatial-momentum control. That response cannot be dropped using a
+homogeneous or source-free Gaussian calculation.
+
+On gravity, an explicitly positive even-spin spectral fixture has
+divergent full J but a finite finite-angle arc. The comparison can instead
+be restricted to a finite energy window, with a separate finite-angle
+Regge envelope bounding the tail by <60 C/alpha plus its supplied
+remainder. This does not establish that the actual parent's J diverges
+or supply its actual Regge/moment/contour/observable inputs.
+
+**Further September 24 progress:** the
+[constrained-source/pole-matching packet](assessment-2026-09-24-p8-source-response-pole-match.md)
+uses the already existing S250 filtration, S253/S257 finite-regulator
+constraint measure and S275 boundary correction. These are inherited
+results, not newly solved continuum-reference obligations. The actual
+time-dependent source cubic and the lapse-generated source-squared
+quartic are now derived in the original prepared coordinates. Their
+scalar and longitudinal-vector one-loop kernels include both contacts
+and distinct momenta on each leg. This is a formal tree-clock-vertex,
+same-state finite-regulator result, not an evaluated continuum response.
+The contact is indefinite and cannot be silently omitted or normal-ordered
+to a new physical zero.
+
+On gravity, single-leading-pole matching in an explicitly restricted
+dispersion scope fixes C(0)/j'(0)=pi/(2kappa). It does not supply the
+finite-angle residue/trajectory shape bounds needed to use that value
+in the tail estimate. The finite part also depends on residue and
+trajectory derivatives. Published massless finite-energy sum rules do
+not determine these data from the four RATE4 samples or close the
+actual observable's massless-loop/contour problem.
+
+**Closure-driven September 24 outcome: physical-input stop.** The
+[continuum-extension and closure audit](assessment-2026-09-24-p8-response-closure-blockers.md)
+establishes the same-state source-squared noise distributions and
+time-retarded extension families. The conservative complete-phase
+scaling degree is <=14; local normal-derivative ambiguities have order
+at most10. Existence is not a chosen covariant subtraction or B bound.
+Two explicit regular covariant finite functionals preserve the retained
+first-order flat normalization data and reference mean while changing
+independent reduced response directions. Their response determinant is
+102400/59049. They are unadopted finite quantum-completion witnesses,
+not modifications of frozen sources or all-orders equivalent theories.
+
+The current gravity route also cannot certify its numerical allowance
+from the retained inputs. An O(G) finite-detector estimate has no supplied
+constant or validity domain for this exact observable. In the original
+normalization an allocated error C_err/kappa<lambda/100 would require
+C_err<10^198 and applicability at the actual parameters. Neither that
+physical bound nor the finite-angle/contour and observable conversions
+has been proved. No Regge factor or missing error is assigned a value.
+
+**Decision resolved by user approval:** RATE4-COVZERO-1's first-order
+finite-boundary rule is now adopted as a separately named candidate, not
+a consequence of the four rates. The
+[reference-seed packet](assessment-2026-09-24-p8-covzero-reference-seed.md)
+constructs a dimension-dependent light/metric action with zero kinetic
+Schur complement at arbitrary tilt, exact clock ADM cancellations and
+a regular source/chart through X=0. A fixed four-dimensional coefficient
+at all d fails this constraint-preserving check. The new continuation's
+evanescent terms must be kept through pole subtraction, not assigned zero.
+The explicit Proca mu=1000 to mu=1 local conversion preserves the old
+finite prescription, which a scale change alone would alter. Auxiliary-
+gradient cotangent bookkeeping addresses the chart, not the full quantum
+gauge measure. The candidate is recorded in a machine-readable
+[specification](candidates/p8-rate4-covzero-1.json).
+
+**Reference admission result: exact fixed-count extension obstructed.**
+The [coupled-source audit](assessment-2026-09-24-p8-covzero-source-constraint-obstruction.md)
+keeps the full retained source and finds a generic scalar/metric rank
+increase from six to seven. At a purely spatial scalar gradient the
+new acceleration Hessian is (R-1)^2/X, and the temporal-Proca secondary
+equation still solves its own auxiliary variable instead of replacing
+the lost scalar constraint. A literal-parent bound for u=0,
+X=-e,0<e<=10^-430 gives 5*1024*e^3<R-1<10*1024*e^3 and a nonzero
+metric pivot. This is an off-shell domain obstruction to the proposed
+uniform exact canonical measure, not a demonstrated bounce instability
+or a no-go for every controlled EFT. The b=0 clock count, vacuum
+quadratic spectrum and pure-light reference-seed results are unchanged.
+
+**SOURCE-1: authorized bounded study COMPLETE; subsequent S0 adoption approved.**
+The [source feasibility study](assessment-2026-09-28-p8-source1-feasibility.md)
+independently finds a nonzero scalar/vector primary bracket at nonzero null
+gradients in the actual parent. Within the fixed-light, Hessian-linear
+gradient-parallel source class, the two-tilt constraint test forces the
+second-derivative coefficients to vanish on the regular set. Source-free
+S0 and a first-derivative-only comparison have safe primary algebra and regular
+local secondary pairs at the vacuum and finite clock points. They preserve
+the classical clock and quadratic data. A field-degree proof preserves the
+formal source-tagged first-loop flat four-scalar projection, but the curved
+nonlinear response changes. The unchanged-action order-reduced EFT route
+still needs an actual validity/error bound; it is not excluded.
+
+**Decision resolved: S0 is now adopted and S0-REFERENCE is in progress.**
+The user explicitly approved the separately named
+[QG2-H8A420-RATE4-COVZERO-S0 candidate](candidates/p8-rate4-covzero-s0.json),
+replacing the entire source square by the source-free Proca mass term.
+The old sourced parent is preserved. The
+[canonical/vector bridge](assessment-2026-09-28-p8-s0-reference.md)
+establishes compact-clock local auxiliary admission, the exact source-free
+four-plus-two Gaussian split and reduced canonical brackets, physical
+vector probe contacts, original-state transport and the inherited ordinary
+Proca finite conversion. The old-source response difference contains both
+the two-vertex kernel and its local contact; deleting the source does not
+delete the vector's gravitational response. A restricted lapse-only
+Horndeski-frame shortcut is singular at finite clock times, while the
+original canonical chart stays regular.
+
+**Active subtarget:** the remaining light/metric gauge and second-class
+measure in the selected dimensional continuation, its required patch
+transport, Ward/locality conditions and pole/finite conversions. Then
+assemble the same-state causal finite parts and actual response bounds.
+Compact local/patchwise admission is sufficient if it meets the original
+closure contract; no unnecessarily global field-space prerequisite is
+added. The scalar-unitary chart is not extended through the flat vacuum.
+No new physical domain restriction, state, cutoff or mode prescription is
+adopted. Both S0 and COVZERO approvals are resolved; do not request them
+again or ask the user to invent Wilson/Regge coefficients. The common
+reference remains incomplete, not an executable certified quantum parent.
+
+After resolving this admission boundary, finish the common reference and
+evaluate/bound the response of the named candidate. For the unchanged
+source this includes its source-squared kernels, local contacts and mixed
+response; for S0 those source-tagged vertices are absent, but all retained
+source-independent light, metric and matter response remains. Independently
+establish a same-observable gravity certificate with quantitative errors
+and a valid domain; authorization is not proof of those hypotheses.
+The full-J route remains optional, and a suitable finite-energy theorem
+is admissible. The earlier inference routes from retained data alone
+remain CONDITIONAL ONLY; the authorized COVZERO candidate is additional
+physical data, not a proof of the missing gravity bounds. Stop expanding
+known-sector refinements as a substitute. This is not exclusion of all gravity routes
+or closure of M/V/G/B/R/P8. No background research is claimed after handoff.
+
+The optional R=128 bidisk witness (proved supremum <=23000lambda) remains
+sufficient, not necessary. A direct tail or decision-projection bound may
+be preferable. Pole/source enclosures must come from the same parent's
+physical prescription. Retain the distinct curved/source and original
+prepared-state obligations for B, the complete hard calculation, actual
+higher-order errors and admissible V/G functional. The order-by-order
+normalization lemma is not convergence or an omitted-order bound. The only
+newly adopted physical data are the authorized COVZERO first-order boundary
+rule and the separately named S0 source replacement; no physical cutoff or
+weakened finish line is adopted. Keep
+CONDITIONAL ONLY until actual bounds are established; do not
+ask the user to invent Wilson coefficients or restart negligible known-
+sector refinements as a substitute.
 
 ### Required output
 
@@ -219,7 +484,10 @@ certificates remain unchanged. Publication acceptance is not M/V/G/B closure.
   The audited exact-GCD adapter was FULL-only; ordinary/CLI used original
   SymPy. The three root matching diagnostics are verified separately.
 
-The validation wait is resolved. Proceed with RATE4.REMAINDER according
-to the admission rule, while preserving unrelated P4/P9 changes. Never
+The validation wait is resolved. The subsequent RATE4.REMAINDER audit is
+a separate read-only diagnostic, not another full-suite replay. Proceed
+with PRESCRIPTION-2 reference completion and the gravity spectral/error
+calculation after their initial constructive packet, preserving unrelated
+P4/P9 changes. Never
 modify a frozen certificate to make a replay pass or use release counts
 as a substitute for closing a scientific gate.
