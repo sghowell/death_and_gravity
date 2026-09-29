@@ -347,15 +347,29 @@ The old sourced parent is preserved. The
 establishes compact-clock local auxiliary admission, the exact source-free
 four-plus-two Gaussian split and reduced canonical brackets, physical
 vector probe contacts, original-state transport and the inherited ordinary
-Proca finite conversion. The old-source response difference contains both
-the two-vertex kernel and its local contact; deleting the source does not
+Proca finite conversion. The old source-aligned response difference contains
+both the two-vertex kernel and its local contact; deleting the source does not
 delete the vector's gravitational response. A restricted lapse-only
 Horndeski-frame shortcut is singular at finite clock times, while the
 original canonical chart stays regular.
 
-**Active subtarget:** the remaining light/metric gauge and second-class
-measure in the selected dimensional continuation, its required patch
-transport, Ward/locality conditions and pole/finite conversions. Then
+The [gauge/measure continuation](assessment-2026-09-29-p8-s0-gauge-measure.md)
+now gives the dimensional clock-gauge algebra and temporal Jacobian,
+the actual de Donder ghost operator, its momentum-uniform finite-interval
+retarded bound and ordinary ghost UV polynomial. It also corrects the
+previous unqualified held-vector response comparison: retain the old
+normal-vector one-point embedding contact `-Gamma_old,W*S_AB`. A centered
+vector product does not remove its light quadratic contribution. This
+correction does not change the adopted S0 action or its parity. Original
+packets stay frozen; successful replay is not endorsement of that
+superseded interpretation.
+
+**Active subtarget:** construct the coupled S0 light/metric/second-class
+measure bridge in the selected dimensional continuation, with actual
+off-shell source/state and endpoint transport. Combine its bosonic and
+constraint contributions with the ghost block; establish the needed
+Ward/locality conditions and common pole/finite conversions. On-clock
+determinant agreement alone is not the response bridge. Then
 assemble the same-state causal finite parts and actual response bounds.
 Compact local/patchwise admission is sufficient if it meets the original
 closure contract; no unnecessarily global field-space prerequisite is

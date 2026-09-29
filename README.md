@@ -89,10 +89,18 @@ around a pre-registered problems document and a certificate-gated ledger.
   compact-clock auxiliary pivots,
   the source-free four-plus-two Gaussian split, physical vector probe
   contacts and original-state transport. The exact
-  old-source response difference includes both its two-vertex kernel and
-  local contact. Ordinary Proca retains its known finite prescription;
-  the coupled light/metric measure, common subtraction and actual response
-  bounds remain open. A restricted lapse-only Horndeski-frame shortcut
+  source-aligned old-source response difference includes both its two-vertex
+  kernel and local contact. The subsequent
+  [gauge/measure continuation and response correction](docs/assessment-2026-09-29-p8-s0-gauge-measure.md)
+  restores the additional old normal-vector one-point embedding contact
+  required for held-physical-vector response; it cannot be inferred zero
+  from the centered vector state. The same packet derives the dimensional
+  clock gauge, actual de Donder ghost operator, its momentum-uniform
+  retarded bound on the bounce and the ordinary ghost UV polynomial.
+  These do not establish the coupled light/metric measure or off-shell
+  source/state transport. Ordinary Proca retains its known finite prescription;
+  common subtraction and actual physical response bounds remain open.
+  A restricted lapse-only Horndeski-frame shortcut
   becomes singular on the clock; the original canonical chart does not.
   The unchanged-action EFT alternative still lacks a validity/error bound.
   The old sourced parent is preserved. No cutoff, state change or physical
