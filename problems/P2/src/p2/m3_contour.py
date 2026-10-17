@@ -19,8 +19,8 @@ enclosed by the box F(R_t)/F(r0) times the centred ball (R_t encloses all r(t; w
 model is propagated from the exact midpoint m0.  F is evaluated in factored form
 -(Lambda/3)(r - r_n)(r - r_-)(r - r_+)(r - r_c)/r^2 to avoid cancellation near the horizons.
 
-Analyticity of r(x) near a ray (Cauchy): if r(x0) = r0 in B and |F| <= M on B + disc(delta)
-(avoiding 0), the solution extends analytically to |x - x0| < delta/M.
+(The sector analyticity used by the certificate is proved by the Re r* identity, not by a fan of
+rays; see notes/s2-m3.md, Lemma 1.)
 """
 from __future__ import annotations
 
@@ -154,21 +154,6 @@ class Ray:
         i = self.step_index(float(s.mid()))
         st = self.steps[i]
         return st.eval(s - st.s0)
-
-    def analyticity(self, delta):
-        """min over steps of delta/M (radius of analyticity of r(x) about any ray point), and
-        min |r| over the a-priori boxes."""
-        rho, rmin = None, None
-        for st in self.steps:
-            Bd = acb(st.B.real + arb(0, 1) * delta, st.B.imag + arb(0, 1) * delta)
-            if Bd.real.contains(0) and Bd.imag.contains(0):
-                return None, None
-            M = abs(F_of(self.pt, Bd)).upper()
-            r_ = arb(delta) / M
-            rho = r_ if rho is None or r_ < rho else rho
-            m = abs(st.B).lower()
-            rmin = m if rmin is None or m < rmin else rmin
-        return rho, rmin
 
 
 def rstar(pt, r):

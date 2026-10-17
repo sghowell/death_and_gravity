@@ -17,7 +17,8 @@ the increments add up to 2 pi * winding (a ball containing exactly one integer).
 Krawczyk.  For Z = z0 + [-r, r] + i[-r, r] and Y ~ 1/W'(z0):
     K(Z) = z0 - Y W(z0) + (1 - Y W'(Z)) (Z - z0)  subset of int(Z)  =>  unique zero of W_l in Z
 (mean-value form; W' over Z enclosed via a central difference at z0 with the analytic remainder
-bound M h^2/(R^3 (1 - h^2/R^2)) plus the Cauchy bound 2 M r/(R - r)^2 for W'(Z) - W'(z0), where
+bound M h^2/(R^3 (1 - h^2/R^2)) plus the Cauchy bound 2 M rho/(R - rho)^2 for W'(Z) - W'(z0), with
+rho = sqrt(2) r the corner distance of the square Z (R > rho is checked), where
 M >= |W_l| on the box z0 + [-R, R] + i[-R, R] is itself a validated enclosure).
 """
 from __future__ import annotations

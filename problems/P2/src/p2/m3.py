@@ -395,8 +395,8 @@ def tail_bound(pt: Point, side, S, r_S, d0):
         if not (lo_ > 0):
             return None
         t1, t2 = Ai * lo_.log(), Ai * hi_.log()          # A_i log|.| is monotone in the distance
-        Smin = Smin + arb(min(float(t1.lower()), float(t2.lower()))) - arb("1e-30")
-        Smax = Smax + arb(max(float(t1.upper()), float(t2.upper()))) + arb("1e-30")
+        Smin = Smin + arb(t1.lower()).min(arb(t2.lower()))   # exact Arb endpoints (no float round trip)
+        Smax = Smax + arb(t1.upper()).max(arb(t2.upper()))
     if not (abs(r_S - rh) < d0):
         return None
     xS = xP + arb(S) * ct
@@ -595,8 +595,45 @@ def control_l(pt: Point, l: int, rays, tails, window_nodes, window_lam, design=D
         out["b_box_design"] = {"certified": cb["A1_pass"], "mu_cert": cb["mu_cert"],
                                "float_lambda_min": cb["float_lambda_min"]}
     except (ArithmeticError, ValueError) as ex:
-        out["b_box_design"] = {"certified": False, "design_failed": str(ex)}
+        # the float margin at the box is <= 0, so the Riccati design cannot start: the checker is
+        # NOT run on this branch (S2 review, S4); branch (a) and A2' below are the real controls
+        out["b_box_design"] = {"certified": False, "design_failed": str(ex), "checker_run": False}
     out["A2_pass"] = (not out["a_window_ground_state"]["certified"]) and (not out["b_box_design"]["certified"])
+    return out
+
+
+def near_mode_control(pt: Point, l: int, rays, tails, design=DESIGN):
+    """A2' (S2 review, section 5): the same checker with a ground state designed close to the l-th
+    PS fundamental mode (Re w = Re w_PS, Im w = -0.88 gamma0, where the float margin is still > 0).
+    Boxes (real half-width gamma0/50 about Re w_PS):
+      IN    : |Im w - Im w_PS| <= gamma0/50          (contains a QNM)   -> must NOT certify
+      STRAD : Im w in [-1.05, -0.95] gamma0           (contains the mode) -> must NOT certify
+      OUT   : Im w in [-0.90, -0.86] gamma0           (mode-free)         -> reported (may certify)."""
+    import mpmath as mp
+
+    from .qnm_float import Geom, Solver
+    g = Geom.frozen("PB")
+    with mp.workdps(30):
+        top = (l + mp.mpf(1) / 2) * g.OmegaP
+        ps = Solver(g, K=6).find(l, mp.mpc(top, -g.gamma0))
+    g0 = float(pt.gamma0.mid())
+    re_ps, im_ps = float(mp.re(ps)), float(mp.im(ps))
+    e = g0 / 50
+    lam, nodes = design_ground_state(pt, l, complex(re_ps, -0.88 * g0), design)
+    muHO = float((2 * (l + arb(1) / 2) * pt.OmegaP * pt.gamma0).mid())
+    boxes = {"IN": (re_ps - e, re_ps + e, im_ps - e, im_ps + e),
+             "STRAD": (re_ps - e, re_ps + e, -1.05 * g0, -0.95 * g0),
+             "OUT": (re_ps - e, re_ps + e, -0.90 * g0, -0.86 * g0)}
+    out = {"PS_mode_over_kappa_minus": [mp.nstr(mp.re(ps) / g.km, 12), mp.nstr(mp.im(ps) / g.km, 12)],
+           "design_point_Im_over_gamma0": -0.88, "float_lambda_at_design_over_muHO": lam / muHO,
+           "ground_state_nodes": [[str(x), str(y)] for x, y in nodes]}
+    for name, (a1, a2, b1, b2) in boxes.items():
+        c = certify_l(pt, l, rays, tails, design, nodes=nodes, lam_float=lam,
+                      box=(arb(a1), arb(a2), arb(b1), arb(b2)))
+        mu = float(arb(c["mu_cert"].split()[0].strip("[")).mid())
+        out[name] = {"box": [a1, a2, b1, b2], "certified": c["A1_pass"], "mu_cert": c["mu_cert"],
+                     "mu_over_muHO": mu / muHO, "cells": c["cells_evaluated"]}
+    out["A2prime_pass"] = (not out["IN"]["certified"]) and (not out["STRAD"]["certified"])
     return out
 
 
@@ -654,13 +691,19 @@ def main_run(ls):
             with Timer() as tc:
                 c["A2_control"] = control_l(pt, l, rays, tails, nodes, c["float_lambda_min"])
             c["A2_control"]["timing_s"] = {"wall": round(tc.wall, 1), "cpu": round(tc.cpu, 1)}
+            with Timer() as tn:
+                c["A2prime_near_mode"] = near_mode_control(pt, l, rays, tails)
+            c["A2prime_near_mode"]["timing_s"] = {"wall": round(tn.wall, 1), "cpu": round(tn.cpu, 1)}
             c["A3_mu_cert_le_float"] = bool(float(arb(c["mu_cert"].split()[0].strip("[")).mid())
                                             <= c["float_lambda_min"])
             c["P2_2_overlap"] = _overlap(pt, l)
             c["commit"] = commit
             (CERT_DIR / f"m3_PB_l{l}.json").write_text(json.dumps(c, indent=1) + "\n")
             ms[l] = float(arb(c["m_ratio"].split()[0].strip("[")).mid()) if "+/-" in c["m_ratio"] else float(c["m_ratio"])
-            rows[l] = {"A1": c["A1_pass"], "A2": c["A2_control"]["A2_pass"], "A3": c["A3_mu_cert_le_float"],
+            rows[l] = {"A1": c["A1_pass"], "A2": c["A2_control"]["A2_pass"],
+                       "A2prime_near_mode": c["A2prime_near_mode"]["A2prime_pass"],
+                       "A2prime_OUT_certified": c["A2prime_near_mode"]["OUT"]["certified"],
+                       "A3": c["A3_mu_cert_le_float"],
                        "overlap": c["P2_2_overlap"]["a_l_le_top"], "mu_cert": c["mu_cert"], "m": c["m_ratio"],
                        "float_m": c["float_lambda_min"] / float(arb(c["mu_HO"].split()[0].strip("[")).mid())}
             print(l, rows[l], c["timing_s"], flush=True)
@@ -676,7 +719,10 @@ def main_run(ls):
         else:
             verdict = "INCONCLUSIVE (see failing items)"
         summ = {"point": "PB", "route": "M3", "rows": rows, "fit": f, "verdict": verdict, "commit": commit,
-                "preregistration": "notes/s2-preregistration.md"}
+                "preregistration": "notes/s2-preregistration.md",
+                "note": "projected_l0 is the formal output of the pre-registered fit. The fit is mis-specified "
+                        "(S2 review, section 4: design slack, a ground-state loss ~ 1/l and a spline loss ~ sqrt(l) "
+                        "add up to a non-monotone m(l)); it has no predictive content. See notes/s2-report.md section 3."}
         (CERT_DIR / "m3_PB_summary.json").write_text(json.dumps(summ, indent=1) + "\n")
         print(json.dumps(summ, indent=1))
 
