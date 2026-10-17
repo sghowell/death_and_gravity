@@ -3,6 +3,12 @@
 Fast by default (~2-3 min: exact identities, helper algebra, one sonic
 closing-piece direct run, one centre piece).  The full-piece analyze and the
 Lemma D rerun are gated behind P4_SLOW=1.
+
+Measured 2026-10-16 (M4 Pro): the fast set takes ~3 min without
+test_centre_first_piece; that test alone did not finish within 15 min.
+test_commutation_value_consistency and test_kdiv_roundtrip fail on their
+relative-width thresholds although the compared balls overlap (see
+notes/s4-3-recovery.md section 3).
 """
 import json
 import os
@@ -53,8 +59,14 @@ def test_e5_sonic_vanishing(atoms):
 
 @SLOW
 def test_e2_layer_identity(atoms):
+    # check_layer_identity returns (pmin, ok): pmin is the lowest raw centre
+    # layer of Z (before A -> 1) and ok says that layers pmin, pmin + 1 cancel
+    # with A -> 1 and no odd layers exist; with A - 1 = O(t^2) this gives
+    # val(Z o u) >= pmin + 2.  run_lemma_d raises Z to offset 16, so the
+    # requirement is pmin + 2 >= 16 (the recorded value is pmin = 14).  The
+    # previous assertion `val >= 16` compared pmin itself with 16 and failed.
     val, ok = tc.check_layer_identity(atoms)
-    assert ok and val >= 16
+    assert ok and val + 2 >= 16
 
 
 # ------------------------------------------------------------ helper algebra
