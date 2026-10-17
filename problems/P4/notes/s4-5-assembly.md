@@ -11,7 +11,7 @@ Status 2026-10-17, branch `p4/theorem-c-s4-3`.
 
 Neither version ran a computation.  The only operations were sha256 hashes,
 JSON reads and exact rational arithmetic on stored endpoints (§8).  The
-review's own checks are committed in `P4/results/theorem_c/review_s45/`, and
+review's own checks are committed in `P4/certificates/theorem_c/review_s45/`, and
 its README says how each one was run.
 
 **Theorem C is not proved yet.**  The strip exclusion lacks the 30 centre
@@ -56,7 +56,7 @@ FORMULATION.md are unchanged; §6 proposes ledger text.  `P4/` means
   * Since `ccc74f3a` the merge checks the cover exactly on the tube caches:
     content hash, step identity, radius 0, exact joins, Fractions.
   * The review reproduced the result with independent code
-    (`P4/results/theorem_c/review_s45/cover_independent.txt`; review §8).
+    (`P4/certificates/theorem_c/review_s45/cover_independent.txt`; review §8).
 * **Open** (full list in §5):
   * the centre: 30 pieces, x ≤ −4.5, no route decided;
   * the merge-output wording, `scope.xi_open_max` and `scope.full_strip_tau`
@@ -225,12 +225,12 @@ reviewed 2026-08-26).
   (`s2-theorem-b.md:525-540, 560-581`).  Outside R, Lemma G1 extends the
   definition and the equivalence.
 * *Artifacts:*
-  * `P4/results/theorem_b/winding_R.json` `d8977be1482ce448166afd9f27068b814bf2ddc87a48102960589fffe6cfe688`
-  * `P4/results/theorem_b/analyticity_R.json` `d435c46cd1a182c425ade858e2b86d8c6c0e3274d3061daac72ee143cea478a5`
-  * `P4/results/theorem_b/krawczyk.json` `7e4b02aeb3b08e8276c14b2ee42f6b434b0032230ec328b08493eaf05cf7a42a`
-  * fixed-code re-runs `P4/results/recert_2026-10-17/{winding,analyticity,krawczyk}.json`
+  * `P4/certificates/theorem_b/winding_R.json` `d8977be1482ce448166afd9f27068b814bf2ddc87a48102960589fffe6cfe688`
+  * `P4/certificates/theorem_b/analyticity_R.json` `d435c46cd1a182c425ade858e2b86d8c6c0e3274d3061daac72ee143cea478a5`
+  * `P4/certificates/theorem_b/krawczyk.json` `7e4b02aeb3b08e8276c14b2ee42f6b434b0032230ec328b08493eaf05cf7a42a`
+  * fixed-code re-runs `P4/certificates/recert_2026-10-17/{winding,analyticity,krawczyk}.json`
     (`bbd30770…`, `ee9d4237…`, `18f983e6…`).  They are compared as identical
-    by certified fields in `P4/results/recert_2026-10-17/comparison.json`
+    by certified fields in `P4/certificates/recert_2026-10-17/comparison.json`
     `608a86a84b425b42bc34171fd687fc21b4f35f595a45934bec559ad21c49f7d4`.
 * *Code:* `modecount.py` `356435ea…`, `analyticity.py` `34ef72d9…`,
   `krawczyk_kappa.py` `7a445915…`, `linsonic4.py` `32bfb104…`, `linsys.py`
@@ -262,8 +262,8 @@ reviewed 2026-08-26).
 * *Used:* 𝔴 = −D > 0 on the open cone, so SΔ̃ ≠ 0 there and P is invertible
   (`s4-energy.md:55-56`).  In the strip, dT ≠ 0 gives the same per piece.
 * *Artifacts:*
-  * `P4/results/theorem_c/tc_monotone.json` `2b08581f26ea609ec76f6656b2255732a99335eacc6d6d871237d9f63696f222`
-  * `P4/results/theorem_c/parts/p43_centre.json` `2d128e2ae7e131d3b3d484bc05f37259d94dbf90da620937f18a2d95eaf77f22`
+  * `P4/certificates/theorem_c/tc_monotone.json` `2b08581f26ea609ec76f6656b2255732a99335eacc6d6d871237d9f63696f222`
+  * `P4/certificates/theorem_c/p43_centre.json` `2d128e2ae7e131d3b3d484bc05f37259d94dbf90da620937f18a2d95eaf77f22`
   * fixed-code re-runs `recert_2026-10-17/tc_monotone.json` and
     `p43_centre.json`, identical.
 * *Code:* `tc_monotone.py` `def35430…`.
@@ -277,13 +277,13 @@ Lemma D condition dropped, §6).
     x ≤ ln YCUT = −4.500000000000000037 by Lemma D.
   * The two regions overlap by 4.6e−17 (`review_s45/s42_join.txt`; review §7).
 * *Artifacts:*
-  * `P4/results/theorem_c/tc_energy.json`
+  * `P4/certificates/theorem_c/tc_energy.json`
     `7f48a49d2c89d792a97e1f2e2e17e9c072884b05fe8b19b83d1928683df01245`.
     Cite **only** its tube, sonic and closing blocks: 14520 + 16666 + 1 boxes,
     with min (b) 2.91e−4 and min (c) 2.249 on the tube (`s4-energy.md:190-194`).
     **Its `lemma_d` block is the 2026-08-31 midpoint-ball record and must not
     be cited** (`s4-3-recovery.md:107-117, 437-439`).
-  * Lemma D: `P4/results/theorem_c/parts/lemma_d_certified.json`
+  * Lemma D: `P4/certificates/theorem_c/lemma_d_certified.json`
     `41fda13b765a0db01a9e3599501332c9006b29b911b1019f5d2f3d73f47de9ad`.
     * The fixed-code record; all 24 recorded source hashes are current
       (review §7).
@@ -309,7 +309,7 @@ Lemma D condition dropped, §6).
 **I6. Exact checks E1/E2/E3/E5** (S4-3).
 * *Used:* E1/E3/E5 justify the sonic Laurent raises; E3 also justifies the
   (tt·dT_k)′ raise; E2 (pmin = 14, so val ≥ 16) justifies Lemma D.
-* *Artifact:* `P4/results/theorem_c/parts/checks.json`
+* *Artifact:* `P4/certificates/theorem_c/checks.json`
   `1034c0ab0bb78f6b204b8ee9e5c9a95f86f763a3cbc4a754f4eb641ade14c92b`, valid
   for the current code.  Results: E1 true, E2 [14, true], E3 and E5 all true.
 
@@ -409,7 +409,7 @@ checks (review §1, rows 3a–6).
 **I11. The S4-5 review and its checks.**
 * `docs/review-2026-10-17-p4-s4-5-adversarial.md`
   `939e15912a32ae961316295aa8ff40f93c45de6ef5b7208ddd57e8b5f0145f8f`.
-* Outputs in `P4/results/theorem_c/review_s45/` (the README there gives each
+* Outputs in `P4/certificates/theorem_c/review_s45/` (the README there gives each
   command):
 
   | file | sha256 | what |
@@ -668,7 +668,7 @@ P4-6's class.  On R the two classes coincide (Theorem B′).
 
 *Proof.*
 
-(a) **Sonic, order 0** [M] (`P4/results/theorem_c/review_s45/g1_order0.json`).
+(a) **Sonic, order 0** [M] (`P4/certificates/theorem_c/review_s45/g1_order0.json`).
 * The check builds the 2×2 order-0 solve M₀ for (W_p, V_p)(0) exactly as
   `linsonic4.py:142-150` does, on the certified V₀ box.
 * Only its ℓ·G row depends on κ, so
@@ -699,7 +699,7 @@ P4-6's class.  On R the two classes coincide (Theorem B′).
   higher level is invertible.  This proves (i).
 
 (c) **Centre** [X + M].
-* `P4/results/theorem_c/review_s45/centre_pattern.json` gives the exact zero
+* `P4/certificates/theorem_c/review_s45/centre_pattern.json` gives the exact zero
   pattern of `linscaled.full_system` at t = 0:
   * rows 1 and 3 of P₀ are (0, 1, 0, 0) and (0, 0, n∞, 0);
   * rows 1 and 3 of G₀ vanish;
@@ -711,7 +711,7 @@ P4-6's class.  On R the two classes coincide (Theorem B′).
 
   with n∞ = 1.2366, P₂₃ = 28.7929 and G₂₃ = −86.3787.  This is nonzero for
   every n ≥ 1.
-* `P4/results/theorem_c/review_s45/g1_centre.txt` gives the balls on the
+* `P4/certificates/theorem_c/review_s45/g1_centre.txt` gives the balls on the
   certified (a*, μ*) series: −569.685, −3560.53, … for n = 1 … 6, identical at
   κ ∈ {0, 1, 7, 3 + 50i, 1000i}.
 * G₀(κ) has rank 2 for every κ, through the κ-free (Â, ñ)-minor
@@ -780,12 +780,12 @@ This proves (iii). ∎
      cover [14, ∞).
    * `run_centre(..., ncells=6)` still passes an ignored argument
      (`tc_commutator.py:1103, 1130, 1141`).
-3. **Owner decision: the README policy.**
+3. **Owner decision: the README policy.  Resolved 2026-10-17: moved.**
    * README defines CERTIFIED as a certificate "committed under
      `certificates/`" (main `README.md:1178`; layout at `:1163`).
-   * P4 keeps all its artifacts under `P4/results/`, as the CERTIFIED rows
-     P4-3 … P4-6 already do.
-   * This note does not resolve it.
+   * The CERTIFIED rows' artifacts (P4-3, P4-6, P4-8, review checks) moved
+     unchanged to `P4/certificates/` (its `README.md` maps old paths to new).
+   * P4-9's artifacts stay under `results/` while the row is CONJECTURED.
 4. **Optional hardening of the S4-2 join** (review §7).  The join at −4.5
    overlaps by 4.6e−17 "by rounding luck".  Running Lemma D to a ycut slightly
    above e^{−4.5}, or keeping one more tube step, would give a margin.  This is
@@ -861,12 +861,12 @@ coincide (P4-6, Theorem B′).
   be restricted to [6, 15] × [−14, 14], where it follows from P4-6.
 * *Evidence:*
   * `problems/P4/notes/s4-energy.md` §1–§3, §6;
-  * `problems/P4/results/theorem_c/parts/lemma_d_certified.json`;
-  * `.../parts/checks.json`;
+  * `problems/P4/certificates/theorem_c/lemma_d_certified.json`;
+  * `.../checks.json`;
   * `.../tc_energy.json`: the tube, sonic and closing blocks only.  Its
     `lemma_d` block is the superseded midpoint record;
-  * `problems/P4/results/recert_2026-10-17/{tc_energy,comparison}.json`;
-  * `problems/P4/results/theorem_c/review_s45/{centre_layers.json,s42_join.txt,sonic_residues.json,identities_out.txt}`;
+  * `problems/P4/certificates/recert_2026-10-17/{tc_energy,comparison}.json`;
+  * `problems/P4/certificates/theorem_c/review_s45/{centre_layers.json,s42_join.txt,sonic_residues.json,identities_out.txt}`;
   * `docs/review-2026-10-17-p4-s4-5-adversarial.md`;
   * for the E-clause: `problems/P4/notes/s4-5-assembly.md` §4.5 and
     `review_s45/{g1_order0.json,centre_pattern.json,g1_centre.txt}`.
@@ -895,7 +895,7 @@ coincide (P4-6, Theorem B′).
     §12–§14, `s4-5-assembly.md` §4.1;
   * `parts/layer_t14/` (aggregate `e9835a41…`);
   * `layer_recompute/merge_substitute_layer_t14.json`;
-  * `parts/checks.json`;
+  * `certificates/theorem_c/checks.json`;
   * the two 2026-10-17 review documents and `review_s45/`.
 
   When the centre lands, add its parts and the complete `tc_commutator.json`.
@@ -959,10 +959,10 @@ When the centre lands, check:
 From the repository (worktree) root:
 
 ```
-shasum -a 256 problems/P4/results/theorem_b/*.json problems/P4/results/theorem_c/tc_*.json \
-  problems/P4/results/theorem_c/parts/{checks,plan,lemma_d_certified,p43_centre}.json \
+shasum -a 256 problems/P4/certificates/theorem_b/*.json problems/P4/certificates/theorem_c/*.json \
+  problems/P4/results/theorem_c/tc_leading.json problems/P4/results/theorem_c/parts/plan.json \
   problems/P4/results/theorem_c/parts/caches/*.json problems/P4/results/theorem_c/layer_recompute/*.json \
-  problems/P4/results/theorem_c/review_s45/*.json problems/P4/results/theorem_c/review_s45/*.txt
+  problems/P4/certificates/theorem_c/review_s45/*.json problems/P4/certificates/theorem_c/review_s45/*.txt
 # aggregate of a part directory (paths relative to the root, C-locale sort):
 find problems/P4/results/theorem_c/parts/layer_t14 -name '*.json' | LC_ALL=C sort \
   | xargs shasum -a 256 | shasum -a 256
@@ -978,4 +978,8 @@ sources:
 
 The merge's exact cover (`ccc74f3a`) and the review's
 `review_s45/cover_independent.txt` now supersede it.  The review's checks are
-re-run as `P4/results/theorem_c/review_s45/README.md` describes.
+re-run as `P4/certificates/theorem_c/review_s45/README.md` describes.
+
+---
+
+*Paths (2026-10-17): the files behind CERTIFIED rows moved unchanged from `results/` to `certificates/` (`problems/P4/certificates/README.md`). The paths in this note are updated; the module mains still write their replays to `results/`. The note gained no lines above this one, so line references into it still hold.*

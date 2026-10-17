@@ -6,9 +6,9 @@ was never assembled, every September region output was lost, and 1 of the 576
 region pieces has a stored result (`parts/band/band-000.json`, the driver smoke
 test).  Each of the following is backed by an artifact produced today from the
 committed code:
-* the exact identities E1/E2/E3/E5 (`parts/checks.json`);
+* the exact identities E1/E2/E3/E5 (`certificates/theorem_c/checks.json`);
 * Lemma D on a background that encloses the certified EC solution
-  (`parts/lemma_d_certified.json`).  The as-committed run
+  (`certificates/theorem_c/lemma_d_certified.json`).  The as-committed run
   (`parts/lemma_d_midpoint.json`) reproduces the old record exactly, but its
   centre series sits on the a3 midpoint (§3).
 The four tube caches are rebuilt and pinned by content hash.  A persistent
@@ -20,8 +20,8 @@ drivers.  Paths below are relative to `problems/P4/` unless they start with
 the code (commit `ed4cab14`): `tc_commutator._centre_expansion` and
 `tc_monotone.run_centre` now build the centre series on the certified (a*, μ*)
 balls.  On the fixed code (commit `02e93bac`):
-* P4-3 still holds (`results/theorem_c/tc_monotone.json` regenerated);
-* Lemma D reproduces `parts/lemma_d_certified.json` exactly;
+* P4-3 still holds (`certificates/theorem_c/tc_monotone.json` regenerated);
+* Lemma D reproduces `certificates/theorem_c/lemma_d_certified.json` exactly;
 * E1/E2/E3/E5 still hold.
 
 The §8 (iii) centre variant fails (commit `ad16bbac`).  310 node-independent
@@ -41,7 +41,7 @@ Transcript line numbers are given as `L<n>`.
 * Commit `14da7d1e` (this branch): `src/p4/validated/tc_commutator.py` (1688
   lines), `tc_tm.py` (537), the Lemma D wiring in `tc_energy.py`,
   `tests/test_tc_commutator.py`, `notes/s4-commutator.md`, and
-  `results/theorem_c/tc_energy.json` with the `lemma_d` block (ok, 61.6 s,
+  `certificates/theorem_c/tc_energy.json` with the `lemma_d` block (ok, 61.6 s,
   nsub = 1100).  The committed `tc_commutator.py` is the final working-tree
   state: it contains the strip-depth fix (`if sdepth < 9`, line 1468; the
   09-04T01:22Z edit, L1529) and the progress logging added 09-05T01:13Z (L1621,
@@ -74,9 +74,9 @@ was not identified.
 
 | item | command | outcome | wall | artifact |
 |---|---|---|---|---|
-| E1, E2, E3, E5 | `scripts/s43_parts.py checks` | E1 True; E2 (pmin = 14, ok) True; E3 (True, True, True); E5 (True, True, True) | 48 s (E5 42 s) | `results/theorem_c/parts/checks.json` |
+| E1, E2, E3, E5 | `scripts/s43_parts.py checks` | E1 True; E2 (pmin = 14, ok) True; E3 (True, True, True); E5 (True, True, True) | 48 s (E5 42 s) | `certificates/theorem_c/checks.json` |
 | Lemma D as committed | `s43_parts.py lemma-d --centre-balls midpoint` | ok; 1100/1100 subranges; q2 ≥ 1.9618364, mB ≥ 3.4752564, mC ≥ 15.348300, pole gaps ≥ 0.99952, 0.99999; **identical to tc_energy.json** | 62.6 s | `parts/lemma_d_midpoint.json` |
-| Lemma D, certified background | `s43_parts.py lemma-d --centre-balls certified` | ok; 1100/1100; q2 ≥ 1.9618364, mB ≥ 3.4752428, mC ≥ 15.348292, pole gaps ≥ 0.99952, 0.99999 | 61.5 s | `parts/lemma_d_certified.json` |
+| Lemma D, certified background | `s43_parts.py lemma-d --centre-balls certified` | ok; 1100/1100; q2 ≥ 1.9618364, mB ≥ 3.4752428, mC ≥ 15.348292, pole gaps ≥ 0.99952, 0.99999 | 61.5 s | `certificates/theorem_c/lemma_d_certified.json` |
 | tube caches | `s43_parts.py build-caches --detach` | full 344 steps (187 s), gap 107 (121 s), deep 129 (8 s), band 60 (36 s): same step counts and step grids as September; content hashes reproducible (deep, band rebuilt twice: identical) | 3.2 min | `parts/caches/*.json` |
 | test_tc_reduction.py | pytest | 9 passed | 23 s | — |
 | test_tc_energy.py (+ `P4_TUBE_CACHE`) | pytest | 6 passed, 1 skipped (P4_SLOW); with P4_SLOW=1 the field identity passed | 12 s + 101 s | — |
@@ -395,7 +395,7 @@ Route (a) stays the long-term fallback and a useful float diagnostic.
 ## 10. Draft ledger text (for Sean; CLAIMS.md not edited)
 
 * P4-8: "conditional on Lemma D" can be dropped on the strength of
-  `results/theorem_c/parts/lemma_d_certified.json` (Lemma D with the certified
+  `certificates/theorem_c/lemma_d_certified.json` (Lemma D with the certified
   (a*, μ*) balls, ok, 1100/1100 subranges, q2 ≥ 1.9618, mB ≥ 3.4752, mC ≥ 15.348;
   replay `s43_parts.py lemma-d`).  The midpoint-ball record in tc_energy.json
   reproduces exactly but does not enclose the EC background.
@@ -405,7 +405,7 @@ Revised drafts, 2026-10-16 evening (supersede the two items above):
 
 * **P4-3**: the status stays CERTIFIED.  Suggested addition to the claim
   text: "(centre tail on the certified (a*, μ*) balls since 2026-10-16)".
-  * Evidence: `results/theorem_c/tc_monotone.json`, regenerated on the fixed
+  * Evidence: `certificates/theorem_c/tc_monotone.json`, regenerated on the fixed
     code.  The centre tail t ∈ (0, e^{−8}] is now evaluated on balls that
     enclose the certified (a*, μ*): a3 midpoint + Krawczyk offset,
     `p4.validated.ec_centre`.  The previous centre block used the bare
@@ -419,14 +419,14 @@ Revised drafts, 2026-10-16 evening (supersede the two items above):
     * t²D′ ≥ 3.0584.
   * None moved by more than 1.2e-7 from the midpoint run.  The sonic and tube
     (344 steps) blocks are unchanged bit for bit.
-  * Provenance: `results/theorem_c/parts/p43_centre.json`.  It also replays the
+  * Provenance: `certificates/theorem_c/p43_centre.json`.  It also replays the
     old midpoint record exactly.
   * Replay: `cd problems/P4 && PYTHONPATH=src python -m p4.validated.tc_monotone
     data/cache/tube_full.json`, or `scripts/s43_parts.py p43-centre`.
 * **P4-8**: suggested status "CERTIFIED (unconditional since 2026-10-16:
   Lemma D closed in S4-3)".
   * Lemma D (deep tail x ≤ −4.5) is certified with centre balls that enclose
-    the certified (a*, μ*): `results/theorem_c/parts/lemma_d_certified.json`.
+    the certified (a*, μ*): `certificates/theorem_c/lemma_d_certified.json`.
   * It is reproduced exactly through the fixed committed code path:
     `results/theorem_c/parts/replays/lemma_d_certified.json`.
     `tc_commutator.run_lemma_d` there uses `ec_centre` and now also checks
@@ -436,7 +436,7 @@ Revised drafts, 2026-10-16 evening (supersede the two items above):
   * Replay: `scripts/s43_parts.py lemma-d --replay`.
   * The `lemma_d` block in `tc_energy.json` is the old midpoint run.  It
     reproduces (`parts/lemma_d_midpoint.json`) but does not enclose the EC
-    background; cite `parts/lemma_d_certified.json` instead.
+    background; cite `certificates/theorem_c/lemma_d_certified.json` instead.
 * **P4-9** (commutator strip): no certificate yet; status after the re-run
   per §6/§7/§11.
 
@@ -471,10 +471,10 @@ Revised drafts, 2026-10-16 evening (supersede the two items above):
 
 | item | command | outcome | wall | artifact |
 |---|---|---|---|---|
-| P4-3, all three regions | `cd problems/P4 && PYTHONPATH=src python -m p4.validated.tc_monotone data/cache/tube_full.json` | PASSES.  Centre tail on the certified balls: vrel_pos ≥ 0.40433444061, dvrel ≥ 0.40433436552, neg_drho ≥ 82.743524313, wG_pos ≥ 0.33333331494, neg_Ds ≥ 1.5291792671, dD_pos ≥ 3.0583589280.  Sonic minima and tube (344 steps) minima identical to the stored record; only `tube_info.time` (cache build time) differs | 2.4 s | `results/theorem_c/tc_monotone.json` (regenerated) |
-| P4-3 centre tail, with provenance | `s43_parts.py p43-centre` | as above; the midpoint replay reproduces the old centre block exactly.  Certified − midpoint: neg_drho +1.19e-7, dD_pos −4.3e-11, neg_Ds −2.2e-11, vrel_pos and dvrel +2.8e-12, wG_pos 0 | < 1 s | `parts/p43_centre.json` |
-| Lemma D, fixed code path | `s43_parts.py lemma-d --replay` | identical to `parts/lemma_d_certified.json` in ok, c0, ycut, layer identity (14, True), nsub, failures (0 of 1100) and all five minima: q2 ≥ 1.961836442292799, mB ≥ 3.4752428204250765, mC ≥ 15.348292102988353, poleA ≥ 0.9995211043091139, poleFN ≥ 0.9999925864848808 | 64.7 s | `parts/replays/lemma_d_certified.json` |
-| E1/E2/E3/E5 (tc_commutator.py hash changed) | `s43_parts.py checks` | E1 True; E2 (pmin 14, ok); E3 and E5 all True | ≈ 48 s | `parts/checks.json` (overwritten; valid for the current code) |
+| P4-3, all three regions | `cd problems/P4 && PYTHONPATH=src python -m p4.validated.tc_monotone data/cache/tube_full.json` | PASSES.  Centre tail on the certified balls: vrel_pos ≥ 0.40433444061, dvrel ≥ 0.40433436552, neg_drho ≥ 82.743524313, wG_pos ≥ 0.33333331494, neg_Ds ≥ 1.5291792671, dD_pos ≥ 3.0583589280.  Sonic minima and tube (344 steps) minima identical to the stored record; only `tube_info.time` (cache build time) differs | 2.4 s | `certificates/theorem_c/tc_monotone.json` (regenerated) |
+| P4-3 centre tail, with provenance | `s43_parts.py p43-centre` | as above; the midpoint replay reproduces the old centre block exactly.  Certified − midpoint: neg_drho +1.19e-7, dD_pos −4.3e-11, neg_Ds −2.2e-11, vrel_pos and dvrel +2.8e-12, wG_pos 0 | < 1 s | `certificates/theorem_c/p43_centre.json` |
+| Lemma D, fixed code path | `s43_parts.py lemma-d --replay` | identical to `certificates/theorem_c/lemma_d_certified.json` in ok, c0, ycut, layer identity (14, True), nsub, failures (0 of 1100) and all five minima: q2 ≥ 1.961836442292799, mB ≥ 3.4752428204250765, mC ≥ 15.348292102988353, poleA ≥ 0.9995211043091139, poleFN ≥ 0.9999925864848808 | 64.7 s | `parts/replays/lemma_d_certified.json` |
+| E1/E2/E3/E5 (tc_commutator.py hash changed) | `s43_parts.py checks` | E1 True; E2 (pmin 14, ok); E3 and E5 all True | ≈ 48 s | `certificates/theorem_c/checks.json` (overwritten; valid for the current code) |
 
 ### 11.3 P4-3 verdict
 
@@ -623,3 +623,7 @@ chunk (A1 starts at idx 167), so it is needed under either branch.  The centre
 * After the run, `merge` writes `tc_commutator_partial.json`: the centre,
   tube 138–244 and deep are still missing, and τ > 224 stays open on the
   direct-only pieces.
+
+---
+
+*Paths (2026-10-17): the files behind CERTIFIED rows moved unchanged from `results/` to `certificates/` (`problems/P4/certificates/README.md`). The paths in this note are updated; the module mains still write their replays to `results/`. The note gained no lines above this one, so line references into it still hold.*

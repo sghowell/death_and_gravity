@@ -6,18 +6,20 @@ directory, and compare their certified values, margins and counts with the
 stored outputs.  Nothing stored is overwritten.
 
 Certificates and their documented commands (notes/s2-theorem-b.md section 4,
-notes/s4-3-recovery.md section 11.2, the module mains):
-  checks          scripts/s43_parts.py checks             parts/checks.json
-  lemma_d         scripts/s43_parts.py lemma-d --replay   parts/lemma_d_certified.json
-  p43_centre      scripts/s43_parts.py p43-centre         parts/p43_centre.json
-  tc_monotone     python -m p4.validated.tc_monotone TUBE results/theorem_c/tc_monotone.json
+notes/s4-3-recovery.md section 11.2, the module mains).  The stored files are
+under problems/P4/certificates/ (C below; moved there from results/ on
+2026-10-17, unchanged); the module mains still write to results/:
+  checks          scripts/s43_parts.py checks             C/theorem_c/checks.json
+  lemma_d         scripts/s43_parts.py lemma-d --replay   C/theorem_c/lemma_d_certified.json
+  p43_centre      scripts/s43_parts.py p43-centre         C/theorem_c/p43_centre.json
+  tc_monotone     python -m p4.validated.tc_monotone TUBE C/theorem_c/tc_monotone.json
   tc_energy       python -m p4.validated.tc_energy all TUBE 6.0 (+ lemma_d)
-                                                          results/theorem_c/tc_energy.json
-  krawczyk        the snippet of s2-theorem-b.md section 4 results/theorem_b/krawczyk.json
+                                                          C/theorem_c/tc_energy.json
+  krawczyk        the snippet of s2-theorem-b.md section 4 C/theorem_b/krawczyk.json
   analyticity     python -m p4.validated.analyticity TUBE_B --workers 1
-                                                          results/theorem_b/analyticity_R.json
+                                                          C/theorem_b/analyticity_R.json
   winding         python -m p4.validated.modecount TUBE_B --workers 1
-                                                          results/theorem_b/winding_R.json
+                                                          C/theorem_b/winding_R.json
 TUBE is the pinned S4-3 cache data/cache/tube_full.json (the tube tc_monotone.json
 records); TUBE_B is the Theorem B tube, rebuilt by its documented command
 (Tube.build(V0_EC, W_V0, x_c=-3.0), 244 steps) into data/cache/tube_theorem_b.json
@@ -47,15 +49,16 @@ SRC = s43.SRC
 TUBE = s43.cache_path("full")
 ORDER = ("checks", "lemma_d", "p43_centre", "tc_monotone", "krawczyk", "analyticity",
          "tc_energy", "winding")
+CERT_B = os.path.join(P4, "certificates", "theorem_b")
 STORED = dict(
-    checks=os.path.join(s43.PARTS, "checks.json"),
-    lemma_d=os.path.join(s43.PARTS, "lemma_d_certified.json"),
-    p43_centre=os.path.join(s43.PARTS, "p43_centre.json"),
-    tc_monotone=os.path.join(s43.TC_DIR, "tc_monotone.json"),
-    tc_energy=os.path.join(s43.TC_DIR, "tc_energy.json"),
-    krawczyk=os.path.join(P4, "results", "theorem_b", "krawczyk.json"),
-    analyticity=os.path.join(P4, "results", "theorem_b", "analyticity_R.json"),
-    winding=os.path.join(P4, "results", "theorem_b", "winding_R.json"))
+    checks=s43.CHECKS,
+    lemma_d=os.path.join(s43.CERT_TC, "lemma_d_certified.json"),
+    p43_centre=os.path.join(s43.CERT_TC, "p43_centre.json"),
+    tc_monotone=os.path.join(s43.CERT_TC, "tc_monotone.json"),
+    tc_energy=os.path.join(s43.CERT_TC, "tc_energy.json"),
+    krawczyk=os.path.join(CERT_B, "krawczyk.json"),
+    analyticity=os.path.join(CERT_B, "analyticity_R.json"),
+    winding=os.path.join(CERT_B, "winding_R.json"))
 
 
 def _env():

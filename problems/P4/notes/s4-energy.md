@@ -73,7 +73,7 @@ valid on Re κ ≥ 6, xT = τ₀ + τ₁κ + r with |r| ≤ 1.75e−5, τ₀ = 0
 2026-10-17: the stored τ₀, τ₁ are float midpoints and 1.75e−5 is the closing
 box's line sup over Re κ ≥ c₀ = 6; the note said O(2.3e−5).  The limit is
 exact for every κ: the residue identities of
-`results/theorem_c/review_s45/sonic_residues.json` with the integer-rigidity
+`certificates/theorem_c/review_s45/sonic_residues.json` with the integer-rigidity
 lemma of `docs/review-2026-10-17-p4-s4-5-adversarial.md` §4.]  Hence |f| ~ |x|^{(1+Reσ)/2} and
 |v| = O(|x|^{(1−Reσ)/2}), |v̄v′| = O(|x|^{−Reσ}) → 0 since Re σ(κ) =
 −σ₀ − (1−σ₀)ε < 0; ∫|v′|² and ∫|𝒬||v|² converge at 0 for the same reason
@@ -84,7 +84,7 @@ compensate V_p ~ ṽ_p eˣ etc.); T → T∞ with **T∞ = −3 exactly** (the t
 first-order term, forcing exponent-sum 0 = −T∞ − 3; float: 𝒬 → T∞²/4 = 9/4 ✓),
 [2026-10-17: 𝒬 → 9/4 (E2) fixes only the exponent difference; T∞ = −3 itself
 is exact by the centre layers val(TN1r + 3·denT) = 9 > val(denT) = 7, i.e.
-T = −3 + O(t²) for every κ ∉ {0, 1}, `results/theorem_c/review_s45/centre_layers.json`,
+T = −3 + O(t²) for every κ ∉ {0, 1}, `certificates/theorem_c/review_s45/centre_layers.json`,
 review §4]
 so |f| ~ e^{−3x/2} → ∞ and v, v′ → 0 exponentially; all integrals converge.
 The interchange limits defining [v̄v′] therefore vanish; no uniformity in κ is
@@ -137,8 +137,8 @@ not by the analysis (float margins stay positive down to c₀ ≈ 4.5).
 > section's "NOT yet certified" and §5's "conditional on Lemma D" are
 > superseded.
 >
-> *Artifact:* `results/theorem_c/parts/lemma_d_certified.json`.
-> * It rests on S4-3's exact layer identity E2 (`parts/checks.json`), plus
+> *Artifact:* `certificates/theorem_c/lemma_d_certified.json`.
+> * It rests on S4-3's exact layer identity E2 (`certificates/theorem_c/checks.json`), plus
 >   one Taylor-model run on y = eˣ ∈ (0, YCUT] with the centre series on the
 >   certified (a*, μ*) balls.
 > * ok, 1100/1100 subranges.  The first subrange is [0, ·], so y → 0 is
@@ -150,7 +150,7 @@ not by the analysis (float margins stay positive down to c₀ ≈ 4.5).
 > and must not be cited (`s4-3-recovery.md` §3, §10).
 >
 > *The S4-2 x-cover at the join is checked exactly*
-> (`results/theorem_c/review_s45/s42_join.txt`).
+> (`certificates/theorem_c/review_s45/s42_join.txt`).
 > * The tube region of §3, the steps with float(x) − h ≥ −4.5, ends at
 >   x = −4.500000000000000083.
 > * Lemma D starts at x = ln YCUT = −4.500000000000000037, since
@@ -260,3 +260,7 @@ PYTHONPATH=problems/P4/src uv run python -m p4.validated.tc_energy field        
 PYTHONPATH=problems/P4/src uv run python -m p4.validated.tc_monotone <tube.json>         # ~4 min
 uv run pytest problems/P4/tests/test_tc_reduction.py problems/P4/tests/test_tc_energy.py -q
 ```
+
+---
+
+*Paths (2026-10-17): the files behind CERTIFIED rows moved unchanged from `results/` to `certificates/` (`problems/P4/certificates/README.md`). The paths in this note are updated; the module mains still write their replays to `results/`. The note gained no lines above this one, so line references into it still hold.*

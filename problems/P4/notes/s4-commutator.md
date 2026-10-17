@@ -7,8 +7,8 @@
 > `14da7d1e` sources):
 > - the exact identities E1, E2, E3, E5 (§4): all hold.  E2 returns pmin = 14
 >   with ok = True, i.e. val(Z∘u) ≥ 16 once A → 1.  Artifact:
->   `results/theorem_c/parts/checks.json`.
-> - Lemma D (§1, Task 1).  `results/theorem_c/parts/lemma_d_certified.json`:
+>   `certificates/theorem_c/checks.json`.
+> - Lemma D (§1, Task 1).  `certificates/theorem_c/lemma_d_certified.json`:
 >   passes with centre balls that enclose the certified (a*, μ*).
 >   `parts/lemma_d_midpoint.json` reproduces the `tc_energy.json` record
 >   exactly, but that run's centre series sits on the a3 midpoint, which does not
@@ -28,7 +28,7 @@
 > Update, 2026-10-16 evening (`s4-3-recovery.md` §11):
 > - `_centre_expansion` and `tc_monotone.run_centre` now build the centre
 >   series on the certified (a*, μ*) balls (`p4.validated.ec_centre`).
-> - On that code, Lemma D reproduces `parts/lemma_d_certified.json` exactly
+> - On that code, Lemma D reproduces `certificates/theorem_c/lemma_d_certified.json` exactly
 >   and P4-3 still passes.
 > - The τ-quadratic-from-τ = 14 centre variant fails.
 > - 310 region pieces are being computed; `s43_parts.py status` gives the
@@ -60,7 +60,7 @@ One Taylor-model run over y = e^x in (0, e^{-4.5}] (1100 subranges, ratio
   q2_hat >= 1.9618 > 0,  mB = +3.475,  mC = +15.348,
   pole gaps |y/A|, |y F_N| >= 0.9995 away from 1.
 
-Recorded in `results/theorem_c/tc_energy.json` under `"lemma_d"`
+Recorded in `certificates/theorem_c/tc_energy.json` under `"lemma_d"`
 (`all_ok = true`); replay: `uv run python -m p4.validated.tc_commutator
 lemma_d`.  P4-8 loses its conditionality (draft row in Section 9).
 
@@ -76,7 +76,7 @@ certified values are a* = a_m + 7.031e-12 ± 8.87e-16 and μ* = μ_m + 2.3757e-9
 4.61e-14, the balls that `modecount.certified_centre` and every tube build use.
 With those balls Lemma D passes: q2 ≥ 1.9618364, mB ≥ 3.4752428,
 mC ≥ 15.348292, pole gaps ≥ 0.99952 and 0.99999, 61.5 s.  Artifact:
-`results/theorem_c/parts/lemma_d_certified.json`.  Replay:
+`certificates/theorem_c/lemma_d_certified.json`.  Replay:
 `python problems/P4/scripts/s43_parts.py lemma-d --centre-balls certified`.
 Lemma D is certified by that artifact.  The P4-8 ledger update is for Sean to
 make (draft in `s4-3-recovery.md` §10).  `tc_monotone.run_centre` had the same
@@ -240,7 +240,7 @@ the expected outcome, before the runs finished.  `tc_commutator.json` was never
 written, so no line except the first is backed by an artifact.  Status of each
 line, from the transcript (details in `s4-3-recovery.md` §4):
 
-- checks: re-verified 2026-10-16, all hold (`parts/checks.json`).  E2 returns
+- checks: re-verified 2026-10-16, all hold (`certificates/theorem_c/checks.json`).  E2 returns
   pmin = 14, which gives val >= 16 after A -> 1.
 - centre: not certified.  The 30/30 run (worst -5.99, 1022 s) started at
   09-01T04:18Z with code that had no direct phase: the tau-quadratic covered
@@ -313,7 +313,7 @@ large-tau sonic-sliver item above.
 ## 9. Draft CLAIMS rows (do not edit CLAIMS.md from this stage)
 
 [Correction 2026-10-16.  The P4-8 update now rests on
-`results/theorem_c/parts/lemma_d_certified.json` (centre balls enclosing
+`certificates/theorem_c/lemma_d_certified.json` (centre balls enclosing
 (a*, mu*)), not on the midpoint record in tc_energy.json (§1).  The P4-9 draft
 is superseded: no certificate exists, and its piece counts are the September
 design, not the 576-piece plan.  The current draft text is in
@@ -396,3 +396,7 @@ design, not the 576-piece plan.  The current draft text is in
   cloud re-runs with the strip-depth fix.  [2026-10-16: the scratchpad was
   deleted in the 2026-09-07 reboot.  The cloud results were not retrieved.
   See `s4-3-recovery.md` §2 and §6.]
+
+---
+
+*Paths (2026-10-17): the files behind CERTIFIED rows moved unchanged from `results/` to `certificates/` (`problems/P4/certificates/README.md`). The paths in this note are updated; the module mains still write their replays to `results/`. The note gained no lines above this one, so line references into it still hold.*
