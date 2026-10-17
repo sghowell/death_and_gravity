@@ -1,0 +1,13 @@
+# P2_SLOW=1 pytest problems/P2/tests -q (repo root), nice 10, 2026-10-17T17:57:02Z, HEAD 6b933896
+....................................................                     [100%]
+=============================== warnings summary ===============================
+problems/P2/tests/test_m3.py::test_negative_control_rerun_l100
+  /Users/seanhowell/dev/research/death_and_gravity/.claude/worktrees/p2-s2-part-i/problems/P2/src/p2/m3.py:212: RuntimeWarning: overflow encountered in scalar multiply
+    return (mu_t - q[k]) / c[k] - cp[k] / c[k] * y + y * y
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+52 passed, 1 warning in 199.01s (0:03:19)
+real 199.20
+user 198.16
+sys 0.58
+exit=0
