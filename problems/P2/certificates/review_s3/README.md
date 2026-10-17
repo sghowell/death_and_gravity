@@ -55,3 +55,20 @@ scratch, delete `logs/replay_l*.jsonl` or `logs/recount_l*.jsonl`.
 They contain 2351 ok records, one per segment, and each equals its piece
 (`compare_author_jsonl_stdout.txt`). The script needs the author's worktree, since those files are
 not in the repository.
+
+## Follow-up check of the author's fixes (`e874b5f8`, `b19065b6`)
+
+This is review §9, run at `b19065b6`. Its compute was 0.19 core-h, so the review total is 1.43 core-h.
+
+| script | what it checks | outputs | CPU |
+|---|---|---|---|
+| `followup_checks.py` | F1: `certificates/part3/replay_PB.json` against the deterministic sample, the certificates, this review's replay logs and independent float increments. F2: the new `part3.verify` path, with workers and `out`, re-run for l = 0, 1, 5, 10, 19. Its output goes to `followup_verify_out.json` here, never into `certificates/`. F3: the l = 0 left half recomputed against `symmetry_PB_l0.json`, with nothing written. F4: the numbers behind the fast box test | `followup_checks.json`, `followup_checks_stdout.txt`, `followup_verify_out.json` | 197 s |
+| pytest at `b19065b6` | fast suite and P2_SLOW=1 suite | `followup_pytest_fast.txt` (77 passed, 15 skipped), `followup_pytest_slow.txt` (92 passed) | 25 s + 449 s |
+
+```
+cd problems/P2/certificates/review_s3
+nice -n 10 $PY followup_checks.py
+cd ../../../..
+nice -n 10 $PY -m pytest problems/P2/tests -q -p no:cacheprovider
+P2_SLOW=1 nice -n 10 $PY -m pytest problems/P2/tests -q -p no:cacheprovider
+```

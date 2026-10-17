@@ -1,0 +1,26 @@
+........................................................................ [ 78%]
+....................                                                     [100%]
+=============================== warnings summary ===============================
+problems/P2/tests/test_m3.py::test_negative_control_rerun_l100
+  /Users/seanhowell/dev/research/death_and_gravity/.claude/worktrees/p2-s3-review/problems/P2/src/p2/m3.py:212: RuntimeWarning: overflow encountered in scalar multiply
+    return (mu_t - q[k]) / c[k] - cp[k] / c[k] * y + y * y
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================= slowest 12 durations =============================
+122.91s call     problems/P2/tests/test_m3.py::test_near_mode_control_rerun_l50
+69.91s call     problems/P2/tests/test_kats.py::test_kat1_rerun
+57.83s call     problems/P2/tests/test_m3.py::test_window_replay_l20
+43.49s call     problems/P2/tests/test_m3.py::test_negative_control_rerun_l100
+40.85s call     problems/P2/tests/test_part3.py::test_control_rectangles
+22.13s call     problems/P2/tests/test_part3.py::test_segment_replay_l19
+13.33s call     problems/P2/tests/test_part3.py::test_replay_sample[5]
+12.69s call     problems/P2/tests/test_part3.py::test_replay_sample[4]
+10.89s call     problems/P2/tests/test_spectral_kat6.py::test_kat6_rerun
+9.33s call     problems/P2/tests/test_part3.py::test_box_enclosure_l19_corner_wide
+7.42s call     problems/P2/tests/test_part3.py::test_replay_sample[3]
+6.99s call     problems/P2/tests/test_part3.py::test_replay_sample[1]
+92 passed, 1 warning in 452.11s (0:07:32)
+
+real	7m32.314s
+user	7m29.049s
+sys	0m1.969s

@@ -596,3 +596,62 @@ until P2-6 is attempted.
    one or two l = 19 segments.
 
 Under the repository's rules the merge into main must be run by the user.
+
+## 9. Follow-up check of the author's fixes (`e874b5f8`, `b19065b6`), 2026-10-17
+
+**Setup.**
+- `p2/s3-review` was fast-forwarded to `p2/s3-part-iii` at `b19065b6`: the author's two commits on top
+  of this review's `123277fb`.
+- Against `123277fb`, only four files changed: FORMULATION.md, s3-report.md, `part3.py` and
+  `test_part3.py`.
+- Two records were added: `certificates/part3/replay_PB.json` and `symmetry_PB_l0.json`.
+- This review's files, CLAIMS.md and the README were not touched.
+- New outputs are in `review_s3/`: `followup_checks.py` and its `.json`/stdout, `followup_verify_out.json`,
+  and `followup_pytest_{fast,slow}.txt`.
+
+**Verdict: PASS, merge-ready.** Every finding is resolved as intended, and nothing changes a certified
+result. The ledger text of §7 stays correct; an optional update for the new evidence is below.
+
+| item | result |
+|---|---|
+| S1 (the corollary's level) | **PASS.** The s3-report verdict, §1 and §7, and FORMULATION v0.5 now say the counts are CERTIFIED and the strip corollary is at P2-0's level. They name the band 0 < Im ω ≤ e with \|Re ω\| ≥ a_l, and cite analyticity under FORMULATION §1.2. s3-report §7 is the review's §7 verbatim: the P2-3B row and the P2-K6 block compared string for string. The v0.5 entry records that its wording was corrected after the review, so the edit is not silent |
+| S2 (the test point) | **PASS.** `test_zsol_matches_arbw` tests both (7, 40.0, −0.55) and (7, 30.0, −0.55), and both pass. s3-report §3 discloses the change and withdraws "the fix touched only the control" |
+| S3 (missing outputs) | **PASS.** `replay_PB.json` and `symmetry_PB_l0.json` are what they claim (F1–F3 below). The C4 and C7 rows of s3-report §3 cite them |
+| S4 (box-enclosure tests) | **PASS.** Fast: the zsol box ball at the corner (a₁₉, −b), half-width 1e−4κ₋, must contain S1's arbw enclosures at two box corners. P2_SLOW: the same at κ₋/16 with four corners, and two stored l = 19 segments recomputed. All pass. The docstring's "about 60×" reproduces as 56×: the ball's relative half-width is 5.83e−3, and the corner values lie 1.039e−4 from the centre (F4) |
+| W1–W8 | **PASS.** W1 (the 10¹⁸ figure) is corrected in §2. W2 (the C0 points) is stated in full. W3 is fixed in FORMULATION, plus a correct erratum in s3-report §1 for the pre-registration's two uses of β and its "S1, D1′" citation; I checked all four quoted places against the pre-registration. W4 (FORMULATION header) is fixed. W5 (format) is noted in §2 and §4. W6 (failing point) is in §3. W7 (pilot compute) is in §5. W8 (what "independent" means) is in §4 and the verdict |
+| W9 (P2-K6 radius) | Left to the coordinator, as intended; it is part of §7's K6 amendment |
+| New code paths | **PASS.** `cauchy_segment`, `plan`, `region`, `assemble`, `run`, `controls`, zsol, arbw, params, m3, lg_bounds and winding are unchanged; only `part3.py` changed in `src/`. The certificates read nothing new. The changes are: `verify` (records results, `--workers`, `--out` through `_replay_task`, which calls the unchanged `cauchy_segment` with the stored K at the same 128-bit precision); `symmetry_check` (`--lsym`, through the unchanged `left_half_sum`); argument parsing. None can alter a winding certificate. The new path was re-run with 2 workers for l = 0, 1, 5, 10, 19 and reproduces `replay_PB.json` string for string (F2) |
+| Pre-registration | **PASS.** `notes/s3-preregistration.md` is byte-identical to `89a2336b`: same blob `4e46db04`, sha256 `053ceeaa…` |
+| Tests | **PASS.** Fast: 77 passed, 15 skipped, 25 s. P2_SLOW=1: 92 passed, 1 pre-existing warning (the S2 m3 overflow), 452 s. The three new part3 tests ran |
+
+**Spot-replays of the new records** (`followup_checks.py`):
+- **F1, `replay_PB.json`.**
+  - It holds 132 segments, exactly the deterministic sample of `part3.verify`.
+  - Every stored ball and K equals its certificate piece.
+  - The 20 segments at l = 0, 1, 2 and 19 equal this review's full replay string for string.
+  - All 132 recomputed balls contain the reviewer's independent float increments, at most 0.87 radii
+    from the printed midpoint.
+  - It is stamped with the clean commit `e874b5f8`. That commit added the code, and the outputs were
+    committed in `b19065b6`.
+- **F2, the new verify path.** Re-run with 2 workers and `--out`, it produces identical recomputed
+  balls and no problems on its 28 segments.
+- **F3, `symmetry_PB_l0.json`.** The l = 0 left half, recomputed with the unchanged `left_half_sum`,
+  gives exactly the committed "[3.142 +/- 5.00e-4]", and its quotient by π, [1.000 ± 2.89e−4],
+  contains 1.
+- **F4, the fast box test's numbers.** These are the numbers quoted in the S4 row above.
+
+**Compute for the follow-up:** 0.19 core-h; at most 3 processes, nice 10. That is 197 CPU-s of checks
+and 474 s of tests. The review total is now 1.43 core-h.
+
+**The ledger text.** The §7 P2-3B row and the P2-K6 amendment remain correct as written.
+
+Now that the C7 record and the l = 0 left half are committed, the controls sentence of P2-3B can name
+them. This is optional. The paste-ready row with that change is below; it differs from §7 only in the
+"Controls" sentence and in the review sentence:
+
+| P2-3B | P2 | At P_B (ΛM² = 3/50, Q = (999/1000)Q_max, δ = 1/20) and for each l = 0, 1, …, 19, let R′_l = [−a_l, a_l] × [−b, e], with a_l the P2-2 threshold (`W_l_exact` of certificates/lg/lg_PB_l{l}.json; a_l/κ₋ from 5.40 at l = 0 to 101.71 at l = 19), b = 6280879/2²⁸ (b/κ₋ = 0.55000001 ≥ ½ + δ) and e = 4567911/2³⁰ (e/κ₋ = 0.09999998 ≤ 1/10). Then W_l is analytic on a neighbourhood of R′_l and has no zero on ∂R′_l, and its winding number around ∂R′_l is 1 for l = 0 and 0 for 1 ≤ l ≤ 19. So R′₀ contains exactly one zero of W₀, the simple zero at ω = 0 (D4), and R′_l contains none for 1 ≤ l ≤ 19. With P2-0 (Im ω > 0) and P2-2 (abs(Re ω) ≥ a_l), at P2-0's level: for every l ≤ 19, S_δ contains no QNM of degree l other than ω = 0 (l = 0). This is P2-3 for l ≤ 19 only, on R′_l rather than D7's R_l: P2-3 itself needs every l < l₀, and l₀ comes from S4 | CERTIFIED for the counts on R′_l (Arb, 128-bit). Cauchy-interpolation discs on the right half of ∂R′_l (conjugation symmetry), 2351 segments; every winding ball lies within 6.5e−4 of its integer. W comes from the phase-factored Jost solutions (zsol): an exact identity, checked in sympy, makes it equal to the frozen W_l. Cross-checked against the S1 code at 24 points (relative difference ≤ 4e−36, both balls below 1e−10). Controls: four known zeros counted (P_B l = 0, 1, 2; P_A l = 1); a 1/0 pair of rectangles sharing an edge 0.0103κ₋ above a PS mode; the left half computed explicitly at l = 0 and 2; a deterministic 5% sample (132 segments) recomputed (certificates/part3/replay_PB.json); the box enclosure tested against the S1 code at the l = 19 corner (tests/test_part3.py). Written steps, all routine: the argument principle, the conjugation symmetry, analyticity of W_l off E₊ ∪ E_c (FORMULATION §1.2), and the identification of the zsol solutions with the Jost solutions. The corollary on S_δ is at P2-0's level (WRITTEN_PROOF) for Im ω > 0. Independent review 2026-10-17, with a follow-up check of the fixes: proven as stated. Every certificate was re-summed exactly, with its tiling, corners and pole clearance re-checked from independently computed parameters. An independent float code reproduces all 2351 increments and traces the left half for every l. l = 0, 1, 2, 19 were replayed in full; l = 0, 1, 2, 5 were recounted rigorously on the full boundary with the reviewer's counting layer and S1 point values; the box bound M was tested on all 2351 discs | problems/P2/src/p2/zsol.py, part3.py, zeq_identity.py; problems/P2/certificates/part3/; problems/P2/notes/s3-preregistration.md, s3-report.md; problems/P2/tests/test_part3.py; docs/review-2026-10-17-p2-s3-adversarial.md; problems/P2/certificates/review_s3/ | 2026-10-17 |
+
+The P2-K6 amendment is unchanged from §7. The owner's open choice also stands: β ≤ 0.90938098 can go
+into P2-K6 now, or wait for P2-6.
+
+Under the repository's rules the merge into main must be run by the user.
