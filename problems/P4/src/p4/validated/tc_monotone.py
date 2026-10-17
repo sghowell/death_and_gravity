@@ -135,12 +135,13 @@ def run_centre(x_tail=-8.0, prec=256):
     """The open tail t = e^x in (0, e^{x_tail}]: certified A2 centre series; the
     t-factored margins (v_rel = t g etc.) certify the signs on the whole tail."""
     from . import centre
+    from .ec_centre import certified_centre_balls
     t0 = time.time()
-    root = os.path.join(os.path.dirname(__file__), "..", "..", "..")
-    aj = json.load(open(os.path.join(root, "results", "a3_midpoint.json")))
     with precision(prec):
-        ball = lambda s: arb(s[1:-1].split(" +/-")[0]) + arb(0, float(s[1:-1].split(" +/- ")[1]))
-        a, mu = ball(aj["a"]), ball(aj["mu"])
+        # (a*, mu*) balls: a3_midpoint.json midpoint + Krawczyk offset
+        # K_minus_m (ec_centre).  Before 2026-10-16 the bare midpoint was used,
+        # which does not enclose (a*, mu*) (notes/s4-3-recovery.md).
+        a, mu = certified_centre_balls()
         ce = centre.centre_expansion(mu * (2 * a).exp(), nhat=(-a).exp(), K=30)
         cert = ce.certify()
         if not cert.ok:
