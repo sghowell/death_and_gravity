@@ -58,15 +58,23 @@ and κ ≠ κ̄ (Re κ ≥ c₀ > κ̄) gives p = 0 — contradiction. **No eige
 Re κ ≥ c₀ in the class; hence E(κ) ≠ 0 there** by the E = 0 ⟺ eigenvalue
 equivalence of `s2-theorem-b.md` §3.8, whose three ingredients are κ-independent
 or hold for all κ with Re σ(κ) < 0 — automatic on Re κ ≥ 0 (plan §1).
+[2026-10-17: outside R this was asserted without proof.  It is now Lemma G1,
+`s4-5-assembly.md` §4.5: E is defined, and E = 0 ⟺ eigenvalue, for every κ
+with Re κ > κ* = −0.0990.]
 
 ## 2. Function space and boundary terms
 
 *Sonic end.* An admissible p is analytic at x = 0; χ = Δ̃[(N′+κN)V_p − V′N_p]
 has the factor Δ̃ = 4SWD with D(u(0)) = 0 **exactly** (A1 closed forms), so
 χ = x·(analytic), χ, χ′ bounded. The transform weight obeys
-xT(x; κ) → 1 + σ(κ) = (1−σ₀)(1 − κ): certified enclosure (closing box, §3)
-xT = τ₀ + τ₁κ + O(2.3e−5) with τ₀ = 0.90989405…, τ₁ = −0.90989403…
-(= ±(1−σ₀), σ₀ = 0.090105970507920(5e−16)). Hence |f| ~ |x|^{(1+Reσ)/2} and
+xT(x; κ) → 1 + σ(κ) = (1−σ₀)(1 − κ): certified enclosure (closing box, §3),
+valid on Re κ ≥ 6, xT = τ₀ + τ₁κ + r with |r| ≤ 1.75e−5, τ₀ = 0.90989405…,
+τ₁ = −0.90989403… (= ±(1−σ₀), σ₀ = 0.090105970507920(5e−16)).  [Corrected
+2026-10-17: the stored τ₀, τ₁ are float midpoints and 1.75e−5 is the closing
+box's line sup over Re κ ≥ c₀ = 6; the note said O(2.3e−5).  The limit is
+exact for every κ: the residue identities of
+`results/theorem_c/review_s45/sonic_residues.json` with the integer-rigidity
+lemma of `docs/review-2026-10-17-p4-s4-5-adversarial.md` §4.]  Hence |f| ~ |x|^{(1+Reσ)/2} and
 |v| = O(|x|^{(1−Reσ)/2}), |v̄v′| = O(|x|^{−Reσ}) → 0 since Re σ(κ) =
 −σ₀ − (1−σ₀)ε < 0; ∫|v′|² and ∫|𝒬||v|² converge at 0 for the same reason
 (exponents −1−Reσ > −1). *Centre end.* Class (iii) bounds the scaled
@@ -74,6 +82,10 @@ perturbations, so χ, η = O(1) as x → −∞ (the covector weights Δ̃(N′+
 compensate V_p ~ ṽ_p eˣ etc.); T → T∞ with **T∞ = −3 exactly** (the two
 χ-branches at the centre have t-exponents {0, −3} and the normal form has no
 first-order term, forcing exponent-sum 0 = −T∞ − 3; float: 𝒬 → T∞²/4 = 9/4 ✓),
+[2026-10-17: 𝒬 → 9/4 (E2) fixes only the exponent difference; T∞ = −3 itself
+is exact by the centre layers val(TN1r + 3·denT) = 9 > val(denT) = 7, i.e.
+T = −3 + O(t²) for every κ ∉ {0, 1}, `results/theorem_c/review_s45/centre_layers.json`,
+review §4]
 so |f| ~ e^{−3x/2} → ∞ and v, v′ → 0 exponentially; all integrals converge.
 The interchange limits defining [v̄v′] therefore vanish; no uniformity in κ is
 needed (the identity is per-κ).
@@ -86,7 +98,7 @@ covering **x ∈ [−4.5, 0]**; the far tail x < −4.5 is Lemma D (§4). Struct
 * **Exact algebra** (fmpq_mpoly, verified at import): SD = Dp·SDr, D2 = Dp³·D2r,
   Bc = Dp²·Bcr, Ac = Dp²·Acr, Ae = Dp·Aer, Be = Dp·Ber, TN1 = Dp⁵·TN1r,
   QNm = Dp¹⁰·QN_red (Dp = the sonic polynomial D), and the reduced identity
-  U1 = Dp⁶(Bcr·UN3r − Acr·EBc·D2r). 𝒬 = QN/(P³·SDr³D2r²Bcr²) with QN assembled
+  U1 = Dp⁶(Bcr·UN3r − Acr·EBc·D2r). 𝒬 = QN/(Dp³·SDr³D2r²Bcr²) with QN assembled
   from the small reduced atoms only — no hidden Dp-power cancellations.
 * **The field identity.** QN_red(u₀) = 0 **exactly in ℚ(V₀, √3)** at the KHA
   closed-form sonic point, identically in V₀ and κ (mode ``field``, ≈ 2 min of
@@ -121,6 +133,34 @@ not by the analysis (float margins stay positive down to c₀ ≈ 4.5).
 
 ## 4. Lemma D (deep tail x ≤ −4.5) — analytic, float-validated, NOT yet certified
 
+> **Status banner, 2026-10-17 (§4–§5).  Lemma D is certified.**  This
+> section's "NOT yet certified" and §5's "conditional on Lemma D" are
+> superseded.
+>
+> *Artifact:* `results/theorem_c/parts/lemma_d_certified.json`.
+> * It rests on S4-3's exact layer identity E2 (`parts/checks.json`), plus
+>   one Taylor-model run on y = eˣ ∈ (0, YCUT] with the centre series on the
+>   certified (a*, μ*) balls.
+> * ok, 1100/1100 subranges.  The first subrange is [0, ·], so y → 0 is
+>   included.
+> * q2 ≥ 1.96184, mB ≥ 3.47524, mC ≥ 15.3483; pole gaps ≥ 0.99952 and
+>   0.99999.
+>
+> The `lemma_d` block of `tc_energy.json` is the 2026-08-31 midpoint record
+> and must not be cited (`s4-3-recovery.md` §3, §10).
+>
+> *The S4-2 x-cover at the join is checked exactly*
+> (`results/theorem_c/review_s45/s42_join.txt`).
+> * The tube region of §3, the steps with float(x) − h ≥ −4.5, ends at
+>   x = −4.500000000000000083.
+> * Lemma D starts at x = ln YCUT = −4.500000000000000037, since
+>   YCUT = 0.011108996538242306 < e^{−4.5}.
+> * The overlap is 4.6e−17.  The other joins, −0.05 and −1e−8, are exact
+>   doubles.
+>
+> Review: `docs/review-2026-10-17-p4-s4-5-adversarial.md` §7.  The proposed
+> P4-8 text is in `s4-5-assembly.md` §6.
+
 **Statement.** For x ≤ −4.5 and Re κ ≥ 6: the pole condition (d) holds (all
 κ-poles of 𝒬(x;·), including the Bc-cubic roots, have Re ≤ 2 — float: they
 cluster at κ = 1 with sup Re = 1.00 down to x = −16), Im𝒬(x;κ)/τ > 0 (τ ≠ 0)
@@ -141,6 +181,11 @@ denominator modulo (2NV + 1) in the centre-scaled variables (t-power labels
 then carry the margins for all t) — is inherited by S4-3.
 
 ## 5. Certified results (c₀ = 6, RBAR = 2; JSONs under results/theorem_c/)
+
+> **Status banner, 2026-10-17.**  Lemma D is certified (see the §4 banner), so
+> the "conditional on Lemma D" in the statement below no longer applies.
+> Outside R, the clause "hence E(κ) ≠ 0 on {Re κ ≥ 6}" rests on Lemma G1
+> (`s4-5-assembly.md` §4.5).
 
 | region | boxes | min (a) q₂ | min (b) | min (c) | status |
 |---|---|---|---|---|---|

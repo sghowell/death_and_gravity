@@ -443,7 +443,7 @@ Run (8 workers, spawn; 172 chunks of length 0.5; the κ-free step data of the 24
 290 tiles, the same per-side table to the digits shown, 1231 s wall on 8 workers; re-summed by
 `test_full_rectangle_result_if_available`)
 (S1's float minimum 4.5e−2 was for E_fin; E₃ = E_fin × the factor of §3.3), 1255 s wall (8665 CPU-s), the
-conjugate symmetry E(κ̄) = E(κ)̄ visible tile by tile (the bottom and top rows are conjugates to all digits).
+conjugate symmetry E(κ^c) = E(κ)^c (^c: complex conjugation) visible tile by tile (the bottom and top rows are conjugates to all digits).
 Corner/side values (floats of the endpoint balls): E₃(0) = 0.113077, E₃(15) = 1125.08, E₃(±14i) = 7.31e−4 ∓
 4.77e−3 i, E₃(15 ± 14i) = 639.19 ∓ 853.80 i (radii ≤ 2e−2 at the corners, 6e−7 where |E| is small).
 Cross-checks: the small rectangle [2.5, 3.1] × [−0.3, 0.3] gives 1.0000 ± 1.9e−4 (κ₁ only; 8 tiles, 66 s on 4
@@ -532,7 +532,7 @@ the pure-gauge mode (κ̄ = 2 − A₀ + 2ω₀/3 = 0.355699203710964 ± 1.6e−
 2.81055255326]** (E′(κ₁) = 0.022490638 ± 4e−10, E′(κ̄) = −0.061293328 ± 1e−9). Hence there is exactly one
 non-gauge eigenvalue with Re κ ≥ 0 in R, it is real, and the mass-scaling exponent is
 **γ = 1/κ₁ ∈ [0.3558019218, 0.3558019231]** (γ = 0.35580192 ± 3.0e−9; KHA: 0.35580192).
-Reality: E(κ̄) = E(κ)̄ (real data), so the unique zero in each box, symmetric about the real axis, is real.
+Reality: E(κ^c) = E(κ)^c (real data; ^c is complex conjugation, since κ̄ denotes the gauge zero), so the unique zero in each box, symmetric about the real axis, is real.
 Proof structure: §3.5 (analyticity on a neighbourhood of R and E(κ) = 0 ⟺ eigenvalue) + §3.4 (winding
 number 2 = number of zeros with multiplicity) + §3.6 (two disjoint Krawczyk boxes, one simple zero each)
 + §3.7 (the zero near κ̄ is the gauge mode). FORMULATION's targets κ₁ ∈ [2.81055, 2.81056] and
