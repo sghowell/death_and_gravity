@@ -278,6 +278,22 @@ def test_nb_layer_identity(atoms_ce):
         assert idn["denU"][j]["lowest_nonzero_layer"] == 8
 
 
+def test_centre_series_is_even(atoms_ce):
+    """The parity half of the raise: with no odd-parity terms in U6, the
+    y^9 coefficient of nB vanishes because the background is even in y.
+    The certified series n, w, v have exactly zero odd coefficients up to
+    K (the Banach tail sits at K + 1), and A = 1 + y^2 Ahat with Ahat built
+    from n, w, v, y^2 (tc_tm.centre_components), so even too."""
+    from p4.validated.tc_tm import centre_components
+    _, ce = atoms_ce
+    for k in range(1, ce.K + 1, 2):
+        assert all(ce.balls[k][i].is_zero() for i in range(3)), k
+    comps, (n, w, v) = centre_components(ce, 0.0111)
+    assert [cp.off for cp in comps] == [0, -1, 2, 1]
+    for tm in (comps[0].tm, n, w, v):
+        assert all(tm.c[k].is_zero() for k in range(1, min(tm.ve, len(tm.c)), 2))
+
+
 def test_raised_forms_are_pure_w_forms(c29, c00):
     for _, _, ld in (c29, c00):
         assert ld.raised
