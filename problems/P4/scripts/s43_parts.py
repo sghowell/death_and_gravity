@@ -29,8 +29,21 @@ Commands (python problems/P4/scripts/s43_parts.py <cmd> -h for options):
   build-caches [--only full,gap,deep,band] [--detach] [--nice 10]
   cache-hash FILE...                 content hash of a tube cache (steps + K, not info)
   plan                               enumerate all pieces -> parts/plan.json
+                                     (per piece: tq = False for the direct-only
+                                     pieces, tstar_fac for the centre variant)
   checks                             E1/E2/E3/E5 -> parts/checks.json
-  lemma-d [--centre-balls certified|midpoint]   Lemma D -> parts/lemma_d_<balls>.json
+  lemma-d [--centre-balls certified|midpoint] [--replay]
+                                     Lemma D -> parts/lemma_d_<balls>.json
+                                     (--replay: parts/replays/lemma_d_<balls>.json,
+                                     compared with the stored record)
+  p43-centre                         P4-3 centre tail (tc_monotone.run_centre) with
+                                     the certified balls, and the midpoint-ball
+                                     replay of the old record -> parts/p43_centre.json
+  bench --ids ID,.. [--modes tq,direct] [--detach --nice 10 --tag T]
+                                     time analyze_piece with tq=True / tq=False on
+                                     single pieces (phase split recorded) ->
+                                     results/theorem_c/bench/<id>__<mode>.json
+                                     (resumable: finished modes are skipped)
   list [selection options]           print the selected piece ids (machine splits)
   work [selection options] [--order cost|plan|deep-first]
                                      foreground worker loop (skips valid results)
@@ -230,21 +243,20 @@ V0C, V0W = "0.1124394013880983", 1e-16     # = tc_energy.V0C/V0W = modecount.V0_
 def certified_centre_balls():
     """(a, mu) balls of the certified EC solution: a3_midpoint.json midpoint +
     its stored Krawczyk offset K(X) - m.  Equal to the constants used by
-    modecount.certified_centre and by the September tube builds."""
-    from flint import arb
-    aj = json.load(open(os.path.join(P4, "results", "a3_midpoint.json")))
-
-    def ball(s):
-        mid, rad = s.strip()[1:-1].split(" +/- ")
-        return arb(mid) + arb(0, float(rad))
-    a = ball(aj["a"]) + ball(aj["K_minus_m"][1])
-    mu = ball(aj["mu"]) + ball(aj["K_minus_m"][2])
-    return a, mu
+    modecount.certified_centre and by the September tube builds.  Since
+    2026-10-16 the construction lives in p4.validated.ec_centre (shared with
+    tc_commutator._centre_expansion and tc_monotone.run_centre); at the
+    working precisions 256/320/384 it returns the same balls as the driver's
+    original construction (float radius; the endpoint guard does not fire)."""
+    from p4.validated.ec_centre import certified_centre_balls as ccb
+    return ccb()
 
 
 def midpoint_centre_balls():
-    """(a, mu) exactly as tc_commutator._centre_expansion builds them (midpoint
-    only, radius <= 1e-41; does NOT contain the certified (a*, mu*))."""
+    """(a, mu) exactly as tc_commutator._centre_expansion and
+    tc_monotone.run_centre built them before 2026-10-16 (midpoint only, radius
+    <= 1e-41; does NOT contain the certified (a*, mu*)).  Kept only to replay
+    the old records."""
     from flint import arb
     aj = json.load(open(os.path.join(P4, "results", "a3_midpoint.json")))
     ball = lambda s: arb(s[1:-1].split(" +/-")[0]) + arb(0, float(s[1:-1].split(" +/- ")[1]))
@@ -254,8 +266,11 @@ def midpoint_centre_balls():
 def centre_expansion(balls="certified", prec=256):
     from p4.validated import centre
     from p4.validated.arbseries import precision
+    if balls == "certified":
+        from p4.validated.ec_centre import certified_centre_expansion
+        return certified_centre_expansion(prec, K=30)
     with precision(prec):
-        a, mu = certified_centre_balls() if balls == "certified" else midpoint_centre_balls()
+        a, mu = midpoint_centre_balls()
         ce = centre.centre_expansion(mu * (2 * a).exp(), nhat=(-a).exp(), K=30)
         if not ce.certify().ok:
             raise RuntimeError("centre certificate failed (%s balls)" % balls)
@@ -354,23 +369,48 @@ def cache_ok(name):
 #   gap:  gap_worker.py / gapd_worker.py (x_min=-0.056, x_max=-0.008)
 #   sonic: sonic_worker2.py (run_sonic, 51 pieces below XI_SONIC_TOP)
 #   centre: run_centre_final.py (run_centre, 30 pieces)
+# Per-piece phase settings (recorded in every plan entry and part spec):
+#  * tq = False ("direct_only"): the tau-quadratic phase is not attempted; the
+#    piece is at best pass-direct (tau in [b1, tstar] certified, tau > tstar
+#    open).  Used where the September tau-quadratic phase failed on every
+#    piece: gap idx 0-88 (xi in [0.0085, 0.0357]) and all 51 sonic pieces;
+#    the S4-4 layer engine is to carry tau > tstar there (recovery note 8(i)).
+#  * tstar_fac (centre): the tau-quadratic phase starts at tstar = tstar_fac*b1;
+#    tstar_fac = 1 makes it cover every tau >= b1 with no direct boxes
+#    (recovery note 8(iii); the 04:18Z September code closed the centre so).
 REGIONS = {
     "centre": dict(kind="centre", y0=1e-8, ratio=1.6, prec=320, ncells=6,
-                   centre_balls="certified"),
+                   centre_balls="certified", tstar_fac=1.0),
     "tube": dict(kind="tube", cache="full", x_min=-4.5, x_max=-0.05, degrade=True,
                  exclude=dict(band=(-0.1705, -0.134), deep_below=-3.05)),
     "band": dict(kind="tube", cache="band", x_min=-0.1705, x_max=-0.134, degrade=True),
     "deep": dict(kind="tube", cache="deep", x_min=-4.6, x_max=-2.9, degrade=True),
-    "gap": dict(kind="tube", cache="gap", x_min=-0.056, x_max=-0.008, degrade=True),
-    "sonic": dict(kind="sonic", xi0=1e-6, prec=320),
+    "gap": dict(kind="tube", cache="gap", x_min=-0.056, x_max=-0.008, degrade=True,
+                direct_only=dict(index_max=88, why=(
+                    "xi <= 0.0357: the tau-quadratic phase failed on every one of "
+                    "idx 0-88 in September (bounds +8e8 ... +7.8e10); direct "
+                    "phase only, tau > tstar left to the S4-4 layer engine"))),
+    "sonic": dict(kind="sonic", xi0=1e-6, prec=320,
+                  direct_only=dict(index_max=50, why=(
+                      "all 51 pieces passed only the direct phase in September; "
+                      "direct phase only, tau > tstar left to the S4-4 layer "
+                      "engine"))),
 }
 REGION_ORDER = ("centre", "tube", "band", "deep", "gap", "sonic")
 
 
-def est_core_hours(region, x=None, idx=None):
+def piece_tq(region, index):
+    do = REGIONS[region].get("direct_only")
+    return not (do is not None and index <= do["index_max"])
+
+
+def est_core_hours(region, x=None, idx=None, tq=True, tstar_fac=None):
     """Rough Mac-performance-core hours per piece from the September logs
     (see notes/s4-3-recovery.md, inventory).  Used for ordering and ETAs only."""
     if region == "centre":
+        if tstar_fac is not None and tstar_fac <= 1:
+            return 0.05     # tau-quadratic from b1, no direct boxes (04:18Z code:
+                            # 30 pieces in 1022 s)
         return 2.0          # >= 0.85 (25.3 CPU-h for < 30 pieces, never finished); the
                             # 2-cell unit-test piece did not finish in 15 min (2026-10-16)
     if region == "sonic":
@@ -378,7 +418,7 @@ def est_core_hours(region, x=None, idx=None):
     if region == "band":
         return 0.03
     if region == "gap":
-        return 0.2
+        return 0.2 if tq else 0.06   # gapd: direct phase ~19179 s / 90 steps
     if region == "deep":
         return 2.0          # cloud C chunks (21-22 steps) unfinished at 65 h
     if region == "tube":
@@ -410,17 +450,22 @@ def build_plan():
     for region in REGION_ORDER:
         rd = REGIONS[region]
         if rd["kind"] == "centre":
+            tf = rd.get("tstar_fac")
             for i, (lo, hi) in enumerate(tc.y_subranges(rd["y0"], rd["ratio"])):
-                pieces.append(dict(id="centre/c%02d" % i, region=region, kind="centre",
-                                   index=i, lo=lo, hi=hi,
-                                   x_cover=[None if lo <= 0 else math.log(lo), math.log(hi)],
-                                   est_core_h=est_core_hours(region)))
+                ent = dict(id="centre/c%02d" % i, region=region, kind="centre",
+                           index=i, lo=lo, hi=hi,
+                           x_cover=[None if lo <= 0 else math.log(lo), math.log(hi)],
+                           est_core_h=est_core_hours(region, tstar_fac=tf))
+                if tf is not None:
+                    ent["tstar_fac"] = tf
+                pieces.append(ent)
         elif rd["kind"] == "sonic":
             subs = [t for t in tc.xi_subranges(rd["xi0"]) if t[0] < tc.XI_SONIC_TOP]
             for i, (lo, hi) in enumerate(subs):
+                tq = piece_tq(region, i)
                 pieces.append(dict(id="sonic/s%02d" % i, region=region, kind="sonic",
-                                   index=i, lo=lo, hi=hi, x_cover=[-hi, -lo],
-                                   est_core_h=est_core_hours(region)))
+                                   index=i, lo=lo, hi=hi, x_cover=[-hi, -lo], tq=tq,
+                                   est_core_h=est_core_hours(region, tq=tq)))
         else:
             name = rd["cache"]
             if name not in tubes:
@@ -430,12 +475,13 @@ def build_plan():
                      and float(sd.x) <= rd["x_max"] + 1e-12]
             for i, sd in enumerate(steps):
                 x, h = float(sd.x), float(sd.h)
+                tq = piece_tq(region, i)
                 ent = dict(id="%s/%s-%03d" % (region, name, i), region=region,
                            kind="tube", cache=name,
                            cache_content_sha256=caches[name]["content_sha256"],
                            index=i, x=x, h=h, x_cover=[x - h, x],
                            x_min=rd["x_min"], x_max=rd["x_max"], degrade=rd["degrade"],
-                           est_core_h=est_core_hours(region, x=x, idx=i))
+                           tq=tq, est_core_h=est_core_hours(region, x=x, idx=i, tq=tq))
                 ex = rd.get("exclude")
                 if ex:
                     blo, bhi = ex["band"]
@@ -497,7 +543,10 @@ class Ctx:
 
     def centre_ce(self):
         if self._ce is None:
-            self._ce = centre_expansion(self.centre_balls)
+            if self.centre_balls == "certified":
+                self._ce = self.tc._centre_expansion()   # the committed code path
+            else:
+                self._ce = centre_expansion(self.centre_balls)
         return self._ce
 
 
@@ -509,11 +558,12 @@ def classify(res):
 
 def run_piece(p, ctx):
     tc = ctx.tc
+    tq = p.get("tq", True)
     if p["kind"] == "tube":
         tube = ctx.tube(p["cache"])
         rep = tc.run_tube(ctx.at, tube, B1, x_min=p["x_min"], x_max=p["x_max"],
                           step_slice=(p["index"], p["index"] + 1),
-                          degrade=p["degrade"])
+                          degrade=p["degrade"], tq=tq)
         if rep["pieces"] != 1:
             raise RuntimeError("slice returned %d pieces" % rep["pieces"])
         d = rep["detail"][0]
@@ -521,42 +571,51 @@ def run_piece(p, ctx):
             raise RuntimeError("step mismatch: plan (%r, %r) vs cache (%r, %r)"
                                % (p["x"], p["h"], d["x"], d["h"]))
         return d, dict(region_call="run_tube(at, tube_%s, %g, x_min=%g, x_max=%g, "
-                       "step_slice=(%d, %d), degrade=%s)"
+                       "step_slice=(%d, %d), degrade=%s, tq=%s)"
                        % (p["cache"], B1, p["x_min"], p["x_max"], p["index"],
-                          p["index"] + 1, p["degrade"]))
+                          p["index"] + 1, p["degrade"], tq), tq=tq)
     if p["kind"] == "sonic":
-        rep = tc.run_sonic(ctx.at, B1, piece_slice=(p["index"], p["index"] + 1))
+        rep = tc.run_sonic(ctx.at, B1, piece_slice=(p["index"], p["index"] + 1), tq=tq)
         if rep["pieces"] != 1:
             raise RuntimeError("slice returned %d pieces" % rep["pieces"])
         d = rep["detail"][0]
         if d["lo"] != p["lo"] or d["hi"] != p["hi"]:
             raise RuntimeError("sonic piece mismatch")
-        return d, dict(region_call="run_sonic(at, %g, piece_slice=(%d, %d))"
-                       % (B1, p["index"], p["index"] + 1))
+        return d, dict(region_call="run_sonic(at, %g, piece_slice=(%d, %d), tq=%s)"
+                       % (B1, p["index"], p["index"] + 1, tq), tq=tq)
     if p["kind"] == "centre":
-        # run_centre's per-piece body, verbatim except that the centre
-        # expansion encloses the certified (a*, mu*) (see the recovery note)
+        # run_centre's per-piece body, verbatim: the committed
+        # _centre_expansion (certified (a*, mu*) balls since 2026-10-16) and
+        # centre_piece with the piece's tstar_fac (None = TSTAR_FAC)
         rd = REGIONS["centre"]
         ce = ctx.centre_ce()
+        tf = p.get("tstar_fac")
         try:
             rep = tc.centre_piece(ctx.at, ce, p["lo"], p["hi"], B1,
-                                  tc.eps_cells_default(rd["ncells"]), rd["prec"])
+                                  tc.eps_cells_default(rd["ncells"]), rd["prec"],
+                                  tstar_fac=tf)
         except (ArithmeticError, RuntimeError) as e:
             rep = dict(ok=False, err=str(e), cells=[])
         mg = max((c.get("margin") for c in rep.get("cells", [])
                   if c.get("margin") is not None), default=None)
         d = dict(lo=p["lo"], hi=p["hi"], ok=rep["ok"], margin=mg, err=rep.get("err"),
                  errs=[c.get("err") for c in rep.get("cells", []) if c.get("err")][:2] or None)
-        return d, dict(region_call="centre_piece(at, ce[%s balls], %r, %r, %g, "
-                       "eps_cells_default(), %d)" % (ctx.centre_balls, p["lo"], p["hi"],
-                                                     B1, rd["prec"]),
-                       centre_balls=ctx.centre_balls,
+        return d, dict(region_call="centre_piece(at, _centre_expansion() [%s balls], %r, "
+                       "%r, %g, eps_cells_default(), %d, tstar_fac=%r)"
+                       % (ctx.centre_balls, p["lo"], p["hi"], B1, rd["prec"], tf),
+                       centre_balls=ctx.centre_balls, tstar_fac=tf,
                        cells=rep.get("cells"))
     raise RuntimeError("unknown kind " + p["kind"])
 
 
+def piece_tstar(p, tc):
+    """tstar of a piece: tstar_fac * b1 (default TSTAR_FAC)."""
+    tf = p.get("tstar_fac")
+    return (tc.TSTAR_FAC if tf is None else tf) * B1
+
+
 SPEC_KEYS = ("id", "region", "kind", "index", "x", "h", "lo", "hi", "cache",
-             "cache_content_sha256", "x_min", "x_max", "degrade")
+             "cache_content_sha256", "x_min", "x_max", "degrade", "tq", "tstar_fac")
 
 
 def spec_of(p):
@@ -684,7 +743,7 @@ def cmd_work(args):
             files, (head, dirty) = loaded_code(), git_head()
             rec = dict(schema=SCHEMA, id=p["id"], region=p["region"], spec=spec_of(p),
                        status=classify(res), result=res, b1=B1,
-                       tstar=ctx.tc.TSTAR_FAC * B1, extra=extra,
+                       tstar=piece_tstar(p, ctx.tc), extra=extra,
                        code=dict(files=files, fingerprint=fingerprint(files),
                                  git_head=head, git_dirty_src=dirty),
                        driver_sha256=sha256_file(os.path.abspath(__file__)),
@@ -838,14 +897,18 @@ def cmd_checks(args):
 
 
 def cmd_lemma_d(args):
+    """certified: tc_commutator.run_lemma_d as committed (its _centre_expansion
+    builds the certified (a*, mu*) balls since 2026-10-16; before that the
+    driver substituted them).  midpoint: the pre-2026-10-16 construction
+    (bare a3 midpoint), substituted here only to replay the old record."""
     import_p4()
     import p4.validated.tc_commutator as tc
     from p4.validated.tc_energy import Atoms
     at = Atoms(full=True)
     balls = args.centre_balls
     orig = tc._centre_expansion
-    if balls == "certified":
-        tc._centre_expansion = lambda prec=256: centre_expansion("certified", prec)
+    if balls == "midpoint":
+        tc._centre_expansion = lambda prec=256: centre_expansion("midpoint", prec)
     t0, c0 = time.time(), time.process_time()
     try:
         r = tc.run_lemma_d(at)
@@ -855,18 +918,261 @@ def cmd_lemma_d(args):
     nbad = sum(1 for s in r["subranges"] if not s["ok"])
     rec = dict(schema="s43-lemma-d/1", ok=r["ok"], centre_balls=balls,
                centre_balls_note=("certified: a3_midpoint midpoint + K_minus_m "
-                                  "(encloses the certified (a*, mu*)); midpoint: as in "
-                                  "the committed tc_commutator._centre_expansion "
-                                  "(radius <= 1e-41, does not enclose (a*, mu*))"),
+                                  "(encloses the certified (a*, mu*)), the committed "
+                                  "tc_commutator._centre_expansion since 2026-10-16; "
+                                  "midpoint: the pre-2026-10-16 construction (radius "
+                                  "<= 1e-41, does not enclose (a*, mu*))"),
+               code_path=("tc_commutator.run_lemma_d as committed" if balls == "certified"
+                          else "run_lemma_d with _centre_expansion replaced by the "
+                               "midpoint construction"),
                c0=r["c0"], ycut=r["ycut"], layer_identity=r["layer_identity"],
                mins=r["mins"], nsub=len(r["subranges"]), failing_subranges=nbad,
                wall_s=time.time() - t0, cpu_s=time.process_time() - c0,
                recorded_in_tc_energy=rec_json, created=now(), env=env_info(),
                code=dict(files=loaded_code(), fingerprint=fingerprint(loaded_code()),
                          git_head=git_head()[0], git_dirty_src=git_head()[1]))
-    write_json_atomic(os.path.join(PARTS, "lemma_d_%s.json" % balls), rec)
-    print("lemma_d[%s] ok=%s mins=%s failing=%d wall=%.1fs"
-          % (balls, r["ok"], r["mins"], nbad, rec["wall_s"]))
+    out = os.path.join(PARTS, "lemma_d_%s.json" % balls)
+    if args.replay:
+        prev = json.load(open(out)) if os.path.exists(out) else None
+        keys = ("ok", "c0", "ycut", "layer_identity", "mins", "nsub", "failing_subranges")
+        rec["stored"] = ({k: prev.get(k) for k in keys} if prev else None)
+        rec["stored_file"] = rel(out)
+        rec["stored_code_fingerprint"] = (prev or {}).get("code", {}).get("fingerprint")
+        rec["identical"] = bool(prev) and all(rec[k] == prev.get(k) for k in keys)
+        out = os.path.join(PARTS, "replays", "lemma_d_%s.json" % balls)
+    write_json_atomic(out, rec)
+    print("lemma_d[%s] ok=%s mins=%s failing=%d wall=%.1fs%s -> %s"
+          % (balls, r["ok"], r["mins"], nbad, rec["wall_s"],
+             (" identical=%s" % rec["identical"]) if args.replay else "", rel(out)))
+
+
+def cmd_p43_centre(args):
+    """P4-3's centre tail t = e^x in (0, e^{-8}] (tc_monotone.run_centre): the
+    committed code (certified (a*, mu*) balls since 2026-10-16), plus a replay
+    of the pre-fix construction (bare a3 midpoint) for comparison with the
+    record in results/theorem_c/tc_monotone.json."""
+    import_p4()
+    import p4.validated.ec_centre as ecc
+    import p4.validated.tc_monotone as tm
+    t0, c0 = time.time(), time.process_time()
+    cert = tm.run_centre()
+    t1 = time.time()
+    orig = ecc.certified_centre_balls
+    ecc.certified_centre_balls = midpoint_centre_balls
+    try:
+        mid = tm.run_centre()
+    finally:
+        ecc.certified_centre_balls = orig
+    stored = json.load(open(os.path.join(TC_DIR, "tc_monotone.json"))).get("centre")
+    cmp_keys = sorted(cert["mins"])
+    rec = dict(schema="s43-p43-centre/1", ok=cert["ok"], x_tail=cert["x_tail"],
+               certified=dict(ok=cert["ok"], mins=cert["mins"], wall_s=t1 - t0,
+                              balls="a3_midpoint + K_minus_m (ec_centre."
+                                    "certified_centre_balls; encloses (a*, mu*))"),
+               midpoint_replay=dict(ok=mid["ok"], mins=mid["mins"],
+                                    balls="bare a3 midpoint (pre-2026-10-16; does not "
+                                          "enclose (a*, mu*))"),
+               stored_record=stored,
+               midpoint_replay_identical_to_stored=bool(stored) and all(
+                   mid["mins"][k] == stored["mins"].get(k) for k in cmp_keys),
+               min_margin=min(cert["mins"].values()),
+               change_vs_midpoint={k: cert["mins"][k] - mid["mins"][k] for k in cmp_keys},
+               claim=("P4-3 centre tail: v_rel > 0, v_rel' > 0, -rho^' > 0, "
+                      "1/3 - v_rel^2 > 0, -t^2 D > 0, D' > 0 on t in (0, e^-8] "
+                      "(all t-factored margins must be > 0)"),
+               created=now(), env=env_info(),
+               wall_s=time.time() - t0, cpu_s=time.process_time() - c0,
+               code=dict(files=loaded_code(), fingerprint=fingerprint(loaded_code()),
+                         git_head=git_head()[0], git_dirty_src=git_head()[1]))
+    write_json_atomic(os.path.join(PARTS, "p43_centre.json"), rec)
+    print("p43-centre: ok=%s mins=%s\n  midpoint replay ok=%s identical_to_stored=%s"
+          % (cert["ok"], cert["mins"], mid["ok"], rec["midpoint_replay_identical_to_stored"]))
+
+
+# ------------------------------------------------------------------- bench
+BENCH = os.path.join(TC_DIR, "bench")
+BENCH_MODES = {"tq": True, "direct": False}
+
+
+def bench_path(pid, mode):
+    return os.path.join(BENCH, "%s__%s.json" % (pid.replace("/", "__"), mode))
+
+
+class PhaseTimer:
+    """Times tc_commutator's phase functions during one analyze_piece call by
+    wrapping the module globals that analyze_piece looks up at call time
+    (sup_ratio_boxes and tau_quad_check: the tau-quadratic phase;
+    direct_S_boxes: the direct phase).  Arguments and results pass through
+    unchanged; the wrappers are removed on exit."""
+    NAMES = ("sup_ratio_boxes", "tau_quad_check", "direct_S_boxes")
+
+    def __init__(self, tc):
+        self.tc, self.orig, self.stats, self.calls = tc, {}, {}, []
+
+    def __enter__(self):
+        for n in self.NAMES:
+            f = getattr(self.tc, n)
+            self.orig[n] = f
+            setattr(self.tc, n, self._wrap(n, f))
+        return self
+
+    def __exit__(self, *exc):
+        for n, f in self.orig.items():
+            setattr(self.tc, n, f)
+        return False
+
+    def _wrap(self, name, f):
+        def g(*a, **kw):
+            t0, c0 = time.time(), time.process_time()
+            try:
+                out = f(*a, **kw)
+            except Exception as e:
+                self._note(name, a, t0, c0, None, "%s: %s" % (type(e).__name__, e))
+                raise
+            self._note(name, a, t0, c0, out, None)
+            return out
+        return g
+
+    def _note(self, name, a, t0, c0, out, err):
+        dt, dc = time.time() - t0, time.process_time() - c0
+        s = self.stats.setdefault(name, dict(calls=0, wall_s=0.0, cpu_s=0.0))
+        s["calls"] += 1
+        s["wall_s"] += dt
+        s["cpu_s"] += dc
+        e = dict(phase=name, wall_s=dt, cpu_s=dc, err=err)
+        if name == "direct_S_boxes":
+            e["eps_cells"] = a[8] if len(a) > 8 else None
+            if out is not None:
+                e.update(ok=out[0], worst=out[1])
+        elif name == "sup_ratio_boxes":
+            e["families"] = sorted(a[0]) if a else None
+        elif name == "tau_quad_check" and out is not None:
+            e.update(ok=out[0], margin=out[1].get("margin"), err=out[1].get("err"))
+        self.calls.append(e)
+        log("  %s %s %.0f s%s" % (name, e.get("eps_cells") or e.get("families") or "",
+                                  dt, "" if err is None else " ERR " + err))
+
+
+def bench_one(p, mode, ctx):
+    """run_tube's per-step body for one piece with tq = BENCH_MODES[mode],
+    without degrade: analyze_piece is timed as called."""
+    tc = ctx.tc
+    from p4.validated.arbseries import precision
+    from p4.validated.tc_tm import AtomKP, step_components
+    tube = ctx.tube(p["cache"])
+    steps = [sd for sd in tube.steps if float(sd.x) - sd.h >= p["x_min"] - 1e-12
+             and float(sd.x) <= p["x_max"] + 1e-12]
+    sd = steps[p["index"]]
+    if float(sd.x) != p["x"] or float(sd.h) != p["h"]:
+        raise RuntimeError("step mismatch for %s" % p["id"])
+    tq = BENCH_MODES[mode]
+    start, la0 = now(), list(os.getloadavg())
+    t0, c0 = time.time(), time.process_time()
+    err, rep = None, None
+    with precision(320):                                  # run_tube's prec
+        comps = step_components(sd)
+        ak = AtomKP(ctx.at, comps, sd_shift=0)
+        pr = tc.build_pairs(ak)
+        cm = tc.commute(pr, pr["dT"][-1][0].trim().inv())
+        t_setup, c_setup = time.time() - t0, time.process_time() - c0
+        log("bench %s %s: setup %.0f s; analyze_piece(tq=%s) ..." % (p["id"], mode,
+                                                                    t_setup, tq))
+        with PhaseTimer(tc) as pt:
+            t1, c1 = time.time(), time.process_time()
+            try:
+                rep = tc.analyze_piece(pr, cm, 0.0, float(sd.h), B1,
+                                       tc.eps_cells_default(), 0, (0, 0, 0), tq=tq)
+            except (ArithmeticError, RuntimeError) as e:
+                err = "%s: %s" % (type(e).__name__, e)
+            t_an, c_an = time.time() - t1, time.process_time() - c1
+    rep = rep or {}
+    cells = rep.get("cells", [])
+    margin = max((c.get("margin") for c in cells if c.get("margin") is not None),
+                 default=None)
+    tq_s = sum(pt.stats.get(n, {}).get("wall_s", 0.0)
+               for n in ("sup_ratio_boxes", "tau_quad_check"))
+    dir_s = pt.stats.get("direct_S_boxes", {}).get("wall_s", 0.0)
+    files = loaded_code()
+    head, dirty = git_head()
+    return dict(
+        schema="s43-bench/1", id=p["id"], spec=spec_of(p), mode=mode, tq=tq,
+        call=("analyze_piece(pr, cm, 0.0, h, %g, eps_cells_default(), 0, (0, 0, 0), "
+              "tq=%s): run_tube's per-step body at prec 320, no degrade" % (B1, tq)),
+        result=dict(ok=bool(rep.get("ok")) and err is None, margin=margin, err=err,
+                    open=rep.get("tau_quad"), cells=cells,
+                    bounds={k: rep.get(k) for k in ("Rbar", "thU", "DW", "DWdec", "DWp",
+                                                     "DB", "DBdec", "LL") if k in rep}),
+        timing=dict(start=start, end=now(), setup_wall_s=t_setup, setup_cpu_s=c_setup,
+                    analyze_wall_s=t_an, analyze_cpu_s=c_an,
+                    tau_quadratic_phase_wall_s=tq_s, direct_phase_wall_s=dir_s,
+                    loadavg_start=la0, loadavg_end=list(os.getloadavg()),
+                    nice=os.nice(0)),
+        phases=pt.stats, phase_calls=pt.calls,
+        code=dict(files=files, fingerprint=fingerprint(files), git_head=head,
+                  git_dirty_src=dirty),
+        driver_sha256=sha256_file(os.path.abspath(__file__)), env=env_info(),
+        note=("timing benchmark (recovery note 8(ii)); not a part: merge does not "
+              "read results/theorem_c/bench/"))
+
+
+def cmd_bench(args):
+    plan = load_plan()
+    ids = [s for s in args.ids.split(",") if s]
+    modes = [m for m in args.modes.split(",") if m]
+    for m in modes:
+        if m not in BENCH_MODES:
+            raise SystemExit("unknown mode %s (tq | direct)" % m)
+    pieces = {p["id"]: p for p in plan["pieces"]}
+    for pid in ids:
+        if pid not in pieces or pieces[pid]["kind"] != "tube":
+            raise SystemExit("bench needs planned tube-kind pieces: %s" % pid)
+    if args.detach:
+        tag = args.tag or time.strftime("bench-%Y%m%d-%H%M%S")
+        out = []
+        for pid in ids:                     # one detached process per piece
+            lf = os.path.join(LOGS, "%s-%s.log" % (tag, pid.replace("/", "__")))
+            av = ["bench", "--ids", pid, "--modes", ",".join(modes)]
+            if args.force:
+                av.append("--force")
+            wp = spawn_detached(av, lf, args.nice)
+            out.append(dict(piece=pid, pid=wp, log=rel(lf), argv=av,
+                            results=[rel(bench_path(pid, m)) for m in modes]))
+            print("pid %d  bench %s (%s)  log %s" % (wp, pid, ",".join(modes), rel(lf)))
+        write_json_atomic(os.path.join(LOGS, "launch-%s.json" % tag),
+                          dict(tag=tag, host=socket.gethostname(), started=now(),
+                               nice=args.nice, bench=out))
+        return
+    ctx = None
+    for pid in ids:
+        for mode in modes:
+            out = bench_path(pid, mode)
+            if os.path.exists(out) and not args.force:
+                log("bench %s %s: result present (%s), skipped" % (pid, mode, rel(out)))
+                continue
+            lk = claim("bench/%s/%s" % (pid, mode))
+            if lk is None:
+                log("bench %s %s: claimed by a live process, skipped" % (pid, mode))
+                continue
+            try:
+                if ctx is None:
+                    ctx = Ctx(REGIONS["centre"]["centre_balls"])
+                rec = bench_one(pieces[pid], mode, ctx)
+                write_json_atomic(out, rec)
+                log("bench %s %s done: ok=%s margin=%s analyze %.0f s (tau-quadratic "
+                    "phase %.0f s, direct phase %.0f s) -> %s"
+                    % (pid, mode, rec["result"]["ok"], rec["result"]["margin"],
+                       rec["timing"]["analyze_wall_s"],
+                       rec["timing"]["tau_quadratic_phase_wall_s"],
+                       rec["timing"]["direct_phase_wall_s"], rel(out)))
+            except Exception:
+                log("EXCEPTION in bench %s %s (no result written):\n%s"
+                    % (pid, mode, traceback.format_exc()))
+            finally:
+                try:
+                    os.remove(lk)
+                except OSError:
+                    pass
+    log("bench exit")
 
 
 # ------------------------------------------------------------------ status
@@ -904,6 +1210,16 @@ def cmd_status(args):
             continue
         d = json.load(open(f))
         print("%-28s ok=%s" % (os.path.basename(f), d.get("ok")))
+    for f in sorted(glob.glob(os.path.join(BENCH, "*.json"))):
+        d = json.load(open(f))
+        t = d["timing"]
+        print("bench %-22s %-6s ok=%s margin=%s analyze=%.0fs (tq-phase %.0fs, direct "
+              "%.0fs)" % (d["id"], d["mode"], d["result"]["ok"], d["result"]["margin"],
+                          t["analyze_wall_s"], t["tau_quadratic_phase_wall_s"],
+                          t["direct_phase_wall_s"]))
+    for lk in sorted(locks):
+        if lk.startswith("bench/"):
+            print("bench running: %s" % lk[len("bench/"):])
 
 
 def parse_accept(items):
@@ -1120,6 +1436,14 @@ def cmd_merge(args):
                    tau_above_tstar=("certified everywhere" if not gaps_both else
                                     "OPEN on x in %s (direct phase only there)" % gaps_both)),
         b1=B1, m=tc.MC, c=[tc.CNUM, tc.CDEN], eps_max=tc.EPS_MAX, tstar_fac=tc.TSTAR_FAC,
+        phase_settings=dict(
+            tstar_fac_by_region={r: REGIONS[r]["tstar_fac"] for r in REGIONS
+                                 if "tstar_fac" in REGIONS[r]},
+            direct_only={r: REGIONS[r]["direct_only"] for r in REGIONS
+                         if "direct_only" in REGIONS[r]},
+            note=("pass-both pieces are certified for every tau >= b1 (centre with "
+                  "tstar_fac = 1: the tau-quadratic phase alone); pass-direct pieces "
+                  "only for tau in [b1, tstar_fac * b1]")),
         open_pieces=len(opens),
         checks=(dict(E1_U6top=checks["results"]["E1_U6top"],
                      E2_layers=checks["results"]["E2_layers"],
@@ -1177,7 +1501,19 @@ def main(argv=None):
     p.set_defaults(fn=cmd_checks)
     p = sub.add_parser("lemma-d")
     p.add_argument("--centre-balls", default="certified", choices=("certified", "midpoint"))
+    p.add_argument("--replay", action="store_true",
+                   help="write parts/replays/lemma_d_<balls>.json and compare")
     p.set_defaults(fn=cmd_lemma_d)
+    p = sub.add_parser("p43-centre")
+    p.set_defaults(fn=cmd_p43_centre)
+    p = sub.add_parser("bench")
+    p.add_argument("--ids", required=True)
+    p.add_argument("--modes", default="tq,direct")
+    p.add_argument("--detach", action="store_true")
+    p.add_argument("--nice", type=int, default=10)
+    p.add_argument("--tag")
+    p.add_argument("--force", action="store_true")
+    p.set_defaults(fn=cmd_bench)
     p = sub.add_parser("work")
     sel(p)
     p.set_defaults(fn=cmd_work)

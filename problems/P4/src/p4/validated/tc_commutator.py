@@ -839,14 +839,18 @@ def cubic_root_bound(bcr_kp, lo, hi):
 
 
 def analyze_piece(pr, cm, lo, hi, b1, eps_cells, scale_off, raises,
-                  dp_raise=None, tq=True):
+                  dp_raise=None, tq=True, tstar_fac=None):
     from .tc_tm import SPLIT_REL
     SPLIT_REL[0] = 1e-4 if (lo <= 0 and scale_off) else 1e-12
     """Certified strip-exclusion conditions on one local subrange [lo, hi]:
     B0 != 0 and Bcr != 0 on the tail (commutation + eta-elimination legal), and
     sup_{tau >= b1} [K2 tau^2 + R1 tau + K0 + R0] < 0 per eps cell.  raises =
     (r_dT, r_nB, r_dB): Laurent raises of the kdiv leads at the sonic point,
-    justified by D(u0) = 0 (E3) and the U6_9 factorization (E1)."""
+    justified by D(u0) = 0 (E3) and the U6_9 factorization (E1).
+    tstar = tstar_fac * b1 (default TSTAR_FAC): direct boxes on tau in
+    [b1, tstar], the tau-quadratic phase on tau >= tstar.  tstar_fac <= 1
+    makes the tau-quadratic phase cover every tau >= b1; the direct range is
+    then empty and direct_S_boxes is not called (needs tq=True)."""
     c, cl = cval(), abs(cval())
     b1a = arb(b1)
     nT, dT, nB, dB = (slot0(pr[k]) for k in ("nT", "dT", "nB", "dB"))
@@ -911,7 +915,10 @@ def analyze_piece(pr, cm, lo, hi, b1, eps_cells, scale_off, raises,
     if not (arb(Aup) < b1a and arb(FNup) < b1a):
         raise ArithmeticError("real pole bound reaches the strip tail")
     # ---- remainder bounds for tau >= tstar (thU first: B0 quad dominance)
-    tstar = TSTAR_FAC * b1
+    tstar = (TSTAR_FAC if tstar_fac is None else float(tstar_fac)) * b1
+    direct_range = tstar > b1           # False: tau-quadratic phase from b1
+    if not direct_range and not tq:
+        raise ValueError("tq=False needs tstar > b1 (no tau range left)")
     dpr = r_dT if dp_raise is None else dp_raise
     nof = dict(U=0)
     if not tq:
@@ -1012,12 +1019,19 @@ def analyze_piece(pr, cm, lo, hi, b1, eps_cells, scale_off, raises,
                   + rho_b.scale(arb(DW) / (2 * cl_), noW)  # (tau/2c) rho_R nu
                   + tt_b.scale(arb(DWdec) / (2 * cl_), noW))  # d-rho f tau^2
         okc, m = tau_quad_check(K2, R1, K0, R0, tstar, lo, hi, scale_off)
-        try:
-            okd, wd, dfails = direct_S_boxes(pr, cm, uqj, remUj, lo, hi, b1,
-                                             tstar, [(e0, e1)], scale_off)
-        except ArithmeticError as e:
-            okd, wd, dfails = False, None, []
-            m["direct_err"] = str(e)
+        if not direct_range:
+            # tstar <= b1: tau_quad_check and every remainder bound above
+            # hold uniformly on tau >= tstar, i.e. on the whole strip tail
+            okd, wd, dfails = True, None, []
+            m["direct_skipped"] = "tau range [b1, tstar] empty"
+        else:
+            try:
+                okd, wd, dfails = direct_S_boxes(pr, cm, uqj, remUj, lo, hi,
+                                                 b1, tstar, [(e0, e1)],
+                                                 scale_off)
+            except ArithmeticError as e:
+                okd, wd, dfails = False, None, []
+                m["direct_err"] = str(e)
         m["direct"] = wd
         if dfails:
             m["direct_fails"] = dfails
@@ -1077,17 +1091,12 @@ def tau_quad_check(K2, R1, K0, R0, b1, lo, hi, scale_off):
 
 
 def _centre_expansion(prec=256):
-    from . import centre
-    root = os.path.join(os.path.dirname(__file__), "..", "..", "..")
-    aj = json.load(open(os.path.join(root, "results", "a3_midpoint.json")))
-    ball = lambda s: arb(s[1:-1].split(" +/-")[0]) + arb(0, float(s[1:-1].split(" +/- ")[1]))
-    with precision(prec):
-        a, mu = ball(aj["a"]), ball(aj["mu"])
-        ce = centre.centre_expansion(mu * (2 * a).exp(), nhat=(-a).exp(), K=30)
-        cert = ce.certify()
-        if not cert.ok:
-            raise RuntimeError("centre certificate failed")
-    return ce
+    """Certified A2 centre series at balls enclosing the certified (a*, mu*):
+    the a3_midpoint.json midpoint PLUS its Krawczyk offset K_minus_m
+    (ec_centre).  Before 2026-10-16 this used the bare midpoint, which does
+    not enclose (a*, mu*) (mu off by 2.4e-9); see notes/s4-3-recovery.md."""
+    from .ec_centre import certified_centre_expansion
+    return certified_centre_expansion(prec, K=30)
 
 
 def eps_cells_default(n=None):
@@ -1105,17 +1114,19 @@ def y_subranges(y0=1e-8, ratio=1.6):
     return out[::-1]
 
 
-def centre_piece(at, ce, lo, hi, b1, eps_cells, prec):
-    """Build and check one centre piece on its own TM domain [0, hi]."""
+def centre_piece(at, ce, lo, hi, b1, eps_cells, prec, tstar_fac=None):
+    """Build and check one centre piece on its own TM domain [0, hi].
+    tstar_fac: see analyze_piece (None = TSTAR_FAC)."""
     with precision(prec):
         comps, _ = centre_components(ce, hi)
         ak = AtomKP(at, comps, sd_shift=0)
         pr = build_pairs(ak)
         cm = commute(pr, pr["dT"][-1][0].trim().inv())
-        return analyze_piece(pr, cm, lo, hi, b1, eps_cells, 0, (0, 0, 0))
+        return analyze_piece(pr, cm, lo, hi, b1, eps_cells, 0, (0, 0, 0),
+                             tstar_fac=tstar_fac)
 
 
-def run_centre(at, b1, prec=320, y0=1e-8, ratio=1.6, ncells=6):
+def run_centre(at, b1, prec=320, y0=1e-8, ratio=1.6, ncells=6, tstar_fac=None):
     """Strip-exclusion conditions on the centre region y = e^x in (0, e^{-4.5}]:
     per-piece TM domains, geometric subranges down to y0 plus the closing piece
     [0, y0]."""
@@ -1124,7 +1135,8 @@ def run_centre(at, b1, prec=320, y0=1e-8, ratio=1.6, ncells=6):
     pieces, ok, worst = [], True, None
     for lo, hi in y_subranges(y0, ratio):
         try:
-            rep = centre_piece(at, ce, lo, hi, b1, eps_cells_default(ncells), prec)
+            rep = centre_piece(at, ce, lo, hi, b1, eps_cells_default(ncells), prec,
+                               tstar_fac=tstar_fac)
         except (ArithmeticError, RuntimeError) as e:
             rep = dict(ok=False, err=str(e), cells=[])
         ok = ok and rep["ok"]
@@ -1141,11 +1153,13 @@ def run_centre(at, b1, prec=320, y0=1e-8, ratio=1.6, ncells=6):
 
 
 def run_tube(at, tube, b1, x_min=-4.5, x_max=-0.05, prec=320, step_slice=None,
-             degrade=False):
+             degrade=False, tq=True):
     """Strip-exclusion conditions on tube steps covering [x_min, x_max]:
     per-step TM domain sigma = x_k - x in [0, h].  degrade=True: if the
     tau > tstar quadratic phase fails on a step, certify the direct phase
-    (tau in [b1, tstar]) and mark the tail open (near-sonic band)."""
+    (tau in [b1, tstar]) and mark the tail open (near-sonic band).
+    tq=False: direct phase only (no tau-quadratic attempt); every step is
+    then at best certified on tau in [b1, tstar] with the tail marked open."""
     from .tc_tm import step_components
     t0 = time.time()
     steps = [sd for sd in tube.steps
@@ -1160,14 +1174,19 @@ def run_tube(at, tube, b1, x_min=-4.5, x_max=-0.05, prec=320, step_slice=None,
                 ak = AtomKP(at, comps, sd_shift=0)
                 pr = build_pairs(ak)
                 cm = commute(pr, pr["dT"][-1][0].trim().inv())
-                try:
+                if not tq:
                     rep = analyze_piece(pr, cm, 0.0, float(sd.h), b1,
-                                        eps_cells_default(), 0, (0, 0, 0))
-                except (ArithmeticError, RuntimeError):
-                    if not degrade:
-                        raise
-                    rep = dict(ok=False)
-                if degrade and not rep["ok"]:
+                                        eps_cells_default(), 0, (0, 0, 0),
+                                        tq=False)
+                else:
+                    try:
+                        rep = analyze_piece(pr, cm, 0.0, float(sd.h), b1,
+                                            eps_cells_default(), 0, (0, 0, 0))
+                    except (ArithmeticError, RuntimeError):
+                        if not degrade:
+                            raise
+                        rep = dict(ok=False)
+                if tq and degrade and not rep["ok"]:
                     rep = analyze_piece(pr, cm, 0.0, float(sd.h), b1,
                                         eps_cells_default(), 0, (0, 0, 0),
                                         tq=False)
@@ -1202,12 +1221,14 @@ def xi_subranges(xi0=1e-6, ratio=1.2):
     return out
 
 
-def run_sonic(at, b1, prec=320, xi0=1e-6, piece_slice=None):
+def run_sonic(at, b1, prec=320, xi0=1e-6, piece_slice=None, tq=True):
     """Strip-exclusion conditions on the sonic region xi = -x in [0, 0.05]:
     pieces with lo >= xi0 are recentred to their own domain (no vanishing
     factors there); the closing piece [0, xi0] keeps the Laurent machinery
     with kdiv leads offset-raised by (1, 2, 3) Dp-powers (identities E1/E3)
-    and all conditions xi^2-scaled."""
+    and all conditions xi^2-scaled.  tq=False: direct phase only on every
+    piece (no tau-quadratic attempt; the closing piece is direct-only
+    anyway)."""
     from .tc_energy import sonic_expansion_cached
     from .tc_tm import sonic_components, sonic_components_recentred
     t0 = time.time()
@@ -1226,7 +1247,8 @@ def run_sonic(at, b1, prec=320, xi0=1e-6, piece_slice=None):
                     pr = build_pairs(ak)
                     cm = commute(pr, pr["dT"][-1][0].trim().inv())
                     rep = analyze_piece(pr, cm, 0.0, hi - lo, b1,
-                                        eps_cells_default(), 0, (0, 0, 0))
+                                        eps_cells_default(), 0, (0, 0, 0),
+                                        tq=tq)
                 elif lo >= xi0 * 0.99:
                     # small-xi pieces: Laurent machinery on the piece's own
                     # domain [0, hi], evaluated on [lo, hi] (lo > 0: all
@@ -1237,12 +1259,14 @@ def run_sonic(at, b1, prec=320, xi0=1e-6, piece_slice=None):
                     ak = AtomKP(at, comps, sd_shift=1)
                     pr = sonic_raise_inputs(build_pairs(ak))
                     cm = commute(pr, pr["dT"][-1][0].trim().inv())
-                    try:
-                        rep = analyze_piece(pr, cm, lo, hi, b1,
-                                            eps_cells_default(), 2, (0, 0, 0),
-                                            dp_raise=1)
-                    except (ArithmeticError, RuntimeError):
-                        rep = dict(ok=False)
+                    rep = dict(ok=False)
+                    if tq:
+                        try:
+                            rep = analyze_piece(pr, cm, lo, hi, b1,
+                                                eps_cells_default(), 2,
+                                                (0, 0, 0), dp_raise=1)
+                        except (ArithmeticError, RuntimeError):
+                            rep = dict(ok=False)
                     if not rep["ok"]:
                         rep = analyze_piece(pr, cm, lo, hi, b1,
                                             eps_cells_default(), 2, (0, 0, 0),
@@ -1500,6 +1524,12 @@ def run_lemma_d(at, c0=C0_LEMMA_D, prec=320, ycut=YCUT, nsub=1100):
     pmin, okE2 = check_layer_identity(at)
     if not okE2:
         raise RuntimeError("layer identity E2 failed")
+    # E2's pmin is the lowest raw layer of Z; with A - 1 = O(t^2) it gives
+    # val(Z o u) >= pmin + 2.  The exact shift below raises Z to offset 16,
+    # which is justified only if pmin + 2 >= 16 (recorded: pmin = 14).
+    if not (pmin + 2 >= 16):
+        raise RuntimeError("layer identity E2: pmin + 2 = %d < 16, the y^16 "
+                           "shift of Z is not justified" % (pmin + 2))
     ce = _centre_expansion()
     out = dict(ok=True, c0=c0, ycut=ycut, layer_identity=[pmin, okE2],
                subranges=[], mins={})

@@ -69,6 +69,40 @@ def test_e2_layer_identity(atoms):
     assert ok and val + 2 >= 16
 
 
+# ------------------------------------------------ certified centre background
+def test_centre_expansion_encloses_certified_background():
+    """_centre_expansion (Lemma D and the centre region) is built at (a, mu)
+    balls containing the certified (a*, mu*) = a3 midpoint + K_minus_m (the
+    balls of modecount.certified_centre), not at the bare midpoint, which
+    misses mu* by 2.4e-9 (notes/s4-3-recovery.md section 3)."""
+    from p4.validated import modecount
+    ce = tc._centre_expansion()
+    with precision(256):
+        a = arb(modecount.A_STAR) + arb("7.031e-12") + arb(0, 8.87e-16)
+        mu = arb(modecount.MU_STAR) + arb("2.3757e-9") + arb(0, 4.61e-14)
+        assert ce.what.contains(mu * (2 * a).exp())
+        assert ce.nhat.contains((-a).exp())
+        a_m, mu_m = arb(modecount.A_STAR), arb(modecount.MU_STAR)
+        assert not ce.what.overlaps(mu_m * (2 * a_m).exp())
+
+
+def test_lemma_d_requires_layer_valuation_16(monkeypatch):
+    """run_lemma_d shifts Z to offset 16 on the strength of E2; it must refuse
+    when the E2 layer minimum only gives val(Z o u) = pmin + 2 < 16."""
+    monkeypatch.setattr(tc, "check_layer_identity", lambda at: (13, True))
+    with pytest.raises(RuntimeError, match="pmin"):
+        tc.run_lemma_d(None)
+
+
+def test_direct_only_needs_a_direct_range(sonic_pr):
+    """tq=False with tstar_fac <= 1 would certify nothing: refused."""
+    pr, cm = sonic_pr
+    with precision(320):
+        with pytest.raises(ValueError):
+            tc.analyze_piece(pr, cm, 0.0, 1e-6, 14.0, [(0.0, 0.03)], 2,
+                             (0, 0, 0), dp_raise=1, tq=False, tstar_fac=1.0)
+
+
 # ------------------------------------------------------------ helper algebra
 def test_bnd_arithmetic():
     b = tc.Bnd.of(2.0, -1) + tc.Bnd.of(3.0, 0)
