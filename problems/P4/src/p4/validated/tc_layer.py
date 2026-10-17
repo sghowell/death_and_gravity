@@ -560,16 +560,20 @@ def _upper(ld, box):
 
 def certify_piece(ld, la, lb, eps_cells=None, s_lo=None, s_a=1e-3, s_big=None,
                   s_ratio=2.0, target=0.0, max_evals=400000, max_depth=60, log=None,
-                  t_pre=2e4, t_ratio=1.5):
+                  t_pre=2e4, t_ratio=1.5, tau_min=None):
     """Certify Sigma <= target (< 0 suffices; target < 0 certifies a margin) on
-    {ell in [la, lb], eps in [0, EPS_MAX], tau >= TSTAR} by an adaptive cover
-    with boxes in (ell, eps, s = xi tau, tau).  The root boxes cover
-    eps in [0, EPS_MAX] (cells), s in [xi(la) TSTAR, inf] (s in [0, inf] on a
-    piece touching xi = 0) and tau in [TSTAR, inf]; splits share endpoints.
+    {ell in [la, lb], eps in [0, EPS_MAX], tau >= tau_min} (tau_min = TSTAR by
+    default) by an adaptive cover with boxes in (ell, eps, s = xi tau, tau).
+    The root boxes cover eps in [0, EPS_MAX] (cells), s in [xi(la) tau_min, inf]
+    (s in [0, inf] on a piece touching xi = 0) and tau in [tau_min, inf];
+    splits share endpoints.
     Returns a dict with ok, worst (the largest certified upper bound of Sigma,
     i.e. the certified margin is -worst), the number of certified boxes and
     evaluations, and up to 8 failing boxes."""
     t_start = time.time()
+    tmin = TSTAR if tau_min is None else float(tau_min)
+    if not tmin > 0:
+        raise ValueError("tau_min must be positive")
     if not target <= 0:
         raise ValueError("target must be <= 0")
     eps_cells = eps_cells_default() if eps_cells is None else eps_cells
@@ -578,7 +582,7 @@ def certify_piece(ld, la, lb, eps_cells=None, s_lo=None, s_a=1e-3, s_big=None,
         raise ValueError("eps cells must tile [0, EPS_MAX]")
     xa = ld.xi_of_ell(la)
     if s_lo is None:
-        s_lo = xa * TSTAR * (1 - 1e-12)
+        s_lo = xa * tmin * (1 - 1e-12)
     if s_big is None:
         # the outer pseudo-box s >= s_big needs |w| = 1/tau small as well as
         # |zeta| = 1/s: start it at tau >= 1e4 on pieces with xi > 0.1
@@ -598,7 +602,7 @@ def certify_piece(ld, la, lb, eps_cells=None, s_lo=None, s_a=1e-3, s_big=None,
     # unbounded tau-range starting below t_pre; its 1/tau terms cancel in
     # truth but not in interval arithmetic, so tau is pre-split geometrically
     # there (a tiling of [TSTAR, inf], hence the cover is unchanged).
-    edges = [TSTAR]
+    edges = [tmin]
     while edges[-1] < t_pre:
         edges.append(min(edges[-1] * t_ratio, t_pre))
     slabs = list(zip(edges, edges[1:])) + [(edges[-1], INF)]
@@ -610,7 +614,7 @@ def certify_piece(ld, la, lb, eps_cells=None, s_lo=None, s_a=1e-3, s_big=None,
                 for ta, tb in slabs:
                     stack.append(((la, lb, e0, e1, s0, s1, ta, tb), 0, None))
             else:
-                stack.append(((la, lb, e0, e1, s0, s1, TSTAR, INF), 0, None))
+                stack.append(((la, lb, e0, e1, s0, s1, tmin, INF), 0, None))
     nev = ncert = nempty = 0
     worst = -INF
     fails = []
@@ -663,7 +667,7 @@ def certify_piece(ld, la, lb, eps_cells=None, s_lo=None, s_a=1e-3, s_big=None,
                depth_hist={str(k): v for k, v in sorted(hist.items())},
                time=time.time() - t_start,
                params=dict(s_a=s_a, s_big=s_big, s_ratio=s_ratio, zsplit=ZSPLIT,
-                           tstar=TSTAR, eps_cells=eps_cells, la=la, lb=lb,
+                           tstar=TSTAR, tau_min=tmin, eps_cells=eps_cells, la=la, lb=lb,
                            target=target, s_lo=s_lo, t_pre=t_pre, t_ratio=t_ratio))
     if log:
         log("certify_piece %s: ok=%s worst=%s boxes=%d evals=%d t=%.1fs"
@@ -705,7 +709,7 @@ MARGIN_LADDER = (-0.75, -0.5, -0.25)
 
 def run_layer_piece(ld, la, lb, prec=320, ladder=MARGIN_LADDER, ladder_evals=20000,
                     **kw):
-    """Certify Sigma < 0 for tau >= TSTAR on the piece.  The margin ladder
+    """Certify Sigma < 0 for tau >= TSTAR (or tau >= kw["tau_min"]) on the piece.  The margin ladder
     first tries to certify Sigma <= t for t in `ladder` with a small
     evaluation budget each and stops at the first success; otherwise it
     certifies Sigma < 0 with the full budget.  Returns the certify_piece

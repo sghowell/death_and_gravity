@@ -22,9 +22,11 @@ helper functions.
 Commands:
   list   [--ids PAT,..] [--regions R,..] [--all-gap]   print the selected piece ids
   work   [--ids PAT,..] [--regions R,..] [--all-gap] [--tube-cache FILE] [--force]
-         [--max-pieces N]                              compute and write layer parts
-  status                                               layer parts vs the band, and
+         [--max-pieces N] [--tau-min T]                compute and write layer parts
+  status [--tau-min T]                                 layer parts vs the band, and
                                                        the S4-3 status of each piece
+--tau-min 14 runs the engine on tau >= 14 (both S4-3 phases) and writes to
+parts/layer_t14/ instead.
 Selection defaults to the band (sonic/* and gap steps with xi_hi <= XI_BAND).
 """
 from __future__ import annotations
@@ -44,11 +46,20 @@ import s43_parts as s43  # noqa: E402  (plan, cache records, hashing helpers)
 
 LAYER = os.path.join(s43.PARTS, "layer")
 SCHEMA = "s44-layer/1"
+TAU_MIN = 224.0                  # the S4-4 item: tau > 224 on the band
 XI_BAND = 0.0357 + 1e-9          # gap steps 0-88: the tau-quadratic phase fails there
 
 
-def part_path(pid):
-    return os.path.join(LAYER, pid + ".json")
+def layer_dir(tau_min=TAU_MIN):
+    """parts/layer for the default tau >= 224; parts/layer_t<tau_min> for a
+    lower tau_min (e.g. layer_t14: the engine covering both S4-3 phases)."""
+    if tau_min == TAU_MIN:
+        return LAYER
+    return os.path.join(s43.PARTS, "layer_t%g" % tau_min)
+
+
+def part_path(pid, tau_min=TAU_MIN):
+    return os.path.join(layer_dir(tau_min), pid + ".json")
 
 
 def xi_range(p):
@@ -114,7 +125,7 @@ class Ctx:
         return self._tube
 
 
-def run_piece(p, ctx):
+def run_piece(p, ctx, tau_min=TAU_MIN):
     tl = ctx.tl
     t0, c0 = time.time(), time.process_time()
     if p["kind"] == "sonic":
@@ -142,7 +153,7 @@ def run_piece(p, ctx):
         raise RuntimeError("unsupported piece kind for the layer engine: %s" % p["id"])
     tb, cb = time.time() - t0, time.process_time() - c0
     t1, c1 = time.time(), time.process_time()
-    res = tl.run_layer_piece(ld, la, lb)
+    res = tl.run_layer_piece(ld, la, lb, tau_min=tau_min)
     tc_, cc = time.time() - t1, time.process_time() - c1
     timing = dict(build_wall_s=tb, build_cpu_s=cb, certify_wall_s=tc_, certify_cpu_s=cc,
                   wall_s=tb + tc_, cpu_s=cb + cc)
@@ -165,7 +176,7 @@ def cmd_work(args):
     for p in ps:
         if args.max_pieces and done >= args.max_pieces:
             break
-        path = part_path(p["id"])
+        path = part_path(p["id"], args.tau_min)
         if os.path.exists(path) and not args.force:
             d = json.load(open(path))
             if d.get("schema") == SCHEMA and d.get("spec") == s43.spec_of(p) and \
@@ -176,7 +187,7 @@ def cmd_work(args):
         s43.log("start %s" % p["id"])
         start = s43.now()
         try:
-            res, inputs, call, timing = run_piece(p, ctx)
+            res, inputs, call, timing = run_piece(p, ctx, args.tau_min)
             status = "pass" if res["ok"] else "fail"
             err = None
         except Exception as e:                       # recorded, never a pass
@@ -187,10 +198,11 @@ def cmd_work(args):
         xi = xi_range(p)
         rec = dict(schema=SCHEMA, id=p["id"], region=p["region"], spec=s43.spec_of(p),
                    status=status,
-                   scope=dict(tau=[224.0, "inf"], eps=[0.0, 6.0], xi=list(xi),
+                   scope=dict(tau=[args.tau_min, "inf"], eps=[0.0, 6.0], xi=list(xi),
                               statement=("for all xi in the piece, eps in [0, 6], "
-                                         "tau >= 224: dT, dB, nB != 0 and "
-                                         "Sigma = S xi^2/tau^2 <= certified_bound < 0")),
+                                         "tau >= %g: dT, dB, nB != 0 and "
+                                         "Sigma = S xi^2/tau^2 <= certified_bound < 0"
+                                         % args.tau_min)),
                    certified_bound=(res or {}).get("certified_bound"),
                    result=_clean({k: v for k, v in (res or {}).items()}),
                    error=err, inputs=inputs, region_call=call,
@@ -214,7 +226,7 @@ def cmd_status(args):
     worst = None
     cpu = 0.0
     for p in band:
-        path = part_path(p["id"])
+        path = part_path(p["id"], args.tau_min)
         d = json.load(open(path)) if os.path.exists(path) else None
         st43 = s43.part_state(p, s43.read_part(p["id"]))
         if d is None:
@@ -253,9 +265,13 @@ def main(argv=None):
     q.add_argument("--tube-cache", help="gap tube file (content hash must match the record)")
     q.add_argument("--force", action="store_true")
     q.add_argument("--max-pieces", type=int, default=0)
+    q.add_argument("--tau-min", type=float, default=TAU_MIN,
+                   help="lower end of the tau range (default 224; 14 covers both "
+                        "S4-3 phases; parts then go to parts/layer_t14)")
     q.set_defaults(fn=cmd_work)
     q = sub.add_parser("status")
     q.add_argument("-v", "--verbose", action="store_true")
+    q.add_argument("--tau-min", type=float, default=TAU_MIN)
     q.set_defaults(fn=cmd_status)
     args = ap.parse_args(argv)
     args.fn(args)

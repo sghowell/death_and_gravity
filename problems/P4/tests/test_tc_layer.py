@@ -181,11 +181,13 @@ def test_sigma_layer_algebra_vs_direct(point_ld, eps, tau):
         assert float(S_layer.rad()) < 1e-6 * max(1.0, abs(float(S_layer.mid())))
 
 
-def test_certify_single_xi(point_ld):
-    """End-to-end adaptive cover at one xi: all eps in [0, 6], tau >= 224."""
+@pytest.mark.parametrize("tau_min", [224.0, 14.0])
+def test_certify_single_xi(point_ld, tau_min):
+    """End-to-end adaptive cover at one xi: all eps in [0, 6], tau >= tau_min."""
     xi, pr, ld = point_ld
-    res = tl.run_layer_piece(ld, 0.0, 0.0)
+    res = tl.run_layer_piece(ld, 0.0, 0.0, tau_min=tau_min)
     assert res["ok"] and res["certified_bound"] < 0, res["fails"]
+    assert res["params"]["tau_min"] == tau_min
 
 
 # ----------------------------------------------------------- full pieces
@@ -222,12 +224,16 @@ def test_gap_step_certifies(atoms):
 
 # ---------------------------------------------------------------- artifacts
 def test_layer_parts_consistency():
-    files = sorted(glob.glob(os.path.join(LAYER_PARTS, "*", "*.json")))
+    files = sorted(glob.glob(os.path.join(LAYER_PARTS + "*", "*", "*.json")))
     if not files:
         pytest.skip("no layer parts yet")
     for f in files:
         d = json.load(open(f))
         assert d["schema"] == "s44-layer/1"
-        assert d["scope"]["tau"][0] == 224.0 and d["scope"]["eps"] == [0.0, 6.0]
+        tmin = 224.0 if os.path.basename(os.path.dirname(os.path.dirname(f))) == "layer" \
+            else float(os.path.basename(os.path.dirname(os.path.dirname(f)))[len("layer_t"):])
+        assert d["scope"]["tau"][0] == tmin and d["scope"]["eps"] == [0.0, 6.0]
+        if d["status"] == "pass":
+            assert d["result"]["params"]["tau_min"] == tmin
         if d["status"] == "pass":
             assert d["result"]["ok"] and d["certified_bound"] < 0
