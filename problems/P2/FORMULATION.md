@@ -142,7 +142,8 @@ Both points satisfy (½+δ)κ₋ < min(κ₊, κ_c), so
 - **D1′ (equivalence; an S1 lemma, written proof with citations).** For
   ω ∉ E₊ ∪ E_c, D1 is equivalent to σ = ω being a resonance (a QNM) in the
   sense of [Vas13], [HV17] and [Hin25]: a smooth resonant state in (t*, r, θ, φ)
-  coordinates, with the same multiplicity. The ingredients are separation of
+  coordinates, with the same multiplicity [v0.1: the multiplicity clause is
+  proved for Im ω > −min(κ₊, κ_c) only; see the Revision log]. The ingredients are separation of
   variables, and the fact that in the hyperboloidal variable u = e^{−iωT}R
   (so that φ = e^{−iωt*}u Y_lm) the exponents at each horizon are {0, iω/κ}.
   Smoothness selects the analytic branch whenever iω/κ ∉ ℕ, which holds on S_δ
@@ -346,3 +347,11 @@ Sizing and kill criteria are in `s0-gate.md` §7.
   proposed .tex v1.2 entry (`s0-gate.md` §7). If it is not approved, P_A is the
   only target and P_B, P2-6 are dropped. The literature was checked on
   2026-10-16 (`notes/literature-digest.md`).
+
+- **v0.1 (2026-10-16, S1 close-out).** D1′ narrowed to what is proved. The
+  equivalence "zero of W_l ⟺ resonance" holds as stated on ω ∉ E₊ ∪ E_c,
+  but the clause "with the same multiplicity" is proved only for
+  Im ω > −min(κ₊, κ_c) (`notes/s1-p20-d1prime.md`, part 2). That region
+  contains S_δ at both frozen points (certified in `certificates/params.json`;
+  margins in `notes/s1-report.md`), so no target changes. No other frozen
+  item changes.
