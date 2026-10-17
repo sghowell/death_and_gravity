@@ -696,3 +696,38 @@ For Re κ > −0.0990 this equals P4-6's normalized class.
 by a certificate "committed under `certificates/`".  P4 keeps its artifacts
 under `results/`, as the existing CERTIFIED rows P4-3 … P4-6 already do.  The
 owner should note or change this.
+
+## 12. Follow-up check of `6d189cbb` (2026-10-17)
+
+The same reviewer checked the drafter's response to this review:
+- Lemma G1, in assembly §4.5;
+- §10 items 1–8;
+- the ledger rows.
+
+The check was read-only, with no computation.
+
+**Lemma G1: correct, with two overreaches to reword.**
+- The lemma faithfully combines §2 (b), (c) and (e).
+- It rests only on:
+  - `g1_order0.json`, `centre_pattern.json` and `g1_centre.txt`;
+  - classical Frobenius theory;
+  - the κ-independent ingredients of `s2-theorem-b.md` §3.8.
+- The E-form follows on all of Ω, so P4-8's E-clause can stay.
+
+The two overreaches are harmless on Ω:
+1. **The root of det M₀.** It equals σ's zero only in balls (d₀σ_b − d₁σ_a ∋ 0).
+   - Corrected wording: "det M₀(κ) = d₁(κ − κ₀), κ₀ = −0.0990290820550 ± 2.9e−14 real; σ's zero lies in the same ball".
+   - The lemma is now stated on Re κ > −0.0990.
+2. **The radius ≥ 0.065 of P4-6's class.** It is certified on R only, and §2 (c) of this review was equally loose.
+   - Corrected wording: every element of the class is a multiple of p̃, and P4-6's normalized class is contained in it. So "no eigenvalue" in the class implies the same for P4-6's class, and on R the two coincide (B′).
+
+**Minor.**
+- The fourth centre exponent is G₂₃/P₂₃ = −3.0000 only in balls; the text now reads {0, 0, −3, G₂₃/P₂₃ < 0}.
+- In S8, add that both branches are ≢ 0.
+- Restore P4-10's sentence: if P4-8 or P4-9 ends at WRITTEN_PROOF, so does P4-10.
+
+**§10 items 1–8.** Applied correctly, with no new error. The S8 rigidity argument and the `s4-energy.md` status banners are right.
+
+**Ledger rows.** They match §11, class included.
+
+All of the above is applied in `148e9a10`.
