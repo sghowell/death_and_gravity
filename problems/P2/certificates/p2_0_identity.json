@@ -1,0 +1,88 @@
+{
+ "claim": "P2-0 (closed upper half-plane: W_l(w) = 0 with Im w >= 0 iff (l, w) = (0, 0)) and D4 (m_0(0) = 1)",
+ "level": "CERTIFIED (exact identities) + written steps",
+ "steps": [
+  {
+   "id": "C1",
+   "statement": "e^{-i w T}[(r^2 F R')' + (w^2 r^2/F - L) R] - E[u] == 0 for R = e^{i w T} u, T' = eta/F",
+   "method": "sympy simplify/expand == 0, generic F, eta, u, T",
+   "ok": true
+  },
+  {
+   "id": "C2",
+   "statement": "conj(u) E[u] = J' - r^2F|u'|^2 - 2w r^2 eta Im(u' conj u) + w^2 r^2(1-eta^2)/F |u|^2 - L|u|^2",
+   "method": "sympy expand == 0, u = p + i q, w = a + i b",
+   "ok": true
+  },
+  {
+   "id": "C3",
+   "statement": "J(r_c) - J(r_+) = i w (r_c^2|u(r_c)|^2 + r_+^2|u(r_+)|^2) = i w B",
+   "method": "exact substitution",
+   "ok": true
+  },
+  {
+   "id": "C4",
+   "statement": "Re/Im of 0 = i w B - D - 2wX + w^2 W - L N",
+   "method": "sympy as_real_imag",
+   "ok": true
+  },
+  {
+   "id": "C5",
+   "statement": "b Re - a Im = -[b(D + L N + |w|^2 W) + |w|^2 B]",
+   "method": "sympy expand",
+   "ok": true
+  },
+  {
+   "id": "C6",
+   "statement": "r^2(1-eta^2)/F = 4 r^4/((Lambda/3)(r_c-r_+)^2 (r-r_n)(r-r_-)), eta(r_+)=-1, eta(r_c)=1",
+   "method": "sympy cancel",
+   "ok": true
+  },
+  {
+   "id": "C7a",
+   "statement": "Res_{r_+} T' = -1/(2 kappa_+), Res_{r_c} T' = -1/(2 kappa_c)",
+   "method": "exact substitution",
+   "ok": true
+  },
+  {
+   "id": "C7b",
+   "statement": "indicial exponents of E[u]: {0, i w/kappa_+} at r_+, {0, i w/kappa_c} at r_c",
+   "method": "sympy expand",
+   "ok": true
+  },
+  {
+   "id": "C8",
+   "statement": "D4: d/dw Delta(R_+R_c' - R_+'R_c) at (l,w)=(0,0) is i(r_+^2 + r_c^2)",
+   "method": "sympy limit/expand",
+   "ok": true
+  }
+ ],
+ "written_steps": {
+  "integration": "u = e^{-i w T} R_+ is analytic on [r_+, r_c] when W_l(w) = 0 (C7 at r_+; R_+ = const*R_c and C7 at r_c), so D, N, X, W, B are finite (C6 bounds the W-weight) and integrating C2 over [r_+, r_c] with C3 gives 0 = i w B - D - 2 w X + w^2 W - L N (C4).",
+  "b_pos": "b > 0: by C5, b (D + L N + |w|^2 W) + |w|^2 B = 0 with every term >= 0, so W = 0 (w != 0); the weight of W is > 0 on (r_+, r_c) (C6), hence u = 0: no QNM with Im w > 0.",
+  "b_zero": "b = 0, a != 0: Im part of C4 gives a B = 0, so u(r_+) = 0, contradicting u_+(r_+) != 0 (C7).  w = 0: C4 gives D + L N = 0, so u' = 0 and (l >= 1) u = 0; for l = 0, u = const: the zero mode.",
+  "D4": "C8: W_0(0) = 0 (R = 1) and W_0'(0) = i (r_+^2 + r_c^2)/(r_+ r_c) != 0 (the exponential Jost factor is entire and does not change the order of the zero), so m_0(0) = 1."
+ },
+ "negative_controls": {
+  "meaning": "each identity with a deliberately wrong term must FAIL (True = it failed)",
+  "results": {
+   "C1": true,
+   "C2": true,
+   "C3": true,
+   "C4": true,
+   "C5": true,
+   "C6": true,
+   "C7a": true,
+   "C7b": true,
+   "C8": true
+  },
+  "all_discriminating": true
+ },
+ "all_ok": true,
+ "sympy": "1.14.0",
+ "commit": "891ef7e22d025df872ec94373196bd6707f23d4d+dirty",
+ "timing_s": {
+  "wall": 0.3,
+  "cpu": 0.3
+ }
+}
