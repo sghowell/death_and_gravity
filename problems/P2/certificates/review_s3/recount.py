@@ -14,7 +14,9 @@ What is reused from the author: only the zsol BOX enclosure, for the sup bound M
   * pieces: length <= kappa_-/32 initially, bisected until the enclosure excludes 0; increment =
     principal Arg of the ratio of the end enclosures, certified below pi.
 The winding is (sum of all increments)/(2 pi), certified when within 1/4 of an integer.
-Usage: nice -n 10 python recount.py 1,2 --workers 3     (writes recount.json; logs/recount_l{l}.jsonl)
+Working precision: 128 bits for l <= 2, 256 bits for l >= 3 (S1 arbw loses ~45 digits at the l = 5
+corner).
+Usage: nice -n 10 python recount.py 0,1,2,5 --workers 3     (writes recount.json; logs/recount_l{l}.jsonl)
 """
 from __future__ import annotations
 
@@ -101,7 +103,8 @@ def segment(args):
     pt = _G["pt"]
     arbw = _G["arbw"]
     t0 = time.process_time()
-    with precision(PREC):
+    prec = PREC if l <= 2 else 256                     # arbw needs 256 bits at l >= 3 (C0 data)
+    with precision(prec):
         c = acb(_q(sg["c"][0]), _q(sg["c"][1]))
         rho = _q(sg["rho"])
         p0 = acb(_q(sg["p0"][0]), _q(sg["p0"][1]))
