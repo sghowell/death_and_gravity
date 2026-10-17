@@ -36,6 +36,7 @@ import time
 from flint import arb
 
 from .arbseries import precision
+from .ballutil import radius_cover, strip_ball
 from .tc_energy import sonic_expansion_cached, u_prime_balls
 
 BLOCKS4 = [(0, 1), (1, 3), (3, 4)]
@@ -83,7 +84,7 @@ def run_tube(tube, nsub=4, prec=256):
             h = arb(sd.h)
             for j in range(nsub):
                 w2 = sd.h / (2 * nsub)
-                sm = (-h * (2 * j + 1)) / (2 * nsub) + arb(0, w2)
+                sm = (-h * (2 * j + 1)) / (2 * nsub) + arb(0, radius_cover(w2, h / (2 * nsub)))
                 Z = [zi + arb(0, sd.eps_z) for zi in ss.horner_vec(sd.co, sm)]
                 f, _P = ss.rhs_enclosure(tube.sys4, Z, BLOCKS4)
                 m = margins_scaled(Z, f[:3])
@@ -120,7 +121,7 @@ def run_sonic(nx=6, prec=256):
     with precision(prec):
         edges = [-0.05 * (1 - i / nx) for i in range(nx + 1)]
         for a, b in zip(edges, edges[1:]):
-            xb = arb((a + b) / 2, (b - a) / 2)
+            xb = strip_ball(a, b)
             u = ex.eval(xb)
             up = u_prime_balls(ex, xb, prec)
             m = margins_unscaled(u, up, at_zero=(b == 0.0))

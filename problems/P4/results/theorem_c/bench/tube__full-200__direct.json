@@ -1,0 +1,377 @@
+{
+ "schema": "s43-bench/1",
+ "id": "tube/full-200",
+ "spec": {
+  "id": "tube/full-200",
+  "region": "tube",
+  "kind": "tube",
+  "index": 200,
+  "x": -2.1340625,
+  "h": 0.02,
+  "cache": "full",
+  "cache_content_sha256": "cb2531921be5ff5c387f2f1b424f351c7fa378f80f71c97dc7edd464de0b1b6e",
+  "x_min": -4.5,
+  "x_max": -0.05,
+  "degrade": true,
+  "tq": true
+ },
+ "mode": "direct",
+ "tq": false,
+ "call": "analyze_piece(pr, cm, 0.0, h, 14, eps_cells_default(), 0, (0, 0, 0), tq=False): run_tube's per-step body at prec 320, no degrade",
+ "result": {
+  "ok": true,
+  "margin": -1.8374960672686723e-05,
+  "err": null,
+  "open": "open (tau > tstar not certified on this piece)",
+  "cells": [
+   {
+    "eps": [
+     0.0,
+     0.03
+    ],
+    "ok": true,
+    "margin": -0.0001346789180954482,
+    "direct": -0.0001346789180954482
+   },
+   {
+    "eps": [
+     0.03,
+     0.07
+    ],
+    "ok": true,
+    "margin": -0.0006495324396744307,
+    "direct": -0.0006495324396744307
+   },
+   {
+    "eps": [
+     0.07,
+     0.12
+    ],
+    "ok": true,
+    "margin": -1.8374960672686723e-05,
+    "direct": -1.8374960672686723e-05
+   },
+   {
+    "eps": [
+     0.12,
+     0.2
+    ],
+    "ok": true,
+    "margin": -6.423633424288211e-05,
+    "direct": -6.423633424288211e-05
+   },
+   {
+    "eps": [
+     0.2,
+     0.35
+    ],
+    "ok": true,
+    "margin": -0.0004505426170516688,
+    "direct": -0.0004505426170516688
+   },
+   {
+    "eps": [
+     0.35,
+     0.6
+    ],
+    "ok": true,
+    "margin": -0.0003251778931578267,
+    "direct": -0.0003251778931578267
+   },
+   {
+    "eps": [
+     0.6,
+     1.0
+    ],
+    "ok": true,
+    "margin": -0.00010987290967098218,
+    "direct": -0.00010987290967098218
+   },
+   {
+    "eps": [
+     1.0,
+     1.6
+    ],
+    "ok": true,
+    "margin": -0.001559255670889529,
+    "direct": -0.001559255670889529
+   },
+   {
+    "eps": [
+     1.6,
+     2.4
+    ],
+    "ok": true,
+    "margin": -0.00018400805202276562,
+    "direct": -0.00018400805202276562
+   },
+   {
+    "eps": [
+     2.4,
+     3.4
+    ],
+    "ok": true,
+    "margin": -0.02259533767468973,
+    "direct": -0.02259533767468973
+   },
+   {
+    "eps": [
+     3.4,
+     4.6
+    ],
+    "ok": true,
+    "margin": -0.0037257282221482193,
+    "direct": -0.0037257282221482193
+   },
+   {
+    "eps": [
+     4.6,
+     6.0
+    ],
+    "ok": true,
+    "margin": -0.01112234106549731,
+    "direct": -0.01112234106549731
+   }
+  ],
+  "bounds": {
+   "Rbar": 3.0734259150585417
+  }
+ },
+ "timing": {
+  "start": "2026-10-17T08:57:54Z",
+  "end": "2026-10-17T14:26:23Z",
+  "setup_wall_s": 67.32588911056519,
+  "setup_cpu_s": 66.38942400000087,
+  "analyze_wall_s": 19642.300196170807,
+  "analyze_cpu_s": 19361.695691999998,
+  "tau_quadratic_phase_wall_s": 0.0,
+  "direct_phase_wall_s": 19641.795608997345,
+  "loadavg_start": [
+   14.89501953125,
+   13.88330078125,
+   14.4638671875
+  ],
+  "loadavg_end": [
+   5.98291015625,
+   6.53076171875,
+   6.69970703125
+  ],
+  "nice": 10
+ },
+ "phases": {
+  "direct_S_boxes": {
+   "calls": 12,
+   "wall_s": 19641.795608997345,
+   "cpu_s": 19361.20392699999
+  }
+ },
+ "phase_calls": [
+  {
+   "phase": "direct_S_boxes",
+   "wall_s": 1723.7511172294617,
+   "cpu_s": 1709.4737539999987,
+   "err": null,
+   "eps_cells": [
+    [
+     0.0,
+     0.03
+    ]
+   ],
+   "ok": true,
+   "worst": -0.0001346789180954482
+  },
+  {
+   "phase": "direct_S_boxes",
+   "wall_s": 3207.297930955887,
+   "cpu_s": 3112.6463049999984,
+   "err": null,
+   "eps_cells": [
+    [
+     0.03,
+     0.07
+    ]
+   ],
+   "ok": true,
+   "worst": -0.0006495324396744307
+  },
+  {
+   "phase": "direct_S_boxes",
+   "wall_s": 2556.380959033966,
+   "cpu_s": 2477.848969999999,
+   "err": null,
+   "eps_cells": [
+    [
+     0.07,
+     0.12
+    ]
+   ],
+   "ok": true,
+   "worst": -1.8374960672686723e-05
+  },
+  {
+   "phase": "direct_S_boxes",
+   "wall_s": 3930.888973712921,
+   "cpu_s": 3850.4443949999986,
+   "err": null,
+   "eps_cells": [
+    [
+     0.12,
+     0.2
+    ]
+   ],
+   "ok": true,
+   "worst": -6.423633424288211e-05
+  },
+  {
+   "phase": "direct_S_boxes",
+   "wall_s": 2720.164651155472,
+   "cpu_s": 2714.9041209999996,
+   "err": null,
+   "eps_cells": [
+    [
+     0.2,
+     0.35
+    ]
+   ],
+   "ok": true,
+   "worst": -0.0004505426170516688
+  },
+  {
+   "phase": "direct_S_boxes",
+   "wall_s": 1741.0805411338806,
+   "cpu_s": 1737.9793219999992,
+   "err": null,
+   "eps_cells": [
+    [
+     0.35,
+     0.6
+    ]
+   ],
+   "ok": true,
+   "worst": -0.0003251778931578267
+  },
+  {
+   "phase": "direct_S_boxes",
+   "wall_s": 1370.3812201023102,
+   "cpu_s": 1368.7258169999986,
+   "err": null,
+   "eps_cells": [
+    [
+     0.6,
+     1.0
+    ]
+   ],
+   "ok": true,
+   "worst": -0.00010987290967098218
+  },
+  {
+   "phase": "direct_S_boxes",
+   "wall_s": 897.808070898056,
+   "cpu_s": 896.5277300000016,
+   "err": null,
+   "eps_cells": [
+    [
+     1.0,
+     1.6
+    ]
+   ],
+   "ok": true,
+   "worst": -0.001559255670889529
+  },
+  {
+   "phase": "direct_S_boxes",
+   "wall_s": 615.9859273433685,
+   "cpu_s": 615.4730369999961,
+   "err": null,
+   "eps_cells": [
+    [
+     1.6,
+     2.4
+    ]
+   ],
+   "ok": true,
+   "worst": -0.00018400805202276562
+  },
+  {
+   "phase": "direct_S_boxes",
+   "wall_s": 334.41641116142273,
+   "cpu_s": 334.1102450000035,
+   "err": null,
+   "eps_cells": [
+    [
+     2.4,
+     3.4
+    ]
+   ],
+   "ok": true,
+   "worst": -0.02259533767468973
+  },
+  {
+   "phase": "direct_S_boxes",
+   "wall_s": 291.9999601840973,
+   "cpu_s": 291.6807769999941,
+   "err": null,
+   "eps_cells": [
+    [
+     3.4,
+     4.6
+    ]
+   ],
+   "ok": true,
+   "worst": -0.0037257282221482193
+  },
+  {
+   "phase": "direct_S_boxes",
+   "wall_s": 251.63984608650208,
+   "cpu_s": 251.38945400000375,
+   "err": null,
+   "eps_cells": [
+    [
+     4.6,
+     6.0
+    ]
+   ],
+   "ok": true,
+   "worst": -0.01112234106549731
+  }
+ ],
+ "code": {
+  "files": {
+   "problems/P4/src/p4/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "problems/P4/src/p4/validated/__init__.py": "2d62466572841f234a88bfc9c0e440d4fe34840a62b6d0faee2983c150cbba68",
+   "problems/P4/src/p4/validated/arbseries.py": "04e239090c8d5aa4ee645ae041a5acfebc75608add88a523917f828167ab4f1d",
+   "problems/P4/src/p4/validated/biseries.py": "af614a0747cd6f68510dfc2d1788459afd0759af0778cc8eec4b2cafdfc028f6",
+   "problems/P4/src/p4/validated/centre.py": "9f2655d57981916c6f5c8d0248d8cdcf91b44a1ab6e801236b265e1aa877269e",
+   "problems/P4/src/p4/validated/linstep.py": "f93fc04f09e16f183aa8b61cddf2e8e7cf5051e61afedfeec04379b24ee06c07",
+   "problems/P4/src/p4/validated/linsys.py": "fc6c8ff924c19f7a072afe75396b182923709c262f6438e3bcb44ed6b8a2e1f8",
+   "problems/P4/src/p4/validated/lintail.py": "61f929642232a27a8f0984ce35b04098c1468009fab70a33ec02b649467ac7d6",
+   "problems/P4/src/p4/validated/lintube.py": "8c034ee8209abff74d4f1d83f8da2debc8226b7582a6ac7e47c6d263d365eb80",
+   "problems/P4/src/p4/validated/matching.py": "d85834e140c22fad388c86fac0383642595ab2c1d92e40dc03ffe880be9f4835",
+   "problems/P4/src/p4/validated/polysys.py": "c9025549b91eb6e700fbd6e8673e4dcb2cae75b183b451d3aec3cde3e8c8ee4b",
+   "problems/P4/src/p4/validated/recursion.py": "5f3d29a83481b34c72496b570dc70603f26ed0ceaf3bb9952822ce5dacd8187e",
+   "problems/P4/src/p4/validated/shootsys.py": "975b998fe5be09c7b2d504526098825daeeb2ab8fe7e707c011ca5e38ae9bff0",
+   "problems/P4/src/p4/validated/sonic.py": "dbb046ea88f75d91acc6fe1593790b866e8b8f6c7723e3547666c9d8e221939b",
+   "problems/P4/src/p4/validated/systems.py": "7e0a98495e17e728795996c40f1e340a523d687b506a81b69882fed7143e64f6",
+   "problems/P4/src/p4/validated/tailbound.py": "8c4b5de660fb8cca3b8c6305625dac0ecce267454052b8feb4ad9650419158ae",
+   "problems/P4/src/p4/validated/tc_commutator.py": "11cfdc4969577218472dcc4c79673629c78b8686e5cfb758e8f9e199cf006da7",
+   "problems/P4/src/p4/validated/tc_energy.py": "b5c08649680e1c6a41426621883dbe2146db2f16c7bc109fd7822a00ab159cf1",
+   "problems/P4/src/p4/validated/tc_reduce.py": "fb07a9837ead0d99aaca7a78d07f2b91731f64b136878ffde25ee0688c1ea9e6",
+   "problems/P4/src/p4/validated/tc_tm.py": "2db115ae9d729a97e0efe33b5958be2c5252c42d1fcb2c9abf6e631ebf72a422",
+   "problems/P4/src/p4/validated/tmint.py": "8dc2d5e8b8d129774d3f52f3455d678a86ae04b0cc88c03147521e11d716d820",
+   "problems/P4/src/p4/validated/variational.py": "e2adb8e44870c9b0367d03fea6c2dd7d3b146b77d0b197548628205465108a79"
+  },
+  "fingerprint": "936af109d5ce3aab93f134e2b77a36b2627c6829778aa6e3deea94eb74c53852",
+  "git_head": "75869b9164e5ee6835d2f83b165a31d6c45226af",
+  "git_dirty_src": false
+ },
+ "driver_sha256": "6e95af680036f8b1d38de807b89a97f3709304aa9fab9248f505ad4632637fa0",
+ "env": {
+  "host": "Mac",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "machine": "arm64",
+  "cpu_count": 12,
+  "python": "3.11.14",
+  "flint": "0.9.0"
+ },
+ "note": "timing benchmark (recovery note 8(ii)); not a part: merge does not read results/theorem_c/bench/"
+}

@@ -33,8 +33,9 @@ def main(argv=None):
     if not p or p[0]["kind"] != "centre":
         raise SystemExit("needs a planned centre piece")
     p = p[0]
-    from flint import arb
+    from flint import arb  # noqa: F401
     import p4.validated.tc_commutator as tc
+    from p4.validated.ballutil import strip_ball
     from p4.validated.tc_energy import Atoms
     at = Atoms(full=True)
     ce = tc._centre_expansion()
@@ -42,7 +43,7 @@ def main(argv=None):
 
     def wrap(K2, R1, K0, R0, b1, lo, hi, so):
         K2t = K2.trim()
-        el = arb((lo + hi) / 2, (hi - lo) / 2)
+        el = strip_ball(lo, hi)
         hK2, hR1 = K2t.off + so, R1.min_off() + so
         h = min(hK2, hR1)
         A = K2t.tm.eval(lo, hi)

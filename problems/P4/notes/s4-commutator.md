@@ -7,8 +7,8 @@
 > `14da7d1e` sources):
 > - the exact identities E1, E2, E3, E5 (§4): all hold.  E2 returns pmin = 14
 >   with ok = True, i.e. val(Z∘u) ≥ 16 once A → 1.  Artifact:
->   `results/theorem_c/parts/checks.json`.
-> - Lemma D (§1, Task 1).  `results/theorem_c/parts/lemma_d_certified.json`:
+>   `certificates/theorem_c/checks.json`.
+> - Lemma D (§1, Task 1).  `certificates/theorem_c/lemma_d_certified.json`:
 >   passes with centre balls that enclose the certified (a*, μ*).
 >   `parts/lemma_d_midpoint.json` reproduces the `tc_energy.json` record
 >   exactly, but that run's centre series sits on the a3 midpoint, which does not
@@ -28,7 +28,7 @@
 > Update, 2026-10-16 evening (`s4-3-recovery.md` §11):
 > - `_centre_expansion` and `tc_monotone.run_centre` now build the centre
 >   series on the certified (a*, μ*) balls (`p4.validated.ec_centre`).
-> - On that code, Lemma D reproduces `parts/lemma_d_certified.json` exactly
+> - On that code, Lemma D reproduces `certificates/theorem_c/lemma_d_certified.json` exactly
 >   and P4-3 still passes.
 > - The τ-quadratic-from-τ = 14 centre variant fails.
 > - 310 region pieces are being computed; `s43_parts.py status` gives the
@@ -60,7 +60,7 @@ One Taylor-model run over y = e^x in (0, e^{-4.5}] (1100 subranges, ratio
   q2_hat >= 1.9618 > 0,  mB = +3.475,  mC = +15.348,
   pole gaps |y/A|, |y F_N| >= 0.9995 away from 1.
 
-Recorded in `results/theorem_c/tc_energy.json` under `"lemma_d"`
+Recorded in `certificates/theorem_c/tc_energy.json` under `"lemma_d"`
 (`all_ok = true`); replay: `uv run python -m p4.validated.tc_commutator
 lemma_d`.  P4-8 loses its conditionality (draft row in Section 9).
 
@@ -76,7 +76,7 @@ certified values are a* = a_m + 7.031e-12 ± 8.87e-16 and μ* = μ_m + 2.3757e-9
 4.61e-14, the balls that `modecount.certified_centre` and every tube build use.
 With those balls Lemma D passes: q2 ≥ 1.9618364, mB ≥ 3.4752428,
 mC ≥ 15.348292, pole gaps ≥ 0.99952 and 0.99999, 61.5 s.  Artifact:
-`results/theorem_c/parts/lemma_d_certified.json`.  Replay:
+`certificates/theorem_c/lemma_d_certified.json`.  Replay:
 `python problems/P4/scripts/s43_parts.py lemma-d --centre-balls certified`.
 Lemma D is certified by that artifact.  The P4-8 ledger update is for Sean to
 make (draft in `s4-3-recovery.md` §10).  `tc_monotone.run_centre` had the same
@@ -127,6 +127,14 @@ coefficients sit at real kappa in [kappa-bar, 1.89]: certified per piece via
 |A|, |F_N| < b1 (real-pole bound), distance >= b1 - 1.89 >= 12.1 from the
 excluded region.  Eta-elimination is legal since the Bcr cubic's roots obey
 the Cauchy bound Rbar < b1 on every piece (certified; worst Rbar ~ 6.5).
+[2026-10-17: "certified per piece" holds for the pieces carried by S4-3
+parts.  A piece carried by a substituted S4-4 `layer_t14` part (`s43_parts.py
+merge --substitute-layer-t14`, `s4-4-layer-engine.md` section 14) has no Rbar
+or real-pole bound; there dT != 0 at every strip kappa of the piece is
+certified instead, and since dT = Dp SDr D2r Bcr it gives Bcr != 0 and
+D2r != 0 (no pole) at those kappa directly.  The real-pole bound is vacuous
+in the strip anyway (the roots A and -F_N of D2r are real); review
+`docs/review-2026-10-17-p4-layer-engine-adversarial.md` section 1.]
 
 ## 4. Certified structure constants and input raising
 
@@ -155,7 +163,10 @@ the G-remainder slots to val 4 (Section 6).
 Each region piece builds atom kappa-polynomials of Laurent-Taylor models
 (`tc_tm.py`: TM/LC/JLC, CAP = 80, recentred Taylor-shift evaluation), forms
 the pairs (nT, dT, nB, dB), commutes once, and certifies S < 0 for all
-eps in [0, 6] (13 graded cells) and tau >= b1 = 14 in two phases:
+eps in [0, 6] (12 graded cells with the 13 edges 0, 0.03, 0.07, 0.12, 0.2,
+0.35, 0.6, 1, 1.6, 2.4, 3.4, 4.6, 6 of `tc_commutator.eps_cells_default`, used
+by every part; corrected 2026-10-17, the note said 13 cells) and
+tau >= b1 = 14 in two phases:
 
 - direct phase, tau in [b1, tstar], tstar = 16 b1 = 224: adaptive ball
   evaluation of S on (ell-strip) x (eps, tau) boxes through value chains
@@ -229,7 +240,7 @@ the expected outcome, before the runs finished.  `tc_commutator.json` was never
 written, so no line except the first is backed by an artifact.  Status of each
 line, from the transcript (details in `s4-3-recovery.md` §4):
 
-- checks: re-verified 2026-10-16, all hold (`parts/checks.json`).  E2 returns
+- checks: re-verified 2026-10-16, all hold (`certificates/theorem_c/checks.json`).  E2 returns
   pmin = 14, which gives val >= 16 after A -> 1.
 - centre: not certified.  The 30/30 run (worst -5.99, 1022 s) started at
   09-01T04:18Z with code that had no direct phase: the tau-quadratic covered
@@ -302,7 +313,7 @@ large-tau sonic-sliver item above.
 ## 9. Draft CLAIMS rows (do not edit CLAIMS.md from this stage)
 
 [Correction 2026-10-16.  The P4-8 update now rests on
-`results/theorem_c/parts/lemma_d_certified.json` (centre balls enclosing
+`certificates/theorem_c/lemma_d_certified.json` (centre balls enclosing
 (a*, mu*)), not on the midpoint record in tc_energy.json (§1).  The P4-9 draft
 is superseded: no certificate exists, and its piece counts are the September
 design, not the 576-piece plan.  The current draft text is in
@@ -336,7 +347,12 @@ design, not the 576-piece plan.  The current draft text is in
   eta-elimination root bound (Rbar < 14) and the real-pole margins needed
   there are certified per piece in the JSON.  [2026-10-16: not yet.  These
   bounds are checked inside each piece run (`analyze_piece` raises if they
-  fail), so they become certified piece by piece as parts land.]
+  fail), so they become certified piece by piece as parts land.
+  2026-10-17: for pieces carried by a substituted `layer_t14` part the endgame
+  uses dT != 0 at strip kappa instead (every polynomial it needs nonzero
+  there divides dT up to powers of Dp: D2 = Dp^3 D2r, Bc = Dp^2 Bcr,
+  S Delta-tilde = Dp SDr); Rbar and the real-pole margins are not recorded
+  for those pieces and not needed (review 2026-10-17 section 1).]
 - The dec-slots (DWdec etc.) remain in the JSON for the non-closing pieces;
   on sonic pieces the tail-lemma sups (KW/KWp third slots) replace them.
 
@@ -380,3 +396,7 @@ design, not the 576-piece plan.  The current draft text is in
   cloud re-runs with the strip-depth fix.  [2026-10-16: the scratchpad was
   deleted in the 2026-09-07 reboot.  The cloud results were not retrieved.
   See `s4-3-recovery.md` §2 and §6.]
+
+---
+
+*Paths (2026-10-17): the files behind CERTIFIED rows moved unchanged from `results/` to `certificates/` (`problems/P4/certificates/README.md`). The paths in this note are updated; the module mains still write their replays to `results/`. The note gained no lines above this one, so line references into it still hold.*

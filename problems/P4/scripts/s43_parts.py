@@ -18,9 +18,14 @@ unchanged on the Mac and on the cloud node):
   problems/P4/results/theorem_c/parts/caches/<name>.json  cache build records (committed)
   problems/P4/results/theorem_c/parts/plan.json      every piece of the certificate (committed)
   problems/P4/results/theorem_c/parts/<region>/<id>.json  one result per piece (committed)
-  problems/P4/results/theorem_c/parts/checks.json    exact identities E1/E2/E3/E5 (committed)
-  problems/P4/results/theorem_c/parts/lemma_d*.json  Lemma D re-runs (committed)
+  problems/P4/certificates/theorem_c/checks.json     exact identities E1/E2/E3/E5 (committed)
+  problems/P4/certificates/theorem_c/lemma_d_certified.json  Lemma D, certified balls
+  problems/P4/certificates/theorem_c/p43_centre.json P4-3 centre tail (committed)
+  problems/P4/results/theorem_c/parts/lemma_d_midpoint.json  Lemma D, old midpoint replay
   problems/P4/results/theorem_c/tc_commutator.json   merged certificate (only when complete)
+  (certificates/ holds the artifacts of CERTIFIED ledger rows, README "Ledger
+  levels"; checks.json, lemma_d_certified.json and p43_centre.json moved there
+  from parts/ on 2026-10-17, unchanged)
   problems/P4/logs/s43/                              worker logs, launch records, locks
                                                      (gitignored)
 
@@ -31,14 +36,16 @@ Commands (python problems/P4/scripts/s43_parts.py <cmd> -h for options):
   plan                               enumerate all pieces -> parts/plan.json
                                      (per piece: tq = False for the direct-only
                                      pieces, tstar_fac for the centre variant)
-  checks                             E1/E2/E3/E5 -> parts/checks.json
+  checks                             E1/E2/E3/E5 -> certificates/theorem_c/checks.json
   lemma-d [--centre-balls certified|midpoint] [--replay]
-                                     Lemma D -> parts/lemma_d_<balls>.json
+                                     Lemma D -> certificates/theorem_c/lemma_d_certified.json
+                                     or parts/lemma_d_midpoint.json
                                      (--replay: parts/replays/lemma_d_<balls>.json,
                                      compared with the stored record)
   p43-centre                         P4-3 centre tail (tc_monotone.run_centre) with
                                      the certified balls, and the midpoint-ball
-                                     replay of the old record -> parts/p43_centre.json
+                                     replay of the old record ->
+                                     certificates/theorem_c/p43_centre.json
   bench --ids ID,.. [--modes tq,direct] [--detach --nice 10 --tag T]
                                      time analyze_piece with tq=True / tq=False on
                                      single pieces (phase split recorded) ->
@@ -59,10 +66,23 @@ Commands (python problems/P4/scripts/s43_parts.py <cmd> -h for options):
   cloud-manifest --out F             Branch A: {source: sha256} the cworkers executed
   replay ID                          recompute one piece, compare with its part
                                      (record in parts/replays/, part untouched)
-  merge [--accept-code FILE=SHA ...] [--accept-reason TEXT]
+  merge [--accept-code FILE=SHA ...] [--accept-reason TEXT] [--substitute-layer-t14]
                                      coverage-checked assembly; writes
                                      tc_commutator.json only when complete,
-                                     tc_commutator_partial.json otherwise
+                                     tc_commutator_partial.json otherwise.
+                                     S4-4 layer parts (parts/layer*/<id>.json,
+                                     scripts/s44_layer.py) are joined by piece
+                                     id: a valid passing one carries tau > tstar
+                                     for a pass-direct piece (layer_checks).
+                                     --substitute-layer-t14 (opt-in): a strictly
+                                     checked passing layer_t14 part carries a
+                                     tube or sonic piece whose S4-3 part is
+                                     missing, stale or invalid (review
+                                     2026-10-17 section 2).  The x-cover is
+                                     checked exactly on the tube caches' step
+                                     positions (exact_x_cover); a piece that
+                                     is not the cache step it claims, or an
+                                     inexact join, fails the merge.
 
 A piece's result is "valid" (skipped on re-run) iff its file parses, its spec
 matches the plan entry, its tube cache content hash matches the local cache,
@@ -78,6 +98,7 @@ from __future__ import annotations
 import argparse
 import datetime as _dt
 import fnmatch
+import functools
 import glob
 import hashlib
 import json
@@ -90,6 +111,7 @@ import subprocess
 import sys
 import time
 import traceback
+from fractions import Fraction
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.abspath(os.path.join(HERE, "..", "..", ".."))
@@ -98,6 +120,9 @@ SRC = os.path.join(P4, "src")
 CACHE_DIR = os.path.join(P4, "data", "cache")
 TC_DIR = os.path.join(P4, "results", "theorem_c")
 PARTS = os.path.join(TC_DIR, "parts")
+CERT_TC = os.path.join(P4, "certificates", "theorem_c")   # CERTIFIED-row artifacts
+CHECKS = os.path.join(CERT_TC, "checks.json")
+S43_CERTS = ("checks.json", "lemma_d_certified.json", "p43_centre.json")   # written here
 LOGS = os.path.join(P4, "logs", "s43")
 LOCKS = os.path.join(LOGS, "locks")
 PLAN = os.path.join(PARTS, "plan.json")
@@ -155,15 +180,30 @@ def log(msg):
 
 
 def git_head():
+    """(head, dirty) of the checkout ROOT: head the commit, dirty True iff
+    problems/P4/src has uncommitted or untracked changes.  (None, None) on
+    any failure: git missing or exiting non-zero, or ROOT not the top level
+    of its own checkout (a `git archive` copy, also one placed inside another
+    repository).  Before 2026-10-17 a failed `git status` read as a clean
+    tree, (None, False) (review section 6, new issue 1)."""
+    def git(*args):
+        r = subprocess.run(["git", "-C", ROOT] + list(args), capture_output=True,
+                           text=True, timeout=20)
+        if r.returncode != 0:
+            raise RuntimeError("git %s exited %d" % (args[0], r.returncode))
+        return r.stdout.strip()
     try:
-        h = subprocess.run(["git", "-C", ROOT, "rev-parse", "HEAD"],
-                           capture_output=True, text=True, timeout=20).stdout.strip()
-        dirty = subprocess.run(["git", "-C", ROOT, "status", "--porcelain",
-                                "--", "problems/P4/src"], capture_output=True,
-                               text=True, timeout=20).stdout.strip()
-        return h or None, bool(dirty)
-    except Exception:          # no git on the node checkout: provenance only
+        top = git("rev-parse", "--show-toplevel")
+        if not top or os.path.realpath(top) != os.path.realpath(ROOT):
+            return None, None
+        head = git("rev-parse", "--verify", "HEAD")
+        dirty = git("status", "--porcelain", "--untracked-files=normal", "--",
+                    "problems/P4/src")
+    except Exception:          # no git, or git failed: provenance unknown
         return None, None
+    if not head:
+        return None, None
+    return head, bool(dirty)
 
 
 def env_info():
@@ -180,30 +220,118 @@ def env_info():
 # ------------------------------------------------------------ code identity
 EAGER = ("tc_commutator", "tc_tm", "tc_energy", "tc_reduce", "lintube", "centre",
          "sonic", "shootsys", "tailbound", "matching", "recursion", "tmint",
-         "linstep", "polysys", "systems", "linsys", "arbseries")
-_HASH_CACHE = {}
+         "linstep", "polysys", "systems", "linsys", "arbseries", "ec_centre",
+         "ballutil")
+_HASH_CACHE = {}          # current_hash(): files as they are on disk now (merge, status)
+_IMPORT_HASH = {}         # snapshot_code(): the module set of the import-time snapshots,
+#                           with each file's hash when this process loaded it
+DRIVER_SHA256 = sha256_file(os.path.abspath(__file__))     # this driver, at import
+
+
+def _p4_sources():
+    """{repo-relative path: absolute path} of the p4.* sources loaded in this
+    process now."""
+    out = {}
+    for name, mod in sorted(sys.modules.items()):
+        if not (name == "p4" or name.startswith("p4.")):
+            continue
+        f = getattr(mod, "__file__", None)
+        if f and f.endswith(".py"):
+            out[rel(f)] = f
+    return out
+
+
+def snapshot_code():
+    """The import-time snapshot: hash every p4.* source this process has
+    loaded and not hashed yet, add it to the snapshot's module set, and
+    return {repo-relative path: sha256} of the set.  Called right after the
+    imports (import_p4 and the drivers' contexts, before any computation),
+    so the hashes are those of the code that was loaded; a source edited on
+    disk afterwards is caught at write time by verify_code.  A module first
+    loaded after the last snapshot is not added at write time: code_record
+    lists it in late_modules (review section 6, new issue 2)."""
+    for r, f in _p4_sources().items():
+        if r not in _IMPORT_HASH:
+            _IMPORT_HASH[r] = sha256_file(f)
+    return dict(_IMPORT_HASH)
 
 
 def import_p4():
     import importlib
     for m in EAGER:
         importlib.import_module("p4.validated." + m)
+    snapshot_code()
+
+
+def late_modules():
+    """Repo-relative paths of the p4.* sources loaded in this process but
+    not in the module set of an import-time snapshot: first loaded after the
+    last snapshot_code(), so a hash taken now need not be that of the code
+    that ran."""
+    return sorted(r for r in _p4_sources() if r not in _IMPORT_HASH)
 
 
 def loaded_code():
-    """{repo-relative path: sha256} of every p4.* module loaded in this process."""
-    out = {}
-    for name, mod in sorted(sys.modules.items()):
-        if not (name == "p4" or name.startswith("p4.")):
-            continue
-        f = getattr(mod, "__file__", None)
-        if not f or not f.endswith(".py"):
-            continue
-        r = rel(f)
-        if r not in _HASH_CACHE:
-            _HASH_CACHE[r] = sha256_file(f)
-        out[r] = _HASH_CACHE[r]
-    return out
+    """{repo-relative path: sha256} of every p4.* module loaded in this
+    process: the import-time hash (snapshot_code), or, for a module in
+    late_modules(), a hash taken now.  Does not extend the snapshot."""
+    files = dict(_IMPORT_HASH)
+    for r, f in _p4_sources().items():
+        if r not in files:
+            files[r] = sha256_file(f)
+    return files
+
+
+def verify_code(files, drivers=None):
+    """Write-time re-verification: re-hash every recorded source, and the
+    driver scripts ({absolute path: sha256 at import}), from disk.  Returns
+    dict(ok, changed_sources, changed_drivers); ok is False if any of them
+    changed on disk since it was hashed at import.  status and merge treat a
+    result with ok False as invalid."""
+    changed = {}
+    for r, sha in sorted(files.items()):
+        p = os.path.join(ROOT, r)
+        cur = sha256_file(p) if os.path.exists(p) else None
+        if cur != sha:
+            changed[r] = cur
+    dchg = {}
+    for path, sha in sorted((drivers or {}).items()):
+        cur = sha256_file(path) if os.path.exists(path) else None
+        if cur != sha:
+            dchg[rel(path)] = cur
+    return dict(ok=not changed and not dchg, changed_sources=changed,
+                changed_drivers=dchg, checked=now())
+
+
+def code_record(drivers=None):
+    """The code block of a stored result: import-time hashes, fingerprint,
+    git head, dirty flag (None when git cannot tell), the modules first
+    loaded after the import-time snapshot (late_modules), and the write-time
+    verification of the sources and of the driver scripts (default: this
+    one).  A late module fails the write check: its hash was taken at write
+    time, not when it was loaded."""
+    late = late_modules()
+    files, (head, dirty) = loaded_code(), git_head()
+    if drivers is None:
+        drivers = {os.path.abspath(__file__): DRIVER_SHA256}
+    wc = verify_code(files, drivers)
+    if late:
+        wc.update(ok=False, late_modules=late)
+    return dict(files=files, fingerprint=fingerprint(files), git_head=head,
+                git_dirty_src=dirty, hashed="import", late_modules=late,
+                write_check=wc)
+
+
+def write_check_ok(d):
+    """False iff the result records a failed write-time verification or a
+    module first loaded after the import-time snapshot (results written
+    before 2026-10-17 have no write_check and count as unchecked; results
+    written before the late_modules field have none recorded)."""
+    code = (d or {}).get("code") or {}
+    if code.get("late_modules"):
+        return False
+    wc = code.get("write_check")
+    return wc is None or wc.get("ok") is True
 
 
 def fingerprint(files):
@@ -637,9 +765,13 @@ def read_part(pid):
 
 
 def part_state(p, d, accept=None):
-    """missing | stale | pass-both | pass-direct | fail | error"""
+    """missing | invalid | stale | pass-both | pass-direct | fail | error.
+    invalid: a source the part's process had loaded changed on disk before
+    the part was written (write-time verification, code.write_check)."""
     if d is None:
         return "missing"
+    if not write_check_ok(d):
+        return "invalid"
     if d.get("spec") != spec_of(p):
         return "stale"
     if p["kind"] == "tube":
@@ -743,13 +875,11 @@ def cmd_work(args):
             log("start %s (est %.2f core-h)" % (p["id"], p["est_core_h"]))
             t0, c0, start = time.time(), time.process_time(), now()
             res, extra = run_piece(p, ctx)
-            files, (head, dirty) = loaded_code(), git_head()
             rec = dict(schema=SCHEMA, id=p["id"], region=p["region"], spec=spec_of(p),
                        status=classify(res), result=res, b1=B1,
                        tstar=piece_tstar(p, ctx.tc), extra=extra,
-                       code=dict(files=files, fingerprint=fingerprint(files),
-                                 git_head=head, git_dirty_src=dirty),
-                       driver_sha256=sha256_file(os.path.abspath(__file__)),
+                       code=code_record(),
+                       driver_sha256=DRIVER_SHA256,
                        env=env_info(),
                        timing=dict(start=start, end=now(), wall_s=time.time() - t0,
                                    cpu_s=time.process_time() - c0,
@@ -889,14 +1019,14 @@ def cmd_checks(args):
           and all(res["E5_sonic_vanishing"]))
     rec = dict(schema="s43-checks/1", ok=ok, results=res, seconds=times, atoms_s=ta,
                created=now(), env=env_info(),
-               code=dict(files=loaded_code(), fingerprint=fingerprint(loaded_code()),
-                         git_head=git_head()[0], git_dirty_src=git_head()[1]),
+               code=code_record(), driver_sha256=DRIVER_SHA256,
                note=("E2 returns (pmin, ok): the lowest centre layer present in Z and "
                      "whether the identity holds (no layers below the target, no odd "
                      "layers); the note's 'val >= 16' is the valuation of Z o u after "
                      "A - 1 = O(t^2), see check_layer_identity."))
-    write_json_atomic(os.path.join(PARTS, "checks.json"), rec)
-    print("checks ok=%s %s" % (ok, res))
+    out = args.out or CHECKS
+    write_json_atomic(out, rec)
+    print("checks ok=%s %s -> %s" % (ok, res, rel(out)))
 
 
 def cmd_lemma_d(args):
@@ -917,7 +1047,7 @@ def cmd_lemma_d(args):
         r = tc.run_lemma_d(at)
     finally:
         tc._centre_expansion = orig
-    rec_json = json.load(open(os.path.join(TC_DIR, "tc_energy.json"))).get("lemma_d")
+    rec_json = json.load(open(os.path.join(CERT_TC, "tc_energy.json"))).get("lemma_d")
     nbad = sum(1 for s in r["subranges"] if not s["ok"])
     rec = dict(schema="s43-lemma-d/1", ok=r["ok"], centre_balls=balls,
                centre_balls_note=("certified: a3_midpoint midpoint + K_minus_m "
@@ -932,9 +1062,8 @@ def cmd_lemma_d(args):
                mins=r["mins"], nsub=len(r["subranges"]), failing_subranges=nbad,
                wall_s=time.time() - t0, cpu_s=time.process_time() - c0,
                recorded_in_tc_energy=rec_json, created=now(), env=env_info(),
-               code=dict(files=loaded_code(), fingerprint=fingerprint(loaded_code()),
-                         git_head=git_head()[0], git_dirty_src=git_head()[1]))
-    out = os.path.join(PARTS, "lemma_d_%s.json" % balls)
+               code=code_record(), driver_sha256=DRIVER_SHA256)
+    out = os.path.join(CERT_TC if balls == "certified" else PARTS, "lemma_d_%s.json" % balls)
     if args.replay:
         prev = json.load(open(out)) if os.path.exists(out) else None
         keys = ("ok", "c0", "ycut", "layer_identity", "mins", "nsub", "failing_subranges")
@@ -943,6 +1072,8 @@ def cmd_lemma_d(args):
         rec["stored_code_fingerprint"] = (prev or {}).get("code", {}).get("fingerprint")
         rec["identical"] = bool(prev) and all(rec[k] == prev.get(k) for k in keys)
         out = os.path.join(PARTS, "replays", "lemma_d_%s.json" % balls)
+    if args.out:
+        out = args.out
     write_json_atomic(out, rec)
     print("lemma_d[%s] ok=%s mins=%s failing=%d wall=%.1fs%s -> %s"
           % (balls, r["ok"], r["mins"], nbad, rec["wall_s"],
@@ -953,10 +1084,11 @@ def cmd_p43_centre(args):
     """P4-3's centre tail t = e^x in (0, e^{-8}] (tc_monotone.run_centre): the
     committed code (certified (a*, mu*) balls since 2026-10-16), plus a replay
     of the pre-fix construction (bare a3 midpoint) for comparison with the
-    record in results/theorem_c/tc_monotone.json."""
+    record in certificates/theorem_c/tc_monotone.json."""
     import_p4()
     import p4.validated.ec_centre as ecc
     import p4.validated.tc_monotone as tm
+    snapshot_code()                    # tc_monotone is not in EAGER: hash it at import
     t0, c0 = time.time(), time.process_time()
     cert = tm.run_centre()
     t1 = time.time()
@@ -966,7 +1098,7 @@ def cmd_p43_centre(args):
         mid = tm.run_centre()
     finally:
         ecc.certified_centre_balls = orig
-    stored = json.load(open(os.path.join(TC_DIR, "tc_monotone.json"))).get("centre")
+    stored = json.load(open(os.path.join(CERT_TC, "tc_monotone.json"))).get("centre")
     cmp_keys = sorted(cert["mins"])
     rec = dict(schema="s43-p43-centre/1", ok=cert["ok"], x_tail=cert["x_tail"],
                certified=dict(ok=cert["ok"], mins=cert["mins"], wall_s=t1 - t0,
@@ -985,9 +1117,8 @@ def cmd_p43_centre(args):
                       "(all t-factored margins must be > 0)"),
                created=now(), env=env_info(),
                wall_s=time.time() - t0, cpu_s=time.process_time() - c0,
-               code=dict(files=loaded_code(), fingerprint=fingerprint(loaded_code()),
-                         git_head=git_head()[0], git_dirty_src=git_head()[1]))
-    write_json_atomic(os.path.join(PARTS, "p43_centre.json"), rec)
+               code=code_record(), driver_sha256=DRIVER_SHA256)
+    write_json_atomic(args.out or os.path.join(CERT_TC, "p43_centre.json"), rec)
     print("p43-centre: ok=%s mins=%s\n  midpoint replay ok=%s identical_to_stored=%s"
           % (cert["ok"], cert["mins"], mid["ok"], rec["midpoint_replay_identical_to_stored"]))
 
@@ -1193,22 +1324,24 @@ def cmd_status(args):
         r = rows.setdefault(p["region"], dict(planned=0, cpu_h=0.0, est_left=0.0))
         r["planned"] += 1
         r[st] = r.get(st, 0) + 1
-        if d is not None and st not in ("stale",):
+        if d is not None and st not in ("stale", "invalid"):
             r["cpu_h"] += d["timing"].get("cpu_s", 0) / 3600.0
-        if st in ("missing", "running", "stale"):
+        if st in ("missing", "running", "stale", "invalid"):
             r["est_left"] += p["est_core_h"]
         if args.verbose and st not in ("missing",):
             print("%-22s %-11s margin=%s" % (p["id"], st,
                                              (d or {}).get("result", {}).get("margin")))
     cols = ("planned", "pass-both", "pass-direct", "fail", "error", "stale",
-            "running", "missing")
+            "invalid", "running", "missing")
     print("%-7s " % "region" + " ".join("%11s" % c for c in cols)
           + "   cpu_h_done  est_core_h_left")
     for reg in REGION_ORDER:
         r = rows.get(reg, {})
         print("%-7s " % reg + " ".join("%11d" % r.get(c, 0) for c in cols)
               + "   %10.1f  %15.0f" % (r.get("cpu_h", 0), r.get("est_left", 0)))
-    for f in sorted(glob.glob(os.path.join(PARTS, "*.json"))):
+    for f in (sorted(glob.glob(os.path.join(PARTS, "*.json")))
+              + [os.path.join(CERT_TC, n) for n in S43_CERTS
+                 if os.path.exists(os.path.join(CERT_TC, n))]):
         if os.path.basename(f) in ("plan.json",):
             continue
         d = json.load(open(f))
@@ -1385,6 +1518,472 @@ def uncovered(intervals, lo=-math.inf, hi=0.0, tol=1e-12):
     return gaps
 
 
+# --------------------------------------------- the merge's exact x-cover
+# The plan's float labels (x, h) do not tile in exact arithmetic (371 joins
+# between consecutive steps of one cache leave gaps of 8e-20 to 1.8e-16,
+# label rounding; notes/s4-5-assembly.md B1).  The certified steps are the
+# arb steps of the tube caches: the merge checks the cover on those, exactly.
+class XPoint:
+    """A point of the extended x-line, exactly: a dyadic rational q, or
+    log t for a dyadic t >= 0 (an end of a centre piece, which lives in
+    t = e^x; log 0 = -inf)."""
+    __slots__ = ("q", "t")
+
+    def __init__(self, q=None, t=None):
+        self.q, self.t = q, t
+
+    def __float__(self):            # display only
+        if self.t is None:
+            return float(self.q)
+        return -math.inf if self.t == 0 else math.log(self.t)
+
+    def __repr__(self):
+        return "XPoint(%r)" % float(self)
+
+
+X_NEG_INF = XPoint(t=Fraction(0))
+X_ZERO = XPoint(q=Fraction(0))
+
+
+def _arb_of(q):
+    from flint import arb, fmpz
+    return arb(fmpz(q.numerator)) / arb(fmpz(q.denominator))
+
+
+def _log_cmp(t, q):
+    """Sign of log t - q, exactly, for dyadic t >= 0 and dyadic q.  For
+    q != 0, e^q is irrational, so log t != q and ball arithmetic at rising
+    precision decides."""
+    if t == 0:
+        return -1
+    if q == 0:
+        return (t > 1) - (t < 1)
+    from p4.validated.arbseries import precision
+    for prec in (64, 256, 1024, 4096):
+        with precision(prec):
+            d = _arb_of(t).log() - _arb_of(q)
+            if d > 0:
+                return 1
+            if d < 0:
+                return -1
+    raise RuntimeError("cannot order log(%s) and %s" % (t, q))
+
+
+def xcmp(a, b):
+    """-1, 0 or 1 as the exact x-points a <, =, > b."""
+    if a.t is None and b.t is None:
+        return (a.q > b.q) - (a.q < b.q)
+    if a.t is not None and b.t is not None:
+        return (a.t > b.t) - (a.t < b.t)
+    if a.t is not None:
+        return _log_cmp(a.t, b.q)
+    return -_log_cmp(b.t, a.q)
+
+
+def exact_gaps(intervals, hi=X_ZERO):
+    """Sub-intervals of [-inf, hi] not covered by the union of the closed
+    exact intervals (pairs of XPoint), compared exactly (no tolerance)."""
+    order = functools.cmp_to_key(lambda u, v: xcmp(u[0], v[0]) or xcmp(u[1], v[1]))
+    gaps, cur = [], X_NEG_INF
+    for a, b in sorted(intervals, key=order):
+        if xcmp(b, cur) < 0:
+            continue
+        if xcmp(a, cur) > 0:
+            gaps.append((cur, a))
+        if xcmp(b, cur) > 0:
+            cur = b
+        if xcmp(cur, hi) >= 0:
+            break
+    if xcmp(cur, hi) < 0:
+        gaps.append((cur, hi))
+    return gaps
+
+
+def exact_minus(gs, hs):
+    """The exact intervals gs minus the union of hs (both lists of XPoint
+    pairs); for the merge's description of what is open, where gs are the
+    tau > tstar gaps and hs the tau <= tstar gaps inside them."""
+    out = []
+    for a, b in gs:
+        cur = a
+        for c, d in sorted(hs, key=functools.cmp_to_key(lambda u, v: xcmp(u[0], v[0]))):
+            if xcmp(d, cur) <= 0 or xcmp(c, b) >= 0:
+                continue
+            if xcmp(c, cur) > 0:
+                out.append((cur, c))
+            if xcmp(d, cur) > 0:
+                cur = d
+        if xcmp(cur, b) < 0:
+            out.append((cur, b))
+    return out
+
+
+def _floats(ivs):
+    return [(float(a), float(b)) for a, b in ivs]
+
+
+def exact_caches(names):
+    """{name: dict(content_sha256, steps)} of the tube cache files: per step
+    the exact position x (a Fraction; None if the stored radius is not 0),
+    the stored step h (a double, exact), and the float label float(x) as
+    the drivers compute it (Tube.load's decoding); {name: dict(error)} for a
+    missing file."""
+    from flint import arb, fmpz
+    from p4.validated.arbseries import precision
+    out = {}
+    for name in names:
+        path = cache_path(name)
+        if not os.path.exists(path):
+            out[name] = dict(error="cache %s: file %s missing (build-caches)" % (name, rel(path)))
+            continue
+        d = json.load(open(path))
+        payload = json.dumps(dict(K=d["K"], steps=d["steps"]), sort_keys=True,
+                             separators=(",", ":"))
+        steps = []
+        with precision(384):
+            for st in d["steps"]:
+                m, e, rm, _ = (int(v) for v in st["x"])
+                xf = float(arb(arb(fmpz(m)) * arb(2) ** e))
+                steps.append(dict(x=(Fraction(m) * Fraction(2) ** e) if rm == 0 else None,
+                                  h=Fraction(st["h"]), hf=float(st["h"]), xf=xf))
+        out[name] = dict(content_sha256=hashlib.sha256(payload.encode()).hexdigest(),
+                         steps=steps)
+    return out
+
+
+def exact_x_cover(plan, ids):
+    """({id: (a, b)} exact x-intervals of the plan pieces ids, errors).
+
+    Tube-kind pieces: the cache file's content hash must be the plan's; the
+    step the piece claims (the drivers' selection: the steps with
+    x - h >= x_min - 1e-12 and x <= x_max + 1e-12, then index) must carry
+    the piece's labels exactly (float(x_k) = x, h_k = h) and radius 0; the
+    interval is [x_k - h_k, x_k] in exact arithmetic.  Every step of every
+    cache in use must have radius 0, and consecutive steps must join
+    exactly, x_{k+1} = x_k - h_k.  Sonic pieces: [-hi, -lo] (the Laurent
+    domain is [lo, hi]); centre pieces: [log lo, log hi] (t-pieces);
+    consecutive sonic and centre pieces must touch exactly (hi_i = lo_{i+1}).
+    Any violation is an error, and the merge fails on it."""
+    byid = {p["id"]: p for p in plan["pieces"]}
+    pieces = [byid[i] for i in ids]
+    names = sorted({p["cache"] for p in pieces if p["kind"] == "tube"})
+    caches = exact_caches(names)
+    errors = []
+    for name in names:
+        c = caches[name]
+        if "error" in c:
+            errors.append(c["error"])
+            continue
+        st = c["steps"]
+        for k, s in enumerate(st):
+            if s["x"] is None:
+                errors.append("cache %s: step %d position has a nonzero radius" % (name, k))
+        for k in range(len(st) - 1):
+            a, b = st[k], st[k + 1]
+            if a["x"] is not None and b["x"] is not None and b["x"] != a["x"] - a["h"]:
+                errors.append("cache %s: steps %d and %d do not join exactly "
+                              "(x_%d - (x_%d - h_%d) = %.3g)"
+                              % (name, k, k + 1, k + 1, k, k,
+                                 float(b["x"] - (a["x"] - a["h"]))))
+    iv = {}
+    for p in pieces:
+        if p["kind"] == "sonic":
+            iv[p["id"]] = (XPoint(q=-Fraction(p["hi"])), XPoint(q=-Fraction(p["lo"])))
+            continue
+        if p["kind"] == "centre":
+            iv[p["id"]] = (XPoint(t=Fraction(p["lo"])), XPoint(t=Fraction(p["hi"])))
+            continue
+        c = caches[p["cache"]]
+        if "error" in c:
+            continue
+        if c["content_sha256"] != p["cache_content_sha256"]:
+            errors.append("%s: cache %s content %s differs from the plan's %s"
+                          % (p["id"], p["cache"], c["content_sha256"][:16],
+                             str(p["cache_content_sha256"])[:16]))
+            continue
+        sel = [k for k, s in enumerate(c["steps"])
+               if s["xf"] - s["hf"] >= p["x_min"] - 1e-12 and s["xf"] <= p["x_max"] + 1e-12]
+        if not 0 <= p["index"] < len(sel):
+            errors.append("%s: index %d outside the %d steps of cache %s in [x_min, x_max]"
+                          % (p["id"], p["index"], len(sel), p["cache"]))
+            continue
+        k = sel[p["index"]]
+        s = c["steps"][k]
+        if not (s["xf"] == p["x"] and s["hf"] == p["h"]):
+            errors.append("%s: not the cache step it claims: plan (x, h) = (%r, %r), "
+                          "cache %s step %d (%r, %r)" % (p["id"], p["x"], p["h"], p["cache"],
+                                                         k, s["xf"], s["hf"]))
+            continue
+        if s["x"] is None:
+            continue                       # the radius error is recorded above
+        iv[p["id"]] = (XPoint(q=s["x"] - s["h"]), XPoint(q=s["x"]))
+    for reg in ("sonic", "centre"):
+        ps = sorted((p for p in pieces if p["region"] == reg), key=lambda p: p["index"])
+        for a, b in zip(ps, ps[1:]):
+            if b["index"] == a["index"] + 1 and Fraction(a["hi"]) != Fraction(b["lo"]):
+                errors.append("%s and %s do not touch exactly (hi %r, lo %r)"
+                              % (a["id"], b["id"], a["hi"], b["lo"]))
+    return iv, errors
+
+
+# ------------------------------------------------------- S4-4 layer parts
+LAYER_SCHEMA = "s44-layer/1"
+
+
+def layer_dirs():
+    """Names of the S4-4 layer-part directories (scripts/s44_layer.py):
+    parts/layer (tau >= 224) and parts/layer_t<T> (tau >= T)."""
+    out = []
+    for d in sorted(glob.glob(os.path.join(PARTS, "layer*"))):
+        b = os.path.basename(d)
+        if os.path.isdir(d) and (b == "layer" or b.startswith("layer_t")):
+            out.append(b)
+    return out
+
+
+def read_layer_part(dirname, pid):
+    path = os.path.join(PARTS, dirname, pid + ".json")
+    if not os.path.exists(path):
+        return None
+    try:
+        return json.load(open(path))
+    except Exception:
+        return {}
+
+
+S44_DRIVER = os.path.join(HERE, "s44_layer.py")
+LAYER_REQUIRED = ("tc_layer", "tc_commutator", "tc_tm", "tc_energy", "tc_reduce")
+LAYER_EVALUATORS = ("sigma_box", "sigma_box_mv3", "sigma_box_mv")
+
+
+def _vpath(mod):
+    return "problems/P4/src/p4/validated/%s.py" % mod
+
+
+def layer_checks(p, d, tau_need, eps_max, accept=None, strict=False):
+    """(state, reasons) of the S4-4 layer part d of plan piece p as a cover of
+    tau >= tau_need: missing | invalid | stale | pass | fail | error, and the
+    failed conditions.  Statement of a passing part (tc_layer): for every xi
+    in the piece, eps in [0, eps_max] and tau >= tau_min, dT, dB, nB != 0
+    and S xi^2/tau^2 <= certified_bound < 0.
+
+    Always checked (review docs/review-2026-10-17-p4-layer-engine-adversarial.md
+    section 2, items 2, 4 and 5, read from the cover the part actually ran):
+    schema, id and spec; for tube pieces the cache hash of the record, the
+    plan and the part's inputs, and the cache name; a non-empty code record
+    with current (or accepted) hashes and no failed write-time check; status
+    pass, ok, no failing boxes, certified_bound = result bound = worst,
+    finite and < 0; params.tau_min = scope tau_min <= tau_need, tau up to
+    inf; eps cells contiguous from 0 to eps_max; the cover's ell-range the
+    piece's (tube: [0, h], sonic: [lo, hi]) and the scope's xi-range
+    consistent with it; s_lo <= xi(la) tau_min (0 on the closing piece);
+    laurent iff sonic; a known evaluator, centred ones only on tube pieces
+    and as the engine record says; combine as the engine record says, never
+    on sonic pieces.
+    strict=True (the substitution rule, item 3) adds: no accepted code
+    variants; the modules tc_layer, tc_commutator, tc_tm, tc_energy and
+    tc_reduce, lintube on tube pieces, tc_layer_mv iff the engine uses a
+    centred evaluator; a recorded git_head and git_dirty_src exactly false
+    (written from a clean checkout; review section 6, new issue 1); a
+    passing write-time check present; driver_sha256 equal to the current
+    s44_layer.py.  A module first loaded after the import-time snapshot
+    (code.late_modules; review section 6, new issue 2) makes the part
+    invalid in both modes."""
+    if d is None:
+        return "missing", ["no layer part"]
+    if not d or d.get("schema") != LAYER_SCHEMA or d.get("id") != p["id"]:
+        return "invalid", ["schema or id"]
+    if d.get("spec") != spec_of(p):
+        return "stale", ["spec differs from the plan entry"]
+    inp = d.get("inputs") or {}
+    if p["kind"] == "tube":
+        rec = json.load(open(cache_record_path(p["cache"])))
+        if rec["content_sha256"] != p["cache_content_sha256"]:
+            return "stale", ["cache record hash differs from the plan"]
+        if inp.get("cache_content_sha256") != p["cache_content_sha256"]:
+            return "stale", ["part's cache hash differs from the plan"]
+        if inp.get("cache") != p["cache"]:
+            return "stale", ["part's cache name differs from the plan"]
+    code = d.get("code") or {}
+    files = code.get("files")
+    if not files:
+        return "invalid", ["no code record"]
+    if code.get("late_modules"):
+        return "invalid", ["modules first loaded after the import-time snapshot: %s"
+                           % ", ".join(code["late_modules"])]
+    if not write_check_ok(d):
+        return "invalid", ["a source changed on disk before the part was written"]
+    if not code_matches(files, None if strict else accept):
+        return "stale", ["source hashes not current"]
+    eng = dict(norm="layer", combine=False, mv=None)
+    eng.update(d.get("engine") or {})
+    why = []
+    if strict:
+        need = [_vpath(m) for m in LAYER_REQUIRED]
+        if p["kind"] == "tube":
+            need.append(_vpath("lintube"))
+        why += ["module %s not recorded" % m for m in need if m not in files]
+        if bool(eng.get("mv")) != (_vpath("tc_layer_mv") in files):
+            why.append("tc_layer_mv recorded iff the engine uses a centred evaluator")
+        if not code.get("git_head"):
+            why.append("git_head not recorded (not written from a checkout)")
+        if code.get("git_dirty_src") is not False:
+            why.append("git_dirty_src not false")
+        if not (code.get("write_check") or {}).get("ok") is True:
+            why.append("no passing write-time check")
+        if not os.path.exists(S44_DRIVER) or d.get("driver_sha256") != sha256_file(S44_DRIVER):
+            why.append("driver_sha256 differs from the current s44_layer.py")
+        if why:
+            return "invalid", why
+    st = d.get("status")
+    if st in ("fail", "error"):
+        return st, ["status " + st]
+    if st != "pass":
+        return "invalid", ["status " + str(st)]
+    sc, res, b = d.get("scope") or {}, d.get("result") or {}, d.get("certified_bound")
+    prm = res.get("params") or {}
+    a, c = x_interval(p)
+    try:
+        if not (res.get("ok") is True and res.get("fails") == []):
+            why.append("result not ok or failing boxes recorded")
+        if not (type(b) in (int, float) and math.isfinite(b) and b < 0
+                and res.get("certified_bound") == b and res.get("worst") == b):
+            why.append("certified bound not finite, negative and equal to result and worst")
+        tmin = float(prm["tau_min"])
+        if not (tmin == float(sc["tau"][0]) and sc["tau"][1] == "inf"):
+            why.append("tau range of the cover and the scope differ")
+        if not tmin <= tau_need:
+            why.append("tau_min %g above %g" % (tmin, tau_need))
+        cells = [[float(u), float(v)] for u, v in prm["eps_cells"]]
+        if not (cells and cells[0][0] == 0.0 and cells[-1][1] == float(eps_max)
+                and all(x[1] == y[0] for x, y in zip(cells, cells[1:]))
+                and all(x[0] < x[1] for x in cells)):
+            why.append("eps cells do not tile [0, eps_max]")
+        if [float(v) for v in sc["eps"]] != [0.0, float(eps_max)]:
+            why.append("scope eps range")
+        la, lb = float(prm["la"]), float(prm["lb"])
+        if p["kind"] == "tube":
+            if not (la == 0.0 and lb == float(p["h"])):
+                why.append("cover ell-range is not [0, h]")
+            xi_la = -float(p["x"]) + la
+        else:
+            if not (la == float(p["lo"]) and lb == float(p["hi"])):
+                why.append("cover ell-range is not [lo, hi]")
+            xi_la = la
+        if [float(v) for v in sc["xi"]] != [-c, -a]:
+            why.append("scope xi-range differs from the piece")
+        s_lo = float(prm["s_lo"])
+        if not (s_lo <= xi_la * tmin and (xi_la > 0 or s_lo == 0.0)):
+            why.append("s_lo above xi(la) tau_min")
+        if res.get("laurent") is not (p["kind"] == "sonic"):
+            why.append("laurent flag does not match the piece kind")
+        ev = prm.get("evaluator")
+        if ev not in LAYER_EVALUATORS:
+            why.append("unknown evaluator %r" % ev)
+        elif ev != "sigma_box" and p["kind"] != "tube":
+            why.append("centred evaluator on a sonic piece")
+        elif ev != ("sigma_box_" + eng["mv"] if eng.get("mv") else "sigma_box"):
+            why.append("evaluator differs from the engine record")
+        if bool(prm.get("combine")) != bool(eng.get("combine")) or \
+                (p["kind"] == "sonic" and prm.get("combine")):
+            why.append("combine differs from the engine record or set on a sonic piece")
+    except (KeyError, TypeError, ValueError, IndexError) as e:
+        why.append("record incomplete: %r" % (e,))
+    return ("pass", []) if not why else ("invalid", why)
+
+
+def layer_state(p, d, tstar, eps_max, accept=None):
+    """State only (see layer_checks)."""
+    return layer_checks(p, d, tstar, eps_max, accept)[0]
+
+
+def layer_join(plan, tc, accept=None, reasons=None):
+    """{piece id: {layer dir: (state, part)}} for every plan piece with a
+    layer part in some layer directory (joined by piece id), as covers of
+    tau > tstar of the piece; reasons (a dict, optional) collects the failed
+    conditions per (id, dir)."""
+    out = {}
+    for dn in layer_dirs():
+        for p in plan["pieces"]:
+            d = read_layer_part(dn, p["id"])
+            if d is None:
+                continue
+            st, why = layer_checks(p, d, piece_tstar(p, tc), tc.EPS_MAX, accept)
+            out.setdefault(p["id"], {})[dn] = (st, d)
+            if reasons is not None and why and st != "pass":
+                reasons[(p["id"], dn)] = why
+    return out
+
+
+SUBSTITUTE_DIR = "layer_t14"
+
+
+def substitution_globals(tc, checks_ok):
+    """Review section 2 item 6: the checks must be valid for the current
+    code, and b1 = 14, c = -1/32, EPS_MAX = 6 unchanged in tc_commutator and
+    tc_layer.  Returns the list of failed conditions (empty: substitution
+    allowed)."""
+    import p4.validated.tc_layer as tl
+    snapshot_code()
+    why = []
+    if not checks_ok:
+        why.append("checks.json not valid for the current code")
+    if not (B1 == 14.0 and (tc.CNUM, tc.CDEN) == (-1, 32) and tc.EPS_MAX == 6.0
+            and (tl.CNUM, tl.CDEN) == (-1, 32) and tl.EPS_MAX == 6.0):
+        why.append("b1, c or EPS_MAX changed")
+    return why
+
+
+def substitute_layer_t14(plan, tc, states, checks_ok):
+    """The opt-in substitution rule (merge --substitute-layer-t14; review
+    section 2): a tube or sonic piece whose S4-3 part is missing, stale or
+    invalid is carried for every tau >= b1 by its passing layer_t14 part,
+    checked strictly (layer_checks(strict=True), tau_min <= b1, no accepted
+    code variants).  A failed or errored S4-3 part paired with a passing
+    layer_t14 part goes to manual review, never to substitution.  Returns
+    dict(subs={id: part}, manual_review=[ids], rejected={id: reasons},
+    blocked=[global reasons])."""
+    blocked = substitution_globals(tc, checks_ok)
+    subs, manual, rejected = {}, [], {}
+    for p in plan["pieces"]:
+        st43 = states[p["id"]]
+        if p["kind"] not in ("tube", "sonic"):
+            continue
+        if st43 not in ("missing", "stale", "invalid", "fail", "error"):
+            continue
+        d = read_layer_part(SUBSTITUTE_DIR, p["id"])
+        if d is None:
+            continue
+        st, why = layer_checks(p, d, B1, tc.EPS_MAX, None, strict=True)
+        if st43 in ("fail", "error"):
+            if st == "pass":
+                manual.append(p["id"])
+            continue
+        if st != "pass":
+            rejected[p["id"]] = why
+        elif blocked:
+            rejected[p["id"]] = list(blocked)
+        else:
+            subs[p["id"]] = d
+    return dict(subs=subs, manual_review=sorted(manual), rejected=rejected, blocked=blocked)
+
+
+def layer_cover(joined, pid):
+    """(dir, part) of the passing layer part that carries tau > tstar for the
+    piece: parts/layer if it passes, else the passing part with the lowest
+    tau_min; None if there is none."""
+    ent = joined.get(pid, {})
+    if ent.get("layer", (None,))[0] == "pass":
+        return "layer", ent["layer"][1]
+    best = None
+    for dn, (st, d) in sorted(ent.items()):
+        if st == "pass":
+            t = float(d["scope"]["tau"][0])
+            if best is None or t < best[0]:
+                best = (t, dn, d)
+    return None if best is None else (best[1], best[2])
+
+
 def cmd_merge(args):
     import_p4()
     import p4.validated.tc_commutator as tc
@@ -1401,6 +2000,36 @@ def cmd_merge(args):
                 code_union.setdefault(r, set()).add(sha)
             if st.startswith("pass"):
                 used.append((p, d))
+    # S4-4: a pass-direct piece (tau in [b1, tstar]) whose layer part passes
+    # (tau >= tau_min with tau_min <= tstar) is covered for every tau >= b1.
+    # Pieces without layer parts keep the S4-3 semantics unchanged.
+    join_why = {}
+    joined = layer_join(plan, tc, accept, join_why)
+    covers = {}
+    for p, d in used:
+        if d["status"] == "pass-direct":
+            lc = layer_cover(joined, p["id"])
+            if lc is not None:
+                covers[p["id"]] = lc
+                for r, sha in lc[1]["code"]["files"].items():
+                    code_union.setdefault(r, set()).add(sha)
+    checks = json.load(open(CHECKS)) if os.path.exists(CHECKS) else None
+    checks_ok = bool(checks and checks["ok"] and write_check_ok(checks)
+                     and code_matches(checks["code"]["files"], accept))
+    # opt-in (review section 2): a passing layer_t14 part carries a tube or
+    # sonic piece whose S4-3 part is missing, stale or invalid, for every
+    # tau >= b1; off by default
+    sub = dict(subs={}, manual_review=[], rejected={}, blocked=[])
+    if getattr(args, "substitute_layer_t14", False):
+        # item 6: the checks must be valid for the current code itself
+        # (accepted code variants do not count for substitution)
+        checks_cur = bool(checks and checks["ok"] and write_check_ok(checks)
+                          and code_matches(checks["code"]["files"], None))
+        sub = substitute_layer_t14(plan, tc, states, checks_cur)
+        for pid, d in sub["subs"].items():
+            for r, sha in d["code"]["files"].items():
+                code_union.setdefault(r, set()).add(sha)
+    subp = [(p, sub["subs"][p["id"]]) for p in plan["pieces"] if p["id"] in sub["subs"]]
     # several hashes for one source file among the used parts are acceptable only
     # when every non-current hash was explicitly accepted (--accept-code)
     conflicts = {}
@@ -1411,33 +2040,124 @@ def cmd_merge(args):
         if len(s) > 1 or bad:
             conflicts[r] = dict(hashes=sorted(s), current=cur, unaccepted=bad)
     unaccepted = {r: c for r, c in conflicts.items() if c["unaccepted"]}
-    direct_iv = [x_interval(p) for p, d in used]
-    both_iv = [x_interval(p) for p, d in used if d["status"] == "pass-both"]
-    gaps_direct = uncovered(direct_iv)
-    gaps_both = uncovered(both_iv)
-    missing = sorted(i for i, s in states.items() if s in ("missing", "stale"))
+    # the cover, exactly: tube steps at their exact cache positions (each
+    # piece checked to be the cache step it claims), no tolerance; any
+    # mismatch or inexact join is a merge error (notes/s4-5-assembly.md B1)
+    xiv, cover_errors = exact_x_cover(plan, [p["id"] for p, d in used + subp])
+    direct_iv = [xiv[p["id"]] for p, d in used + subp if p["id"] in xiv]
+    both_iv = [xiv[p["id"]] for p, d in used if p["id"] in xiv
+               and (d["status"] == "pass-both" or p["id"] in covers)] \
+        + [xiv[p["id"]] for p, d in subp if p["id"] in xiv]
+    gx_direct, gx_both = exact_gaps(direct_iv), exact_gaps(both_iv)
+    gaps_direct, gaps_both = _floats(gx_direct), _floats(gx_both)
+    gaps_direct_only = _floats(exact_minus(gx_both, gx_direct))
+    missing = sorted(i for i, s in states.items() if s in ("missing", "stale", "invalid")
+                     and i not in sub["subs"])
     failed = sorted(i for i, s in states.items() if s in ("fail", "error"))
-    checks = json.load(open(os.path.join(PARTS, "checks.json"))) \
-        if os.path.exists(os.path.join(PARTS, "checks.json")) else None
-    checks_ok = bool(checks and checks["ok"] and code_matches(checks["code"]["files"], accept))
     complete = (not gaps_direct and not missing and not failed and checks_ok
-                and not unaccepted)
-    opens = [d for p, d in used if d["status"] == "pass-direct"]
+                and not unaccepted and not cover_errors)
+    opens = [d for p, d in used if d["status"] == "pass-direct" and p["id"] not in covers]
     xi_open = max([-a for a, b in gaps_both], default=0.0) if gaps_both else 0.0
     detail = []
+    second = 0
     for p, d in used:
         e = dict(d["result"])
         e.update(id=p["id"], region=p["region"])
+        if p["id"] in joined:
+            # S4-4 layer parts of this piece; tau_gt_tstar says what carries
+            # tau > tstar; direct_range_second_method names a passing layer
+            # part that also covers [b1, tstar] (tau_min <= b1)
+            e["layer"] = {dn: dict(state=st, certified_bound=ld.get("certified_bound"),
+                                   tau_min=(ld.get("scope") or {}).get("tau", [None])[0],
+                                   engine=ld.get("engine"),
+                                   relative_margin=(ld.get("result") or {}).get(
+                                       "relative_margin"))
+                          for dn, (st, ld) in sorted(joined[p["id"]].items())}
+            sm = [dn for dn, (st, ld) in sorted(joined[p["id"]].items())
+                  if st == "pass" and float(ld["scope"]["tau"][0]) <= B1]
+            if sm:
+                e["direct_range_second_method"] = sm[0]
+                second += 1
+        e["tau_gt_tstar"] = ("tau-quadratic" if d["status"] == "pass-both" else
+                             "layer:" + covers[p["id"]][0] if p["id"] in covers else "open")
         detail.append(e)
+    for p, d in subp:
+        r = d.get("result") or {}
+        detail.append(dict(
+            id=p["id"], region=p["region"], ok=True, substituted=SUBSTITUTE_DIR,
+            s43_state=states[p["id"]], tau_le_tstar="layer:" + SUBSTITUTE_DIR,
+            tau_gt_tstar="layer:" + SUBSTITUTE_DIR, certified_bound=d["certified_bound"],
+            tau_min=d["scope"]["tau"][0], engine=d.get("engine"),
+            relative_margin=r.get("relative_margin"),
+            evaluator=(r.get("params") or {}).get("evaluator"),
+            code_fingerprint=d["code"].get("fingerprint"), driver_sha256=d.get("driver_sha256"),
+            nonvanishing=("Bcr, D2r != 0 at strip kappa follow from dT != 0 "
+                          "(dT = Dp SDr D2r Bcr); Rbar and the real-pole bounds of "
+                          "analyze_piece are not used")))
+    lstates = {}
+    for pid, ent in joined.items():
+        for dn, (st, ld) in ent.items():
+            lstates.setdefault(dn, {}).setdefault(st, []).append(pid)
+    layer_summary = dict(
+        dirs=layer_dirs(),
+        joined_pieces=len(joined),
+        tau_gt_tstar_by_layer=len(covers),
+        direct_range_second_method=second,
+        states={dn: {st: len(v) for st, v in sorted(x.items())}
+                for dn, x in sorted(lstates.items())},
+        not_passing={dn: {st: sorted(v) for st, v in sorted(x.items()) if st != "pass"}
+                     for dn, x in sorted(lstates.items())},
+        worst_bound={dn: max((ld["certified_bound"] for pid, ent in joined.items()
+                              for dd, (st, ld) in ent.items() if dd == dn and st == "pass"),
+                             default=None)
+                     for dn in sorted(lstates)},
+        statement=("a passing layer part certifies, for every xi in its piece, eps in "
+                   "[0, eps_max] and tau >= tau_min: dT, dB, nB != 0 and "
+                   "S xi^2/tau^2 <= certified_bound < 0 (p4.validated.tc_layer); "
+                   "joined by piece id, it carries tau > tstar for a pass-direct piece"))
+    substitution = dict(
+        enabled=bool(getattr(args, "substitute_layer_t14", False)), dir=SUBSTITUTE_DIR,
+        substituted=sorted(sub["subs"]), count=len(sub["subs"]),
+        manual_review=sub["manual_review"], rejected=sub["rejected"],
+        blocked=sub["blocked"],
+        rule=("review 2026-10-17 section 2: tube or sonic piece, S4-3 part missing, "
+              "stale or invalid; layer_t14 part passing layer_checks(strict=True) with "
+              "tau_min <= b1 (identity, current code with the required modules, a "
+              "recorded git head and a clean tree, write-time check, no module loaded "
+              "after the import-time snapshot, pinned s44_layer.py, the cover actually "
+              "run); "
+              "checks valid; b1, c, EPS_MAX unchanged.  Failed or errored S4-3 parts go "
+              "to manual_review."))
     worst = max((e["margin"] for e in detail if e.get("margin") is not None), default=None)
+    if not gaps_both:
+        above = "certified everywhere"
+    else:
+        what = []
+        if gaps_direct:
+            what.append("nothing is certified for any tau >= b1 on x in %s (no passing "
+                        "part, S4-3 or substituted, covers it)" % gaps_direct)
+        if gaps_direct_only:
+            what.append("only tau in [b1, tstar] is certified on x in %s (the S4-3 direct "
+                        "phase of pass-direct pieces); tau > tstar is open there"
+                        % gaps_direct_only)
+        above = "OPEN on x in %s: %s" % (gaps_both, "; ".join(what))
     res = dict(
         ok=complete, status="complete" if complete else "partial",
         scope=dict(full_strip_tau=[B1, tc.TSTAR_FAC * B1],
                    tau_le_tstar_uncovered_x=gaps_direct,
                    tau_gt_tstar_uncovered_x=gaps_both,
                    xi_open_max=xi_open,
-                   tau_above_tstar=("certified everywhere" if not gaps_both else
-                                    "OPEN on x in %s (direct phase only there)" % gaps_both)),
+                   tau_above_tstar=above,
+                   tau_gt_tstar_by=dict(
+                       tau_quadratic=sum(1 for p, d in used if d["status"] == "pass-both"),
+                       layer=len(covers), open=len(opens), substituted=len(subp))),
+        cover=dict(exact=True, errors=cover_errors, pieces=len(xiv),
+                   method=("tube steps at their exact cache positions [x_k - h_k, x_k] "
+                           "(radius 0, consecutive steps joining exactly, each piece the "
+                           "cache step it claims); sonic [-hi, -lo]; centre "
+                           "[log lo, log hi]; union and gaps in exact arithmetic, no "
+                           "tolerance")),
+        strip_exclusion_certified=bool(complete and not gaps_both),
         b1=B1, m=tc.MC, c=[tc.CNUM, tc.CDEN], eps_max=tc.EPS_MAX, tstar_fac=tc.TSTAR_FAC,
         phase_settings=dict(
             tstar_fac_by_region={r: REGIONS[r]["tstar_fac"] for r in REGIONS
@@ -1446,8 +2166,12 @@ def cmd_merge(args):
                          if "direct_only" in REGIONS[r]},
             note=("pass-both pieces are certified for every tau >= b1 (centre with "
                   "tstar_fac = 1: the tau-quadratic phase alone); pass-direct pieces "
-                  "only for tau in [b1, tstar_fac * b1]")),
+                  "only for tau in [b1, tstar_fac * b1], unless a passing S4-4 layer "
+                  "part of the same id carries tau > tstar (detail: tau_gt_tstar)")),
         open_pieces=len(opens),
+        layer=layer_summary,
+        layer_join_rejections={"%s @ %s" % k: v for k, v in sorted(join_why.items())},
+        substitution=substitution,
         checks=(dict(E1_U6top=checks["results"]["E1_U6top"],
                      E2_layers=checks["results"]["E2_layers"],
                      E3_sonic_zeros=checks["results"]["E3_sonic_zeros"],
@@ -1460,14 +2184,22 @@ def cmd_merge(args):
         accept_reason=args.accept_reason,
         provenance=dict(plan_sha256=sha256_file(PLAN), caches=plan["caches"],
                         code=loaded_code(), git_head=git_head()[0], merged=now(),
-                        driver_sha256=sha256_file(os.path.abspath(__file__)),
+                        driver_sha256=DRIVER_SHA256,
+                        s44_driver_sha256=(sha256_file(S44_DRIVER)
+                                           if os.path.exists(S44_DRIVER) else None),
                         parts_dir=rel(PARTS)))
     out = CERT if complete else CERT_PARTIAL
     write_json_atomic(out, res)
-    print("%s: status=%s used=%d missing=%d failed=%d gaps(tau<=tstar)=%s "
-          "gaps(tau>tstar)=%s conflicts=%s -> %s"
-          % ("merge", res["status"], len(used), len(missing), len(failed), gaps_direct,
-             gaps_both, list(conflicts), rel(out)))
+    print("%s: status=%s used=%d substituted=%d missing=%d failed=%d manual_review=%d "
+          "gaps(tau<=tstar)=%s gaps(tau>tstar)=%s layer-covered=%d conflicts=%s "
+          "strip_exclusion_certified=%s -> %s"
+          % ("merge", res["status"], len(used), len(subp), len(missing), len(failed),
+             len(sub["manual_review"]), gaps_direct, gaps_both, len(covers),
+             list(conflicts), res["strip_exclusion_certified"], rel(out)))
+    if cover_errors:
+        raise SystemExit("merge error: the exact cover check failed (%d): %s%s"
+                         % (len(cover_errors), "; ".join(cover_errors[:3]),
+                            " ..." if len(cover_errors) > 3 else ""))
 
 
 # -------------------------------------------------------------------- main
@@ -1501,13 +2233,16 @@ def main(argv=None):
     p = sub.add_parser("plan")
     p.set_defaults(fn=cmd_plan)
     p = sub.add_parser("checks")
+    p.add_argument("--out", help="write here instead of certificates/theorem_c/checks.json")
     p.set_defaults(fn=cmd_checks)
     p = sub.add_parser("lemma-d")
     p.add_argument("--centre-balls", default="certified", choices=("certified", "midpoint"))
     p.add_argument("--replay", action="store_true",
                    help="write parts/replays/lemma_d_<balls>.json and compare")
+    p.add_argument("--out", help="write here instead (with --replay: still compared)")
     p.set_defaults(fn=cmd_lemma_d)
     p = sub.add_parser("p43-centre")
+    p.add_argument("--out", help="write here instead of certificates/theorem_c/p43_centre.json")
     p.set_defaults(fn=cmd_p43_centre)
     p = sub.add_parser("bench")
     p.add_argument("--ids", required=True)
@@ -1549,6 +2284,9 @@ def main(argv=None):
     p = sub.add_parser("merge")
     p.add_argument("--accept-code", action="append")
     p.add_argument("--accept-reason")
+    p.add_argument("--substitute-layer-t14", action="store_true",
+                   help="opt-in: a passing layer_t14 part (strict checks) carries a tube "
+                        "or sonic piece whose S4-3 part is missing, stale or invalid")
     p.set_defaults(fn=cmd_merge)
     args = ap.parse_args(argv)
     args.fn(args)
