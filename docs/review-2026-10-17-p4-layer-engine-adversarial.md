@@ -289,3 +289,119 @@ compare against the stored outputs:
 
 Earlier timings put the non-layer re-runs at about 1.7 core-h. None of these
 certificates records code hashes, so the comparison is by output.
+
+## 6. Re-check of the fixes (2026-10-17, at `c0f0effd`)
+
+The same reviewer re-checked commits `e51cd7a6..c0f0effd` (22 commits).
+
+- Read-only. Computations ran in `git archive` scratch copies, at most three
+  processes at once, at nice ≥ 10, about 0.65 core-h in all.
+- The worktree stayed clean.
+
+**Verdict.**
+- The fixes hold, and no new soundness issue was found.
+- The strip-exclusion statement on the 546 non-centre pieces merits
+  CERTIFIED: dT, dB, nB ≠ 0 and S < 0 on each piece × ε ∈ [0, 6] ×
+  τ ∈ [14, ∞).
+- P4-9 itself stays open. The 30 centre pieces (x ≤ −4.5) are missing, and
+  the theorem-level row inherits S4-3's prose lemmas for the S4-5 review.
+
+| # | Item | Verdict |
+|---|---|---|
+| 1 | `ballutil` helpers and call sites; remaining float balls | PROVEN AS STATED |
+| 2 | mv3 ι-ball centre and `_w_dv` | PROVEN AS STATED |
+| 3 | must-fix/should-fix items; conditions C1–C7; 48 strict tests | resolved |
+| 4 | provenance of the 1092 parts; `checks.json` | PROVEN AS STATED; two minor gaps (below) |
+| 5 | spot recompute; independent sampling | bit-identical; no sample above a bound |
+| 6 | Step-7 differences | both explanations confirmed; P4-6, P4-8 unaffected |
+| 7 | two failing tests | test design, failing since 14da7d1e; not a regression |
+| 8 | merge with substitution | missing = the 30 centre pieces; gap = the centre region |
+
+**1. `ballutil` (ballutil.py:22–63).**
+- Each helper returns a ball that contains what its call site needs. They
+  rely only on these facts: `arb(float)` is exact; `arb_contains` never
+  answers True wrongly; balls are convex; `arb_union` rounds outward; and
+  `arb(0, <arb>)` takes the ball's upper bound.
+- Edge cases behave: zero width gives a point; a reversed interval gives a
+  ball containing both endpoints; ±inf gives [± inf]; nan gives nan, which
+  box rejection catches.
+- 60,000 random intervals at precision 30/53/320 gave no failure.
+- All 20 call sites use the right helper.
+- An AST scan of `src/p4` and `scripts` found 101 two-argument `arb()`
+  calls and none of the float-midpoint kind:
+  - the rest are upper bounds, box-defining widths, or ball radii;
+  - `ec_centre` has an endpoint guard;
+  - the hard-coded (a*, μ*) literals at modecount :169–170 contain the
+    printed a3 balls.
+
+**2. ι-ball (tc_layer_mv :236, :248).**
+- `itb.mid()` is an exact point of the rigorous ι-ball.
+- The gradient pass covers E × I_ball × S. `wv = itb·q` encloses w = ιq,
+  with dw/dε = −w² and dw/dι = iq².
+- 1,280 centred enclosures were tested on degenerate, sub-1e-13 and τ = ∞
+  boxes:
+  - the centre was always inside the ι-ball;
+  - no point value fell outside its enclosure;
+  - three hulls came out 2^-29 of the radius wider than the natural one,
+    which is outward rounding.
+
+**3. Conditions.**
+- C1–C7 are implemented in `layer_checks(strict=True)`,
+  `substitution_globals` and `substitute_layer_t14` (s43_parts.py
+  :1485–1681), and wired into the merge (:1740–1805).
+- A failed or errored S4-3 part goes to manual review (:1671).
+- Every one of the 48 strict mutations is rejected for the reason it names.
+
+**4. Provenance.**
+- All 1092 parts record current hashes, `ballutil` included.
+- All record driver `3a86e50f` (= `s44_layer.py` at b5de0b62; sources and
+  drivers are unchanged since then).
+- All have a passing write check, are hashed at import, and record a clean
+  tree.
+- `checks.json` is valid for the current code.
+
+**5. Recompute.**
+- Recomputed from scratch: s29 at τ ≥ 14; full-244 and deep-128 in both
+  modes, with the 400k/1M budgets. All five parts are bit-identical to the
+  committed ones in every result field.
+- The merge with substitution reproduces: 546 substituted, the same 30
+  missing.
+- 11,445 independent point values on the worst piece of each region:
+  - none exceeds a bound;
+  - the bound is 0.50 of the float supremum at τ ≥ 14;
+  - deep-128: supremum −0.043285 at τ → ∞, bound −0.021654.
+
+**6. Step 7.**
+- **Lemma D:** the stored `tc_energy.json` block equals
+  `parts/lemma_d_midpoint.json`; the re-run equals
+  `parts/lemma_d_certified.json`.
+- **Winding:** all certified fields are identical. Tile 9.375i (w = 0.125),
+  recomputed on the rebuilt tube, reproduces the stored increment bit for
+  bit. Only the float diagnostic `width` differs (…908 against the stored
+  …877).
+
+**7. Failing tests.**
+- The failures are identical at 14da7d1e, fef526e6, ed4cab14, e51cd7a6,
+  eba80cb4 and c0f0effd.
+- The tests hull TMs over the strip [8e-7, 8.2e-7] but take the Laurent
+  factor at 8e-7.
+- Evaluated at a point, the identities agree to 4.3e-12 (A1), 1.9e-6 (B1)
+  and 1.8e-12 (kdiv).
+- Fix: evaluate at `xi_lo = xi_hi`.
+
+**New issues (provenance only).**
+1. **`git_head()` (s43_parts :166–173) returns `(None, False)` when git
+   fails**, so the strict clean-tree check (:1543) is vacuous outside a
+   checkout. Five parts written from an archive were substituted. Fix:
+   check return codes, record dirty as `None` on failure, and require a
+   non-null `git_head` under strict mode.
+2. **A module first imported after `snapshot_code()` would be hashed at
+   write time**, so an edit between its import and the write would pass the
+   write check. There is none on today's layer path. Fix: flag modules
+   first seen at write time.
+
+**Coordinator's follow-up.** Neither issue touches the 1092 committed parts:
+all were written in the checkout, with a non-null head and no late import.
+Both are fixed in `scripts/s43_parts.py`, along with the two tests, before
+the next production run (the centre). `s44_layer.py` and `src/p4` stay
+untouched, so the driver pin and the parts' recorded hashes stay valid.
