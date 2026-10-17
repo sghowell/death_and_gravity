@@ -1,0 +1,230 @@
+{
+ "schema": "p4-recertify-compare/1",
+ "created": "2026-10-17T13:06:10Z",
+ "outdir": "problems/P4/results/recert_2026-10-17",
+ "git_head": "5b234e6dd4b795b7ed2e700278675691170420e7",
+ "code": {
+  "problems/P4/src/p4/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "problems/P4/src/p4/validated/__init__.py": "2d62466572841f234a88bfc9c0e440d4fe34840a62b6d0faee2983c150cbba68",
+  "problems/P4/src/p4/validated/arbseries.py": "04e239090c8d5aa4ee645ae041a5acfebc75608add88a523917f828167ab4f1d",
+  "problems/P4/src/p4/validated/ballutil.py": "39528e526fe96a5e5f5d9b44cb6579b4928176207b8a8a5f25270180b51072f1",
+  "problems/P4/src/p4/validated/biseries.py": "af614a0747cd6f68510dfc2d1788459afd0759af0778cc8eec4b2cafdfc028f6",
+  "problems/P4/src/p4/validated/lincentre.py": "55d0c6cfa26e41dc26c311478db68b3a15ac91fe21e0be538a3990b60994e813",
+  "problems/P4/src/p4/validated/linscaled.py": "17dd081ba85e44ae2b4b9f0836f465e0cc2ee3c7054e6830ab168057a6eb6855",
+  "problems/P4/src/p4/validated/linstep.py": "f93fc04f09e16f183aa8b61cddf2e8e7cf5051e61afedfeec04379b24ee06c07",
+  "problems/P4/src/p4/validated/linsys.py": "fc6c8ff924c19f7a072afe75396b182923709c262f6438e3bcb44ed6b8a2e1f8",
+  "problems/P4/src/p4/validated/lintaylor.py": "97f8e47a5e7039b41e8212999c8b9d23b3256165929d3c0fc4297b79534296bd",
+  "problems/P4/src/p4/validated/modecount.py": "356435ea2ddbca3599c0933364cbfb6ee77fbc3c16cec84c231e5226faa23e4e",
+  "problems/P4/src/p4/validated/polysys.py": "c9025549b91eb6e700fbd6e8673e4dcb2cae75b183b451d3aec3cde3e8c8ee4b",
+  "problems/P4/src/p4/validated/recursion.py": "5f3d29a83481b34c72496b570dc70603f26ed0ceaf3bb9952822ce5dacd8187e",
+  "problems/P4/src/p4/validated/shootsys.py": "975b998fe5be09c7b2d504526098825daeeb2ab8fe7e707c011ca5e38ae9bff0",
+  "problems/P4/src/p4/validated/systems.py": "7e0a98495e17e728795996c40f1e340a523d687b506a81b69882fed7143e64f6"
+ },
+ "theorem_b_tube": {
+  "tube": "problems/P4/data/cache/tube_theorem_b.json",
+  "sha256": "364e25cf1890a265c0d26889683537eafd2366136afa9cf50000221a534bc9bd",
+  "same_as_first_244_steps_of_the_s43_cache": true,
+  "s43_cache": "problems/P4/data/cache/tube_full.json",
+  "s43_cache_sha256": "408ebdb2ff8284b106cc4e9fa49e78588402f73feacd3f9dc49c87a2f525450c",
+  "note": "built at 2026-10-17T09:07Z into results/recert_2026-10-17/tube_theorem_b.json (the path the krawczyk, analyticity and winding re-runs read) and moved to data/cache afterwards, unchanged (a 4 MB cache, not committed)"
+ },
+ "certificates": {
+  "checks": {
+   "identical": true,
+   "compared": [
+    "ok",
+    "results"
+   ],
+   "differences": {}
+  },
+  "lemma_d": {
+   "identical": true,
+   "compared": [
+    "c0",
+    "failing_subranges",
+    "layer_identity",
+    "mins",
+    "nsub",
+    "ok",
+    "ycut"
+   ],
+   "differences": {}
+  },
+  "p43_centre": {
+   "identical": true,
+   "compared": [
+    "certified.mins",
+    "midpoint_replay.mins",
+    "min_margin",
+    "ok"
+   ],
+   "differences": {}
+  },
+  "tc_monotone": {
+   "identical": true,
+   "compared": [
+    "centre.mins",
+    "centre.ok",
+    "ok",
+    "sonic.fails",
+    "sonic.mins",
+    "sonic.ok",
+    "tube.fails",
+    "tube.mins",
+    "tube.ok",
+    "tube_info"
+   ],
+   "differences": {}
+  },
+  "krawczyk": {
+   "identical": true,
+   "compared": [
+    "disjoint",
+    "gamma.ball",
+    "gamma.re_interval",
+    "gauge.contained",
+    "gauge.kappa_bar",
+    "kappa1.E",
+    "kappa1.E_abs_upper",
+    "kappa1.dE",
+    "kappa1.dE_box",
+    "kappa1.kappa_c",
+    "kappa1.m",
+    "kappa1.ok",
+    "kappa1.rem",
+    "kappa1.w",
+    "kappa1.w_B",
+    "kappa1.zero",
+    "kappa1.zero_im_abs",
+    "kappa1.zero_re_interval",
+    "kbar.E",
+    "kbar.E_abs_upper",
+    "kbar.dE",
+    "kbar.dE_box",
+    "kbar.kappa_c",
+    "kbar.m",
+    "kbar.ok",
+    "kbar.rem",
+    "kbar.w",
+    "kbar.w_B",
+    "kbar.zero",
+    "kbar.zero_im_abs",
+    "kbar.zero_re_interval"
+   ],
+   "differences": {}
+  },
+  "analyticity": {
+   "identical": true,
+   "compared": [
+    "boxes (as a multiset)",
+    "constraint",
+    "enlarge",
+    "max_Pinv",
+    "max_Z_centre",
+    "max_Z_sonic",
+    "max_g_centre",
+    "max_re_sigma",
+    "min_nu",
+    "min_w",
+    "n_boxes",
+    "n_steps",
+    "rect",
+    "tube_info",
+    "tube_regular",
+    "w0",
+    "x_d"
+   ],
+   "differences": {},
+   "note": "tube_info equal except its build wall time"
+  },
+  "tc_energy": {
+   "identical": false,
+   "compared": [
+    "all_ok",
+    "c0",
+    "lemma_d.c0",
+    "lemma_d.layer_identity",
+    "lemma_d.mins",
+    "lemma_d.ok",
+    "lemma_d.ycut",
+    "sonic.ED",
+    "sonic.box_fails",
+    "sonic.boxes",
+    "sonic.dc",
+    "sonic.known_answer_sigma",
+    "sonic.mins",
+    "sonic.ok",
+    "sonic.xT_affine",
+    "sonic.xT_rem_bound",
+    "tube.boxes",
+    "tube.fails",
+    "tube.mins",
+    "tube.ok"
+   ],
+   "differences": {
+    "lemma_d.mins": {
+     "stored": {
+      "q2": 1.9618364422656047,
+      "mB": 3.4752564497427962,
+      "mC": 15.348299575408227,
+      "poleA": 0.9995211043092475,
+      "poleFN": 0.9999925864848735
+     },
+     "new": {
+      "q2": 1.961836442292799,
+      "mB": 3.4752428204250765,
+      "mC": 15.348292102988353,
+      "poleA": 0.9995211043091139,
+      "poleFN": 0.9999925864848808
+     }
+    }
+   },
+   "lemma_d_vs_parts_lemma_d_certified": {
+    "identical": true,
+    "file": "parts/lemma_d_certified.json",
+    "note": "the stored tc_energy.json lemma_d block is the pre-2026-10-16 midpoint-ball record (s4-3-recovery.md sections 3 and 11); the re-run's block is the certified-ball Lemma D and equals parts/lemma_d_certified.json"
+   },
+   "note": "tube_info differs by design: the stored record used a September build of the A3 tube (time 167.83519101142883); this run used the pinned S4-3 cache (time 181.30426406860352), the same construction; lemma_d nsub is not in this run's block (the Lemma D re-run records 1100 subranges)"
+  },
+  "winding": {
+   "identical": true,
+   "compared": [
+    "certified",
+    "constants (without workers)",
+    "m",
+    "min_abs_E",
+    "n_tiles",
+    "rect",
+    "segments (all fields but time, t_prop, width)",
+    "total_arg (sum of the tile increments in a fixed order)",
+    "tube_info",
+    "winding",
+    "winding_ball",
+    "wmax"
+   ],
+   "differences": {},
+   "width_max_relative_difference": 7.0764300115259336e-15,
+   "width_probe": {
+    "file": "problems/P4/results/recert_2026-10-17/winding_width_probe.json",
+    "result": "all three code versions give the re-run's widths, bit for bit, on the rebuilt tube: the ball fix (and every other code change since b3bd414e) is not the cause. The difference lies in the stored run's input or environment: it propagated on the August build of the tube, which is not kept (its tube_info equals the rebuild's except the build wall time), so the two builds presumably differ in the last bits of some radii, or the library versions differ; not pinned down further. The certified increments, min|E|, the winding ball and the winding number are unaffected."
+   },
+   "total_arg_as_stored": {
+    "stored": [
+     "452751206466686933",
+     "-55",
+     "181105721",
+     "-35"
+    ],
+    "new": [
+     "452751206466686933",
+     "-55",
+     "724422883",
+     "-37"
+    ]
+   },
+   "note_total_arg": "the stored total_arg was summed by 8 pool workers in completion order, this one by 1; the midpoints agree and the radii differ in their last bits; summed in one fixed order the two sets of tile increments give bit-identical totals",
+   "note": "tube_info equal except its build wall time"
+  }
+ },
+ "all_identical": false
+}
