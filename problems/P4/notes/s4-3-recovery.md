@@ -356,6 +356,14 @@ Route (a) stays the long-term fallback and a useful float diagnostic.
 * (ii): the benchmark is running.  Its logs already show the τ-quadratic
   bounds taking about 4 s per piece; the direct phase was still running at
   hand-off (§11.6).
+* Update 2026-10-17 (`s4-4-layer-engine.md` §§9–13): the S4-4 layer engine,
+  with a per-piece margin scale, polynomial-level derivative blocks and a
+  centred enclosure (`tc_layer_mv`), certifies tube/full-170, -200, -240 and
+  deep/deep-000, -064, -128 for τ ≥ 224 and for τ ≥ 14 (both phases at once)
+  at half of each piece's float scale, in 1–4.6 min per piece.  Projected
+  cost of tube 138–244 plus deep 0–128 that way: about 8 core-h instead of
+  470–1070.  Using it needs a reviewed merge rule (a passing `layer_t14` part
+  in place of a missing S4-3 part); not implemented.
 
 ## 9. Other findings to carry forward
 
