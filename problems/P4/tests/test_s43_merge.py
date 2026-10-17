@@ -433,6 +433,15 @@ def _sub_bad():
             {_vp("tc_layer"): "3" * 64}),
         "dirty-tree": code(git_dirty_src=True),
         "dirty-unknown": code(git_dirty_src=None),
+        # written outside a checkout: before 2026-10-17 git_head() returned
+        # (None, False) there (review section 6, new issue 1)
+        "git-head-missing": code(git_head=None),
+        # a module first loaded after the import-time snapshot, as code_record
+        # writes it (review section 6, new issue 2)
+        "late-module": code(late_modules=[_vp("tc_reduced_eigs")],
+                            write_check=dict(ok=False, changed_sources={},
+                                             changed_drivers={},
+                                             late_modules=[_vp("tc_reduced_eigs")])),
         "no-write-check": lambda d, env: d["code"].pop("write_check"),
         "write-check-failed": code(write_check=dict(ok=False)),
         "driver-pin": top(driver_sha256="4" * 64),
@@ -558,3 +567,126 @@ def test_substituted_code_joins_the_conflict_check(env):
     assert m["substitution"]["substituted"] == ["gap/gap-000"]
     c = m["code_conflicts"][_vp("tc_tm")]
     assert old in c["hashes"] and s43.current_hash(_vp("tc_tm")) in c["hashes"]
+
+
+# ------------------------------------- provenance (review section 6, new issues)
+def _git_fails(monkeypatch):
+    """Every git call exits 128 with empty output, as outside a checkout."""
+    import subprocess
+
+    def run(argv, **kw):
+        return subprocess.CompletedProcess(argv, 128, stdout="",
+                                           stderr="fatal: not a git repository")
+    monkeypatch.setattr(s43.subprocess, "run", run)
+
+
+def test_git_head_in_the_checkout():
+    head, dirty = s43.git_head()
+    if head is None:
+        pytest.skip("not run from a git checkout (e.g. a git archive copy)")
+    assert len(head) == 40 and isinstance(dirty, bool)
+
+
+def test_git_head_when_git_fails(monkeypatch):
+    # new issue 1: a failed `git status` used to read as a clean tree
+    _git_fails(monkeypatch)
+    assert s43.git_head() == (None, None)
+
+
+def test_git_head_outside_a_checkout(tmp_path, monkeypatch):
+    monkeypatch.setattr(s43, "ROOT", str(tmp_path))
+    assert s43.git_head() == (None, None)
+
+
+def test_git_head_of_a_copy_inside_another_checkout(tmp_path, monkeypatch):
+    # a `git archive` copy placed (and ignored) inside some other repository:
+    # git answers for that repository, not for the copy
+    import subprocess
+    outer = tmp_path / "outer"
+    copy = outer / "copy"
+    (copy / "problems" / "P4" / "src").mkdir(parents=True)
+    (outer / ".gitignore").write_text("copy/\n")
+    g = ["git", "-c", "user.name=t", "-c", "user.email=t@t", "-c", "commit.gpgsign=false",
+         "-c", "core.hooksPath=/dev/null", "-C", str(outer)]
+    subprocess.run(g + ["init", "-q"], check=True)
+    subprocess.run(g + ["add", ".gitignore"], check=True)
+    subprocess.run(g + ["commit", "-q", "-m", "x"], check=True)
+    monkeypatch.setattr(s43, "ROOT", str(copy))
+    assert s43.git_head() == (None, None)
+
+
+def test_part_written_without_git_is_not_substituted(env, monkeypatch):
+    # end to end: the code record of a process without git records git_head
+    # and git_dirty_src as None, and the strict checks reject the part
+    with monkeypatch.context() as mp:
+        _git_fails(mp)
+        rec = s43.code_record()
+    assert rec["git_head"] is None and rec["git_dirty_src"] is None
+    env.drop_s43("gap/gap-000")
+    env.layer_part("sonic/s00")
+    d = env.layer_record("gap/gap-000", tau_min=14.0)
+    d["code"].update(git_head=rec["git_head"], git_dirty_src=rec["git_dirty_src"])
+    env.layer_part("gap/gap-000", dirname="layer_t14", d=d)
+    _, m = env.merge(substitute=True)
+    assert m["substitution"]["substituted"] == [] and "gap/gap-000" in m["missing"]
+    why = m["substitution"]["rejected"]["gap/gap-000"]
+    assert "git_head not recorded (not written from a checkout)" in why
+    assert "git_dirty_src not false" in why
+
+
+def _late_probe(tmp_path, monkeypatch):
+    """A p4 module first loaded after the import-time snapshot: a private
+    copy of the snapshot, then a module object entered into sys.modules."""
+    monkeypatch.setattr(s43, "_IMPORT_HASH", dict(s43._IMPORT_HASH))
+    s43.snapshot_code()
+    src = tmp_path / "late_probe.py"
+    src.write_text("X = 1\n")
+    mod = type(sys)("p4._late_probe")
+    mod.__file__ = str(src)
+    monkeypatch.setitem(sys.modules, "p4._late_probe", mod)
+    return s43.rel(str(src))
+
+
+def test_no_late_module_after_the_snapshot(monkeypatch):
+    monkeypatch.setattr(s43, "_IMPORT_HASH", dict(s43._IMPORT_HASH))
+    s43.import_p4()
+    rec = s43.code_record()
+    assert rec["late_modules"] == [] and rec["write_check"]["ok"] is True
+    assert s43.write_check_ok(dict(code=rec))
+
+
+def test_late_module_is_flagged(tmp_path, monkeypatch):
+    r = _late_probe(tmp_path, monkeypatch)
+    assert s43.late_modules() == [r]
+    assert r in s43.loaded_code() and s43.late_modules() == [r]   # no silent snapshot
+    rec = s43.code_record()
+    assert rec["late_modules"] == [r] and r in rec["files"]
+    assert rec["write_check"]["ok"] is False and rec["write_check"]["late_modules"] == [r]
+    assert not s43.write_check_ok(dict(code=rec))
+    # a record that lists a late module fails even with a passing write check
+    assert not s43.write_check_ok(dict(code=dict(rec, write_check=dict(ok=True))))
+    s43.snapshot_code()                       # an explicit import-time snapshot
+    assert s43.late_modules() == []
+
+
+def test_late_module_part_is_rejected(tmp_path, env, monkeypatch):
+    # a layer part whose code record lists a late module: invalid for the join
+    # and rejected by the substitution rule; an S4-3 part with one is invalid
+    r = _late_probe(tmp_path, monkeypatch)
+    rec = s43.code_record()
+    env.drop_s43("gap/gap-000")
+    d = env.layer_record("sonic/s00")
+    d["code"].update(late_modules=rec["late_modules"], write_check=rec["write_check"])
+    env.layer_part("sonic/s00", d=d)
+    d = env.layer_record("gap/gap-000", tau_min=14.0)
+    d["code"].update(late_modules=rec["late_modules"], write_check=rec["write_check"])
+    env.layer_part("gap/gap-000", dirname="layer_t14", d=d)
+    _, m = env.merge(substitute=True)
+    want = ["modules first loaded after the import-time snapshot: %s" % r]
+    assert m["substitution"]["substituted"] == []
+    assert m["substitution"]["rejected"]["gap/gap-000"] == want
+    assert m["layer_join_rejections"]["sonic/s00 @ layer"] == want
+    env.s43_part("tube/full-000", "pass-both",
+                 code=dict(files=dict(env.code), late_modules=[r],
+                           write_check=dict(ok=True)))
+    assert s43.part_state(env.byid["tube/full-000"], s43.read_part("tube/full-000")) == "invalid"

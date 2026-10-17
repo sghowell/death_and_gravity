@@ -164,15 +164,30 @@ def log(msg):
 
 
 def git_head():
+    """(head, dirty) of the checkout ROOT: head the commit, dirty True iff
+    problems/P4/src has uncommitted or untracked changes.  (None, None) on
+    any failure: git missing or exiting non-zero, or ROOT not the top level
+    of its own checkout (a `git archive` copy, also one placed inside another
+    repository).  Before 2026-10-17 a failed `git status` read as a clean
+    tree, (None, False) (review section 6, new issue 1)."""
+    def git(*args):
+        r = subprocess.run(["git", "-C", ROOT] + list(args), capture_output=True,
+                           text=True, timeout=20)
+        if r.returncode != 0:
+            raise RuntimeError("git %s exited %d" % (args[0], r.returncode))
+        return r.stdout.strip()
     try:
-        h = subprocess.run(["git", "-C", ROOT, "rev-parse", "HEAD"],
-                           capture_output=True, text=True, timeout=20).stdout.strip()
-        dirty = subprocess.run(["git", "-C", ROOT, "status", "--porcelain",
-                                "--", "problems/P4/src"], capture_output=True,
-                               text=True, timeout=20).stdout.strip()
-        return h or None, bool(dirty)
-    except Exception:          # no git on the node checkout: provenance only
+        top = git("rev-parse", "--show-toplevel")
+        if not top or os.path.realpath(top) != os.path.realpath(ROOT):
+            return None, None
+        head = git("rev-parse", "--verify", "HEAD")
+        dirty = git("status", "--porcelain", "--untracked-files=normal", "--",
+                    "problems/P4/src")
+    except Exception:          # no git, or git failed: provenance unknown
         return None, None
+    if not head:
+        return None, None
+    return head, bool(dirty)
 
 
 def env_info():
@@ -192,23 +207,34 @@ EAGER = ("tc_commutator", "tc_tm", "tc_energy", "tc_reduce", "lintube", "centre"
          "linstep", "polysys", "systems", "linsys", "arbseries", "ec_centre",
          "ballutil")
 _HASH_CACHE = {}          # current_hash(): files as they are on disk now (merge, status)
-_IMPORT_HASH = {}         # snapshot_code(): files as they were when this process loaded them
+_IMPORT_HASH = {}         # snapshot_code(): the module set of the import-time snapshots,
+#                           with each file's hash when this process loaded it
 DRIVER_SHA256 = sha256_file(os.path.abspath(__file__))     # this driver, at import
 
 
-def snapshot_code():
-    """Hash every p4.* source this process has loaded and not hashed yet, and
-    return {repo-relative path: sha256} of all of them.  Called right after
-    the imports (import_p4 and the drivers' contexts), so the hashes are
-    those of the code that was loaded; a source edited on disk afterwards is
-    caught at write time by verify_code."""
+def _p4_sources():
+    """{repo-relative path: absolute path} of the p4.* sources loaded in this
+    process now."""
+    out = {}
     for name, mod in sorted(sys.modules.items()):
         if not (name == "p4" or name.startswith("p4.")):
             continue
         f = getattr(mod, "__file__", None)
-        if not f or not f.endswith(".py"):
-            continue
-        r = rel(f)
+        if f and f.endswith(".py"):
+            out[rel(f)] = f
+    return out
+
+
+def snapshot_code():
+    """The import-time snapshot: hash every p4.* source this process has
+    loaded and not hashed yet, add it to the snapshot's module set, and
+    return {repo-relative path: sha256} of the set.  Called right after the
+    imports (import_p4 and the drivers' contexts, before any computation),
+    so the hashes are those of the code that was loaded; a source edited on
+    disk afterwards is caught at write time by verify_code.  A module first
+    loaded after the last snapshot is not added at write time: code_record
+    lists it in late_modules (review section 6, new issue 2)."""
+    for r, f in _p4_sources().items():
         if r not in _IMPORT_HASH:
             _IMPORT_HASH[r] = sha256_file(f)
     return dict(_IMPORT_HASH)
@@ -221,10 +247,23 @@ def import_p4():
     snapshot_code()
 
 
+def late_modules():
+    """Repo-relative paths of the p4.* sources loaded in this process but
+    not in the module set of an import-time snapshot: first loaded after the
+    last snapshot_code(), so a hash taken now need not be that of the code
+    that ran."""
+    return sorted(r for r in _p4_sources() if r not in _IMPORT_HASH)
+
+
 def loaded_code():
     """{repo-relative path: sha256} of every p4.* module loaded in this
-    process, hashed when it was first seen loaded (snapshot_code)."""
-    return snapshot_code()
+    process: the import-time hash (snapshot_code), or, for a module in
+    late_modules(), a hash taken now.  Does not extend the snapshot."""
+    files = dict(_IMPORT_HASH)
+    for r, f in _p4_sources().items():
+        if r not in files:
+            files[r] = sha256_file(f)
+    return files
 
 
 def verify_code(files, drivers=None):
@@ -250,20 +289,32 @@ def verify_code(files, drivers=None):
 
 def code_record(drivers=None):
     """The code block of a stored result: import-time hashes, fingerprint,
-    git head, dirty flag, and the write-time verification of the sources and
-    of the driver scripts (default: this one)."""
+    git head, dirty flag (None when git cannot tell), the modules first
+    loaded after the import-time snapshot (late_modules), and the write-time
+    verification of the sources and of the driver scripts (default: this
+    one).  A late module fails the write check: its hash was taken at write
+    time, not when it was loaded."""
+    late = late_modules()
     files, (head, dirty) = loaded_code(), git_head()
     if drivers is None:
         drivers = {os.path.abspath(__file__): DRIVER_SHA256}
+    wc = verify_code(files, drivers)
+    if late:
+        wc.update(ok=False, late_modules=late)
     return dict(files=files, fingerprint=fingerprint(files), git_head=head,
-                git_dirty_src=dirty, hashed="import",
-                write_check=verify_code(files, drivers))
+                git_dirty_src=dirty, hashed="import", late_modules=late,
+                write_check=wc)
 
 
 def write_check_ok(d):
-    """False iff the result records a failed write-time verification (results
-    written before 2026-10-17 have no write_check and count as unchecked)."""
-    wc = ((d or {}).get("code") or {}).get("write_check")
+    """False iff the result records a failed write-time verification or a
+    module first loaded after the import-time snapshot (results written
+    before 2026-10-17 have no write_check and count as unchecked; results
+    written before the late_modules field have none recorded)."""
+    code = (d or {}).get("code") or {}
+    if code.get("late_modules"):
+        return False
+    wc = code.get("write_check")
     return wc is None or wc.get("ok") is True
 
 
@@ -1021,6 +1072,7 @@ def cmd_p43_centre(args):
     import_p4()
     import p4.validated.ec_centre as ecc
     import p4.validated.tc_monotone as tm
+    snapshot_code()                    # tc_monotone is not in EAGER: hash it at import
     t0, c0 = time.time(), time.process_time()
     cert = tm.run_centre()
     t1 = time.time()
@@ -1505,8 +1557,12 @@ def layer_checks(p, d, tau_need, eps_max, accept=None, strict=False):
     strict=True (the substitution rule, item 3) adds: no accepted code
     variants; the modules tc_layer, tc_commutator, tc_tm, tc_energy and
     tc_reduce, lintube on tube pieces, tc_layer_mv iff the engine uses a
-    centred evaluator; git_dirty_src false; a passing write-time check
-    present; driver_sha256 equal to the current s44_layer.py."""
+    centred evaluator; a recorded git_head and git_dirty_src exactly false
+    (written from a clean checkout; review section 6, new issue 1); a
+    passing write-time check present; driver_sha256 equal to the current
+    s44_layer.py.  A module first loaded after the import-time snapshot
+    (code.late_modules; review section 6, new issue 2) makes the part
+    invalid in both modes."""
     if d is None:
         return "missing", ["no layer part"]
     if not d or d.get("schema") != LAYER_SCHEMA or d.get("id") != p["id"]:
@@ -1526,6 +1582,9 @@ def layer_checks(p, d, tau_need, eps_max, accept=None, strict=False):
     files = code.get("files")
     if not files:
         return "invalid", ["no code record"]
+    if code.get("late_modules"):
+        return "invalid", ["modules first loaded after the import-time snapshot: %s"
+                           % ", ".join(code["late_modules"])]
     if not write_check_ok(d):
         return "invalid", ["a source changed on disk before the part was written"]
     if not code_matches(files, None if strict else accept):
@@ -1540,6 +1599,8 @@ def layer_checks(p, d, tau_need, eps_max, accept=None, strict=False):
         why += ["module %s not recorded" % m for m in need if m not in files]
         if bool(eng.get("mv")) != (_vpath("tc_layer_mv") in files):
             why.append("tc_layer_mv recorded iff the engine uses a centred evaluator")
+        if not code.get("git_head"):
+            why.append("git_head not recorded (not written from a checkout)")
         if code.get("git_dirty_src") is not False:
             why.append("git_dirty_src not false")
         if not (code.get("write_check") or {}).get("ok") is True:
@@ -1831,8 +1892,10 @@ def cmd_merge(args):
         blocked=sub["blocked"],
         rule=("review 2026-10-17 section 2: tube or sonic piece, S4-3 part missing, "
               "stale or invalid; layer_t14 part passing layer_checks(strict=True) with "
-              "tau_min <= b1 (identity, current code with the required modules, clean "
-              "tree, write-time check, pinned s44_layer.py, the cover actually run); "
+              "tau_min <= b1 (identity, current code with the required modules, a "
+              "recorded git head and a clean tree, write-time check, no module loaded "
+              "after the import-time snapshot, pinned s44_layer.py, the cover actually "
+              "run); "
               "checks valid; b1, c, EPS_MAX unchanged.  Failed or errored S4-3 parts go "
               "to manual_review."))
     worst = max((e["margin"] for e in detail if e.get("margin") is not None), default=None)
