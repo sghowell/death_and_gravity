@@ -13,6 +13,7 @@ import json
 import math
 import os
 import sys
+from fractions import Fraction
 
 import pytest
 
@@ -35,34 +36,66 @@ def _vp(m):
     return s43._vpath(m)
 
 
+def _enc(x):
+    """Tube.save's encoding [man, exp, rad_man, rad_exp] of the exact dyadic
+    x (a float or a Fraction), radius 0."""
+    q = Fraction(x)
+    d = q.denominator
+    assert d & (d - 1) == 0
+    return [str(q.numerator), str(-(d.bit_length() - 1)), "0", "0"]
+
+
 class Env:
+    """Synthetic plan: centre (-inf, log 0.375], tube [-1, -0.02], gap
+    [-0.02, -0.01], sonic [-0.01, 0]; the two tube-kind pieces are steps of
+    small tube cache files (exact positions), as the merge's exact cover
+    check reads them."""
+
     def __init__(self, root):
         self.root = root
         self.parts = os.path.join(root, "parts")
+        self.cache_dir = os.path.join(root, "cache")
         self.code = {CODE_FILE: s43.current_hash(CODE_FILE)}
         assert self.code[CODE_FILE]
-        e1 = math.exp(-1.0)
+        self.sha = {"full": self.write_cache("full", [(-0.02, 0.98)]),
+                    "gap": self.write_cache("gap", [(-0.01, 0.01)])}
         self.pieces = [
-            dict(id="centre/c00", region="centre", kind="centre", index=0, lo=0.0, hi=e1),
+            dict(id="centre/c00", region="centre", kind="centre", index=0, lo=0.0, hi=0.375),
             dict(id="tube/full-000", region="tube", kind="tube", cache="full",
-                 cache_content_sha256="aaa", index=0, x=-0.02, h=0.98, x_min=-4.5,
-                 x_max=-0.05, degrade=True, tq=True),
+                 cache_content_sha256=self.sha["full"], index=0, x=-0.02, h=0.98,
+                 x_min=-4.5, x_max=-0.02, degrade=True, tq=True),
             dict(id="gap/gap-000", region="gap", kind="tube", cache="gap",
-                 cache_content_sha256="bbb", index=0, x=-0.01, h=0.01, x_min=-0.056,
-                 x_max=-0.008, degrade=True, tq=False),
+                 cache_content_sha256=self.sha["gap"], index=0, x=-0.01, h=0.01,
+                 x_min=-0.056, x_max=-0.008, degrade=True, tq=False),
             dict(id="sonic/s00", region="sonic", kind="sonic", index=0, lo=0.0, hi=0.01,
                  tq=False),
         ]
-        self.byid = {p["id"]: p for p in self.pieces}
-        _write(os.path.join(self.parts, "plan.json"),
-               dict(schema="s43-plan/1", pieces=self.pieces, caches={}))
-        for name, sha in (("full", "aaa"), ("gap", "bbb")):
-            _write(os.path.join(self.parts, "caches", name + ".json"),
-                   dict(content_sha256=sha))
+        self.write_plan()
         self.checks(True)
         for pid, st in (("centre/c00", "pass-both"), ("tube/full-000", "pass-both"),
                         ("gap/gap-000", "pass-direct"), ("sonic/s00", "pass-direct")):
             self.s43_part(pid, st)
+
+    def write_cache(self, name, steps, rad=None):
+        """A tube cache file of the steps [(x, h)] (exact positions; rad
+        {k: radius mantissa} for nonzero radii) and its build record;
+        returns its content hash."""
+        rad = rad or {}
+        enc = [_enc(x) for x, h in steps]
+        for k, r in rad.items():
+            enc[k][2] = str(r)
+        path = os.path.join(self.cache_dir, "tube_%s.json" % name)
+        _write(path, dict(K=1, info={}, steps=[
+            dict(x=e, h=h, eps=["0", "0", "0", "0"], region="tube", co=[])
+            for e, (x, h) in zip(enc, steps)]))
+        sha = s43.tube_content_hash(path)
+        _write(os.path.join(self.parts, "caches", name + ".json"), dict(content_sha256=sha))
+        return sha
+
+    def write_plan(self):
+        self.byid = {p["id"]: p for p in self.pieces}
+        _write(os.path.join(self.parts, "plan.json"),
+               dict(schema="s43-plan/1", pieces=self.pieces, caches={}))
 
     def checks(self, ok):
         _write(os.path.join(self.parts, "checks.json"),
@@ -141,6 +174,7 @@ def env(tmp_path, monkeypatch):
     monkeypatch.setattr(s43, "PLAN", os.path.join(root, "parts", "plan.json"))
     monkeypatch.setattr(s43, "CERT", os.path.join(root, "tc_commutator.json"))
     monkeypatch.setattr(s43, "CERT_PARTIAL", os.path.join(root, "tc_commutator_partial.json"))
+    monkeypatch.setattr(s43, "CACHE_DIR", os.path.join(root, "cache"))
     return Env(root)
 
 
@@ -158,9 +192,13 @@ def test_merge_without_layer_parts_keeps_s43_semantics(env):
     assert name == "tc_commutator.json" and d["ok"] and d["status"] == "complete"
     assert d["scope"]["tau_le_tstar_uncovered_x"] == []
     assert _gaps(d) == [(-0.02, 0.0)]                  # the band: direct phase only
-    assert d["scope"]["tau_above_tstar"].startswith("OPEN")
+    t = d["scope"]["tau_above_tstar"]
+    assert t.startswith("OPEN") and "nothing is certified" not in t
+    assert "only tau in [b1, tstar] is certified on x in [(-0.02, 0.0)]" in t
     assert d["open_pieces"] == 2 and not d["strip_exclusion_certified"]
-    assert d["scope"]["tau_gt_tstar_by"] == dict(tau_quadratic=2, layer=0, open=2)
+    assert d["scope"]["tau_gt_tstar_by"] == dict(tau_quadratic=2, layer=0, open=2,
+                                                 substituted=0)
+    assert d["cover"]["exact"] is True and d["cover"]["errors"] == []
     assert d["layer"]["joined_pieces"] == 0 and d["layer"]["dirs"] == []
     assert _detail(d, "gap/gap-000")["tau_gt_tstar"] == "open"
     assert _detail(d, "tube/full-000")["tau_gt_tstar"] == "tau-quadratic"
@@ -174,7 +212,8 @@ def test_layer_parts_cover_the_band(env):
     assert name == "tc_commutator.json" and d["ok"]
     assert _gaps(d) == [] and d["scope"]["tau_above_tstar"] == "certified everywhere"
     assert d["strip_exclusion_certified"] and d["open_pieces"] == 0
-    assert d["scope"]["tau_gt_tstar_by"] == dict(tau_quadratic=2, layer=2, open=0)
+    assert d["scope"]["tau_gt_tstar_by"] == dict(tau_quadratic=2, layer=2, open=0,
+                                                 substituted=0)
     for pid in ("gap/gap-000", "sonic/s00"):
         e = _detail(d, pid)
         assert e["tau_gt_tstar"] == "layer:layer"
@@ -218,8 +257,8 @@ def _join_bad():
                                "invalid"),
         "cache-hash": (top(inputs=dict(kind="tube", cache="gap",
                                        cache_content_sha256="ccc")), "stale"),
-        "cache-name": (top(inputs=dict(kind="tube", cache="full",
-                                       cache_content_sha256="bbb")), "stale"),
+        "cache-name": (lambda d: d.update(inputs=dict(d["inputs"], cache="full")),
+                       "stale"),
         "schema": (top(schema="s44-layer/0"), "invalid"),
         "positive": (lambda d: (d.update(certified_bound=0.1),
                                 d["result"].update(certified_bound=0.1, worst=0.1)),
@@ -297,6 +336,9 @@ def test_layer_parts_do_not_replace_s43_parts_without_the_flag(env):
     assert d["missing"] == ["gap/gap-000"]
     assert d["scope"]["tau_le_tstar_uncovered_x"] == [[-0.02, -0.01]]
     assert _gaps(d) == [(-0.02, -0.01)]
+    t = d["scope"]["tau_above_tstar"]
+    assert "nothing is certified for any tau >= b1 on x in [(-0.02, -0.01)]" in t
+    assert "only tau in [b1, tstar]" not in t
     assert _detail(d, "tube/full-000")["tau_gt_tstar"] == "tau-quadratic"
     env.s43_part("gap/gap-000", "fail")
     _, d = env.merge()
@@ -427,7 +469,7 @@ def _sub_bad():
         "id": top(id="gap/gap-001"),
         "spec": top(spec=dict(id="gap/gap-000", index=3)),
         "cache-hash": top(inputs=dict(kind="tube", cache="gap", cache_content_sha256="ccc")),
-        "cache-name": top(inputs=dict(kind="tube", cache="deep", cache_content_sha256="bbb")),
+        "cache-name": lambda d, env: d.update(inputs=dict(d["inputs"], cache="deep")),
         "no-code": code(files={}),
         "hash-not-current": lambda d, env: d["code"]["files"].update(
             {_vp("tc_layer"): "3" * 64}),
@@ -690,3 +732,109 @@ def test_late_module_part_is_rejected(tmp_path, env, monkeypatch):
                  code=dict(files=dict(env.code), late_modules=[r],
                            write_check=dict(ok=True)))
     assert s43.part_state(env.byid["tube/full-000"], s43.read_part("tube/full-000")) == "invalid"
+
+
+# ----------------------------------- the exact x-cover (S4-5 assembly note B1)
+X0 = Fraction(-0.01) + Fraction(1, 2 ** 60)      # an exact step position, not a double
+
+
+def _two_gap_steps(env, x1=None, h1=0.0051):
+    """The gap cache as two steps from X0 (h0 = 0.005; x1 = X0 - h0 unless
+    given), the plan's gap pieces gap-000 and gap-001 labelled as the drivers
+    label them (float(x), h), both pass-direct."""
+    x1 = X0 - Fraction(0.005) if x1 is None else x1
+    sha = env.write_cache("gap", [(X0, 0.005), (x1, h1)])
+    g0 = dict(env.byid["gap/gap-000"], cache_content_sha256=sha, x=float(X0), h=0.005)
+    g1 = dict(g0, id="gap/gap-001", index=1, x=float(x1), h=h1)
+    env.pieces = [p for p in env.pieces if p["region"] != "gap"] + [g0, g1]
+    env.write_plan()
+    for pid in ("gap/gap-000", "gap/gap-001"):
+        env.s43_part(pid, "pass-direct")
+    return g0, g1
+
+
+def test_cover_is_exact_where_the_float_labels_do_not_tile(env):
+    g0, g1 = _two_gap_steps(env)
+    # in exact arithmetic the labels leave a hole between the two steps ...
+    assert Fraction(g1["x"]) < Fraction(g0["x"]) - Fraction(g0["h"])
+    # ... the exact cache positions join exactly, and the merge sees no gap
+    name, d = env.merge()
+    assert name == "tc_commutator.json" and d["ok"]
+    assert d["cover"]["errors"] == [] and d["cover"]["pieces"] == 5
+    assert d["scope"]["tau_le_tstar_uncovered_x"] == []
+
+
+def test_merge_fails_on_an_inexact_join(env):
+    # x1 = X0 - h0 - 2^-70: the second step starts 2^-70 below the first's end
+    _two_gap_steps(env, x1=X0 - Fraction(0.005) - Fraction(1, 2 ** 70))
+    with pytest.raises(SystemExit, match="exact cover check failed"):
+        s43.cmd_merge(argparse.Namespace(accept_code=None, accept_reason=None,
+                                         substitute_layer_t14=False))
+    d = json.load(open(os.path.join(env.root, "tc_commutator_partial.json")))
+    assert not d["ok"] and not d["strip_exclusion_certified"]
+    assert any("steps 0 and 1 do not join exactly" in e for e in d["cover"]["errors"])
+
+
+def _cover_bad():
+    """exact_x_cover errors: (plan pieces as changes of the env's, the
+    expected message)."""
+    def gap(**kw):
+        def f(env):
+            env.pieces = [dict(p, **kw) if p["id"] == "gap/gap-000" else p for p in env.pieces]
+        return f
+
+    def cache(steps, **kw):
+        def f(env):
+            sha = env.write_cache("gap", steps, **kw)
+            gap(cache_content_sha256=sha)(env)
+        return f
+
+    def sonic_pair(env):
+        s1 = dict(env.byid["sonic/s00"], id="sonic/s01", index=1, lo=0.0100001, hi=0.02)
+        env.pieces = env.pieces + [s1]
+    return {
+        "claims-another-step": (gap(x=-0.0101), "not the cache step it claims"),
+        "h-label": (gap(h=0.0099), "not the cache step it claims"),
+        "content-hash": (gap(cache_content_sha256="ccc"), "differs from the plan's"),
+        "index": (gap(index=3), "outside the 1 steps"),
+        "radius": (cache([(-0.01, 0.01)], rad={0: 1}), "nonzero radius"),
+        "join": (cache([(-0.01, 0.005), (-0.0150001, 0.005)]), "do not join exactly"),
+        "missing-file": (gap(cache="deep"), "missing"),
+        "sonic-touch": (sonic_pair, "do not touch exactly"),
+    }
+
+
+@pytest.mark.parametrize("case", sorted(_cover_bad()))
+def test_exact_cover_errors(env, case):
+    fn, want = _cover_bad()[case]
+    fn(env)
+    env.write_plan()
+    iv, errors = s43.exact_x_cover(s43.load_plan(), [p["id"] for p in env.pieces])
+    assert any(want in e for e in errors), (case, errors)
+
+
+def test_exact_cover_intervals(env):
+    iv, errors = s43.exact_x_cover(s43.load_plan(), [p["id"] for p in env.pieces])
+    assert errors == []
+    q = lambda p: (p.q, p.t)
+    assert q(iv["gap/gap-000"][0]) == (Fraction(-0.01) - Fraction(0.01), None)
+    assert q(iv["gap/gap-000"][1]) == (Fraction(-0.01), None)
+    assert q(iv["sonic/s00"][0]) == (-Fraction(0.01), None)
+    assert q(iv["centre/c00"][0]) == (None, 0) and q(iv["centre/c00"][1]) == (None, Fraction(0.375))
+    assert s43.exact_gaps(list(iv.values())) == []
+
+
+def test_exact_gaps_with_centre_pieces():
+    X, Q = s43.XPoint, Fraction
+    tube = (X(q=Q(-1)), X(q=Q(-1, 50)))
+    # log 0.375 = -0.98 > -1: the centre piece overlaps the tube step
+    assert s43.exact_gaps([(X(t=Q(0)), X(t=Q(3, 8))), tube], hi=X(q=Q(-1, 50))) == []
+    # log 0.25 = -1.386 < -1: a hole (log 0.25, -1), found without tolerance
+    g = s43.exact_gaps([(X(t=Q(0)), X(t=Q(1, 4))), tube], hi=X(q=Q(-1, 50)))
+    assert [(float(a), float(b)) for a, b in g] == [(math.log(0.25), -1.0)]
+    # touching: log 1 = 0 meets [0, 1] exactly
+    assert s43.exact_gaps([(X(t=Q(0)), X(t=Q(1))), (X(q=Q(0)), X(q=Q(1)))],
+                          hi=X(q=Q(1))) == []
+    # a gap of 2^-80 between two dyadic ends is a gap
+    g = s43.exact_gaps([(X(q=Q(-2)), X(q=Q(-1))), (X(q=Q(-1) + Q(1, 2 ** 80)), X(q=Q(0)))])
+    assert len(g) == 2 and g[1][0].q == Q(-1) and g[1][1].q == Q(-1) + Q(1, 2 ** 80)

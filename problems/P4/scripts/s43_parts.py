@@ -71,7 +71,11 @@ Commands (python problems/P4/scripts/s43_parts.py <cmd> -h for options):
                                      checked passing layer_t14 part carries a
                                      tube or sonic piece whose S4-3 part is
                                      missing, stale or invalid (review
-                                     2026-10-17 section 2)
+                                     2026-10-17 section 2).  The x-cover is
+                                     checked exactly on the tube caches' step
+                                     positions (exact_x_cover); a piece that
+                                     is not the cache step it claims, or an
+                                     inexact join, fails the merge.
 
 A piece's result is "valid" (skipped on re-run) iff its file parses, its spec
 matches the plan entry, its tube cache content hash matches the local cache,
@@ -87,6 +91,7 @@ from __future__ import annotations
 import argparse
 import datetime as _dt
 import fnmatch
+import functools
 import glob
 import hashlib
 import json
@@ -99,6 +104,7 @@ import subprocess
 import sys
 import time
 import traceback
+from fractions import Fraction
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.abspath(os.path.join(HERE, "..", "..", ".."))
@@ -1500,6 +1506,214 @@ def uncovered(intervals, lo=-math.inf, hi=0.0, tol=1e-12):
     return gaps
 
 
+# --------------------------------------------- the merge's exact x-cover
+# The plan's float labels (x, h) do not tile in exact arithmetic (371 joins
+# between consecutive steps of one cache leave gaps of 8e-20 to 1.8e-16,
+# label rounding; notes/s4-5-assembly.md B1).  The certified steps are the
+# arb steps of the tube caches: the merge checks the cover on those, exactly.
+class XPoint:
+    """A point of the extended x-line, exactly: a dyadic rational q, or
+    log t for a dyadic t >= 0 (an end of a centre piece, which lives in
+    t = e^x; log 0 = -inf)."""
+    __slots__ = ("q", "t")
+
+    def __init__(self, q=None, t=None):
+        self.q, self.t = q, t
+
+    def __float__(self):            # display only
+        if self.t is None:
+            return float(self.q)
+        return -math.inf if self.t == 0 else math.log(self.t)
+
+    def __repr__(self):
+        return "XPoint(%r)" % float(self)
+
+
+X_NEG_INF = XPoint(t=Fraction(0))
+X_ZERO = XPoint(q=Fraction(0))
+
+
+def _arb_of(q):
+    from flint import arb, fmpz
+    return arb(fmpz(q.numerator)) / arb(fmpz(q.denominator))
+
+
+def _log_cmp(t, q):
+    """Sign of log t - q, exactly, for dyadic t >= 0 and dyadic q.  For
+    q != 0, e^q is irrational, so log t != q and ball arithmetic at rising
+    precision decides."""
+    if t == 0:
+        return -1
+    if q == 0:
+        return (t > 1) - (t < 1)
+    from p4.validated.arbseries import precision
+    for prec in (64, 256, 1024, 4096):
+        with precision(prec):
+            d = _arb_of(t).log() - _arb_of(q)
+            if d > 0:
+                return 1
+            if d < 0:
+                return -1
+    raise RuntimeError("cannot order log(%s) and %s" % (t, q))
+
+
+def xcmp(a, b):
+    """-1, 0 or 1 as the exact x-points a <, =, > b."""
+    if a.t is None and b.t is None:
+        return (a.q > b.q) - (a.q < b.q)
+    if a.t is not None and b.t is not None:
+        return (a.t > b.t) - (a.t < b.t)
+    if a.t is not None:
+        return _log_cmp(a.t, b.q)
+    return -_log_cmp(b.t, a.q)
+
+
+def exact_gaps(intervals, hi=X_ZERO):
+    """Sub-intervals of [-inf, hi] not covered by the union of the closed
+    exact intervals (pairs of XPoint), compared exactly (no tolerance)."""
+    order = functools.cmp_to_key(lambda u, v: xcmp(u[0], v[0]) or xcmp(u[1], v[1]))
+    gaps, cur = [], X_NEG_INF
+    for a, b in sorted(intervals, key=order):
+        if xcmp(b, cur) < 0:
+            continue
+        if xcmp(a, cur) > 0:
+            gaps.append((cur, a))
+        if xcmp(b, cur) > 0:
+            cur = b
+        if xcmp(cur, hi) >= 0:
+            break
+    if xcmp(cur, hi) < 0:
+        gaps.append((cur, hi))
+    return gaps
+
+
+def exact_minus(gs, hs):
+    """The exact intervals gs minus the union of hs (both lists of XPoint
+    pairs); for the merge's description of what is open, where gs are the
+    tau > tstar gaps and hs the tau <= tstar gaps inside them."""
+    out = []
+    for a, b in gs:
+        cur = a
+        for c, d in sorted(hs, key=functools.cmp_to_key(lambda u, v: xcmp(u[0], v[0]))):
+            if xcmp(d, cur) <= 0 or xcmp(c, b) >= 0:
+                continue
+            if xcmp(c, cur) > 0:
+                out.append((cur, c))
+            if xcmp(d, cur) > 0:
+                cur = d
+        if xcmp(cur, b) < 0:
+            out.append((cur, b))
+    return out
+
+
+def _floats(ivs):
+    return [(float(a), float(b)) for a, b in ivs]
+
+
+def exact_caches(names):
+    """{name: dict(content_sha256, steps)} of the tube cache files: per step
+    the exact position x (a Fraction; None if the stored radius is not 0),
+    the stored step h (a double, exact), and the float label float(x) as
+    the drivers compute it (Tube.load's decoding); {name: dict(error)} for a
+    missing file."""
+    from flint import arb, fmpz
+    from p4.validated.arbseries import precision
+    out = {}
+    for name in names:
+        path = cache_path(name)
+        if not os.path.exists(path):
+            out[name] = dict(error="cache %s: file %s missing (build-caches)" % (name, rel(path)))
+            continue
+        d = json.load(open(path))
+        payload = json.dumps(dict(K=d["K"], steps=d["steps"]), sort_keys=True,
+                             separators=(",", ":"))
+        steps = []
+        with precision(384):
+            for st in d["steps"]:
+                m, e, rm, _ = (int(v) for v in st["x"])
+                xf = float(arb(arb(fmpz(m)) * arb(2) ** e))
+                steps.append(dict(x=(Fraction(m) * Fraction(2) ** e) if rm == 0 else None,
+                                  h=Fraction(st["h"]), hf=float(st["h"]), xf=xf))
+        out[name] = dict(content_sha256=hashlib.sha256(payload.encode()).hexdigest(),
+                         steps=steps)
+    return out
+
+
+def exact_x_cover(plan, ids):
+    """({id: (a, b)} exact x-intervals of the plan pieces ids, errors).
+
+    Tube-kind pieces: the cache file's content hash must be the plan's; the
+    step the piece claims (the drivers' selection: the steps with
+    x - h >= x_min - 1e-12 and x <= x_max + 1e-12, then index) must carry
+    the piece's labels exactly (float(x_k) = x, h_k = h) and radius 0; the
+    interval is [x_k - h_k, x_k] in exact arithmetic.  Every step of every
+    cache in use must have radius 0, and consecutive steps must join
+    exactly, x_{k+1} = x_k - h_k.  Sonic pieces: [-hi, -lo] (the Laurent
+    domain is [lo, hi]); centre pieces: [log lo, log hi] (t-pieces);
+    consecutive sonic and centre pieces must touch exactly (hi_i = lo_{i+1}).
+    Any violation is an error, and the merge fails on it."""
+    byid = {p["id"]: p for p in plan["pieces"]}
+    pieces = [byid[i] for i in ids]
+    names = sorted({p["cache"] for p in pieces if p["kind"] == "tube"})
+    caches = exact_caches(names)
+    errors = []
+    for name in names:
+        c = caches[name]
+        if "error" in c:
+            errors.append(c["error"])
+            continue
+        st = c["steps"]
+        for k, s in enumerate(st):
+            if s["x"] is None:
+                errors.append("cache %s: step %d position has a nonzero radius" % (name, k))
+        for k in range(len(st) - 1):
+            a, b = st[k], st[k + 1]
+            if a["x"] is not None and b["x"] is not None and b["x"] != a["x"] - a["h"]:
+                errors.append("cache %s: steps %d and %d do not join exactly "
+                              "(x_%d - (x_%d - h_%d) = %.3g)"
+                              % (name, k, k + 1, k + 1, k, k,
+                                 float(b["x"] - (a["x"] - a["h"]))))
+    iv = {}
+    for p in pieces:
+        if p["kind"] == "sonic":
+            iv[p["id"]] = (XPoint(q=-Fraction(p["hi"])), XPoint(q=-Fraction(p["lo"])))
+            continue
+        if p["kind"] == "centre":
+            iv[p["id"]] = (XPoint(t=Fraction(p["lo"])), XPoint(t=Fraction(p["hi"])))
+            continue
+        c = caches[p["cache"]]
+        if "error" in c:
+            continue
+        if c["content_sha256"] != p["cache_content_sha256"]:
+            errors.append("%s: cache %s content %s differs from the plan's %s"
+                          % (p["id"], p["cache"], c["content_sha256"][:16],
+                             str(p["cache_content_sha256"])[:16]))
+            continue
+        sel = [k for k, s in enumerate(c["steps"])
+               if s["xf"] - s["hf"] >= p["x_min"] - 1e-12 and s["xf"] <= p["x_max"] + 1e-12]
+        if not 0 <= p["index"] < len(sel):
+            errors.append("%s: index %d outside the %d steps of cache %s in [x_min, x_max]"
+                          % (p["id"], p["index"], len(sel), p["cache"]))
+            continue
+        k = sel[p["index"]]
+        s = c["steps"][k]
+        if not (s["xf"] == p["x"] and s["hf"] == p["h"]):
+            errors.append("%s: not the cache step it claims: plan (x, h) = (%r, %r), "
+                          "cache %s step %d (%r, %r)" % (p["id"], p["x"], p["h"], p["cache"],
+                                                         k, s["xf"], s["hf"]))
+            continue
+        if s["x"] is None:
+            continue                       # the radius error is recorded above
+        iv[p["id"]] = (XPoint(q=s["x"] - s["h"]), XPoint(q=s["x"]))
+    for reg in ("sonic", "centre"):
+        ps = sorted((p for p in pieces if p["region"] == reg), key=lambda p: p["index"])
+        for a, b in zip(ps, ps[1:]):
+            if b["index"] == a["index"] + 1 and Fraction(a["hi"]) != Fraction(b["lo"]):
+                errors.append("%s and %s do not touch exactly (hi %r, lo %r)"
+                              % (a["id"], b["id"], a["hi"], b["lo"]))
+    return iv, errors
+
+
 # ------------------------------------------------------- S4-4 layer parts
 LAYER_SCHEMA = "s44-layer/1"
 
@@ -1815,17 +2029,22 @@ def cmd_merge(args):
         if len(s) > 1 or bad:
             conflicts[r] = dict(hashes=sorted(s), current=cur, unaccepted=bad)
     unaccepted = {r: c for r, c in conflicts.items() if c["unaccepted"]}
-    direct_iv = [x_interval(p) for p, d in used] + [x_interval(p) for p, d in subp]
-    both_iv = [x_interval(p) for p, d in used
-               if d["status"] == "pass-both" or p["id"] in covers] \
-        + [x_interval(p) for p, d in subp]
-    gaps_direct = uncovered(direct_iv)
-    gaps_both = uncovered(both_iv)
+    # the cover, exactly: tube steps at their exact cache positions (each
+    # piece checked to be the cache step it claims), no tolerance; any
+    # mismatch or inexact join is a merge error (notes/s4-5-assembly.md B1)
+    xiv, cover_errors = exact_x_cover(plan, [p["id"] for p, d in used + subp])
+    direct_iv = [xiv[p["id"]] for p, d in used + subp if p["id"] in xiv]
+    both_iv = [xiv[p["id"]] for p, d in used if p["id"] in xiv
+               and (d["status"] == "pass-both" or p["id"] in covers)] \
+        + [xiv[p["id"]] for p, d in subp if p["id"] in xiv]
+    gx_direct, gx_both = exact_gaps(direct_iv), exact_gaps(both_iv)
+    gaps_direct, gaps_both = _floats(gx_direct), _floats(gx_both)
+    gaps_direct_only = _floats(exact_minus(gx_both, gx_direct))
     missing = sorted(i for i, s in states.items() if s in ("missing", "stale", "invalid")
                      and i not in sub["subs"])
     failed = sorted(i for i, s in states.items() if s in ("fail", "error"))
     complete = (not gaps_direct and not missing and not failed and checks_ok
-                and not unaccepted)
+                and not unaccepted and not cover_errors)
     opens = [d for p, d in used if d["status"] == "pass-direct" and p["id"] not in covers]
     xi_open = max([-a for a, b in gaps_both], default=0.0) if gaps_both else 0.0
     detail = []
@@ -1899,17 +2118,34 @@ def cmd_merge(args):
               "checks valid; b1, c, EPS_MAX unchanged.  Failed or errored S4-3 parts go "
               "to manual_review."))
     worst = max((e["margin"] for e in detail if e.get("margin") is not None), default=None)
+    if not gaps_both:
+        above = "certified everywhere"
+    else:
+        what = []
+        if gaps_direct:
+            what.append("nothing is certified for any tau >= b1 on x in %s (no passing "
+                        "part, S4-3 or substituted, covers it)" % gaps_direct)
+        if gaps_direct_only:
+            what.append("only tau in [b1, tstar] is certified on x in %s (the S4-3 direct "
+                        "phase of pass-direct pieces); tau > tstar is open there"
+                        % gaps_direct_only)
+        above = "OPEN on x in %s: %s" % (gaps_both, "; ".join(what))
     res = dict(
         ok=complete, status="complete" if complete else "partial",
         scope=dict(full_strip_tau=[B1, tc.TSTAR_FAC * B1],
                    tau_le_tstar_uncovered_x=gaps_direct,
                    tau_gt_tstar_uncovered_x=gaps_both,
                    xi_open_max=xi_open,
-                   tau_above_tstar=("certified everywhere" if not gaps_both else
-                                    "OPEN on x in %s (direct phase only there)" % gaps_both),
+                   tau_above_tstar=above,
                    tau_gt_tstar_by=dict(
                        tau_quadratic=sum(1 for p, d in used if d["status"] == "pass-both"),
-                       layer=len(covers), open=len(opens))),
+                       layer=len(covers), open=len(opens), substituted=len(subp))),
+        cover=dict(exact=True, errors=cover_errors, pieces=len(xiv),
+                   method=("tube steps at their exact cache positions [x_k - h_k, x_k] "
+                           "(radius 0, consecutive steps joining exactly, each piece the "
+                           "cache step it claims); sonic [-hi, -lo]; centre "
+                           "[log lo, log hi]; union and gaps in exact arithmetic, no "
+                           "tolerance")),
         strip_exclusion_certified=bool(complete and not gaps_both),
         b1=B1, m=tc.MC, c=[tc.CNUM, tc.CDEN], eps_max=tc.EPS_MAX, tstar_fac=tc.TSTAR_FAC,
         phase_settings=dict(
@@ -1949,6 +2185,10 @@ def cmd_merge(args):
           % ("merge", res["status"], len(used), len(subp), len(missing), len(failed),
              len(sub["manual_review"]), gaps_direct, gaps_both, len(covers),
              list(conflicts), res["strip_exclusion_certified"], rel(out)))
+    if cover_errors:
+        raise SystemExit("merge error: the exact cover check failed (%d): %s%s"
+                         % (len(cover_errors), "; ".join(cover_errors[:3]),
+                            " ..." if len(cover_errors) > 3 else ""))
 
 
 # -------------------------------------------------------------------- main
