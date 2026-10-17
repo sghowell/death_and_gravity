@@ -80,7 +80,7 @@ def plan(pt, a: Fr, b: Fr, e: Fr):
                 c = ((p0[0] + p1[0]) / 2, (p0[1] + p1[1]) / 2)
                 rho = Fr(5, 4) * (t1 - t)
                 cc = acb(arb(fmpq(c[0].numerator, c[0].denominator)), arb(fmpq(c[1].numerator, c[1].denominator)))
-                if poles_clear(pt, cc, arb(fmpq(rho.numerator, rho.denominator)) * Fr(5, 4)):
+                if poles_clear(pt, cc, arb(fmpq(rho.numerator, rho.denominator)) * arb(fmpq(5, 4))):
                     break
                 h = h / 2
             segs.append({"p0": [str(p0[0]), str(p0[1])], "p1": [str(p1[0]), str(p1[1])],

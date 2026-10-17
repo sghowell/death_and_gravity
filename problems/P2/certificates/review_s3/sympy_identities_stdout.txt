@@ -1,0 +1,28 @@
+{
+ "S1_partial_fractions": true,
+ "S2_factored_equation_s=+1": true,
+ "S2_factored_equation_s=-1": true,
+ "S3_factored_W_equals_frozen_W": true,
+ "S4_A_plus": true,
+ "S4_A_c": true,
+ "S4_factor_to_1": true,
+ "S5_indicial_roots": [
+  "0",
+  "2*I*r_h**2*s*w/d1"
+ ],
+ "S5_roots_at_r_plus": [
+  "0",
+  "I*w/kappa_p"
+ ],
+ "S5_roots_at_r_c": [
+  "0",
+  "I*w/kappa_c"
+ ],
+ "S5_ok": true,
+ "S6_eq_plus": true,
+ "S6_eq_c": true,
+ "S6_D4": true,
+ "S7_conjugation": true,
+ "pass": true
+}
+nice -n 10 $PY sympy_identities.py  0.36s user 0.06s system 76% cpu 0.549 total
