@@ -30,3 +30,10 @@ def test_weight_exponents_zero_mode():
     assert P.c6_weight_positive() and not P.c6_weight_positive(1)
     assert all(P.c7_exponents()) and not any(P.c7_exponents(1))
     assert P.c8_zero_mode_derivative() and not P.c8_zero_mode_derivative(1)
+
+
+def test_d1prime_machine_checked_parts():
+    """C0 (separation of Box_g), C9 (Abel identity), C10 (Abel exponent at the horizons)."""
+    assert P.c0_separation() and not P.c0_separation(1)
+    assert P.c9_abel() and not P.c9_abel(1)
+    assert P.c10_abel_exponent() and not P.c10_abel_exponent(1)

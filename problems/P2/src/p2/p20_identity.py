@@ -25,7 +25,10 @@ Chain (u = e^{-i w T} R, T' = eta/F, w = a + i b, L = l(l+1)):
   C8  (D4)  d/dw [Delta (R_+ R_c' - R_+' R_c)] at (l, w) = (0, 0) equals i (r_+^2 + r_c^2);
       so W_0'(0) = i (r_+^2 + r_c^2)/(r_+ r_c) != 0 and the zero of W_0 at 0 is simple.
 
-Replay:  .venv/bin/python -m p2.p20_identity [write|verify]   (cwd problems/P2/src; ~10 s)
+  C0, C9, C10 (lemma D1'): separation of Box_g; the Abel identity for the hyperboloidal operator;
+      the residue of p1/p2 at the horizons (integrability window Im w > -kappa).
+
+Replay:  .venv/bin/python -m p2.p20_identity [write|verify]   (cwd problems/P2/src; ~2 s)
 """
 from __future__ import annotations
 
@@ -183,6 +186,48 @@ def c8_zero_mode_derivative(eps=0):
     return all((ok_dp, ok_dc, ok_cp, ok_cc, ok_w, ok_ode, ok_one))
 
 
+def c0_separation(eps=0):
+    """C0 (D1'): for g = -F dt^2 + F^{-1} dr^2 + r^2 dOmega^2 and phi = e^{-i w t} R(r) Y(th, ph),
+    Box_g phi = e^{-i w t} r^{-2} [ (Delta R')' Y + w^2 r^4/Delta R Y + R Lap_S2 Y ],  Delta = r^2 F,
+    so with Lap_S2 Y = -L Y the radial equation (R) of FORMULATION 1.2 follows."""
+    t, th, ph = sp.symbols("t theta phi", real=True)
+    F_ = Ff(r)
+    R = sp.Function("R")(r)
+    Y = sp.Function("Y")(th, ph)
+    ww = sp.Symbol("omega")
+    phi_ = sp.exp(-sp.I * ww * t) * R * Y
+    sqrtg = r ** 2 * sp.sin(th)
+    ginv = {t: -1 / F_, r: F_, th: 1 / r ** 2, ph: 1 / (r ** 2 * sp.sin(th) ** 2)}
+    box = sum(sp.diff(sqrtg * gi * sp.diff(phi_, x), x) for x, gi in ginv.items()) / sqrtg
+    lapY = sp.diff(sp.sin(th) * sp.diff(Y, th), th) / sp.sin(th) + sp.diff(Y, ph, 2) / sp.sin(th) ** 2
+    Delta = r ** 2 * F_
+    target = sp.exp(-sp.I * ww * t) / r ** 2 * (sp.diff(Delta * sp.diff(R, r), r) * Y
+                                                 + (1 + eps) * ww ** 2 * r ** 4 / Delta * R * Y + R * lapY)
+    return _zero(sp.simplify(box - target))
+
+
+def c9_abel(eps=0):
+    """C9 (D1'): for P = p2 d^2 + p1 d + p0 and mu' = (p1/p2) mu:
+    d/dr [mu (y z' - y' z)] = mu (y P z - z P y)/p2."""
+    p2_, p1_, p0_, y, z, mu = (sp.Function(n)(r) for n in ("p2", "p1", "p0", "y", "z", "mu"))
+    P = lambda f: p2_ * sp.diff(f, r, 2) + p1_ * sp.diff(f, r) + p0_ * f
+    lhs = sp.diff(mu * (y * sp.diff(z, r) - sp.diff(y, r) * z), r)
+    lhs = lhs.subs(sp.Derivative(mu, r), (p1_ / p2_ + eps) * mu)
+    rhs = mu * (y * P(z) - z * P(y)) / p2_
+    return _zero(sp.simplify(lhs - rhs))
+
+
+def c10_abel_exponent(eps=0):
+    """C10 (D1'): for E[u] (C1), p2 = Delta, p1 = Delta' + 2 i w r^2 eta; at a simple root r_h of
+    Delta with eta(r_h) = -1 (event) / +1 (cosmological), Res_{r_h} p1/p2 = 1 - i w/kappa_+ and
+    1 - i w/kappa_c respectively, so mu/p2 ~ |r - r_h|^{-i w/kappa}: integrable iff Im w > -kappa."""
+    rp, rc, kp, kc = sp.symbols("r_p r_c kappa_p kappa_c", positive=True)
+    ww = sp.Symbol("omega")
+    res_p = (2 * kp * rp ** 2 + 2 * sp.I * ww * rp ** 2 * (-1)) / (2 * kp * rp ** 2)
+    res_c = (-2 * kc * rc ** 2 + 2 * sp.I * ww * rc ** 2 * (+1)) / (-2 * kc * rc ** 2)
+    return _zero(res_p - (1 - (1 + eps) * sp.I * ww / kp)) and _zero(res_c - (1 - sp.I * ww / kc))
+
+
 WRITTEN = {
     "integration": "u = e^{-i w T} R_+ is analytic on [r_+, r_c] when W_l(w) = 0 (C7 at r_+; R_+ = const*R_c "
                    "and C7 at r_c), so D, N, X, W, B are finite (C6 bounds the W-weight) and integrating C2 "
@@ -199,6 +244,8 @@ WRITTEN = {
 def run_all() -> dict:
     steps = []
     with Timer() as tm:
+        steps.append({"id": "C0", "statement": "Box_g(e^{-iwt} R Y) = e^{-iwt} r^{-2}[(Delta R')' Y + w^2 r^4/Delta R Y + R Lap_S2 Y]",
+                      "method": "sympy simplify, coordinate formula of Box_g", "ok": c0_separation()})
         ok, txt = c1_transformed_ode()
         steps.append({"id": "C1", "statement": txt, "method": "sympy simplify/expand == 0, generic F, eta, u, T", "ok": ok})
         ok, txt = c2_divergence_identity()
@@ -214,13 +261,17 @@ def run_all() -> dict:
         steps.append({"id": "C7a", "statement": "Res_{r_+} T' = -1/(2 kappa_+), Res_{r_c} T' = -1/(2 kappa_c)", "method": "exact substitution", "ok": ok_res})
         steps.append({"id": "C7b", "statement": "indicial exponents of E[u]: {0, i w/kappa_+} at r_+, {0, i w/kappa_c} at r_c", "method": "sympy expand", "ok": ok_ind})
         steps.append({"id": "C8", "statement": "D4: d/dw Delta(R_+R_c' - R_+'R_c) at (l,w)=(0,0) is i(r_+^2 + r_c^2)", "method": "sympy limit/expand", "ok": c8_zero_mode_derivative()})
+        steps.append({"id": "C9", "statement": "D1': d/dr[mu(yz' - y'z)] = mu(yPz - zPy)/p2, mu' = (p1/p2) mu", "method": "sympy simplify", "ok": c9_abel()})
+        steps.append({"id": "C10", "statement": "D1': Res p1/p2 = 1 - i w/kappa_+ at r_+, 1 - i w/kappa_c at r_c", "method": "exact", "ok": c10_abel_exponent()})
     with Timer() as tc:
         controls = {
+            "C0": not c0_separation(1), "C9": not c9_abel(1), "C10": not c10_abel_exponent(1),
             "C1": not c1_transformed_ode(1)[0], "C2": not c2_divergence_identity(1)[0],
             "C3": not c3_boundary_flux(1)[0], "C4": not c4_c5_real_imag_and_elimination(1)[0],
             "C5": not c4_c5_real_imag_and_elimination(1)[1], "C6": not c6_weight_positive(1),
             "C7a": not c7_exponents(1)[0], "C7b": not c7_exponents(1)[1], "C8": not c8_zero_mode_derivative(1)}
-    return {"claim": "P2-0 (closed upper half-plane: W_l(w) = 0 with Im w >= 0 iff (l, w) = (0, 0)) and D4 (m_0(0) = 1)",
+    return {"claim": "P2-0 (closed upper half-plane: W_l(w) = 0 with Im w >= 0 iff (l, w) = (0, 0)) and D4 (m_0(0) = 1); "
+                     "C0, C7, C9, C10 are the machine-checked parts of lemma D1' (notes/s1-p20-d1prime.md)",
             "level": "CERTIFIED (exact identities) + written steps",
             "steps": steps, "written_steps": WRITTEN,
             "negative_controls": {"meaning": "each identity with a deliberately wrong term must FAIL (True = it failed)",
