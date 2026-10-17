@@ -199,7 +199,7 @@ def test_full_rectangle_result_if_available():
 # ---------------------------------------------------------------------------------------------
 # constraint-surface invariance (exact) and its exponent conditions; stored full-R results
 # ---------------------------------------------------------------------------------------------
-RESULTS = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "results", "theorem_b")
+RESULTS = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "certificates", "theorem_b")
 
 
 def test_linearised_constraint_propagated_exactly_and_exponents(bg):
@@ -234,7 +234,7 @@ def _sides_tiled(res):
 
 
 def test_full_rectangle_result_if_available():
-    """Re-checks the stored JSON of the full-R run (results/theorem_b/winding_R.json, or P4_STAGE3_WINDING):
+    """Re-checks the stored JSON of the full-R run (certificates/theorem_b/winding_R.json, or P4_STAGE3_WINDING):
     winding 2 from the exactly encoded tile increments, contour tiled without gaps, constants as certified."""
     path = os.environ.get("P4_STAGE3_WINDING") or os.path.join(RESULTS, "winding_R.json")
     if not os.path.exists(path):
@@ -250,7 +250,7 @@ def test_full_rectangle_result_if_available():
 
 
 def test_stored_analyticity_cover():
-    """Re-checks the stored cover (results/theorem_b/analyticity_R.json, or P4_STAGE3_ANALYTICITY): the closed
+    """Re-checks the stored cover (certificates/theorem_b/analyticity_R.json, or P4_STAGE3_ANALYTICITY): the closed
     tiles partition R, each certified on a strictly larger box, nu > |x0|, Re sigma < 1, Z < 1, g < K+1, and the
     constraint-exponent certificate holds."""
     path = os.environ.get("P4_STAGE3_ANALYTICITY") or os.path.join(RESULTS, "analyticity_R.json")

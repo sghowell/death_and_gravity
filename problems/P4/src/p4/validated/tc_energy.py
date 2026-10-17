@@ -46,6 +46,7 @@ import time
 from flint import acb, arb, fmpq
 
 from .arbseries import precision, to_arb
+from .ballutil import half_width, radius_cover, recentred_delta, strip_ball
 from .tc_reduce import Reduction
 
 KD = 12                      # kappa-degree of QN
@@ -224,7 +225,7 @@ def line_sup(rem, QD, c0, dens, nbox=48):
         numpp = pder(nump)
 
         def box(a, b, depth=0):
-            kap = acb(arb(s0), arb((a + b) / 2, (b - a) / 2))
+            kap = acb(arb(s0), strip_ball(a, b))
             lo = arb(1)
             for d in dens:
                 fl = arb(abs(phorner(d, kap)).lower())
@@ -234,7 +235,7 @@ def line_sup(rem, QD, c0, dens, nbox=48):
                 lo = lo * fl
             if lo is not None:
                 kap0 = acb(arb(s0), arb((a + b) / 2))
-                wd = arb((b - a) / 2)
+                wd = half_width(a, b, arb((a + b) / 2))
                 up = arb(abs(phorner(num, kap0)).upper()) \
                     + wd * arb(abs(phorner(nump, kap0)).upper()) \
                     + wd * wd / 2 * arb(abs(phorner(numpp, kap)).upper())
@@ -373,7 +374,9 @@ class BoxEval:
     mpolys; derivatives are D1-atom values divided by the S*Delta value)."""
 
     def __init__(self, at, u_m, u_box, w):
-        self.at, self.dx = at, arb(0, w)
+        # w: the half-width (float) of the x-box, or an arb ball containing
+        # x - x_mid for every x of the box (ballutil.recentred_delta)
+        self.at, self.dx = at, (w if isinstance(w, arb) else arb(0, w))
         self.dx2h = self.dx * self.dx / 2
         dm = at.dmax
         self.pm, self.pb = u_to_pw(u_m, dm), u_to_pw(u_box, dm)
@@ -424,7 +427,7 @@ class BoxEvalScaled:
     with every atom evaluated through kval_s.  Z balls are (n, w, v, t)."""
 
     def __init__(self, at, Zm, Zb, w):
-        self.at, self.dx = at, arb(0, w)
+        self.at, self.dx = at, (w if isinstance(w, arb) else arb(0, w))
         self.dx2h = self.dx * self.dx / 2
         dm = at.dmax
 
@@ -575,12 +578,14 @@ def run_tube(at, tube, c0, x_min=-4.5, wfrac=1500.0, prec=256):
                 ok, worst = True, {}
                 for j in range(nsub):
                     w = sd.h / (2 * nsub)
+                    # the double w may round below the exact half-width h/(2 nsub)
+                    dxb = arb(0, radius_cover(w, h / (2 * nsub)))
                     sm = (-h * (2 * j + 1)) / (2 * nsub)
                     Zm = [zi + arb(0, sd.eps_z) for zi in ss.horner_vec(sd.co, sm)]
                     Zb = [zi + arb(0, sd.eps_z)
-                          for zi in ss.horner_vec(sd.co, sm + arb(0, w))]
+                          for zi in ss.horner_vec(sd.co, sm + dxb)]
                     try:
-                        ev = BoxEvalScaled(at, Zm, Zb, w)
+                        ev = BoxEvalScaled(at, Zm, Zb, dxb)
                         QNj, QDj, v = qn_qd(at, ev)
                         u = [ev.Ab, Zb[0] / Zb[3], Zb[1] * Zb[3] ** 2, Zb[2] * Zb[3]]
                         okb, m, _ = conditions_jet(QNj, QDj, u, v["Bcr"], c0, ev,
@@ -641,9 +646,10 @@ def _sonic_box(at, ex, a, b, c0, mins, stats, depth=0):
     okb = None
     if w <= abs(m) / 1500:              # heuristic: don't even try wide boxes
         try:
-            ev = BoxEval(at, ex.eval(arb(m)), ex.eval(arb(m, w)), w)
+            xb = strip_ball(a, b)
+            ev = BoxEval(at, ex.eval(arb(m)), ex.eval(xb), recentred_delta(a, b, arb(m)))
             QNj, QDj, v = qn_qd(at, ev)
-            okb, mg, _ = conditions_jet(QNj, QDj, ex.eval(arb(m, w)), v["Bcr"], c0, ev,
+            okb, mg, _ = conditions_jet(QNj, QDj, ex.eval(xb), v["Bcr"], c0, ev,
                                         fac=v["fac"], p3j=v["P3"])
         except (ArithmeticError, RuntimeError):
             okb, mg = False, None
@@ -667,7 +673,7 @@ def closing_box(at, ex, c0, dc=1e-8, prec=256):
     and including the endpoint.  Also returns the sigma known-answer containments and
     the xT = 1 + sigma(kappa) exponent data for the boundary lemma."""
     with precision(prec):
-        xb = arb(-dc / 2, dc / 2)
+        xb = strip_ball(-dc, 0.0)          # = arb(-dc/2, dc/2) when it contains [-dc, 0]
         u = ex.eval(xb)
         up = u_prime_balls(ex, xb, prec)
         pw = u_to_pw(u, at.dmax)

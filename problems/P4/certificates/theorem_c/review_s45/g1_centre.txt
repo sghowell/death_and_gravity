@@ -1,0 +1,14 @@
+P kappa-degrees: 1  G kappa-degrees: 2
+P_j=0 at t=0: [['1.00000', '0', '0', '0'], ['0', '1.00000', '0', '0'], ['0', '0', '[1.50000 +/- 1e-10]', '[28.7929 +/- 4.79e-6]'], ['0', '0', '[1.23660 +/- 3.91e-8]', '0']]
+G_j=0 at t=0: [['-3.00000', '0', '2.00000', '0'], ['0', '0', '0', '0'], ['0', '[28.2435 +/- 2.45e-5]', '[+/- 1.07e-14]', '[-86.3787 +/- 1.44e-5]'], ['0', '0', '0', '0']]
+G_j=1 at t=0: [['0', '0', '0', '0'], ['0', '0', '0', '0'], ['0', '0', '-3.00000', '0'], ['0', '0', '0', '0']]
+kappa 0 eig(P0^-1 G0): failed to isolate eigenvalues (try higher prec, multiple=True for multiple eigenvalues, or nonstop=True to avoid the exception)
+    det(n P0 - G0), n=1..6: ['[-569.685 +/- 3.11e-4]', '[-3560.53 +/- 6.90e-4]', '[-11536.1 +/- 0.0150]', '[-27914.5 +/- 0.0499]', '[-56968.5 +/- 0.0311]', '[-1.03825e+5 +/- 0.0348]']
+kappa 1 eig(P0^-1 G0): failed to isolate eigenvalues (try higher prec, multiple=True for multiple eigenvalues, or nonstop=True to avoid the exception)
+    det(n P0 - G0), n=1..6: ['[-569.685 +/- 3.11e-4]', '[-3560.53 +/- 6.90e-4]', '[-11536.1 +/- 0.0150]', '[-27914.5 +/- 0.0499]', '[-56968.5 +/- 0.0311]', '[-1.03825e+5 +/- 0.0348]']
+kappa 7 eig(P0^-1 G0): failed to isolate eigenvalues (try higher prec, multiple=True for multiple eigenvalues, or nonstop=True to avoid the exception)
+    det(n P0 - G0), n=1..6: ['[-569.685 +/- 3.11e-4]', '[-3560.53 +/- 6.90e-4]', '[-11536.1 +/- 0.0150]', '[-27914.5 +/- 0.0499]', '[-56968.5 +/- 0.0311]', '[-1.03825e+5 +/- 0.0348]']
+kappa 3.000000000000000000000000000000000000000000000000000000000000000000000000000 + 50.00000000000000000000000000000000000000000000000000000000000000000000000000j eig(P0^-1 G0): failed to isolate eigenvalues (try higher prec, multiple=True for multiple eigenvalues, or nonstop=True to avoid the exception)
+    det(n P0 - G0), n=1..6: ['[-569.685 +/- 3.11e-4] + [+/- 3.28e-12]j', '[-3560.53 +/- 6.90e-4] + [+/- 2.35e-11]j', '[-11536.1 +/- 0.0150] + [+/- 8.53e-11]j', '[-27914.5 +/- 0.0499] + [+/- 2.30e-10]j', '[-56968.5 +/- 0.0311] + [+/- 5.14e-10]j', '[-1.03825e+5 +/- 0.0348] + [+/- 1.02e-9]j']
+kappa 1000.000000000000000000000000000000000000000000000000000000000000000000000000j eig(P0^-1 G0): failed to isolate eigenvalues (try higher prec, multiple=True for multiple eigenvalues, or nonstop=True to avoid the exception)
+    det(n P0 - G0), n=1..6: ['[-569.685 +/- 3.11e-4] + [+/- 2.79e-14]j', '[-3560.53 +/- 6.90e-4] + [+/- 3.24e-13]j', '[-11536.1 +/- 0.0150] + [+/- 1.54e-12]j', '[-27914.5 +/- 0.0499] + [+/- 4.88e-12]j', '[-56968.5 +/- 0.0311] + [+/- 1.24e-11]j', '[-1.03825e+5 +/- 0.0348] + [+/- 2.69e-11]j']

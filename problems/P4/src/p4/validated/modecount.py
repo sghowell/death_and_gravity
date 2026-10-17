@@ -26,6 +26,7 @@ from flint import acb, acb_mat, arb
 
 from . import lincentre, lintaylor
 from .arbseries import abs_upper, precision, to_arb
+from .ballutil import strip_ball
 from .linsys import kappa_box, to_acb
 
 
@@ -241,7 +242,7 @@ def segment_increment(E, w, direction, nsub):
     minE, ends, a, b, rots = None, [], [], [], []
     for j in range(nsub):
         sa, sb = -w + 2 * w * j / nsub, -w + 2 * w * (j + 1) / nsub
-        piece = dr * arb((sa + sb) / 2, (sb - sa) / 2)
+        piece = dr * strip_ball(sa, sb)
         B = E.eval(piece)
         z = complex(float(B.real.mid()), float(B.imag.mid()))
         if z == 0:

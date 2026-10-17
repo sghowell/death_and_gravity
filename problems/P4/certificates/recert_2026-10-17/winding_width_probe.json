@@ -1,0 +1,37 @@
+{
+ "schema": "p4-recertify-winding-width-probe/1",
+ "created": "2026-10-17T13:03Z",
+ "question": "the re-run's per-tile 'width' (max radius of the propagated states, a float diagnostic, not certified) differs from the stored winding_R.json on 268 of 290 tiles by at most 7.1e-15 relative, while every certified field of every tile is bit-identical; is the ball fix the cause?",
+ "method": "E_model of three tiles, each in a fresh process, on the rebuilt Theorem B tube (then at results/recert_2026-10-17/tube_theorem_b.json, now data/cache/tube_theorem_b.json, sha256 in tube_theorem_b.check.json), with the sources of three commits: HEAD 5b234e6d, e51cd7a6 (before eba80cb4) and b3bd414e (the commit that stored winding_R.json); git archive of problems/P4/src, PYTHONPATH set to it",
+ "probe_source": "import json, sys, time\nfrom flint import acb\nfrom p4.validated import lintube, modecount\ntube = lintube.Tube.load(sys.argv[1])\nctx = modecount.Context(tube)\nout = {}\nfor kc, w in ((complex(0.0, 9.375), 0.125), (complex(15.0, 13.25), 0.25), (complex(9.125, 14.0), 0.125)):\n    t0 = time.time()\n    E, info = ctx.E_model(acb(kc.real, kc.imag), w, 8)\n    out[str((kc, w))] = dict(width=info.get(\"width\"), t=time.time() - t0)\nprint(json.dumps(dict(file=modecount.__file__, tiles=out)))\n",
+ "tiles": {
+  "[[0.0, 9.375], 0.125]": {
+   "stored_width": 0.004412538881430877,
+   "rerun_width": 0.004412538881430908,
+   "probe_width": {
+    "HEAD (fixed code)": 0.004412538881430908,
+    "e51cd7a6 (before the ball fix)": 0.004412538881430908,
+    "b3bd414e (the stored run's commit)": 0.004412538881430908
+   }
+  },
+  "[[15.0, 13.25], 0.25]": {
+   "stored_width": 0.12048671163513332,
+   "rerun_width": 0.12048671163513369,
+   "probe_width": {
+    "HEAD (fixed code)": 0.12048671163513369,
+    "e51cd7a6 (before the ball fix)": 0.12048671163513369,
+    "b3bd414e (the stored run's commit)": 0.12048671163513369
+   }
+  },
+  "[[9.125, 14.0], 0.125]": {
+   "stored_width": 0.013491524343762577,
+   "rerun_width": 0.013491524343762577,
+   "probe_width": {
+    "HEAD (fixed code)": 0.013491524343762577,
+    "e51cd7a6 (before the ball fix)": 0.013491524343762577,
+    "b3bd414e (the stored run's commit)": 0.013491524343762577
+   }
+  }
+ },
+ "result": "all three code versions give the re-run's widths, bit for bit, on the rebuilt tube: the ball fix (and every other code change since b3bd414e) is not the cause. The difference lies in the stored run's input or environment: it propagated on the August build of the tube, which is not kept (its tube_info equals the rebuild's except the build wall time), so the two builds presumably differ in the last bits of some radii, or the library versions differ; not pinned down further. The certified increments, min|E|, the winding ball and the winding number are unaffected."
+}

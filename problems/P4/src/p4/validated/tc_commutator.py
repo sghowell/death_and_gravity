@@ -51,6 +51,7 @@ import time
 from flint import arb, fmpq, fmpq_mpoly_ctx
 
 from .arbseries import precision
+from .ballutil import radius_cover, strip_ball
 from .tc_energy import Atoms, SIGMA0, V0C, V0W, hurwitz_shift
 from .tc_tm import (AtomKP, LC, TM, centre_components, jlc_add, jlc_inv,
                     jlc_mul, jlc_neg, kpj_add, kpj_deriv, kpj_depth, kpj_kmul,
@@ -401,7 +402,7 @@ class Bnd:
 
     def eval_up(self, lo, hi, scale_off=0):
         acc = arb(0)
-        el = arb((lo + hi) / 2, (hi - lo) / 2)
+        el = strip_ball(lo, hi)
         for v, o in self.t:
             oo = o + scale_off
             if oo < 0 and lo <= 0:
@@ -522,7 +523,7 @@ def quad_lower_mixed(q2, q1, q0, klo, lo, hi):
                 o >= 0 for _, o in jb.t) else arb(jb.eval_up(lo, hi, 0))
     J = J * (1 + emax * emax / (kl * kl))
     omin = min(q2.off, q1.off, X.min_off())
-    el = arb((lo + hi) / 2, (hi - lo) / 2)
+    el = strip_ball(lo, hi)
     Xup = X.eval_up(lo, hi, -omin)
     p2 = abs(el) ** (q2.off - omin)
     p1 = abs(el) ** (q1.off - omin)
@@ -530,7 +531,7 @@ def quad_lower_mixed(q2, q1, q0, klo, lo, hi):
            + abs(s1).lower() * (p1.lower() if q1.off > omin else 1) * kl)
     if not (arb(Xup) < rhs):
         raise ArithmeticError("mixed quad-lower: X exceeds |q2| klo^2/2 + |q1| klo")
-    el2 = abs(arb((lo + hi) / 2, (hi - lo) / 2)) ** q2.off
+    el2 = abs(strip_ball(lo, hi)) ** q2.off
     C = (abs(s2).lower() / 4 - J / el2.lower() if q2.off else abs(s2).lower() / 4 - J)
     C = arb(C).lower()
     if not (C > 0):
@@ -663,11 +664,11 @@ def sup_ratio_boxes(rems, pr, uq, klo, lo, hi, thU=None, nbox=26, nstrip=10,
             boxes = list(zip(edges, edges[1:])) + [(edges[-1], None)]
             for t0, t1 in boxes:
                 if t1 is None:
-                    wv = acb(arb(0, 1.0 / t0), arb(0, 1.0 / t0))
+                    rw = radius_cover(1.0 / t0, arb(1) / arb(t0))
+                    wv = acb(arb(0, rw), arb(0, rw))
                     wlo = wilo = arb(0)
                 else:
-                    z = acb(arb((e0 + e1) / 2, (e1 - e0) / 2),
-                            arb((t0 + t1) / 2, (t1 - t0) / 2))
+                    z = acb(strip_ball(e0, e1), strip_ball(t0, t1))
                     wv = acb(1) / z
                     wlo = arb(1) / arb(abs(z).upper())
                     wilo = arb(t0) / (arb(e1) ** 2 + arb(t1) ** 2)
@@ -827,7 +828,7 @@ def cubic_root_bound(bcr_kp, lo, hi):
     l3 = abs(c3.tm.eval(lo, hi)).lower()
     if not (l3 > 0):
         raise ArithmeticError("Bcr leading coefficient not bounded away from 0")
-    el = arb((lo + hi) / 2, (hi - lo) / 2)
+    el = strip_ball(lo, hi)
     m = arb(0)
     for j in range(3):
         cj = bcr_kp[j]
@@ -984,7 +985,7 @@ def analyze_piece(pr, cm, lo, hi, b1, eps_cells, scale_off, raises,
     cl_ = cl
     closing = closing0
     for e0, e1 in eps_cells:
-        eb = arb((e0 + e1) / 2, (e1 - e0) / 2)
+        eb = strip_ball(e0, e1)
         rhoR = w0_ - (eb + c) * tt                     # explicit part of rho
         G = ttp + rhoR * tt
         K2 = -b2_ - (1 / c) * ((2 * eb) * b2_ + b1_) - (1 / (2 * c)) * G
@@ -1065,7 +1066,7 @@ def tau_quad_check(K2, R1, K0, R0, b1, lo, hi, scale_off):
     if h < 0 and lo <= 0:
         return False, dict(err="R1 offset negative at 0", **m)
     # pointwise ell^h [K2h tau^2 + R1h tau] with K2h <= A*ellpow, R1h <= B
-    el = arb((lo + hi) / 2, (hi - lo) / 2)
+    el = strip_ball(lo, hi)
     Ah = (A * abs(el) ** (hK2 - h)).upper()
     Bh = arb(0)
     for v, o in R1.t:
@@ -1386,8 +1387,8 @@ def direct_S_boxes(pr, cm, uqj, remUj, lo, hi, b1, tstar, eps_cells, scale_off,
             return (acc, m)
 
         def sbox(elo_, ehi_, t0, t1):
-            eb = arb((elo_ + ehi_) / 2, (ehi_ - elo_) / 2)
-            tb = arb((t0 + t1) / 2, (t1 - t0) / 2)
+            eb = strip_ball(elo_, ehi_)
+            tb = strip_ball(t0, t1)
             z = acb(eb, tb)
             wv = acb(1) / z
             v = {n + str(sl): hat(n + str(sl), wv, degs[n])
