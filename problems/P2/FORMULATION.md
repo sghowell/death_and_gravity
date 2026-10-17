@@ -395,3 +395,21 @@ Sizing and kill criteria are in `s0-gate.md` §7.
     window, and violates the Liouville–Green condition β < κ₊).
   - The header status is updated to match. No frozen convention, definition,
     point, δ or KAT changes.
+
+- **v0.4 (2026-10-17, S2 gate; `notes/s2-report.md`).** The P2-1 route is
+  chosen at the S2 gate, as §2 provides. It is **M3**: rotate the tortoise
+  coordinate by π/4 through the photon sphere, then prove a variable-phase
+  coercivity bound certified by a ground-state (Allegretto–Piepenbrink)
+  pointwise inequality (`notes/s2-m3.md`). M2 was not implemented
+  (`notes/s2-preregistration.md` §2).
+  - The part-(i) certificate format is `certificates/m3/m3_{X}_geometry.json`
+    (contour, sector analyticity, tails), `m3_{X}_l{l}.json` (window, ground
+    state, margins, negative control, P2-2 overlap) and `m3_{X}_summary.json`.
+    It replaces the placeholder `large_l_{X}.json` of §4. The h → 0 closing
+    boxes of S4 will use the same inequality in the scaled variable.
+  - S2 result at P_B: the barrier-top window
+    [ω_l − 8γ₀, ω_l + 6γ₀] × [−(½+δ)κ₋, 0] is certified QNM-free for
+    l = 20, 50, 100. Margins μ_cert/μ_HO are 0.528, 0.568, 0.560. The fit is
+    C = 0.94, giving projected l₀ = 2. Verdict: GO for S3.
+  - Still open for P2-1: uniformity in h, and the sub-barrier and low-frequency
+    regimes (S4). P_A has not been probed.

@@ -1,0 +1,50 @@
+{
+ "point": "PB",
+ "route": "M3",
+ "rows": {
+  "20": {
+   "A1": true,
+   "A2": true,
+   "A3": true,
+   "overlap": true,
+   "mu_cert": "[0.3245472114 +/- 3.12e-11]",
+   "m": "[0.52827170 +/- 4.79e-9]",
+   "float_m": 0.6606644482633316
+  },
+  "50": {
+   "A1": true,
+   "A2": true,
+   "A3": true,
+   "overlap": true,
+   "mu_cert": "[0.8599105052 +/- 4.60e-11]",
+   "m": "[0.56819212 +/- 1.50e-9]",
+   "float_m": 0.681224590575133
+  },
+  "100": {
+   "A1": true,
+   "A2": true,
+   "A3": true,
+   "overlap": true,
+   "mu_cert": "[1.685388092 +/- 3.74e-10]",
+   "m": "[0.55958645 +/- 2.25e-9]",
+   "float_m": 0.6794435596196273
+  }
+ },
+ "fit": {
+  "C_over_l": {
+   "m_inf": 0.5765175611160773,
+   "C": 0.9359463976483275,
+   "max_residual": 0.010208150916562797,
+   "projected_l0": 2
+  },
+  "C2_over_l2": {
+   "m_inf": 0.5673731019615166,
+   "C": 16.048227942680185,
+   "max_residual": 0.007111823819359819,
+   "projected_l0": 5
+  }
+ },
+ "verdict": "GO for S3 (barrier-top window certified at l = 20, 50, 100; projected l0 <= 100)",
+ "commit": "c4159e7f0b5679633247f6556a437d104b00cf99",
+ "preregistration": "notes/s2-preregistration.md"
+}

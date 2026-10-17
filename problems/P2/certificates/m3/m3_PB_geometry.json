@@ -1,0 +1,40 @@
+{
+ "theta": "pi/4",
+ "x_P": "[-2.43796603456595 +/- 7.67e-16]",
+ "contour_range": [
+  -64.0,
+  32.0
+ ],
+ "step": 0.0625,
+ "taylor_order": 20,
+ "identity_Re_rstar_holds": true,
+ "sum_A_contains_0": true,
+ "Re_rstar_0": "[-2.29663689319 +/- 4.87e-12]",
+ "lower_left_sector_free": true,
+ "upper_right_special_segments": {
+  "Re_x0": {
+   "X": "[-2.29663689319 +/- 4.87e-12]",
+   "Ymax": "[0.14132914 +/- 1.38e-9]",
+   "steps": 3,
+   "min_abs_r": "[1.96075 +/- 2.11e-6]",
+   "max_abs_r": "[2.00448 +/- 4.20e-6]",
+   "ok": true
+  },
+  "Re_xinf": {
+   "X": "0",
+   "Ymax": "[2.4379660 +/- 3.46e-8]",
+   "steps": 40,
+   "min_abs_r": "[2.41241 +/- 3.31e-6]",
+   "max_abs_r": "[2.49073 +/- 2.66e-7]",
+   "ok": true
+  }
+ },
+ "tail_left_sup_dist_to_rplus": "[0.00955711 +/- 1.94e-9]",
+ "tail_right_sup_dist_to_rc": "[0.351053 +/- 4.63e-8]",
+ "timing_s": {
+  "wall": 0.6,
+  "cpu": 0.6
+ },
+ "A0_pass": true,
+ "commit": "c4159e7f0b5679633247f6556a437d104b00cf99"
+}
