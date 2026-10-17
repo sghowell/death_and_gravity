@@ -32,7 +32,7 @@
   ],
   "statement": "for all xi in the piece, eps in [0, 6], tau >= 224: dT, dB, nB != 0 and Sigma = S xi^2/tau^2 <= certified_bound < 0"
  },
- "certified_bound": -0.3981170712110949,
+ "certified_bound": -0.43107400843302635,
  "engine": {
   "norm": "piece",
   "combine": true,
@@ -42,18 +42,17 @@
  },
  "result": {
   "ok": true,
-  "worst": -0.3981170712110949,
-  "boxes": 149,
-  "evals": 604,
+  "worst": -0.43107400843302635,
+  "boxes": 142,
+  "evals": 548,
   "empty": 0,
   "fails": [],
   "depth_hist": {
-   "0": 41,
-   "1": 67,
-   "2": 35,
-   "3": 6
+   "0": 42,
+   "1": 68,
+   "2": 32
   },
-  "time": 1.3127129077911377,
+  "time": 1.0489277839660645,
   "params": {
    "s_a": 0.001,
    "s_big": 26140.625,
@@ -125,11 +124,11 @@
    {
     "target": -0.3959572327929579,
     "ok": true,
-    "evals": 604,
-    "time": 1.3127129077911377
+    "evals": 548,
+    "time": 1.0489277839660645
    }
   ],
-  "certified_bound": -0.3981170712110949,
+  "certified_bound": -0.43107400843302635,
   "forms": {
    "nV": {
     "name": "nV",
@@ -453,7 +452,7 @@
   "laurent": false,
   "norm": "piece",
   "scale": 0.7919144655859158,
-  "relative_margin": 0.5027273632595396
+  "relative_margin": 0.5443441522615533
  },
  "error": null,
  "inputs": {
@@ -468,8 +467,10 @@
    "problems/P4/src/p4/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
    "problems/P4/src/p4/validated/__init__.py": "2d62466572841f234a88bfc9c0e440d4fe34840a62b6d0faee2983c150cbba68",
    "problems/P4/src/p4/validated/arbseries.py": "04e239090c8d5aa4ee645ae041a5acfebc75608add88a523917f828167ab4f1d",
+   "problems/P4/src/p4/validated/ballutil.py": "39528e526fe96a5e5f5d9b44cb6579b4928176207b8a8a5f25270180b51072f1",
    "problems/P4/src/p4/validated/biseries.py": "af614a0747cd6f68510dfc2d1788459afd0759af0778cc8eec4b2cafdfc028f6",
    "problems/P4/src/p4/validated/centre.py": "9f2655d57981916c6f5c8d0248d8cdcf91b44a1ab6e801236b265e1aa877269e",
+   "problems/P4/src/p4/validated/ec_centre.py": "d618310842541c6c03957558987f7cf2339414b82062b6b052f11ece4da2d8d9",
    "problems/P4/src/p4/validated/linstep.py": "f93fc04f09e16f183aa8b61cddf2e8e7cf5051e61afedfeec04379b24ee06c07",
    "problems/P4/src/p4/validated/linsys.py": "fc6c8ff924c19f7a072afe75396b182923709c262f6438e3bcb44ed6b8a2e1f8",
    "problems/P4/src/p4/validated/lintail.py": "61f929642232a27a8f0984ce35b04098c1468009fab70a33ec02b649467ac7d6",
@@ -481,22 +482,31 @@
    "problems/P4/src/p4/validated/sonic.py": "dbb046ea88f75d91acc6fe1593790b866e8b8f6c7723e3547666c9d8e221939b",
    "problems/P4/src/p4/validated/systems.py": "7e0a98495e17e728795996c40f1e340a523d687b506a81b69882fed7143e64f6",
    "problems/P4/src/p4/validated/tailbound.py": "8c4b5de660fb8cca3b8c6305625dac0ecce267454052b8feb4ad9650419158ae",
-   "problems/P4/src/p4/validated/tc_commutator.py": "2c7d207725814f3463249b9e22531b403c86efd4a2e3847abf15474bfa6025b9",
-   "problems/P4/src/p4/validated/tc_energy.py": "afa902bc7cb3d3be575c2931d6a0b1dee2cb62af5b31db344056ef3997c30e9d",
-   "problems/P4/src/p4/validated/tc_layer.py": "29a864dd171e02af9719a762ebe531065b525192c619367b8bb7a19c6536a405",
-   "problems/P4/src/p4/validated/tc_layer_mv.py": "5e0ad6b996b0d73b8e10d5486e6b19299a8dd17a171d1511e165b20d5ca060c1",
+   "problems/P4/src/p4/validated/tc_commutator.py": "11cfdc4969577218472dcc4c79673629c78b8686e5cfb758e8f9e199cf006da7",
+   "problems/P4/src/p4/validated/tc_energy.py": "b5c08649680e1c6a41426621883dbe2146db2f16c7bc109fd7822a00ab159cf1",
    "problems/P4/src/p4/validated/tc_reduce.py": "fb07a9837ead0d99aaca7a78d07f2b91731f64b136878ffde25ee0688c1ea9e6",
-   "problems/P4/src/p4/validated/tc_tm.py": "66e059e80162f660f242fbf7089fc95b739fb15e547195cb9cbe8c25757efdd2",
+   "problems/P4/src/p4/validated/tc_tm.py": "2db115ae9d729a97e0efe33b5958be2c5252c42d1fcb2c9abf6e631ebf72a422",
    "problems/P4/src/p4/validated/tmint.py": "8dc2d5e8b8d129774d3f52f3455d678a86ae04b0cc88c03147521e11d716d820",
-   "problems/P4/src/p4/validated/variational.py": "e2adb8e44870c9b0367d03fea6c2dd7d3b146b77d0b197548628205465108a79"
+   "problems/P4/src/p4/validated/variational.py": "e2adb8e44870c9b0367d03fea6c2dd7d3b146b77d0b197548628205465108a79",
+   "problems/P4/src/p4/validated/tc_layer.py": "29a864dd171e02af9719a762ebe531065b525192c619367b8bb7a19c6536a405",
+   "problems/P4/src/p4/validated/tc_layer_mv.py": "b1986b574c67c949924e9453bfaf56fc05864cad930a497beac90aa95763a5d1"
   },
-  "fingerprint": "7ff07febc56a35e187135fe5397df71336e6fe5936cf298e571382fdb99ad915",
-  "git_head": "c41715090f712cfc211e1941652e0ae7bf08d754",
-  "git_dirty_src": false
+  "fingerprint": "94010babc2a8626df7db9ebc2007edaa6bea653b5b64a4baf81c0ece4b9b8d2d",
+  "git_head": "ae358f73af782c84ff9127ad568fc6352249820d",
+  "git_dirty_src": false,
+  "hashed": "import",
+  "write_check": {
+   "ok": true,
+   "changed_sources": {},
+   "changed_drivers": {},
+   "checked": "2026-10-17T10:40:02Z"
+  }
  },
- "driver_sha256": "3153ff4d6ee832ab8813ca8230557e27c1e31f80ca5db7b6ca06177ef9881356",
+ "driver_sha256": "3a86e50f1723e44873d230136a08f9a9ac4f6077ec71c220ac40849bcd823c1e",
+ "helper_sha256": "c323dad1d131a8e06531c5b8d9ed96c0fae8e4e5e5fa71205655045e127ed2e4",
+ "helper_changed_since_import": false,
  "env": {
-  "host": "Seans-Mac-mini.local",
+  "host": "Mac",
   "platform": "macOS-26.6.2-arm64-arm-64bit",
   "machine": "arm64",
   "cpu_count": 12,
@@ -504,18 +514,57 @@
   "flint": "0.9.0"
  },
  "timing": {
-  "start": "2026-10-17T08:21:46Z",
-  "end": "2026-10-17T08:22:50Z",
-  "build_wall_s": 61.82743191719055,
-  "build_cpu_s": 61.08234700000003,
-  "certify_wall_s": 1.4563589096069336,
-  "certify_cpu_s": 1.4424910000000182,
-  "wall_s": 63.283790826797485,
-  "cpu_s": 62.524838000000045,
+  "start": "2026-10-17T10:38:56Z",
+  "end": "2026-10-17T10:40:02Z",
+  "build_wall_s": 65.10637307167053,
+  "build_cpu_s": 62.96093599999995,
+  "certify_wall_s": 1.2110199928283691,
+  "certify_cpu_s": 1.1731150000000525,
+  "wall_s": 66.3173930644989,
+  "cpu_s": 64.134051,
   "build_shared_with": [
    224.0,
    14.0
   ]
  },
- "provenance": "computed by problems/P4/scripts/s44_layer.py work"
+ "provenance": "computed by problems/P4/scripts/s44_layer.py work",
+ "previous": {
+  "status": "pass",
+  "certified_bound": -0.3981170712110949,
+  "worst": -0.3981170712110949,
+  "boxes": 149,
+  "evals": 604,
+  "empty": 0,
+  "attempts": [
+   {
+    "target": -0.3959572327929579,
+    "ok": true,
+    "evals": 604,
+    "time": 1.3127129077911377
+   }
+  ],
+  "scale": 0.7919144655859158,
+  "engine": {
+   "norm": "piece",
+   "combine": true,
+   "mv": "mv3",
+   "piece_ladder_evals": 400000,
+   "piece_final_evals": 1000000
+  },
+  "code_fingerprint": "7ff07febc56a35e187135fe5397df71336e6fe5936cf298e571382fdb99ad915",
+  "git_head": "c41715090f712cfc211e1941652e0ae7bf08d754",
+  "cpu_s": 62.524838000000045
+ },
+ "recompute": {
+  "identical": false,
+  "fields": {
+   "status": true,
+   "certified_bound": false,
+   "worst": false,
+   "boxes": false,
+   "evals": false,
+   "attempts": false
+  },
+  "same_engine": true
+ }
 }
