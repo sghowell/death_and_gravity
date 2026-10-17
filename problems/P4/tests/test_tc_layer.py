@@ -190,6 +190,75 @@ def test_certify_single_xi(point_ld, tau_min):
     assert res["params"]["tau_min"] == tau_min
 
 
+# --------------------------------- combined blocks and the piece normalization
+def _pure(offs_len, seed):
+    return _synthetic([0] * offs_len, seed=seed)
+
+
+def test_ratio_hull_w_identity():
+    """N/(D1 D2) = w^e Q_N/(Q_D1 Q_D2) for pure w-forms (tube steps)."""
+    with precision(256):
+        kps = [_pure(n, sd) for n, sd in ((9, 11), (6, 12), (5, 13))]
+        N, D1, D2 = (tl.PForm(k, nm) for k, nm in zip(kps, ("N", "D1", "D2")))
+        assert (N.d, D1.d, D2.d) == (8, 5, 4)
+        l = 7e-4
+        for kap in (acb(0.3, 14.0), acb(5.0, 250.0), acb(0.0, 3e4)):
+            w = 1 / kap
+            got = tl.ratio_hull_w(N, [D1, D2], 2, (l, l), arb(3.0), w)
+            want = _direct(kps[0], l, kap) / (_direct(kps[1], l, kap) * _direct(kps[2], l, kap))
+            want = want * 9
+            assert got.overlaps(want)
+            assert abs(got - want).upper() <= 1e-25 * abs(want).upper()
+        with pytest.raises(ArithmeticError):
+            tl.ratio_hull_w(N, [D2], 0, (l, l), arb(1), acb(0, 0.01))
+
+
+def test_combine_refuses_laurent():
+    with pytest.raises(ValueError):
+        tl.LayerData({}, True, combine=True)
+
+
+@pytest.fixture(scope="module")
+def point_ld_combined(atoms, sonic_ex):
+    xi = 2e-3
+    pr = tl.point_pairs(atoms, sonic_ex, xi)
+    with precision(320):
+        ld = tl.LayerData(pr, False, xik=arb(xi), label="point-combined", combine=True)
+    return xi, pr, ld
+
+
+@pytest.mark.parametrize("eps,tau", [(0.0, 14.0), (0.0, 224.0), (0.5, 1000.0),
+                                     (3.0, 3e4), (6.0, 2e6), (0.01, 1e9)])
+def test_sigma_combined_vs_direct(point_ld_combined, eps, tau):
+    """The combined derivative blocks give the same Sigma as the direct chain."""
+    xi, pr, ld = point_ld_combined
+    with precision(320):
+        box = (0.0, 0.0, eps, eps, xi * tau, xi * tau, tau, tau)
+        S_c = tl.sigma_box(ld, box)
+        S_dir, _ = tl.point_S_direct(pr, eps, tau)
+        S_dir = S_dir * arb(xi) ** 2 / arb(tau) ** 2
+        assert S_c.overlaps(S_dir)
+        assert float(S_c.rad()) < 1e-6 * max(1.0, abs(float(S_c.mid())))
+
+
+def test_piece_scale_and_norm(point_ld, point_ld_combined):
+    """norm="piece": the ladder is relative to the piece's own float scale
+    (minus the largest sampled Sigma at eps = 0); the certified bound is
+    still a rigorous upper bound of Sigma."""
+    xi, pr, ld = point_ld
+    sc = tl.piece_scale(ld, 0.0, 0.0, tau_min=224.0)
+    with precision(320):
+        v = tl.sigma_box(ld, (0.0, 0.0, 0.0, 0.0, xi * 224.0, xi * 224.0, 224.0, 224.0))
+    assert sc is not None and sc > 0 and sc <= -float(v.mid()) + 1e-12
+    for d in (point_ld, point_ld_combined):
+        res = tl.run_layer_piece(d[2], 0.0, 0.0, tau_min=14.0, norm="piece")
+        assert res["ok"] and res["certified_bound"] < 0, res["fails"]
+        assert res["norm"] == "piece" and res["scale"] > 0
+        assert res["relative_margin"] == pytest.approx(-res["certified_bound"] / res["scale"])
+        assert res["attempts"][0]["target"] == pytest.approx(-0.5 * res["scale"])
+        assert res["params"]["combine"] == d[2].combine
+
+
 # ----------------------------------------------------------- full pieces
 @SLOW
 def test_closing_piece_certifies(atoms, sonic_ex):

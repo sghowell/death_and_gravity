@@ -234,6 +234,24 @@ class PForm:
                     top_on_layer=self.top_on_layer)
 
 
+def ratio_hull_w(N, Ds, k, L, lam, w):
+    """Hull of lam^k * N / (D_1 ... D_r) on a tube-step box, for pure w-forms
+    (no Laurent offsets, pivot = top: P = kappa^d Q(w)).  Exactly
+    N/(D_1...D_r) = w^{e} Q_N / (Q_D1 ... Q_Dr) with e = sum d_Di - d_N >= 0;
+    each Q is a polynomial in w = 1/kappa with TM-hull coefficients."""
+    if any(F.p != F.d for F in [N] + list(Ds)):
+        raise ArithmeticError("ratio %s: needs pure w-forms" % N.name)
+    e = sum(D.d for D in Ds) - N.d
+    if e < 0:
+        raise ArithmeticError("ratio %s: numerator degree above the denominator's" % N.name)
+    q = N.small(L, None, w)
+    for D in Ds:
+        q = q / D.small(L, None, w)
+    if e:
+        q = q * w ** e
+    return q * lam ** k if k else q
+
+
 def ratio_hull(N, D, k, L, lam, z, zeta, w, use_large, laurent):
     """Hull of lam^k * N/D on the box, from the pivot forms N, D.
     Small-z form:  N/D = ell^{mN-mD} z^{pN-pD} QN/QD;
@@ -289,14 +307,31 @@ class LayerData:
     order: tt dT_k = TN_top (dT_k/xi)/(dT_top/xi) is analytic at xi = 0 (the
     raised dT_top has a constant term bounded away from 0, checked here), so
     its derivative has no xi^{-1} term (drop_lead checks containment and ve).
+
+    combine=True (tube steps only): the derivative blocks are also formed as
+    single kappa-polynomials over products of the denominators, by TM
+    arithmetic (tc_commutator.kp_mul / kp_sub), the identities
+
+      V'         = (nV' dT - nV dT') / dT^2                      (NVp),
+      (log B0)'  = (nB' dB - nB dB') / (nB dB)                   (NL),
+      (log B0)'' = (nB'' nB - nB'^2) / nB^2 - (dB'' dB - dB'^2) / dB^2  (Mn, Md).
+
+    Away from the sonic point the separate ratios nB''/nB and (nB'/nB)^2 are
+    each ~80 while (log nB)'' is O(1) (tube/full-200), and their independent
+    hulls do not cancel; in the products the cancellation happens in the
+    Taylor coefficients.  The denominators are the same (dT, dB, nB), so the
+    nonvanishing statement of the certificate is unchanged.
     """
 
-    def __init__(self, pr, laurent, xik=None, label=""):
+    def __init__(self, pr, laurent, xik=None, label="", combine=False):
         """laurent=True: sonic pieces, TM variable ell = xi on [0, hi].
         laurent=False: tube steps, TM variable sigma = x_k - x on [0, h] and
         xi = xik + sigma with xik = -x_k (an arb ball)."""
         from .tc_tm import lc_raise
         self.laurent, self.label = laurent, label
+        self.combine = bool(combine)
+        if self.combine and laurent:
+            raise ValueError("combine=True is for tube steps (no Laurent offsets)")
         if laurent:
             self.xik = None
             self.xi_of_ell = lambda l: l
@@ -360,6 +395,13 @@ class LayerData:
             if not (f.pivot_on_layer and f.top_on_layer):
                 raise ArithmeticError("denominator %s: pivot/top off the layer line %s"
                                       % (nm, f.info()))
+        if self.combine:
+            from .tc_commutator import kp_mul, kp_sub
+            self.forms.update(
+                NVp=PForm(kp_sub(kp_mul(nVp, dT0), kp_mul(nV, dT1)), "NVp"),
+                NL=PForm(kp_sub(kp_mul(nB1, dB0), kp_mul(nB0, dB1)), "NL"),
+                Mn=PForm(kp_sub(kp_mul(nB2, nB0), kp_mul(nB1, nB1)), "Mn"),
+                Md=PForm(kp_sub(kp_mul(dB2, dB0), kp_mul(dB1, dB1)), "Md"))
         self._rcache = {}
 
     def xi_hull(self, L):
@@ -463,12 +505,18 @@ def sigma_box(ld, box, geo=None, terms=False):
     c = cval()
     t, tp, u2h = ld.real_hulls(L, lam)
     V = R("nV", "dT", 1)
-    Vp = R("nVp", "dT", 2) - V * R("dT1", "dT", 1)
     Y = R("nY", "kdB", 2)
-    dBp, dBpp = R("dB1", "dB", 1), R("dB2", "dB", 2)
-    nBp, nBpp = R("nB1", "nB", 1), R("nB2", "nB", 2)
-    Lh = nBp - dBp
-    Lp = (nBpp - nBp * nBp) - (dBpp - dBp * dBp)
+    if getattr(ld, "combine", False):
+        Rc = lambda n, ds, k: ratio_hull_w(F[n], [F[d] for d in ds], k, L, lam, w)
+        Vp = Rc("NVp", ("dT", "dT"), 2)
+        Lh = Rc("NL", ("nB", "dB"), 1)
+        Lp = Rc("Mn", ("nB", "nB"), 2) - Rc("Md", ("dB", "dB"), 2)
+    else:
+        Vp = R("nVp", "dT", 2) - V * R("dT1", "dT", 1)
+        dBp, dBpp = R("dB1", "dB", 1), R("dB2", "dB", 2)
+        nBp, nBpp = R("nB1", "nB", 1), R("nB2", "nB", 2)
+        Lh = nBp - dBp
+        Lp = (nBpp - nBp * nBp) - (dBpp - dBp * dBp)
     W, Wp = V - Lh, Vp - Lp
     G = Y + t * Lh - tp
     H = Vp - V * Lh
@@ -543,13 +591,15 @@ def _children(ld, box, var):
     raise ValueError(var)
 
 
-def _upper(ld, box):
-    """(normalized box or None if empty, upper bound of Sigma or +inf)."""
+def _upper(ld, box, sigma_fn=None):
+    """(normalized box or None if empty, upper bound of Sigma or +inf).
+    sigma_fn(ld, box, geo) replaces sigma_box (an alternative rigorous
+    enclosure of the same Sigma, e.g. a centred form; default sigma_box)."""
     nb, g = _normalize(ld, box)
     if nb is None:
         return None, -INF
     try:
-        S = sigma_box(ld, nb, g)
+        S = (sigma_box if sigma_fn is None else sigma_fn)(ld, nb, g)
     except (ArithmeticError, ZeroDivisionError, ValueError):
         return nb, INF
     if S is None:
@@ -560,7 +610,7 @@ def _upper(ld, box):
 
 def certify_piece(ld, la, lb, eps_cells=None, s_lo=None, s_a=1e-3, s_big=None,
                   s_ratio=2.0, target=0.0, max_evals=400000, max_depth=60, log=None,
-                  t_pre=2e4, t_ratio=1.5, tau_min=None):
+                  t_pre=2e4, t_ratio=1.5, tau_min=None, sigma_fn=None):
     """Certify Sigma <= target (< 0 suffices; target < 0 certifies a margin) on
     {ell in [la, lb], eps in [0, EPS_MAX], tau >= tau_min} (tau_min = TSTAR by
     default) by an adaptive cover with boxes in (ell, eps, s = xi tau, tau).
@@ -622,7 +672,7 @@ def certify_piece(ld, la, lb, eps_cells=None, s_lo=None, s_a=1e-3, s_big=None,
     while stack:
         box, depth, up = stack.pop()
         if up is None:
-            nb, up = _upper(ld, box)
+            nb, up = _upper(ld, box, sigma_fn)
             nev += 1
             if nb is None:
                 nempty += 1
@@ -645,7 +695,7 @@ def certify_piece(ld, la, lb, eps_cells=None, s_lo=None, s_a=1e-3, s_big=None,
                 continue
             res = []
             for cb in ch:
-                nb, u = _upper(ld, cb)
+                nb, u = _upper(ld, cb, sigma_fn)
                 nev += 1
                 res.append((nb, u))
             score = max(u for _, u in res)
@@ -668,7 +718,11 @@ def certify_piece(ld, la, lb, eps_cells=None, s_lo=None, s_a=1e-3, s_big=None,
                time=time.time() - t_start,
                params=dict(s_a=s_a, s_big=s_big, s_ratio=s_ratio, zsplit=ZSPLIT,
                            tstar=TSTAR, tau_min=tmin, eps_cells=eps_cells, la=la, lb=lb,
-                           target=target, s_lo=s_lo, t_pre=t_pre, t_ratio=t_ratio))
+                           target=target, s_lo=s_lo, t_pre=t_pre, t_ratio=t_ratio,
+                           max_evals=max_evals,
+                           evaluator=("sigma_box" if sigma_fn is None
+                                      else getattr(sigma_fn, "__name__", str(sigma_fn))),
+                           combine=bool(getattr(ld, "combine", False))))
     if log:
         log("certify_piece %s: ok=%s worst=%s boxes=%d evals=%d t=%.1fs"
             % (ld.label, ok, out["worst"], ncert, nev, out["time"]))
@@ -691,9 +745,10 @@ def sonic_layer_data(at, ex, hi, prec=320, label=None):
         return LayerData(pr, True, label=label or "sonic[0,%g]" % hi)
 
 
-def tube_layer_data(at, sd, prec=320, label=None):
+def tube_layer_data(at, sd, prec=320, label=None, combine=False):
     """LayerData of a tube step (sigma = x_k - x in [0, h]), built exactly as
-    tc_commutator.run_tube builds its pairs (no Laurent structure)."""
+    tc_commutator.run_tube builds its pairs (no Laurent structure).
+    combine=True: polynomial-level derivative blocks (LayerData)."""
     from . import tc_commutator as tc
     from .tc_tm import AtomKP, step_components
     with precision(prec):
@@ -701,25 +756,94 @@ def tube_layer_data(at, sd, prec=320, label=None):
         ak = AtomKP(at, comps, sd_shift=0)
         pr = tc.build_pairs(ak)
         return LayerData(pr, False, xik=-sd.x,
-                         label=label or "step[x=%.6f,h=%g]" % (float(sd.x), sd.h))
+                         label=label or "step[x=%.6f,h=%g]" % (float(sd.x), sd.h),
+                         combine=combine)
 
 
 MARGIN_LADDER = (-0.75, -0.5, -0.25)
+PIECE_FRACS = (0.5, 0.25)          # norm="piece": ladder targets -f * scale
+PIECE_LADDER_EVALS = 500000
+PIECE_FINAL_EVALS = 2000000
+
+
+def piece_scale(ld, la, lb, tau_min=None, prec=320, sigma_fn=None):
+    """The piece's own scale of Sigma (a positive float, or None): minus the
+    largest point value of Sigma at eps = 0 over a sample of the piece,
+    ell in {la, mid, lb} (lb/2 and lb on a piece touching ell = 0) and
+    tau in {tau_min 2^k, k = 0..30} plus tau = 1e12 .. inf (the tau -> infinity
+    hat, K2 xi^2 at fixed xi).  A normalization natural away from the sonic
+    point: there Sigma -> K2(xi, eps) xi^2 as tau -> infinity, and K2 decays
+    like e^{2x} into the deep band (float data, notes/s4-4-layer-engine.md
+    section 10), so a fixed margin ladder in Sigma units cannot fit every
+    piece.  The scale is design data only: it sets the ladder targets
+    -f * scale, and the certificate is still the rigorous upper bound of
+    Sigma itself."""
+    tmin = TSTAR if tau_min is None else float(tau_min)
+    if ld.laurent and la <= 0:
+        ells = [lb / 2, lb]
+    else:
+        ells = [la, (la + lb) / 2, lb]
+    fn = sigma_box if sigma_fn is None else sigma_fn
+    best = None
+    with precision(prec):
+        for l in ells:
+            xi = ld.xi_of_ell(l)
+            for k in range(0, 32):
+                if k < 31:
+                    tau = tmin * 2.0 ** k
+                    s = xi * tau
+                    box = (l, l, 0.0, 0.0, s * (1 - 1e-12), s * (1 + 1e-12), tau, tau)
+                else:
+                    box = (l, l, 0.0, 0.0, xi * 1e12 * (1 - 1e-12), INF, 1e12, INF)
+                try:
+                    g = box_geometry(ld, box)
+                    if g is None:
+                        continue
+                    v = fn(ld, box, g)
+                except (ArithmeticError, ZeroDivisionError, ValueError):
+                    continue
+                if v is None or not v.mid().is_finite():
+                    continue
+                f = float(v.mid())
+                best = f if best is None else max(best, f)
+    if best is None or not best < 0:
+        return None
+    return -best
 
 
 def run_layer_piece(ld, la, lb, prec=320, ladder=MARGIN_LADDER, ladder_evals=20000,
-                    **kw):
+                    norm="layer", piece_fracs=PIECE_FRACS,
+                    piece_ladder_evals=PIECE_LADDER_EVALS,
+                    piece_final_evals=PIECE_FINAL_EVALS, **kw):
     """Certify Sigma < 0 for tau >= TSTAR (or tau >= kw["tau_min"]) on the piece.  The margin ladder
     first tries to certify Sigma <= t for t in `ladder` with a small
     evaluation budget each and stops at the first success; otherwise it
     certifies Sigma < 0 with the full budget.  Returns the certify_piece
     record of the successful (or last) attempt plus the attempt list and the
-    form structure (pivot data)."""
+    form structure (pivot data).
+
+    norm="layer" (default): the ladder is `ladder`, in Sigma = S xi^2/tau^2
+    units (the layer normalization: F(0+) = -0.90 on the band).
+    norm="piece": the ladder is -f * scale for f in piece_fracs, scale =
+    piece_scale(...) (the piece's own float scale; natural away from the
+    sonic point), piece_ladder_evals evaluations each, and the final Sigma < 0
+    attempt gets piece_final_evals (unless kw sets max_evals).  The result
+    records norm, scale and relative_margin = -certified_bound / scale."""
     attempts = []
     res = None
+    scale = None
+    if norm not in ("layer", "piece"):
+        raise ValueError("norm must be 'layer' or 'piece'")
+    if norm == "piece":
+        scale = piece_scale(ld, la, lb, kw.get("tau_min"), prec, kw.get("sigma_fn"))
+        ladder = tuple(-f * scale for f in piece_fracs) if scale else ()
+        ladder_evals = piece_ladder_evals
+        kw.setdefault("max_evals", piece_final_evals)
     with precision(prec):
         for tg in ladder:
-            r = certify_piece(ld, la, lb, target=tg, max_evals=ladder_evals, **kw)
+            kk = dict(kw)
+            kk["max_evals"] = ladder_evals
+            r = certify_piece(ld, la, lb, target=tg, **kk)
             attempts.append(dict(target=tg, ok=r["ok"], evals=r["evals"],
                                  time=r["time"]))
             if r["ok"]:
@@ -733,4 +857,8 @@ def run_layer_piece(ld, la, lb, prec=320, ladder=MARGIN_LADDER, ladder_evals=200
     res["certified_bound"] = res["worst"] if res["ok"] else None
     res["forms"] = ld.form_info()
     res["laurent"] = ld.laurent
+    res["norm"] = norm
+    res["scale"] = scale
+    res["relative_margin"] = (-res["certified_bound"] / scale
+                              if (scale and res["certified_bound"] is not None) else None)
     return res
