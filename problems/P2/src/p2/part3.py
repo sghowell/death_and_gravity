@@ -630,11 +630,30 @@ def krawczyk_z(name: str, l: int, z_k: tuple, rel_r: str = "1e-20", rel_R: str =
             "M_upper": float(M.upper())}
 
 
-def verify(name: str, ls: list, sample_frac: float = 0.05, min_sample: int = 3) -> list:
+def _replay_task(args):
+    """Recompute one stored segment with its stored K (C7)."""
+    name, l, r = args
+    pt = _PT.get("pt") or Point(name, 256)
+    seg = {"edge": r["edge"], "idx": r["idx"], "p0": [_fq(x) for x in r["p0"]],
+           "p1": [_fq(x) for x in r["p1"]], "c": [_fq(x) for x in r["c"]], "rho": _fq(r["rho"])}
+    with precision(PREC):
+        rr = cauchy_segment(pt, l, seg, K=r["K"])
+        ok = bool(arb(rr["increment"]).overlaps(arb(r["increment"])))
+    return {"l": l, "key": r["key"], "K": r["K"], "stored": r["increment"], "recomputed": rr["increment"],
+            "overlap": ok, "cpu_s": rr["timing_s"]["cpu"]}
+
+
+def verify(name: str, ls: list, sample_frac: float = 0.05, min_sample: int = 3, workers: int = 1,
+           out: str | None = None) -> list:
     """C7 replay: exact re-sum and coverage of every certificate, and a deterministic sample of
-    segments recomputed (their increments must overlap the stored balls)."""
+    segments recomputed with their stored K (their increments must overlap the stored balls).
+    With out, the record of every check is written there."""
     probs = []
     pt = Point(name, 256)
+    t0 = time.time()
+    rec = {"check": "C7 replay (notes/s3-preregistration.md section 3)", "point": name, "ls": ls,
+           "sample_frac": sample_frac, "min_sample": min_sample, "commit": git_commit(), "per_l": {}}
+    tasks = []
     for l in ls:
         f = CERT_DIR / f"winding_{name}_l{l}.json"
         if not f.exists():
@@ -644,32 +663,52 @@ def verify(name: str, ls: list, sample_frac: float = 0.05, min_sample: int = 3) 
         with precision(PREC):
             pieces = st["pieces"]
             total = sum((arb(r["increment"]) for r in pieces), arb(0))
-            if not total.overlaps(arb(st["sum_increments_over_H"])):
+            resum_ok = bool(total.overlaps(arb(st["sum_increments_over_H"])))
+            if not resum_ok:
                 probs.append(f"l={l}: re-sum differs")
             wn = total / arb.pi()
-            if not (st["certified"] and abs(wn - st["winding"]) < arb("0.25")):
+            wind_ok = bool(st["certified"] and abs(wn - st["winding"]) < arb("0.25"))
+            if not wind_ok:
                 probs.append(f"l={l}: winding not reproduced")
             # coverage of H, in order, with exact shared endpoints
             plan_segs = plan(pt, l)
             ends = [[str(v) for v in plan_segs[0]["p0"]]] + [[str(v) for v in s_["p1"]] for s_ in plan_segs]
             cur = ends[0]
+            cov_ok = True
             for r in pieces:
                 if r["p0"] != cur:
                     probs.append(f"l={l}: coverage gap at {r['key']}")
+                    cov_ok = False
                     break
                 cur = r["p1"]
             if cur != ends[-1]:
                 probs.append(f"l={l}: coverage does not end at (0, e)")
+                cov_ok = False
             n = len(pieces)
             k = max(min_sample, math.ceil(sample_frac * n))
             idx = sorted({(j * 7919 + l * 104729) % n for j in range(k)})
-            for j in idx:
-                r = pieces[j]
-                seg = {"edge": r["edge"], "idx": r["idx"], "p0": [_fq(x) for x in r["p0"]],
-                       "p1": [_fq(x) for x in r["p1"]], "c": [_fq(x) for x in r["c"]], "rho": _fq(r["rho"])}
-                rr = cauchy_segment(pt, l, seg, K=r["K"])
-                if not arb(rr["increment"]).overlaps(arb(r["increment"])):
-                    probs.append(f"l={l}: segment {r['key']} increment not reproduced")
+            tasks += [(name, l, pieces[j]) for j in idx]
+            rec["per_l"][str(l)] = {"segments": n, "resum": total.str(20), "resum_ok": resum_ok,
+                                    "winding": st["winding"], "winding_ok": wind_ok, "coverage_ok": cov_ok,
+                                    "sampled": len(idx)}
+    if tasks and workers > 1:
+        import multiprocessing as mpr
+        ctx = mpr.get_context("spawn")
+        with ctx.Pool(workers, initializer=_worker_init, initargs=(name,)) as pool:
+            results = list(pool.imap(_replay_task, tasks))
+    else:
+        if tasks:
+            _worker_init(name)
+        results = [_replay_task(t) for t in tasks]
+    for r in results:
+        if not r["overlap"]:
+            probs.append(f"l={r['l']}: segment {r['key']} increment not reproduced")
+    if out:
+        rec.update({"segments_recomputed": len(results), "all_overlap": all(r["overlap"] for r in results),
+                    "recomputed": results, "problems": probs, "pass": not probs,
+                    "timing_s": {"wall": round(time.time() - t0, 1),
+                                 "cpu_segments": round(sum(r["cpu_s"] for r in results), 1)}})
+        Path(out).write_text(json.dumps(rec, indent=1) + "\n")
     return probs
 
 
@@ -691,16 +730,19 @@ def c0_cases(name: str = "PB") -> list:
     return cases
 
 
-def symmetry_check(workers: int = 4) -> dict:
-    """C4: the left half of the boundary of R'_2 computed explicitly against the certificate's right half."""
-    lh = left_half_sum("PB", 2, workers)
-    rf = CERT_DIR / "winding_PB_l2.json"
+def symmetry_check(workers: int = 4, l: int = 2) -> dict:
+    """C4 (l = 2): the left half of the boundary of R'_l computed explicitly against the certificate's
+    right half (also used for the extra l = 0 check)."""
+    lh = left_half_sum("PB", l, workers)
+    rf = CERT_DIR / f"winding_PB_l{l}.json"
     right = json.loads(rf.read_text())["sum_increments_over_H"] if rf.exists() else None
     with precision(PREC):
         sym = bool(right is not None and "sum_left" in lh and arb(lh["sum_left"]).overlaps(arb(right)))
     out = {"left": lh, "right": right, "pass": sym, "commit": git_commit()}
     CERT_DIR.mkdir(parents=True, exist_ok=True)
-    (CERT_DIR / "symmetry_PB_l2.json").write_text(json.dumps(out, indent=1) + "\n")
+    with precision(PREC):
+        out["left_over_pi"] = (arb(lh["sum_left"]) / arb.pi()).str(10) if "sum_left" in lh else None
+    (CERT_DIR / f"symmetry_PB_l{l}.json").write_text(json.dumps(out, indent=1) + "\n")
     return out
 
 
@@ -765,14 +807,17 @@ def main(argv=None):
     v.add_argument("--point", default="PB")
     v.add_argument("--l", required=True)
     v.add_argument("--sample", type=float, default=0.05)
+    v.add_argument("--workers", type=int, default=1)
+    v.add_argument("--out", default=None)
     cc = sub.add_parser("controls")
     cc.add_argument("--workers", type=int, default=4)
     sy = sub.add_parser("symmetry")
     sy.add_argument("--workers", type=int, default=4)
+    sy.add_argument("--lsym", type=int, default=2)
     args = ap.parse_args(argv)
     if args.cmd == "symmetry":
-        o = symmetry_check(args.workers)
-        print("C4 symmetry pass:", o["pass"], flush=True)
+        o = symmetry_check(args.workers, args.lsym)
+        print(f"symmetry l = {args.lsym} pass:", o["pass"], o.get("left_over_pi"), flush=True)
         sys.exit(0 if o["pass"] else 1)
     if args.cmd == "controls":
         o = controls(args.workers)
@@ -790,7 +835,7 @@ def main(argv=None):
     if args.cmd == "run":
         run(args.point, ls, args.workers)
     elif args.cmd == "verify":
-        pr = verify(args.point, ls, args.sample)
+        pr = verify(args.point, ls, args.sample, workers=args.workers, out=args.out)
         print("part3 replay:", "OK" if not pr else pr, flush=True)
         sys.exit(1 if pr else 0)
     else:
