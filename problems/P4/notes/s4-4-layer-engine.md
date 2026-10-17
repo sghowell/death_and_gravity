@@ -423,7 +423,15 @@ directory, counts); `scope.tau_gt_tstar_by`; and `strip_exclusion_certified`
 = complete and no tau > tstar gap.  `ok`/`complete` keep their meaning (every
 planned S4-3 piece present and passing, checks valid, no unaccepted code).
 Tests: `tests/test_s43_merge.py` (synthetic plan and parts; 19 cases,
-including twelve rejection modes).
+including twelve rejection modes).  Provenance note: the S4-3 workers of
+launch s43-20261016 kept running across this edit; a part records
+`driver_sha256` from the file on disk when it is written, so their parts
+written after commit `f0612a82` carry the edited driver's hash although the
+processes run the code they started with.  The edit touched only `merge`
+and its helpers, not the `work` path, and `driver_sha256` is not part of the
+validity check.  Likewise 16 gap parts written 05:23-05:42Z record
+`git_dirty_src` true (uncommitted `tc_layer.py`, then the untracked
+`tc_layer_mv.py`, neither loaded by those workers).
 
 **On the real parts (2026-10-17 07:47Z; the partial certificate is not
 committed, `merge` regenerates it):** status partial, because the S4-3 run is
