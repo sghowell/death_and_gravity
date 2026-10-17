@@ -20,8 +20,9 @@ notes/s4-3-recovery.md section 11.2, the module mains):
                                                           results/theorem_b/winding_R.json
 TUBE is the pinned S4-3 cache data/cache/tube_full.json (the tube tc_monotone.json
 records); TUBE_B is the Theorem B tube, rebuilt by its documented command
-(Tube.build(V0_EC, W_V0, x_c=-3.0), 244 steps) and checked against the first 244
-steps of TUBE.
+(Tube.build(V0_EC, W_V0, x_c=-3.0), 244 steps) into data/cache/tube_theorem_b.json
+(not committed; its sha256 is in OUTDIR/tube_theorem_b.check.json) and checked
+against the first 244 steps of TUBE.
 
 usage: p4_recertify.py run OUTDIR [--only a,b,..]     (one process at a time)
        p4_recertify.py compare OUTDIR --out FILE
@@ -71,10 +72,14 @@ def _run(argv, log):
         raise SystemExit("failed: %s (log %s)" % (" ".join(argv), log))
 
 
+TUBE_B = os.path.join(s43.CACHE_DIR, "tube_theorem_b.json")   # a cache (data/cache, not in git)
+
+
 def tube_b(outdir):
-    """The Theorem B tube by its documented command; checked against the first
-    244 steps of the pinned S4-3 cache."""
-    path = os.path.join(outdir, "tube_theorem_b.json")
+    """The Theorem B tube by its documented command, kept in data/cache (4 MB,
+    not committed); checked against the first 244 steps of the pinned S4-3
+    cache."""
+    path = TUBE_B
     if not os.path.exists(path):
         code = ("from p4.validated import lintube, modecount; "
                 "lintube.Tube.build(modecount.V0_EC, modecount.W_V0, x_c=-3.0).save(%r)" % path)
@@ -135,8 +140,9 @@ def run(args):
             _run([PY, "-c", code], log)
         elif name in ("krawczyk", "analyticity", "winding"):
             tb, same = tube_b(outdir)
-            json.dump(dict(tube=tb, same_as_first_244_steps_of_the_s43_cache=same,
-                           s43_cache=s43.rel(TUBE)),
+            json.dump(dict(tube=s43.rel(tb), sha256=s43.sha256_file(tb),
+                           same_as_first_244_steps_of_the_s43_cache=same,
+                           s43_cache=s43.rel(TUBE), s43_cache_sha256=s43.sha256_file(TUBE)),
                       open(os.path.join(outdir, "tube_theorem_b.check.json"), "w"), indent=1)
             if name == "analyticity":
                 _run([PY, "-m", "p4.validated.analyticity", tb, "--workers", "1", "--out", out], log)
@@ -228,13 +234,27 @@ def compare(args):
             for k in ("ok", "mins", "boxes", "box_fails", "known_answer_sigma", "ED",
                       "xT_affine", "xT_rem_bound", "dc"):
                 pairs["sonic." + k] = (old["sonic"].get(k), new["sonic"].get(k))
-            for k in ("ok", "c0", "ycut", "layer_identity", "mins", "nsub"):
+            for k in ("ok", "c0", "ycut", "layer_identity", "mins"):
                 pairs["lemma_d." + k] = (old["lemma_d"].get(k), new["lemma_d"].get(k))
             pairs["c0"] = (old["c0"], new["c0"])
             cmp(name, pairs)
+            # the stored lemma_d block predates the 2026-10-16 centre-ball fix
+            # (ed4cab14: the centre series on the certified (a*, mu*) balls);
+            # the certified-ball Lemma D is parts/lemma_d_certified.json
+            ldc = _load(os.path.join(s43.PARTS, "lemma_d_certified.json")) or {}
+            same_ldc = all(ldc.get(k) == new["lemma_d"].get(k)
+                           for k in ("ok", "c0", "ycut", "layer_identity", "mins"))
+            rows[name]["lemma_d_vs_parts_lemma_d_certified"] = dict(
+                identical=same_ldc, file="parts/lemma_d_certified.json",
+                note=("the stored tc_energy.json lemma_d block is the pre-2026-10-16 "
+                      "midpoint-ball record (s4-3-recovery.md sections 3 and 11); the "
+                      "re-run's block is the certified-ball Lemma D and equals "
+                      "parts/lemma_d_certified.json"))
             rows[name]["note"] = ("tube_info differs by design: the stored record used a "
                                   "September build of the A3 tube (time %s); this run used the "
-                                  "pinned S4-3 cache (time %s), the same construction"
+                                  "pinned S4-3 cache (time %s), the same construction; lemma_d "
+                                  "nsub is not in this run's block (the Lemma D re-run records "
+                                  "1100 subranges)"
                                   % (old["tube_info"].get("time"), new["tube_info"].get("time")))
         elif name == "krawczyk":
             pairs = {}
@@ -261,14 +281,47 @@ def compare(args):
             if "tube_info" in rows[name]["differences"]:
                 rows[name]["note"] = "tube_info.time is the wall time of the tube build"
         elif name == "winding":
-            keys = ("rect", "m", "wmax", "winding", "certified", "winding_ball", "total_arg",
+            keys = ("rect", "m", "wmax", "winding", "certified", "winding_ball",
                     "n_tiles", "min_abs_E", "tube_info")
             pairs = {k: (old.get(k), new.get(k)) for k in keys}
-            pairs["segments"] = (old["segments"], new["segments"])
+            # per tile, matched by (kc, w): every field but the wall times
+            # (time, t_prop) and 'width', a float diagnostic of the
+            # propagation's set width (not a certified quantity)
+            tk = lambda r: json.dumps([r["kc"], r.get("w")])
+            skip = ("time", "t_prop", "width")
+            to = {tk(r): {k: v for k, v in r.items() if k not in skip} for r in old["segments"]}
+            tn = {tk(r): {k: v for k, v in r.items() if k not in skip} for r in new["segments"]}
+            pairs["segments (all fields but time, t_prop, width)"] = (to, tn)
+            wo = {tk(r): r.get("width") for r in old["segments"]}
+            wn = {tk(r): r.get("width") for r in new["segments"]}
+            relw = max((abs(wo[k] - wn[k]) / abs(wo[k]) for k in wo if k in wn and wo[k]),
+                       default=0.0)
+            # the pool sums the tile increments in completion order: compare
+            # the exact sums in one fixed order (and report the stored total)
+            from flint import arb
+            from p4.validated.arbseries import precision
+            from p4.validated.modecount import dec, enc
+            with precision(256):
+                fsum = lambda segs: enc(sum((dec(r["inc"]) for r in sorted(
+                    segs, key=lambda r: json.dumps(r["inc"]))), arb(0)))
+                pairs["total_arg (sum of the tile increments in a fixed order)"] = (
+                    fsum(old["segments"]), fsum(new["segments"]))
             c_old = {k: v for k, v in old["constants"].items() if k != "workers"}
             c_new = {k: v for k, v in new["constants"].items() if k != "workers"}
             pairs["constants (without workers)"] = (c_old, c_new)
             cmp(name, pairs)
+            rows[name]["width_max_relative_difference"] = relw
+            probe = os.path.join(outdir, "winding_width_probe.json")
+            if os.path.exists(probe):
+                rows[name]["width_probe"] = dict(file=s43.rel(probe),
+                                                 result=_load(probe).get("result"))
+            rows[name]["total_arg_as_stored"] = dict(stored=old.get("total_arg"),
+                                                     new=new.get("total_arg"))
+            rows[name]["note_total_arg"] = (
+                "the stored total_arg was summed by 8 pool workers in completion order, "
+                "this one by 1; the midpoints agree and the radii differ in their last "
+                "bits; summed in one fixed order the two sets of tile increments give "
+                "bit-identical totals")
     # tube_info.time is a build time, not a certified value
     for name in ("analyticity", "winding"):
         r = rows.get(name) or {}
@@ -281,7 +334,7 @@ def compare(args):
                 r["identical"] = not r["differences"]
                 r["note"] = "tube_info equal except its build wall time"
     tb = _load(os.path.join(outdir, "tube_theorem_b.check.json"))
-    rec = dict(schema="p4-recertify-compare/1", created=s43.now(), outdir=outdir,
+    rec = dict(schema="p4-recertify-compare/1", created=s43.now(), outdir=s43.rel(outdir),
                git_head=s43.git_head()[0], code=s43.loaded_code(),
                theorem_b_tube=tb, certificates=rows,
                all_identical=all(r.get("identical") for r in rows.values()
