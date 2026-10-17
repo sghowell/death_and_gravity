@@ -70,7 +70,9 @@ SOURCE and S0-reference studies). No top-level gate changed status after
 - **Many scoped intermediate results** (loop, soft, tree and matching
   computations) are recorded in CLAIMS.md with their own scope sentences.
   They remain valid as stated. None of them is a V, G or B verdict, and
-  they should not be cited or counted as P8 results.
+  they should not be cited or counted as P8 results. Their CERTIFIED
+  labels predate the WRITTEN_PROOF level, and none has had an independent
+  review.
 
 ## 4. Status of the rest of P8
 
@@ -96,6 +98,14 @@ SOURCE and S0-reference studies). No top-level gate changed status after
 The P8, S6 and P8(a) READMEs are hash-pinned by their replay
 certificates, so this status is recorded here rather than in them.
 Editing them would make `p8.verify_all --check` and the S6 replay fail.
+
+### Validation receipts
+
+The receipts in `docs/validation/` pin README.md, CLAIMS.md and
+docs/p8-closure-plan.md by hash, as they stood at each receipt's own
+checkpoint. Each receipt went stale at the next checkpoint. The 2026-10-16
+ledger edits make the last one (2026-09-29) stale as well. They are
+point-in-time records, not replays of the live ledger.
 
 ## 5. What would reopen S6
 
