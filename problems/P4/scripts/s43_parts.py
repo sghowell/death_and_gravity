@@ -375,12 +375,15 @@ def cache_ok(name):
 #    open).  Used where the September tau-quadratic phase failed on every
 #    piece: gap idx 0-88 (xi in [0.0085, 0.0357]) and all 51 sonic pieces;
 #    the S4-4 layer engine is to carry tau > tstar there (recovery note 8(i)).
-#  * tstar_fac (centre): the tau-quadratic phase starts at tstar = tstar_fac*b1;
-#    tstar_fac = 1 makes it cover every tau >= b1 with no direct boxes
-#    (recovery note 8(iii); the 04:18Z September code closed the centre so).
+#  * tstar_fac (centre, optional key): the tau-quadratic phase starts at
+#    tstar = tstar_fac * b1; tstar_fac = 1 makes it cover every tau >= b1 with
+#    no direct boxes (recovery note 8(iii)).  Tried 2026-10-16 on centre/c29:
+#    certified failure in 39 s on 10 of 12 eps cells (K2 = O(y^2) against an
+#    O(1) tau-linear slack; parts/experiments/centre-tstar_fac-1/).  The plan
+#    therefore keeps the committed default (no key: TSTAR_FAC).
 REGIONS = {
     "centre": dict(kind="centre", y0=1e-8, ratio=1.6, prec=320, ncells=6,
-                   centre_balls="certified", tstar_fac=1.0),
+                   centre_balls="certified"),
     "tube": dict(kind="tube", cache="full", x_min=-4.5, x_max=-0.05, degrade=True,
                  exclude=dict(band=(-0.1705, -0.134), deep_below=-3.05)),
     "band": dict(kind="tube", cache="band", x_min=-0.1705, x_max=-0.134, degrade=True),
