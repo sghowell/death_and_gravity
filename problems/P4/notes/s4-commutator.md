@@ -1,5 +1,32 @@
 # S4-3: Lemma D closure and the commutator strip exclusion (b2)
 
+> **Status banner, 2026-10-16 (recovery stage).  This banner overrides every
+> "Status" or "Results" statement below that no stored artifact backs.**
+>
+> Certified, by artifacts produced 2026-10-16 from the committed code (commit
+> `14da7d1e` sources):
+> - the exact identities E1, E2, E3, E5 (§4): all hold.  E2 returns pmin = 14
+>   with ok = True, i.e. val(Z∘u) ≥ 16 once A → 1.  Artifact:
+>   `results/theorem_c/parts/checks.json`.
+> - Lemma D (§1, Task 1).  `results/theorem_c/parts/lemma_d_certified.json`:
+>   passes with centre balls that enclose the certified (a*, μ*).
+>   `parts/lemma_d_midpoint.json` reproduces the `tc_energy.json` record
+>   exactly, but that run's centre series sits on the a3 midpoint, which does not
+>   enclose (a*, μ*).  See the §1 correction.
+>
+> Not certified: the commutator strip exclusion (Task 2).  Of the 576 region
+> pieces (centre 30; tube 241 + band 18 + deep 129; gap 107; sonic 51), exactly
+> one has a stored result: `parts/band/band-000.json`, the driver smoke test
+> (pass, both phases, replayed bit for bit).  `results/theorem_c/tc_commutator.json` was never
+> assembled.  The September region outputs were lost with `/tmp` in the
+> 2026-09-07 reboot, and most of them came from earlier code versions.  The cloud
+> production round was never retrieved.  The per-region numbers in §5 and §7–§9
+> are September observations from the agent's transcript, not certificates.
+> Inventory, cost model and re-run plan: `notes/s4-3-recovery.md`.  Driver:
+> `scripts/s43_parts.py`.
+
+[Superseded 2026-10-16.  This status paragraph was written on 2026-09-01,
+before the region runs finished, and no artifact supports it.]
 Status: Task 1 complete (P4-8 now unconditional).  Task 2 certified with
 b1 = 14 on tau in [14, 224] over the whole interval, and on tau > 224
 everywhere except the near-sonic band xi <= XI_OPEN (value recorded in the
@@ -27,6 +54,24 @@ One Taylor-model run over y = e^x in (0, e^{-4.5}] (1100 subranges, ratio
 Recorded in `results/theorem_c/tc_energy.json` under `"lemma_d"`
 (`all_ok = true`); replay: `uv run python -m p4.validated.tc_commutator
 lemma_d`.  P4-8 loses its conditionality (draft row in Section 9).
+
+**Correction, 2026-10-16.**  (a) The replay command above prints its result
+and writes nothing.  The `tc_energy.json` block was merged by hand from the
+scratchpad file `lemmad_rep.json` (transcript L706).  (b) The re-run on
+2026-10-16 reproduces that record exactly: ok, 1100/1100 subranges, the same
+five minima, 62.6 s.  Artifact: `parts/lemma_d_midpoint.json`.  (c) That record
+does not cover the EC background, however.  `_centre_expansion` builds the
+centre series from the midpoint (a_m, μ_m) of `results/a3_midpoint.json`
+(radius ≤ 1e-41) and omits the stored Krawczyk offset `K_minus_m`.  The
+certified values are a* = a_m + 7.031e-12 ± 8.87e-16 and μ* = μ_m + 2.3757e-9 ±
+4.61e-14, the balls that `modecount.certified_centre` and every tube build use.
+With those balls Lemma D passes: q2 ≥ 1.9618364, mB ≥ 3.4752428,
+mC ≥ 15.348292, pole gaps ≥ 0.99952 and 0.99999, 61.5 s.  Artifact:
+`results/theorem_c/parts/lemma_d_certified.json`.  Replay:
+`python problems/P4/scripts/s43_parts.py lemma-d --centre-balls certified`.
+Lemma D is certified by that artifact.  The P4-8 ledger update is for Sean to
+make (draft in `s4-3-recovery.md` §10).  `tc_monotone.run_centre` has the same
+midpoint construction.
 
 ## 2. The commuted operator (m = 1)
 
@@ -116,7 +161,15 @@ eps in [0, 6] (13 graded cells) and tau >= b1 = 14 in two phases:
   tau ending in one pseudo-box w = 1/kappa in [0, 1/T], and per-name Laurent
   allowances (net offsets).  The vertex bound closes sup_{tau >= tstar}.
 
-Region assembly (all with b1 = 14, eps_max = 6):
+Region assembly (all with b1 = 14, eps_max = 6).  [Correction 2026-10-16.
+The region list below is the September design.  The pieces actually needed are
+the 241 tube_full steps with x - h >= -3.05, minus the 4 h = 0.0075 steps in
+[-0.169, -0.139]; plus 18 band re-steps (h = 0.002) and 129 deep re-steps
+(h = 0.0125, x in [-4.56, -2.95]).  The 33 replaced steps fail their chain TM
+inverses.  In the September per-step logs the gap tube's tau-quadratic phase
+failed on steps 0-88 (xi <= 0.0357) and passed on steps 89-106, not "for
+x <= -0.048".  The full list is in `results/theorem_c/parts/plan.json` and
+`s4-3-recovery.md` §4.]
 
   centre   y = e^x in (0, e^{-4.5}], 30 pieces (geometric + closing piece);
   tube     x in [-4.5, -0.05], 274 certified ODE steps (tube_full);
@@ -159,7 +212,34 @@ branches |quadN| >= (l2/sqrt2) ell + cI |w| (min over valid bookkeepings).
 This closes every Laurent piece's direct phase and all centre/tube pieces'
 both phases.  It does NOT close the sonic tau > tstar tail: see Section 8.
 
-## 7. Results (certificate summary)
+## 7. Results (certificate summary) [SUPERSEDED 2026-10-16]
+
+**Correction, 2026-10-16.**  The summary below was written on 2026-09-01 as
+the expected outcome, before the runs finished.  `tc_commutator.json` was never
+written, so no line except the first is backed by an artifact.  Status of each
+line, from the transcript (details in `s4-3-recovery.md` §4):
+
+- checks: re-verified 2026-10-16, all hold (`parts/checks.json`).  E2 returns
+  pmin = 14, which gives val >= 16 after A -> 1.
+- centre: not certified.  The 30/30 run (worst -5.99, 1022 s) started at
+  09-01T04:18Z with code that had no direct phase: the tau-quadratic covered
+  tau >= 14 directly, and `direct_S_boxes` was added at 04:32Z.  No run of the
+  committed code finished (one was killed after 26 h wall / 25.3 h CPU).  The
+  centre series was also the midpoint one (§1 correction).
+- tube: not certified.  Steps 184-273 never finished locally.  33 steps failed
+  their TM inverses and were re-stepped (band, deep).  12 steps in
+  x in [-1.79, -1.54] failed the direct phase at the old strip-depth cap
+  (sdepth < 3).  With the fix (sdepth < 9), two of the 16 cloud chunks are
+  known to have passed: A1 (8 steps, worst -63145) and one that was never
+  identified.  Neither was retrieved.  The other steps ran code older than the
+  committed version.
+- gap tube: not certified.  The tau-quadratic phase failed on steps 0-88
+  (xi <= 0.0357).  A degrade run passed the direct phase on all of them, and
+  steps 89-106 passed both phases.  The outputs are lost.
+- sonic: not certified.  51/51 passed the direct phase in September (worst
+  -5.9e-5; tau > 224 open), with code of 09-01T09:45Z.  The outputs are lost.
+
+Original text, kept for reference:
 
   checks   E1, E2 (val >= 16), E3, E5 all pass exactly.
   centre   30/30 pieces, both phases; worst scaled margin -5.99.
@@ -169,8 +249,10 @@ both phases.  It does NOT close the sonic tau > tstar tail: see Section 8.
   sonic    51/51 pieces direct phase (worst hat margins ~ -0.003 .. -39);
            tau > 224 open on these pieces (Section 8).
 
-Replay: `uv run python -m p4.validated.tc_commutator checks|centre|sonic|
-tube <tube.json> [a b]` then `... merge <parts>` writes
+Replay [superseded 2026-10-16 by `scripts/s43_parts.py`, which gives
+per-piece resumable parts and a coverage-checked merge; see
+`s4-3-recovery.md` §5]: `uv run python -m p4.validated.tc_commutator
+checks|centre|sonic|tube <tube.json> [a b]` then `... merge <parts>` writes
 `results/theorem_c/tc_commutator.json` (region parts can be sliced for
 worker parallelism; the shipped JSON lists every piece).
 
@@ -198,6 +280,9 @@ sonic neighbourhood for large tau; (ii) a large-|kappa| perturbative
 exclusion (GHJS Prop 3.14 style) for tau > 224, which would also make the
 whole tau-quadratic phase redundant.
 
+[2026-10-16: nothing in this paragraph is certified yet.  It states the
+September expectation, and the September data put the open band at
+xi <= 0.0357, not ~0.048 (see §5).]
 Consequences for the b2 target: the certified exclusion is
   tau in [14, 224] on the full strip  (b1 = 14 achieved there), plus
   tau > 224 for xi > XI_OPEN (~0.048) pointwise.
@@ -205,6 +290,13 @@ No S4-4 tau-bridge below 224 is needed; the S4-4 hand-off is the single
 large-tau sonic-sliver item above.
 
 ## 9. Draft CLAIMS rows (do not edit CLAIMS.md from this stage)
+
+[Correction 2026-10-16.  The P4-8 update now rests on
+`results/theorem_c/parts/lemma_d_certified.json` (centre balls enclosing
+(a*, mu*)), not on the midpoint record in tc_energy.json (§1).  The P4-9 draft
+is superseded: no certificate exists, and its piece counts are the September
+design, not the 576-piece plan.  The current draft text is in
+`s4-3-recovery.md` §10.]
 
   P4-8  (update)  Deep-tail energy conditions x <= -4.5 certified
         unconditionally (Lemma D closed via the exact layer identity E2 +
@@ -225,11 +317,16 @@ large-tau sonic-sliver item above.
 - S4-4 (bridge stage): the only remaining task for full b1 = 14 strip
   exclusion is tau > 224 on the near-sonic band xi <= ~0.048 (Section 8;
   recommended: the large-kappa perturbative estimate, which would subsume
-  all tau > 224 work, or the 2D (w, ell) engine on the band).
+  all tau > 224 work, or the 2D (w, ell) engine on the band).  [2026-10-16:
+  reassessed in `s4-3-recovery.md` §8.  The large-kappa matching route is not
+  recommended for S4-4; the energy-framework layer engine is.  The September
+  data put the band at xi <= 0.0357.]
 - S4-5 (endgame): with the strip clear, ker = span{g}, S Delta-tilde != 0
   and the gauge argument proceed as planned (theorem-c-plan.md par. 6); the
   eta-elimination root bound (Rbar < 14) and the real-pole margins needed
-  there are certified per piece in the JSON.
+  there are certified per piece in the JSON.  [2026-10-16: not yet.  These
+  bounds are checked inside each piece run (`analyze_piece` raises if they
+  fail), so they become certified piece by piece as parts land.]
 - The dec-slots (DWdec etc.) remain in the JSON for the non-closing pieces;
   on sonic pieces the tail-lemma sups (KW/KWp third slots) replace them.
 
@@ -246,11 +343,17 @@ large-tau sonic-sliver item above.
   xi ~ 0.02); the gap tube supersedes it.
 - Tube extension: `Tube.build(V0, 1e-16, x0=-0.0085, x_c=-0.055, K=28,
   hmax=0.004, prec=384)`, 107 steps, 134 s; saved as tube_gap.json next to
-  the certificate inputs.  `run_tube(..., degrade=True)` applies the same
+  the certificate inputs.  [2026-10-16: that file was lost.  All four tube
+  caches are rebuilt by `scripts/s43_parts.py build-caches` into
+  `problems/P4/data/cache/` (gap: 107 steps, 121 s), pinned by content hash in
+  `results/theorem_c/parts/caches/`.]  `run_tube(..., degrade=True)` applies the same
   direct-phase fallback as `run_sonic` on the band.
 - The centre certificate in the JSON is the original run (sound earlier
   code path; the region never touches the branch bookkeeping); a
   re-validation with the final code was started and aborted for CPU.
+  [2026-10-16: no JSON exists.  That run (09-01T04:18Z) predates the direct
+  phase and used the midpoint centre series, so it is not a run of the
+  committed code (§7 correction).]
 - Deep-tube diagnosis (x in [-4.56, -1.5]): the direct-phase failures there
   were pinned to the (tau ~ 14, eps ~ 0) corner on the first ell-strips: the
   chain-hull slop scales with the STRIP width (atom variation amplified
@@ -264,4 +367,6 @@ large-tau sonic-sliver item above.
   re-stepped at h = 0.0125 (tube_deep.json, 129 steps via extend_centre).
   Partial old-parameterization runs (tchunk/dchunk/tband2, gap_w0-4) are
   kept in the scratchpad as diagnostics only; they are superseded by the
-  cloud re-runs with the strip-depth fix.
+  cloud re-runs with the strip-depth fix.  [2026-10-16: the scratchpad was
+  deleted in the 2026-09-07 reboot.  The cloud results were not retrieved.
+  See `s4-3-recovery.md` §2 and §6.]
