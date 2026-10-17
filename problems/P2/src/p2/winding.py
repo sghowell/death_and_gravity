@@ -222,7 +222,7 @@ def kat6_case(name, l, z_over_km, label, printed=None, hw_over_km="1e-3", prec=2
     return out
 
 
-def run_kat6():
+def run_kat6(write=True):
     cases = [("PA", 1, ("3.242616412611042303686208", "-0.7958326323112821365072551"),
               "Table I l=1 PS", ("3.2426164126", "-0.7958326323")),
              ("PB", 0, ("0", "-0.9093809789948054555249"), "P_B l=0 NE n=0", None)]
@@ -232,7 +232,8 @@ def run_kat6():
         res["cases"].append(kat6_case(name, l, z, label, printed))
         print(json.dumps(res["cases"][-1], indent=1)[:2000], flush=True)
     res["pass"] = all(c["pass"] for c in res["cases"])
-    (CERT_DIR / "kat6_winding_krawczyk.json").write_text(json.dumps(res, indent=1) + "\n")
+    if write:
+        (CERT_DIR / "kat6_winding_krawczyk.json").write_text(json.dumps(res, indent=1) + "\n")
     return res
 
 
