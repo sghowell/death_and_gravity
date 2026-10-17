@@ -28,8 +28,8 @@ def test_zeq_identity():
 
 
 def test_zsol_matches_arbw():
-    out = part3.zsol_vs_arbw("PB", [(0, 2.0, -0.55), (3, 12.0, 0.1), (7, 40.0, -0.55)])
-    assert all(x["overlap"] for x in out), out
+    out = part3.zsol_vs_arbw("PB", [(0, 2.0, -0.55), (3, 12.0, 0.1), (7, 30.0, -0.55)])
+    assert all(x["pass"] for x in out), out
 
 
 def test_d4():

@@ -385,6 +385,16 @@ def run(name: str, ls: list, workers: int = 4, rho_min_k: float = RHO_MIN_K, lau
     lpath.write_text(json.dumps(rec, indent=1) + "\n")
 
 
+def _launch_commits(name: str, l: int) -> list:
+    """Commits of the launch records (in the results directory) whose runs included l."""
+    out = set()
+    for f in sorted(_RES["dir"].glob("launch_*.json")):
+        rec = json.loads(f.read_text())
+        if rec.get("point") == name and l in rec.get("ls", []):
+            out.add(rec.get("commit"))
+    return sorted(out)
+
+
 def assemble(name: str, l: int, write: bool = True) -> dict:
     """Check the coverage of H exactly, sum the increments, write the certificate."""
     pt = Point(name, 256)
@@ -428,7 +438,7 @@ def assemble(name: str, l: int, write: bool = True) -> dict:
                "cpu_s": round(sum(r["timing_s"]["cpu"] for r in pieces), 1),
                "method": {"prec_bits": PREC, "theta_point": THETA_POINT, "theta_box": THETA_BOX,
                           "x": "1/2", "rho_max_kappa": RHO_MAX_K, "target": TARGET},
-               "commit": git_commit(), "pieces": pieces}
+               "computed_at": _launch_commits(name, l), "assembled_at": git_commit(), "pieces": pieces}
     if write:
         CERT_DIR.mkdir(parents=True, exist_ok=True)
         (CERT_DIR / f"winding_{name}_l{l}.json").write_text(json.dumps(out, indent=1) + "\n")
@@ -498,20 +508,53 @@ def left_half_sum(name: str, l: int, workers: int = 1) -> dict:
     return {"l": l, "sum_left": total.str(30), "segments": sum(len(r["results"]) for r in out)}
 
 
+def _arbw_reference(name: str, l: int, w_q: tuple, precs=(256, 512, 1024, 2048, 4096)):
+    """S1's arbw.wronskian at the exact point w_q (fmpq pair), at the lowest precision giving a
+    relative radius below 1e-10.  arbw's Frobenius stopping rule can end before its own tail
+    condition N > 2|rho| + 1 holds at large |w| (it then raises); the minimum term count is raised
+    to 2|rho| + 8 here, through a wrapper.  arbw itself is not modified."""
+    from . import arbw
+    orig = arbw.frobenius
+
+    def frob(pt, which, w, L, t, min_terms=20):
+        kap = pt.kp if which == "+" else pt.kc
+        rho_abs = float((abs(acb(w)) / (2 * kap)).upper())
+        return orig(pt, which, w, L, t, min_terms=max(min_terms, int(2 * rho_abs) + 8))
+
+    arbw.frobenius = frob
+    try:
+        for prec in precs:
+            pt = Point(name, prec)
+            with precision(prec):
+                w = acb(arb(w_q[0]), arb(w_q[1]))
+                Wa = arbw.wronskian(pt, l, w)
+                rr = float((abs(Wa).rad() / abs(Wa).mid()))
+                if rr < 1e-10:
+                    return Wa, prec, rr
+        return Wa, precs[-1], rr
+    finally:
+        arbw.frobenius = orig
+
+
 def zsol_vs_arbw(name: str, cases: list) -> list:
-    """B0: the phase-factored W (zsol) against the S1 Frobenius/Taylor W (arbw) at points."""
-    from .arbw import wronskian
+    """C0: the phase-factored W (zsol, 256 bits) against the S1 Frobenius/Taylor W (arbw) at exact
+    points.  Pass: both balls have relative radius < 1e-10 and they overlap."""
     pt = Point(name, 256)
     out = []
-    with precision(256):
-        for l, re_k, im_k in cases:
-            w = acb(arb(_kq(pt, re_k)), arb(_kq(pt, im_k)))
+    for l, re_k, im_k in cases:
+        w_q = (_kq(pt, re_k), _kq(pt, im_k))
+        with precision(256):
+            w = acb(arb(w_q[0]), arb(w_q[1]))
             Wz = zsol.wronskian_z(pt, l, w, theta=THETA_POINT)[0]
-            Wa = wronskian(pt, l, w)
-            out.append({"l": l, "w_kappa": [re_k, im_k], "overlap": bool(Wz.overlaps(Wa)),
-                        "W_zsol": Wz.str(12), "W_arbw": Wa.str(12),
-                        "rel_diff_mid": float(abs(acb(Wz.real.mid(), Wz.imag.mid()) - acb(Wa.real.mid(), Wa.imag.mid())).upper()
-                                              / abs(Wa).lower())})
+            rz = float(abs(Wz).rad() / abs(Wz).mid())
+        Wa, pa, ra = _arbw_reference(name, l, w_q)
+        with precision(256):
+            ov = bool(Wz.overlaps(Wa))
+            rel = float((abs(acb(Wz.real.mid(), Wz.imag.mid()) - acb(Wa.real.mid(), Wa.imag.mid())) / abs(Wa).mid()).upper())
+        out.append({"l": l, "w_kappa": [re_k, im_k], "w_exact": [str(w_q[0]), str(w_q[1])],
+                    "overlap": ov, "relrad_zsol": rz, "relrad_arbw": ra, "arbw_prec": pa,
+                    "meaningful": bool(rz < 1e-10 and ra < 1e-10), "pass": bool(ov and rz < 1e-10 and ra < 1e-10),
+                    "W_zsol": Wz.str(15), "W_arbw": Wa.str(15), "rel_diff_mid": rel})
     return out
 
 
@@ -665,7 +708,8 @@ def controls(workers: int = 4) -> dict:
     t0, c0 = time.time(), time.process_time()
     out = {"commit": git_commit()}
     out["C0_zsol_vs_arbw"] = zsol_vs_arbw("PB", c0_cases("PB"))
-    out["C0_pass"] = all(x["overlap"] for x in out["C0_zsol_vs_arbw"])
+    out["C0_pass"] = all(x["pass"] for x in out["C0_zsol_vs_arbw"])
+    print("C0", out["C0_pass"], [(x["l"], x["arbw_prec"]) for x in out["C0_zsol_vs_arbw"]], flush=True)
     out["C1_D4"] = d4_check("PB")
     out["C2"] = []
     for name, l, box, exp, label in C2_RECTS:
