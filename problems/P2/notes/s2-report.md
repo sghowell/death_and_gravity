@@ -223,12 +223,12 @@ What the three certified points do and do not imply:
   - node spacing ∝ (l+½)^{−1/2}, i.e. fixed in σ = s(l+½)^{1/2};
   - window width ∝ the oscillator quantum.
 
-  With that scaling the hull and sawtooth losses become l-independent at
-  leading order, and the closing box at h = 1/(l+½) = 0 is the
+  With that scaling the sawtooth loss becomes l-independent at leading
+  order and the hull loss vanishes as l grows (review §12), and the closing box at h = 1/(l+½) = 0 is the
   harmonic-oscillator ground-state bound. Whether the O(h) corrections stay
   below the margin on a whole h-box is S4's question; S2 does not answer it.
-- The low-l range of S3 is therefore not chosen from l₀ = 2
-  (`s3-preregistration.md`).
+- The low-l range of S3 is therefore not chosen from l₀ = 2 (see the S3
+  pre-registration, `notes/s3-preregistration.md` on branch p2/s3-part-iii).
 
 ## 4. What S2 does not establish (carried to S3/S4)
 
