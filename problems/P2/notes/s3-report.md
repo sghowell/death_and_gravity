@@ -160,7 +160,8 @@ phase-factored solutions of problems/P2/src/p2/zsol.py): a unique zero of W₀ a
 | `3e7fca05` | P2: S3 control C0 calls arbw with enough Frobenius terms and enough precision; record run commits |
 | `c7d1bfbc` | P2: S3 control gate passes (C0–C3, C6); lower bound of abs(W) per piece from the rectangle |
 | `44904fbb`, `a3927dfb`, `ffa08710`, `b216311b`, `9c5714ac`, `a3b12803` | the certificates as they landed (l = 19; 17–18; 15–16; 12–14; 8–11; 0–7) |
-| (this commit) | P2: S3 symmetry check, report |
+| `1abe9d71` | P2: S3 report and the C4 symmetry check; verdict PASS at P_B for l = 0–19 |
+| `09013c78` | P2: FORMULATION v0.5 records the S3 part (iii) implementation and result |
 
 ## 9. Reproduction (cwd `problems/P2/src`)
 
