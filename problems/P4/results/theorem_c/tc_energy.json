@@ -3,7 +3,7 @@
  "rbar": 2.0,
  "delc": 1.2,
  "ttail": 64.0,
- "produced_by": "region runs (run_tube/run_sonic incl. closing box), assembled; replay: python -m p4.validated.tc_energy all <tube.json> 6.0",
+ "produced_by": "region runs (run_tube/run_sonic incl. closing box), assembled; replay: python -m p4.validated.tc_energy all <tube.json> 6.0 + lemma_d merged from tc_commutator.run_lemma_d (replay: python -m p4.validated.tc_energy centre)",
  "field_identity": true,
  "tube": {
   "ok": true,
@@ -57,5 +57,24 @@
   "iv_width": "2.0719238088557485e-14",
   "pt_width": "1.1757128162634779e-39"
  },
- "all_ok": true
+ "all_ok": true,
+ "lemma_d": {
+  "ok": true,
+  "c0": 6.0,
+  "ycut": 0.011108996538242306,
+  "layer_identity": [
+   14,
+   true
+  ],
+  "mins": {
+   "q2": 1.9618364422656047,
+   "mB": 3.4752564497427962,
+   "mC": 15.348299575408227,
+   "poleA": 0.9995211043092475,
+   "poleFN": 0.9999925864848735
+  },
+  "nsub": 1100,
+  "time": 61.56263017654419,
+  "note": "Lemma D closed: conditions (a)-(d) certified on the whole open tail x <= -4.5 (y = e^x in (0, e^{-4.5}]) via the exact layer identity E2 (tc_commutator.check_layer_identity) and Taylor models in y; mins are y^2-hat margins, mC additionally carries the exact 9/4"
+ }
 }

@@ -768,9 +768,16 @@ def main(argv):
         res["sonic"] = run_sonic(at, c0)
         print(f"sonic:  ok={res['sonic']['ok']}  mins={res['sonic']['mins']}  "
               f"sigma-known-answer={res['sonic']['known_answer_sigma']}")
-    if mode == "centre":
-        raise SystemExit("the deep tail x < -4.5 is Lemma D (notes/s4-energy.md "
-                         "section 4); its closing computation is an S4-3 item")
+    if mode in ("centre", "all"):
+        # Lemma D (S4-3): the deep tail x <= -4.5 in one Taylor-model
+        # computation (tc_commutator.run_lemma_d; exact layer identity E2)
+        from .tc_commutator import run_lemma_d
+        res["lemma_d"] = run_lemma_d(at)
+        res["lemma_d"]["mins"] = {k: float(v) if not isinstance(v, float) else v
+                                  for k, v in res["lemma_d"]["mins"].items()}
+        res["lemma_d"].pop("subranges", None)
+        print(f"lemma_d: ok={res['lemma_d']['ok']}  hat-mins="
+              f"{res['lemma_d']['mins']}")
     if mode in ("tube", "all"):
         from .lintube import Tube
         path = argv[1] if len(argv) > 1 else os.environ.get("P4_TUBE_CACHE", "")
@@ -781,7 +788,7 @@ def main(argv):
         res["tube"] = run_tube(at, tube, c0)
         print(f"tube:   ok={res['tube']['ok']}  steps={len(tube.steps)}  "
               f"mins={res['tube']['mins']}  fails={res['tube']['fails'][:5]}")
-    ok = all(res[r]["ok"] for r in ("sonic", "centre", "tube") if r in res)
+    ok = all(res[r]["ok"] for r in ("sonic", "lemma_d", "tube") if r in res)
     res["all_ok"], res["total_time"] = ok, time.time() - t0
     out = os.path.join(os.path.dirname(__file__), "..", "..", "..",
                        "results", "theorem_c", "tc_energy.json")
