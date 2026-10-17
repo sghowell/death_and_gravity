@@ -1,6 +1,6 @@
 # P2 — A certified resonance-free strip for subextremal RNdS (β > 1/2, linear SCC failure for smooth data)
 
-Status: formulation **v0.4** (S2 gate passed; stage S3), 2026-10-17; frozen at v0 (S0,
+Status: formulation **v0.5** (S3 exit; stage S4), 2026-10-17; frozen at v0 (S0,
 2026-10-16), with every later change recorded in the Revision log. Since S1 the
 ledger has rows P2-par, P2-0, P2-2 and P2-K6 (`CLAIMS.md`); every other claim id
 is still a *target*.
@@ -428,3 +428,19 @@ Sizing and kill criteria are in `s0-gate.md` §7.
     σ = s(l+½)^{1/2}) and window width ∝ the oscillator quantum.
   - Still open for P2-1: uniformity in h, and the sub-barrier and low-frequency
     regimes (S4). P_A has not been probed.
+
+- **v0.5 (2026-10-17, S3 exit; `notes/s3-preregistration.md`, `notes/s3-report.md`).** Part (iii)
+  is implemented as follows; the deviations from §4 were declared in the pre-registration.
+  - **W_l.** It is computed from the phase-factored Jost solutions
+    Z₊ = e^{iω(r*−c₊)}R₊ and Z_c = e^{−iω(r*−c_c)}R_c (`src/p2/zsol.py`), via the exact identity
+    W_l = [Δ(Z₊Z_c′ − Z₊′Z_c) + 2iωr²Z₊Z_c]/(r₊r_c), which is checked in sympy. The S1 code,
+    which evaluates the free phase, gives useless box bounds at high |ω|.
+  - **Counting.** Cauchy-interpolation discs (S1 `winding.py`) replace §4's ω-Taylor-model tiles.
+    Only the right half of ∂R_l is computed, by the conjugation symmetry. The box is
+    R'_l = [−a_l, a_l] × [−b, e], with dyadic b ≥ β and 0 < e ≤ η.
+  - **Certificates.** `certificates/part3/winding_{X}_l{l}.json`. The pole checks are recorded
+    per segment, so there is no separate `analyticity_*.json`. The l = 0 Krawczyk enclosure is
+    `certificates/part3/krawczyk_PB_l0.json`.
+  - **S3 result at P_B, l = 0–19.** The count on R'_l is 1 at l = 0 (the simple zero at 0) and 0
+    for 1 ≤ l ≤ 19. With P2-0 and P2-2, S_δ contains no QNM of degree l ≤ 19 other than ω = 0.
+  - **Open.** P2-3 for 20 ≤ l < l₀, which waits for S4; P_A; and the two-sided β (P2-6).
