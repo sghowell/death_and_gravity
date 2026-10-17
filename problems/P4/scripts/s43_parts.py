@@ -1735,7 +1735,11 @@ def cmd_merge(args):
     # tau >= b1; off by default
     sub = dict(subs={}, manual_review=[], rejected={}, blocked=[])
     if getattr(args, "substitute_layer_t14", False):
-        sub = substitute_layer_t14(plan, tc, states, checks_ok)
+        # item 6: the checks must be valid for the current code itself
+        # (accepted code variants do not count for substitution)
+        checks_cur = bool(checks and checks["ok"] and write_check_ok(checks)
+                          and code_matches(checks["code"]["files"], None))
+        sub = substitute_layer_t14(plan, tc, states, checks_cur)
         for pid, d in sub["subs"].items():
             for r, sha in d["code"]["files"].items():
                 code_union.setdefault(r, set()).add(sha)

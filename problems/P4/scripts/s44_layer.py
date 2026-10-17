@@ -73,7 +73,9 @@ LAYER = os.path.join(s43.PARTS, "layer")
 SCHEMA = "s44-layer/1"
 DRIVER = os.path.abspath(__file__)
 DRIVER_SHA256 = s43.sha256_file(DRIVER)          # this driver, at import
-HELPER = os.path.abspath(s43.__file__)           # s43_parts.py, imported above
+HELPER = os.path.abspath(s43.__file__)           # s43_parts.py, imported above (metadata
+                                                 # helpers and the merge; recorded, and
+                                                 # its change mid-run noted, not fatal)
 TAU_MIN = 224.0                  # the S4-4 item: tau > 224 on the band
 XI_BAND = 0.0357 + 1e-9          # gap steps 0-88: the tau-quadratic phase fails there
 LOGS = os.path.join(s43.P4, "logs", "s44")
@@ -331,8 +333,9 @@ def write_part(p, mode_tau, res, err, inputs, call, timing, opts, build_shared):
                engine=opts,
                result=_clean({k: v for k, v in (res or {}).items()}),
                error=err, inputs=inputs, region_call=call,
-               code=s43.code_record({DRIVER: DRIVER_SHA256, HELPER: s43.DRIVER_SHA256}),
+               code=s43.code_record({DRIVER: DRIVER_SHA256}),
                driver_sha256=DRIVER_SHA256, helper_sha256=s43.DRIVER_SHA256,
+               helper_changed_since_import=(s43.sha256_file(HELPER) != s43.DRIVER_SHA256),
                env=s43.env_info(),
                timing=dict(timing, build_shared_with=build_shared),
                provenance="computed by problems/P4/scripts/s44_layer.py work")

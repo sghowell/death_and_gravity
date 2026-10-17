@@ -519,6 +519,22 @@ def test_substitution_blocked_by_invalid_checks(env):
     assert "gap/gap-000" in d["missing"]
 
 
+def test_substitution_needs_checks_valid_for_the_current_code(env):
+    # checks.json computed by an older (accepted) code version keeps the
+    # merge's checks_valid_for_code, but blocks substitution
+    _sub_setup(env)
+    old = "7" * 64
+    _write(os.path.join(env.parts, "checks.json"),
+           dict(ok=True, code=dict(files={CODE_FILE: old}),
+                results=dict(E1_U6top=True, E2_layers=[14, True],
+                             E3_sonic_zeros=[True], E5_sonic_vanishing=[True])))
+    s43._HASH_CACHE.pop(CODE_FILE, None)
+    _, d = env.merge(substitute=True, accept=["%s=%s" % (CODE_FILE, old)])
+    assert d["checks_valid_for_code"] is True
+    assert d["substitution"]["blocked"] == ["checks.json not valid for the current code"]
+    assert d["substitution"]["substituted"] == []
+
+
 def test_substitution_blocked_by_changed_constants(env, monkeypatch):
     import p4.validated.tc_layer as tl
     _sub_setup(env)
