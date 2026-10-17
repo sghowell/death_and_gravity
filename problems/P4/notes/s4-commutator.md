@@ -24,6 +24,15 @@
 > are September observations from the agent's transcript, not certificates.
 > Inventory, cost model and re-run plan: `notes/s4-3-recovery.md`.  Driver:
 > `scripts/s43_parts.py`.
+>
+> Update, 2026-10-16 evening (`s4-3-recovery.md` §11):
+> - `_centre_expansion` and `tc_monotone.run_centre` now build the centre
+>   series on the certified (a*, μ*) balls (`p4.validated.ec_centre`).
+> - On that code, Lemma D reproduces `parts/lemma_d_certified.json` exactly
+>   and P4-3 still passes.
+> - The τ-quadratic-from-τ = 14 centre variant fails.
+> - 310 region pieces are being computed; `s43_parts.py status` gives the
+>   live count.
 
 [Superseded 2026-10-16.  This status paragraph was written on 2026-09-01,
 before the region runs finished, and no artifact supports it.]
@@ -70,8 +79,9 @@ mC ≥ 15.348292, pole gaps ≥ 0.99952 and 0.99999, 61.5 s.  Artifact:
 `results/theorem_c/parts/lemma_d_certified.json`.  Replay:
 `python problems/P4/scripts/s43_parts.py lemma-d --centre-balls certified`.
 Lemma D is certified by that artifact.  The P4-8 ledger update is for Sean to
-make (draft in `s4-3-recovery.md` §10).  `tc_monotone.run_centre` has the same
-midpoint construction.
+make (draft in `s4-3-recovery.md` §10).  `tc_monotone.run_centre` had the same
+midpoint construction.  Both are fixed in the code since 2026-10-16 evening
+(`p4.validated.ec_centre`; `s4-3-recovery.md` §11).
 
 ## 2. The commuted operator (m = 1)
 

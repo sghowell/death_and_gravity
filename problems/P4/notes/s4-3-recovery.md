@@ -16,6 +16,19 @@ driver, `scripts/s43_parts.py` (commit `76c07e8b`), replaces the lost scratchpad
 drivers.  Paths below are relative to `problems/P4/` unless they start with
 `problems/`.
 
+**Update, 2026-10-16 evening (§11).**  The centre-ball defect of §3 is fixed in
+the code (commit `ed4cab14`): `tc_commutator._centre_expansion` and
+`tc_monotone.run_centre` now build the centre series on the certified (a*, μ*)
+balls.  On the fixed code (commit `02e93bac`):
+* P4-3 still holds (`results/theorem_c/tc_monotone.json` regenerated);
+* Lemma D reproduces `parts/lemma_d_certified.json` exactly;
+* E1/E2/E3/E5 still hold.
+
+The §8 (iii) centre variant fails (commit `ad16bbac`).  310 node-independent
+region pieces and the §8 (ii) benchmark are running detached on the Mac; §11.6
+gives PIDs, logs, expected finish and the stop command.  The commutator strip
+exclusion is still not certified.
+
 Sources for everything stated about September: the S4-3 agent's transcript
 (`agent-a7accaae8fcc3cf60.jsonl`, 1671 records, 2026-09-01T01:12Z to
 2026-09-05T18:40Z) and the coordinator's transcript (status through
@@ -103,7 +116,8 @@ With the certified balls (`centre_balls="certified"`, the driver's default for
 Lemma D and for the centre region) Lemma D passes with essentially unchanged
 margins, so Lemma D now rests on a correct artifact.  The same correction is
 needed in `tc_monotone.run_centre` (P4-3's centre tail) and should become the
-code default in S4-4 (§9).
+code default in S4-4 (§9).  [Done later on 2026-10-16: both functions build
+the certified balls in the committed code; see §11.1–§11.3.]
 
 ## 4. Inventory of the region parts
 
@@ -116,7 +130,7 @@ Driver: `PY=.venv/bin/python; $PY problems/P4/scripts/s43_parts.py`.
 |---|---|---|---|---|---|---|
 | checks E1/E2/E3/E5 | 1 | — | `checks` | claimed in note §7, no artifact | — | done today, 0.01 |
 | Lemma D | 1 | a3_midpoint.json | `lemma-d` → `run_lemma_d(at)` | recorded in tc_energy.json | 61.6 s | done today, 0.02 |
-| centre `centre/c00–c29` | 30 | centre series (certified balls) | `centre_piece(at, ce, lo, hi, 14, eps_cells_default(), 320)` = `run_centre` body; y-pieces `y_subranges(1e-8, 1.6)` | `centre_rep.json` 30/30, worst −5.99, 1022 s — **produced 09-01T04:18Z by pre-direct-phase code** (τ-quadratic from τ = 14; `direct_S_boxes` was added at 04:32Z, L492); committed-code runs never finished: 06:23Z run killed after 26.0 h wall / 25.3 h CPU (L1364, L1372), 09:45Z run killed after 8.4 h (L1331); today a 2-cell test piece did not finish in 15 min | ≥ 25.3 CPU-h, unfinished | 45–90 (≥ 25 measured; see §8 for a minutes-long variant) |
+| centre `centre/c00–c29` | 30 | centre series (certified balls) | `centre_piece(at, ce, lo, hi, 14, eps_cells_default(), 320)` = `run_centre` body; y-pieces `y_subranges(1e-8, 1.6)` | `centre_rep.json` 30/30, worst −5.99, 1022 s — **produced 09-01T04:18Z by pre-direct-phase code** (τ-quadratic from τ = 14; `direct_S_boxes` was added at 04:32Z, L492); committed-code runs never finished: 06:23Z run killed after 26.0 h wall / 25.3 h CPU (L1364, L1372), 09:45Z run killed after 8.4 h (L1331); today a 2-cell test piece did not finish in 15 min | ≥ 25.3 CPU-h, unfinished | 45–90 (≥ 25 measured; the §8 (iii) minutes-long variant fails, §11.5) |
 | tube idx 0–45 (`tube/full-000…045`, x ∈ [−0.267, −0.05]) | 42 | tube_full | `run_tube(at, tube_full, 14, x_min=−4.5, x_max=−0.05, step_slice=(i, i+1), degrade=True)` | tube_w0 (code of 09-01T06:58Z, no degrade): 42 pass, 4 fail with `TM inverse: \|q\| hull >= 1` at idx 29–32 (excluded, → band) | 28228 s wall / 46 steps | 4–7 |
 | band `band/band-000…017` (x ∈ [−0.17, −0.134], h = 0.002) | 18 | tube_band | `run_tube(at, tube_band, 14, x_min=−0.1705, x_max=−0.134, …, degrade=True)` | tubeband 16/16 + tband3 2/2 pass (degrade runs; worst −2.6e7, −2.5e7); today `band/band-000` passed both phases | 1294 s incl. tube build | 0.5 |
 | tube idx 46–91 (x ∈ [−0.784, −0.267]) | 46 | tube_full | as above | all pass, worst −1.14e6 | 8434 s | 1.5–2.5 |
@@ -174,6 +188,17 @@ passed both phases on 18 of its 107 steps, not "107/107 both phases".
   `--exclude-ids-file`, `--x-range LO,HI`, `--shard K/M`; `list` prints the ids.
 * `status`, `replay ID` (recompute one piece, compare, never overwrite),
   `import-cloud` and `cloud-manifest` (Branch A), `merge`.
+* Added 2026-10-16 evening (commit `ed4cab14`).  Plan entries carry `tq`
+  (False = direct phase only; gap idx 0–88 and all sonic pieces, set by
+  `REGIONS[...]["direct_only"]`) and, when set, `tstar_fac`.  Both are part of
+  the spec, so a direct-only part never stands in for a both-phase one.
+  New commands:
+  * `lemma-d --replay` runs the committed `run_lemma_d` and compares the result
+    with the stored record;
+  * `p43-centre` runs P4-3's centre tail and replays the old midpoint record;
+  * `bench` times `analyze_piece` with `tq=True` and `tq=False` and records the
+    phase split.  It is detachable and resumable; results go to
+    `results/theorem_c/bench/`, which `merge` does not read.
 * `merge` checks coverage: the union of the x-intervals of passing pieces must
   contain (−∞, 0] (centre: y-pieces mapped to x = ln y; sonic: x = −ξ); pieces
   with `open` count only for τ ∈ [14, 224].  It writes
@@ -226,7 +251,11 @@ All `ssh`/`scp` below are for Sean to run; this stage did not contact the node.
    two thirds.
    On the Mac: `$PY problems/P4/scripts/s43_parts.py launch --workers 8 --nice 10 --accept-code tc_commutator.py=0c5a8e67ce9f2661475f8833fbbc71957c9d9a1238f9ca02898accf16f042c7f`
    (imported parts are then recognised as valid and skipped).  Wall ≈ 9–17 h,
-   set by the slowest centre pieces (less if the §8 (iii) centre variant works).
+   set by the slowest centre pieces (the §8 (iii) centre variant fails, §11.5).
+   [Update 2026-10-16 evening: tube idx 0–137, band, gap and sonic are running
+   (§11.6); afterwards the node-independent remainder is the centre (30) and
+   tube idx 138–166 (29, in no cloud chunk: A1 starts at idx 167), held back
+   with the rest of idx 138–244 until the node check.]
 8. Merge: `$PY problems/P4/scripts/s43_parts.py merge --accept-code tc_commutator.py=0c5a8e67… --accept-reason "cloud chunks 2026-09-04: executed tc_commutator.py = 14da7d1e minus the two P4_PROGRESS blocks"`.
    The τ > 224 band stays open in `scope` until S4-4.
 
@@ -321,22 +350,39 @@ for the centre pieces, recorded in each part).  One piece takes minutes, and if
 drops from ≥ 25 core-h to minutes.
 Route (a) stays the long-term fallback and a useful float diagnostic.
 
+**Outcomes, 2026-10-16 evening.**
+* (iii) was tried and fails, quickly (§11.5).
+* (i): the direct-only pieces are running (§11.6).
+* (ii): the benchmark is running.  Its logs already show the τ-quadratic
+  bounds taking about 4 s per piece; the direct phase was still running at
+  hand-off (§11.6).
+
 ## 9. Other findings to carry forward
 
 * `tc_commutator._centre_expansion` and `tc_monotone.run_centre` use the
   a3 midpoint without `K_minus_m` (§3).  Fix: build (a, μ) as
   `s43_parts.certified_centre_balls()` does, then re-run Lemma D (62 s, done today
   in the driver) and the P4-3 centre tail (`tc_monotone`, seconds).
+  [Done 2026-10-16 evening, §11.1–§11.3.]
 * `run_lemma_d` raises Z to offset 16 trusting E2, but does not check that the
   returned pmin satisfies pmin + 2 ≥ 16 (it is 14, so the run is sound); add the
-  assertion.
+  assertion.  [Done 2026-10-16 evening: it raises unless pmin + 2 ≥ 16, §11.1.]
 * `test_e2_layer_identity` asserted `val >= 16` on pmin (= 14) and failed; fixed
   to `val + 2 >= 16`, which matches `check_layer_identity`'s contract and the
   note.  It now passes.
 * `run_tube(degrade=True)` recomputes the whole direct phase after a failed
-  τ-quadratic attempt; on the band that doubles the direct cost.
+  τ-quadratic attempt; on the band that doubles the direct cost.  In the
+  `tq=True` call, `analyze_piece` has already run `direct_S_boxes` on every
+  ε-cell with the same arguments as the `tq=False` call.  S4-4 could
+  therefore reuse those results.  A rerun is needed only when the
+  τ-quadratic setup raises before the cell loop (e.g. thU ≥ 1).
 * The tube caches are ≈ 9 MB in all and rebuild in 3 min; they stay out of git and
   are pinned by content hash.
+* Centre τ-quadratic structure (§11.5): on c29 the τ² coefficient K2 carries
+  y² while the τ-linear remainder slack has a y-independent part (0.441).  A
+  τ-quadratic phase that is to start near τ = 14 in the centre needs
+  remainder bounds whose τ-linear part also vanishes like y² (or a
+  y-dependent tstar).  The S4-4 layer engine should check this.
 
 ## 10. Draft ledger text (for Sean; CLAIMS.md not edited)
 
@@ -346,3 +392,226 @@ Route (a) stays the long-term fallback and a useful float diagnostic.
   replay `s43_parts.py lemma-d`).  The midpoint-ball record in tc_energy.json
   reproduces exactly but does not enclose the EC background.
 * P4-9 (commutator strip): no certificate yet; status after the re-run per §6/§7.
+
+Revised drafts, 2026-10-16 evening (supersede the two items above):
+
+* **P4-3**: the status stays CERTIFIED.  Suggested addition to the claim
+  text: "(centre tail on the certified (a*, μ*) balls since 2026-10-16)".
+  * Evidence: `results/theorem_c/tc_monotone.json`, regenerated on the fixed
+    code.  The centre tail t ∈ (0, e^{−8}] is now evaluated on balls that
+    enclose the certified (a*, μ*): a3 midpoint + Krawczyk offset,
+    `p4.validated.ec_centre`.  The previous centre block used the bare
+    midpoint, which does not enclose them.
+  * All six t-factored margins stay positive:
+    * v_rel/t ≥ 0.40433;
+    * (v_rel)'/t ≥ 0.40433;
+    * −ρ̂′/t² ≥ 82.744;
+    * 1/3 − v_rel² ≥ 0.33333;
+    * −t²D ≥ 1.5292;
+    * t²D′ ≥ 3.0584.
+  * None moved by more than 1.2e-7 from the midpoint run.  The sonic and tube
+    (344 steps) blocks are unchanged bit for bit.
+  * Provenance: `results/theorem_c/parts/p43_centre.json`.  It also replays the
+    old midpoint record exactly.
+  * Replay: `cd problems/P4 && PYTHONPATH=src python -m p4.validated.tc_monotone
+    data/cache/tube_full.json`, or `scripts/s43_parts.py p43-centre`.
+* **P4-8**: suggested status "CERTIFIED (unconditional since 2026-10-16:
+  Lemma D closed in S4-3)".
+  * Lemma D (deep tail x ≤ −4.5) is certified with centre balls that enclose
+    the certified (a*, μ*): `results/theorem_c/parts/lemma_d_certified.json`.
+  * It is reproduced exactly through the fixed committed code path:
+    `results/theorem_c/parts/replays/lemma_d_certified.json`.
+    `tc_commutator.run_lemma_d` there uses `ec_centre` and now also checks
+    the E2 condition pmin + 2 ≥ 16.
+  * Result: ok, 1100/1100 subranges; q2 ≥ 1.96184, mB ≥ 3.47524,
+    mC ≥ 15.3483; pole gaps ≥ 0.99952, 0.99999.
+  * Replay: `scripts/s43_parts.py lemma-d --replay`.
+  * The `lemma_d` block in `tc_energy.json` is the old midpoint run.  It
+    reproduces (`parts/lemma_d_midpoint.json`) but does not enclose the EC
+    background; cite `parts/lemma_d_certified.json` instead.
+* **P4-9** (commutator strip): no certificate yet; status after the re-run
+  per §6/§7/§11.
+
+## 11. 2026-10-16 evening: integrity fix, re-runs, centre experiment, launch
+
+### 11.1 Integrity fix (commit `ed4cab14`)
+
+* New module `src/p4/validated/ec_centre.py` with two functions:
+  * `certified_centre_balls()` returns the a3_midpoint.json midpoint plus its
+    Krawczyk offset `K_minus_m`.  This is the driver's construction exactly.
+    At 256, 320 and 384 bits the parsed balls contain the printed decimal
+    balls (endpoint check, also done at run time, widening otherwise).
+  * `certified_centre_expansion(prec, K)` builds the centre series on those
+    balls.
+* `tc_commutator._centre_expansion` (Lemma D, centre region) and
+  `tc_monotone.run_centre` (P4-3 centre tail) now use the new module.
+  * Test `test_centre_expansion_encloses_certified_background`: the series'
+    ŵ = μe^{2a} and n̂ = e^{−a} contain those of modecount's certified balls.
+    Its ŵ is disjoint from the midpoint value.
+* `run_lemma_d` now raises unless the E2 layer minimum satisfies
+  pmin + 2 ≥ 16 (test `test_lemma_d_requires_layer_valuation_16`).
+* New options, defaults unchanged:
+  * `run_tube(tq=False)` and `run_sonic(tq=False)` run the direct phase only.
+  * `analyze_piece`, `centre_piece` and `run_centre` take `tstar_fac`.  With
+    tstar_fac ≤ 1 the τ-quadratic phase covers all τ ≥ b1, and
+    `direct_S_boxes` is not called because its range [b1, tstar] is empty.
+  * `tq=False` with tstar_fac ≤ 1 is refused (test
+    `test_direct_only_needs_a_direct_range`).
+* Driver changes: §5.
+
+### 11.2 Re-runs on the fixed code (commit `02e93bac`)
+
+| item | command | outcome | wall | artifact |
+|---|---|---|---|---|
+| P4-3, all three regions | `cd problems/P4 && PYTHONPATH=src python -m p4.validated.tc_monotone data/cache/tube_full.json` | PASSES.  Centre tail on the certified balls: vrel_pos ≥ 0.40433444061, dvrel ≥ 0.40433436552, neg_drho ≥ 82.743524313, wG_pos ≥ 0.33333331494, neg_Ds ≥ 1.5291792671, dD_pos ≥ 3.0583589280.  Sonic minima and tube (344 steps) minima identical to the stored record; only `tube_info.time` (cache build time) differs | 2.4 s | `results/theorem_c/tc_monotone.json` (regenerated) |
+| P4-3 centre tail, with provenance | `s43_parts.py p43-centre` | as above; the midpoint replay reproduces the old centre block exactly.  Certified − midpoint: neg_drho +1.19e-7, dD_pos −4.3e-11, neg_Ds −2.2e-11, vrel_pos and dvrel +2.8e-12, wG_pos 0 | < 1 s | `parts/p43_centre.json` |
+| Lemma D, fixed code path | `s43_parts.py lemma-d --replay` | identical to `parts/lemma_d_certified.json` in ok, c0, ycut, layer identity (14, True), nsub, failures (0 of 1100) and all five minima: q2 ≥ 1.961836442292799, mB ≥ 3.4752428204250765, mC ≥ 15.348292102988353, poleA ≥ 0.9995211043091139, poleFN ≥ 0.9999925864848808 | 64.7 s | `parts/replays/lemma_d_certified.json` |
+| E1/E2/E3/E5 (tc_commutator.py hash changed) | `s43_parts.py checks` | E1 True; E2 (pmin 14, ok); E3 and E5 all True | ≈ 48 s | `parts/checks.json` (overwritten; valid for the current code) |
+
+### 11.3 P4-3 verdict
+
+CLAIMS row P4-3 still holds.  The defect affected only the centre tail
+t ∈ (0, e^{−8}].  On the certified balls every t-factored margin stays
+positive:
+* the smallest, 1/3 − v_rel² ≥ 0.33333331, is unchanged;
+* no margin moves by more than 1.2e-7.
+
+The sonic and tube blocks never used these balls (the tube's centre extension
+was built on the certified balls), and they reproduce bit for bit.  Draft
+ledger text: §10.
+
+### 11.4 Tests
+
+* `test_tc_commutator.py`, run with P4_SLOW=1 and `test_centre_first_piece`
+  deselected (more than 15 min on the default path; not run): 14 passed,
+  2 failed, 1 skipped (no merged certificate), 314 s.
+  * The 2 failures are the known tightness assertions
+    `test_commutation_value_consistency` and `test_kdiv_roundtrip`: the balls
+    overlap; unchanged since September (§3).
+  * The passes include the three new tests, `test_e2_layer_identity`,
+    `test_lemma_d_rerun` (63 s, fixed code path) and
+    `test_sonic_laurent_piece_full` (138 s, `run_sonic` default path).
+* `test_tc_energy.py`, run with `P4_TUBE_CACHE`: 6 passed, 1 skipped (the
+  P4_SLOW field identity; `tc_energy.py` is unchanged), 12 s.  The passes
+  include `test_monotone_sonic_and_centre` (the fixed `run_centre`).
+
+### 11.5 Centre experiment, §8 (iii) (commit `ad16bbac`)
+
+Setup: `centre/c29` (y ∈ [0.00694, 0.01111], the outermost piece) with
+`tstar_fac = 1`, run through the driver on the committed code.
+
+Result: certified failure after 39 s wall (39 s CPU).
+* The τ-quadratic bound is positive on 10 of the 12 ε-cells: +77.05 on
+  ε ∈ [0, 0.03], falling to +1.22 on [2.4, 3.4].
+* Only ε ∈ [3.4, 6] closes (−1.06, −2.36).
+
+Diagnosis (`scripts/s43_centre_tq_diag.py`, output stored):
+* K2, the τ² coefficient, has y-offset 2.  Its y-scaled hull is −5.9e-4 …
+  −1.6e-2 over the cells.
+* The τ-linear remainder slack R1 has an offset-0 part, 0.441.
+* K0 + R0 ≈ −5.36.
+* So the vertex of K2τ² + R1τ lies at τ ≈ 14 … 374, and its supremum (up to
+  82) exceeds |K0 + R0|.
+
+Consequences:
+* K2 carries y² and the slack does not, so pieces closer to y = 0 should do
+  worse.  This is expected, not run.
+* The committed τ-quadratic phase does not reproduce the 04:18Z September
+  centre pass.
+
+As instructed, no further centre pieces were tried and no committed-path
+centre run was started.  The plan keeps the centre on the committed default
+(TSTAR_FAC = 16, direct boxes on [14, 224]).  Artifacts, in
+`parts/experiments/centre-tstar_fac-1/`: `c29.json` (the part, with its
+timing block) and `c29_tau_quad_diag.json`.
+
+### 11.6 What is running
+
+Launched 2026-10-17T03:38Z (2026-10-16 20:38 PDT) on the Mac, at nice 10.
+Each process is detached: its own session, parent PID 1, SIGHUP ignored, nohup.
+Six processes in all.
+
+**Region workers** (tag `s43-20261016`): PIDs 44147, 44148, 44149, 44150.
+* Logs: `problems/P4/logs/s43/s43-20261016-w0.log` … `-w3.log`.
+* Launch record: `problems/P4/logs/s43/launch-s43-20261016.json`.
+* Selection: `--ids 'tube/full-0??,tube/full-1[0-2]?,tube/full-13[0-7],band/*,gap/*,sonic/*'`,
+  310 pieces:
+
+  | pieces | count | phases |
+  |---|---|---|
+  | tube idx 0–137 without 29–32 | 134 | both phases, degrade |
+  | band 0–17 | 18 | both phases, degrade |
+  | gap 89–106 | 18 | both phases, degrade |
+  | gap 0–88 | 89 | direct only, `tq = False` |
+  | sonic 0–50 | 51 | direct only, `tq = False` |
+
+* Order: estimated cost.  Band and tube come first; the both-phase gap
+  pieces come last.
+* Results go to `problems/P4/results/theorem_c/parts/<region>/<id>.json`.
+* Expected finish: the estimate is 21 core-h.  Band pieces took 103–115 s
+  against an estimate of 108 s.  That gives 5–10 h wall, i.e. about
+  2026-10-17 09:00–14:00Z (02:00–07:00 PDT).
+* At hand-off (2026-10-17T03:49Z):
+  * the band region is complete: band-000 … band-017 are all pass-both,
+    margins −3.65e7 … −2.50e7, 103–115 s wall each, committed;
+    `tube/full-093` and `full-094` are pass-both and tube pieces are running.
+  * The validity check passed on the first parts: spec equals the plan entry,
+    source hashes are current, git head is `ad16bbac`, src is clean.
+  * band-000 recomputed on the fixed code reproduces the morning's margin
+    −36528931.26271176 bit for bit.
+
+**Benchmark** (§8 (ii); tag `bench-20261016`): PIDs 44319 (`tube/full-200`)
+and 44321 (`deep/deep-064`).
+* Each process runs `analyze_piece(tq=True)` and then
+  `analyze_piece(tq=False)` on its piece: `run_tube`'s per-step body at
+  prec 320, no degrade.
+* Wall and CPU are recorded, plus the phase split: `sup_ratio_boxes` +
+  `tau_quad_check` against `direct_S_boxes`, per call.
+* Logs: `problems/P4/logs/s43/bench-20261016-tube__full-200.log` and
+  `…-deep__deep-064.log`.  Launch record: `launch-bench-20261016.json`.
+* Results: `problems/P4/results/theorem_c/bench/tube__full-200__tq.json`,
+  `tube__full-200__direct.json`, `deep__deep-064__tq.json`,
+  `deep__deep-064__direct.json`.  These are not parts; `merge` ignores them.
+* Expected: about a day, finishing 2026-10-17 late to 2026-10-18.  No Mac
+  timing of these pieces exists; September gives ≥ 8 vCPU-h per band-B step
+  and ≥ 3 vCPU-h per deep step.
+* Early log observation (not a result; the JSON will hold the numbers).  On
+  both pieces, after an 83–85 s setup:
+  * `sup_ratio_boxes` (U, then the six families) took 2 + 2 s;
+  * `tau_quad_check` took under 1 s;
+  * then the direct phase started.  It was still running at hand-off.
+
+**Not launched**, per instruction:
+* tube idx 138–244, which includes band A (167–183) and band B (184–244);
+* deep 0–128.
+
+These wait for the cloud-node check (§6).  Tube idx 138–166 is in no cloud
+chunk (A1 starts at idx 167), so it is needed under either branch.  The centre
+(30 pieces, committed path only, ≥ 25 core-h) was not started either.
+
+### 11.7 Checking, stopping, resuming, committing
+
+`PY=.venv/bin/python` (from the repository root).
+
+* Status: `$PY problems/P4/scripts/s43_parts.py status`.  It prints counts per
+  region, the finished bench records and the running bench modes; add `-v`
+  for each piece.  Also:
+  * `tail -f problems/P4/logs/s43/s43-20261016-w*.log problems/P4/logs/s43/bench-20261016-*.log`
+  * `ps -o pid,etime,time,command -p 44147,44148,44149,44150,44319,44321`
+* Stop all: `kill 44147 44148 44149 44150 44319 44321`.
+  * A piece in progress is lost and is recomputed on the next launch.
+  * Lock files of dead processes are reclaimed automatically.
+* Resume: valid results are skipped.
+  * Regions: `$PY problems/P4/scripts/s43_parts.py launch --workers 4 --nice 10 --tag s43-<date> --ids 'tube/full-0??,tube/full-1[0-2]?,tube/full-13[0-7],band/*,gap/*,sonic/*'`
+  * Bench: `$PY problems/P4/scripts/s43_parts.py bench --ids tube/full-200,deep/deep-064 --modes tq,direct --detach --nice 10`.
+    Finished modes are skipped.
+* Do not edit `problems/P4/src` while workers run.  A part records the source
+  hashes read from disk when it is written; a changed file makes the part
+  stale.
+* Commit parts as they land:
+  `git add problems/P4/results/theorem_c/parts problems/P4/results/theorem_c/bench`.
+  `band/band-000.json` from commit `fef526e6` was computed on the pre-fix
+  code; this launch has recomputed it.
+* After the run, `merge` writes `tc_commutator_partial.json`: the centre,
+  tube 138–244 and deep are still missing, and τ > 224 stays open on the
+  direct-only pieces.
