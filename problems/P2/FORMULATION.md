@@ -1,9 +1,10 @@
 # P2 — A certified resonance-free strip for subextremal RNdS (β > 1/2, linear SCC failure for smooth data)
 
-Status: formulation **v0.4** (S2 gate passed; stage S3), 2026-10-17; frozen at v0 (S0,
-2026-10-16), with every later change recorded in the Revision log. Since S1 the
-ledger has rows P2-par, P2-0, P2-2 and P2-K6 (`CLAIMS.md`); every other claim id
-is still a *target*.
+Status: formulation **v0.5** (S3 exit; stage S4), 2026-10-17; frozen at v0 (S0,
+2026-10-16), with every later change recorded in the Revision log. The ledger
+has rows P2-par, P2-0, P2-D1′, P2-1w, P2-2 and P2-K6 (`CLAIMS.md`). S3 proposes
+the row P2-3B and an amendment to P2-K6 (`notes/s3-report.md` §7, from the S3
+review). Every other claim id is still a *target*.
 
 Changes after S1 begins go in the Revision log, never by silent edit (house
 discipline of `problems/P9/b/FORMULATION.md`).
@@ -428,3 +429,28 @@ Sizing and kill criteria are in `s0-gate.md` §7.
     σ = s(l+½)^{1/2}) and window width ∝ the oscillator quantum.
   - Still open for P2-1: uniformity in h, and the sub-barrier and low-frequency
     regimes (S4). P_A has not been probed.
+
+- **v0.5 (2026-10-17, S3 exit; `notes/s3-preregistration.md`, `notes/s3-report.md`).** Part (iii)
+  is implemented as follows; the deviations from §4 were declared in the pre-registration.
+  - **W_l.** It is computed from the phase-factored Jost solutions
+    Z₊ = e^{iω(r*−c₊)}R₊ and Z_c = e^{−iω(r*−c_c)}R_c (`src/p2/zsol.py`), via the exact identity
+    W_l = [Δ(Z₊Z_c′ − Z₊′Z_c) + 2iωr²Z₊Z_c]/(r₊r_c), which is checked in sympy. The S1 code,
+    which evaluates the free phase, gives useless box bounds at high |ω|.
+  - **Counting.** Cauchy-interpolation discs (S1 `winding.py`) replace §4's ω-Taylor-model tiles.
+    Only the right half of ∂R′_l is computed, by the conjugation symmetry. The box is
+    R′_l = [−a_l, a_l] × [−b, e], with dyadic b ≥ (½+δ)κ₋ and 0 < e ≤ η.
+  - **Certificates.** `certificates/part3/winding_{X}_l{l}.json`.
+    - Each certificate stores every disc (c, ρ). The pole clearance √2ρ < dist(c, E₊ ∪ E_c) is
+      enforced at compute time, and can be re-checked from (c, ρ); the S3 review's
+      `check_certs.py` does so. There is no separate `analyticity_*.json`.
+    - The l = 0 Krawczyk enclosure is `certificates/part3/krawczyk_PB_l0.json`.
+  - **S3 result at P_B, l = 0–19.** The counts on R′_l are CERTIFIED: 1 at l = 0 (the simple zero
+    at 0) and 0 for 1 ≤ l ≤ 19. They use the analyticity of W_l off E₊ ∪ E_c (§1.2). The
+    independent review (`docs/review-2026-10-17-p2-s3-adversarial.md`) found them proven as stated.
+  - **The strip corollary is at P2-0's level.** With P2-0 (Im ω > 0) and P2-2 (|Re ω| ≥ a_l),
+    S_δ contains no QNM of degree l ≤ 19 other than ω = 0. Its Im ω > 0 part, including the band
+    0 < Im ω ≤ e with |Re ω| ≥ a_l, rests on P2-0's written argument.
+  - **Open.** P2-3 for 20 ≤ l < l₀, which waits for S4; P_A; and the two-sided β (P2-6).
+  - The wording of this entry was corrected after the S3 review (2026-10-17): the corollary's
+    level, the reference for analyticity, ∂R′_l, the strip depth written as (½+δ)κ₋ (β is D3's
+    gap), and the description of the pole checks.
