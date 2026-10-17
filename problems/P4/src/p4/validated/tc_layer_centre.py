@@ -1,0 +1,721 @@
+"""Theorem C, S4-6: the centre variant of the layer engine.
+
+The centre region is y = e^x in (0, e^{-4.5}], 30 pieces in y (the plan's
+centre/c00..c29; c00 = [0, y0] closes at y = 0).  The commuted energy
+condition is the one of tc_layer (notes/s4-commutator.md section 3):
+
+    S = Re B1 - (tau/c) Im B1 - (f' + rho f)/2 + nu^2/4 < 0,
+
+with the same pairs (tc_commutator.build_pairs over tc_tm.centre_components,
+built from the certified (a*, mu*) balls of ec_centre).  Near the centre S
+scales in the layer variable s = y tau, not in xi = -x:
+
+    S = G(s, eps) + O(y),   G(0+, eps) = -6,   G(s, eps) ~ k2(eps) s^2 (s large),
+
+k2(0) = -19.0, k2(1) = -144.5, k2(6) = -772 (float data, notes/s4-6-centre.md).
+So the quantity certified here is
+
+    Sigma_c := S / (1 + s^2),          s = y tau,
+
+which stays O(1) and bounded away from 0 as y -> 0 and as tau -> infinity.
+
+Pivot forms.  Every kappa-polynomial P = sum_j y^{o_j} TM_j(y) kappa^j of the
+layer data is the tc_layer.PForm in the Laurent variable y, with
+z = y kappa and w = 1/kappa:
+
+    P = y^m z^p [ sum_{j>=p} TM_j y^{e_j} z^{j-p} + sum_{j<p} TM_j y^{g_j} w^{p-j} ].
+
+tc_layer.LayerData builds the blocks (nV, dT, nVp, dT1, nY, kdB, dB, dB1, dB2,
+nB, nB1, nB2, tt, tt', u2) and checks that every denominator has its pivot
+and its top on the layer line; it is used unchanged (laurent=True with the
+TM variable ell = y).
+
+The exact centre layer identity.  build_pairs computes nB's kappa^1..kappa^7
+coefficients at Laurent offset 8 with constant Taylor coefficients that are
+balls around 0 (radius ~1e2-1e7 from the width of the certified (a*, mu*)
+balls, against ~1e14 for the true leading terms).  check_nb_identity proves
+in exact arithmetic that their true offset is 10: in the centre grading of
+E2 (A -> 1, N ~ y^-1, W ~ y^2, V ~ y) the layer 8 of U6 = -nB vanishes
+identically for kappa^1..kappa^7, U6 has no odd-parity terms, and the
+computed y^9 coefficients are exact zeros.  raise_nb then re-expresses them
+(and those of nB', nB'', which are y d/dy of slot 0) at offset 10
+(TM.drop_lead(2): exact-coefficient semantics up to ve).  On the raised data
+every pivot form is a pure w-form (pivot = top, no z-dependence), nB's
+pivot coefficient is TM_9 (9.9e13 at y = 0), and the closing piece y -> 0
+evaluates cleanly.
+
+Graded evaluation.  The sonic engine (tc_layer.sigma_box) normalizes with
+lam = ell, and every block's ell-power cancels exactly.  At the centre no
+single power of y does that: the blocks V, Lh, ... are O(1), while tt, tt'
+and u2 are O(y^2) and the t-linear terms of S are O(1) only through tau y = s.
+So each quantity is carried as a polynomial in one grading variable g with
+exactly tracked integer exponents and ball coefficients (class GV), and the
+y-powers cancel by exponent bookkeeping, not by interval arithmetic:
+
+  regime L (s > 0, any y including y -> 0):  g = y,
+      it = 1/tau = g / s,  z = i s + g eps,  w = 1/kappa = g zeta,
+      zeta = 1/z = (g eps - i s)/(s^2 + y^2 eps^2),  lam = g^{-1};
+      the tc_layer identity S lam^2 it^2 = T(lam) gives Sigma = S/s^2.
+  regime S (bounded s, including s -> 0):  g = r = 1/tau,  y = g s,
+      it = g,  z = i s + g s eps,  w = g (g eps - i)/(1 + r^2 eps^2),  lam = g^{-1};
+      then Sigma = S.
+
+All are exact identities (z w = y, tau y = s); g -> 0 is the corner y -> 0
+(L) or tau -> infinity at bounded s (S).  The exponent-0 coefficients of the
+pivot forms are real (only even powers of z appear without a y factor, and
+z = i s at g = 0), so the negative exponents created by lam cancel exactly:
+GV.value() refuses a box if any negative-exponent coefficient of the final
+Sigma is not exactly zero.  Exponents above KMAX are folded into KMAX + 1
+with the g-hull (sum_{a > K} g^a c_a = g^{K+1} sum g^{a-K-1} c_a, contained
+in g^{K+1} * sum gh^{a-K-1} c_a).  Division by a pivot-form denominator
+Q = q0 (1 + u), u = O(g): the Neumann series to order KMAX + 1 plus the exact
+remainder (-u)^{KMAX+2}/(1 + u), bounded with the hull of u; a box whose q0
+or 1 + u hull contains 0 is rejected (so dT, dB, nB != 0 on every certified
+box with y > 0).  Finally Sigma_c = Sigma * s^2/(1 + s^2) (L) or
+Sigma/(1 + s^2) (S).  sigma_box_centre evaluates every regime that applies
+to the box and intersects the enclosures.
+
+The cover is tc_layer.certify_piece / run_layer_piece, unchanged, with
+sigma_fn = sigma_box_centre and boxes (y-strip) x (eps-cell) x (s = y tau) x
+(tau): tc_layer.box_geometry with laurent=True reads ell as y and xi(ell) =
+ell, so its s is y tau.
+
+A centred (mean-value) form of this sigma is in tc_layer_centre_mv; the
+production runs use this natural enclosure (notes/s4-6-centre.md).
+"""
+from __future__ import annotations
+
+from flint import acb, arb
+
+from . import tc_layer as tl
+from .arbseries import precision
+
+KMAX = 4              # exponents tracked exactly up to KMAX; higher folded into KMAX + 1
+S_SPLIT = 0.5         # regime S below, regime L above (in s = y tau)
+Z_LARGE = 8.0         # regime L: small-z forms for s <= Z_LARGE, large-z (zeta) forms above
+INF = float("inf")
+
+
+# =====================================================================
+# graded values
+# =====================================================================
+class GV:
+    """sum_a g^a c[a]: integer exponents a (possibly negative), complex ball
+    coefficients, g a real variable in the hull gh (gh >= 0).  Exponents
+    above KMAX are folded into KMAX + 1 (exactly, by containment)."""
+    __slots__ = ("c", "gh")
+
+    def __init__(self, c, gh):
+        self.c, self.gh = c, gh
+
+    @classmethod
+    def const(cls, v, gh):
+        return cls({0: acb(v)}, gh)
+
+    @classmethod
+    def mono(cls, e, v, gh):
+        return cls({e: acb(v)}, gh)
+
+    def _fold(self, e, v, out):
+        if e > KMAX + 1:
+            v = v * self.gh ** (e - KMAX - 1)
+            e = KMAX + 1
+        out[e] = out[e] + v if e in out else v
+
+    def __add__(self, o):
+        if not isinstance(o, GV):
+            o = GV.const(o, self.gh)
+        out = dict(self.c)
+        for e, v in o.c.items():
+            out[e] = out[e] + v if e in out else v
+        return GV(out, self.gh)
+
+    __radd__ = __add__
+
+    def __neg__(self):
+        return GV({e: -v for e, v in self.c.items()}, self.gh)
+
+    def __sub__(self, o):
+        return self + (-o)
+
+    def __rsub__(self, o):
+        return (-self) + o
+
+    def __mul__(self, o):
+        if not isinstance(o, GV):
+            v = acb(o)
+            return GV({e: c * v for e, c in self.c.items()}, self.gh)
+        out = {}
+        for ea, ca in self.c.items():
+            for eb, cb in o.c.items():
+                self._fold(ea + eb, ca * cb, out)
+        return GV(out, self.gh)
+
+    __rmul__ = __mul__
+
+    def __truediv__(self, o):
+        if isinstance(o, GV):
+            return self * o.inv()
+        v = acb(1) / acb(o)
+        return self * v
+
+    def __pow__(self, n):
+        r = GV.const(1, self.gh)
+        for _ in range(n):
+            r = r * self
+        return r
+
+    def shift(self, k):
+        """g^k * self (exact)."""
+        out = {}
+        for e, v in self.c.items():
+            self._fold(e + k, v, out)
+        return GV(out, self.gh)
+
+    @property
+    def real(self):
+        return GV({e: acb(v.real) for e, v in self.c.items()}, self.gh)
+
+    @property
+    def imag(self):
+        return GV({e: acb(v.imag) for e, v in self.c.items()}, self.gh)
+
+    def min_exp(self):
+        nz = [e for e, v in self.c.items() if not v.is_zero()]
+        return min(nz) if nz else None
+
+    def value(self, allow_negative=False):
+        """Ball containing sum_a g^a c[a] for every g in gh.  Negative
+        exponents must carry exactly-zero coefficients (unless
+        allow_negative, which needs gh bounded away from 0)."""
+        acc = acb(0)
+        for e, v in self.c.items():
+            if e < 0:
+                if v.is_zero():
+                    continue
+                if not allow_negative:
+                    raise ArithmeticError("graded value: nonzero coefficient at g^%d" % e)
+                if not (self.gh > 0):
+                    raise ArithmeticError("graded value: g^%d with g-hull touching 0" % e)
+            acc = acc + (v * self.gh ** e if e else v)
+        return acc
+
+    def inv(self):
+        """1/self for self = q0 + O(g), q0 = c[0] != 0, no negative exponents:
+        (1/q0) [sum_{k <= K+1} (-u)^k + (-u)^{K+2}/(1 + u)], u = self/q0 - 1."""
+        if any(e < 0 and not v.is_zero() for e, v in self.c.items()):
+            raise ArithmeticError("graded inverse: negative exponent")
+        q0 = self.c.get(0)
+        if q0 is None or q0.contains(0):
+            raise ArithmeticError("graded inverse: leading coefficient contains 0")
+        iq = acb(1) / q0
+        u = GV({e: v * iq for e, v in self.c.items() if e > 0}, self.gh)
+        if not u.c:
+            return GV.const(iq, self.gh)
+        uv = u.value()
+        one_u = acb(1) + uv
+        if one_u.contains(0):
+            raise ArithmeticError("graded inverse: 1 + u contains 0")
+        acc = GV.const(1, self.gh)
+        term = GV.const(1, self.gh)
+        mu = -u
+        for _ in range(KMAX + 1):
+            term = term * mu
+            acc = acc + term
+        rem = (term * mu) * (acb(1) / one_u)
+        return (acc + rem) * iq
+
+
+# =====================================================================
+# layer data at the centre
+# =====================================================================
+class CentreLayerData(tl.LayerData):
+    """tc_layer.LayerData of the centre pairs (Laurent variable y = e^x, TM
+    domain [0, hi]).  The construction and its checks are tc_layer's
+    (laurent=True); the derivative raise of tc_layer for (tt dT_k)' does not
+    fire on the centre pairs (checked: the computed offsets are already at
+    the target), and it would be sound here too, since d/dx = y d/dy keeps
+    Laurent offsets."""
+
+    centre = True
+    # (numerator, denominator) pairs evaluated as c + (N - c D)/D: at the
+    # centre N ~ c D to leading order (log-derivatives of y-homogeneous
+    # leading parts: nB ~ y^10, dB ~ y^8, dT ~ y^7, and V = nV/dT -> 3), so
+    # the difference N - c D, formed coefficientwise on the Taylor models
+    # before any hull is taken, is small and carries the dependence on
+    # (y, s) that the separate hulls of N and D would not cancel.
+    CENTRED = (("nV", "dT"), ("nVp", "dT"), ("dT1", "dT"), ("dB1", "dB"),
+               ("dB2", "dB"), ("nB1", "nB"), ("nB2", "nB"))
+
+    def __init__(self, pr, label=""):
+        super().__init__(pr, True, label=label)
+        from .tc_tm import LC
+        self.centring = {}
+        for nn, dn in self.CENTRED:
+            N, D = self.forms[nn], self.forms[dn]
+            c = centring_constant(N, D)
+            kp = []
+            for j in range(max(N.d, D.d) + 1):
+                a = LC(N.tm[j], N.o[j]) if j in N.tm else None
+                b = LC(D.tm[j], D.o[j]) * arb(c) if j in D.tm else None
+                if a is None and b is None:
+                    kp.append(tl._lc_zero_like(LC(D.tm[D.d], 0)))
+                elif b is None:
+                    kp.append(a)
+                elif a is None:
+                    kp.append(-b)
+                else:
+                    kp.append(a - b)
+            self.forms["C_%s_%s" % (nn, dn)] = tl.PForm(kp, "C_%s_%s" % (nn, dn))
+            self.centring[(nn, dn)] = c
+
+
+def centring_constant(N, D):
+    """A fixed exact constant c ~ N/D at the centre: the ratio of the top
+    coefficients' constant terms, rounded to an integer when within 1e-6 of
+    one, else to 2^-20.  Any constant gives an exact identity; this one makes
+    N - c D small."""
+    a = float(N.tm[N.d].c[0].mid())
+    b = float(D.tm[D.d].c[0].mid())
+    if N.d != D.d or b == 0.0:
+        return 0
+    r = a / b
+    if abs(r - round(r)) < 1e-6 * max(1.0, abs(r)):
+        return int(round(r))
+    return round(r * 2 ** 20) / 2 ** 20
+
+
+# =====================================================================
+# the exact centre layer identity for nB (the closing piece)
+# =====================================================================
+NB_RAISE = 2                 # nB's kappa^1..kappa^7 coefficients: true offset 10, computed 8
+NB_RAISE_KAPPA = range(1, 8)
+
+
+def centre_nb_layers(at):
+    """Exact (fmpq) centre layers of U6 = -nB and of denU = dB, from the
+    compiled atoms of tc_energy.Atoms (the polynomials build_pairs combines:
+    U6 = Bcr UN3r - Acr EBc D2r, UN3r = EAc D2r + SDr (Bcr Aer - Acr Ber),
+    EAc = 2 dDp Acr + Dp dAcr, EBc = 2 dDp Bcr + Dp dBcr; denU = Dp^3 SDr
+    D2r^2 Bcr).  Centre grading of a monomial A^a N^b W^c V^e kappa^j:
+    layer p = -b + 2c + e (A = 1 + O(y^2), N = n/y, W = y^2 w, V = y v with
+    n, w, v analytic), parity of b + e.  Returns {name: {j: dict(layers,
+    nonzero, odd)}} with the layer polynomials summed at A = 1.
+    Pure exact arithmetic (no balls); about 10 s."""
+    from flint import fmpq_mpoly_ctx
+    mp = at.mp
+    Dp = mp["Dp"]
+    EAc = 2 * mp["dDp"] * mp["Acr"] + Dp * mp["dAcr"]
+    EBc = 2 * mp["dDp"] * mp["Bcr"] + Dp * mp["dBcr"]
+    UN3r = EAc * mp["D2r"] + mp["SDr"] * (mp["Bcr"] * mp["Aer"] - mp["Acr"] * mp["Ber"])
+    U6 = mp["Bcr"] * UN3r - mp["Acr"] * EBc * mp["D2r"]
+    denU = Dp ** 3 * mp["SDr"] * mp["D2r"] ** 2 * mp["Bcr"]
+    ctx3 = fmpq_mpoly_ctx.get(("n", "w", "v"))
+    names = U6.context().names()
+    iA, iN, iW, iV, ik = (names.index(v) for v in ("A", "N", "W", "V", "k"))
+    out = {}
+    for nm, P in (("U6", U6), ("denU", denU)):
+        other = [i for i in range(len(names)) if i not in (iA, iN, iW, iV, ik)]
+        lay, odd = {}, {}
+        for e, cf in P.terms():
+            if any(int(e[i]) for i in other):
+                raise ArithmeticError("centre layers: unexpected variable in %s" % nm)
+            eN, eW, eV, ek = int(e[iN]), int(e[iW]), int(e[iV]), int(e[ik])
+            key = (ek, -eN + 2 * eW + eV)
+            lay.setdefault(key, ctx3.constant(0))
+            lay[key] += ctx3.from_dict({(eN, eW, eV): cf})
+            if (eN + eV) % 2:
+                odd[ek] = odd.get(ek, 0) + 1
+        res = {}
+        for j in sorted(set(k for k, _ in lay)):
+            ps = sorted(p for k, p in lay if k == j)
+            res[j] = dict(layers=ps, nonzero=[p for p in ps if not lay[(j, p)].is_zero()],
+                          odd=odd.get(j, 0))
+        out[nm] = res
+    return out
+
+
+def check_nb_identity(at):
+    """The identity behind the offset raise of nB at the centre: for
+    kappa^1..kappa^7, U6's lowest centre layer is 8 and its layer-8
+    polynomial vanishes identically at A = 1, and U6 has no odd-parity
+    terms.  Then for every centre background (A = 1 + y^2 A^, N = n/y,
+    W = y^2 w, V = y v with n, w, v even), the y^8 and y^9 Taylor
+    coefficients of nB's kappa^j coefficient vanish: its true offset is 10.
+    Returns dict(ok, ...).  Cached on the Atoms object."""
+    cached = getattr(at, "_centre_nb_identity", None)
+    if cached is not None:
+        return cached
+    L = centre_nb_layers(at)
+    rows = {}
+    ok = True
+    for j, r in L["U6"].items():
+        low = r["layers"][0]
+        first = r["nonzero"][0] if r["nonzero"] else None
+        rows[j] = dict(lowest_layer=low, lowest_nonzero_layer=first, odd_terms=r["odd"])
+        if r["odd"]:
+            ok = False
+        if j in NB_RAISE_KAPPA:
+            ok = ok and low == 8 and first == 8 + NB_RAISE
+        else:
+            ok = ok and low >= 8 + NB_RAISE
+    res = dict(ok=bool(ok), raise_by=NB_RAISE, kappa=list(NB_RAISE_KAPPA), U6=rows,
+               denU={j: dict(lowest_layer=r["layers"][0],
+                             lowest_nonzero_layer=r["nonzero"][0] if r["nonzero"] else None,
+                             odd_terms=r["odd"]) for j, r in L["denU"].items()},
+               statement=("U6 = -nB: for kappa^1..kappa^7 the lowest centre layer is 8 and "
+                          "it vanishes identically at A = 1 (layer 8 is zero as a polynomial "
+                          "in n, w, v), the lowest nonzero layer is 10; kappa^0, kappa^8, "
+                          "kappa^9 start at 10; no odd-parity terms (so no odd layers)"))
+    at._centre_nb_identity = res
+    return res
+
+
+def raise_nb(pr):
+    """Pairs with nB's kappa^1..kappa^7 coefficients raised from offset 8
+    to 10, in all three jet slots: exact by check_nb_identity (the true y^8
+    and y^9 Taylor coefficients vanish; the x-derivative slots are
+    y d/dy of slot 0 and keep offsets).  lc_raise -> TM.drop_lead checks that
+    the dropped coefficients contain 0 and lie in the exact-coefficient range
+    (ve)."""
+    from .tc_tm import lc_raise
+    nb = []
+    for j, jet in enumerate(pr["nB"]):
+        if j in NB_RAISE_KAPPA:
+            new = []
+            for x in jet:
+                t = x.trim()
+                if t.off == 8 + NB_RAISE:
+                    new.append(t)
+                elif t.off == 8:
+                    new.append(lc_raise(t, NB_RAISE))
+                else:
+                    raise ArithmeticError("raise_nb: kappa^%d offset %d" % (j, t.off))
+            nb.append(new)
+        else:
+            nb.append(jet)
+    out = dict(pr)
+    out["nB"] = nb
+    return out
+
+
+def centre_layer_data(at, ce, hi, prec=320, label=None, raised=True):
+    """CentreLayerData of a centre piece [lo, hi]: centre_components(ce, hi)
+    on y in [0, hi], built exactly as tc_commutator.centre_piece builds its
+    pairs (AtomKP with sd_shift = 0); raised=True applies raise_nb after
+    check_nb_identity (refuses if the identity fails)."""
+    from . import tc_commutator as tc
+    from .tc_tm import AtomKP, centre_components
+    with precision(prec):
+        comps, _ = centre_components(ce, hi)
+        ak = AtomKP(at, comps, sd_shift=0)
+        pr = tc.build_pairs(ak)
+        if raised:
+            if not check_nb_identity(at)["ok"]:
+                raise ArithmeticError("centre nB layer identity failed")
+            pr = raise_nb(pr)
+        ld = CentreLayerData(pr, label=label or "centre[0,%g]" % hi)
+        ld.raised = bool(raised)
+        return ld
+
+
+# =====================================================================
+# the graded box variables
+# =====================================================================
+class Grade:
+    """The graded variables of one box: g-hull, Y (y as a GV), Z (z = y kappa),
+    W (w = 1/kappa), ZETA (1/z, regime L only), IT (1/tau), LAM (lambda) and
+    the final normalization factor (a real ball) taking Sigma to
+    Sigma_c = S/(1 + s^2)."""
+
+    def __init__(self, regime, L, E, sb, tb):
+        self.regime = regime
+        e = E
+        if regime == "L":
+            ylo, yhi = L
+            gh = tl.iv(ylo, yhi)
+            sl, sh = sb
+            if not sl > 0:
+                raise ArithmeticError("regime L needs s > 0")
+            # sigma = 1/s on [1/sh, 1/sl] (sh may be inf)
+            isg = (arb(0) if sh == INF else arb(1) / arb(sh)).union(arb(1) / arb(sl))
+            self.gh = gh
+            one = GV.const(1, gh)
+            self.Y = GV.mono(1, 1, gh)
+            self.IT = GV.mono(1, isg, gh)
+            D = (arb(1) + (gh * e * isg) ** 2)          # (s^2 + y^2 eps^2)/s^2, real
+            # zeta = 1/z = (y eps - i s)/(s^2 + y^2 eps^2) = sigma (-i + y eps sigma)/D
+            self.ZETA = GV({0: acb(0, -isg / D), 1: acb(e * isg * isg / D)}, gh)
+            self.W = self.ZETA.shift(1)                 # w = y zeta
+            if sh <= Z_LARGE:
+                sbox = tl.iv(sl, sh)
+                self.Z = GV({0: acb(0, sbox), 1: acb(e)}, gh)
+            else:
+                self.Z = None
+            self.LAM = GV.mono(-1, 1, gh)
+            self.norm = arb(1) / (arb(1) + isg * isg)   # s^2/(1 + s^2)
+            self.one = one
+            self.sbox = None if sh == INF else tl.iv(sl, sh)
+        elif regime == "S":
+            tlo, thi = tb
+            rg = (arb(0) if thi == INF else arb(1) / arb(thi)).union(arb(1) / arb(tlo))
+            gh = rg
+            sl, sh = sb
+            if sh == INF:
+                raise ArithmeticError("regime S needs bounded s")
+            sbox = tl.iv(sl, sh)
+            self.gh = gh
+            self.one = GV.const(1, gh)
+            self.Y = GV.mono(1, sbox, gh)                # y = r s
+            self.IT = GV.mono(1, 1, gh)                  # 1/tau = r
+            Dr = arb(1) + (rg * e) ** 2
+            # w = 1/kappa = r/(i + r eps) = r (r eps - i)/(1 + r^2 eps^2)
+            self.W = GV({1: acb(0, -arb(1) / Dr), 2: acb(e / Dr)}, gh)
+            self.Z = GV({0: acb(0, sbox), 1: acb(sbox * e)}, gh)
+            self.ZETA = None
+            self.LAM = GV.mono(-1, 1, gh)
+            self.norm = arb(1) / (arb(1) + sbox * sbox)  # 1/(1 + s^2)
+            self.sbox = sbox
+        else:
+            raise ValueError(regime)
+        self.E = E
+
+    def ypow(self, e):
+        if e == 0:
+            return self.one
+        if e > 0:
+            return self.Y ** e
+        if self.regime == "L":
+            return GV.mono(e, 1, self.gh)
+        # regime S: y^e = g^e s^e, e < 0
+        if not (self.sbox > 0):
+            raise ArithmeticError("negative y-power at s -> 0 (regime S)")
+        return GV.mono(e, self.sbox ** e, self.gh)
+
+
+def _form_small(F, L, gd, cache):
+    """Q = P/(y^m z^p) as a GV (small-z form)."""
+    key = ("s", F.name)
+    if key in cache:
+        return cache[key]
+    acc = None
+    for j in F.idx:
+        h = acb(F.tm[j].eval(L[0], L[1]))
+        if j >= F.p:
+            t = gd.ypow(F.e[j]) * h
+            if j > F.p:
+                if gd.Z is None:
+                    raise ArithmeticError("small form needs bounded z")
+                t = t * gd.Z ** (j - F.p)
+        else:
+            t = gd.ypow(F.g[j]) * h * gd.W ** (F.p - j)
+        acc = t if acc is None else acc + t
+    cache[key] = acc
+    return acc
+
+
+def _form_large(F, L, gd, cache):
+    """Q / z^{d-p} = P/(y^m z^d) as a GV (large-z form, zeta = 1/z)."""
+    key = ("l", F.name)
+    if key in cache:
+        return cache[key]
+    if gd.ZETA is None:
+        raise ArithmeticError("large form needs zeta")
+    acc = None
+    for j in F.idx:
+        h = acb(F.tm[j].eval(L[0], L[1]))
+        if j >= F.p:
+            t = gd.ypow(F.e[j]) * h
+            if j < F.d:
+                t = t * gd.ZETA ** (F.d - j)
+        else:
+            t = gd.ypow(F.g[j]) * h * gd.W ** (F.p - j)
+            if F.d > F.p:
+                t = t * gd.ZETA ** (F.d - F.p)
+        acc = t if acc is None else acc + t
+    cache[key] = acc
+    return acc
+
+
+def ratio_gv(N, D, k, L, gd, use_large, cache):
+    """lam^k N/D as a GV:  N/D = y^{mN-mD} z^{pN-pD} QN/QD (small form) or
+    y^{mN-mD} z^{dN-dD} QN^L/QD^L (large form); a negative z-power is
+    rewritten exactly as y^{-1} w per power (z w = y)."""
+    if use_large:
+        q = _form_large(N, L, gd, cache) / _form_large(D, L, gd, cache)
+        zp = N.d - D.d
+        if zp > 0:
+            raise ArithmeticError("positive z-power in a large-form ratio %s/%s" % (N.name, D.name))
+        if zp < 0:
+            q = q * gd.ZETA ** (-zp)
+        ye = N.m - D.m
+    else:
+        q = _form_small(N, L, gd, cache) / _form_small(D, L, gd, cache)
+        zp = N.p - D.p
+        ye = N.m - D.m
+        if zp < 0:
+            q = q * gd.W ** (-zp)
+            ye += zp
+        elif zp > 0:
+            if gd.Z is None:
+                raise ArithmeticError("z-power needs bounded z")
+            q = q * gd.Z ** zp
+    return q * gd.ypow(ye) * (gd.LAM ** k if k else gd.one)
+
+
+def _real_gv(lc, k, L, gd):
+    """lam^k * LC (value = y^off tm(y)) as a GV."""
+    h = acb(lc.tm.eval(L[0], L[1]))
+    return gd.ypow(lc.off) * h * (gd.LAM ** k if k else gd.one)
+
+
+def regime_of(sb):
+    sl, sh = sb
+    if sl >= S_SPLIT:
+        return "L"
+    if sh <= S_SPLIT or sl <= 0:
+        if sh == INF:
+            raise ArithmeticError("s-range [0, inf]: split s")
+        return "S"
+    return "L"
+
+
+def sigma_graded(ld, box, geo=None, regime=None, terms=False):
+    """The graded Sigma (GV) of the box and its Grade; Sigma = S lam^2 it^2
+    (S/s^2 in regime L, S in regime S)."""
+    g = tl.box_geometry(ld, box) if geo is None else geo
+    if g is None:
+        return None, None
+    L, E = g["L"], g["E"]
+    sb, tb = g["s"], g["tau"]
+    rg = regime or regime_of(sb)
+    gd = Grade(rg, L, E, sb, tb)
+    use_large = rg == "L"
+    F = ld.forms
+    cache = {}
+    cent = getattr(ld, "centring", {})
+
+    def R(n, d, k):
+        if (n, d) in cent:
+            c = cent[(n, d)]
+            r = ratio_gv(F["C_%s_%s" % (n, d)], F[d], k, L, gd, use_large, cache)
+            if c:                         # N/D = c + (N - c D)/D, exactly
+                r = r + (gd.LAM ** k if k else gd.one) * arb(c)
+            return r
+        return ratio_gv(F[n], F[d], k, L, gd, use_large, cache)
+    c = tl.cval()
+    t = _real_gv(ld.tt, 1, L, gd)
+    tp = _real_gv(ld.ttp, 2, L, gd)
+    u2h = _real_gv(ld.u2, 1, L, gd)
+    lam = gd.LAM
+    it = gd.IT
+    Eg = GV.const(E, gd.gh)
+    V = R("nV", "dT", 1)
+    Y = R("nY", "kdB", 2)
+    Vp = R("nVp", "dT", 2) - V * R("dT1", "dT", 1)
+    dBp, dBpp = R("dB1", "dB", 1), R("dB2", "dB", 2)
+    nBp, nBpp = R("nB1", "nB", 1), R("nB2", "nB", 2)
+    Lh = nBp - dBp
+    Lp = (nBpp - nBp * nBp) - (dBpp - dBp * dBp)
+    W, Wp = V - Lh, Vp - Lp
+    G = Y + t * Lh - tp
+    H = Vp - V * Lh
+    nu, nup = W.imag, Wp.imag
+    rho = W.real - (Eg + c) * t
+    cf = c * it * it + (arb(1) / c)
+    T = dict(reB1=u2h * lam * (Eg * Eg * it * it - 1) + Eg * it * it * G.real
+             - it * G.imag + it * it * H.real,
+             imB1=-(2 * Eg * u2h * lam + G.real + Eg * it * G.imag + it * H.imag) * (arb(1) / c),
+             fp=-cf * tp * arb(0.5) + (it * (arb(1) / c)) * nup * arb(0.5),
+             rhof=-rho * (cf * t - (it * (arb(1) / c)) * nu) * arb(0.5),
+             nu2=nu * nu * it * it * arb(0.25))
+    if terms:
+        return T, gd
+    tot = T["reB1"] + T["imB1"] + T["fp"] + T["rhof"] + T["nu2"]
+    return tot, gd
+
+
+def _sigma_c(ld, box, g, regime):
+    tot, gd = sigma_graded(ld, box, g, regime=regime)
+    v = tot.value()
+    if not v.imag.contains(0):
+        raise ArithmeticError("Sigma not real")
+    return v.real * gd.norm
+
+
+def regimes_of(sb):
+    """The regimes that apply to an s-range: L needs s > 0, S bounded s."""
+    sl, sh = sb
+    out = []
+    if sl > 0:
+        out.append("L")
+    if sh < INF:
+        out.append("S")
+    if not out:
+        raise ArithmeticError("s-range [0, inf]: split s")
+    return out
+
+
+def sigma_box_centre(ld, box, geo=None):
+    """Ball enclosing Sigma_c = S/(1 + (y tau)^2) over the box (or None if
+    empty): the intersection of the graded enclosures of every regime that
+    applies (each is a rigorous enclosure of the same function).  Raises
+    ArithmeticError if no regime gives an enclosure (a denominator hull
+    containing 0, or an inexact graded cancellation).  Plugs into
+    tc_layer.certify_piece / run_layer_piece as sigma_fn."""
+    g = tl.box_geometry(ld, box) if geo is None else geo
+    if g is None:
+        return None
+    out, err = None, None
+    for rg in regimes_of(g["s"]):
+        try:
+            v = _sigma_c(ld, box, g, rg)
+        except (ArithmeticError, ZeroDivisionError, ValueError) as ex:
+            err = ex
+            continue
+        if out is None:
+            out = v
+        else:
+            if not out.overlaps(v):
+                raise ArithmeticError("disjoint regime enclosures (a bug)")
+            out = _intersect(out, v)
+    if out is None:
+        raise err
+    return out
+
+
+def _intersect(a, b):
+    lo = max(a.lower(), b.lower())
+    hi = min(a.upper(), b.upper())
+    return arb(lo).union(arb(hi))
+
+
+# =====================================================================
+# point evaluation (the float design check; not a certificate)
+# =====================================================================
+def point_pairs_centre(at, ce, y, prec=320):
+    """build_pairs at the single point y (constant Taylor models), from the
+    certified centre series; the component LCs carry their Laurent offsets."""
+    from . import tc_commutator as tc
+    from .tc_tm import LC, TM, AtomKP, centre_components
+    with precision(prec):
+        comps, _ = centre_components(ce, y)
+        vals = [cp.tm.eval(y, y) * arb(y) ** cp.off for cp in comps]
+        cc = tuple(LC(TM.const(v, y), 0) for v in vals)
+        ak = AtomKP(at, cc, sd_shift=0)
+        return tc.build_pairs(ak)
+
+
+def point_sigma_direct(pr, y, eps, tau, prec=320):
+    """Sigma_c = S/(1 + (y tau)^2) at a point from the direct chain
+    (tc_layer.point_S_direct; independent of the pivot-form algebra)."""
+    S, _ = tl.point_S_direct(pr, eps, tau, prec)
+    with precision(prec):
+        s = arb(y) * arb(tau)
+        return S / (1 + s * s), S
+
+
+def point_box(y, eps, tau):
+    """A degenerate box at (y, eps, tau) for sigma_box_centre."""
+    s = y * tau
+    return (y, y, eps, eps, s * (1 - 1e-15), s * (1 + 1e-15), tau, tau)

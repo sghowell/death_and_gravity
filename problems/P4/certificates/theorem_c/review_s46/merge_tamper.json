@@ -1,0 +1,2102 @@
+{
+ "schema": "review-s46-merge-tamper/1",
+ "scenarios": [
+  {
+   "scenario": "baseline: both rules, committed parts",
+   "expect": "certified",
+   "passed": true,
+   "status": "complete",
+   "strip_exclusion_certified": true,
+   "centre_substituted": 30,
+   "layer_substituted": 546,
+   "centre_rejected": {},
+   "centre_blocked": [],
+   "missing": 0,
+   "failed": 0,
+   "gaps_tau_gt_tstar": [],
+   "identity_valid": true,
+   "merge_error": null
+  },
+  {
+   "scenario": "default merge (no substitution flags)",
+   "expect": "partial",
+   "passed": true,
+   "status": "partial",
+   "strip_exclusion_certified": false,
+   "centre_substituted": 0,
+   "layer_substituted": 0,
+   "centre_rejected": {},
+   "centre_blocked": [],
+   "missing": 576,
+   "failed": 0,
+   "gaps_tau_gt_tstar": [
+    [
+     -Infinity,
+     0.0
+    ]
+   ],
+   "identity_valid": null,
+   "merge_error": null
+  },
+  {
+   "scenario": "--substitute-centre alone (layer pieces not substituted)",
+   "expect": "partial",
+   "passed": true,
+   "status": "partial",
+   "strip_exclusion_certified": false,
+   "centre_substituted": 30,
+   "layer_substituted": 0,
+   "centre_rejected": {},
+   "centre_blocked": [],
+   "missing": 546,
+   "failed": 0,
+   "gaps_tau_gt_tstar": [
+    [
+     -4.5,
+     0.0
+    ]
+   ],
+   "identity_valid": true,
+   "merge_error": null
+  },
+  {
+   "scenario": "--substitute-layer-t14 alone (centre missing)",
+   "expect": "partial",
+   "passed": true,
+   "status": "partial",
+   "strip_exclusion_certified": false,
+   "centre_substituted": 0,
+   "layer_substituted": 546,
+   "centre_rejected": {},
+   "centre_blocked": [],
+   "missing": 30,
+   "failed": 0,
+   "gaps_tau_gt_tstar": [
+    [
+     -Infinity,
+     -4.56
+    ]
+   ],
+   "identity_valid": null,
+   "merge_error": null
+  },
+  {
+   "scenario": "c29: certified_bound changed alone",
+   "expect": "reject:centre/c29",
+   "passed": true,
+   "status": "partial",
+   "strip_exclusion_certified": false,
+   "centre_substituted": 29,
+   "layer_substituted": 546,
+   "centre_rejected": {
+    "centre/c29": [
+     "certified bound not finite, negative and equal to result and worst"
+    ]
+   },
+   "centre_blocked": [],
+   "missing": 1,
+   "failed": 0,
+   "gaps_tau_gt_tstar": [
+    [
+     -4.970003629245736,
+     -4.56
+    ]
+   ],
+   "identity_valid": true,
+   "merge_error": null
+  },
+  {
+   "scenario": "c29: bound, result.certified_bound, result.worst all set to +0.01",
+   "expect": "reject:centre/c29",
+   "passed": true,
+   "status": "partial",
+   "strip_exclusion_certified": false,
+   "centre_substituted": 29,
+   "layer_substituted": 546,
+   "centre_rejected": {
+    "centre/c29": [
+     "certified bound not finite, negative and equal to result and worst"
+    ]
+   },
+   "centre_blocked": [],
+   "missing": 1,
+   "failed": 0,
+   "gaps_tau_gt_tstar": [
+    [
+     -4.970003629245736,
+     -4.56
+    ]
+   ],
+   "identity_valid": true,
+   "merge_error": null
+  },
+  {
+   "scenario": "c29: bound fields forged consistently to -1.0 (no recompute in the merge)",
+   "expect": "certified",
+   "passed": true,
+   "status": "complete",
+   "strip_exclusion_certified": true,
+   "centre_substituted": 30,
+   "layer_substituted": 546,
+   "centre_rejected": {},
+   "centre_blocked": [],
+   "missing": 0,
+   "failed": 0,
+   "gaps_tau_gt_tstar": [],
+   "identity_valid": true,
+   "merge_error": null
+  },
+  {
+   "scenario": "c12: status fail",
+   "expect": "reject:centre/c12",
+   "passed": true,
+   "status": "partial",
+   "strip_exclusion_certified": false,
+   "centre_substituted": 29,
+   "layer_substituted": 546,
+   "centre_rejected": {
+    "centre/c12": [
+     "status fail"
+    ]
+   },
+   "centre_blocked": [],
+   "missing": 1,
+   "failed": 0,
+   "gaps_tau_gt_tstar": [
+    [
+     -12.96006532642324,
+     -12.490061697177506
+    ]
+   ],
+   "identity_valid": true,
+   "merge_error": null
+  },
+  {
+   "scenario": "c12: result.ok false",
+   "expect": "reject:centre/c12",
+   "passed": true,
+   "status": "partial",
+   "strip_exclusion_certified": false,
+   "centre_substituted": 29,
+   "layer_substituted": 546,
+   "centre_rejected": {
+    "centre/c12": [
+     "result not ok or failing boxes recorded"
+    ]
+   },
+   "centre_blocked": [],
+   "missing": 1,
+   "failed": 0,
+   "gaps_tau_gt_tstar": [
+    [
+     -12.96006532642324,
+     -12.490061697177506
+    ]
+   ],
+   "identity_valid": true,
+   "merge_error": null
+  },
+  {
+   "scenario": "c12: a failing box recorded",
+   "expect": "reject:centre/c12",
+   "passed": true,
+   "status": "partial",
+   "strip_exclusion_certified": false,
+   "centre_substituted": 29,
+   "layer_substituted": 546,
+   "centre_rejected": {
+    "centre/c12": [
+     "result not ok or failing boxes recorded"
+    ]
+   },
+   "centre_blocked": [],
+   "missing": 1,
+   "failed": 0,
+   "gaps_tau_gt_tstar": [
+    [
+     -12.96006532642324,
+     -12.490061697177506
+    ]
+   ],
+   "identity_valid": true,
+   "merge_error": null
+  },
+  {
+   "scenario": "c07: tc_layer_centre hash wrong (stale code)",
+   "expect": "reject:centre/c07",
+   "passed": true,
+   "status": "partial",
+   "strip_exclusion_certified": false,
+   "centre_substituted": 29,
+   "layer_substituted": 546,
+   "centre_rejected": {
+    "centre/c07": [
+     "source hashes not current"
+    ]
+   },
+   "centre_blocked": [],
+   "missing": 1,
+   "failed": 0,
+   "gaps_tau_gt_tstar": [
+    [
+     -15.31008347265192,
+     -14.840079843406183
+    ]
+   ],
+   "identity_valid": true,
+   "merge_error": null
+  },
+  {
+   "scenario": "c07: tc_layer_centre not recorded",
+   "expect": "reject:centre/c07",
+   "passed": true,
+   "status": "partial",
+   "strip_exclusion_certified": false,
+   "centre_substituted": 29,
+   "layer_substituted": 546,
+   "centre_rejected": {
+    "centre/c07": [
+     "module problems/P4/src/p4/validated/tc_layer_centre.py not recorded"
+    ]
+   },
+   "centre_blocked": [],
+   "missing": 1,
+   "failed": 0,
+   "gaps_tau_gt_tstar": [
+    [
+     -15.31008347265192,
+     -14.840079843406183
+    ]
+   ],
+   "identity_valid": true,
+   "merge_error": null
+  },
+  {
+   "scenario": "c07: ec_centre not recorded",
+   "expect": "reject:centre/c07",
+   "passed": true,
+   "status": "partial",
+   "strip_exclusion_certified": false,
+   "centre_substituted": 29,
+   "layer_substituted": 546,
+   "centre_rejected": {
+    "centre/c07": [
+     "module problems/P4/src/p4/validated/ec_centre.py not recorded"
+    ]
+   },
+   "centre_blocked": [],
+   "missing": 1,
+   "failed": 0,
+   "gaps_tau_gt_tstar": [
+    [
+     -15.31008347265192,
+     -14.840079843406183
+    ]
+   ],
+   "identity_valid": true,
+   "merge_error": null
+  },
+  {
+   "scenario": "c07: the mean-value module recorded (current hash)",
+   "expect": "reject:centre/c07",
+   "passed": true,
+   "status": "partial",
+   "strip_exclusion_certified": false,
+   "centre_substituted": 29,
+   "layer_substituted": 546,
+   "centre_rejected": {
+    "centre/c07": [
+     "module problems/P4/src/p4/validated/tc_layer_centre_mv.py recorded (the evaluator is sigma_box_centre)"
+    ]
+   },
+   "centre_blocked": [],
+   "missing": 1,
+   "failed": 0,
+   "gaps_tau_gt_tstar": [
+    [
+     -15.31008347265192,
+     -14.840079843406183
+    ]
+   ],
+   "identity_valid": true,
+   "merge_error": null
+  },
+  {
+   "scenario": "c07: git_dirty_src true",
+   "expect": "reject:centre/c07",
+   "passed": true,
+   "status": "partial",
+   "strip_exclusion_certified": false,
+   "centre_substituted": 29,
+   "layer_substituted": 546,
+   "centre_rejected": {
+    "centre/c07": [
+     "git_dirty_src not false"
+    ]
+   },
+   "centre_blocked": [],
+   "missing": 1,
+   "failed": 0,
+   "gaps_tau_gt_tstar": [
+    [
+     -15.31008347265192,
+     -14.840079843406183
+    ]
+   ],
+   "identity_valid": true,
+   "merge_error": null
+  },
+  {
+   "scenario": "c07: git_head null",
+   "expect": "reject:centre/c07",
+   "passed": true,
+   "status": "partial",
+   "strip_exclusion_certified": false,
+   "centre_substituted": 29,
+   "layer_substituted": 546,
+   "centre_rejected": {
+    "centre/c07": [
+     "git_head not recorded (not written from a checkout)"
+    ]
+   },
+   "centre_blocked": [],
+   "missing": 1,
+   "failed": 0,
+   "gaps_tau_gt_tstar": [
+    [
+     -15.31008347265192,
+     -14.840079843406183
+    ]
+   ],
+   "identity_valid": true,
+   "merge_error": null
+  },
+  {
+   "scenario": "c07: a late module",
+   "expect": "reject:centre/c07",
+   "passed": true,
+   "status": "partial",
+   "strip_exclusion_certified": false,
+   "centre_substituted": 29,
+   "layer_substituted": 546,
+   "centre_rejected": {
+    "centre/c07": [
+     "modules first loaded after the import-time snapshot: problems/P4/src/p4/validated/tc_layer.py"
+    ]
+   },
+   "centre_blocked": [],
+   "missing": 1,
+   "failed": 0,
+   "gaps_tau_gt_tstar": [
+    [
+     -15.31008347265192,
+     -14.840079843406183
+    ]
+   ],
+   "identity_valid": true,
+   "merge_error": null
+  },
+  {
+   "scenario": "c07: write check failed",
+   "expect": "reject:centre/c07",
+   "passed": true,
+   "status": "partial",
+   "strip_exclusion_certified": false,
+   "centre_substituted": 29,
+   "layer_substituted": 546,
+   "centre_rejected": {
+    "centre/c07": [
+     "a source changed on disk before the part was written"
+    ]
+   },
+   "centre_blocked": [],
+   "missing": 1,
+   "failed": 0,
+   "gaps_tau_gt_tstar": [
+    [
+     -15.31008347265192,
+     -14.840079843406183
+    ]
+   ],
+   "identity_valid": true,
+   "merge_error": null
+  },
+  {
+   "scenario": "c07: driver_sha256 of another driver",
+   "expect": "reject:centre/c07",
+   "passed": true,
+   "status": "partial",
+   "strip_exclusion_certified": false,
+   "centre_substituted": 29,
+   "layer_substituted": 546,
+   "centre_rejected": {
+    "centre/c07": [
+     "driver_sha256 differs from the current s46_centre.py"
+    ]
+   },
+   "centre_blocked": [],
+   "missing": 1,
+   "failed": 0,
+   "gaps_tau_gt_tstar": [
+    [
+     -15.31008347265192,
+     -14.840079843406183
+    ]
+   ],
+   "identity_valid": true,
+   "merge_error": null
+  },
+  {
+   "scenario": "c20: the tau >= 224 part placed as the tau >= 14 part",
+   "expect": "reject:centre/c20",
+   "passed": true,
+   "status": "partial",
+   "strip_exclusion_certified": false,
+   "centre_substituted": 29,
+   "layer_substituted": 546,
+   "centre_rejected": {
+    "centre/c20": [
+     "tau_min 224 above 14"
+    ]
+   },
+   "centre_blocked": [],
+   "missing": 1,
+   "failed": 0,
+   "gaps_tau_gt_tstar": [
+    [
+     -9.200036292457357,
+     -8.73003266321162
+    ]
+   ],
+   "identity_valid": true,
+   "merge_error": null
+  },
+  {
+   "scenario": "c20: scope tau changed to [14, inf] on the 224 part (params still 224)",
+   "expect": "reject:centre/c20",
+   "passed": true,
+   "status": "partial",
+   "strip_exclusion_certified": false,
+   "centre_substituted": 29,
+   "layer_substituted": 546,
+   "centre_rejected": {
+    "centre/c20": [
+     "tau range of the record, the cover and the scope differ",
+     "tau_min 224 above 14"
+    ]
+   },
+   "centre_blocked": [],
+   "missing": 1,
+   "failed": 0,
+   "gaps_tau_gt_tstar": [
+    [
+     -9.200036292457357,
+     -8.73003266321162
+    ]
+   ],
+   "identity_valid": true,
+   "merge_error": null
+  },
+  {
+   "scenario": "c20: tau range of the 224 part forged in all three places (s_lo still lo 224)",
+   "expect": "reject:centre/c20",
+   "passed": true,
+   "status": "partial",
+   "strip_exclusion_certified": false,
+   "centre_substituted": 29,
+   "layer_substituted": 546,
+   "centre_rejected": {
+    "centre/c20": [
+     "s_lo above lo tau_min (or not 0 on the closing piece)"
+    ]
+   },
+   "centre_blocked": [],
+   "missing": 1,
+   "failed": 0,
+   "gaps_tau_gt_tstar": [
+    [
+     -9.200036292457357,
+     -8.73003266321162
+    ]
+   ],
+   "identity_valid": true,
+   "merge_error": null
+  },
+  {
+   "scenario": "c20: the 224 part forged throughout (tau_min and s_lo): accepted, the merge cannot see a consistent forgery",
+   "expect": "certified-forgery",
+   "passed": true,
+   "status": "complete",
+   "strip_exclusion_certified": true,
+   "centre_substituted": 30,
+   "layer_substituted": 546,
+   "centre_rejected": {},
+   "centre_blocked": [],
+   "missing": 0,
+   "failed": 0,
+   "gaps_tau_gt_tstar": [],
+   "identity_valid": true,
+   "merge_error": null
+  },
+  {
+   "scenario": "c20: tau upper end 1e6, not inf",
+   "expect": "reject:centre/c20",
+   "passed": true,
+   "status": "partial",
+   "strip_exclusion_certified": false,
+   "centre_substituted": 29,
+   "layer_substituted": 546,
+   "centre_rejected": {
+    "centre/c20": [
+     "tau range of the record, the cover and the scope differ"
+    ]
+   },
+   "centre_blocked": [],
+   "missing": 1,
+   "failed": 0,
+   "gaps_tau_gt_tstar": [
+    [
+     -9.200036292457357,
+     -8.73003266321162
+    ]
+   ],
+   "identity_valid": true,
+   "merge_error": null
+  },
+  {
+   "scenario": "c03: one eps cell removed from the cover",
+   "expect": "reject:centre/c03",
+   "passed": true,
+   "status": "partial",
+   "strip_exclusion_certified": false,
+   "centre_substituted": 29,
+   "layer_substituted": 546,
+   "centre_rejected": {
+    "centre/c03": [
+     "eps cells do not tile [0, eps_max]"
+    ]
+   },
+   "centre_blocked": [],
+   "missing": 1,
+   "failed": 0,
+   "gaps_tau_gt_tstar": [
+    [
+     -17.19009798963486,
+     -16.720094360389126
+    ]
+   ],
+   "identity_valid": true,
+   "merge_error": null
+  },
+  {
+   "scenario": "c03: eps cells end at 5.0",
+   "expect": "reject:centre/c03",
+   "passed": true,
+   "status": "partial",
+   "strip_exclusion_certified": false,
+   "centre_substituted": 29,
+   "layer_substituted": 546,
+   "centre_rejected": {
+    "centre/c03": [
+     "eps cells do not tile [0, eps_max]"
+    ]
+   },
+   "centre_blocked": [],
+   "missing": 1,
+   "failed": 0,
+   "gaps_tau_gt_tstar": [
+    [
+     -17.19009798963486,
+     -16.720094360389126
+    ]
+   ],
+   "identity_valid": true,
+   "merge_error": null
+  },
+  {
+   "scenario": "c03: cover y-range [lo, hi/2]",
+   "expect": "reject:centre/c03",
+   "passed": true,
+   "status": "partial",
+   "strip_exclusion_certified": false,
+   "centre_substituted": 29,
+   "layer_substituted": 546,
+   "centre_rejected": {
+    "centre/c03": [
+     "cover y-range is not [lo, hi]"
+    ]
+   },
+   "centre_blocked": [],
+   "missing": 1,
+   "failed": 0,
+   "gaps_tau_gt_tstar": [
+    [
+     -17.19009798963486,
+     -16.720094360389126
+    ]
+   ],
+   "identity_valid": true,
+   "merge_error": null
+  },
+  {
+   "scenario": "c00: s_lo = 1e-6 on the closing piece",
+   "expect": "reject:centre/c00",
+   "passed": true,
+   "status": "partial",
+   "strip_exclusion_certified": false,
+   "centre_substituted": 29,
+   "layer_substituted": 546,
+   "centre_rejected": {
+    "centre/c00": [
+     "s_lo above lo tau_min (or not 0 on the closing piece)"
+    ]
+   },
+   "centre_blocked": [],
+   "missing": 1,
+   "failed": 0,
+   "gaps_tau_gt_tstar": [
+    [
+     -Infinity,
+     -18.130105248126334
+    ]
+   ],
+   "identity_valid": true,
+   "merge_error": null
+  },
+  {
+   "scenario": "c05: s_lo above lo tau_min",
+   "expect": "reject:centre/c05",
+   "passed": true,
+   "status": "partial",
+   "strip_exclusion_certified": false,
+   "centre_substituted": 29,
+   "layer_substituted": 546,
+   "centre_rejected": {
+    "centre/c05": [
+     "s_lo above lo tau_min (or not 0 on the closing piece)"
+    ]
+   },
+   "centre_blocked": [],
+   "missing": 1,
+   "failed": 0,
+   "gaps_tau_gt_tstar": [
+    [
+     -16.25009073114339,
+     -15.780087101897655
+    ]
+   ],
+   "identity_valid": true,
+   "merge_error": null
+  },
+  {
+   "scenario": "c05: evaluator sigma_box",
+   "expect": "reject:centre/c05",
+   "passed": true,
+   "status": "partial",
+   "strip_exclusion_certified": false,
+   "centre_substituted": 29,
+   "layer_substituted": 546,
+   "centre_rejected": {
+    "centre/c05": [
+     "evaluator is not sigma_box_centre in the cover and the engine record"
+    ]
+   },
+   "centre_blocked": [],
+   "missing": 1,
+   "failed": 0,
+   "gaps_tau_gt_tstar": [
+    [
+     -16.25009073114339,
+     -15.780087101897655
+    ]
+   ],
+   "identity_valid": true,
+   "merge_error": null
+  },
+  {
+   "scenario": "c05: laurent false",
+   "expect": "reject:centre/c05",
+   "passed": true,
+   "status": "partial",
+   "strip_exclusion_certified": false,
+   "centre_substituted": 29,
+   "layer_substituted": 546,
+   "centre_rejected": {
+    "centre/c05": [
+     "laurent flag not set"
+    ]
+   },
+   "centre_blocked": [],
+   "missing": 1,
+   "failed": 0,
+   "gaps_tau_gt_tstar": [
+    [
+     -16.25009073114339,
+     -15.780087101897655
+    ]
+   ],
+   "identity_valid": true,
+   "merge_error": null
+  },
+  {
+   "scenario": "c05: combine on",
+   "expect": "reject:centre/c05",
+   "passed": true,
+   "status": "partial",
+   "strip_exclusion_certified": false,
+   "centre_substituted": 29,
+   "layer_substituted": 546,
+   "centre_rejected": {
+    "centre/c05": [
+     "combine set"
+    ]
+   },
+   "centre_blocked": [],
+   "missing": 1,
+   "failed": 0,
+   "gaps_tau_gt_tstar": [
+    [
+     -16.25009073114339,
+     -15.780087101897655
+    ]
+   ],
+   "identity_valid": true,
+   "merge_error": null
+  },
+  {
+   "scenario": "c05: data not raised",
+   "expect": "reject:centre/c05",
+   "passed": true,
+   "status": "partial",
+   "strip_exclusion_certified": false,
+   "centre_substituted": 29,
+   "layer_substituted": 546,
+   "centre_rejected": {
+    "centre/c05": [
+     "layer data not raised"
+    ]
+   },
+   "centre_blocked": [],
+   "missing": 1,
+   "failed": 0,
+   "gaps_tau_gt_tstar": [
+    [
+     -16.25009073114339,
+     -15.780087101897655
+    ]
+   ],
+   "identity_valid": true,
+   "merge_error": null
+  },
+  {
+   "scenario": "c05: identity block raise_by 3",
+   "expect": "reject:centre/c05",
+   "passed": true,
+   "status": "partial",
+   "strip_exclusion_certified": false,
+   "centre_substituted": 29,
+   "layer_substituted": 546,
+   "centre_rejected": {
+    "centre/c05": [
+     "identity block differs from the current raise (2, [1, 2, 3, 4, 5, 6, 7])"
+    ]
+   },
+   "centre_blocked": [],
+   "missing": 1,
+   "failed": 0,
+   "gaps_tau_gt_tstar": [
+    [
+     -16.25009073114339,
+     -15.780087101897655
+    ]
+   ],
+   "identity_valid": true,
+   "merge_error": null
+  },
+  {
+   "scenario": "c05: TM domain [lo, hi]",
+   "expect": "reject:centre/c05",
+   "passed": true,
+   "status": "partial",
+   "strip_exclusion_certified": false,
+   "centre_substituted": 29,
+   "layer_substituted": 546,
+   "centre_rejected": {
+    "centre/c05": [
+     "TM domain is not [0, hi]"
+    ]
+   },
+   "centre_blocked": [],
+   "missing": 1,
+   "failed": 0,
+   "gaps_tau_gt_tstar": [
+    [
+     -16.25009073114339,
+     -15.780087101897655
+    ]
+   ],
+   "identity_valid": true,
+   "merge_error": null
+  },
+  {
+   "scenario": "c05: centre series from the bare midpoint",
+   "expect": "reject:centre/c05",
+   "passed": true,
+   "status": "partial",
+   "strip_exclusion_certified": false,
+   "centre_substituted": 29,
+   "layer_substituted": 546,
+   "centre_rejected": {
+    "centre/c05": [
+     "centre series is not ec_centre.certified_centre_expansion(...)"
+    ]
+   },
+   "centre_blocked": [],
+   "missing": 1,
+   "failed": 0,
+   "gaps_tau_gt_tstar": [
+    [
+     -16.25009073114339,
+     -15.780087101897655
+    ]
+   ],
+   "identity_valid": true,
+   "merge_error": null
+  },
+  {
+   "scenario": "c06 served as c07 (id mismatch)",
+   "expect": "reject:centre/c07",
+   "passed": true,
+   "status": "partial",
+   "strip_exclusion_certified": false,
+   "centre_substituted": 29,
+   "layer_substituted": 546,
+   "centre_rejected": {
+    "centre/c07": [
+     "schema or id"
+    ]
+   },
+   "centre_blocked": [],
+   "missing": 1,
+   "failed": 0,
+   "gaps_tau_gt_tstar": [
+    [
+     -15.31008347265192,
+     -14.840079843406183
+    ]
+   ],
+   "identity_valid": true,
+   "merge_error": null
+  },
+  {
+   "scenario": "c08: spec lo changed",
+   "expect": "reject:centre/c08",
+   "passed": true,
+   "status": "partial",
+   "strip_exclusion_certified": false,
+   "centre_substituted": 29,
+   "layer_substituted": 546,
+   "centre_rejected": {
+    "centre/c08": [
+     "spec differs from the plan entry"
+    ]
+   },
+   "centre_blocked": [],
+   "missing": 1,
+   "failed": 0,
+   "gaps_tau_gt_tstar": [
+    [
+     -14.840079843406183,
+     -14.370076214160449
+    ]
+   ],
+   "identity_valid": true,
+   "merge_error": null
+  },
+  {
+   "scenario": "c15: part missing",
+   "expect": "partial",
+   "passed": true,
+   "status": "partial",
+   "strip_exclusion_certified": false,
+   "centre_substituted": 29,
+   "layer_substituted": 546,
+   "centre_rejected": {},
+   "centre_blocked": [],
+   "missing": 1,
+   "failed": 0,
+   "gaps_tau_gt_tstar": [
+    [
+     -11.550054438686034,
+     -11.0800508094403
+    ]
+   ],
+   "identity_valid": true,
+   "merge_error": null
+  },
+  {
+   "scenario": "c00: part missing (no closing piece)",
+   "expect": "partial",
+   "passed": true,
+   "status": "partial",
+   "strip_exclusion_certified": false,
+   "centre_substituted": 29,
+   "layer_substituted": 546,
+   "centre_rejected": {},
+   "centre_blocked": [],
+   "missing": 1,
+   "failed": 0,
+   "gaps_tau_gt_tstar": [
+    [
+     -Infinity,
+     -18.130105248126334
+    ]
+   ],
+   "identity_valid": true,
+   "merge_error": null
+  },
+  {
+   "scenario": "identity artifact missing",
+   "expect": "blocked",
+   "passed": true,
+   "status": "partial",
+   "strip_exclusion_certified": false,
+   "centre_substituted": 0,
+   "layer_substituted": 546,
+   "centre_rejected": {
+    "centre/c00": [
+     "centre identity: ../../../../../../../../var/folders/dc/zzvgwkn95rzdzzl8g5xx_m8r0000gn/T/s46_tamper_0yhi8ywj/centre_nb_identity.json missing (s46_centre.py identity)"
+    ],
+    "centre/c01": [
+     "centre identity: ../../../../../../../../var/folders/dc/zzvgwkn95rzdzzl8g5xx_m8r0000gn/T/s46_tamper_0yhi8ywj/centre_nb_identity.json missing (s46_centre.py identity)"
+    ],
+    "centre/c02": [
+     "centre identity: ../../../../../../../../var/folders/dc/zzvgwkn95rzdzzl8g5xx_m8r0000gn/T/s46_tamper_0yhi8ywj/centre_nb_identity.json missing (s46_centre.py identity)"
+    ],
+    "centre/c03": [
+     "centre identity: ../../../../../../../../var/folders/dc/zzvgwkn95rzdzzl8g5xx_m8r0000gn/T/s46_tamper_0yhi8ywj/centre_nb_identity.json missing (s46_centre.py identity)"
+    ],
+    "centre/c04": [
+     "centre identity: ../../../../../../../../var/folders/dc/zzvgwkn95rzdzzl8g5xx_m8r0000gn/T/s46_tamper_0yhi8ywj/centre_nb_identity.json missing (s46_centre.py identity)"
+    ],
+    "centre/c05": [
+     "centre identity: ../../../../../../../../var/folders/dc/zzvgwkn95rzdzzl8g5xx_m8r0000gn/T/s46_tamper_0yhi8ywj/centre_nb_identity.json missing (s46_centre.py identity)"
+    ],
+    "centre/c06": [
+     "centre identity: ../../../../../../../../var/folders/dc/zzvgwkn95rzdzzl8g5xx_m8r0000gn/T/s46_tamper_0yhi8ywj/centre_nb_identity.json missing (s46_centre.py identity)"
+    ],
+    "centre/c07": [
+     "centre identity: ../../../../../../../../var/folders/dc/zzvgwkn95rzdzzl8g5xx_m8r0000gn/T/s46_tamper_0yhi8ywj/centre_nb_identity.json missing (s46_centre.py identity)"
+    ],
+    "centre/c08": [
+     "centre identity: ../../../../../../../../var/folders/dc/zzvgwkn95rzdzzl8g5xx_m8r0000gn/T/s46_tamper_0yhi8ywj/centre_nb_identity.json missing (s46_centre.py identity)"
+    ],
+    "centre/c09": [
+     "centre identity: ../../../../../../../../var/folders/dc/zzvgwkn95rzdzzl8g5xx_m8r0000gn/T/s46_tamper_0yhi8ywj/centre_nb_identity.json missing (s46_centre.py identity)"
+    ],
+    "centre/c10": [
+     "centre identity: ../../../../../../../../var/folders/dc/zzvgwkn95rzdzzl8g5xx_m8r0000gn/T/s46_tamper_0yhi8ywj/centre_nb_identity.json missing (s46_centre.py identity)"
+    ],
+    "centre/c11": [
+     "centre identity: ../../../../../../../../var/folders/dc/zzvgwkn95rzdzzl8g5xx_m8r0000gn/T/s46_tamper_0yhi8ywj/centre_nb_identity.json missing (s46_centre.py identity)"
+    ],
+    "centre/c12": [
+     "centre identity: ../../../../../../../../var/folders/dc/zzvgwkn95rzdzzl8g5xx_m8r0000gn/T/s46_tamper_0yhi8ywj/centre_nb_identity.json missing (s46_centre.py identity)"
+    ],
+    "centre/c13": [
+     "centre identity: ../../../../../../../../var/folders/dc/zzvgwkn95rzdzzl8g5xx_m8r0000gn/T/s46_tamper_0yhi8ywj/centre_nb_identity.json missing (s46_centre.py identity)"
+    ],
+    "centre/c14": [
+     "centre identity: ../../../../../../../../var/folders/dc/zzvgwkn95rzdzzl8g5xx_m8r0000gn/T/s46_tamper_0yhi8ywj/centre_nb_identity.json missing (s46_centre.py identity)"
+    ],
+    "centre/c15": [
+     "centre identity: ../../../../../../../../var/folders/dc/zzvgwkn95rzdzzl8g5xx_m8r0000gn/T/s46_tamper_0yhi8ywj/centre_nb_identity.json missing (s46_centre.py identity)"
+    ],
+    "centre/c16": [
+     "centre identity: ../../../../../../../../var/folders/dc/zzvgwkn95rzdzzl8g5xx_m8r0000gn/T/s46_tamper_0yhi8ywj/centre_nb_identity.json missing (s46_centre.py identity)"
+    ],
+    "centre/c17": [
+     "centre identity: ../../../../../../../../var/folders/dc/zzvgwkn95rzdzzl8g5xx_m8r0000gn/T/s46_tamper_0yhi8ywj/centre_nb_identity.json missing (s46_centre.py identity)"
+    ],
+    "centre/c18": [
+     "centre identity: ../../../../../../../../var/folders/dc/zzvgwkn95rzdzzl8g5xx_m8r0000gn/T/s46_tamper_0yhi8ywj/centre_nb_identity.json missing (s46_centre.py identity)"
+    ],
+    "centre/c19": [
+     "centre identity: ../../../../../../../../var/folders/dc/zzvgwkn95rzdzzl8g5xx_m8r0000gn/T/s46_tamper_0yhi8ywj/centre_nb_identity.json missing (s46_centre.py identity)"
+    ],
+    "centre/c20": [
+     "centre identity: ../../../../../../../../var/folders/dc/zzvgwkn95rzdzzl8g5xx_m8r0000gn/T/s46_tamper_0yhi8ywj/centre_nb_identity.json missing (s46_centre.py identity)"
+    ],
+    "centre/c21": [
+     "centre identity: ../../../../../../../../var/folders/dc/zzvgwkn95rzdzzl8g5xx_m8r0000gn/T/s46_tamper_0yhi8ywj/centre_nb_identity.json missing (s46_centre.py identity)"
+    ],
+    "centre/c22": [
+     "centre identity: ../../../../../../../../var/folders/dc/zzvgwkn95rzdzzl8g5xx_m8r0000gn/T/s46_tamper_0yhi8ywj/centre_nb_identity.json missing (s46_centre.py identity)"
+    ],
+    "centre/c23": [
+     "centre identity: ../../../../../../../../var/folders/dc/zzvgwkn95rzdzzl8g5xx_m8r0000gn/T/s46_tamper_0yhi8ywj/centre_nb_identity.json missing (s46_centre.py identity)"
+    ],
+    "centre/c24": [
+     "centre identity: ../../../../../../../../var/folders/dc/zzvgwkn95rzdzzl8g5xx_m8r0000gn/T/s46_tamper_0yhi8ywj/centre_nb_identity.json missing (s46_centre.py identity)"
+    ],
+    "centre/c25": [
+     "centre identity: ../../../../../../../../var/folders/dc/zzvgwkn95rzdzzl8g5xx_m8r0000gn/T/s46_tamper_0yhi8ywj/centre_nb_identity.json missing (s46_centre.py identity)"
+    ],
+    "centre/c26": [
+     "centre identity: ../../../../../../../../var/folders/dc/zzvgwkn95rzdzzl8g5xx_m8r0000gn/T/s46_tamper_0yhi8ywj/centre_nb_identity.json missing (s46_centre.py identity)"
+    ],
+    "centre/c27": [
+     "centre identity: ../../../../../../../../var/folders/dc/zzvgwkn95rzdzzl8g5xx_m8r0000gn/T/s46_tamper_0yhi8ywj/centre_nb_identity.json missing (s46_centre.py identity)"
+    ],
+    "centre/c28": [
+     "centre identity: ../../../../../../../../var/folders/dc/zzvgwkn95rzdzzl8g5xx_m8r0000gn/T/s46_tamper_0yhi8ywj/centre_nb_identity.json missing (s46_centre.py identity)"
+    ],
+    "centre/c29": [
+     "centre identity: ../../../../../../../../var/folders/dc/zzvgwkn95rzdzzl8g5xx_m8r0000gn/T/s46_tamper_0yhi8ywj/centre_nb_identity.json missing (s46_centre.py identity)"
+    ]
+   },
+   "centre_blocked": [
+    "centre identity: ../../../../../../../../var/folders/dc/zzvgwkn95rzdzzl8g5xx_m8r0000gn/T/s46_tamper_0yhi8ywj/centre_nb_identity.json missing (s46_centre.py identity)"
+   ],
+   "missing": 30,
+   "failed": 0,
+   "gaps_tau_gt_tstar": [
+    [
+     -Infinity,
+     -4.56
+    ]
+   ],
+   "identity_valid": false,
+   "merge_error": null
+  },
+  {
+   "scenario": "identity artifact ok = false",
+   "expect": "blocked",
+   "passed": true,
+   "status": "partial",
+   "strip_exclusion_certified": false,
+   "centre_substituted": 0,
+   "layer_substituted": 546,
+   "centre_rejected": {
+    "centre/c00": [
+     "centre identity: identity not ok"
+    ],
+    "centre/c01": [
+     "centre identity: identity not ok"
+    ],
+    "centre/c02": [
+     "centre identity: identity not ok"
+    ],
+    "centre/c03": [
+     "centre identity: identity not ok"
+    ],
+    "centre/c04": [
+     "centre identity: identity not ok"
+    ],
+    "centre/c05": [
+     "centre identity: identity not ok"
+    ],
+    "centre/c06": [
+     "centre identity: identity not ok"
+    ],
+    "centre/c07": [
+     "centre identity: identity not ok"
+    ],
+    "centre/c08": [
+     "centre identity: identity not ok"
+    ],
+    "centre/c09": [
+     "centre identity: identity not ok"
+    ],
+    "centre/c10": [
+     "centre identity: identity not ok"
+    ],
+    "centre/c11": [
+     "centre identity: identity not ok"
+    ],
+    "centre/c12": [
+     "centre identity: identity not ok"
+    ],
+    "centre/c13": [
+     "centre identity: identity not ok"
+    ],
+    "centre/c14": [
+     "centre identity: identity not ok"
+    ],
+    "centre/c15": [
+     "centre identity: identity not ok"
+    ],
+    "centre/c16": [
+     "centre identity: identity not ok"
+    ],
+    "centre/c17": [
+     "centre identity: identity not ok"
+    ],
+    "centre/c18": [
+     "centre identity: identity not ok"
+    ],
+    "centre/c19": [
+     "centre identity: identity not ok"
+    ],
+    "centre/c20": [
+     "centre identity: identity not ok"
+    ],
+    "centre/c21": [
+     "centre identity: identity not ok"
+    ],
+    "centre/c22": [
+     "centre identity: identity not ok"
+    ],
+    "centre/c23": [
+     "centre identity: identity not ok"
+    ],
+    "centre/c24": [
+     "centre identity: identity not ok"
+    ],
+    "centre/c25": [
+     "centre identity: identity not ok"
+    ],
+    "centre/c26": [
+     "centre identity: identity not ok"
+    ],
+    "centre/c27": [
+     "centre identity: identity not ok"
+    ],
+    "centre/c28": [
+     "centre identity: identity not ok"
+    ],
+    "centre/c29": [
+     "centre identity: identity not ok"
+    ]
+   },
+   "centre_blocked": [
+    "centre identity: identity not ok"
+   ],
+   "missing": 30,
+   "failed": 0,
+   "gaps_tau_gt_tstar": [
+    [
+     -Infinity,
+     -4.56
+    ]
+   ],
+   "identity_valid": false,
+   "merge_error": null
+  },
+  {
+   "scenario": "identity artifact: kappa^4 lowest nonzero layer 8",
+   "expect": "blocked",
+   "passed": true,
+   "status": "partial",
+   "strip_exclusion_certified": false,
+   "centre_substituted": 0,
+   "layer_substituted": 546,
+   "centre_rejected": {
+    "centre/c00": [
+     "centre identity: kappa^4: odd terms or a nonzero layer below 10"
+    ],
+    "centre/c01": [
+     "centre identity: kappa^4: odd terms or a nonzero layer below 10"
+    ],
+    "centre/c02": [
+     "centre identity: kappa^4: odd terms or a nonzero layer below 10"
+    ],
+    "centre/c03": [
+     "centre identity: kappa^4: odd terms or a nonzero layer below 10"
+    ],
+    "centre/c04": [
+     "centre identity: kappa^4: odd terms or a nonzero layer below 10"
+    ],
+    "centre/c05": [
+     "centre identity: kappa^4: odd terms or a nonzero layer below 10"
+    ],
+    "centre/c06": [
+     "centre identity: kappa^4: odd terms or a nonzero layer below 10"
+    ],
+    "centre/c07": [
+     "centre identity: kappa^4: odd terms or a nonzero layer below 10"
+    ],
+    "centre/c08": [
+     "centre identity: kappa^4: odd terms or a nonzero layer below 10"
+    ],
+    "centre/c09": [
+     "centre identity: kappa^4: odd terms or a nonzero layer below 10"
+    ],
+    "centre/c10": [
+     "centre identity: kappa^4: odd terms or a nonzero layer below 10"
+    ],
+    "centre/c11": [
+     "centre identity: kappa^4: odd terms or a nonzero layer below 10"
+    ],
+    "centre/c12": [
+     "centre identity: kappa^4: odd terms or a nonzero layer below 10"
+    ],
+    "centre/c13": [
+     "centre identity: kappa^4: odd terms or a nonzero layer below 10"
+    ],
+    "centre/c14": [
+     "centre identity: kappa^4: odd terms or a nonzero layer below 10"
+    ],
+    "centre/c15": [
+     "centre identity: kappa^4: odd terms or a nonzero layer below 10"
+    ],
+    "centre/c16": [
+     "centre identity: kappa^4: odd terms or a nonzero layer below 10"
+    ],
+    "centre/c17": [
+     "centre identity: kappa^4: odd terms or a nonzero layer below 10"
+    ],
+    "centre/c18": [
+     "centre identity: kappa^4: odd terms or a nonzero layer below 10"
+    ],
+    "centre/c19": [
+     "centre identity: kappa^4: odd terms or a nonzero layer below 10"
+    ],
+    "centre/c20": [
+     "centre identity: kappa^4: odd terms or a nonzero layer below 10"
+    ],
+    "centre/c21": [
+     "centre identity: kappa^4: odd terms or a nonzero layer below 10"
+    ],
+    "centre/c22": [
+     "centre identity: kappa^4: odd terms or a nonzero layer below 10"
+    ],
+    "centre/c23": [
+     "centre identity: kappa^4: odd terms or a nonzero layer below 10"
+    ],
+    "centre/c24": [
+     "centre identity: kappa^4: odd terms or a nonzero layer below 10"
+    ],
+    "centre/c25": [
+     "centre identity: kappa^4: odd terms or a nonzero layer below 10"
+    ],
+    "centre/c26": [
+     "centre identity: kappa^4: odd terms or a nonzero layer below 10"
+    ],
+    "centre/c27": [
+     "centre identity: kappa^4: odd terms or a nonzero layer below 10"
+    ],
+    "centre/c28": [
+     "centre identity: kappa^4: odd terms or a nonzero layer below 10"
+    ],
+    "centre/c29": [
+     "centre identity: kappa^4: odd terms or a nonzero layer below 10"
+    ]
+   },
+   "centre_blocked": [
+    "centre identity: kappa^4: odd terms or a nonzero layer below 10"
+   ],
+   "missing": 30,
+   "failed": 0,
+   "gaps_tau_gt_tstar": [
+    [
+     -Infinity,
+     -4.56
+    ]
+   ],
+   "identity_valid": false,
+   "merge_error": null
+  },
+  {
+   "scenario": "identity artifact: odd terms at kappa^2",
+   "expect": "blocked",
+   "passed": true,
+   "status": "partial",
+   "strip_exclusion_certified": false,
+   "centre_substituted": 0,
+   "layer_substituted": 546,
+   "centre_rejected": {
+    "centre/c00": [
+     "centre identity: kappa^2: odd terms or a nonzero layer below 10"
+    ],
+    "centre/c01": [
+     "centre identity: kappa^2: odd terms or a nonzero layer below 10"
+    ],
+    "centre/c02": [
+     "centre identity: kappa^2: odd terms or a nonzero layer below 10"
+    ],
+    "centre/c03": [
+     "centre identity: kappa^2: odd terms or a nonzero layer below 10"
+    ],
+    "centre/c04": [
+     "centre identity: kappa^2: odd terms or a nonzero layer below 10"
+    ],
+    "centre/c05": [
+     "centre identity: kappa^2: odd terms or a nonzero layer below 10"
+    ],
+    "centre/c06": [
+     "centre identity: kappa^2: odd terms or a nonzero layer below 10"
+    ],
+    "centre/c07": [
+     "centre identity: kappa^2: odd terms or a nonzero layer below 10"
+    ],
+    "centre/c08": [
+     "centre identity: kappa^2: odd terms or a nonzero layer below 10"
+    ],
+    "centre/c09": [
+     "centre identity: kappa^2: odd terms or a nonzero layer below 10"
+    ],
+    "centre/c10": [
+     "centre identity: kappa^2: odd terms or a nonzero layer below 10"
+    ],
+    "centre/c11": [
+     "centre identity: kappa^2: odd terms or a nonzero layer below 10"
+    ],
+    "centre/c12": [
+     "centre identity: kappa^2: odd terms or a nonzero layer below 10"
+    ],
+    "centre/c13": [
+     "centre identity: kappa^2: odd terms or a nonzero layer below 10"
+    ],
+    "centre/c14": [
+     "centre identity: kappa^2: odd terms or a nonzero layer below 10"
+    ],
+    "centre/c15": [
+     "centre identity: kappa^2: odd terms or a nonzero layer below 10"
+    ],
+    "centre/c16": [
+     "centre identity: kappa^2: odd terms or a nonzero layer below 10"
+    ],
+    "centre/c17": [
+     "centre identity: kappa^2: odd terms or a nonzero layer below 10"
+    ],
+    "centre/c18": [
+     "centre identity: kappa^2: odd terms or a nonzero layer below 10"
+    ],
+    "centre/c19": [
+     "centre identity: kappa^2: odd terms or a nonzero layer below 10"
+    ],
+    "centre/c20": [
+     "centre identity: kappa^2: odd terms or a nonzero layer below 10"
+    ],
+    "centre/c21": [
+     "centre identity: kappa^2: odd terms or a nonzero layer below 10"
+    ],
+    "centre/c22": [
+     "centre identity: kappa^2: odd terms or a nonzero layer below 10"
+    ],
+    "centre/c23": [
+     "centre identity: kappa^2: odd terms or a nonzero layer below 10"
+    ],
+    "centre/c24": [
+     "centre identity: kappa^2: odd terms or a nonzero layer below 10"
+    ],
+    "centre/c25": [
+     "centre identity: kappa^2: odd terms or a nonzero layer below 10"
+    ],
+    "centre/c26": [
+     "centre identity: kappa^2: odd terms or a nonzero layer below 10"
+    ],
+    "centre/c27": [
+     "centre identity: kappa^2: odd terms or a nonzero layer below 10"
+    ],
+    "centre/c28": [
+     "centre identity: kappa^2: odd terms or a nonzero layer below 10"
+    ],
+    "centre/c29": [
+     "centre identity: kappa^2: odd terms or a nonzero layer below 10"
+    ]
+   },
+   "centre_blocked": [
+    "centre identity: kappa^2: odd terms or a nonzero layer below 10"
+   ],
+   "missing": 30,
+   "failed": 0,
+   "gaps_tau_gt_tstar": [
+    [
+     -Infinity,
+     -4.56
+    ]
+   ],
+   "identity_valid": false,
+   "merge_error": null
+  },
+  {
+   "scenario": "identity artifact: kappa list 1..6",
+   "expect": "blocked",
+   "passed": true,
+   "status": "partial",
+   "strip_exclusion_certified": false,
+   "centre_substituted": 0,
+   "layer_substituted": 546,
+   "centre_rejected": {
+    "centre/c00": [
+     "centre identity: raise_by or kappa differ from the current tc_layer_centre (2, [1, 2, 3, 4, 5, 6, 7])"
+    ],
+    "centre/c01": [
+     "centre identity: raise_by or kappa differ from the current tc_layer_centre (2, [1, 2, 3, 4, 5, 6, 7])"
+    ],
+    "centre/c02": [
+     "centre identity: raise_by or kappa differ from the current tc_layer_centre (2, [1, 2, 3, 4, 5, 6, 7])"
+    ],
+    "centre/c03": [
+     "centre identity: raise_by or kappa differ from the current tc_layer_centre (2, [1, 2, 3, 4, 5, 6, 7])"
+    ],
+    "centre/c04": [
+     "centre identity: raise_by or kappa differ from the current tc_layer_centre (2, [1, 2, 3, 4, 5, 6, 7])"
+    ],
+    "centre/c05": [
+     "centre identity: raise_by or kappa differ from the current tc_layer_centre (2, [1, 2, 3, 4, 5, 6, 7])"
+    ],
+    "centre/c06": [
+     "centre identity: raise_by or kappa differ from the current tc_layer_centre (2, [1, 2, 3, 4, 5, 6, 7])"
+    ],
+    "centre/c07": [
+     "centre identity: raise_by or kappa differ from the current tc_layer_centre (2, [1, 2, 3, 4, 5, 6, 7])"
+    ],
+    "centre/c08": [
+     "centre identity: raise_by or kappa differ from the current tc_layer_centre (2, [1, 2, 3, 4, 5, 6, 7])"
+    ],
+    "centre/c09": [
+     "centre identity: raise_by or kappa differ from the current tc_layer_centre (2, [1, 2, 3, 4, 5, 6, 7])"
+    ],
+    "centre/c10": [
+     "centre identity: raise_by or kappa differ from the current tc_layer_centre (2, [1, 2, 3, 4, 5, 6, 7])"
+    ],
+    "centre/c11": [
+     "centre identity: raise_by or kappa differ from the current tc_layer_centre (2, [1, 2, 3, 4, 5, 6, 7])"
+    ],
+    "centre/c12": [
+     "centre identity: raise_by or kappa differ from the current tc_layer_centre (2, [1, 2, 3, 4, 5, 6, 7])"
+    ],
+    "centre/c13": [
+     "centre identity: raise_by or kappa differ from the current tc_layer_centre (2, [1, 2, 3, 4, 5, 6, 7])"
+    ],
+    "centre/c14": [
+     "centre identity: raise_by or kappa differ from the current tc_layer_centre (2, [1, 2, 3, 4, 5, 6, 7])"
+    ],
+    "centre/c15": [
+     "centre identity: raise_by or kappa differ from the current tc_layer_centre (2, [1, 2, 3, 4, 5, 6, 7])"
+    ],
+    "centre/c16": [
+     "centre identity: raise_by or kappa differ from the current tc_layer_centre (2, [1, 2, 3, 4, 5, 6, 7])"
+    ],
+    "centre/c17": [
+     "centre identity: raise_by or kappa differ from the current tc_layer_centre (2, [1, 2, 3, 4, 5, 6, 7])"
+    ],
+    "centre/c18": [
+     "centre identity: raise_by or kappa differ from the current tc_layer_centre (2, [1, 2, 3, 4, 5, 6, 7])"
+    ],
+    "centre/c19": [
+     "centre identity: raise_by or kappa differ from the current tc_layer_centre (2, [1, 2, 3, 4, 5, 6, 7])"
+    ],
+    "centre/c20": [
+     "centre identity: raise_by or kappa differ from the current tc_layer_centre (2, [1, 2, 3, 4, 5, 6, 7])"
+    ],
+    "centre/c21": [
+     "centre identity: raise_by or kappa differ from the current tc_layer_centre (2, [1, 2, 3, 4, 5, 6, 7])"
+    ],
+    "centre/c22": [
+     "centre identity: raise_by or kappa differ from the current tc_layer_centre (2, [1, 2, 3, 4, 5, 6, 7])"
+    ],
+    "centre/c23": [
+     "centre identity: raise_by or kappa differ from the current tc_layer_centre (2, [1, 2, 3, 4, 5, 6, 7])"
+    ],
+    "centre/c24": [
+     "centre identity: raise_by or kappa differ from the current tc_layer_centre (2, [1, 2, 3, 4, 5, 6, 7])"
+    ],
+    "centre/c25": [
+     "centre identity: raise_by or kappa differ from the current tc_layer_centre (2, [1, 2, 3, 4, 5, 6, 7])"
+    ],
+    "centre/c26": [
+     "centre identity: raise_by or kappa differ from the current tc_layer_centre (2, [1, 2, 3, 4, 5, 6, 7])"
+    ],
+    "centre/c27": [
+     "centre identity: raise_by or kappa differ from the current tc_layer_centre (2, [1, 2, 3, 4, 5, 6, 7])"
+    ],
+    "centre/c28": [
+     "centre identity: raise_by or kappa differ from the current tc_layer_centre (2, [1, 2, 3, 4, 5, 6, 7])"
+    ],
+    "centre/c29": [
+     "centre identity: raise_by or kappa differ from the current tc_layer_centre (2, [1, 2, 3, 4, 5, 6, 7])"
+    ]
+   },
+   "centre_blocked": [
+    "centre identity: raise_by or kappa differ from the current tc_layer_centre (2, [1, 2, 3, 4, 5, 6, 7])"
+   ],
+   "missing": 30,
+   "failed": 0,
+   "gaps_tau_gt_tstar": [
+    [
+     -Infinity,
+     -4.56
+    ]
+   ],
+   "identity_valid": false,
+   "merge_error": null
+  },
+  {
+   "scenario": "identity artifact: stale tc_energy hash",
+   "expect": "blocked",
+   "passed": true,
+   "status": "partial",
+   "strip_exclusion_certified": false,
+   "centre_substituted": 0,
+   "layer_substituted": 546,
+   "centre_rejected": {
+    "centre/c00": [
+     "centre identity: source hashes not current"
+    ],
+    "centre/c01": [
+     "centre identity: source hashes not current"
+    ],
+    "centre/c02": [
+     "centre identity: source hashes not current"
+    ],
+    "centre/c03": [
+     "centre identity: source hashes not current"
+    ],
+    "centre/c04": [
+     "centre identity: source hashes not current"
+    ],
+    "centre/c05": [
+     "centre identity: source hashes not current"
+    ],
+    "centre/c06": [
+     "centre identity: source hashes not current"
+    ],
+    "centre/c07": [
+     "centre identity: source hashes not current"
+    ],
+    "centre/c08": [
+     "centre identity: source hashes not current"
+    ],
+    "centre/c09": [
+     "centre identity: source hashes not current"
+    ],
+    "centre/c10": [
+     "centre identity: source hashes not current"
+    ],
+    "centre/c11": [
+     "centre identity: source hashes not current"
+    ],
+    "centre/c12": [
+     "centre identity: source hashes not current"
+    ],
+    "centre/c13": [
+     "centre identity: source hashes not current"
+    ],
+    "centre/c14": [
+     "centre identity: source hashes not current"
+    ],
+    "centre/c15": [
+     "centre identity: source hashes not current"
+    ],
+    "centre/c16": [
+     "centre identity: source hashes not current"
+    ],
+    "centre/c17": [
+     "centre identity: source hashes not current"
+    ],
+    "centre/c18": [
+     "centre identity: source hashes not current"
+    ],
+    "centre/c19": [
+     "centre identity: source hashes not current"
+    ],
+    "centre/c20": [
+     "centre identity: source hashes not current"
+    ],
+    "centre/c21": [
+     "centre identity: source hashes not current"
+    ],
+    "centre/c22": [
+     "centre identity: source hashes not current"
+    ],
+    "centre/c23": [
+     "centre identity: source hashes not current"
+    ],
+    "centre/c24": [
+     "centre identity: source hashes not current"
+    ],
+    "centre/c25": [
+     "centre identity: source hashes not current"
+    ],
+    "centre/c26": [
+     "centre identity: source hashes not current"
+    ],
+    "centre/c27": [
+     "centre identity: source hashes not current"
+    ],
+    "centre/c28": [
+     "centre identity: source hashes not current"
+    ],
+    "centre/c29": [
+     "centre identity: source hashes not current"
+    ]
+   },
+   "centre_blocked": [
+    "centre identity: source hashes not current"
+   ],
+   "missing": 30,
+   "failed": 0,
+   "gaps_tau_gt_tstar": [
+    [
+     -Infinity,
+     -4.56
+    ]
+   ],
+   "identity_valid": false,
+   "merge_error": null
+  },
+  {
+   "scenario": "identity artifact: tc_layer_centre not recorded",
+   "expect": "blocked",
+   "passed": true,
+   "status": "partial",
+   "strip_exclusion_certified": false,
+   "centre_substituted": 0,
+   "layer_substituted": 546,
+   "centre_rejected": {
+    "centre/c00": [
+     "centre identity: module problems/P4/src/p4/validated/tc_layer_centre.py not recorded"
+    ],
+    "centre/c01": [
+     "centre identity: module problems/P4/src/p4/validated/tc_layer_centre.py not recorded"
+    ],
+    "centre/c02": [
+     "centre identity: module problems/P4/src/p4/validated/tc_layer_centre.py not recorded"
+    ],
+    "centre/c03": [
+     "centre identity: module problems/P4/src/p4/validated/tc_layer_centre.py not recorded"
+    ],
+    "centre/c04": [
+     "centre identity: module problems/P4/src/p4/validated/tc_layer_centre.py not recorded"
+    ],
+    "centre/c05": [
+     "centre identity: module problems/P4/src/p4/validated/tc_layer_centre.py not recorded"
+    ],
+    "centre/c06": [
+     "centre identity: module problems/P4/src/p4/validated/tc_layer_centre.py not recorded"
+    ],
+    "centre/c07": [
+     "centre identity: module problems/P4/src/p4/validated/tc_layer_centre.py not recorded"
+    ],
+    "centre/c08": [
+     "centre identity: module problems/P4/src/p4/validated/tc_layer_centre.py not recorded"
+    ],
+    "centre/c09": [
+     "centre identity: module problems/P4/src/p4/validated/tc_layer_centre.py not recorded"
+    ],
+    "centre/c10": [
+     "centre identity: module problems/P4/src/p4/validated/tc_layer_centre.py not recorded"
+    ],
+    "centre/c11": [
+     "centre identity: module problems/P4/src/p4/validated/tc_layer_centre.py not recorded"
+    ],
+    "centre/c12": [
+     "centre identity: module problems/P4/src/p4/validated/tc_layer_centre.py not recorded"
+    ],
+    "centre/c13": [
+     "centre identity: module problems/P4/src/p4/validated/tc_layer_centre.py not recorded"
+    ],
+    "centre/c14": [
+     "centre identity: module problems/P4/src/p4/validated/tc_layer_centre.py not recorded"
+    ],
+    "centre/c15": [
+     "centre identity: module problems/P4/src/p4/validated/tc_layer_centre.py not recorded"
+    ],
+    "centre/c16": [
+     "centre identity: module problems/P4/src/p4/validated/tc_layer_centre.py not recorded"
+    ],
+    "centre/c17": [
+     "centre identity: module problems/P4/src/p4/validated/tc_layer_centre.py not recorded"
+    ],
+    "centre/c18": [
+     "centre identity: module problems/P4/src/p4/validated/tc_layer_centre.py not recorded"
+    ],
+    "centre/c19": [
+     "centre identity: module problems/P4/src/p4/validated/tc_layer_centre.py not recorded"
+    ],
+    "centre/c20": [
+     "centre identity: module problems/P4/src/p4/validated/tc_layer_centre.py not recorded"
+    ],
+    "centre/c21": [
+     "centre identity: module problems/P4/src/p4/validated/tc_layer_centre.py not recorded"
+    ],
+    "centre/c22": [
+     "centre identity: module problems/P4/src/p4/validated/tc_layer_centre.py not recorded"
+    ],
+    "centre/c23": [
+     "centre identity: module problems/P4/src/p4/validated/tc_layer_centre.py not recorded"
+    ],
+    "centre/c24": [
+     "centre identity: module problems/P4/src/p4/validated/tc_layer_centre.py not recorded"
+    ],
+    "centre/c25": [
+     "centre identity: module problems/P4/src/p4/validated/tc_layer_centre.py not recorded"
+    ],
+    "centre/c26": [
+     "centre identity: module problems/P4/src/p4/validated/tc_layer_centre.py not recorded"
+    ],
+    "centre/c27": [
+     "centre identity: module problems/P4/src/p4/validated/tc_layer_centre.py not recorded"
+    ],
+    "centre/c28": [
+     "centre identity: module problems/P4/src/p4/validated/tc_layer_centre.py not recorded"
+    ],
+    "centre/c29": [
+     "centre identity: module problems/P4/src/p4/validated/tc_layer_centre.py not recorded"
+    ]
+   },
+   "centre_blocked": [
+    "centre identity: module problems/P4/src/p4/validated/tc_layer_centre.py not recorded"
+   ],
+   "missing": 30,
+   "failed": 0,
+   "gaps_tau_gt_tstar": [
+    [
+     -Infinity,
+     -4.56
+    ]
+   ],
+   "identity_valid": false,
+   "merge_error": null
+  },
+  {
+   "scenario": "identity artifact: wrong driver",
+   "expect": "blocked",
+   "passed": true,
+   "status": "partial",
+   "strip_exclusion_certified": false,
+   "centre_substituted": 0,
+   "layer_substituted": 546,
+   "centre_rejected": {
+    "centre/c00": [
+     "centre identity: driver_sha256 differs from the current s46_centre.py"
+    ],
+    "centre/c01": [
+     "centre identity: driver_sha256 differs from the current s46_centre.py"
+    ],
+    "centre/c02": [
+     "centre identity: driver_sha256 differs from the current s46_centre.py"
+    ],
+    "centre/c03": [
+     "centre identity: driver_sha256 differs from the current s46_centre.py"
+    ],
+    "centre/c04": [
+     "centre identity: driver_sha256 differs from the current s46_centre.py"
+    ],
+    "centre/c05": [
+     "centre identity: driver_sha256 differs from the current s46_centre.py"
+    ],
+    "centre/c06": [
+     "centre identity: driver_sha256 differs from the current s46_centre.py"
+    ],
+    "centre/c07": [
+     "centre identity: driver_sha256 differs from the current s46_centre.py"
+    ],
+    "centre/c08": [
+     "centre identity: driver_sha256 differs from the current s46_centre.py"
+    ],
+    "centre/c09": [
+     "centre identity: driver_sha256 differs from the current s46_centre.py"
+    ],
+    "centre/c10": [
+     "centre identity: driver_sha256 differs from the current s46_centre.py"
+    ],
+    "centre/c11": [
+     "centre identity: driver_sha256 differs from the current s46_centre.py"
+    ],
+    "centre/c12": [
+     "centre identity: driver_sha256 differs from the current s46_centre.py"
+    ],
+    "centre/c13": [
+     "centre identity: driver_sha256 differs from the current s46_centre.py"
+    ],
+    "centre/c14": [
+     "centre identity: driver_sha256 differs from the current s46_centre.py"
+    ],
+    "centre/c15": [
+     "centre identity: driver_sha256 differs from the current s46_centre.py"
+    ],
+    "centre/c16": [
+     "centre identity: driver_sha256 differs from the current s46_centre.py"
+    ],
+    "centre/c17": [
+     "centre identity: driver_sha256 differs from the current s46_centre.py"
+    ],
+    "centre/c18": [
+     "centre identity: driver_sha256 differs from the current s46_centre.py"
+    ],
+    "centre/c19": [
+     "centre identity: driver_sha256 differs from the current s46_centre.py"
+    ],
+    "centre/c20": [
+     "centre identity: driver_sha256 differs from the current s46_centre.py"
+    ],
+    "centre/c21": [
+     "centre identity: driver_sha256 differs from the current s46_centre.py"
+    ],
+    "centre/c22": [
+     "centre identity: driver_sha256 differs from the current s46_centre.py"
+    ],
+    "centre/c23": [
+     "centre identity: driver_sha256 differs from the current s46_centre.py"
+    ],
+    "centre/c24": [
+     "centre identity: driver_sha256 differs from the current s46_centre.py"
+    ],
+    "centre/c25": [
+     "centre identity: driver_sha256 differs from the current s46_centre.py"
+    ],
+    "centre/c26": [
+     "centre identity: driver_sha256 differs from the current s46_centre.py"
+    ],
+    "centre/c27": [
+     "centre identity: driver_sha256 differs from the current s46_centre.py"
+    ],
+    "centre/c28": [
+     "centre identity: driver_sha256 differs from the current s46_centre.py"
+    ],
+    "centre/c29": [
+     "centre identity: driver_sha256 differs from the current s46_centre.py"
+    ]
+   },
+   "centre_blocked": [
+    "centre identity: driver_sha256 differs from the current s46_centre.py"
+   ],
+   "missing": 30,
+   "failed": 0,
+   "gaps_tau_gt_tstar": [
+    [
+     -Infinity,
+     -4.56
+    ]
+   ],
+   "identity_valid": false,
+   "merge_error": null
+  },
+  {
+   "scenario": "checks.json not ok",
+   "expect": "blocked",
+   "passed": true,
+   "status": "partial",
+   "strip_exclusion_certified": false,
+   "centre_substituted": 0,
+   "layer_substituted": 0,
+   "centre_rejected": {
+    "centre/c00": [
+     "checks.json not valid for the current code"
+    ],
+    "centre/c01": [
+     "checks.json not valid for the current code"
+    ],
+    "centre/c02": [
+     "checks.json not valid for the current code"
+    ],
+    "centre/c03": [
+     "checks.json not valid for the current code"
+    ],
+    "centre/c04": [
+     "checks.json not valid for the current code"
+    ],
+    "centre/c05": [
+     "checks.json not valid for the current code"
+    ],
+    "centre/c06": [
+     "checks.json not valid for the current code"
+    ],
+    "centre/c07": [
+     "checks.json not valid for the current code"
+    ],
+    "centre/c08": [
+     "checks.json not valid for the current code"
+    ],
+    "centre/c09": [
+     "checks.json not valid for the current code"
+    ],
+    "centre/c10": [
+     "checks.json not valid for the current code"
+    ],
+    "centre/c11": [
+     "checks.json not valid for the current code"
+    ],
+    "centre/c12": [
+     "checks.json not valid for the current code"
+    ],
+    "centre/c13": [
+     "checks.json not valid for the current code"
+    ],
+    "centre/c14": [
+     "checks.json not valid for the current code"
+    ],
+    "centre/c15": [
+     "checks.json not valid for the current code"
+    ],
+    "centre/c16": [
+     "checks.json not valid for the current code"
+    ],
+    "centre/c17": [
+     "checks.json not valid for the current code"
+    ],
+    "centre/c18": [
+     "checks.json not valid for the current code"
+    ],
+    "centre/c19": [
+     "checks.json not valid for the current code"
+    ],
+    "centre/c20": [
+     "checks.json not valid for the current code"
+    ],
+    "centre/c21": [
+     "checks.json not valid for the current code"
+    ],
+    "centre/c22": [
+     "checks.json not valid for the current code"
+    ],
+    "centre/c23": [
+     "checks.json not valid for the current code"
+    ],
+    "centre/c24": [
+     "checks.json not valid for the current code"
+    ],
+    "centre/c25": [
+     "checks.json not valid for the current code"
+    ],
+    "centre/c26": [
+     "checks.json not valid for the current code"
+    ],
+    "centre/c27": [
+     "checks.json not valid for the current code"
+    ],
+    "centre/c28": [
+     "checks.json not valid for the current code"
+    ],
+    "centre/c29": [
+     "checks.json not valid for the current code"
+    ]
+   },
+   "centre_blocked": [
+    "checks.json not valid for the current code"
+   ],
+   "missing": 576,
+   "failed": 0,
+   "gaps_tau_gt_tstar": [
+    [
+     -Infinity,
+     0.0
+    ]
+   ],
+   "identity_valid": true,
+   "merge_error": null
+  },
+  {
+   "scenario": "checks.json with a stale code hash",
+   "expect": "blocked",
+   "passed": true,
+   "status": "partial",
+   "strip_exclusion_certified": false,
+   "centre_substituted": 0,
+   "layer_substituted": 0,
+   "centre_rejected": {
+    "centre/c00": [
+     "checks.json not valid for the current code"
+    ],
+    "centre/c01": [
+     "checks.json not valid for the current code"
+    ],
+    "centre/c02": [
+     "checks.json not valid for the current code"
+    ],
+    "centre/c03": [
+     "checks.json not valid for the current code"
+    ],
+    "centre/c04": [
+     "checks.json not valid for the current code"
+    ],
+    "centre/c05": [
+     "checks.json not valid for the current code"
+    ],
+    "centre/c06": [
+     "checks.json not valid for the current code"
+    ],
+    "centre/c07": [
+     "checks.json not valid for the current code"
+    ],
+    "centre/c08": [
+     "checks.json not valid for the current code"
+    ],
+    "centre/c09": [
+     "checks.json not valid for the current code"
+    ],
+    "centre/c10": [
+     "checks.json not valid for the current code"
+    ],
+    "centre/c11": [
+     "checks.json not valid for the current code"
+    ],
+    "centre/c12": [
+     "checks.json not valid for the current code"
+    ],
+    "centre/c13": [
+     "checks.json not valid for the current code"
+    ],
+    "centre/c14": [
+     "checks.json not valid for the current code"
+    ],
+    "centre/c15": [
+     "checks.json not valid for the current code"
+    ],
+    "centre/c16": [
+     "checks.json not valid for the current code"
+    ],
+    "centre/c17": [
+     "checks.json not valid for the current code"
+    ],
+    "centre/c18": [
+     "checks.json not valid for the current code"
+    ],
+    "centre/c19": [
+     "checks.json not valid for the current code"
+    ],
+    "centre/c20": [
+     "checks.json not valid for the current code"
+    ],
+    "centre/c21": [
+     "checks.json not valid for the current code"
+    ],
+    "centre/c22": [
+     "checks.json not valid for the current code"
+    ],
+    "centre/c23": [
+     "checks.json not valid for the current code"
+    ],
+    "centre/c24": [
+     "checks.json not valid for the current code"
+    ],
+    "centre/c25": [
+     "checks.json not valid for the current code"
+    ],
+    "centre/c26": [
+     "checks.json not valid for the current code"
+    ],
+    "centre/c27": [
+     "checks.json not valid for the current code"
+    ],
+    "centre/c28": [
+     "checks.json not valid for the current code"
+    ],
+    "centre/c29": [
+     "checks.json not valid for the current code"
+    ]
+   },
+   "centre_blocked": [
+    "checks.json not valid for the current code"
+   ],
+   "missing": 576,
+   "failed": 0,
+   "gaps_tau_gt_tstar": [
+    [
+     -Infinity,
+     0.0
+    ]
+   ],
+   "identity_valid": true,
+   "merge_error": null
+  }
+ ],
+ "passed": 50,
+ "total": 50,
+ "ok": true
+}

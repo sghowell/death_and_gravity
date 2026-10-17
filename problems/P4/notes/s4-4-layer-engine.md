@@ -327,7 +327,7 @@ engine costs only the cover time.
 - **Merge.**  `s43_parts.py merge` counts a pass-direct piece only for
   tau <= 224.  It must learn to treat pass-direct plus a passing
   `parts/layer/<id>.json` (same `spec`, code hashes current) as covering
-  tau >= 14.  Alternatively it can accept `parts/layer_t14` alone for the
+  tau >= 14.  Alternatively it can accept `strip/layer_t14` alone for the
   band.  Not done here, to keep `s43_parts.py` untouched for the merge with
   the S4-3 branch.  [2026-10-17 morning: done, section 10.]
 - **Inputs.**  The certificate inherits the S4-3 inputs: `build_pairs`,
@@ -359,8 +359,8 @@ both modes, one pair build per piece (`work --tau-mins 224,14`):
 
 | pieces | engine | parts |
 |---|---|---|
-| sonic, 51 | the reviewed default: natural layer form, `norm=layer` (ladder -0.75 / -0.5 / -0.25 in Sigma units, then Sigma < 0 at 400000 evaluations) | `parts/layer/sonic/`, `parts/layer_t14/sonic/` |
-| gap, 89 | `--combine --norm piece --mv mv3 --piece-ladder-evals 200000 --piece-final-evals 600000` (sections 11.2-11.4) | `parts/layer/gap/`, `parts/layer_t14/gap/` |
+| sonic, 51 | the reviewed default: natural layer form, `norm=layer` (ladder -0.75 / -0.5 / -0.25 in Sigma units, then Sigma < 0 at 400000 evaluations) | `parts/layer/sonic/`, `strip/layer_t14/sonic/` |
+| gap, 89 | `--combine --norm piece --mv mv3 --piece-ladder-evals 200000 --piece-final-evals 600000` (sections 11.2-11.4) | `parts/layer/gap/`, `strip/layer_t14/gap/` |
 
 Why the gap steps use the extended engine.  They are tube steps (no Laurent
 structure), so `combine` and the centred form apply.  With the default engine
@@ -399,7 +399,7 @@ Re-run of sonic s29-s50, `--tau-min 14 --norm piece` (07:23-07:41Z, two
 processes; logs `logs/s44/s44-sonic-t14-piece-w0.log`, `-b-w0.log`): all 22
 pass at the first rung, bounds -0.452 (s29) ... -0.585 (s50), each 0.50 of
 the piece's scale (0.903 ... 1.170), 2515-51899 boxes, cover 5.7-62 s.  These
-parts replace the default-engine ones in `parts/layer_t14/sonic/` (those are
+parts replace the default-engine ones in `strip/layer_t14/sonic/` (those are
 kept in commit `ac91f9fa`).  So the band's tau >= 14 parts now certify
 Sigma <= -0.45 or better everywhere: sonic s00-s28 at -0.50 (default
 engine), s29-s50 at -0.452 ... -0.585, gap at -0.604 ... -1.231.
@@ -588,7 +588,7 @@ at 2M evaluations; mv certifies with 93033 boxes in 403 s; mv3 with 9123
 boxes in 90 s.  One mv3 evaluation costs ~1.2 ms (~14 natural ones).
 
 Probe results with `--combine --norm piece --mv mv3` (parts in
-`parts/layer/{tube,deep}/` and `parts/layer_t14/{tube,deep}/`; sources of
+`parts/layer/{tube,deep}/` and `strip/layer_t14/{tube,deep}/`; sources of
 commit `9a99f51c`, recorded head `34d297f7` with the same sources,
 `git_dirty_src` false); certified bound, its fraction of the piece scale,
 boxes, cover wall time (one M4 Pro core, nice 10, 8-10 other processes on 12
@@ -947,3 +947,5 @@ The differences, none caused by the ball fix:
 ---
 
 *Paths (2026-10-17): the files behind CERTIFIED rows moved unchanged from `results/` to `certificates/` (`problems/P4/certificates/README.md`). The paths in this note are updated; the module mains still write their replays to `results/`. The note gained no lines above this one, so line references into it still hold.*
+
+*Paths (2026-10-17, P4-9 promotion): the strip certificate (the plan, the cache records, the `layer_t14` and `centre_t14` parts, the centre identity and the merged `tc_commutator.json`) moved unchanged to `certificates/theorem_c/strip/` (`problems/P4/certificates/README.md`); `strip/` in this note means that directory.*

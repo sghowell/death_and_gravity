@@ -1,0 +1,509 @@
+{
+ "U1_divisible_by_Dp6": true,
+ "U6_equals_build_pairs_formula": true,
+ "U6_terms": 34291,
+ "atoms_checked": [
+  "Acr",
+  "Aer",
+  "Bcr",
+  "Ber",
+  "D2r",
+  "Dp",
+  "SD",
+  "SDr",
+  "TN1r",
+  "dAcr",
+  "dAer",
+  "dBcr",
+  "dBer",
+  "dD2r",
+  "dDp",
+  "dSD",
+  "dSDr",
+  "dTN1r",
+  "ddAcr",
+  "ddAer",
+  "ddBcr",
+  "ddBer",
+  "ddD2r",
+  "ddDp",
+  "ddSDr",
+  "ddTN1r",
+  "dddAcr",
+  "dddBcr",
+  "dddDp"
+ ],
+ "atoms_with_other_variables": {},
+ "checks": {
+  "U6_built_two_ways": true,
+  "controls_fail_as_expected": true,
+  "denU_kappa1to7_y8_nonzero": true,
+  "kappa1to7_lowest_term_layer_8": true,
+  "kappa1to7_y10_nonzero": true,
+  "kappa1to7_y8_y9_vanish": true,
+  "no_odd_parity_U6": true,
+  "no_other_variables": true,
+  "other_kappa_start_at_10": true
+ },
+ "controls": {
+  "a_linear_A_y9_nonzero_kappa": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7
+  ],
+  "mutated_odd_parity_terms": 1,
+  "mutated_y8_nonzero_kappa": [
+   3
+  ],
+  "mutated_y9_nonzero_kappa": [
+   2
+  ]
+ },
+ "ctx_names": [
+  "t",
+  "A",
+  "N",
+  "W",
+  "V",
+  "Ap",
+  "Np",
+  "Wp",
+  "Vp",
+  "k"
+ ],
+ "denU_terms": 13742,
+ "note": "y^9 vanishes for every background with A = 1 + O(y^2), not only even ones: the y^9 coefficient of the layer-8 part is the derivative of the layer-8 polynomial in the direction (n1, w1, v1), and that polynomial is identically 0; there is no layer-9 monomial (no odd parity).",
+ "ok": true,
+ "scan": {
+  "U6": {
+   "kappa": {
+    "0": {
+     "lowest_nonzero": 10,
+     "y10_symbols": [
+      "n0",
+      "v0",
+      "w0"
+     ],
+     "y10_terms": 3,
+     "y8_zero": true,
+     "y9_zero": true,
+     "y_powers_nonzero": [
+      10
+     ],
+     "y_powers_with_terms": [
+      10
+     ]
+    },
+    "1": {
+     "lowest_nonzero": 10,
+     "y10_symbols": [
+      "a0",
+      "n0",
+      "v0",
+      "w0"
+     ],
+     "y10_terms": 7,
+     "y8_zero": true,
+     "y9_zero": true,
+     "y_powers_nonzero": [
+      10
+     ],
+     "y_powers_with_terms": [
+      8,
+      9,
+      10
+     ]
+    },
+    "2": {
+     "lowest_nonzero": 10,
+     "y10_symbols": [
+      "a0",
+      "n0",
+      "v0",
+      "w0"
+     ],
+     "y10_terms": 7,
+     "y8_zero": true,
+     "y9_zero": true,
+     "y_powers_nonzero": [
+      10
+     ],
+     "y_powers_with_terms": [
+      8,
+      9,
+      10
+     ]
+    },
+    "3": {
+     "lowest_nonzero": 10,
+     "y10_symbols": [
+      "a0",
+      "n0",
+      "v0",
+      "w0"
+     ],
+     "y10_terms": 7,
+     "y8_zero": true,
+     "y9_zero": true,
+     "y_powers_nonzero": [
+      10
+     ],
+     "y_powers_with_terms": [
+      8,
+      9,
+      10
+     ]
+    },
+    "4": {
+     "lowest_nonzero": 10,
+     "y10_symbols": [
+      "a0",
+      "n0",
+      "v0",
+      "w0"
+     ],
+     "y10_terms": 7,
+     "y8_zero": true,
+     "y9_zero": true,
+     "y_powers_nonzero": [
+      10
+     ],
+     "y_powers_with_terms": [
+      8,
+      9,
+      10
+     ]
+    },
+    "5": {
+     "lowest_nonzero": 10,
+     "y10_symbols": [
+      "a0",
+      "n0",
+      "v0",
+      "w0"
+     ],
+     "y10_terms": 7,
+     "y8_zero": true,
+     "y9_zero": true,
+     "y_powers_nonzero": [
+      10
+     ],
+     "y_powers_with_terms": [
+      8,
+      9,
+      10
+     ]
+    },
+    "6": {
+     "lowest_nonzero": 10,
+     "y10_symbols": [
+      "a0",
+      "n0",
+      "v0",
+      "w0"
+     ],
+     "y10_terms": 6,
+     "y8_zero": true,
+     "y9_zero": true,
+     "y_powers_nonzero": [
+      10
+     ],
+     "y_powers_with_terms": [
+      8,
+      9,
+      10
+     ]
+    },
+    "7": {
+     "lowest_nonzero": 10,
+     "y10_symbols": [
+      "a0",
+      "n0",
+      "v0",
+      "w0"
+     ],
+     "y10_terms": 5,
+     "y8_zero": true,
+     "y9_zero": true,
+     "y_powers_nonzero": [
+      10
+     ],
+     "y_powers_with_terms": [
+      8,
+      9,
+      10
+     ]
+    },
+    "8": {
+     "lowest_nonzero": 10,
+     "y10_symbols": [
+      "n0",
+      "v0",
+      "w0"
+     ],
+     "y10_terms": 2,
+     "y8_zero": true,
+     "y9_zero": true,
+     "y_powers_nonzero": [
+      10
+     ],
+     "y_powers_with_terms": [
+      10
+     ]
+    },
+    "9": {
+     "lowest_nonzero": 10,
+     "y10_symbols": [
+      "n0",
+      "w0"
+     ],
+     "y10_terms": 1,
+     "y8_zero": true,
+     "y9_zero": true,
+     "y_powers_nonzero": [
+      10
+     ],
+     "y_powers_with_terms": [
+      10
+     ]
+    }
+   },
+   "min_layer": 8,
+   "odd_parity_terms": 0,
+   "series_order": 2,
+   "symbols": [
+    "n0",
+    "n1",
+    "n2",
+    "w0",
+    "w1",
+    "w2",
+    "v0",
+    "v1",
+    "v2",
+    "a0",
+    "a1",
+    "a2"
+   ]
+  },
+  "denU": {
+   "kappa": {
+    "0": {
+     "lowest_nonzero": 10,
+     "y10_symbols": [
+      "n0",
+      "v0",
+      "w0"
+     ],
+     "y10_terms": 3,
+     "y8_zero": true,
+     "y9_zero": true,
+     "y_powers_nonzero": [
+      10
+     ],
+     "y_powers_with_terms": [
+      10
+     ]
+    },
+    "1": {
+     "lowest_nonzero": 8,
+     "y10_symbols": [
+      "n0",
+      "n1",
+      "n2",
+      "v0",
+      "w0",
+      "w1",
+      "w2"
+     ],
+     "y10_terms": 11,
+     "y8_zero": false,
+     "y9_zero": false,
+     "y_powers_nonzero": [
+      8,
+      9,
+      10
+     ],
+     "y_powers_with_terms": [
+      8,
+      9,
+      10
+     ]
+    },
+    "2": {
+     "lowest_nonzero": 8,
+     "y10_symbols": [
+      "n0",
+      "n1",
+      "n2",
+      "v0",
+      "w0",
+      "w1",
+      "w2"
+     ],
+     "y10_terms": 11,
+     "y8_zero": false,
+     "y9_zero": false,
+     "y_powers_nonzero": [
+      8,
+      9,
+      10
+     ],
+     "y_powers_with_terms": [
+      8,
+      9,
+      10
+     ]
+    },
+    "3": {
+     "lowest_nonzero": 8,
+     "y10_symbols": [
+      "n0",
+      "n1",
+      "n2",
+      "v0",
+      "w0",
+      "w1",
+      "w2"
+     ],
+     "y10_terms": 11,
+     "y8_zero": false,
+     "y9_zero": false,
+     "y_powers_nonzero": [
+      8,
+      9,
+      10
+     ],
+     "y_powers_with_terms": [
+      8,
+      9,
+      10
+     ]
+    },
+    "4": {
+     "lowest_nonzero": 8,
+     "y10_symbols": [
+      "n0",
+      "n1",
+      "n2",
+      "v0",
+      "w0",
+      "w1",
+      "w2"
+     ],
+     "y10_terms": 11,
+     "y8_zero": false,
+     "y9_zero": false,
+     "y_powers_nonzero": [
+      8,
+      9,
+      10
+     ],
+     "y_powers_with_terms": [
+      8,
+      9,
+      10
+     ]
+    },
+    "5": {
+     "lowest_nonzero": 8,
+     "y10_symbols": [
+      "n0",
+      "n1",
+      "n2",
+      "v0",
+      "w0",
+      "w1",
+      "w2"
+     ],
+     "y10_terms": 11,
+     "y8_zero": false,
+     "y9_zero": false,
+     "y_powers_nonzero": [
+      8,
+      9,
+      10
+     ],
+     "y_powers_with_terms": [
+      8,
+      9,
+      10
+     ]
+    },
+    "6": {
+     "lowest_nonzero": 8,
+     "y10_symbols": [
+      "n0",
+      "n1",
+      "n2",
+      "v0",
+      "w0",
+      "w1",
+      "w2"
+     ],
+     "y10_terms": 9,
+     "y8_zero": false,
+     "y9_zero": false,
+     "y_powers_nonzero": [
+      8,
+      9,
+      10
+     ],
+     "y_powers_with_terms": [
+      8,
+      9,
+      10
+     ]
+    },
+    "7": {
+     "lowest_nonzero": 8,
+     "y10_symbols": [
+      "n0",
+      "n1",
+      "n2",
+      "v0",
+      "w0",
+      "w1",
+      "w2"
+     ],
+     "y10_terms": 8,
+     "y8_zero": false,
+     "y9_zero": false,
+     "y_powers_nonzero": [
+      8,
+      9,
+      10
+     ],
+     "y_powers_with_terms": [
+      8,
+      9,
+      10
+     ]
+    }
+   },
+   "min_layer": 8,
+   "odd_parity_terms": 0,
+   "series_order": 2,
+   "symbols": [
+    "n0",
+    "n1",
+    "n2",
+    "w0",
+    "w1",
+    "w2",
+    "v0",
+    "v1",
+    "v2",
+    "a0",
+    "a1",
+    "a2"
+   ]
+  }
+ },
+ "schema": "review-s46-identity-independent/1",
+ "seconds": 6.724302291870117
+}

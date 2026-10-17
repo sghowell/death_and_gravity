@@ -1,0 +1,61 @@
+........................................................................ [ 17%]
+........................................................................ [ 34%]
+........................................................................ [ 52%]
+......................................................s.........s.s..... [ 69%]
+sss.....................................ssss............................ [ 87%]
+...................................ss................                    [100%]
+============================= slowest 40 durations =============================
+185.23s setup    problems/P4/tests/test_validated_modes_stage2.py::test_E_fin_matches_S1_and_E_has_S1_signs
+166.24s call     problems/P4/tests/test_validated_shoot_matching.py::test_krawczyk_certificate
+112.21s call     problems/P4/tests/test_validated_modes_stage2.py::test_E_zero_at_kappa1_and_gauge_and_box_contains_point
+55.91s setup    problems/P4/tests/test_tc_commutator.py::test_direct_only_needs_a_direct_range
+55.08s call     problems/P4/tests/test_validated_modes_stage2.py::test_E_fin_matches_S1_and_E_has_S1_signs
+40.80s call     problems/P4/tests/test_validated_shoot.py::test_sonic_initial_state_and_short_integration
+40.47s call     problems/P4/tests/test_tc_commutator.py::test_e5_sonic_vanishing
+39.25s setup    problems/P4/tests/test_tc_layer_centre.py::test_regimes_agree_and_normalization
+33.83s setup    problems/P4/tests/test_tc_layer_centre.py::test_agrees_with_direct_chain_c00
+21.56s call     problems/P4/tests/test_tc_reduction.py::test_reduced_eigenvalues_known_answer
+21.48s call     problems/P4/tests/test_validated_modes_stage2.py::test_apparent_singularity_needs_4D
+17.87s call     problems/P4/tests/test_validated_modes_stage2.py::test_short_tube_propagation_encloses_stage1_series
+17.57s call     problems/P4/tests/test_validated_modes_stage3.py::test_taylor_model_propagation_contains_point_runs
+14.89s call     problems/P4/tests/test_perturb.py::test_winding_number_small_box
+6.99s setup    problems/P4/tests/test_tc_layer.py::test_float_check_september
+6.31s call     problems/P4/tests/test_validated_modes_stage3.py::test_context_refuses_mismatched_tube
+5.26s setup    problems/P4/tests/test_tc_commutator.py::test_e1_u6_top_identity
+5.14s setup    problems/P4/tests/test_tc_energy.py::test_exact_reductions_build
+4.84s call     problems/P4/tests/test_tc_commutator.py::test_sonic_closing_direct_phase
+3.62s call     problems/P4/tests/test_tc_layer.py::test_piece_scale_and_norm
+3.32s call     problems/P4/tests/test_tc_layer.py::test_centred_form_certifies
+2.13s call     problems/P4/tests/test_tc_layer.py::test_certify_single_xi[14.0]
+2.04s call     problems/P4/tests/test_perturb.py::test_gauge_eigenvalue_found_and_identified
+2.00s call     problems/P4/tests/test_perturb.py::test_kappa_1
+1.97s call     problems/P4/tests/test_tc_energy.py::test_monotone_sonic_and_centre
+1.93s setup    problems/P4/tests/test_tc_energy.py::test_closing_box_and_sigma_known_answer
+1.92s setup    problems/P4/tests/test_validated_modes_stage3.py::test_4d_sonic_series_matches_stage1_and_is_regular_at_A0
+1.85s call     problems/P4/tests/test_derivation.py::test_pointwise_M_and_rows_match_symbolic_exactly
+1.16s setup    problems/P4/tests/test_validated_sonic.py::test_balls_contain_S1_float_coefficients
+0.92s call     problems/P4/tests/test_tc_reduction.py::test_reduced_matches_full_system
+0.89s call     problems/P4/tests/test_validated_modes_stage3.py::test_4d_sonic_series_matches_stage1_and_is_regular_at_A0
+0.88s call     problems/P4/tests/test_validated_modes_stage3.py::test_interior_box_certificates
+0.80s call     problems/P4/tests/test_validated_modes_stage2.py::test_centre_regular_family_certified_and_on_constraint
+0.74s call     problems/P4/tests/test_tc_layer_centre.py::test_agrees_with_direct_chain_c29
+0.71s call     problems/P4/tests/test_shoot.py::test_other_branch_has_no_root
+0.67s call     problems/P4/tests/test_derivation.py::test_independent_pointwise_checks
+0.64s setup    problems/P4/tests/test_derivation.py::test_derivation_sanity
+0.60s call     problems/P4/tests/test_validated_modes_stage3.py::test_4d_delta_model_remainders
+0.58s setup    problems/P4/tests/test_shoot.py::test_ec_root_value
+0.50s call     problems/P4/tests/test_tc_layer_centre.py::test_mean_value_form_contains_points
+=========================== short test summary info ============================
+SKIPPED [1] problems/P4/tests/test_tc_commutator.py:65: P4_SLOW=1 for the long runs
+SKIPPED [1] problems/P4/tests/test_tc_commutator.py:234: P4_SLOW=1 for the long runs
+SKIPPED [1] problems/P4/tests/test_tc_commutator.py:255: P4_SLOW=1 for the long runs
+SKIPPED [1] problems/P4/tests/test_tc_energy.py:81: needs P4_TUBE_CACHE (saved certified tube)
+SKIPPED [1] problems/P4/tests/test_tc_energy.py:109: needs P4_TUBE_CACHE (saved certified tube)
+SKIPPED [1] problems/P4/tests/test_tc_energy.py:118: P4_SLOW=1 for the field identity
+SKIPPED [1] problems/P4/tests/test_tc_layer.py:376: P4_SLOW=1 for the full-piece runs
+SKIPPED [1] problems/P4/tests/test_tc_layer.py:415: P4_SLOW=1 for the full-piece runs
+SKIPPED [1] problems/P4/tests/test_tc_layer.py:423: P4_SLOW=1 for the full-piece runs
+SKIPPED [1] problems/P4/tests/test_tc_layer.py:431: P4_SLOW=1 for the full-piece runs
+SKIPPED [1] problems/P4/tests/test_validated_modes_stage3.py:160: needs the full tube (P4_TUBE_CACHE) or P4_SLOW=1
+SKIPPED [1] problems/P4/tests/test_validated_modes_stage3.py:172: needs the full tube (P4_TUBE_CACHE) or P4_SLOW=1
+401 passed, 12 skipped, 1 deselected in 901.47s (0:15:01)
