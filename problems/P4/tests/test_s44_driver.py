@@ -62,9 +62,13 @@ def test_tau_mins_and_dirs():
 def test_engine_opts_and_validity(plan):
     p = [q for q in plan["pieces"] if q["id"] == "gap/gap-000"][0]
     code = {CODE_FILE: s44.s43.current_hash(CODE_FILE)}
-    d = dict(schema=s44.SCHEMA, spec=s44.s43.spec_of(p), code=dict(files=code))
+    d = dict(schema=s44.SCHEMA, spec=s44.s43.spec_of(p), code=dict(files=code),
+             driver_sha256=s44.DRIVER_SHA256)
     default = s44.engine_opts(_args())
     assert s44.part_valid(d, p, default)                 # no engine record = defaults
+    assert not s44.part_valid(dict(d, driver_sha256="8" * 64), p, default)   # other driver
+    assert not s44.part_valid(dict(d, code=dict(files=code, write_check=dict(ok=False))),
+                              p, default)                # sources changed mid-run
     ext = s44.engine_opts(_args(combine=True, norm="piece", mv="mv3",
                                 piece_ladder_evals=200000, piece_final_evals=600000))
     assert not s44.part_valid(d, p, ext)
@@ -90,3 +94,17 @@ def test_work_argv_roundtrip():
         assert x in av
     assert not any(x.startswith("--tau-min=") for x in av)
     assert "--tau-min=224" in s44.work_argv(_args())
+
+
+def test_compare_previous_ignores_attempt_times():
+    prev = dict(status="pass", certified_bound=-0.5, worst=-0.5, boxes=10, evals=40,
+                attempts=[dict(target=-0.75, ok=False, evals=20, time=1.0),
+                          dict(target=-0.5, ok=True, evals=20, time=2.0)])
+    rec = dict(status="pass", certified_bound=-0.5,
+               result=dict(worst=-0.5, boxes=10, evals=40,
+                           attempts=[dict(target=-0.75, ok=False, evals=20, time=9.0),
+                                     dict(target=-0.5, ok=True, evals=20, time=8.0)]))
+    assert s44.compare_previous(prev, rec)["identical"] is True
+    rec["result"]["boxes"] = 11
+    rc = s44.compare_previous(prev, rec)
+    assert rc["identical"] is False and rc["fields"]["boxes"] is False

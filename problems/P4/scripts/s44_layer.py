@@ -243,10 +243,13 @@ def build_piece(p, ctx, combine=False):
 
 
 def part_valid(d, p, opts):
-    """A stored part may be skipped: right schema and spec, current code, a
-    write-time check that did not fail, the same engine options (a part
-    without the record used the defaults)."""
+    """A stored part may be skipped: right schema and spec, written by this
+    driver (driver_sha256, the hash the merge pins for substitution), current
+    code, a write-time check that did not fail, the same engine options (a
+    part without the record used the defaults)."""
     if d.get("schema") != SCHEMA or d.get("spec") != s43.spec_of(p):
+        return False
+    if d.get("driver_sha256") != DRIVER_SHA256:
         return False
     if not s43.write_check_ok(d) or not s43.code_matches(d["code"]["files"]):
         return False
@@ -303,16 +306,23 @@ def previous_record(path):
                 cpu_s=(d.get("timing") or {}).get("cpu_s"))
 
 
+def _attempts(a):
+    """Ladder attempts without their wall times: [(target, ok, evals)]."""
+    return [[x.get("target"), x.get("ok"), x.get("evals")] for x in (a or [])]
+
+
 def compare_previous(prev, rec):
     """identical: same status, certified bound, worst, boxes, evals and
-    ladder attempts (bit for bit), against the previous part."""
+    ladder attempts (targets, outcomes and evaluation counts; not their wall
+    times), bit for bit, against the previous part."""
     if not prev or prev.get("unreadable"):
         return None
     r = rec.get("result") or {}
     keys = dict(status=rec.get("status"), certified_bound=rec.get("certified_bound"),
                 worst=r.get("worst"), boxes=r.get("boxes"), evals=r.get("evals"),
-                attempts=r.get("attempts"))
-    same = {k: prev.get(k) == v for k, v in keys.items()}
+                attempts=_attempts(r.get("attempts")))
+    old = dict(prev, attempts=_attempts(prev.get("attempts")))
+    same = {k: old.get(k) == v for k, v in keys.items()}
     return dict(identical=all(same.values()), fields=same,
                 same_engine=(prev.get("engine") or {}) == (rec.get("engine") or {}))
 
@@ -595,6 +605,8 @@ def cmd_compare(args):
     worst, boxes, evals and ladder attempts are bit-identical."""
     old = json.load(open(args.old))["parts"]
     cur = {k: _part_summary(d) for k, d in _all_parts().items()}
+    for x in list(old.values()) + list(cur.values()):
+        x["attempts"] = _attempts(x.get("attempts"))
     keys = ("status", "certified_bound", "worst", "boxes", "evals", "attempts")
     rows, tally = {}, {}
     for k in sorted(set(old) | set(cur)):

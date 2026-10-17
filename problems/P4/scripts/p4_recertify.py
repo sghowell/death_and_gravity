@@ -161,7 +161,9 @@ for key, kc, w in (("kappa1", modecount.KAPPA1, 2e-7), ("kbar", modecount.KGAUGE
     with precision(ctx.prec):
         z = zs[key] = k["zero"]
         out[key] = dict(ok=k["ok"], kappa_c=str(k["kappa_c"]), w_B=k["w_B"], m=k["model"].m, w=w,
-                        E=str(k["E"]), E_abs_upper=float(abs_upper(k["E"])),
+                        E=str(k["E"]), E_abs_upper=float(abs(k["E"]).upper()),
+                        E_abs_upper_arb=float(abs_upper(k["E"])), E_enc=modecount.enc(k["E"].real)
+                        + modecount.enc(k["E"].imag),
                         dE=str(k["dE"]), dE_box=str(k["dE_box"]), rem=k["rem"],
                         zero=str(z), zero_re_interval=[str(z.real.lower()), str(z.real.upper())],
                         zero_im_abs=float(abs_upper(z.imag)), info=k["info"],
@@ -252,8 +254,9 @@ def compare(args):
                     "max_Pinv", "n_boxes", "min_w", "min_nu", "max_re_sigma", "max_Z_sonic",
                     "max_Z_centre", "max_g_centre", "tube_info")
             pairs = {k: (old.get(k), new.get(k)) for k in keys}
-            strip = lambda bs: [{k: v for k, v in b.items()} for b in bs]
-            pairs["boxes"] = (strip(old["boxes"]), strip(new["boxes"]))
+            # the pool returns the boxes in completion order: compare as multisets
+            srt = lambda bs: sorted(json.dumps(b, sort_keys=True) for b in bs)
+            pairs["boxes (as a multiset)"] = (srt(old["boxes"]), srt(new["boxes"]))
             cmp(name, pairs)
             if "tube_info" in rows[name]["differences"]:
                 rows[name]["note"] = "tube_info.time is the wall time of the tube build"
