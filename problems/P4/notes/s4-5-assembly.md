@@ -206,7 +206,7 @@ reviewed 2026-08-26).
 
   | record | record sha256 | content hash | covers |
   |---|---|---|---|
-  | `P4/results/theorem_c/parts/caches/full.json` | `9a2bcc535cb2642d2d815467f8e6e1c9bab86c593fd8230a297b97d5e523059b` | `cb2531921be5ff5c387f2f1b424f351c7fa378f80f71c97dc7edd464de0b1b6e` | 344 steps, [−8, −0.05]; A3 tube to −3, then the certified centre series |
+  | `P4/certificates/theorem_c/strip/caches/full.json` | `9a2bcc535cb2642d2d815467f8e6e1c9bab86c593fd8230a297b97d5e523059b` | `cb2531921be5ff5c387f2f1b424f351c7fa378f80f71c97dc7edd464de0b1b6e` | 344 steps, [−8, −0.05]; A3 tube to −3, then the certified centre series |
   | `.../caches/gap.json` | `d16bb0b245efa7265b3a6c1754d9637907d1d94305f01487af347b95998f0e58` | `a5428c96c3513e8f95cb0f523350b0cf19925de1be4fc4c6fc83991fe1b9e182` | 107 steps, [−0.055, −0.0085] |
   | `.../caches/deep.json` | `28c42cd72a44b29ca81fef35712d316be949f0b79c2eb411819fbed075b13d2a` | `ef544d927ef12534ed38a4f04044a4bbb6d61f5a45f0f7c5e20ec00775cfa493` | 129 steps, [−4.56, −2.95]; built from the certified centre series |
   | `.../caches/band.json` | `c4a55cd3d34a0e52bc2a90540c3336c9868cf8d1f33ceb3722ee2fc122436d1e` | `9f1e73819af48bcc63bd40e5100c807479ffc600df0522285d3fd3d1a0a4ebcb` | 60 steps, [−0.17, −0.05] |
@@ -328,7 +328,7 @@ engine under the substitution rule).
   (gap-000), band −3.951 (band-000), tube −0.2094 (full-244), deep −0.02165
   (deep-128).  Every piece-norm part has relative margin ≥ 0.5000.
 * *Artifacts:*
-  * `P4/results/theorem_c/parts/layer_t14/` (546 files), aggregate
+  * `P4/results/theorem_c/parts/layer_t14/` (546 files; now `strip/`, §10), aggregate
     `e9835a41fb2dbcc718e6beff9d6aa89b3b50b7874c996baee10fa173d0f5ff6c`.
     * Every recorded source hash is current, `git_dirty_src` is false and the
       driver is `3a86e50f…` (= `s44_layer.py`).
@@ -343,7 +343,7 @@ engine under the substitution rule).
     * Uncovered x, for τ ≤ 224 and for τ > 224: (−∞, −4.56).
     * The review re-ran the merge with the exact cover code (`75869b91`) and
       got identical per-piece detail (review §8).
-  * The plan, `P4/results/theorem_c/parts/plan.json`
+  * The plan, `P4/certificates/theorem_c/strip/plan.json`
     `b3e658249452ee976b244d35c3944573980eecd4aa3aa53b7c70e28639fb10e2`.
   * Supporting files, not cited for the theorem:
     * `parts/layer/` (τ ≥ 224, 546 files), aggregate
@@ -785,7 +785,7 @@ This proves (iii). ∎
      `certificates/`" (main `README.md:1178`; layout at `:1163`).
    * The CERTIFIED rows' artifacts (P4-3, P4-6, P4-8, review checks) moved
      unchanged to `P4/certificates/` (its `README.md` maps old paths to new).
-   * P4-9's artifacts stay under `results/` while the row is CONJECTURED.
+   * P4-9's artifacts moved to `P4/certificates/theorem_c/strip/` at its promotion (§10).
 4. **Optional hardening of the S4-2 join** (review §7).  The join at −4.5
    overlaps by 4.6e−17 "by rounding luck".  Running Lemma D to a ycut slightly
    above e^{−4.5}, or keeping one more tube step, would give a margin.  This is
@@ -883,22 +883,22 @@ coincide (P4-6, Theorem B′).
   * boundary terms: γ = 1 + σ₀ + (1 − σ₀)(ε + c) ≥ 1.0617 at the sonic
     point, and BT = O(t^{3+k}) → 0 at the centre, with B0 = O(t^k), k ≥ 2;
   * Im κ ≤ −14 by conjugation.
-* *Level now:* **CONJECTURED.**  546 of 576 pieces are certified on
-  x ∈ [−4.56, 0] (exact cover; S4-4 `layer_t14` parts under
-  `merge --substitute-layer-t14`).  The 30 centre pieces (x ≤ −4.5) are
-  computed in S4-6 and await their review (§9).
+* *Level now:* **CERTIFIED** (2026-10-17, §10).  All 576 pieces are certified:
+  546 S4-4 `layer_t14` parts on x ∈ [−4.56, 0] and 30 S4-6 centre parts,
+  under `merge --substitute-layer-t14 --substitute-centre` (exact cover,
+  `strip_exclusion_certified = true`; §9).
 * *Target:* CERTIFIED when the centre pieces pass on the current code with
   the certified centre balls and the merge reports
   `strip_exclusion_certified = true`.
 * *Evidence:*
   * notes: `s4-commutator.md` §2–§3, `s4-4-layer-engine.md` §1–§5 and
     §12–§14, `s4-5-assembly.md` §4.1;
-  * `parts/layer_t14/` (aggregate `e9835a41…`);
+  * `strip/layer_t14/` (aggregate `e9835a41…` at the old path, §10);
   * `layer_recompute/merge_substitute_layer_t14.json`;
   * `certificates/theorem_c/checks.json`;
   * the two 2026-10-17 review documents and `review_s45/`.
 
-  The centre has landed: add its parts and the complete `tc_commutator.json` (§9).
+  The centre: `strip/centre_t14/`, `strip/centre_nb_identity.json` and the complete `strip/tc_commutator.json` (§9, §10).
 
 **P4-10 (new): Theorem C and the mode count.**
 * *Claim:* in the class of P4-8 there is no eigenvalue in
@@ -912,7 +912,7 @@ coincide (P4-6, Theorem B′).
   * Corollary (Lemma G1): E(κ) ≠ 0 on Ω.
   * Not claimed: kink modes, non-spherical modes, nonlinear stability,
     Re κ < 0.
-* *Level now:* **CONJECTURED** (it inherits P4-9).
+* *Level now:* **CERTIFIED** (2026-10-17, with P4-9; §10).
 * *Target:* CERTIFIED with P4-9.  If P4-8 or P4-9 ends at WRITTEN_PROOF, so
   does P4-10.
 * *Evidence:* the P4-6, P4-8 and P4-9 evidence; `s4-5-assembly.md`;
@@ -960,18 +960,18 @@ From the repository (worktree) root:
 
 ```
 shasum -a 256 problems/P4/certificates/theorem_b/*.json problems/P4/certificates/theorem_c/*.json \
-  problems/P4/results/theorem_c/tc_leading.json problems/P4/results/theorem_c/parts/plan.json \
-  problems/P4/results/theorem_c/parts/caches/*.json problems/P4/results/theorem_c/layer_recompute/*.json \
+  problems/P4/results/theorem_c/tc_leading.json problems/P4/certificates/theorem_c/strip/plan.json \
+  problems/P4/certificates/theorem_c/strip/caches/*.json problems/P4/results/theorem_c/layer_recompute/*.json \
   problems/P4/certificates/theorem_c/review_s45/*.json problems/P4/certificates/theorem_c/review_s45/*.txt
 # aggregate of a part directory (paths relative to the root, C-locale sort):
-find problems/P4/results/theorem_c/parts/layer_t14 -name '*.json' | LC_ALL=C sort \
+find problems/P4/certificates/theorem_c/strip/layer_t14 -name '*.json' | LC_ALL=C sort \
   | xargs shasum -a 256 | shasum -a 256
 git diff --stat fda58897..HEAD -- problems/P4/src   # S4-6's two new files only (§9)
 ```
 
 The first version's own exact cover analysis used Python `fractions` on two
 sources:
-* the `parts/plan.json` endpoints: 371 same-tube label gaps of at most
+* the `strip/plan.json` endpoints: 371 same-tube label gaps of at most
   1.8e−16, which are label rounding, and no cross-region gap;
 * the dyadic step positions of `P4/data/cache/tube_{full,gap,deep,band}.json`:
   radius 0 and exact joins.
@@ -1012,11 +1012,11 @@ section is appended.  The full account and the reviewer's checklist are in
     passing write-time check, no late module and the driver `s46_centre.py`
     `735336cc…`.  The merge's strict centre rule checks all of it
     (`s4-6-centre.md` §6).
-* *Artifacts,* all under `P4/results/theorem_c/` and not promoted:
+* *Artifacts,* under `P4/results/theorem_c/` at review time (promoted, §10):
 
   | file | sha256 | what |
   |---|---|---|
-  | `parts/centre_t14/` (30 files) | aggregate `4ac8a7b00f9904d56dd5a26e7b656fd6387f1457614be7467dc6cad61e1f17d7` | τ ≥ 14 parts, used by the merge |
+  | `parts/centre_t14/` (30 files; now `strip/`) | aggregate (old path) `4ac8a7b00f9904d56dd5a26e7b656fd6387f1457614be7467dc6cad61e1f17d7` | τ ≥ 14 parts, used by the merge |
   | `parts/centre_t224/` (30 files) | aggregate `ba424c3f78ea8d4a001072dd07025b7c6cd56acbfce12c5304ad14cf7f9fc836` | τ ≥ 224 parts, reported only |
   | `centre_nb_identity.json` | `0fad868ba62fdecb836e6f8a78de23bd3a87f096e50bd117b3cb0475c29bd505` | the exact identity |
   | `tc_commutator.json` | `6c228a73abb42c2a2a17ef0c59f4e6565e5c4381b19b7d1dafc15556150fdbab` | the complete merge |
@@ -1039,10 +1039,39 @@ section is appended.  The full account and the reviewer's checklist are in
   * nonvanishing: above;
   * `complete` and `strip_exclusion_certified`: above;
   * the merge wording: fixed, except `ncells`.
-* *Next.*  §6 applies to P4-9 and P4-10 only after the centre review and the
-  owner's approval; until then both rows stay CONJECTURED.  For P4-9's
-  evidence, add `notes/s4-6-centre.md`, `results/theorem_c/parts/centre_t14/`
-  (aggregate `4ac8a7b0…`), `results/theorem_c/centre_nb_identity.json`,
-  `results/theorem_c/tc_commutator.json`, `src/p4/validated/tc_layer_centre.py`,
-  `scripts/s46_centre.py`, `tests/test_tc_layer_centre.py`,
-  `tests/test_s43_merge.py`, and the centre review.
+* *Next.*  Done 2026-10-17 (§10): the centre review passed and the owner
+  approved; P4-9 and P4-10 are CERTIFIED.  P4-9's evidence adds
+  `notes/s4-6-centre.md`, `strip/centre_t14/` (aggregate `4ac8a7b0…` at the
+  old path), `strip/centre_nb_identity.json`, `strip/tc_commutator.json`,
+  `src/p4/validated/tc_layer_centre.py`, `scripts/s46_centre.py`,
+  `tests/test_tc_layer_centre.py`, `tests/test_s43_merge.py`, and the centre
+  review.
+
+## 10. Promotion of P4-9 and P4-10 (2026-10-17)
+
+* The S4-6 centre review (`docs/review-2026-10-17-p4-s4-6-centre-adversarial.md`)
+  found no blocking or should-fix flaw; its §12 recommends CERTIFIED for both
+  rows, in the same commit that moves the artifacts under `certificates/`.
+* With the owner's approval, P4-9 and P4-10 are CERTIFIED in CLAIMS.md, and
+  P4-2's scope note is widened to Re κ ≥ 0 (§6 "Related edits").
+* The strip certificate moved unchanged (git renames at 100% similarity)
+  from `P4/results/theorem_c/` to `P4/certificates/theorem_c/strip/`:
+  `parts/plan.json` → `plan.json`, `parts/caches/` → `caches/`,
+  `parts/layer_t14/` → `layer_t14/`, `parts/centre_t14/` → `centre_t14/`,
+  `centre_nb_identity.json` and `tc_commutator.json` (same names).  The
+  review's checks moved to `certificates/theorem_c/review_s46/`.  The second
+  τ modes (`parts/layer/`, `parts/centre_t224/`), the S4-3 parts,
+  `layer_recompute/` and `centre_sampling.json` stay in `results/`.
+* `s43_parts.py` (not pinned) reads the moved files (`STRIP`,
+  `layer_dir_path`).  The pinned drivers `s44_layer.py` and `s46_centre.py`
+  still write new parts under `results/theorem_c/parts/`, so a replay never
+  overwrites the certificate.
+* The merge re-run at the new paths reproduces `tc_commutator.json` except
+  `provenance` and the identity's recorded path; the committed file is the
+  reviewed one (`6c228a73…`).
+* The §8 aggregate command hashes paths too, so at the new paths it gives
+  `f21d32bd…` (`layer_t14`) and `7b087f9a…` (`centre_t14`).  The aggregates
+  quoted above (`e9835a41…`, `4ac8a7b0…`) are the same content at the old
+  paths: map the paths back before the outer shasum and they reproduce.
+* `certificates/README.md` lists every file, and `certificates/SHA256SUMS`
+  their sha256.

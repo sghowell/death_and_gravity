@@ -1,8 +1,8 @@
 """S4-3 tests: the commutator strip-exclusion certificate (tc_commutator).
 
 Fast by default (~2-3 min: exact identities, helper algebra, one sonic
-closing-piece direct run, one centre piece).  The full-piece analyze and the
-Lemma D rerun are gated behind P4_SLOW=1.
+closing-piece direct run).  The full-piece analyze, the Lemma D rerun and
+test_centre_first_piece are gated behind P4_SLOW=1.
 
 Measured 2026-10-16 (M4 Pro): the fast set takes ~3 min without
 test_centre_first_piece; that test alone did not finish within 15 min.
@@ -27,7 +27,6 @@ from p4.validated.tc_tm import sonic_components, AtomKP, LC, TM, SPLIT_REL
 
 SLOW = pytest.mark.skipif(os.environ.get("P4_SLOW") is None,
                           reason="P4_SLOW=1 for the long runs")
-RESULTS = os.path.join(os.path.dirname(__file__), "..", "results", "theorem_c")
 CERTS = os.path.join(os.path.dirname(__file__), "..", "certificates", "theorem_c")
 
 
@@ -224,6 +223,7 @@ def test_sonic_closing_direct_phase(sonic_pr):
     assert worst < -0.05
 
 
+@SLOW
 def test_centre_first_piece(atoms):
     ce = tc._centre_expansion()
     rep = tc.centre_piece(atoms, ce, 1e-8, 1.6e-8, 14.0,
@@ -240,10 +240,11 @@ def test_sonic_laurent_piece_full(atoms):
 
 # ---------------------------------------------------------------- artifacts
 def test_certificate_json_consistency():
-    path = os.path.join(RESULTS, "tc_commutator.json")
+    path = os.path.join(CERTS, "strip", "tc_commutator.json")
     if not os.path.exists(path):
         pytest.skip("tc_commutator.json not yet merged")
     d = json.load(open(path))
+    assert d["status"] == "complete" and d["strip_exclusion_certified"]
     assert d["b1"] == 14.0 and d["m"] == 1
     assert d["checks"]["E1_U6top"] and all(d["checks"]["E3_sonic_zeros"])
     assert all(d["checks"]["E5_sonic_vanishing"])

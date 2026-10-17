@@ -233,6 +233,7 @@ class Env:
 def env(tmp_path, monkeypatch):
     root = str(tmp_path)
     monkeypatch.setattr(s43, "PARTS", os.path.join(root, "parts"))
+    monkeypatch.setattr(s43, "STRIP", os.path.join(root, "parts"))    # one tree here
     monkeypatch.setattr(s43, "PLAN", os.path.join(root, "parts", "plan.json"))
     monkeypatch.setattr(s43, "CHECKS", os.path.join(root, "certificates", "checks.json"))
     monkeypatch.setattr(s43, "CERT", os.path.join(root, "tc_commutator.json"))
@@ -1353,7 +1354,11 @@ def test_centre_substitution_blocked_by_changed_constants(env, monkeypatch):
 def test_centre_constants_match_the_driver():
     import s46_centre as s46
     assert s46.SCHEMA == s43.CENTRE_SCHEMA and s46.EVALUATOR == s43.CENTRE_EVALUATOR
-    assert s46.IDENTITY == s43.CENTRE_IDENTITY and s46.DRIVER == s43.S46_DRIVER
+    assert s46.DRIVER == s43.S46_DRIVER
+    # the pinned driver writes the identity under results/ (a replay); the
+    # merge reads the promoted certificate copy under strip/
+    assert os.path.dirname(s46.IDENTITY) == s43.TC_DIR
+    assert os.path.basename(s46.IDENTITY) == os.path.basename(s43.CENTRE_IDENTITY)
     assert os.path.basename(s46.part_dir(14.0)) == s43.CENTRE_DIR
     assert os.path.basename(s46.part_dir(224.0)) == s43.CENTRE_DIR_224
     assert s43.centre_raise() == (2, [1, 2, 3, 4, 5, 6, 7])
@@ -1379,3 +1384,30 @@ def test_driver_record_passes_the_centre_checks(env, monkeypatch):
     d = s43.read_layer_part(s43.CENTRE_DIR, C00)
     assert d["schema"] == s43.CENTRE_SCHEMA and out["status"] == "pass"
     assert s43.centre_checks(p, d, 14.0, 6.0) == ("pass", [])
+
+
+def test_strip_layout():
+    # the P4-9 promotion (2026-10-17): the substituted part directories, the
+    # plan, the cache records, the identity and the merge live under
+    # certificates/theorem_c/strip; the other layer-part directories stay in PARTS
+    assert s43.STRIP == os.path.join(s43.P4, "certificates", "theorem_c", "strip")
+    for dn in s43.STRIP_DIRS:
+        assert s43.layer_dir_path(dn) == os.path.join(s43.STRIP, dn)
+    for dn in ("layer", s43.CENTRE_DIR_224):
+        assert s43.layer_dir_path(dn) == os.path.join(s43.PARTS, dn)
+    for path in (s43.PLAN, s43.CERT, s43.CENTRE_IDENTITY, s43.cache_record_path("full")):
+        assert path.startswith(s43.STRIP + os.sep)
+
+
+def test_replay_under_parts_does_not_shadow_the_strip(tmp_path, monkeypatch):
+    # the pinned drivers (s44_layer.py, s46_centre.py) write replays under
+    # PARTS; the merge reads the STRIP_DIRS from STRIP only
+    parts, strip = str(tmp_path / "parts"), str(tmp_path / "strip")
+    monkeypatch.setattr(s43, "PARTS", parts)
+    monkeypatch.setattr(s43, "STRIP", strip)
+    _write(os.path.join(parts, "layer_t14", "gap", "g.json"), dict(src="replay"))
+    _write(os.path.join(strip, "layer_t14", "gap", "g.json"), dict(src="strip"))
+    _write(os.path.join(parts, "layer", "gap", "g.json"), dict(src="parts"))
+    assert s43.read_layer_part("layer_t14", "gap/g") == dict(src="strip")
+    assert s43.read_layer_part("layer", "gap/g") == dict(src="parts")
+    assert s43.layer_dirs() == ["layer", "layer_t14"]

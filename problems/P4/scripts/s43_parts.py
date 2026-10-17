@@ -14,18 +14,28 @@ Layout (all paths relative to the repository root, so the script runs
 unchanged on the Mac and on the cloud node):
 
   problems/P4/data/cache/tube_<name>.json            tube caches (gitignored; pinned
-                                                     by content hash in parts/caches/)
-  problems/P4/results/theorem_c/parts/caches/<name>.json  cache build records (committed)
-  problems/P4/results/theorem_c/parts/plan.json      every piece of the certificate (committed)
-  problems/P4/results/theorem_c/parts/<region>/<id>.json  one result per piece (committed)
+                                                     by content hash in strip/caches/)
+  problems/P4/certificates/theorem_c/strip/          the P4-9 strip certificate (committed):
+    caches/<name>.json                               cache build records
+    plan.json                                        every piece of the certificate
+    layer_t14/<region>/<id>.json, centre_t14/centre/<id>.json
+                                                     the parts the merge substitutes
+    centre_nb_identity.json                          the centre identity artifact
+    tc_commutator.json                               merged certificate (only when complete)
+  problems/P4/results/theorem_c/parts/<region>/<id>.json  one S4-3 result per piece (committed)
+  problems/P4/results/theorem_c/parts/layer*/, centre_t224/  the other layer-part
+                                                     directories (second tau modes)
   problems/P4/certificates/theorem_c/checks.json     exact identities E1/E2/E3/E5 (committed)
   problems/P4/certificates/theorem_c/lemma_d_certified.json  Lemma D, certified balls
   problems/P4/certificates/theorem_c/p43_centre.json P4-3 centre tail (committed)
   problems/P4/results/theorem_c/parts/lemma_d_midpoint.json  Lemma D, old midpoint replay
-  problems/P4/results/theorem_c/tc_commutator.json   merged certificate (only when complete)
+  problems/P4/results/theorem_c/tc_commutator_partial.json  merge output when not complete
   (certificates/ holds the artifacts of CERTIFIED ledger rows, README "Ledger
   levels"; checks.json, lemma_d_certified.json and p43_centre.json moved there
-  from parts/ on 2026-10-17, unchanged)
+  from parts/ on 2026-10-17, unchanged, and the strip/ files at the P4-9
+  promotion.  The hash-pinned drivers s44_layer.py and s46_centre.py still
+  write new parts and the identity under results/theorem_c/: a replay never
+  overwrites the certificate)
   problems/P4/logs/s43/                              worker logs, launch records, locks
                                                      (gitignored)
 
@@ -33,7 +43,7 @@ Commands (python problems/P4/scripts/s43_parts.py <cmd> -h for options):
 
   build-caches [--only full,gap,deep,band] [--detach] [--nice 10]
   cache-hash FILE...                 content hash of a tube cache (steps + K, not info)
-  plan                               enumerate all pieces -> parts/plan.json
+  plan                               enumerate all pieces -> strip/plan.json
                                      (per piece: tq = False for the direct-only
                                      pieces, tstar_fac for the centre variant)
   checks                             E1/E2/E3/E5 -> certificates/theorem_c/checks.json
@@ -70,7 +80,7 @@ Commands (python problems/P4/scripts/s43_parts.py <cmd> -h for options):
         [--substitute-centre]        coverage-checked assembly; writes
                                      tc_commutator.json only when complete,
                                      tc_commutator_partial.json otherwise.
-                                     S4-4 layer parts (parts/layer*/<id>.json,
+                                     S4-4 layer parts (layer*/<id>.json under parts/ or strip/,
                                      scripts/s44_layer.py) are joined by piece
                                      id: a valid passing one carries tau > tstar
                                      for a pass-direct piece (layer_checks).
@@ -133,8 +143,10 @@ CHECKS = os.path.join(CERT_TC, "checks.json")
 S43_CERTS = ("checks.json", "lemma_d_certified.json", "p43_centre.json")   # written here
 LOGS = os.path.join(P4, "logs", "s43")
 LOCKS = os.path.join(LOGS, "locks")
-PLAN = os.path.join(PARTS, "plan.json")
-CERT = os.path.join(TC_DIR, "tc_commutator.json")
+STRIP = os.path.join(CERT_TC, "strip")          # the P4-9 certificate (promotion 2026-10-17)
+STRIP_DIRS = ("layer_t14", "centre_t14")        # SUBSTITUTE_DIR, CENTRE_DIR: parts under STRIP
+PLAN = os.path.join(STRIP, "plan.json")
+CERT = os.path.join(STRIP, "tc_commutator.json")
 CERT_PARTIAL = os.path.join(TC_DIR, "tc_commutator_partial.json")
 SCHEMA = "s43-part/1"
 
@@ -437,7 +449,7 @@ def cache_path(name):
 
 
 def cache_record_path(name):
-    return os.path.join(PARTS, "caches", "%s.json" % name)
+    return os.path.join(STRIP, "caches", "%s.json" % name)
 
 
 def build_one_cache(name):
@@ -1738,19 +1750,28 @@ def exact_x_cover(plan, ids):
 LAYER_SCHEMA = "s44-layer/1"
 
 
+def layer_dir_path(dirname):
+    """Where a layer-part directory lives: the STRIP_DIRS (layer_t14,
+    centre_t14) are part of the P4-9 certificate under STRIP; the others
+    (parts/layer, centre_t224, experiments) stay under PARTS."""
+    return os.path.join(STRIP if dirname in STRIP_DIRS else PARTS, dirname)
+
+
 def layer_dirs():
     """Names of the S4-4 layer-part directories (scripts/s44_layer.py):
-    parts/layer (tau >= 224) and parts/layer_t<T> (tau >= T)."""
-    out = []
-    for d in sorted(glob.glob(os.path.join(PARTS, "layer*"))):
-        b = os.path.basename(d)
-        if os.path.isdir(d) and (b == "layer" or b.startswith("layer_t")):
-            out.append(b)
-    return out
+    layer (tau >= 224) and layer_t<T> (tau >= T), under PARTS or STRIP."""
+    out = set()
+    for root in (PARTS, STRIP):
+        for d in glob.glob(os.path.join(root, "layer*")):
+            b = os.path.basename(d)
+            if (os.path.isdir(d) and (b == "layer" or b.startswith("layer_t"))
+                    and layer_dir_path(b) == d):
+                out.add(b)
+    return sorted(out)
 
 
 def read_layer_part(dirname, pid):
-    path = os.path.join(PARTS, dirname, pid + ".json")
+    path = os.path.join(layer_dir_path(dirname), pid + ".json")
     if not os.path.exists(path):
         return None
     try:
@@ -1997,7 +2018,8 @@ CENTRE_SCHEMA = "s46-centre/1"
 CENTRE_DIR = "centre_t14"            # tau >= 14: the parts the centre rule uses
 CENTRE_DIR_224 = "centre_t224"       # tau >= 224: the second tau mode, reported only
 S46_DRIVER = os.path.join(HERE, "s46_centre.py")
-CENTRE_IDENTITY = os.path.join(TC_DIR, "centre_nb_identity.json")
+CENTRE_IDENTITY = os.path.join(STRIP, "centre_nb_identity.json")
+assert set(STRIP_DIRS) == {SUBSTITUTE_DIR, CENTRE_DIR}
 CENTRE_IDENTITY_SCHEMA = "s46-centre-nb-identity/1"
 CENTRE_REQUIRED = LAYER_REQUIRED + ("tc_layer_centre", "ec_centre")
 CENTRE_IDENTITY_REQUIRED = ("tc_layer_centre", "tc_energy", "tc_commutator")
@@ -2526,7 +2548,7 @@ def cmd_merge(args):
                                            if os.path.exists(S44_DRIVER) else None),
                         s46_driver_sha256=(sha256_file(S46_DRIVER)
                                            if os.path.exists(S46_DRIVER) else None),
-                        parts_dir=rel(PARTS)))
+                        parts_dir=rel(PARTS), strip_dir=rel(STRIP)))
     out = CERT if complete else CERT_PARTIAL
     write_json_atomic(out, res)
     print("%s: status=%s used=%d substituted=%d (layer_t14 %d, centre %d) missing=%d "

@@ -58,7 +58,7 @@ R₂} with (R₁, R₂) = (15, 14) (the KHA search box) the zeros of E are exact
 Theorem C, the PBH mass-scaling exponent is γ = 1/λ₁ ∈ [0.355801, 0.355802].
 
 **Theorem C (exclusion outside the rectangle, analytic).** E has no zeros
-with Re λ ≥ 0 outside R. **[open — research item]**: the GHJS argument for
+with Re λ ≥ 0 outside R. **[proved: P4-10, CERTIFIED 2026-10-17; v1.5. Was the open research item]**: the GHJS argument for
 Re λ > 1 and |Im λ| ≫ 1 uses monotonicity of the Larson–Penston profile
 (ρ̂' < 0, ω̂' > 0, hence w'/w < 0 inside the cone). Whether the EC profile
 at k = 1/3 has the analogous monotonicity on [0, x_sp] (|V_z| increasing from
@@ -195,3 +195,14 @@ the float literals 8/3, 4/3 in `css.py` (asserted).
   (gauge and κ₁ ∈ [2.81055254439, 2.81055255326]), γ ∈ [0.3558019218,
   0.3558019231]; review pending. Theorem C (exclusion outside R) remains the
   open research item.
+- v1.5 (2026-10-17): Theorem C proved and certified (ledger P4-8, P4-9 and
+  P4-10, all CERTIFIED; `notes/s4-5-assembly.md`, `notes/s4-6-centre.md`). In
+  the class C of P4-8 there is no eigenvalue in {Re κ ≥ 0} \ R: direct energy
+  for Re κ ≥ 6 (P4-8) and a once-commuted energy identity on the strip
+  0 ≤ Re κ ≤ 6, |Im κ| ≥ 14 (P4-9: an exact cover of x ∈ (−∞, 0) by 576
+  interval-certified pieces), and, by Lemma G1, E(κ) ≠ 0 there. With
+  Theorem B, κ₁ is the unique non-gauge mode with Re κ ≥ 0, and
+  γ = 1/κ₁ ∈ [0.3558019218, 0.3558019231] holds without the Theorem C
+  condition of §2. Not claimed: kink modes, non-spherical modes, nonlinear
+  stability, Re κ < 0. The certificates are in `certificates/`
+  (`certificates/README.md`).

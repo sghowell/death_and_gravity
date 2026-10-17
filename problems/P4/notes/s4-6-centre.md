@@ -1,23 +1,23 @@
 # S4-6: the centre of the Theorem C strip (x ≤ −4.5)
 
-> **Status 2026-10-17, branch `p4/theorem-c-centre`.  Computed; awaiting
-> the adversarial review and the owner's ledger decision.**
+> **Status 2026-10-17: reviewed (no blocking or should-fix finding) and
+> promoted: P4-9 and P4-10 are CERTIFIED, artifacts in `certificates/` (§10).**
 > - All 30 centre pieces pass, in both τ modes (τ ≥ 14 and τ ≥ 224): 60
->   parts in `results/theorem_c/parts/centre_t14/` and `centre_t224/`
+>   parts in `certificates/theorem_c/strip/centre_t14/` and `results/theorem_c/parts/centre_t224/`
 >   (`c4d86e83`).  Worst bound at τ ≥ 14: Σ_c ≤ −5.91e−4 (c29).
 > - The merge `s43_parts.py merge --substitute-layer-t14 --substitute-centre`
 >   reports `status = complete` and **`strip_exclusion_certified = true`**:
 >   576 pieces (546 `layer_t14` + 30 `centre_t14`), exact cover of x ∈ (−∞, 0)
 >   with no gap, nothing missing, failed, rejected or blocked
->   (`results/theorem_c/tc_commutator.json`, `a038640c`).
+>   (`certificates/theorem_c/strip/tc_commutator.json`, `a038640c`).
 > - The closing piece c00 rests on an exact identity (§3.2), committed as an
->   artifact with provenance (`results/theorem_c/centre_nb_identity.json`).
+>   artifact with provenance (`certificates/theorem_c/strip/centre_nb_identity.json`).
 > - Neither checkpoint of the build plan triggered: c29 certified at τ ≥ 14,
 >   and the exact identity for c00 holds.  No prose corner lemma is used.
 > - Compute: 0.71 core-h for the 60 parts (4 workers at nice 10, 11.7 min
 >   wall), well inside the 5 core-h budget.  Besides: the probe 0.9 core-h,
 >   the point-sample check (§5.4) 0.33 core-h per run (run twice).
-> - Nothing is promoted to `certificates/`; CLAIMS.md is unchanged.  The 26
+> - Promoted 2026-10-17 with the owner's approval (§10).  The 26
 >   hash-pinned modules of `src/p4` and `scripts/s44_layer.py` (`3a86e50f`)
 >   are unchanged, so the 1092 `layer_t14`/`layer` parts stay valid
 >   (`git diff --stat fda58897..HEAD -- problems/P4/src` lists only the two
@@ -33,7 +33,7 @@ exact cover of x ∈ (−∞, 0):
     S < 0 and dT, dB, nB ≠ 0  for every piece × ε ∈ [0, 6] × τ ∈ [14, ∞).
 
 The S4-4 layer engine covers x ∈ [−4.56, 0] with 546 pieces.  The rest,
-y = eˣ ∈ (0, e^{−4.5}], is 30 plan pieces in y: `centre/c00` = [0, 1.337e−8]
+y = eˣ ∈ (0, YCUT], YCUT = e^{−4.5}(1 − 3.7e−17), is 30 plan pieces in y: `centre/c00` = [0, 1.337e−8]
 (closes at y = 0) to `centre/c29` = [0.006943, 0.011109] (overlapping the
 deep tube end at −4.56 by 0.06 in x).  The committed S4-3 path never
 finished there (≥ 25 CPU-h for the direct phase; its τ-quadratic phase fails
@@ -51,7 +51,7 @@ constant-coefficient limit: V = nV/dT → 3, W → 1, ρ → 1, ν → 0,
 tt ~ 2.616 y², u2 ~ −1.962 y², B0 ~ u2 κ² → 0.  Laurent offsets of the
 pairs: nT, dT, TN [9, 7, 7, 7, 7, 7, 9]; nB [10, 8 × 7, 10, 10] as computed
 (10 throughout after the raise of §3.2); dB [10, 8 × 7].  The certified
-background is even in y (§3.2).
+series have zero odd coefficients up to K = 30 (§3.2).
 
 ## 3. Design
 
@@ -86,11 +86,11 @@ argument a reviewer needs.
 **The problem it solves.**  `build_pairs` computes nB's κ¹…κ⁷ coefficients
 at Laurent offset 8, with constant Taylor coefficients that are balls
 around 0 (radius 3e2–7e6 from the width of the (a*, μ*) balls) against
-~1e14 for the true leading terms.  With them no cover closes c00 at
-y τ → 0 (the probe, §9).
+3e15–4e16 for the true y¹⁰ coefficients (nB's κ⁹ pivot is 9.9e13).  With
+them no cover closes c00 at y τ → 0 (the probe, §9).
 
 **Statement** (`tc_layer_centre.check_nb_identity`, exact `fmpq_mpoly`
-arithmetic on the compiled atoms of `tc_energy.Atoms`; about 10 s).  Grade a
+arithmetic on the exact atoms `tc_energy.Atoms.mp`; about 10 s).  Grade a
 monomial A^a N^b W^c V^e κ^j of U6 = Bcr·UN3r − Acr·EBc·D2r by the centre
 layer p = −b + 2c + e (A = 1 + O(y²), N ~ y⁻¹, W ~ y², V ~ y), as E2 does
 (`tc_commutator.check_layer_identity`).  Then:
@@ -99,16 +99,16 @@ layer p = −b + 2c + e (A = 1 + O(y²), N ~ y⁻¹, W ~ y², V ~ y), as E2 does
 * κ⁰, κ⁸, κ⁹ start at layer ≥ 10;
 * U6 has no odd-parity term (b + e odd), hence no odd layer.
 
-**Why the y⁸ and y⁹ coefficients vanish.**  With A = 1 + y² Â and n, w, v,
-Â even in y, the monomial contributes y^p × (an even series in y).  The y⁸
-coefficient of the κ^j coefficient comes from layer 8 at y = 0 only: the
-layer-8 polynomial at A = 1, which is zero.  The y⁹ coefficient would need
-an odd layer: there is none.  So the true Laurent offset of nB's κ¹…κ⁷
-coefficients is 10.  The background is even: the certified series n, w, v
-have exactly-zero odd coefficients up to K = 30, and Â is built from them
-and y² (`tests/test_tc_layer_centre.py::test_centre_series_is_even`).  The
-x-derivative slots are y d/dy of slot 0, so their y⁸ and y⁹ coefficients
-(8c₀, 9c₁ and 64c₀, 81c₁) vanish too.
+**Why the y⁸ and y⁹ coefficients vanish.**  Write A = 1 + O(y²) and expand
+n, w, v in y.  A monomial of layer p contributes y^p × (a series in y), so the
+y⁸ coefficient of the κ^j coefficient comes from layer 8 at y = 0 only: the
+layer-8 polynomial L₈ at A = 1, which is identically zero.  The y⁹ coefficient
+is the derivative of L₈ ≡ 0 in the direction (n₁, w₁, v₁), plus odd layers, of
+which there are none; so it vanishes on any background with A = 1 + O(y²).  On
+the certified one n₁ = w₁ = v₁ = 0 anyway (zero odd coefficients up to K = 30,
+`test_centre_series_is_even`), and the y⁹ TM coefficients are exact zeros, so
+only the y⁸ drop rests on the identity: nB's κ¹…κ⁷ offset is truly 10.  The
+x-derivative slots are y d/dy of slot 0: their y⁸, y⁹ coefficients (8c₀, 9c₁ and 64c₀, 81c₁) vanish too.
 
 **Use** (`raise_nb`, then `centre_layer_data(..., raised=True)`).  Each of
 nB's κ¹…κ⁷ coefficients, in all three jet slots, is re-expressed at offset
@@ -120,7 +120,7 @@ their exact vanishing.  `raise_nb` refuses any other offset.  nY follows
 every pivot form is a pure w-form (pivot = top), nB's pivot coefficient is
 TM₉ (9.9e13 at y = 0), and c00 evaluates cleanly to −6 at the corner.
 
-**Artifact.**  `results/theorem_c/centre_nb_identity.json`, sha256
+**Artifact.**  `certificates/theorem_c/strip/centre_nb_identity.json`, sha256
 `0fad868ba62fdecb836e6f8a78de23bd3a87f096e50bd117b3cb0475c29bd505`, written
 by `s46_centre.py identity` at `da7a7f28` (clean tree, driver `735336cc`,
 the strict code record of `s43_parts.code_record`).  Every part's process
@@ -257,7 +257,7 @@ of builds (30 × 34 s) + 288 s (τ ≥ 224) + 1250 s (τ ≥ 14) = 0.71 core-h.
 
 Aggregates (paths relative to the repository root, C-locale sort,
 `find … -name '*.json' | LC_ALL=C sort | xargs shasum -a 256 | shasum -a 256`):
-* `parts/centre_t14/`: `4ac8a7b00f9904d56dd5a26e7b656fd6387f1457614be7467dc6cad61e1f17d7`
+* `parts/centre_t14/` (now `strip/centre_t14/`, §10): `4ac8a7b00f9904d56dd5a26e7b656fd6387f1457614be7467dc6cad61e1f17d7`
 * `parts/centre_t224/`: `ba424c3f78ea8d4a001072dd07025b7c6cd56acbfce12c5304ad14cf7f9fc836`
 
 ### 5.2 Per piece
@@ -308,7 +308,7 @@ the merge reports it and does not use it.
 ### 5.3 The merge
 
 `python problems/P4/scripts/s43_parts.py merge --substitute-layer-t14
---substitute-centre` at `2560a06d` → `results/theorem_c/tc_commutator.json`,
+--substitute-centre` at `2560a06d` → `certificates/theorem_c/strip/tc_commutator.json`,
 sha256 `6c228a73abb42c2a2a17ef0c59f4e6565e5c4381b19b7d1dafc15556150fdbab`:
 * `status = complete`, `ok = true`, `strip_exclusion_certified = true`;
 * substituted 576 = 546 (`layer_t14`) + 30 (`centre_t14`); missing 0,
@@ -321,7 +321,7 @@ sha256 `6c228a73abb42c2a2a17ef0c59f4e6565e5c4381b19b7d1dafc15556150fdbab`:
   tube −0.209 (full-244), sonic −0.452 (s29), gap −0.603 (gap-000),
   band −3.95 (band-000).  The layer values equal those of the S4-5 record.
 
-### 5.4 Independent point samples
+### 5.4 Point samples
 
 `scripts/s46_sample.py` (a check, not part of the certificate) →
 `results/theorem_c/centre_sampling.json`, sha256
@@ -426,7 +426,7 @@ From the repository (worktree) root, Python 3.11 with python-flint 0.9.0:
     python problems/P4/scripts/s46_centre.py launch --workers 4 --nice 10 \
         --tau-mins 224,14 --max-evals 150000 --tag replay
     python problems/P4/scripts/s46_centre.py status -v
-    # the merge (seconds); rewrites results/theorem_c/tc_commutator.json
+    # the merge (seconds); rewrites certificates/theorem_c/strip/tc_commutator.json
     # (only the provenance's head and time change; check with git diff)
     python problems/P4/scripts/s43_parts.py merge --substitute-layer-t14 --substitute-centre
     # the point samples (about 20 min)
@@ -492,3 +492,58 @@ It recommended a mean-value form and an exact identity (or a corner lemma)
 for the closing piece.  The build found that the identity, plus evaluating
 and intersecting both regimes, closed both pieces; the probe's 0.9 core-h is
 not included in §5.1.
+
+## 10. Review and promotion (2026-10-17)
+
+**Review.**  `docs/review-2026-10-17-p4-s4-6-centre-adversarial.md`
+(`e17ff004`, `2bda78ba`): no blocking and no should-fix finding.  It
+re-derived the raise identity exactly with independent code, recomputed all
+60 parts identically, verified the covers of c00, c27, c28 and c29 exactly,
+checked the x-cover of all 576 pieces independently, and attacked the merge
+rule 50 ways.  Its checks are in `certificates/theorem_c/review_s46/`.
+
+**Promotion.**  With the owner's approval, P4-9 and P4-10 are CERTIFIED
+(CLAIMS.md), and the strip certificate moved unchanged (git renames at 100%
+similarity) from `results/theorem_c/` to `certificates/theorem_c/strip/`:
+`plan.json`, `caches/`, `layer_t14/`, `centre_t14/`, `centre_nb_identity.json`
+and `tc_commutator.json`.  The review's checks moved to
+`certificates/theorem_c/review_s46/`.  `centre_t224/`, `centre_sampling.json`
+and the probe stay in `results/` (supporting, not cited).
+* `s43_parts.py` (not pinned) reads the moved files at the new paths
+  (`STRIP`, `layer_dir_path`).  The pinned `s46_centre.py` still writes new
+  parts under `results/theorem_c/parts/centre_t<T>/` and the identity under
+  `results/theorem_c/` (or `identity --out`), so a replay never overwrites
+  the certificate.
+* The merge re-run at the new paths reproduces `tc_commutator.json` except
+  `provenance` (git_head, merged, driver_sha256 and the new strip_dir) and
+  the identity's recorded path.  The committed file is the reviewed one
+  (`6c228a73…`).
+* Aggregates (the §5.1 command): `strip/centre_t14/` gives `7b087f9a…` at the
+  new paths.  The reviewed `4ac8a7b0…` is the same content at the old paths
+  (map the paths back to `results/theorem_c/parts/centre_t14` before the outer
+  shasum and it reproduces).  `strip/layer_t14/`: `f21d32bd…` new,
+  `e9835a41…` old.
+
+**Review nits recorded here.**  Fixing them in code would change hashes that
+the 60 parts (or all 1152 parts) record.
+* `tc_layer_centre.Z_LARGE`'s comment is stale: regime L always uses the
+  large-z (ζ) forms; `Z_LARGE` only decides whether `Grade` builds a `Z` that
+  nothing uses.  `S_SPLIT`'s comment ("regime S below, regime L above") is
+  stale too: production evaluates both regimes wherever they apply and
+  intersects them, and `S_SPLIT` only steers `regime_of`, the default when
+  `sigma_graded` is called without a regime (tests only).  So every part's
+  `engine.s_split = 0.5` records no split that was used.
+* `engine.raised`, `inputs.*` and `engine.s_split` are constants the driver
+  writes, not measurements.  The merge checks them, but the guarantee that
+  the data were raised and built from the certified balls is the pinned
+  `s46_centre.py`, which hard-codes both (§6).
+* `tc_tm.TM.inv` records `ve = m`, ignoring `self.ve` (pinned, pre-existing),
+  so the recorded exact-coefficient range of an inverse can exceed the
+  input's.  Not triggered here: every TM on the centre path is also capped by
+  the component TMs (ve 31), and `drop_lead(2)` runs at ve = 25.
+* §3.2's identity uses the exact `fmpq_mpoly` atoms (`at.mp`); evaluation
+  reads the compiled term lists (`at.cmp`), the same polynomials.
+* §5.4's samples evaluate the graded form on point boxes only.  The box
+  enclosures are covered by the review's containment checks (its §4–§5).
+* `tests/test_tc_commutator.py::test_centre_first_piece` is now gated behind
+  `P4_SLOW` (it did not finish within 15 min).
