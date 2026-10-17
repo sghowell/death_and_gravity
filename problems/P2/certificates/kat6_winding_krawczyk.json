@@ -1,0 +1,130 @@
+{
+ "KAT": "KAT-6",
+ "commit": "ca164afbe563eeb6be85e1468a7dc000aaa02d99+dirty",
+ "cases": [
+  {
+   "point": "PA",
+   "l": 1,
+   "mode": "Table I l=1 PS",
+   "box_kappa_minus_units": {
+    "centre": [
+     "3.242616412611042303686208",
+     "-0.7958326323112821365072551"
+    ],
+    "half_width": "1e-3"
+   },
+   "box_corners_exact_absolute": {
+    "re": [
+     "369395793392582001084121/1208925819614629174706176",
+     "369623701785416823129817/1208925819614629174706176"
+    ],
+    "im": [
+     "-90802422294202499766505/1208925819614629174706176",
+     "-90574513901367677720809/1208925819614629174706176"
+    ]
+   },
+   "winding": {
+    "winding": 1,
+    "winding_ball": "[1.00000 +/- 1.51e-7]",
+    "certified": true,
+    "segments": 64,
+    "point_evaluations": 65,
+    "taylor_model": {
+     "K": 64,
+     "rho_over_box_halfdiag": 4,
+     "M_upper": 58082679.5
+    },
+    "max_enclosure_rel_radius": 0.04510359298193168
+   },
+   "krawczyk": {
+    "certified_unique_zero": true,
+    "Z_centre_float": [
+     "3.242616412611042303686208",
+     "-0.7958326323112821365072551"
+    ],
+    "Z_halfwidth_rel": "1e-20",
+    "contraction": 3.9627789227836274e-07,
+    "enclosure_over_kappa_minus": {
+     "re": "[3.2426164126110423036862081 +/- 5.29e-26]",
+     "im": "[-0.7958326323112821365072551 +/- 3.88e-26]"
+    },
+    "float_value_in_Z": true,
+    "float_value_abs_dist_to_Z_centre_over_kappa_minus": "6.8844e-26",
+    "Krawczyk_centre_in_winding_box": true
+   },
+   "prec_bits": 256,
+   "printed_value": [
+    "3.2426164126",
+    "-0.7958326323"
+   ],
+   "printed_within_5e-11": true,
+   "printed_abs_diff_upper": [
+    1.1042303686208085e-11,
+    1.1282136507255139e-11
+   ],
+   "pass": true,
+   "timing_s": {
+    "wall": 6.6,
+    "cpu": 6.5
+   }
+  },
+  {
+   "point": "PB",
+   "l": 0,
+   "mode": "P_B l=0 NE n=0",
+   "box_kappa_minus_units": {
+    "centre": [
+     "0.0",
+     "-0.9093809789948054555249"
+    ],
+    "half_width": "1e-3"
+   },
+   "box_corners_exact_absolute": {
+    "re": [
+     "-51430115953413818679/1208925819614629174706176",
+     "51430115953413818679/1208925819614629174706176"
+    ],
+    "im": [
+     "-1463156228483913464851/37778931862957161709568",
+     "-46718139079578403237873/1208925819614629174706176"
+    ]
+   },
+   "winding": {
+    "winding": 1,
+    "winding_ball": "[1.000000000 +/- 2.65e-11]",
+    "certified": true,
+    "segments": 64,
+    "point_evaluations": 65,
+    "taylor_model": {
+     "K": 64,
+     "rho_over_box_halfdiag": 4,
+     "M_upper": 54151.371826171875
+    },
+    "max_enclosure_rel_radius": 0.06295781156296142
+   },
+   "krawczyk": {
+    "certified_unique_zero": true,
+    "Z_centre_float": [
+     "0.0",
+     "-0.9093809789948054555249"
+    ],
+    "Z_halfwidth_rel": "1e-20",
+    "contraction": 4.20657478468478e-10,
+    "enclosure_over_kappa_minus": {
+     "re": "[+/- 5.41e-30]",
+     "im": "[-0.90938097899480545552493376262 +/- 7.10e-30]"
+    },
+    "float_value_in_Z": true,
+    "float_value_abs_dist_to_Z_centre_over_kappa_minus": "3.3763e-23",
+    "Krawczyk_centre_in_winding_box": true
+   },
+   "prec_bits": 256,
+   "pass": true,
+   "timing_s": {
+    "wall": 6.0,
+    "cpu": 5.9
+   }
+  }
+ ],
+ "pass": true
+}

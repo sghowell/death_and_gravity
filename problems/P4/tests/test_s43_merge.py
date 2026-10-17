@@ -98,7 +98,7 @@ class Env:
                dict(schema="s43-plan/1", pieces=self.pieces, caches={}))
 
     def checks(self, ok):
-        _write(os.path.join(self.parts, "checks.json"),
+        _write(s43.CHECKS,
                dict(ok=ok, code=dict(files=self.code),
                     results=dict(E1_U6top=True, E2_layers=[14, True],
                                  E3_sonic_zeros=[True], E5_sonic_vanishing=[True])))
@@ -172,6 +172,7 @@ def env(tmp_path, monkeypatch):
     root = str(tmp_path)
     monkeypatch.setattr(s43, "PARTS", os.path.join(root, "parts"))
     monkeypatch.setattr(s43, "PLAN", os.path.join(root, "parts", "plan.json"))
+    monkeypatch.setattr(s43, "CHECKS", os.path.join(root, "certificates", "checks.json"))
     monkeypatch.setattr(s43, "CERT", os.path.join(root, "tc_commutator.json"))
     monkeypatch.setattr(s43, "CERT_PARTIAL", os.path.join(root, "tc_commutator_partial.json"))
     monkeypatch.setattr(s43, "CACHE_DIR", os.path.join(root, "cache"))
@@ -575,7 +576,7 @@ def test_substitution_needs_checks_valid_for_the_current_code(env):
     # merge's checks_valid_for_code, but blocks substitution
     _sub_setup(env)
     old = "7" * 64
-    _write(os.path.join(env.parts, "checks.json"),
+    _write(s43.CHECKS,
            dict(ok=True, code=dict(files={CODE_FILE: old}),
                 results=dict(E1_U6top=True, E2_layers=[14, True],
                              E3_sonic_zeros=[True], E5_sonic_vanishing=[True])))

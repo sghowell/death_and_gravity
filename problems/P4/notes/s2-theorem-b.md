@@ -320,7 +320,7 @@ with precision(256):
 Status: Stage 3 of 3 done (2026-08-29). Code (new, nothing pre-existing modified):
 `problems/P4/src/p4/validated/{linsonic4,lintaylor,modecount,analyticity,krawczyk_kappa}.py`; tests
 `uv run pytest problems/P4/tests/test_validated_modes_stage3.py -q` (8 fast tests ≈ 45 s; 2 slow ones with
-`P4_TUBE_CACHE=<tube.json>`; the stored full-R results `results/theorem_b/{winding_R,analyticity_R}.json` are
+`P4_TUBE_CACHE=<tube.json>`; the stored full-R results `certificates/theorem_b/{winding_R,analyticity_R}.json` are
 re-verified by 2 further tests). Revised 2026-08-30 after an adversarial review (§3.8: what changed).
 Every number below is a rigorous 256-bit ball unless marked float. The tube is the Stage-2 A3 tube
 [−3, −0.05] (244 steps, V0 ∈ c* ± 1e−16), *without* the centre extension: E is evaluated at x_d = −3 (§3.3).
@@ -439,7 +439,7 @@ Run (8 workers, spawn; 172 chunks of length 0.5; the κ-free step data of the 24
 
 **Total: Σ Δarg / 2π = 2.00000 ± 8.4e−4 ⟹ winding number 2**, certified; 290 tiles, min |E| on ∂R = 4.81e−3
 (re-run 2026-08-30 with the fixes of §3.8 from `python -m p4.validated.modecount`, stored as
-`results/theorem_b/winding_R.json` with every tile increment as an exact dyadic ball: 1.99999996 ± 8.39e−4, the same
+`certificates/theorem_b/winding_R.json` with every tile increment as an exact dyadic ball: 1.99999996 ± 8.39e−4, the same
 290 tiles, the same per-side table to the digits shown, 1231 s wall on 8 workers; re-summed by
 `test_full_rectangle_result_if_available`)
 (S1's float minimum 4.5e−2 was for E_fin; E₃ = E_fin × the factor of §3.3), 1255 s wall (8665 CPU-s), the
@@ -471,7 +471,7 @@ at −0.099: 432 boxes in the end, min half-width 0.125); every tile is certifie
 so the open certified boxes cover the closed rectangle and E is analytic on a neighbourhood of R.
 Results: min ν = 0.065, max Re σ = 0.105 (< 1: no resonance in R; the resonances are at σ ∈ {1, 2, …}, i.e.
 Re κ ≤ −1.198, and the pole σ = 0 at −0.099 ∉ R), max Z_sonic = 0.99974, max Z_centre = 0.572, max g_centre
-= 6.12; 76 s with 2 workers (re-run 2026-08-30 with the certify4 fix of §3.8, `results/theorem_b/analyticity_R.json`:
+= 6.12; 76 s with 2 workers (re-run 2026-08-30 with the certify4 fix of §3.8, `certificates/theorem_b/analyticity_R.json`:
 the same 432 boxes and the same numbers to the digits shown, max ‖P⁻¹‖ = 11.74, 79 s; the JSON also records the
 constraint-exponent certificate of §3.8 and is re-checked by `test_stored_analyticity_cover`). Consequences used below: (i) for every κ ∈ R the admissible sonic solution with
 N_p(0) = 0 is unique up to scale and has A_p(0) ≠ 0 (σ(κ) ≠ 0), so the normalisation A_p(0) = 1 loses
@@ -498,7 +498,7 @@ Outward-rounded: **κ₁ ∈ [2.81055254439, 2.81055255326]**, **κ̄ ∈ [0.355
 |Im| ≤ 4.7e−9, both simple (E′(B) ∌ 0), and **γ = 1/κ₁ ∈ [0.3558019218, 0.3558019231]** (ball 0.35580192 ±
 3.0e−9). The enclosure radii are set by |E(κ_c)|/|E′| with rad E(κ_c) = 1e−10 (the Lohner width of the
 propagation, 5e−10 relative), not by the Taylor model (remainders 1.6e−23, 7.4e−18). Re-run 2026-08-30 with the corrected operator
-(§3.8 (iii)); the outward-rounded enclosures are unchanged; `results/theorem_b/krawczyk.json`. S1's κ₁ =
+(§3.8 (iii)); the outward-rounded enclosures are unchanged; `certificates/theorem_b/krawczyk.json`. S1's κ₁ =
 2.8105525487765 (float, ± 1e−9) and KHA99's 2.81055255 lie inside; γ agrees with KHA's 0.35580192 to all
 digits given. The two boxes are disjoint, so with the winding number 2 of §3.4 they are *all* the zeros.
 
@@ -588,7 +588,7 @@ k < max; with l_P = l_G = 42 one term of size ~1e−9 was omitted; all certifica
 the square box (§3.6 re-run: enclosures unchanged to the digits shown). (iv) `modecount.Context` refuses a cached
 tube whose `info` (V0, box width, x₀) differs from the certified constants. (v) The full-rectangle winding and
 the analyticity cover are re-runnable from `python -m p4.validated.{modecount,analyticity} TUBE` and their
-results (all tile increments as exact dyadics, box parameters, tube info) are stored in `results/theorem_b/` and
+results (all tile increments as exact dyadics, box parameters, tube info) are stored in `certificates/theorem_b/` and
 re-checked by tests.
 
 **Timings** (M-series laptop, 256 bits). 4D sonic series + certificate 0.05–0.1 s; δ-model (m = 8, box run)
@@ -599,7 +599,7 @@ interior cover 79 s (2 workers); Krawczyk 39 s (κ₁), 19 s (κ̄) including th
 tests 45 s, slow tests ≈ 5 min with the cached tube; the exact identity of §3.8 0.01 s, its exponent certificate 1 s.
 
 Reproduction (tube from §2.5's `Tube.build` saved with `tube.save(path)`, ≈ 190 s; results under
-`problems/P4/results/theorem_b/`, re-checked by the tests):
+`problems/P4/certificates/theorem_b/`, re-checked by the tests):
 ```
 PYTHONPATH=problems/P4/src uv run python -c "
 from p4.validated import lintube, modecount; lintube.Tube.build(modecount.V0_EC, modecount.W_V0, x_c=-3.0).save('tube_full.json')"
@@ -613,3 +613,7 @@ for kc, w in ((modecount.KAPPA1, 2e-7), (modecount.KGAUGE, 2e-5)):
 print(krawczyk_kappa.gauge_checks(ctx.bg))"
 P4_TUBE_CACHE=tube_full.json uv run pytest problems/P4/tests -q -k stage                            # Stage 1-3, slow tests included
 ```
+
+---
+
+*Paths (2026-10-17): the files behind CERTIFIED rows moved unchanged from `results/` to `certificates/` (`problems/P4/certificates/README.md`). The paths in this note are updated; the module mains still write their replays to `results/`. The note gained no lines above this one, so line references into it still hold.*

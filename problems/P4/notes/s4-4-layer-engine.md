@@ -20,7 +20,7 @@
 >   centre, tc_monotone, Theorem B's Krawczyk, analyticity and winding,
 >   tc_energy) were re-run on the fixed code: identical, except the Lemma D
 >   block of tc_energy.json, which predates the 2026-10-16 centre-ball fix
->   (the re-run equals `parts/lemma_d_certified.json`), and the summation
+>   (the re-run equals `certificates/theorem_c/lemma_d_certified.json`), and the summation
 >   order and a float diagnostic of winding_R.json (section 14).
 > - Not done: the centre (30 pieces), CLAIMS.md.
 >
@@ -108,7 +108,7 @@ All quantities are ratios of kappa-polynomials whose coefficients are
 Laurent Taylor models in the piece's TM variable (tc_tm `LC` = ell^off TM),
 taken from `tc_commutator.build_pairs` exactly as S4-3 builds them (on sonic
 pieces raised by `sonic_raise_inputs`, which rests on the exact identities
-E1/E3/E5 of `parts/checks.json`).  With tt = TN_top/dT_top and
+E1/E3/E5 of `certificates/theorem_c/checks.json`).  With tt = TN_top/dT_top and
 u2 = nB_top/dB_top:
 
     V  := A0 + kappa tt = nV/dT,       nV  = nT + kappa tt dT   (kappa^6 slot = 0),
@@ -889,23 +889,23 @@ entirely the centre change; the other mv3 parts were not isolated.
 
 **Re-runs of the other certificates (step 7).**  `scripts/p4_recertify.py
 run` re-ran them one at a time at nice 10 on the fixed code, by their
-documented commands, into `results/recert_2026-10-17/` (09:02-12:51Z,
+documented commands, into `certificates/recert_2026-10-17/` (09:02-12:51Z,
 alongside the layer run); `compare` wrote
-`results/recert_2026-10-17/comparison.json`.  The Theorem B tube was rebuilt
+`certificates/recert_2026-10-17/comparison.json`.  The Theorem B tube was rebuilt
 by its documented command (`data/cache/tube_theorem_b.json`, not committed,
 sha256 in `tube_theorem_b.check.json`); it equals the first 244 steps of
 the pinned S4-3 cache.
 
 | certificate | stored output | compared | result | stored file |
 |---|---|---|---|---|
-| exact checks E1-E5 | `parts/checks.json` | ok, every result | identical | replaced (see below) |
-| Lemma D, certified balls | `parts/lemma_d_certified.json` | ok, c0, ycut, layer identity, mins, nsub (1100), failing subranges (0) | identical | replaced |
-| P4-3 centre tail | `parts/p43_centre.json` | ok, certified and replay mins, min margin (0.33333) | identical | replaced |
-| tc_monotone (P4-3) | `results/theorem_c/tc_monotone.json` | ok, mins, fails of sonic, centre, tube; tube info | identical | kept |
-| Krawczyk (Theorem B) | `results/theorem_b/krawczyk.json` | both zeros: ok, widths, E, the bound on abs(E), dE, remainder, zero ball and interval; gamma; gauge; disjointness | identical | kept |
-| analyticity (Theorem B) | `results/theorem_b/analyticity_R.json` | all summary values; the 432 boxes as a multiset (the pool returns them in completion order) | identical | kept |
-| winding (Theorem B) | `results/theorem_b/winding_R.json` | winding 2, certified, the winding ball, 290 tiles with every field but wall times and the `width` diagnostic, min abs E | identical | kept |
-| tc_energy (P4-8) | `results/theorem_c/tc_energy.json` | all_ok, c0, sonic, tube and lemma_d blocks | identical except `lemma_d.mins` | kept |
+| exact checks E1-E5 | `certificates/theorem_c/checks.json` | ok, every result | identical | replaced (see below) |
+| Lemma D, certified balls | `certificates/theorem_c/lemma_d_certified.json` | ok, c0, ycut, layer identity, mins, nsub (1100), failing subranges (0) | identical | replaced |
+| P4-3 centre tail | `certificates/theorem_c/p43_centre.json` | ok, certified and replay mins, min margin (0.33333) | identical | replaced |
+| tc_monotone (P4-3) | `certificates/theorem_c/tc_monotone.json` | ok, mins, fails of sonic, centre, tube; tube info | identical | kept |
+| Krawczyk (Theorem B) | `certificates/theorem_b/krawczyk.json` | both zeros: ok, widths, E, the bound on abs(E), dE, remainder, zero ball and interval; gamma; gauge; disjointness | identical | kept |
+| analyticity (Theorem B) | `certificates/theorem_b/analyticity_R.json` | all summary values; the 432 boxes as a multiset (the pool returns them in completion order) | identical | kept |
+| winding (Theorem B) | `certificates/theorem_b/winding_R.json` | winding 2, certified, the winding ball, 290 tiles with every field but wall times and the `width` diagnostic, min abs E | identical | kept |
+| tc_energy (P4-8) | `certificates/theorem_c/tc_energy.json` | all_ok, c0, sonic, tube and lemma_d blocks | identical except `lemma_d.mins` | kept |
 
 Convention.  The three S4-3 records carry code hashes, and the merge (and
 the substitution rule, strictly) needs `checks.json` valid for the current
@@ -914,18 +914,18 @@ comparison showed identical results; each carries a `replaces` block
 (previous creation time and code fingerprint, the comparison file).  They
 landed in commit `61f2016c` together with the first recomputed parts.  The
 other five record no code hashes; the stored files are kept and the re-run
-outputs stay in `results/recert_2026-10-17/` as the fixed-code evidence.
+outputs stay in `certificates/recert_2026-10-17/` as the fixed-code evidence.
 
 The differences, none caused by the ball fix:
 - **tc_energy.json, `lemma_d.mins`:** the stored block predates the
   2026-10-16 centre-ball fix (`ed4cab14`: the centre series on the certified
   (a*, mu*) balls, `s4-3-recovery.md`); the re-run's block is the
-  certified-ball Lemma D and equals `parts/lemma_d_certified.json` bit for
+  certified-ball Lemma D and equals `certificates/theorem_c/lemma_d_certified.json` bit for
   bit: q2 1.96183644229 (stored 1.96183644227), mB 3.47524282 (stored
   3.47525645), mC 15.3482921 (stored 15.3482996), poleA and poleFN equal to
   1e-13; every other field of the file is identical.  The stored file is
   kept (the coordinator's rule: report before replacing); replacing it, or
-  pointing its lemma_d block at `parts/lemma_d_certified.json`, is for the
+  pointing its lemma_d block at `certificates/theorem_c/lemma_d_certified.json`, is for the
   owner of P4-8.
 - **winding_R.json, `total_arg` and the per-tile `width`:** the stored total
   was summed by 8 pool workers in completion order, the re-run's by one; the
@@ -936,10 +936,14 @@ The differences, none caused by the ball fix:
   tiles by at most 7.1e-15 relative.  On the rebuilt tube the August code
   (`b3bd414e`, the commit that stored winding_R.json), the pre-fix code
   (`e51cd7a6`) and the fixed code give the re-run's widths bit for bit
-  (`results/recert_2026-10-17/winding_width_probe.json`), so the difference
+  (`certificates/recert_2026-10-17/winding_width_probe.json`), so the difference
   comes with the stored run's tube build or library environment, not with
   any code change; the certified increments do not see it.
 - Krawczyk: the first re-run recorded the |E| bound as `abs_upper(E)`, the
   stored record as `abs(E).upper()` (both upper bounds, 1.4090793506e-10
   against 1.4090793571e-10 at kappa1); re-run with the stored expression,
   identical (the first output is kept as `krawczyk.first.json`).
+
+---
+
+*Paths (2026-10-17): the files behind CERTIFIED rows moved unchanged from `results/` to `certificates/` (`problems/P4/certificates/README.md`). The paths in this note are updated; the module mains still write their replays to `results/`. The note gained no lines above this one, so line references into it still hold.*

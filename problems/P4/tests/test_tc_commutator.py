@@ -28,6 +28,7 @@ from p4.validated.tc_tm import sonic_components, AtomKP, LC, TM, SPLIT_REL
 SLOW = pytest.mark.skipif(os.environ.get("P4_SLOW") is None,
                           reason="P4_SLOW=1 for the long runs")
 RESULTS = os.path.join(os.path.dirname(__file__), "..", "results", "theorem_c")
+CERTS = os.path.join(os.path.dirname(__file__), "..", "certificates", "theorem_c")
 
 
 @pytest.fixture(scope="module")
@@ -258,7 +259,12 @@ def test_lemma_d_rerun(atoms):
 
 
 def test_lemma_d_recorded():
-    path = os.path.join(RESULTS, "tc_energy.json")
-    d = json.load(open(path))
+    # tc_energy.json's lemma_d block is the 2026-08-31 midpoint record; the
+    # certified-ball run that P4-8 cites is lemma_d_certified.json
+    d = json.load(open(os.path.join(CERTS, "tc_energy.json")))
     assert d["lemma_d"]["ok"] and d["all_ok"]
     assert d["lemma_d"]["mins"]["q2"] > 1.9
+    c = json.load(open(os.path.join(CERTS, "lemma_d_certified.json")))
+    assert c["ok"] and c["centre_balls"] == "certified"
+    assert c["nsub"] == 1100 and c["failing_subranges"] == 0
+    assert c["mins"]["q2"] > 1.9

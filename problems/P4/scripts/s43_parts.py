@@ -18,9 +18,14 @@ unchanged on the Mac and on the cloud node):
   problems/P4/results/theorem_c/parts/caches/<name>.json  cache build records (committed)
   problems/P4/results/theorem_c/parts/plan.json      every piece of the certificate (committed)
   problems/P4/results/theorem_c/parts/<region>/<id>.json  one result per piece (committed)
-  problems/P4/results/theorem_c/parts/checks.json    exact identities E1/E2/E3/E5 (committed)
-  problems/P4/results/theorem_c/parts/lemma_d*.json  Lemma D re-runs (committed)
+  problems/P4/certificates/theorem_c/checks.json     exact identities E1/E2/E3/E5 (committed)
+  problems/P4/certificates/theorem_c/lemma_d_certified.json  Lemma D, certified balls
+  problems/P4/certificates/theorem_c/p43_centre.json P4-3 centre tail (committed)
+  problems/P4/results/theorem_c/parts/lemma_d_midpoint.json  Lemma D, old midpoint replay
   problems/P4/results/theorem_c/tc_commutator.json   merged certificate (only when complete)
+  (certificates/ holds the artifacts of CERTIFIED ledger rows, README "Ledger
+  levels"; checks.json, lemma_d_certified.json and p43_centre.json moved there
+  from parts/ on 2026-10-17, unchanged)
   problems/P4/logs/s43/                              worker logs, launch records, locks
                                                      (gitignored)
 
@@ -31,14 +36,16 @@ Commands (python problems/P4/scripts/s43_parts.py <cmd> -h for options):
   plan                               enumerate all pieces -> parts/plan.json
                                      (per piece: tq = False for the direct-only
                                      pieces, tstar_fac for the centre variant)
-  checks                             E1/E2/E3/E5 -> parts/checks.json
+  checks                             E1/E2/E3/E5 -> certificates/theorem_c/checks.json
   lemma-d [--centre-balls certified|midpoint] [--replay]
-                                     Lemma D -> parts/lemma_d_<balls>.json
+                                     Lemma D -> certificates/theorem_c/lemma_d_certified.json
+                                     or parts/lemma_d_midpoint.json
                                      (--replay: parts/replays/lemma_d_<balls>.json,
                                      compared with the stored record)
   p43-centre                         P4-3 centre tail (tc_monotone.run_centre) with
                                      the certified balls, and the midpoint-ball
-                                     replay of the old record -> parts/p43_centre.json
+                                     replay of the old record ->
+                                     certificates/theorem_c/p43_centre.json
   bench --ids ID,.. [--modes tq,direct] [--detach --nice 10 --tag T]
                                      time analyze_piece with tq=True / tq=False on
                                      single pieces (phase split recorded) ->
@@ -113,6 +120,9 @@ SRC = os.path.join(P4, "src")
 CACHE_DIR = os.path.join(P4, "data", "cache")
 TC_DIR = os.path.join(P4, "results", "theorem_c")
 PARTS = os.path.join(TC_DIR, "parts")
+CERT_TC = os.path.join(P4, "certificates", "theorem_c")   # CERTIFIED-row artifacts
+CHECKS = os.path.join(CERT_TC, "checks.json")
+S43_CERTS = ("checks.json", "lemma_d_certified.json", "p43_centre.json")   # written here
 LOGS = os.path.join(P4, "logs", "s43")
 LOCKS = os.path.join(LOGS, "locks")
 PLAN = os.path.join(PARTS, "plan.json")
@@ -1014,7 +1024,7 @@ def cmd_checks(args):
                      "whether the identity holds (no layers below the target, no odd "
                      "layers); the note's 'val >= 16' is the valuation of Z o u after "
                      "A - 1 = O(t^2), see check_layer_identity."))
-    out = args.out or os.path.join(PARTS, "checks.json")
+    out = args.out or CHECKS
     write_json_atomic(out, rec)
     print("checks ok=%s %s -> %s" % (ok, res, rel(out)))
 
@@ -1037,7 +1047,7 @@ def cmd_lemma_d(args):
         r = tc.run_lemma_d(at)
     finally:
         tc._centre_expansion = orig
-    rec_json = json.load(open(os.path.join(TC_DIR, "tc_energy.json"))).get("lemma_d")
+    rec_json = json.load(open(os.path.join(CERT_TC, "tc_energy.json"))).get("lemma_d")
     nbad = sum(1 for s in r["subranges"] if not s["ok"])
     rec = dict(schema="s43-lemma-d/1", ok=r["ok"], centre_balls=balls,
                centre_balls_note=("certified: a3_midpoint midpoint + K_minus_m "
@@ -1053,7 +1063,7 @@ def cmd_lemma_d(args):
                wall_s=time.time() - t0, cpu_s=time.process_time() - c0,
                recorded_in_tc_energy=rec_json, created=now(), env=env_info(),
                code=code_record(), driver_sha256=DRIVER_SHA256)
-    out = os.path.join(PARTS, "lemma_d_%s.json" % balls)
+    out = os.path.join(CERT_TC if balls == "certified" else PARTS, "lemma_d_%s.json" % balls)
     if args.replay:
         prev = json.load(open(out)) if os.path.exists(out) else None
         keys = ("ok", "c0", "ycut", "layer_identity", "mins", "nsub", "failing_subranges")
@@ -1074,7 +1084,7 @@ def cmd_p43_centre(args):
     """P4-3's centre tail t = e^x in (0, e^{-8}] (tc_monotone.run_centre): the
     committed code (certified (a*, mu*) balls since 2026-10-16), plus a replay
     of the pre-fix construction (bare a3 midpoint) for comparison with the
-    record in results/theorem_c/tc_monotone.json."""
+    record in certificates/theorem_c/tc_monotone.json."""
     import_p4()
     import p4.validated.ec_centre as ecc
     import p4.validated.tc_monotone as tm
@@ -1088,7 +1098,7 @@ def cmd_p43_centre(args):
         mid = tm.run_centre()
     finally:
         ecc.certified_centre_balls = orig
-    stored = json.load(open(os.path.join(TC_DIR, "tc_monotone.json"))).get("centre")
+    stored = json.load(open(os.path.join(CERT_TC, "tc_monotone.json"))).get("centre")
     cmp_keys = sorted(cert["mins"])
     rec = dict(schema="s43-p43-centre/1", ok=cert["ok"], x_tail=cert["x_tail"],
                certified=dict(ok=cert["ok"], mins=cert["mins"], wall_s=t1 - t0,
@@ -1108,7 +1118,7 @@ def cmd_p43_centre(args):
                created=now(), env=env_info(),
                wall_s=time.time() - t0, cpu_s=time.process_time() - c0,
                code=code_record(), driver_sha256=DRIVER_SHA256)
-    write_json_atomic(args.out or os.path.join(PARTS, "p43_centre.json"), rec)
+    write_json_atomic(args.out or os.path.join(CERT_TC, "p43_centre.json"), rec)
     print("p43-centre: ok=%s mins=%s\n  midpoint replay ok=%s identical_to_stored=%s"
           % (cert["ok"], cert["mins"], mid["ok"], rec["midpoint_replay_identical_to_stored"]))
 
@@ -1329,7 +1339,9 @@ def cmd_status(args):
         r = rows.get(reg, {})
         print("%-7s " % reg + " ".join("%11d" % r.get(c, 0) for c in cols)
               + "   %10.1f  %15.0f" % (r.get("cpu_h", 0), r.get("est_left", 0)))
-    for f in sorted(glob.glob(os.path.join(PARTS, "*.json"))):
+    for f in (sorted(glob.glob(os.path.join(PARTS, "*.json")))
+              + [os.path.join(CERT_TC, n) for n in S43_CERTS
+                 if os.path.exists(os.path.join(CERT_TC, n))]):
         if os.path.basename(f) in ("plan.json",):
             continue
         d = json.load(open(f))
@@ -2001,8 +2013,7 @@ def cmd_merge(args):
                 covers[p["id"]] = lc
                 for r, sha in lc[1]["code"]["files"].items():
                     code_union.setdefault(r, set()).add(sha)
-    checks = json.load(open(os.path.join(PARTS, "checks.json"))) \
-        if os.path.exists(os.path.join(PARTS, "checks.json")) else None
+    checks = json.load(open(CHECKS)) if os.path.exists(CHECKS) else None
     checks_ok = bool(checks and checks["ok"] and write_check_ok(checks)
                      and code_matches(checks["code"]["files"], accept))
     # opt-in (review section 2): a passing layer_t14 part carries a tube or
@@ -2222,7 +2233,7 @@ def main(argv=None):
     p = sub.add_parser("plan")
     p.set_defaults(fn=cmd_plan)
     p = sub.add_parser("checks")
-    p.add_argument("--out", help="write here instead of parts/checks.json")
+    p.add_argument("--out", help="write here instead of certificates/theorem_c/checks.json")
     p.set_defaults(fn=cmd_checks)
     p = sub.add_parser("lemma-d")
     p.add_argument("--centre-balls", default="certified", choices=("certified", "midpoint"))
@@ -2231,7 +2242,7 @@ def main(argv=None):
     p.add_argument("--out", help="write here instead (with --replay: still compared)")
     p.set_defaults(fn=cmd_lemma_d)
     p = sub.add_parser("p43-centre")
-    p.add_argument("--out", help="write here instead of parts/p43_centre.json")
+    p.add_argument("--out", help="write here instead of certificates/theorem_c/p43_centre.json")
     p.set_defaults(fn=cmd_p43_centre)
     p = sub.add_parser("bench")
     p.add_argument("--ids", required=True)
