@@ -471,3 +471,53 @@ The level is unchanged: CERTIFIED on the lower strip.
 7. **Optional (S7).** Add a pytest replay of `lg_PB_l100.json` and a near-mode negative control.
 
 Under the repository's rules the merge into main must be run by the user.
+
+## 12. Follow-up check of 85fad9f1 and 0e919647 (2026-10-17)
+
+The author's fixes were diffed against `03f949f5`. Commit `85fad9f1` changes the code; `0e919647`
+changes the notes, the m3 certificates and the tests. Result: every should-fix and wording item is
+resolved correctly, and nothing blocks the merge into main. The level and the row text are unchanged
+(WRITTEN_PROOF, §10).
+
+| item | result |
+|---|---|
+| S1 | Resolved. s2-report §6 carries the §10 P2-1w row and the P2-2 amendment verbatim. FORMULATION v0.4 states WRITTEN_PROOF. |
+| S2 | Resolved. l₀ = 2 is called the formal output of a mis-specified fit, in the report header and §3, in FORMULATION v0.4 and in the summary's `note`. §4's four-part loss decomposition replaces the old attribution, and "any l ≥ 20" is withdrawn. |
+| S3 | Resolved. The A0 and A3 deviations are disclosed with line references. The design-study provenance given (min of E over the corners for one common ground state: 0.584, 0.650, 0.664) agrees with §4: λ at the low-left corner minus the hull loss gives 0.585, 0.650, 0.664. |
+| S4 | Resolved. A2 is called weak, and branch (b) now records `checker_run: false`. The near-mode control A2′ is part of the pipeline (`near_mode_control`). Its stored results reproduce the reviewer's run exactly (same μ to six digits, same cell counts). |
+| S5 | Resolved, and the added text is correct. It covers: the radii 0.0970 > 0.00956 and 4.77 > 0.351; \|(r − r₊)/(r₊ − r_i)\| ≤ 0.00956/0.0970 < 0.1; the representation (∗) extended to Ω₋ by the identity theorem; ψ inverting (r − r₊)e^{2κ₊R̃₊}; Φ′ = e^{…}h(r); decay at least e^{−61κ₋\|s\|}; the two tail facts on φ. The LG citation is dropped. |
+| S6 | Resolved. `tail_bound` now uses exact `arb.min`/`arb.max`, and `float_leak_tail_bound.py` gives d_author = d_exact bit for bit on both sides. No new float leak: the A2′ boxes are built from floats, but they are controls, not certificates. |
+| S7 | Resolved. `test_lg_l100_replay` recomputes the LG criterion at l = 100 and the a_100 < top comparison, with a control 0.2% below a_100 where the criterion exceeds 2. `test_near_mode_control_rerun_l50` (P2_SLOW) re-runs the checker on the stored A2′ boxes with the stored nodes and matches every verdict and μ. The A2′ re-run covers l = 50 only. |
+| S8, W1–W5 | Resolved: the evidence path; the hull and n = 0 wording; the header at v0.4; the commit table; the winding docstring. |
+
+**Regenerated certificates (at `85fad9f1`).** A field-by-field diff against `03f949f5` shows only
+these changes:
+- the commit stamp;
+- `float_lambda_min`, which drifts by 1.3e-14, 9e-15 and 3e-15 relative (the float design eigenvalue,
+  used only as the bisection target);
+- the added A2′ records, `checker_run` flag and summary `note`.
+
+μ_cert, the A1 verdicts, the nodes, the cell counts, the worst cells, the tail bounds and m_ratio are
+all identical. `lg_PB_l100.json` is unchanged. `0e919647` does not touch `src/`, so the stamp matches
+HEAD's code.
+
+**`winding.py`.** The change is behaviour-neutral: with docstrings stripped, the module's AST is
+identical. No P2 certificate or replay records a file hash. P2 certificates carry only commit stamps,
+which no verify compares. `kat6_winding_krawczyk.json` keeps its S1 stamp `ca164afb…+dirty`. That
+stamp has been there since `9f1b8e6f` and is not made stale by this change. Nothing needs doing;
+regenerating KAT-6 at a clean commit would only tidy the stamp.
+
+**Nits (not blocking).**
+- s2-report.md:231 cites `s3-preregistration.md`, which exists in no commit.
+- s2-report §3 says the hull loss becomes "l-independent at leading order". It is 14β/((l+½)Ω_P),
+  which is O(h), so it vanishes rather than staying constant.
+
+**Replays** (nice 10, HEAD `0e919647`):
+
+| command | result |
+|---|---|
+| `python -m p2.m3 verify` | OK, 61.6 s |
+| `pytest problems/P2/tests -q` | 51 passed, 6 skipped, 11.5 s |
+| `P2_SLOW=1 pytest problems/P2/tests -q` | 57 passed, 1 warning (the A2 design overflow), 319 s |
+
+`git status` was clean afterwards.
