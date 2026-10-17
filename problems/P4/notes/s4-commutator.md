@@ -163,7 +163,10 @@ the G-remainder slots to val 4 (Section 6).
 Each region piece builds atom kappa-polynomials of Laurent-Taylor models
 (`tc_tm.py`: TM/LC/JLC, CAP = 80, recentred Taylor-shift evaluation), forms
 the pairs (nT, dT, nB, dB), commutes once, and certifies S < 0 for all
-eps in [0, 6] (13 graded cells) and tau >= b1 = 14 in two phases:
+eps in [0, 6] (12 graded cells with the 13 edges 0, 0.03, 0.07, 0.12, 0.2,
+0.35, 0.6, 1, 1.6, 2.4, 3.4, 4.6, 6 of `tc_commutator.eps_cells_default`, used
+by every part; corrected 2026-10-17, the note said 13 cells) and
+tau >= b1 = 14 in two phases:
 
 - direct phase, tau in [b1, tstar], tstar = 16 b1 = 224: adaptive ball
   evaluation of S on (ell-strip) x (eps, tau) boxes through value chains
