@@ -12,7 +12,7 @@
    "neg_Ds": 1.5291792670816315,
    "dD_pos": 3.0583589280360095
   },
-  "wall_s": 0.027581214904785156,
+  "wall_s": 0.02640676498413086,
   "balls": "a3_midpoint + K_minus_m (ec_centre.certified_centre_balls; encloses (a*, mu*))"
  },
  "midpoint_replay": {
@@ -30,17 +30,17 @@
  "stored_record": {
   "ok": true,
   "x_tail": -8.0,
-  "time": 0.028921842575073242,
+  "time": 0.02582406997680664,
   "mins": {
-   "vrel_pos": 0.40433444060840307,
-   "dvrel": 0.40433436551405216,
-   "neg_drho": 82.74352419376373,
+   "vrel_pos": 0.40433444061124507,
+   "dvrel": 0.40433436551689417,
+   "neg_drho": 82.74352431297302,
    "wG_pos": 0.33333331493535895,
-   "neg_Ds": 1.5291792671031377,
-   "dD_pos": 3.0583589280790213
+   "neg_Ds": 1.5291792670816315,
+   "dD_pos": 3.0583589280360095
   }
  },
- "midpoint_replay_identical_to_stored": true,
+ "midpoint_replay_identical_to_stored": false,
  "min_margin": 0.33333331493535895,
  "change_vs_midpoint": {
   "dD_pos": -4.3011816330817965e-11,
@@ -51,22 +51,23 @@
   "wG_pos": 0.0
  },
  "claim": "P4-3 centre tail: v_rel > 0, v_rel' > 0, -rho^' > 0, 1/3 - v_rel^2 > 0, -t^2 D > 0, D' > 0 on t in (0, e^-8] (all t-factored margins must be > 0)",
- "created": "2026-10-17T03:31:22Z",
+ "created": "2026-10-17T09:04:10Z",
  "env": {
-  "host": "Mac.attlocal.net",
+  "host": "Seans-Mac-mini.local",
   "platform": "macOS-26.6.2-arm64-arm-64bit",
   "machine": "arm64",
   "cpu_count": 12,
   "python": "3.11.14",
   "flint": "0.9.0"
  },
- "wall_s": 0.0723121166229248,
- "cpu_s": 0.06275900000000001,
+ "wall_s": 0.0677030086517334,
+ "cpu_s": 0.06055200000000001,
  "code": {
   "files": {
    "problems/P4/src/p4/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
    "problems/P4/src/p4/validated/__init__.py": "2d62466572841f234a88bfc9c0e440d4fe34840a62b6d0faee2983c150cbba68",
    "problems/P4/src/p4/validated/arbseries.py": "04e239090c8d5aa4ee645ae041a5acfebc75608add88a523917f828167ab4f1d",
+   "problems/P4/src/p4/validated/ballutil.py": "39528e526fe96a5e5f5d9b44cb6579b4928176207b8a8a5f25270180b51072f1",
    "problems/P4/src/p4/validated/biseries.py": "af614a0747cd6f68510dfc2d1788459afd0759af0778cc8eec4b2cafdfc028f6",
    "problems/P4/src/p4/validated/centre.py": "9f2655d57981916c6f5c8d0248d8cdcf91b44a1ab6e801236b265e1aa877269e",
    "problems/P4/src/p4/validated/ec_centre.py": "d618310842541c6c03957558987f7cf2339414b82062b6b052f11ece4da2d8d9",
@@ -81,16 +82,30 @@
    "problems/P4/src/p4/validated/sonic.py": "dbb046ea88f75d91acc6fe1593790b866e8b8f6c7723e3547666c9d8e221939b",
    "problems/P4/src/p4/validated/systems.py": "7e0a98495e17e728795996c40f1e340a523d687b506a81b69882fed7143e64f6",
    "problems/P4/src/p4/validated/tailbound.py": "8c4b5de660fb8cca3b8c6305625dac0ecce267454052b8feb4ad9650419158ae",
-   "problems/P4/src/p4/validated/tc_commutator.py": "2c7d207725814f3463249b9e22531b403c86efd4a2e3847abf15474bfa6025b9",
-   "problems/P4/src/p4/validated/tc_energy.py": "afa902bc7cb3d3be575c2931d6a0b1dee2cb62af5b31db344056ef3997c30e9d",
-   "problems/P4/src/p4/validated/tc_monotone.py": "29dbf0a1f9ed2a96ca754a696d6a0ac98e1f3e4be514cc85210dd91785e4e7e9",
+   "problems/P4/src/p4/validated/tc_commutator.py": "11cfdc4969577218472dcc4c79673629c78b8686e5cfb758e8f9e199cf006da7",
+   "problems/P4/src/p4/validated/tc_energy.py": "b5c08649680e1c6a41426621883dbe2146db2f16c7bc109fd7822a00ab159cf1",
    "problems/P4/src/p4/validated/tc_reduce.py": "fb07a9837ead0d99aaca7a78d07f2b91731f64b136878ffde25ee0688c1ea9e6",
-   "problems/P4/src/p4/validated/tc_tm.py": "66e059e80162f660f242fbf7089fc95b739fb15e547195cb9cbe8c25757efdd2",
+   "problems/P4/src/p4/validated/tc_tm.py": "2db115ae9d729a97e0efe33b5958be2c5252c42d1fcb2c9abf6e631ebf72a422",
    "problems/P4/src/p4/validated/tmint.py": "8dc2d5e8b8d129774d3f52f3455d678a86ae04b0cc88c03147521e11d716d820",
-   "problems/P4/src/p4/validated/variational.py": "e2adb8e44870c9b0367d03fea6c2dd7d3b146b77d0b197548628205465108a79"
+   "problems/P4/src/p4/validated/variational.py": "e2adb8e44870c9b0367d03fea6c2dd7d3b146b77d0b197548628205465108a79",
+   "problems/P4/src/p4/validated/tc_monotone.py": "def354309be58ac473de4279313b25052bd9d15a2912fdfdb07851245a513563"
   },
-  "fingerprint": "32d8e25c6b46cc279a747726825a68dc7f25165a45e4b65d108cb0c066815f8b",
-  "git_head": "ed4cab149c03452747687a61b7e6830caba18d41",
-  "git_dirty_src": false
+  "fingerprint": "8509cc18fa13a1894ff51505a5b7aff20accb865a0e47ce9193cb9d890510748",
+  "git_head": "5f538254ec6d16b2a21bbbefb3619b80c813deb5",
+  "git_dirty_src": false,
+  "hashed": "import",
+  "write_check": {
+   "ok": true,
+   "changed_sources": {},
+   "changed_drivers": {},
+   "checked": "2026-10-17T09:04:10Z"
+  }
+ },
+ "driver_sha256": "38dcfbfef88f855e0de8ae68b4153774aa156d52335aa2e8ef5d6dfa65b5703a",
+ "replaces": {
+  "previous_created": "2026-10-17T03:31:22Z",
+  "previous_code_fingerprint": "32d8e25c6b46cc279a747726825a68dc7f25165a45e4b65d108cb0c066815f8b",
+  "identical_results": true,
+  "comparison": "results/recert_2026-10-17/comparison.json"
  }
 }

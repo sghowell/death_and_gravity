@@ -19,15 +19,15 @@
   ]
  },
  "seconds": {
-  "E1_U6top": 0.05013608932495117,
-  "E2_layers": 0.17926812171936035,
-  "E3_sonic_zeros": 0.0007407665252685547,
-  "E5_sonic_vanishing": 44.20882296562195
+  "E1_U6top": 0.05843019485473633,
+  "E2_layers": 0.21002531051635742,
+  "E3_sonic_zeros": 0.0007288455963134766,
+  "E5_sonic_vanishing": 47.99681901931763
  },
- "atoms_s": 5.85866904258728,
- "created": "2026-10-17T03:32:33Z",
+ "atoms_s": 7.143195152282715,
+ "created": "2026-10-17T09:03:00Z",
  "env": {
-  "host": "Mac.attlocal.net",
+  "host": "Seans-Mac-mini.local",
   "platform": "macOS-26.6.2-arm64-arm-64bit",
   "machine": "arm64",
   "cpu_count": 12,
@@ -39,8 +39,10 @@
    "problems/P4/src/p4/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
    "problems/P4/src/p4/validated/__init__.py": "2d62466572841f234a88bfc9c0e440d4fe34840a62b6d0faee2983c150cbba68",
    "problems/P4/src/p4/validated/arbseries.py": "04e239090c8d5aa4ee645ae041a5acfebc75608add88a523917f828167ab4f1d",
+   "problems/P4/src/p4/validated/ballutil.py": "39528e526fe96a5e5f5d9b44cb6579b4928176207b8a8a5f25270180b51072f1",
    "problems/P4/src/p4/validated/biseries.py": "af614a0747cd6f68510dfc2d1788459afd0759af0778cc8eec4b2cafdfc028f6",
    "problems/P4/src/p4/validated/centre.py": "9f2655d57981916c6f5c8d0248d8cdcf91b44a1ab6e801236b265e1aa877269e",
+   "problems/P4/src/p4/validated/ec_centre.py": "d618310842541c6c03957558987f7cf2339414b82062b6b052f11ece4da2d8d9",
    "problems/P4/src/p4/validated/linstep.py": "f93fc04f09e16f183aa8b61cddf2e8e7cf5051e61afedfeec04379b24ee06c07",
    "problems/P4/src/p4/validated/linsys.py": "fc6c8ff924c19f7a072afe75396b182923709c262f6438e3bcb44ed6b8a2e1f8",
    "problems/P4/src/p4/validated/lintail.py": "61f929642232a27a8f0984ce35b04098c1468009fab70a33ec02b649467ac7d6",
@@ -52,16 +54,30 @@
    "problems/P4/src/p4/validated/sonic.py": "dbb046ea88f75d91acc6fe1593790b866e8b8f6c7723e3547666c9d8e221939b",
    "problems/P4/src/p4/validated/systems.py": "7e0a98495e17e728795996c40f1e340a523d687b506a81b69882fed7143e64f6",
    "problems/P4/src/p4/validated/tailbound.py": "8c4b5de660fb8cca3b8c6305625dac0ecce267454052b8feb4ad9650419158ae",
-   "problems/P4/src/p4/validated/tc_commutator.py": "2c7d207725814f3463249b9e22531b403c86efd4a2e3847abf15474bfa6025b9",
-   "problems/P4/src/p4/validated/tc_energy.py": "afa902bc7cb3d3be575c2931d6a0b1dee2cb62af5b31db344056ef3997c30e9d",
+   "problems/P4/src/p4/validated/tc_commutator.py": "11cfdc4969577218472dcc4c79673629c78b8686e5cfb758e8f9e199cf006da7",
+   "problems/P4/src/p4/validated/tc_energy.py": "b5c08649680e1c6a41426621883dbe2146db2f16c7bc109fd7822a00ab159cf1",
    "problems/P4/src/p4/validated/tc_reduce.py": "fb07a9837ead0d99aaca7a78d07f2b91731f64b136878ffde25ee0688c1ea9e6",
-   "problems/P4/src/p4/validated/tc_tm.py": "66e059e80162f660f242fbf7089fc95b739fb15e547195cb9cbe8c25757efdd2",
+   "problems/P4/src/p4/validated/tc_tm.py": "2db115ae9d729a97e0efe33b5958be2c5252c42d1fcb2c9abf6e631ebf72a422",
    "problems/P4/src/p4/validated/tmint.py": "8dc2d5e8b8d129774d3f52f3455d678a86ae04b0cc88c03147521e11d716d820",
    "problems/P4/src/p4/validated/variational.py": "e2adb8e44870c9b0367d03fea6c2dd7d3b146b77d0b197548628205465108a79"
   },
-  "fingerprint": "4c0e2a187e3128934d0ce3588603886d79046867ffa157f78844b4fedb7f5a1c",
-  "git_head": "ed4cab149c03452747687a61b7e6830caba18d41",
-  "git_dirty_src": false
+  "fingerprint": "b9e36d055c5c2ea627c3f18efbaae022c0cd812a487cb731f689be7a28d1de2b",
+  "git_head": "b0fe424ae73a5c6d8eb6ba4b3537a836659a1a7f",
+  "git_dirty_src": false,
+  "hashed": "import",
+  "write_check": {
+   "ok": true,
+   "changed_sources": {},
+   "changed_drivers": {},
+   "checked": "2026-10-17T09:03:00Z"
+  }
  },
- "note": "E2 returns (pmin, ok): the lowest centre layer present in Z and whether the identity holds (no layers below the target, no odd layers); the note's 'val >= 16' is the valuation of Z o u after A - 1 = O(t^2), see check_layer_identity."
+ "driver_sha256": "38dcfbfef88f855e0de8ae68b4153774aa156d52335aa2e8ef5d6dfa65b5703a",
+ "note": "E2 returns (pmin, ok): the lowest centre layer present in Z and whether the identity holds (no layers below the target, no odd layers); the note's 'val >= 16' is the valuation of Z o u after A - 1 = O(t^2), see check_layer_identity.",
+ "replaces": {
+  "previous_created": "2026-10-17T03:32:33Z",
+  "previous_code_fingerprint": "4c0e2a187e3128934d0ce3588603886d79046867ffa157f78844b4fedb7f5a1c",
+  "identical_results": true,
+  "comparison": "results/recert_2026-10-17/comparison.json"
+ }
 }
