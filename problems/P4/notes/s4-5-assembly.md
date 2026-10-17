@@ -1,7 +1,8 @@
 # P4 S4-5 — Theorem C: the assembly (proof skeleton for the final review)
 
-Status 2026-10-17, branch `p4/theorem-c-s4-3`, written at HEAD `c0f0effd`.  This is
-a draft for the final adversarial review of the chain.  It adds no computation:
+Status 2026-10-17, branch `p4/theorem-c-s4-3`, written at HEAD `c0f0effd`, with
+the re-check commit `82728526` folded in.  This is a draft for the final
+adversarial review of the chain.  It adds no computation:
 the only operations run for it were sha256 hashes, JSON reads and exact
 rational arithmetic on stored endpoints (§8).  **Theorem C is not proved yet.**
 The strip exclusion lacks the 30 centre pieces (x ≤ −4.5), so
@@ -56,13 +57,19 @@ position has radius 0 and x_{k+1} = x_k − h_k holds exactly (construction:
 (`s44_layer.py:231`).  So the real cover has no hole.  The merge should check
 this itself (§5 item 9).
 
-**Known open items** (not new): the centre (30 pieces, no route decided); the
-re-check of the review's fixes (running separately; the substitution is
-pending it); the prose lemmas of the strip argument (identity, boundary terms,
-endgame, conjugation), which the earlier review left for this stage
-(`docs/review-2026-10-17-p4-layer-engine-adversarial.md:255-264`); and the
-Lemma D condition on P4-8.  The full list, with the inconsistencies found
-between notes, code and artifacts, is §5.
+**Known open items** (not new):
+* the centre (30 pieces, no route decided);
+* the prose lemmas of the strip argument (identity, boundary terms, endgame,
+  conjugation), which the earlier review left for this stage
+  (`docs/review-2026-10-17-p4-layer-engine-adversarial.md:255-264`);
+* the Lemma D condition on P4-8.
+
+The re-check of the review's fixes landed while this note was being written
+(commit `82728526`, review §6, `review…adversarial.md:293-407`).  All eight
+items pass, and the 546-piece strip statement "merits CERTIFIED".  It found
+two provenance gaps in `s43_parts.py`, to be fixed before the next production
+run (the centre); they do not touch the committed parts.  The full list, with
+the inconsistencies found between notes, code and artifacts, is §5.
 
 Apart from G1 and the centre, I found no hole in the chain.  §4 re-derives the
 strip identity and the boundary terms to support that judgement, but this is
@@ -317,11 +324,18 @@ under the substitution rule).**
   * drivers: `P4/scripts/s44_layer.py` `3a86e50f1723e44873d230136a08f9a9ac4f6077ec71c220ac40849bcd823c1e`
     and `P4/scripts/s43_parts.py` `c323dad1d131a8e06531c5b8d9ed96c0fae8e4e5e5fa71205655045e127ed2e4`.
 * *Review:*
-  `docs/review-2026-10-17-p4-layer-engine-adversarial.md` `dd452d10b66748cb623e90ac1149a979f7a7b47e927ee4eebdb258b6574ac045`
-  found the substitution sound and the Σ enclosure correct.  Its must-fix
-  items are reported done in `s4-4-layer-engine.md` §14; **the re-check of
-  those fixes is running separately, so treat the substitution as pending.**
-* *Proposed level:* part of P4-9 (§6).
+  `docs/review-2026-10-17-p4-layer-engine-adversarial.md`.  At `c0f0effd` its
+  sha256 was `dd452d10b66748cb623e90ac1149a979f7a7b47e927ee4eebdb258b6574ac045`;
+  with the re-check (§6) appended in `82728526` it is
+  `9155516367185c17a35e2f82fb3138e1527767271dd362daf3230b9b61e81bd8`.
+  * The review found the substitution sound and the Σ enclosure correct.
+  * The fixes are in `s4-4-layer-engine.md` §14.
+  * The re-check confirms the fixes.  It recomputed s29 at τ ≥ 14 and
+    full-244 and deep-128 in both modes bit for bit, sampled 11,445
+    independent points with none above a bound, and judged the 546-piece
+    statement "merits CERTIFIED".
+* *Proposed level:* the pointwise statement on the 546 pieces is CERTIFIED by
+  the review and re-check.  As an input it is part of P4-9 (§6).
 
 **I8. Strip, the 30 centre pieces: missing.**
 * *Domain:* y = e^x ∈ (0, e^{−4.5}] (x ≤ −4.5).  The pieces run from c00 =
@@ -568,8 +582,14 @@ Suppose p ≠ 0 is an eigenfunction at κ.
    * Recommended before any launch: a τ-quadratic-only diagnostic at
      tstar = 224 on c29 and c00.  The alternative is a centre layer engine
      (pivot forms in y, y² normalization; `s4-4-layer-engine.md:733-741`).
-2. **The re-check of the review's fixes** is running separately.  The
-   substitution, and so all of I7, is pending it.
+2. **Re-check of the review's fixes: done** (`82728526`, review §6), all items
+   pass.  Two provenance gaps remain, both in `s43_parts.py`, to fix before
+   the centre run (`review…adversarial.md:392-407`).
+   * `git_head()` returns `(None, False)` when git fails, which makes the
+     strict clean-tree check vacuous outside a checkout.
+   * A module imported only after `snapshot_code()` is hashed at write time.
+
+   Neither touches the 1092 committed parts.
 3. **Prose: the χ₁ identity** (S6).  `s4-commutator.md:99-117` and
    `tc_commutator.py:20-38` give no derivation beyond "toy-verified".  §4.1 S6
    re-derives it by hand.  Recommend an exact symbolic check (e.g. sympy
@@ -626,7 +646,9 @@ Suppose p ≠ 0 is an eigenfunction at κ.
 13. **Tests on the S4-3 path** (relevant if the centre runs on it).
     * `test_commutation_value_consistency` and `test_kdiv_roundtrip` fail as
       tightness assertions; their balls overlap (`s4-3-recovery.md:98-105,
-      496-498`).
+      496-498`).  The re-check diagnoses this as test design: the tests hull
+      TMs over a strip but take the Laurent factor at its endpoint.  The fix
+      is to evaluate at a point; it is not a regression (review §6 item 7).
     * `test_centre_first_piece` has never completed (`:86-90`).
 14. **Unchecked prose ingredient of S2.** "χ, η = O(1), analytic in t at the
     centre" (`s4-energy.md:72-75`) is asserted from the covector weights.  It
@@ -668,12 +690,14 @@ complete written proof.
     were lost.
 * *Target:* CERTIFIED when all three hold:
   * (i) the centre pieces pass on the current code with the certified centre
-    balls and the merge reports `strip_exclusion_certified = true`;
-  * (ii) the re-check of the 2026-10-17 review's fixes passes;
+    balls (after the two provenance fixes of §5 item 2), and the merge
+    reports `strip_exclusion_certified = true`;
+  * (ii) the re-check of the 2026-10-17 review's fixes passes — **met**
+    (`82728526`);
   * (iii) the S4-5 review accepts S5–S8, S12 and S13 as routine.
 
-  WRITTEN_PROOF if (i) and (ii) hold but the reviewer finds the written
-  lemmas non-routine and checks them complete.
+  WRITTEN_PROOF if (i) holds but the reviewer finds the written lemmas
+  non-routine and checks them complete.
 * *Evidence:* `problems/P4/notes/s4-commutator.md` §2–§3;
   `problems/P4/notes/s4-4-layer-engine.md` §1–§5, §12–§14;
   `problems/P4/notes/s4-5-assembly.md` §4.1;
@@ -738,7 +762,9 @@ complete written proof.
      thinnest at −0.02165, and sonic/s29, the thinnest sonic.
    * Confirm every part passes `layer_checks(strict=True)` on the reviewer's
      copy.
-   * Confirm the re-check of the fixes.
+   * The re-check (`82728526`) already recomputed s29, full-244 and deep-128
+     bit for bit.  Check that the two provenance fixes of §5 item 2 are in
+     before any centre part is accepted.
 8. **Cover (S10, B1).** Verify exact contiguity in the four caches, the
    cross-cache overlaps, the sonic touching joins, and the overlap
    [−4.56, −4.5] with the centre once it lands.
