@@ -1,0 +1,85 @@
+{
+ "schema": "s43-part/1",
+ "id": "gap/gap-015",
+ "region": "gap",
+ "spec": {
+  "id": "gap/gap-015",
+  "region": "gap",
+  "kind": "tube",
+  "index": 15,
+  "x": -0.00990625,
+  "h": 9.375e-05,
+  "cache": "gap",
+  "cache_content_sha256": "a5428c96c3513e8f95cb0f523350b0cf19925de1be4fc4c6fc83991fe1b9e182",
+  "x_min": -0.056,
+  "x_max": -0.008,
+  "degrade": true,
+  "tq": false
+ },
+ "status": "pass-direct",
+ "result": {
+  "x": -0.00990625,
+  "h": 9.375e-05,
+  "ok": true,
+  "margin": -9.752207984236582,
+  "err": null,
+  "open": "open (tau > tstar not certified on this piece)",
+  "errs": null
+ },
+ "b1": 14.0,
+ "tstar": 224.0,
+ "extra": {
+  "region_call": "run_tube(at, tube_gap, 14, x_min=-0.056, x_max=-0.008, step_slice=(15, 16), degrade=True, tq=False)",
+  "tq": false
+ },
+ "code": {
+  "files": {
+   "problems/P4/src/p4/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "problems/P4/src/p4/validated/__init__.py": "2d62466572841f234a88bfc9c0e440d4fe34840a62b6d0faee2983c150cbba68",
+   "problems/P4/src/p4/validated/arbseries.py": "04e239090c8d5aa4ee645ae041a5acfebc75608add88a523917f828167ab4f1d",
+   "problems/P4/src/p4/validated/biseries.py": "af614a0747cd6f68510dfc2d1788459afd0759af0778cc8eec4b2cafdfc028f6",
+   "problems/P4/src/p4/validated/centre.py": "9f2655d57981916c6f5c8d0248d8cdcf91b44a1ab6e801236b265e1aa877269e",
+   "problems/P4/src/p4/validated/linstep.py": "f93fc04f09e16f183aa8b61cddf2e8e7cf5051e61afedfeec04379b24ee06c07",
+   "problems/P4/src/p4/validated/linsys.py": "fc6c8ff924c19f7a072afe75396b182923709c262f6438e3bcb44ed6b8a2e1f8",
+   "problems/P4/src/p4/validated/lintail.py": "61f929642232a27a8f0984ce35b04098c1468009fab70a33ec02b649467ac7d6",
+   "problems/P4/src/p4/validated/lintube.py": "8c034ee8209abff74d4f1d83f8da2debc8226b7582a6ac7e47c6d263d365eb80",
+   "problems/P4/src/p4/validated/matching.py": "d85834e140c22fad388c86fac0383642595ab2c1d92e40dc03ffe880be9f4835",
+   "problems/P4/src/p4/validated/polysys.py": "c9025549b91eb6e700fbd6e8673e4dcb2cae75b183b451d3aec3cde3e8c8ee4b",
+   "problems/P4/src/p4/validated/recursion.py": "5f3d29a83481b34c72496b570dc70603f26ed0ceaf3bb9952822ce5dacd8187e",
+   "problems/P4/src/p4/validated/shootsys.py": "975b998fe5be09c7b2d504526098825daeeb2ab8fe7e707c011ca5e38ae9bff0",
+   "problems/P4/src/p4/validated/sonic.py": "dbb046ea88f75d91acc6fe1593790b866e8b8f6c7723e3547666c9d8e221939b",
+   "problems/P4/src/p4/validated/systems.py": "7e0a98495e17e728795996c40f1e340a523d687b506a81b69882fed7143e64f6",
+   "problems/P4/src/p4/validated/tailbound.py": "8c4b5de660fb8cca3b8c6305625dac0ecce267454052b8feb4ad9650419158ae",
+   "problems/P4/src/p4/validated/tc_commutator.py": "2c7d207725814f3463249b9e22531b403c86efd4a2e3847abf15474bfa6025b9",
+   "problems/P4/src/p4/validated/tc_energy.py": "afa902bc7cb3d3be575c2931d6a0b1dee2cb62af5b31db344056ef3997c30e9d",
+   "problems/P4/src/p4/validated/tc_reduce.py": "fb07a9837ead0d99aaca7a78d07f2b91731f64b136878ffde25ee0688c1ea9e6",
+   "problems/P4/src/p4/validated/tc_tm.py": "66e059e80162f660f242fbf7089fc95b739fb15e547195cb9cbe8c25757efdd2",
+   "problems/P4/src/p4/validated/tmint.py": "8dc2d5e8b8d129774d3f52f3455d678a86ae04b0cc88c03147521e11d716d820",
+   "problems/P4/src/p4/validated/variational.py": "e2adb8e44870c9b0367d03fea6c2dd7d3b146b77d0b197548628205465108a79"
+  },
+  "fingerprint": "4c0e2a187e3128934d0ce3588603886d79046867ffa157f78844b4fedb7f5a1c",
+  "git_head": "f0612a820067d2878c54c63d64f2601b25944309",
+  "git_dirty_src": true
+ },
+ "driver_sha256": "70c7a5f8fcc1bd7b2baed0fc87063a9ceb7d01906299da9d5afbc819f28a9af1",
+ "env": {
+  "host": "Seans-Mac-mini.local",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "machine": "arm64",
+  "cpu_count": 12,
+  "python": "3.11.14",
+  "flint": "0.9.0"
+ },
+ "timing": {
+  "start": "2026-10-17T05:34:10Z",
+  "end": "2026-10-17T05:38:04Z",
+  "wall_s": 234.1754970550537,
+  "cpu_s": 232.2612990000007,
+  "loadavg": [
+   12.259765625,
+   15.068359375,
+   13.33935546875
+  ]
+ },
+ "provenance": "computed by problems/P4/scripts/s43_parts.py work"
+}
