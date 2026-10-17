@@ -1,0 +1,52 @@
+{
+ "claim": "P2-2 at PB, l = 1: W_l(omega) != 0 for |Re omega| >= W_l, -(1/2+delta) kappa_- <= Im omega <= 0",
+ "point": "PB",
+ "qfrac": "999/1000",
+ "delta": "1/20",
+ "l": 1,
+ "W_l_exact": "1840137/4194304",
+ "W_l_float": 0.4387228488922119,
+ "W_l_over_kappa_minus": "[10.3127004450 +/- 2.94e-11]",
+ "W_l_over_l_half_OmegaP": "[1.39771577496 +/- 3.37e-12]",
+ "sqrt_Vmax_plus_beta2_over_kappa_minus_float": 7.541781215052522,
+ "planning_value_over_kappa_minus": 11.22281610266909,
+ "matching_point_exact": "252323/131072",
+ "r_Vmax_float": 1.9250717941600624,
+ "strip_depth_beta": "[0.023398097149909944036 +/- 1.39e-22]",
+ "criterion": {
+  "statement": "exp(Psi_+ + Psi_c) (1 + (Psit_+ + Psit_c)/2) < 2",
+  "value_upper": "[1.99434976112 +/- 2.50e-12]",
+  "certified": true,
+  "Psi_plus": "[0.21264554 +/- 6.08e-10]",
+  "Psit_plus": "[0.24717511 +/- 6.58e-11]",
+  "Psi_c": "[0.24506194 +/- 3.13e-9]",
+  "Psit_c": "[0.27660486 +/- 7.21e-10]",
+  "cells": [
+   2181,
+   2181
+  ],
+  "end_cell_exponents_s": [
+   0.6693294286798881,
+   0.2509191092175226
+  ],
+  "weight_exponents": [
+   9.766812979730902,
+   4.466071189856313
+  ]
+ },
+ "grid": {
+  "n_geo": 400,
+  "n_uni": 2000,
+  "eps_rel": 1e-07,
+  "qgeo": 0.93,
+  "dyadic_bits": 40
+ },
+ "prec_bits": 128,
+ "commit": "a78a3057498a9321e938cf9ec8409ca127f9ae0a",
+ "timing_s": {
+  "search_wall": 1.08,
+  "certify_wall": 0.04,
+  "certify_cpu": 0.04,
+  "total_cpu": 1.1
+ }
+}
