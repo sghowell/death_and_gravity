@@ -40,6 +40,9 @@ engine options: --tau-mins T1,T2 (default 224; 14 covers both S4-3 phases;
                 or fractions 0.5/0.25 of the piece's own float scale)
                 --combine           (tube steps: derivative blocks combined at
                 the polynomial level, tc_layer.LayerData(combine=True))
+                --mv mv|mv3         (tube steps: centred enclosure of Sigma from
+                p4.validated.tc_layer_mv, in (eps, 1/tau) or (sigma, eps, 1/tau))
+                --piece-ladder-evals N --piece-final-evals N  (norm=piece budgets)
 A part is skipped on re-run when it is valid: schema, spec equal to the plan
 entry, every recorded source hash current, and the same engine options.
 Failures are recorded (status fail/error) and also skipped unless --force.
@@ -136,9 +139,30 @@ def tau_mins_of(args):
     return out
 
 
+ENGINE_DEFAULTS = dict(norm="layer", combine=False, mv=None, piece_ladder_evals=None,
+                       piece_final_evals=None)
+
+
 def engine_opts(args):
-    return dict(norm=getattr(args, "norm", "layer") or "layer",
-                combine=bool(getattr(args, "combine", False)))
+    out = dict(ENGINE_DEFAULTS)
+    out.update(norm=getattr(args, "norm", "layer") or "layer",
+               combine=bool(getattr(args, "combine", False)),
+               mv=getattr(args, "mv", None) or None,
+               piece_ladder_evals=getattr(args, "piece_ladder_evals", None),
+               piece_final_evals=getattr(args, "piece_final_evals", None))
+    return out
+
+
+def engine_kwargs(opts):
+    """run_layer_piece keyword arguments of the engine options."""
+    kw = dict(norm=opts["norm"])
+    if opts.get("mv"):
+        import p4.validated.tc_layer_mv as tmv
+        kw["sigma_fn"] = getattr(tmv, "sigma_box_" + opts["mv"])
+    for k in ("piece_ladder_evals", "piece_final_evals"):
+        if opts.get(k):
+            kw[k] = int(opts[k])
+    return kw
 
 
 class Ctx:
@@ -213,7 +237,7 @@ def part_valid(d, p, opts):
         return False
     if not s43.code_matches(d["code"]["files"]):
         return False
-    have = dict(norm="layer", combine=False)
+    have = dict(ENGINE_DEFAULTS)
     have.update(d.get("engine") or {})
     return have == opts
 
@@ -314,6 +338,9 @@ def cmd_work(args):
             start = s43.now()
             t0, c0 = time.time(), time.process_time()
             try:
+                if p["kind"] == "sonic" and opts.get("mv"):
+                    raise RuntimeError("--mv is for tube steps (sonic pieces use the "
+                                       "natural layer form)")
                 ld, la, lb, inputs, call = build_piece(p, ctx, opts["combine"])
                 berr = None
             except Exception:
@@ -327,7 +354,8 @@ def cmd_work(args):
                 res, err = None, berr
                 if err is None:
                     try:
-                        res = ctx.tl.run_layer_piece(ld, la, lb, tau_min=t, norm=opts["norm"])
+                        res = ctx.tl.run_layer_piece(ld, la, lb, tau_min=t,
+                                                     **engine_kwargs(opts))
                     except Exception:                 # recorded, never a pass
                         import traceback
                         res, err = None, traceback.format_exc()
@@ -368,7 +396,8 @@ def spawn_detached(argv, logfile, nice=10):
 
 def work_argv(args):
     av = ["work"]
-    for k in ("ids", "regions", "tube_cache", "tau_mins", "norm"):
+    for k in ("ids", "regions", "tube_cache", "tau_mins", "norm", "mv",
+              "piece_ladder_evals", "piece_final_evals"):
         v = getattr(args, k, None)
         if v:
             av.append("--%s=%s" % (k.replace("_", "-"), v))
@@ -474,6 +503,10 @@ def main(argv=None):
         q.add_argument("--norm", default="layer", choices=("layer", "piece"))
         q.add_argument("--combine", action="store_true",
                        help="tube steps: polynomial-level derivative blocks")
+        q.add_argument("--mv", choices=("mv", "mv3"),
+                       help="tube steps: centred enclosure (p4.validated.tc_layer_mv)")
+        q.add_argument("--piece-ladder-evals", type=int)
+        q.add_argument("--piece-final-evals", type=int)
 
     q = sub.add_parser("list")
     sel(q)

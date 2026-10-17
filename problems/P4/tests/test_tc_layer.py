@@ -259,6 +259,125 @@ def test_piece_scale_and_norm(point_ld, point_ld_combined):
         assert res["params"]["combine"] == d[2].combine
 
 
+# ------------------------------------------------- centred forms (tc_layer_mv)
+def test_dv_derivatives():
+    """Forward-mode DV against the exact derivatives of a rational function
+    of (eps, iota) through w = 1/(eps + i/iota)."""
+    from p4.validated.tc_layer_mv import DV
+    with precision(256):
+        e0, i0 = arb("0.7"), arb("0.05")
+        q = acb(1) / acb(e0 * i0, arb(1))
+        w = DV(i0 * q, (-(i0 * q) ** 2, acb(0, 1) * q * q))
+        E = DV(acb(e0), (acb(1), acb(0)))
+        f = (w * w * 3 + E * w + 2) / (w - 5 + E * E)
+        h = arb("1e-30")
+
+        def fv(e, i):
+            ww = i / acb(e * i, arb(1))
+            return (ww * ww * 3 + e * ww + 2) / (ww - 5 + e * e)
+        de = (fv(e0 + h, i0) - fv(e0 - h, i0)) / (2 * h)
+        di = (fv(e0, i0 + h) - fv(e0, i0 - h)) / (2 * h)
+        assert abs(f.v - fv(e0, i0)).upper() < 1e-60
+        assert abs(f.d[0] - de).upper() < 1e-40 and abs(f.d[1] - di).upper() < 1e-40
+
+
+def test_midpoly_encloses_tm():
+    from p4.validated.tc_layer_mv import _MidPoly
+    with precision(256):
+        c = [arb(1.5, 1e-20), arb(-2.0, 3e-21), arb(0.25), arb(4.0, 1e-25)]
+        tm = TM(c, 0.02)
+        mp = _MidPoly(tm)
+        for s in (0.0, 0.007, 0.02):
+            assert mp.val(s, s).contains(tm.eval(s, s))
+        d = mp.der(0.0, 0.02)
+        for s in (0.0, 0.01, 0.02):
+            exact = -2.0 + 2 * 0.25 * s + 3 * 4.0 * s * s
+            assert d.contains(arb(exact)) or abs(d - exact).upper() < 1e-15
+
+
+@pytest.mark.parametrize("fname", ["sigma_box_mv", "sigma_box_mv3"])
+def test_centred_forms_enclose_points(point_ld, point_ld_combined, fname):
+    """The centred enclosures contain the point values (random boxes) and are
+    never wider than the natural one."""
+    import p4.validated.tc_layer_mv as mv
+    fn = getattr(mv, fname)
+    rnd = random.Random(5)
+    for xi, pr, ld in (point_ld, point_ld_combined):
+        checked = 0
+        with precision(320):
+            for _ in range(25):
+                e0 = rnd.uniform(0, 5.8)
+                e1 = e0 + rnd.choice([0.01, 0.1, 0.2])
+                t0 = 14.0 * rnd.choice([1, 1.3, 2, 10])
+                t1 = t0 * rnd.choice([1.02, 1.2]) if rnd.random() < 0.8 else INF
+                box = (0.0, 0.0, e0, e1, xi * t0 * (1 - 1e-9),
+                       xi * t1 * (1 + 1e-9) if t1 < INF else INF, t0, t1)
+                nb, g = tl._normalize(ld, box)
+                Sn = tl.sigma_box(ld, nb, g)
+                Sm = fn(ld, nb, g)
+                if not (Sm.upper().is_finite() and Sm.lower().is_finite()):
+                    continue                    # unbounded hull: the cover splits it
+                if not (Sn.upper().is_finite() and Sn.lower().is_finite()):
+                    Sn = arb(0, float("inf"))
+                tol = 1e-8 * (1 + abs(float(Sm.mid())))
+                assert Sm.upper() <= Sn.upper() + tol and Sm.lower() >= Sn.lower() - tol
+                for _ in range(3):
+                    e = rnd.uniform(nb[2], nb[3])
+                    tau = rnd.uniform(g["tau"][0], min(g["tau"][1], 3 * g["tau"][0]))
+                    v = tl.sigma_box(ld, (0.0, 0.0, e, e, xi * tau * (1 - 1e-13),
+                                          xi * tau * (1 + 1e-13), tau, tau))
+                    assert Sm.overlaps(v)
+                checked += 1
+        assert checked >= 15
+
+
+def test_centred_form_certifies(point_ld_combined):
+    import p4.validated.tc_layer_mv as mv
+    xi, pr, ld = point_ld_combined
+    res = tl.run_layer_piece(ld, 0.0, 0.0, tau_min=14.0, norm="piece",
+                             sigma_fn=mv.sigma_box_mv3)
+    assert res["ok"] and res["certified_bound"] < 0
+    assert res["params"]["evaluator"] == "sigma_box_mv3"
+
+
+@SLOW
+def test_centred_mv3_on_a_gap_step(atoms):
+    """mv3 on a real tube step: containment of point values on random boxes,
+    with the sigma-direction (midpoint polynomials) active."""
+    path = os.environ.get("P4_GAP_TUBE") or os.path.join(P4, "data", "cache", "tube_gap.json")
+    if not os.path.exists(path):
+        pytest.skip("gap tube cache not available")
+    import p4.validated.tc_layer_mv as mv
+    from p4.validated.lintube import Tube
+    tube = Tube.load(path)
+    steps = [sd for sd in tube.steps if float(sd.x) - sd.h >= -0.056 - 1e-12
+             and float(sd.x) <= -0.008 + 1e-12]
+    sd = steps[60]
+    ld = tl.tube_layer_data(atoms, sd, label="gap/gap-060", combine=True)
+    xi0 = -float(sd.x)
+    h = float(sd.h)
+    rnd = random.Random(9)
+    with precision(320):
+        for _ in range(20):
+            l0 = rnd.uniform(0, h * 0.9)
+            l1 = min(h, l0 + h * rnd.choice([0.02, 0.1, 0.5]))
+            e0 = rnd.uniform(0, 5.8)
+            e1 = e0 + rnd.choice([0.02, 0.2])
+            t0 = 14.0 * rnd.choice([1, 2, 30])
+            t1 = t0 * 1.1
+            box = (l0, l1, e0, e1, (xi0 + l0) * t0 * (1 - 1e-9), (xi0 + l1) * t1 * (1 + 1e-9),
+                   t0, t1)
+            nb, g = tl._normalize(ld, box)
+            Sm = mv.sigma_box_mv3(ld, nb, g)
+            for _ in range(3):
+                l = rnd.uniform(g["L"][0], g["L"][1])
+                e = rnd.uniform(nb[2], nb[3])
+                tau = rnd.uniform(g["tau"][0], g["tau"][1])
+                s = (xi0 + l) * tau
+                v = tl.sigma_box(ld, (l, l, e, e, s * (1 - 1e-13), s * (1 + 1e-13), tau, tau))
+                assert Sm.overlaps(v)
+
+
 # ----------------------------------------------------------- full pieces
 @SLOW
 def test_closing_piece_certifies(atoms, sonic_ex):
