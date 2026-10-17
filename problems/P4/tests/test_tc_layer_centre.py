@@ -9,7 +9,12 @@
   give the same Sigma_c = S/(1 + s^2), and it agrees with the direct chain
   (tc_layer.point_S_direct on point pairs) at interior points of c29 and c00;
 * the negative grading exponents cancel exactly on boxes, and box enclosures
-  contain point values.
+  contain point values;
+* the exact centre layer identity behind the offset raise of nB (layer 8 of
+  U6 vanishes for kappa^1..kappa^7, no odd terms), the raised forms are pure
+  w-forms, the raise refuses a nonzero coefficient, and the closing piece's
+  corner (y, y tau -> 0) evaluates to -6 tightly;
+* the mean-value form (tc_layer_centre_mv) contains point values.
 
 The two piece fixtures build the centre pairs of c29 and c00 (about 50 s
 each).
@@ -255,3 +260,71 @@ def test_sigma_negative_with_margin_on_grid(c29):
                     for y in (lo, hi) for e in (0.0, 3.0, 6.0)
                     for s in (14 * lo, 0.5, 2.0, 50.0, 1e5) if s / y >= 14.0)
         assert worst < -6.0
+
+
+# ------------------------------------------- the exact centre layer identity
+def test_nb_layer_identity(atoms_ce):
+    at, _ = atoms_ce
+    idn = tcc.check_nb_identity(at)
+    assert idn["ok"] and idn["raise_by"] == 2 and idn["kappa"] == list(range(1, 8))
+    for j, r in idn["U6"].items():
+        assert r["odd_terms"] == 0
+        if 1 <= j <= 7:
+            assert r["lowest_layer"] == 8 and r["lowest_nonzero_layer"] == 10
+        else:
+            assert r["lowest_layer"] >= 10
+    # dB keeps its offset 8: its layer 8 is nonzero for kappa^1..kappa^7
+    for j in range(1, 8):
+        assert idn["denU"][j]["lowest_nonzero_layer"] == 8
+
+
+def test_raised_forms_are_pure_w_forms(c29, c00):
+    for _, _, ld in (c29, c00):
+        assert ld.raised
+        for nm in ("nB", "nB1", "nB2", "nY", "dB", "dT", "kdB", "nV",
+                   "C_nB1_nB", "C_nB2_nB", "C_dB1_dB"):
+            f = ld.forms[nm]
+            assert f.p == f.d and f.pivot_on_layer and f.top_on_layer, (nm, f.info())
+        assert set(ld.forms["nB"].o.values()) == {10}
+        assert set(ld.forms["nY"].o.values()) == {10}
+
+
+def test_raise_refuses_a_nonzero_coefficient(c29):
+    from p4.validated.tc_tm import LC
+    lo, hi, ld = c29
+    pr = {"nB": [[LC(TM([arb(1), arb(0), arb(2)], hi), 8)] * 3 for _ in range(10)]}
+    with pytest.raises(ArithmeticError):
+        tcc.raise_nb(pr)
+
+
+def test_closing_piece_corner(c00):
+    """y -> 0 and s = y tau -> 0: Sigma_c -> -6, tight, at every eps."""
+    lo, hi, ld = c00
+    with precision(320):
+        for e0, e1 in ((0.0, 0.03), (4.6, 6.0)):
+            for s0, s1, t0 in ((0.0, 1e-6, 14.0), (1e-4, 2e-4, 14.0), (0.0, 1e-3, 224.0)):
+                v = tcc.sigma_box_centre(ld, (0.0, hi, e0, e1, s0, s1, t0, INF))
+                assert v.upper() < -5.9 and v.lower() > -6.5, (e0, s0, v)
+
+
+def test_mean_value_form_contains_points(c29):
+    from p4.validated import tc_layer_centre_mv as mv
+    lo, hi, ld = c29
+    rnd = random.Random(11)
+    with precision(320):
+        for box in ((lo, hi, 0.0, 0.03, 0.0972, 0.12, 14.0, INF),
+                    (0.0077, 0.0082, 5.3, 6.0, 0.1467, 0.1499, 14.0, INF),
+                    (lo, hi, 4.6, 6.0, 10.0, 20.0, 224.0, INF)):
+            g = tl.box_geometry(ld, box)
+            v = mv.sigma_box_centre_mv(ld, box, g)
+            (ya, yb), (sa, sb) = g["L"], g["s"]
+            n = 0
+            for _ in range(12):
+                y, e, s = rnd.uniform(ya, yb), rnd.uniform(box[2], box[3]), rnd.uniform(sa, sb)
+                tau = s / y
+                if not g["tau"][0] <= tau <= g["tau"][1]:
+                    continue
+                pv = tcc.sigma_box_centre(ld, tcc.point_box(y, e, tau))
+                assert v.contains(pv.mid())
+                n += 1
+            assert n >= 3
