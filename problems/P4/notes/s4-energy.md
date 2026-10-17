@@ -60,7 +60,7 @@ equivalence of `s2-theorem-b.md` §3.8, whose three ingredients are κ-independe
 or hold for all κ with Re σ(κ) < 0 — automatic on Re κ ≥ 0 (plan §1).
 [2026-10-17: outside R this was asserted without proof.  It is now Lemma G1,
 `s4-5-assembly.md` §4.5: E is defined, and E = 0 ⟺ eigenvalue, for every κ
-with Re κ > κ* = −0.0990.]
+with Re κ > −0.0990.]
 
 ## 2. Function space and boundary terms
 

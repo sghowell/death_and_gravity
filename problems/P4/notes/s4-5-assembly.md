@@ -26,8 +26,8 @@ FORMULATION.md are unchanged; §6 proposes ledger text.  `P4/` means
 * **[W]** written prose;
 * **[F]** float evidence only.
 
-*Notation:* κ̄ is the gauge zero, κ* the zero of σ(κ) (Lemma G1), and z^c the
-complex conjugate of z.
+*Notation:* κ̄ is the gauge zero, κ₀ the real root of det M₀(κ) (Lemma G1;
+σ's zero lies in the same ball), and z^c the complex conjugate of z.
 
 ## 0. Read first
 
@@ -45,10 +45,10 @@ complex conjugate of z.
     on R only (`s2-theorem-b.md:455-481, 525-540, 581`).
   * The review showed that the gap has two halves: the sonic order-0 solve,
     and the centre regular family (certificate (C)).  It settled both.
-    * det M₀(κ) = d₁(κ − κ*), with κ* = −0.0990290820550 ± 2.9e−14, the zero
-      of σ.
+    * det M₀(κ) = d₁(κ − κ₀), with κ₀ = −0.0990290820550 ± 2.9e−14 real;
+      σ's zero lies in the same ball.
     * det(nP₀ − G₀(κ)) is κ-free.
-  * Lemma G1 combines them: on Re κ > κ*, E is defined and E = 0 ⟺
+  * Lemma G1 combines them: on Re κ > −0.0990, E is defined and E = 0 ⟺
     eigenvalue.  So the E-form follows from the eigenvalue form on all of Ω.
 * **B1 is resolved in code.**
   * The merge's cover check used to be a float check, with tolerance 1e-12,
@@ -93,15 +93,15 @@ complex conjugate of z.
 
   κ is an *eigenvalue* if 𝒞 is nonempty at κ.  No normalisation and no radius
   enter; this is the class S4-2 uses (`s4-energy.md:30-33`).
-* **Relation to P4-6.** P4-6's class adds A_p(0) = 1 and a radius ≥ 0.065
-  (`s2-theorem-b.md:541-549`).  By Lemma G1 (i), the two classes give the same
-  eigenvalues on Re κ > κ*.  There every element of 𝒞 has A_p(0) ≠ 0, and the
-  radius is a property of the unique admissible solution, not a restriction
-  (review §2 (c)).
+* **Relation to P4-6** (`s2-theorem-b.md:541-549`).
+  * By Lemma G1 (i), every element of 𝒞 is a multiple of p̃.
+  * P4-6's class (A_p(0) = 1, radius ≥ 0.065) is contained in 𝒞.  So if 𝒞 has
+    no eigenvalue, neither does P4-6's class.
+  * On R the two classes coincide (Theorem B′).
 * **E.** E(κ) = e^{3x_d} det[r₁(κ), r₂(κ), p̃(x_d; κ)]_{(Â,ñ,ṽ)}, x_d = −3.
   Here p̃ is the analytic sonic solution normalised by A_p(0) = 1, N_p(0) = 0
   on Σ, and r₁, r₂ are the regular centre family (`s2-theorem-b.md:525-530`).
-  E is defined on Re κ > κ* (Lemma G1).
+  E is defined on Re κ > −0.0990 (Lemma G1).
 * R = [0, 15] × [−14, 14] (closed), and Ω := {Re κ ≥ 0} \ R.  Write κ = ε + iτ.
 
 ### 1.2 Theorem C (proposed wording)
@@ -163,8 +163,10 @@ Boundaries, one by one:
     whose two zeros have Re κ < 3.
 * **Near κ = 0.** Ω is bounded away from 0: every point of Ω is at distance
   more than 14.
-  * E's pole sits at σ = 0, i.e. at κ* = −0.0990290820550 ± 2.9e−14
-    (`review_s45/g1_order0.json`).
+  * The order-0 sonic solve is singular only at κ₀ = −0.0990290820550 ±
+    2.9e−14, which is real, and σ's zero lies in the same ball
+    (`review_s45/g1_order0.json`).  The plan places E's pole there
+    (`theorem-c-plan.md:55`).
   * The resonances σ ∈ ℕ lie at Re κ ≤ −1.198.
   * All of these are in Re κ < 0.
 * **Apparent singularities of the reduction** (`s4-reduction.md:80-92`;
@@ -413,7 +415,7 @@ checks (review §1, rows 3a–6).
   | file | sha256 | what |
   |---|---|---|
   | `identities_out.txt` | `c14549fe98da0e7c1c7c1eb1ef76312f23b9e9a64dc7ff9dd7089456253e8b65` | sympy I1–I7: elimination, normal form, T/U/𝒬 polynomial forms, commutation, the χ₁ identity, the layer normalization; residuals 0, controls nonzero |
-  | `g1_order0.json` | `904b16d5b7d478d1b458221d3af863bc71936a3708ed3fa8dc7d5e2f317354dc` | det M₀ = d₀ + d₁κ, κ*, σ, E rank one, det D |
+  | `g1_order0.json` | `904b16d5b7d478d1b458221d3af863bc71936a3708ed3fa8dc7d5e2f317354dc` | det M₀ = d₀ + d₁κ and its root κ₀, σ and its zero, E rank one, det D |
   | `centre_pattern.json` | `5ab1fdaec034a0398d82f71eba2b0da816ca30dfab775e06f323c2dce669265a` | exact zero pattern of P₀, G₀(κ) at t = 0 |
   | `g1_centre.txt` | `1085cd9a75883da985ed59b604f4883825e2cf1165ef2383bb92b197ee7f4ec4` | P₀, G₀(κ) balls; det(nP₀ − G₀(κ)), n = 1…6, at five κ |
   | `centre_layers.json` | `fe07ce151a0e0b9ab33d17a824379aa26a1dd4081fb14a11f49dcd735931c627` | exact centre layers of TN1r, denT, U6, denU, tt |
@@ -499,9 +501,10 @@ Suppose p ∈ 𝒞 at κ.
       −0.909894029492 ± 6e−14 = −(1 − σ₀).
     * *Integer rigidity makes the two identities exact* (review §4).  For
       σ(κ) ∉ ℤ the χ-equation is Fuchsian at 0, with one exponent m_a ≥ 1
-      (the analytic branch, since Δ̃(0) = 0) and one 1 + σ + j (j ≥ 0).  So
-      R_T − σ = m_a + j is an integer-valued rational function of κ on an
-      open set, hence constant, and the balls pin it to 1.
+      (the analytic branch, since Δ̃(0) = 0) and one 1 + σ + j (j ≥ 0).
+      Both branches are ≢ 0: otherwise η ≡ 0, and the endgame puts the
+      solution in span g.  So R_T − σ = m_a + j is an integer-valued rational
+      function of κ on an open set, hence constant, and the balls pin it to 1.
     * So m_a = 1 and j = 0.  The product of the exponents then gives
       R_B = 1 + σ(κ).
     * Hence R_T = R_B = 1 + σ(κ) exactly, Res₀ A1 = 2 − R_T = 1 − σ(κ), and
@@ -624,7 +627,7 @@ Suppose p ∈ 𝒞 at κ.
 * **A3 [M+X+W]** Theorem B′: the eigenvalues in R are exactly κ̄ and κ₁
   (E = 0 ⟺ eigenvalue on R).
 * **A4** The mode-count corollary of §1.2 follows from A2 and A3.
-* **A5 (E-form)** Ω ⊂ {Re κ > κ*}, so by Lemma G1 (§4.5), E is defined on Ω
+* **A5 (E-form)** Ω ⊂ {Re κ > −0.0990}, so by Lemma G1 (§4.5), E is defined on Ω
   and E = 0 ⟺ eigenvalue there.  A2 then gives E ≠ 0 on Ω.  This uses both
   halves of G1: the sonic order-0 solve, and the centre family (certificate
   (C) of `s2-theorem-b.md` §3.5).
@@ -648,8 +651,7 @@ Suppose p ∈ 𝒞 at κ.
 
 ### 4.5 Lemma G1: E outside R
 
-**Lemma G1.** Let κ* = −0.0990290820550 ± 2.9e−14 be the zero of
-σ(κ) = σ_a + σ_bκ.  For every κ with Re κ > κ*:
+**Lemma G1.** For every κ with Re κ > −0.0990:
 * (i) the admissible sonic family {p analytic at x = 0 : c(0) = 0, N_p(0) = 0}
   is one-dimensional, and its nonzero elements have A_p(0) ≠ 0.  So p̃ exists
   and is unique;
@@ -657,27 +659,35 @@ Suppose p ∈ 𝒞 at κ.
   two-dimensional family, normalised by (w̃, ṽ)(0) = (1, 0) and (0, 1);
 * (iii) E(κ) is defined, and E(κ) = 0 ⟺ κ is an eigenvalue of 𝒞.
 
-Ω ⊂ {Re κ ≥ 0} ⊂ {Re κ > κ*}, so Theorem C (eigenvalue form) gives E ≠ 0 on
-Ω.  By (i), 𝒞 and P4-6's normalized class give the same eigenvalues on
-Re κ > κ*.
+Ω ⊂ {Re κ ≥ 0} ⊂ {Re κ > −0.0990}, so Theorem C (eigenvalue form) gives
+E ≠ 0 on Ω.
+
+By (i), every element of 𝒞 is a multiple of p̃.  P4-6's class (A_p(0) = 1,
+radius ≥ 0.065) is contained in 𝒞, so if 𝒞 has no eigenvalue, neither does
+P4-6's class.  On R the two classes coincide (Theorem B′).
 
 *Proof.*
 
 (a) **Sonic, order 0** [M] (`P4/results/theorem_c/review_s45/g1_order0.json`).
 * The check builds the 2×2 order-0 solve M₀ for (W_p, V_p)(0) exactly as
   `linsonic4.py:142-150` does, on the certified V₀ box.
-* Only its ℓ·G row depends on κ, so det M₀(κ) = d₀ + d₁κ = d₁(κ − κ*), with
-  d₁ = 11.8434668208 ± 2.8e−11 and κ* real.
-* κ* is also the root of σ: d₀σ_b − d₁σ_a ∈ [± 1.9e−13].  The reason is that
-  C̃ annihilates the null vector of P_fl(u₀) (C̃·r_null ∈ [± 1.0e−14]).
-* Hence det M₀ ≠ 0 on Re κ > κ*.
+* Only its ℓ·G row depends on κ, so
+  det M₀(κ) = d₀ + d₁κ = d₁(κ − κ₀), with d₁ = 11.8434668208 ± 2.8e−11 and
+  κ₀ = −0.0990290820550 ± 2.9e−14 real.
+* The zero of σ(κ) = σ_a + σ_bκ lies in the same ball:
+  −σ_a/σ_b ∈ −0.0990290820550 ± 3.1e−14, and d₀σ_b − d₁σ_a ∈ [± 1.9e−13].
+  The proportionality det M₀ ∝ σ is established only in balls.  Its
+  structural reason is that C̃ annihilates the null vector of P_fl(u₀)
+  (C̃·r_null ∈ [± 1.0e−14]).
+* Both zeros lie below −0.0990.  Hence det M₀ ≠ 0 on Re κ > −0.0990.
 
 (b) **Sonic, higher orders** [X + M] (same file).
 * Rows 0–2 of E₀ and E₁ are exactly zero, so E(κ) has rank ≤ 1.  With
   det D = −9.60210331438 ± 3.5e−12, this gives
   det(nD + E(κ)) = det D · n³(n − σ(κ)) identically.
-* σ_b = −0.909894029492 ± 6e−14 < 0, so Re σ(κ) < 0 on Re κ > κ*.  Hence
-  nD + E(κ) is invertible for every n ≥ 1: no resonance.
+* σ_b = −0.909894029492 ± 6e−14 < 0, and σ's zero lies below −0.0990.  So
+  Re σ(κ) < 0 on Re κ > −0.0990, and nD + E(κ) is invertible for every n ≥ 1:
+  no resonance.
 * σ(κ) ≠ 0 there, so E(κ) ≠ 0 and its kernel, {p₀ : ℓ·G₀(κ)p₀ = 0}, is
   3-dimensional.
 * On that kernel, the conditions N_p(0) = 0 and c(0) = 0 leave the 2×2
@@ -706,10 +716,13 @@ Re κ > κ*.
   κ ∈ {0, 1, 7, 3 + 50i, 1000i}.
 * G₀(κ) has rank 2 for every κ, through the κ-free (Â, ñ)-minor
   diag(−3, 28.2435).
-* So the exponents are {0, 0, −3, −3} for every κ.  The exponent-0 solutions
-  form a two-dimensional analytic family, parametrised by (w̃, ṽ)(0), whose
-  recursion is solvable at every order n ≥ 1.  The exponent −3 solutions are
-  unbounded in the scaled variables.  This proves (ii).
+* So the exponents are {0, 0, −3, G₂₃/P₂₃} for every κ, with
+  G₂₃/P₂₃ < 0.  It equals −3.0000 only within balls.
+* The exponent-0 solutions form a two-dimensional analytic family,
+  parametrised by (w̃, ṽ)(0), whose recursion is solvable at every order
+  n ≥ 1.
+* The solutions with the two negative exponents are unbounded in the scaled
+  variables.  This proves (ii).
 
 (d) **Convergence** [W, classical].
 * At x = 0 the system reads p′ = x⁻¹B(x)p with B = x·adj P·G/det P analytic:
@@ -718,8 +731,6 @@ Re κ > κ*.
 * Formal series with non-resonant recursions converge on the disc where B is
   analytic.  The solutions continue along the real line, where P is invertible
   (P4-3).
-* The sonic radius ≥ 0.065 in P4-6's class is a property of the unique
-  admissible solution, not a restriction (review §2 (c)).
 
 (e) **κ-independent ingredients** [X + M], verbatim from `s2-theorem-b.md`
 §3.8:
@@ -730,7 +741,7 @@ Re κ > κ*.
 * r₁(x_d) and r₂(x_d) are independent.
 
 With (i) and (ii), the argument of `s2-theorem-b.md` §3.5 (ii) applies at every
-κ with Re κ > κ*:
+κ with Re κ > −0.0990:
 
 E(κ) = 0 ⟺ p̃(x_d) ∈ span(r₁(x_d), r₂(x_d)) ⟺ p̃ is regular at the centre
 ⟺ κ is an eigenvalue.
@@ -822,8 +833,10 @@ gauge N_p(0) = 0 with time dependence e^{κs}, that are:
 * on the linearised momentum-constraint surface;
 * regular at the centre (analytic in t = eˣ with bounded scaled variables).
 
-For Re κ > κ* = −0.0990 this class gives the same eigenvalues as P4-6's
-normalized class (Lemma G1).
+By Lemma G1 (i), on Re κ > −0.0990 every element of this class is a multiple
+of p̃.  P4-6's class (A_p(0) = 1, radius ≥ 0.065) is contained in this class,
+so if this class has no eigenvalue, neither does P4-6's class.  On R the two
+coincide (P4-6, Theorem B′).
 
 **P4-8 (update): direct-energy exclusion (Theorem C, part 1).**
 * *Claim:* in the class above there is no eigenvalue with Re κ ≥ 6.  Hence,
@@ -900,7 +913,8 @@ normalized class (Lemma G1).
   * Not claimed: kink modes, non-spherical modes, nonlinear stability,
     Re κ < 0.
 * *Level now:* **CONJECTURED** (it inherits P4-9).
-* *Target:* CERTIFIED with P4-9.
+* *Target:* CERTIFIED with P4-9.  If P4-8 or P4-9 ends at WRITTEN_PROOF, so
+  does P4-10.
 * *Evidence:* the P4-6, P4-8 and P4-9 evidence; `s4-5-assembly.md`;
   `docs/review-2026-10-17-p4-s4-5-adversarial.md`.
 
