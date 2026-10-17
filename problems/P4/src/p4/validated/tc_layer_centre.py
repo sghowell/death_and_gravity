@@ -1,4 +1,4 @@
-"""Theorem C, S4-6: the centre variant of the layer engine (probe stage).
+"""Theorem C, S4-6: the centre variant of the layer engine.
 
 The centre region is y = e^x in (0, e^{-4.5}], 30 pieces in y (the plan's
 centre/c00..c29; c00 = [0, y0] closes at y = 0).  The commuted energy
@@ -30,6 +30,20 @@ nB, nB1, nB2, tt, tt', u2) and checks that every denominator has its pivot
 and its top on the layer line; it is used unchanged (laurent=True with the
 TM variable ell = y).
 
+The exact centre layer identity.  build_pairs computes nB's kappa^1..kappa^7
+coefficients at Laurent offset 8 with constant Taylor coefficients that are
+balls around 0 (radius ~1e2-1e7 from the width of the certified (a*, mu*)
+balls, against ~1e14 for the true leading terms).  check_nb_identity proves
+in exact arithmetic that their true offset is 10: in the centre grading of
+E2 (A -> 1, N ~ y^-1, W ~ y^2, V ~ y) the layer 8 of U6 = -nB vanishes
+identically for kappa^1..kappa^7, U6 has no odd-parity terms, and the
+computed y^9 coefficients are exact zeros.  raise_nb then re-expresses them
+(and those of nB', nB'', which are y d/dy of slot 0) at offset 10
+(TM.drop_lead(2): exact-coefficient semantics up to ve).  On the raised data
+every pivot form is a pure w-form (pivot = top, no z-dependence), nB's
+pivot coefficient is TM_9 (9.9e13 at y = 0), and the closing piece y -> 0
+evaluates cleanly.
+
 Graded evaluation.  The sonic engine (tc_layer.sigma_box) normalizes with
 lam = ell, and every block's ell-power cancels exactly.  At the centre no
 single power of y does that: the blocks V, Lh, ... are O(1), while tt, tt'
@@ -38,11 +52,11 @@ So each quantity is carried as a polynomial in one grading variable g with
 exactly tracked integer exponents and ball coefficients (class GV), and the
 y-powers cancel by exponent bookkeeping, not by interval arithmetic:
 
-  regime L (s >= S_SPLIT, any y including y -> 0):  g = y,
+  regime L (s > 0, any y including y -> 0):  g = y,
       it = 1/tau = g / s,  z = i s + g eps,  w = 1/kappa = g zeta,
       zeta = 1/z = (g eps - i s)/(s^2 + y^2 eps^2),  lam = g^{-1};
       the tc_layer identity S lam^2 it^2 = T(lam) gives Sigma = S/s^2.
-  regime S (s <= S_SPLIT):  g = r = 1/tau,  y = g s,
+  regime S (bounded s, including s -> 0):  g = r = 1/tau,  y = g s,
       it = g,  z = i s + g s eps,  w = g (g eps - i)/(1 + r^2 eps^2),  lam = g^{-1};
       then Sigma = S.
 
@@ -58,19 +72,16 @@ Q = q0 (1 + u), u = O(g): the Neumann series to order KMAX + 1 plus the exact
 remainder (-u)^{KMAX+2}/(1 + u), bounded with the hull of u; a box whose q0
 or 1 + u hull contains 0 is rejected (so dT, dB, nB != 0 on every certified
 box with y > 0).  Finally Sigma_c = Sigma * s^2/(1 + s^2) (L) or
-Sigma/(1 + s^2) (S).
+Sigma/(1 + s^2) (S).  sigma_box_centre evaluates every regime that applies
+to the box and intersects the enclosures.
 
 The cover is tc_layer.certify_piece / run_layer_piece, unchanged, with
 sigma_fn = sigma_box_centre and boxes (y-strip) x (eps-cell) x (s = y tau) x
 (tau): tc_layer.box_geometry with laurent=True reads ell as y and xi(ell) =
 ell, so its s is y tau.
 
-Not done at this stage (see notes/s4-6-centre.md): a centred (mean-value)
-form for Laurent coefficients, and an exact identity for the near-zero
-leading Taylor coefficients of nB, nB1, nB2 and nY (balls around 0 of radius
-~1e3 against coefficients ~1e14-1e15, from the width of the certified
-(a*, mu*) balls); they dominate the pivot forms of the closing piece when
-s = y tau is below ~1e-5.
+A centred (mean-value) form of this sigma is in tc_layer_centre_mv; the
+production runs use this natural enclosure (notes/s4-6-centre.md).
 """
 from __future__ import annotations
 
@@ -274,17 +285,138 @@ def centring_constant(N, D):
     return round(r * 2 ** 20) / 2 ** 20
 
 
-def centre_layer_data(at, ce, hi, prec=320, label=None):
+# =====================================================================
+# the exact centre layer identity for nB (the closing piece)
+# =====================================================================
+NB_RAISE = 2                 # nB's kappa^1..kappa^7 coefficients: true offset 10, computed 8
+NB_RAISE_KAPPA = range(1, 8)
+
+
+def centre_nb_layers(at):
+    """Exact (fmpq) centre layers of U6 = -nB and of denU = dB, from the
+    compiled atoms of tc_energy.Atoms (the polynomials build_pairs combines:
+    U6 = Bcr UN3r - Acr EBc D2r, UN3r = EAc D2r + SDr (Bcr Aer - Acr Ber),
+    EAc = 2 dDp Acr + Dp dAcr, EBc = 2 dDp Bcr + Dp dBcr; denU = Dp^3 SDr
+    D2r^2 Bcr).  Centre grading of a monomial A^a N^b W^c V^e kappa^j:
+    layer p = -b + 2c + e (A = 1 + O(y^2), N = n/y, W = y^2 w, V = y v with
+    n, w, v analytic), parity of b + e.  Returns {name: {j: dict(layers,
+    nonzero, odd)}} with the layer polynomials summed at A = 1.
+    Pure exact arithmetic (no balls); about 10 s."""
+    from flint import fmpq_mpoly_ctx
+    mp = at.mp
+    Dp = mp["Dp"]
+    EAc = 2 * mp["dDp"] * mp["Acr"] + Dp * mp["dAcr"]
+    EBc = 2 * mp["dDp"] * mp["Bcr"] + Dp * mp["dBcr"]
+    UN3r = EAc * mp["D2r"] + mp["SDr"] * (mp["Bcr"] * mp["Aer"] - mp["Acr"] * mp["Ber"])
+    U6 = mp["Bcr"] * UN3r - mp["Acr"] * EBc * mp["D2r"]
+    denU = Dp ** 3 * mp["SDr"] * mp["D2r"] ** 2 * mp["Bcr"]
+    ctx3 = fmpq_mpoly_ctx.get(("n", "w", "v"))
+    names = U6.context().names()
+    iA, iN, iW, iV, ik = (names.index(v) for v in ("A", "N", "W", "V", "k"))
+    out = {}
+    for nm, P in (("U6", U6), ("denU", denU)):
+        other = [i for i in range(len(names)) if i not in (iA, iN, iW, iV, ik)]
+        lay, odd = {}, {}
+        for e, cf in P.terms():
+            if any(int(e[i]) for i in other):
+                raise ArithmeticError("centre layers: unexpected variable in %s" % nm)
+            eN, eW, eV, ek = int(e[iN]), int(e[iW]), int(e[iV]), int(e[ik])
+            key = (ek, -eN + 2 * eW + eV)
+            lay.setdefault(key, ctx3.constant(0))
+            lay[key] += ctx3.from_dict({(eN, eW, eV): cf})
+            if (eN + eV) % 2:
+                odd[ek] = odd.get(ek, 0) + 1
+        res = {}
+        for j in sorted(set(k for k, _ in lay)):
+            ps = sorted(p for k, p in lay if k == j)
+            res[j] = dict(layers=ps, nonzero=[p for p in ps if not lay[(j, p)].is_zero()],
+                          odd=odd.get(j, 0))
+        out[nm] = res
+    return out
+
+
+def check_nb_identity(at):
+    """The identity behind the offset raise of nB at the centre: for
+    kappa^1..kappa^7, U6's lowest centre layer is 8 and its layer-8
+    polynomial vanishes identically at A = 1, and U6 has no odd-parity
+    terms.  Then for every centre background (A = 1 + y^2 A^, N = n/y,
+    W = y^2 w, V = y v with n, w, v even), the y^8 and y^9 Taylor
+    coefficients of nB's kappa^j coefficient vanish: its true offset is 10.
+    Returns dict(ok, ...).  Cached on the Atoms object."""
+    cached = getattr(at, "_centre_nb_identity", None)
+    if cached is not None:
+        return cached
+    L = centre_nb_layers(at)
+    rows = {}
+    ok = True
+    for j, r in L["U6"].items():
+        low = r["layers"][0]
+        first = r["nonzero"][0] if r["nonzero"] else None
+        rows[j] = dict(lowest_layer=low, lowest_nonzero_layer=first, odd_terms=r["odd"])
+        if r["odd"]:
+            ok = False
+        if j in NB_RAISE_KAPPA:
+            ok = ok and low == 8 and first == 8 + NB_RAISE
+        else:
+            ok = ok and low >= 8 + NB_RAISE
+    res = dict(ok=bool(ok), raise_by=NB_RAISE, kappa=list(NB_RAISE_KAPPA), U6=rows,
+               denU={j: dict(lowest_layer=r["layers"][0],
+                             lowest_nonzero_layer=r["nonzero"][0] if r["nonzero"] else None,
+                             odd_terms=r["odd"]) for j, r in L["denU"].items()},
+               statement=("U6 = -nB: for kappa^1..kappa^7 the lowest centre layer is 8 and "
+                          "it vanishes identically at A = 1 (layer 8 is zero as a polynomial "
+                          "in n, w, v), the lowest nonzero layer is 10; kappa^0, kappa^8, "
+                          "kappa^9 start at 10; no odd-parity terms (so no odd layers)"))
+    at._centre_nb_identity = res
+    return res
+
+
+def raise_nb(pr):
+    """Pairs with nB's kappa^1..kappa^7 coefficients raised from offset 8
+    to 10, in all three jet slots: exact by check_nb_identity (the true y^8
+    and y^9 Taylor coefficients vanish; the x-derivative slots are
+    y d/dy of slot 0 and keep offsets).  lc_raise -> TM.drop_lead checks that
+    the dropped coefficients contain 0 and lie in the exact-coefficient range
+    (ve)."""
+    from .tc_tm import lc_raise
+    nb = []
+    for j, jet in enumerate(pr["nB"]):
+        if j in NB_RAISE_KAPPA:
+            new = []
+            for x in jet:
+                t = x.trim()
+                if t.off == 8 + NB_RAISE:
+                    new.append(t)
+                elif t.off == 8:
+                    new.append(lc_raise(t, NB_RAISE))
+                else:
+                    raise ArithmeticError("raise_nb: kappa^%d offset %d" % (j, t.off))
+            nb.append(new)
+        else:
+            nb.append(jet)
+    out = dict(pr)
+    out["nB"] = nb
+    return out
+
+
+def centre_layer_data(at, ce, hi, prec=320, label=None, raised=True):
     """CentreLayerData of a centre piece [lo, hi]: centre_components(ce, hi)
     on y in [0, hi], built exactly as tc_commutator.centre_piece builds its
-    pairs (AtomKP with sd_shift = 0)."""
+    pairs (AtomKP with sd_shift = 0); raised=True applies raise_nb after
+    check_nb_identity (refuses if the identity fails)."""
     from . import tc_commutator as tc
     from .tc_tm import AtomKP, centre_components
     with precision(prec):
         comps, _ = centre_components(ce, hi)
         ak = AtomKP(at, comps, sd_shift=0)
         pr = tc.build_pairs(ak)
-        return CentreLayerData(pr, label=label or "centre[0,%g]" % hi)
+        if raised:
+            if not check_nb_identity(at)["ok"]:
+                raise ArithmeticError("centre nB layer identity failed")
+            pr = raise_nb(pr)
+        ld = CentreLayerData(pr, label=label or "centre[0,%g]" % hi)
+        ld.raised = bool(raised)
+        return ld
 
 
 # =====================================================================
@@ -503,18 +635,59 @@ def sigma_graded(ld, box, geo=None, regime=None, terms=False):
     return tot, gd
 
 
-def sigma_box_centre(ld, box, geo=None):
-    """Ball enclosing Sigma_c = S/(1 + (y tau)^2) over the box (or None if
-    empty).  Raises ArithmeticError if a denominator hull contains 0 or the
-    graded cancellation is not exact.  Plugs into tc_layer.certify_piece /
-    run_layer_piece as sigma_fn."""
-    tot, gd = sigma_graded(ld, box, geo)
-    if tot is None:
-        return None
+def _sigma_c(ld, box, g, regime):
+    tot, gd = sigma_graded(ld, box, g, regime=regime)
     v = tot.value()
     if not v.imag.contains(0):
         raise ArithmeticError("Sigma not real")
     return v.real * gd.norm
+
+
+def regimes_of(sb):
+    """The regimes that apply to an s-range: L needs s > 0, S bounded s."""
+    sl, sh = sb
+    out = []
+    if sl > 0:
+        out.append("L")
+    if sh < INF:
+        out.append("S")
+    if not out:
+        raise ArithmeticError("s-range [0, inf]: split s")
+    return out
+
+
+def sigma_box_centre(ld, box, geo=None):
+    """Ball enclosing Sigma_c = S/(1 + (y tau)^2) over the box (or None if
+    empty): the intersection of the graded enclosures of every regime that
+    applies (each is a rigorous enclosure of the same function).  Raises
+    ArithmeticError if no regime gives an enclosure (a denominator hull
+    containing 0, or an inexact graded cancellation).  Plugs into
+    tc_layer.certify_piece / run_layer_piece as sigma_fn."""
+    g = tl.box_geometry(ld, box) if geo is None else geo
+    if g is None:
+        return None
+    out, err = None, None
+    for rg in regimes_of(g["s"]):
+        try:
+            v = _sigma_c(ld, box, g, rg)
+        except (ArithmeticError, ZeroDivisionError, ValueError) as ex:
+            err = ex
+            continue
+        if out is None:
+            out = v
+        else:
+            if not out.overlaps(v):
+                raise ArithmeticError("disjoint regime enclosures (a bug)")
+            out = _intersect(out, v)
+    if out is None:
+        raise err
+    return out
+
+
+def _intersect(a, b):
+    lo = max(a.lower(), b.lower())
+    hi = min(a.upper(), b.upper())
+    return arb(lo).union(arb(hi))
 
 
 # =====================================================================
