@@ -88,12 +88,20 @@ SOURCE and S0-reference studies). No top-level gate changed status after
   strong-coupling verdict.
 - **S6, UV compatibility:** closed, as recorded here.
 - **P8(a):** rows A.1–A.23. A.1–A.7 were reviewed in the Empiricist trial
-  (unmerged branch `empiricist-claims-import`). A separate-agent
-  adversarial review of A.8–A.23 reported on 2026-10-16
-  ([review](review-2026-10-16-p8a-adversarial.md)). It found no
-  mathematical error, and every replay passed. The results are correct but
-  narrow conditional FLRW theorems, built mostly on known QEIs, and the
-  CERTIFIED level overstates what is machine-checked.
+  (unmerged branch `empiricist-claims-import`). Two separate-agent
+  adversarial reviews covered the rest on 2026-10-16. Neither found a
+  mathematical error, and every replay passed.
+  - A.16–A.23 ([review](review-2026-10-16-p8a-adversarial.md)) are correct
+    but narrow conditional FLRW theorems, built mostly on known QEIs.
+  - A.8–A.15 ([review](review-2026-10-16-p8a-A8-A15-adversarial.md)) are
+    internally correct but physically confined to Planck-scale durations,
+    bounded by the classic SEE runaway, and do not advance P8(a).
+  - Levels under the WRITTEN_PROOF policy adopted the same day: A.9–A.12
+    and A.14–A.23 are WRITTEN_PROOF; A.8 (conditional on A.7's constants)
+    and A.13 stay CERTIFIED.
+  - The A.11 and A.15 test suites fail to load from long checkout paths:
+    their conftest files put every `src` folder under problems/P8 on the
+    import path. They pass from the main checkout.
 
 The P8, S6 and P8(a) READMEs are hash-pinned by their replay
 certificates, so this status is recorded here rather than in them.
