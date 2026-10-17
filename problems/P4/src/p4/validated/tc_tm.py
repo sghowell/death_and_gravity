@@ -25,6 +25,8 @@ from __future__ import annotations
 
 from flint import arb
 
+from .ballutil import recentred_delta, strip_ball
+
 CAP = 80                      # TM truncation order (coefficients 0..CAP-1)
 SPLIT_REL = [1e-12]           # near-zero threshold for LC.split_junk (mutable knob)
 
@@ -115,13 +117,13 @@ class TM:
         so the g_j come out point-tight (ball cancellations happen exactly)
         and the interval-evaluated q is suppressed by delta^{J+1}."""
         if hi <= lo or len(self.c) <= 2:
-            xb = arb((lo + hi) / 2, (hi - lo) / 2)
+            xb = strip_ball(lo, hi)
             acc = arb(0)
             for x in reversed(self.c):
                 acc = acc * xb + x
             return acc
         mid = arb((lo + hi) / 2)
-        delta = arb(0, (hi - lo) / 2)
+        delta = recentred_delta(lo, hi, mid)
         c = list(self.c)
         g = []
         for _ in range(min(J + 1, len(c))):
@@ -136,7 +138,7 @@ class TM:
                 break
         acc = arb(0)
         if c:
-            xb = arb((lo + hi) / 2, (hi - lo) / 2)
+            xb = strip_ball(lo, hi)
             for x in reversed(c):
                 acc = acc * xb + x
         out = acc
@@ -267,7 +269,7 @@ class LC:
         """Ball for ell in [lo, hi]; needs lo > 0 if off < 0."""
         if self.off < 0 and lo <= 0:
             raise ArithmeticError("negative Laurent offset evaluated at 0")
-        xb = arb((lo + hi) / 2, (hi - lo) / 2)
+        xb = strip_ball(lo, hi)
         return self.tm.eval(lo, hi) * xb ** self.off
 
     def abs_up(self, lo, hi):
