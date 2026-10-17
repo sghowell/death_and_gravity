@@ -1,0 +1,22 @@
+# indep_identities_sympy.py, nice 10, 2026-10-17T18:01:22Z
+PASS 1 e^{-i phi}(-u'')ubar = -(e^{-i phi}u'ubar)' + e^{-i phi}|u'|^2 - i phi' e^{-i phi} u' ubar
+PASS 2 Young: eta P A^2 + P B^2/(4 eta) - P A B is a square times P
+PASS 2b Re(-i phi' e^{-i phi} u'ubar) >= -|phi'||u'||u| (modulus bound)
+PASS 3 Lemma 4: c|u'|^2 + q|u|^2 = c g^2|v'|^2 + E|u|^2 + (c g g'|v|^2)'
+PASS 4 E' formula of Checker.E_parts
+PASS 5a c' as coded
+PASS 5b c'' as coded
+PASS 6 q' as coded
+PASS 6b Re(e^{-i phi}(Q1 + i Q2)) = cos(phi) Q1 + sin(phi) Q2
+PASS 7 Q' = e^{3 i theta} V'(r) F(r)
+PASS 8a V_l = D K / r^6
+PASS 8b K' as coded
+PASS 8c V' as coded
+PASS 8d F as coded (u = 1/r): -(Lam/3) r^2 + 1 - 2/r + Q^2/r^2
+PASS 9 d^2/ds^2 Phi(x_P + e^{i theta}s) = e^{2 i theta} Phi''
+PASS 10 Re(-i w e^{i pi/4}) = (a + b)/sqrt(2)
+PASS 11 hull monotonicity (signs of partials)
+PASS 12 |phi'| monotone for |s| > (3/5)^{1/4} s1
+PASS 13 Re Q = k s^2/2 + Im(w^2) = k s^2/2 + 2ab (barrier-top model)
+ALL PASS
+exit=0

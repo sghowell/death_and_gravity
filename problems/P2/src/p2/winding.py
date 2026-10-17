@@ -17,7 +17,8 @@ the increments add up to 2 pi * winding (a ball containing exactly one integer).
 Krawczyk.  For Z = z0 + [-r, r] + i[-r, r] and Y ~ 1/W'(z0):
     K(Z) = z0 - Y W(z0) + (1 - Y W'(Z)) (Z - z0)  subset of int(Z)  =>  unique zero of W_l in Z
 (mean-value form; W' over Z enclosed via a central difference at z0 with the analytic remainder
-bound M h^2/(R^3 (1 - h^2/R^2)) plus the Cauchy bound 2 M r/(R - r)^2 for W'(Z) - W'(z0), where
+bound M h^2/(R^3 (1 - h^2/R^2)) plus the Cauchy bound 2 M rho/(R - rho)^2 for W'(Z) - W'(z0), with
+rho = sqrt(2) r the corner distance of the square Z (R > rho is checked), where
 M >= |W_l| on the box z0 + [-R, R] + i[-R, R] is itself a validated enclosure).
 """
 from __future__ import annotations
@@ -222,7 +223,7 @@ def kat6_case(name, l, z_over_km, label, printed=None, hw_over_km="1e-3", prec=2
     return out
 
 
-def run_kat6():
+def run_kat6(write=True):
     cases = [("PA", 1, ("3.242616412611042303686208", "-0.7958326323112821365072551"),
               "Table I l=1 PS", ("3.2426164126", "-0.7958326323")),
              ("PB", 0, ("0", "-0.9093809789948054555249"), "P_B l=0 NE n=0", None)]
@@ -232,7 +233,8 @@ def run_kat6():
         res["cases"].append(kat6_case(name, l, z, label, printed))
         print(json.dumps(res["cases"][-1], indent=1)[:2000], flush=True)
     res["pass"] = all(c["pass"] for c in res["cases"])
-    (CERT_DIR / "kat6_winding_krawczyk.json").write_text(json.dumps(res, indent=1) + "\n")
+    if write:
+        (CERT_DIR / "kat6_winding_krawczyk.json").write_text(json.dumps(res, indent=1) + "\n")
     return res
 
 

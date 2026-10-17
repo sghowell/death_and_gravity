@@ -1,0 +1,57 @@
+{
+ "point": "PB",
+ "route": "M3",
+ "rows": {
+  "20": {
+   "A1": true,
+   "A2": true,
+   "A2prime_near_mode": true,
+   "A2prime_OUT_certified": true,
+   "A3": true,
+   "overlap": true,
+   "mu_cert": "[0.3245472114 +/- 3.12e-11]",
+   "m": "[0.52827170 +/- 4.79e-9]",
+   "float_m": 0.6606644482633233
+  },
+  "50": {
+   "A1": true,
+   "A2": true,
+   "A2prime_near_mode": true,
+   "A2prime_OUT_certified": true,
+   "A3": true,
+   "overlap": true,
+   "mu_cert": "[0.8599105052 +/- 4.60e-11]",
+   "m": "[0.56819212 +/- 1.50e-9]",
+   "float_m": 0.6812245905751391
+  },
+  "100": {
+   "A1": true,
+   "A2": true,
+   "A2prime_near_mode": true,
+   "A2prime_OUT_certified": false,
+   "A3": true,
+   "overlap": true,
+   "mu_cert": "[1.685388092 +/- 3.74e-10]",
+   "m": "[0.55958645 +/- 2.25e-9]",
+   "float_m": 0.6794435596196294
+  }
+ },
+ "fit": {
+  "C_over_l": {
+   "m_inf": 0.5765175611160773,
+   "C": 0.9359463976483275,
+   "max_residual": 0.010208150916562797,
+   "projected_l0": 2
+  },
+  "C2_over_l2": {
+   "m_inf": 0.5673731019615166,
+   "C": 16.048227942680185,
+   "max_residual": 0.007111823819359819,
+   "projected_l0": 5
+  }
+ },
+ "verdict": "GO for S3 (barrier-top window certified at l = 20, 50, 100; projected l0 <= 100)",
+ "commit": "85fad9f1c00f860d5f598c52ba3c96c63f255b05",
+ "preregistration": "notes/s2-preregistration.md",
+ "note": "projected_l0 is the formal output of the pre-registered fit. The fit is mis-specified (S2 review, section 4: design slack, a ground-state loss ~ 1/l and a spline loss ~ sqrt(l) add up to a non-monotone m(l)); it has no predictive content. See notes/s2-report.md section 3."
+}
