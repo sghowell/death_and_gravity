@@ -67,7 +67,7 @@ Commands (python problems/P4/scripts/s43_parts.py <cmd> -h for options):
   replay ID                          recompute one piece, compare with its part
                                      (record in parts/replays/, part untouched)
   merge [--accept-code FILE=SHA ...] [--accept-reason TEXT] [--substitute-layer-t14]
-                                     coverage-checked assembly; writes
+        [--substitute-centre]        coverage-checked assembly; writes
                                      tc_commutator.json only when complete,
                                      tc_commutator_partial.json otherwise.
                                      S4-4 layer parts (parts/layer*/<id>.json,
@@ -78,7 +78,15 @@ Commands (python problems/P4/scripts/s43_parts.py <cmd> -h for options):
                                      checked passing layer_t14 part carries a
                                      tube or sonic piece whose S4-3 part is
                                      missing, stale or invalid (review
-                                     2026-10-17 section 2).  The x-cover is
+                                     2026-10-17 section 2).
+                                     --substitute-centre (opt-in): a strictly
+                                     checked passing centre_t14 part
+                                     (scripts/s46_centre.py, centre_checks)
+                                     carries a centre piece whose S4-3 part is
+                                     missing, stale or invalid, given the
+                                     centre identity artifact
+                                     (centre_identity_checks; notes/s4-6-centre.md).
+                                     The x-cover is
                                      checked exactly on the tube caches' step
                                      positions (exact_x_cover); a piece that
                                      is not the cache step it claims, or an
@@ -1984,6 +1992,251 @@ def layer_cover(joined, pid):
     return None if best is None else (best[1], best[2])
 
 
+# ------------------------------------------------------- S4-6 centre parts
+CENTRE_SCHEMA = "s46-centre/1"
+CENTRE_DIR = "centre_t14"            # tau >= 14: the parts the centre rule uses
+CENTRE_DIR_224 = "centre_t224"       # tau >= 224: the second tau mode, reported only
+S46_DRIVER = os.path.join(HERE, "s46_centre.py")
+CENTRE_IDENTITY = os.path.join(TC_DIR, "centre_nb_identity.json")
+CENTRE_IDENTITY_SCHEMA = "s46-centre-nb-identity/1"
+CENTRE_REQUIRED = LAYER_REQUIRED + ("tc_layer_centre", "ec_centre")
+CENTRE_IDENTITY_REQUIRED = ("tc_layer_centre", "tc_energy", "tc_commutator")
+CENTRE_UNUSED = ("tc_layer_centre_mv", "tc_layer_mv")
+CENTRE_EVALUATOR = "sigma_box_centre"
+CENTRE_SERIES = "ec_centre.certified_centre_expansion("
+
+
+def centre_raise():
+    """(NB_RAISE, [kappa powers]) of the current tc_layer_centre: the offset
+    raise of nB that the centre layer data apply (raise_nb)."""
+    import p4.validated.tc_layer_centre as tlc
+    return int(tlc.NB_RAISE), [int(k) for k in tlc.NB_RAISE_KAPPA]
+
+
+def _strict_code(d, required, unused, driver, driver_name):
+    """The strict provenance conditions shared by the centre parts and the
+    centre identity artifact: (state, reasons) with state invalid or stale
+    on a failure, None if every condition holds.  A non-empty code record;
+    no module first loaded after the import-time snapshot; a passing
+    write-time check; every recorded hash current (no accepted variants);
+    the required modules recorded and the unused ones not; a recorded git
+    head and git_dirty_src exactly false; driver_sha256 equal to the
+    current driver."""
+    code = d.get("code") or {}
+    files = code.get("files")
+    if not files:
+        return "invalid", ["no code record"]
+    if code.get("late_modules"):
+        return "invalid", ["modules first loaded after the import-time snapshot: %s"
+                           % ", ".join(code["late_modules"])]
+    if not write_check_ok(d):
+        return "invalid", ["a source changed on disk before the part was written"]
+    if not code_matches(files, None):
+        return "stale", ["source hashes not current"]
+    why = ["module %s not recorded" % m for m in map(_vpath, required) if m not in files]
+    why += ["module %s recorded (the evaluator is %s)" % (m, CENTRE_EVALUATOR)
+            for m in map(_vpath, unused) if m in files]
+    if not code.get("git_head"):
+        why.append("git_head not recorded (not written from a checkout)")
+    if code.get("git_dirty_src") is not False:
+        why.append("git_dirty_src not false")
+    if (code.get("write_check") or {}).get("ok") is not True:
+        why.append("no passing write-time check")
+    if not os.path.exists(driver) or d.get("driver_sha256") != sha256_file(driver):
+        why.append("driver_sha256 differs from the current %s" % driver_name)
+    return ("invalid", why) if why else None
+
+
+def centre_identity_checks(path=None):
+    """(record, reasons) of the exact centre nB layer identity artifact
+    (s46_centre.py identity; tc_layer_centre.check_nb_identity); reasons
+    empty iff it is valid.  Valid: schema; ok and identity.ok true;
+    identity.raise_by and identity.kappa equal to the raise of the current
+    tc_layer_centre (centre_raise); at every raised kappa power, U6 = -nB
+    has no odd-parity terms and its lowest nonzero centre layer is at least
+    8 + raise_by (the dropped Taylor coefficients vanish); the strict code
+    conditions (_strict_code) with tc_layer_centre, tc_energy and
+    tc_commutator recorded and the driver the current s46_centre.py."""
+    path = path or CENTRE_IDENTITY
+    if not os.path.exists(path):
+        return None, ["%s missing (s46_centre.py identity)" % rel(path)]
+    try:
+        rec = json.load(open(path))
+    except Exception:
+        return None, ["%s does not parse" % rel(path)]
+    if rec.get("schema") != CENTRE_IDENTITY_SCHEMA:
+        return rec, ["schema"]
+    bad = _strict_code(rec, CENTRE_IDENTITY_REQUIRED, (), S46_DRIVER, "s46_centre.py")
+    if bad:
+        return rec, bad[1]
+    why = []
+    idn = rec.get("identity") or {}
+    raise_by, kappa = centre_raise()
+    if not (rec.get("ok") is True and idn.get("ok") is True):
+        why.append("identity not ok")
+    if idn.get("raise_by") != raise_by or idn.get("kappa") != kappa:
+        why.append("raise_by or kappa differ from the current tc_layer_centre (%d, %s)"
+                   % (raise_by, kappa))
+    u6 = idn.get("U6") or {}
+    for k in kappa:
+        r = u6.get(str(k)) or u6.get(k) or {}
+        low = r.get("lowest_nonzero_layer")
+        if r.get("odd_terms") != 0 or not (type(low) is int and low >= 8 + raise_by):
+            why.append("kappa^%d: odd terms or a nonzero layer below %d" % (k, 8 + raise_by))
+    return rec, why
+
+
+def centre_checks(p, d, tau_need, eps_max, raise_spec=None):
+    """(state, reasons) of the S4-6 centre part d of the centre plan piece p
+    as a cover of tau >= tau_need: missing | invalid | stale | pass | fail |
+    error, and the failed conditions.  Statement of a passing part
+    (scripts/s46_centre.py, p4.validated.tc_layer_centre): for every y in
+    the piece with y > 0, eps in [0, eps_max] and tau >= tau_min, dT, dB,
+    nB != 0 and Sigma_c = S/(1 + (y tau)^2) <= certified_bound < 0.
+
+    Always strict (there is no non-strict centre mode): schema, id, region
+    and spec; the strict code conditions (_strict_code: current hashes and
+    no accepted variants, no late module, a passing write-time check, a git
+    head and a clean tree, the modules tc_layer, tc_commutator, tc_tm,
+    tc_energy, tc_reduce, tc_layer_centre and ec_centre recorded and the
+    mean-value modules not, driver_sha256 equal to the current
+    s46_centre.py); status pass, ok, no failing boxes, certified_bound =
+    result bound = worst, finite and < 0; tau_min of the record, the cover
+    and the scope equal and <= tau_need, tau up to inf; eps cells tiling
+    [0, eps_max] and the scope's eps range; the cover's y-range [lo, hi]
+    and the scope's; s_lo <= lo tau_min, and 0 on the closing piece
+    (lo = 0); laurent; combine off; the evaluator sigma_box_centre in the
+    cover and the engine record, by tc_layer.run_layer_piece, on raised
+    layer data; the identity block (ok, raise_by, kappa) equal to the
+    current raise (raise_spec, default centre_raise()); the certified
+    centre series and the TM domain [0, hi]."""
+    if d is None:
+        return "missing", ["no centre part"]
+    if not d or d.get("schema") != CENTRE_SCHEMA or d.get("id") != p["id"]:
+        return "invalid", ["schema or id"]
+    if p.get("kind") != "centre" or d.get("region") != "centre":
+        return "invalid", ["not a centre piece"]
+    if d.get("spec") != spec_of(p):
+        return "stale", ["spec differs from the plan entry"]
+    bad = _strict_code(d, CENTRE_REQUIRED, CENTRE_UNUSED, S46_DRIVER, "s46_centre.py")
+    if bad:
+        return bad
+    st = d.get("status")
+    if st in ("fail", "error"):
+        return st, ["status " + st]
+    if st != "pass":
+        return "invalid", ["status " + str(st)]
+    raise_by, kappa = raise_spec or centre_raise()
+    sc, res, b = d.get("scope") or {}, d.get("result") or {}, d.get("certified_bound")
+    prm, eng = res.get("params") or {}, d.get("engine") or {}
+    inp, idn = d.get("inputs") or {}, d.get("identity") or {}
+    why = []
+    try:
+        if not (res.get("ok") is True and res.get("fails") == []):
+            why.append("result not ok or failing boxes recorded")
+        if not (type(b) in (int, float) and math.isfinite(b) and b < 0
+                and res.get("certified_bound") == b and res.get("worst") == b):
+            why.append("certified bound not finite, negative and equal to result and worst")
+        tmin = float(prm["tau_min"])
+        if not (tmin == float(sc["tau"][0]) == float(d["tau_min"]) and sc["tau"][1] == "inf"):
+            why.append("tau range of the record, the cover and the scope differ")
+        if not tmin <= tau_need:
+            why.append("tau_min %g above %g" % (tmin, tau_need))
+        cells = [[float(u), float(v)] for u, v in prm["eps_cells"]]
+        if not (cells and cells[0][0] == 0.0 and cells[-1][1] == float(eps_max)
+                and all(x[1] == y[0] for x, y in zip(cells, cells[1:]))
+                and all(x[0] < x[1] for x in cells)):
+            why.append("eps cells do not tile [0, eps_max]")
+        if [float(v) for v in sc["eps"]] != [0.0, float(eps_max)]:
+            why.append("scope eps range")
+        lo, hi = float(p["lo"]), float(p["hi"])
+        if not (float(prm["la"]) == lo and float(prm["lb"]) == hi):
+            why.append("cover y-range is not [lo, hi]")
+        if [float(v) for v in sc["y"]] != [lo, hi]:
+            why.append("scope y-range differs from the piece")
+        s_lo = float(prm["s_lo"])
+        if not (s_lo <= lo * tmin and (lo > 0 or s_lo == 0.0)):
+            why.append("s_lo above lo tau_min (or not 0 on the closing piece)")
+        if res.get("laurent") is not True:
+            why.append("laurent flag not set")
+        if prm.get("combine"):
+            why.append("combine set")
+        if not (prm.get("evaluator") == eng.get("evaluator") == CENTRE_EVALUATOR):
+            why.append("evaluator is not %s in the cover and the engine record"
+                       % CENTRE_EVALUATOR)
+        if eng.get("cover") != "tc_layer.run_layer_piece":
+            why.append("cover is not tc_layer.run_layer_piece")
+        if eng.get("raised") is not True:
+            why.append("layer data not raised")
+        if not (idn.get("ok") is True and idn.get("raise_by") == raise_by
+                and idn.get("kappa") == kappa):
+            why.append("identity block differs from the current raise (%d, %s)"
+                       % (raise_by, kappa))
+        if [float(v) for v in inp["tm_domain"]] != [0.0, hi]:
+            why.append("TM domain is not [0, hi]")
+        if not str(inp.get("centre_series", "")).startswith(CENTRE_SERIES):
+            why.append("centre series is not %s...)" % CENTRE_SERIES)
+    except (KeyError, TypeError, ValueError, IndexError) as e:
+        why.append("record incomplete: %r" % (e,))
+    return ("pass", []) if not why else ("invalid", why)
+
+
+def substitute_centre(plan, tc, states, checks_ok):
+    """The opt-in centre rule (merge --substitute-centre; notes/s4-6-centre.md):
+    a centre piece whose S4-3 part is missing, stale or invalid is carried
+    for every tau >= b1 by its passing centre_t14 part (centre_checks,
+    tau_min <= b1).  Global conditions, as for --substitute-layer-t14: the
+    checks valid for the current code and b1, c, EPS_MAX unchanged
+    (substitution_globals); and the centre identity artifact valid
+    (centre_identity_checks).  A failed or errored S4-3 part paired with a
+    passing centre part goes to manual review, never to substitution; a
+    usable S4-3 part is kept.  The centre_t224 parts (tau >= 224) are
+    checked the same way against tau >= tstar and reported only.  Returns
+    dict(subs={id: part}, manual_review, rejected={id: reasons}, blocked,
+    no_part, s43_used, second_mode={id: dict(state, certified_bound)},
+    identity)."""
+    blocked = substitution_globals(tc, checks_ok)
+    idrec, idwhy = centre_identity_checks()
+    blocked += ["centre identity: " + w for w in idwhy]
+    spec = centre_raise()
+    subs, manual, rejected, no_part, used43, second = {}, [], {}, [], [], {}
+    for p in plan["pieces"]:
+        if p["kind"] != "centre":
+            continue
+        d2 = read_layer_part(CENTRE_DIR_224, p["id"])
+        if d2 is not None:
+            st2, why2 = centre_checks(p, d2, piece_tstar(p, tc), tc.EPS_MAX, spec)
+            second[p["id"]] = dict(state=st2, certified_bound=d2.get("certified_bound"),
+                                   reasons=why2)
+        st43 = states[p["id"]]
+        if st43 not in ("missing", "stale", "invalid", "fail", "error"):
+            used43.append(p["id"])
+            continue
+        d = read_layer_part(CENTRE_DIR, p["id"])
+        if d is None:
+            no_part.append(p["id"])
+            continue
+        st, why = centre_checks(p, d, B1, tc.EPS_MAX, spec)
+        if st43 in ("fail", "error"):
+            if st == "pass":
+                manual.append(p["id"])
+            else:
+                rejected[p["id"]] = why
+            continue
+        if st != "pass":
+            rejected[p["id"]] = why
+        elif blocked:
+            rejected[p["id"]] = list(blocked)
+        else:
+            subs[p["id"]] = d
+    ident = dict(path=rel(CENTRE_IDENTITY), valid=not idwhy, reasons=idwhy,
+                 sha256=(sha256_file(CENTRE_IDENTITY) if os.path.exists(CENTRE_IDENTITY)
+                         else None),
+                 git_head=((idrec or {}).get("code") or {}).get("git_head"))
+    return dict(subs=subs, manual_review=sorted(manual), rejected=rejected, blocked=blocked,
+                no_part=no_part, s43_used=used43, second_mode=second, identity=ident)
+
+
 def cmd_merge(args):
     import_p4()
     import p4.validated.tc_commutator as tc
@@ -2018,18 +2271,27 @@ def cmd_merge(args):
                      and code_matches(checks["code"]["files"], accept))
     # opt-in (review section 2): a passing layer_t14 part carries a tube or
     # sonic piece whose S4-3 part is missing, stale or invalid, for every
-    # tau >= b1; off by default
+    # tau >= b1; off by default.  Opt-in (S4-6): a passing centre_t14 part
+    # carries a centre piece the same way (substitute_centre).
+    want_layer = bool(getattr(args, "substitute_layer_t14", False))
+    want_centre = bool(getattr(args, "substitute_centre", False))
+    # item 6: the checks must be valid for the current code itself
+    # (accepted code variants do not count for substitution)
+    checks_cur = bool(checks and checks["ok"] and write_check_ok(checks)
+                      and code_matches(checks["code"]["files"], None))
     sub = dict(subs={}, manual_review=[], rejected={}, blocked=[])
-    if getattr(args, "substitute_layer_t14", False):
-        # item 6: the checks must be valid for the current code itself
-        # (accepted code variants do not count for substitution)
-        checks_cur = bool(checks and checks["ok"] and write_check_ok(checks)
-                          and code_matches(checks["code"]["files"], None))
+    if want_layer:
         sub = substitute_layer_t14(plan, tc, states, checks_cur)
-        for pid, d in sub["subs"].items():
-            for r, sha in d["code"]["files"].items():
-                code_union.setdefault(r, set()).add(sha)
-    subp = [(p, sub["subs"][p["id"]]) for p in plan["pieces"] if p["id"] in sub["subs"]]
+    csub = dict(subs={}, manual_review=[], rejected={}, blocked=[], no_part=[], s43_used=[],
+                second_mode={}, identity=None)
+    if want_centre:
+        csub = substitute_centre(plan, tc, states, checks_cur)
+    subs = dict(sub["subs"])
+    subs.update(csub["subs"])          # disjoint: tube and sonic pieces, centre pieces
+    for pid, d in subs.items():
+        for r, sha in d["code"]["files"].items():
+            code_union.setdefault(r, set()).add(sha)
+    subp = [(p, subs[p["id"]]) for p in plan["pieces"] if p["id"] in subs]
     # several hashes for one source file among the used parts are acceptable only
     # when every non-current hash was explicitly accepted (--accept-code)
     conflicts = {}
@@ -2052,12 +2314,15 @@ def cmd_merge(args):
     gaps_direct, gaps_both = _floats(gx_direct), _floats(gx_both)
     gaps_direct_only = _floats(exact_minus(gx_both, gx_direct))
     missing = sorted(i for i, s in states.items() if s in ("missing", "stale", "invalid")
-                     and i not in sub["subs"])
+                     and i not in subs)
     failed = sorted(i for i, s in states.items() if s in ("fail", "error"))
     complete = (not gaps_direct and not missing and not failed and checks_ok
                 and not unaccepted and not cover_errors)
     opens = [d for p, d in used if d["status"] == "pass-direct" and p["id"] not in covers]
-    xi_open = max([-a for a, b in gaps_both], default=0.0) if gaps_both else 0.0
+    # review s4-5 section 8e: xi_open_max only for an open set bounded in x;
+    # an uncovered interval reaching x = -inf (the centre end) has no finite
+    # xi-bound, and the scope says so instead of xi_open_max = inf
+    open_at_centre = any(xcmp(a, X_NEG_INF) == 0 for a, b in gx_both)
     detail = []
     second = 0
     for p, d in used:
@@ -2083,6 +2348,27 @@ def cmd_merge(args):
         detail.append(e)
     for p, d in subp:
         r = d.get("result") or {}
+        if p["kind"] == "centre":
+            sm = csub["second_mode"].get(p["id"])
+            detail.append(dict(
+                id=p["id"], region=p["region"], ok=True, substituted=CENTRE_DIR,
+                s43_state=states[p["id"]], tau_le_tstar="centre:" + CENTRE_DIR,
+                tau_gt_tstar="centre:" + CENTRE_DIR, certified_bound=d["certified_bound"],
+                tau_min=d["scope"]["tau"][0], y=d["scope"]["y"], engine=d.get("engine"),
+                boxes=r.get("boxes"), evals=r.get("evals"),
+                evaluator=(r.get("params") or {}).get("evaluator"),
+                code_fingerprint=d["code"].get("fingerprint"),
+                driver_sha256=d.get("driver_sha256"),
+                second_mode=(None if sm is None else
+                             dict(dir=CENTRE_DIR_224, state=sm["state"],
+                                  certified_bound=sm["certified_bound"])),
+                statement=d["scope"].get("statement"),
+                nonvanishing=("dT, kappa dB, dB and nB != 0 on every box of the cover "
+                              "(y > 0): sigma_box_centre divides by them through graded "
+                              "inverses, and a box on which one does not invert fails; "
+                              "Bcr, D2r != 0 at strip kappa follow from dT != 0 "
+                              "(dT = Dp SDr D2r Bcr)")))
+            continue
         detail.append(dict(
             id=p["id"], region=p["region"], ok=True, substituted=SUBSTITUTE_DIR,
             s43_state=states[p["id"]], tau_le_tstar="layer:" + SUBSTITUTE_DIR,
@@ -2116,7 +2402,7 @@ def cmd_merge(args):
                    "S xi^2/tau^2 <= certified_bound < 0 (p4.validated.tc_layer); "
                    "joined by piece id, it carries tau > tstar for a pass-direct piece"))
     substitution = dict(
-        enabled=bool(getattr(args, "substitute_layer_t14", False)), dir=SUBSTITUTE_DIR,
+        enabled=want_layer, dir=SUBSTITUTE_DIR,
         substituted=sorted(sub["subs"]), count=len(sub["subs"]),
         manual_review=sub["manual_review"], rejected=sub["rejected"],
         blocked=sub["blocked"],
@@ -2128,6 +2414,39 @@ def cmd_merge(args):
               "run); "
               "checks valid; b1, c, EPS_MAX unchanged.  Failed or errored S4-3 parts go "
               "to manual_review."))
+    sec = csub["second_mode"]
+    centre_substitution = dict(
+        enabled=want_centre, dir=CENTRE_DIR,
+        substituted=sorted(csub["subs"]), count=len(csub["subs"]),
+        manual_review=csub["manual_review"], rejected=csub["rejected"],
+        blocked=csub["blocked"], no_part=csub["no_part"], s43_used=csub["s43_used"],
+        identity=csub["identity"],
+        driver_sha256=sha256_file(S46_DRIVER) if os.path.exists(S46_DRIVER) else None,
+        worst_bound=max((d["certified_bound"] for d in csub["subs"].values()), default=None),
+        second_mode=dict(
+            dir=CENTRE_DIR_224, tau_min="tstar",
+            states={st: sum(1 for v in sec.values() if v["state"] == st)
+                    for st in sorted({v["state"] for v in sec.values()})},
+            worst_bound=max((v["certified_bound"] for v in sec.values()
+                             if v["state"] == "pass"), default=None),
+            not_passing={i: v["reasons"] for i, v in sorted(sec.items())
+                         if v["state"] != "pass"},
+            use="reported only: the centre_t14 part alone carries tau >= b1"),
+        statement=("a passing centre part certifies, for every y in (0, hi] with y >= lo, "
+                   "eps in [0, eps_max] and tau >= tau_min: dT, dB, nB != 0 and "
+                   "Sigma_c = S/(1 + (y tau)^2) <= certified_bound < 0, hence S < 0 "
+                   "(scripts/s46_centre.py, p4.validated.tc_layer_centre)"),
+        rule=("notes/s4-6-centre.md: centre piece, S4-3 part missing, stale or invalid; "
+              "centre_t14 part passing centre_checks with tau_min <= b1 (current code "
+              "with the required modules and without the mean-value ones, a recorded git "
+              "head and a clean tree, write-time check, no module loaded after the "
+              "import-time snapshot, pinned s46_centre.py, sigma_box_centre by "
+              "tc_layer.run_layer_piece on raised layer data, the identity block equal "
+              "to the current raise, the certified centre series on the TM domain "
+              "[0, hi], the cover's y-range [lo, hi], s_lo = 0 on the closing piece, eps "
+              "cells tiling [0, EPS_MAX], tau up to inf); checks valid; b1, c, EPS_MAX "
+              "unchanged; the centre identity artifact valid (centre_identity_checks).  "
+              "Failed or errored S4-3 parts go to manual_review."))
     worst = max((e["margin"] for e in detail if e.get("margin") is not None), default=None)
     if not gaps_both:
         above = "certified everywhere"
@@ -2141,16 +2460,31 @@ def cmd_merge(args):
                         "phase of pass-direct pieces); tau > tstar is open there"
                         % gaps_direct_only)
         above = "OPEN on x in %s: %s" % (gaps_both, "; ".join(what))
+    # review s4-5 section 8e: the tau range per carrier (each substituted part
+    # is one cover of tau >= b1), not one [b1, tstar] for the whole strip
+    scope = dict(
+        tau_target=[B1, "inf"],
+        tau_by_carrier=dict(
+            s43_pass_both=[B1, "inf"], s43_pass_direct=[B1, "tstar"],
+            layer_join=["tstar", "inf"], substituted_layer_t14=[B1, "inf"],
+            substituted_centre=[B1, "inf"],
+            note=("tstar = tstar_fac * b1 of the piece (phase_settings); layer_join: a "
+                  "passing S4-4 layer part of the same id carries tau > tstar of a "
+                  "pass-direct piece (detail: tau_gt_tstar); a substituted part "
+                  "(layer_t14 or centre_t14) is one cover of tau >= b1")),
+        tau_le_tstar_uncovered_x=gaps_direct,
+        tau_gt_tstar_uncovered_x=gaps_both,
+        open_at_centre_end=open_at_centre,
+        tau_above_tstar=above,
+        tau_gt_tstar_by=dict(
+            tau_quadratic=sum(1 for p, d in used if d["status"] == "pass-both"),
+            layer=len(covers), open=len(opens), substituted=len(subp)))
+    if gaps_both and not open_at_centre:
+        # the largest xi = -x left open; only for an open set bounded in x
+        scope["xi_open_max"] = max(-a for a, b in gaps_both)
     res = dict(
         ok=complete, status="complete" if complete else "partial",
-        scope=dict(full_strip_tau=[B1, tc.TSTAR_FAC * B1],
-                   tau_le_tstar_uncovered_x=gaps_direct,
-                   tau_gt_tstar_uncovered_x=gaps_both,
-                   xi_open_max=xi_open,
-                   tau_above_tstar=above,
-                   tau_gt_tstar_by=dict(
-                       tau_quadratic=sum(1 for p, d in used if d["status"] == "pass-both"),
-                       layer=len(covers), open=len(opens), substituted=len(subp))),
+        scope=scope,
         cover=dict(exact=True, errors=cover_errors, pieces=len(xiv),
                    method=("tube steps at their exact cache positions [x_k - h_k, x_k] "
                            "(radius 0, consecutive steps joining exactly, each piece the "
@@ -2167,11 +2501,14 @@ def cmd_merge(args):
             note=("pass-both pieces are certified for every tau >= b1 (centre with "
                   "tstar_fac = 1: the tau-quadratic phase alone); pass-direct pieces "
                   "only for tau in [b1, tstar_fac * b1], unless a passing S4-4 layer "
-                  "part of the same id carries tau > tstar (detail: tau_gt_tstar)")),
+                  "part of the same id carries tau > tstar (detail: tau_gt_tstar); "
+                  "substituted pieces (layer_t14, centre_t14) for every tau >= b1 by "
+                  "one cover (scope.tau_by_carrier)")),
         open_pieces=len(opens),
         layer=layer_summary,
         layer_join_rejections={"%s @ %s" % k: v for k, v in sorted(join_why.items())},
         substitution=substitution,
+        centre_substitution=centre_substitution,
         checks=(dict(E1_U6top=checks["results"]["E1_U6top"],
                      E2_layers=checks["results"]["E2_layers"],
                      E3_sonic_zeros=checks["results"]["E3_sonic_zeros"],
@@ -2187,15 +2524,18 @@ def cmd_merge(args):
                         driver_sha256=DRIVER_SHA256,
                         s44_driver_sha256=(sha256_file(S44_DRIVER)
                                            if os.path.exists(S44_DRIVER) else None),
+                        s46_driver_sha256=(sha256_file(S46_DRIVER)
+                                           if os.path.exists(S46_DRIVER) else None),
                         parts_dir=rel(PARTS)))
     out = CERT if complete else CERT_PARTIAL
     write_json_atomic(out, res)
-    print("%s: status=%s used=%d substituted=%d missing=%d failed=%d manual_review=%d "
-          "gaps(tau<=tstar)=%s gaps(tau>tstar)=%s layer-covered=%d conflicts=%s "
-          "strip_exclusion_certified=%s -> %s"
-          % ("merge", res["status"], len(used), len(subp), len(missing), len(failed),
-             len(sub["manual_review"]), gaps_direct, gaps_both, len(covers),
-             list(conflicts), res["strip_exclusion_certified"], rel(out)))
+    print("%s: status=%s used=%d substituted=%d (layer_t14 %d, centre %d) missing=%d "
+          "failed=%d manual_review=%d gaps(tau<=tstar)=%s gaps(tau>tstar)=%s "
+          "layer-covered=%d conflicts=%s strip_exclusion_certified=%s -> %s"
+          % ("merge", res["status"], len(used), len(subp), len(sub["subs"]),
+             len(csub["subs"]), len(missing), len(failed),
+             len(sub["manual_review"]) + len(csub["manual_review"]), gaps_direct, gaps_both,
+             len(covers), list(conflicts), res["strip_exclusion_certified"], rel(out)))
     if cover_errors:
         raise SystemExit("merge error: the exact cover check failed (%d): %s%s"
                          % (len(cover_errors), "; ".join(cover_errors[:3]),
@@ -2287,6 +2627,10 @@ def main(argv=None):
     p.add_argument("--substitute-layer-t14", action="store_true",
                    help="opt-in: a passing layer_t14 part (strict checks) carries a tube "
                         "or sonic piece whose S4-3 part is missing, stale or invalid")
+    p.add_argument("--substitute-centre", action="store_true",
+                   help="opt-in: a passing centre_t14 part (scripts/s46_centre.py; "
+                        "strict checks, the centre identity artifact) carries a centre "
+                        "piece whose S4-3 part is missing, stale or invalid")
     p.set_defaults(fn=cmd_merge)
     args = ap.parse_args(argv)
     args.fn(args)

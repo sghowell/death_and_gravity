@@ -4,9 +4,12 @@ the S4-3 parts by piece id (a valid passing one carries tau > tstar for a
 pass-direct piece), and, opt-in (merge --substitute-layer-t14), a strictly
 checked passing layer_t14 part carries a tube or sonic piece whose S4-3 part
 is missing, stale or invalid (review
-docs/review-2026-10-17-p4-layer-engine-adversarial.md, section 2).  Synthetic
-plan and parts in a temporary directory; no region code runs (the merge only
-imports the modules for their constants)."""
+docs/review-2026-10-17-p4-layer-engine-adversarial.md, section 2).  Opt-in
+(merge --substitute-centre), a strictly checked passing centre_t14 part
+(scripts/s46_centre.py) carries a centre piece the same way, given the centre
+identity artifact (notes/s4-6-centre.md).  Synthetic plan and parts in a
+temporary directory; no region code runs (the merge only imports the modules
+for their constants)."""
 import argparse
 import copy
 import json
@@ -155,9 +158,68 @@ class Env:
         _write(os.path.join(self.parts, dirname, pid + ".json"), d)
         return d
 
-    def merge(self, substitute=False, accept=None):
+    def centre_record(self, pid, tau_min=14.0, bound=-0.5):
+        """A complete passing centre part as s46_centre.py writes it."""
+        p = self.byid[pid]
+        lo, hi = p["lo"], p["hi"]
+        files = {_vp(m): s43.current_hash(_vp(m)) for m in s43.CENTRE_REQUIRED}
+        assert all(files.values())
+        raise_by, kappa = s43.centre_raise()
+        params = dict(s_a=0.001, s_big=1000.0, s_ratio=2.0, zsplit=4.0, tstar=224.0,
+                      tau_min=tau_min, eps_cells=copy.deepcopy(EPS_CELLS), la=lo, lb=hi,
+                      target=0.0, s_lo=lo * tau_min * (1 - 1e-12), t_pre=20000.0,
+                      t_ratio=1.5, max_evals=150000, evaluator="sigma_box_centre",
+                      combine=False)
+        return dict(
+            schema="s46-centre/1", id=pid, region="centre", spec=s43.spec_of(p),
+            status="pass", tau_min=tau_min,
+            scope=dict(y=[lo, hi], eps=[0.0, 6.0], tau=[tau_min, "inf"], statement="..."),
+            certified_bound=bound,
+            result=dict(ok=True, worst=bound, certified_bound=bound, fails=[], boxes=10,
+                        evals=20, params=params, laurent=True, norm="layer"),
+            engine=dict(evaluator="sigma_box_centre", cover="tc_layer.run_layer_piece",
+                        ladder=[], max_evals=150000, raised=True, kmax=4, s_split=0.5,
+                        centring={"nV/dT": 3}),
+            inputs=dict(centre_series="ec_centre.certified_centre_expansion(256, K=30) "
+                                      "(the certified (a*, mu*) balls)",
+                        tm_domain=[0.0, hi]),
+            identity=dict(ok=True, raise_by=raise_by, kappa=kappa),
+            code=dict(files=files, fingerprint=s43.fingerprint(files), git_head="x",
+                      git_dirty_src=False, hashed="import", late_modules=[],
+                      write_check=dict(ok=True, changed_sources={}, changed_drivers={})),
+            driver_sha256=s43.sha256_file(s43.S46_DRIVER))
+
+    def centre_part(self, pid, dirname="centre_t14", tau_min=14.0, d=None, **over):
+        d = d or self.centre_record(pid, tau_min)
+        d.update(over)
+        _write(os.path.join(self.parts, dirname, pid + ".json"), d)
+        return d
+
+    def identity_record(self):
+        """A valid centre identity artifact as s46_centre.py identity writes it."""
+        files = {_vp(m): s43.current_hash(_vp(m)) for m in s43.CENTRE_IDENTITY_REQUIRED}
+        raise_by, kappa = s43.centre_raise()
+        row = lambda low, first: dict(lowest_layer=low, lowest_nonzero_layer=first,
+                                      odd_terms=0)
+        u6 = {str(j): (row(8, 10) if j in kappa else row(10, 10)) for j in range(10)}
+        return dict(
+            schema="s46-centre-nb-identity/1", ok=True,
+            identity=dict(ok=True, raise_by=raise_by, kappa=kappa, U6=u6, denU={},
+                          statement="..."),
+            code=dict(files=files, fingerprint=s43.fingerprint(files), git_head="x",
+                      git_dirty_src=False, hashed="import", late_modules=[],
+                      write_check=dict(ok=True, changed_sources={}, changed_drivers={})),
+            driver_sha256=s43.sha256_file(s43.S46_DRIVER))
+
+    def centre_identity(self, d=None):
+        d = d or self.identity_record()
+        _write(s43.CENTRE_IDENTITY, d)
+        return d
+
+    def merge(self, substitute=False, accept=None, centre=False):
         s43.cmd_merge(argparse.Namespace(accept_code=accept, accept_reason=None,
-                                         substitute_layer_t14=substitute))
+                                         substitute_layer_t14=substitute,
+                                         substitute_centre=centre))
         for name in ("tc_commutator.json", "tc_commutator_partial.json"):
             f = os.path.join(self.root, name)
             if os.path.exists(f):
@@ -176,6 +238,7 @@ def env(tmp_path, monkeypatch):
     monkeypatch.setattr(s43, "CERT", os.path.join(root, "tc_commutator.json"))
     monkeypatch.setattr(s43, "CERT_PARTIAL", os.path.join(root, "tc_commutator_partial.json"))
     monkeypatch.setattr(s43, "CACHE_DIR", os.path.join(root, "cache"))
+    monkeypatch.setattr(s43, "CENTRE_IDENTITY", os.path.join(root, "centre_nb_identity.json"))
     return Env(root)
 
 
@@ -793,6 +856,10 @@ def _cover_bad():
     def sonic_pair(env):
         s1 = dict(env.byid["sonic/s00"], id="sonic/s01", index=1, lo=0.0100001, hi=0.02)
         env.pieces = env.pieces + [s1]
+
+    def centre_pair(env):
+        c1 = dict(env.byid["centre/c00"], id="centre/c01", index=1, lo=0.3750001, hi=0.4)
+        env.pieces = env.pieces + [c1]
     return {
         "claims-another-step": (gap(x=-0.0101), "not the cache step it claims"),
         "h-label": (gap(h=0.0099), "not the cache step it claims"),
@@ -802,6 +869,7 @@ def _cover_bad():
         "join": (cache([(-0.01, 0.005), (-0.0150001, 0.005)]), "do not join exactly"),
         "missing-file": (gap(cache="deep"), "missing"),
         "sonic-touch": (sonic_pair, "do not touch exactly"),
+        "centre-touch": (centre_pair, "do not touch exactly"),
     }
 
 
@@ -839,3 +907,475 @@ def test_exact_gaps_with_centre_pieces():
     # a gap of 2^-80 between two dyadic ends is a gap
     g = s43.exact_gaps([(X(q=Q(-2)), X(q=Q(-1))), (X(q=Q(-1) + Q(1, 2 ** 80)), X(q=Q(0)))])
     assert len(g) == 2 and g[1][0].q == Q(-1) and g[1][1].q == Q(-1) + Q(1, 2 ** 80)
+
+
+# ------------------------------------------ the centre rule (S4-6, opt-in)
+C00 = "centre/c00"
+
+
+def _centre_setup(env, pid=C00):
+    """S4-3 part of the centre piece removed; a valid identity artifact and a
+    passing centre_t14 part; the band pieces covered above tstar by their
+    layer parts, so a complete merge certifies the strip."""
+    env.drop_s43(pid)
+    env.centre_identity()
+    env.centre_part(pid)
+    env.layer_part("gap/gap-000")
+    env.layer_part("sonic/s00")
+
+
+def _two_centre_pieces(env):
+    """The centre as c00 = [0, 1/4] and c01 = [1/4, 3/8], no S4-3 parts."""
+    c00 = dict(env.byid[C00], hi=0.25)
+    c01 = dict(env.byid[C00], id="centre/c01", index=1, lo=0.25, hi=0.375)
+    env.pieces = [c00, c01] + [p for p in env.pieces if p["region"] != "centre"]
+    env.write_plan()
+    env.drop_s43(C00)
+
+
+def test_centre_substitution_is_off_by_default(env):
+    _centre_setup(env)
+    name, d = env.merge()
+    assert name == "tc_commutator_partial.json" and d["missing"] == [C00]
+    assert d["centre_substitution"]["enabled"] is False
+    assert d["centre_substitution"]["count"] == 0
+    # the layer rule never takes a centre piece, from any directory
+    _, d = env.merge(substitute=True)
+    assert d["missing"] == [C00] and d["substitution"]["substituted"] == []
+
+
+def test_centre_substitution_of_a_missing_part(env):
+    _centre_setup(env)
+    name, d = env.merge(centre=True)
+    assert name == "tc_commutator.json" and d["ok"] and d["strip_exclusion_certified"]
+    c = d["centre_substitution"]
+    assert c["enabled"] and c["substituted"] == [C00] and c["count"] == 1
+    assert c["blocked"] == [] and c["rejected"] == {} and c["identity"]["valid"]
+    assert c["worst_bound"] == -0.5 and c["driver_sha256"] == s43.sha256_file(s43.S46_DRIVER)
+    assert d["missing"] == [] and _gaps(d) == [] and d["cover"]["errors"] == []
+    e = _detail(d, C00)
+    assert e["substituted"] == "centre_t14" and e["s43_state"] == "missing"
+    assert e["tau_le_tstar"] == e["tau_gt_tstar"] == "centre:centre_t14"
+    assert e["tau_min"] == 14.0 and e["evaluator"] == "sigma_box_centre"
+    assert "dT" in e["nonvanishing"] and "nB" in e["nonvanishing"]
+    assert d["scope"]["tau_gt_tstar_by"]["substituted"] == 1
+    assert d["pieces"] == len(d["detail"]) == 4
+
+
+@pytest.mark.parametrize("how", ["spec", "code", "write-check"])
+def test_centre_substitution_of_a_stale_or_invalid_part(env, how):
+    _centre_setup(env)
+    if how == "spec":
+        env.s43_part(C00, "pass-both", spec=dict(id=C00, index=7))
+        want = "stale"
+    elif how == "code":
+        env.s43_part(C00, "pass-both", code=dict(files={CODE_FILE: "2" * 64}))
+        want = "stale"
+    else:
+        env.s43_part(C00, "pass-both",
+                     code=dict(files=dict(env.code), write_check=dict(ok=False)))
+        want = "invalid"
+    name, d = env.merge(centre=True)
+    assert name == "tc_commutator.json" and d["strip_exclusion_certified"]
+    assert d["centre_substitution"]["substituted"] == [C00]
+    assert _detail(d, C00)["s43_state"] == want
+
+
+@pytest.mark.parametrize("st43", ["fail", "error"])
+def test_failed_s43_centre_part_goes_to_manual_review(env, st43):
+    _centre_setup(env)
+    env.s43_part(C00, st43)
+    name, d = env.merge(centre=True)
+    assert name == "tc_commutator_partial.json" and d["failed"] == [C00]
+    c = d["centre_substitution"]
+    assert c["manual_review"] == [C00] and c["substituted"] == [] and c["rejected"] == {}
+    # a failed S4-3 part with an invalid centre part: rejected, still failed
+    env.centre_part(C00, status="weird")
+    _, d = env.merge(centre=True)
+    c = d["centre_substitution"]
+    assert c["manual_review"] == [] and c["rejected"][C00] == ["status weird"]
+
+
+def test_usable_s43_centre_part_is_kept(env):
+    env.centre_identity()
+    env.centre_part(C00)
+    _, d = env.merge(centre=True)
+    c = d["centre_substitution"]
+    assert c["substituted"] == [] and c["s43_used"] == [C00]
+    assert _detail(d, C00)["tau_gt_tstar"] == "tau-quadratic"
+
+
+def test_centre_and_layer_substitution_together(env):
+    _centre_setup(env)
+    env.drop_s43("gap/gap-000")
+    env.layer_part("gap/gap-000", dirname="layer_t14", tau_min=14.0)
+    _, d = env.merge(substitute=True)
+    assert d["missing"] == [C00] and d["substitution"]["substituted"] == ["gap/gap-000"]
+    name, d = env.merge(substitute=True, centre=True)
+    assert name == "tc_commutator.json" and d["strip_exclusion_certified"]
+    assert d["substitution"]["substituted"] == ["gap/gap-000"]
+    assert d["centre_substitution"]["substituted"] == [C00]
+    assert d["scope"]["tau_gt_tstar_by"]["substituted"] == 2
+    assert d["cover"]["pieces"] == 4 and d["cover"]["errors"] == []
+
+
+def test_two_centre_pieces_and_the_closing_piece(env):
+    _two_centre_pieces(env)
+    env.centre_identity()
+    env.layer_part("gap/gap-000")
+    env.layer_part("sonic/s00")
+    env.centre_part("centre/c01")
+    name, d = env.merge(centre=True)
+    # without the closing piece the open set reaches x = -inf: no finite
+    # xi-bound, and no xi_open_max (review s4-5 section 8e)
+    assert name == "tc_commutator_partial.json" and d["missing"] == [C00]
+    assert _gaps(d) == [(-math.inf, math.log(0.25))]
+    assert d["scope"]["open_at_centre_end"] is True and "xi_open_max" not in d["scope"]
+    env.centre_part(C00)
+    name, d = env.merge(centre=True)
+    assert name == "tc_commutator.json" and d["strip_exclusion_certified"]
+    assert d["centre_substitution"]["substituted"] == [C00, "centre/c01"]
+    assert d["scope"]["open_at_centre_end"] is False and _gaps(d) == []
+
+
+def test_scope_wording(env):
+    # review s4-5 section 8e: the tau range per carrier, no [b1, tstar] for
+    # the strip, and xi_open_max only for an open set bounded in x
+    name, d = env.merge()
+    sc = d["scope"]
+    assert "full_strip_tau" not in sc and sc["tau_target"] == [14.0, "inf"]
+    assert sc["tau_by_carrier"]["substituted_centre"] == [14.0, "inf"]
+    assert sc["tau_by_carrier"]["substituted_layer_t14"] == [14.0, "inf"]
+    assert sc["tau_by_carrier"]["s43_pass_direct"] == [14.0, "tstar"]
+    assert _gaps(d) == [(-0.02, 0.0)] and sc["xi_open_max"] == 0.02
+    assert sc["open_at_centre_end"] is False
+    env.layer_part("gap/gap-000")
+    env.layer_part("sonic/s00")
+    _, d = env.merge()
+    assert _gaps(d) == [] and "xi_open_max" not in d["scope"]
+
+
+def test_second_tau_mode_is_reported_not_used(env):
+    _centre_setup(env)
+    env.centre_part(C00, dirname="centre_t224", tau_min=224.0, d=env.centre_record(
+        C00, tau_min=224.0, bound=-0.25))
+    _, d = env.merge(centre=True)
+    sm = d["centre_substitution"]["second_mode"]
+    assert sm["states"] == {"pass": 1} and sm["worst_bound"] == -0.25
+    assert _detail(d, C00)["second_mode"] == dict(dir="centre_t224", state="pass",
+                                                  certified_bound=-0.25)
+    # a tau >= 224 part alone does not carry the piece
+    os.remove(os.path.join(env.parts, "centre_t14", C00 + ".json"))
+    _, d = env.merge(centre=True)
+    c = d["centre_substitution"]
+    assert c["substituted"] == [] and c["no_part"] == [C00] and d["missing"] == [C00]
+    # an invalid tau >= 224 part is reported and changes nothing else
+    env.centre_part(C00)
+    env.centre_part(C00, dirname="centre_t224", d=env.centre_record(C00, tau_min=224.0),
+                    driver_sha256="4" * 64)
+    _, d = env.merge(centre=True)
+    sm = d["centre_substitution"]["second_mode"]
+    assert d["centre_substitution"]["substituted"] == [C00]
+    assert sm["states"] == {"invalid": 1}
+    assert sm["not_passing"][C00] == ["driver_sha256 differs from the current s46_centre.py"]
+
+
+def _centre_bad():
+    """Rejections of a centre part by centre_checks, on the closing piece
+    c00 unless the key starts with c01/ (the two-piece plan)."""
+    def code(**kw):
+        def f(d, env):
+            d["code"].update(kw)
+        return f
+
+    def prm(**kw):
+        def f(d, env):
+            d["result"]["params"].update(kw)
+        return f
+
+    def top(**kw):
+        def f(d, env):
+            d.update(kw)
+        return f
+
+    def sub(key, **kw):
+        def f(d, env):
+            d[key].update(kw)
+        return f
+
+    def drop(m):
+        def f(d, env):
+            del d["code"]["files"][_vp(m)]
+        return f
+
+    def add(m):
+        def f(d, env):
+            d["code"]["files"][_vp(m)] = s43.current_hash(_vp(m))
+        return f
+    late = [_vp("tc_reduced_eigs")]
+    out = {
+        "schema": top(schema="s46-centre/0"),
+        "id": top(id="centre/c07"),
+        "region": top(region="tube"),
+        "spec": top(spec=dict(id=C00, index=5)),
+        "no-code": code(files={}),
+        "hash-not-current": lambda d, env: d["code"]["files"].update(
+            {_vp("tc_layer_centre"): "3" * 64}),
+        "late-module": code(late_modules=late, write_check=dict(
+            ok=False, changed_sources={}, changed_drivers={}, late_modules=late)),
+        "no-write-check": lambda d, env: d["code"].pop("write_check"),
+        "write-check-failed": code(write_check=dict(ok=False)),
+        "dirty-tree": code(git_dirty_src=True),
+        "dirty-unknown": code(git_dirty_src=None),
+        "git-head-missing": code(git_head=None),
+        "driver-pin": top(driver_sha256="4" * 64),
+        "status-fail": top(status="fail"),
+        "status-error": top(status="error"),
+        "status-other": top(status="running"),
+        "not-ok": sub("result", ok=False),
+        "fails-recorded": sub("result", fails=[dict(box=[0])]),
+        "bound-result": sub("result", certified_bound=-0.4),
+        "bound-worst": sub("result", worst=-0.4),
+        "bound-missing": top(certified_bound=None),
+        "bound-nonfinite": top(certified_bound=float("nan")),
+        "bound-nonnegative": lambda d, env: (d.update(certified_bound=0.0),
+                                             d["result"].update(certified_bound=0.0,
+                                                                worst=0.0)),
+        "tau-min-above-b1": None,
+        "tau-min-cover": prm(tau_min=13.0),
+        "tau-min-record": top(tau_min=13.0),
+        "tau-bounded": lambda d, env: d["scope"].update(tau=[14.0, 1e8]),
+        "eps-cells-gap": prm(eps_cells=EPS_CELLS[:3] + EPS_CELLS[4:]),
+        "eps-cells-short": prm(eps_cells=EPS_CELLS[:-1]),
+        "eps-cells-backward": prm(eps_cells=[[0.0, 3.0], [3.0, 3.0], [3.0, 6.0]]),
+        "eps-scope": lambda d, env: d["scope"].update(eps=[0.0, 5.0]),
+        "la": prm(la=1e-9),
+        "lb": prm(lb=0.3),
+        "y-scope": lambda d, env: d["scope"].update(y=[0.0, 0.3]),
+        "closing-s-lo": prm(s_lo=1e-9),
+        "c01/s-lo": prm(s_lo=0.25 * 14.0 * 1.01),
+        "c01/la": prm(la=0.0),
+        "laurent": sub("result", laurent=False),
+        "combine": prm(combine=True),
+        "evaluator-cover": prm(evaluator="sigma_box_centre_mv"),
+        "evaluator-engine": sub("engine", evaluator="sigma_box"),
+        "cover-engine": sub("engine", cover="tc_layer.certify_piece"),
+        "not-raised": sub("engine", raised=False),
+        "identity-raise-by": sub("identity", raise_by=1),
+        "identity-kappa": sub("identity", kappa=[1, 2, 3, 4, 5, 6]),
+        "identity-not-ok": sub("identity", ok=False),
+        "tm-domain": lambda d, env: d["inputs"].update(tm_domain=[0.0, 0.5]),
+        "centre-series": sub("inputs", centre_series="ec_centre.midpoint_centre_expansion("),
+        "record-incomplete": lambda d, env: d["result"]["params"].pop("eps_cells"),
+    }
+    for m in s43.CENTRE_REQUIRED:
+        out["module-" + m] = drop(m)
+    for m in s43.CENTRE_UNUSED:
+        out["unused-" + m] = add(m)
+    return out
+
+
+def _centre_why(case):
+    """The one reason centre_checks gives for each _centre_bad case."""
+    fixed = {
+        "c01/la": "cover y-range", "la": "cover y-range", "lb": "cover y-range",
+        "c01/s-lo": "s_lo above", "closing-s-lo": "s_lo above",
+        "centre-series": "centre series is not", "combine": "combine set",
+        "cover-engine": "cover is not", "driver-pin": "driver_sha256 differs",
+        "eps-scope": "scope eps range", "fails-recorded": "result not ok",
+        "not-ok": "result not ok", "git-head-missing": "git_head not recorded",
+        "hash-not-current": "source hashes not current", "id": "schema or id",
+        "schema": "schema or id", "late-module": "modules first loaded after",
+        "laurent": "laurent flag", "no-code": "no code record",
+        "no-write-check": "no passing write-time check", "not-raised": "not raised",
+        "record-incomplete": "record incomplete", "region": "not a centre piece",
+        "spec": "spec differs", "status-error": "status error",
+        "status-fail": "status fail", "status-other": "status running",
+        "tau-min-above-b1": "tau_min 224 above 14", "tm-domain": "TM domain",
+        "write-check-failed": "a source changed on disk", "y-scope": "scope y-range"}
+    prefix = {
+        "bound-": "certified bound not finite", "dirty-": "git_dirty_src not false",
+        "eps-cells-": "eps cells do not tile", "evaluator-": "evaluator is not",
+        "identity-": "identity block differs", "tau-": "tau range of the record",
+        "unused-": "recorded (the evaluator is sigma_box_centre)"}
+    if case in fixed:
+        return fixed[case]
+    if case.startswith("module-"):
+        return "module %s not recorded" % _vp(case[len("module-"):])
+    return [w for k, w in prefix.items() if case.startswith(k)][0]
+
+
+@pytest.mark.parametrize("case", sorted(_centre_bad()))
+def test_centre_part_rejected(env, case):
+    pid = C00
+    if case.startswith("c01/"):
+        _two_centre_pieces(env)
+        env.centre_part(C00)
+        pid = "centre/c01"
+    else:
+        env.drop_s43(C00)
+    env.centre_identity()
+    env.layer_part("gap/gap-000")
+    env.layer_part("sonic/s00")
+    if case == "tau-min-above-b1":
+        d = env.centre_record(pid, tau_min=224.0)
+    else:
+        d = env.centre_record(pid)
+        _centre_bad()[case](d, env)
+    env.centre_part(pid, d=d)
+    p = s43.load_plan()["pieces"]
+    p = [q for q in p if q["id"] == pid][0]
+    stored = json.load(open(os.path.join(env.parts, "centre_t14", pid + ".json")))
+    st, why = s43.centre_checks(p, stored, 14.0, 6.0)
+    assert st != "pass" and len(why) == 1 and _centre_why(case) in why[0], (case, why)
+    name, m = env.merge(centre=True)
+    assert name == "tc_commutator_partial.json" and not m["strip_exclusion_certified"]
+    c = m["centre_substitution"]
+    assert pid not in c["substituted"] and pid in m["missing"]
+    assert c["rejected"][pid] == why, case
+
+
+def test_centre_substitution_ignores_accept_code(env):
+    _centre_setup(env)
+    old = "5" * 64
+    d = env.centre_record(C00)
+    d["code"]["files"][_vp("tc_layer_centre")] = old
+    env.centre_part(C00, d=d)
+    _, m = env.merge(centre=True, accept=["%s=%s" % (_vp("tc_layer_centre"), old)])
+    assert m["centre_substitution"]["substituted"] == []
+    assert m["centre_substitution"]["rejected"][C00] == ["source hashes not current"]
+
+
+def _identity_bad():
+    """Centre identity artifacts that block the centre rule: (change, the
+    expected reason)."""
+    def code(**kw):
+        def f(d):
+            d["code"].update(kw)
+        return f
+
+    def idn(**kw):
+        def f(d):
+            d["identity"].update(kw)
+        return f
+
+    def u6(j, **kw):
+        def f(d):
+            d["identity"]["U6"][str(j)].update(kw)
+        return f
+
+    def drop(m):
+        def f(d):
+            del d["code"]["files"][_vp(m)]
+        return f
+    late = [_vp("tc_reduced_eigs")]
+    out = {
+        "missing": ("missing", "missing (s46_centre.py identity)"),
+        "unparsable": ("unparsable", "does not parse"),
+        "schema": (lambda d: d.update(schema="s46-centre-nb-identity/0"), "schema"),
+        "not-ok": (lambda d: d.update(ok=False), "identity not ok"),
+        "identity-not-ok": (idn(ok=False), "identity not ok"),
+        "raise-by": (idn(raise_by=3), "raise_by or kappa differ"),
+        "kappa": (idn(kappa=[1, 2, 3]), "raise_by or kappa differ"),
+        "layer-9": (u6(3, lowest_nonzero_layer=9), "kappa^3: odd terms or a nonzero layer"),
+        "layer-none": (u6(4, lowest_nonzero_layer=None), "kappa^4: odd terms"),
+        "odd-terms": (u6(5, odd_terms=2), "kappa^5: odd terms"),
+        "hash-not-current": (lambda d: d["code"]["files"].update(
+            {_vp("tc_energy"): "3" * 64}), "source hashes not current"),
+        "late-module": (code(late_modules=late), "modules first loaded after"),
+        "write-check-failed": (code(write_check=dict(ok=False)), "a source changed on disk"),
+        "no-write-check": (lambda d: d["code"].pop("write_check"),
+                           "no passing write-time check"),
+        "git-head-missing": (code(git_head=None), "git_head not recorded"),
+        "dirty-tree": (code(git_dirty_src=True), "git_dirty_src not false"),
+        "driver-pin": (lambda d: d.update(driver_sha256="4" * 64), "driver_sha256 differs"),
+    }
+    for m in s43.CENTRE_IDENTITY_REQUIRED:
+        out["module-" + m] = (drop(m), "module %s not recorded" % _vp(m))
+    return out
+
+
+@pytest.mark.parametrize("case", sorted(_identity_bad()))
+def test_centre_substitution_blocked_by_the_identity_artifact(env, case):
+    _centre_setup(env)
+    fn, want = _identity_bad()[case]
+    if fn == "missing":
+        os.remove(s43.CENTRE_IDENTITY)
+    elif fn == "unparsable":
+        with open(s43.CENTRE_IDENTITY, "w") as fh:
+            fh.write("{")
+    else:
+        d = env.identity_record()
+        fn(d)
+        env.centre_identity(d)
+    rec, why = s43.centre_identity_checks()
+    assert any(want in w for w in why), (case, why)
+    _, m = env.merge(centre=True)
+    c = m["centre_substitution"]
+    assert c["substituted"] == [] and C00 in m["missing"]
+    assert c["identity"]["valid"] is False
+    assert any(b.startswith("centre identity: ") and want in b for b in c["blocked"])
+    assert c["rejected"][C00] == c["blocked"]
+
+
+def test_centre_substitution_blocked_by_invalid_checks(env):
+    _centre_setup(env)
+    env.checks(False)
+    _, d = env.merge(centre=True)
+    c = d["centre_substitution"]
+    assert c["blocked"] == ["checks.json not valid for the current code"]
+    assert c["substituted"] == [] and C00 in d["missing"]
+
+
+def test_centre_substitution_needs_checks_valid_for_the_current_code(env):
+    _centre_setup(env)
+    old = "7" * 64
+    _write(s43.CHECKS,
+           dict(ok=True, code=dict(files={CODE_FILE: old}),
+                results=dict(E1_U6top=True, E2_layers=[14, True],
+                             E3_sonic_zeros=[True], E5_sonic_vanishing=[True])))
+    s43._HASH_CACHE.pop(CODE_FILE, None)
+    _, d = env.merge(centre=True, accept=["%s=%s" % (CODE_FILE, old)])
+    assert d["checks_valid_for_code"] is True
+    assert d["centre_substitution"]["blocked"] == ["checks.json not valid for the current code"]
+    assert d["centre_substitution"]["substituted"] == []
+
+
+def test_centre_substitution_blocked_by_changed_constants(env, monkeypatch):
+    import p4.validated.tc_commutator as tc
+    _centre_setup(env)
+    monkeypatch.setattr(tc, "EPS_MAX", 5.0)
+    _, d = env.merge(centre=True)
+    assert d["centre_substitution"]["blocked"] == ["b1, c or EPS_MAX changed"]
+    assert d["centre_substitution"]["substituted"] == []
+
+
+def test_centre_constants_match_the_driver():
+    import s46_centre as s46
+    assert s46.SCHEMA == s43.CENTRE_SCHEMA and s46.EVALUATOR == s43.CENTRE_EVALUATOR
+    assert s46.IDENTITY == s43.CENTRE_IDENTITY and s46.DRIVER == s43.S46_DRIVER
+    assert os.path.basename(s46.part_dir(14.0)) == s43.CENTRE_DIR
+    assert os.path.basename(s46.part_dir(224.0)) == s43.CENTRE_DIR_224
+    assert s43.centre_raise() == (2, [1, 2, 3, 4, 5, 6, 7])
+
+
+def test_driver_record_passes_the_centre_checks(env, monkeypatch):
+    # the record s46_centre.write_part writes (synthetic result, a clean
+    # code record) is the one centre_checks reads
+    import s46_centre as s46
+    import p4.validated.tc_layer_centre as tcc
+    files = {_vp(m): s43.current_hash(_vp(m)) for m in s43.CENTRE_REQUIRED}
+    rec = dict(files=files, fingerprint=s43.fingerprint(files), git_head="x",
+               git_dirty_src=False, hashed="import", late_modules=[],
+               write_check=dict(ok=True, changed_sources={}, changed_drivers={}))
+    monkeypatch.setattr(s43, "code_record", lambda drivers=None: rec)
+    raise_by, kappa = s43.centre_raise()
+    ctx = argparse.Namespace(tcc=tcc, identity=dict(ok=True, raise_by=raise_by, kappa=kappa))
+    ld = argparse.Namespace(centring={("nV", "dT"): 3})
+    p = env.byid[C00]
+    res = dict(env.centre_record(C00)["result"], forms={})
+    out = s46.write_part(ctx, ld, p, 14.0, res, None, dict(start="", end=""),
+                         argparse.Namespace(max_evals=150000))
+    d = s43.read_layer_part(s43.CENTRE_DIR, C00)
+    assert d["schema"] == s43.CENTRE_SCHEMA and out["status"] == "pass"
+    assert s43.centre_checks(p, d, 14.0, 6.0) == ("pass", [])
