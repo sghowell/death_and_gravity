@@ -1,7 +1,13 @@
 {
- "claim": "P2-0 (closed upper half-plane: W_l(w) = 0 with Im w >= 0 iff (l, w) = (0, 0)) and D4 (m_0(0) = 1)",
+ "claim": "P2-0 (closed upper half-plane: W_l(w) = 0 with Im w >= 0 iff (l, w) = (0, 0)) and D4 (m_0(0) = 1); C0, C7, C9, C10 are the machine-checked parts of lemma D1' (notes/s1-p20-d1prime.md)",
  "level": "CERTIFIED (exact identities) + written steps",
  "steps": [
+  {
+   "id": "C0",
+   "statement": "Box_g(e^{-iwt} R Y) = e^{-iwt} r^{-2}[(Delta R')' Y + w^2 r^4/Delta R Y + R Lap_S2 Y]",
+   "method": "sympy simplify, coordinate formula of Box_g",
+   "ok": true
+  },
   {
    "id": "C1",
    "statement": "e^{-i w T}[(r^2 F R')' + (w^2 r^2/F - L) R] - E[u] == 0 for R = e^{i w T} u, T' = eta/F",
@@ -55,6 +61,18 @@
    "statement": "D4: d/dw Delta(R_+R_c' - R_+'R_c) at (l,w)=(0,0) is i(r_+^2 + r_c^2)",
    "method": "sympy limit/expand",
    "ok": true
+  },
+  {
+   "id": "C9",
+   "statement": "D1': d/dr[mu(yz' - y'z)] = mu(yPz - zPy)/p2, mu' = (p1/p2) mu",
+   "method": "sympy simplify",
+   "ok": true
+  },
+  {
+   "id": "C10",
+   "statement": "D1': Res p1/p2 = 1 - i w/kappa_+ at r_+, 1 - i w/kappa_c at r_c",
+   "method": "exact",
+   "ok": true
   }
  ],
  "written_steps": {
@@ -66,6 +84,9 @@
  "negative_controls": {
   "meaning": "each identity with a deliberately wrong term must FAIL (True = it failed)",
   "results": {
+   "C0": true,
+   "C9": true,
+   "C10": true,
    "C1": true,
    "C2": true,
    "C3": true,
@@ -80,9 +101,9 @@
  },
  "all_ok": true,
  "sympy": "1.14.0",
- "commit": "891ef7e22d025df872ec94373196bd6707f23d4d+dirty",
+ "commit": "a78a3057498a9321e938cf9ec8409ca127f9ae0a",
  "timing_s": {
-  "wall": 0.3,
-  "cpu": 0.3
+  "wall": 0.49,
+  "cpu": 0.48
  }
 }
