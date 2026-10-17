@@ -28,7 +28,11 @@ Commands:
                                            detached `work` processes sharing one
                                            lock-guarded queue (logs/s44/)
   status [--tau-min T] [-v]                layer parts vs the band, and the S4-3
-                                           state of each piece
+                                           state of each piece; every sonic and
+                                           tube-kind piece with the recompute tally
+  snapshot [--out F]                       key values of every stored layer part
+  compare [--old F] [--out F]              stored parts against a snapshot (which were
+                                           recomputed, and bit-identical or not)
 selection:      --ids PAT,..  --regions R,..  --all-gap  --beyond-band
                 (default: the band = sonic/* and the gap steps with xi_hi <=
                 XI_BAND; --beyond-band selects from every sonic and tube-kind
@@ -67,6 +71,9 @@ import s43_parts as s43  # noqa: E402  (plan, cache records, hashing helpers)
 
 LAYER = os.path.join(s43.PARTS, "layer")
 SCHEMA = "s44-layer/1"
+DRIVER = os.path.abspath(__file__)
+DRIVER_SHA256 = s43.sha256_file(DRIVER)          # this driver, at import
+HELPER = os.path.abspath(s43.__file__)           # s43_parts.py, imported above
 TAU_MIN = 224.0                  # the S4-4 item: tau > 224 on the band
 XI_BAND = 0.0357 + 1e-9          # gap steps 0-88: the tau-quadratic phase fails there
 LOGS = os.path.join(s43.P4, "logs", "s44")
@@ -166,11 +173,14 @@ def engine_kwargs(opts):
 
 
 class Ctx:
-    def __init__(self, tube_cache=None):
+    def __init__(self, tube_cache=None, opts=None):
         t0 = time.time()
         s43.import_p4()
         import p4.validated.tc_energy as te
         import p4.validated.tc_layer as tl
+        if (opts or {}).get("mv"):
+            import p4.validated.tc_layer_mv  # noqa: F401  (hashed at import, below)
+        s43.snapshot_code()                  # the sources as loaded (review 4c)
         self.te, self.tl = te, tl
         self.at = te.Atoms(full=True)
         self.ex = te.sonic_expansion_cached(320)
@@ -231,11 +241,12 @@ def build_piece(p, ctx, combine=False):
 
 
 def part_valid(d, p, opts):
-    """A stored part may be skipped: right schema and spec, current code, the
-    same engine options (a part without the record used the defaults)."""
+    """A stored part may be skipped: right schema and spec, current code, a
+    write-time check that did not fail, the same engine options (a part
+    without the record used the defaults)."""
     if d.get("schema") != SCHEMA or d.get("spec") != s43.spec_of(p):
         return False
-    if not s43.code_matches(d["code"]["files"]):
+    if not s43.write_check_ok(d) or not s43.code_matches(d["code"]["files"]):
         return False
     have = dict(ENGINE_DEFAULTS)
     have.update(d.get("engine") or {})
@@ -271,8 +282,42 @@ def claim(pid):
     return None
 
 
+def previous_record(path):
+    """The comparison block of a part about to be overwritten: its bounds,
+    counts, engine, code fingerprint and timing (None if there is none)."""
+    if not os.path.exists(path):
+        return None
+    try:
+        d = json.load(open(path))
+    except Exception:
+        return dict(unreadable=True)
+    r = d.get("result") or {}
+    return dict(status=d.get("status"), certified_bound=d.get("certified_bound"),
+                worst=r.get("worst"), boxes=r.get("boxes"), evals=r.get("evals"),
+                empty=r.get("empty"), attempts=r.get("attempts"), scale=r.get("scale"),
+                engine=d.get("engine"),
+                code_fingerprint=(d.get("code") or {}).get("fingerprint"),
+                git_head=(d.get("code") or {}).get("git_head"),
+                cpu_s=(d.get("timing") or {}).get("cpu_s"))
+
+
+def compare_previous(prev, rec):
+    """identical: same status, certified bound, worst, boxes, evals and
+    ladder attempts (bit for bit), against the previous part."""
+    if not prev or prev.get("unreadable"):
+        return None
+    r = rec.get("result") or {}
+    keys = dict(status=rec.get("status"), certified_bound=rec.get("certified_bound"),
+                worst=r.get("worst"), boxes=r.get("boxes"), evals=r.get("evals"),
+                attempts=r.get("attempts"))
+    same = {k: prev.get(k) == v for k, v in keys.items()}
+    return dict(identical=all(same.values()), fields=same,
+                same_engine=(prev.get("engine") or {}) == (rec.get("engine") or {}))
+
+
 def write_part(p, mode_tau, res, err, inputs, call, timing, opts, build_shared):
-    files, (head, dirty) = s43.loaded_code(), s43.git_head()
+    path = part_path(p["id"], mode_tau)
+    prev = previous_record(path)
     xi = xi_range(p)
     status = "error" if err else ("pass" if res["ok"] else "fail")
     rec = dict(schema=SCHEMA, id=p["id"], region=p["region"], spec=s43.spec_of(p),
@@ -286,13 +331,14 @@ def write_part(p, mode_tau, res, err, inputs, call, timing, opts, build_shared):
                engine=opts,
                result=_clean({k: v for k, v in (res or {}).items()}),
                error=err, inputs=inputs, region_call=call,
-               code=dict(files=files, fingerprint=s43.fingerprint(files),
-                         git_head=head, git_dirty_src=dirty),
-               driver_sha256=s43.sha256_file(os.path.abspath(__file__)),
+               code=s43.code_record({DRIVER: DRIVER_SHA256, HELPER: s43.DRIVER_SHA256}),
+               driver_sha256=DRIVER_SHA256, helper_sha256=s43.DRIVER_SHA256,
                env=s43.env_info(),
                timing=dict(timing, build_shared_with=build_shared),
                provenance="computed by problems/P4/scripts/s44_layer.py work")
-    s43.write_json_atomic(part_path(p["id"], mode_tau), _clean(rec))
+    rec["previous"] = prev
+    rec["recompute"] = compare_previous(prev, _clean(rec))
+    s43.write_json_atomic(path, _clean(rec))
     return rec
 
 
@@ -333,7 +379,7 @@ def cmd_work(args):
             if not modes:
                 continue
             if ctx is None:
-                ctx = Ctx(args.tube_cache)
+                ctx = Ctx(args.tube_cache, opts)
             s43.log("start %s (tau_min %s)" % (p["id"], modes))
             start = s43.now()
             t0, c0 = time.time(), time.process_time()
@@ -446,7 +492,8 @@ def cmd_status(args):
         if d is None:
             rows["missing"] += 1
             st = "missing"
-        elif d.get("spec") != s43.spec_of(p) or not s43.code_matches(d["code"]["files"]):
+        elif (d.get("spec") != s43.spec_of(p) or not s43.write_check_ok(d)
+              or not s43.code_matches(d["code"]["files"])):
             rows["stale"] += 1
             st = "stale"
         else:
@@ -462,22 +509,126 @@ def cmd_status(args):
           "missing %d; worst certified bound %s; cpu %.1f s"
           % (args.tau_min, len(band), rows["pass_"], rows["fail"], rows["error"],
              rows["stale"], rows["missing"], worst, cpu))
-    # layer parts outside the band (e.g. the deep probe)
-    extra = []
-    byid = {p["id"]: p for p in plan["pieces"]}
-    root = layer_dir(args.tau_min)
-    for dp, _, fs in os.walk(root):
-        for f in sorted(fs):
-            if not f.endswith(".json"):
-                continue
-            pid = os.path.relpath(os.path.join(dp, f), root)[:-5]
-            if pid in byid and not in_band(byid[pid]):
-                extra.append((pid, json.load(open(os.path.join(dp, f)))))
-    for pid, d in sorted(extra):
-        r = d.get("result") or {}
-        print("beyond band: %-16s status=%s bound=%s scale=%s engine=%s cpu=%.0fs"
-              % (pid, d["status"], d.get("certified_bound"), r.get("scale"),
-                 d.get("engine"), (d.get("timing") or {}).get("cpu_s", 0.0)))
+    # every sonic and tube-kind piece of the plan, per region: states and the
+    # recompute comparison against the overwritten part (write_part's record)
+    tally = {}
+    for p in plan["pieces"]:
+        if p["kind"] not in ("sonic", "tube"):
+            continue
+        path = part_path(p["id"], args.tau_min)
+        d = json.load(open(path)) if os.path.exists(path) else None
+        t = tally.setdefault(p["region"], dict(pieces=0, pass_=0, fail=0, error=0, stale=0,
+                                                missing=0, identical=0, differs=0,
+                                                no_previous=0))
+        t["pieces"] += 1
+        if d is None:
+            t["missing"] += 1
+            continue
+        if (d.get("spec") != s43.spec_of(p) or not s43.write_check_ok(d)
+                or not s43.code_matches(d["code"]["files"])):
+            t["stale"] += 1
+            continue
+        t["pass_" if d["status"] == "pass" else d["status"]] += 1
+        rc = d.get("recompute")
+        if rc is None:
+            t["no_previous"] += 1
+        elif rc.get("identical"):
+            t["identical"] += 1
+        else:
+            t["differs"] += 1
+    print("all sonic and tube-kind pieces (tau >= %g):" % args.tau_min)
+    for reg in s43.REGION_ORDER:
+        t = tally.get(reg)
+        if t:
+            print("  %-6s pieces %3d: pass %3d fail %d error %d stale %3d missing %3d; "
+                  "vs the overwritten part: identical %3d differs %3d no-previous %3d"
+                  % (reg, t["pieces"], t["pass_"], t["fail"], t["error"], t["stale"],
+                     t["missing"], t["identical"], t["differs"], t["no_previous"]))
+
+
+RECOMPUTE_DIR = os.path.join(s43.TC_DIR, "layer_recompute")
+
+
+def _part_summary(d):
+    r = d.get("result") or {}
+    c = d.get("code") or {}
+    return dict(status=d.get("status"), certified_bound=d.get("certified_bound"),
+                worst=r.get("worst"), boxes=r.get("boxes"), evals=r.get("evals"),
+                empty=r.get("empty"), attempts=r.get("attempts"), scale=r.get("scale"),
+                relative_margin=r.get("relative_margin"), engine=d.get("engine"),
+                code_fingerprint=c.get("fingerprint"), git_head=c.get("git_head"),
+                tc_tm_sha256=(c.get("files") or {}).get(s43._vpath("tc_tm")),
+                cpu_s=(d.get("timing") or {}).get("cpu_s"), end=(d.get("timing") or {}).get("end"))
+
+
+def _all_parts():
+    out = {}
+    for dn in s43.layer_dirs():
+        root = os.path.join(s43.PARTS, dn)
+        for dp, _, fs in os.walk(root):
+            for f in sorted(fs):
+                if f.endswith(".json"):
+                    pid = os.path.relpath(os.path.join(dp, f), root)[:-5]
+                    try:
+                        out["%s|%s" % (dn, pid)] = json.load(open(os.path.join(dp, f)))
+                    except Exception:
+                        pass
+    return out
+
+
+def cmd_snapshot(args):
+    """Record the key values of every stored layer part (before a recompute
+    overwrites them)."""
+    parts = _all_parts()
+    rec = dict(schema="s44-layer-snapshot/1", created=s43.now(), git_head=s43.git_head()[0],
+               parts={k: _part_summary(d) for k, d in sorted(parts.items())})
+    s43.write_json_atomic(args.out, rec)
+    print("snapshot: %d parts -> %s" % (len(parts), s43.rel(args.out)))
+
+
+def cmd_compare(args):
+    """Compare the stored layer parts with a snapshot: per part whether it was
+    recomputed (code fingerprint changed) and, if so, whether status, bound,
+    worst, boxes, evals and ladder attempts are bit-identical."""
+    old = json.load(open(args.old))["parts"]
+    cur = {k: _part_summary(d) for k, d in _all_parts().items()}
+    keys = ("status", "certified_bound", "worst", "boxes", "evals", "attempts")
+    rows, tally = {}, {}
+    for k in sorted(set(old) | set(cur)):
+        o, n = old.get(k), cur.get(k)
+        dn, pid = k.split("|", 1)
+        reg = pid.split("/")[0]
+        if o is None:
+            kind = "new"
+        elif n is None:
+            kind = "removed"
+        elif n["code_fingerprint"] == o["code_fingerprint"]:
+            kind = "pending"
+        else:
+            same = {f: o.get(f) == n.get(f) for f in keys}
+            kind = "identical" if all(same.values()) else "differs"
+        e = dict(kind=kind, old=o, new=n if kind != "pending" else None)
+        if kind == "differs":
+            e["fields_differing"] = [f for f in keys if o.get(f) != n.get(f)]
+            e["same_engine"] = (o.get("engine") or {}) == (n.get("engine") or {})
+        rows[k] = e
+        t = tally.setdefault("%s|%s" % (dn, reg), {})
+        t[kind] = t.get(kind, 0) + 1
+    rec = dict(schema="s44-layer-compare/1", created=s43.now(), snapshot=s43.rel(args.old),
+               snapshot_created=json.load(open(args.old)).get("created"),
+               note=("identical: status, certified_bound, worst, boxes, evals and the "
+                     "ladder attempts bit-equal after the recompute on the fixed code "
+                     "(ballutil evaluation balls, tc_layer_mv iota-centre); pending: not "
+                     "recomputed yet (same code fingerprint as the snapshot)"),
+               tally=tally, parts=rows)
+    s43.write_json_atomic(args.out, rec)
+    tot = {}
+    for t in tally.values():
+        for kk, v in t.items():
+            tot[kk] = tot.get(kk, 0) + v
+    print("compare: %s -> %s" % (tot, s43.rel(args.out)))
+    for k in sorted(tally):
+        print("  %-22s %s" % (k, tally[k]))
 
 
 def main(argv=None):
@@ -526,6 +677,13 @@ def main(argv=None):
     q.add_argument("-v", "--verbose", action="store_true")
     q.add_argument("--tau-min", type=float, default=TAU_MIN)
     q.set_defaults(fn=cmd_status)
+    q = sub.add_parser("snapshot", help="key values of every stored layer part")
+    q.add_argument("--out", default=os.path.join(RECOMPUTE_DIR, "snapshot.json"))
+    q.set_defaults(fn=cmd_snapshot)
+    q = sub.add_parser("compare", help="stored layer parts against a snapshot")
+    q.add_argument("--old", default=os.path.join(RECOMPUTE_DIR, "snapshot.json"))
+    q.add_argument("--out", default=os.path.join(RECOMPUTE_DIR, "comparison.json"))
+    q.set_defaults(fn=cmd_compare)
     args = ap.parse_args(argv)
     args.fn(args)
 

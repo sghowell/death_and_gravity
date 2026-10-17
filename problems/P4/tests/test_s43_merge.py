@@ -1,9 +1,12 @@
 """Tests of the coverage-checked merge of scripts/s43_parts.py and its S4-4
-hook: layer parts (scripts/s44_layer.py, p4.validated.tc_layer) are joined to
-the S4-3 parts by piece id, and a valid passing one carries tau > tstar for a
-pass-direct piece.  Synthetic plan and parts in a temporary directory; no
-region code runs (the merge only imports the modules for their constants).
-"""
+hooks: layer parts (scripts/s44_layer.py, p4.validated.tc_layer) are joined to
+the S4-3 parts by piece id (a valid passing one carries tau > tstar for a
+pass-direct piece), and, opt-in (merge --substitute-layer-t14), a strictly
+checked passing layer_t14 part carries a tube or sonic piece whose S4-3 part
+is missing, stale or invalid (review
+docs/review-2026-10-17-p4-layer-engine-adversarial.md, section 2).  Synthetic
+plan and parts in a temporary directory; no region code runs (the merge only
+imports the modules for their constants)."""
 import argparse
 import copy
 import json
@@ -18,12 +21,18 @@ sys.path.insert(0, os.path.join(HERE, "..", "scripts"))
 import s43_parts as s43  # noqa: E402
 
 CODE_FILE = "problems/P4/FORMULATION.md"     # stands in for a source file: its current hash
+EPS_CELLS = [[0.0, 0.03], [0.03, 0.07], [0.07, 0.12], [0.12, 0.2], [0.2, 0.35], [0.35, 0.6],
+             [0.6, 1.0], [1.0, 1.6], [1.6, 2.4], [2.4, 3.4], [3.4, 4.6], [4.6, 6.0]]
 
 
 def _write(path, obj):
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w") as fh:
         json.dump(obj, fh)
+
+
+def _vp(m):
+    return s43._vpath(m)
 
 
 class Env:
@@ -50,44 +59,72 @@ class Env:
         for name, sha in (("full", "aaa"), ("gap", "bbb")):
             _write(os.path.join(self.parts, "caches", name + ".json"),
                    dict(content_sha256=sha))
-        _write(os.path.join(self.parts, "checks.json"),
-               dict(ok=True, code=dict(files=self.code),
-                    results=dict(E1_U6top=True, E2_layers=[14, True],
-                                 E3_sonic_zeros=[True], E5_sonic_vanishing=[True])))
+        self.checks(True)
         for pid, st in (("centre/c00", "pass-both"), ("tube/full-000", "pass-both"),
                         ("gap/gap-000", "pass-direct"), ("sonic/s00", "pass-direct")):
             self.s43_part(pid, st)
 
-    def s43_part(self, pid, status):
+    def checks(self, ok):
+        _write(os.path.join(self.parts, "checks.json"),
+               dict(ok=ok, code=dict(files=self.code),
+                    results=dict(E1_U6top=True, E2_layers=[14, True],
+                                 E3_sonic_zeros=[True], E5_sonic_vanishing=[True])))
+
+    def s43_part(self, pid, status, **over):
         p = self.byid[pid]
         res = dict(ok=status.startswith("pass"), margin=-1.0,
                    open=("open (tau > tstar not certified on this piece)"
                          if status == "pass-direct" else None))
-        _write(os.path.join(self.parts, pid + ".json"),
-               dict(schema=s43.SCHEMA, id=pid, region=p["region"], spec=s43.spec_of(p),
-                    status=status, result=res, extra=dict(centre_balls="certified"),
-                    code=dict(files=self.code), timing=dict(cpu_s=1.0)))
+        d = dict(schema=s43.SCHEMA, id=pid, region=p["region"], spec=s43.spec_of(p),
+                 status=status, result=res, extra=dict(centre_balls="certified"),
+                 code=dict(files=dict(self.code)), timing=dict(cpu_s=1.0))
+        d.update(over)
+        _write(os.path.join(self.parts, pid + ".json"), d)
 
-    def layer_part(self, pid, dirname="layer", tau_min=224.0, **over):
+    def drop_s43(self, pid):
+        os.remove(os.path.join(self.parts, pid + ".json"))
+
+    def layer_record(self, pid, tau_min=224.0, bound=-0.8):
+        """A complete passing layer part as s44_layer.py writes it: tube pieces
+        with the combine/piece/mv3 engine, sonic pieces with the default."""
         p = self.byid[pid]
         a, b = s43.x_interval(p)
-        d = dict(schema="s44-layer/1", id=pid, region=p["region"], spec=s43.spec_of(p),
-                 status="pass",
-                 scope=dict(tau=[tau_min, "inf"], eps=[0.0, 6.0], xi=[-b, -a]),
-                 certified_bound=-0.8,
-                 result=dict(ok=True, certified_bound=-0.8, params=dict(tau_min=tau_min)),
-                 inputs=(dict(kind="tube", cache=p["cache"],
-                              cache_content_sha256=p["cache_content_sha256"])
-                         if p["kind"] == "tube" else dict(kind="sonic")),
-                 code=dict(files=dict(self.code)),
-                 engine=dict(norm="layer", combine=False))
-        for k, v in over.items():
-            d[k] = v
+        tube = p["kind"] == "tube"
+        la, lb = (0.0, p["h"]) if tube else (p["lo"], p["hi"])
+        xi_la = (-p["x"] + la) if tube else la
+        mods = list(s43.LAYER_REQUIRED) + (["lintube", "tc_layer_mv"] if tube else [])
+        files = {_vp(m): s43.current_hash(_vp(m)) for m in mods}
+        assert all(files.values())
+        eng = dict(norm="piece" if tube else "layer", combine=tube,
+                   mv="mv3" if tube else None, piece_ladder_evals=None,
+                   piece_final_evals=None)
+        params = dict(tau_min=tau_min, eps_cells=copy.deepcopy(EPS_CELLS), la=la, lb=lb,
+                      s_lo=xi_la * tau_min * (1 - 1e-12),
+                      evaluator="sigma_box_mv3" if tube else "sigma_box", combine=tube,
+                      tstar=224.0, target=bound / 2)
+        return dict(
+            schema="s44-layer/1", id=pid, region=p["region"], spec=s43.spec_of(p),
+            status="pass", scope=dict(tau=[tau_min, "inf"], eps=[0.0, 6.0], xi=[-b, -a]),
+            certified_bound=bound,
+            result=dict(ok=True, worst=bound, certified_bound=bound, fails=[], boxes=10,
+                        evals=20, params=params, laurent=not tube),
+            inputs=(dict(kind="tube", cache=p["cache"],
+                         cache_content_sha256=p["cache_content_sha256"])
+                    if tube else dict(kind="sonic")),
+            code=dict(files=files, fingerprint=s43.fingerprint(files), git_head="x",
+                      git_dirty_src=False, hashed="import",
+                      write_check=dict(ok=True, changed_sources={}, changed_drivers={})),
+            engine=eng, driver_sha256=s43.sha256_file(s43.S44_DRIVER))
+
+    def layer_part(self, pid, dirname="layer", tau_min=224.0, d=None, **over):
+        d = d or self.layer_record(pid, tau_min)
+        d.update(over)
         _write(os.path.join(self.parts, dirname, pid + ".json"), d)
         return d
 
-    def merge(self):
-        s43.cmd_merge(argparse.Namespace(accept_code=None, accept_reason=None))
+    def merge(self, substitute=False, accept=None):
+        s43.cmd_merge(argparse.Namespace(accept_code=accept, accept_reason=None,
+                                         substitute_layer_t14=substitute))
         for name in ("tc_commutator.json", "tc_commutator_partial.json"):
             f = os.path.join(self.root, name)
             if os.path.exists(f):
@@ -115,6 +152,7 @@ def _detail(d, pid):
     return [e for e in d["detail"] if e["id"] == pid][0]
 
 
+# ------------------------------------------------- the tau > tstar join
 def test_merge_without_layer_parts_keeps_s43_semantics(env):
     name, d = env.merge()
     assert name == "tc_commutator.json" and d["ok"] and d["status"] == "complete"
@@ -126,6 +164,7 @@ def test_merge_without_layer_parts_keeps_s43_semantics(env):
     assert d["layer"]["joined_pieces"] == 0 and d["layer"]["dirs"] == []
     assert _detail(d, "gap/gap-000")["tau_gt_tstar"] == "open"
     assert _detail(d, "tube/full-000")["tau_gt_tstar"] == "tau-quadratic"
+    assert d["substitution"]["enabled"] is False and d["substitution"]["count"] == 0
 
 
 def test_layer_parts_cover_the_band(env):
@@ -153,38 +192,67 @@ def test_layer_parts_join_by_id_only(env):
     assert _detail(d, "sonic/s00")["tau_gt_tstar"] == "layer:layer"
 
 
-def _bad_cases():
+def _join_bad():
+    """Rejections of the tau > tstar join (gap/gap-000, a tube piece)."""
+    def res(**kw):
+        def f(d):
+            d["result"].update(kw)
+        return f
+
+    def prm(**kw):
+        def f(d):
+            d["result"]["params"].update(kw)
+        return f
+
+    def top(**kw):
+        def f(d):
+            d.update(kw)
+        return f
     return {
-        "fail": (dict(status="fail", certified_bound=None), "fail"),
-        "error": (dict(status="error", certified_bound=None), "error"),
-        "spec": (dict(spec=dict(id="gap/gap-000", index=1)), "stale"),
-        "code": (dict(code=dict(files={CODE_FILE: "0" * 64})), "stale"),
-        "no-code": (dict(code=dict(files={})), "invalid"),
-        "cache": (dict(inputs=dict(kind="tube", cache="gap", cache_content_sha256="ccc")),
-                  "stale"),
-        "schema": (dict(schema="s44-layer/0"), "invalid"),
-        "positive": (dict(certified_bound=0.1,
-                          result=dict(ok=True, certified_bound=0.1,
-                                      params=dict(tau_min=224.0))), "invalid"),
-        "not-ok": (dict(result=dict(ok=False, certified_bound=-0.8,
-                                    params=dict(tau_min=224.0))), "invalid"),
-        "eps": (dict(scope=dict(tau=[224.0, "inf"], eps=[0.0, 5.0], xi=[0.01, 0.02])),
-                "invalid"),
-        "xi": (dict(scope=dict(tau=[224.0, "inf"], eps=[0.0, 6.0], xi=[0.01, 0.021])),
-               "invalid"),
-        "tau-bounded": (dict(scope=dict(tau=[224.0, 1e6], eps=[0.0, 6.0], xi=[0.01, 0.02])),
-                        "invalid"),
+        "fail": (top(status="fail", certified_bound=None), "fail"),
+        "error": (top(status="error", certified_bound=None), "error"),
+        "spec": (top(spec=dict(id="gap/gap-000", index=1)), "stale"),
+        "code": (top(code=dict(files={CODE_FILE: "0" * 64})), "stale"),
+        "no-code": (top(code=dict(files={})), "invalid"),
+        "write-check-failed": (lambda d: d["code"].update(write_check=dict(ok=False)),
+                               "invalid"),
+        "cache-hash": (top(inputs=dict(kind="tube", cache="gap",
+                                       cache_content_sha256="ccc")), "stale"),
+        "cache-name": (top(inputs=dict(kind="tube", cache="full",
+                                       cache_content_sha256="bbb")), "stale"),
+        "schema": (top(schema="s44-layer/0"), "invalid"),
+        "positive": (lambda d: (d.update(certified_bound=0.1),
+                                d["result"].update(certified_bound=0.1, worst=0.1)),
+                     "invalid"),
+        "not-ok": (res(ok=False), "invalid"),
+        "fails-recorded": (res(fails=[dict(box=[0], upper=1.0)]), "invalid"),
+        "worst-differs": (res(worst=-0.7), "invalid"),
+        "eps-scope": (lambda d: d["scope"].update(eps=[0.0, 5.0]), "invalid"),
+        "eps-cells": (prm(eps_cells=EPS_CELLS[:5] + EPS_CELLS[6:]), "invalid"),
+        "xi": (lambda d: d["scope"].update(xi=[0.01, 0.021]), "invalid"),
+        "tau-bounded": (lambda d: d["scope"].update(tau=[224.0, 1e6]), "invalid"),
+        "tau-min-scope": (prm(tau_min=200.0), "invalid"),
+        "la": (prm(la=0.001), "invalid"),
+        "lb": (prm(lb=0.005), "invalid"),
+        "s-lo": (prm(s_lo=10.0), "invalid"),
+        "laurent": (res(laurent=True), "invalid"),
+        "evaluator": (prm(evaluator="sigma_box_other"), "invalid"),
+        "evaluator-engine": (prm(evaluator="sigma_box"), "invalid"),
+        "combine": (prm(combine=False), "invalid"),
     }
 
 
-@pytest.mark.parametrize("case", sorted(_bad_cases()))
+@pytest.mark.parametrize("case", sorted(_join_bad()))
 def test_layer_part_rejected(env, case):
-    over, want = _bad_cases()[case]
+    fn, want = _join_bad()[case]
     env.layer_part("sonic/s00")
-    env.layer_part("gap/gap-000", **over)
+    d = env.layer_record("gap/gap-000")
+    fn(d)
+    env.layer_part("gap/gap-000", d=d)
     p = env.byid["gap/gap-000"]
-    d = json.load(open(os.path.join(env.parts, "layer", "gap/gap-000.json")))
-    assert s43.layer_state(p, d, 224.0, 6.0) == want
+    stored = json.load(open(os.path.join(env.parts, "layer", "gap/gap-000.json")))
+    st, why = s43.layer_checks(p, stored, 224.0, 6.0)
+    assert st == want and why
     _, m = env.merge()
     assert _gaps(m) == [(-0.02, -0.01)]
     e = _detail(m, "gap/gap-000")
@@ -198,6 +266,7 @@ def test_layer_tau_min_above_tstar_does_not_cover(env):
     _, d = env.merge()
     assert _gaps(d) == [(-0.02, -0.01)]
     assert _detail(d, "gap/gap-000")["layer"]["layer"]["state"] == "invalid"
+    assert any("tau_min" in r for r in d["layer_join_rejections"]["gap/gap-000 @ layer"])
 
 
 def test_layer_t14_second_method_and_fallback(env):
@@ -215,10 +284,11 @@ def test_layer_t14_second_method_and_fallback(env):
     assert d["layer"]["dirs"] == ["layer", "layer_t14"]
 
 
-def test_layer_parts_do_not_replace_s43_parts(env):
-    # a layer part never stands in for a missing or failed S4-3 part, and it
-    # does not change what carries tau > tstar on a pass-both piece
-    os.remove(os.path.join(env.parts, "gap/gap-000.json"))
+def test_layer_parts_do_not_replace_s43_parts_without_the_flag(env):
+    # without --substitute-layer-t14 a layer part never stands in for a
+    # missing or failed S4-3 part, and it does not change what carries
+    # tau > tstar on a pass-both piece
+    env.drop_s43("gap/gap-000")
     env.layer_part("gap/gap-000", dirname="layer_t14", tau_min=14.0)
     env.layer_part("tube/full-000")
     env.layer_part("sonic/s00")
@@ -238,11 +308,237 @@ def test_layer_code_hash_enters_conflicts(env):
     # in code_conflicts like any other used part
     env.layer_part("sonic/s00")
     old = "1" * 64
-    env.layer_part("gap/gap-000", code=dict(files={CODE_FILE: old}))
-    s43._HASH_CACHE.pop(CODE_FILE, None)
-    s43.cmd_merge(argparse.Namespace(accept_code=["%s=%s" % (CODE_FILE, old)],
-                                     accept_reason="test"))
-    d = json.load(open(os.path.join(env.root, "tc_commutator.json")))
-    assert d["scope"]["tau_gt_tstar_uncovered_x"] == []
-    c = d["code_conflicts"][CODE_FILE]
+    d = env.layer_record("gap/gap-000")
+    d["code"]["files"][_vp("tc_layer")] = old
+    env.layer_part("gap/gap-000", d=d)
+    s43._HASH_CACHE.pop(_vp("tc_layer"), None)
+    s43.cmd_merge(argparse.Namespace(accept_code=["%s=%s" % (_vp("tc_layer"), old)],
+                                     accept_reason="test", substitute_layer_t14=False))
+    m = json.load(open(os.path.join(env.root, "tc_commutator.json")))
+    assert m["scope"]["tau_gt_tstar_uncovered_x"] == []
+    c = m["code_conflicts"][_vp("tc_layer")]
     assert old in c["hashes"] and c["unaccepted"] == []
+
+
+def test_s43_part_with_failed_write_check_is_invalid(env):
+    env.s43_part("tube/full-000", "pass-both",
+                 code=dict(files=dict(env.code), write_check=dict(ok=False)))
+    p = env.byid["tube/full-000"]
+    assert s43.part_state(p, s43.read_part("tube/full-000")) == "invalid"
+    _, d = env.merge()
+    assert "tube/full-000" in d["missing"] and not d["ok"]
+
+
+# --------------------------------------------- the substitution rule (opt-in)
+def _sub_setup(env, pid="gap/gap-000"):
+    """S4-3 part of pid removed; a passing layer_t14 part for it; the other
+    band piece covered above tstar by its layer part."""
+    env.drop_s43(pid)
+    env.layer_part(pid, dirname="layer_t14", tau_min=14.0)
+    other = "sonic/s00" if pid == "gap/gap-000" else "gap/gap-000"
+    env.layer_part(other)
+
+
+def test_substitution_is_off_by_default(env):
+    _sub_setup(env)
+    name, d = env.merge()
+    assert name == "tc_commutator_partial.json"
+    assert d["missing"] == ["gap/gap-000"] and d["substitution"]["count"] == 0
+
+
+@pytest.mark.parametrize("pid", ["gap/gap-000", "sonic/s00"])
+def test_substitution_of_a_missing_part(env, pid):
+    _sub_setup(env, pid)
+    name, d = env.merge(substitute=True)
+    assert name == "tc_commutator.json" and d["ok"] and d["strip_exclusion_certified"]
+    assert d["missing"] == [] and d["substitution"]["substituted"] == [pid]
+    assert d["scope"]["tau_le_tstar_uncovered_x"] == [] and _gaps(d) == []
+    e = _detail(d, pid)
+    assert e["substituted"] == "layer_t14" and e["s43_state"] == "missing"
+    assert e["tau_le_tstar"] == e["tau_gt_tstar"] == "layer:layer_t14"
+    assert "dT != 0" in e["nonvanishing"] and "Rbar" in e["nonvanishing"]
+    assert d["pieces"] == len(d["detail"]) == 4
+
+
+@pytest.mark.parametrize("how", ["spec", "code", "write-check"])
+def test_substitution_of_a_stale_or_invalid_part(env, how):
+    env.layer_part("gap/gap-000", dirname="layer_t14", tau_min=14.0)
+    env.layer_part("sonic/s00")
+    if how == "spec":
+        env.s43_part("gap/gap-000", "pass-direct", spec=dict(id="gap/gap-000", index=7))
+        want = "stale"
+    elif how == "code":
+        env.s43_part("gap/gap-000", "pass-direct", code=dict(files={CODE_FILE: "2" * 64}))
+        want = "stale"
+    else:
+        env.s43_part("gap/gap-000", "pass-direct",
+                     code=dict(files=dict(env.code), write_check=dict(ok=False)))
+        want = "invalid"
+    name, d = env.merge(substitute=True)
+    assert name == "tc_commutator.json" and d["strip_exclusion_certified"]
+    assert d["substitution"]["substituted"] == ["gap/gap-000"]
+    assert _detail(d, "gap/gap-000")["s43_state"] == want
+
+
+@pytest.mark.parametrize("st43", ["fail", "error"])
+def test_failed_s43_part_goes_to_manual_review(env, st43):
+    env.s43_part("gap/gap-000", st43)
+    env.layer_part("gap/gap-000", dirname="layer_t14", tau_min=14.0)
+    env.layer_part("sonic/s00")
+    name, d = env.merge(substitute=True)
+    assert name == "tc_commutator_partial.json"
+    assert d["substitution"]["manual_review"] == ["gap/gap-000"]
+    assert d["substitution"]["substituted"] == [] and d["failed"] == ["gap/gap-000"]
+
+
+def test_centre_is_never_substituted(env):
+    env.drop_s43("centre/c00")
+    _write(os.path.join(env.parts, "layer_t14", "centre/c00.json"),
+           dict(schema="s44-layer/1", id="centre/c00", status="pass"))
+    _, d = env.merge(substitute=True)
+    assert "centre/c00" in d["missing"] and d["substitution"]["substituted"] == []
+    assert "centre/c00" not in d["substitution"]["rejected"]
+
+
+def _sub_bad():
+    """Rejections specific to the substitution rule (strict checks), on the
+    tube piece gap/gap-000 unless the key says sonic."""
+    def drop(m):
+        def f(d, env):
+            del d["code"]["files"][_vp(m)]
+        return f
+
+    def code(**kw):
+        def f(d, env):
+            d["code"].update(kw)
+        return f
+
+    def prm(**kw):
+        def f(d, env):
+            d["result"]["params"].update(kw)
+        return f
+
+    def top(**kw):
+        def f(d, env):
+            d.update(kw)
+        return f
+    out = {
+        "schema": top(schema="s44-layer/0"),
+        "id": top(id="gap/gap-001"),
+        "spec": top(spec=dict(id="gap/gap-000", index=3)),
+        "cache-hash": top(inputs=dict(kind="tube", cache="gap", cache_content_sha256="ccc")),
+        "cache-name": top(inputs=dict(kind="tube", cache="deep", cache_content_sha256="bbb")),
+        "no-code": code(files={}),
+        "hash-not-current": lambda d, env: d["code"]["files"].update(
+            {_vp("tc_layer"): "3" * 64}),
+        "dirty-tree": code(git_dirty_src=True),
+        "dirty-unknown": code(git_dirty_src=None),
+        "no-write-check": lambda d, env: d["code"].pop("write_check"),
+        "write-check-failed": code(write_check=dict(ok=False)),
+        "driver-pin": top(driver_sha256="4" * 64),
+        "mv-module-without-engine": lambda d, env: d["engine"].update(mv=None),
+        "engine-mv-without-module": drop("tc_layer_mv"),
+        "status-fail": top(status="fail"),
+        "status-error": top(status="error"),
+        "not-ok": lambda d, env: d["result"].update(ok=False),
+        "fails-recorded": lambda d, env: d["result"].update(fails=[dict(box=[0])]),
+        "bound-result": lambda d, env: d["result"].update(certified_bound=-0.7),
+        "bound-worst": lambda d, env: d["result"].update(worst=-0.7),
+        "bound-nonfinite": lambda d, env: (d.update(certified_bound=float("nan"))),
+        "bound-nonnegative": lambda d, env: (d.update(certified_bound=0.0),
+                                             d["result"].update(certified_bound=0.0,
+                                                                worst=0.0)),
+        "tau-min-above-b1": None,
+        "tau-min-scope": prm(tau_min=13.0),
+        "tau-bounded": lambda d, env: d["scope"].update(tau=[14.0, 1e8]),
+        "eps-cells-gap": prm(eps_cells=EPS_CELLS[:3] + EPS_CELLS[4:]),
+        "eps-cells-short": prm(eps_cells=EPS_CELLS[:-1]),
+        "eps-cells-backward": prm(eps_cells=[[0.0, 3.0], [3.0, 3.0], [3.0, 6.0]]),
+        "la": prm(la=1e-4),
+        "lb": prm(lb=0.0099),
+        "xi-scope": lambda d, env: d["scope"].update(xi=[0.0101, 0.02]),
+        "s-lo": prm(s_lo=0.2),
+        "laurent": lambda d, env: d["result"].update(laurent=True),
+        "evaluator-unknown": prm(evaluator="sigma_box_fast"),
+        "evaluator-engine": prm(evaluator="sigma_box_mv"),
+        "combine": prm(combine=False),
+        "sonic/la": prm(la=1e-9),
+        "sonic/lb": prm(lb=0.02),
+        "sonic/closing-s-lo": prm(s_lo=1e-9),
+        "sonic/mv-evaluator": lambda d, env: (d["result"]["params"].update(
+            evaluator="sigma_box_mv3"), d["engine"].update(mv="mv3"),
+            d["code"]["files"].update({_vp("tc_layer_mv"): s43.current_hash(
+                _vp("tc_layer_mv"))})),
+        "sonic/combine": lambda d, env: (d["result"]["params"].update(combine=True),
+                                         d["engine"].update(combine=True)),
+        "sonic/laurent": lambda d, env: d["result"].update(laurent=False),
+    }
+    for m in s43.LAYER_REQUIRED + ("lintube",):
+        out["module-" + m] = drop(m)
+    return out
+
+
+@pytest.mark.parametrize("case", sorted(_sub_bad()))
+def test_substitution_rejected(env, case):
+    pid = "sonic/s00" if case.startswith("sonic/") else "gap/gap-000"
+    other = "gap/gap-000" if pid == "sonic/s00" else "sonic/s00"
+    env.drop_s43(pid)
+    env.layer_part(other)
+    if case == "tau-min-above-b1":
+        d = env.layer_record(pid, tau_min=224.0)
+    else:
+        d = env.layer_record(pid, tau_min=14.0)
+        _sub_bad()[case](d, env)
+    env.layer_part(pid, dirname="layer_t14", d=d)
+    name, m = env.merge(substitute=True)
+    assert name == "tc_commutator_partial.json"
+    assert m["substitution"]["substituted"] == [] and pid in m["missing"]
+    assert m["substitution"]["rejected"][pid], case
+
+
+def test_substitution_ignores_accept_code(env):
+    # --accept-code makes an old hash acceptable for the S4-3 parts and the
+    # join, never for a substituted piece
+    env.drop_s43("gap/gap-000")
+    env.layer_part("sonic/s00")
+    old = "5" * 64
+    d = env.layer_record("gap/gap-000", tau_min=14.0)
+    d["code"]["files"][_vp("tc_layer")] = old
+    env.layer_part("gap/gap-000", dirname="layer_t14", d=d)
+    _, m = env.merge(substitute=True, accept=["%s=%s" % (_vp("tc_layer"), old)])
+    assert m["substitution"]["substituted"] == []
+    assert m["substitution"]["rejected"]["gap/gap-000"] == ["source hashes not current"]
+
+
+def test_substitution_blocked_by_invalid_checks(env):
+    _sub_setup(env)
+    env.checks(False)
+    _, d = env.merge(substitute=True)
+    assert d["substitution"]["substituted"] == []
+    assert d["substitution"]["blocked"] == ["checks.json not valid for the current code"]
+    assert "gap/gap-000" in d["missing"]
+
+
+def test_substitution_blocked_by_changed_constants(env, monkeypatch):
+    import p4.validated.tc_layer as tl
+    _sub_setup(env)
+    monkeypatch.setattr(tl, "EPS_MAX", 5.0)
+    _, d = env.merge(substitute=True)
+    assert d["substitution"]["blocked"] == ["b1, c or EPS_MAX changed"]
+    assert d["substitution"]["substituted"] == []
+
+
+def test_substituted_code_joins_the_conflict_check(env):
+    # two passing parts with different (current vs accepted-old) hashes of one
+    # file: the substituted part's hash is current, the join part's old one is
+    # accepted; both enter code_union, so the conflict is reported
+    _sub_setup(env)
+    old = "6" * 64
+    d = env.layer_record("sonic/s00")
+    d["code"]["files"][_vp("tc_tm")] = old
+    env.layer_part("sonic/s00", d=d)
+    s43._HASH_CACHE.pop(_vp("tc_tm"), None)
+    _, m = env.merge(substitute=True, accept=["%s=%s" % (_vp("tc_tm"), old)])
+    assert m["substitution"]["substituted"] == ["gap/gap-000"]
+    c = m["code_conflicts"][_vp("tc_tm")]
+    assert old in c["hashes"] and s43.current_hash(_vp("tc_tm")) in c["hashes"]
