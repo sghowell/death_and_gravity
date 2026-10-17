@@ -564,13 +564,13 @@ All in the scratch copy of `75869b91`, at nice 10.
 |---|---|---|---|
 | `check_s45_identities.py` | sympy I1–I7 | all residuals 0; both controls nonzero; I3c numerically spot-checked | < 1 s |
 | `g1_order0.py` → `g1_order0.json` | order-0 sonic solve, σ(κ), rank of E | κ\* = −0.0990290820550 ± 2.9e−14 = σ-root; E rank one exactly; det D = −9.6021 | 10 s |
-| `centre_pattern.py`, `g1_centre.py` (`.out`) | centre t = 0 structure | exact zero pattern; det(nP₀ − G₀(κ)) κ-free, identical at five κ | 15 s |
+| `centre_pattern.py`, `g1_centre.py` (`.txt`) | centre t = 0 structure | exact zero pattern; det(nP₀ − G₀(κ)) κ-free, identical at five κ | 15 s |
 | `centre_layers.py` → `.json` | exact centre layers of TN1r, denT, U6, denU, tt | T + 3 = O(t²), B0 = O(t²), tt = O(t²); denT, denU lowest layers ∝ κ(κ−1)⁴, κ(κ−1)⁶ | 6 s |
 | `centre_U6_roots.py` → `.json` | κ-roots of U6's lowest centre layer (float) | none in the strip or Re κ ≥ 6 | 10 s |
 | `sonic_residues.py` → `.json` | R_T, R_B, Res tt at x = 0 (balls) | identities hold coefficientwise; γ_min = 1.061671782 | 30 s |
 | `factor_checks.py` → `.json` | exact factor structure | all true | 7 s |
-| `s42_join.py` → `.out` | S4-2 join at −4.5 | overlap 4.6e−17, no gap | 2 s |
-| `cover_independent.py` → `.out` | strip x-cover, independent | [−4.56, 0], no gap; parts' covers match | 3 s |
+| `s42_join.py` → `.txt` | S4-2 join at −4.5 | overlap 4.6e−17, no gap | 2 s |
+| `cover_independent.py` → `.txt` | strip x-cover, independent | [−4.56, 0], no gap; parts' covers match | 3 s |
 | `s43_parts.py merge --substitute-layer-t14` | the exact merge | as §8; per-piece identical | 1 s |
 | `pytest test_s43_merge.py`; the two fixed `test_tc_commutator` tests | regression | 116 passed / 1 skipped; 2 passed | 70 s |
 | `s44_layer.py work --force` on s29 and deep-128 | recompute + provenance | bit-identical; rejected by the strict rule outside a checkout | 330 s |

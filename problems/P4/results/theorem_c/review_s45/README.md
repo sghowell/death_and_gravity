@@ -7,15 +7,17 @@ tube caches copied in:
 
     PYTHONPATH=<copy>/problems/P4/src python <script> [args]
 
-- `cover_independent.py <copy>/problems/P4` → `cover_independent.out`
-- `s42_join.py <tube cache json>` → `s42_join.out`
-- `g1_centre.py` → `g1_centre.out`
+- `cover_independent.py <copy>/problems/P4` → `cover_independent.txt`
+- `s42_join.py <tube cache json>` → `s42_join.txt`
+- `g1_centre.py` → `g1_centre.txt`
 - every other script writes the JSON named after it, or the path given as its
   first argument
 
-`logs/` holds the two end-to-end recomputes (sonic/s29 and deep/deep-128). Both
-were bit-identical to the committed parts, and the strict rule rejected both
-because they were written outside a git checkout.
+Captured stdout uses `.txt`, because the repository ignores `*.out` and
+`*.log`.
 
-`merge_after_scratch_recompute.json` from the same run is not kept; review §8
-summarizes it.
+`logs/` holds the stdout of the two end-to-end recomputes (sonic/s29 and
+deep/deep-128). Both were bit-identical to the committed parts.
+`merge_after_scratch_recompute.json` is the merge that followed: the strict rule
+rejected both recomputed parts because they were written outside a git checkout
+(review §8).
