@@ -14,16 +14,20 @@ removes most of that loss.
 sigma_box_mv (variables eps, iota = 1/tau).  On a tube step (no Laurent
 offsets) Sigma is, for each fixed sigma = x_k - x in the strip and each fixed
 choice of the Taylor-model coefficient values, a real C^1 function of
-(eps, iota) on the closed box E x I, I = [1/tau_hi, 1/tau_lo] (iota = 0
-included: w = 1/kappa = iota/(eps iota + i) is smooth there).  By the mean
-value theorem along the segment from the centre c = (eps_c, iota_c),
+(eps, iota) on the closed convex region E x I, E the eps-ball and I the
+rigorous iota-ball g["itau"] (it contains [1/tau_hi, 1/tau_lo]; iota = 0
+included: w = 1/kappa = iota/(eps iota + i) is smooth there).  The centre is
+c = (eps_c, iota_c) with eps_c the double midpoint of [e0, e1] and iota_c the
+midpoint of I (an exact point of I, also when the tau-range is degenerate).
+By the mean value theorem along the segment from c, which stays in E x I,
 
-    Sigma in Sigma(c) + [dSigma/deps](box) (E - eps_c) + [dSigma/diota](box) (I - iota_c),
+    Sigma in Sigma(c) + [dSigma/deps](E x I) (E - eps_c) + [dSigma/diota](E x I) (I - iota_c),
 
 where Sigma(c) is the natural enclosure at the thin point c with the whole
 sigma-strip, and the gradient hulls come from forward-mode differentiation
-in ball arithmetic over the whole box (class DV), with
-w = iota q, q = 1/(eps iota + i), dw/deps = -w^2, dw/diota = i q^2.
+in ball arithmetic over E x I (class DV), with w = iota q,
+q = 1/(eps iota + i), evaluated on the iota-ball (not on the box's own
+w-hull, which covers only the tau-range), dw/deps = -w^2, dw/diota = i q^2.
 
 sigma_box_mv3 (variables sigma, eps, iota).  A Taylor model f(sigma) in
 sum_k [c_k] sigma^k on [0, R] is not differentiable as an enclosure, but
@@ -224,18 +228,24 @@ def _intersect(S_nat, S_mv):
 
 
 def _centre(g, box):
-    """(eps_c, iota_c, thin geometry dict at the centre with the same strip)."""
-    tlo, thi = g["tau"]
+    """(eps_c, iota_c, tau_c) of the mean-value centre.  eps_c is the double
+    midpoint of [e0, e1] (it lies in [e0, e1]); iota_c is the midpoint of the
+    rigorous iota-ball g["itau"] (an exact arb inside that ball, also for a
+    degenerate tau-range; review 3d), and tau_c = 1/iota_c as a ball."""
     ec = (box[2] + box[3]) / 2
-    ic = (1.0 / tlo + (0.0 if thi == INF else 1.0 / thi)) / 2
-    Tc = arb(1) / arb(ic)
+    ic = g["itau"].mid()
+    Tc = arb(1) / ic
     return ec, ic, Tc
 
 
 def _w_dv(g, n, ie, ii):
-    """w over the box as a DV with d/deps at slot ie and d/diota at slot ii."""
-    Eb, itb, wv = g["E"], g["itau"], g["w"]
+    """w = iota q, q = 1/(eps iota + i), as a DV over E x I with I the
+    iota-ball g["itau"] (the region the mean-value segments lie in, centre
+    included): value iota q, d/deps = -w^2 at slot ie, d/diota = i q^2 at
+    slot ii."""
+    Eb, itb = g["E"], g["itau"]
     q = acb(1) / acb(Eb * itb, arb(1))
+    wv = itb * q
     d = [acb(0)] * n
     d[ie] = -(wv * wv)
     d[ii] = acb(0, 1) * q * q
@@ -254,7 +264,7 @@ def sigma_box_mv(ld, box, geo=None):
         return S_nat
     L, lam, Eb, itb = g["L"], g["lam"], g["E"], g["itau"]
     ec, ic, Tc = _centre(g, box)
-    gc = dict(L=L, E=arb(ec), w=acb(1) / acb(arb(ec), Tc), itau=arb(ic), lam=lam,
+    gc = dict(L=L, E=arb(ec), w=acb(1) / acb(arb(ec), Tc), itau=ic, lam=lam,
               z=None, zeta=None, use_large=False)
     try:
         Sc = tl.sigma_box(ld, box, gc)
@@ -268,7 +278,7 @@ def sigma_box_mv(ld, box, geo=None):
         t, tp, u2h = ld.real_hulls(L, lam)
         Sd = assemble(V, Vp, Y, Lh, Lp, t, tp, u2h, lam,
                       DV(acb(Eb), (acb(1), acb(0))), DV(acb(itb), (acb(0), acb(1))))
-        S_mv = Sc + Sd.d[0].real * (Eb - arb(ec)) + Sd.d[1].real * (itb - arb(ic))
+        S_mv = Sc + Sd.d[0].real * (Eb - arb(ec)) + Sd.d[1].real * (itb - ic)
     except (ArithmeticError, ZeroDivisionError, ValueError):
         return S_nat
     return _intersect(S_nat, S_mv)
@@ -358,7 +368,7 @@ def sigma_box_mv3(ld, box, geo=None):
         lam_c = DV(acb(ld.xik + arb(sc)), z0)
         wc = DV(acb(1) / acb(arb(ec), Tc), z0)
         Sc = _sigma_dv(ld, md, lambda n: cc[n], lambda n: rc[n], lam_c, wc,
-                       DV(acb(arb(ec)), z0), DV(acb(arb(ic)), z0)).v.real
+                       DV(acb(arb(ec)), z0), DV(acb(ic), z0)).v.real
         # gradient over the box: slots (sigma, eps, iota)
         if (lo, hi) not in md["strip"]:
             md["strip"][(lo, hi)] = (
@@ -374,7 +384,7 @@ def sigma_box_mv3(ld, box, geo=None):
                        DV(acb(itb), (acb(0), acb(0), acb(1))))
         Sb = arb(lo).union(arb(hi))
         S_mv = (Sc + Sd.d[0].real * (Sb - arb(sc)) + Sd.d[1].real * (Eb - arb(ec))
-                + Sd.d[2].real * (itb - arb(ic)))
+                + Sd.d[2].real * (itb - ic))
     except (ArithmeticError, ZeroDivisionError, ValueError):
         return S_nat
     return _intersect(S_nat, S_mv)

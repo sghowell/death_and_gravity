@@ -331,6 +331,39 @@ def test_centred_forms_enclose_points(point_ld, point_ld_combined, fname):
         assert checked >= 15
 
 
+@pytest.mark.parametrize("rel", [0.0, 1e-15, 1e-13, 1e-10])
+def test_centred_forms_degenerate_tau_range(point_ld, point_ld_combined, rel):
+    """Degenerate and near-degenerate tau-ranges (review 3d): the iota-centre
+    is the midpoint of the rigorous iota-ball, the w-hull of the gradient
+    pass covers the iota-ball (so the mean-value segment stays inside the
+    region of the gradient hulls), and the centred enclosures contain the
+    point values."""
+    import p4.validated.tc_layer_mv as mv
+    rnd = random.Random(int(rel * 1e15) + 5)
+    for xi, pr, ld in (point_ld, point_ld_combined):
+        with precision(320):
+            for _ in range(12):
+                eps = rnd.uniform(0.0, 6.0)
+                e1 = eps if rnd.random() < 0.5 else eps + 1e-3
+                t0 = 14.0 * rnd.choice((1.0, 1.7, 13.0, 4e3)) * rnd.uniform(1.0, 1.1)
+                t1 = t0 * (1 + rel)
+                box = (0.0, 0.0, eps, e1, xi * t0 * (1 - 1e-13), xi * t1 * (1 + 1e-13), t0, t1)
+                nb, g = tl._normalize(ld, box)
+                ec, ic, Tc = mv._centre(g, nb)
+                assert g["itau"].contains(ic) and nb[2] <= ec <= nb[3]
+                wv = mv._w_dv(g, 2, 0, 1).v
+                assert wv.contains(acb(1) / acb(arb(ec), Tc))      # w at the centre
+                for tau in (g["tau"][0], g["tau"][1]):
+                    assert wv.contains(acb(1) / acb(arb(ec), arb(tau)))
+                for fn in (mv.sigma_box_mv, mv.sigma_box_mv3):
+                    Sm = fn(ld, nb, g)
+                    assert Sm.upper().is_finite()
+                    for tau in (g["tau"][0], g["tau"][1]):
+                        v = tl.sigma_box(ld, (0.0, 0.0, ec, ec, xi * tau * (1 - 1e-13),
+                                              xi * tau * (1 + 1e-13), tau, tau))
+                        assert Sm.overlaps(v)
+
+
 def test_centred_form_certifies(point_ld_combined):
     import p4.validated.tc_layer_mv as mv
     xi, pr, ld = point_ld_combined
