@@ -1,7 +1,30 @@
 # S4-4: the near-sonic layer engine (tau >= 224 on the band)
 
-> **Status, 2026-10-17 morning (branch `p4/theorem-c-s4-3`; sections 9-13
-> are new).**
+> **Status, 2026-10-17 afternoon (branch `p4/theorem-c-s4-3`; section 14 is
+> new).**
+> - **The review's fixes** (`docs/review-2026-10-17-p4-layer-engine-adversarial.md`)
+>   are in: evaluation balls that contain their float intervals in all P4
+>   certificate code (`ballutil`), the mv3 iota-centre inside the iota-ball,
+>   import-time source hashes re-verified at write, and the opt-in
+>   substitution rule `merge --substitute-layer-t14` (off by default) with
+>   every condition of the review's section 2.  The written justification is
+>   corrected (sections 1 and 13.2: the dT factor argument, not Rbar).
+> - **Recompute** (section 14): every sonic and tube-kind piece of the plan
+>   (546 pieces, both tau modes, 1092 parts) on the fixed code, all passing.
+>   The 102 natural-engine (sonic) parts come out bit-identical; the 485 mv3
+>   parts that had an old part move with the iota-centre change (on 14 of
+>   them, with the old centre patched back, the ball fix alone is
+>   bit-neutral); 505 parts are new.  `merge --substitute-layer-t14`
+>   substitutes all 546 pieces; only the 30 centre pieces are missing.
+> - **The other certificates the ball fix touches** (checks, Lemma D, P4-3's
+>   centre, tc_monotone, Theorem B's Krawczyk, analyticity and winding,
+>   tc_energy) were re-run on the fixed code: identical, except the Lemma D
+>   block of tc_energy.json, which predates the 2026-10-16 centre-ball fix
+>   (the re-run equals `parts/lemma_d_certified.json`), and the summation
+>   order and a float diagnostic of winding_R.json (section 14).
+> - Not done: the centre (30 pieces), CLAIMS.md.
+>
+> Earlier status (2026-10-17 morning; sections 9-13):
 > - **Band run** (section 9): all 140 band pieces certified in both
 >   modes, 280 parts, no failure (commit `ac91f9fa`).  tau >= 224: worst
 >   bound -0.750 on the sonic pieces, -3.51 on the gap steps (each at least
@@ -24,8 +47,9 @@
 >   unlaunched September-style runs (tube 138-244, deep 0-128, 470-1070
 >   core-h): about 8 core-h (section 11.5).
 > - Not done: no layer part replaces an S4-3 part in the merge (that is a
->   semantic change for review, section 13), the centre (30 pieces) is
->   untouched, and CLAIMS.md is not edited.
+>   semantic change for review, section 13; reviewed and implemented as an
+>   opt-in rule since, section 14), the centre (30 pieces) is untouched, and
+>   CLAIMS.md is not edited.
 >
 > Earlier status (2026-10-17 night): engine built, 3 of the 140 band pieces
 > certified (`sonic/s00`, `sonic/s25`, `gap/gap-088`, tau >= 224 bounds
@@ -60,11 +84,20 @@ A layer part certifies, for one piece P (an xi-interval), the statement
 
 Since xi > 0 and tau > 0, Sigma < 0 is S < 0.  The nonvanishing of dT, dB and
 nB on the piece is part of the certificate (a denominator hull containing 0
-rejects the box).  It makes the commutation legal (B0 = nB/dB != 0), the
-eta-elimination legal (Bcr is a factor of dT), and keeps the coefficient
-poles away, so the separate Rbar and real-pole checks of `analyze_piece` are
-not needed for tau >= 224.  The boundary terms and the function-space argument
-are kappa-independent and unchanged (`s4-commutator.md` section 3).  Combined
+rejects the box).  Every polynomial the strip argument needs nonzero at a
+strip kappa divides dT = Dp SDr D2r Bcr, up to powers of Dp (exact
+factorizations, review `docs/review-2026-10-17-p4-layer-engine-adversarial.md`
+section 1): S Delta-tilde = Dp SDr, Bc = Dp^2 Bcr, D2 = Dp^3 D2r, and
+D2r = c dn (e/Dp) with dn = (kappa - A)(1 - V^2).  So dT != 0 at a strip kappa
+gives D2 != 0 (closing the (chi, eta) pair), b = Bc/D2 != 0, dn, e != 0,
+S Delta-tilde != 0, and with nB, dB != 0 also B0 != 0 (commutation).
+`analyze_piece`'s kappa-uniform per-piece bounds are therefore not needed:
+Rbar < b1 is only a sufficient condition for Bcr != 0, which dT != 0 gives
+directly, and the real-pole bound |A|, |F_N| < b1 is vacuous in the strip
+(the roots A and -F_N of D2r are real, |Im kappa| >= 14).  What remains
+depends only on kappa (kappa != kappa-bar, Re sigma(kappa) < 0) or is
+kappa-independent: the boundary terms, the function-space argument, the
+gauge identity and P4-3's w > 0 (`s4-commutator.md` section 3).  Combined
 with the S4-3 direct phase of the same piece (tau in [14, 224]) the piece is
 closed for tau >= 14; alternatively `--tau-min 14` runs the engine on
 tau >= 14 directly (section 6).
@@ -135,9 +168,12 @@ coefficients.  If the pivot lies on the layer line (e_p = 0), Q -> TM_p(0) at
 (z, w, ell) -> 0.  If the top does (e_d = 0), Q/z^{d-p} -> TM_d(0) at
 (zeta, w, ell) -> 0.  `LayerData` requires both for every denominator (dT,
 kappa dB, dB, nB).  A ratio is N/D = ell^{mN-mD} z^{pN-pD} QN/QD (small-z
-form) = ell^{mN-mD} z^{dN-dD} QN^L/QD^L (large-z form, |z| >= 4).  For all
-eight blocks the ell-power cancels against lam^k exactly (k + mN - mD = 0 on
-sonic pieces).  The only z-power left is z^1 in lam^2 nB''/nB (small form).
+form) = ell^{mN-mD} z^{dN-dD} QN^L/QD^L (large-z form, |z| >= 4).  On sonic
+pieces every ratio has k + mN - mD = 0, so the ell-power cancels against
+lam^k exactly, except lam^2 nV'/dT, which carries ell^{+1} (mN - mD = -1,
+k = 2; a positive power, bounded on the strip).  [Corrected 2026-10-17: the
+note said "all eight blocks"; review section 4.]  The only z-power left is
+z^1 in lam^2 nB''/nB (small form).
 A negative ell-power on a strip touching 0 raises an error, and the box is
 rejected.
 
@@ -192,8 +228,14 @@ that succeeds within 20000 evaluations, else Sigma < 0 (400000 evaluations).
 Soundness ledger: (i) the S4-3 inputs and their raises (E1/E3/E5); (ii) the
 exact top-slot drops of section 2; (iii) the (tt dT_k)' raise of section 2;
 (iv) exponents e_j, g_j >= 0 always, and ell-prefactor exponents checked;
-(v) outward-rounded hulls; (vi) any denominator hull containing 0 gives a
-non-finite Sigma, and the box is rejected.
+(v) outward-rounded hulls [2026-10-17: with one formal flaw, now fixed.  The
+evaluation ball arb((lo + hi)/2, (hi - lo)/2) of `TM.eval` and `LC.eval`
+(and of the S4-3 bounds) rounds its midpoint to a double and can miss a strip
+endpoint by about one ulp; Arb's upward rounding of the radius hid it except
+on strips narrower than about 1e-7 relative, and 336,196 instrumented strip
+evaluations of the review found no miss.  All P4 code now uses
+`ballutil.strip_ball` and friends (section 14)]; (vi) any denominator hull
+containing 0 gives a non-finite Sigma, and the box is rejected.
 
 ## 6. Validation
 
@@ -408,6 +450,12 @@ invalid, stale, fail or error:
   to the cover's `params.tau_min` and tau_min <= tstar of the piece (224);
 - `scope.xi` equal to the piece's xi-range.
 
+[2026-10-17: the scope fields (tau, eps, xi) are declared by the driver from
+the plan and constants, not read from the cover that ran (review 4a).  Since
+section 14, `layer_checks` also checks the cover the part actually ran, from
+`result.params`: tau_min, the eps cells, the ell-range, s_lo, laurent, the
+evaluator and combine, plus `fails` empty and bound = worst.]
+
 Coverage: a piece counts for tau > tstar if it is pass-both, or pass-direct
 with a passing layer part (`parts/layer` preferred, else the passing part with
 the lowest tau_min, e.g. `layer_t14`).  Layer parts never stand in for a
@@ -613,18 +661,29 @@ steps in 69 s and 149 s.
   tau = 1e9.
 - **mv** (`sigma_box_mv`): for each fixed sigma in the strip and fixed
   coefficient values, Sigma is a real C^1 function of (eps, iota) on the
-  closed convex box E x I, I = [1/tau_hi, 1/tau_lo] (iota = 0 included:
-  w = iota/(eps iota + i)); the mean value theorem along the segment from the
-  centre gives Sigma in Sigma(c) + G_eps (E - eps_c) + G_iota (I - iota_c),
-  G the gradient hulls over the box by forward-mode differentiation in ball
+  closed convex region E x I, E the eps-ball and I the rigorous iota-ball
+  `g["itau"]`, which contains [1/tau_hi, 1/tau_lo] (iota = 0 included:
+  w = iota/(eps iota + i)).  The centre c = (eps_c, iota_c) has eps_c the
+  double midpoint of [e0, e1] and iota_c the midpoint of I, an exact point of
+  I also on a degenerate tau-range [2026-10-17, review 3d; before, iota_c was
+  the double (1/tau_lo + 1/tau_hi)/2, which can fall outside I].  The mean
+  value theorem along the segment from c, which stays in E x I, gives
+  Sigma in Sigma(c) + G_eps (E - eps_c) + G_iota (I - iota_c), G the
+  gradient hulls over E x I by forward-mode differentiation in ball
   arithmetic (`DV`: every operation encloses value and derivatives for all
-  points the inputs enclose), dw/deps = -w^2, dw/diota = i q^2,
-  q = 1/(eps iota + i).
-- **mv3** (`sigma_box_mv3`): a TM f(sigma) in sum [c_k] sigma^k on [0, R]
-  equals P + delta with P the exact midpoint polynomial and
-  |delta(sigma)| <= r = sum rad(c_k) R^k (sigma >= 0).  For fixed
+  points the inputs enclose), with w = iota q evaluated on I itself (not on
+  the box's w-hull, which covers only the tau-range), dw/deps = -w^2,
+  dw/diota = i q^2, q = 1/(eps iota + i).
+- **mv3** (`sigma_box_mv3`): the TM semantics `tc_tm` implements is: a TM
+  with ball coefficients [c_k] on [0, R] (R = h on a tube step) encloses f at
+  each point, f(sigma) in sum [c_k] sigma^k for every sigma in [0, R], with
+  no separate remainder term (the truncation spill is absorbed into
+  c_{CAP-1} and the step's eps_z into c_0).  Hence f = P + delta with P the
+  exact midpoint polynomial and |delta(sigma)| <= r = sum rad(c_k) R^k
+  (sigma >= 0).  For fixed
   delta* = delta(sigma) the map (s, e, i) -> Phi(P(s) + delta*, e, i) is C^1
-  on the box, hence Phi(f(sigma), eps, iota) lies in
+  on the box (the sigma-strip x E x I, centre and I as for mv), hence
+  Phi(f(sigma), eps, iota) lies in
   Phi(P(sigma_c) + [-r, r], eps_c, iota_c) + G . (box - centre), with the
   coefficient values P(S) + [-r, r] and their derivatives P'(S) in the
   gradient pass; lam = xi_k + sigma has derivative 1, w none.  Applied to
@@ -650,21 +709,27 @@ steps in 69 s and 149 s.
    tau > tstar gap on the band.  The S4-3 direct-only runs of the same 140
    pieces (running) still certify [14, 224]; the layer_t14 parts are an
    independent second certificate of that range.
-2. **Tube 138-244 and deep 0-128 (236 pieces; not launched):** do not
-   launch the September-style both-phase runs (470-1070 core-h).  Run the
-   layer engine instead:
+2. **Tube 138-244 and deep 0-128 (236 pieces):** do not launch the
+   September-style both-phase runs (470-1070 core-h).  Run the layer engine
+   instead [launched 2026-10-17 as `s44-beyond-t14` on the code before the
+   ball fix, stopped at 09:03Z, and now part of the recompute of section
+   14]:
    `s44_layer.py launch --workers 8 --nice 10 --beyond-band --regions tube,deep --ids 'tube/full-13[89],tube/full-1[4-9]?,tube/full-2[0-3]?,tube/full-24[0-4],deep/*' --tau-mins 224,14 --combine --norm piece --mv mv3 --piece-ladder-evals 400000 --piece-final-evals 1000000`
    (about 8 core-h; `list` with the same selection gives the 236 pieces:
    tube idx 138-244 and the 129 deep steps; the six probe parts used the
    200000/600000 budgets, so with these options they are recomputed).  Then
-   extend `merge`, after review, with an opt-in rule: a piece whose S4-3 part is missing may be covered for
-   all tau >= 14 by a passing `layer_t14` part (tau_min <= b1), with the same
-   validity checks as section 10.  The mathematical justification is the one
-   of section 1: the part certifies dT, dB, nB != 0 and S < 0 pointwise on
-   [14, inf) x [0, 6], which is what `analyze_piece` certifies in two phases
-   plus its Rbar and real-pole checks (Bcr and D2r are factors of dT).  The
-   widest step (idx 244) and a band-A step were probed and pass (section
-   11.4).
+   merge with the opt-in rule (implemented 2026-10-17, `merge
+   --substitute-layer-t14`, section 14): a tube or sonic piece whose S4-3
+   part is missing, stale or invalid is carried for all tau >= 14 by a
+   strictly checked passing `layer_t14` part.  Justification (section 1): the
+   part certifies S < 0 and dT, dB, nB != 0 pointwise on the piece x
+   [0, 6] x [14, inf), and every polynomial the strip argument needs nonzero
+   at a strip kappa divides dT up to powers of Dp.  This is not "everything
+   `analyze_piece` certifies": Rbar and the real-pole bounds are not
+   certified for such a piece, and they are not needed (the real-pole bound
+   is vacuous in the strip, Rbar only implies Bcr != 0).  [Corrected
+   2026-10-17, review 1a.]  The widest step (idx 244) and a band-A step were
+   probed and pass (section 11.4).
 3. **Centre (30 pieces):** now the dominant open cost (the committed path
    never finished: >= 25 CPU-h measured, 45-90 estimated) and the only region
    the layer engine does not cover.  The obstruction there is the same kind
@@ -675,4 +740,206 @@ steps in 69 s and 149 s.
    extended to Laurent coefficients.  Until that exists, the centre stays on
    the committed default.
 4. Keep the running S4-3 workers (tube 0-137, band, gap, sonic): they are
-   cheap and the merge needs them.
+   cheap and the merge needs them.  [2026-10-17: after the ball fix every
+   S4-3 part is stale against the current code, the running workers' later
+   parts too.  The recompute of section 14 gives every tube-kind and sonic
+   piece a fixed-code layer_t14 part, which `merge --substitute-layer-t14`
+   uses in place of the stale S4-3 part; re-running S4-3 on those pieces is
+   then not needed.  The centre still needs S4-3 (or a centre variant).]
+
+## 14. The review's fixes, and the recompute on the fixed code (2026-10-17)
+
+The independent review (`docs/review-2026-10-17-p4-layer-engine-adversarial.md`,
+commit `e51cd7a6`) found the substitution sound and the Sigma enclosure
+correct, with two latent defects and a list of should-fixes.  All are now
+in the code, and every layer part was recomputed on it.
+
+**The evaluation ball (review 2f; must-fix).**  `arb((lo + hi)/2,
+(hi - lo)/2)` rounds the midpoint and the radius to doubles, so the ball can
+miss lo or hi by about one ulp: on random non-dyadic intervals about 30 % of
+these balls miss an endpoint, at every working precision.  Arb's upward
+rounding of the radius to a 30-bit mantissa hid it except on strips
+narrower than about 1e-7 relative, and the review's 336,196 instrumented
+strip evaluations found no miss.  The coordinator's search found the same
+construction in all P4 certificate code, not only in `tc_tm`.  New module
+`src/p4/validated/ballutil.py`:
+- `strip_ball(lo, hi)`: the old ball if it provably contains both endpoints
+  (arb_contains is exact or conservative), else `arb(lo).union(arb(hi))`;
+- `recentred_delta(lo, hi, mid)`: the same for the recentred delta
+  `arb(0, (hi - lo)/2)` against `arb(lo) - mid` and `arb(hi) - mid`;
+- `half_width(lo, hi, mid)`: an exact w >= |x - mid| on [lo, hi], for
+  Taylor-remainder magnitudes;
+- `radius_cover(r, exact)`: a radius at least an exact half-width, for
+  double radii such as h/(2 nsub) or 1/t0 that may round down.
+Each returns the old construction whenever it already contained what it
+must, so results that did not depend on a miss stay bit-identical.
+Sites (commit `eba80cb4`):
+
+| file | sites |
+|---|---|
+| `tc_tm.py` | `TM.eval` (both evaluation balls, the recentred delta), `LC.eval` |
+| `tc_commutator.py` | `Bnd.eval_up`; `quad_lower_mixed` (two); `sup_ratio_boxes` kappa boxes and the 1/t0 pseudo-box radius; `cubic_root_bound`; the `analyze_piece` eps cells; `tau_quad_check`; the `direct_S_boxes` (eps, tau) boxes |
+| `tc_energy.py` | `line_sup`'s kappa segment and its Taylor half-width; `run_tube`'s sub-box radius; `_sonic_box`'s x-ball and its recentred dx (`BoxEval`, `BoxEvalScaled` accept a dx ball); the closing box |
+| `tc_monotone.py` | `run_sonic`'s x-ball; `run_tube`'s sub-box radius |
+| `modecount.py` | `segment_increment`'s pieces (Theorem B winding) |
+| `scripts/s43_centre_tq_diag.py` | the diagnostic's ell-ball |
+
+Checked and left alone, because they are exact or defined by the ball: the
+`arb(0, w)` widths of the parameter boxes in `centre`, `sonic`, `linsonic*`,
+`linsys.kappa_box` and `variational` (the statement is about that ball);
+`lintube`, `tmint` and `matching`'s sub-box radii (computed in arb); the
+`elp` hulls of `tc_commutator` (unions); `tc_layer.box_geometry` (unions);
+analyticity's tiles (certified on the 1.05-times enlarged box).
+Tests: `tests/test_ballutil.py`.
+
+**The mv3 iota-centre (review 3d).**  The centre is now the midpoint of the
+rigorous iota-ball, and the gradient pass evaluates w = iota q on that ball,
+so the mean-value segment stays inside the region of the gradient hulls
+(section 12; commit `13119db1`).  mv/mv3 results move slightly.
+
+**Drivers (review 4c, should-fix).**  Sources are hashed at import and
+re-verified at write (`code.hashed`, `code.write_check`); a part whose
+sources or driver changed on disk mid-run is `invalid` to status, work and
+merge.  The merge pins s44_layer.py for substituted pieces (commit
+`73388d50`).
+
+**Merge (review 4a and section 2, must-fix).**  `layer_checks` checks the
+cover each part actually ran (section 10), and `merge --substitute-layer-t14`
+implements the substitution rule with every condition of review section 2;
+`tests/test_s43_merge.py` has one test per rejection mode (25 for the join,
+48 for the strict rule) and the positive cases (section 13.2).
+
+**Recompute of every layer part (step 6 of the coordinator's plan).**  The
+old-code `s44-beyond-t14` run (PIDs 36412-36414) was stopped at 09:03Z; the
+key values of all 587 layer parts were snapshotted
+(`results/theorem_c/layer_recompute/snapshot.json`, `s44_layer.py
+snapshot`), and `scripts/s44_recompute.py launch --workers 4 --nice 10`
+started four detached workers at 09:26:55Z (tag `s44-recompute-20261017b`,
+code `b5de0b62`, s44_layer.py sha256 `3a86e50f...`, worker PIDs 24655-24657
+and 24659; launch record `logs/s44/launch-s44-recompute-20261017b.json` and
+the worker logs, machine-local like every log) over all 546 sonic and
+tube-kind pieces of the plan, both tau modes (1092 parts), in six queues:
+
+| queue | pieces | engine |
+|---|---|---|
+| Q1 | sonic s00-s28 | default (as before), tau >= 224 and 14 |
+| Q2 | sonic s29-s50 | default, tau >= 224 |
+| Q4 | gap 000-088 | combine, piece, mv3, 200000/600000 (as before) |
+| Q5 | tube 138-244, deep 000-128 | combine, piece, mv3, 400000/1000000 (section 13.2) |
+| Q6 | tube 0-137, band 000-017, gap 089-106 | as Q5 |
+| Q3 | sonic s29-s50 | piece, tau >= 14 (as before; last, since the locks are per piece) |
+
+A first launch (tag `s44-recompute-20261017`, 09:24:40Z, code `6c9a9870`)
+was stopped after five parts: its `recompute.identical` compared the ladder
+attempts including their wall times, and `work` took an existing part
+written by another driver version as done.  Both are fixed in `b5de0b62`
+(attempts compared as (target, ok, evals); a part is done only if this
+driver wrote it); the five parts were restored from git and recomputed.
+Each new part records the part it overwrote (`previous`) and whether
+status, certified bound, worst, boxes, evals and ladder attempts are
+bit-identical (`recompute`); `s44_layer.py compare` compares every part
+with the snapshot (`results/theorem_c/layer_recompute/comparison.json`).
+
+**Result (finished 13:19:10Z, 3 h 52 min after the launch).**  All 1092
+parts were written on the fixed code and pass (no fail, no error);
+`s44_layer.py status` shows all 546 pieces passing in both tau modes, none
+stale.  Against the snapshot (`s44_layer.py compare`):
+
+| parts | count | against the old part |
+|---|---|---|
+| sonic s00-s50, both modes (Q1-Q3, natural enclosure) | 102 | bit-identical: status, bound, worst, boxes, evals, ladder attempts |
+| mv3 parts with an old part: gap 0-88, tube 138-244, deep 0-44 (tau >= 224; 0-43 for tau >= 14), 64 and 128 | 485 | differ (the iota-centre), all pass; deep 64 and 128 also moved from the probe budgets 200000/600000 to 400000/1000000 |
+| pieces without an old part: tube 0-137 (134 pieces), band 0-17, gap 89-106, the other deep steps | 505 | new, all pass |
+
+The 485 moves: for tau >= 224 the certified bound changed by -21.9 % to
++23.8 % (the covers subdivide differently), boxes -6.1 % and evaluations
+-17.8 % in total; for tau >= 14 by -6.3 % to +5.0 %, boxes -2.8 %,
+evaluations -3.0 %.  The 1012 parts on the piece norm record a relative
+margin (-bound/scale); every one is at least 0.50000, the first ladder
+target (the 80 default-engine sonic parts use the layer norm and record
+none).  Worst bounds, tau >= 224 /
+tau >= 14: sonic -0.750 (s01) / -0.452 (s29), gap -3.45 / -0.603 (gap-000),
+band -15.1 / -3.95 (band-000), tube -0.211 / -0.209 (full-244), deep
+-0.0220 / -0.0217 (deep-128).
+
+**Merge.**  `s43_parts.py merge --substitute-layer-t14` on these parts
+(13:19:41Z, head `fda58897`; output kept as
+`results/theorem_c/layer_recompute/merge_substitute_layer_t14.json`):
+status partial, used 0, substituted 546, missing 30 (the centre), failed 0,
+manual review 0, no rejection, nothing blocked, no code conflict; the only
+gap, for tau <= tstar and for tau > tstar, is x < -4.56 (the centre).
+Without the flag: substituted 0, missing 576 (every S4-3 part is stale
+against the fixed code, or missing), and the gap is the whole line.
+`strip_exclusion_certified` stays false until the centre lands.  The S4-3
+region parts on disk were all computed before `eba80cb4` and are stale by
+design; with the rule, re-running them is not needed for the 546 tube-kind
+and sonic pieces.
+
+**Is the ball fix alone bit-neutral on the mv3 parts?**  The mv3 parts
+changed for two reasons at once: the evaluation balls (`eba80cb4`) and the
+iota-centre (`13119db1`).  `scripts/s44_isolate_ballfix.py` recomputes
+pieces on the current code with the pre-`13119db1` centre and w-hull patched
+back into `tc_layer_mv` and the engine options of the old parts: tube
+138, 170 and 244, gap 0 and 88, deep 0 and 64, both modes (14 parts), all
+bit-identical to the snapshot in status, bound, worst, boxes, evals and
+ladder attempts (`results/theorem_c/layer_recompute/isolate_ballfix.json`).
+The fixed balls changed nothing there (in line with the review's
+instrumented run, which found no miss), so on these 14 parts the move is
+entirely the centre change; the other mv3 parts were not isolated.
+
+**Re-runs of the other certificates (step 7).**  `scripts/p4_recertify.py
+run` re-ran them one at a time at nice 10 on the fixed code, by their
+documented commands, into `results/recert_2026-10-17/` (09:02-12:51Z,
+alongside the layer run); `compare` wrote
+`results/recert_2026-10-17/comparison.json`.  The Theorem B tube was rebuilt
+by its documented command (`data/cache/tube_theorem_b.json`, not committed,
+sha256 in `tube_theorem_b.check.json`); it equals the first 244 steps of
+the pinned S4-3 cache.
+
+| certificate | stored output | compared | result | stored file |
+|---|---|---|---|---|
+| exact checks E1-E5 | `parts/checks.json` | ok, every result | identical | replaced (see below) |
+| Lemma D, certified balls | `parts/lemma_d_certified.json` | ok, c0, ycut, layer identity, mins, nsub (1100), failing subranges (0) | identical | replaced |
+| P4-3 centre tail | `parts/p43_centre.json` | ok, certified and replay mins, min margin (0.33333) | identical | replaced |
+| tc_monotone (P4-3) | `results/theorem_c/tc_monotone.json` | ok, mins, fails of sonic, centre, tube; tube info | identical | kept |
+| Krawczyk (Theorem B) | `results/theorem_b/krawczyk.json` | both zeros: ok, widths, E, the bound on abs(E), dE, remainder, zero ball and interval; gamma; gauge; disjointness | identical | kept |
+| analyticity (Theorem B) | `results/theorem_b/analyticity_R.json` | all summary values; the 432 boxes as a multiset (the pool returns them in completion order) | identical | kept |
+| winding (Theorem B) | `results/theorem_b/winding_R.json` | winding 2, certified, the winding ball, 290 tiles with every field but wall times and the `width` diagnostic, min abs E | identical | kept |
+| tc_energy (P4-8) | `results/theorem_c/tc_energy.json` | all_ok, c0, sonic, tube and lemma_d blocks | identical except `lemma_d.mins` | kept |
+
+Convention.  The three S4-3 records carry code hashes, and the merge (and
+the substitution rule, strictly) needs `checks.json` valid for the current
+sources, so they were replaced by their fixed-code re-runs once the
+comparison showed identical results; each carries a `replaces` block
+(previous creation time and code fingerprint, the comparison file).  They
+landed in commit `61f2016c` together with the first recomputed parts.  The
+other five record no code hashes; the stored files are kept and the re-run
+outputs stay in `results/recert_2026-10-17/` as the fixed-code evidence.
+
+The differences, none caused by the ball fix:
+- **tc_energy.json, `lemma_d.mins`:** the stored block predates the
+  2026-10-16 centre-ball fix (`ed4cab14`: the centre series on the certified
+  (a*, mu*) balls, `s4-3-recovery.md`); the re-run's block is the
+  certified-ball Lemma D and equals `parts/lemma_d_certified.json` bit for
+  bit: q2 1.96183644229 (stored 1.96183644227), mB 3.47524282 (stored
+  3.47525645), mC 15.3482921 (stored 15.3482996), poleA and poleFN equal to
+  1e-13; every other field of the file is identical.  The stored file is
+  kept (the coordinator's rule: report before replacing); replacing it, or
+  pointing its lemma_d block at `parts/lemma_d_certified.json`, is for the
+  owner of P4-8.
+- **winding_R.json, `total_arg` and the per-tile `width`:** the stored total
+  was summed by 8 pool workers in completion order, the re-run's by one; the
+  midpoints agree, the radii differ in their last bits, and summed in one
+  fixed order the two sets of tile increments give bit-identical totals (the
+  winding ball as stored is identical).  The per-tile `width` (the largest
+  radius of the propagated states, a float diagnostic) differs on 268 of 290
+  tiles by at most 7.1e-15 relative.  On the rebuilt tube the August code
+  (`b3bd414e`, the commit that stored winding_R.json), the pre-fix code
+  (`e51cd7a6`) and the fixed code give the re-run's widths bit for bit
+  (`results/recert_2026-10-17/winding_width_probe.json`), so the difference
+  comes with the stored run's tube build or library environment, not with
+  any code change; the certified increments do not see it.
+- Krawczyk: the first re-run recorded the |E| bound as `abs_upper(E)`, the
+  stored record as `abs(E).upper()` (both upper bounds, 1.4090793506e-10
+  against 1.4090793571e-10 at kappa1); re-run with the stored expression,
+  identical (the first output is kept as `krawczyk.first.json`).

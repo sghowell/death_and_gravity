@@ -127,6 +127,14 @@ coefficients sit at real kappa in [kappa-bar, 1.89]: certified per piece via
 |A|, |F_N| < b1 (real-pole bound), distance >= b1 - 1.89 >= 12.1 from the
 excluded region.  Eta-elimination is legal since the Bcr cubic's roots obey
 the Cauchy bound Rbar < b1 on every piece (certified; worst Rbar ~ 6.5).
+[2026-10-17: "certified per piece" holds for the pieces carried by S4-3
+parts.  A piece carried by a substituted S4-4 `layer_t14` part (`s43_parts.py
+merge --substitute-layer-t14`, `s4-4-layer-engine.md` section 14) has no Rbar
+or real-pole bound; there dT != 0 at every strip kappa of the piece is
+certified instead, and since dT = Dp SDr D2r Bcr it gives Bcr != 0 and
+D2r != 0 (no pole) at those kappa directly.  The real-pole bound is vacuous
+in the strip anyway (the roots A and -F_N of D2r are real); review
+`docs/review-2026-10-17-p4-layer-engine-adversarial.md` section 1.]
 
 ## 4. Certified structure constants and input raising
 
@@ -336,7 +344,12 @@ design, not the 576-piece plan.  The current draft text is in
   eta-elimination root bound (Rbar < 14) and the real-pole margins needed
   there are certified per piece in the JSON.  [2026-10-16: not yet.  These
   bounds are checked inside each piece run (`analyze_piece` raises if they
-  fail), so they become certified piece by piece as parts land.]
+  fail), so they become certified piece by piece as parts land.
+  2026-10-17: for pieces carried by a substituted `layer_t14` part the endgame
+  uses dT != 0 at strip kappa instead (every polynomial it needs nonzero
+  there divides dT up to powers of Dp: D2 = Dp^3 D2r, Bc = Dp^2 Bcr,
+  S Delta-tilde = Dp SDr); Rbar and the real-pole margins are not recorded
+  for those pieces and not needed (review 2026-10-17 section 1).]
 - The dec-slots (DWdec etc.) remain in the JSON for the non-closing pieces;
   on sonic pieces the tail-lemma sups (KW/KWp third slots) replace them.
 
