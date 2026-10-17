@@ -1,7 +1,7 @@
 # S4-3 recovery: what survived the 2026-09-07 reboot, and how to finish
 
 Status 2026-10-16 (recovery stage, branch `p4/theorem-c-s4-3`).  The
-commutator strip exclusion is not certified.  `results/theorem_c/tc_commutator.json`
+commutator strip exclusion is not certified.  `certificates/theorem_c/strip/tc_commutator.json`
 was never assembled, every September region output was lost, and 1 of the 576
 region pieces has a stored result (`parts/band/band-000.json`, the driver smoke
 test).  Each of the following is backed by an artifact produced today from the
@@ -77,7 +77,7 @@ was not identified.
 | E1, E2, E3, E5 | `scripts/s43_parts.py checks` | E1 True; E2 (pmin = 14, ok) True; E3 (True, True, True); E5 (True, True, True) | 48 s (E5 42 s) | `certificates/theorem_c/checks.json` |
 | Lemma D as committed | `s43_parts.py lemma-d --centre-balls midpoint` | ok; 1100/1100 subranges; q2 ≥ 1.9618364, mB ≥ 3.4752564, mC ≥ 15.348300, pole gaps ≥ 0.99952, 0.99999; **identical to tc_energy.json** | 62.6 s | `parts/lemma_d_midpoint.json` |
 | Lemma D, certified background | `s43_parts.py lemma-d --centre-balls certified` | ok; 1100/1100; q2 ≥ 1.9618364, mB ≥ 3.4752428, mC ≥ 15.348292, pole gaps ≥ 0.99952, 0.99999 | 61.5 s | `certificates/theorem_c/lemma_d_certified.json` |
-| tube caches | `s43_parts.py build-caches --detach` | full 344 steps (187 s), gap 107 (121 s), deep 129 (8 s), band 60 (36 s): same step counts and step grids as September; content hashes reproducible (deep, band rebuilt twice: identical) | 3.2 min | `parts/caches/*.json` |
+| tube caches | `s43_parts.py build-caches --detach` | full 344 steps (187 s), gap 107 (121 s), deep 129 (8 s), band 60 (36 s): same step counts and step grids as September; content hashes reproducible (deep, band rebuilt twice: identical) | 3.2 min | `strip/caches/*.json` |
 | test_tc_reduction.py | pytest | 9 passed | 23 s | — |
 | test_tc_energy.py (+ `P4_TUBE_CACHE`) | pytest | 6 passed, 1 skipped (P4_SLOW); with P4_SLOW=1 the field identity passed | 12 s + 101 s | — |
 | test_tc_commutator.py, fast set | pytest | 8 passed (incl. `test_sonic_closing_direct_phase`, 68 s), **2 failed** (`test_commutation_value_consistency`, `test_kdiv_roundtrip`), 1 skipped (no tc_commutator.json); **`test_centre_first_piece` not completed: stopped after 15 min (924 s wall)** | 104 s + 68 s + 924 s | — |
@@ -121,7 +121,7 @@ the certified balls in the committed code; see §11.1–§11.3.]
 
 ## 4. Inventory of the region parts
 
-All pieces are listed in `results/theorem_c/parts/plan.json` (576 pieces, 33
+All pieces are listed in `certificates/theorem_c/strip/plan.json` (576 pieces, 33
 excluded with reasons).  Each piece is computed by the committed region function
 with a one-piece slice; the call is recorded in the part (`extra.region_call`).
 Driver: `PY=.venv/bin/python; $PY problems/P4/scripts/s43_parts.py`.
@@ -170,11 +170,11 @@ passed both phases on 18 of its 107 steps, not "107/107 both phases".
 ## 5. The driver (`scripts/s43_parts.py`) and the result layout
 
 * `build-caches [--detach]`: the four September tube constructions, verbatim
-  (recipes recorded in `parts/caches/<name>.json`); caches go to
+  (recipes recorded in `strip/caches/<name>.json`); caches go to
   `problems/P4/data/cache/` (gitignored by the root `.gitignore`), pinned by a
   content hash over (K, steps) that excludes the wall-clock build time.  `work`
   refuses a cache whose content hash differs from its record.
-* `plan`: enumerates every piece (`parts/plan.json`, committed).
+* `plan`: enumerates every piece (`strip/plan.json`, committed).
 * `work` / `launch --workers N --nice 10`: per-piece results in
   `parts/<region>/<id>.json`; a worker claims a piece with an `O_EXCL` lock file
   (stale locks of dead local workers are reclaimed), writes atomically, and skips
@@ -202,7 +202,7 @@ passed both phases on 18 of its 107 steps, not "107/107 both phases".
 * `merge` checks coverage: the union of the x-intervals of passing pieces must
   contain (−∞, 0] (centre: y-pieces mapped to x = ln y; sonic: x = −ξ); pieces
   with `open` count only for τ ∈ [14, 224].  It writes
-  `results/theorem_c/tc_commutator.json` only when every planned piece is
+  `certificates/theorem_c/strip/tc_commutator.json` only when every planned piece is
   present and passing, the checks are valid for the current code, and no
   unaccepted code variant is mixed in; otherwise it writes
   `tc_commutator_partial.json` with the missing and failed lists.
@@ -627,3 +627,5 @@ chunk (A1 starts at idx 167), so it is needed under either branch.  The centre
 ---
 
 *Paths (2026-10-17): the files behind CERTIFIED rows moved unchanged from `results/` to `certificates/` (`problems/P4/certificates/README.md`). The paths in this note are updated; the module mains still write their replays to `results/`. The note gained no lines above this one, so line references into it still hold.*
+
+*Paths (2026-10-17, P4-9 promotion): the strip certificate (the plan, the cache records, the `layer_t14` and `centre_t14` parts, the centre identity and the merged `tc_commutator.json`) moved unchanged to `certificates/theorem_c/strip/` (`problems/P4/certificates/README.md`); `strip/` in this note means that directory.*

@@ -17,7 +17,7 @@
 > Not certified: the commutator strip exclusion (Task 2).  Of the 576 region
 > pieces (centre 30; tube 241 + band 18 + deep 129; gap 107; sonic 51), exactly
 > one has a stored result: `parts/band/band-000.json`, the driver smoke test
-> (pass, both phases, replayed bit for bit).  `results/theorem_c/tc_commutator.json` was never
+> (pass, both phases, replayed bit for bit).  `certificates/theorem_c/strip/tc_commutator.json` was never
 > assembled.  The September region outputs were lost with `/tmp` in the
 > 2026-09-07 reboot, and most of them came from earlier code versions.  The cloud
 > production round was never retrieved.  The per-region numbers in §5 and §7–§9
@@ -41,7 +41,7 @@ b1 = 14 on tau in [14, 224] over the whole interval, and on tau > 224
 everywhere except the near-sonic band xi <= XI_OPEN (value recorded in the
 certificate JSON, `scope.xi_open_max`; ~0.048), which is a precisely
 diagnosed open item (Section 8).  Code: `src/p4/validated/tc_commutator.py`
-(+ `tc_tm.py`); certificate: `results/theorem_c/tc_commutator.json`.
+(+ `tc_tm.py`); certificate: `certificates/theorem_c/strip/tc_commutator.json`.
 
 ## 1. Task 1 — Lemma D closed exactly
 
@@ -189,7 +189,7 @@ the 241 tube_full steps with x - h >= -3.05, minus the 4 h = 0.0075 steps in
 (h = 0.0125, x in [-4.56, -2.95]).  The 33 replaced steps fail their chain TM
 inverses.  In the September per-step logs the gap tube's tau-quadratic phase
 failed on steps 0-88 (xi <= 0.0357) and passed on steps 89-106, not "for
-x <= -0.048".  The full list is in `results/theorem_c/parts/plan.json` and
+x <= -0.048".  The full list is in `certificates/theorem_c/strip/plan.json` and
 `s4-3-recovery.md` §4.]
 
   centre   y = e^x in (0, e^{-4.5}], 30 pieces (geometric + closing piece);
@@ -274,7 +274,7 @@ Replay [superseded 2026-10-16 by `scripts/s43_parts.py`, which gives
 per-piece resumable parts and a coverage-checked merge; see
 `s4-3-recovery.md` §5]: `uv run python -m p4.validated.tc_commutator
 checks|centre|sonic|tube <tube.json> [a b]` then `... merge <parts>` writes
-`results/theorem_c/tc_commutator.json` (region parts can be sliced for
+`certificates/theorem_c/strip/tc_commutator.json` (region parts can be sliced for
 worker parallelism; the shipped JSON lists every piece).
 
 ## 8. The open item: near-sonic band x (tau > 224)
@@ -328,7 +328,7 @@ design, not the 576-piece plan.  The current draft text is in
         once-commuted energy certificate (m = 1, c = -1/32) excludes
         eigenvalues with |Im kappa| in [14, 224] (full interval), and with
         |Im kappa| > 224 away from the near-sonic band xi <= ~0.048.
-        Certificate: results/theorem_c/tc_commutator.json (E1/E2/E3/E5
+        Certificate: certificates/theorem_c/strip/tc_commutator.json (E1/E2/E3/E5
         exact identities; 30 centre + 274 tube + 107 gap-tube pieces both
         phases; 51 sonic pieces direct phase).  Open: sliver x (tau > 224),
         see notes/s4-commutator.md Section 8.
@@ -372,7 +372,7 @@ design, not the 576-piece plan.  The current draft text is in
   the certificate inputs.  [2026-10-16: that file was lost.  All four tube
   caches are rebuilt by `scripts/s43_parts.py build-caches` into
   `problems/P4/data/cache/` (gap: 107 steps, 121 s), pinned by content hash in
-  `results/theorem_c/parts/caches/`.]  `run_tube(..., degrade=True)` applies the same
+  `certificates/theorem_c/strip/caches/`.]  `run_tube(..., degrade=True)` applies the same
   direct-phase fallback as `run_sonic` on the band.
 - The centre certificate in the JSON is the original run (sound earlier
   code path; the region never touches the branch bookkeeping); a
@@ -400,3 +400,5 @@ design, not the 576-piece plan.  The current draft text is in
 ---
 
 *Paths (2026-10-17): the files behind CERTIFIED rows moved unchanged from `results/` to `certificates/` (`problems/P4/certificates/README.md`). The paths in this note are updated; the module mains still write their replays to `results/`. The note gained no lines above this one, so line references into it still hold.*
+
+*Paths (2026-10-17, P4-9 promotion): the strip certificate (the plan, the cache records, the `layer_t14` and `centre_t14` parts, the centre identity and the merged `tc_commutator.json`) moved unchanged to `certificates/theorem_c/strip/` (`problems/P4/certificates/README.md`); `strip/` in this note means that directory.*
