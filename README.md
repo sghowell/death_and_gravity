@@ -1174,9 +1174,14 @@ machine evidence at every step above HEURISTIC.
 | HEURISTIC | numerical/analytic lore, no certificate |
 | CONJECTURED | precise statement, tested numerically, not certified |
 | VERIFIED_N | independently re-run by a second implementation/engine |
-| CERTIFIED | machine-checkable certificate (interval enclosure, exact dual, exhaustive enumeration) committed under `certificates/` |
+| WRITTEN_PROOF | precise statement with a complete written proof that an independent reviewer has checked; every identity, constant and bound it uses is machine-checked, but the analytic argument is prose |
+| CERTIFIED | machine-checkable certificate (interval enclosure, exact dual, exhaustive enumeration) committed under `certificates/`; the decisive steps are machine-checked and any written lemmas are routine (otherwise the row is WRITTEN_PROOF) |
 | FORMALIZED | kernel-checked proof (Lean 4) |
 | REFUTED | terminal |
+
+WRITTEN_PROOF was added on 2026-10-16, after the independent review of P8(a)
+(`docs/review-2026-10-16-p8a-adversarial.md`) found machine checks covering
+only identities and constants.
 
 ## Building the problems document
 
