@@ -62,7 +62,11 @@ Commands (python problems/P4/scripts/s43_parts.py <cmd> -h for options):
   merge [--accept-code FILE=SHA ...] [--accept-reason TEXT]
                                      coverage-checked assembly; writes
                                      tc_commutator.json only when complete,
-                                     tc_commutator_partial.json otherwise
+                                     tc_commutator_partial.json otherwise.
+                                     S4-4 layer parts (parts/layer*/<id>.json,
+                                     scripts/s44_layer.py) are joined by piece
+                                     id: a valid passing one carries tau > tstar
+                                     for a pass-direct piece (layer_state)
 
 A piece's result is "valid" (skipped on re-run) iff its file parses, its spec
 matches the plan entry, its tube cache content hash matches the local cache,
@@ -1385,6 +1389,109 @@ def uncovered(intervals, lo=-math.inf, hi=0.0, tol=1e-12):
     return gaps
 
 
+# ------------------------------------------------------- S4-4 layer parts
+LAYER_SCHEMA = "s44-layer/1"
+
+
+def layer_dirs():
+    """Names of the S4-4 layer-part directories (scripts/s44_layer.py):
+    parts/layer (tau >= 224) and parts/layer_t<T> (tau >= T)."""
+    out = []
+    for d in sorted(glob.glob(os.path.join(PARTS, "layer*"))):
+        b = os.path.basename(d)
+        if os.path.isdir(d) and (b == "layer" or b.startswith("layer_t")):
+            out.append(b)
+    return out
+
+
+def read_layer_part(dirname, pid):
+    path = os.path.join(PARTS, dirname, pid + ".json")
+    if not os.path.exists(path):
+        return None
+    try:
+        return json.load(open(path))
+    except Exception:
+        return {}
+
+
+def layer_state(p, d, tstar, eps_max, accept=None):
+    """State of the S4-4 layer part d of plan piece p as a cover of
+    tau >= tstar: missing | invalid | stale | pass | fail | error.
+
+    pass requires: schema s44-layer/1, id and spec equal to the plan entry,
+    for tube pieces the plan's cache content hash (record and part inputs),
+    a non-empty code record whose every source hash is current (or accepted),
+    status pass with result ok, a finite negative certified bound (equal in
+    the result), scope eps = [0, eps_max], tau = [tau_min, inf] with tau_min
+    equal to the cover's own and <= tstar, and the scope's xi-range equal to
+    the piece's.  Statement of such a part (tc_layer): for every xi in the
+    piece, eps in [0, eps_max] and tau >= tau_min, dT, dB, nB != 0 and
+    S xi^2/tau^2 <= certified_bound < 0."""
+    if d is None:
+        return "missing"
+    if not d or d.get("schema") != LAYER_SCHEMA or d.get("id") != p["id"]:
+        return "invalid"
+    if d.get("spec") != spec_of(p):
+        return "stale"
+    if p["kind"] == "tube":
+        rec = json.load(open(cache_record_path(p["cache"])))
+        if rec["content_sha256"] != p["cache_content_sha256"] or \
+                (d.get("inputs") or {}).get("cache_content_sha256") != p["cache_content_sha256"]:
+            return "stale"
+    files = (d.get("code") or {}).get("files")
+    if not files:
+        return "invalid"
+    if not code_matches(files, accept):
+        return "stale"
+    st = d.get("status")
+    if st in ("fail", "error"):
+        return st
+    if st != "pass":
+        return "invalid"
+    sc, res, b = d.get("scope") or {}, d.get("result") or {}, d.get("certified_bound")
+    a, c = x_interval(p)
+    try:
+        tmin = float(sc["tau"][0])
+        good = (res.get("ok") is True and type(b) in (int, float) and math.isfinite(b)
+                and b < 0 and res.get("certified_bound") == b and sc["tau"][1] == "inf"
+                and [float(v) for v in sc["eps"]] == [0.0, float(eps_max)]
+                and float(res["params"]["tau_min"]) == tmin and tmin <= tstar
+                and [float(v) for v in sc["xi"]] == [-c, -a])
+    except (KeyError, TypeError, ValueError, IndexError):
+        good = False
+    return "pass" if good else "invalid"
+
+
+def layer_join(plan, tc, accept=None):
+    """{piece id: {layer dir: (state, part)}} for every plan piece with a
+    layer part in some layer directory (joined by piece id)."""
+    out = {}
+    for dn in layer_dirs():
+        for p in plan["pieces"]:
+            d = read_layer_part(dn, p["id"])
+            if d is None:
+                continue
+            out.setdefault(p["id"], {})[dn] = (
+                layer_state(p, d, piece_tstar(p, tc), tc.EPS_MAX, accept), d)
+    return out
+
+
+def layer_cover(joined, pid):
+    """(dir, part) of the passing layer part that carries tau > tstar for the
+    piece: parts/layer if it passes, else the passing part with the lowest
+    tau_min; None if there is none."""
+    ent = joined.get(pid, {})
+    if ent.get("layer", (None,))[0] == "pass":
+        return "layer", ent["layer"][1]
+    best = None
+    for dn, (st, d) in sorted(ent.items()):
+        if st == "pass":
+            t = float(d["scope"]["tau"][0])
+            if best is None or t < best[0]:
+                best = (t, dn, d)
+    return None if best is None else (best[1], best[2])
+
+
 def cmd_merge(args):
     import_p4()
     import p4.validated.tc_commutator as tc
@@ -1401,6 +1508,18 @@ def cmd_merge(args):
                 code_union.setdefault(r, set()).add(sha)
             if st.startswith("pass"):
                 used.append((p, d))
+    # S4-4: a pass-direct piece (tau in [b1, tstar]) whose layer part passes
+    # (tau >= tau_min with tau_min <= tstar) is covered for every tau >= b1.
+    # Pieces without layer parts keep the S4-3 semantics unchanged.
+    joined = layer_join(plan, tc, accept)
+    covers = {}
+    for p, d in used:
+        if d["status"] == "pass-direct":
+            lc = layer_cover(joined, p["id"])
+            if lc is not None:
+                covers[p["id"]] = lc
+                for r, sha in lc[1]["code"]["files"].items():
+                    code_union.setdefault(r, set()).add(sha)
     # several hashes for one source file among the used parts are acceptable only
     # when every non-current hash was explicitly accepted (--accept-code)
     conflicts = {}
@@ -1412,7 +1531,8 @@ def cmd_merge(args):
             conflicts[r] = dict(hashes=sorted(s), current=cur, unaccepted=bad)
     unaccepted = {r: c for r, c in conflicts.items() if c["unaccepted"]}
     direct_iv = [x_interval(p) for p, d in used]
-    both_iv = [x_interval(p) for p, d in used if d["status"] == "pass-both"]
+    both_iv = [x_interval(p) for p, d in used
+               if d["status"] == "pass-both" or p["id"] in covers]
     gaps_direct = uncovered(direct_iv)
     gaps_both = uncovered(both_iv)
     missing = sorted(i for i, s in states.items() if s in ("missing", "stale"))
@@ -1422,13 +1542,52 @@ def cmd_merge(args):
     checks_ok = bool(checks and checks["ok"] and code_matches(checks["code"]["files"], accept))
     complete = (not gaps_direct and not missing and not failed and checks_ok
                 and not unaccepted)
-    opens = [d for p, d in used if d["status"] == "pass-direct"]
+    opens = [d for p, d in used if d["status"] == "pass-direct" and p["id"] not in covers]
     xi_open = max([-a for a, b in gaps_both], default=0.0) if gaps_both else 0.0
     detail = []
+    second = 0
     for p, d in used:
         e = dict(d["result"])
         e.update(id=p["id"], region=p["region"])
+        if p["id"] in joined:
+            # S4-4 layer parts of this piece; tau_gt_tstar says what carries
+            # tau > tstar; direct_range_second_method names a passing layer
+            # part that also covers [b1, tstar] (tau_min <= b1)
+            e["layer"] = {dn: dict(state=st, certified_bound=ld.get("certified_bound"),
+                                   tau_min=(ld.get("scope") or {}).get("tau", [None])[0],
+                                   engine=ld.get("engine"),
+                                   relative_margin=(ld.get("result") or {}).get(
+                                       "relative_margin"))
+                          for dn, (st, ld) in sorted(joined[p["id"]].items())}
+            sm = [dn for dn, (st, ld) in sorted(joined[p["id"]].items())
+                  if st == "pass" and float(ld["scope"]["tau"][0]) <= B1]
+            if sm:
+                e["direct_range_second_method"] = sm[0]
+                second += 1
+        e["tau_gt_tstar"] = ("tau-quadratic" if d["status"] == "pass-both" else
+                             "layer:" + covers[p["id"]][0] if p["id"] in covers else "open")
         detail.append(e)
+    lstates = {}
+    for pid, ent in joined.items():
+        for dn, (st, ld) in ent.items():
+            lstates.setdefault(dn, {}).setdefault(st, []).append(pid)
+    layer_summary = dict(
+        dirs=layer_dirs(),
+        joined_pieces=len(joined),
+        tau_gt_tstar_by_layer=len(covers),
+        direct_range_second_method=second,
+        states={dn: {st: len(v) for st, v in sorted(x.items())}
+                for dn, x in sorted(lstates.items())},
+        not_passing={dn: {st: sorted(v) for st, v in sorted(x.items()) if st != "pass"}
+                     for dn, x in sorted(lstates.items())},
+        worst_bound={dn: max((ld["certified_bound"] for pid, ent in joined.items()
+                              for dd, (st, ld) in ent.items() if dd == dn and st == "pass"),
+                             default=None)
+                     for dn in sorted(lstates)},
+        statement=("a passing layer part certifies, for every xi in its piece, eps in "
+                   "[0, eps_max] and tau >= tau_min: dT, dB, nB != 0 and "
+                   "S xi^2/tau^2 <= certified_bound < 0 (p4.validated.tc_layer); "
+                   "joined by piece id, it carries tau > tstar for a pass-direct piece"))
     worst = max((e["margin"] for e in detail if e.get("margin") is not None), default=None)
     res = dict(
         ok=complete, status="complete" if complete else "partial",
@@ -1437,7 +1596,11 @@ def cmd_merge(args):
                    tau_gt_tstar_uncovered_x=gaps_both,
                    xi_open_max=xi_open,
                    tau_above_tstar=("certified everywhere" if not gaps_both else
-                                    "OPEN on x in %s (direct phase only there)" % gaps_both)),
+                                    "OPEN on x in %s (direct phase only there)" % gaps_both),
+                   tau_gt_tstar_by=dict(
+                       tau_quadratic=sum(1 for p, d in used if d["status"] == "pass-both"),
+                       layer=len(covers), open=len(opens))),
+        strip_exclusion_certified=bool(complete and not gaps_both),
         b1=B1, m=tc.MC, c=[tc.CNUM, tc.CDEN], eps_max=tc.EPS_MAX, tstar_fac=tc.TSTAR_FAC,
         phase_settings=dict(
             tstar_fac_by_region={r: REGIONS[r]["tstar_fac"] for r in REGIONS
@@ -1446,8 +1609,10 @@ def cmd_merge(args):
                          if "direct_only" in REGIONS[r]},
             note=("pass-both pieces are certified for every tau >= b1 (centre with "
                   "tstar_fac = 1: the tau-quadratic phase alone); pass-direct pieces "
-                  "only for tau in [b1, tstar_fac * b1]")),
+                  "only for tau in [b1, tstar_fac * b1], unless a passing S4-4 layer "
+                  "part of the same id carries tau > tstar (detail: tau_gt_tstar)")),
         open_pieces=len(opens),
+        layer=layer_summary,
         checks=(dict(E1_U6top=checks["results"]["E1_U6top"],
                      E2_layers=checks["results"]["E2_layers"],
                      E3_sonic_zeros=checks["results"]["E3_sonic_zeros"],
@@ -1465,9 +1630,9 @@ def cmd_merge(args):
     out = CERT if complete else CERT_PARTIAL
     write_json_atomic(out, res)
     print("%s: status=%s used=%d missing=%d failed=%d gaps(tau<=tstar)=%s "
-          "gaps(tau>tstar)=%s conflicts=%s -> %s"
+          "gaps(tau>tstar)=%s layer-covered=%d conflicts=%s -> %s"
           % ("merge", res["status"], len(used), len(missing), len(failed), gaps_direct,
-             gaps_both, list(conflicts), rel(out)))
+             gaps_both, len(covers), list(conflicts), rel(out)))
 
 
 # -------------------------------------------------------------------- main
