@@ -30,7 +30,7 @@ def test_kat6_certificate_fields():
 
 @SLOW
 def test_kat6_rerun():
-    r = winding.run_kat6()
+    r = winding.run_kat6(write=False)          # replay must not overwrite the committed certificate
     assert r["pass"]
 
 

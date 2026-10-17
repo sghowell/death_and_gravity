@@ -1,6 +1,6 @@
 # P2 — A certified resonance-free strip for subextremal RNdS (β > 1/2, linear SCC failure for smooth data)
 
-Status: formulation **v0.3** (stage S2), 2026-10-17; frozen at v0 (S0,
+Status: formulation **v0.4** (S2 gate passed; stage S3), 2026-10-17; frozen at v0 (S0,
 2026-10-16), with every later change recorded in the Revision log. Since S1 the
 ledger has rows P2-par, P2-0, P2-2 and P2-K6 (`CLAIMS.md`); every other claim id
 is still a *target*.
@@ -395,3 +395,36 @@ Sizing and kill criteria are in `s0-gate.md` §7.
     window, and violates the Liouville–Green condition β < κ₊).
   - The header status is updated to match. No frozen convention, definition,
     point, δ or KAT changes.
+
+- **v0.4 (2026-10-17, S2 gate; `notes/s2-report.md`).** The P2-1 route is
+  chosen at the S2 gate, as §2 provides. It is **M3**: rotate the tortoise
+  coordinate by π/4 through the photon sphere, then prove a variable-phase
+  coercivity bound certified by a ground-state (Allegretto–Piepenbrink)
+  pointwise inequality (`notes/s2-m3.md`). M2 was not implemented
+  (`notes/s2-preregistration.md` §2).
+  - The part-(i) certificate format is `certificates/m3/m3_{X}_geometry.json`
+    (contour, sector analyticity, tails), `m3_{X}_l{l}.json` (window, ground
+    state, margins, negative control, P2-2 overlap) and `m3_{X}_summary.json`.
+    It replaces the placeholder `large_l_{X}.json` of §4. The h → 0 closing
+    boxes of S4 will use the same inequality in the scaled variable.
+  - S2 result at P_B: the barrier-top window
+    [ω_l − 8γ₀, ω_l + 6γ₀] × [−(½+δ)κ₋, 0] is QNM-free for l = 20, 50, 100
+    (machine-checked inequalities plus written lemmas, so WRITTEN_PROOF; the
+    independent review, `docs/review-2026-10-17-p2-s2-adversarial.md`, found it
+    proven as stated). Margins μ_cert/μ_HO are 0.528, 0.568, 0.560. Verdict: GO
+    for S3 under the pre-registered rule; the margin at l = 100 is 0.56 μ_HO.
+  - The projected l₀ = 2 (fit C = 0.94) is only the formal output of the
+    pre-registered fit. The fit is mis-specified (s2-report §3). m(l) is a sum of
+    design losses with opposite l-dependence:
+    - the 5% design slack;
+    - one ground state for the whole ω² hull, a loss of about 1/l;
+    - the spline sawtooth at the fixed node spacing 0.01, a loss growing about
+      like √l;
+    - the mean-value cells, which cost < 1e-4 μ_HO.
+  - The three points certify l = 20, 50 and 100 only. They say nothing about
+    other l, and nothing below l = 20. With the design held fixed, the √l term
+    would eventually exhaust the margin, so a fixed design cannot be uniform in l.
+    S4 must scale the design: node spacing ∝ (l+½)^{−1/2} (fixed in
+    σ = s(l+½)^{1/2}) and window width ∝ the oscillator quantum.
+  - Still open for P2-1: uniformity in h, and the sub-barrier and low-frequency
+    regimes (S4). P_A has not been probed.

@@ -1,0 +1,10 @@
+# float_leak_tail_bound.py, nice 10, 2026-10-17T18:17:14Z, HEAD 6b933896
+side -1: d_author = [0.0095571080701487445114 +/- 4.76e-23]  d_exact = [0.0095571080701487451596 +/- 2.77e-23]  max per-term float-rounding error = 6.53e-16  (d_exact - d_author)/d = 6.78e-17
+   l=20: tail lower bound of E with the enlarged disc = [13.195442 +/- 8.21e-8]
+   l=50: tail lower bound of E with the enlarged disc = [96.099479 +/- 3.27e-7]
+   l=100: tail lower bound of E with the enlarged disc = [403.42171 +/- 6.76e-7]
+side +1: d_author = [0.35105295377702260230 +/- 4.48e-21]  d_exact = [0.35105295377702250365 +/- 4.31e-21]  max per-term float-rounding error = 1.70e-15  (d_exact - d_author)/d = -2.81e-16
+   l=20: tail lower bound of E with the enlarged disc = [1.0683831 +/- 3.58e-8]
+   l=50: tail lower bound of E with the enlarged disc = [22.581206 +/- 2.39e-7]
+   l=100: tail lower bound of E with the enlarged disc = [112.29634 +/- 1.57e-6]
+exit=0
