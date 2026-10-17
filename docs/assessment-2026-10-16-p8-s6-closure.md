@@ -75,8 +75,13 @@ SOURCE and S0-reference studies). No top-level gate changed status after
 ## 4. Status of the rest of P8
 
 - **P8(b), linear classification (gate L):** complete in its frozen
-  scope. A separate-agent adversarial review was commissioned on
-  2026-10-16; until now it had only the authoring thread's self-review.
+  scope. A separate-agent adversarial review reported on 2026-10-16
+  ([review](review-2026-10-16-p8b-adversarial.md)): the chain survives,
+  with no claim-level error. Every load-bearing coefficient re-derives in
+  an independent covariant expansion, and the replay passes. The gaps
+  are presentation-level. The witnesses' contracting tails have p > 1/3,
+  so homogeneous anisotropy grows there; the stated BKL/infrared
+  exclusion covers this, but it belongs next to "stable".
 - **S5, perturbative control:** parked. S5.1 is complete; there is no
   strong-coupling verdict.
 - **S6, UV compatibility:** closed, as recorded here.
