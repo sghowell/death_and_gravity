@@ -6,9 +6,13 @@ Lemma D rerun are gated behind P4_SLOW=1.
 
 Measured 2026-10-16 (M4 Pro): the fast set takes ~3 min without
 test_centre_first_piece; that test alone did not finish within 15 min.
-test_commutation_value_consistency and test_kdiv_roundtrip fail on their
-relative-width thresholds although the compared balls overlap (see
-notes/s4-3-recovery.md section 3).
+test_commutation_value_consistency and test_kdiv_roundtrip evaluate their
+value identities at one point xi (since 2026-10-17).  They used to hull the
+TMs over the strip [8e-7, 8.2e-7] while taking the Laurent factor xi^off at
+8e-7, so the two sides were not enclosures of the same quantity and the
+relative-width thresholds failed although the balls overlapped (review
+docs/review-2026-10-17-p4-layer-engine-adversarial.md section 6, item 7: at
+a point the identities agree to 4.3e-12 (A1), 1.9e-6 (B1), 1.8e-12 (kdiv)).
 """
 import json
 import os
@@ -134,10 +138,11 @@ def test_kp_helpers():
 def test_commutation_value_consistency(sonic_pr):
     """A1 = A0 - (log B0)' and B1 = B0 + A0' - A0 (log B0)' hold as rational
     value identities: check nA1/dA1 and nB1/dB1 against jet chains of the
-    input pairs at a sample (kappa, xi)."""
+    input pairs at a sample point (kappa, xi), the TM and its Laurent factor
+    xi^off evaluated at the same xi."""
     pr, cm = sonic_pr
     with precision(320):
-        xi_lo, xi_hi = 8e-7, 8.2e-7
+        xi_lo = xi_hi = 8e-7
         kap = acb(1.0, 37.0)
 
         def kp_val(kp, sl):
@@ -165,7 +170,8 @@ def test_commutation_value_consistency(sonic_pr):
 
 
 def test_kdiv_roundtrip(sonic_pr):
-    """nB = sum q_j k^j dB + rem as values (division consistency)."""
+    """nB = sum q_j k^j dB + rem as values (division consistency), at a
+    sample point (kappa, xi)."""
     pr, _ = sonic_pr
     with precision(320):
         SPLIT_REL[0] = 1e-4
@@ -177,7 +183,7 @@ def test_kdiv_roundtrip(sonic_pr):
                                 * (dBi * dBi * dBi))
                 - dBtj[2].trim() * (dBi * dBi)]
         uqj, remUj = tc.kdiv_jlc(pr["nB"], pr["dB"], dBij, 2, depth=2)
-        xi_lo, xi_hi = 8e-7, 8.2e-7
+        xi_lo = xi_hi = 8e-7
         kap = acb(0.5, 29.0)
 
         def lval(x):
