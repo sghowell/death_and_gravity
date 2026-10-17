@@ -141,7 +141,9 @@ Both points satisfy (½+δ)κ₋ < min(κ₊, κ_c), so
   multiplicity as a resonance of □_g is (2l+1)·m_l(ω).
 - **D1′ (equivalence; an S1 lemma, written proof with citations).** For
   ω ∉ E₊ ∪ E_c, D1 is equivalent to σ = ω being a resonance (a QNM) in the
-  sense of [Vas13], [HV17] and [Hin25]: a smooth resonant state in (t*, r, θ, φ)
+  sense of [Vas13], [HV17] and [Hin25] [v0.2: read as the resonances of the
+  forward problem on Ω₂₃ (HV17 §2.5) = the poles of the localized
+  ψ(P_σ−iQ_σ)⁻¹ (Vas13 §3) = the QNM set of Hin25 §1]: a smooth resonant state in (t*, r, θ, φ)
   coordinates, with the same multiplicity [v0.1: the multiplicity clause is
   proved for Im ω > −min(κ₊, κ_c) only; see the Revision log]. The ingredients are separation of
   variables, and the fact that in the hyperboloidal variable u = e^{−iωT}R
@@ -195,8 +197,10 @@ certificate format is fixed in §4 below.
 ### P2-2 Part (ii): high-frequency exclusion per l [target: CERTIFIED]
 For each l < l₀ there is an explicit W_l such that W_l(ω) ≠ 0 on
 S_δ ∩ {|Re ω| ≥ W_l}. The route is Liouville–Green above the barrier, with
-Olver complex-variable error control along the real progressive path
-([Olv74] Ch. 6). The error-control integrals are enclosed in Arb.
+Olver-type Volterra error control ([Olv74] Ch. 6) [v0.2: implemented as
+weighted bounds along the real line, which is anti-progressive for the
+horizon-referenced solutions; see the Revision log]. The error-control
+integrals are enclosed in Arb.
 
 ### P2-3 Part (iii): validated count on the compact remainder [target: CERTIFIED]
 For each l < l₀:
@@ -228,7 +232,9 @@ since 2 min{α, κ₊} > κ₋ at both points. Neither theorem is re-proven.
 A Krawczyk enclosure of the simple l = 0 zero ω_* ≈ −0.909381iκ₋, together
 with P2-1…P2-3 run with the strip edge at −0.92κ₋ (where the l = 0 winding is
 2), gives **β ∈ [β_lo, β_hi]** with β_hi − β_lo ≤ 10⁻⁸. Part (i) is then
-needed up to 0.547·γ₀.
+needed up to 0.547·γ₀. [v0.2: this edge passes the first point of E₊,
+−iκ₊ ≈ −0.823iκ₋, where W₀ has a simple pole; P2-6 needs new foundations,
+see the Revision log.]
 
 ### P2-7 The P_A statement [target: CERTIFIED; second target]
 P2-0…P2-5 at P_A with δ = 1/100. Part (i) is needed up to 0.667·γ₀.
@@ -355,3 +361,24 @@ Sizing and kill criteria are in `s0-gate.md` §7.
   contains S_δ at both frozen points (certified in `certificates/params.json`;
   margins in `notes/s1-report.md`), so no target changes. No other frozen
   item changes.
+
+- **v0.2 (2026-10-16, after the independent review of S1;
+  `docs/review-2026-10-16-p2-s1-adversarial.md`).**
+  - D1′ is read in the localized sense: the resonances of the forward
+    problem on Ω₂₃ (HV17 §2.5), which are the poles of the localized
+    ψ(P_σ−iQ_σ)⁻¹ (Vas13 §3) and the QNM set of Hin25 §1. HV17's global
+    P̂(σ)⁻¹ can have other resonances (HV17 Lemma 2.14(1)). Its level is
+    WRITTEN_PROOF.
+  - P2-2's error control is a weighted Volterra bound along the real line,
+    which is anti-progressive for the horizon-referenced solutions, not
+    Olver's progressive-path control. The bound is valid. The threshold is
+    written a_l in new text, to avoid a clash with the Wronskian W_l(ω).
+  - P2-6 needs new foundations. At P_B its strip edge (−0.92κ₋) passes the
+    first point of E₊ (−iκ₊ ≈ −0.823iκ₋), where W₀ has a simple pole, so a
+    winding count there counts zeros minus poles. That edge is also outside
+    D1′'s multiplicity window and outside the Liouville–Green condition
+    β < κ₊. The main target needs the strip only down to −(½+δ)κ₋
+    (−0.55κ₋ at P_B) and is unaffected.
+  - KAT-6's Krawczyk step used the inscribed-disc radius r instead of the
+    square's corner distance √2·r. It is fixed, and the certificate is
+    regenerated; both modes still certify.

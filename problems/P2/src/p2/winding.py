@@ -146,7 +146,12 @@ def krawczyk(pt: Point, l: int, z0, r, R, h):
     Wm = wronskian(pt, l, z0 - h)
     fd = (Wp - Wm) / (2 * h)
     e_fd = M * h * h / (R ** 3 * (1 - (h / R) ** 2))
-    e_z = 2 * M * r / (R - r) ** 2
+    # Z is the square z0 + [-r, r] + i[-r, r]: its corners lie at distance sqrt(2) r from z0,
+    # so the Cauchy bound on |W'(z) - W'(z0)| must use s = sqrt(2) r (and needs R > s).
+    s_corner = arb(2).sqrt() * r
+    if not bool(R > s_corner):
+        raise ArithmeticError("Krawczyk: need R > sqrt(2) r")
+    e_z = 2 * M * s_corner / (R - s_corner) ** 2
     dW = fd + acb(arb(0, 1), arb(0, 1)) * (e_fd + e_z)
     Y = 1 / acb(fd.real.mid(), fd.imag.mid())
     Zc = acb(arb(0, 1) * r, arb(0, 1) * r)
