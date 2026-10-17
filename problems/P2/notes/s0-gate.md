@@ -1,5 +1,9 @@
 # P2 S0 gate: go/no-go memo for the certified resonance-free strip
 
+Decision (2026-10-17): v1.2 approved as proposed in §7, except that the two-sided
+β enclosure is a stretch goal, not part of the entry point; P_B primary, P_A
+second (FORMULATION v0.3).
+
 Status: S0 memo, 2026-10-16. Nothing here is certified. Numbers without a ball
 radius are floats from `src/s0_sanity.py` (mpmath, 25–40 digits, about 5 CPU-min
 in total, one core). Inputs: `../FORMULATION.md` v0,

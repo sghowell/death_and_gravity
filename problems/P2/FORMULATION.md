@@ -1,17 +1,19 @@
 # P2 — A certified resonance-free strip for subextremal RNdS (β > 1/2, linear SCC failure for smooth data)
 
-Status: formulation **v0** (stage S0), 2026-10-16. Nothing here is certified.
-Every claim id is a ledger *target*: S0 adds no `CLAIMS.md` rows.
+Status: formulation **v0.3** (stage S2), 2026-10-17; frozen at v0 (S0,
+2026-10-16), with every later change recorded in the Revision log. Since S1 the
+ledger has rows P2-par, P2-0, P2-2 and P2-K6 (`CLAIMS.md`); every other claim id
+is still a *target*.
 
 Changes after S1 begins go in the Revision log, never by silent edit (house
 discipline of `problems/P9/b/FORMULATION.md`).
 
 Pre-registered statement: `docs/problems/open-problems-theoretical-cosmology-2026.tex`
-§P2, v1.1. That document is frozen. The S0 gate (`notes/s0-gate.md`) recommends
-**GO with a modified entry point** and proposes a v1.2 revision-log entry
-(`s0-gate.md` §7). The proposal has **not been approved**. This formulation is
-written so that both outcomes are well-defined: see §1.3, and the roles of
-P_B and P_A there.
+§P2, **v1.2** (approved 2026-10-17). The S0 gate (`notes/s0-gate.md`)
+recommended **GO with a modified entry point** and proposed the v1.2 entry
+(`s0-gate.md` §7). It was approved with one change: the two-sided enclosure of
+β (P2-6) is a stretch goal, not part of the entry point. So P_B is the primary
+target and P_A the second (§1.3).
 
 Literature basis: `notes/literature-digest.md`, whose bracketed keys are used
 below. Float numbers quoted here come from `src/s0_sanity.py` (mpmath, 40
@@ -97,7 +99,7 @@ r³ − 25r + 25 = 0, which is the double-root condition 2Λr³/3 − r + 1 = 0 
 numbers, and certificates carry them as Arb balls produced from these
 definitions.
 
-- **P_B (primary target if v1.2 is approved): Q = (999/1000)·Q_max.**
+- **P_B (primary target; v1.2 approved 2026-10-17): Q = (999/1000)·Q_max.**
   - Published support, [CCDHJ18] Fig. 3, ΛM² = 0.06 panel (tick labels read
     from the figure): β > ½ for Q/Q_max > 0.9920, and the l = 0 near-extremal
     mode is dominant for Q/Q_max > 0.9967. Its curve lies between −0.8κ₋ and
@@ -109,8 +111,7 @@ definitions.
     - l=10: PS 51.62353 − 1.68459i.
   - Eikonal limit: γ₀/κ₋ = 1.683212.
   - So β ≈ 0.90938, attained by an isolated l = 0 mode.
-- **P_A (second target; the sole target if v1.2 is not approved):
-  Q = (249/250)·Q_max.** This is the representative point of [CCDHJ18] Table I.
+- **P_A (second target): Q = (249/250)·Q_max.** This is the representative point of [CCDHJ18] Table I.
   - All nine tabulated values are known answers (KAT-1). S0 reproduced six of
     them to |Δ| ≤ 4.6e−11.
   - β = γ₀/κ₋ = 0.764303. It is attained **only as l → ∞**, by the photon-sphere
@@ -228,7 +229,7 @@ This is the linear analogue of the failure of Christodoulou's SCC for smooth
 data, at X. [CF17] Thm 3.1 gives the same H¹ conclusion with a C⁰ extension,
 since 2 min{α, κ₊} > κ₋ at both points. Neither theorem is re-proven.
 
-### P2-6 Two-sided β at P_B [target: CERTIFIED; stretch of the primary target]
+### P2-6 Two-sided β at P_B [target: CERTIFIED; stretch goal, not part of the entry point (v1.2)]
 A Krawczyk enclosure of the simple l = 0 zero ω_* ≈ −0.909381iκ₋, together
 with P2-1…P2-3 run with the strip edge at −0.92κ₋ (where the l = 0 winding is
 2), gives **β ∈ [β_lo, β_hi]** with β_hi − β_lo ≤ 10⁻⁸. Part (i) is then
@@ -382,3 +383,15 @@ Sizing and kill criteria are in `s0-gate.md` §7.
   - KAT-6's Krawczyk step used the inscribed-disc radius r instead of the
     square's corner distance √2·r. It is fixed, and the certificate is
     regenerated; both modes still certify.
+
+- **v0.3 (2026-10-17, S2 start).** The .tex v1.2 entry proposed in
+  `s0-gate.md` §7 is approved (2026-10-17) and recorded in the .tex revision
+  log, with one change: the two-sided certified enclosure of β is a stretch goal
+  and not part of the entry point.
+  - P_B is the primary target and P_A the second (§1.3 role labels updated;
+    the conditional "if v1.2 is not approved" fallback of v0 is void).
+  - P2-6 is a stretch goal. It also needs the new foundations noted in v0.2
+    (the −0.92κ₋ edge passes E₊'s first point, lies outside D1′'s multiplicity
+    window, and violates the Liouville–Green condition β < κ₊).
+  - The header status is updated to match. No frozen convention, definition,
+    point, δ or KAT changes.
