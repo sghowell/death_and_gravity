@@ -1,260 +1,494 @@
-# S4-6: the centre variant of the layer engine (probe, 2026-10-17)
+# S4-6: the centre of the Theorem C strip (x ≤ −4.5)
 
-> **Status (branch `p4/theorem-c-centre`, from `d6ccd565`).**  Probe done.
-> - New files only: `src/p4/validated/tc_layer_centre.py` (the centre
->   sigma-function), `scripts/s46_centre.py` (driver), `tests/test_tc_layer_centre.py`
->   (16 tests), outputs in `results/theorem_c/centre_probe/`.  No existing
->   file changed: the 1092 `layer_t14` parts keep their hashes and the
->   `s44_layer.py` pin.
-> - Float grid: S < 0 with margin on c29 and c00, both tau ranges, as
->   y -> 0 and at eps = 0: Sigma_c = S/(1 + (y tau)^2) <= -6.10 on c29 at
->   tau >= 14 (-15.2 at tau >= 224), -6.0000 on c00.
-> - Natural enclosure: **c29, tau >= 224: certified** (Sigma_c <= -1.53, 138
->   boxes, 2 s).  c29, tau >= 14: not closed in 20000 evaluations
->   (overestimation at small s = y tau with large eps; true margin -6 to
->   -20 there).  c00: not closed (near-zero leading Taylor coefficients of
->   nB and its derivatives dominate the pivot forms for y tau below ~1e-3).
-> - Recommendation (section 6): go, conditional on two items: a mean-value
->   form for the graded evaluation, and an exact identity (or a lemma) for
->   the closing piece.  About 3-4 sessions and 2-5 core-h for the 30 pieces.
+> **Status 2026-10-17, branch `p4/theorem-c-centre`.  Computed; awaiting
+> the adversarial review and the owner's ledger decision.**
+> - All 30 centre pieces pass, in both τ modes (τ ≥ 14 and τ ≥ 224): 60
+>   parts in `results/theorem_c/parts/centre_t14/` and `centre_t224/`
+>   (`c4d86e83`).  Worst bound at τ ≥ 14: Σ_c ≤ −5.91e−4 (c29).
+> - The merge `s43_parts.py merge --substitute-layer-t14 --substitute-centre`
+>   reports `status = complete` and **`strip_exclusion_certified = true`**:
+>   576 pieces (546 `layer_t14` + 30 `centre_t14`), exact cover of x ∈ (−∞, 0)
+>   with no gap, nothing missing, failed, rejected or blocked
+>   (`results/theorem_c/tc_commutator.json`, `a038640c`).
+> - The closing piece c00 rests on an exact identity (§3.2), committed as an
+>   artifact with provenance (`results/theorem_c/centre_nb_identity.json`).
+> - Neither checkpoint of the build plan triggered: c29 certified at τ ≥ 14,
+>   and the exact identity for c00 holds.  No prose corner lemma is used.
+> - Compute: 0.71 core-h for the 60 parts (4 workers at nice 10, 11.7 min
+>   wall), well inside the 5 core-h budget.  Besides: the probe 0.9 core-h,
+>   the point-sample check (§5.4) 0.33 core-h per run (run twice).
+> - Nothing is promoted to `certificates/`; CLAIMS.md is unchanged.  The 26
+>   hash-pinned modules of `src/p4` and `scripts/s44_layer.py` (`3a86e50f`)
+>   are unchanged, so the 1092 `layer_t14`/`layer` parts stay valid
+>   (`git diff --stat fda58897..HEAD -- problems/P4/src` lists only the two
+>   new files of §3).
 
-Paths are relative to `problems/P4/`.
+Paths are relative to `problems/P4/`.  §8 is the reviewer's checklist.
 
 ## 1. The problem
 
-The centre region is y = e^x in (0, e^{-4.5}], split into 30 plan pieces
-(`centre/c00` = [0, 1.34e-8] closes at y = 0; `centre/c29` = [0.00694,
-0.0111]).  The committed S4-3 path never finished there: the direct phase on
-tau in [14, 224] measured >= 25 CPU-h without completing (45-90 core-h
-estimated), and the tau-quadratic phase from tau = 14 fails on c29 by +77,
-because its tau^2 coefficient K2 is O(y^2) against an O(1) tau-linear slack
-(`s4-3-recovery.md` 11.5).  The layer engine (`s4-4-layer-engine.md`)
-certified the 546 other pieces; its sonic normalization (Sigma = S xi^2/tau^2,
-lam = xi) does not fit the centre.
+The strip exclusion (ledger P4-9; `s4-5-assembly.md` §4.1, I8) needs, on an
+exact cover of x ∈ (−∞, 0):
 
-## 2. What S looks like at the centre (float data)
+    S < 0 and dT, dB, nB ≠ 0  for every piece × ε ∈ [0, 6] × τ ∈ [14, ∞).
 
-Point evaluation of S by the direct chain (`tc_layer.point_S_direct`) on
-point pairs from the certified centre series shows a layer in s = y tau:
+The S4-4 layer engine covers x ∈ [−4.56, 0] with 546 pieces.  The rest,
+y = eˣ ∈ (0, e^{−4.5}], is 30 plan pieces in y: `centre/c00` = [0, 1.337e−8]
+(closes at y = 0) to `centre/c29` = [0.006943, 0.011109] (overlapping the
+deep tube end at −4.56 by 0.06 in x).  The committed S4-3 path never
+finished there (≥ 25 CPU-h for the direct phase; its τ-quadratic phase fails
+on c29 by +77, `s4-3-recovery.md` 11.5), and the layer engine's sonic
+normalization (Σ = S ξ²/τ², λ = ξ) does not fit the centre.
 
-    S = G(s, eps) + O(y),   G(0+, eps) = -6,   G(s, eps) ~ k2(eps) s^2 (s large),
+## 2. What S looks like at the centre
 
-with k2(0) = -19.0, k2(1) = -144.5, k2(6) = -772 (roughly -19 - 125.6 eps)
-and G(1, 0) = -24.96 = -6 - 19.0.  The blocks tend to a constant-coefficient
-limit: V = nV/dT -> 3, W = V - (log B0)' -> 1, rho -> 1, nu -> 0,
-tt ~ 2.616 y^2, u2 ~ -1.962 y^2, Y = (B0 - u2 kappa^2)/kappa = O(y^2), so
-B0 ~ u2 kappa^2 -> 0 as y -> 0 at fixed kappa, and Re H = Re(V' - V Lh) -> -6
-is the s -> 0 limit of S.  The pairs have the Laurent offsets nT, dT, TN:
-[9, 7, 7, 7, 7, 7, 9]; nB: [10, 8 x 7, 10, 10]; dB: [10, 8 x 7]; every Taylor
-model is even in y; at y = 0, dT ~ kappa (kappa - 1)^4 and dB ~ kappa
-(kappa - 1)^6 (binomial coefficients).
+From the direct chain at points (`tc_layer.point_S_direct`):
 
-## 3. Design (`tc_layer_centre.py`)
+    S = G(s, ε) + O(y),   s = y τ,   G(0+, ε) = −6,   G(s, ε) ~ k2(ε) s² (s → ∞),
 
-**Layer data.**  `tc_layer.LayerData(pr, laurent=True)` with the TM variable
-ell read as y builds the blocks (nV, dT, nVp, dT1, nY, kdB, dB, dB1, dB2, nB,
-nB1, nB2, tt, tt', u2) from `tc_commutator.build_pairs` over
-`tc_tm.centre_components(ce, hi)`, with `ce` the certified centre series at
-the certified (a*, mu*) balls (`ec_centre.certified_centre_expansion(256,
-K=30)`, as `tc_commutator._centre_expansion`).  Its checks pass: every
-denominator (dT, kappa dB, dB, nB) has its pivot and its top on the layer
-line.  Its derivative raise for (tt dT_k)' does not fire (the computed
-offsets are at the target), and would be sound here too, since
-d/dx = y d/dy keeps Laurent offsets.
+k2(0) = −19.0, k2(6) = −772 (about −19 − 125.6 ε).  The blocks tend to a
+constant-coefficient limit: V = nV/dT → 3, W → 1, ρ → 1, ν → 0,
+tt ~ 2.616 y², u2 ~ −1.962 y², B0 ~ u2 κ² → 0.  Laurent offsets of the
+pairs: nT, dT, TN [9, 7, 7, 7, 7, 7, 9]; nB [10, 8 × 7, 10, 10] as computed
+(10 throughout after the raise of §3.2); dB [10, 8 × 7].  The certified
+background is even in y (§3.2).
 
-**Pivot forms** (`tc_layer.PForm`, unchanged): P = sum_j y^{o_j} TM_j(y)
-kappa^j = y^m z^p Q, z = y kappa, w = 1/kappa, with the small-z form
-Q = sum_{j>=p} TM_j y^{e_j} z^{j-p} + sum_{j<p} TM_j y^{g_j} w^{p-j} and the
-large-z form Q/z^{d-p} in zeta = 1/z.  A ratio N/D is y^{mN-mD} z^{pN-pD}
-QN/QD; a negative z-power is rewritten exactly as y^{-1} w per power.
+## 3. Design
 
-**Normalization.**  The certified quantity is Sigma_c = S/(1 + s^2),
-s = y tau: O(1) and bounded away from 0 both as s -> 0 (-> G(0+) = -6) and as
-s -> infinity (-> k2(eps)).  It has the sign of S.
+Two new source files; nothing else in `src/` changed.
 
-**Graded evaluation.**  No single power lam = y^a normalizes every block
-(V is O(1), tt and u2 are O(y^2), and the tau-linear terms of S are O(1) only
-through tau y = s), so every quantity is a polynomial in one grading
-variable g with exactly tracked integer exponents and ball coefficients
-(class `GV`):
-
-| | regime L (s >= 0.5) | regime S (s <= 0.5) |
+| file | role | sha256 (as recorded by the parts) |
 |---|---|---|
-| g | y | r = 1/tau |
-| 1/tau | g/s | g |
+| `src/p4/validated/tc_layer_centre.py` | the centre σ-function, the identity, the raise | `ec32ccd6…64ea` |
+| `src/p4/validated/tc_layer_centre_mv.py` | optional mean-value form (§3.7), not used by the parts | not loaded |
+| `scripts/s46_centre.py` | driver: identity, work, launch, status, grid | `735336cc…0db0` |
+
+The module docstrings give the full derivations; this section is the
+argument a reviewer needs.
+
+### 3.1 Inputs and layer data
+
+* The certified centre series at the certified (a*, μ*) balls:
+  `ec_centre.certified_centre_expansion(256, K=30)` (a3 midpoint plus the
+  Krawczyk offset; as `tc_commutator._centre_expansion`).
+* `tc_tm.centre_components(ce, hi)`: Taylor models in y on [0, hi] with the
+  Banach tail at order K + 1, A = 1 + y² Â, N = n/y, W = y² w, V = y v.
+* `tc_commutator.build_pairs(AtomKP(at, comps, sd_shift=0))`, exactly as
+  the S4-3 `centre_piece` builds its pairs: nT = −TN1r, dT = denT,
+  nB = −U6, dB = denU, as κ-polynomial jets (value, x-derivative, second).
+* `tc_layer.LayerData(pr, laurent=True)` (unchanged) builds the blocks nV,
+  dT, nVp, dT1, nY, kdB, dB, dB1, dB2, nB, nB1, nB2, tt, tt′, u2 and checks
+  that every denominator has its pivot and top on the layer line.
+  `CentreLayerData` adds the centred numerators of §3.5.
+
+### 3.2 The exact centre layer identity (the closing piece)
+
+**The problem it solves.**  `build_pairs` computes nB's κ¹…κ⁷ coefficients
+at Laurent offset 8, with constant Taylor coefficients that are balls
+around 0 (radius 3e2–7e6 from the width of the (a*, μ*) balls) against
+~1e14 for the true leading terms.  With them no cover closes c00 at
+y τ → 0 (the probe, §9).
+
+**Statement** (`tc_layer_centre.check_nb_identity`, exact `fmpq_mpoly`
+arithmetic on the compiled atoms of `tc_energy.Atoms`; about 10 s).  Grade a
+monomial A^a N^b W^c V^e κ^j of U6 = Bcr·UN3r − Acr·EBc·D2r by the centre
+layer p = −b + 2c + e (A = 1 + O(y²), N ~ y⁻¹, W ~ y², V ~ y), as E2 does
+(`tc_commutator.check_layer_identity`).  Then:
+* for κ¹…κ⁷ the lowest layer of U6 is 8, and the layer-8 polynomial, summed
+  at A = 1, is identically zero in (n, w, v); the lowest nonzero layer is 10;
+* κ⁰, κ⁸, κ⁹ start at layer ≥ 10;
+* U6 has no odd-parity term (b + e odd), hence no odd layer.
+
+**Why the y⁸ and y⁹ coefficients vanish.**  With A = 1 + y² Â and n, w, v,
+Â even in y, the monomial contributes y^p × (an even series in y).  The y⁸
+coefficient of the κ^j coefficient comes from layer 8 at y = 0 only: the
+layer-8 polynomial at A = 1, which is zero.  The y⁹ coefficient would need
+an odd layer: there is none.  So the true Laurent offset of nB's κ¹…κ⁷
+coefficients is 10.  The background is even: the certified series n, w, v
+have exactly-zero odd coefficients up to K = 30, and Â is built from them
+and y² (`tests/test_tc_layer_centre.py::test_centre_series_is_even`).  The
+x-derivative slots are y d/dy of slot 0, so their y⁸ and y⁹ coefficients
+(8c₀, 9c₁ and 64c₀, 81c₁) vanish too.
+
+**Use** (`raise_nb`, then `centre_layer_data(..., raised=True)`).  Each of
+nB's κ¹…κ⁷ coefficients, in all three jet slots, is re-expressed at offset
+10 by `tc_tm.lc_raise(t, 2)` → `TM.drop_lead(2)`.  `drop_lead` refuses unless
+2 ≤ ve (the dropped coefficients are exact Taylor coefficients, not
+remainder-bearing) and the dropped balls contain 0; the identity supplies
+their exact vanishing.  `raise_nb` refuses any other offset.  nY follows
+(nY = nB − u2 κ² dB with u2·dB_{j−2} of offset ≥ 10).  On the raised data
+every pivot form is a pure w-form (pivot = top), nB's pivot coefficient is
+TM₉ (9.9e13 at y = 0), and c00 evaluates cleanly to −6 at the corner.
+
+**Artifact.**  `results/theorem_c/centre_nb_identity.json`, sha256
+`0fad868ba62fdecb836e6f8a78de23bd3a87f096e50bd117b3cb0475c29bd505`, written
+by `s46_centre.py identity` at `da7a7f28` (clean tree, driver `735336cc`,
+the strict code record of `s43_parts.code_record`).  Every part's process
+also re-runs `check_nb_identity` before building data, and refuses to work
+if it fails; each part records the result (`identity` block).  The merge
+checks the artifact (§6).  Consistent with the S4-5 review's
+`certificates/theorem_c/review_s45/centre_layers.json` (val U6 = 10,
+val denU = 8, no odd layers).  dB keeps offset 8: its layer 8 is nonzero
+for κ¹…κ⁷ (tested).
+
+### 3.3 Pivot forms and the normalization
+
+The pivot forms are `tc_layer.PForm`, unchanged, in the Laurent variable y,
+with z = y κ and w = 1/κ:
+
+    P = y^m z^p [ Σ_{j≥p} TM_j y^{e_j} z^{j−p} + Σ_{j<p} TM_j y^{g_j} w^{p−j} ].
+
+The certified quantity is
+
+    Σ_c = S / (1 + s²),   s = y τ,
+
+O(1) and bounded away from 0 as s → 0 (→ −6) and as s → ∞ (→ k2(ε)), with
+the sign of S.  A passing part states: for all y ∈ [lo, hi] with y > 0,
+ε ∈ [0, 6] and τ ≥ τ_min, dT, dB, nB ≠ 0 and Σ_c ≤ certified_bound < 0.
+
+### 3.4 Graded evaluation
+
+No single power λ = y^a normalizes every block at the centre (V is O(1),
+tt and u2 are O(y²), and the τ-linear terms of S are O(1) only through
+τ y = s).  So every quantity is a polynomial in one grading variable g with
+exactly tracked integer exponents and ball coefficients (class `GV`):
+
+| | regime L (s > 0) | regime S (s bounded) |
+|---|---|---|
+| g | y | r = 1/τ |
+| 1/τ | g σ, σ = 1/s | g |
 | y | g | g s |
-| z = y kappa | i s + g eps | i s + g s eps |
-| w = 1/kappa | g zeta, zeta = (g eps - i s)/(s^2 + y^2 eps^2) | g (g eps - i)/(1 + r^2 eps^2) |
-| lam | g^{-1} | g^{-1} |
-| Sigma = S lam^2 tau^{-2} | S/s^2 | S |
-| Sigma_c | Sigma * s^2/(1 + s^2) | Sigma/(1 + s^2) |
+| z = y κ | i s + g ε | i s + g s ε |
+| w = 1/κ | g ζ, ζ = 1/z = σ(−i + y ε σ)/(1 + (y ε σ)²) | g (g ε − i)/(1 + r² ε²) |
+| λ | g⁻¹ | g⁻¹ |
+| Σ_c | (S/s²) · s²/(1 + s²) | S · 1/(1 + s²) |
 
-The assembly of S is tc_layer's identity S lam^2 tau^{-2} = T(lam) (the
-formula of `sigma_box`, valid for every lam > 0) evaluated in this graded
-arithmetic.  The identities used: z w = y, tau y = s, the two closed forms of
-w and zeta above, and the pivot-form identities.  Regime L uses the large-z
-forms (for nB, nB1, nB2, where z^2 dominates, the s-dependence then cancels
-in QN^L/QD^L).
+S is assembled by tc_layer's identity S λ² τ⁻² = T(λ) (the formula of
+`sigma_box`, valid for every λ > 0) in this arithmetic.  The identities used
+are z w = y, τ y = s and the closed forms of w and ζ.  `sigma_graded` uses
+the large-z forms in regime L and the small-z forms in regime S.  On the
+raised data all 19 pivot forms (the blocks and the centred numerators) are
+pure w-forms, pivot = top (checked on c00 and c29), so the two kinds
+coincide and z never enters; κ enters only through w (regime L:
+w = y ζ).  The comment on `Z_LARGE` in the module ("small-z forms for
+s ≤ Z_LARGE") is stale: the constant only decides whether regime L builds
+a z that nothing uses.  The comment cannot be fixed without changing the
+module's hash, which the 60 parts record.
 
-**Exact cancellation.**  lam = g^{-1} creates negative exponents.  They
-cancel exactly, not by interval arithmetic: the exponent-0 coefficient of
-every pivot form is real (only even powers of z appear without a y factor,
-e.g. TM_9 z^2 in nB but TM_8 y z, and z = i s at g = 0), so the imaginary
-parts that meet tau or lam are carried at exponent >= 1.  `GV.value` refuses
-a box unless every negative-exponent coefficient of the final Sigma is
-exactly zero (tested on boxes).
+* **Exact cancellation.**  λ = g⁻¹ creates negative exponents.  The
+  exponent-0 coefficient of a pure w-form is the real ball TM_p(y), and
+  every imaginary part carries w = O(g), so the imaginary parts that meet
+  τ or λ sit at exponent ≥ 1.  `GV.value` refuses a box unless every
+  negative-exponent coefficient of the final Σ is exactly zero.  The
+  structure is needed only for completeness: if it failed, boxes would be
+  refused, never mis-certified.
+* **Folding.**  Exponents above KMAX = 4 fold into KMAX + 1 with the g-hull:
+  Σ_{a>K} g^a c_a = g^{K+1} Σ g^{a−K−1} c_a ⊂ g^{K+1} Σ gh^{a−K−1} c_a.
+* **Division.**  1/Q for Q = q₀(1 + u), u = O(g): the Neumann series to
+  order KMAX + 1 plus the exact remainder (−u)^{KMAX+2}/(1 + u), bounded with
+  the hull of u.  A box whose q₀ or 1 + u hull contains 0 is refused.  Every
+  regime evaluation divides by dT, κ dB, dB and nB, so a box that passes in
+  any regime has all four nonzero (y > 0, τ < ∞).
+* **Both regimes.**  `sigma_box_centre` evaluates every regime that applies
+  (L if s_lo > 0, S if s_hi < ∞) and intersects the enclosures; disjoint
+  enclosures raise (a bug).  Each regime encloses the same function over
+  the same box, since its (g, s, ε) hull contains every box point.
 
-**Division.**  1/Q for Q = q0 (1 + u), u = O(g): the Neumann series to order
-KMAX + 1 = 5 plus the exact remainder (-u)^{KMAX+2}/(1 + u), with 1 + u
-bounded by the hull of u; a box whose q0 or 1 + u contains 0 is refused, so
-dT, dB, nB != 0 on every certified box (y > 0, kappa != 0).  Exponents above
-KMAX fold into KMAX + 1 by containment (g^a c = g^{K+1} g^{a-K-1} c).
+### 3.5 Centred ratios
 
-**Centred ratios.**  At the centre N ~ c D for the log-derivative pairs
-(nB ~ y^10, dB ~ y^8, dT ~ y^7, V -> 3), so N/D is evaluated as
-c + (N - c D)/D with N - c D formed on the Taylor coefficients before any
-hull: (nV, dT) 3, (nVp, dT) 21, (dT1, dT) 7, (dB1, dB) 8, (dB2, dB) 64,
-(nB1, nB) 10, (nB2, nB) 100.  An exact identity for any constant c; it
-removes the dependence on (y, s) that the separate hulls of N and D cannot
-cancel.
+At the centre N ≈ c D for the log-derivative pairs, so N/D is evaluated as
+c + (N − c D)/D, with N − c D formed coefficientwise on the Taylor models
+before any hull (`CentreLayerData.CENTRED`): (nV, dT) 3, (nVp, dT) 21,
+(dT1, dT) 7, (dB1, dB) 8, (dB2, dB) 64, (nB1, nB) 10, (nB2, nB) 100.  This
+is an exact identity for any constant c; the constant only makes N − c D
+small.
 
-**Cover.**  `tc_layer.run_layer_piece`, unchanged, with
-`sigma_fn = sigma_box_centre`.  `tc_layer.box_geometry` with laurent=True
-reads ell = xi = y, so its boxes are (y-strip) x (eps-cell) x (s = y tau) x
-(tau).  Statement of a passing part: for all y in the piece (y > 0), eps in
-[0, 6] and tau >= tau_min, dT, dB, nB != 0 and Sigma_c <= certified_bound < 0.
+### 3.6 The cover
 
-## 4. Probe results
+`tc_layer.run_layer_piece`, unchanged, with `sigma_fn = sigma_box_centre`,
+no margin ladder (target 0) and at most 150000 evaluations.
+`tc_layer.box_geometry` with laurent=True reads ℓ = ξ = y, so the boxes are
+(y-strip) × (ε-cell) × (s = y τ) × (τ), over y ∈ [lo, hi], the 12 ε-cells of
+[0, 6], s ≥ lo·τ_min (from s = 0 on c00) and τ ∈ [τ_min, ∞).  Unbounded
+ranges enter through pseudo-boxes: τ = ∞ as g = 1/τ ∋ 0 (regime S) and
+s = ∞ as σ = 1/s ∋ 0 (regime L).
 
-All on `1c247e25` (clean tree), nice 10.
+### 3.7 The mean-value form (built, not used)
 
-**Float grid** (`results/theorem_c/centre_probe/grid.json`, `s46_centre.py
-grid`): 336 points per tau range on c29 (y in {lo, mid, hi}, 8 eps values,
-tau = tau_min 2^k up to 2^39 tau_min), 560 on c00 (y from hi down to 1e-9 hi).
+The plan made a mean-value form the first milestone for c29 at τ ≥ 14.  It
+is in `tc_layer_centre_mv.py`: forward-mode derivatives (class DV) through
+the graded arithmetic (class GVD), midpoint polynomial plus frozen
+remainder δ as in `tc_layer_mv`'s mv3, intersected with the natural
+enclosure.  Tests show it contains point values.  It was not needed: on
+the identity-raised data, with both regimes intersected, the natural
+enclosure certified c29 at τ ≥ 14 first (29924 evaluations), and the MV
+form was tighter only sometimes, at about six times the cost.  The parts do
+not load it, and the merge rejects a part that records it (§6).
 
-| piece | tau range | max Sigma_c | at | eps <= 0.03 |
-|---|---|---|---|---|
-| c29 | >= 224 | -15.18 | y = lo, eps = 0, tau = 224 | -15.18 |
-| c29 | >= 14 | -6.10 | y = lo, eps = 0, tau = 14 | -6.10 |
-| c00 | >= 224 | -6.0000000007 | y = 1.3e-14, s = 6e-6 | same |
-| c00 | >= 14 | -6.0000000007 | y = 1.3e-11, s = 6e-6 | same |
+## 4. Identities and where each is checked
 
-So S < 0 with margin at least 6 (1 + s^2) in this design check, including
-y -> 0 and eps = 0; the worst cell is eps = 0 at the smallest tau.  On c29
-the graded sigma with the certified-ball Taylor models equals the direct
-chain to 6e-14.  On c00 the certified-ball evaluation is undefined at 176
-(tau >= 224) and 240 (tau >= 14) of the 560 points, all at s <= ~1e-3 (next
-paragraph); the c00 values in the table use the Taylor-model midpoints (a
-float check only).
-
-**Natural enclosure** (`s46_centre.py run`, launch
-`s46-centre-probe-20261017b`, parts in `results/theorem_c/centre_probe/t224/`
-and `t14/`, ladder target -1 then 0, at most 20000 evaluations):
-
-| piece | tau >= 224 | tau >= 14 |
+| identity | kind | where |
 |---|---|---|
-| c29 | pass, Sigma_c <= -1.53, 138 boxes, 180 evals, 2.1 s | fail, 2520 boxes certified in 20021 evals, 283 s |
-| c00 | fail at the corner, 274 boxes, 54 s | fail at the corner, 274 boxes, 53 s |
+| layer 8 of U6 = −nB vanishes for κ¹…κ⁷; no odd layers | X (exact fmpq) | `check_nb_identity`; artifact §3.2; `test_nb_layer_identity` |
+| certified centre series even in y (odd coefficients exactly 0) | M | `test_centre_series_is_even` |
+| nB = −U6, dB = denU, dT = Dp·SDr·D2r·Bcr | code | `tc_commutator.build_pairs` (pinned, S4-3/S4-4 reviewed) |
+| pivot-form identities, small and large z, both regimes | algebra; tests | module docstring; `test_pivot_forms_graded` |
+| regimes L and S give the same Σ_c | algebra; tests | `test_regimes_agree_and_normalization` |
+| graded Σ_c = direct chain at points (c29, c00) | M (tests) | `test_agrees_with_direct_chain_c29/_c00` |
+| negative exponents cancel exactly on boxes | M (tests) | `test_negative_exponents_cancel_exactly_on_boxes` |
+| box enclosures contain point values | M (tests) | `test_box_enclosure_contains_points`, `test_mean_value_form_contains_points` |
+| c + (N − cD)/D = N/D | exact | `CentreLayerData` |
+| S λ² τ⁻² = T(λ) | X (sympy I6, S4-5 review) | `tc_layer.sigma_box` |
 
-Build of the pairs: 33-54 s per piece.  Evaluation: about 3 ms per point,
-10-25 ms per box.
+`tests/test_tc_layer_centre.py`: 22 tests, about 75 s (two piece fixtures
+build the c29 and c00 data).
 
-**Why c29 fails at tau >= 14: overestimation.**  The failing boxes sit at
-s = y tau in [0.097, 0.78] with eps >= 3.4 (tau in [14, ~110]), where the true
-Sigma_c is -6 to -20.  The hulls there are far wider than the
-function's variation over the box (15 times on the smallest failing boxes,
-much more on the larger ones): the graded coefficients carry the box's
-(y, s, eps) ranges independently, and the expansion parameter eps/tau is up
-to 0.43 at tau = 14.  Finer root grids (s ratio 1.1, eps cells of 0.35) move
-the failure but do not remove it within 25000 evaluations.  This is the
-dependency problem a mean-value form solves (as `tc_layer_mv` did for the deep
-tube steps); it is not a sign problem.
+## 5. Results
 
-**Why c00 fails: the near-zero leading coefficients.**  The constant Taylor
-coefficients of nB's kappa^1..kappa^7 coefficients (and nY's) are balls
-around 0, radius 3e2-8e3 for nB, up to 2.3e5 (nB1) and 7.4e6 (nB2), against
-~1e14-1e15 for the true leading terms; their true offset is 10, not 8
-(every coefficient of nB is y^10 times an O(1) Taylor model, e.g. nB's
-kappa^7 coefficient is -2.96e15 y^10 + ...).  The radii come from the widths
-of the certified (a*, mu*) balls through cancellations, not from rounding.
-With them, nB's pivot coefficient is TM_7 = [+/- 296] - 2.96e15 y^2 + ... and
-the pivot form's leading coefficient TM_7 - TM_9 s^2 is dominated by the junk
-for s <= ~1e-3 (y <= 1.34e-8): the hulls of fp and Im B1 grow like 1/s^2
-(+/- 5 at s = 4.7e-4, +/- 115 at s = 1e-4) while the midpoint evaluation
-gives Sigma_c = -6.0000 there.  Away from that corner c00 evaluates cleanly
-(s in [0.01, 0.02]: [-6.18, -5.83]).
+### 5.1 The run
 
-**Compute used:** about 0.9 core-h, all at nice 10 (exploration ~0.7 core-h,
-of which three capped tau >= 14 attempts on c29 took 0.4; the committed runs
-and grids 0.2).
+Launch `s46-centre-20261017` (`logs/s46/launch-s46-centre-20261017.json`,
+machine-local): 4 detached workers at nice 10, `work --tau-mins 224,14
+--max-evals 150000`, 19:09:50Z–19:21:30Z, at `e9cc5086` (clean tree).  Each
+worker claims a piece (O_EXCL lock), builds its data once and runs both τ
+modes.  All 60 parts record git head `e9cc5086`, `git_dirty_src = false`, a
+passing write-time check, no late module and driver `735336cc`.  CPU: 1008 s
+of builds (30 × 34 s) + 288 s (τ ≥ 224) + 1250 s (τ ≥ 14) = 0.71 core-h.
 
-## 5. What the closing piece needs
+Aggregates (paths relative to the repository root, C-locale sort,
+`find … -name '*.json' | LC_ALL=C sort | xargs shasum -a 256 | shasum -a 256`):
+* `parts/centre_t14/`: `4ac8a7b00f9904d56dd5a26e7b656fd6387f1457614be7467dc6cad61e1f17d7`
+* `parts/centre_t224/`: `ba424c3f78ea8d4a001072dd07025b7c6cd56acbfce12c5304ad14cf7f9fc836`
 
-Yes, a lemma or an exact identity.  With the junk present, no cover closes
-c00 at y tau -> 0: every box touching s = 0 has a pivot coefficient ball
-containing 0.  Two routes:
-- **An exact identity** (preferred, cheap): the y^8 layers of nB's
-  kappa^1..kappa^7 coefficients and of nY's vanish identically, i.e. their
-  true offset is 10, checked by exact computation on the centre series in the
-  manner of E2 (`tc_commutator.check_layer_identity`).  With it the offsets
-  can be raised (`lc_raise`), nB becomes a pure w-form y^10 kappa^9 [TM_9 +
-  ...] with TM_9(0) = 9.9e13, and the pivot forms close at s -> 0.  The
-  midpoint grid (-6.0000 down to y = 1e-17) suggests the identity holds.
-- **A corner lemma**: S <= -6 + C (y tau)^2 + C' y for y tau <= s_c, from
-  the constant-coefficient limit at x -> -infinity with explicit error
-  bounds.  More prose, more review.
+### 5.2 Per piece
 
-On the larger pieces the junk is a small relative perturbation: 1e-5 of
-nB's pivot coefficient at y = 1e-4 (c20-c29 have y >= 1e-4), more for nB2,
-whose centred difference nB2 - 100 nB is itself small.  Where it stops being
-negligible has to be measured piece by piece; c29 is unaffected.
+Bounds are the worst upper bound of Σ_c over the accepted boxes.  The cover
+stops refining a box once its upper bound is below the target 0, so a bound
+is far above the function's supremum, which is about −6 on every piece
+(§5.4).
 
-## 6. Recommendation and revised estimate
+| piece | y-range | τ ≥ 14: bound | boxes | evals | cpu s | τ ≥ 224: bound | boxes | cpu s |
+|---|---|---|---|---|---|---|---|---|
+| c00 | [0, 1.337e-08] | -0.184 | 505 | 680 | 12 | -0.184 | 433 | 11 |
+| c01 | [1.337e-08, 2.14e-08] | -1.19 | 440 | 664 | 15 | -1.19 | 392 | 13 |
+| c02 | [2.14e-08, 3.423e-08] | -1.29 | 430 | 668 | 14 | -1.29 | 382 | 13 |
+| c03 | [3.423e-08, 5.477e-08] | -0.228 | 410 | 592 | 12 | -0.228 | 362 | 11 |
+| c04 | [5.477e-08, 8.763e-08] | -1.21 | 416 | 640 | 14 | -1.21 | 368 | 13 |
+| c05 | [8.763e-08, 1.402e-07] | -1.31 | 406 | 644 | 13 | -1.31 | 358 | 12 |
+| c06 | [1.402e-07, 2.243e-07] | -0.27 | 385 | 560 | 12 | -0.27 | 337 | 11 |
+| c07 | [2.243e-07, 3.59e-07] | -1.22 | 392 | 616 | 13 | -1.22 | 344 | 12 |
+| c08 | [3.59e-07, 5.743e-07] | -0.12 | 381 | 612 | 13 | -0.12 | 333 | 12 |
+| c09 | [5.743e-07, 9.189e-07] | -0.672 | 361 | 536 | 11 | -0.672 | 313 | 10 |
+| c10 | [9.189e-07, 1.47e-06] | -1.24 | 368 | 592 | 13 | -1.24 | 320 | 12 |
+| c11 | [1.47e-06, 2.352e-06] | -1.25 | 357 | 588 | 13 | -1.25 | 309 | 11 |
+| c12 | [2.352e-06, 3.764e-06] | -0.241 | 336 | 504 | 11 | -0.241 | 288 | 9 |
+| c13 | [3.764e-06, 6.022e-06] | -0.486 | 343 | 560 | 12 | -0.486 | 295 | 11 |
+| c14 | [6.022e-06, 9.636e-06] | -1.33 | 333 | 564 | 12 | -1.33 | 285 | 11 |
+| c15 | [9.636e-06, 1.542e-05] | -0.0248 | 311 | 472 | 10 | -0.0248 | 263 | 9 |
+| c16 | [1.542e-05, 2.467e-05] | -1.29 | 319 | 536 | 12 | -1.29 | 271 | 10 |
+| c17 | [2.467e-05, 3.947e-05] | -1.12 | 309 | 540 | 12 | -1.12 | 261 | 11 |
+| c18 | [3.947e-05, 6.315e-05] | -0.35 | 287 | 448 | 9 | -0.35 | 239 | 8 |
+| c19 | [6.315e-05, 0.000101] | -1.3 | 295 | 512 | 11 | -1.3 | 247 | 10 |
+| c20 | [0.000101, 0.0001617] | -1.11 | 285 | 516 | 11 | -1.11 | 237 | 10 |
+| c21 | [0.0001617, 0.0002587] | -0.0491 | 262 | 416 | 9 | -0.0491 | 214 | 7 |
+| c22 | [0.0002587, 0.0004138] | -0.0108 | 270 | 480 | 10 | -0.0108 | 222 | 9 |
+| c23 | [0.0004138, 0.0006621] | -0.702 | 261 | 492 | 11 | -0.702 | 213 | 9 |
+| c24 | [0.0006621, 0.001059] | -0.109 | 252 | 504 | 10 | -0.385 | 192 | 7 |
+| c25 | [0.001059, 0.001695] | -0.0754 | 261 | 576 | 13 | -0.0359 | 188 | 7 |
+| c26 | [0.001695, 0.002712] | -0.0126 | 293 | 916 | 20 | -0.231 | 170 | 6 |
+| c27 | [0.002712, 0.004339] | -0.00163 | 533 | 2920 | 64 | -0.624 | 154 | 5 |
+| c28 | [0.004339, 0.006943] | -0.00163 | 1367 | 9592 | 207 | -0.184 | 151 | 4 |
+| c29 | [0.006943, 0.01111] | -0.000591 | 3898 | 29924 | 653 | -0.228 | 137 | 4 |
 
-**Go, conditionally**, against the committed S4-3 default (45-90 core-h
-estimated, never finished, and its tau-quadratic phase fails on c29 even
-from tau = 14, so its tau >= 224 half is uncertain too).  The probe shows
-the centre has a clean layer structure (S ~ -6 - 19 (y tau)^2 at eps = 0)
-that the graded pivot forms capture exactly, and the asymptotic part
-(c29 at tau >= 224) certifies in seconds.
+c29 at τ ≥ 14 reproduces the milestone run of the build session bit for
+bit (bound −5.913728371814791e−4, 3898 boxes, 29924 evaluations).  The
+τ ≥ 224 mode is a second, independent cover of part of the same statement;
+the merge reports it and does not use it.
 
-Build:
-1. Mean-value form for the graded sigma in (y, s, eps): forward-mode
-   derivatives through the GV arithmetic (a DV class over GV coefficients),
-   intersected with the natural enclosure, as `tc_layer_mv` does for tube
-   steps.  1-2 sessions.  First milestone: c29 at tau >= 14.
-2. The junk identity for nB, nB1, nB2, nY at the centre (exact check, then
-   `lc_raise` in a new centre-data constructor), or the corner lemma.
-   1 session.
-3. A merge rule for centre parts (new code in `s43_parts.py`, outside this
-   probe), the 30-piece run in both tau modes, and the review package.
-   1 session.
+### 5.3 The merge
 
-Total: 3-4 sessions.  Compute: tau >= 224 is seconds per piece; tau >= 14
-with a centred form is estimated at 1-5 min per piece, so 30 pieces x 2
-modes = 1-3 core-h, budget 5 core-h.  The src side stays in new files (a
-new module beside tc_layer_centre), so the 1092 parts' recorded hashes and
-the s44_layer.py pin stay valid; the merge rule for centre parts is new code
-in s43_parts.py, which no part pins.  If tc_layer.py itself had to change,
-all 1092 parts would go stale: about 15 core-h to recompute, plus a
-re-review.
+`python problems/P4/scripts/s43_parts.py merge --substitute-layer-t14
+--substitute-centre` at `2560a06d` → `results/theorem_c/tc_commutator.json`,
+sha256 `6c228a73abb42c2a2a17ef0c59f4e6565e5c4381b19b7d1dafc15556150fdbab`:
+* `status = complete`, `ok = true`, `strip_exclusion_certified = true`;
+* substituted 576 = 546 (`layer_t14`) + 30 (`centre_t14`); missing 0,
+  failed 0, manual review 0, rejected 0, blocked 0;
+* exact cover: 576 pieces, no error, no gap for τ ≤ tstar or τ > tstar;
+  `open_at_centre_end = false`;
+* `checks_valid_for_code = true`, no code conflicts, no accepted variants;
+* centre identity artifact valid; `centre_t224` second mode: 30 pass;
+* worst bounds by region: centre −5.91e−4 (c29), deep −2.17e−2 (deep-128),
+  tube −0.209 (full-244), sonic −0.452 (s29), gap −0.603 (gap-000),
+  band −3.95 (band-000).  The layer values equal those of the S4-5 record.
 
-Risks:
-- The mean-value form may not tame the small-s, large-eps corner at tau
-  near 14 (eps/tau up to 0.43).  Fallback: shrink the eps cells there, or a
-  direct (non-graded) evaluation for tau in [14, ~50] at y >= 1e-4.
-- The junk identity may not hold exactly.  Then pieces with y below ~1e-5
-  need the corner lemma, a prose argument for review.
-- Smaller-y pieces put more of tau >= 14 into regime S (s = y tau small), so
-  per-piece cost may grow toward c00.
-- Review: the graded arithmetic (exact cancellation, folding, remainder),
-  the two regimes, and the centred ratios are new machinery, and need an
-  adversarial review like the one of the layer engine.
+### 5.4 Independent point samples
+
+`scripts/s46_sample.py` (a check, not part of the certificate) →
+`results/theorem_c/centre_sampling.json`, sha256
+`a740dd19abea81c74193caf7f3f788cad11f57f1597c4ddbe476c0382f789c06`, written
+at `90cbd611` with a clean tree.  At
+14400 random points (seed 20261017; per piece 6 values of y, log-uniform in
+the piece and from 1e−12 on c00; 8 of ε including 0 and 6; 10 of τ
+including 14 and 224, log-uniform up to 1e9), it compares three enclosures
+of Σ_c:
+* *graded*: the certificate's evaluator on a point box;
+* *direct*: the direct chain of `tc_layer.point_S_direct` (no pivot forms,
+  no grading, no raise) at the certified balls, rigorous but wide at small s;
+* *direct_mid*: the same chain at the midpoints of the certified (a*, μ*)
+  balls, a background inside the certified box, so every enclosure over the
+  box must contain it.
+
+Results: **0 failures** of the three checks (graded meets direct, graded
+meets direct_mid, direct_mid below the piece's `centre_t14` bound and, for
+τ ≥ 224, its `centre_t224` bound).  The graded value is defined at all 14400
+points; the direct chain at the certified balls is finite at 13795 (it
+divides by balls containing 0 at the smallest s); direct_mid is tight
+(radius < 1e−6) at all 14400.  The largest |graded − direct_mid| is 1.1e−13;
+the largest graded radius is 3.1e−6.  The largest sampled Σ_c is −6.0
+(s → 0).  Per piece it is −6.112 on c29, −6.051 on c28, −6.017 on c27 and
+−6.000000 to six digits on c00–c15 (y ≤ 1.5e−5), against certified bounds
+between −1.33 and −5.9e−4.  The output keeps, per piece, the 20 points
+nearest the bound; `--rows all` regenerates all of them (the run is seeded
+and deterministic).  20 min wall, 0.33 core-h.
+
+### 5.5 The plan's checkpoints
+
+* (a) c29 at τ ≥ 14: certified in the first build session, by the natural
+  enclosure on the raised data with both regimes intersected (the probe had
+  failed it at 20000 evaluations on unraised data).  The mean-value form was
+  built as planned (§3.7) but is not needed.
+* (b) the exact identity for c00's near-zero nB coefficients: true (§3.2).
+  Both checkpoints passed; no prose corner lemma is used anywhere.
+
+## 6. The merge rule (`s43_parts.py merge --substitute-centre`)
+
+Opt-in and strict, in the pattern of `--substitute-layer-t14` (`2560a06d`;
+`centre_checks`, `centre_identity_checks`, `substitute_centre`).
+
+* **Which pieces.**  A centre piece whose S4-3 part is missing, stale or
+  invalid is carried for every τ ≥ b₁ by its passing `centre_t14` part.  A
+  failed or errored S4-3 part paired with a passing centre part goes to
+  `manual_review`, never to substitution; a usable S4-3 part is kept.
+* **Per part** (`centre_checks`, always strict): schema `s46-centre/1`, id,
+  region and the plan spec; a non-empty code record with every hash current
+  (accepted variants do not count), no module loaded after the import-time
+  snapshot, a passing write-time check, a recorded git head and
+  `git_dirty_src` exactly false; the modules tc_layer, tc_commutator, tc_tm,
+  tc_energy, tc_reduce, tc_layer_centre and ec_centre recorded, and the
+  mean-value modules not; `driver_sha256` equal to the current
+  `s46_centre.py`; status pass, ok, no failing boxes, a finite negative bound
+  equal to the result's bound and worst; τ_min of the record, cover and scope
+  equal and ≤ b₁, τ up to ∞; ε-cells tiling [0, EPS_MAX] and the scope's ε
+  range; the cover's y-range [lo, hi] and the scope's; s_lo ≤ lo·τ_min and
+  s_lo = 0 on the closing piece; laurent; combine off; evaluator
+  `sigma_box_centre` in the cover and the engine record, by
+  `tc_layer.run_layer_piece`, on raised data; the identity block equal to
+  the raise of the current `tc_layer_centre` (2, κ¹…κ⁷); the certified
+  centre series on the TM domain [0, hi].
+* **Global** (each blocks every centre substitution): `checks.json` valid
+  for the current code; b₁, c, EPS_MAX unchanged; the identity artifact
+  valid (schema; ok; raise_by and κ list equal to the current raise; at every
+  raised κ power no odd terms and lowest nonzero layer ≥ 10; the strict code
+  conditions with tc_layer_centre, tc_energy and tc_commutator recorded and
+  the current `s46_centre.py` as driver).
+* **Cover.**  The substituted centre pieces join the exact cover with the
+  other used and substituted pieces: [log lo, log hi] in exact arithmetic,
+  consecutive centre pieces touching exactly, c00 from −∞.
+* **Output.**  `centre_substitution` (substituted, rejected with reasons,
+  blocked, manual review, no part, S4-3 parts kept, the identity artifact's
+  hash and validity, the second τ mode's states) and a detail entry per
+  piece (bound, boxes, evaluations, engine, code fingerprint, the
+  nonvanishing statement, the second mode).
+* **Wording fixes** (S4-5 review §8e): `scope.full_strip_tau` is replaced by
+  `tau_by_carrier` (S4-3 pass-both [b₁, ∞), pass-direct [b₁, tstar], layer
+  join (tstar, ∞), substituted `layer_t14` and `centre_t14` [b₁, ∞)) and
+  `tau_target = [b₁, ∞)`; `xi_open_max` is given only for an open set
+  bounded in x, and `open_at_centre_end` says whether a gap reaches x = −∞.
+  The ignored `ncells` argument of `run_centre` stays: `tc_commutator.py` is
+  hash-pinned.
+* **Tests** (`tests/test_s43_merge.py`, 214 tests, about 11 s): one per
+  rejection mode of a centre part (58, each pinned to its one reason) and of
+  the identity artifact (20); the global blocks; positive cases (missing,
+  stale and invalid S4-3 parts substituted, manual review, S4-3 part kept,
+  both rules together, a two-piece centre with and without the closing
+  piece, the second mode reported but not used, accepted code ignored); the
+  scope wording; the constants shared with the driver; a record written by
+  `s46_centre.write_part` passes `centre_checks`.
 
 ## 7. Reproducing
 
-    python problems/P4/scripts/s46_centre.py grid
-    python problems/P4/scripts/s46_centre.py launch --pieces c29,c00 \
-        --tau-mins 224,14 --max-evals 20000 --ladder-evals 5000
-    python problems/P4/scripts/s46_centre.py status
-    PYTHONPATH=problems/P4/src python -m pytest problems/P4/tests/test_tc_layer_centre.py
+From the repository (worktree) root, Python 3.11 with python-flint 0.9.0:
+
+    # the identity artifact (about 10 s)
+    python problems/P4/scripts/s46_centre.py identity --out /tmp/centre_nb_identity.json
+    # the 60 parts (about 0.7 core-h); resumable: skips parts valid for the
+    # current code, so add --force to recompute (in a scratch checkout, below)
+    python problems/P4/scripts/s46_centre.py launch --workers 4 --nice 10 \
+        --tau-mins 224,14 --max-evals 150000 --tag replay
+    python problems/P4/scripts/s46_centre.py status -v
+    # the merge (seconds); rewrites results/theorem_c/tc_commutator.json
+    # (only the provenance's head and time change; check with git diff)
+    python problems/P4/scripts/s43_parts.py merge --substitute-layer-t14 --substitute-centre
+    # the point samples (about 20 min)
+    python problems/P4/scripts/s46_sample.py --out /tmp/centre_sampling.json
+    # tests
+    PYTHONPATH=problems/P4/src python -m pytest problems/P4/tests/test_tc_layer_centre.py \
+        problems/P4/tests/test_s43_merge.py
+
+To recompute committed parts without touching them, work in a scratch
+checkout (`git worktree add /tmp/s46 <head>`) and run `s46_centre.py work
+--pieces c29,c00 --force` there; compare `certified_bound`, `boxes` and
+`evals` (timing, env and dates differ).  The computation is deterministic:
+the production c29 τ ≥ 14 part equals the earlier milestone run.
+
+## 8. What an adversarial reviewer must check
+
+1. **The identity and the raise** (§3.2): the grading argument (layer 8 at
+   A = 1 and no odd layers ⇒ the y⁸ and y⁹ coefficients vanish); the
+   evenness of the certified background; that nB = −U6 in `build_pairs`;
+   that the jet slots are y d/dy images; that `drop_lead(2)` drops exact
+   Taylor coefficients (k ≤ ve); that nY's offsets follow.
+2. **The graded arithmetic** (`GV`): folding, the Neumann inverse and its
+   remainder bound with the hull of u, the refusal of nonzero
+   negative-exponent coefficients.
+3. **The two regimes**: the closed forms of z, w, ζ, 1/τ and y, the
+   normalization factors s²/(1 + s²) and 1/(1 + s²), the applicability
+   conditions (L needs s > 0, S bounded s), and the soundness of the
+   intersection.
+4. **The centred ratios**: that the `C_N_D` forms are exactly N − c D.
+5. **The cover**: that `run_layer_piece` with laurent=True covers
+   [lo, hi] × [0, 6] × [τ_min, ∞) through s = y τ, from s = 0 on c00, and
+   that every accepted box divides by dT, κ dB, dB and nB.
+6. **Nonvanishing**: that dT, dB, nB ≠ 0 on y > 0 meets I8's requirement
+   (with Bcr, D2r ≠ 0 from dT = Dp·SDr·D2r·Bcr ≠ 0).
+7. **Inputs**: the certified (a*, μ*) balls, the TM domain [0, hi] with its
+   Banach tail, and pairs built exactly as the S4-3 `centre_piece`.
+8. **The merge rule and cover** (§6): the strict checks, the identity
+   artifact check, the exact cover with c00 from −∞ and c29 overlapping the
+   deep end.
+9. **Provenance**: the 60 parts at `e9cc5086` with a clean tree and driver
+   `735336cc`; the identity at `da7a7f28`; every recorded hash current; the
+   26 pinned modules and `s44_layer.py` unchanged since `fda58897`.
+10. **Independent evidence**: the point samples (§5.4) and a spot
+    recompute of c29 (τ ≥ 14) and c00 in a scratch checkout.
+
+The S8 centre boundary term (BT = O(t^{3+k}) → 0, `centre_layers.json`) is
+already reviewed (S4-5 review §4) and unchanged; the centre parts supply
+only the pointwise condition for y > 0.
+
+## 9. The probe (history)
+
+The probe (`8dc4e203`; outputs in `results/theorem_c/centre_probe/`,
+superseded) ran the natural enclosure on unraised data, with one regime
+chosen per box:
+* c29 at τ ≥ 224 passed (Σ_c ≤ −1.53, 138 boxes); c29 at τ ≥ 14 failed in
+  20000 evaluations: overestimation at s ∈ [0.1, 0.8] with ε ≥ 3.4, where the
+  true Σ_c is −6 to −20;
+* c00 failed at the corner y τ → 0: the junk balls of nB's leading
+  coefficients dominated the pivot forms for y τ ≲ 1e−3, while the midpoint
+  evaluation gave −6.0000 there;
+* the float grid gave max Σ_c = −6.10 on c29 (τ ≥ 14) and −6.0000 on c00.
+It recommended a mean-value form and an exact identity (or a corner lemma)
+for the closing piece.  The build found that the identity, plus evaluating
+and intersecting both regimes, closed both pieces; the probe's 0.9 core-h is
+not included in §5.1.
