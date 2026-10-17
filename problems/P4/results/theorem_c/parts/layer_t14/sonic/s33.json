@@ -27,9 +27,9 @@
   ],
   "statement": "for all xi in the piece, eps in [0, 6], tau >= 14: dT, dB, nB != 0 and Sigma = S xi^2/tau^2 <= certified_bound < 0"
  },
- "certified_bound": -0.2502004956911544,
+ "certified_bound": -0.4545614829268399,
  "engine": {
-  "norm": "layer",
+  "norm": "piece",
   "combine": false,
   "mv": null,
   "piece_ladder_evals": null,
@@ -37,27 +37,28 @@
  },
  "result": {
   "ok": true,
-  "worst": -0.2502004956911544,
-  "boxes": 2325,
-  "evals": 17004,
+  "worst": -0.4545614829268399,
+  "boxes": 4219,
+  "evals": 32156,
   "empty": 0,
   "fails": [],
   "depth_hist": {
-   "0": 136,
-   "1": 69,
-   "2": 106,
-   "3": 121,
-   "4": 87,
-   "5": 133,
-   "6": 167,
-   "7": 223,
-   "8": 226,
-   "9": 267,
-   "10": 311,
-   "11": 429,
-   "12": 50
+   "0": 135,
+   "1": 65,
+   "2": 99,
+   "3": 149,
+   "4": 88,
+   "5": 129,
+   "6": 183,
+   "7": 233,
+   "8": 284,
+   "9": 397,
+   "10": 429,
+   "11": 750,
+   "12": 722,
+   "13": 556
   },
-  "time": 1.0612022876739502,
+  "time": 9.83870792388916,
   "params": {
    "s_a": 0.001,
    "s_big": 1000.0,
@@ -117,35 +118,23 @@
    ],
    "la": 0.00034182189187166806,
    "lb": 0.0004101862702460017,
-   "target": -0.25,
+   "target": -0.4545136176698651,
    "s_lo": 0.004785506486198568,
    "t_pre": 20000.0,
    "t_ratio": 1.5,
-   "max_evals": 20000,
+   "max_evals": 500000,
    "evaluator": "sigma_box",
    "combine": false
   },
   "attempts": [
    {
-    "target": -0.75,
-    "ok": false,
-    "evals": 20013,
-    "time": 7.109659194946289
-   },
-   {
-    "target": -0.5,
-    "ok": false,
-    "evals": 20004,
-    "time": 4.068556785583496
-   },
-   {
-    "target": -0.25,
+    "target": -0.4545136176698651,
     "ok": true,
-    "evals": 17004,
-    "time": 1.0612022876739502
+    "evals": 32156,
+    "time": 9.83870792388916
    }
   ],
-  "certified_bound": -0.2502004956911544,
+  "certified_bound": -0.4545614829268399,
   "forms": {
    "nV": {
     "name": "nV",
@@ -365,9 +354,9 @@
    }
   },
   "laurent": true,
-  "norm": "layer",
-  "scale": null,
-  "relative_margin": null
+  "norm": "piece",
+  "scale": 0.9090272353397302,
+  "relative_margin": 0.5000526554707208
  },
  "error": null,
  "inputs": {
@@ -406,7 +395,7 @@
    "problems/P4/src/p4/validated/variational.py": "e2adb8e44870c9b0367d03fea6c2dd7d3b146b77d0b197548628205465108a79"
   },
   "fingerprint": "4cffd33318ba93efa6c046ab577bacd0892ff8c26942b7e47670c3089416870d",
-  "git_head": "1e6af8d54dea433ac4b5174c42e792016a8b2a24",
+  "git_head": "ac91f9fab8ab1386ca386981aa1548b5cea45b18",
   "git_dirty_src": false
  },
  "driver_sha256": "3153ff4d6ee832ab8813ca8230557e27c1e31f80ca5db7b6ca06177ef9881356",
@@ -419,18 +408,15 @@
   "flint": "0.9.0"
  },
  "timing": {
-  "start": "2026-10-17T06:41:24Z",
-  "end": "2026-10-17T06:42:28Z",
-  "build_wall_s": 51.58803200721741,
-  "build_cpu_s": 51.46821899999986,
-  "certify_wall_s": 12.239502668380737,
-  "certify_cpu_s": 12.217563999999584,
-  "wall_s": 63.827534675598145,
-  "cpu_s": 63.68578299999945,
-  "build_shared_with": [
-   224.0,
-   14.0
-  ]
+  "start": "2026-10-17T07:27:06Z",
+  "end": "2026-10-17T07:28:08Z",
+  "build_wall_s": 51.74664497375488,
+  "build_cpu_s": 51.514066000000014,
+  "certify_wall_s": 9.847203016281128,
+  "certify_cpu_s": 9.818898999999988,
+  "wall_s": 61.59384799003601,
+  "cpu_s": 61.332965,
+  "build_shared_with": null
  },
  "provenance": "computed by problems/P4/scripts/s44_layer.py work"
 }
