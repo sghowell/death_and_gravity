@@ -269,7 +269,9 @@ def cauchy_segment(pt: Point, l: int, seg: dict, K: int | None = None) -> dict:
             raise ArithmeticError("piece increment not certified below pi")
         total += inc
         pieces += 1
-        al = abs(E).lower()
+        al = max(float(abs(E).lower()),
+                 0.0 if E.real.contains(0) else float(abs(E.real).lower()),
+                 0.0 if E.imag.contains(0) else float(abs(E.imag).lower()))   # a lower bound for |W| on the piece
         min_abs = al if min_abs is None else min(min_abs, al)
         max_rel = max(max_rel, float(max(E.real.rad(), E.imag.rad()).upper()) / float(abs(E).mid()))
     return {"key": seg_key(seg), "edge": seg["edge"], "idx": seg["idx"],
