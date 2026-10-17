@@ -8,7 +8,8 @@
   "kind": "sonic",
   "index": 0,
   "lo": 0.0,
-  "hi": 1e-06
+  "hi": 1e-06,
+  "tq": false
  },
  "status": "pass",
  "scope": {
@@ -27,6 +28,13 @@
   "statement": "for all xi in the piece, eps in [0, 6], tau >= 14: dT, dB, nB != 0 and Sigma = S xi^2/tau^2 <= certified_bound < 0"
  },
  "certified_bound": -0.5003413981238266,
+ "engine": {
+  "norm": "layer",
+  "combine": false,
+  "mv": null,
+  "piece_ladder_evals": null,
+  "piece_final_evals": null
+ },
  "result": {
   "ok": true,
   "worst": -0.5003413981238266,
@@ -47,7 +55,7 @@
    "9": 221,
    "10": 66
   },
-  "time": 0.7170102596282959,
+  "time": 0.67936110496521,
   "params": {
    "s_a": 0.001,
    "s_big": 1000.0,
@@ -110,20 +118,23 @@
    "target": -0.5,
    "s_lo": 0.0,
    "t_pre": 20000.0,
-   "t_ratio": 1.5
+   "t_ratio": 1.5,
+   "max_evals": 20000,
+   "evaluator": "sigma_box",
+   "combine": false
   },
   "attempts": [
    {
     "target": -0.75,
     "ok": false,
     "evals": 20000,
-    "time": 1.9412572383880615
+    "time": 1.7357587814331055
    },
    {
     "target": -0.5,
     "ok": true,
     "evals": 11896,
-    "time": 0.7170102596282959
+    "time": 0.67936110496521
    }
   ],
   "certified_bound": -0.5003413981238266,
@@ -345,7 +356,10 @@
     "top_on_layer": true
    }
   },
-  "laurent": true
+  "laurent": true,
+  "norm": "layer",
+  "scale": null,
+  "relative_margin": null
  },
  "error": null,
  "inputs": {
@@ -375,21 +389,21 @@
    "problems/P4/src/p4/validated/sonic.py": "dbb046ea88f75d91acc6fe1593790b866e8b8f6c7723e3547666c9d8e221939b",
    "problems/P4/src/p4/validated/systems.py": "7e0a98495e17e728795996c40f1e340a523d687b506a81b69882fed7143e64f6",
    "problems/P4/src/p4/validated/tailbound.py": "8c4b5de660fb8cca3b8c6305625dac0ecce267454052b8feb4ad9650419158ae",
-   "problems/P4/src/p4/validated/tc_commutator.py": "b63fbdce64c5bbe766b65b56742a958cef2e4d5ca1b0dbc022566561bbaf96b1",
+   "problems/P4/src/p4/validated/tc_commutator.py": "2c7d207725814f3463249b9e22531b403c86efd4a2e3847abf15474bfa6025b9",
    "problems/P4/src/p4/validated/tc_energy.py": "afa902bc7cb3d3be575c2931d6a0b1dee2cb62af5b31db344056ef3997c30e9d",
-   "problems/P4/src/p4/validated/tc_layer.py": "e3b151dee1f217c51e2b257e15e139dbf606d48bd1023d440e96fa39bfa3a41e",
+   "problems/P4/src/p4/validated/tc_layer.py": "29a864dd171e02af9719a762ebe531065b525192c619367b8bb7a19c6536a405",
    "problems/P4/src/p4/validated/tc_reduce.py": "fb07a9837ead0d99aaca7a78d07f2b91731f64b136878ffde25ee0688c1ea9e6",
    "problems/P4/src/p4/validated/tc_tm.py": "66e059e80162f660f242fbf7089fc95b739fb15e547195cb9cbe8c25757efdd2",
    "problems/P4/src/p4/validated/tmint.py": "8dc2d5e8b8d129774d3f52f3455d678a86ae04b0cc88c03147521e11d716d820",
    "problems/P4/src/p4/validated/variational.py": "e2adb8e44870c9b0367d03fea6c2dd7d3b146b77d0b197548628205465108a79"
   },
-  "fingerprint": "7e381dd56cddad747c9ad6edd53b924086e3df7c0808ffd7ca27ce15f9c4ad1d",
-  "git_head": "f65c536c3b390ec5b36ce7f5f2cdc0f2e9a94fef",
+  "fingerprint": "4cffd33318ba93efa6c046ab577bacd0892ff8c26942b7e47670c3089416870d",
+  "git_head": "34d297f7e4d303c09689b43476bb1fa8a1f5f7af",
   "git_dirty_src": false
  },
- "driver_sha256": "13bbb98ad35516d0bf517a4fd77a9cfea684bcc13ccc592948ca3efb7b157c76",
+ "driver_sha256": "3153ff4d6ee832ab8813ca8230557e27c1e31f80ca5db7b6ca06177ef9881356",
  "env": {
-  "host": "Seans-Mac-mini.local",
+  "host": "Mac",
   "platform": "macOS-26.6.2-arm64-arm-64bit",
   "machine": "arm64",
   "cpu_count": 12,
@@ -397,14 +411,18 @@
   "flint": "0.9.0"
  },
  "timing": {
-  "start": "2026-10-17T04:55:14Z",
-  "end": "2026-10-17T04:56:09Z",
-  "build_wall_s": 52.83316397666931,
-  "build_cpu_s": 52.214433,
-  "certify_wall_s": 2.6583757400512695,
-  "certify_cpu_s": 2.6268300000000124,
-  "wall_s": 55.49153971672058,
-  "cpu_s": 54.84126300000001
+  "start": "2026-10-17T06:04:04Z",
+  "end": "2026-10-17T06:04:58Z",
+  "build_wall_s": 51.50542426109314,
+  "build_cpu_s": 51.285562999999996,
+  "certify_wall_s": 2.415210008621216,
+  "certify_cpu_s": 2.4143690000000007,
+  "wall_s": 53.920634269714355,
+  "cpu_s": 53.699932,
+  "build_shared_with": [
+   224.0,
+   14.0
+  ]
  },
  "provenance": "computed by problems/P4/scripts/s44_layer.py work"
 }

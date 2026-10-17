@@ -1,0 +1,419 @@
+{
+ "schema": "s44-layer/1",
+ "id": "sonic/s35",
+ "region": "sonic",
+ "spec": {
+  "id": "sonic/s35",
+  "region": "sonic",
+  "kind": "sonic",
+  "index": 35,
+  "lo": 0.000492223524295202,
+  "hi": 0.0005906682291542423,
+  "tq": false
+ },
+ "status": "pass",
+ "scope": {
+  "tau": [
+   224.0,
+   "inf"
+  ],
+  "eps": [
+   0.0,
+   6.0
+  ],
+  "xi": [
+   0.000492223524295202,
+   0.0005906682291542423
+  ],
+  "statement": "for all xi in the piece, eps in [0, 6], tau >= 224: dT, dB, nB != 0 and Sigma = S xi^2/tau^2 <= certified_bound < 0"
+ },
+ "certified_bound": -0.7511485563463413,
+ "engine": {
+  "norm": "layer",
+  "combine": false,
+  "mv": null,
+  "piece_ladder_evals": null,
+  "piece_final_evals": null
+ },
+ "result": {
+  "ok": true,
+  "worst": -0.7511485563463413,
+  "boxes": 434,
+  "evals": 2212,
+  "empty": 0,
+  "fails": [],
+  "depth_hist": {
+   "0": 126,
+   "1": 51,
+   "2": 53,
+   "3": 99,
+   "4": 14,
+   "5": 41,
+   "6": 42,
+   "7": 8
+  },
+  "time": 0.6427340507507324,
+  "params": {
+   "s_a": 0.001,
+   "s_big": 1000.0,
+   "s_ratio": 2.0,
+   "zsplit": 4.0,
+   "tstar": 224.0,
+   "tau_min": 224.0,
+   "eps_cells": [
+    [
+     0.0,
+     0.03
+    ],
+    [
+     0.03,
+     0.07
+    ],
+    [
+     0.07,
+     0.12
+    ],
+    [
+     0.12,
+     0.2
+    ],
+    [
+     0.2,
+     0.35
+    ],
+    [
+     0.35,
+     0.6
+    ],
+    [
+     0.6,
+     1.0
+    ],
+    [
+     1.0,
+     1.6
+    ],
+    [
+     1.6,
+     2.4
+    ],
+    [
+     2.4,
+     3.4
+    ],
+    [
+     3.4,
+     4.6
+    ],
+    [
+     4.6,
+     6.0
+    ]
+   ],
+   "la": 0.000492223524295202,
+   "lb": 0.0005906682291542423,
+   "target": -0.75,
+   "s_lo": 0.11025806944201498,
+   "t_pre": 20000.0,
+   "t_ratio": 1.5,
+   "max_evals": 20000,
+   "evaluator": "sigma_box",
+   "combine": false
+  },
+  "attempts": [
+   {
+    "target": -0.75,
+    "ok": true,
+    "evals": 2212,
+    "time": 0.6427340507507324
+   }
+  ],
+  "certified_bound": -0.7511485563463413,
+  "forms": {
+   "nV": {
+    "name": "nV",
+    "d": 5,
+    "p": 5,
+    "m": -5,
+    "offs": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "pivot_on_layer": true,
+    "top_on_layer": true
+   },
+   "dT": {
+    "name": "dT",
+    "d": 5,
+    "p": 5,
+    "m": -4,
+    "offs": [
+     1,
+     1,
+     1,
+     1,
+     1,
+     1
+    ],
+    "pivot_on_layer": true,
+    "top_on_layer": true
+   },
+   "nVp": {
+    "name": "nVp",
+    "d": 5,
+    "p": 5,
+    "m": -5,
+    "offs": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "pivot_on_layer": true,
+    "top_on_layer": true
+   },
+   "dT1": {
+    "name": "dT1",
+    "d": 5,
+    "p": 5,
+    "m": -5,
+    "offs": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "pivot_on_layer": true,
+    "top_on_layer": true
+   },
+   "nY": {
+    "name": "nY",
+    "d": 8,
+    "p": 8,
+    "m": -7,
+    "offs": [
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1
+    ],
+    "pivot_on_layer": true,
+    "top_on_layer": true
+   },
+   "kdB": {
+    "name": "kdB",
+    "d": 8,
+    "p": 8,
+    "m": -5,
+    "offs": [
+     null,
+     3,
+     3,
+     3,
+     3,
+     3,
+     3,
+     3,
+     3
+    ],
+    "pivot_on_layer": true,
+    "top_on_layer": true
+   },
+   "dB": {
+    "name": "dB",
+    "d": 7,
+    "p": 7,
+    "m": -4,
+    "offs": [
+     3,
+     3,
+     3,
+     3,
+     3,
+     3,
+     3,
+     3
+    ],
+    "pivot_on_layer": true,
+    "top_on_layer": true
+   },
+   "dB1": {
+    "name": "dB1",
+    "d": 7,
+    "p": 7,
+    "m": -5,
+    "offs": [
+     2,
+     2,
+     2,
+     2,
+     2,
+     2,
+     2,
+     2
+    ],
+    "pivot_on_layer": true,
+    "top_on_layer": true
+   },
+   "dB2": {
+    "name": "dB2",
+    "d": 7,
+    "p": 7,
+    "m": -6,
+    "offs": [
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1
+    ],
+    "pivot_on_layer": true,
+    "top_on_layer": true
+   },
+   "nB": {
+    "name": "nB",
+    "d": 9,
+    "p": 8,
+    "m": -7,
+    "offs": [
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     2
+    ],
+    "pivot_on_layer": true,
+    "top_on_layer": true
+   },
+   "nB1": {
+    "name": "nB1",
+    "d": 9,
+    "p": 8,
+    "m": -8,
+    "offs": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1
+    ],
+    "pivot_on_layer": true,
+    "top_on_layer": true
+   },
+   "nB2": {
+    "name": "nB2",
+    "d": 9,
+    "p": 9,
+    "m": -9,
+    "offs": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "pivot_on_layer": true,
+    "top_on_layer": true
+   }
+  },
+  "laurent": true,
+  "norm": "layer",
+  "scale": null,
+  "relative_margin": null
+ },
+ "error": null,
+ "inputs": {
+  "kind": "sonic",
+  "series": "tc_energy.sonic_expansion_cached(320)",
+  "tm_domain": [
+   0.0,
+   0.0005906682291542423
+  ]
+ },
+ "region_call": "tc_layer.sonic_layer_data(at, ex, 0.0005906682291542423) ; run_layer_piece(ld, 0.000492223524295202, 0.0005906682291542423)",
+ "code": {
+  "files": {
+   "problems/P4/src/p4/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "problems/P4/src/p4/validated/__init__.py": "2d62466572841f234a88bfc9c0e440d4fe34840a62b6d0faee2983c150cbba68",
+   "problems/P4/src/p4/validated/arbseries.py": "04e239090c8d5aa4ee645ae041a5acfebc75608add88a523917f828167ab4f1d",
+   "problems/P4/src/p4/validated/biseries.py": "af614a0747cd6f68510dfc2d1788459afd0759af0778cc8eec4b2cafdfc028f6",
+   "problems/P4/src/p4/validated/centre.py": "9f2655d57981916c6f5c8d0248d8cdcf91b44a1ab6e801236b265e1aa877269e",
+   "problems/P4/src/p4/validated/linstep.py": "f93fc04f09e16f183aa8b61cddf2e8e7cf5051e61afedfeec04379b24ee06c07",
+   "problems/P4/src/p4/validated/linsys.py": "fc6c8ff924c19f7a072afe75396b182923709c262f6438e3bcb44ed6b8a2e1f8",
+   "problems/P4/src/p4/validated/lintail.py": "61f929642232a27a8f0984ce35b04098c1468009fab70a33ec02b649467ac7d6",
+   "problems/P4/src/p4/validated/lintube.py": "8c034ee8209abff74d4f1d83f8da2debc8226b7582a6ac7e47c6d263d365eb80",
+   "problems/P4/src/p4/validated/matching.py": "d85834e140c22fad388c86fac0383642595ab2c1d92e40dc03ffe880be9f4835",
+   "problems/P4/src/p4/validated/polysys.py": "c9025549b91eb6e700fbd6e8673e4dcb2cae75b183b451d3aec3cde3e8c8ee4b",
+   "problems/P4/src/p4/validated/recursion.py": "5f3d29a83481b34c72496b570dc70603f26ed0ceaf3bb9952822ce5dacd8187e",
+   "problems/P4/src/p4/validated/shootsys.py": "975b998fe5be09c7b2d504526098825daeeb2ab8fe7e707c011ca5e38ae9bff0",
+   "problems/P4/src/p4/validated/sonic.py": "dbb046ea88f75d91acc6fe1593790b866e8b8f6c7723e3547666c9d8e221939b",
+   "problems/P4/src/p4/validated/systems.py": "7e0a98495e17e728795996c40f1e340a523d687b506a81b69882fed7143e64f6",
+   "problems/P4/src/p4/validated/tailbound.py": "8c4b5de660fb8cca3b8c6305625dac0ecce267454052b8feb4ad9650419158ae",
+   "problems/P4/src/p4/validated/tc_commutator.py": "2c7d207725814f3463249b9e22531b403c86efd4a2e3847abf15474bfa6025b9",
+   "problems/P4/src/p4/validated/tc_energy.py": "afa902bc7cb3d3be575c2931d6a0b1dee2cb62af5b31db344056ef3997c30e9d",
+   "problems/P4/src/p4/validated/tc_layer.py": "29a864dd171e02af9719a762ebe531065b525192c619367b8bb7a19c6536a405",
+   "problems/P4/src/p4/validated/tc_reduce.py": "fb07a9837ead0d99aaca7a78d07f2b91731f64b136878ffde25ee0688c1ea9e6",
+   "problems/P4/src/p4/validated/tc_tm.py": "66e059e80162f660f242fbf7089fc95b739fb15e547195cb9cbe8c25757efdd2",
+   "problems/P4/src/p4/validated/tmint.py": "8dc2d5e8b8d129774d3f52f3455d678a86ae04b0cc88c03147521e11d716d820",
+   "problems/P4/src/p4/validated/variational.py": "e2adb8e44870c9b0367d03fea6c2dd7d3b146b77d0b197548628205465108a79"
+  },
+  "fingerprint": "4cffd33318ba93efa6c046ab577bacd0892ff8c26942b7e47670c3089416870d",
+  "git_head": "1e6af8d54dea433ac4b5174c42e792016a8b2a24",
+  "git_dirty_src": false
+ },
+ "driver_sha256": "3153ff4d6ee832ab8813ca8230557e27c1e31f80ca5db7b6ca06177ef9881356",
+ "env": {
+  "host": "Mac",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "machine": "arm64",
+  "cpu_count": 12,
+  "python": "3.11.14",
+  "flint": "0.9.0"
+ },
+ "timing": {
+  "start": "2026-10-17T06:43:35Z",
+  "end": "2026-10-17T06:44:27Z",
+  "build_wall_s": 51.81462907791138,
+  "build_cpu_s": 51.57279699999981,
+  "certify_wall_s": 0.6428139209747314,
+  "certify_cpu_s": 0.6330859999998211,
+  "wall_s": 52.45744299888611,
+  "cpu_s": 52.20588299999963,
+  "build_shared_with": [
+   224.0,
+   14.0
+  ]
+ },
+ "provenance": "computed by problems/P4/scripts/s44_layer.py work"
+}
