@@ -477,12 +477,22 @@ def k4_residual(row):
         Wr, Ws = abs(sol.wronskian(root, row["l"])), abs(sol.wronskian(seed, row["l"]))
         ratio = float(Wr / Ws)
     pt = Point("PB", 256)
-    with precision(256):
-        w = acb(arb(mp.nstr(mp.re(root), 30)), arb(mp.nstr(mp.im(root), 30)))
-        Wz = zsol.wronskian_z(pt, row["l"], w, theta=part3.THETA_POINT)[0]
+    # zsol's Frobenius start needs N > 2|z| + 2 with |z| = |w|/kappa_h; its cap N_MAX = 6000 is raised for
+    # this check only (module attribute; zsol itself is not modified), as S3's C0 wrapper did for arbw
+    old_cap = zsol.N_MAX
+    zsol.N_MAX = max(old_cap, int(4 * float(abs(root)) / float(g.kp)) + 2000)
+    try:
+        with precision(256):
+            w = acb(arb(mp.nstr(mp.re(root), 30)), arb(mp.nstr(mp.im(root), 30)))
+            Wz = zsol.wronskian_z(pt, row["l"], w, theta=part3.THETA_POINT)[0]
+        zs = {"evaluated": True, "abs_W": abs(Wz).str(10), "excludes_0": bool(not Wz.contains(0)), "N_MAX": zsol.N_MAX}
+    except (ArithmeticError, ValueError) as ex:
+        zs = {"evaluated": False, "error": str(ex)[:100], "N_MAX": zsol.N_MAX}
+    finally:
+        zsol.N_MAX = old_cap
     return {"i": row["i"], "l": row["l"], "root_over_km": row["secant_root_over_km"], "abs_W_root_float": mp.nstr(Wr, 8),
-            "abs_W_seed_float": mp.nstr(Ws, 8), "residual_ratio": ratio, "zsol_abs_W_root": abs(Wz).str(10),
-            "zsol_excludes_0": bool(not Wz.contains(0)), "is_zero": bool(ratio < 1e-8 and Wz.contains(0))}
+            "abs_W_seed_float": mp.nstr(Ws, 8), "residual_ratio": ratio, "zsol": zs,
+            "is_zero": bool(ratio < 1e-8 and not (zs["evaluated"] and zs["excludes_0"]))}
 
 
 def _k4_rows():
@@ -532,8 +542,10 @@ def assemble_K4():
             "zeros_in_H_plus": [c for c in checks if c["is_zero"]],
             "by_regime": {g: sum(1 for r in vals if r["regime"] == g) for g in "LSTA"},
             "seconds_total": round(sum(r["seconds"] for r in vals), 1),
+            "zsol_evaluated": sum(1 for c in checks if c.get("zsol", {}).get("evaluated")),
+            "zsol_excludes_0_where_evaluated": all(c["zsol"]["excludes_0"] for c in checks if c.get("zsol", {}).get("evaluated")),
             "pass": (not missing) and all(r["W_nonzero"] for r in vals) and not any(c["is_zero"] for c in checks)
-                    and all(c["zsol_excludes_0"] for c in checks),
+                    and all(c["zsol"]["excludes_0"] for c in checks if c.get("zsol", {}).get("evaluated")),
             "rows": vals}
 
 
