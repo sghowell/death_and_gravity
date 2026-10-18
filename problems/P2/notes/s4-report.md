@@ -163,7 +163,26 @@ against 0.3. The float K4 sample was the largest item.
 
 ## 8. Commits
 
-TBD
+| commit | subject |
+|---|---|
+| `d00f9a3c` | the pre-registration (before any production run) |
+| `c8bd7436` | Amendments 1–3 (coordinator) |
+| `8f189b18` | Amendment 4: linear T ground state |
+| `e639d96e` | Amendment 5: L and S methods fixed in development, before their production runs |
+| `35201758` | the checkers (part1, part1_T, throat, lowfreq, affine) and tests; the production commit |
+| `ca66270b` | S assembly checks the tail regions lie in the strips (W2) |
+| `776aa7ef` | certificates T, A, S±, L±, bulk, cover |
+| `a16b52cb` | Amendment 6 (post hoc): when K4's secant search has found a zero |
+| `53fa7080`, `0e3c40f7` | K4's residual and zsol checks as a worker; zsol's term cap raised for that check |
+| `279878d4`, `b24e3087` | the cover checks L's tiling box by box |
+| `56f8d43c` | point lookups at contour nodes (no certificate changes) |
+| `5b2b3a41` | controls and replay |
+| `c8bf85bf` | proof, report and FORMULATION v0.6 |
+| (this commit) | the report's commit table |
+
+All production certificates were computed at `35201758` (recorded in each file). The later code
+commits change only the assembly checks, the controls' evaluation, and a lookup that production never
+reaches.
 
 ## 9. Reproduction (cwd `problems/P2/src`)
 
