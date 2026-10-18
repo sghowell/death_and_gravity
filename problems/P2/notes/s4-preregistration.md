@@ -362,3 +362,34 @@ the L regime" holds only for Re ω ≤ Ω_L. The correct statements are:
 - ζ → 0 with Re ω ≤ Ω_L is the L regime;
 - ζ → 0 with Re ω fixed above Ω_L, or with Re ω → ∞, is S's closing box ζ ∈ [0, ζ₁], with
   ε = 1/Re ω ∈ [0, 1/Ω_S].
+
+### Amendment 4 (2026-10-18, before any production run; T design)
+
+**T's ground state is linear in s, not a square root.** §3.3 and §5 fixed
+Γ = (1 − ε_g)·θ(s)·sign(s)·√(q₀(s; Ω_P)/c). It is replaced by
+
+    Γ(s) = (1 − ε_g)·a_d·s·θ(s),   a_d = 32178552/2³⁰ = 0.02996861190…,
+
+an exact dyadic just below a* = √(|U″|/2) = 2Ω_Pγ₀ = 0.02996861191… (a* − a_d ≈ 3.7·10⁻¹¹).
+ε_g = 0.05 and the taper θ (C¹ cosine, 1 on |s| ≤ 2, 0 on |s| ≥ 4) are unchanged, and so is
+everything else in T: the contour, the phase (φ_∞ = −1.4375, s₁ = 7, p = 4), η = ½, the
+ζ-range [0.8, 2.0]Ω_P, h₀ and the per-cell bound.
+- **Reason.** The √ form vanishes like |s| at s = 0, where q₀/c vanishes quadratically.
+  Enclosing it and its first two derivatives on s-cells near 0 would need a Taylor model of
+  q₀/c at s = 0 for each derivative (the square root of an interval containing 0 has an
+  unbounded derivative). The linear form is a polynomial times the taper: Γ, Γ′ and Γ″ are
+  evaluated directly in Arb, and E₀ = s²Ẽ₀ near 0 needs only the second derivative of U, as §3.3
+  already plans.
+- **Validity is unaffected.** Any C¹ compactly supported Γ is admissible in the ground-state
+  bound (W4); the choice changes only the margin. §3.3's remark that Γ ≈ a s near 0 now holds
+  exactly on |s| ≤ 2.
+- **Float support** (the §9 scripts, same grid). On 0 < |s| ≤ 4,
+  0.993 ≤ q₀(s; Ω_P)/(c·a*²s²) ≤ 1.057, so the two forms differ by under 6% on the support. The
+  h-uniform margin min_s F/a* (F = E₀/h₀ + E₁ + h₀·min(0, E₂), ν = −d_δ):
+
+  | ζ/Ω_P | 0.8 | 0.9 | 1.0 | 1.5 | 2.0 |
+  |---|---|---|---|---|---|
+  | linear Γ (this amendment) | 0.156 | 0.224 | 0.301 | 0.460 | 0.296 |
+  | √ form (§3.3 as registered) | 0.175 | 0.243 | 0.320 | 0.460 | 0.296 |
+
+  E₀ ≥ 0 on the whole contour for both, with E₀/s² → a*² − (1 − ε_g)²a_d² ≈ 0.0975a*² at s = 0.
