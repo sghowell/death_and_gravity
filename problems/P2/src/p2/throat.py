@@ -1102,8 +1102,25 @@ def assemble(side_name: str):
     # the leaves tile [0, zeta_SU]
     iv = sorted((Fraction(x["zeta_over_OmegaP"][0]), Fraction(x["zeta_over_OmegaP"][1])) for x in leaves)
     tiles = bool(iv) and iv[0][0] == 0 and iv[-1][1] == ZETA_SU and all(a[1] == b[0] for a, b in itertools.pairwise(iv))
-    ok = (not missing) and tiles and all(x["pass"] for x in leaves)
+    # W2's tail region: Re x <= X_L lies in the left strip (side +), Re x >= X_L > 0 in the right strip (side c)
+    pt = Point("PB", 256)
+    with precision(PREC):
+        x0re = sum((Ai * abs(ri).log() for Ai, ri in zip(pt.Acoef, pt.roots)), arb(0))
+        tail_strip = True
+        tail_disc_max = 0.0
+        for x in leaves:
+            if x.get("closing"):
+                continue
+            Xa, k = fa(Fraction(x["X_a"])), fa(Fraction(x["k"]))
+            ta = Fraction(x["design"][0]) + Fraction(x["design"][1])
+            XL = Xa + side * fa(T_LEFT - ta) / k
+            tail_strip = tail_strip and (bool(XL < x0re) if side > 0 else bool(XL > 0))
+            for e in x["eps_boxes"]:
+                if e.get("tail_disc"):
+                    tail_disc_max = max(tail_disc_max, float(arb(e["tail_disc"]).upper()))
+    ok = (not missing) and tiles and all(x["pass"] for x in leaves) and tail_strip
     cert = {"regime": "S", "side": tag, "point": "PB", "h0": str(H0), "precision_bits": PREC,
+            "tail_region_in_strip": tail_strip, "tail_disc_max": tail_disc_max,
             "design_grid": {"w": [str(x) for x in GRID_W], "y_a": [str(x) for x in GRID_YA],
                             "phi_inf": [f"-pi/{n}" for n in GRID_PHI], "phase_centre": [str(x) for x in GRID_PC],
                             "phase_width": [str(x) for x in GRID_PW]},
