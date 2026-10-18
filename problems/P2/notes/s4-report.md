@@ -28,10 +28,10 @@ Proof: `notes/s4-proof.md`.
 |---|---|---|---|
 | L | 0 ≤ Re ω ≤ 8κ₋ | `L_PB_plus.json`, `L_PB_c.json` (1760 ω-boxes of side κ₋/20, none refined) | Re y₊ ≥ 0.1245, Re y_c ≤ −0.0804 at the exits |
 | S | 6κ₋ ≤ Re ω ≤ 0.9Ω_P/h | `S_PB_plus.json` (47 ζ-leaves), `S_PB_c.json` (45) | min q̂ = 0.0130 (+), 0.0091 (c) |
-| T | 0.8Ω_P/h ≤ Re ω ≤ 2.0Ω_P/h | `T_PB.json` (24 ζ-boxes, 37 146 cells) | μ_T ≥ 0.1003·a*/h, uniformly in h |
-| A | Re ω ≥ 1.5Ω_P/h | `A_PB.json` (ζ_A plus W7) | μ_A ≥ 6.955·a*/h at ζ_A |
+| T | 0.8Ω_P/h ≤ Re ω ≤ 2.0Ω_P/h | `T_PB.json` (24 ζ-boxes, 37 146 cells) | E ≥ 0.1003·a*/h on the contour, for every h ≤ h₀ |
+| A | Re ω ≥ 1.5Ω_P/h | `A_PB.json` (ζ_A plus W7) | E ≥ 6.955·a*/h at Re ω = ζ_A/h, monotone above |
 
-Here a* = √(\|U″\|/2) = 2Ω_Pγ₀ = 0.029969, and ν ∈ [−d_δ, 0] throughout. Also certified:
+Here a* = √(|U″|/2) = 2Ω_Pγ₀ = 0.029969, and ν ∈ [−d_δ, 0] throughout. Also certified:
 - `bulk_PB.json`: U is monotone on each side of r_P; W̃ ≥ −99/12500; C_W = 0.03168.
 - `cover_PB.json`: the cover inequalities and the tilings.
 
