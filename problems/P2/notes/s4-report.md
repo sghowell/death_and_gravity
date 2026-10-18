@@ -180,9 +180,15 @@ against 0.3. The float K4 sample was the largest item.
 | `c8bf85bf` | proof, report and FORMULATION v0.6 |
 | (this commit) | the report's commit table |
 
-All production certificates were computed at `35201758` (recorded in each file). The later code
-commits change only the assembly checks, the controls' evaluation, and a lookup that production never
-reaches.
+- **The regime certificates** (bulk, T, A, S±, L±) were computed by workers launched at
+  `35201758`; see the launch records.
+- **The "+dirty" labels.** Some S+ and L rows record `35201758+dirty`. Those rows were written while
+  an edit to `throat.assemble` was uncommitted (it became `ca66270b`).
+  - The workers had loaded the code at launch, and never call `assemble`.
+  - The replay at `0e3c40f7` reproduces the sampled S and L leaves exactly.
+- The cover was recomputed at `279878d4`, and the controls and replay ran at `0e3c40f7`.
+- **What the later code commits change:** only assembly checks, the controls' evaluation, and a
+  lookup that production never reaches.
 
 ## 9. Reproduction (cwd `problems/P2/src`)
 
