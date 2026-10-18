@@ -476,18 +476,46 @@ def k4_residual(row):
             "zsol_excludes_0": bool(not Wz.contains(0)), "is_zero": bool(ratio < 1e-8 and Wz.contains(0))}
 
 
-def assemble_K4():
+def _k4_rows():
     rows = {}
     for f in sorted(RES_DIR.glob("K4_PB.w*.jsonl")):
         for line in f.read_text().splitlines():
             if line.strip():
                 r = json.loads(line)
                 rows[r["i"]] = r
+    return rows
+
+
+def run_K4R(worker: int, nworkers: int):
+    """Amendment 6: the residual and zsol checks of every secant stop in H+ (resumable worker)."""
+    out = RES_DIR / f"K4R_PB.w{worker}.jsonl"
+    done = set()
+    if out.exists():
+        done = {json.loads(x)["i"] for x in out.read_text().splitlines() if x.strip()}
+    flagged = [r for _, r in sorted(_k4_rows().items()) if r["root_in_H_plus"]]
+    for k, r in enumerate(flagged):
+        if k % nworkers != worker or r["i"] in done:
+            continue
+        t0 = time.time()
+        c = k4_residual(r)
+        c["seconds"] = round(time.time() - t0, 1)
+        with out.open("a") as f:
+            f.write(json.dumps(c) + "\n")
+
+
+def assemble_K4():
+    rows = _k4_rows()
     n = len(_k4_points())
     missing = [i for i in range(n) if i not in rows]
     vals = [rows[i] for i in sorted(rows)]
     flagged = [r for r in vals if r["root_in_H_plus"]]
-    checks = [k4_residual(r) for r in flagged]
+    stored = {}
+    for f in sorted(RES_DIR.glob("K4R_PB.w*.jsonl")):
+        for line in f.read_text().splitlines():
+            if line.strip():
+                c = json.loads(line)
+                stored[c["i"]] = c
+    checks = [stored[r["i"]] if r["i"] in stored else k4_residual(r) for r in flagged]
     return {"points": n, "missing": missing, "all_W_nonzero": all(r["W_nonzero"] for r in vals),
             "secant_converged": sum(1 for r in vals if "secant_root_over_km" in r),
             "secant_stopped_in_H_plus_raw": len(flagged),
@@ -638,6 +666,8 @@ def run(regime: str, worker: int, nworkers: int):
         lowfreq.run_L(worker, nworkers)
     elif regime == "K4":
         run_K4(worker, nworkers)
+    elif regime == "K4R":
+        run_K4R(worker, nworkers)
     else:
         raise SystemExit(f"unknown regime {regime}")
 
