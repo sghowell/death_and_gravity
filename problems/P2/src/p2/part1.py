@@ -437,12 +437,21 @@ def cover():
             tiles[f"S {side}: zeta-leaves tile [0, zeta_SU], eps-boxes tile [0, eps_max(zeta_lo)]"] = bool(ok)
         Lx = certs[f"L_PB_{side}"]
         if Lx:
-            area = sum((Fraction(b["box"][1]) - Fraction(b["box"][0])) * (Fraction(b["box"][3]) - Fraction(b["box"][2]))
-                       for b in Lx["leaves_detail"])
-            inside = all(0 <= Fraction(b["box"][0]) and Fraction(b["box"][1]) <= OMEGA_L_KM
-                         and Fraction(-11, 20) <= Fraction(b["box"][2]) and Fraction(b["box"][3]) <= 0 for b in Lx["leaves_detail"])
-            tiles[f"L {side}: leaves inside [0, 8] x [-11/20, 0] with total area 8 * 11/20 (quadrisected boxes)"] = \
-                bool(inside and area == OMEGA_L_KM * Fraction(11, 20))
+            from .lowfreq import boxes_L
+            grid = {b: [] for b in boxes_L()}
+            ok = True
+            for lf in Lx["leaves_detail"]:
+                bx = tuple(Fraction(v) for v in lf["box"])
+                parent = [g for g in grid if g[0] <= bx[0] and bx[1] <= g[1] and g[2] <= bx[2] and bx[3] <= g[3]]
+                ok = ok and len(parent) == 1
+                if parent:
+                    grid[parent[0]].append(bx)
+            for g, lv in grid.items():
+                area = sum((b[1] - b[0]) * (b[3] - b[2]) for b in lv)
+                disjoint = all(min(a[1], b[1]) <= max(a[0], b[0]) or min(a[3], b[3]) <= max(a[2], b[2])
+                               for i, a in enumerate(lv) for b in lv[i + 1:])
+                ok = ok and disjoint and area == (g[1] - g[0]) * (g[3] - g[2])
+            tiles[f"L {side}: in every grid box of [0, 8] x [-11/20, 0], the leaves are disjoint and fill it"] = bool(ok)
     out["tiling"] = tiles
     out["cited"] = {"Im w > 0": "P2-0 (at P2-0's level)", "Re w < 0": "W_l(-conj w) = conj W_l(w) (FORMULATION 1.2; zeq_identity Z4)"}
     out["pass"] = bool(all(out["inequalities"].values()) and all(out["certificates_pass"].values()) and tiles
