@@ -1,10 +1,10 @@
 # P2 — A certified resonance-free strip for subextremal RNdS (β > 1/2, linear SCC failure for smooth data)
 
-Status: formulation **v0.5** (S3 exit; stage S4), 2026-10-17; frozen at v0 (S0,
+Status: formulation **v0.6** (S4 exit; stage S5), 2026-10-18; frozen at v0 (S0,
 2026-10-16), with every later change recorded in the Revision log. The ledger
-has rows P2-par, P2-0, P2-D1′, P2-1w, P2-2 and P2-K6 (`CLAIMS.md`). S3 proposes
-the row P2-3B and an amendment to P2-K6 (`notes/s3-report.md` §7, from the S3
-review). Every other claim id is still a *target*.
+has rows P2-par, P2-0, P2-D1′, P2-1w, P2-2, P2-3B and P2-K6 (`CLAIMS.md`). S4
+proposes the row P2-1 at P_B (`notes/s4-report.md` §7; not yet reviewed). Every
+other claim id is still a *target*.
 
 Changes after S1 begins go in the Revision log, never by silent edit (house
 discipline of `problems/P9/b/FORMULATION.md`).
@@ -454,3 +454,31 @@ Sizing and kill criteria are in `s0-gate.md` §7.
   - The wording of this entry was corrected after the S3 review (2026-10-17): the corollary's
     level, the reference for analyticity, ∂R′_l, the strip depth written as (½+δ)κ₋ (β is D3's
     gap), and the description of the pole checks.
+
+- **v0.6 (2026-10-18, S4 exit; `notes/s4-preregistration.md`, `notes/s4-report.md`, `notes/s4-proof.md`).**
+  Part (i) is implemented at P_B, uniformly in l ≥ l₀ = 20 (h = 1/(l+½) ≤ h₀ = 2/41). The
+  deviations from §4 were declared in the pre-registration and its dated Amendments 1–6.
+  - **Four regimes** cover {l ≥ 20} × {Re ω ≥ 0, −(½+δ)κ₋ ≤ Im ω ≤ 0}. ζ := h Re ω.
+    - **L** (Re ω ≤ 8κ₋): a τ-scaled Frobenius series at each horizon (r = r_h ± h²τ), uniform in
+      h² ∈ [0, h₀²], in affine Arb arithmetic. Then Riccati invariance through the forbidden bulk.
+    - **S** (6κ₋ ≤ Re ω ≤ 0.9Ω_P/h): half-line coercivity on C² contours passing below each
+      turning point, in the normalised form where h enters only through ζ and 1/Re ω. Below
+      ζ = 0.02Ω_P, a near-horizon Taylor model closes ζ → 0.
+    - **T** (0.8–2.0 Ω_P/h): S2's rotated contour with the exact splitting
+      h²E = E₀ + hE₁ + h²E₂ and a linear ground state. This replaces S2's per-l spline and window.
+    - **A** (≥ 1.5Ω_P/h): monotone in Re ω.
+  - **The part-(i) certificate format** is `certificates/part1/`:
+    - `{T,A}_PB.json`, `S_PB_{plus,c}.json` and `L_PB_{plus,c}.json`;
+    - `bulk_PB.json`, `cover_PB.json`, `controls_PB.json` and `replay_PB.json`.
+    It replaces the `m3_{X}_*` format of v0.4 for part (i). The S2 geometry certificate is
+    replayed as K1.
+  - **S4 result at P_B.** W_l(ω) ≠ 0 for every l ≥ 20 on that half-strip. With the conjugation
+    symmetry and P2-0, this gives **P2-1 at P_B with l₀ = 20**.
+    - Level: WRITTEN_PROOF. The inequalities are certified in Arb (128-bit). W1 (vertical-strip
+      analyticity of r(x)) and W2 (Jost continuation and decay on the curved contours) are
+      non-routine written arguments. The Im ω > 0 part is at P2-0's level.
+    - The target level of P2-1 (CERTIFIED) would need W1 and W2 machine-checked.
+  - **With P2-3B (l ≤ 19), P2-3 is complete at P_B.** The S3 fallback for 20 ≤ l < l₀ was not
+    needed.
+  - **Open.** The independent review of S4; the assembly P2-4/P2-5 (S5); P_A; P2-6.
+
