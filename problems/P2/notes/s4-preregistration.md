@@ -393,3 +393,96 @@ everything else in T: the contour, the phase (φ_∞ = −1.4375, s₁ = 7, p = 
   | √ form (§3.3 as registered) | 0.175 | 0.243 | 0.320 | 0.460 | 0.296 |
 
   E₀ ≥ 0 on the whole contour for both, with E₀/s² → a*² − (1 − ε_g)²a_d² ≈ 0.0975a*² at s = 0.
+
+### Amendment 5 (2026-10-18, before any production run of L, S and the controls; methods fixed in development)
+
+Development runs (sample boxes only, about 0.5 core-h in all) showed where §3.1, §3.2 and §5 must be made
+precise or changed. No production certificate had been written. T and A are as in Amendment 4, with
+cell bisection target a*/10.
+
+**S (§3.2, §5).**
+1. **Contour family.** For the grid parameters (w, y_a): Y(t) = t + iη(t), with η = t for t ≤ −w,
+   η = −w·m₀(−t/w) on |t| ≤ w, and η = 0 for t ≥ w. Here m₀ is the C³ smoothed max(0, u) on [−1, 1]
+   (m₀″ = (15/16)(1 − u²)², m₀(0) = 5/32). The exit is t_a = w + y_a.
+   - So the contour is the π/4 ray for t ≤ −w and is exactly real for t ≥ w. It passes below the
+     turning point at depth (5/32)w.
+   - The §9 pilot used a softplus bend, which is never exactly real. W3 needs the exit on the real axis
+     (φ(t_a) = 0 and x′(t_a) real).
+2. **Grid.** w ∈ {0.15, 0.3, 0.6, 1.0} is extended by {2, 3, 4}.
+   - A compact half-width w plays the role of about three softplus widths.
+   - At small ζ the best designs need half-widths 2 to 4: the float margin at ζ = 0.02Ω_P is 0.37 (+)
+     and 0.63 (c) with them, against 0.06 and −0.03 without.
+   - The other grid values are unchanged.
+   - The phase is φ_∞ for t ≤ p_c − p_w; φ_∞(1 − S₅(v)) with S₅ = 10v³ − 15v⁴ + 6v⁵ and
+     v = (t − p_c + p_w)/(2p_w); and 0 after.
+   - Designs with p_c + p_w > t_a are inadmissible.
+3. **One contour per ζ-box.** x(t) = X_a + s(Y(t) − t_a)/k (s = ±1). k = k_T and X_a = x_T + s·t_a/k
+   are taken at the geometric mean of the box's ζ endpoints and rounded to multiples of 2⁻³⁰. 1/ζ²
+   enters q̂ affinely, so the box is handled by endpoint evaluation.
+4. **Young weight.** η = cos φ/κ_tot pointwise, so the kinetic coefficient is 0 and
+   q̂ = Re(e^{−iφ}Y′²[U/ζ² − 1 + 2iε|ν| + ε²(ν² + W̃)]) − (kε)²κ_tot²/(4 cos φ), with
+   κ_tot = |Y″/Y′ − iφ′|.
+5. **Cells.**
+   - The mean-value form in t, with t-derivatives by acb_series, and separable interval bounds in 1/ζ²,
+     ε, ε|ν| and ε²ν². Family polynomials are evaluated in centred form.
+   - r(t) by validated Taylor integration (order 20) of dr/dt = x′(t)F(r), backward from the real exit
+     r_a = r(X_a) (interval Newton).
+   - Steps are halved until the a-priori box exists and the remainder is below 10⁻³⁰. The Lohner
+     factor is F(B)/F(r₀), which also holds for the non-autonomous r′ = x′(t)F(r).
+   - t_L = −8. The tail t ≤ t_L is bounded by S2's horizon disc (Lemma 2), with Re x linear in t on
+     the ray.
+6. **Exit and order.** Certified per box: U(r_a)/ζ_hi² − 1 > ε_max²·W_bound, and X_a < x_P (+) resp.
+   X_a > x_P (c). Between the two exits, U ≥ min(U(x_a⁺), U(x_a^c)) by monotonicity.
+7. **Refinement.**
+   - If the selected design's float margin is ≤ 0, the ζ-box is halved at once.
+   - Otherwise the ε-box is halved first (≤ 4 levels), then the ζ-box (down to 0.0025Ω_P, as
+     registered).
+   - Cells start at the contour steps and are bisected to depth ≤ 8, with target
+     max(margin_float/4, 10⁻³) rounded to a dyadic and stored for replay.
+8. **Closing box ζ ∈ (0, 0.02Ω_P].**
+   - The contour is x_T(ζ) + s·Y(t)/κ_h (k = κ_h exactly). Along it,
+     ρ := e^{±2κ_h(x − c_h)} = ρ_T e^{2Y}.
+   - G(ρ) = U(r(ρ)) is taken as its Taylor polynomial of order 14 (by series reversion of
+     ρ(r) = s(r − r_h)f(r)), plus a Cauchy remainder on |ρ| < R = m_f·d_r. By Rouché, r(ρ) stays in
+     |r − r_h| ≤ d_r there (d_r = 3/50 at r₊ and 1 at r_c).
+   - Ũ = e^{2Y}P(ρ_T e^{2Y})/P(ρ_T), with P = G/ρ, ρ_T ∈ [0, ρ₁], and ρ₁ certified from G(ρ₁) ≥ ζ₁².
+   - P on the radial segment is bounded by g₁ + Σ gₙzⁿ⁻¹·[0, 1].
+   - |W̃| ≤ M_W(|ρ|/R)/(1 − |ρ|/R).
+   - Closing-box designs need t_a ≤ 2.1, so that ρ₁e^{2t_a} < R.
+9. **W1 (Amendment 1)** is checked per box as specified. In the closing box the contour stays in the
+   near-horizon disc, whose r* range lies in the left strip (+) resp. the right strip (c); this is
+   certified through r*(r_h ± d_r).
+
+**L (§3.1, §5).**
+10. **Arithmetic.** The scaled Frobenius recurrence runs in first-order affine forms (`affine.py`) in
+    the deviations of ω (a disc about the box centre) and of h² (a disc about a sub-interval's centre).
+    Second-order terms go into the remainder.
+    - Plain Arb rectangles wrap by up to √2 per complex multiplication.
+    - Over a box of side κ₋/20 at Re ω = 3κ₋, the series lost all accuracy.
+11. **h².** [0, h₀²] is covered by 16 equal sub-intervals; the certificate is their conjunction.
+12. **Exit, per box.**
+    - τ_a is the smallest multiple of 1/64 at which the box minimum of h⁻²U = D/r⁴ (over the 16
+      sub-intervals) is at least the box maximum of max(4|ω|², C_W). This is the box form of §3.1's
+      rule.
+    - C_W = 4·max(κ₊², W_bound), with W_bound = 99/12500 = 0.00792 ≥ max(−W̃) = 0.0079101…
+      (`bulk_PB.json`).
+13. **N3.**
+    - It runs the continuation path in τ (affine Taylor steps, as §3.1 plans) on boxes
+      Re ω ∈ [0, 1/20000]κ₋, Im ω = mode ± 1/40000 κ₋. The continuation runs against the recessive
+      direction and amplifies a box's deviation about 30-fold.
+    - A mode-free box at half the mode's depth is reported alongside.
+
+**Controls and replay.**
+14. **N4.** The design selected for ζ ∈ [0.3, 0.32]Ω_P, with X_a moved to x_T ∓ 1/(2k) (allowed
+    region). It runs with ε-levels 0 and cell depth 2: q̂ < 0 on an interval near that exit, so
+    refinement cannot change the verdict.
+15. **K4.** 200 points with seed 20261018:
+    - l uniform in [20, 400], the regime uniform in {L, S, T, A}, Re ω uniform in its range
+      (A: [1.5, 3]Ω_P/h), and ν uniform in [−d_δ, 0];
+    - mpmath at 20 digits;
+    - a secant search (≤ 12 steps) seeded at each point.
+16. **Replay.**
+    - T and A: 5% of cells from the stored partitions, plus each box's worst cell, plus the tails.
+    - S: every 20th ζ-leaf, recomputed from its stored design and target.
+    - L: every 20th ω-leaf.
+    - Verdicts and the stored bounds must agree exactly.
