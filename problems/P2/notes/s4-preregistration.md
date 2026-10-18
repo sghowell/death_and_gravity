@@ -324,4 +324,41 @@ holds. l₀ at P_A would be larger; no run is planned.
 
 ## Amendments
 
-(none)
+### Amendment 1 (2026-10-18, before any production run; requested by the coordinator)
+
+**W1 for the new S contours, certified contour by contour.**
+- S2's Lemma 1 reasons as follows. Along a vertical continuation from the real axis,
+  Re r*(r(x)) = Re x, and Σ A_i = 0. So the continuation can fail only where r → 0, on the line
+  Re x = Re r*(0) = −2.29664, or where r → ∞, on the line Re x = 0.
+  - Off those two lines, the vertical continuation exists at every height. The ODE argument of
+    Lemma 1's last bullet makes it analytic jointly in x.
+  - On the two lines, S2 checked the segments up to heights 0.1413 and 2.438, respectively. They
+    hold for Im x < 0 as well, by conjugation (r(x̄) = conj r(x)).
+- **The vertical-strip form of W1, used in S4.** r(x) is analytic on each of three open vertical
+  strips, at every height: {Re x < −2.29664}, {−2.29664 < Re x < 0} and {Re x > 0}. The strips are
+  joined across the two lines only through the checked segments.
+- **For every S design actually used, the certificate checks one of two things:**
+  - the contour lies in Σ₋ ∪ Σ₊ (S2's sectors); or
+  - the contour crosses the lines Re x = −2.29664 and Re x = 0 only within the checked segments
+    (|Im x| ≤ 0.1413, resp. |Im x| ≤ 2.438), from enclosures of the crossing heights.
+- The r₊-side contours have Re x ≤ x_a⁺ < x_P < −2.29664, so they lie in the left strip; this is
+  checked too.
+- The result is recorded as a field `w1_check` in `S_PB_plus.json` and `S_PB_c.json`.
+- W2 (Lemma 3's representation and decay) carries over in the same strip form: its disc argument
+  uses only Re x ≤ X₋, at any height.
+- This extension is stated in W1 (§3.5) and in `notes/s4-proof.md`.
+
+### Amendment 2 (2026-10-18, before any production run; requested by the coordinator)
+
+**New negative control N5, on L's production path.** The L checker is run with h² ∈ [0, h₀²],
+ω-boxes in L's domain, and no Taylor continuation, with the exit placed in the allowed region
+(h⁻²U(r_a) < (Re ω)²). It must not certify. (N3 runs at l = 1 and 2 through the continuation
+path, which production does not use.)
+
+### Amendment 3 (2026-10-18, before any production run; requested by the coordinator)
+
+**Corrected wording of §2, "Closing the limits".** The sentence "ζ → 0 (Re ω fixed, l → ∞) is
+the L regime" holds only for Re ω ≤ Ω_L. The correct statements are:
+- ζ → 0 with Re ω ≤ Ω_L is the L regime;
+- ζ → 0 with Re ω fixed above Ω_L, or with Re ω → ∞, is S's closing box ζ ∈ [0, ζ₁], with
+  ε = 1/Re ω ∈ [0, 1/Ω_S].
