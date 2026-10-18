@@ -486,3 +486,24 @@ cell bisection target a*/10.
     - S: every 20th ζ-leaf, recomputed from its stored design and target.
     - L: every 20th ω-leaf.
     - Verdicts and the stored bounds must agree exactly.
+
+### Amendment 6 (2026-10-18, after the first K4 results; post hoc, disclosed as such)
+
+**What "the float solver finds a QNM" means in K4.** The registered wording (§4; Amendment 5,
+item 15) was a secant search seeded at each point, with no criterion for a found zero.
+- **What happened.** After 14 of the 200 points, three secant runs had stopped inside H⁺, each within
+  10⁻⁶ (relative) of its seed:
+  - l = 122 (T), Re ω ≈ 1047κ₋;
+  - l = 136 (A), Re ω ≈ 1502κ₋;
+  - l = 253 (A), Re ω ≈ 2222κ₋.
+- **They are not zeros.** At these points |W| equals its value at the seed to six digits (83.2271 and
+  123.14, at both 20 and 40 digits). The rigorous zsol code gives |W| = 83.227148 ± 3.6·10⁻⁷ at the
+  l = 122 point.
+- **Why the stopping rule fires.** The secant stops when the relative step falls below
+  10^{−dps+12}. At large |ω| the phase of W turns fast (d log W/dω is large), so the step f/W′ is
+  tiny although W is not small.
+- **The K4 evaluation from now on.** A secant stop in H⁺ counts as a QNM only if
+  |W(root)| < 10⁻⁸·|W(seed)| (float, the run's settings) and the zsol ball at the root contains 0.
+  - Every flagged stop is checked both ways.
+  - The raw number of stops in H⁺ is reported alongside.
+  - The K4 run itself (the points, the solver and its settings) is unchanged.

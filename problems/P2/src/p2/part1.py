@@ -451,6 +451,31 @@ def cover():
     return out
 
 
+def k4_residual(row):
+    """A secant 'root' counts only if the Wronskian is small there: |W(root)| < 1e-8 |W(seed)| (float, the
+    run's settings).  Each flagged root is also evaluated with the rigorous zsol code (256 bits)."""
+    import mpmath as mp
+    from flint import acb
+
+    from . import part3, zsol
+    from .qnm_float import Geom, Solver
+    g = Geom.frozen("PB")
+    with mp.workdps(20):
+        sol = Solver(g, K=6)
+        km = g.km
+        root = mp.mpc(mp.mpf(row["secant_root_over_km"][0]), mp.mpf(row["secant_root_over_km"][1])) * km
+        seed = mp.mpc(mp.mpf(row["w_over_km"][0]), mp.mpf(row["w_over_km"][1])) * km
+        Wr, Ws = abs(sol.wronskian(root, row["l"])), abs(sol.wronskian(seed, row["l"]))
+        ratio = float(Wr / Ws)
+    pt = Point("PB", 256)
+    with precision(256):
+        w = acb(arb(mp.nstr(mp.re(root), 30)), arb(mp.nstr(mp.im(root), 30)))
+        Wz = zsol.wronskian_z(pt, row["l"], w, theta=part3.THETA_POINT)[0]
+    return {"i": row["i"], "l": row["l"], "root_over_km": row["secant_root_over_km"], "abs_W_root_float": mp.nstr(Wr, 8),
+            "abs_W_seed_float": mp.nstr(Ws, 8), "residual_ratio": ratio, "zsol_abs_W_root": abs(Wz).str(10),
+            "zsol_excludes_0": bool(not Wz.contains(0)), "is_zero": bool(ratio < 1e-8 and Wz.contains(0))}
+
+
 def assemble_K4():
     rows = {}
     for f in sorted(RES_DIR.glob("K4_PB.w*.jsonl")):
@@ -461,12 +486,17 @@ def assemble_K4():
     n = len(_k4_points())
     missing = [i for i in range(n) if i not in rows]
     vals = [rows[i] for i in sorted(rows)]
+    flagged = [r for r in vals if r["root_in_H_plus"]]
+    checks = [k4_residual(r) for r in flagged]
     return {"points": n, "missing": missing, "all_W_nonzero": all(r["W_nonzero"] for r in vals),
-            "roots_in_H_plus": [r for r in vals if r["root_in_H_plus"]],
             "secant_converged": sum(1 for r in vals if "secant_root_over_km" in r),
+            "secant_stopped_in_H_plus_raw": len(flagged),
+            "residual_checks": checks,
+            "zeros_in_H_plus": [c for c in checks if c["is_zero"]],
             "by_regime": {g: sum(1 for r in vals if r["regime"] == g) for g in "LSTA"},
             "seconds_total": round(sum(r["seconds"] for r in vals), 1),
-            "pass": (not missing) and all(r["W_nonzero"] for r in vals) and not any(r["root_in_H_plus"] for r in vals),
+            "pass": (not missing) and all(r["W_nonzero"] for r in vals) and not any(c["is_zero"] for c in checks)
+                    and all(c["zsol_excludes_0"] for c in checks),
             "rows": vals}
 
 
