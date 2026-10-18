@@ -346,6 +346,14 @@ class CurveContour:
         self.tL = tL
 
     def find(self, a: Fraction, b: Fraction):
+        if a == b:                                   # a point (possibly a step node): a step containing it
+            import bisect
+            if not hasattr(self, "_tlos"):
+                self._tlos = [x[0] for x in self.steps]
+            i = bisect.bisect_right(self._tlos, a) - 1
+            if 0 <= i < len(self.steps) and self.steps[i][0] <= a <= self.steps[i][1]:
+                return self.steps[i][2], self.steps[i][3]
+            raise IndexError((a, b))
         lo_, hi_ = 0, len(self.steps) - 1
         while lo_ <= hi_:
             m = (lo_ + hi_) // 2
