@@ -2,10 +2,10 @@
 
 Status: formulation **v0.6** (S4 exit; stage S5), 2026-10-18; frozen at v0 (S0,
 2026-10-16), with every later change recorded in the Revision log. The ledger
-has rows P2-par, P2-0, P2-D1′, P2-1w, P2-2, P2-3B and P2-K6 (`CLAIMS.md`). S4
-proposes the row P2-1 at P_B (`notes/s4-report.md` §7). The independent review
-(`docs/review-2026-10-18-p2-s4-adversarial.md`, 2026-10-18/19) found it proven as
-stated; one closing-box error term (S1) was corrected after it. Every other claim
+has rows P2-par, P2-0, P2-D1′, P2-1w, P2-1, P2-2, P2-3B and P2-K6 (`CLAIMS.md`).
+P2-1 at P_B (S4, `notes/s4-report.md` §7) was entered on 2026-10-19. The independent
+review (`docs/review-2026-10-18-p2-s4-adversarial.md`, 2026-10-18/19) found it proven
+as stated; one closing-box error term (S1) was corrected after it. Every other claim
 id is still a *target*.
 
 Changes after S1 begins go in the Revision log, never by silent edit (house
