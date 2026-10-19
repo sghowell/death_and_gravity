@@ -3,6 +3,8 @@
 These are the scripts and outputs behind `docs/review-2026-10-18-p2-s4-adversarial.md`.
 
 - The review was run at `0e329217`, from a scratch directory, on 2026-10-18/19.
+- The follow-up check of the author's fixes was run at `21358225` on 2026-10-19. Its outputs are in
+  `followup_2026-10-19/`.
 - The scripts were committed here after the review, with the user's approval. Their absolute paths
   were replaced by paths relative to the script, so they replay from any checkout.
 
@@ -21,7 +23,8 @@ the certificates as of `0e329217`. Two kinds of script compare against the store
 - the independent checks that read stored bounds (`indep_S.py`, `indep_L.py`, `indep_TA.py`,
   `cover_recheck.py`).
 
-Re-run at a later commit, they check the certificates of that commit.
+Re-run at a later commit, they check the certificates of that commit. That is what
+`followup_2026-10-19/` holds.
 
 ## The independent checks (no `p2`)
 
@@ -47,6 +50,16 @@ Re-run at a later commit, they check the certificates of that commit.
 | `closing_err_check.py` | finding S1: the closing box with the first version's real-segment error term and with a rigorous one (disc and complex-segment bounds) | margins unchanged to 8 digits; largest cell drop 8.2e−5 → `closing_err_check.json` | < 1 s |
 | `k4_secant_trace.py` | the K4 float secant (`qnm_float`, dps 20) step by step at three stops (finding S2) | overshoot to Im ω ≈ −7…−13κ₋, return, zero step → `k4_secant_trace.json` | 194 s |
 | `count_l20.py` | **backs the l = 20 clause of the P2-1 ledger row.** S3's reviewed counting pipeline (`p2.part3`, unchanged on the S4 branch) at l = 20 on R′₂₀ = [−a₂₀, a₂₀] × [−b, e], with a₂₀ from the certified P2-2 certificate `lg_PB_l20.json`. Usage: `count_l20.py OUTDIR [workers]` | winding 0 (ball 0 ± 7.4e−4), 223 segments, \|W₂₀\| ≥ 4.07 on the right half. With P2-2 and P2-0, W₂₀ has no zero in S_δ, independently of S4 → `count_l20/` (segment JSONL, summary, full pieces, launch record) | 2008 CPU-s (3 workers, ≈ 11 min) |
+
+## The follow-up of 2026-10-19 (`followup_2026-10-19/`, at `21358225`)
+
+| script / file | what it checks | result |
+|---|---|---|
+| `s1_recheck.py` | the fixed closing-box bounds (`nh_P_bounds`, `nh_P_disc`) against \|P_N\| in Arb at 4025 samples per side on the actual contour, and 642 tail samples; the first version's real-segment bound at the same samples; the new test's body with the old bound; both closing boxes recomputed | new bounds: no violation. Old lower bound: 813 violations per side (worst relative excess 2.8e−4 (+), 9.9e−6 (c)). The new test fails 46 times with the old bound, so it would have caught S1. Closing leaves recompute to the stored [0.41468628, 0.41468629] and [0.35342094, 0.35342095] |
+| `compare_regenerated.py` | the regenerated certificates against the reviewed ones (read from git at `0e329217`) | S: 92 leaves, no value change; 273 printed intervals re-rounded outward, each by at most one unit in the 8th significant digit (≤ 1e−7 relative, ≤ 1e−5 absolute). L: leaves identical; summaries from ball endpoints. Controls: N4's strings re-rounded, timings |
+| `replay_all_S.json`, `indep_S.json`, `indep_TA.json`, `cover_recheck.json`, `nh_check.json` | the earlier checks re-run against the regenerated certificates | the 92 S leaves replay identically (203 CPU-s); every independent check holds |
+| `closing_err_check.json`, `pilot_compare.json` | re-runs (S1, S5) at the new head | unchanged, apart from the author's outward printing of the stored bounds |
+| `pytest_fast.txt`, `pytest_slow.txt` | the whole P2 suite, fast and with P2_SLOW=1 | fast: 86 passed, 17 skipped (32 s); P2_SLOW=1: 103 passed, 1 pre-existing warning (660 s) |
 
 ## Notes
 

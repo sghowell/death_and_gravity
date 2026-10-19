@@ -23,6 +23,8 @@ The scripts and their JSON outputs are in the reviewer's session scratch directo
 `/private/tmp/claude-501/-Users-seanhowell-dev-research-death-and-gravity/5e36ca60-7404-4050-9ab7-cadfa3093ba6/scratchpad/rv/`,
 which is not durable. §5 lists every script, what it does and its result, precisely enough to redo
 each check. A second denied call is listed in §6.
+[Update 2026-10-19: with the user's approval the scripts and outputs are now committed under
+`problems/P2/certificates/review_s4/`, with a README; see §9.]
 
 **Overall verdict:** the S4 theorem is proven as stated, and P2-1 at P_B with l₀ = 20 holds at
 WRITTEN_PROOF. Nothing is blocking. One machine-checked error term in the S closing box is not
@@ -603,3 +605,62 @@ and evidence are unchanged.
    `problems/P2/certificates/review_s4/` (their creation was denied in this session).
 
 Under the repository's rules the merge into main must be run by the user.
+
+## 9. Follow-up check of the author's fixes (`68de8184`, `0b883e50`, `21358225`), 2026-10-19
+
+**Setup.**
+- The user approved every should-fix item (S1–S5), W1–W8, this re-check, the l = 20 clause and the
+  P2-1w note.
+- The coordinator fast-forwarded `p2/s4-review` to the author's head `21358225`. On top of this
+  review's `2a72dd6b` it has:
+  - `68de8184`: S1 and W4 in code (`throat.py`, `arbutil.py`, `lowfreq.py`), `verify full`, and a
+    fast S1 test;
+  - `0b883e50`: all 92 S leaves regenerated, L re-assembled, cover, controls and a full replay;
+  - `21358225`: the Amendment 6 correction and errata, the proof, the report and FORMULATION v0.6.
+- Nothing else changed: not CLAIMS.md, not this document, not the README.
+- The review's scripts are now committed under `problems/P2/certificates/review_s4/` (`7d6e8551`),
+  with paths relative to the script and a README. The follow-up's scripts and outputs are in
+  `review_s4/followup_2026-10-19/`.
+
+**Verdict: PASS, merge-ready.** Every finding is resolved as intended. No certified number changed,
+and the §7 row needs only the small update below.
+
+| item | result |
+|---|---|
+| S1 (closing-box truncation term) | **PASS.** `err_cell` now bounds \|P_N(ρ)\| over the complex set it must cover, {λρ₁e^{2Y(t)} : λ ∈ [0, 1], t in the cell}: the larger of the disc lower bound \|g₁\| − Σ_{n≥2}\|g_n\|ρ_max^{n−1} and the lower end of the complex-segment enclosure, and the smaller of the two upper bounds (`nh_P_bounds`). It returns +∞ if the lower bound is not positive. The tail uses the disc bound (`nh_P_disc`), valid at any argument. Both are rigorous: \|ρ\| ≤ ρ₁e^{2t} = `rabs` on the cell, and each ingredient is a valid bound. `s1_recheck.py` evaluates \|P_N\| in Arb at 4025 points per side (every base cell, 5 values of t and 5 of λ) and 642 tail points: no violation. The first version's real-segment lower bound fails at 813 of the 4025 per side (worst relative excess 2.8e−4 on +, 9.9e−6 on c), so the defect was real on the actual contour, but negligible. The regenerated closing leaves are [0.41468628, 0.41468629] (+) and [0.35342094, 0.35342095] (c), mu_tail [1.5341632, 1.7320506], as predicted, and they recompute identically at `21358225` |
+| S1's test | **PASS.** `test_S1_closing_P_bounds_at_complex_rho` samples \|P_N\| on six cells of the closing contour, including the bend where arg ρ ≈ −π, and requires the new bounds to enclose it. With the first version's real-segment bound substituted, the same assertions fail 46 times (`s1_recheck.py`), so the test would have caught S1. It tests `nh_P_bounds`, which `err_cell` calls, rather than `err_cell` itself (a closure); that is adequate |
+| All 92 S leaves regenerated | **PASS.** Compared with the reviewed versions (`compare_regenerated.py`, reading `0e329217` from git), no certified value changed. Every design, X_a, k, target, ε-box, cell count, depth histogram, worst cell, tail disc, exit, order flag and W1 check is identical. The only differences are 273 printed intervals re-rounded outward (W4): each new interval contains the old printed endpoints and moves by at most one unit in the 8th significant digit (≤ 1.0e−7 relative; up to 1e−5 absolute, for exit margins of order 10²–10³). The certificates' commit lists are now the clean `68de8184`; the 90 working rows behind them (author's JSONL, read only) are all clean `68de8184` rows. The reviewer's full S replay at `21358225` reproduces all 92 leaves field for field (203 CPU-s), and the independent float check (`indep_S.py`) still finds every certified bound below the float minimum |
+| L, controls, cover, replay | **PASS.** L's 1760 leaves are unchanged; only the summary extremes now come from the ball endpoints, rounded outward (0.12456385, −0.080453488). Controls: N4's printed strings are re-rounded outward, and timings changed. The cover changed only its commit. The replay is now `full` (37 005 T cells, 1536 A cells, 92 S leaves, 1760 L boxes) and passes. T, A and bulk are untouched |
+| S2 (Amendment 6) | **PASS.** The correction is dated (2026-10-19), appended after Amendment 6, and Amendment 6's text is unchanged (the diff only adds lines). Its content is accurate: the launch-time rule in `assemble_K4` and K4's 61/200 failure under it; the overshoot-and-return mechanism with this review's numbers; the residual ratios and zsol; K4's weight |
+| S3 (the union) | **PASS.** W1 now defines D = Π₋ ∪ Π₀ ∪ Π₊ ∪ N₀ ∪ N₁ and shows that its complement in the Riemann sphere (four rays joined at ∞) is connected, so r and every solution of the radial equation are single-valued on D. W2 uses it for the c side. The argument is correct. Nit (optional): take N₀ and N₁ to be thin open rectangles around the windows, which the continuity argument provides, so that each special line meets the complement in exactly two rays |
+| S4 (wording) | **PASS.** The s4-report verdict now says every l < 20 is counted on P2-3B's boxes R′_l and that P2-1 contains P2-1w. FORMULATION v0.6 records R′_l, the review, S1's correction and C³; its header no longer says "not yet reviewed". The §7 row in s4-report is this review's §7 row with exactly one insertion, "; problems/P2/certificates/review_s4/" in the evidence column (string comparison). The l = 20 clause is kept, and the P2-1w note is there |
+| S5 (pilot) | **PASS.** s4-report §4 gives the three-part decomposition (contour family and ζ-box; the O(ε) terms; the certification loss) with this review's numbers |
+| W1–W8 | **PASS.** W1 and W5 are errata appended to the pre-registration. W2 and W3 are corrected in the proof note. W4 is the outward printing (exact rational rounding in `arbutil.lohi_out`) and L's endpoint summaries. W6 (N2's h-range) and W7 (T's target-limited margin) are in the report. W8: the first K4R launch's four logs are back in the author's `results/part1/` (gitignored); they hold the zsol-cap tracebacks the report describes |
+| Tests | **PASS.** Fast: 86 passed, 17 skipped (32.5 s). P2_SLOW=1: 103 passed, 1 pre-existing warning (S2's m3 overflow), 660.3 s. These are the author's counts, with the new S1 test included |
+
+**New nits** (none blocks the merge):
+- **FU1.** s4-report §1, closing boxes: "the printed bounds moved by at most 10⁻⁸ (outward rounding)".
+  The moves are up to one unit in the 8th significant digit: up to 1e−5 for the exit margins (e.g.
+  935.67801 → 935.67802), and ≤ 1.0e−7 relative everywhere.
+- **FU2.** The S3 nit above (rectangular N₀, N₁). Optional.
+
+**Change to the §7 row:** three clauses and the date.
+- "Independent review 2026-10-18: proven as stated." becomes "Independent review 2026-10-18, with a
+  follow-up check of the fixes on 2026-10-19: proven as stated.";
+- "the closing-box truncation term was corrected after the review." gains "and both closing boxes
+  regenerated, with margins unchanged to 8 digits";
+- "with six dated amendments" gains "a dated correction to the sixth and errata (2026-10-19)";
+- the date column becomes 2026-10-19, the date of the regenerated certificates.
+
+The evidence column already cites `problems/P2/certificates/review_s4/`. The paste-ready row:
+
+| P2-1 | P2 | At P_B (ΛM² = 3/50, Q = (999/1000)Q_max, δ = 1/20), uniformly in l ≥ l₀ = 20: W_l(ω) ≠ 0 for every ω with Re ω ≥ 0 and −(½+δ)κ₋ ≤ Im ω ≤ 0. With the conjugation symmetry W_l(−ω̄) = conj W_l(ω) and P2-0 (Im ω ≥ 0), W_l has no zero in S_δ for any l ≥ 20; this contains P2-1w. With P2-3B, every l < l₀ is counted at P_B, on P2-3B's boxes R′_l (the assembly P2-4 is S5). Not P_A | WRITTEN_PROOF. Four regimes cover {l ≥ 20} × the closed half-strip; with h = 1/(l+½) ≤ h₀ = 2/41 and ζ = h Re ω, the cover's inequalities and tilings are certified in certificates/part1/cover_PB.json. **L** (Re ω ≤ 8κ₋): τ-scaled Frobenius series at both horizons (r = r_h ± h²τ), in Arb affine arithmetic over 1760 ω-boxes and 16 sub-intervals of h² ∈ [0, h₀²]; Re y₊ ≥ 0.1245 and Re y_c ≤ −0.0804 at the exits (y = Φ′/Φ); then Riccati invariance through the forbidden bulk. **S** (6κ₋ ≤ Re ω ≤ 0.9Ω_P/h): half-line coercivity on C³ contours below each turning point, uniform in h through ζ and 1/Re ω; validated curved-contour integration; a near-horizon Taylor model with a Rouché disc and Cauchy remainder for ζ ≤ 0.02Ω_P; min q̂ = 0.0130 (+) and 0.0091 (c) over 47 and 45 ζ-leaves. **T** (0.8–2.0 Ω_P/h): S2's rotated contour with the exact splitting h²E = E₀ + hE₁ + h²E₂ and a linear ground state; E ≥ 0.1003·2Ω_Pγ₀/h for every h ≤ h₀. **A** (≥ 1.5Ω_P/h): E ≥ 6.955·2Ω_Pγ₀/h at 1.5Ω_P/h, and monotone in Re ω above. Machine-checked (Arb, 128-bit): every cell, tail, exit and order condition, the bulk facts (U monotone on each side of r_P; W̃ ≥ −0.00792) and the W1 crossing checks. Written (notes/s4-proof.md): W1, the vertical-strip analyticity of r(x) and the simply-connected union of the strips and S2's checked windows (extending S2 Lemma 1); W2, the Jost continuation and decay on the curved throat contours and the near-horizon map (extending S2 Lemma 3); and routine W3–W9. Controls: N1–N5 do not certify (N1, N2: PS modes at l = 20, 50, 100 and an h-box holding the l = 20–50 modes; N3: NE modes at l = 1, 2 by the continuation path, while mode-free boxes certify; N4, N5: exits misplaced into the allowed region); K2: W_l from the L code agrees with zsol and arbw at 12 points (relative radii ≤ 1.5e−38); K4 (float only, not used by the proof): W_l ≠ 0 at 200 points; the secant search stopped in H⁺ at 61 of them, none a zero (residual and zsol); the launch-time rule counted such stops as zeros, and Amendment 6 (post hoc) replaced it. Pre-registered (notes/s4-preregistration.md) with six dated amendments, a dated correction to the sixth and errata (2026-10-19). Independent review 2026-10-18, with a follow-up check of the fixes on 2026-10-19: proven as stated. Every certificate was replayed in full; reviewer code sharing nothing with p2 confirms every T, A, S and L bound (each certified bound lies below the reviewer's value; L at actual l from 20 to 10⁵; both closing boxes by the exact near-horizon map); S3's counting pipeline with the P2-2 threshold independently finds no zero of W₂₀ in R′₂₀; the closing-box truncation term was corrected after the review and both closing boxes regenerated, with margins unchanged to 8 digits. The Im ω > 0 part is at P2-0's level | problems/P2/src/p2/part1.py, part1_T.py, throat.py, lowfreq.py, affine.py; problems/P2/certificates/part1/; problems/P2/notes/s4-preregistration.md, s4-proof.md, s4-report.md; problems/P2/tests/test_part1.py; docs/review-2026-10-18-p2-s4-adversarial.md; problems/P2/certificates/review_s4/ | 2026-10-19 |
+
+**P2-1w note** (approved): append "Contained in P2-1." to its statement column. s4-report §7 dates it
+2026-10-18; if the P2-1 row is dated 2026-10-19, use that date or none.
+
+**Compute for the follow-up:** ≈ 0.25 core-h (S replay 203 s, pytest fast and slow 690 s, the other
+checks ≈ 15 s), at nice 10, with at most 3 processes at once. The review total is now ≈ 1.47 core-h.
+
+**Merge.** Nothing blocks it from the review's side. Under the repository's rules the merge into main
+and the ledger rows are the owner's.

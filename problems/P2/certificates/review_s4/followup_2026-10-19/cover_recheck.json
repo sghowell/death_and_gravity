@@ -1,0 +1,62 @@
+{
+ "T_tiles_[4/5,2]": true,
+ "T_all_pass_h0_decay": true,
+ "T_nu_low_is_minus_d": true,
+ "A_pass": true,
+ "A_phi0_lt_minus_atan": true,
+ "S": {
+  "plus": {
+   "tiles_[0,9/10]": true,
+   "eps_tiles_and_eps_max": true,
+   "flags": true,
+   "w1_and_tail_strip": true,
+   "n_leaves": 47,
+   "cert_pass": true
+  },
+  "c": {
+   "tiles_[0,9/10]": true,
+   "eps_tiles_and_eps_max": true,
+   "flags": true,
+   "w1_and_tail_strip": true,
+   "n_leaves": 45,
+   "cert_pass": true
+  }
+ },
+ "S_c_max_crossing_height": {
+  "X0": 0.0,
+  "0": 0.05365281568575139
+ },
+ "S_c_max_t_distance_of_crossing_from_exit": 0.21133650898853715,
+ "L": {
+  "n": 1760,
+  "area_eq_8x11/20": true,
+  "inside": true,
+  "on_1/20_grid": true,
+  "distinct": true,
+  "same_boxes_both_sides": true,
+  "all_pass": true,
+  "poles_avoided_im_ge_minus_d_gt_minus_kplus": true
+ },
+ "overlaps": {
+  "6<8": true,
+  "4/5<9/10": true,
+  "3/2<2": true,
+  "0.9 OmP/h0 > 8 km": true,
+  "d < kp < kc": true,
+  "6 km > d": true,
+  "0.8 OmP/h0 > d": true,
+  "1.5 OmP/h0 > d": true
+ },
+ "random_lookups": {
+  "n": 2000,
+  "uncovered": [],
+  "n_uncovered": 0,
+  "by_regime": {
+   "L": 405,
+   "S": 520,
+   "T": 136,
+   "A": 1102
+  }
+ },
+ "pass": true
+}

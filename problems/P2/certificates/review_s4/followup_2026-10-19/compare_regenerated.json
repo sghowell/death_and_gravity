@@ -1,0 +1,186 @@
+{
+ "S_plus": {
+  "leaves": [
+   47,
+   47
+  ],
+  "outward_rerounded_strings": 140,
+  "max_abs_move": 1e-05,
+  "max_rel_move": 9.910556238888408e-08,
+  "other_changes": [],
+  "top_level_changes": {
+   "commits": [
+    [
+     "35201758e5c9fc5f411fbd27d6f00373123ff882",
+     "35201758e5c9fc5f411fbd27d6f00373123ff882+dirty"
+    ],
+    [
+     "68de818453b32110618504656f12d4381673370a"
+    ]
+   ],
+   "cpu_s_total": [
+    196.9,
+    195.0
+   ]
+  }
+ },
+ "S_c": {
+  "leaves": [
+   45,
+   45
+  ],
+  "outward_rerounded_strings": 133,
+  "max_abs_move": 1e-05,
+  "max_rel_move": 9.459666677293026e-08,
+  "other_changes": [],
+  "top_level_changes": {
+   "commits": [
+    [
+     "35201758e5c9fc5f411fbd27d6f00373123ff882"
+    ],
+    [
+     "68de818453b32110618504656f12d4381673370a"
+    ]
+   ]
+  }
+ },
+ "L_plus": {
+  "leaves_detail_identical": true,
+  "top_level_changes": {
+   "min_Re_y_plus_lower": [
+    0.124564,
+    "0.12456385"
+   ]
+  }
+ },
+ "L_c": {
+  "leaves_detail_identical": true,
+  "top_level_changes": {
+   "max_Re_y_c_upper": [
+    -0.0804535,
+    "-0.080453488"
+   ]
+  }
+ },
+ "controls_PB.json": [
+  {
+   "path": ".K2.timing_s.cpu",
+   "kind": "VALUE CHANGE",
+   "old": 2.7,
+   "new": 2.8
+  },
+  {
+   "path": ".K2.timing_s.wall",
+   "kind": "VALUE CHANGE",
+   "old": 2.7,
+   "new": 2.8
+  },
+  {
+   "path": ".N4.c.eps_boxes[0].mu_cells",
+   "kind": "outward re-rounding",
+   "old": "[-0.9242449, -0.9242449]",
+   "new": "[-0.92424490, -0.92424489]",
+   "abs": 1e-08,
+   "rel": 1.0819643148693599e-08
+  },
+  {
+   "path": ".N4.c.exit.Ut_minus_1_minus_epsmax2_Wbound",
+   "kind": "outward re-rounding",
+   "old": "[-0.65727292, -0.65727292]",
+   "new": "[-0.65727293, -0.65727292]",
+   "abs": 1e-08,
+   "rel": 1.5214380047788975e-08
+  },
+  {
+   "path": ".N4.plus.eps_boxes[0].mu_cells",
+   "kind": "outward re-rounding",
+   "old": "[-0.81175786, -0.81175786]",
+   "new": "[-0.81175787, -0.81175786]",
+   "abs": 1e-08,
+   "rel": 1.231894446947517e-08
+  },
+  {
+   "path": ".N4.plus.exit.Ut_minus_1_minus_epsmax2_Wbound",
+   "kind": "outward re-rounding",
+   "old": "[-0.62179395, -0.62179395]",
+   "new": "[-0.62179395, -0.62179394]",
+   "abs": 1e-08,
+   "rel": 1.6082498068693013e-08
+  },
+  {
+   "path": ".commit",
+   "kind": "VALUE CHANGE",
+   "old": "0e3c40f74210d584b2cce02bd4d1d4000206ad41",
+   "new": "68de818453b32110618504656f12d4381673370a"
+  },
+  {
+   "path": ".timing_N_K1_s.cpu",
+   "kind": "VALUE CHANGE",
+   "old": 187.3,
+   "new": 194.5
+  },
+  {
+   "path": ".timing_N_K1_s.wall",
+   "kind": "VALUE CHANGE",
+   "old": 187.5,
+   "new": 196.7
+  }
+ ],
+ "cover_PB.json": [
+  {
+   "path": ".commit",
+   "kind": "VALUE CHANGE",
+   "old": "279878d424b455dc157309f28d61298838df7877",
+   "new": "68de818453b32110618504656f12d4381673370a"
+  }
+ ],
+ "replay_PB.json": [
+  {
+   "path": ".commit",
+   "kind": "VALUE CHANGE",
+   "old": "0e3c40f74210d584b2cce02bd4d1d4000206ad41",
+   "new": "68de818453b32110618504656f12d4381673370a"
+  },
+  {
+   "path": ".mode",
+   "kind": "missing in old"
+  },
+  {
+   "path": ".stats.A.cells_recomputed",
+   "kind": "VALUE CHANGE",
+   "old": 78,
+   "new": 1536
+  },
+  {
+   "path": ".stats.L.recomputed",
+   "kind": "VALUE CHANGE",
+   "old": 88,
+   "new": 1760
+  },
+  {
+   "path": ".stats.S_c.recomputed",
+   "kind": "VALUE CHANGE",
+   "old": 3,
+   "new": 45
+  },
+  {
+   "path": ".stats.S_plus.recomputed",
+   "kind": "VALUE CHANGE",
+   "old": 3,
+   "new": 47
+  },
+  {
+   "path": ".stats.T.cells_recomputed",
+   "kind": "VALUE CHANGE",
+   "old": 1878,
+   "new": 37005
+  },
+  {
+   "path": ".stride",
+   "kind": "missing in old"
+  }
+ ],
+ "T_PB.json": [],
+ "A_PB.json": [],
+ "bulk_PB.json": []
+}
