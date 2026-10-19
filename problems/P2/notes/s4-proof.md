@@ -35,8 +35,9 @@ Notation.
   r_P′ = 3 − r_P.
   - r_P′ = 1.04127 < r₊ = 1.09435 (Arb). Hence U is strictly increasing on (r₊, r_P) and strictly
     decreasing on (r_P, r_c).
-- **The W̃ bound.** W̃ ≥ −W_bound on [r₊, r_c], with W_bound = 99/12500 = 0.00792. The true
-  minimum is −0.0079101, near r = 3.94; it is enclosed on 6000 cells.
+- **The W̃ bound.** W̃ ≥ −W_bound on [r₊, r_c], with W_bound = 99/12500 = 0.00792. The certified
+  lower bound over 6000 cells is −0.0079101. The float minimum is −0.0078910, at r = 3.9461 (review
+  W2).
   - C_W := 4·max(κ₊², W_bound) = 0.03168.
 - **Bulk positivity.** On a real interval where h⁻²U ≥ M and M ≥ max(4|ω|², C_W):
   Re(V − ω²) = h⁻²U + W̃ − (Re ω)² + ν² ≥ M − M/4 − M/4 > 0.
@@ -63,7 +64,8 @@ certificate's parameter boxes tile its domain; `cover_PB.json` checks the tiling
 - T's 24 ζ-boxes tile [0.8, 2.0]Ω_P.
 - S's ζ-leaves tile [0, 0.9]Ω_P. In each leaf the ε-boxes tile [0, ε_max(ζ_lo)], where
   ε_max(ζ_lo) ≥ min(1/(6κ₋), h₀/ζ) ≥ ε for every (h, Re ω) in S.
-- L's leaves have total area 8 × 0.55 (κ₋²) inside [0, 8] × [−0.55, 0].
+- L's leaves tile [0, 8] × [−0.55, 0] (κ₋ units). Since `279878d4` the cover checks this box by
+  box: in every grid box of side 1/20, the leaves are disjoint and fill it (review W3).
 
 ## 2. W1: vertical-strip analyticity of r(x) (S2 Lemma 1, extended by Amendment 1)
 
@@ -85,7 +87,21 @@ there.
 - On the two lines, S2 integrated r along the segments up to heights 0.1413 and 2.438
   (`certificates/m3/m3_PB_geometry.json`, replayed as K1), with |r| bounded away from 0 and ∞.
   Conjugation (r(x̄) = conj r(x)) gives the segments below the axis.
-- Each strip is simply connected, so the continuation is single-valued there. ∎
+- Each strip is simply connected, so the continuation is single-valued there.
+- **The union is simply connected** (added after the review, finding S3).
+  - Let N₀ and N₁ be open neighbourhoods of the checked windows
+    {X₀ + iY : |Y| ≤ 0.1413} and {iY : |Y| ≤ 2.438} on which r continues analytically. They exist
+    because the vertical continuation depends continuously on X near X₀ and 0, the windows stay in a
+    compact subset of ℂ∖{0}, and Cauchy–Riemann holds as above.
+  - Then D := Π₋ ∪ Π₀ ∪ Π₊ ∪ N₀ ∪ N₁ is open and connected. Its complement in the Riemann sphere is
+    {∞} together with the four rays {X₀ + iY : |Y| > 0.1413} and {iY : |Y| > 2.438}, minus the parts
+    inside N₀, N₁. These pieces are joined at ∞, so the complement is connected and D is simply
+    connected.
+  - Hence r, and every solution of the radial equation in x, is single-valued on D. Equivalently,
+    the region between the real axis and any S contour is a curvilinear trapezoid inside D.
+  - So Φ_c continued along a c-side contour, which may cross Re x = X₀ and Re x = 0 inside the
+    windows, is the same function as Φ_c continued vertically. On the tail half-plane of W2 that
+    function is the Frobenius representation (∗). ∎
 
 **Where each contour lies** (`w1_check` in each S leaf; S2's geometry for T and A):
 - T and A use S2's contour, which lies in S2's sectors.
@@ -123,6 +139,9 @@ derivatives, provided Re ω + Im ω > 0:
   - In T and A, Re ω ≥ 0.8Ω_P/h₀ > d_δ.
 - **The c side** is the same at r_c. The tail region {Re x ≥ X_L} lies in Π₊, since
   X_L = X_a + (t_a − t_L)/k > 0 in every leaf; this is checked at assembly.
+  - The contour reaches the tail from a real exit in Π₋ or Π₀ through the windows. By the simply
+    connected union D of W1, the function continued along it is the one represented by (∗) on the
+    tail.
 - **The closing box.** r(x) = r_h + s·ψ(e^{±2κ_h(x − c_h)}) on that half-plane, by the identity
   theorem (both sides are analytic and agree on the real axis). (∗) holds there directly. ∎
 
@@ -257,7 +276,15 @@ This is polynomial in τ with coefficients polynomial in h².
 - **The turning point.** G is increasing on [0, ρ₁] and G(ρ₁) ≥ ζ₁², so ρ_T(ζ) ≤ ρ₁ for every
   ζ ≤ ζ₁.
 - **Ũ.** Ũ = G(ρ_T e^{2Y})/G(ρ_T) = e^{2Y}P(ρ_T e^{2Y})/P(ρ_T), with P = G/ρ.
-  - On the radial segment, P(λz) ∈ g₁ + Σ g_n zⁿ⁻¹·[0, 1] for λ ∈ [0, 1].
+  - On the radial segment, P(λz) ∈ g₁ + Σ g_n zⁿ⁻¹·[0, 1] for λ ∈ [0, 1], for complex z.
+  - **The error terms** need |P_N(ρ)| bounded on the complex set the contour visits,
+    ρ = λρ₁e^{2Y(t)}. arg ρ = 2η(t) covers [−π, 0] on the bend, and the g_n have mixed signs.
+    - Lower bound: the larger of |g₁| − Σ_{n≥2}|g_n||ρ|^{n−1} and the complex-segment enclosure's lower
+      end. Upper bound: the smaller of |g₁| + Σ_{n≥2}|g_n||ρ|^{n−1} and its upper end.
+    - The tail uses the disc bound.
+    - The first version bounded |P_N| on the real segment only, which is not a bound at complex ρ
+      (review S1). It was corrected at `68de8184`; the regenerated margins agree with the first ones to
+      8 digits.
   - W̃(r_h) = 0 gives |W̃| ≤ M_W(|ρ|/R)/(1 − |ρ|/R).
   - ρ₁e^{2t_a} < R is certified.
 - **The check.** q̂ is then an explicit function of t, with ρ_T as an interval parameter. The

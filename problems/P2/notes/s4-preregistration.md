@@ -507,3 +507,34 @@ item 15) was a secant search seeded at each point, with no criterion for a found
   - Every flagged stop is checked both ways.
   - The raw number of stops in H⁺ is reported alongside.
   - The K4 run itself (the points, the solver and its settings) is unchanged.
+
+### Correction to Amendment 6 (2026-10-19, after the independent review, finding S2)
+
+Amendment 6's text stands as written. This corrects it on two points.
+- **A rule did exist at launch.** The registered *text* gave no criterion for a found zero, but the
+  code did.
+  - At `35201758`, and at `ca66270b`, from which K4 was launched, `assemble_K4` set
+    `pass = … and not any(r["root_in_H_plus"])`. So every secant stop in H⁺ counted as a zero.
+  - **Under that launch-time rule K4 fails**, with 61 of the 200 points stopped in H⁺. Amendment 6
+    replaced the rule after the first results.
+- **The mechanism is overshoot and return, not a fast-turning phase.** The review traced the secant
+  at three of the stops.
+  - d arg W/d(Re ω) at the seeds is only −3.35, −1.87 and −3.68.
+  - The first secant step overshoots to Im ω ≈ −7.5, −13.0 and −6.9 κ₋, where |W| ≈ 10¹⁵ to 10⁴⁸.
+  - The next step returns to the previous iterate to 16 digits.
+  - The step after that is at most 3·10⁻¹⁶ relative, and the step-only test fires at the perturbed
+    seed x₁ = x₀(1 + 10⁻⁶) + 10⁻⁹i. This is why every stop lies within 10⁻⁶ of its seed.
+- **The new criterion stands.** A secant stop is a zero only if W is small there.
+  - At all 61 stops the residual ratio |W(root)|/|W(seed)| is 1.0000008–1.0000013, and the
+    rigorous zsol balls exclude 0. The reviewer's independent code gives D = 1 at 13 of them.
+  - K4 is a float sanity check; the proof does not use it.
+
+### Errata (2026-10-19, after the independent review, items W1 and W5)
+
+- **W1 (Amendment 4).** "a* = 0.02996861191… (a* − a_d ≈ 3.7·10⁻¹¹)" is wrong in its last digits.
+  - In Arb, a* = 2Ω_Pγ₀ = 0.0299686149113, and a_d = 32178552/2³⁰ = 0.0299686118960, so
+    a* − a_d = 3.0·10⁻⁹. The 3.7·10⁻¹¹ came from the float pilot's finite-difference a*.
+  - This is harmless: any a_d < a* is admissible. The best 30-bit dyadic below a* would have been
+    32178555/2³⁰.
+- **W5.** "K4" names two different things in this document: the float acceptance check (§4) and the
+  kill criterion h₁ < 1/30.5 (§7). The S4 report calls the latter "kill criterion K4 (l₀ too large)".

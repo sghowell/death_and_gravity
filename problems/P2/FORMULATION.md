@@ -3,8 +3,10 @@
 Status: formulation **v0.6** (S4 exit; stage S5), 2026-10-18; frozen at v0 (S0,
 2026-10-16), with every later change recorded in the Revision log. The ledger
 has rows P2-par, P2-0, P2-D1′, P2-1w, P2-2, P2-3B and P2-K6 (`CLAIMS.md`). S4
-proposes the row P2-1 at P_B (`notes/s4-report.md` §7; not yet reviewed). Every
-other claim id is still a *target*.
+proposes the row P2-1 at P_B (`notes/s4-report.md` §7). The independent review
+(`docs/review-2026-10-18-p2-s4-adversarial.md`, 2026-10-18/19) found it proven as
+stated; one closing-box error term (S1) was corrected after it. Every other claim
+id is still a *target*.
 
 Changes after S1 begins go in the Revision log, never by silent edit (house
 discipline of `problems/P9/b/FORMULATION.md`).
@@ -461,7 +463,7 @@ Sizing and kill criteria are in `s0-gate.md` §7.
   - **Four regimes** cover {l ≥ 20} × {Re ω ≥ 0, −(½+δ)κ₋ ≤ Im ω ≤ 0}. ζ := h Re ω.
     - **L** (Re ω ≤ 8κ₋): a τ-scaled Frobenius series at each horizon (r = r_h ± h²τ), uniform in
       h² ∈ [0, h₀²], in affine Arb arithmetic. Then Riccati invariance through the forbidden bulk.
-    - **S** (6κ₋ ≤ Re ω ≤ 0.9Ω_P/h): half-line coercivity on C² contours passing below each
+    - **S** (6κ₋ ≤ Re ω ≤ 0.9Ω_P/h): half-line coercivity on C³ contours passing below each
       turning point, in the normalised form where h enters only through ζ and 1/Re ω. Below
       ζ = 0.02Ω_P, a near-horizon Taylor model closes ζ → 0.
     - **T** (0.8–2.0 Ω_P/h): S2's rotated contour with the exact splitting
@@ -478,7 +480,18 @@ Sizing and kill criteria are in `s0-gate.md` §7.
       analyticity of r(x)) and W2 (Jost continuation and decay on the curved contours) are
       non-routine written arguments. The Im ω > 0 part is at P2-0's level.
     - The target level of P2-1 (CERTIFIED) would need W1 and W2 machine-checked.
-  - **With P2-3B (l ≤ 19), P2-3 is complete at P_B.** The S3 fallback for 20 ≤ l < l₀ was not
-    needed.
-  - **Open.** The independent review of S4; the assembly P2-4/P2-5 (S5); P_A; P2-6.
+  - **With P2-3B, every l < l₀ = 20 is counted at P_B, on P2-3B's boxes R′_l.** The S3 fallback
+    for 20 ≤ l < l₀ was not needed. P2-1 contains P2-1w's statement.
+  - **The independent review** (`docs/review-2026-10-18-p2-s4-adversarial.md`, 2026-10-18/19) found
+    the theorem proven as stated, with nothing blocking.
+    - Every certificate was replayed in full, and reviewer code sharing nothing with `p2` confirms
+      every certified bound.
+    - S3's counting pipeline independently finds no zero of W₂₀ in R′₂₀.
+  - **The review's fixes (2026-10-19).**
+    - S1: the S closing box's truncation term bounded P_N on the real segment, while the contour
+      visits complex ρ. It now uses rigorous complex bounds, and the regenerated margins agree with
+      the first ones to 8 digits.
+    - The rest: a dated correction to Amendment 6 (the launch-time K4 rule, and the secant
+      mechanism), the simply connected union of strips and windows in W1/W2, and wording.
+  - **Open.** The assembly P2-4/P2-5 (S5); P_A; P2-6.
 
