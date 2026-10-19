@@ -35,7 +35,7 @@ from pathlib import Path
 import numpy as np
 from flint import acb, acb_series, arb, ctx
 
-from .arbutil import Timer, git_commit, precision
+from .arbutil import Timer, git_commit, lohi_out, precision
 from .m3 import dist_bounds, fa, real_point
 from .m3_contour import F_of, apriori_box, rstar
 from .params import Point
@@ -66,8 +66,9 @@ I = acb(0, 1)
 
 
 def lohi(x, digits=8) -> str:
-    """Outward-rounded endpoints of an arb as a readable string (Arb's short rendering can hide the sign)."""
-    return f"[{float(arb(x.lower())):.{digits}g}, {float(arb(x.upper())):.{digits}g}]"
+    """'[lo, hi]' with lo rounded down and hi rounded up at `digits` significant digits (review W4: the
+    first version rounded to nearest); Arb's short rendering can hide the sign."""
+    return lohi_out(x, digits)
 
 
 def pval(co, x):
@@ -911,6 +912,28 @@ def nh_P_err(nh, rho_abs):
     return arb(((nh["M_G"] / nh["R"]) * q ** nh["N"] / (1 - q)).upper())
 
 
+def nh_P_disc(nh, rabs):
+    """Lower and upper bounds of |P_N(rho)| over the closed disc |rho| <= rabs (any argument):
+    |g_1| -+ sum_{n>=2} |g_n| rabs^(n-1)."""
+    g = nh["g"]
+    s_ = arb(0)
+    rp = arb(1)
+    for n in range(2, nh["N"] + 1):
+        rp = rp * rabs
+        s_ = s_ + arb(abs(g[n]).upper()) * rp
+    g1 = abs(g[1])
+    return arb((g1 - s_).lower()), arb((g1 + s_).upper())
+
+
+def nh_P_bounds(nh, z, rabs):
+    """Rigorous bounds of |P_N(lam z')| for lam in [0, 1] and z' in the complex box z, with |z| <= rabs
+    (review S1): the larger of the disc lower bound and the complex-segment enclosure's lower end, and the
+    smaller of the two upper ends."""
+    seg = abs(nh_P_seg(nh, z))
+    dlo, dhi = nh_P_disc(nh, rabs)
+    return arb(dlo.max(arb(seg.lower())).lower()), arb(dhi.min(arb(seg.upper())).upper())
+
+
 def certify_closing(pt: Point, g: FGeo, side: int, W_bound: Fraction, design=None):
     """zeta in (0, zeta_1], eps in [0, 1/Omega_S]: contour x_T(zeta) + side Y(t)/kappa_h; along it
     rho = rho_T e^{2Y} and U~ = e^{2Y} P(rho_T e^{2Y})/P(rho_T), P = G/rho, rho_T in [0, rho_1]."""
@@ -961,15 +984,19 @@ def certify_closing(pt: Point, g: FGeo, side: int, W_bound: Fraction, design=Non
         p = parts(pt, D, tt, None, None, side, kap, pb, pp, model=Ut)
         return p
 
-    def err_cell(civ, p):
-        """|Y'|^2 |U~_N| delta + eps^2 |Y'|^2 |Wt| over the cell."""
+    def err_cell(civ, pb, p):
+        """|Y'|^2 |U~_N| delta + eps^2 |Y'|^2 |Wt| over the cell.  |P_N(rho)| is bounded on the complex set
+        rho = lam rho_1 e^{2Y(t)} the contour visits (review S1), not on the real segment."""
         e2t = (2 * civ).exp()
         rabs = arb((rho1 * e2t).upper())
-        PN = nh_P_seg(nh, acb(rho1 * e2t))
-        e1 = nh_P_err(nh, rabs) / arb((abs(PN).lower()).max(arb("1e-300")))
+        e2Yc = (2 * acb(civ, D.eta_value(civ, pb))).exp()
+        Plo, Phi = nh_P_bounds(nh, acb(rho1) * e2Yc, rabs)
+        if not (Plo > 0):
+            return arb.pos_inf()
+        e1 = nh_P_err(nh, rabs) / Plo
         e2 = errT / PT_abs_lo
         delta = (e1 + e2) / (1 - e2)
-        Uabs = e2t * arb((abs(PN).upper() + nh_P_err(nh, rabs)).upper()) / PT_abs_lo
+        Uabs = e2t * arb((Phi + nh_P_err(nh, rabs)).upper()) / PT_abs_lo
         q = rabs / nh["R"]
         Wabs = nh["M_W"] * q / (1 - q)
         return p["Yp2"][0] * (Uabs * delta + prm.E2.upper() * Wabs)
@@ -985,13 +1012,13 @@ def certify_closing(pt: Point, g: FGeo, side: int, W_bound: Fraction, design=Non
         pc = model(civ, pb, pp)
         qm = prm.combine(pm, 0, k2)
         dq = prm.combine(pc, 1, k2)
-        err = err_cell(civ, pc)
+        err = err_cell(civ, pb, pc)
         return arb((qm.lower() - abs(dq).upper() * (w / 2) - err.upper()).lower())
 
     # exit: U~(t_a) - 1 - eps_max^2 W_bound > 0 for all rho_T in [0, rho_1]
     pa = model(ta, 1, 1)
     Ua_lo = pa["P1"][0]                              # = Re(G U~) with G = 1 at the exit (phi = 0, Y' = 1)
-    ea = err_cell(ta, pa)
+    ea = err_cell(ta, 1, pa)
     ex_margin = Ua_lo - ea - 1 - fa(eps_max) ** 2 * fa(W_bound)
     rh = pt.rp if side > 0 else pt.rc
     r_edge = rh + side * fa(nh["d_r"])
@@ -1031,7 +1058,7 @@ def certify_closing(pt: Point, g: FGeo, side: int, W_bound: Fraction, design=Non
     phinf = D.phinf()
     e2L = (2 * fa(T_LEFT)).exp()
     rL = arb((rho1 * e2L).upper())
-    UL = e2L * arb((abs(nh_P_seg(nh, acb(rL))).upper() + nh_P_err(nh, rL)).upper()) / PT_abs_lo
+    UL = e2L * arb((nh_P_disc(nh, rL)[1] + nh_P_err(nh, rL)).upper()) / PT_abs_lo      # any arg rho (S1)
     WL = nh["M_W"] * (rL / nh["R"]) / (1 - rL / nh["R"])
     tail = (-2 * phinf.sin() + prm.EN * (-4 * phinf.cos()) + prm.E2N2 * (2 * phinf.sin())
             - 2 * UL - 2 * WL * prm.E2.upper())

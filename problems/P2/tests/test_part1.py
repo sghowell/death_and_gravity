@@ -100,6 +100,33 @@ def test_S_closing_and_one_box_each_side(pt):
         assert throat.certify_zbox(pt, g, 1, Fraction(22, 25), Fraction(9, 10), W_BOUND)["pass"]
 
 
+def test_S1_closing_P_bounds_at_complex_rho(pt):
+    """Review S1: in the closing box the contour visits complex rho = lam rho_1 e^{2Y(t)}; the bounds on
+    |P_N(rho)| used by the error term must hold there.  Also: the old real-segment lower bound (g_1, for
+    positive coefficients) is not a bound at arg rho = pi, so this test would have caught S1."""
+    D = throat.SDesign(2, Fraction(1, 20), 3, 0, 1)
+    cells = ((Fraction(-2), Fraction(-31, 16)), (Fraction(-13, 8), Fraction(-25, 16)), (Fraction(-1), Fraction(-15, 16)),
+             (Fraction(-1, 4), Fraction(-3, 16)), (Fraction(1), Fraction(17, 16)), (Fraction(2), Fraction(41, 20)))
+    with precision(128):
+        for side, rho1, r_pi in ((1, arb("0.00031"), arb("0.01")), (-1, arb("0.0034"), arb("0.1"))):
+            nh = throat.nh_model(pt, side, throat.D_R[side])
+            for a, b in cells:
+                pb = D.piece_bend(a, b)
+                civ = (fa(a) + fa(b)) / 2 + arb(0, 1) * (fa(b - a) / 2)
+                rabs = arb((rho1 * (2 * civ).exp()).upper())
+                z = acb(rho1) * (2 * acb(civ, D.eta_value(civ, pb))).exp()
+                Plo, Phi = throat.nh_P_bounds(nh, z, rabs)
+                for frac in (Fraction(0), Fraction(1, 2), Fraction(1)):
+                    t = fa(a + (b - a) * frac)
+                    for lam in ("1", "0.5", "0.1"):
+                        zt = arb(lam) * rho1 * (2 * acb(t, D.eta_value(t, pb))).exp()
+                        v = abs(throat.nh_P(nh, zt))
+                        assert v.lower() >= Plo and v.upper() <= Phi, (side, a, b, lam)
+            # at arg rho = pi, |P_N| lies below g_1, the lower end of the real-segment enclosure
+            assert abs(throat.nh_P(nh, acb(-r_pi))) < abs(nh["g"][1])
+            assert throat.nh_P_bounds(nh, acb(-r_pi), r_pi)[0] <= abs(throat.nh_P(nh, acb(-r_pi))).lower()
+
+
 def test_affine_forms_enclose():
     rng = random.Random(1)
     with precision(128):

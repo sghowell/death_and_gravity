@@ -9,7 +9,7 @@ Regimes: L (lowfreq.py), S (throat.py), T and A (part1_T.py).  Certificates: cer
     python -m p2.part1 assemble REGIME            certificate from the worker files
     python -m p2.part1 cover                      cover_PB.json
     python -m p2.part1 controls                   controls_PB.json (N1-N5, K1-K4)
-    python -m p2.part1 verify                     replay_PB.json
+    python -m p2.part1 verify [full]              replay_PB.json (5% sample, or every cell/leaf/box)
 """
 from __future__ import annotations
 
@@ -652,7 +652,9 @@ def verify(frac_stride=20):
     st = json.loads((CERT_DIR / "cover_PB.json").read_text())
     if cv["pass"] != st["pass"] or cv["tiling"] != st["tiling"] or cv["inequalities"] != st["inequalities"]:
         probs.append("cover: replay differs")
-    return {"problems": probs, "pass": not probs, "stats": stats, "commit": git_commit()}
+    return {"problems": probs, "pass": not probs, "stats": stats, "stride": frac_stride,
+            "mode": "full" if frac_stride == 1 else f"every {frac_stride}th item (plus each T box's worst cell)",
+            "commit": git_commit()}
 
 
 # ---------------------------------------------------------------------------------------------
@@ -733,7 +735,7 @@ def main(argv):
         (CERT_DIR / "controls_PB.json").write_text(json.dumps(c, indent=1) + "\n")
         print("controls pass:", c["pass"])
     elif cmd == "verify":
-        c = verify()
+        c = verify(1 if (len(argv) > 2 and argv[2] == "full") else 20)
         (CERT_DIR / "replay_PB.json").write_text(json.dumps(c, indent=1) + "\n")
         print("replay:", "OK" if c["pass"] else c["problems"])
     else:

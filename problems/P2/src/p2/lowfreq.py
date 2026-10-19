@@ -33,7 +33,7 @@ from pathlib import Path
 from flint import acb, arb, ctx, fmpq
 
 from .affine import AF, up
-from .arbutil import Timer, git_commit, precision
+from .arbutil import Timer, dec_round, exact_fraction, git_commit, precision
 from .arbw import _geom_tails, _shift, _solve_q
 from .m3 import fa
 from .params import Point
@@ -556,10 +556,14 @@ def assemble():
     for name, sgn in (("plus", 1), ("c", -1)):
         vals = [x[name] for x in leaves if "Re_y_bound" in x.get(name, {})]
         side_ok = (not missing) and len(vals) == len(leaves) and all(v["y_sign_ok"] and v["exit_rule_ok"] for v in vals)
-        ext = [float(arb(v["Re_y_bound"].split("+/-")[0].strip("[ ")).mid()) for v in vals]
+        # extremes over the stored (rigorous) balls' endpoints, rounded outward (review W4: the first
+        # version took the minimum of midpoints)
+        ext = [exact_fraction(arb(arb(v["Re_y_bound"]).lower() if sgn > 0 else arb(v["Re_y_bound"]).upper()))
+               for v in vals]
         cert = {"regime": "L", "side": name, "point": "PB", "h0": str(H0), "precision_bits": PREC,
                 "design": DESIGN_L, "boxes": len(want), "leaves": len(leaves), "missing": missing,
-                ("min_Re_y_plus_lower" if sgn > 0 else "max_Re_y_c_upper"): (min(ext) if sgn > 0 else max(ext)) if ext else None,
+                ("min_Re_y_plus_lower" if sgn > 0 else "max_Re_y_c_upper"):
+                    (dec_round(min(ext), 8, False) if sgn > 0 else dec_round(max(ext), 8, True)) if ext else None,
                 "max_tau_a": str(max((Fraction(v["tau_a"]) for v in vals), default=0)),
                 "poles_avoided_all": all(x["poles_avoided"] for x in leaves),
                 "cpu_s_total_both_sides": cpu, "commits": commits,
