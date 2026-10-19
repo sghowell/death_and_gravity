@@ -84,7 +84,9 @@ Here a* = √(|U″|/2) = 2Ω_Pγ₀ = 0.029969, and ν ∈ [−d_δ, 0] through
   - The first run printed 0.41468629 and 0.35342094 (rounded to nearest). The values are unchanged
     to 8 digits.
   - All 92 S leaves were regenerated at that commit. Every design, X_a, k, target and cell partition
-    is as before, and the printed bounds moved by at most 10⁻⁸ (outward rounding).
+    is as before. The printed bounds moved outward by at most one unit in the 8th significant
+    digit: at most 1.0e−7 relative, and up to 1e−5 absolute for the exit margins of order 10²–10³
+    (review §9, FU1).
 - **The other leaves.**
   - Designs from the registered grid plus the added half-widths w = 2, 3 (Amendment 5). w = 4 was
     never selected.
