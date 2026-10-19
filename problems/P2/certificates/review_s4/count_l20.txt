@@ -1,0 +1,36 @@
+223 segments to run for l = [20]
+{
+ "claim": "P2-3 at PB, l = 20: number of zeros of W_l in R'_l (with multiplicity)",
+ "point": "PB",
+ "l": 20,
+ "region": {
+  "a": "76112707/16777216",
+  "b": "6280879/268435456",
+  "e": "4567911/1073741824",
+  "a_source": "certificates/lg/lg_PB_l20.json",
+  "b_ge_beta": true,
+  "e_le_eta": true
+ },
+ "symmetry": "W(-conj w) = conj W(w): winding = (sum over the right half H)/pi",
+ "sum_increments_over_H": "[+/- 2.34e-3]",
+ "winding_ball": "[+/- 7.43e-4]",
+ "certified": true,
+ "winding": 0,
+ "segments": 223,
+ "K_max_used": 104,
+ "min_abs_W_on_H_lower": 4.067773282527924,
+ "max_M_over_absWc": 7.738319116025277e+22,
+ "cpu_s": 2007.6,
+ "method": {
+  "prec_bits": 128,
+  "theta_point": 3.0,
+  "theta_box": 0.25,
+  "x": "1/2",
+  "rho_max_kappa": 1.0,
+  "target": 1e-06
+ },
+ "computed_at": [
+  "0e32921784046ea42b8b7eb622e3840ee7a67033"
+ ],
+ "assembled_at": "0e32921784046ea42b8b7eb622e3840ee7a67033"
+}

@@ -78,6 +78,38 @@ def mid_str(x, digits: int = 20) -> str:
     return x.mid().str(digits, radius=False)
 
 
+def exact_fraction(x: arb) -> Fraction:
+    """The exact rational value of an arb's midpoint (use on an endpoint, e.g. x.lower())."""
+    m, e = x.mid().man_exp()
+    return Fraction(int(m)) * Fraction(2) ** int(e)
+
+
+def dec_round(fr: Fraction, digits: int, up: bool) -> str:
+    """fr rounded to `digits` significant decimal digits, toward +inf (up) or -inf (down), exactly."""
+    import math
+    from decimal import Decimal
+    if fr == 0:
+        return "0"
+    a = abs(fr)
+    k = 0
+    while Fraction(10) ** k > a:
+        k -= 1
+    while Fraction(10) ** (k + 1) <= a:
+        k += 1
+    scale = Fraction(10) ** (digits - 1 - k)
+    v = a * scale
+    n = math.ceil(v) if (up == (fr > 0)) else math.floor(v)
+    d = Decimal(n).scaleb(k - digits + 1)
+    return str(-d if fr < 0 else d)
+
+
+def lohi_out(x: arb, digits: int = 8) -> str:
+    """'[lo, hi]' with lo rounded down and hi rounded up (outward), so the printed interval contains x."""
+    if not x.is_finite():
+        return str(x)
+    return f"[{dec_round(exact_fraction(arb(x.lower())), digits, False)}, {dec_round(exact_fraction(arb(x.upper())), digits, True)}]"
+
+
 def acb_box(re_lo, re_hi, im_lo, im_hi) -> acb:
     """Complex box [re_lo, re_hi] x [im_lo, im_hi] (exact rational/arb endpoints)."""
     rl, rh, il, ih = (A(v) for v in (re_lo, re_hi, im_lo, im_hi))

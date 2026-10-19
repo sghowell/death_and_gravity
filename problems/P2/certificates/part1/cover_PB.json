@@ -1,0 +1,45 @@
+{
+ "constants": {
+  "h0": "2/41",
+  "Omega_L_over_km": "8",
+  "Omega_S_over_km": "6",
+  "zeta_SU": "9/10",
+  "zeta_TL": "4/5",
+  "zeta_TU": "2",
+  "zeta_A": "3/2"
+ },
+ "inequalities": {
+  "Omega_S < Omega_L (L/S overlap)": true,
+  "zeta_TL < zeta_SU (S/T overlap)": true,
+  "zeta_A < zeta_TU (T/A overlap)": true,
+  "zeta_SU Omega_P/h0 > Omega_L (S reaches above L for every h <= h0)": true,
+  "d_delta < kappa_+ < kappa_c (E_+, E_c outside the strip)": true,
+  "Omega_S > d_delta (Jost decay on S's tails: Re w + Im w > 0)": true,
+  "zeta_TL Omega_P/h0 > d_delta (T)": true,
+  "zeta_A Omega_P/h0 > d_delta (A)": true
+ },
+ "certificates_pass": {
+  "bulk_PB": true,
+  "T_PB": true,
+  "A_PB": true,
+  "S_PB_plus": true,
+  "S_PB_c": true,
+  "L_PB_plus": true,
+  "L_PB_c": true
+ },
+ "tiling": {
+  "T zeta-boxes tile [zeta_TL, zeta_TU]": true,
+  "T nu range [-d_delta, 0], h0": true,
+  "A at zeta_A, monotone above (W7)": true,
+  "S plus: zeta-leaves tile [0, zeta_SU], eps-boxes tile [0, eps_max(zeta_lo)]": true,
+  "L plus: in every grid box of [0, 8] x [-11/20, 0], the leaves are disjoint and fill it": true,
+  "S c: zeta-leaves tile [0, zeta_SU], eps-boxes tile [0, eps_max(zeta_lo)]": true,
+  "L c: in every grid box of [0, 8] x [-11/20, 0], the leaves are disjoint and fill it": true
+ },
+ "cited": {
+  "Im w > 0": "P2-0 (at P2-0's level)",
+  "Re w < 0": "W_l(-conj w) = conj W_l(w) (FORMULATION 1.2; zeq_identity Z4)"
+ },
+ "pass": true,
+ "commit": "68de818453b32110618504656f12d4381673370a"
+}

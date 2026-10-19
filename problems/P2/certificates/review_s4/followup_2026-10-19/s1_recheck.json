@@ -1,0 +1,76 @@
+{
+ "commit": "21358225ac93d9f859b6705aa6541341f7428614",
+ "sides": [
+  {
+   "side": "plus",
+   "cells": 161,
+   "samples": 4025,
+   "new_bound_violations": 0,
+   "old_lower_bound_violations": 813,
+   "old_upper_bound_violations": 0,
+   "old_lower_worst_relative_excess": 0.00028291617905745585,
+   "tail_samples": 642,
+   "tail_disc_violations": 0
+  },
+  {
+   "side": "c",
+   "cells": 161,
+   "samples": 4025,
+   "new_bound_violations": 0,
+   "old_lower_bound_violations": 813,
+   "old_upper_bound_violations": 0,
+   "old_lower_worst_relative_excess": 9.856583560056418e-06,
+   "tail_samples": 642,
+   "tail_disc_violations": 0
+  }
+ ],
+ "regenerated_closing_leaves": [
+  {
+   "side": "plus",
+   "stored_mu_cells": "[0.41468628, 0.41468629]",
+   "stored_mu_tail": "[1.5341632, 1.7320506]",
+   "recomputed_mu_cells": "[0.41468628, 0.41468629]",
+   "diffs": []
+  },
+  {
+   "side": "c",
+   "stored_mu_cells": "[0.35342094, 0.35342095]",
+   "stored_mu_tail": "[1.5341632, 1.7320506]",
+   "recomputed_mu_cells": "[0.35342094, 0.35342095]",
+   "diffs": []
+  }
+ ],
+ "test_body_with_old_bound": {
+  "assertion_failures_with_old_bound": 46,
+  "first": [
+   [
+    1,
+    "-2",
+    "-31/16",
+    "1",
+    "0"
+   ],
+   [
+    1,
+    "-2",
+    "-31/16",
+    "0.5",
+    "0"
+   ],
+   [
+    1,
+    "-2",
+    "-31/16",
+    "1",
+    "1/2"
+   ],
+   [
+    1,
+    "-2",
+    "-31/16",
+    "0.5",
+    "1/2"
+   ]
+  ]
+ }
+}
