@@ -622,3 +622,9 @@ Sizing and kill criteria are in `s0-gate.md` §7.
   - **Open:** P2-7 (P_A).
   - **The ledger (2026-10-27).** The rows P2-6 and P2-E are entered verbatim from the review's §8,
     which its §9 confirms. The review's notes are appended to P2-K6, P2-4 and P2-D1′.
+  - **The problems document (2026-10-27).** Revision 1.4 adds the v1.4 entry, as the user approved
+    on 2026-10-27. The author drafted it (`notes/s6-report.md` §11), and the review's §9 checked it,
+    with one wording fix in (c) and a typesetting wrapper. It supersedes v1.3 (d) as to the
+    two-sided enclosure of β; v1.3 itself is not edited. The PDF is rebuilt with tectonic, and the
+    v1.3 PDF is archived in `docs/problems/revisions/`. The P2 statement and entry point are
+    unchanged from v1.2.
