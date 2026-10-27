@@ -250,7 +250,12 @@ def test_part1_S_extended_grid_box():
     with precision(T.PREC):
         new = T.certify_zbox_refined(pt, T.FGeo(pt), 1, Fraction(3, 50), Fraction(2, 25), W_bound)
     new = json.loads(json.dumps(new))
-    assert len(new) == 1 and new[0]["pass"] and new[0] == stored[0]
+    assert len(new) == 1 and new[0]["pass"]
+    # the float design margin (used only to pick the design) may differ in the last digits; the
+    # certified record must be identical
+    fm_new, fm_old = new[0].pop("float_margin"), dict(stored[0]).pop("float_margin")
+    assert abs(fm_new - fm_old) <= 1e-9 * abs(fm_old)
+    assert new[0] == {k: v for k, v in stored[0].items() if k != "float_margin"}
 
 
 @SLOW
