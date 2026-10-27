@@ -1,17 +1,21 @@
 # P2 — A certified resonance-free strip for subextremal RNdS (β > 1/2, linear SCC failure for smooth data)
 
-Status: formulation **v1.1** (S6 start), 2026-10-27; frozen at v0 (S0, 2026-10-16),
+Status: formulation **v1.2** (S6 exit), 2026-10-27; frozen at v0 (S0, 2026-10-16),
 with every later change recorded in the Revision log.
-- The ledger has rows P2-par, P2-0, P2-D1′, P2-1w, P2-1, P2-2, P2-3B, P2-4, P2-5 and
-  P2-K6 (`CLAIMS.md`).
+- The ledger has rows P2-par, P2-0, P2-D1′, P2-E, P2-1w, P2-1, P2-2, P2-3B, P2-4, P2-5,
+  P2-6 and P2-K6 (`CLAIMS.md`).
 - S5 assembled P2-4 and P2-5 at P_B (`notes/s5-assembly.md`).
 - The independent review (`docs/review-2026-10-26-p2-s5-adversarial.md`, 2026-10-26)
   found both proven as stated, with nothing blocking. Its fixes S1–S3 and W1–W9 are
   applied, and its follow-up check (§9) passed (2026-10-26).
 - P2-4 and P2-5 at P_B (`notes/s5-report.md` §6, the review's §7 rows) were entered
   on 2026-10-26, with the user's approval of that day.
-- P2-6 (the stretch goal) and P2-7 (P_A) are still *targets*. S6 (P2-6 at P_B) is in
-  progress (`notes/s6-preregistration.md`; Revision log v1.1).
+- S6 assembled P2-6 at P_B at WRITTEN_PROOF (`notes/s6-proof.md`; Revision log v1.2),
+  and P2-E records the exceptional point −iκ₊. The independent review
+  (`docs/review-2026-10-27-p2-s6-adversarial.md`) found both proven as stated, and its
+  follow-up check (§9) passed. Both rows were entered on 2026-10-27, with the user's
+  approval of that day.
+- P2-7 (P_A) is still a *target*.
 
 Changes after S1 begins go in the Revision log, never by silent edit (house
 discipline of `problems/P9/b/FORMULATION.md`).
@@ -596,8 +600,8 @@ Sizing and kill criteria are in `s0-gate.md` §7.
   - The §2 text of P2-6 is not rewritten. It carries a bracketed pointer here.
 
 - **v1.2 (2026-10-27, S6 exit; `notes/s6-proof.md`, `notes/s6-report.md`; independent review
-  `docs/review-2026-10-27-p2-s6-adversarial.md`).** P2-6 at P_B is assembled (P2-6 and P2-E reviewed
-  and approved 2026-10-27; not yet entered in the ledger).
+  `docs/review-2026-10-27-p2-s6-adversarial.md`).** P2-6 at P_B is assembled (P2-6 and P2-E entered
+  in the ledger on 2026-10-27).
   - **P2-6 at P_B: WRITTEN_PROOF**, the minimum of its ingredients. §2's target, CERTIFIED, is not
     reached.
     - The resonances of the forward problem on Ω₂₃ with Im σ ≥ −0.92κ₋ are exactly 0 and ω_*, both of
@@ -616,3 +620,5 @@ Sizing and kill criteria are in `s0-gate.md` §7.
   - **Unchanged:** the edge, the target, D1, D1′, D3, D7, the KATs of §5 (S6's B1–B7 are additive,
     v1.1), P2-5 (no stronger conversion is claimed) and the scope fences of §7.
   - **Open:** P2-7 (P_A).
+  - **The ledger (2026-10-27).** The rows P2-6 and P2-E are entered verbatim from the review's §8,
+    which its §9 confirms. The review's notes are appended to P2-K6, P2-4 and P2-D1′.
