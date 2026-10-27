@@ -216,3 +216,24 @@ and the certified inequalities (½+δ)κ₋ < min(κ₊, κ_c, γ₀). Then by D
 
 These are exactly the hypotheses quoted from [HV17] §2.5 in §4.1. Nothing here re-proves [HV17];
 P2-5 remains a theorem by citation.
+
+## Erratum (2026-10-27, after the S6 review)
+
+§4.1 quotes [Vas13] v2's half-plane for Thm 2.6, ℂ_s = {Im σ > β⁻¹(1 − 2s)}, which is the TeX
+statement Im σ > β⁻¹(k − 1 − 2s) (ℓ. 1940) with k = 2. The S6 review
+(`docs/review-2026-10-27-p2-s6-adversarial.md`, W6) found that this statement does not match
+[Vas13] v2's own radial estimate.
+- That estimate's sign condition, s − (k − 1)/2 + β Im σ − δ > 0 (ℓ. 1627), gives
+  s > (k − 1)/2 − β Im σ. That is twice the shift of the quoted half-plane,
+  s > (k − 1)/2 − (β/2) Im σ.
+- With [Vas13]'s Kerr–de Sitter β (ℓ. 5980), which is 1/κ at a = 0, only the radial-estimate form
+  matches the regularity of the second Frobenius solution at a horizon.
+- The published version of [Vas13] was not checked.
+
+For the threshold at a given σ, cite [HV17]'s radial-point statement instead: s > 1/2 + β_jα
+([HV17] v2 ℓ. 1065–1067), with β_j = 2/|μ_*′(r_j)| (ℓ. 850) and κ_j = β_j⁻¹ (ℓ. 857).
+
+Nothing in this note depends on the exact half-plane, so the statements of §4 and the P2-D1′ row are
+unchanged. Lemma D1′ uses only three facts: resonant states lie in H^s above threshold, they are
+smooth there, and the poles do not depend on s above threshold. [HV17] also allows arbitrarily high
+regularity at r₂ and r₃ (ℓ. 1549).
