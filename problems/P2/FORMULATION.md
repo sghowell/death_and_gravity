@@ -1,12 +1,16 @@
 # P2 — A certified resonance-free strip for subextremal RNdS (β > 1/2, linear SCC failure for smooth data)
 
-Status: formulation **v0.6** (S4 exit; stage S5), 2026-10-18; frozen at v0 (S0,
-2026-10-16), with every later change recorded in the Revision log. The ledger
-has rows P2-par, P2-0, P2-D1′, P2-1w, P2-1, P2-2, P2-3B and P2-K6 (`CLAIMS.md`).
-P2-1 at P_B (S4, `notes/s4-report.md` §7) was entered on 2026-10-19. The independent
-review (`docs/review-2026-10-18-p2-s4-adversarial.md`, 2026-10-18/19) found it proven
-as stated; one closing-box error term (S1) was corrected after it. Every other claim
-id is still a *target*.
+Status: formulation **v1.0** (S5 exit), 2026-10-26; frozen at v0 (S0, 2026-10-16),
+with every later change recorded in the Revision log.
+- The ledger has rows P2-par, P2-0, P2-D1′, P2-1w, P2-1, P2-2, P2-3B, P2-4, P2-5 and
+  P2-K6 (`CLAIMS.md`).
+- S5 assembled P2-4 and P2-5 at P_B (`notes/s5-assembly.md`).
+- The independent review (`docs/review-2026-10-26-p2-s5-adversarial.md`, 2026-10-26)
+  found both proven as stated, with nothing blocking. Its fixes S1–S3 and W1–W9 are
+  applied, and its follow-up check (§9) passed (2026-10-26).
+- P2-4 and P2-5 at P_B (`notes/s5-report.md` §6, the review's §7 rows) were entered
+  on 2026-10-26, with the user's approval of that day.
+- P2-6 (the stretch goal) and P2-7 (P_A) are still *targets*.
 
 Changes after S1 begins go in the Revision log, never by silent edit (house
 discipline of `problems/P9/b/FORMULATION.md`).
@@ -230,7 +234,8 @@ Cauchy horizon. In particular φ ∈ H¹_loc up to the Cauchy horizon.
 
 This is the linear analogue of the failure of Christodoulou's SCC for smooth
 data, at X. [CF17] Thm 3.1 gives the same H¹ conclusion with a C⁰ extension,
-since 2 min{α, κ₊} > κ₋ at both points. Neither theorem is re-proven.
+since 2 min{α, κ₊} > κ₋ at both points. Neither theorem is re-proven. [v1.0: the
+scope of P2-5 at P_B is narrowed; see the Revision log, v1.0, "Scope of P2-5".]
 
 ### P2-6 Two-sided β at P_B [target: CERTIFIED; stretch goal, not part of the entry point (v1.2)]
 A Krawczyk enclosure of the simple l = 0 zero ω_* ≈ −0.909381iκ₋, together
@@ -494,4 +499,68 @@ Sizing and kill criteria are in `s0-gate.md` §7.
     - The rest: a dated correction to Amendment 6 (the launch-time K4 rule, and the secant
       mechanism), the simply connected union of strips and windows in W1/W2, and wording.
   - **Open.** The assembly P2-4/P2-5 (S5); P_A; P2-6.
+
+- **v1.0 (2026-10-26, S5 exit; `notes/s5-plan.md`, `notes/s5-assembly.md`, `notes/s5-report.md`).**
+  The ladder at P_B is assembled up to P2-5 (P2-4 and P2-5 entered in the ledger on 2026-10-26). The
+  status at P_B, with levels:
+  - **Already in the ledger.**
+    - P2-0: WRITTEN_PROOF.
+    - P2-1: WRITTEN_PROOF, with l₀ = 20.
+    - P2-2: CERTIFIED on the lower strip, for l ≤ 50 and l = 100.
+    - P2-3: P2-3B counts every l < l₀ = 20 on R′_l. The counts are CERTIFIED; the strip corollary
+      is at P2-0's level.
+  - **P2-4: WRITTEN_PROOF**, the minimum of its ingredients (P2-0, P2-D1′ and P2-1). Entered in
+    the ledger on 2026-10-26.
+    - For every l, S_δ∖{0} contains no QNM, and 0 is a simple QNM with a constant resonant state.
+    - So β ≥ 0.55. With P2-K6, 0.55 ≤ β ≤ 0.90938098 (two-sided, not sharp).
+    - The bookkeeping is machine-checked, with negative controls:
+      `certificates/assembly/assembly_PB.json` (`python -m p2.assembly`).
+  - **P2-5: WRITTEN_PROOF, conversion cited** (P2-4's level). Entered in the ledger on 2026-10-26.
+    - [HV17]'s α hypothesis concerns the forward problem on Ω₂₃ (quoted from its §2.5). P2-4 with
+      P2-D1′ supplies it exactly, so the conversion is not conditional.
+    - For smooth data on [HV17]'s H_I, u′ ∈ e^{−αt₀}H^{1.05−0} with α = 0.55κ₋ (decay e^{−αt₀} at α
+      exactly via some α′ ∈ (α, γ₀); s5-assembly H7). [CF17] applies with p = α.
+  - **Achieved against target levels.** §2 sets CERTIFIED as the target for P2-0, P2-1 and P2-4;
+    the achieved level is WRITTEN_PROOF. CERTIFIED would need P2-0's written steps, P2-1's W1–W2
+    and D1′ to be machine-checked.
+  - **Scope of P2-5 (a narrowing of the §2 template).**
+    - (a) Data on HV17's one-ended initial surface H_I: the conclusions hold in its domain of
+      dependence, near the Cauchy horizon towards i⁺.
+    - (b) Data on a complete Cauchy surface: near every point of the Cauchy horizon other than its
+      bifurcation sphere B, with constants depending on the point (Killing translates of H_I).
+    - (c) Nothing at B.
+
+    For [CF17], the C⁰ ∩ H¹_loc extension is to the Cauchy-horizon component adjacent to the
+    event-horizon component carrying the Price law, with the same exception.
+
+    This narrows the frozen §2 P2-5 template ("Every solution of □_gφ = 0 with smooth Cauchy data
+    on RNdS at X … φ ∈ H¹_loc up to the Cauchy horizon"). The user approved recording it this way
+    on 2026-10-26. The §2 text is not rewritten; it points here.
+  - **Open.** P2-6 (the stretch goal, which needs the new foundations of v0.2) and P2-7 (P_A, where
+    no part-(i) run exists).
+  - The scope fences of §7 are unchanged. No frozen convention, definition, point, δ or KAT
+    changes.
+  - **The independent review** (`docs/review-2026-10-26-p2-s5-adversarial.md`, 2026-10-26) found
+    P2-4 and P2-5 at P_B proven as stated, with nothing blocking.
+    - It confirms from the arXiv TeX that [HV17]'s α hypothesis concerns the forward problem on
+      Ω₂₃.
+    - It writes out the general clause of [HV17] Lemma 2.14(1), which [HV17] proves only in
+      outline.
+    - Reviewer code sharing nothing with `p2` re-checks every seam of the cover of S_δ.
+    - 22 further mutations of the inputs each make the assembly check fail.
+  - **The review's fixes (2026-10-26), approved by the user.**
+    - S1: the decay e^{−αt₀} at α = d_δ exactly, via some α′ ∈ (α, γ₀) (`notes/s5-assembly.md` §2.2
+      H7).
+    - S2: the scope at the bifurcation sphere, recorded above as a narrowing of the §2 template.
+    - S3: the P2-5 row names the step of [HV17] Lemma 2.14(1) that is proved only in outline, and
+      the source of the order-1 claim at 0.
+    - W1–W9: wording, the source versions ([HV17] arXiv v2, [CF17] arXiv v2), a note on an [HV17]
+      typo, and dated notes appended to the plan.
+  - **The ledger (2026-10-26).** The rows P2-4 and P2-5 are entered verbatim from the review's
+    §7, which its §9 confirms, and P2-1's parenthesis now reads "(assembled in P2-4)".
+  - **The problems document (2026-10-26).** Revision 1.3 adds the v1.3 entry (`notes/s5-report.md`
+    §7, with the review's §9 one-word change to "initial surface") and the bibitem
+    `costafranzen2017`, as the user approved on 2026-10-26. The PDF is rebuilt with tectonic, and
+    the v1.2 PDF is archived in `docs/problems/revisions/`. The P2 statement and entry point are
+    unchanged from v1.2. The optional Status sentence (`s5-report.md` §7) is not applied.
 

@@ -1,0 +1,375 @@
+{
+ "tool": "mutations.py (S5 review)",
+ "baseline_pass": true,
+ "baseline_checks": 366,
+ "rows": [
+  {
+   "id": "M1",
+   "what": "P2-2 threshold raised (gap from the P2-2 side), l = 11",
+   "expected_failures": [
+    "C2.l11.a_identical"
+   ],
+   "failed": [
+    "C2.l11.a_identical",
+    "C2.l11.lower_strip_in_box_and_P2_2"
+   ],
+   "crashed": null,
+   "verdict": "fails as expected",
+   "ok": true
+  },
+  {
+   "id": "M2",
+   "what": "a piece removed from the l = 4 path",
+   "expected_failures": [
+    "C2.l4.path_traces_H"
+   ],
+   "failed": [
+    "C2.l4.path_traces_H"
+   ],
+   "crashed": null,
+   "verdict": "fails as expected",
+   "ok": true
+  },
+  {
+   "id": "M3",
+   "what": "one increment off by pi, l = 9",
+   "expected_failures": [
+    "C2.l9.resum"
+   ],
+   "failed": [
+    "C2.l9.resum"
+   ],
+   "crashed": null,
+   "verdict": "fails as expected",
+   "ok": true
+  },
+  {
+   "id": "M4",
+   "what": "l = 6 certificate in l = 7's slot",
+   "expected_failures": [
+    "C2.l7.wind_meta",
+    "C2.l7.a_identical"
+   ],
+   "failed": [
+    "C2.l7.wind_meta",
+    "C2.l7.a_identical",
+    "C2.l7.lower_strip_in_box_and_P2_2"
+   ],
+   "crashed": null,
+   "verdict": "fails as expected",
+   "ok": true
+  },
+  {
+   "id": "M5",
+   "what": "lg certificate l = 12 missing",
+   "expected_failures": [
+    "C2.l12.present",
+    "C2.all_l_0_to_19_present"
+   ],
+   "failed": [
+    "C2.l12.present",
+    "C2.all_l_0_to_19_present"
+   ],
+   "crashed": null,
+   "verdict": "fails as expected",
+   "ok": true
+  },
+  {
+   "id": "M6",
+   "what": "lg criterion upper >= 2, l = 3",
+   "expected_failures": [
+    "C2.l3.lg_certified"
+   ],
+   "failed": [
+    "C2.l3.lg_certified"
+   ],
+   "crashed": null,
+   "verdict": "fails as expected",
+   "ok": true
+  },
+  {
+   "id": "M7",
+   "what": "lg strip depth 0.5 kappa_-, l = 5",
+   "expected_failures": [
+    "C2.l5.lg_strip_depth"
+   ],
+   "failed": [
+    "C2.l5.lg_strip_depth"
+   ],
+   "crashed": null,
+   "verdict": "fails as expected",
+   "ok": true
+  },
+  {
+   "id": "M8",
+   "what": "winding certificate uncertified, l = 0",
+   "expected_failures": [
+    "C2.l0.wind_meta"
+   ],
+   "failed": [
+    "C2.l0.wind_meta"
+   ],
+   "crashed": null,
+   "verdict": "fails as expected",
+   "ok": true
+  },
+  {
+   "id": "M9",
+   "what": "an S tiling flag false",
+   "expected_failures": [
+    "C3.cover_pass",
+    "C3.Im_range"
+   ],
+   "failed": [
+    "C3.cover_pass",
+    "C3.cover_replay_identical",
+    "C3.Im_range"
+   ],
+   "crashed": null,
+   "verdict": "fails as expected",
+   "ok": true
+  },
+  {
+   "id": "M10",
+   "what": "L_PB_plus missing",
+   "expected_failures": [
+    "C3.regime_pass.L_PB_plus"
+   ],
+   "failed": [
+    "C3.regime_pass.L_PB_plus",
+    "C3.regime_h0.L_PB_plus",
+    "C3.design_readable",
+    "C3.Im_range"
+   ],
+   "crashed": null,
+   "verdict": "fails as expected",
+   "ok": true
+  },
+  {
+   "id": "M11",
+   "what": "L Im range [-1/2, 0]",
+   "expected_failures": [
+    "C3.design_L",
+    "C3.Im_range"
+   ],
+   "failed": [
+    "C3.design_L",
+    "C3.Im_range"
+   ],
+   "crashed": null,
+   "verdict": "fails as expected",
+   "ok": true
+  },
+  {
+   "id": "M12",
+   "what": "a T box not reaching -d_delta",
+   "expected_failures": [
+    "C3.design_T",
+    "C3.Im_range"
+   ],
+   "failed": [
+    "C3.design_T",
+    "C3.Im_range"
+   ],
+   "crashed": null,
+   "verdict": "fails as expected",
+   "ok": true
+  },
+  {
+   "id": "M13",
+   "what": "an oversized disc, l = 2",
+   "expected_failures": [
+    "C2.l2.discs_clear_poles"
+   ],
+   "failed": [
+    "C2.l2.discs_clear_poles"
+   ],
+   "crashed": null,
+   "verdict": "fails as expected",
+   "ok": true
+  },
+  {
+   "id": "M14",
+   "what": "a 2^-40 gap in the l = 10 path",
+   "expected_failures": [
+    "C2.l10.path_traces_H"
+   ],
+   "failed": [
+    "C2.l10.path_traces_H"
+   ],
+   "crashed": null,
+   "verdict": "fails as expected",
+   "ok": true
+  },
+  {
+   "id": "M15",
+   "what": "l = 13 b raised, path not moved",
+   "expected_failures": [
+    "C2.l13.path_traces_H"
+   ],
+   "failed": [
+    "C2.l13.path_traces_H"
+   ],
+   "crashed": null,
+   "verdict": "fails as expected",
+   "ok": true
+  },
+  {
+   "id": "M16",
+   "what": "Krawczyk enclosure at -0.95 i kappa_-",
+   "expected_failures": [
+    "C6.beta_upper"
+   ],
+   "failed": [
+    "C6.beta_upper",
+    "C6.kat6_consistent"
+   ],
+   "crashed": null,
+   "verdict": "fails as expected",
+   "ok": true
+  },
+  {
+   "id": "M17",
+   "what": "params kappa_+ inconsistent (0.6 kappa_-)",
+   "expected_failures": [
+    "C1.overlap.kappa_plus"
+   ],
+   "failed": [
+    "C1.overlap.kappa_plus",
+    "C2.l0.discs_clear_poles",
+    "C2.l1.discs_clear_poles",
+    "C2.l2.discs_clear_poles",
+    "C2.l3.discs_clear_poles",
+    "C2.l4.discs_clear_poles",
+    "C2.l5.discs_clear_poles",
+    "C2.l6.discs_clear_poles",
+    "C2.l7.discs_clear_poles",
+    "C2.l8.discs_clear_poles",
+    "C2.l9.discs_clear_poles",
+    "C2.l10.discs_clear_poles",
+    "C2.l11.discs_clear_poles",
+    "C2.l12.discs_clear_poles",
+    "C2.l13.discs_clear_poles",
+    "C2.l14.discs_clear_poles",
+    "C2.l15.discs_clear_poles",
+    "C2.l16.discs_clear_poles",
+    "C2.l17.discs_clear_poles",
+    "C2.l18.discs_clear_poles",
+    "C2.l19.discs_clear_poles"
+   ],
+   "crashed": null,
+   "verdict": "fails as expected",
+   "ok": true
+  },
+  {
+   "id": "M18",
+   "what": "stored winding 0 at l = 0",
+   "expected_failures": [
+    "C2.l0.winding_value",
+    "C2.l0.resum"
+   ],
+   "failed": [
+    "C2.l0.resum",
+    "C2.l0.winding_value"
+   ],
+   "crashed": null,
+   "verdict": "fails as expected",
+   "ok": true
+  },
+  {
+   "id": "M19",
+   "what": "cover zeta_SU = 1/10",
+   "expected_failures": [
+    "C3.S_T_overlap"
+   ],
+   "failed": [
+    "C3.cover_replay_identical",
+    "C3.design_S",
+    "C3.S_T_overlap"
+   ],
+   "crashed": null,
+   "verdict": "fails as expected",
+   "ok": true
+  },
+  {
+   "id": "M20",
+   "what": "cover h0 = 2/39",
+   "expected_failures": [
+    "C3.h0_is_2_41",
+    "C3.no_l_gap"
+   ],
+   "failed": [
+    "C3.cover_replay_identical",
+    "C3.h0_is_2_41",
+    "C3.no_l_gap",
+    "C3.regime_h0.T_PB",
+    "C3.regime_h0.A_PB",
+    "C3.regime_h0.S_PB_plus",
+    "C3.regime_h0.S_PB_c",
+    "C3.regime_h0.L_PB_plus",
+    "C3.regime_h0.L_PB_c",
+    "C3.design_L"
+   ],
+   "crashed": null,
+   "verdict": "fails as expected",
+   "ok": true
+  },
+  {
+   "id": "M21",
+   "what": "a P2-0 identity step failed",
+   "expected_failures": [
+    "C5.P2_0_identities"
+   ],
+   "failed": [
+    "C5.P2_0_identities"
+   ],
+   "crashed": null,
+   "verdict": "fails as expected",
+   "ok": true
+  },
+  {
+   "id": "M22",
+   "what": "Z4 failed",
+   "expected_failures": [
+    "C3.symmetry_Z4"
+   ],
+   "failed": [
+    "C3.symmetry_Z4"
+   ],
+   "crashed": null,
+   "verdict": "fails as expected",
+   "ok": true
+  },
+  {
+   "id": "B1",
+   "what": "a_8 raised by 1 in lg, the box and the path coordinates equal to a_8",
+   "expected_failures": [],
+   "failed": [
+    "C2.l8.path_in_discs"
+   ],
+   "crashed": null,
+   "verdict": "caught incidentally by ['C2.l8.path_in_discs']",
+   "ok": true
+  },
+  {
+   "id": "B2",
+   "what": "BY DESIGN NOT CAUGHT: one increment +0.1 at l = 15",
+   "expected_failures": [],
+   "failed": [],
+   "crashed": null,
+   "verdict": "passes (not a bookkeeping error; only the ingredient's own replay can see it)",
+   "ok": true
+  },
+  {
+   "id": "B3",
+   "what": "BY DESIGN NOT CAUGHT: lg matching point changed at l = 6",
+   "expected_failures": [],
+   "failed": [],
+   "crashed": null,
+   "verdict": "passes (not a bookkeeping error; only the ingredient's own replay can see it)",
+   "ok": true
+  }
+ ],
+ "all_ok": true,
+ "timing_s": 4.29
+}
