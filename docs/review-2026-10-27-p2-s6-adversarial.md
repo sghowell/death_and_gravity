@@ -724,3 +724,123 @@ target." The header's list of ledger rows then gains P2-6 and P2-E.
    the header.
 5. The .tex v1.4 entry, drafted by the author and approved by the user.
 6. The user approves the merge into main, and the coordinator runs it.
+
+## 9. Follow-up, 2026-10-27: the author's fixes (`43eed599`) and the draft v1.4 entry
+
+**Scope.**
+- The coordinator fast-forwarded `p2/s6-review` to the author's `43eed599` (13:05:34), one commit on top of
+  this review (`fa1ad2fa`).
+- It changes only `FORMULATION.md`, `notes/s6-preregistration.md`, `notes/s6-proof.md` and
+  `notes/s6-report.md`. Nothing in `src/`, `tests/`, `certificates/`, `CLAIMS.md` or `docs/` differs from
+  `fa1ad2fa`, and `CLAIMS.md` and the .tex are unchanged since main (`followup_check.py`, F1).
+- As the coordinator reports, on 2026-10-27 the user approved:
+  - S1, S2 and W1–W10;
+  - the rows P2-6 and P2-E (P2-E as its own row);
+  - the notes for P2-K6 and P2-4, and the optional note for P2-D1′;
+  - FORMULATION v1.2 and the merge;
+  - a .tex v1.4 entry with §8's content.
+
+**Verdict: every fix holds, and nothing is blocking.**
+- The §8 rows and notes stand unchanged.
+- One wording fix to the v1.4 draft: in (c), "certified" large-|Re ω| exclusions overstates their level.
+- One optional typesetting wrapper, which removes an overfull line.
+
+| item | verdict |
+|---|---|
+| 1. S1 | DONE. The pole is CERTIFIED for l ≤ 19 and WRITTEN_PROOF for l ≥ 20, and the non-resonance is at P2-D1′'s level for every l. This now reads so in `s6-report.md` §1, §5 (separate level columns, "P2-E as a whole is WRITTEN_PROOF") and §9, and in `s6-proof.md` §2.6 (the same two-part table) and §7 (three Lemma E entries). No old wording remains ("CERTIFIED at l = 0", "WRITTEN_PROOF and CERTIFIED", "pending"). **Not relabelling `INGREDIENTS` is acceptable.** The label "Lemma E, l = 0 and l ≤ 19 (Arb)" names the Arb route, i.e. the pole statement, which is CERTIFIED for l ≤ 19. The non-resonance sits at the level of the entry "P2-D1′ (set clause, any depth)", which is WRITTEN_PROOF. The minimum is unchanged, and relabelling would only regenerate a pinned certificate. Report §5 records this reading |
+| 2. S2 | DONE. The §9 rows P2-6 and P2-E and the notes for P2-K6, P2-4 and P2-D1′ are byte-identical to this review's §8 (F2) |
+| 3. FORMULATION | DONE. **v1.2** is §8's text: lines 3–20 are byte-identical, and the first two lines carry the date 2026-10-27 and the interim wording "(P2-6 and P2-E reviewed and approved 2026-10-27; not yet entered in the ledger)", re-wrapped (F3). **v1.1** changes only by the pronoun ("and he informs the user" → "and informs the user"). Everything else before v1.2, the header included, is byte-identical (F3) |
+| 4. W1–W10 | DONE (details below) |
+| 5. The v1.4 draft (`s6-report.md` §11) | ACCURATE apart from one phrase in (c). The final text is below and in `review_s6/followup_tex_item_v1.4.txt` |
+| 6. Tests | Fast: 102 passed, 21 skipped (65 s). `beta_assembly verify`: identical. `p2.assembly verify`: identical |
+
+**4. W1–W10.**
+- **W1.** v1.1 is untouched apart from the pronoun, which is acceptable: W1 was optional, and v1.2 is
+  exact.
+- **W2, W3.** In the rows (item 2).
+- **W4.** The B7 wording is right in `s6-report.md` §6 (the B7 row), in `s6-proof.md` §8, and in the P2-6
+  row's qualifier. The split is the review's: 69 searches did not converge, 20 stopped within 10⁻⁶ of their
+  seeds, and 11 stopped at non-roots well below the band.
+- **W5.** `s6-report.md` §7, accurate.
+- **W6.**
+  - `s6-proof.md` §2.2 now takes the smoothness of kernel elements from [Vas13] §2.6 (ℓ. 1888) and
+    [HV17] Lemma 2.14's proof (ℓ. 1264).
+  - It takes the threshold from [HV17]: s > ½ + β_jα (ℓ. 1065–1067), with β_j = 1/κ_j (ℓ. 850, 857).
+  - It notes the arbitrary regularity at r₂, r₃ (ℓ. 1549), and that [Vas13]'s half-plane (ℓ. 1940) is not
+    used.
+  - All nine cited line numbers match `quotes_check_out.json` (F5).
+- **W7.** `s6-report.md` §12, accurate.
+- **W8.** `s6-report.md` §14, accurate.
+- **W9.** The `s6-report.md` header, accurate.
+- **W10.**
+  - The pre-registration at `fa1ad2fa` is a byte prefix of the new file. Only the dated erratum is
+    appended (F4).
+  - Its values are right: ã₁(ω₀) = h²(2κ₊r₊ + L)/Δ′(r₊) = (1 + 2κ₊r₊h² − h²/4)/Δ′(r₊), which is 1/d₁ at
+    h = 0 (sympy E9).
+
+**4′. P2-D1′'s own note (`notes/s1-p20-d1prime.md` §4.1, on main) quotes [Vas13] v2's half-plane.**
+- This has no effect on the P2-D1′ row or on the optional note.
+- D1′'s proof uses only two things:
+  - Lemma A's regularity of the second solution, H^s only for s < ½ − Im ω/κ, which is correct;
+  - the smoothness of kernel elements on spaces above threshold. Any s large enough serves, and [HV17]
+    allows that.
+- The quoted half-plane is descriptive.
+- A later documentation pass may add a dated note there that points to [HV17]'s form (ℓ. 1065–1067, 850,
+  857). It is optional and not needed for the merge.
+
+**5. The v1.4 draft, checked against §8 and the certified facts.**
+- **Numbers.**
+  - β's ball is P2-K6's: −0.909380978994805455524933762622 ± 3.16·10⁻³¹, written "± 3.2×10⁻³¹".
+  - 0.92κ₋/γ₀ = 0.5466, so "≈ 0.55γ₀" is right; it is rounded to two digits, as v1.3's "≈ 0.33γ₀" is.
+  - κ₊/κ₋ = 0.82289, so "≈ −0.823iκ₋" is right.
+  - ℓ ≥ 20 and ℓ ≤ 19; ΛM² = 3/50, Q/Q_max = 999/1000 and 249/250; the order 1; the review date. All
+    correct (F6).
+- **(a)** Accurate. "For every ℓ" follows v1.3 (a)'s form. The added sentence on what the stretch goal
+  needed is §8's optional point.
+- **(b)** Accurate. At −iκ₊ the radial Wronskian has a pole, not a zero. Off E₊ ∪ E_c the zeros and
+  [HV17]'s resonances coincide by P2-D1′, so the two notions agree in the strip. The level of this
+  statement is covered by (c)'s level sentence.
+- **(c)** Keep the author's added sentence, with one fix.
+  - "for ℓ ≤ 19, certified large-|Re ω| exclusions" reuses v1.3 (b)'s phrase, which there named P2-2:
+    Liouville–Green, CERTIFIED.
+  - At depth 0.92 the ℓ ≤ 19 exclusions are regime A of the large-ℓ exclusion at fixed h. Their
+    inequalities are certified, but W1, W2 and W4 are written, so they are WRITTEN_PROOF. "Certified" would
+    therefore overstate their level.
+  - The minimal fix: "for ℓ ≤ 19, large-|Re ω| exclusions now use the method of the large-ℓ exclusion, and
+    validated argument-principle counts allow for the pole at −iκ₊".
+  - The rest of (c) is accurate, including "the point −iκ₊ is analysed in writing, with interval-certified
+    values for ℓ ≤ 19" and the level sentence, which repeats v1.3's.
+- **(d)** It matches §8's list exactly. The supersession sentence is right: v1.3 is not edited, and v1.3
+  (d)'s other items stand.
+- **LaTeX.**
+  - Braces and dollar signs balance. The only citation, `hintzvasy2017`, has its bibitem.
+  - The document compiles with tectonic, in a temporary copy, both with the draft and with the final text
+    (F8).
+  - As drafted, and also with only the (c) fix, the unbreakable 30-digit enclosure leaves one 92.2 pt
+    overfull line. The document's five existing overfull boxes are at most 15.9 pt.
+  - Wrapping the item body in `{\emergencystretch=3em … \par}` removes the line without changing the text
+    (tested). The wrapper is typesetting only, and the coordinator may drop it.
+
+**The final paste-ready text** (the leading ⟨Month day⟩ is the coordinator's; also in
+`review_s6/followup_tex_item_v1.4.txt`):
+
+```latex
+\item[v1.4] {\emergencystretch=3em ⟨Month day⟩, 2026 (proposed October 27, 2026 by the P2 stage-S6 assembly, \texttt{problems/\allowbreak P2/\allowbreak notes/\allowbreak s6-report.md}; approved October 27, 2026). P2 only; the other problems are unchanged. \emph{P2 Status.} (a) At the primary pre-registered point $\Lambda M^2=3/50$, $Q/Q_{\max}=999/1000$, for every $\ell$ the only quasinormal modes with $\operatorname{Im}\omega\ge-0.92\,\kappa_-$ ($0.92\,\kappa_-\approx0.55\,\gamma_0$) are $\omega=0$ and the $\ell=0$ near-extremal mode $\omega_*$. Hence $\beta=-\operatorname{Im}\omega_*/\kappa_-\in[0.909380978994805455524933762622\pm3.2\times10^{-31}]$, a two-sided enclosure. This is the stretch goal of revision v1.2. It needed more than the interval-Newton enclosure of the mode named there: every other quasinormal mode had to be excluded down to $\operatorname{Im}\omega=-0.92\,\kappa_-$, and the point $-i\kappa_+$ had to be treated. (b) The point $\omega=-i\kappa_+$ ($\approx-0.823\,i\kappa_-$), where the radial Wronskian has a pole for every $\ell$, is not a resonance of the forward problem near the black-hole exterior used in \cite{hintzvasy2017}. So in this strip the zeros of the radial Wronskian and the resonances used in \cite{hintzvasy2017} coincide, and the two notions of quasinormal mode agree. (c) The proof extends that of v1.3 (b): the large-$\ell$ exclusion, uniform in $\ell\ge20$, now reaches $-0.92\,\kappa_-$; for $\ell\le19$, large-$|\operatorname{Re}\omega|$ exclusions now use the method of the large-$\ell$ exclusion, and validated argument-principle counts allow for the pole at $-i\kappa_+$; and the point $-i\kappa_+$ is analysed in writing, with interval-certified values for $\ell\le19$. The result is a written proof with machine-checked certificates, independently reviewed October 27, 2026; it is not a fully machine-checked certificate. (d) Not established: the resonance multiplicity of $\omega_*$ (only its order as a zero of the radial Wronskian, $1$, is established); anything below $\operatorname{Im}\omega=-0.92\,\kappa_-$; the second point $Q/Q_{\max}=249/250$; the Einstein--Maxwell problem; any conversion stronger than v1.3 (c). This entry supersedes v1.3 (d) as to the two-sided enclosure of $\beta$.\par}
+```
+
+**Changes to §8's rows or notes:** none.
+
+**Compute and tools.**
+- About 0.02 core-h at nice 10, one process at a time:
+  - the fast suite, 64 s;
+  - the two verifies, 4 s;
+  - `followup_check.py` with its three tectonic builds, about 10 s.
+- No permission was denied.
+
+**Before the merge, now.** The coordinator:
+- enters P2-6, P2-E and the three notes from §8;
+- replaces v1.2's interim wording and updates the header line;
+- applies the v1.4 text above, rebuilds the PDF and archives the v1.3 PDF, as at S5;
+- runs the merge the user approved.
+
+No author action remains. An erratum note to `s1-p20-d1prime.md` (4′) is optional and can come later.
