@@ -1,16 +1,21 @@
 # P2 — A certified resonance-free strip for subextremal RNdS (β > 1/2, linear SCC failure for smooth data)
 
-Status: formulation **v1.0** (S5 exit), 2026-10-26; frozen at v0 (S0, 2026-10-16),
+Status: formulation **v1.2** (S6 exit), 2026-10-27; frozen at v0 (S0, 2026-10-16),
 with every later change recorded in the Revision log.
-- The ledger has rows P2-par, P2-0, P2-D1′, P2-1w, P2-1, P2-2, P2-3B, P2-4, P2-5 and
-  P2-K6 (`CLAIMS.md`).
+- The ledger has rows P2-par, P2-0, P2-D1′, P2-E, P2-1w, P2-1, P2-2, P2-3B, P2-4, P2-5,
+  P2-6 and P2-K6 (`CLAIMS.md`).
 - S5 assembled P2-4 and P2-5 at P_B (`notes/s5-assembly.md`).
 - The independent review (`docs/review-2026-10-26-p2-s5-adversarial.md`, 2026-10-26)
   found both proven as stated, with nothing blocking. Its fixes S1–S3 and W1–W9 are
   applied, and its follow-up check (§9) passed (2026-10-26).
 - P2-4 and P2-5 at P_B (`notes/s5-report.md` §6, the review's §7 rows) were entered
   on 2026-10-26, with the user's approval of that day.
-- P2-6 (the stretch goal) and P2-7 (P_A) are still *targets*.
+- S6 assembled P2-6 at P_B at WRITTEN_PROOF (`notes/s6-proof.md`; Revision log v1.2),
+  and P2-E records the exceptional point −iκ₊. The independent review
+  (`docs/review-2026-10-27-p2-s6-adversarial.md`) found both proven as stated, and its
+  follow-up check (§9) passed. Both rows were entered on 2026-10-27, with the user's
+  approval of that day.
+- P2-7 (P_A) is still a *target*.
 
 Changes after S1 begins go in the Revision log, never by silent edit (house
 discipline of `problems/P9/b/FORMULATION.md`).
@@ -243,7 +248,8 @@ with P2-1…P2-3 run with the strip edge at −0.92κ₋ (where the l = 0 windin
 2), gives **β ∈ [β_lo, β_hi]** with β_hi − β_lo ≤ 10⁻⁸. Part (i) is then
 needed up to 0.547·γ₀. [v0.2: this edge passes the first point of E₊,
 −iκ₊ ≈ −0.823iκ₋, where W₀ has a simple pole; P2-6 needs new foundations,
-see the Revision log.]
+see the Revision log.] [v1.1: the winding parenthesis is corrected, and the route changes; see the
+Revision log, v1.1.]
 
 ### P2-7 The P_A statement [target: CERTIFIED; second target]
 P2-0…P2-5 at P_A with δ = 1/100. Part (i) is needed up to 0.667·γ₀.
@@ -564,3 +570,61 @@ Sizing and kill criteria are in `s0-gate.md` §7.
     the v1.2 PDF is archived in `docs/problems/revisions/`. The P2 statement and entry point are
     unchanged from v1.2. The optional Status sentence (`s5-report.md` §7) is not applied.
 
+- **v1.1 (2026-10-27, S6 start; `notes/s6-preregistration.md` at `c98ca16d`, with its Amendments
+  A1–A6).** The user approved S6 on 2026-10-27, and the coordinator approved Phase 2 the same day.
+  The coordinator approved recording this entry as coordinator: it changes no frozen definition,
+  no target and no edge, and informs the user. Five items:
+  - **1. A correction to P2-6's parenthesis "(where the l = 0 winding is 2)".**
+    - At depth 0.92κ₋ the full l = 0 box holds two zeros (0 and ω_*) and one simple pole, at
+      ω₀ = −iκ₊ (the first point of E₊; v0.2).
+    - The winding of W₀ is therefore 1 on the full box. On S6's band box
+      [−a′₀, a′₀] × [−0.92κ₋, −κ₋/2] it is 0.
+  - **2. P2-6's route changes method.** The frozen text reads "P2-1…P2-3 run with the strip edge at
+    −0.92κ₋". S6 instead:
+    - covers S_δ by P2-4;
+    - covers the band −0.92κ₋ ≤ Im ω ≤ −κ₋/2 by part (i) at depth 0.92 for l ≥ 20, with T
+      redesigned, S's design grid extended, and L using the pole-free series R̃ = (1 + 2ρ)R;
+    - replaces part (ii) for l ≤ 19 by regime A at fixed h = 1/(l+½). Liouville–Green on the real
+      line cannot reach Im ω < −κ₊;
+    - uses pole-aware band counts for part (iii), l ≤ 19;
+    - adds Lemma E: ω₀ is not a resonance for any l, and W_l has a simple pole there.
+  - **3. Additive.** The band boxes B_l (D7 is unchanged), Lemma E, and the S6 KATs B1–B7.
+  - **4. Unchanged.**
+    - The edge, 0.92κ₋.
+    - The target, β ∈ [β_lo, β_hi] with width ≤ 10⁻⁸. It is to be realised by P2-K6's Krawczyk
+      ball, of width 6.4·10⁻³¹, reused unchanged.
+    - D1, D1′ and D3. Lemma E shows that D1's QNMs and HV17's resonances agree in the strip.
+    - The scope fences of §7.
+  - **5. The level.** §2 states CERTIFIED as P2-6's target. The level expected from S6 is
+    WRITTEN_PROOF, the minimum of its ingredients (`notes/s6-preregistration.md` §6).
+  - The §2 text of P2-6 is not rewritten. It carries a bracketed pointer here.
+
+- **v1.2 (2026-10-27, S6 exit; `notes/s6-proof.md`, `notes/s6-report.md`; independent review
+  `docs/review-2026-10-27-p2-s6-adversarial.md`).** P2-6 at P_B is assembled (P2-6 and P2-E entered
+  in the ledger on 2026-10-27).
+  - **P2-6 at P_B: WRITTEN_PROOF**, the minimum of its ingredients. §2's target, CERTIFIED, is not
+    reached.
+    - The resonances of the forward problem on Ω₂₃ with Im σ ≥ −0.92κ₋ are exactly 0 and ω_*, both of
+      degree l = 0 and simple zeros of W₀ (radial order 1; the resonance multiplicity of ω_*, which lies
+      below −κ₊, is not claimed).
+    - β = −Im ω_*/κ₋ ∈ [0.909380978994805455524933762622 ± 3.2·10⁻³¹]. The frozen target (width
+      ≤ 10⁻⁸) is met by P2-K6's ball, reused unchanged.
+    - The bookkeeping is machine-checked, with negative controls:
+      `certificates/beta/assembly_beta_PB.json` (`python -m p2.beta_assembly`).
+  - **Lemma E** (row P2-E): −iκ₊ is not a resonance for any l, and every W_l has a simple pole there.
+    The pole is CERTIFIED for l ≤ 19 and WRITTEN_PROOF for l ≥ 20; the non-resonance is at P2-D1′'s
+    level. So D1's QNMs and HV17's resonances agree in S_e, and D3's α is HV17's α₀ there.
+  - **The independent review** (2026-10-27) found P2-6 and P2-E proven as stated, with nothing
+    blocking; its corrections (the level of P2-E's non-resonance statement, and the ledger and
+    FORMULATION texts) are applied.
+  - **Unchanged:** the edge, the target, D1, D1′, D3, D7, the KATs of §5 (S6's B1–B7 are additive,
+    v1.1), P2-5 (no stronger conversion is claimed) and the scope fences of §7.
+  - **Open:** P2-7 (P_A).
+  - **The ledger (2026-10-27).** The rows P2-6 and P2-E are entered verbatim from the review's §8,
+    which its §9 confirms. The review's notes are appended to P2-K6, P2-4 and P2-D1′.
+  - **The problems document (2026-10-27).** Revision 1.4 adds the v1.4 entry, as the user approved
+    on 2026-10-27. The author drafted it (`notes/s6-report.md` §11), and the review's §9 checked it,
+    with one wording fix in (c) and a typesetting wrapper. It supersedes v1.3 (d) as to the
+    two-sided enclosure of β; v1.3 itself is not edited. The PDF is rebuilt with tectonic, and the
+    v1.3 PDF is archived in `docs/problems/revisions/`. The P2 statement and entry point are
+    unchanged from v1.2.

@@ -1,0 +1,482 @@
+{
+ "baseline_pass": true,
+ "baseline_failed": [],
+ "baseline_checks": 332,
+ "mutations": [
+  {
+   "id": "M1",
+   "what": "a piece removed from the l = 0 path",
+   "expected": [
+    "C5.l0.path_traces_H"
+   ],
+   "failed": [
+    "C5.l0.path_traces_H"
+   ],
+   "n_failed": 1,
+   "caught_on_named_items": true
+  },
+  {
+   "id": "M2",
+   "what": "an l = 12 increment off by 2 pi",
+   "expected": [
+    "C5.l12.resum"
+   ],
+   "failed": [
+    "C5.l12.resum"
+   ],
+   "n_failed": 1,
+   "caught_on_named_items": true
+  },
+  {
+   "id": "M3",
+   "what": "the l = 9 band certificate in l = 8's slot",
+   "expected": [
+    "C5.l8.meta"
+   ],
+   "failed": [
+    "C5.l8.meta",
+    "C5.l8.a_identical"
+   ],
+   "n_failed": 2,
+   "caught_on_named_items": true
+  },
+  {
+   "id": "M4",
+   "what": "l = 2 band top moved to -0.56 kappa_- (gap below S_delta)",
+   "expected": [
+    "C5.l2.b0"
+   ],
+   "failed": [
+    "C5.l2.b0"
+   ],
+   "n_failed": 1,
+   "caught_on_named_items": true
+  },
+  {
+   "id": "M5",
+   "what": "l = 0 disc near omega0 inflated to reach the pole",
+   "expected": [
+    "C5.l0.discs_clear_E"
+   ],
+   "failed": [
+    "C5.l0.discs_clear_E"
+   ],
+   "n_failed": 1,
+   "caught_on_named_items": true
+  },
+  {
+   "id": "M6",
+   "what": "l = 5 band certificate flagged uncertified",
+   "expected": [
+    "C5.l5.meta"
+   ],
+   "failed": [
+    "C5.l5.meta"
+   ],
+   "n_failed": 1,
+   "caught_on_named_items": true
+  },
+  {
+   "id": "M7",
+   "what": "l = 0 stored winding -1 (ignoring omega_*)",
+   "expected": [
+    "C5.l0.winding_value",
+    "C5.l0.resum"
+   ],
+   "failed": [
+    "C5.l0.resum",
+    "C5.l0.winding_value",
+    "C5.l0.pole_forced_consistent_C3"
+   ],
+   "n_failed": 3,
+   "caught_on_named_items": true
+  },
+  {
+   "id": "M8",
+   "what": "two l = 3 pieces swapped",
+   "expected": [
+    "C5.l3.path_traces_H"
+   ],
+   "failed": [
+    "C5.l3.path_traces_H"
+   ],
+   "n_failed": 1,
+   "caught_on_named_items": true
+  },
+  {
+   "id": "M9",
+   "what": "an l = 11 disc shrunk below its segment",
+   "expected": [
+    "C5.l11.path_in_discs"
+   ],
+   "failed": [
+    "C5.l11.path_in_discs"
+   ],
+   "n_failed": 1,
+   "caught_on_named_items": true
+  },
+  {
+   "id": "M10",
+   "what": "part (ii') l = 3 certified at h0 = 2/41, not h_3",
+   "expected": [
+    "C4.l3.pass"
+   ],
+   "failed": [
+    "C4.l3.pass"
+   ],
+   "n_failed": 1,
+   "caught_on_named_items": true
+  },
+  {
+   "id": "M11",
+   "what": "part (ii') l = 0 W7 fails",
+   "expected": [
+    "C4.l0.pass"
+   ],
+   "failed": [
+    "C4.l0.pass"
+   ],
+   "n_failed": 1,
+   "caught_on_named_items": true
+  },
+  {
+   "id": "M12",
+   "what": "a'_6 below zeta_A Omega_P/h_6 (gap at Re w = a'_6)",
+   "expected": [
+    "C4.l6.pass"
+   ],
+   "failed": [
+    "C4.l6.pass"
+   ],
+   "n_failed": 1,
+   "caught_on_named_items": true
+  },
+  {
+   "id": "M13",
+   "what": "part (ii') row l = 11 missing",
+   "expected": [
+    "C4.l11.pass",
+    "C5.l11.a_identical"
+   ],
+   "failed": [
+    "C4.l11.pass",
+    "C5.l11.a_identical"
+   ],
+   "n_failed": 2,
+   "caught_on_named_items": true
+  },
+  {
+   "id": "M14",
+   "what": "Wt_0 not separated from 0",
+   "expected": [
+    "C3.l0.Wt_nonzero",
+    "C5.l0.pole_forced_consistent_C3"
+   ],
+   "failed": [
+    "C3.l0.Wt_nonzero",
+    "C5.l0.pole_forced_consistent_C3"
+   ],
+   "n_failed": 2,
+   "caught_on_named_items": true
+  },
+  {
+   "id": "M15",
+   "what": "a B5 row fails",
+   "expected": [
+    "C3.B5_residue_formula"
+   ],
+   "failed": [
+    "C3.B5_residue_formula"
+   ],
+   "n_failed": 1,
+   "caught_on_named_items": true
+  },
+  {
+   "id": "M16",
+   "what": "V_l positivity input negative",
+   "expected": [
+    "C3.V_l_positive_l_ge_1"
+   ],
+   "failed": [
+    "C3.V_l_positive_l_ge_1"
+   ],
+   "n_failed": 1,
+   "caught_on_named_items": true
+  },
+  {
+   "id": "M17",
+   "what": "a T box removed (zeta gap)",
+   "expected": [
+    "C6.T_design"
+   ],
+   "failed": [
+    "C6.T_design"
+   ],
+   "n_failed": 1,
+   "caught_on_named_items": true
+  },
+  {
+   "id": "M18",
+   "what": "a T box certified only to -kappa_-/2",
+   "expected": [
+    "C6.T_design"
+   ],
+   "failed": [
+    "C6.T_design"
+   ],
+   "n_failed": 1,
+   "caught_on_named_items": true
+  },
+  {
+   "id": "M19",
+   "what": "part (i) A: W7 fails",
+   "expected": [
+    "C6.A_design"
+   ],
+   "failed": [
+    "C6.A_design"
+   ],
+   "n_failed": 1,
+   "caught_on_named_items": true
+  },
+  {
+   "id": "M20",
+   "what": "L rows only to -0.9 kappa_-",
+   "expected": [
+    "C6.L_band_rows"
+   ],
+   "failed": [
+    "C6.L_band_rows"
+   ],
+   "n_failed": 1,
+   "caught_on_named_items": true
+  },
+  {
+   "id": "M21",
+   "what": "L margin min Re y_+ negative",
+   "expected": [
+    "C6.L_W6_prime_margin"
+   ],
+   "failed": [
+    "C6.L_W6_prime_margin"
+   ],
+   "n_failed": 1,
+   "caught_on_named_items": true
+  },
+  {
+   "id": "M22",
+   "what": "an S+ job missing",
+   "expected": [
+    "C6.S_design"
+   ],
+   "failed": [
+    "C6.S_design"
+   ],
+   "n_failed": 1,
+   "caught_on_named_items": true
+  },
+  {
+   "id": "M23",
+   "what": "S_c run at depth 11/20",
+   "expected": [
+    "C6.S_c.pass"
+   ],
+   "failed": [
+    "C6.S_c.pass"
+   ],
+   "n_failed": 1,
+   "caught_on_named_items": true
+  },
+  {
+   "id": "M24",
+   "what": "a cover inequality false",
+   "expected": [
+    "C6.cover_pass",
+    "C6.cover_replay_identical"
+   ],
+   "failed": [
+    "C6.cover_pass",
+    "C6.cover_replay_identical"
+   ],
+   "n_failed": 2,
+   "caught_on_named_items": true
+  },
+  {
+   "id": "M25",
+   "what": "omega_* moved below the band (-0.93 kappa_-)",
+   "expected": [
+    "C8.omega_star_in_B0"
+   ],
+   "failed": [
+    "C8.kat6_consistent",
+    "C8.omega_star_in_B0",
+    "C8.consistent_with_P2_4"
+   ],
+   "n_failed": 3,
+   "caught_on_named_items": true
+  },
+  {
+   "id": "M26",
+   "what": "omega_* moved inside the band (-0.85 kappa_-)",
+   "expected": [
+    "C8.kat6_consistent"
+   ],
+   "failed": [
+    "C8.kat6_consistent"
+   ],
+   "n_failed": 1,
+   "caught_on_named_items": true
+  },
+  {
+   "id": "M27",
+   "what": "symmetry Z4 false",
+   "expected": [
+    "C6.symmetry_Z4"
+   ],
+   "failed": [
+    "C6.symmetry_Z4"
+   ],
+   "n_failed": 1,
+   "caught_on_named_items": true
+  },
+  {
+   "id": "M28",
+   "what": "KAT B3 not as expected",
+   "expected": [
+    "C9.KAT_B2_B3_B4_B6"
+   ],
+   "failed": [
+    "C9.KAT_B2_B3_B4_B6"
+   ],
+   "n_failed": 1,
+   "caught_on_named_items": true
+  },
+  {
+   "id": "M29",
+   "what": "band 5% replay failed",
+   "expected": [
+    "C9.band_replay"
+   ],
+   "failed": [
+    "C9.band_replay"
+   ],
+   "n_failed": 1,
+   "caught_on_named_items": true
+  },
+  {
+   "id": "M30",
+   "what": "P2-4's assembly not passing",
+   "expected": [
+    "C2.P2_4_pass"
+   ],
+   "failed": [
+    "C2.P2_4_pass"
+   ],
+   "n_failed": 1,
+   "caught_on_named_items": true
+  },
+  {
+   "id": "M31",
+   "what": "a P2-4 input changed",
+   "expected": [
+    "C2.P2_4_inputs_unchanged"
+   ],
+   "failed": [
+    "C2.P2_4_inputs_unchanged"
+   ],
+   "n_failed": 1,
+   "caught_on_named_items": true
+  },
+  {
+   "id": "M32",
+   "what": "NB4 not failing",
+   "expected": [
+    "C9.NB3_NB4_NB5"
+   ],
+   "failed": [
+    "C9.NB3_NB4_NB5"
+   ],
+   "n_failed": 1,
+   "caught_on_named_items": true
+  },
+  {
+   "id": "M33",
+   "what": "l = 19 path ends 2^-40 short of (0, -b0)",
+   "expected": [
+    "C5.l19.path_traces_H"
+   ],
+   "failed": [
+    "C5.l19.path_traces_H"
+   ],
+   "n_failed": 1,
+   "caught_on_named_items": true
+  },
+  {
+   "id": "M34",
+   "what": "Lemma E row l = 19 missing",
+   "expected": [
+    "C3.l19.Wt_nonzero"
+   ],
+   "failed": [
+    "C3.l19.Wt_nonzero",
+    "C5.l19.pole_forced_consistent_C3"
+   ],
+   "n_failed": 2,
+   "caught_on_named_items": true
+  },
+  {
+   "id": "M35",
+   "what": "the S_c certificate missing",
+   "expected": [
+    "C6.S_c.pass"
+   ],
+   "failed": [
+    "C6.S_c.pass",
+    "C6.readable"
+   ],
+   "n_failed": 2,
+   "caught_on_named_items": true
+  },
+  {
+   "id": "M36",
+   "what": "NB2 certified (a winding through omega_*)",
+   "expected": [
+    "C9.NB2"
+   ],
+   "failed": [
+    "C9.NB2"
+   ],
+   "n_failed": 1,
+   "caught_on_named_items": true
+  }
+ ],
+ "by_design": [
+  {
+   "id": "B1",
+   "what": "an l = 4 increment changed by 0.2 (< 1/4 of pi)",
+   "pass": true,
+   "failed": [],
+   "dirty_tags_listed": []
+  },
+  {
+   "id": "B2",
+   "what": "a +dirty commit tag on T_PB.json",
+   "pass": true,
+   "failed": [],
+   "dirty_tags_listed": [
+    "T/commit: 7168b2e4b2ce75eb9a634830364b07b14b890b48+dirty"
+   ]
+  },
+  {
+   "id": "B3",
+   "what": "an l = 7 disc far from E inflated by 5/4",
+   "pass": false,
+   "failed": [
+    "C5.l7.discs_clear_E"
+   ],
+   "dirty_tags_listed": []
+  }
+ ],
+ "all_caught": true,
+ "wall_s": 4.2
+}

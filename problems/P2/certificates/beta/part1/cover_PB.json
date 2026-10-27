@@ -1,0 +1,48 @@
+{
+ "point": "PB",
+ "depth_over_kappa_minus": "23/25",
+ "h0": "2/41",
+ "constants": {
+  "Omega_L_over_km": "8",
+  "Omega_S_over_km": "6",
+  "zeta_SU": "9/10",
+  "zeta_TL": "4/5",
+  "zeta_TU": "13/10",
+  "zeta_A": "6/5"
+ },
+ "inequalities": {
+  "Omega_S < Omega_L (L/S overlap)": true,
+  "zeta_TL < zeta_SU (S/T overlap)": true,
+  "zeta_A < zeta_TU (T/A overlap)": true,
+  "zeta_SU Omega_P/h0 > Omega_L (S reaches above L for every h <= h0)": true,
+  "Omega_S kappa_- > d (Re w + Im w > 0 in S)": true,
+  "zeta_TL Omega_P/h0 > d (T)": true,
+  "zeta_A Omega_P/h0 > d (A)": true,
+  "d < 2 kappa_+ and d < kappa_c (only omega0 = -i kappa_+ of E_+ u E_c in S_e)": true,
+  "kappa_+ < d (omega0 lies in S_e)": true,
+  "L's band rows reach -e kappa_- and overlap S_delta": true,
+  "h0 = 2/41 gives l0 = 20": true
+ },
+ "certificates_pass": {
+  "T_PB": true,
+  "A_PB": true,
+  "S_PB_plus": true,
+  "S_PB_c": true,
+  "L_PB": true
+ },
+ "tiling": {
+  "T zeta-boxes tile [zeta_TL, zeta_TU]": true,
+  "T nu_low encloses -e kappa_- and h0 = 2/41": true,
+  "A at zeta_A, nu_low encloses -e kappa_-, W7": true,
+  "S plus: zeta-leaves tile [0, zeta_SU], eps-boxes tile [0, eps_max]": true,
+  "S c: zeta-leaves tile [0, zeta_SU], eps-boxes tile [0, eps_max]": true,
+  "L: in every grid box of the band rows, the leaves are disjoint and fill it": true
+ },
+ "cited": {
+  "Im w >= -0.55 kappa_- (S_delta)": "P2-4 (S5)",
+  "Re w < 0": "W_l(-conj w) = conj W_l(w) (FORMULATION 1.2; zeq_identity Z4)",
+  "omega0 = -i kappa_+": "Lemma E (certificates/beta/epole_PB.json; W6' in L)"
+ },
+ "pass": true,
+ "commit": "7168b2e4b2ce75eb9a634830364b07b14b890b48"
+}

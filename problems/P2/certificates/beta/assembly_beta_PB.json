@@ -1,0 +1,1731 @@
+{
+ "claim": "P2-6 at P_B (assembly bookkeeping): the committed certificates cover S_e = {Im w >= -e kappa_-}, e = 23/25, for every l with no gap; in S_e the only zeros of the W_l are 0 and omega_* (both l = 0, simple), and the only point of E_+ u E_c is omega0 = -i kappa_+, where every W_l has a simple pole (Lemma E); so beta = -Im omega_*/kappa_-, enclosed by P2-K6's Krawczyk ball",
+ "point": {
+  "name": "PB",
+  "qfrac": "999/1000",
+  "delta": "1/20",
+  "Lambda": "3/50",
+  "M": "1",
+  "edge": "23/25"
+ },
+ "decomposition": [
+  "S_delta = {Im w >= -(11/20) kappa_-}, every l: P2-4 (certificates/assembly/assembly_PB.json)",
+  "Re w < 0: W_l(-conj w) = conj W_l(w) (zeq_identity Z4)",
+  "band B = {-e kappa_- <= Im w <= -kappa_-/2}, Re w >= 0, l >= 20: part (i) at depth e (L, S, T, A; cover_PB.json)",
+  "B, l <= 19: B_l = [-a'_l, a'_l] x [-b', -b0] (band counts) and Re w >= a'_l (A at fixed h_l)",
+  "omega0 = -i kappa_+, every l: Lemma E (epole_PB.json and notes/s6-proof.md section 2)"
+ ],
+ "result": {
+  "checks": {
+   "C1.pins_main_blobs": {
+    "ok": true,
+    "note": "6/6 S2-S5 certificates equal their blobs on main 300c22a7"
+   },
+   "C1.point_overlaps_params": {
+    "ok": true
+   },
+   "C1.only_omega0_in_S_e": {
+    "ok": true,
+    "margin": "[0.7257790881, 0.7257790882] kappa_- (2 kappa_+ - e kappa_-), [1.275065476, 1.275065477] (kappa_c - e kappa_-)"
+   },
+   "C1.omega0_in_S_e": {
+    "ok": true,
+    "margin": "[0.09711045590, 0.09711045591] kappa_-"
+   },
+   "C1.b_prime_ge_e": {
+    "ok": true,
+    "margin": "[3.878981817E-10, 3.878981818E-10]"
+   },
+   "C1.b0_le_half": {
+    "ok": true,
+    "margin": "[5.180469161E-10, 5.180469162E-10]"
+   },
+   "C1.band_overlaps_S_delta": {
+    "ok": true
+   },
+   "C2.P2_4_pass": {
+    "ok": true,
+    "note": "366 checks"
+   },
+   "C2.P2_4_inputs_unchanged": {
+    "ok": true,
+    "note": "54/54"
+   },
+   "C2.P2_4_depth": {
+    "ok": true
+   },
+   "C3.present": {
+    "ok": true
+   },
+   "C3.sympy_first_step": {
+    "ok": true
+   },
+   "C3.V_l_positive_l_ge_1": {
+    "ok": true
+   },
+   "C3.l0.Wt_nonzero": {
+    "ok": true,
+    "note": "[0.038285581814409 +/- 4.40e-16]"
+   },
+   "C3.l1.Wt_nonzero": {
+    "ok": true,
+    "note": "[-22.800094349715 +/- 4.34e-13]"
+   },
+   "C3.l2.Wt_nonzero": {
+    "ok": true,
+    "note": "[-20790.693939592 +/- 2.54e-10]"
+   },
+   "C3.l3.Wt_nonzero": {
+    "ok": true,
+    "note": "[-16146662.780386 +/- 2.26e-7]"
+   },
+   "C3.l4.Wt_nonzero": {
+    "ok": true,
+    "note": "[-12271039243.074 +/- 3.11e-4]"
+   },
+   "C3.l5.Wt_nonzero": {
+    "ok": true,
+    "note": "[-9323368721515.8 +/- 0.0253]"
+   },
+   "C3.l6.Wt_nonzero": {
+    "ok": true,
+    "note": "[-7.1150108777883e+15 +/- 2.36]"
+   },
+   "C3.l7.Wt_nonzero": {
+    "ok": true,
+    "note": "[-5.4580722143712e+18 +/- 2.64e+4]"
+   },
+   "C3.l8.Wt_nonzero": {
+    "ok": true,
+    "note": "[-4.2078978473603e+21 +/- 1.71e+7]"
+   },
+   "C3.l9.Wt_nonzero": {
+    "ok": true,
+    "note": "[-3.2586696580088e+24 +/- 2.03e+10]"
+   },
+   "C3.l10.Wt_nonzero": {
+    "ok": true,
+    "note": "[-2.5336088082825e+27 +/- 4.90e+13]"
+   },
+   "C3.l11.Wt_nonzero": {
+    "ok": true,
+    "note": "[-1.9767712698511e+30 +/- 9.03e+15]"
+   },
+   "C3.l12.Wt_nonzero": {
+    "ok": true,
+    "note": "[-1.5470722596086e+33 +/- 1.05e+19]"
+   },
+   "C3.l13.Wt_nonzero": {
+    "ok": true,
+    "note": "[-1.2140802278233e+36 +/- 4.57e+22]"
+   },
+   "C3.l14.Wt_nonzero": {
+    "ok": true,
+    "note": "[-9.5506902520104e+38 +/- 4.75e+24]"
+   },
+   "C3.l15.Wt_nonzero": {
+    "ok": true,
+    "note": "[-7.5293939529745e+41 +/- 2.17e+27]"
+   },
+   "C3.l16.Wt_nonzero": {
+    "ok": true,
+    "note": "[-5.9473934092305e+44 +/- 2.97e+30]"
+   },
+   "C3.l17.Wt_nonzero": {
+    "ok": true,
+    "note": "[-4.7059976467294e+47 +/- 4.77e+33]"
+   },
+   "C3.l18.Wt_nonzero": {
+    "ok": true,
+    "note": "[-3.7296098642479e+50 +/- 2.53e+36]"
+   },
+   "C3.l19.Wt_nonzero": {
+    "ok": true,
+    "note": "[-2.9600527340171e+53 +/- 3.28e+39]"
+   },
+   "C3.B5_residue_formula": {
+    "ok": true
+   },
+   "C3.normalisation_stated": {
+    "ok": true
+   },
+   "C4.present": {
+    "ok": true
+   },
+   "C4.depth_and_design": {
+    "ok": true
+   },
+   "C4.l0.pass": {
+    "ok": true
+   },
+   "C4.l1.pass": {
+    "ok": true
+   },
+   "C4.l2.pass": {
+    "ok": true
+   },
+   "C4.l3.pass": {
+    "ok": true
+   },
+   "C4.l4.pass": {
+    "ok": true
+   },
+   "C4.l5.pass": {
+    "ok": true
+   },
+   "C4.l6.pass": {
+    "ok": true
+   },
+   "C4.l7.pass": {
+    "ok": true
+   },
+   "C4.l8.pass": {
+    "ok": true
+   },
+   "C4.l9.pass": {
+    "ok": true
+   },
+   "C4.l10.pass": {
+    "ok": true
+   },
+   "C4.l11.pass": {
+    "ok": true
+   },
+   "C4.l12.pass": {
+    "ok": true
+   },
+   "C4.l13.pass": {
+    "ok": true
+   },
+   "C4.l14.pass": {
+    "ok": true
+   },
+   "C4.l15.pass": {
+    "ok": true
+   },
+   "C4.l16.pass": {
+    "ok": true
+   },
+   "C4.l17.pass": {
+    "ok": true
+   },
+   "C4.l18.pass": {
+    "ok": true
+   },
+   "C4.l19.pass": {
+    "ok": true
+   },
+   "C5.l0.present": {
+    "ok": true
+   },
+   "C5.l0.meta": {
+    "ok": true
+   },
+   "C5.l0.a_identical": {
+    "ok": true,
+    "note": "a'_l = 294903081/536870912"
+   },
+   "C5.l0.b_prime_ge_e": {
+    "ok": true,
+    "margin": "[3.878981817E-10, 3.878981818E-10]"
+   },
+   "C5.l0.b0": {
+    "ok": true
+   },
+   "C5.l0.omega0_interior": {
+    "ok": true
+   },
+   "C5.l0.path_traces_H": {
+    "ok": true,
+    "note": "41 pieces"
+   },
+   "C5.l0.path_in_discs": {
+    "ok": true,
+    "note": "all endpoints within rho/2"
+   },
+   "C5.l0.discs_clear_E": {
+    "ok": true,
+    "note": "all disc boxes clear of E_+ u E_c"
+   },
+   "C5.l0.resum": {
+    "ok": true,
+    "margin": "[+/- 8.69e-5]"
+   },
+   "C5.l0.winding_value": {
+    "ok": true,
+    "note": "stored 0, expected 0"
+   },
+   "C5.l0.pole_forced_consistent_C3": {
+    "ok": true
+   },
+   "C5.l1.present": {
+    "ok": true
+   },
+   "C5.l1.meta": {
+    "ok": true
+   },
+   "C5.l1.a_identical": {
+    "ok": true,
+    "note": "a'_l = 623509371/1073741824"
+   },
+   "C5.l1.b_prime_ge_e": {
+    "ok": true,
+    "margin": "[3.878981817E-10, 3.878981818E-10]"
+   },
+   "C5.l1.b0": {
+    "ok": true
+   },
+   "C5.l1.omega0_interior": {
+    "ok": true
+   },
+   "C5.l1.path_traces_H": {
+    "ok": true,
+    "note": "43 pieces"
+   },
+   "C5.l1.path_in_discs": {
+    "ok": true,
+    "note": "all endpoints within rho/2"
+   },
+   "C5.l1.discs_clear_E": {
+    "ok": true,
+    "note": "all disc boxes clear of E_+ u E_c"
+   },
+   "C5.l1.resum": {
+    "ok": true,
+    "margin": "[-1.000 +/- 1.09e-4]"
+   },
+   "C5.l1.winding_value": {
+    "ok": true,
+    "note": "stored -1, expected -1"
+   },
+   "C5.l1.pole_forced_consistent_C3": {
+    "ok": true
+   },
+   "C5.l2.present": {
+    "ok": true
+   },
+   "C5.l2.meta": {
+    "ok": true
+   },
+   "C5.l2.a_identical": {
+    "ok": true,
+    "note": "a'_l = 842580231/1073741824"
+   },
+   "C5.l2.b_prime_ge_e": {
+    "ok": true,
+    "margin": "[3.878981817E-10, 3.878981818E-10]"
+   },
+   "C5.l2.b0": {
+    "ok": true
+   },
+   "C5.l2.omega0_interior": {
+    "ok": true
+   },
+   "C5.l2.path_traces_H": {
+    "ok": true,
+    "note": "53 pieces"
+   },
+   "C5.l2.path_in_discs": {
+    "ok": true,
+    "note": "all endpoints within rho/2"
+   },
+   "C5.l2.discs_clear_E": {
+    "ok": true,
+    "note": "all disc boxes clear of E_+ u E_c"
+   },
+   "C5.l2.resum": {
+    "ok": true,
+    "margin": "[-1.00 +/- 2.28e-4]"
+   },
+   "C5.l2.winding_value": {
+    "ok": true,
+    "note": "stored -1, expected -1"
+   },
+   "C5.l2.pole_forced_consistent_C3": {
+    "ok": true
+   },
+   "C5.l3.present": {
+    "ok": true
+   },
+   "C5.l3.meta": {
+    "ok": true
+   },
+   "C5.l3.a_identical": {
+    "ok": true,
+    "note": "a'_l = 1061651091/1073741824"
+   },
+   "C5.l3.b_prime_ge_e": {
+    "ok": true,
+    "margin": "[3.878981817E-10, 3.878981818E-10]"
+   },
+   "C5.l3.b0": {
+    "ok": true
+   },
+   "C5.l3.omega0_interior": {
+    "ok": true
+   },
+   "C5.l3.path_traces_H": {
+    "ok": true,
+    "note": "63 pieces"
+   },
+   "C5.l3.path_in_discs": {
+    "ok": true,
+    "note": "all endpoints within rho/2"
+   },
+   "C5.l3.discs_clear_E": {
+    "ok": true,
+    "note": "all disc boxes clear of E_+ u E_c"
+   },
+   "C5.l3.resum": {
+    "ok": true,
+    "margin": "[-1.000 +/- 1.81e-4]"
+   },
+   "C5.l3.winding_value": {
+    "ok": true,
+    "note": "stored -1, expected -1"
+   },
+   "C5.l3.pole_forced_consistent_C3": {
+    "ok": true
+   },
+   "C5.l4.present": {
+    "ok": true
+   },
+   "C5.l4.meta": {
+    "ok": true
+   },
+   "C5.l4.a_identical": {
+    "ok": true,
+    "note": "a'_l = 631935173/536870912"
+   },
+   "C5.l4.b_prime_ge_e": {
+    "ok": true,
+    "margin": "[3.878981817E-10, 3.878981818E-10]"
+   },
+   "C5.l4.b0": {
+    "ok": true
+   },
+   "C5.l4.omega0_interior": {
+    "ok": true
+   },
+   "C5.l4.path_traces_H": {
+    "ok": true,
+    "note": "71 pieces"
+   },
+   "C5.l4.path_in_discs": {
+    "ok": true,
+    "note": "all endpoints within rho/2"
+   },
+   "C5.l4.discs_clear_E": {
+    "ok": true,
+    "note": "all disc boxes clear of E_+ u E_c"
+   },
+   "C5.l4.resum": {
+    "ok": true,
+    "margin": "[-1.00 +/- 2.68e-4]"
+   },
+   "C5.l4.winding_value": {
+    "ok": true,
+    "note": "stored -1, expected -1"
+   },
+   "C5.l4.pole_forced_consistent_C3": {
+    "ok": true
+   },
+   "C5.l5.present": {
+    "ok": true
+   },
+   "C5.l5.meta": {
+    "ok": true
+   },
+   "C5.l5.a_identical": {
+    "ok": true,
+    "note": "a'_l = 741470603/536870912"
+   },
+   "C5.l5.b_prime_ge_e": {
+    "ok": true,
+    "margin": "[3.878981817E-10, 3.878981818E-10]"
+   },
+   "C5.l5.b0": {
+    "ok": true
+   },
+   "C5.l5.omega0_interior": {
+    "ok": true
+   },
+   "C5.l5.path_traces_H": {
+    "ok": true,
+    "note": "81 pieces"
+   },
+   "C5.l5.path_in_discs": {
+    "ok": true,
+    "note": "all endpoints within rho/2"
+   },
+   "C5.l5.discs_clear_E": {
+    "ok": true,
+    "note": "all disc boxes clear of E_+ u E_c"
+   },
+   "C5.l5.resum": {
+    "ok": true,
+    "margin": "[-1.00 +/- 2.05e-4]"
+   },
+   "C5.l5.winding_value": {
+    "ok": true,
+    "note": "stored -1, expected -1"
+   },
+   "C5.l5.pole_forced_consistent_C3": {
+    "ok": true
+   },
+   "C5.l6.present": {
+    "ok": true
+   },
+   "C5.l6.meta": {
+    "ok": true
+   },
+   "C5.l6.a_identical": {
+    "ok": true,
+    "note": "a'_l = 54767715/33554432"
+   },
+   "C5.l6.b_prime_ge_e": {
+    "ok": true,
+    "margin": "[3.878981817E-10, 3.878981818E-10]"
+   },
+   "C5.l6.b0": {
+    "ok": true
+   },
+   "C5.l6.omega0_interior": {
+    "ok": true
+   },
+   "C5.l6.path_traces_H": {
+    "ok": true,
+    "note": "92 pieces"
+   },
+   "C5.l6.path_in_discs": {
+    "ok": true,
+    "note": "all endpoints within rho/2"
+   },
+   "C5.l6.discs_clear_E": {
+    "ok": true,
+    "note": "all disc boxes clear of E_+ u E_c"
+   },
+   "C5.l6.resum": {
+    "ok": true,
+    "margin": "[-1.000 +/- 2.62e-4]"
+   },
+   "C5.l6.winding_value": {
+    "ok": true,
+    "note": "stored -1, expected -1"
+   },
+   "C5.l6.pole_forced_consistent_C3": {
+    "ok": true
+   },
+   "C5.l7.present": {
+    "ok": true
+   },
+   "C5.l7.meta": {
+    "ok": true
+   },
+   "C5.l7.a_identical": {
+    "ok": true,
+    "note": "a'_l = 1937934531/1073741824"
+   },
+   "C5.l7.b_prime_ge_e": {
+    "ok": true,
+    "margin": "[3.878981817E-10, 3.878981818E-10]"
+   },
+   "C5.l7.b0": {
+    "ok": true
+   },
+   "C5.l7.omega0_interior": {
+    "ok": true
+   },
+   "C5.l7.path_traces_H": {
+    "ok": true,
+    "note": "101 pieces"
+   },
+   "C5.l7.path_in_discs": {
+    "ok": true,
+    "note": "all endpoints within rho/2"
+   },
+   "C5.l7.discs_clear_E": {
+    "ok": true,
+    "note": "all disc boxes clear of E_+ u E_c"
+   },
+   "C5.l7.resum": {
+    "ok": true,
+    "margin": "[-1.00 +/- 2.90e-4]"
+   },
+   "C5.l7.winding_value": {
+    "ok": true,
+    "note": "stored -1, expected -1"
+   },
+   "C5.l7.pole_forced_consistent_C3": {
+    "ok": true
+   },
+   "C5.l8.present": {
+    "ok": true
+   },
+   "C5.l8.meta": {
+    "ok": true
+   },
+   "C5.l8.a_identical": {
+    "ok": true,
+    "note": "a'_l = 1098162901/536870912"
+   },
+   "C5.l8.b_prime_ge_e": {
+    "ok": true,
+    "margin": "[3.878981817E-10, 3.878981818E-10]"
+   },
+   "C5.l8.b0": {
+    "ok": true
+   },
+   "C5.l8.omega0_interior": {
+    "ok": true
+   },
+   "C5.l8.path_traces_H": {
+    "ok": true,
+    "note": "112 pieces"
+   },
+   "C5.l8.path_in_discs": {
+    "ok": true,
+    "note": "all endpoints within rho/2"
+   },
+   "C5.l8.discs_clear_E": {
+    "ok": true,
+    "note": "all disc boxes clear of E_+ u E_c"
+   },
+   "C5.l8.resum": {
+    "ok": true,
+    "margin": "[-1.000 +/- 3.32e-4]"
+   },
+   "C5.l8.winding_value": {
+    "ok": true,
+    "note": "stored -1, expected -1"
+   },
+   "C5.l8.pole_forced_consistent_C3": {
+    "ok": true
+   },
+   "C5.l9.present": {
+    "ok": true
+   },
+   "C5.l9.meta": {
+    "ok": true
+   },
+   "C5.l9.a_identical": {
+    "ok": true,
+    "note": "a'_l = 153419817/67108864"
+   },
+   "C5.l9.b_prime_ge_e": {
+    "ok": true,
+    "margin": "[3.878981817E-10, 3.878981818E-10]"
+   },
+   "C5.l9.b0": {
+    "ok": true
+   },
+   "C5.l9.omega0_interior": {
+    "ok": true
+   },
+   "C5.l9.path_traces_H": {
+    "ok": true,
+    "note": "123 pieces"
+   },
+   "C5.l9.path_in_discs": {
+    "ok": true,
+    "note": "all endpoints within rho/2"
+   },
+   "C5.l9.discs_clear_E": {
+    "ok": true,
+    "note": "all disc boxes clear of E_+ u E_c"
+   },
+   "C5.l9.resum": {
+    "ok": true,
+    "margin": "[-1.000 +/- 4.59e-4]"
+   },
+   "C5.l9.winding_value": {
+    "ok": true,
+    "note": "stored -1, expected -1"
+   },
+   "C5.l9.pole_forced_consistent_C3": {
+    "ok": true
+   },
+   "C5.l10.present": {
+    "ok": true
+   },
+   "C5.l10.meta": {
+    "ok": true
+   },
+   "C5.l10.a_identical": {
+    "ok": true,
+    "note": "a'_l = 2595147111/1073741824"
+   },
+   "C5.l10.b_prime_ge_e": {
+    "ok": true,
+    "margin": "[3.878981817E-10, 3.878981818E-10]"
+   },
+   "C5.l10.b0": {
+    "ok": true
+   },
+   "C5.l10.omega0_interior": {
+    "ok": true
+   },
+   "C5.l10.path_traces_H": {
+    "ok": true,
+    "note": "128 pieces"
+   },
+   "C5.l10.path_in_discs": {
+    "ok": true,
+    "note": "all endpoints within rho/2"
+   },
+   "C5.l10.discs_clear_E": {
+    "ok": true,
+    "note": "all disc boxes clear of E_+ u E_c"
+   },
+   "C5.l10.resum": {
+    "ok": true,
+    "margin": "[-1.00 +/- 5.02e-4]"
+   },
+   "C5.l10.winding_value": {
+    "ok": true,
+    "note": "stored -1, expected -1"
+   },
+   "C5.l10.pole_forced_consistent_C3": {
+    "ok": true
+   },
+   "C5.l11.present": {
+    "ok": true
+   },
+   "C5.l11.meta": {
+    "ok": true
+   },
+   "C5.l11.a_identical": {
+    "ok": true,
+    "note": "a'_l = 1421151989/536870912"
+   },
+   "C5.l11.b_prime_ge_e": {
+    "ok": true,
+    "margin": "[3.878981817E-10, 3.878981818E-10]"
+   },
+   "C5.l11.b0": {
+    "ok": true
+   },
+   "C5.l11.omega0_interior": {
+    "ok": true
+   },
+   "C5.l11.path_traces_H": {
+    "ok": true,
+    "note": "141 pieces"
+   },
+   "C5.l11.path_in_discs": {
+    "ok": true,
+    "note": "all endpoints within rho/2"
+   },
+   "C5.l11.discs_clear_E": {
+    "ok": true,
+    "note": "all disc boxes clear of E_+ u E_c"
+   },
+   "C5.l11.resum": {
+    "ok": true,
+    "margin": "[-1.000 +/- 5.37e-4]"
+   },
+   "C5.l11.winding_value": {
+    "ok": true,
+    "note": "stored -1, expected -1"
+   },
+   "C5.l11.pole_forced_consistent_C3": {
+    "ok": true
+   },
+   "C5.l12.present": {
+    "ok": true
+   },
+   "C5.l12.meta": {
+    "ok": true
+   },
+   "C5.l12.a_identical": {
+    "ok": true,
+    "note": "a'_l = 1544730423/536870912"
+   },
+   "C5.l12.b_prime_ge_e": {
+    "ok": true,
+    "margin": "[3.878981817E-10, 3.878981818E-10]"
+   },
+   "C5.l12.b0": {
+    "ok": true
+   },
+   "C5.l12.omega0_interior": {
+    "ok": true
+   },
+   "C5.l12.path_traces_H": {
+    "ok": true,
+    "note": "151 pieces"
+   },
+   "C5.l12.path_in_discs": {
+    "ok": true,
+    "note": "all endpoints within rho/2"
+   },
+   "C5.l12.discs_clear_E": {
+    "ok": true,
+    "note": "all disc boxes clear of E_+ u E_c"
+   },
+   "C5.l12.resum": {
+    "ok": true,
+    "margin": "[-1.00 +/- 4.83e-4]"
+   },
+   "C5.l12.winding_value": {
+    "ok": true,
+    "note": "stored -1, expected -1"
+   },
+   "C5.l12.pole_forced_consistent_C3": {
+    "ok": true
+   },
+   "C5.l13.present": {
+    "ok": true
+   },
+   "C5.l13.meta": {
+    "ok": true
+   },
+   "C5.l13.a_identical": {
+    "ok": true,
+    "note": "a'_l = 1668308857/536870912"
+   },
+   "C5.l13.b_prime_ge_e": {
+    "ok": true,
+    "margin": "[3.878981817E-10, 3.878981818E-10]"
+   },
+   "C5.l13.b0": {
+    "ok": true
+   },
+   "C5.l13.omega0_interior": {
+    "ok": true
+   },
+   "C5.l13.path_traces_H": {
+    "ok": true,
+    "note": "163 pieces"
+   },
+   "C5.l13.path_in_discs": {
+    "ok": true,
+    "note": "all endpoints within rho/2"
+   },
+   "C5.l13.discs_clear_E": {
+    "ok": true,
+    "note": "all disc boxes clear of E_+ u E_c"
+   },
+   "C5.l13.resum": {
+    "ok": true,
+    "margin": "[-1.000 +/- 5.16e-4]"
+   },
+   "C5.l13.winding_value": {
+    "ok": true,
+    "note": "stored -1, expected -1"
+   },
+   "C5.l13.pole_forced_consistent_C3": {
+    "ok": true
+   },
+   "C5.l14.present": {
+    "ok": true
+   },
+   "C5.l14.meta": {
+    "ok": true
+   },
+   "C5.l14.a_identical": {
+    "ok": true,
+    "note": "a'_l = 3583774581/1073741824"
+   },
+   "C5.l14.b_prime_ge_e": {
+    "ok": true,
+    "margin": "[3.878981817E-10, 3.878981818E-10]"
+   },
+   "C5.l14.b0": {
+    "ok": true
+   },
+   "C5.l14.omega0_interior": {
+    "ok": true
+   },
+   "C5.l14.path_traces_H": {
+    "ok": true,
+    "note": "173 pieces"
+   },
+   "C5.l14.path_in_discs": {
+    "ok": true,
+    "note": "all endpoints within rho/2"
+   },
+   "C5.l14.discs_clear_E": {
+    "ok": true,
+    "note": "all disc boxes clear of E_+ u E_c"
+   },
+   "C5.l14.resum": {
+    "ok": true,
+    "margin": "[-1.00 +/- 5.34e-4]"
+   },
+   "C5.l14.winding_value": {
+    "ok": true,
+    "note": "stored -1, expected -1"
+   },
+   "C5.l14.pole_forced_consistent_C3": {
+    "ok": true
+   },
+   "C5.l15.present": {
+    "ok": true
+   },
+   "C5.l15.meta": {
+    "ok": true
+   },
+   "C5.l15.a_identical": {
+    "ok": true,
+    "note": "a'_l = 3830931449/1073741824"
+   },
+   "C5.l15.b_prime_ge_e": {
+    "ok": true,
+    "margin": "[3.878981817E-10, 3.878981818E-10]"
+   },
+   "C5.l15.b0": {
+    "ok": true
+   },
+   "C5.l15.omega0_interior": {
+    "ok": true
+   },
+   "C5.l15.path_traces_H": {
+    "ok": true,
+    "note": "182 pieces"
+   },
+   "C5.l15.path_in_discs": {
+    "ok": true,
+    "note": "all endpoints within rho/2"
+   },
+   "C5.l15.discs_clear_E": {
+    "ok": true,
+    "note": "all disc boxes clear of E_+ u E_c"
+   },
+   "C5.l15.resum": {
+    "ok": true,
+    "margin": "[-1.000 +/- 6.59e-4]"
+   },
+   "C5.l15.winding_value": {
+    "ok": true,
+    "note": "stored -1, expected -1"
+   },
+   "C5.l15.pole_forced_consistent_C3": {
+    "ok": true
+   },
+   "C5.l16.present": {
+    "ok": true
+   },
+   "C5.l16.meta": {
+    "ok": true
+   },
+   "C5.l16.a_identical": {
+    "ok": true,
+    "note": "a'_l = 4078088317/1073741824"
+   },
+   "C5.l16.b_prime_ge_e": {
+    "ok": true,
+    "margin": "[3.878981817E-10, 3.878981818E-10]"
+   },
+   "C5.l16.b0": {
+    "ok": true
+   },
+   "C5.l16.omega0_interior": {
+    "ok": true
+   },
+   "C5.l16.path_traces_H": {
+    "ok": true,
+    "note": "195 pieces"
+   },
+   "C5.l16.path_in_discs": {
+    "ok": true,
+    "note": "all endpoints within rho/2"
+   },
+   "C5.l16.discs_clear_E": {
+    "ok": true,
+    "note": "all disc boxes clear of E_+ u E_c"
+   },
+   "C5.l16.resum": {
+    "ok": true,
+    "margin": "[-1.000 +/- 6.03e-4]"
+   },
+   "C5.l16.winding_value": {
+    "ok": true,
+    "note": "stored -1, expected -1"
+   },
+   "C5.l16.pole_forced_consistent_C3": {
+    "ok": true
+   },
+   "C5.l17.present": {
+    "ok": true
+   },
+   "C5.l17.meta": {
+    "ok": true
+   },
+   "C5.l17.a_identical": {
+    "ok": true,
+    "note": "a'_l = 16895489/4194304"
+   },
+   "C5.l17.b_prime_ge_e": {
+    "ok": true,
+    "margin": "[3.878981817E-10, 3.878981818E-10]"
+   },
+   "C5.l17.b0": {
+    "ok": true
+   },
+   "C5.l17.omega0_interior": {
+    "ok": true
+   },
+   "C5.l17.path_traces_H": {
+    "ok": true,
+    "note": "205 pieces"
+   },
+   "C5.l17.path_in_discs": {
+    "ok": true,
+    "note": "all endpoints within rho/2"
+   },
+   "C5.l17.discs_clear_E": {
+    "ok": true,
+    "note": "all disc boxes clear of E_+ u E_c"
+   },
+   "C5.l17.resum": {
+    "ok": true,
+    "margin": "[-1.000 +/- 5.97e-4]"
+   },
+   "C5.l17.winding_value": {
+    "ok": true,
+    "note": "stored -1, expected -1"
+   },
+   "C5.l17.pole_forced_consistent_C3": {
+    "ok": true
+   },
+   "C5.l18.present": {
+    "ok": true
+   },
+   "C5.l18.meta": {
+    "ok": true
+   },
+   "C5.l18.a_identical": {
+    "ok": true,
+    "note": "a'_l = 1143100513/268435456"
+   },
+   "C5.l18.b_prime_ge_e": {
+    "ok": true,
+    "margin": "[3.878981817E-10, 3.878981818E-10]"
+   },
+   "C5.l18.b0": {
+    "ok": true
+   },
+   "C5.l18.omega0_interior": {
+    "ok": true
+   },
+   "C5.l18.path_traces_H": {
+    "ok": true,
+    "note": "216 pieces"
+   },
+   "C5.l18.path_in_discs": {
+    "ok": true,
+    "note": "all endpoints within rho/2"
+   },
+   "C5.l18.discs_clear_E": {
+    "ok": true,
+    "note": "all disc boxes clear of E_+ u E_c"
+   },
+   "C5.l18.resum": {
+    "ok": true,
+    "margin": "[-1.00 +/- 6.84e-4]"
+   },
+   "C5.l18.winding_value": {
+    "ok": true,
+    "note": "stored -1, expected -1"
+   },
+   "C5.l18.pole_forced_consistent_C3": {
+    "ok": true
+   },
+   "C5.l19.present": {
+    "ok": true
+   },
+   "C5.l19.meta": {
+    "ok": true
+   },
+   "C5.l19.a_identical": {
+    "ok": true,
+    "note": "a'_l = 602444865/134217728"
+   },
+   "C5.l19.b_prime_ge_e": {
+    "ok": true,
+    "margin": "[3.878981817E-10, 3.878981818E-10]"
+   },
+   "C5.l19.b0": {
+    "ok": true
+   },
+   "C5.l19.omega0_interior": {
+    "ok": true
+   },
+   "C5.l19.path_traces_H": {
+    "ok": true,
+    "note": "228 pieces"
+   },
+   "C5.l19.path_in_discs": {
+    "ok": true,
+    "note": "all endpoints within rho/2"
+   },
+   "C5.l19.discs_clear_E": {
+    "ok": true,
+    "note": "all disc boxes clear of E_+ u E_c"
+   },
+   "C5.l19.resum": {
+    "ok": true,
+    "margin": "[-1.00 +/- 7.01e-4]"
+   },
+   "C5.l19.winding_value": {
+    "ok": true,
+    "note": "stored -1, expected -1"
+   },
+   "C5.l19.pole_forced_consistent_C3": {
+    "ok": true
+   },
+   "C5.all_l_present": {
+    "ok": true
+   },
+   "C6.T.pass": {
+    "ok": true
+   },
+   "C6.A.pass": {
+    "ok": true
+   },
+   "C6.S_plus.pass": {
+    "ok": true
+   },
+   "C6.S_c.pass": {
+    "ok": true
+   },
+   "C6.L.pass": {
+    "ok": true
+   },
+   "C6.cover_pass": {
+    "ok": true
+   },
+   "C6.cover_replay_identical": {
+    "ok": true
+   },
+   "C6.T_design": {
+    "ok": true
+   },
+   "C6.A_design": {
+    "ok": true
+   },
+   "C6.S_design": {
+    "ok": true
+   },
+   "C6.L_band_rows": {
+    "ok": true,
+    "note": "Im w in [-19/20, -11/20] kappa_-: reaches below -e kappa_- and into S_delta"
+   },
+   "C6.L_rows_reach": {
+    "ok": true
+   },
+   "C6.L_W6_prime_margin": {
+    "ok": true,
+    "note": "min Re y_+ >= 0.1284, max Re y_c <= -0.0770"
+   },
+   "C6.S_reaches_above_L": {
+    "ok": true,
+    "margin": "[82.75251045, 82.75251046] kappa_-"
+   },
+   "C6.regime_overlaps": {
+    "ok": true
+   },
+   "C6.Re_plus_Im_positive": {
+    "ok": true
+   },
+   "C6.symmetry_Z4": {
+    "ok": true
+   },
+   "C7.no_l_gap": {
+    "ok": true,
+    "note": "l0 = ceil(1/h0 - 1/2) = 20; l <= 19 counted"
+   },
+   "C8.krawczyk_certified": {
+    "ok": true
+   },
+   "C8.kat6_consistent": {
+    "ok": true
+   },
+   "C8.beta_width": {
+    "ok": true,
+    "margin": "[6.32e-31 +/- 2e-38]"
+   },
+   "C8.omega_star_in_B0": {
+    "ok": true,
+    "margin": "[0.01061903012, 0.01061903013] kappa_- below"
+   },
+   "C8.omega_star_off_E": {
+    "ok": true
+   },
+   "C8.omega_star_below_S_delta": {
+    "ok": true
+   },
+   "C8.consistent_with_P2_4": {
+    "ok": true,
+    "margin": "[1.005194544E-9, 1.005194545E-9]"
+   },
+   "C9.KAT_B2_B3_B4_B6": {
+    "ok": true,
+    "note": "B2(l=0): 1, B3(l=0): -1, B3(l=1): -1, B4(l=0): 0, B6(l=0): 1, B6(l=1): 1"
+   },
+   "C9.NB1": {
+    "ok": true
+   },
+   "C9.NB2": {
+    "ok": true
+   },
+   "C9.left_halves_symmetry": {
+    "ok": true
+   },
+   "C9.B1_krawczyk_replay": {
+    "ok": true
+   },
+   "C9.NB3_NB4_NB5": {
+    "ok": true
+   },
+   "C9.band_replay": {
+    "ok": true
+   },
+   "C9.B7_float": {
+    "ok": true,
+    "note": "float evidence; not used by the proof"
+   },
+   "C10.level_minimum": {
+    "ok": true,
+    "note": "WRITTEN_PROOF"
+   }
+  },
+  "summary": {
+   "edge_over_kappa_minus": "23/25",
+   "band": {
+    "b_prime": "21012395/536870912",
+    "b0": "22839559/1073741824",
+    "b_prime_over_kappa_minus": "[0.9200000091, 0.9200000092]",
+    "b0_over_kappa_minus": "[0.4999999878, 0.4999999879]",
+    "omega0_over_kappa_minus": "-i [0.8228895440, 0.8228895441]"
+   },
+   "lemma_E": {
+    "Wt_l": {
+     "0": "[0.038285581814409 +/- 4.40e-16]",
+     "1": "[-22.800094349715 +/- 4.34e-13]",
+     "2": "[-20790.693939592 +/- 2.54e-10]",
+     "3": "[-16146662.780386 +/- 2.26e-7]",
+     "4": "[-12271039243.074 +/- 3.11e-4]",
+     "5": "[-9323368721515.8 +/- 0.0253]",
+     "6": "[-7.1150108777883e+15 +/- 2.36]",
+     "7": "[-5.4580722143712e+18 +/- 2.64e+4]",
+     "8": "[-4.2078978473603e+21 +/- 1.71e+7]",
+     "9": "[-3.2586696580088e+24 +/- 2.03e+10]",
+     "10": "[-2.5336088082825e+27 +/- 4.90e+13]",
+     "11": "[-1.9767712698511e+30 +/- 9.03e+15]",
+     "12": "[-1.5470722596086e+33 +/- 1.05e+19]",
+     "13": "[-1.2140802278233e+36 +/- 4.57e+22]",
+     "14": "[-9.5506902520104e+38 +/- 4.75e+24]",
+     "15": "[-7.5293939529745e+41 +/- 2.17e+27]",
+     "16": "[-5.9473934092305e+44 +/- 2.97e+30]",
+     "17": "[-4.7059976467294e+47 +/- 4.77e+33]",
+     "18": "[-3.7296098642479e+50 +/- 2.53e+36]",
+     "19": "[-2.9600527340171e+53 +/- 3.28e+39]"
+    },
+    "samples_l_ge_20": [
+     20,
+     25,
+     30,
+     40,
+     50,
+     60,
+     100
+    ]
+   },
+   "band_counts": {
+    "per_l": {
+     "0": {
+      "a_prime_over_kappa_minus": "[12.91194255, 12.91194256]",
+      "winding": 0,
+      "zeros": 1,
+      "poles": 1,
+      "pieces": 41,
+      "resum_over_pi": "[+/- 8.69e-5]",
+      "min_abs_W_lower": 0.03209880821515828
+     },
+     "1": {
+      "a_prime_over_kappa_minus": "[13.64976783, 13.64976784]",
+      "winding": -1,
+      "zeros": 0,
+      "poles": 1,
+      "pieces": 43,
+      "resum_over_pi": "[-1.000 +/- 1.09e-4]",
+      "min_abs_W_lower": 0.3512309193611145
+     },
+     "2": {
+      "a_prime_over_kappa_minus": "[18.44563221, 18.44563222]",
+      "winding": -1,
+      "zeros": 0,
+      "poles": 1,
+      "pieces": 53,
+      "resum_over_pi": "[-1.00 +/- 2.28e-4]",
+      "min_abs_W_lower": 0.4769312613643706
+     },
+     "3": {
+      "a_prime_over_kappa_minus": "[23.24149658, 23.24149659]",
+      "winding": -1,
+      "zeros": 0,
+      "poles": 1,
+      "pieces": 63,
+      "resum_over_pi": "[-1.000 +/- 1.81e-4]",
+      "min_abs_W_lower": 0.6003554919734597
+     },
+     "4": {
+      "a_prime_over_kappa_minus": "[27.66844830, 27.66844831]",
+      "winding": -1,
+      "zeros": 0,
+      "poles": 1,
+      "pieces": 71,
+      "resum_over_pi": "[-1.00 +/- 2.68e-4]",
+      "min_abs_W_lower": 0.7101191869005561
+     },
+     "5": {
+      "a_prime_over_kappa_minus": "[32.46431268, 32.46431269]",
+      "winding": -1,
+      "zeros": 0,
+      "poles": 1,
+      "pieces": 81,
+      "resum_over_pi": "[-1.00 +/- 2.05e-4]",
+      "min_abs_W_lower": 0.8174488125368953
+     },
+     "6": {
+      "a_prime_over_kappa_minus": "[38.36691499, 38.36691500]",
+      "winding": -1,
+      "zeros": 0,
+      "poles": 1,
+      "pieces": 92,
+      "resum_over_pi": "[-1.000 +/- 2.62e-4]",
+      "min_abs_W_lower": 0.912687967531383
+     },
+     "7": {
+      "a_prime_over_kappa_minus": "[42.42495408, 42.42495409]",
+      "winding": -1,
+      "zeros": 0,
+      "poles": 1,
+      "pieces": 101,
+      "resum_over_pi": "[-1.00 +/- 2.90e-4]",
+      "min_abs_W_lower": 0.9856073837727308
+     },
+     "8": {
+      "a_prime_over_kappa_minus": "[48.08161463, 48.08161464]",
+      "winding": -1,
+      "zeros": 0,
+      "poles": 1,
+      "pieces": 112,
+      "resum_over_pi": "[-1.000 +/- 3.32e-4]",
+      "min_abs_W_lower": 1.0954549740999937
+     },
+     "9": {
+      "a_prime_over_kappa_minus": "[53.73827516, 53.73827517]",
+      "winding": -1,
+      "zeros": 0,
+      "poles": 1,
+      "pieces": 123,
+      "resum_over_pi": "[-1.000 +/- 4.59e-4]",
+      "min_abs_W_lower": 1.1301316320896149
+     },
+     "10": {
+      "a_prime_over_kappa_minus": "[56.81254720, 56.81254721]",
+      "winding": -1,
+      "zeros": 0,
+      "poles": 1,
+      "pieces": 128,
+      "resum_over_pi": "[-1.00 +/- 5.02e-4]",
+      "min_abs_W_lower": 1.265235722064972
+     },
+     "11": {
+      "a_prime_over_kappa_minus": "[62.22326597, 62.22326598]",
+      "winding": -1,
+      "zeros": 0,
+      "poles": 1,
+      "pieces": 141,
+      "resum_over_pi": "[-1.000 +/- 5.37e-4]",
+      "min_abs_W_lower": 1.3145146649330854
+     },
+     "12": {
+      "a_prime_over_kappa_minus": "[67.63398476, 67.63398477]",
+      "winding": -1,
+      "zeros": 0,
+      "poles": 1,
+      "pieces": 151,
+      "resum_over_pi": "[-1.00 +/- 4.83e-4]",
+      "min_abs_W_lower": 1.4291186966001987
+     },
+     "13": {
+      "a_prime_over_kappa_minus": "[73.04470355, 73.04470356]",
+      "winding": -1,
+      "zeros": 0,
+      "poles": 1,
+      "pieces": 163,
+      "resum_over_pi": "[-1.000 +/- 5.16e-4]",
+      "min_abs_W_lower": 1.4984763860702515
+     },
+     "14": {
+      "a_prime_over_kappa_minus": "[78.45542231, 78.45542232]",
+      "winding": -1,
+      "zeros": 0,
+      "poles": 1,
+      "pieces": 173,
+      "resum_over_pi": "[-1.00 +/- 5.34e-4]",
+      "min_abs_W_lower": 1.6081952918320894
+     },
+     "15": {
+      "a_prime_over_kappa_minus": "[83.86614110, 83.86614111]",
+      "winding": -1,
+      "zeros": 0,
+      "poles": 1,
+      "pieces": 182,
+      "resum_over_pi": "[-1.000 +/- 6.59e-4]",
+      "min_abs_W_lower": 1.6785119120031595
+     },
+     "16": {
+      "a_prime_over_kappa_minus": "[89.27685989, 89.27685990]",
+      "winding": -1,
+      "zeros": 0,
+      "poles": 1,
+      "pieces": 195,
+      "resum_over_pi": "[-1.000 +/- 6.03e-4]",
+      "min_abs_W_lower": 1.7821623049676418
+     },
+     "17": {
+      "a_prime_over_kappa_minus": "[94.68757865, 94.68757866]",
+      "winding": -1,
+      "zeros": 0,
+      "poles": 1,
+      "pieces": 205,
+      "resum_over_pi": "[-1.000 +/- 5.97e-4]",
+      "min_abs_W_lower": 1.8239476382732391
+     },
+     "18": {
+      "a_prime_over_kappa_minus": "[100.0982974, 100.0982975]",
+      "winding": -1,
+      "zeros": 0,
+      "poles": 1,
+      "pieces": 216,
+      "resum_over_pi": "[-1.00 +/- 6.84e-4]",
+      "min_abs_W_lower": 1.9335608277469873
+     },
+     "19": {
+      "a_prime_over_kappa_minus": "[105.5090162, 105.5090163]",
+      "winding": -1,
+      "zeros": 0,
+      "poles": 1,
+      "pieces": 228,
+      "resum_over_pi": "[-1.00 +/- 7.01e-4]",
+      "min_abs_W_lower": 1.9593465849757195
+     }
+    },
+    "pieces_total": 2562
+   },
+   "part_i": {
+    "h0": "2/41",
+    "constants": {
+     "Omega_L_over_km": "8",
+     "Omega_S_over_km": "6",
+     "zeta_SU": "9/10",
+     "zeta_TL": "4/5",
+     "zeta_TU": "13/10",
+     "zeta_A": "6/5"
+    },
+    "Re_cover": "[0, 8 km] (L, band rows) u [6 km, (9/10) OmP/h] (S) u [(4/5) OmP/h, (13/10) OmP/h] (T) u [(6/5) OmP/h, oo) (A) = [0, oo) for every h <= h0",
+    "T_mu_over_a_star": [
+     "[0.33361 +/- 2.29e-6]",
+     "[0.32053 +/- 4.50e-6]",
+     "[0.30832 +/- 3.65e-7]",
+     "[0.29697 +/- 1.04e-7]",
+     "[0.28648 +/- 2.92e-6]",
+     "[0.27686 +/- 6.27e-7]",
+     "[0.26810 +/- 5.24e-7]",
+     "[0.26020 +/- 3.23e-6]",
+     "[0.25317 +/- 6.08e-7]",
+     "[0.23927 +/- 4.45e-6]"
+    ],
+    "A_mu_over_a_star": "[1.9724 +/- 4.10e-7]",
+    "L_margins": [
+     0.128444595999999,
+     -0.07700715369999989
+    ]
+   },
+   "l0": 20,
+   "beta": {
+    "enclosure": "[0.909380978994805455524933762622 +/- 3.17e-31]",
+    "width": "[6.32e-31 +/- 2e-38]",
+    "source": "certificates/part3/krawczyk_PB_l0.json (P2-K6, S3 re-derivation; unchanged, A4)",
+    "omega_star_over_kappa_minus": "[+/- 6.62e-35] + i [-0.909380978994805455524933762622 +/- 3.17e-31]"
+   },
+   "dirty_tags": [],
+   "levels": {
+    "ingredients": {
+     "P2-4 (S_delta, every l)": "WRITTEN_PROOF",
+     "P2-D1' (set clause, any depth)": "WRITTEN_PROOF",
+     "part (i) at depth e, l >= 20 (W1, W2, W5, W6')": "WRITTEN_PROOF",
+     "part (ii'), A at fixed h, l <= 19 (W1, W2, W4)": "WRITTEN_PROOF",
+     "Lemma E, l >= 1 (positivity; l >= 20 also by W6')": "WRITTEN_PROOF",
+     "Lemma E, l = 0 and l <= 19 (Arb)": "CERTIFIED",
+     "part (iii) band counts, l <= 19": "CERTIFIED",
+     "P2-K6 Krawczyk ball of omega_*": "CERTIFIED"
+    },
+    "minimum": "WRITTEN_PROOF"
+   }
+  },
+  "pass": true,
+  "failed": []
+ },
+ "negative_controls": [
+  {
+   "id": "NB6a",
+   "what": "one band certificate removed",
+   "mutation": "band_PB_l7.json removed",
+   "expected_failures": [
+    "C5.l7.present",
+    "C5.all_l_present"
+   ],
+   "failed": [
+    "C5.l7.present",
+    "C5.all_l_present"
+   ],
+   "fails_as_expected": true
+  },
+  {
+   "id": "NB6b",
+   "what": "a'_7 lowered by 2^-24",
+   "mutation": "l = 7: a' 1937934531/1073741824 -> 1937934467/1073741824",
+   "expected_failures": [
+    "C5.l7.a_identical"
+   ],
+   "failed": [
+    "C5.l7.a_identical"
+   ],
+   "fails_as_expected": true
+  },
+  {
+   "id": "NB6c",
+   "what": "a winding set to 0 at l = 3",
+   "mutation": "l = 3: stored winding -1 -> 0",
+   "expected_failures": [
+    "C5.l3.winding_value",
+    "C5.l3.resum"
+   ],
+   "failed": [
+    "C5.l3.resum",
+    "C5.l3.winding_value",
+    "C5.l3.pole_forced_consistent_C3"
+   ],
+   "fails_as_expected": true
+  },
+  {
+   "id": "NB6d",
+   "what": "b' just below e kappa_- (A5)",
+   "mutation": "every l: b' -> 42024789/1073741824 (the dyadic just below e kappa_-; A5)",
+   "expected_failures": [
+    "C5.l0.b_prime_ge_e",
+    "C5.l19.b_prime_ge_e"
+   ],
+   "failed": [
+    "C5.l0.b_prime_ge_e",
+    "C5.l1.b_prime_ge_e",
+    "C5.l2.b_prime_ge_e",
+    "C5.l3.b_prime_ge_e",
+    "C5.l4.b_prime_ge_e",
+    "C5.l5.b_prime_ge_e",
+    "C5.l6.b_prime_ge_e",
+    "C5.l7.b_prime_ge_e",
+    "C5.l8.b_prime_ge_e",
+    "C5.l9.b_prime_ge_e",
+    "C5.l10.b_prime_ge_e",
+    "C5.l11.b_prime_ge_e",
+    "C5.l12.b_prime_ge_e",
+    "C5.l13.b_prime_ge_e",
+    "C5.l14.b_prime_ge_e",
+    "C5.l15.b_prime_ge_e",
+    "C5.l16.b_prime_ge_e",
+    "C5.l17.b_prime_ge_e",
+    "C5.l18.b_prime_ge_e",
+    "C5.l19.b_prime_ge_e"
+   ],
+   "fails_as_expected": true
+  },
+  {
+   "id": "NB6e",
+   "what": "Lemma E: Wt_5 not certified nonzero",
+   "mutation": "Lemma E: Wt_5 replaced by a ball containing 0",
+   "expected_failures": [
+    "C3.l5.Wt_nonzero",
+    "C5.l5.pole_forced_consistent_C3"
+   ],
+   "failed": [
+    "C3.l5.Wt_nonzero",
+    "C5.l5.pole_forced_consistent_C3"
+   ],
+   "fails_as_expected": true
+  },
+  {
+   "id": "NB6f",
+   "what": "part (ii') short of the edge at l = 9",
+   "mutation": "part (ii'), l = 9: the A box certified only to depth 0.705 kappa_-",
+   "expected_failures": [
+    "C4.l9.pass"
+   ],
+   "failed": [
+    "C4.l9.pass"
+   ],
+   "fails_as_expected": true
+  },
+  {
+   "id": "NB6g",
+   "what": "an l gap (h0 = 2/43)",
+   "mutation": "part (i): h0 2/41 -> 2/43 (l0 = 21)",
+   "expected_failures": [
+    "C7.no_l_gap"
+   ],
+   "failed": [
+    "C6.T.pass",
+    "C6.A.pass",
+    "C6.S_plus.pass",
+    "C6.S_c.pass",
+    "C6.L.pass",
+    "C6.cover_replay_identical",
+    "C6.L_band_rows",
+    "C7.no_l_gap"
+   ],
+   "fails_as_expected": true
+  },
+  {
+   "id": "NB6h",
+   "what": "an S5 certificate off its main blob",
+   "mutation": "certificates/assembly/assembly_PB.json differs from its blob on main 300c22a7",
+   "expected_failures": [
+    "C1.pins_main_blobs"
+   ],
+   "failed": [
+    "C1.pins_main_blobs"
+   ],
+   "fails_as_expected": true
+  },
+  {
+   "id": "NB6i",
+   "what": "beta's enclosure too wide",
+   "mutation": "P2-K6's ball widened to 2e-7",
+   "expected_failures": [
+    "C8.beta_width"
+   ],
+   "failed": [
+    "C8.beta_width",
+    "C8.consistent_with_P2_4"
+   ],
+   "fails_as_expected": true
+  }
+ ],
+ "inputs_sha256": {
+  "certificates/assembly/assembly_PB.json": "c2d172fb2116058e75298ab29112d221506bcf711da82c140d57ca38f1f6a0fd",
+  "certificates/params.json": "d2258ddd15fe1c287405dcf7d1a447c9de4a08896a0ada012e28f9d5cdc2f9a9",
+  "certificates/part3/krawczyk_PB_l0.json": "e8b78af44d5afafaf72a28c035b62730aa30a5835e181c2f93b037e863309fe3",
+  "certificates/kat6_winding_krawczyk.json": "cde7de012b9596afaeeccf44274dbb65eadb2c260518962ddccaad57a820c745",
+  "certificates/part3/zeq_identity.json": "670e6201037f173e78b5956745923140da0b586200798d98799754359d890ff6",
+  "certificates/part1/bulk_PB.json": "94e89b3427c16c15b3fe9cfa2b9ba6b7878539c542e0daaf9a29871edf1ea10d",
+  "certificates/beta/epole_PB.json": "9a2ba7011b8c436229165b5db4146a6d57b5af19951b4689882d6144293f3bad",
+  "certificates/beta/part2/A_fixed_PB.json": "26a685a0043c8e71d58e74bdae8bee2d8351b8b20d0f95b410e152d50ef149b8",
+  "certificates/beta/part1/T_PB.json": "174e2c72ad20c953299e9f3ec008146f65fb2428e6b436f23aca4bc37912cfb8",
+  "certificates/beta/part1/A_PB.json": "77ac3e09a3a65221dc5215d8753f214bcf38a3f6edf689a9a4420bb93b86c195",
+  "certificates/beta/part1/S_PB_plus.json": "9c987148220349a4c07ca328a0b1aa85677fdb93b2c8474ebc54ca5c8644ddb9",
+  "certificates/beta/part1/S_PB_c.json": "96ce985dec6d0004a5a92268b4ae0d2c656a06adeef98f1040fdc2a500327582",
+  "certificates/beta/part1/L_PB.json": "6a6fd11c3ddb994e6d82b102ad3f0b8c06b1aa5c764f9d8906bf7efbb8350707",
+  "certificates/beta/part1/cover_PB.json": "9edb3dad081e7a008a379075096ab419da34557e579ba476f8f1fb14960170d4",
+  "certificates/beta/part1/controls_PB.json": "dd692d929a94b011334c67949c2567eb2045d488efc1c0033bb73aef56f520ac",
+  "certificates/beta/part1/B7_PB.json": "ddaa48dd54e017e6f73d9a4b3d979d0781fb7f50011cd0373f8210cc7505d56e",
+  "certificates/beta/part3/kat_controls_PB.json": "dd20a5712cc81a9516ac6564910f3dcfed0425f141d6886dfb4ffbb054575e1b",
+  "certificates/beta/part3/replay_PB.json": "fe5c7be2cb21e2f7815731d966823eeae43394304272ef71f108c42476aef543",
+  "certificates/beta/part3/band_PB_l0.json": "0d4be7d1629d0f3388bc7bcc8de03ac5c4d2f76ae684d9c902f2d5ff3cafa2fd",
+  "certificates/beta/part3/band_PB_l1.json": "876d35e72570c5e43f9c0b424d5cdbd001b4c42fdbaea8b85d36303bf7496007",
+  "certificates/beta/part3/band_PB_l2.json": "f7e58027833a8bd7156c740480c68417895a01d031190bf876ccc2d822de463a",
+  "certificates/beta/part3/band_PB_l3.json": "362855513ed62036eb6482b5fdea2a0efcda8c13f8ea96e9607f5298f865af8d",
+  "certificates/beta/part3/band_PB_l4.json": "17691102866296b851b824a0edbdbb5fe778b4d87ee076c6ba69ca5220e64dc7",
+  "certificates/beta/part3/band_PB_l5.json": "aa30d50f5173a6bc5b9e8f0571f3e71b2b38a2e6ed619fd3cfbeef52e9513dc4",
+  "certificates/beta/part3/band_PB_l6.json": "7bc78dc1f0bcf15f54ddba162a644d510c2a721faf7bc582e9360d0528c63cb8",
+  "certificates/beta/part3/band_PB_l7.json": "61da71677eae64818fe99f315656941ecce9a827c5e1485c2aa03c75e11b8404",
+  "certificates/beta/part3/band_PB_l8.json": "36b5c4ca6cfacb086acbd9a03103e60fa8073536e57392ea8655fc8e5e856d8a",
+  "certificates/beta/part3/band_PB_l9.json": "daaf98a696b847d0ad54e1663e5fe1790db6ec4441385d58424f91b61c12af0f",
+  "certificates/beta/part3/band_PB_l10.json": "54fb9d4a135fcd02b255e89104a9f71a47ca8d9cba861eab7f7fe94752d05008",
+  "certificates/beta/part3/band_PB_l11.json": "38720175e562e6b200f2ac2c4c0c85965f93e6c1f3c680270f6e698be8a5610e",
+  "certificates/beta/part3/band_PB_l12.json": "87ad6fe4904a71f5f8e298c5d3dc2b1ad828a528ee5590c76822005e9c611fb5",
+  "certificates/beta/part3/band_PB_l13.json": "820bfd11901d6bc5f1a084d68bbee2da028c816971aa87d41d0eba80df0dc44a",
+  "certificates/beta/part3/band_PB_l14.json": "cc8dc9dc9489ec5e481f2ff3c89f6c90605e3997dc2504932c5ebdb90ddd0b71",
+  "certificates/beta/part3/band_PB_l15.json": "8df8c04c0fc1b83969a24577257620c647543d9eab1c1c4643ba172e30bf94f6",
+  "certificates/beta/part3/band_PB_l16.json": "e70d3437c2e78cce62006931b4b4dcd9bc7c9fb80edf164299841a2bd5c4bcc0",
+  "certificates/beta/part3/band_PB_l17.json": "9f20a8d93cbe0ae31ac51b3c6cb255ad7e72a0ca87fa6d950a5c5f940a7b3e4f",
+  "certificates/beta/part3/band_PB_l18.json": "046b429a9a3102f682fb5902032a4b223a9e6fa985f87842ceffda2509c33e1e",
+  "certificates/beta/part3/band_PB_l19.json": "007c917ba4b308af67724058fa1fe5e621bb7b2c12e7055a35ad42f230d71e25"
+ },
+ "main_blob_match": {
+  "certificates/assembly/assembly_PB.json": true,
+  "certificates/params.json": true,
+  "certificates/part3/krawczyk_PB_l0.json": true,
+  "certificates/kat6_winding_krawczyk.json": true,
+  "certificates/part3/zeq_identity.json": true,
+  "certificates/part1/bulk_PB.json": true
+ },
+ "p2_4_inputs_unchanged": {
+  "certificates/params.json": true,
+  "certificates/part1/cover_PB.json": true,
+  "certificates/part1/replay_PB.json": true,
+  "certificates/p2_0_identity.json": true,
+  "certificates/part3/zeq_identity.json": true,
+  "certificates/part3/krawczyk_PB_l0.json": true,
+  "certificates/kat6_winding_krawczyk.json": true,
+  "certificates/part1/bulk_PB.json": true,
+  "certificates/part1/T_PB.json": true,
+  "certificates/part1/A_PB.json": true,
+  "certificates/part1/S_PB_plus.json": true,
+  "certificates/part1/S_PB_c.json": true,
+  "certificates/part1/L_PB_plus.json": true,
+  "certificates/part1/L_PB_c.json": true,
+  "certificates/lg/lg_PB_l0.json": true,
+  "certificates/part3/winding_PB_l0.json": true,
+  "certificates/lg/lg_PB_l1.json": true,
+  "certificates/part3/winding_PB_l1.json": true,
+  "certificates/lg/lg_PB_l2.json": true,
+  "certificates/part3/winding_PB_l2.json": true,
+  "certificates/lg/lg_PB_l3.json": true,
+  "certificates/part3/winding_PB_l3.json": true,
+  "certificates/lg/lg_PB_l4.json": true,
+  "certificates/part3/winding_PB_l4.json": true,
+  "certificates/lg/lg_PB_l5.json": true,
+  "certificates/part3/winding_PB_l5.json": true,
+  "certificates/lg/lg_PB_l6.json": true,
+  "certificates/part3/winding_PB_l6.json": true,
+  "certificates/lg/lg_PB_l7.json": true,
+  "certificates/part3/winding_PB_l7.json": true,
+  "certificates/lg/lg_PB_l8.json": true,
+  "certificates/part3/winding_PB_l8.json": true,
+  "certificates/lg/lg_PB_l9.json": true,
+  "certificates/part3/winding_PB_l9.json": true,
+  "certificates/lg/lg_PB_l10.json": true,
+  "certificates/part3/winding_PB_l10.json": true,
+  "certificates/lg/lg_PB_l11.json": true,
+  "certificates/part3/winding_PB_l11.json": true,
+  "certificates/lg/lg_PB_l12.json": true,
+  "certificates/part3/winding_PB_l12.json": true,
+  "certificates/lg/lg_PB_l13.json": true,
+  "certificates/part3/winding_PB_l13.json": true,
+  "certificates/lg/lg_PB_l14.json": true,
+  "certificates/part3/winding_PB_l14.json": true,
+  "certificates/lg/lg_PB_l15.json": true,
+  "certificates/part3/winding_PB_l15.json": true,
+  "certificates/lg/lg_PB_l16.json": true,
+  "certificates/part3/winding_PB_l16.json": true,
+  "certificates/lg/lg_PB_l17.json": true,
+  "certificates/part3/winding_PB_l17.json": true,
+  "certificates/lg/lg_PB_l18.json": true,
+  "certificates/part3/winding_PB_l18.json": true,
+  "certificates/lg/lg_PB_l19.json": true,
+  "certificates/part3/winding_PB_l19.json": true
+ },
+ "pass": true,
+ "prec_bits": 256,
+ "commit": "5a78bbcbcc6ddce20971bd89af5becfe0f2b07c7",
+ "timing_s": {
+  "wall": 1.15,
+  "cpu": 1.01
+ }
+}

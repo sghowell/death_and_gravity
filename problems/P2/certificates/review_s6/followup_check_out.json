@@ -1,0 +1,203 @@
+{
+ "F1_changed_files": [
+  "problems/P2/FORMULATION.md",
+  "problems/P2/notes/s6-preregistration.md",
+  "problems/P2/notes/s6-proof.md",
+  "problems/P2/notes/s6-report.md"
+ ],
+ "F1_scope_ok": true,
+ "F1_tex_and_claims_unchanged_since_main": true,
+ "F2_rows_and_notes_byte_identical": {
+  "row P2-6": true,
+  "row P2-E": true,
+  "note P2-K6": true,
+  "note P2-4": true,
+  "note P2-D1′": true
+ },
+ "F3_v11_pronoun_once": true,
+ "F3_prefix_is_old_with_pronoun_fix": true,
+ "F3_appended_is_v12_only": true,
+ "F3_appended_starts_with_blank_line": true,
+ "F3_header_unchanged": true,
+ "F4_prereg_old_is_byte_prefix": true,
+ "F4_appended": "\n## Dated note (2026-10-27, after the S6 review)\n\nAn erratum to O4 (review W10). It changes nothing in the plan, and O4's text above is left as it was\nregistered.\n- O4 says that R̃'s coefficient ã₁ at ω₀ is \"nonzero, with value −d₁ at h = 0\". The value should read\n  1/d₁ = 1/Δ′(r₊).\n- In general ã₁(ω₀) = h²(2κ₊r₊ + L)/Δ′(r₊) = (1 + 2κ₊r₊h² − h²/4)/Δ′(r₊), which is positive for every\n  h (the review's sympy check E9).\n- The coefficient is nonzero either way, which is all that W6′ uses. `notes/s6-proof.md` §3 does not\n  repeat the value.\n",
+ "F5_W6_line_numbers": {
+  "V.nullspace_smooth": {
+   "cited": "ℓ. 1888",
+   "in_text": true,
+   "quotes_check_line": 1888,
+   "match": true
+  },
+  "H.states_smooth": {
+   "cited": "ℓ. 1264",
+   "in_text": true,
+   "quotes_check_line": 1264,
+   "match": true
+  },
+  "H.radial_above": {
+   "cited": "ℓ. 1065",
+   "in_text": true,
+   "quotes_check_line": 1065,
+   "match": true
+  },
+  "H.radial_below": {
+   "cited": "1067",
+   "in_text": true,
+   "quotes_check_line": 1067,
+   "match": true
+  },
+  "H.beta_j": {
+   "cited": "ℓ. 850",
+   "in_text": true,
+   "quotes_check_line": 850,
+   "match": true
+  },
+  "H.kappa_j": {
+   "cited": "857",
+   "in_text": true,
+   "quotes_check_line": 857,
+   "match": true
+  },
+  "H.arbitrary_regularity": {
+   "cited": "ℓ. 1549",
+   "in_text": true,
+   "quotes_check_line": 1549,
+   "match": true
+  },
+  "V.thm_half_plane": {
+   "cited": "ℓ. 1940",
+   "in_text": true,
+   "quotes_check_line": 1940,
+   "match": true
+  },
+  "V.commutator_sign": {
+   "cited": "ℓ. 1627",
+   "in_text": true,
+   "quotes_check_line": 1627,
+   "match": true
+  }
+ },
+ "F6_draft": "\\item[v1.4] ⟨Month day⟩, 2026 (proposed October 27, 2026 by the P2 stage-S6 assembly, \\texttt{problems/\\allowbreak P2/\\allowbreak notes/\\allowbreak s6-report.md}; approved October 27, 2026). P2 only; the other problems are unchanged. \\emph{P2 Status.} (a) At the primary pre-registered point $\\Lambda M^2=3/50$, $Q/Q_{\\max}=999/1000$, for every $\\ell$ the only quasinormal modes with $\\operatorname{Im}\\omega\\ge-0.92\\,\\kappa_-$ ($0.92\\,\\kappa_-\\approx0.55\\,\\gamma_0$) are $\\omega=0$ and the $\\ell=0$ near-extremal mode $\\omega_*$. Hence $\\beta=-\\operatorname{Im}\\omega_*/\\kappa_-\\in[0.909380978994805455524933762622\\pm3.2\\times10^{-31}]$, a two-sided enclosure. This is the stretch goal of revision v1.2. It needed more than the interval-Newton enclosure of the mode named there: every other quasinormal mode had to be excluded down to $\\operatorname{Im}\\omega=-0.92\\,\\kappa_-$, and the point $-i\\kappa_+$ had to be treated. (b) The point $\\omega=-i\\kappa_+$ ($\\approx-0.823\\,i\\kappa_-$), where the radial Wronskian has a pole for every $\\ell$, is not a resonance of the forward problem near the black-hole exterior used in \\cite{hintzvasy2017}. So in this strip the zeros of the radial Wronskian and the resonances used in \\cite{hintzvasy2017} coincide, and the two notions of quasinormal mode agree. (c) The proof extends that of v1.3 (b): the large-$\\ell$ exclusion, uniform in $\\ell\\ge20$, now reaches $-0.92\\,\\kappa_-$; for $\\ell\\le19$, certified large-$|\\operatorname{Re}\\omega|$ exclusions and validated argument-principle counts allow for the pole at $-i\\kappa_+$; and the point $-i\\kappa_+$ is analysed in writing, with interval-certified values for $\\ell\\le19$. The result is a written proof with machine-checked certificates, independently reviewed October 27, 2026; it is not a fully machine-checked certificate. (d) Not established: the resonance multiplicity of $\\omega_*$ (only its order as a zero of the radial Wronskian, $1$, is established); anything below $\\operatorname{Im}\\omega=-0.92\\,\\kappa_-$; the second point $Q/Q_{\\max}=249/250$; the Einstein--Maxwell problem; any conversion stronger than v1.3 (c). This entry supersedes v1.3 (d) as to the two-sided enclosure of $\\beta$.",
+ "F6_checks": {
+  "beta ball matches P2-K6": true,
+  "0.92 kappa_- = 0.547 gamma0 ~ 0.55": true,
+  "-i kappa_+ ~ -0.823 i kappa_-": true,
+  "l >= 20 and l <= 19": true,
+  "point": true,
+  "braces balanced": true,
+  "dollars even": true,
+  "only citation hintzvasy2017": true,
+  "bibitem exists in the .tex": true
+ },
+ "F6_kappa_minus": 0.04254199481801808,
+ "F7_old_clause_present_once": true,
+ "F7_final_braces_balanced": true,
+ "F7_final": "\\item[v1.4] {\\emergencystretch=3em ⟨Month day⟩, 2026 (proposed October 27, 2026 by the P2 stage-S6 assembly, \\texttt{problems/\\allowbreak P2/\\allowbreak notes/\\allowbreak s6-report.md}; approved October 27, 2026). P2 only; the other problems are unchanged. \\emph{P2 Status.} (a) At the primary pre-registered point $\\Lambda M^2=3/50$, $Q/Q_{\\max}=999/1000$, for every $\\ell$ the only quasinormal modes with $\\operatorname{Im}\\omega\\ge-0.92\\,\\kappa_-$ ($0.92\\,\\kappa_-\\approx0.55\\,\\gamma_0$) are $\\omega=0$ and the $\\ell=0$ near-extremal mode $\\omega_*$. Hence $\\beta=-\\operatorname{Im}\\omega_*/\\kappa_-\\in[0.909380978994805455524933762622\\pm3.2\\times10^{-31}]$, a two-sided enclosure. This is the stretch goal of revision v1.2. It needed more than the interval-Newton enclosure of the mode named there: every other quasinormal mode had to be excluded down to $\\operatorname{Im}\\omega=-0.92\\,\\kappa_-$, and the point $-i\\kappa_+$ had to be treated. (b) The point $\\omega=-i\\kappa_+$ ($\\approx-0.823\\,i\\kappa_-$), where the radial Wronskian has a pole for every $\\ell$, is not a resonance of the forward problem near the black-hole exterior used in \\cite{hintzvasy2017}. So in this strip the zeros of the radial Wronskian and the resonances used in \\cite{hintzvasy2017} coincide, and the two notions of quasinormal mode agree. (c) The proof extends that of v1.3 (b): the large-$\\ell$ exclusion, uniform in $\\ell\\ge20$, now reaches $-0.92\\,\\kappa_-$; for $\\ell\\le19$, large-$|\\operatorname{Re}\\omega|$ exclusions now use the method of the large-$\\ell$ exclusion, and validated argument-principle counts allow for the pole at $-i\\kappa_+$; and the point $-i\\kappa_+$ is analysed in writing, with interval-certified values for $\\ell\\le19$. The result is a written proof with machine-checked certificates, independently reviewed October 27, 2026; it is not a fully machine-checked certificate. (d) Not established: the resonance multiplicity of $\\omega_*$ (only its order as a zero of the radial Wronskian, $1$, is established); anything below $\\operatorname{Im}\\omega=-0.92\\,\\kappa_-$; the second point $Q/Q_{\\max}=249/250$; the Einstein--Maxwell problem; any conversion stronger than v1.3 (c). This entry supersedes v1.3 (d) as to the two-sided enclosure of $\\beta$.\\par}",
+ "F8_compile": {
+  "as_is": {
+   "returncode": 0,
+   "overfull": [
+    [
+     11.95955,
+     100,
+     101
+    ],
+    [
+     9.92433,
+     124,
+     125
+    ],
+    [
+     2.92798,
+     124,
+     125
+    ],
+    [
+     7.695,
+     170,
+     170
+    ],
+    [
+     15.87964,
+     175,
+     176
+    ]
+   ]
+  },
+  "draft": {
+   "returncode": 0,
+   "overfull": [
+    [
+     11.95955,
+     100,
+     101
+    ],
+    [
+     9.92433,
+     124,
+     125
+    ],
+    [
+     2.92798,
+     124,
+     125
+    ],
+    [
+     7.695,
+     170,
+     170
+    ],
+    [
+     15.87964,
+     175,
+     176
+    ],
+    [
+     92.22739,
+     226,
+     227
+    ]
+   ]
+  },
+  "final": {
+   "returncode": 0,
+   "overfull": [
+    [
+     11.95955,
+     100,
+     101
+    ],
+    [
+     9.92433,
+     124,
+     125
+    ],
+    [
+     2.92798,
+     124,
+     125
+    ],
+    [
+     7.695,
+     170,
+     170
+    ],
+    [
+     15.87964,
+     175,
+     176
+    ]
+   ]
+  },
+  "final_new_overfull": [],
+  "draft_new_overfull": [
+   [
+    92.22739,
+    226,
+    227
+   ]
+  ],
+  "ok": true
+ },
+ "pass": true
+}

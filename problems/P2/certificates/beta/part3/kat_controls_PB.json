@@ -1,0 +1,224 @@
+{
+ "commit": "5ee4796f79b09d949c9c45ef15802b88b9c86ee3",
+ "boxes": [
+  {
+   "point": "PB",
+   "l": 0,
+   "box_kappa": [
+    -0.03,
+    0.03,
+    -0.93,
+    -0.89
+   ],
+   "box_exact": [
+    "-685187/536870912",
+    "685187/536870912",
+    "-42481581/1073741824",
+    "-2540901/67108864"
+   ],
+   "winding_ball": "[1.0000 +/- 9.31e-7]",
+   "certified": true,
+   "winding": 1,
+   "segments": 8,
+   "cpu_s": 8.6,
+   "min_abs_W_lower": 0.033987990611428535,
+   "id": "B2",
+   "what": "omega_* only (top edge just above omega_*)",
+   "expected": 1,
+   "as_expected": true
+  },
+  {
+   "point": "PB",
+   "l": 0,
+   "box_kappa": [
+    -0.03,
+    0.03,
+    -0.86,
+    -0.79
+   ],
+   "box_exact": [
+    "-685187/536870912",
+    "685187/536870912",
+    "-19642021/536870912",
+    "-4510813/134217728"
+   ],
+   "winding_ball": "[-1.00000 +/- 1.22e-6]",
+   "certified": true,
+   "winding": -1,
+   "segments": 22,
+   "cpu_s": 23.6,
+   "min_abs_W_lower": 0.27165976441177725,
+   "id": "B3",
+   "what": "omega0 only (the pole)",
+   "expected": -1,
+   "as_expected": true
+  },
+  {
+   "point": "PB",
+   "l": 1,
+   "box_kappa": [
+    -0.03,
+    0.03,
+    -0.86,
+    -0.79
+   ],
+   "box_exact": [
+    "-685187/536870912",
+    "685187/536870912",
+    "-19642021/536870912",
+    "-4510813/134217728"
+   ],
+   "winding_ball": "[-1.00000 +/- 7.13e-7]",
+   "certified": true,
+   "winding": -1,
+   "segments": 22,
+   "cpu_s": 24.2,
+   "min_abs_W_lower": 7605.307472229004,
+   "id": "B3",
+   "what": "omega0 only (the pole), l = 1",
+   "expected": -1,
+   "as_expected": true
+  },
+  {
+   "point": "PB",
+   "l": 0,
+   "box_kappa": [
+    -0.03,
+    0.03,
+    -0.93,
+    -0.79
+   ],
+   "box_exact": [
+    "-685187/536870912",
+    "685187/536870912",
+    "-42481581/1073741824",
+    "-4510813/134217728"
+   ],
+   "winding_ball": "[+/- 3.12e-6]",
+   "certified": true,
+   "winding": 0,
+   "segments": 24,
+   "cpu_s": 25.7,
+   "min_abs_W_lower": 0.07257723753430759,
+   "id": "B4",
+   "what": "omega0 and omega_*",
+   "expected": 0,
+   "as_expected": true
+  },
+  {
+   "point": "PB",
+   "l": 0,
+   "box_kappa": [
+    -0.05,
+    0.05,
+    -1.9,
+    -1.8
+   ],
+   "box_exact": [
+    "-570989/268435456",
+    "570989/268435456",
+    "-43395163/536870912",
+    "-41111207/536870912"
+   ],
+   "winding_ball": "[1.000000 +/- 8.08e-8]",
+   "certified": true,
+   "winding": 1,
+   "segments": 8,
+   "cpu_s": 10.6,
+   "min_abs_W_lower": 0.8037478046433808,
+   "id": "B6",
+   "what": "l = 0 NE overtone ~ -1.8552i kappa_- (below the edge; no pole inside)",
+   "expected": 1,
+   "as_expected": true
+  },
+  {
+   "point": "PB",
+   "l": 1,
+   "box_kappa": [
+    6.9,
+    7.5,
+    -1.8,
+    -1.7
+   ],
+   "box_exact": [
+    "157592961/536870912",
+    "342593393/1073741824",
+    "-41111207/536870912",
+    "-38827251/536870912"
+   ],
+   "winding_ball": "[1.00000 +/- 2.07e-6]",
+   "certified": true,
+   "winding": 1,
+   "segments": 4,
+   "cpu_s": 11.3,
+   "min_abs_W_lower": 0.008253311644420593,
+   "id": "B6",
+   "what": "l = 1 PS mode ~ 7.2149 - 1.7533i kappa_- (below the edge)",
+   "expected": 1,
+   "as_expected": true
+  }
+ ],
+ "NB1": {
+  "box": [
+   "-a'_0",
+   "a'_0",
+   "-0.905 kappa_- (dyadic up)",
+   "-b0"
+  ],
+  "bottom": "41339603/1073741824",
+  "winding_ball": "[-1.000 +/- 7.84e-5]",
+  "winding": -1,
+  "segments": 42,
+  "error": null,
+  "expected": -1,
+  "as_expected": true
+ },
+ "NB2": {
+  "box": [
+   -0.03,
+   0.03,
+   -0.909380979,
+   -0.89
+  ],
+  "certified": false,
+  "error": "segment 0:-15167/134217728:-20769861/536870912:28549/536870912:-20769861/536870912 not certifiable: piece enclosure contains 0 at the maximal depth",
+  "fails_as_required": true
+ },
+ "left_halves": [
+  {
+   "l": 0,
+   "sum_left": "[+/- 1.89e-4]",
+   "sum_right_stored": "[+/- 2.73e-4]",
+   "segments": 43,
+   "error": null,
+   "overlap": true
+  },
+  {
+   "l": 2,
+   "sum_left": "[-3.142 +/- 6.74e-4]",
+   "sum_right_stored": "[-3.14 +/- 2.01e-3]",
+   "segments": 53,
+   "error": null,
+   "overlap": true
+  }
+ ],
+ "B1": {
+  "stored": {
+   "re": "[+/- 6.61e-35]",
+   "im": "[-0.909380978994805455524933762622 +/- 3.16e-31]"
+  },
+  "replayed": {
+   "re": "[+/- 6.61e-35]",
+   "im": "[-0.909380978994805455524933762622 +/- 3.16e-31]"
+  },
+  "replayed_certified": true,
+  "contraction": 5.298019812366736e-15,
+  "overlap": true,
+  "pass": true
+ },
+ "timing_s": {
+  "wall": 105.9,
+  "cpu": 1.0
+ },
+ "pass": true
+}

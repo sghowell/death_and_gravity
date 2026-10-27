@@ -1,0 +1,14 @@
+{
+ "what": "L grid rows recomputed at a clean commit (A2 provenance)",
+ "why": "the first L run (launch_L_20261027T092812.json, commit 7168b2e4 clean at launch) imported its code at start; from 09:32 local an untracked draft (src/p2/beta_assembly.py, not imported by the L run) made git status of src/p2 non-empty, so 178 of its 1280 per-row commit tags read 7168b2e4+dirty",
+ "action": "the 178 rows were moved to L.w0.first-pass-dirty.jsonl (kept, git-ignored), the draft was moved out of src/p2, and \"python -m p2.beta_part1 run L 0 1\" (nice 10, foreground) recomputed them at 7168b2e4 clean",
+ "rows_recomputed": 178,
+ "identical_leaves_and_pass": true,
+ "timing_s": {
+  "wall": 49.9,
+  "user": 46.4,
+  "system": 2.8
+ },
+ "result": "L_PB.json commits = [7168b2e4b2ce75eb9a634830364b07b14b890b48]; cover_PB.json re-run at 7168b2e4 clean",
+ "date": "2026-10-27"
+}
