@@ -28,6 +28,7 @@ quotes:
 
 **Overall verdict:** P2-4 and P2-5 at P_B are proven as stated, P2-4 at **WRITTEN_PROOF** and P2-5 at
 **WRITTEN_PROOF, conversion cited**. Nothing is blocking.
+[Update 2026-10-26: the author's fixes (`3f2a17aa`) were re-checked and all hold; see §9.]
 - **The decisive question is settled as the author reads it.** HV17's α-hypothesis (§2.5, ℓ. 1313) is about
   "the forward problem in Ω₂₃", and the next sentence says in so many words that the global problem may have
   other resonances in that half-space. That is P2-D1′'s notion, so P2-4 with P2-D1′ supplies the hypothesis
@@ -484,3 +485,175 @@ report suggests. Nothing else in the existing rows needs to change.
 5. The owner enters P2-4 and P2-5 (§7), and approves the .tex v1.3 entry with the §7 corrections.
 
 Under the repository's rules the merge into main must be run by the user.
+[Correction 2026-10-26, §9: the user approves the merge into main, and the coordinator runs it.]
+
+## 9. Follow-up check of the author's fixes (`3f2a17aa`), 2026-10-26
+
+Scope.
+- The author's commit `3f2a17aa` (21:05:40) sits on top of the review (`65af9e72`). The coordinator
+  fast-forwarded it into `p2/s5-review`.
+- It changes `FORMULATION.md` and the notes `s5-assembly.md`, `s5-plan.md` and `s5-report.md`, and
+  nothing else: no code, test, certificate, `docs/` file or `CLAIMS.md` (`followup_check.py`, item 5).
+- On 2026-10-26 the user approved S1–S3, W1–W9, the §7 rows, the P2-1 parenthesis "(assembled in P2-4)",
+  the .tex v1.3 entry with the §7 corrections, the `costafranzen2017` bibitem, and the merge. The
+  coordinator reported these approvals.
+
+**Verdict:** every fix holds, and nothing is blocking.
+- The §7 rows stand unchanged.
+- One change is recommended to the .tex entry: one word, "Cauchy surface" → "initial surface" (5(i)).
+  It applies the approved W3; the final text is below.
+- One residual nit in FORMULATION v1.0 (item 2).
+
+| item | verdict |
+|---|---|
+| 1. S1 (H7, the decay at α exactly) | DONE; complete and correct. Finiteness of both kinds of resonance, the choice of α′ then α″, the decay e^{−d_δt₀} and the regularity all check. HV17 imposes no cap beyond the radial-point threshold. The α̂ route is stated with its weaker decay and marked unused. The FORMULATION P2-5 bullet is right |
+| 2. S2 (scope at B) | DONE. "Scope of P2-5" in FORMULATION v1.0 is the §7 text, recorded as a narrowing of the frozen §2 template, and §2 carries only a pointer. `s5-assembly.md` §2.1 (i)–(ii), §2.2 H2 and §2.5 match, and so do `s5-report.md` §§4, 6 and 8. No "not uniform up to B" remains. Residual nit: the stale parenthesis below |
+| 3. S3 (the row names the outlines) | DONE. The §6 rows are byte-identical to the §7 rows (sha256 `624ee58e…` for P2-4 and `c3fd53dc…` for P2-5). `s5-assembly.md` §2.3 names both outlined HV17 steps correctly |
+| 4. W1–W9 | DONE. The plan's pre-registered text (9976 bytes at `e2c75aa6`) is a byte prefix of the current plan; only the dated notes for W4 and W9 are appended |
+| 5. The .tex entry | (c) and (d) are in verbatim, the dates are filled and the bibitem is unchanged. 5(i): change one word (below). 5(ii): accurate as it stands, with no phrase needed |
+| 6. The §7 rows | They stand, with no wording change |
+| 7. Tests | Fast: 90 passed, 17 skipped (36.1 s). `python -m p2.assembly verify`: identical |
+
+**1. S1 (`s5-assembly.md` §2.2 H7).** The argument is complete and correct.
+- **Finiteness.** HV17 ℓ. 1530 states that there are finitely many resonances in Im σ > −α for each
+  α < γ₀. The closed half-plane Im σ ≥ −γ, γ < γ₀, lies inside such an open one.
+  - These are the global resonances. The Ω₂₃ resonances are among them. If σ₀ were an Ω₂₃ pole but not
+    a global one, take g ∈ C_c^∞ in the interior of Y₂₃ with P̂₂₃(σ)⁻¹g singular at σ₀; the singular
+    part is finite-rank and continuous, so such g exist.
+  - The restriction identity of §4.C6 gives (P̂(σ)⁻¹g)|_{Y₂₃} = P̂₂₃(σ)⁻¹g on a punctured neighbourhood
+    of σ₀. The left side is holomorphic at σ₀, which is a contradiction.
+  - H7 cites §4.C6 for this. The two lines above complete that reference.
+- **α′ and α″.** Fix γ ∈ (d_δ, γ₀).
+  - The finitely many nonzero Ω₂₃ resonances in Im σ ≥ −γ all have Im σ < −d_δ (P2-4(b)). So some
+    α′ ∈ (d_δ, γ) leaves 0 as the only Ω₂₃ resonance in Im σ ≥ −α′.
+  - The global poles in Im σ ≥ −α′ are finitely many, so some α″ ∈ (d_δ, α′] puts none on Im σ = −α″.
+  - Then α″ satisfies §2.5 (and α″ < γ₀), and HV17's contour is pole-free.
+- **The decay.** Cor 2.19 at α″ gives |u′| ≤ Ce^{−α″t₀} ≤ Ce^{−d_δt₀} in t₀ ≥ 0. The derivative bounds
+  and the weighted space e^{−α″t₀}H^s ⊂ e^{−d_δt₀}H^s on t₀ > 0 follow likewise. So the decay holds at
+  d_δ exactly.
+- **The regularity, and caps.** HV17 at α″ gives H^{1/2+α″/κ₋−0} ⊂ H^{21/20−0}, since α″ > d_δ.
+  - The only cap at r₁ is the radial-point threshold: a forward order function has s < 1/2 + β₁α″ near
+    r₁ (Def 2.6, ℓ. 1029; Prop 2.17; Thm 2.24).
+  - The stricter s < −1/2 + β₁α near r₁ ((EqRNdSFredholmFwOrder2), ℓ. 1232) only sets up the
+    Fredholm theory. Thm 2.13 drops it ("We can strengthen the regularity at the Cauchy horizon by
+    dropping …", ℓ. 1245).
+  - The lower bounds s > 3/2 + max(β₂, β₃)α″ ((EqRNdSFredholmFwOrder), ℓ. 1207) sit in r > r₁ + 2δ′.
+    They are compatible with s′ ≥ 0.
+  - Nothing else limits the exponent. In any case the stated H^{21/20−0} is weaker than what HV17 gives
+    at α″.
+- **The α̂ route** is now stated with its weaker decay (e^{−α̂t₀} for each α̂ < α only) and marked
+  unused. So is the through-the-pole route.
+- **Strictness** (β > 0.55 at "conversion cited" level) is noted and not claimed: §1.3 Remarks and
+  s5-report §8.
+- **The FORMULATION P2-5 bullet** ("decay e^{−αt₀} at α exactly via some α′ ∈ (α, γ₀); s5-assembly
+  H7") is right. Its α′ is H7's final exponent α″, a harmless difference of names; the P2-5 row's single
+  α′ is described by both of its properties.
+
+**2. S2.**
+- FORMULATION v1.0's "Scope of P2-5" is the §7 text set as bullets (a)–(c) plus the CF17 sentence. It
+  adds that it narrows the frozen §2 template, that the user approved recording it this way, and that
+  §2 points to it.
+- §2's P2-5 text is unchanged apart from the appended pointer "[v1.0: the scope of P2-5 at P_B is
+  narrowed; see the Revision log, v1.0, "Scope of P2-5".]" (FORMULATION ℓ. 237–238), in the style of
+  §2's earlier bracketed notes.
+- The notes match:
+  - `s5-assembly.md` §2.1 (i) has "u ∈ H¹_loc up to the part of the Cauchy horizon in that domain of
+    dependence, towards i⁺", then the complete-Cauchy-surface sentence and "Nothing is claimed at B";
+  - §2.1 (ii) localizes CF17 to the component adjacent to i⁺, away from B;
+  - §2.2 H2 says "Nothing is claimed at B", and the "minor extension" is not used;
+  - §2.5 restates (a)–(c);
+  - `s5-report.md` §4 (H2), §6 and §8 match.
+- `followup_check.py` (item 4) finds no "not uniform", "up to the bifurcation sphere" or "Reading of
+  P2-5" in the four files. The only exception is HV17's own sentence about a "two-ended" H_I, which is
+  quoted verbatim.
+- **Residual nit (not blocking).** The v1.0 entry's first line still reads "assembled up to P2-5 (P2-4
+  and P2-5 pending review and approval)". The same entry goes on to record the review and the user's
+  approval, and the header says so too.
+  - Replace the parenthesis by "(reviewed and approved 2026-10-26; not yet entered in the ledger)", or
+    drop it when the rows are entered.
+  - The two "Proposed, not yet in the ledger" bullets are accurate until then.
+
+**3. S3.**
+- The P2-4 and P2-5 lines in the code block of `s5-report.md` §6 are byte-identical to this review's §7
+  rows (`followup_check.py`, item 1). The two other lines starting "| P2-4 |" and "| P2-5 |" in the
+  report belong to its §5 levels table.
+- `s5-assembly.md` §2.3 ("What the citation leans on") names both outlined steps correctly:
+  - Lemma 2.14(1)'s general clause (ℓ. 1266), with the Laurent refinement covered by its "likewise for
+    the more precise result" (ℓ. 1266), which refers back to the "iterative argument" of the Im σ > 0 case
+    (ℓ. 1264), pointing to §4.C6;
+  - the order 1 at 0, from SdS/KdS references (ℓ. 1268), with only the Im σ > 0 argument recalled
+    (ℓ. 1264), and supplied at P_B by D4, P2-0 and P2-D1′.
+
+**4. W1–W9.**
+- W1: `s5-assembly.md` §2.4 F3, and `s5-report.md` §3 (N8b) and §4 (F3).
+- W2: the table header now reads "among others; the JSON lists every failure", plus the N8b note.
+- W3: "initial surface" in the notes and the rows; for the .tex see 5(i).
+- W4: Sources, and plan note 1.
+- W5: §2.3 item 3.
+- W6: applied, with the residual nit above.
+- W7: (c) and (d), and the level wording in the optional sentence. That sentence is kept as a separate,
+  unapproved proposal.
+- W8: §1.4, "Two weak checks".
+- W9: plan note 2 and the report's status lines.
+- The plan's pre-registered text is unchanged: the file at `e2c75aa6` is a byte prefix of the current
+  one (9976 of 10723 bytes). The appended section says it "change[s] nothing in the plan", and the report
+  still lists "no amendments". That is consistent: these are dated notes, not amendments.
+
+**5. The .tex entry (`s5-report.md` §7).** The `\item[v1.3]` equals the pre-review text with exactly
+the review's (c) and (d) corrections and the two dates ("approved October 26, 2026", "independently
+reviewed October 26, 2026") filled in. The leading ⟨Month day⟩ is kept, and the bibitem is unchanged
+(`followup_check.py`, item 2).
+- **5(i): yes, change one word**: "on the one-ended Cauchy surface of \cite{hintzvasy2017}" → "on the
+  one-ended initial surface of \cite{hintzvasy2017}".
+  - This is W3, which the user approved, applied to the .tex.
+  - After the (c) correction the same sentence sets "the one-ended Cauchy surface" against "a complete
+    Cauchy surface". But H_I is not a Cauchy surface of anything; it is a partial one covering one
+    exterior of two-ended RNdS.
+  - In the strong-cosmic-censorship literature "one-ended" names a different class of spacetimes (one
+    asymptotic end, e.g. collapse with a regular centre). "One-ended Cauchy surface" therefore invites
+    the wrong reading.
+  - "Smooth Cauchy data" stays: it means data for the Cauchy problem.
+  - The present wording is HV17's own loose usage ("the Cauchy surface H_I", ℓ. 360; "'Cauchy' surface",
+    ℓ. 473), so it is imprecise rather than wrong. The change is precision of the same kind as the §7
+    corrections, not a rewrite.
+- **5(ii): accurate as it stands; no phrase is needed.**
+  - The CF17 sentence inherits the data classes and localization of the sentence before it, and (d)
+    excludes B.
+  - *Data on a complete Cauchy surface.* HV17 gives the Price law on every event-horizon component (one
+    application per exterior), so Thm 3.1 applies to each black-hole interior from both sides. The
+    adjacent Cauchy-horizon components together make up the whole Cauchy horizon minus B, the same set
+    as in the HV17 sentence.
+  - *Data on H_I.* D(H_I) ∩ M_int is a strip {u > u₁} of exactly the kind CF17's estimate covers
+    (ℓ. 810; CF17's u is +∞ on H⁺_A, ℓ. 526). After any smooth extension of the data, Thm 3.1 gives the
+    extension near the part of the Cauchy horizon in D(H_I), the HV17 sentence's set again.
+  - The component adjacency describes a single application of Thm 3.1. It belongs in the ledger row,
+    where it is.
+- **Final paste-ready text.** This is `s5-report.md` §7 with the one word changed; it is also in
+  `review_s5/followup_tex_item_v1.3.txt`. The bibitem stands as written in §7, and the leading ⟨Month day⟩
+  is the coordinator's:
+
+```latex
+\item[v1.3] ⟨Month day⟩, 2026 (proposed October 26, 2026 by the P2 stage-S5 assembly, \texttt{problems/\allowbreak P2/\allowbreak notes/\allowbreak s5-report.md}; approved October 26, 2026). P2 only; the other problems are unchanged. \emph{P2 Status.} (a) At the primary pre-registered point $\Lambda M^2=3/50$, $Q/Q_{\max}=999/1000$, the resonance-free region of the entry point holds with $\delta=1/20$ for the linear massless scalar field: for every $\ell$, the strip $\{\operatorname{Im}\omega\ge-0.55\,\kappa_-\}\setminus\{0\}$ contains no quasinormal mode, and $\omega=0$ is a simple resonance with constant resonant states ($0.55\,\kappa_-\approx0.33\,\gamma_0$). Hence $0.55\le\beta\le0.90938098$ there; the upper bound comes from an interval-certified $\ell=0$ near-extremal mode. (b) The proof combines a written mode-stability argument on the closed upper half-plane; a large-$\ell$ exclusion, uniform in $\ell\ge20$, whose inequalities are certified in interval arithmetic and whose analytic steps are written; certified large-$|\operatorname{Re}\omega|$ exclusions and validated argument-principle counts for $\ell\le19$; and a written identification of the zeros of the radial Wronskian with the resonances used in \cite{hintzvasy2017}. The assembly is machine-checked. The result is a written proof with machine-checked certificates, independently reviewed October 26, 2026; it is not a fully machine-checked certificate. (c) By \cite[Thm.~1.1 and \S\S2.5--2.6]{hintzvasy2017}, whose spectral hypothesis concerns the forward problem near the black-hole exterior (the notion established in (a)), every solution of the linear wave equation with smooth Cauchy data on the one-ended initial surface of \cite{hintzvasy2017} lies in $H^{1.05-0}$, in particular in $H^1_{\mathrm{loc}}$, near the part of the Cauchy horizon in its domain of dependence; for smooth data on a complete Cauchy surface the same holds near every point of the Cauchy horizon other than its bifurcation sphere. \cite[Thm.~3.1]{costafranzen2017} gives bounded energy and a $C^0\cap H^1_{\mathrm{loc}}$ extension. This is the linear analogue of the failure of the Christodoulou formulation for smooth data at this point. (d) Not established: the Einstein--Maxwell problem; the second point $Q/Q_{\max}=249/250$; a two-sided enclosure of $\beta$ (the stretch goal); any statement at other parameters, or at the bifurcation sphere of the Cauchy horizon. \emph{Bibliography.} Added \cite{costafranzen2017}.
+```
+
+**6. The §7 rows** stand as written; no wording must change. They match the fixed notes:
+- the P2-5 row's single α′ ("that leaves 0 the only Ω₂₃ resonance in Im σ ≥ −α′ and puts no global pole
+  on Im σ = −α′") is H7's α″;
+- its scope sentences are FORMULATION's (a)–(c), and its CF17 clause is the localized one;
+- "one-ended initial surface" is W3;
+- the evidence columns point to files that exist, including this document, which now carries the
+  follow-up.
+
+The P2-1 parenthesis "(assembled in P2-4)" is recorded in `s5-report.md` §6.
+
+**7. Tests** at `3f2a17aa`, nice 10:
+- fast P2 suite: 90 passed, 17 skipped (36.1 s; `review_s5/followup_pytest_fast.txt`);
+- `python -m p2.assembly verify`: identical (2.8 s; `review_s5/followup_assembly_verify.txt`).
+
+No slow suite was run, since no code changed.
+
+**Correction to §8.** Its last sentence should read: the user approves the merge into main, and the
+coordinator runs it. The user approved this merge on 2026-10-26.
+
+**Compute and tools.** About 45 s of CPU (≈ 0.01 core-h of the 0.25 allowed), one process at a time,
+nice 10. No tool call was denied.

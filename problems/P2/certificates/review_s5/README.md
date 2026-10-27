@@ -18,6 +18,13 @@ Paths below are relative to this folder unless they say otherwise.
 | `replay_params.txt`, `replay_lg_PB_0_19.txt` | `p2.params verify`; `p2.lg_bounds verify PB 19` | from `problems/P2`: `PYTHONPATH=src python -m p2.params verify`; `PYTHONPATH=src python -m p2.lg_bounds verify PB 19` | OK; OK |
 | `pytest_fast.txt`, `pytest_slow.txt` | The P2 suite, fast and with `P2_SLOW=1` | from the repository root: `python -m pytest problems/P2/tests -q -p no:cacheprovider` (and with `P2_SLOW=1`) | 90 passed, 17 skipped (37.5 s); 107 passed, 1 pre-existing warning (685 s) |
 
+**Follow-up, 2026-10-26** (the author's fix commit `3f2a17aa`; review §9):
+
+| file | what it is | replay | result |
+|---|---|---|---|
+| `followup_check.py`, `followup_check_out.json`, `followup_tex_item_v1.3.txt` | Mechanical checks of the fix commit: the s5-report §6 rows are byte-identical to the review's §7 rows; the .tex `\item[v1.3]` is the pre-review text plus exactly the review's (c), (d) corrections and the two dates; the pre-registered plan is a byte prefix of the current plan; no residual scope wording; no code, test, certificate, `docs/` or `CLAIMS.md` change. Writes the final `\item[v1.3]` with the one-word change of §9 (5(i)) | `python followup_check.py` | all pass |
+| `followup_pytest_fast.txt`, `followup_assembly_verify.txt` | The fast P2 suite and `p2.assembly verify` at `3f2a17aa` | as above (fast suite; `assembly verify`) | 90 passed, 17 skipped; identical |
+
 The assembly replay itself, `PYTHONPATH=src python -m p2.assembly verify` from `problems/P2`, prints
 `verify: identical` (2.8 s); it writes nothing.
 
