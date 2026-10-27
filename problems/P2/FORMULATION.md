@@ -558,6 +558,9 @@ Sizing and kill criteria are in `s0-gate.md` §7.
       typo, and dated notes appended to the plan.
   - **The ledger (2026-10-26).** The rows P2-4 and P2-5 are entered verbatim from the review's
     §7, which its §9 confirms, and P2-1's parenthesis now reads "(assembled in P2-4)".
-  - **Remaining S5 item.** The .tex v1.3 entry (`notes/s5-report.md` §7, with the review's §9
-    one-word change), which the user approved on 2026-10-26.
+  - **The problems document (2026-10-26).** Revision 1.3 adds the v1.3 entry (`notes/s5-report.md`
+    §7, with the review's §9 one-word change to "initial surface") and the bibitem
+    `costafranzen2017`, as the user approved on 2026-10-26. The PDF is rebuilt with tectonic, and
+    the v1.2 PDF is archived in `docs/problems/revisions/`. The P2 statement and entry point are
+    unchanged from v1.2. The optional Status sentence (`s5-report.md` §7) is not applied.
 
