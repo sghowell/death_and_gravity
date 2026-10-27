@@ -61,7 +61,8 @@ It uses exact rationals and 256-bit Arb. **All 366 checks pass**, in 2.7 s of CP
 - **The HV17 and CF17 numerics** (§4).
 
 **The negative controls N1–N8 all fail as required.** The tightest is N1: b moved to 6280878/2²⁸,
-just below d_δ, fails on `C2.l0.b_ge_d` and nothing else. The others:
+just below d_δ, fails on `C2.l0.b_ge_d` and on the containment check that uses it, and on nothing
+else. The others:
 - N2: `winding_PB_l7.json` removed;
 - N3: a₅ − 2⁻²⁴;
 - N4: h₀ = 2/43, so l₀ = 21;
