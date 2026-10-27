@@ -1,7 +1,13 @@
 # P2 S6: the two-sided β at P_B (P2-6), proof note
 
-Status: written 2026-10-27 on branch `p2/s6-beta` (from main at `300c22a7`), at the S6 exit. Not
-yet reviewed.
+Status: written 2026-10-27 on branch `p2/s6-beta` (from main at `300c22a7`), at the S6 exit;
+revised 2026-10-27 after the independent review (`docs/review-2026-10-27-p2-s6-adversarial.md`).
+- The review found P2-6 and Lemma E (row P2-E) proven as stated, with nothing blocking.
+- Its fixes, approved by the user on 2026-10-27, are applied here:
+  - S1 (Lemma E's levels by part) in §§2.6 and 7;
+  - W4 (B7 is weak evidence) in §8;
+  - W6 (the threshold citation) in §2.2;
+  - W2's wording (the resonances as points, radial order 1) in §0.
 - Plan: `notes/s6-preregistration.md` (`c98ca16d`), with its Amendments A1–A6 (`f82114bf`).
 - Code: `src/p2/beta_*.py` (`7168b2e4`); the assembly check `src/p2/beta_assembly.py` (`5ee4796f`).
 - Certificates: `certificates/beta/` (each records the commit it was computed at).
@@ -21,9 +27,10 @@ yet reviewed.
 
 ## 0. The result
 
-**P2-6 at P_B.** The forward problem for □_g on Ω₂₃ ([HV17] §2.5) has exactly two resonances σ with
-Im σ ≥ −eκ₋, namely σ = 0 and σ = ω_*. Both are of degree l = 0, and each is a simple zero of W₀.
-Hence D3's α is attained at ω_*, and
+**P2-6 at P_B.** The resonances of the forward problem for □_g on Ω₂₃ ([HV17] §2.5) with
+Im σ ≥ −eκ₋ are exactly σ = 0 and σ = ω_* (as points; the resonance multiplicity of ω_* is not
+claimed). Both are of degree l = 0 only and simple zeros of W₀ (radial order 1). Hence D3's α is
+attained at ω_*, and
 
   **β = −Im ω_*/κ₋ ∈ [0.909380978994805455524933762622 ± 3.2·10⁻³¹]**,
 
@@ -99,11 +106,20 @@ and C(t) = −(2iωr + L) = C₀ + C₁t.
   - The exponent-0 solution has a logarithm. It is 1 + c·Z2·ln t + Σ_{m≥1} d_m t^m, and the t⁰
     coefficient of the equation gives Δ₁c + C₀ = 0. So c = (2κ₊r₊ + L)/Δ₁ ≠ 0, and the solution
     contains t ln t.
-- **Smoothness and the threshold.** By D1′'s set-up (`notes/s1-p20-d1prime.md` §4.3, with
-  [Vas13] §2.6 and the proof of [HV17] Lemma 2.14), a resonant state at σ has smooth
-  spherical-harmonic components. Each is u(r)Y_lm, where u = e^{−iσT}R solves the hyperboloidal
-  radial equation on [r₊ − ε, r_c + ε] and lies in H^s above the threshold s > ½ − Im σ/κ at each
-  horizon.
+- **Smoothness and the threshold.** By D1′'s set-up (`notes/s1-p20-d1prime.md` §4.3), a resonant
+  state at σ has smooth spherical-harmonic components. Each is u(r)Y_lm, where u = e^{−iσT}R solves
+  the hyperboloidal radial equation on [r₊ − ε, r_c + ε].
+  - The kernel elements of the forward problem on spaces above threshold are smooth: [Vas13] §2.6
+    ("its elements are in C^∞(X)", ℓ. 1888) and the proof of [HV17] Lemma 2.14 (ℓ. 1264).
+  - The threshold is [HV17]'s radial-point condition s > ½ + β_jα (ℓ. 1065–1067), with
+    β_j = 2/|μ′(r_j)| = 1/κ_j (ℓ. 850, 857) and α = −Im σ for a mode e^{−iσt}. That is,
+    s > ½ − Im σ/κ at each horizon.
+  - [HV17] allows arbitrarily high regularity at r₂ and r₃ (ℓ. 1549). So only smoothness is used
+    below, and the exact threshold is not needed: t·ln t already fails to be C¹.
+  - The line numbers are those of `cauchyhor-r.tex` (arXiv:1512.08004v2) and `kerr-ah-b.tex`
+    (arXiv:1012.4391v2), as checked by the S6 review's `quotes_check.py`.
+  - [Vas13] v2's half-plane form Im σ > β⁻¹(k − 1 − 2s) (ℓ. 1940) is not used. With its β it differs
+    by a factor 2 from its own radial estimate (ℓ. 1627); see the review, W6.
   - Near r₊, T = −x + (smooth), because T′ = T̃/F with T̃(r₊) = −1. So u = (smooth, nowhere
     zero)·Z, where Z = e^{iσ(x−c₊)}R solves the s = +1 equation. The exponents of u at r₊ are those
     of Z.
@@ -255,11 +271,21 @@ All 20 values for l ≤ 19 are certified nonzero.
 
 ### 2.6 Status of Lemma E, per l range
 
-| l | ω₀ not a resonance; simple pole | level |
-|---|---|---|
-| 0 | Arb: W̃₀ ≠ 0 (§2.5). Also the band count (§5): winding 0 with ω_* inside forces the pole | **CERTIFIED** (written steps §§2.2–2.3 routine; first step sympy) |
-| 1–19 | written: §2.4 (positivity), with (E-int). Arb: W̃_l ≠ 0 (§2.5). The band counts (§5): winding −1 forces the pole | **WRITTEN_PROOF and CERTIFIED** |
-| ≥ 20 | written: §2.4. Also part (i)'s L certificate at depth e (§3): in the grid box containing ω₀, the solution regular at r₊ (R̃, which at ω₀ is the exponent-½ = Z2-type solution) and R_c have log-derivatives with Re y₊ ≥ 0.1617 > 0 > −0.1201 ≥ Re y_c, for every h ≤ h₀. So they are not proportional (W5, W6′). Arb samples to l = 100 | **WRITTEN_PROOF**; the L certificate is a second, independent route at the same level |
+Lemma E has two parts, with different levels (review S1).
+- **The pole:** W̃_l ≠ 0, i.e. W_l has a simple pole at ω₀ with nonzero residue (§§2.3–2.5).
+- **The non-resonance:** ω₀ is not a resonance of the forward problem on Ω₂₃. This uses the written
+  criterion of §2.2 (resonant states are smooth and separate; the smooth solutions at r₊ are the
+  multiples of Z2), which is P2-D1′'s framework applied at a point that D1′ excludes. So it is at
+  P2-D1′'s level, WRITTEN_PROOF, for every l, including l = 0. (P2-K6 records its resonance
+  identification the same way.)
+
+| l | the pole (W̃_l ≠ 0) | level of the pole | level of the non-resonance |
+|---|---|---|---|
+| 0 | Arb: W̃₀ ≠ 0 (§2.5); the band count (§5), winding 0 with ω_* inside, forces the pole again | **CERTIFIED** (the Frobenius steps of §§2.2–2.3 are routine; the first is checked in sympy) | WRITTEN_PROOF (P2-D1′'s level) |
+| 1–19 | written: §2.4 (positivity), with (E-int). Arb: W̃_l ≠ 0 (§2.5). The band counts (§5), winding −1, force the pole | **CERTIFIED** (and written) | WRITTEN_PROOF (P2-D1′'s level) |
+| ≥ 20 | written: §2.4. Part (i)'s L certificate at depth e (§3) is a second route: in the grid box containing ω₀, the solution regular at r₊ (R̃, which at ω₀ is the exponent-½ = Z2-type solution) and R_c have log-derivatives with Re y₊ ≥ 0.1617 > 0 > −0.1201 ≥ Re y_c, for every h ≤ h₀, so they are not proportional (W5, W6′). Arb samples to l = 100 | **WRITTEN_PROOF** | WRITTEN_PROOF (P2-D1′'s level) |
+
+**P2-E as a whole is WRITTEN_PROOF.**
 
 **Consequence.** D1's QNMs and HV17's resonances agree in S_e:
 - off E₊ ∪ E_c by D1′'s set clause;
@@ -267,7 +293,8 @@ All 20 values for l ≤ 19 are certified nonzero.
 
 So D3's α is HV17's α₀ for strips down to −eκ₋. No definitional change is needed.
 
-**Literature.** No source is cited for Lemma E; the argument above is self-contained.
+**Literature.** No source is cited for Lemma E's computation, which is self-contained. The resonance
+framework of §2.2 is P2-D1′'s, with [HV17] and [Vas13] as cited there.
 
 ## 3. Part (i) at depth e for l ≥ 20 (`certificates/beta/part1/`)
 
@@ -473,8 +500,9 @@ h₀ = 2/41 gives l₀ = ⌈1/h₀ − ½⌉ = 20, so l ≤ 19 and l ≥ 20 cove
 | P2-D1′, set clause | WRITTEN_PROOF |
 | part (i) at depth e, l ≥ 20 (W1, W2, W5, W6′) | WRITTEN_PROOF |
 | part (ii′), A at fixed h, l ≤ 19 (W1, W2, W4) | WRITTEN_PROOF |
-| Lemma E, l ≥ 1 (§2.4) | WRITTEN_PROOF |
-| Lemma E, l = 0 and l ≤ 19 (Arb) | CERTIFIED |
+| Lemma E, the non-resonance of ω₀, every l (§2.2; P2-D1′'s level) | WRITTEN_PROOF |
+| Lemma E, the pole (W̃_l ≠ 0), l ≥ 20 (§2.4) | WRITTEN_PROOF |
+| Lemma E, the pole (W̃_l ≠ 0), l ≤ 19 (Arb; the band counts) | CERTIFIED |
 | part (iii) band counts, l ≤ 19 | CERTIFIED |
 | ω_*'s Krawczyk ball (P2-K6) | CERTIFIED |
 
@@ -492,6 +520,12 @@ P2-4.
 - **No new conversion.** With β known, [HV17] could be applied with any α < −Im ω_* (and α < γ₀),
   which would sharpen P2-5's H^{1.05−0}. S6 does not claim this; P2-5 is unchanged.
 - **Float evidence is not used.** The float check of (E-int) and KAT B7 (|W_l| at 100 random band
-  points for l ∈ [20, 1000]) support the proof but are not part of it.
+  points for l ∈ [20, 1000]) are not part of the proof.
+  - B7 is weak evidence (review W4). At 69 of its 100 points the secant search did not converge. At 20
+    it stopped within 10⁻⁶ (relative) of its seed, with abs(W(stop))/abs(W(seed)) = 1.000001. At 11 it
+    stopped at non-roots well below the band (Im ω between −2.9κ₋ and −6.5κ₋, abs(W) ratio
+    0.11–0.61).
+  - The review's float recounts at l = 20 and 21 (its §5.C8) are a stronger float check of the same
+    region.
 - **The level is below target:** WRITTEN_PROOF, not CERTIFIED.
 - **Massless scalar on fixed RNdS only**, as in FORMULATION §7.

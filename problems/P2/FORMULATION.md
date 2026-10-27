@@ -569,7 +569,7 @@ Sizing and kill criteria are in `s0-gate.md` §7.
 - **v1.1 (2026-10-27, S6 start; `notes/s6-preregistration.md` at `c98ca16d`, with its Amendments
   A1–A6).** The user approved S6 on 2026-10-27, and the coordinator approved Phase 2 the same day.
   The coordinator approved recording this entry as coordinator: it changes no frozen definition,
-  no target and no edge, and he informs the user. Five items:
+  no target and no edge, and informs the user. Five items:
   - **1. A correction to P2-6's parenthesis "(where the l = 0 winding is 2)".**
     - At depth 0.92κ₋ the full l = 0 box holds two zeros (0 and ω_*) and one simple pole, at
       ω₀ = −iκ₊ (the first point of E₊; v0.2).
@@ -594,3 +594,25 @@ Sizing and kill criteria are in `s0-gate.md` §7.
   - **5. The level.** §2 states CERTIFIED as P2-6's target. The level expected from S6 is
     WRITTEN_PROOF, the minimum of its ingredients (`notes/s6-preregistration.md` §6).
   - The §2 text of P2-6 is not rewritten. It carries a bracketed pointer here.
+
+- **v1.2 (2026-10-27, S6 exit; `notes/s6-proof.md`, `notes/s6-report.md`; independent review
+  `docs/review-2026-10-27-p2-s6-adversarial.md`).** P2-6 at P_B is assembled (P2-6 and P2-E reviewed
+  and approved 2026-10-27; not yet entered in the ledger).
+  - **P2-6 at P_B: WRITTEN_PROOF**, the minimum of its ingredients. §2's target, CERTIFIED, is not
+    reached.
+    - The resonances of the forward problem on Ω₂₃ with Im σ ≥ −0.92κ₋ are exactly 0 and ω_*, both of
+      degree l = 0 and simple zeros of W₀ (radial order 1; the resonance multiplicity of ω_*, which lies
+      below −κ₊, is not claimed).
+    - β = −Im ω_*/κ₋ ∈ [0.909380978994805455524933762622 ± 3.2·10⁻³¹]. The frozen target (width
+      ≤ 10⁻⁸) is met by P2-K6's ball, reused unchanged.
+    - The bookkeeping is machine-checked, with negative controls:
+      `certificates/beta/assembly_beta_PB.json` (`python -m p2.beta_assembly`).
+  - **Lemma E** (row P2-E): −iκ₊ is not a resonance for any l, and every W_l has a simple pole there.
+    The pole is CERTIFIED for l ≤ 19 and WRITTEN_PROOF for l ≥ 20; the non-resonance is at P2-D1′'s
+    level. So D1's QNMs and HV17's resonances agree in S_e, and D3's α is HV17's α₀ there.
+  - **The independent review** (2026-10-27) found P2-6 and P2-E proven as stated, with nothing
+    blocking; its corrections (the level of P2-E's non-resonance statement, and the ledger and
+    FORMULATION texts) are applied.
+  - **Unchanged:** the edge, the target, D1, D1′, D3, D7, the KATs of §5 (S6's B1–B7 are additive,
+    v1.1), P2-5 (no stronger conversion is claimed) and the scope fences of §7.
+  - **Open:** P2-7 (P_A).

@@ -1,23 +1,53 @@
 # P2 S6 report: the two-sided β at P_B (P2-6)
 
-Status: S6 exit, 2026-10-27. Branch `p2/s6-beta`, from main at `300c22a7`.
+Status: S6 exit, 2026-10-27; revised 2026-10-27 after the independent review. Branch `p2/s6-beta`,
+from main at `300c22a7`.
 - Plan: `notes/s6-preregistration.md` (`c98ca16d`), with Amendments A1–A6 (`f82114bf`, dated
   2026-10-27, before any production run).
 - Written proof: `notes/s6-proof.md`. Lemma E is written out in full there (§2, per A1).
 - Machine check: `src/p2/beta_assembly.py`, which writes `certificates/beta/assembly_beta_PB.json`.
 - Tests: `tests/test_beta.py`.
+- Order of work (review W9). The plan and its amendments (`c98ca16d` at 09:16, `f82114bf` at 09:21)
+  precede the production code (`7168b2e4`, 09:28) and every certificate. Commit order is what shows this; the order
+  of authoring cannot itself be checked. The registered designs were used unchanged, and the decisive
+  outcomes (the windings, W̃_l ≠ 0) were registered expectations.
+
+**Review.** `docs/review-2026-10-27-p2-s6-adversarial.md` (2026-10-27) found P2-6 at P_B proven as
+stated, at WRITTEN_PROOF, and P2-E (Lemma E) proven as stated, with its levels given part by part.
+Nothing was blocking. The user approved its fixes, the rows P2-6 and P2-E, the notes, FORMULATION v1.2,
+the merge and a problems-document revision 1.4 on 2026-10-27. Applied on this branch:
+- **S1** (P2-E's levels: the pole is CERTIFIED for l ≤ 19 and WRITTEN_PROOF for l ≥ 20; the
+  non-resonance of −iκ₊ is at P2-D1′'s level for every l): §§1, 5 and 9 here; `s6-proof.md` §§2.6
+  and 7.
+- **S2** (the ledger texts): §9 carries the review's §8 rows and notes verbatim; FORMULATION v1.2 is
+  the review's §8 text (§10).
+- **W1–W10.**
+  - W1: no change to v1.1 beyond its pronoun (§10); v1.2 is exact.
+  - W2–W4: in the §9 rows, and B7 is qualified in §6 and in `s6-proof.md` §8.
+  - W5: §7.
+  - W6: `s6-proof.md` §2.2.
+  - W7: §12.
+  - W8 and W9: §14 and above.
+  - W10: a dated erratum at the end of `notes/s6-preregistration.md`.
+- **Unchanged:** no source, test or certificate. `beta_assembly`'s INGREDIENTS entry is not
+  relabelled (§5).
 
 ## 1. Verdict
 
-- **P2-6 at P_B holds, at WRITTEN_PROOF**, pending the independent review.
-  - The forward problem on Ω₂₃ has exactly two resonances with Im σ ≥ −0.92κ₋, namely 0 and ω_*.
-    Both are of degree l = 0, and each is a simple zero of W₀. In D1's terms, the QNMs of any degree
-    in S_e are 0 and ω_*.
+- **P2-6 at P_B holds, at WRITTEN_PROOF.** The independent review (2026-10-27) found it proven as
+  stated.
+  - The resonances of the forward problem on Ω₂₃ with Im σ ≥ −0.92κ₋ are exactly σ = 0 and σ = ω_*
+    (as points; the resonance multiplicity of ω_* is not claimed). Both are of degree l = 0 only and
+    simple zeros of W₀ (radial order 1). In D1's terms, the QNMs of any degree in S_e are 0 and ω_*.
   - **β = −Im ω_*/κ₋ ∈ [0.909380978994805455524933762622 ± 3.2·10⁻³¹]**, two-sided, of width
     6.4·10⁻³¹ ≤ 10⁻⁸. The ball is P2-K6's, reused unchanged (A4).
-- **Lemma E holds for every l.** −iκ₊ is not a resonance, and every W_l has a simple pole there.
-  The levels are CERTIFIED at l = 0, WRITTEN_PROOF and CERTIFIED for 1 ≤ l ≤ 19, and WRITTEN_PROOF for
-  l ≥ 20 (§5). D1's QNMs and HV17's resonances therefore agree in S_e.
+- **Lemma E (P2-E) holds for every l.** −iκ₊ is not a resonance, and every W_l has a simple pole
+  there. Its levels, by part (review S1; §5):
+  - the pole (W̃_l ≠ 0) is CERTIFIED for l ≤ 19 and WRITTEN_PROOF for l ≥ 20;
+  - the non-resonance is at P2-D1′'s level, WRITTEN_PROOF, for every l, including l = 0.
+
+  P2-E as a whole is WRITTEN_PROOF. With P2-D1′'s set clause, D1's QNMs and HV17's resonances agree in
+  S_e.
 - **Every pre-registered expectation held.**
   - The windings are 0 (l = 0) and −1 (1 ≤ l ≤ 19).
   - Part (i) certified at h₀ = 2/41 (l₀ = 20), and part (ii′) certified for every l ≤ 19.
@@ -40,7 +70,9 @@ Status: S6 exit, 2026-10-27. Branch `p2/s6-beta`, from main at `300c22a7`.
 | `5ee4796f` | the assembly check `beta_assembly.py`; `tests/test_beta.py`; the band-run records |
 | `5a78bbcb` | certificates: the 20 band counts, KATs and controls, the 5% replay, B7 |
 | `6cb88bca` | the assembly certificate |
-| head | `notes/s6-proof.md`, this report, and a test fix (below) |
+| `172eb48c` | `notes/s6-proof.md`, this report, and a test fix (below) |
+| `6f3912e4`, `fa1ad2fa` | the independent review: its checks (`certificates/review_s6/`) and `docs/review-2026-10-27-p2-s6-adversarial.md` |
+| head | the review fixes S1, S2 and W1–W10 (documents only), FORMULATION v1.2 and the v1.1 pronoun, the v1.4 draft (§11) |
 
 The test fix concerns the P2_SLOW test that recomputes the S+ box [0.06, 0.08]Ω_P. It now compares
 the float design margin, which is used only to choose the design, to 10⁻⁹ relative; it had differed
@@ -57,7 +89,7 @@ is `+dirty`. Every one passes.
 | `part2/A_fixed_PB.json` | part (ii′), A at fixed h_l, l ≤ 19 | `7168b2e4` | `b7947fa8` |
 | `part1/T_PB.json`, `A_PB.json` | part (i): T6 (10 boxes), A (ζ_A = 6/5) | `7168b2e4` | `b7947fa8` |
 | `part1/S_PB_plus.json`, `S_PB_c.json` | part (i): S, both sides, extended grid | `7168b2e4` | `b7947fa8` |
-| `part1/L_PB.json` | part (i): L, band rows, pole-free series (1280 boxes) | `7168b2e4` (178 rows recomputed clean, §13) | `b7947fa8` |
+| `part1/L_PB.json` | part (i): L, band rows, pole-free series (1280 boxes) | `7168b2e4` (178 rows recomputed clean, §14) | `b7947fa8` |
 | `part1/cover_PB.json` | part (i): the cover at depth e | `7168b2e4` | `b7947fa8` |
 | `part1/controls_PB.json` | NB3, NB4, NB5 | `7168b2e4` | `b7947fa8` |
 | `part3/band_PB_l{0..19}.json` | the band counts | `7168b2e4` (run); assembled at `5ee4796f` | `5a78bbcb` |
@@ -118,11 +150,25 @@ forward problem on Ω₂₃ for any l, and every W_l has a simple pole there, wi
 Res_{ω₀}W_l = i(2κ₊r₊ + L)/(2r₊²)·W̃_l. The proof is in `s6-proof.md` §2, with the normalisation of A1
 (Z₊ = Σa_m t^m, a₀ = 1, t = r − r₊; Z2 = t + Σ_{m≥2} b_m t^m; Z_c(r_c) = 1).
 
-| l | what holds | level |
-|---|---|---|
-| 0 | Arb: W̃₀ = +0.038285581814409 ± 4.4·10⁻¹⁶. The band count (winding 0 with ω_* inside) forces the pole again. The written argument does not apply, because V₀ = FF′/r changes sign | **CERTIFIED** (the Frobenius steps are routine; the first is checked in sympy) |
-| 1–19 | written (positivity, §2.4) and Arb (W̃_l < 0, from −22.80 at l = 1 to −2.96·10⁵³ at l = 19); the band counts (winding −1) force the pole | **WRITTEN_PROOF and CERTIFIED** |
-| ≥ 20 | written (§2.4). Part (i)'s L certificate at depth e separates the two solutions at ω₀ for every h ≤ h₀ (Re y₊ ≥ 0.1617 > 0 > −0.1201 ≥ Re y_c in the grid box containing ω₀; W5, W6′). Arb samples at l = 20, 25, 30, 40, 50, 60, 100 | **WRITTEN_PROOF** |
+Lemma E has two parts, with different levels (review S1; `s6-proof.md` §2.6).
+- **The pole:** W̃_l ≠ 0, i.e. W_l has a simple pole at ω₀ with nonzero residue.
+- **The non-resonance:** ω₀ is not a resonance of the forward problem on Ω₂₃. This uses the written
+  criterion of `s6-proof.md` §2.2 (resonant states are smooth and separate; the smooth solutions at
+  r₊ are the multiples of Z2). That is P2-D1′'s framework applied at a point D1′ excludes, so it is at
+  P2-D1′'s level, as P2-K6's resonance identification is.
+
+| l | the pole: what holds | level of the pole | level of the non-resonance |
+|---|---|---|---|
+| 0 | Arb: W̃₀ = +0.038285581814409 ± 4.4·10⁻¹⁶. The band count (winding 0 with ω_* inside) forces the pole again. The written positivity argument does not apply, because V₀ = FF′/r changes sign | **CERTIFIED** (the Frobenius steps are routine; the first is checked in sympy) | WRITTEN_PROOF (P2-D1′'s level) |
+| 1–19 | written (positivity, §2.4) and Arb (W̃_l < 0, from −22.80 at l = 1 to −2.96·10⁵³ at l = 19); the band counts (winding −1) force the pole | **CERTIFIED** | WRITTEN_PROOF (P2-D1′'s level) |
+| ≥ 20 | written (§2.4). Part (i)'s L certificate at depth e separates the two solutions at ω₀ for every h ≤ h₀ (Re y₊ ≥ 0.1617 > 0 > −0.1201 ≥ Re y_c in the grid box containing ω₀; W5, W6′). Arb samples at l = 20, 25, 30, 40, 50, 60, 100 | **WRITTEN_PROOF** | WRITTEN_PROOF (P2-D1′'s level) |
+
+**P2-E as a whole is WRITTEN_PROOF.**
+
+**`beta_assembly`'s INGREDIENTS** is not relabelled, and the assembly certificate is not regenerated.
+- Its entry "Lemma E, l = 0 and l ≤ 19 (Arb)": CERTIFIED refers to the pole statement for l ≤ 19.
+- The non-resonance statement (WRITTEN_PROOF, at P2-D1′'s level) has no entry of its own.
+- The minimum, WRITTEN_PROOF, is unchanged.
 
 New in the write-up (A1), beyond the pre-registration's sketch:
 - **The closed form.** W̃_l = −(1/r₊)∫_{r₊}^{r_c}(L + rF′)Z2 dr/r (`s6-proof.md` §2.4(f)). It follows
@@ -152,7 +198,7 @@ D1's QNMs agree with HV17's resonances in S_e.
 | B4 | l = 0, [−0.03, 0.03] × [−0.93, −0.79] (ω₀ and ω_*) | 0 | 0 | same |
 | B5 | ε·W_l(ω₀ + ε) against the residue, l = 0, 1, 5, 19, zsol and arbw | agreement to O(ε) | relative error ≤ 9.2·10⁻⁵ at ε = 10⁻⁵κ₋, 100 times smaller at 10⁻⁷κ₋; the codes agree | `epole_PB.json` |
 | B6 | l = 0 overtone ≈ −1.855iκ₋; l = 1 PS mode ≈ 7.2149 − 1.7533iκ₋ (no pole inside) | +1 each | +1, +1 | `part3/kat_controls_PB.json` |
-| B7 | float, 100 random band points, l ∈ [20, 1000] (A6) | no zero | no zero: none passes the A6 rule; 20 secant searches stopped inside the band, each with abs(W(stop))/abs(W(seed)) = 1.000001, i.e. without moving to a root | `part1/B7_PB.json` |
+| B7 | float, 100 random band points, l ∈ [20, 1000] (A6) | no zero | no zero by the A6 rule; weak evidence (review W4): 69 secant searches did not converge, 20 stopped within 10⁻⁶ of their seeds (abs(W(stop))/abs(W(seed)) = 1.000001), and 11 stopped at non-roots well below the band (Im ω from −2.9κ₋ to −6.5κ₋, abs(W) ratio 0.11–0.61). Not used by the proof | `part1/B7_PB.json` |
 | NB1 | l = 0 band box with its bottom at −0.905κ₋ (above ω_*) | winding −1 | −1 | `part3/kat_controls_PB.json` |
 | NB2 | an edge at Im ω_* to 10 digits | not certify | not certified ("piece enclosure contains 0 at the maximal depth") | same |
 | NB3 | L's ω₀ box with S4's series | not certify | not certified ("affine form may vanish") | `part1/controls_PB.json` |
@@ -190,7 +236,17 @@ Also checked:
   bottom edge, off E₊ ∪ E_c and below S_δ. β ≤ 0.90938098, consistent with P2-4. The width is
   6.3·10⁻³¹.
 - **C9.** The KATs, controls, replay and B7 are as recorded.
-- **C10.** The minimum level is WRITTEN_PROOF, and no `+dirty` tag appears.
+- **C10.** The minimum level is WRITTEN_PROOF. C10 also lists the `+dirty` tags of the S6
+  certificates, and the list is empty.
+- **What the check does not do, by design** (review W5; no code change).
+  - C10 lists `+dirty` tags but does not fail on them, as A2 asked. So "no `+dirty` tag" is a listed
+    fact, not one of the 332 checks.
+  - `C6.L_rows_reach` compares two constants; `C6.L_band_rows` is the check that reads `L_PB.json`.
+  - The pole clearance reused from S5 handles n ≥ 3 by 3·min(κ₊, κ_c) + Im c > √2ρ, which ignores
+    Re c. It is conservative: the stored pieces pass it with margin ≥ 1.095, and the review's
+    all-n check passes with ≥ 1.517.
+  - By design the check trusts each ingredient's own replay: an increment changed within ¼ would
+    pass it. The review re-ran the replays (its §6).
 - **Negative controls.** All nine fail on their named items:
 
   | control | mutation | fails on |
@@ -237,69 +293,88 @@ resumable.
   points cost up to 290 s each in floats.
 - No projection ever approached 40 core-h, so "main" was not messaged.
 
-## 9. Ledger proposals (A3): paste-ready, not applied
+## 9. Ledger rows (A3)
 
-The column order is `| id | problem | statement | level | evidence | updated |`. Nothing here is
-applied. The owner enters rows after the independent review and the user's approval.
+The rows and notes below are the review's §8 texts, verbatim, with S1, S2 and W2–W4 applied.
+- The user approved them on 2026-10-27: P2-E as its own row, the notes for P2-K6 and P2-4, and the
+  optional note for P2-D1′.
+- The coordinator enters them, so nothing here is applied on this branch.
+- The column order is `| id | problem | statement | level | evidence | updated |`.
 
-**Should Lemma E be its own row?** Yes; I propose a row **P2-E** (the id is the owner's choice).
-- Lemma E is a statement about the forward problem at one point, independent of the band and of β.
-- Its level differs by l range: CERTIFIED at l = 0; WRITTEN_PROOF (and, for l ≤ 19, CERTIFIED) for
-  l ≥ 1. Folded into P2-6, that profile would be lost in P2-6's minimum.
-- It complements P2-D1′, which excludes E₊ ∪ E_c. It is what makes D1's QNMs and HV17's resonances
-  agree in S_e, and a later use of [HV17] with α up to −Im ω_* would cite exactly that.
-- It can be reviewed on its own.
-
-The alternative, folding it into P2-6 as an ingredient, is also consistent: P2-6's level is
-WRITTEN_PROOF either way.
+**Why Lemma E is its own row** (the author's proposal; the review agreed, its §8).
+- It is a statement about one point, independent of the band and of β.
+- It complements P2-D1′, which excludes E₊ ∪ E_c.
+- Its level profile differs from P2-6's: the pole is CERTIFIED for l ≤ 19, while the non-resonance is
+  at P2-D1′'s level.
+- A later use of [HV17] with α up to −Im ω_* would cite exactly it.
 
 **P2-6 (new).**
 
 ```
-| P2-6 | P2 | At P_B (ΛM² = 3/50, Q = (999/1000)Q_max): the forward problem on Ω₂₃ (HV17 §2.5) has exactly two resonances σ with Im σ ≥ −(23/25)κ₋ (= −0.547γ₀), namely σ = 0 and σ = ω_*, P2-K6's l = 0 zero, ω_*/κ₋ ∈ −0.909380978994805455524933762622i ± 3.2·10⁻³¹; both are of degree l = 0 and simple zeros of W₀. In D1's terms, the QNMs of any degree in that strip are 0 and ω_*. The one point of E₊ ∪ E_c in the strip, −iκ₊, is not a resonance (P2-E). Hence D3's gap is attained at ω_*: β = −Im ω_*/κ₋ ∈ [0.909380978994805455524933762622 ± 3.2·10⁻³¹] (two-sided; width 6.4·10⁻³¹ ≤ 10⁻⁸), and D1's QNMs and HV17's resonances agree in the strip. Assembled from P2-4 (S_δ), the conjugation symmetry (Re σ < 0), part (i) at depth 23/25 for l ≥ 20, and for l ≤ 19 regime A at fixed h = 1/(l+½) (Re σ ≥ a′_l) with pole-aware argument-principle counts on the band boxes [−a′_l, a′_l] × [−(23/25)κ₋, −κ₋/2]; with P2-E, P2-D1′'s set clause and P2-K6. The resonance multiplicity at ω_* (below −κ₊, outside P2-D1′'s window) is not claimed. Not P_A | WRITTEN_PROOF, the minimum of the ingredients: P2-4, P2-D1′ (set clause), part (i) at depth 23/25 (W1, W2, W5, W6′ written) and part (ii′) (W1, W2, W4) are WRITTEN_PROOF; the band counts, P2-E for l ≤ 19 and P2-K6's ball are CERTIFIED; FORMULATION §2's target CERTIFIED is not reached. Band counts (S3's Cauchy-disc machinery, every disc box clear of E₊ ∪ E_c; 2562 stored pieces; a 5% replay overlaps): winding 0 at l = 0 (ω_* and the simple pole at −iκ₊) and −1 for 1 ≤ l ≤ 19 (the pole, no zero). Part (i) at depth 23/25 with h₀ = 2/41 (l₀ = 20): L on the band rows with the pole-free series R̃ = (1+2ρ)R (W6′), S with an extended design grid, T redesigned, A at ζ_A = 6/5. Machine-checked bookkeeping (exact rationals and Arb, 256-bit; 332 checks; the six S2–S5 inputs pinned by sha256 and equal to their blobs on main 300c22a7; P2-4's 54 pinned inputs unchanged): a′_l identical between the band boxes and the A-at-fixed-h certificates; b′ − (23/25)κ₋ = 3.9e−10 > 0; the stored discs trace the right half of each band box exactly; the re-summed windings; part (i)'s cover replays identically; ω_* lies in B₀, 0.0106κ₋ above its bottom edge. Negative controls NB6a–NB6i fail as required (a band certificate removed; a′₇ lowered by 2⁻²⁴; a wrong winding; b′ just below (23/25)κ₋; and five more). KATs: B1 (P2-K6's ball replayed), B2 +1, B3 −1 (the pole; l = 0, 1), B4 0, B5 (the residue, with the independent S1 code), B6 +1 (two zeros below the edge); B7 (float, 100 band points with l ∈ [20, 1000]) finds no zero; controls NB1–NB5 fail as required. Independent review: pending | problems/P2/src/p2/beta_common.py, beta_epole.py, beta_part1.py, beta_part2.py, beta_part3.py, beta_assembly.py; problems/P2/certificates/beta/ (assembly_beta_PB.json); problems/P2/notes/s6-preregistration.md, s6-proof.md, s6-report.md; problems/P2/tests/test_beta.py | 2026-10-27 |
+| P2-6 | P2 | At P_B (ΛM² = 3/50, Q = (999/1000)Q_max): the resonances of the forward problem on Ω₂₃ (HV17 §2.5) with Im σ ≥ −(23/25)κ₋ (= −0.547γ₀) are exactly σ = 0 and σ = ω_*, P2-K6's l = 0 zero, ω_*/κ₋ ∈ −0.909380978994805455524933762622i ± 3.2·10⁻³¹ (real part ± 6.6·10⁻³⁵). Both are of degree l = 0 only and simple zeros of W₀ (radial order 1). In D1's terms, the QNMs of any degree in that strip are 0 and ω_*. The one point of E₊ ∪ E_c in the strip, −iκ₊, is not a resonance (P2-E). Hence D3's gap is attained at ω_*: β = −Im ω_*/κ₋ ∈ [0.909380978994805455524933762622 ± 3.2·10⁻³¹] (two-sided; width 6.4·10⁻³¹ ≤ 10⁻⁸), and D1's QNMs and HV17's resonances agree in the strip. Assembled from P2-4 (S_δ), the conjugation symmetry (Re σ < 0), part (i) at depth 23/25 for l ≥ 20, and for l ≤ 19 regime A at fixed h = 1/(l+½) (Re σ ≥ a′_l) with pole-aware argument-principle counts on the band boxes B_l = [−a′_l, a′_l] × [−b′, −b₀] (b′ = 21012395/2²⁹ ≥ (23/25)κ₋, b₀ = 22839559/2³⁰ ≤ κ₋/2); with P2-E, P2-D1′'s set clause and P2-K6. The resonance multiplicity at ω_* (below −κ₊, outside P2-D1′'s window) is not claimed. Not P_A | WRITTEN_PROOF, the minimum of the ingredients: P2-4, P2-D1′ (set clause), P2-E's non-resonance statement, part (i) at depth 23/25 (W1, W2, W5, W6′ written) and part (ii′) (W1, W2, W4 written) are WRITTEN_PROOF; the band counts, P2-E's pole statement for l ≤ 19 (W̃_l ≠ 0) and P2-K6's ball are CERTIFIED; FORMULATION §2's target CERTIFIED is not reached. Band counts (S3's Cauchy-disc machinery, every disc box clear of E₊ ∪ E_c; 2562 stored pieces; a 5% replay overlaps): winding 0 at l = 0 (ω_* and the simple pole at −iκ₊) and −1 for 1 ≤ l ≤ 19 (the pole, no zero). Part (i) at depth 23/25 with h₀ = 2/41 (l₀ = 20): L on the band rows with the pole-free series R̃ = (1+2ρ)R (W6′), S with an extended design grid, T redesigned, A at ζ_A = 6/5. Machine-checked bookkeeping (exact rationals and Arb, 256-bit; 332 checks; the six S2–S5 inputs pinned by sha256 and equal to their blobs on main 300c22a7; P2-4's 54 pinned inputs unchanged): a′_l identical between the band boxes and the A-at-fixed-h certificates; b′ − (23/25)κ₋ = 3.9e−10 > 0; the stored discs trace the right half of each band box exactly; the re-summed windings; part (i)'s cover replays identically; ω_* lies in B₀, 0.0106κ₋ above its bottom edge. Negative controls NB6a–NB6i fail as required (a band certificate removed; a′₇ lowered by 2⁻²⁴; a wrong winding; b′ just below (23/25)κ₋; and five more). KATs: B1 (P2-K6's ball replayed), B2 +1, B3 −1 (the pole; l = 0, 1), B4 0, B5 (the residue, with the independent S1 code), B6 +1 (two zeros below the edge); controls NB1–NB5 fail as required; B7 (float, not used) found no zero, but most of its secant searches did not converge. Independent review 2026-10-27: proven as stated. Reviewer code sharing nothing with p2 recomputes Lemma E rigorously (W̃_l(−iκ₊) for l = 0, 1, 2, 3, 5, 10, 19, 20, 50, 100, all overlapping the stored balls; ε·W_l(−iκ₊ + ε) tends to the residue as O(ε); a certified sign change of W₀ on the imaginary axis across P2-K6's ball), reproduces every band winding, the symmetry halving, the pole and the l = 20, 21 seam in floats, and re-checks every seam (215 checks; a 40 000-point sampled cover of S_e for l up to 10⁶); 36 further mutations of the assembly's inputs are each caught; every part-(i), part-(ii′) and Lemma E certificate replays identically (all 1280 L leaves, all 90 S leaves), and 72 further band pieces were recomputed | problems/P2/src/p2/beta_common.py, beta_epole.py, beta_part1.py, beta_part2.py, beta_part3.py, beta_assembly.py; problems/P2/certificates/beta/ (assembly_beta_PB.json); problems/P2/notes/s6-preregistration.md, s6-proof.md, s6-report.md; problems/P2/tests/test_beta.py; docs/review-2026-10-27-p2-s6-adversarial.md; problems/P2/certificates/review_s6/ | 2026-10-27 |
 ```
 
 **P2-E (new; Lemma E).**
 
 ```
-| P2-E | P2 | At P_B, the point ω₀ = −iκ₊ (≈ −0.8229iκ₋; the one point of E₊ ∪ E_c with Im ω ≥ −(23/25)κ₋) is not a resonance of the forward problem on Ω₂₃ (HV17 §2.5) in any sector l ≥ 0, and every W_l has a simple pole there: Res_{ω₀}W_l = i(2κ₊r₊ + L)/(2r₊²)·W̃_l ≠ 0. Here W̃_l is the Wronskian, in zsol's Jost-normalised form, of Z2 = t + Σ_{m≥2} b_m t^m and of the solution analytic at r_c. Z2 is the exponent-1 Frobenius solution at r₊; the exponent-0 one carries t·log t, since the first step reads 0·a₁ = 2κ₊r₊ + L. The normalisation is Z₊ = Σ a_m t^m, a₀ = 1, t = r − r₊. For l ≥ 1, W̃_l = −(1/r₊)∫_{r₊}^{r_c}(L + rF′)Z2 dr/r < 0 (V_l > 0 and Z2 > 0); W̃₀ = 0.038285581814409 ± 4.4·10⁻¹⁶. Hence D1's QNMs and HV17's resonances agree for Im ω ≥ −(23/25)κ₋. Not P_A | l = 0: CERTIFIED (Arb, 128-bit; routine written Frobenius steps, the first checked in sympy). 1 ≤ l ≤ 19: WRITTEN_PROOF (positivity, notes/s6-proof.md §2.4) and CERTIFIED (Arb W̃_l ≠ 0; P2-6's band counts force the pole). l ≥ 20: WRITTEN_PROOF; part (i)'s L certificate at depth 23/25 also separates the two solutions at ω₀ (W6′), and Arb samples at l = 20, 25, 30, 40, 50, 60, 100 are nonzero. KAT B5: ε·W_l(ω₀ + ε) tends to the residue as O(ε), with zsol and with the independent S1 code arbw (l = 0, 1, 5, 19). Float check, not used: the closed form reproduces the Arb W̃_l (l = 0, 1, 2, 5) to 10⁻⁸. No literature is cited. Independent review: pending | problems/P2/src/p2/beta_epole.py; problems/P2/certificates/beta/epole_PB.json; problems/P2/notes/s6-proof.md §2; problems/P2/tests/test_beta.py | 2026-10-27 |
+| P2-E | P2 | At P_B, the point ω₀ = −iκ₊ (≈ −0.8229iκ₋; the one point of E₊ ∪ E_c with Im ω ≥ −(23/25)κ₋) is not a resonance of the forward problem on Ω₂₃ (HV17 §2.5) in any sector l ≥ 0, and every W_l has a simple pole there: Res_{ω₀}W_l = i(2κ₊r₊ + L)/(2r₊²)·W̃_l ≠ 0, where W̃_l := [Δ(Z2·Z_c′ − Z2′·Z_c) + 2iω₀r²·Z2·Z_c]/(r₊r_c) at any r ∈ (r₊, r_c). Here Z2 = t + Σ_{m≥2} b_m t^m (t = r − r₊) is the exponent-1 Frobenius solution at r₊ of ΔZ″ + (Δ′ − 2iωr²)Z′ − (2iωr + L)Z = 0, Z_c is the solution of ΔZ″ + (Δ′ + 2iωr²)Z′ + (2iωr − L)Z = 0 analytic at r_c with Z_c(r_c) = 1, and W_l has the same form with Z₊ = Σ a_m t^m, a₀ = 1. The exponent-0 solution at r₊ carries t·log t (the first step reads 0·a₁ = 2κ₊r₊ + L), so the smooth solutions at r₊ are the multiples of Z2, and ω₀ is a resonance in sector l iff W̃_l = 0. For l ≥ 1, W̃_l = −(1/r₊)∫_{r₊}^{r_c}(L + rF′)Z2 dr/r < 0 (V_l > 0 and Z2 > 0); W̃₀ = 0.038285581814409 ± 4.4·10⁻¹⁶. With P2-D1′'s set clause, D1's QNMs and HV17's resonances agree for Im ω ≥ −(23/25)κ₋. Not P_A | WRITTEN_PROOF. The pole (W̃_l ≠ 0): CERTIFIED for l ≤ 19 (Arb, 128-bit; routine Frobenius steps, the first checked in sympy; P2-6's band windings force it again), WRITTEN_PROOF for l ≥ 20 (positivity, notes/s6-proof.md §2.4; part (i)'s L certificate at depth 23/25 also separates the two solutions at ω₀, by W5 and W6′; Arb samples at l = 20, 25, 30, 40, 50, 60, 100 are nonzero). The non-resonance of ω₀, every l: at P2-D1′'s level (WRITTEN_PROOF), through the written criterion of notes/s6-proof.md §2.2 (resonant states are smooth above the radial-point threshold, 3/2 at r₊ and ½ + κ₊/κ_c at r_c for σ = ω₀). KAT B5: ε·W_l(ω₀ + ε) tends to the residue as O(ε), with zsol and with the independent S1 code arbw (l = 0, 1, 5, 19). Float check, not used: the closed form reproduces the Arb W̃_l (l = 0, 1, 2, 5) to 10⁻⁸. No literature is cited. Independent review 2026-10-27: proven as stated, at the levels given here. The notion of resonance at ω₀ was checked against HV17 v2 and Vas13 v2; the reviewer's sympy re-derives the phase-factored equations, the first step, the log coefficient (2κ₊r₊ + L)/Δ′(r₊), the residue and the identities behind the closed form; reviewer Arb code sharing nothing with p2 recomputes W̃_l for l = 0, 1, 2, 3, 5, 10, 19, 20, 50, 100 (all overlap the stored balls; W̃₀ = 0.0382855818144094394 ± 2·10⁻²²) and the residue as O(ε) at ε = 10⁻³, 10⁻⁵, 10⁻⁷ κ₋ | problems/P2/src/p2/beta_epole.py; problems/P2/certificates/beta/epole_PB.json; problems/P2/notes/s6-proof.md §2; problems/P2/tests/test_beta.py; docs/review-2026-10-27-p2-s6-adversarial.md; problems/P2/certificates/review_s6/ | 2026-10-27 |
 ```
 
-**Notes for existing rows** (exact text, each appended to the end of the row's level column):
-- **P2-K6** (needed: its statement calls the two-sided enclosure "the stretch goal P2-6"):
+**Notes for existing rows** (each appended to the end of the row's level column):
+- **P2-K6** (needed):
   ` Note 2026-10-27 (S6): P2-6 reuses this row's S3 ball (certificates/part3/krawczyk_PB_l0.json) unchanged; with it, β ∈ [0.909380978994805455524933762622 ± 3.2·10⁻³¹] two-sided, which supersedes the one-sided bound for β (the zero itself is unchanged).`
-- **P2-4** (needed, for the same pointer):
+- **P2-4** (needed):
   ` Note 2026-10-27 (S6): the two-sided enclosure is P2-6, β ∈ [0.909380978994805455524933762622 ± 3.2·10⁻³¹]; the bound 0.55 ≤ β ≤ 0.90938098 stated here stays true.`
-- **P2-D1′** (optional; nothing in it changes):
-  ` Note 2026-10-27 (S6): at P_B the one point of E₊ ∪ E_c with Im ω ≥ −(23/25)κ₋, −iκ₊, is not a resonance in any sector, and every W_l has a simple pole there (P2-E); so in that strip the resonances are exactly the zeros of the W_l (used by P2-6). No multiplicity is claimed below −κ₊.`
+- **P2-D1′** (optional; approved):
+  ` Note 2026-10-27 (S6): at P_B the one point of E₊ ∪ E_c with Im ω ≥ −(23/25)κ₋, −iκ₊, is not a resonance in any sector, and every W_l has a simple pole there (P2-E; the non-resonance at this row's level); so in that strip the resonances are exactly the zeros of the W_l (used by P2-6). No multiplicity is claimed below −κ₊.`
 
-## 10. FORMULATION: a proposed exit entry (not applied)
+No other row changes. P2-5 stays as it is, since S6 does not claim the stronger conversion.
 
-The coordinator approved the v1.1 entry (S6 start), and it is applied (`f82114bf`). No exit entry
-was authorised, so this one is a proposal in the style of v1.0 (S5 exit). It is for the owner to
-apply, after the review, together with the header status line.
+## 10. FORMULATION
 
+- **v1.1** (S6 start; approved; `f82114bf`). Its pronoun "and he informs the user" (about the
+  coordinator) now reads "and informs the user". This is an editorial fix to an unmerged entry. Nothing
+  else in v1.1 changes (review W1: v1.2 is exact).
+- **v1.2** (S6 exit; approved by the user on 2026-10-27). The review's §8 text is added to the
+  Revision log, dated 2026-10-27. Until the rows are entered, its first line says "(P2-6 and P2-E
+  reviewed and approved 2026-10-27; not yet entered in the ledger)". The coordinator replaces that
+  wording with the entry date in the ledger commit, as at S5.
+- **The header status line** is left to the coordinator. The review's proposed line: "S6 assembled
+  P2-6 at P_B at WRITTEN_PROOF (`notes/s6-proof.md`; Revision log v1.2), and P2-E records the exceptional
+  point −iκ₊; P2-7 (P_A) is still a target." The header's list of ledger rows then gains P2-6 and P2-E.
+
+## 11. Proposed problems-document entry v1.4 (approved in content by the user on 2026-10-27)
+
+This is drafted for `docs/problems/open-problems-theoretical-cosmology-2026.tex`; it is not applied
+here.
+- The reviewer checks it, and the coordinator applies it and fills the leading ⟨Month day⟩.
+- It follows v1.3's style and macros (`\item[v1.4]`, `\emph{P2 Status.}`, `\operatorname{Im}`,
+  `\cite{hintzvasy2017}`). P2 only.
+- No new bibitem is needed: the only citation, `hintzvasy2017`, is already in the bibliography.
+- Content, as approved:
+  - (a) the strip and β, as the stretch goal of v1.2, which needed the exclusion down to −0.92κ₋ and
+    the point −iκ₊ as well as the enclosure of the mode;
+  - (b) −iκ₊ is not a resonance, so the two notions agree in the strip;
+  - (c) the level;
+  - (d) what is not established;
+  - and the sentence superseding v1.3 (d).
+- (c) also gives a one-sentence account of the proof, as v1.3 (b) did.
+
+```latex
+\item[v1.4] ⟨Month day⟩, 2026 (proposed October 27, 2026 by the P2 stage-S6 assembly, \texttt{problems/\allowbreak P2/\allowbreak notes/\allowbreak s6-report.md}; approved October 27, 2026). P2 only; the other problems are unchanged. \emph{P2 Status.} (a) At the primary pre-registered point $\Lambda M^2=3/50$, $Q/Q_{\max}=999/1000$, for every $\ell$ the only quasinormal modes with $\operatorname{Im}\omega\ge-0.92\,\kappa_-$ ($0.92\,\kappa_-\approx0.55\,\gamma_0$) are $\omega=0$ and the $\ell=0$ near-extremal mode $\omega_*$. Hence $\beta=-\operatorname{Im}\omega_*/\kappa_-\in[0.909380978994805455524933762622\pm3.2\times10^{-31}]$, a two-sided enclosure. This is the stretch goal of revision v1.2. It needed more than the interval-Newton enclosure of the mode named there: every other quasinormal mode had to be excluded down to $\operatorname{Im}\omega=-0.92\,\kappa_-$, and the point $-i\kappa_+$ had to be treated. (b) The point $\omega=-i\kappa_+$ ($\approx-0.823\,i\kappa_-$), where the radial Wronskian has a pole for every $\ell$, is not a resonance of the forward problem near the black-hole exterior used in \cite{hintzvasy2017}. So in this strip the zeros of the radial Wronskian and the resonances used in \cite{hintzvasy2017} coincide, and the two notions of quasinormal mode agree. (c) The proof extends that of v1.3 (b): the large-$\ell$ exclusion, uniform in $\ell\ge20$, now reaches $-0.92\,\kappa_-$; for $\ell\le19$, certified large-$|\operatorname{Re}\omega|$ exclusions and validated argument-principle counts allow for the pole at $-i\kappa_+$; and the point $-i\kappa_+$ is analysed in writing, with interval-certified values for $\ell\le19$. The result is a written proof with machine-checked certificates, independently reviewed October 27, 2026; it is not a fully machine-checked certificate. (d) Not established: the resonance multiplicity of $\omega_*$ (only its order as a zero of the radial Wronskian, $1$, is established); anything below $\operatorname{Im}\omega=-0.92\,\kappa_-$; the second point $Q/Q_{\max}=249/250$; the Einstein--Maxwell problem; any conversion stronger than v1.3 (c). This entry supersedes v1.3 (d) as to the two-sided enclosure of $\beta$.
 ```
-- **v1.2 (⟨date⟩, S6 exit; `notes/s6-proof.md`, `notes/s6-report.md`).** P2-6 at P_B is assembled.
-  - **P2-6 at P_B: WRITTEN_PROOF**, the minimum of its ingredients. §2's target, CERTIFIED, is not
-    reached.
-    - The forward problem on Ω₂₃ has exactly two resonances with Im σ ≥ −0.92κ₋: 0 and ω_*. Each
-      is a simple zero of W₀.
-    - β = −Im ω_*/κ₋ ∈ [0.909380978994805455524933762622 ± 3.2·10⁻³¹]. The frozen target (width
-      ≤ 10⁻⁸) is met by P2-K6's ball, reused unchanged.
-    - The bookkeeping is machine-checked, with negative controls:
-      `certificates/beta/assembly_beta_PB.json` (`python -m p2.beta_assembly`).
-  - **Lemma E** (row P2-E): −iκ₊ is not a resonance for any l, and every W_l has a simple pole
-    there. So D1's QNMs and HV17's resonances agree in S_e, and D3's α is HV17's α₀ there.
-  - **Unchanged:** the edge, the target, D1, D1′, D3, D7, the KATs of §5 (S6's B1–B7 are additive,
-    v1.1) and the scope fences of §7.
-  - **Open:** P2-7 (P_A).
-```
 
-Header status line, proposed: "S6 assembled P2-6 at P_B at WRITTEN_PROOF (`notes/s6-proof.md`;
-Revision log v1.2); P2-7 (P_A) is still a target." 
+Notes for the reviewer of this text:
+- **0.92κ₋ ≈ 0.55γ₀.** 0.92/1.68321 = 0.5466.
+- **"for every ℓ".** v1.3 (a) uses the same form. The QNMs in the strip are both at ℓ = 0; for ℓ ≥ 1
+  there are none.
+- **(b)'s two notions** are those of v1.3 (b): the zeros of the radial Wronskian, and the resonances
+  used in \cite{hintzvasy2017}. The non-resonance of −iκ₊ is at P2-D1′'s level (S1), which the entry's
+  level sentence in (c) covers.
+- **The entry point is not changed.** Its parenthesis "(an interval-Newton enclosure of the ℓ=0
+  near-extremal mode)" stays. v1.4 (a) records that more was needed (the review's optional point).
 
-## 11. What S6 does not establish
+## 12. What S6 does not establish
 
 - **No resonance multiplicity at ω_*.** Only the radial order m₀(ω_*) = 1 is certified. ω_* lies
   below −κ₊, outside P2-D1′'s multiplicity window.
@@ -311,17 +386,21 @@ Revision log v1.2); P2-7 (P_A) is still a target."
   unchanged.
 - **No CERTIFIED level.** P2-6 is WRITTEN_PROOF, below FORMULATION §2's target. CERTIFIED would need
   P2-0's written steps, W1/W2/W4/W5/W6′, D1′ and Lemma E's l ≥ 1 argument to be machine-checked.
-- **Float evidence is not part of the proof:** the closed-form check of W̃_l and KAT B7.
+- **Float evidence is not part of the proof:** the closed-form check of W̃_l, and KAT B7, which is
+  weak evidence (§6).
 - **The scope fences of FORMULATION §7 are unchanged:**
   - massless scalar on fixed RNdS only;
-  - no nonlinear statement. β > 7/9 is now certified at P_B, but [CGNS18]'s other hypotheses are
-    not addressed;
+  - no nonlinear statement. β > 7/9 is now established at P_B (at WRITTEN_PROOF), but [CGNS18]'s
+    other hypotheses are not addressed;
   - nothing about generic solutions being no smoother than H^{1/2+β};
   - no other parameters or neighbourhoods.
-- **No ledger, FORMULATION-status or .tex change on this branch** beyond the approved v1.1 entry. §§9
-  and 10 are proposals.
+- **No ledger or .tex change on this branch.** FORMULATION carries the approved v1.1 and v1.2 entries.
+  The rows (§9), the header status line (§10) and the .tex entry (§11) are the coordinator's to
+  apply.
 
-## 12. For the reviewer: what to attack first
+## 13. For the reviewer: what to attack first
+
+Kept as written at S6 exit. The review (2026-10-27) checked all six points; see its §§4–5.
 
 1. **Lemma E at a point of E₊** (`s6-proof.md` §2.2). D1′'s characterisation of resonant states
    (smooth, H^s above threshold) is used at σ = ω₀ ∈ E₊, where D1′'s Lemma A does not apply. Attack:
@@ -349,7 +428,7 @@ Revision log v1.2); P2-7 (P_A) is still a target."
    absolute); l = 19 against l = 20 at h₀ = 2/41; Re ω = a′_l, held by both the band box and
    part (ii′).
 
-## 13. Deviations, +dirty rows, denials
+## 14. Deviations, +dirty rows, denials
 
 **Deviations from the pre-registration** (all additive, or provenance only):
 - **178 L rows recomputed** at a clean commit. The first L run was launched at `7168b2e4` and
@@ -364,8 +443,12 @@ Revision log v1.2); P2-7 (P_A) is still a target."
   below"). They add five more: Lemma E at l = 5, part (ii′) at l = 9, h₀ = 2/43, an S5 pin, and a
   wide β ball.
 - **The closed form (E-int)** and its float test are new. They are not used by the proof.
-- **FORMULATION.** The v1.1 entry was approved and applied at `f82114bf`. The exit entry in §10 is a
-  proposal only, since no exit entry was authorised.
+- **FORMULATION.** The v1.1 entry was approved and applied at `f82114bf`. The v1.2 exit entry was
+  approved on 2026-10-27, after the review, and is applied (§10).
+- **The ζ_A float rule** (review W8; no code change). `beta_part2.float_zeta_A` also requires E₀ ≥ 0
+  in floats, which the registered rule ("float margin ≥ 0.02a* and W7") does not state. This is
+  harmless: the Arb certification requires E₀ ≥ 0 anyway, and every ζ_A(l) equals the registered probe
+  table at the first try.
 - **No design fallback was needed.** T used no fallback design, every ζ_A(l) certified at its float
   value, S and L passed at the registered settings, and no K4/K5 contingency was used.
 
@@ -374,9 +457,9 @@ lists none. The only `+dirty` tags ever written are the 178 first-pass L rows ab
 superseded by clean recomputations with identical results, and they are kept only in a git-ignored
 results file.
 
-**Denials.** No permission was denied during S6. Twice the harness blocked a plain `sleep`
-(its rule against chained sleeps); I waited with its recommended monitors and condition loops
-instead. Nothing else was affected.
+**Denials.** No permission was denied during S6 or during the review-fix round. Twice the harness
+blocked a plain `sleep` (its rule against chained sleeps), and I waited with its recommended monitors
+and condition loops instead. Nothing else was affected.
 
 **Kill criteria.** None fired:
 - K1: W̃_l certified nonzero for every l ≤ 19, every band count consistent with one simple pole, and

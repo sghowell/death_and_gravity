@@ -446,3 +446,14 @@ checkpoint review and Phase-2 go of 2026-10-27. A5 and A6 are the author's.
     zsol evaluation at 128 bits.
   - Expected: no root in the band.
   - This is float evidence and is not used by the proof.
+
+## Dated note (2026-10-27, after the S6 review)
+
+An erratum to O4 (review W10). It changes nothing in the plan, and O4's text above is left as it was
+registered.
+- O4 says that R̃'s coefficient ã₁ at ω₀ is "nonzero, with value −d₁ at h = 0". The value should read
+  1/d₁ = 1/Δ′(r₊).
+- In general ã₁(ω₀) = h²(2κ₊r₊ + L)/Δ′(r₊) = (1 + 2κ₊r₊h² − h²/4)/Δ′(r₊), which is positive for every
+  h (the review's sympy check E9).
+- The coefficient is nonzero either way, which is all that W6′ uses. `notes/s6-proof.md` §3 does not
+  repeat the value.
