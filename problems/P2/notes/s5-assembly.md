@@ -1,21 +1,30 @@
 # P2 S5: the assembly P2-4 and the conversion P2-5 at P_B
 
-Status: written 2026-10-26 on branch `p2/s5-assembly`, from main at `3dd0b2bc`. It has not yet been
-independently reviewed.
+Status: written 2026-10-26 on branch `p2/s5-assembly`, from main at `3dd0b2bc`; revised 2026-10-26
+after the independent review (`docs/review-2026-10-26-p2-s5-adversarial.md`).
+- The review found P2-4 and P2-5 proven as stated, with nothing blocking.
+- Its fixes, approved by the user on 2026-10-26, are applied here:
+  - S1 in §2.2 H7;
+  - S2 in §§2.1, 2.2 H2 and 2.5;
+  - S3 in §2.3;
+  - W1 in §2.4 F3, W2 and W8 in §1.4, W3 throughout, W4 under Sources, W5 in §2.3.
 - Plan: `notes/s5-plan.md` (`e2c75aa6`).
 - Machine check: `src/p2/assembly.py` (`7aa9fbd0`).
 - Certificate: `certificates/assembly/assembly_PB.json` (`942f89c1`).
 - Test: `tests/test_assembly.py`.
 
 **Sources** (TeX read):
-- **[HV17]** P. Hintz, A. Vasy, arXiv:1512.08004, file `cauchyhor-r.tex`, dated "December 25,
-  2015. Final revision: July 12, 2017" (J. Math. Phys. 58, 081509).
+- **[HV17]** P. Hintz, A. Vasy, arXiv:1512.08004**v2** (posted 2020-05-27, the published version),
+  file `cauchyhor-r.tex`, whose TeX date line reads "December 25, 2015. Final revision: July 12, 2017"
+  (J. Math. Phys. 58, 081509).
   - Theorem numbers are the ones this file produces: one counter per section, shared by theorems,
     propositions, lemmas, corollaries, definitions and remarks. They were checked by counting the
     environments.
   - Labels are given in brackets, and ℓ. is a line of the TeX file.
-- **[CF17]** J. L. Costa, A. T. Franzen, arXiv:1607.01018, file `RN_deSitterRevised6.tex` (Ann.
-  Henri Poincaré 18, 3371).
+- **[CF17]** J. L. Costa, A. T. Franzen, arXiv:1607.01018**v2** (posted 2017-10-23), file
+  `RN_deSitterRevised6.tex` (Ann. Henri Poincaré 18, 3371–3398).
+- The sha256 of the two TeX files are `a0d3302f…33cf2be` and `dcaab0e0…a37464d453`, as the review
+  also records.
 
 **Dictionary.**
 - [HV17]: r₁, r₂, r₃ are our r₋, r₊, r_c; κ₁ is κ₋; μ is F; λ = Λ/3. Its σ is our ω; both carry the
@@ -132,8 +141,9 @@ also re-proves D4's simplicity at the CERTIFIED level.
 
 **Remarks.**
 - β ≥ 0.55 is stated for the closed strip, which is what [HV17]'s hypothesis asks for (§2.3).
-  Strict inequality β > 0.55 is not claimed. It would follow from discreteness of the QNMs below the
-  strip, uniformly in l, and no P2 row states that.
+  Strict inequality β > 0.55 is not claimed. At the "conversion cited" level it would follow from
+  the finiteness argument of §2.2 H7 ([HV17] ℓ. 1530), but no P2 row states that finiteness, and
+  nothing needs it.
 - The two-sided bound is not sharp. The S0 float value is β ≈ 0.909381 (the l = 0 NE mode), and
   nothing between 0.55κ₋ and 0.909κ₋ is explored. P2-6, the two-sided enclosure, stays the stretch
   goal and needs the new foundations recorded in FORMULATION v0.2.
@@ -184,9 +194,9 @@ What it checks (names as in the JSON):
 **Negative controls.** Each mutates a copy of the inputs and must fail on its named item. All nine
 do.
 
-| id | mutation | fails on |
+| id | mutation | fails on (among others; the JSON lists every failure) |
 |---|---|---|
-| N1 | b → 6280878/2²⁸ at l = 0, just below d_δ | C2.l0.b_ge_d (and the containment that uses it); nothing else |
+| N1 | b → 6280878/2²⁸ at l = 0, just below d_δ | C2.l0.b_ge_d and the containment check that uses it, and nothing else |
 | N2 | `winding_PB_l7.json` removed | C2.l7.present, C2.all_l_0_to_19_present |
 | N3 | a₅ → a₅ − 2⁻²⁴ in R′₅ | C2.l5.a_identical |
 | N4 | h₀ → 2/43 | C3.no_l_gap (l₀ = 21), and the h₀ consistency checks |
@@ -194,12 +204,18 @@ do.
 | N6 | stored winding 1 at l = 3 | C2.l3.winding_value, C2.l3.resum |
 | N7 | T_PB fails | C3.regime_pass.T_PB, C3.cover_pass |
 | N8a | γ₀ → κ₋/2 | C7.alpha_lt_gamma0 |
-| N8b | κ₊ → 0.45κ₋ | C8.km_lt_2kp, C8.condition |
+| N8b | κ₊ → 0.45κ₋ | C8.km_lt_2kp, C8.condition (45 checks in all, C4 among them; see §2.4 F3) |
 
 **What the check does not do.** It does not re-verify the analytic content of the regime, lg or
 winding certificates. Their own replays do that: `p2.part1 verify`, `p2.lg_bounds verify` and
 `p2.part3 verify`. The check confirms that the certified statements fit together. In S5,
 `p2.params verify` and `p2.lg_bounds verify PB 19` were replayed, and both pass.
+
+**Two weak checks** (review W8). They are left as they are, since the certificate is pinned. Both are
+harmless.
+- `C2.l*.lower_strip_in_box_and_P2_2` repeats `a_identical` and `b_ge_d`.
+- `C1.Lambda_M` is a string match on the conventions field of `params.json`. The substantive check
+  is the recomputed `Point`.
 
 ### 1.5 Level
 
@@ -221,7 +237,7 @@ P2-4 would be CERTIFIED only if P2-0's written steps, P2-1's W1 and W2, and D1�
 
 Finer statement: for l ≤ 19, part (a) on the lower strip −d_δ ≤ Im ω ≤ 0 is CERTIFIED (P2-2 with
 P2-3B and P2-par). Everything else is WRITTEN_PROOF. The README requires a check by an independent
-reviewer for WRITTEN_PROOF, and this note has not had one yet.
+reviewer for WRITTEN_PROOF. The S5 review (2026-10-26) is that check, and it found the level right.
 
 ### 1.6 What P2-4 does not say
 
@@ -236,18 +252,29 @@ reviewer for WRITTEN_PROOF, and this note has not had one yet.
 **P2-5** (P_B; conversion cited). Let α := d_δ = (11/20)κ₋.
 
 **(i)** [HV17] Thm 1.1 applies with this α, in its quantitative form (Prop 2.17, Cor 2.19,
-Thm 2.24). Let u solve □_g u = 0 with smooth initial data on [HV17]'s Cauchy surface H_I. Then, in
-the domain of dependence of H_I, u = u₀ + u′ with:
+Thm 2.24). Let u solve □_g u = 0 with smooth initial data on [HV17]'s one-ended initial surface H_I.
+Then, in the domain of dependence of H_I, u = u₀ + u′ with:
 - u₀ ∈ ℂ;
 - |u′| ≤ Ce^{−αt₀} uniformly in r > r₋, and the same for any number of derivatives along stationary
-  vector fields tangent to the Cauchy horizon;
+  vector fields tangent to the Cauchy horizon. The decay holds at α itself (§2.2 H7);
 - u continuous up to the Cauchy horizon;
 - u′ ∈ e^{−αt₀}H^{1/2+α/κ₋−0} = e^{−αt₀}H^{21/20−0} in t₀ > 0.
 
-In particular, u ∈ H¹_loc up to the Cauchy horizon.
+In particular, u ∈ H¹_loc up to the part of the Cauchy horizon in that domain of dependence, towards
+i⁺.
+
+For smooth data on a complete Cauchy surface, apply (i) to the Killing translates of H_I and to their
+mirror images in the other exterior (§2.2 H2). This gives the same conclusion near every point of the
+Cauchy horizon other than its bifurcation sphere B, with constants depending on the point. Nothing is
+claimed at B.
 
 **(ii)** [CF17] Thm 3.1 applies with p = α to solutions with smooth data on a Cauchy surface of RNdS
-at P_B. They have bounded energy up to the Cauchy horizon, and they extend to it in C⁰ ∩ H¹_loc.
+at P_B.
+- The Price law holds with p = α on [CF17]'s event-horizon component H⁺, the one adjacent to i⁺
+  (§2.4 F2).
+- So the energy is bounded up to the adjacent Cauchy-horizon component, and the solution extends to it
+  in C⁰ ∩ H¹_loc, near every point of it other than B.
+- Nothing is claimed at B.
 
 Neither theorem is re-proven. The hypotheses they take from P2 are exactly P2-4(b), D4 and P2-par.
 
@@ -291,14 +318,18 @@ Match:
 
 Match:
 - The field is FORMULATION's: a massless, minimally coupled scalar.
-- The data live on H_I, a one-ended partial Cauchy surface. The conclusions hold in its domain of
-  dependence, up to the part of the Cauchy horizon to the future of H_I, towards i⁺. So P2-5(i) is
-  stated for data on H_I, and FORMULATION's "smooth Cauchy data on RNdS" is read that way.
+- The data live on H_I, a one-ended initial surface. It is a partial Cauchy surface; [HV17] writes
+  "'Cauchy' surface" (§1.2, ℓ. 473).
+- The conclusions hold in its domain of dependence, up to the part of the Cauchy horizon to the
+  future of H_I, towards i⁺. So P2-5(i) is stated for data on H_I.
+- Reading FORMULATION's "smooth Cauchy data on RNdS" this way narrows the §2 template. FORMULATION
+  v1.0 records the narrowing as "Scope of P2-5".
 - Take smooth data on a complete Cauchy surface. Apply (i) to the restrictions of the data to the
   translates of H_I in Killing time, and to their mirror images in the other exterior. This gives
   u ∈ H^{21/20−0}_loc near every point of the Cauchy horizon except the bifurcation sphere B, with
   constants that depend on the translate.
-- Up to B, [HV17] only sketches the two-ended extension. That case is not claimed.
+- Nothing is claimed at B. [HV17] only sketches the "minor extension" to a two-ended H_I up to B,
+  and it is not used.
 
 **H3, the resonance notion.** See §2.3 below. Result: it is the localized notion.
 
@@ -358,15 +389,35 @@ Match:
     gap.
   - P2-5 uses Prop 2.17, Cor 2.19 and Thm 2.24 with α = d_δ, which satisfies the hypotheses of
     §2.5 as stated, on the closed half-plane Im σ ≥ −α (see §2.3).
-- **The contour.** This is a remark on [HV17]'s proof, not a gap in the hypotheses.
-  - The proof of Prop 2.17 shifts the inverse Mellin transform to Im σ = −α. That needs the
-    global family P̂(σ)⁻¹ to have no pole on the line. [HV17] does not discuss this.
-  - A global pole on that line is not an Ω₂₃ resonance, by P2-4(b). So its Laurent singular part
-    vanishes in r > r₁ (Lemma 2.14(1)).
-  - Alternatively, the argument can be run on the line Im σ = −α̂, for α̂ < α arbitrarily close.
-    The global poles are discrete: by the high-energy estimates of Prop 2.12 there are finitely
-    many in the strip. This gives u′ ∈ H^{1/2+α̂/κ₋−0} with decay e^{−α̂t₀}. As α̂ ↑ α, the Sobolev
-    conclusion H^{21/20−0} is unchanged.
+- **The contour, and the decay at α exactly** (review S1).
+  - **The gap.** The proof of Prop 2.17 shifts the inverse Mellin transform to Im σ = −α, and
+    expands over "the resonances of P in −α < Im σ < −α̃" (ℓ. 1338). That needs the global family
+    P̂(σ)⁻¹ to have no pole on the line Im σ = −α, which [HV17] does not discuss. [HV17]'s α is
+    existential. P2-5 fixes α = d_δ, so the line must be dealt with.
+  - **Finiteness.** [HV17] ℓ. 1530: "there are only finitely many resonances in any strip
+    Im σ > −α > −γ₀". These are the global resonances. Every Ω₂₃ resonance is a global one (the
+    restriction identity, written out in the review's §4.C6). So the Ω₂₃ resonances are also
+    finitely many in Im σ ≥ −γ, for every γ < γ₀.
+  - **Choice of α′.** Fix γ ∈ (d_δ, γ₀). By P2-4(b), none of the finitely many Ω₂₃ resonances
+    in Im σ ≥ −γ other than 0 lies in Im σ ≥ −d_δ. So there is α′ ∈ (d_δ, γ) such that 0 is the
+    only Ω₂₃ resonance in Im σ ≥ −α′.
+  - **Choice of α″.** The global poles in Im σ ≥ −α′ are finitely many, so some α″ ∈ (d_δ, α′]
+    puts none of them on the line Im σ = −α″.
+  - **Conclusion.**
+    - α″ satisfies the hypotheses of §2.5: 0 is the only Ω₂₃ resonance in Im σ ≥ −α″, and
+      α″ < γ₀.
+    - The contour Im σ = −α″ is free of global poles.
+    - [HV17] at α″ gives decay e^{−α″t₀} ≤ e^{−d_δt₀} in t₀ > 0, and regularity
+      H^{1/2+α″/κ₋−0} ⊂ H^{21/20−0}.
+
+    This is the statement of P2-5(i) at α = d_δ exactly.
+  - **The routes of the first version of this note are not used.**
+    - Running on lines Im σ = −α̂ with α̂ < α gives decay e^{−α̂t₀} only for each α̂ < α. The
+      Sobolev conclusion is the same, but the decay at α is not obtained that way.
+    - Integrating through a global pole on Im σ = −α would first need the singular parts at the
+      finitely many poles on that line subtracted. The argument above avoids the line instead.
+  - **Strictness.** The same argument would give β > 0.55 strictly, at the "conversion cited"
+    level. It is not claimed (§1.3, Remarks).
 - **Time function and signs.**
   - P̂(σ) = e^{iσt*}Pe^{−iσt*}, so resonances with Im σ < 0 decay, as for our ω.
   - D1′ shows that resonances and their multiplicities do not depend on the choice of t*
@@ -424,15 +475,29 @@ forward problem on Ω₂₃ (HV17 §2.5)" on Im σ > −min(κ₊, κ_c) ⊃ S_�
 [HV17]'s hypothesis with α = d_δ. **No extra argument is needed, and P2-5 is not conditional.** The
 plan's stop rule is not triggered.
 
-**What the citation leans on.** These are for the reviewer.
+**What the citation leans on** (review S3; the P2-5 row names both items).
 1. **Lemma 2.14(1)'s "more general" clause.**
    - Its proof is given only in outline (ℓ. 1266): "follows along the same lines …; likewise for
      the more precise result".
    - The Laurent-coefficient refinement is likewise outlined: "An iterative argument, similar to
      [BVW, Proof of Lemma 8.3]".
    - This is [HV17]'s lemma. It is cited, not re-proven.
-2. **The order-1 claim at 0 for RNdS.** [HV17] takes it from Schwarzschild–de Sitter references.
-   At P_B it is also P2-0/D4 with D1′.
+   - The S5 review writes the outline out and finds it routine (its §4.C6): a restriction
+     identity, hyperbolic uniqueness in r₁ < r < r₂ − 2δ, and an induction over the Laurent
+     coefficients.
+2. **The order-1 claim at 0 for RNdS.**
+   - [HV17] takes it from Schwarzschild–de Sitter and Kerr–de Sitter references (ℓ. 1268).
+   - For the closed upper half-plane, it recalls only the Im σ > 0 argument (ℓ. 1264).
+   - At P_B, P2 supplies both itself: D4 (m₀(0) = 1), P2-0 (Im ω ≥ 0, the real axis included) and
+     P2-D1′.
+3. **A typo in [HV17], harmless here** (review W5).
+   - §2.3 (ℓ. 997, (EqRNdSComplexAbsorptionSupp)) places the complex absorption in
+     𝒰 ⊂ {r₁ − δ < r < r₂ − δ, …}.
+   - That set cannot contain "a small neighborhood of πL₀ ∪ πΓ_*", which lies in r₀ ≤ r < r₁. It
+     also contradicts ℓ. 992 ("modifications … in r ≤ r₁").
+   - The intended set is presumably {r₀ − δ < r < r₁ − δ}. With it, 𝒬 vanishes on Ω₂₃, which the
+     argument of Lemma 2.14(1) uses.
+   - S5 depends on nothing else here, but a reader checking Lemma 2.14 should know about it.
 
 ### 2.4 [CF17]: hypotheses quoted and matched
 
@@ -487,9 +552,13 @@ by a constant times e^{−2αv₁}. So Assumption 2.2 holds with **p = α = (11/
 - **The tautological part.** With p = (½+δ)κ₋, 2p > κ₋ ⟺ δ > 0. This is the tautology that the S1
   review found in `params.json`'s CF17_2alpha [C8.two_p_gt_km: 2p/κ₋ = 11/10]. It carries no
   information beyond the choice p = (½+δ)κ₋.
-- **The substantive part.** 2κ₊ > κ₋ is P2-par's CF17_2kp, with margin 0.02747
-  (2κ₊/κ₋ = 1.6458) [C8.km_lt_2kp]. At P_B also p < κ₊ (margin 0.01161), so
-  min{p, κ₊} = p and 2 min{p, κ₊} = 1.1κ₋.
+- **The other part.** 2κ₊ > κ₋ is P2-par's CF17_2kp, with margin 0.02747 (2κ₊/κ₋ = 1.6458)
+  [C8.km_lt_2kp].
+  - It is implied by d_δ < κ₊, which P2-4 already uses (C4): 2κ₊ > 2d_δ = 1.1κ₋ > κ₋ (review W1).
+  - At P_B also p < κ₊ (margin 0.01161), so min{p, κ₊} = p and 2 min{p, κ₊} = 1.1κ₋.
+- **So CF17's condition carries nothing beyond d_δ < κ₊ and δ > 0.** For the same reason, the
+  negative control N8b cannot isolate C8.km_lt_2kp: any κ₊ < κ₋/2 also breaks C4, and N8b fails 45
+  checks.
 - **What the CF17 route rests on.** The Price law with p > κ₋/2, i.e. β > ½. That is P2-4, through
   [HV17]'s expansion. So here [CF17] is not independent of [HV17]. It gives a second conclusion by
   the energy method (bounded energy, C⁰ ∩ H¹_loc) from the same spectral input.
@@ -502,10 +571,16 @@ Every hypothesis of [HV17] Thm 1.1 (§§2.5–2.6) and [CF17] Thm 3.1 is matched
 notion in [HV17]'s α hypothesis is the localized one, which P2-D1′ provides. P2-5 closes by citation,
 at P2-4's level: **WRITTEN_PROOF, conversion cited**.
 
-Two qualifications are part of its statement:
-- the data live on [HV17]'s H_I, and for (ii) on a Cauchy surface Σ;
-- the regularity is stated near the Cauchy horizon in the domain of dependence of H_I, not
-  uniformly up to the bifurcation sphere.
+Its scope is part of its statement. FORMULATION v1.0 records it as "Scope of P2-5", a narrowing of
+the §2 template:
+- (a) for data on [HV17]'s one-ended initial surface H_I: near the part of the Cauchy horizon in the
+  domain of dependence of H_I, towards i⁺;
+- (b) for data on a complete Cauchy surface: near every point of the Cauchy horizon other than its
+  bifurcation sphere B, with constants depending on the point;
+- (c) nothing at B.
+
+For (ii), the C⁰ ∩ H¹_loc extension is to the Cauchy-horizon component adjacent to the event-horizon
+component carrying the Price law, with the same exception.
 
 ## 3. β at P_B
 

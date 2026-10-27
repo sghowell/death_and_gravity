@@ -187,3 +187,16 @@ The quotes, with their labels, go in `s5-assembly.md`.
 
 The assembly check and its tests take seconds to a minute of CPU, at nice 10 with at most 4
 workers. That is far below the 2 core-h allowed.
+
+## Dated notes (2026-10-26, after the S5 review)
+
+These notes correct two statements above. They change nothing in the plan.
+
+1. **Source versions** (review W4). §1 calls the [HV17] file "final revision of 2017-07-12".
+   - The file is arXiv:1512.08004v2, posted 2020-05-27 (the published version). Its TeX date line
+     reads "December 25, 2015. Final revision: July 12, 2017".
+   - The [CF17] file is arXiv:1607.01018v2, posted 2017-10-23.
+2. **Order of work** (review W9). The status line says this plan was written "before any S5 code".
+   - What can be checked is commit order: this plan (`e2c75aa6`, 18:24) precedes the code
+     (`7aa9fbd0`, 18:30) and the certificate (`942f89c1`).
+   - The order of authoring cannot itself be checked.
