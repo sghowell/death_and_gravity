@@ -2,14 +2,14 @@
 
 Status: formulation **v1.0** (S5 exit), 2026-10-26; frozen at v0 (S0, 2026-10-16),
 with every later change recorded in the Revision log.
-- The ledger has rows P2-par, P2-0, P2-D1′, P2-1w, P2-1, P2-2, P2-3B and P2-K6
-  (`CLAIMS.md`).
+- The ledger has rows P2-par, P2-0, P2-D1′, P2-1w, P2-1, P2-2, P2-3B, P2-4, P2-5 and
+  P2-K6 (`CLAIMS.md`).
 - S5 assembled P2-4 and P2-5 at P_B (`notes/s5-assembly.md`).
 - The independent review (`docs/review-2026-10-26-p2-s5-adversarial.md`, 2026-10-26)
   found both proven as stated, with nothing blocking. Its fixes S1–S3 and W1–W9 are
-  applied (2026-10-26).
-- Their ledger rows are in `notes/s5-report.md` §6. The user approved them on
-  2026-10-26; they are not yet entered.
+  applied, and its follow-up check (§9) passed (2026-10-26).
+- P2-4 and P2-5 at P_B (`notes/s5-report.md` §6, the review's §7 rows) were entered
+  on 2026-10-26, with the user's approval of that day.
 - P2-6 (the stretch goal) and P2-7 (P_A) are still *targets*.
 
 Changes after S1 begins go in the Revision log, never by silent edit (house
@@ -501,7 +501,7 @@ Sizing and kill criteria are in `s0-gate.md` §7.
   - **Open.** The assembly P2-4/P2-5 (S5); P_A; P2-6.
 
 - **v1.0 (2026-10-26, S5 exit; `notes/s5-plan.md`, `notes/s5-assembly.md`, `notes/s5-report.md`).**
-  The ladder at P_B is assembled up to P2-5 (P2-4 and P2-5 pending review and approval). The
+  The ladder at P_B is assembled up to P2-5 (P2-4 and P2-5 entered in the ledger on 2026-10-26). The
   status at P_B, with levels:
   - **Already in the ledger.**
     - P2-0: WRITTEN_PROOF.
@@ -509,13 +509,13 @@ Sizing and kill criteria are in `s0-gate.md` §7.
     - P2-2: CERTIFIED on the lower strip, for l ≤ 50 and l = 100.
     - P2-3: P2-3B counts every l < l₀ = 20 on R′_l. The counts are CERTIFIED; the strip corollary
       is at P2-0's level.
-  - **P2-4: WRITTEN_PROOF**, the minimum of its ingredients (P2-0, P2-D1′ and P2-1). Proposed, not
-    yet in the ledger.
+  - **P2-4: WRITTEN_PROOF**, the minimum of its ingredients (P2-0, P2-D1′ and P2-1). Entered in
+    the ledger on 2026-10-26.
     - For every l, S_δ∖{0} contains no QNM, and 0 is a simple QNM with a constant resonant state.
     - So β ≥ 0.55. With P2-K6, 0.55 ≤ β ≤ 0.90938098 (two-sided, not sharp).
     - The bookkeeping is machine-checked, with negative controls:
       `certificates/assembly/assembly_PB.json` (`python -m p2.assembly`).
-  - **P2-5: WRITTEN_PROOF, conversion cited** (P2-4's level). Proposed, not yet in the ledger.
+  - **P2-5: WRITTEN_PROOF, conversion cited** (P2-4's level). Entered in the ledger on 2026-10-26.
     - [HV17]'s α hypothesis concerns the forward problem on Ω₂₃ (quoted from its §2.5). P2-4 with
       P2-D1′ supplies it exactly, so the conversion is not conditional.
     - For smooth data on [HV17]'s H_I, u′ ∈ e^{−αt₀}H^{1.05−0} with α = 0.55κ₋ (decay e^{−αt₀} at α
@@ -556,7 +556,8 @@ Sizing and kill criteria are in `s0-gate.md` §7.
       the source of the order-1 claim at 0.
     - W1–W9: wording, the source versions ([HV17] arXiv v2, [CF17] arXiv v2), a note on an [HV17]
       typo, and dated notes appended to the plan.
-  - **Remaining S5 items (§6).** The ledger rows and the .tex v1.3 entry
-    (`notes/s5-report.md` §§6–7), which the user approved on 2026-10-26. The owner applies
-    them.
+  - **The ledger (2026-10-26).** The rows P2-4 and P2-5 are entered verbatim from the review's
+    §7, which its §9 confirms, and P2-1's parenthesis now reads "(assembled in P2-4)".
+  - **Remaining S5 item.** The .tex v1.3 entry (`notes/s5-report.md` §7, with the review's §9
+    one-word change), which the user approved on 2026-10-26.
 
