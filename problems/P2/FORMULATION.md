@@ -1,12 +1,13 @@
 # P2 — A certified resonance-free strip for subextremal RNdS (β > 1/2, linear SCC failure for smooth data)
 
-Status: formulation **v0.6** (S4 exit; stage S5), 2026-10-18; frozen at v0 (S0,
-2026-10-16), with every later change recorded in the Revision log. The ledger
-has rows P2-par, P2-0, P2-D1′, P2-1w, P2-1, P2-2, P2-3B and P2-K6 (`CLAIMS.md`).
-P2-1 at P_B (S4, `notes/s4-report.md` §7) was entered on 2026-10-19. The independent
-review (`docs/review-2026-10-18-p2-s4-adversarial.md`, 2026-10-18/19) found it proven
-as stated; one closing-box error term (S1) was corrected after it. Every other claim
-id is still a *target*.
+Status: formulation **v1.0** (S5 exit), 2026-10-26; frozen at v0 (S0, 2026-10-16),
+with every later change recorded in the Revision log.
+- The ledger has rows P2-par, P2-0, P2-D1′, P2-1w, P2-1, P2-2, P2-3B and P2-K6
+  (`CLAIMS.md`).
+- S5 assembled P2-4 and P2-5 at P_B (`notes/s5-assembly.md`). Their ledger rows are
+  proposed in `notes/s5-report.md` §6. They await S5's independent review and the
+  user's approval.
+- P2-6 (the stretch goal) and P2-7 (P_A) are still *targets*.
 
 Changes after S1 begins go in the Revision log, never by silent edit (house
 discipline of `problems/P9/b/FORMULATION.md`).
@@ -494,4 +495,36 @@ Sizing and kill criteria are in `s0-gate.md` §7.
     - The rest: a dated correction to Amendment 6 (the launch-time K4 rule, and the secant
       mechanism), the simply connected union of strips and windows in W1/W2, and wording.
   - **Open.** The assembly P2-4/P2-5 (S5); P_A; P2-6.
+
+- **v1.0 (2026-10-26, S5 exit; `notes/s5-plan.md`, `notes/s5-assembly.md`, `notes/s5-report.md`).**
+  The ladder at P_B is complete up to P2-5. The status at P_B, with levels:
+  - **Already in the ledger.**
+    - P2-0: WRITTEN_PROOF.
+    - P2-1: WRITTEN_PROOF, with l₀ = 20.
+    - P2-2: CERTIFIED on the lower strip, for l ≤ 50 and l = 100.
+    - P2-3: P2-3B counts every l < l₀ = 20 on R′_l. The counts are CERTIFIED; the strip corollary
+      is at P2-0's level.
+  - **P2-4: WRITTEN_PROOF**, the minimum of its ingredients (P2-0, P2-D1′ and P2-1). Proposed, not
+    yet in the ledger.
+    - For every l, S_δ∖{0} contains no QNM, and 0 is a simple QNM with a constant resonant state.
+    - So β ≥ 0.55. With P2-K6, 0.55 ≤ β ≤ 0.90938098 (two-sided, not sharp).
+    - The bookkeeping is machine-checked, with negative controls:
+      `certificates/assembly/assembly_PB.json` (`python -m p2.assembly`).
+  - **P2-5: WRITTEN_PROOF, conversion cited** (P2-4's level). Proposed, not yet in the ledger.
+    - [HV17]'s α hypothesis concerns the forward problem on Ω₂₃ (quoted from its §2.5). P2-4 with
+      P2-D1′ supplies it exactly, so the conversion is not conditional.
+    - For smooth data on [HV17]'s H_I, u′ ∈ e^{−αt₀}H^{1.05−0} with α = 0.55κ₋. [CF17] applies
+      with p = α.
+  - **Achieved against target levels.** §2 sets CERTIFIED as the target for P2-0, P2-1 and P2-4;
+    the achieved level is WRITTEN_PROOF. CERTIFIED would need P2-0's written steps, P2-1's W1–W2
+    and D1′ to be machine-checked.
+  - **Reading of P2-5.** "Smooth Cauchy data on RNdS" means data on [HV17]'s one-ended Cauchy
+    surface H_I; for [CF17], data on a Cauchy surface Σ. The statement is not uniform up to the
+    bifurcation sphere of the Cauchy horizon.
+  - **Open.** P2-6 (the stretch goal, which needs the new foundations of v0.2) and P2-7 (P_A, where
+    no part-(i) run exists).
+  - The scope fences of §7 are unchanged. No frozen convention, definition, point, δ or KAT
+    changes.
+  - **Remaining S5 items (§6).** The independent review, the ledger rows, and the .tex status
+    entry. The rows and the .tex text are proposed in `notes/s5-report.md` and are not applied.
 
