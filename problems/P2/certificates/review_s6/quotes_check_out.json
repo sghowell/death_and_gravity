@@ -1,0 +1,146 @@
+{
+ "sources": {
+  "HV17": {
+   "sha256": "a0d3302f755222eb493170e1eea60f988a44c96f0e69108c89171e99733cf2be",
+   "expected": "a0d3302f755222eb493170e1eea60f988a44c96f0e69108c89171e99733cf2be",
+   "match": true
+  },
+  "Vas13": {
+   "sha256": "b7ead254e1b5aa3654d8ba184a89f5fd4a1fb6a7e2cc79c00356f3030b83bc18",
+   "expected": "b7ead254e1b5aa3654d8ba184a89f5fd4a1fb6a7e2cc79c00356f3030b83bc18",
+   "match": true
+  }
+ },
+ "passages": [
+  {
+   "source": "HV17",
+   "id": "H.alpha_hypothesis",
+   "what": "the alpha hypothesis is about the Omega_23 forward problem",
+   "found": true,
+   "line": 1313,
+   "passage": "The only resonance of the forward problem in $\\Omega_{23}$ in $\\Im\\sigma\\geq 0$ is a simple resonance at $\\sigma=0$"
+  },
+  {
+   "source": "HV17",
+   "id": "H.global_may_differ",
+   "what": "the global problem may have other resonances",
+   "found": true,
+   "line": 1313,
+   "passage": "(This does \\emph{not} mean that the global problem for $\\cP$ does not have other resonances in this half space!)"
+  },
+  {
+   "source": "HV17",
+   "id": "H.beta_j",
+   "what": "the radial-point quantity beta_j = 2/|mu'(r_j)|",
+   "found": true,
+   "line": 850,
+   "passage": "\\beta_j := -\\frac{\\tau_0^{-1}\\rham_G\\tau_0}{\\wh\\rho^{-1}\\rham_G\\wh\\rho} = \\frac{2}{|\\mu_*'(r_j)|};"
+  },
+  {
+   "source": "HV17",
+   "id": "H.kappa_j",
+   "what": "kappa_j = 1/beta_j is the surface gravity",
+   "found": true,
+   "line": 857,
+   "passage": "is equal to the \\emph{surface gravity} of the horizon at $r=r_j$"
+  },
+  {
+   "source": "HV17",
+   "id": "H.radial_above",
+   "what": "above threshold: s > 1/2 + beta_j alpha (alpha = -Im sigma for a mode)",
+   "found": true,
+   "line": 1065,
+   "passage": "If $s\\geq s'$, $s'>1/2+\\beta_j\\alpha$, and if $u\\in\\Hb^{-\\infty,\\alpha}(M)$ then $L_{j,\\pm}$"
+  },
+  {
+   "source": "HV17",
+   "id": "H.radial_below",
+   "what": "below threshold",
+   "found": true,
+   "line": 1067,
+   "passage": "On the other hand, if $s<1/2+\\beta_j\\alpha$, and if $u\\in\\Hb^{-\\infty,\\alpha}(M)$"
+  },
+  {
+   "source": "HV17",
+   "id": "H.states_smooth",
+   "what": "resonant states are smooth at r_2, r_3 (above threshold)",
+   "found": true,
+   "line": 1264,
+   "passage": "Now the propagation of singularities at radial points implies that $u$ is smooth at $r=r_2$ and $r=r_3$ (where the a priori regularity exceeds the threshold value)"
+  },
+  {
+   "source": "HV17",
+   "id": "H.arbitrary_regularity",
+   "what": "arbitrarily high regularity may be used at the event and cosmological horizons",
+   "found": true,
+   "line": 1549,
+   "passage": "At the event horizon and the cosmological horizon, this is inconsequential, as we may work in spaces of arbitrary high regularity there"
+  },
+  {
+   "source": "HV17",
+   "id": "H.general_clause",
+   "what": "Lemma 2.14(1): the general clause (any sigma not an Omega_23 resonance)",
+   "found": true,
+   "line": 1259,
+   "passage": "In fact, this holds more generally for any $\\sigma\\in\\C$ which is not a resonance of the forward problem for the wave equation in a neighborhood $\\Omega_{23}$ of the black hole exterior."
+  },
+  {
+   "source": "Vas13",
+   "id": "V.fredholm",
+   "what": "the family is Fredholm above threshold",
+   "found": true,
+   "line": 1926,
+   "passage": "is Fredholm for each $\\sigma$ with $s\\geq m>(\\difford-1-\\beta\\im\\sigma)/2$"
+  },
+  {
+   "source": "Vas13",
+   "id": "V.thm_half_plane",
+   "what": "Thm (thm:classical-absorb): the half-plane C_s",
+   "found": true,
+   "line": 1940,
+   "passage": "\\Cx_s=\\{\\sigma\\in\\Cx:\\ \\im\\sigma>\\beta^{-1}(\\difford-1-2s)\\}."
+  },
+  {
+   "source": "Vas13",
+   "id": "V.meromorphy",
+   "what": "analytic Fredholm theory: meromorphic inverse",
+   "found": true,
+   "line": 1944,
+   "passage": "Thus, analytic Fredholm theory applies, giving meromorphy of the inverse provided the inverse exists for a particular value of $\\sigma$."
+  },
+  {
+   "source": "Vas13",
+   "id": "V.nullspace_smooth",
+   "what": "the nullspace above threshold is finite dimensional and smooth",
+   "found": true,
+   "line": 1888,
+   "passage": "is also finite dimensional, and its elements are in $\\CI(X)$"
+  },
+  {
+   "source": "Vas13",
+   "id": "V.indep_of_s",
+   "what": "the inverse does not depend on s above threshold",
+   "found": true,
+   "line": 1968,
+   "passage": "Thus, in this sense, $(P_\\sigma-\\imath Q_\\sigma)^{-1}$ is independent of $s$"
+  },
+  {
+   "source": "Vas13",
+   "id": "V.commutator_sign",
+   "what": "the radial estimate's sign condition s - (k-1)/2 + beta Im sigma > 0",
+   "found": true,
+   "line": 1627,
+   "passage": "is negative if $s-(\\difford-1)/2+\\beta\\im\\sigma-\\delta>0$"
+  },
+  {
+   "source": "Vas13",
+   "id": "V.KdS_beta",
+   "what": "the Kerr-de Sitter beta (at a = 0: 2 r^2/|Delta'| = 1/kappa)",
+   "found": true,
+   "line": 5980,
+   "passage": "\\beta_\\pm=\\mp 2\\left(\\frac{d\\mut}{dr}\\right)^{-1}(1+\\gamma)(r^2+\\alpha^2)|_{r=r_\\pm}"
+  }
+ ],
+ "all_found": true,
+ "sources_match": true
+}

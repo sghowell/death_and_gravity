@@ -1,0 +1,50 @@
+{
+ "E1": {
+  "s=1": true,
+  "s=-1": true
+ },
+ "E2": {
+  "lowest_coefficient_m(Delta1(m-1)+B0)_m=1..5": true,
+  "D_m = Delta1 m (m - i w/kappa_+)": true,
+  "t0_coefficient_is_D1_a1_plus_C0": true,
+  "D1(omega0) = 0": true,
+  "C0(omega0) = -(2 kappa_+ r_+ + L)": true,
+  "D_m(omega0) = Delta1 m (m-1) != 0 for m >= 2": true,
+  "exponents at omega0": "[0, 1]"
+ },
+ "E3": {
+  "nonlog_t0_coefficient": "-L + 2*c*kappa_p*r_p**2 - 2*kappa_p*r_p",
+  "equals_Delta1_c_plus_C0": true,
+  "c = (2 kappa_+ r_+ + L)/Delta_1": "[(L/2 + kappa_p*r_p)/(kappa_p*r_p**2)]",
+  "log_part_O(t^2)": true
+ },
+ "E4": {
+  "D1 = -2 i r_+^2 (w - omega0)": true,
+  "lim (w - omega0) a1": "I*(L/2 + kappa_p*r_p)/r_p**2",
+  "equals i(2 kappa_+ r_+ + L)/(2 r_+^2)": true
+ },
+ "E5": {
+  "Wronskian_form": true
+ },
+ "E6": {
+  "W[rR1,rR2] = Delta (R1 R2' - R1' R2)": true,
+  "V Phi2 Psi dx = e^{kp c_p} (L + r F') Z2 dr/r": true,
+  "Wt = -I/r_+": true,
+  "Wt": "-I/r_p",
+  "E8 r F' identity": true
+ },
+ "E7": {
+  "W[Phi~_c, Phi_c] (sigma^0 part)": "2*g0*h0*kappa_p",
+  "equals 2 kp h0 g0 (-> 2 kappa_+ r_c^2)": true,
+  "W[Phi~_c, Psi] (sigma^0 part)": "2*g0*kappa_p*exp(c_c*kappa_p)",
+  "equals 2 kp g0 e^{kp c_c} (-> 2 kappa_+ r_c e^{kappa_+ c_c})": true,
+  "W[Phi_c, Psi] = 2 kc sigma H' e^{kp(2x - c_c)}": true
+ },
+ "E9": {
+  "rho = -1/2 is an indicial root at omega0": true,
+  "a~_1 at omega0": "(8*h2*kappa_p*r_p - h2 + 4)/(8*kappa_p*r_p**2)",
+  "a~_1 = (1 + 2 kappa_+ r_+ h^2 - h^2/4)/Delta'(r_+)": true,
+  "a~_1 at h = 0": "1/(2*kappa_p*r_p**2)"
+ },
+ "pass": true
+}
