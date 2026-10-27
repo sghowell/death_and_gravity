@@ -412,4 +412,37 @@ rewritten.
 
 ## Amendments
 
-(none)
+All six are dated 2026-10-27 and made before any production run. A1–A4 come from the coordinator's
+checkpoint review and Phase-2 go of 2026-10-27. A5 and A6 are the author's.
+
+- **A1, the Lemma E write-up.** The exit proof note writes out the argument for l ≥ 1 in full:
+  - the identification Φ₂ ∝ rR^{(2)} ∝ (hyperboloidal factor)·Z2, and of Φ_c, Φ̃_c with Z_c and the
+    other branch at r_c;
+  - both asymptotic expansions, with their error terms;
+  - convergence of ∫VΦ₂Ψ dr* at both ends;
+  - why l = 0 is excluded: V₀ changes sign.
+
+  It also states the residue formula's normalisation, so that B5 tests exactly that formula:
+  Z₊ = Σ_{m≥0} a_m t^m with a₀ = 1 and t = r − r₊ (zsol's `frob_z`), and Z2 = t + Σ_{m≥2} b_m t^m.
+- **A2, the pins.**
+  - `beta_assembly` pins every S5 certificate it reads by sha256, and checks each one against its
+    blob on main `300c22a7` (as `p2.assembly` did).
+  - Every new certificate records the commit it was computed at, clean or `+dirty`.
+  - The stage exit lists any `+dirty` rows.
+- **A3, ledger proposals at the exit.**
+  - The exit proposes a P2-6 row in the house format.
+  - It says whether Lemma E should be its own row or part of P2-6.
+  - If an existing row (P2-D1′, P2-K6, P2-4) needs a note, it gives the exact text.
+  - Nothing is applied.
+- **A4, the frozen part of P2-K6.** β's enclosure reuses `certificates/part3/krawczyk_PB_l0.json`
+  unchanged. B1 replays it into a new file and does not regenerate it.
+- **A5, a typo in NB6.** "b′ just above eκ₋" should read "b′ just below eκ₋". That mutation must
+  fail the check b′ ≥ eκ₋.
+- **A6, how B7 is done.** l is drawn log-uniformly from [20, 1000] with seed 20261027. Re ω is taken
+  in a regime's range, as in S4's K4, and Im ω uniformly in [−eκ₋, −0.55κ₋].
+  - At each point the float W_l is evaluated, and a secant search is seeded there
+    (`qnm_float.Solver.find`, at most 12 steps).
+  - A stop counts as a root only under S4's Amendment-6 rule: |W(root)| < 10⁻⁸|W(seed)|, plus a
+    zsol evaluation at 128 bits.
+  - Expected: no root in the band.
+  - This is float evidence and is not used by the proof.
